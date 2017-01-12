@@ -9,7 +9,7 @@ header-includes:
 You can delete the header-includes (lines 3-6 above) if you like and also the chunk below since it is loaded in the skeleton.Rmd file.  They are included so that chap3.Rmd will compile by itself when you hit Knit PDF.
 -->
 
-```{r include_packages_2, include = FALSE}
+```{r include_packages_5, include = FALSE}
 # This chunk ensures that the reedtemplates package is
 # installed and loaded. This reedtemplates package includes
 # the template files for the thesis and also two functions
@@ -29,24 +29,19 @@ flights <- read.csv("data/flights.csv")
 ```
 
 
-# Archaeas result Tables, Graphics, References, and Labels {#ref_labels}
+# Cyanobacteria EvoMining Results {#ref_labels}
+Cyanobacteria is phylum {Referencia de luis}  
 
 ## Tables
 
 In addition to the tables that can be automatically generated from a data frame in **R** that you saw in [R Markdown Basics] using the `kable` function, you can also create tables using _pandoc_. (More information is available at <http://pandoc.org/README.html#tables>.)  This might be useful if you don't have values specifically stored in **R**, but you'd like to display them in table form.  Below is an example.  Pay careful attention to the alignment in the table and hyphens to create the rows and columns.
 
 ----------------------------------------------------------------------------------
-  Factors                    Correlation between Parents & Child      Inherited
+  Factors                    Correlation between Parents & Child     
 ------------------------- ----------------------------------------- --------------
-  Education                                -0.49                         Yes
+  GenomeDB                                  1245                         
   
-  Socio-Economic Status                     0.28                        Slight   
-  
-  Income                                    0.08                          No
-  
-  Family Size                               0.18                        Slight
-  
-  Occupational Prestige                     0.21                        Slight
+  Families                                  65                          
 ------------------------- ----------------------------------------- --------------
 Table: Correlation of Inheritance Factors for Parents and Child \label{tab:inher}
 
@@ -63,7 +58,8 @@ The addition of the `\label{}` option to the end of the table caption allows us 
 
 
 ## Figures
-
+Lets analize Phosphoribosyl_isomerase_3 family  
+ 
 If your thesis has a lot of figures, _R Markdown_ might behave better for you than that other word processor.  One perk is that it will automatically number the figures accordingly in each chapter.    You'll also be able to create a label for each figure, add a caption, and then reference the figure in a way similar to what we saw with tables earlier.  If you label your figures, you can move the figures around and _R Markdown_ will automatically adjust the numbering for you.  No need for you to remember!  So that you don't have to get too far into \LaTeX\ to do this, a couple **R** functions have been created for you to assist.  You'll see their use below.
 
 <!--
@@ -75,7 +71,7 @@ If you need a graphic or tabular material to be part of the text, you can just p
 
 In the **R** chunk below, we will load in a picture stored as `reed.jpg` in our main directory.  We then give it the caption of "Reed logo", the label of "reed", and specify that this is a figure.  Note again the use of the `results = "asis"` specification to automatically include and compile the \LaTeX\ code.
 
-```{r reed_logo, results = "asis"}
+```{r reed_logo3, results = "asis"}
 label(path = "figure/reed.jpg", caption = "Reed logo", 
       label = "reed", type = "figure")
 ```
@@ -88,7 +84,7 @@ Here is a reference to the Reed logo: `r ref("reed")`.  Note the use of the inli
 
 Below we will investigate how to save the output of an **R** plot and label it in a way similar to that done above.  Recall the `flights` dataset from [](#rmd-basics).  (Note that we've shown a different way to reference a section or chapter here.)  We will next explore a bar graph with the mean flight departure delays by airline from Portland for 2014.  Note also the use of the `scale` parameter which is discussed on the next page.
 
-```{r boxplot, warnings = FALSE, messages = FALSE}
+```{r boxplot_3, warnings = FALSE, messages = FALSE}
 delay_airline <- flights %>% group_by(carrier) %>%
   summarize(mean_dep_delay = mean(dep_delay)) %>%
   ggplot(aes(x = carrier, y = mean_dep_delay)) +
@@ -97,7 +93,7 @@ ggsave("figure/delays.pdf", plot = delay_airline,
   height = 3, width = 6)
 ```
 
-```{r box_label, results = "asis"}
+```{r box_label_3, results = "asis"}
 label(path = "figure/delays.pdf", 
       caption = "Mean Delays by Airline", 
       label = "delays", type = "figure")
@@ -109,7 +105,7 @@ A table linking these carrier codes to airline names is available at <https://gi
 
 Next, we will explore the use of the `scale` parameter which can be used to shrink or expand an image.  Here we use the mathematical graph stored in the "subdivision.pdf" file.  Note that we didn't specify the `caption =` or `label =` here, but we could have.
 
-```{r subdiv1, results = "asis"}
+```{r subdiv1_3, results = "asis"}
 label("figure/subdivision.pdf", "Subdiv. graph", "subd", 
       scale = 0.75)
 ```
@@ -120,7 +116,7 @@ Here is a reference to this image: `r ref("subd")`.  (Move this around throughou
 
 Lastly, we will explore how to rotate figures using the `angle` parameter.
 
-```{r subdiv1_180, results = "asis"}
+```{r subdiv1_180_3, results = "asis"}
 label("figure/subdivision.pdf", 
       "A Larger Figure, Flipped Upside Down", 
       scale = 1.5,
@@ -136,7 +132,7 @@ The following figure features the more popular changes thesis students want to m
 
 If you'd like to make further tweaks to figures, you might need to invoke some \LaTeX\ code.  Please email us at <data@reed.edu> if you need assistance.
 
-```{r tinymathcap, results = "asis"}
+```{r tinymathcap_4, results = "asis"}
 label("figure/subdivision.pdf", 
       caption = "Subdivision of arc segments",
       alt.cap = "You can see that $p_3 = p_6^\\prime$",
