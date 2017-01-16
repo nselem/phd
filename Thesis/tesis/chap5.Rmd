@@ -5,9 +5,7 @@ header-includes:
 - \usepackage{longtable,booktabs,setspace}
 ---
 
-<!--
-You can delete the header-includes (lines 3-6 above) if you like and also the chunk below since it is loaded in the skeleton.Rmd file.  They are included so that chap3.Rmd will compile by itself when you hit Knit PDF.
--->
+<!--- Cyanobacteria-->
 
 ```{r include_packages_5, include = FALSE}
 # This chunk ensures that the reedtemplates package is
@@ -34,8 +32,6 @@ Cyanobacteria is phylum {Referencia de luis}
 
 ## Tables
 
-In addition to the tables that can be automatically generated from a data frame in **R** that you saw in [R Markdown Basics] using the `kable` function, you can also create tables using _pandoc_. (More information is available at <http://pandoc.org/README.html#tables>.)  This might be useful if you don't have values specifically stored in **R**, but you'd like to display them in table form.  Below is an example.  Pay careful attention to the alignment in the table and hyphens to create the rows and columns.
-
 ----------------------------------------------------------------------------------
   Factors                    Correlation between Parents & Child     
 ------------------------- ----------------------------------------- --------------
@@ -43,19 +39,16 @@ In addition to the tables that can be automatically generated from a data frame 
   
   Families                                  65                          
 ------------------------- ----------------------------------------- --------------
-Table: Correlation of Inheritance Factors for Parents and Child \label{tab:inher}
-
-We can also create a link to the table by doing the following: `r ref("inher", type = "table")`.  If you go back to [Loading and exploring data] and look at the `kable` function code, you'll see that I added in a similar `\\label` to be able to reference that table later.  (The extra backslash there is a way that _Markdown_ interfaces with \LaTeX\.) We can create a reference to the max delays table: `r ref("max_delay", type = "table")`.
-
-The addition of the `\label{}` option to the end of the table caption allows us to then use the \LaTeX\ `autoref` function to produce the link. The `ref` function in **R** allows for tables and figures to be referenced in the document easily without having to directly use the `autoref` function.  It will automatically add "Table" before your number if you add the "tab:" prefix to your label. Note that this reference could appear anywhere throughout the document.  
-
-<!-- We will next explore ways to create this label-ref link using figures. -->
+Table: Families on Cyanobacteria \label{tab:inher}
 
 \clearpage
+<!-- clearpage ends the page, and also dumps out all floats.Floats are things like tables and figures. -->
 
-<!-- clearpage ends the page, and also dumps out all floats.
-  Floats are things like tables and figures. -->
+```{r}
+library(ggplot2)
+setwd("/home/nelly/GIT/phd/Thesis/tesis/chap5_files")
 
+```
 
 ## Figures
 Lets analize Phosphoribosyl_isomerase_3 family  

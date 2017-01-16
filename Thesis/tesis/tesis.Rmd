@@ -71,7 +71,7 @@ This is an R chunk and chap0.Rmd refers to the Introductory chapter.  Feel free 
 <!--
 This is for including Chapter 1.  Notice that it's also good practice to name your chunk.  This will help you debug potential issues as you knit.  The chunk above is called intro and the one below is called chapter1.  Feel free to change the name of the Rmd file as you wish, but don't forget to change it here from chap1.Rmd.
 -->
-
+<!--- Genome Mining-->
 ```{r chapter1, child = 'chap1.Rmd'}
 ```
 
@@ -79,17 +79,20 @@ This is for including Chapter 1.  Notice that it's also good practice to name yo
 Immediately below is the chunk for Chapter 2.
 --> 
 
+<!--- PriA family-->
 ```{r chapter2, child = 'chap2.Rmd'}
 ```
 
+<!--- Archaeas-->
 ```{r chapter3, child = 'chap3.Rmd'}
 ```
 
-```{r chapter3, child = 'chap4.Rmd'}
+<!--- Actinos-->
+```{r chapter4, child = 'chap4.Rmd'}
 ```
 
-
-```{r chapter5, child = 'chap4.Rmd'}
+<!--- Cyanobacteria-->
+```{r chapter5, child = 'chap5.Rmd'}
 ```
 <!--
 Add other chunks here for other chapters in your thesis.  Note that if you use the `child =` parameter, you can't include anything else in your chunk.
