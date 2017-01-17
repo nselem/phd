@@ -119,9 +119,15 @@ $(document).ready(function () {
 </div>
 
 
+<!--- Actinos-->
 <!--
 You can delete the header-includes (lines 3-6 above) if you like and also the chunk below since it is loaded in the skeleton.Rmd file.  They are included so that chap3.Rmd will compile by itself when you hit Knit PDF.
 -->
+<pre class="r"><code>ActinoCentral &lt;- read.table(&quot;chapter4/ActinoCentral&quot;, header=TRUE, sep=&quot;\t&quot;)
+ActinoHeatPlot &lt;- read.table(&quot;chapter4/ActinoHeatPlot&quot;, header=TRUE, sep=&quot;\t&quot;)
+ActinoNp &lt;- read.table(&quot;chapter4/ActinoNp&quot;, header=TRUE, sep=&quot;\t&quot;)
+ActinosSmashResults &lt;- read.table(&quot;chapter4/ActinosSmashResults&quot;, header=TRUE, sep=&quot;\t&quot;)
+ActinoTaxa &lt;- read.table(&quot;chapter4/ActinoTaxa&quot;, header=TRUE, sep=&quot;\t&quot;)</code></pre>
 <div id="ref_labels" class="section level1">
 <h1>Actinobacteria EvoMining Results</h1>
 <p>Actinobacteria is an ancient phylum {Referencia de luis}</p>
@@ -139,19 +145,19 @@ You can delete the header-includes (lines 3-6 above) if you like and also the ch
 <tr class="header">
 <th align="center">Factors</th>
 <th align="center">Correlation between Parents &amp; Child</th>
-<th align="center">Inherited</th>
+<th></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td align="center">GenomeDB</td>
 <td align="center">1245</td>
-<td align="center">Yes</td>
+<td></td>
 </tr>
 <tr class="even">
 <td align="center">Families</td>
 <td align="center">65</td>
-<td align="center">Slight</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -164,6 +170,7 @@ You can delete the header-includes (lines 3-6 above) if you like and also the ch
 </div>
 <div id="figures" class="section level2">
 <h2>Figures</h2>
+<p>Lets analize Phosphoribosyl_isomerase_3 family</p>
 <p>If your thesis has a lot of figures, <em>R Markdown</em> might behave better for you than that other word processor. One perk is that it will automatically number the figures accordingly in each chapter. You’ll also be able to create a label for each figure, add a caption, and then reference the figure in a way similar to what we saw with tables earlier. If you label your figures, you can move the figures around and <em>R Markdown</em> will automatically adjust the numbering for you. No need for you to remember! So that you don’t have to get too far into  to do this, a couple <strong>R</strong> functions have been created for you to assist. You’ll see their use below.</p>
 <!--
 One thing that may be annoying is the way _R Markdown_ handles "floats" like tables and figures (it's really \LaTeX's fault). \LaTeX\ will try to find the best place to put your object based on the text around it and until you're really, truly done writing you should just leave it where it lies. There are some optional arguments specified in the options parameter of the `label` function.  If you need to shift your figure around, it might be good to look here on tweaking the options argument:  <https://en.wikibooks.org/wiki/LaTeX/Floats,_Figures_and_Captions>

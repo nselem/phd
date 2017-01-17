@@ -30,6 +30,14 @@ flights <- read.csv("data/flights.csv")
 ```
 
 
+```{r Actino_data}
+ActinoCentral <- read.table("chapter4/ActinoCentral", header=TRUE, sep="\t")
+ActinoHeatPlot <- read.table("chapter4/ActinoHeatPlot", header=TRUE, sep="\t")
+ActinoNp <- read.table("chapter4/ActinoNp", header=TRUE, sep="\t")
+ActinosSmashResults <- read.table("chapter4/ActinosSmashResults", header=TRUE, sep="\t")
+ActinoTaxa <- read.table("chapter4/ActinoTaxa", header=TRUE, sep="\t")
+```
+
 # Actinobacteria EvoMining Results {#ref_labels}
 Actinobacteria is an ancient phylum {Referencia de luis}  
 

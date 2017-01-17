@@ -1417,25 +1417,31 @@ starts here.
   \bottomrule
   \end{longtable}
   
-  We can also create a link to the table by doing the following:
-  \autoref{tab:inher}. If you go back to
-  \protect\hyperlink{loading-and-exploring-data}{Loading and exploring
-  data} and look at the \texttt{kable} function code, you'll see that I
-  added in a similar \texttt{\textbackslash{}\textbackslash{}label} to be
-  able to reference that table later. (The extra backslash there is a way
-  that \emph{Markdown} interfaces with \LaTeX.) We can create a reference
-  to the max delays table: \autoref{tab:max_delay}.
-  
-  The addition of the \texttt{\textbackslash{}label\{\}} option to the end
-  of the table caption allows us to then use the \LaTeX~\texttt{autoref}
-  function to produce the link. The \texttt{ref} function in \textbf{R}
-  allows for tables and figures to be referenced in the document easily
-  without having to directly use the \texttt{autoref} function. It will
-  automatically add ``Table'' before your number if you add the ``tab:''
-  prefix to your label. Note that this reference could appear anywhere
-  throughout the document.
-  
   \clearpage
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \KeywordTok{library}\NormalTok{(ggplot2)}
+  \CommentTok{#setwd("/home/nelly/GIT/phd/Thesis/tesis/chap5_files")}
+  \NormalTok{CyanosCentral <-}\StringTok{ }\KeywordTok{read.table}\NormalTok{(}\StringTok{"chapter5/CyanosCentral"}\NormalTok{, }\DataTypeTok{header=}\OtherTok{TRUE}\NormalTok{, }\DataTypeTok{sep=}\StringTok{"}\CharTok{\textbackslash{}t}\StringTok{"}\NormalTok{)}
+  \NormalTok{CyanosHeatPlot <-}\StringTok{ }\KeywordTok{read.table}\NormalTok{(}\StringTok{"chapter5/CyanosHeatPlot"}\NormalTok{, }\DataTypeTok{header=}\OtherTok{TRUE}\NormalTok{, }\DataTypeTok{sep=}\StringTok{"}\CharTok{\textbackslash{}t}\StringTok{"}\NormalTok{)}
+  \NormalTok{CyanosNp <-}\StringTok{ }\KeywordTok{read.table}\NormalTok{(}\StringTok{"chapter5/CyanosNp"}\NormalTok{, }\DataTypeTok{header=}\OtherTok{TRUE}\NormalTok{, }\DataTypeTok{sep=}\StringTok{"}\CharTok{\textbackslash{}t}\StringTok{"}\NormalTok{)}
+  \end{Highlighting}
+  \end{Shaded}
+  
+  \begin{verbatim}
+  Warning in scan(file = file, what = what, sep = sep, quote = quote, dec =
+  dec, : EOF within quoted string
+  \end{verbatim}
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \NormalTok{CyanosSMASH <-}\StringTok{ }\KeywordTok{read.table}\NormalTok{(}\StringTok{"chapter5/CyanosSMASH"}\NormalTok{, }\DataTypeTok{header=}\OtherTok{TRUE}\NormalTok{, }\DataTypeTok{sep=}\StringTok{"}\CharTok{\textbackslash{}t}\StringTok{"}\NormalTok{)}
+  \NormalTok{CyanosTaxa <-}\StringTok{ }\KeywordTok{read.table}\NormalTok{(}\StringTok{"chapter5/CyanosTaxa"}\NormalTok{, }\DataTypeTok{header=}\OtherTok{TRUE}\NormalTok{, }\DataTypeTok{sep=}\StringTok{"}\CharTok{\textbackslash{}t}\StringTok{"}\NormalTok{)}
+  \end{Highlighting}
+  \end{Shaded}
+  
+  \section{Cyanobacterias AntiSMASH}\label{cyanobacterias-antismash}
   
   \section{Figures}\label{figures-2}
   

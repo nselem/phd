@@ -30,6 +30,14 @@ flights <- read.csv("data/flights.csv")
 ```
 
 
+```{r}
+ArchaeasCentral <- read.table("chapter3/ArchaeasCentral", header=TRUE, sep="\t")
+ArchaeasHeatPlot <- read.table("chapter3/ArchaeasHeatPlot", header=TRUE, sep="\t")
+ArchaeasNp <- read.table("chapter3/ArchaeasNp", header=TRUE, sep="\t")
+ArchaeasSMASH <- read.table("chapter3/ArchaeasSMASH", header=TRUE, sep="\t")
+ArchaeasTaxa <- read.table("chapter3/ArchaeasTaxa", header=TRUE, sep="\t")
+```
+
 # Archaeas result Tables, Graphics, References, and Labels {#ref_labels}
 
 ## Tables

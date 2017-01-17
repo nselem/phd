@@ -47,11 +47,11 @@ Table: Families on Cyanobacteria \label{tab:inher}
 ```{r loading_tables_5}
 library(ggplot2)
 #setwd("/home/nelly/GIT/phd/Thesis/tesis/chap5_files")
-CyanosCentral <- read.table("chap5_files/CyanosCentral", header=TRUE, sep="\t")
-CyanosHeatPlot <- read.table("chap5_files/CyanosHeatPlot", header=TRUE, sep="\t")
-CyanosNp <- read.table("chap5_files/CyanosNp", header=TRUE, sep="\t")
-CyanosSMASH <- read.table("chap5_files/CyanosSMASH", header=TRUE, sep="\t")
-CyanosTaxa <- read.table("chap5_files/CyanosTaxa", header=TRUE, sep="\t")
+CyanosCentral <- read.table("chapter5/CyanosCentral", header=TRUE, sep="\t")
+CyanosHeatPlot <- read.table("chapter5/CyanosHeatPlot", header=TRUE, sep="\t")
+CyanosNp <- read.table("chapter5/CyanosNp", header=TRUE, sep="\t")
+CyanosSMASH <- read.table("chapter5/CyanosSMASH", header=TRUE, sep="\t")
+CyanosTaxa <- read.table("chapter5/CyanosTaxa", header=TRUE, sep="\t")
 ```
 
 ## Cyanobacterias AntiSMASH 

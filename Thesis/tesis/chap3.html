@@ -119,9 +119,15 @@ $(document).ready(function () {
 </div>
 
 
+<!--- Archaeas-->
 <!--
 You can delete the header-includes (lines 3-6 above) if you like and also the chunk below since it is loaded in the skeleton.Rmd file.  They are included so that chap3.Rmd will compile by itself when you hit Knit PDF.
 -->
+<pre class="r"><code>ArchaeasCentral &lt;- read.table(&quot;chapter3/ArchaeasCentral&quot;, header=TRUE, sep=&quot;\t&quot;)
+ArchaeasHeatPlot &lt;- read.table(&quot;chapter3/ArchaeasHeatPlot&quot;, header=TRUE, sep=&quot;\t&quot;)
+ArchaeasNp &lt;- read.table(&quot;chapter3/ArchaeasNp&quot;, header=TRUE, sep=&quot;\t&quot;)
+ArchaeasSMASH &lt;- read.table(&quot;chapter3/ArchaeasSMASH&quot;, header=TRUE, sep=&quot;\t&quot;)
+ArchaeasTaxa &lt;- read.table(&quot;chapter3/ArchaeasTaxa&quot;, header=TRUE, sep=&quot;\t&quot;)</code></pre>
 <div id="ref_labels" class="section level1">
 <h1>Archaeas result Tables, Graphics, References, and Labels</h1>
 <div id="tables" class="section level2">
