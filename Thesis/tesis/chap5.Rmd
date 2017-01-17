@@ -46,7 +46,9 @@ Table: Families on Cyanobacteria \label{tab:inher}
 
 ```{r}
 library(ggplot2)
-setwd("/home/nelly/GIT/phd/Thesis/tesis/chap5_files")
+#setwd("/home/nelly/GIT/phd/Thesis/tesis/chap5_files")
+#mydata110 <- read.table("deltas110.r", header=TRUE, sep="\t")
+
 
 ```
 
