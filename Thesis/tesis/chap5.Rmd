@@ -3,7 +3,7 @@ header-includes:
 - \usepackage{graphicx,latexsym}
 - \usepackage{amssymb,amsthm,amsmath}
 - \usepackage{longtable,booktabs,setspace}
-output: pdf_document
+output: html_document
 ---
 
 <!--- Cyanobacteria-->
@@ -45,7 +45,7 @@ Table: Families on Cyanobacteria \label{tab:inher}
 \clearpage
 <!-- clearpage ends the page, and also dumps out all floats.Floats are things like tables and figures. -->
 
-```{r loading_tables_5}
+```{r loading_tables_5,message=FALSE}
 library(ggplot2)
 library( reshape )
 library(plyr )
@@ -61,21 +61,6 @@ CyanosTaxa <- read.table("chapter5/CyanosTaxa", header=TRUE, sep="\t")
 
 ```
 
-Central pathway expansions  
-
-```{r HeatPlots, warnings = FALSE, messages = FALSE}
-CyanosHeatPlot$RastId <- with(CyanosHeatPlot, reorder(CyanosHeatPlot$RastId, CyanosHeatPlot$TOTAL))
-CyanosHeatPlot.m <- melt(CyanosHeatPlot)
-CyanosHeatPlot.m<- ddply(CyanosHeatPlot.m, .(variable), transform,rescale=scale(value))  ## rescale escala toda la matriz, scale por columnas
-
-(heatplot <- ggplot(CyanosHeatPlot.m, aes(CyanosHeatPlot.m$variable, CyanosHeatPlot.m$RastId))+geom_text(aes(label=CyanosHeatPlot.m$rescale)) + geom_tile(aes(fill = CyanosHeatPlot.m$rescale), colour = "white") + scale_fill_gradient(low = "white", high = "steelblue")+ theme(text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) ))
-
-ggsave("chapter5/HeatPlot.pdf", plot = heatplot,height = 3, width = 6)
-```
-
-```{r HeatPlots_label, results = "asis"}
-label(path = "chapter5/HeatPlot.pdf", caption = "Cyanobacterial Heatplot",label = "CyanoPlot", type = "figure")
-```
 
 
 
@@ -83,18 +68,25 @@ label(path = "chapter5/HeatPlot.pdf", caption = "Cyanobacterial Heatplot",label 
 ```{r CyanoSMASH}
 
 ```
-
-## Figures
 Lets analize Phosphoribosyl_isomerase_3 family  
 
-In the **R** chunk below, we will load in a picture stored as `reed.jpg` in our main directory.  We then give it the caption of "Reed logo", the label of "reed", and specify that this is a figure.  Note again the use of the `results = "asis"` specification to automatically include and compile the \LaTeX\ code.
+## Figures
+Central pathway expansions  
 
-```{r reed_logo3, results = "asis"}
-label(path = "figure/reed.jpg", caption = "Reed logo", 
-      label = "reed", type = "figure")
+```{r HeatPlots, warnings = FALSE, messages = FALSE}
+CyanosHeatPlot$RastId <- with(CyanosHeatPlot, reorder(CyanosHeatPlot$RastId, CyanosHeatPlot$TOTAL))
+CyanosHeatPlot.m <- melt(CyanosHeatPlot)
+CyanosHeatPlot.m<- ddply(CyanosHeatPlot.m, .(variable), transform,rescale=scale(value))  ## rescale escala toda la matriz, scale por columnas
+
+(heatplot <- ggplot(CyanosHeatPlot.m, aes(CyanosHeatPlot.m$variable, CyanosHeatPlot.m$RastId))+ geom_tile(aes(fill = CyanosHeatPlot.m$rescale), colour = "white") + scale_fill_gradient(low = "white", high = "steelblue")+ theme(text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) ))
+
+#+geom_text(aes(label=CyanosHeatPlot.m$rescale)) 
+ggsave("chapter5/HeatPlot.pdf", plot = heatplot,height = 12, width = 6)
 ```
 
-Here is a reference to the Reed logo: `r ref("reed")`.  Note the use of the inline **R** code here.  By default "figure" is specified as the type.  For clarity, we could have also added the `label` and `type` to the parameter specifications and this would give us the same result: `r ref(label = "reed", type = "figure")`.
+```{r HeatPlots_label, results = "asis",message=FALSE}
+label(path = "chapter5/HeatPlot.pdf", caption = "Cyanobacterial Heatplot",label = "CyanoPlot", type = "figure")
+```
 
 \clearpage 
 
