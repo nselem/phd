@@ -145,19 +145,19 @@ ActinoTaxa &lt;- read.table(&quot;chapter4/ActinoTaxa&quot;, header=TRUE, sep=&q
 <tr class="header">
 <th align="center">Factors</th>
 <th align="center">Correlation between Parents &amp; Child</th>
-<th></th>
+<th align="left"></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td align="center">GenomeDB</td>
 <td align="center">1245</td>
-<td></td>
+<td align="left"></td>
 </tr>
 <tr class="even">
 <td align="center">Families</td>
 <td align="center">65</td>
-<td></td>
+<td align="left"></td>
 </tr>
 </tbody>
 </table>
@@ -180,7 +180,12 @@ If you need a graphic or tabular material to be part of the text, you can just p
 <p>In the <strong>R</strong> chunk below, we will load in a picture stored as <code>reed.jpg</code> in our main directory. We then give it the caption of “Reed logo”, the label of “reed”, and specify that this is a figure. Note again the use of the <code>results = &quot;asis&quot;</code> specification to automatically include and compile the  code.</p>
 <pre class="r"><code>label(path = &quot;figure/reed.jpg&quot;, caption = &quot;Reed logo&quot;, 
       label = &quot;reed&quot;, type = &quot;figure&quot;)</code></pre>
-
+\begin{figure}[h!tbp]
+\centering
+\includegraphics[angle = 0,scale = 1]{figure/reed.jpg}
+\caption[Reed logo]{\normalsize{Reed logo}}
+\label{fig:reed}
+\end{figure}
 <p>Here is a reference to the Reed logo: . Note the use of the inline <strong>R</strong> code here. By default “figure” is specified as the type. For clarity, we could have also added the <code>label</code> and <code>type</code> to the parameter specifications and this would give us the same result: .</p>
 <p></p>
 <!-- starts a new page and stops trying to place floats such as tables and figures -->
@@ -194,13 +199,23 @@ ggsave(&quot;figure/delays.pdf&quot;, plot = delay_airline,
 <pre class="r"><code>label(path = &quot;figure/delays.pdf&quot;, 
       caption = &quot;Mean Delays by Airline&quot;, 
       label = &quot;delays&quot;, type = &quot;figure&quot;)</code></pre>
-
+\begin{figure}[h!tbp]
+\centering
+\includegraphics[angle = 0,scale = 1]{figure/delays.pdf}
+\caption[Mean Delays by Airline]{\normalsize{Mean Delays by Airline}}
+\label{fig:delays}
+\end{figure}
 <p>A table linking these carrier codes to airline names is available at <a href="https://github.com/ismayc/pnwflights14/blob/master/data/airlines.csv" class="uri">https://github.com/ismayc/pnwflights14/blob/master/data/airlines.csv</a>.</p>
 <p></p>
 <p>Next, we will explore the use of the <code>scale</code> parameter which can be used to shrink or expand an image. Here we use the mathematical graph stored in the “subdivision.pdf” file. Note that we didn’t specify the <code>caption =</code> or <code>label =</code> here, but we could have.</p>
 <pre class="r"><code>label(&quot;figure/subdivision.pdf&quot;, &quot;Subdiv. graph&quot;, &quot;subd&quot;, 
       scale = 0.75)</code></pre>
-
+\begin{figure}[h!tbp]
+\centering
+\includegraphics[angle = 0,scale = 0.75]{figure/subdivision.pdf}
+\caption[Subdiv. graph]{\normalsize{Subdiv. graph}}
+\label{fig:subd}
+\end{figure}
 <p>Here is a reference to this image: . (Move this around throughout the document as you wish.)</p>
 <div id="more-figure-stuff" class="section level4">
 <h4>More Figure Stuff</h4>
@@ -210,7 +225,12 @@ ggsave(&quot;figure/delays.pdf&quot;, plot = delay_airline,
       scale = 1.5,
       angle = 180,
       label = &quot;subd2&quot;)</code></pre>
-
+\begin{figure}[h!tbp]
+\centering
+\includegraphics[angle = 180,scale = 1.5]{figure/subdivision.pdf}
+\caption[A Larger Figure, Flipped Upside Down]{\normalsize{A Larger Figure, Flipped Upside Down}}
+\label{fig:subd2}
+\end{figure}
 <p>As another example, here is a reference to this figure: .</p>
 </div>
 <div id="common-modifications" class="section level4">
@@ -222,7 +242,12 @@ ggsave(&quot;figure/delays.pdf&quot;, plot = delay_airline,
       alt.cap = &quot;You can see that $p_3 = p_6^\\prime$&quot;,
       cap.size = &quot;footnotesize&quot;,
       label = &quot;subd3&quot;)</code></pre>
-
+\begin{figure}[h!tbp]
+\centering
+\includegraphics[angle = 0,scale = 1]{figure/subdivision.pdf}
+\caption[Subdivision of arc segments]{\footnotesize{You can see that $p_3 = p_6^\prime$}}
+\label{fig:subd3}
+\end{figure}
 <!-- Note here that you need to have two backslashes before LaTeX commands such as prime -->
 </div>
 </div>

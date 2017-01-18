@@ -8,7 +8,7 @@ output: html_document
 
 <!--- Cyanobacteria-->
 
-```{r include_packages_5, include = FALSE}
+```{r include_packages_5, include = FALSE,echo=FALSE}
 # This chunk ensures that the reedtemplates package is
 # installed and loaded. This reedtemplates package includes
 # the template files for the thesis and also two functions
@@ -45,7 +45,7 @@ Table: Families on Cyanobacteria \label{tab:inher}
 \clearpage
 <!-- clearpage ends the page, and also dumps out all floats.Floats are things like tables and figures. -->
 
-```{r loading_tables_5,message=FALSE}
+```{r loading_tables_5,message=FALSE,echo=FALSE}
 library(ggplot2)
 library( reshape )
 library(plyr )
@@ -73,7 +73,7 @@ Lets analize Phosphoribosyl_isomerase_3 family
 ## Figures
 Central pathway expansions  
 
-```{r HeatPlots, warnings = FALSE, messages = FALSE}
+```{r HeatPlots, warnings = FALSE, messages = FALSE,echo=FALSE}
 CyanosHeatPlot$RastId <- with(CyanosHeatPlot, reorder(CyanosHeatPlot$RastId, CyanosHeatPlot$TOTAL))
 CyanosHeatPlot.m <- melt(CyanosHeatPlot)
 CyanosHeatPlot.m<- ddply(CyanosHeatPlot.m, .(variable), transform,rescale=scale(value))  ## rescale escala toda la matriz, scale por columnas
@@ -83,6 +83,8 @@ CyanosHeatPlot.m<- ddply(CyanosHeatPlot.m, .(variable), transform,rescale=scale(
 #+geom_text(aes(label=CyanosHeatPlot.m$rescale)) 
 ggsave("chapter5/HeatPlot.pdf", plot = heatplot,height = 12, width = 6)
 ```
+
+Ahora si la figura
 
 ```{r HeatPlots_label, results = "asis",message=FALSE}
 label(path = "chapter5/HeatPlot.pdf", caption = "Cyanobacterial Heatplot",label = "CyanoPlot", type = "figure")
