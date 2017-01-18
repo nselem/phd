@@ -46,6 +46,9 @@ Table: Families on Cyanobacteria \label{tab:inher}
 
 ```{r loading_tables_5}
 library(ggplot2)
+library( reshape )
+library(plyr )
+library(RColorBrewer)
 #setwd("/home/nelly/GIT/phd/Thesis/tesis/chap5_files")
 CyanosCentral <- read.table("chapter5/CyanosCentral", header=TRUE, sep="\t")
 CyanosHeatPlot <- read.table("chapter5/CyanosHeatPlot", header=TRUE, sep="\t")
@@ -54,7 +57,12 @@ CyanosSMASH <- read.table("chapter5/CyanosSMASH", header=TRUE, sep="\t")
 CyanosTaxa <- read.table("chapter5/CyanosTaxa", header=TRUE, sep="\t")
 ```
 
+
 ## Cyanobacterias AntiSMASH 
+```{r}
+#CyanosHeatPlot$RastId <- with(CyanosHeatPlot, reorder(CyanosHeatPlot$RastIds, CyanosHeatPlot$TOTAL))
+#ggplot(CyanosHeatPlot, aes(variable, RastId))+ geom_raster(aes(fill=Value)) + theme(text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5)) +coord_equal()+scale_fill_gradient(low = "white", high = "black",na.value = "orange")
+```
 
 ## Figures
 Lets analize Phosphoribosyl_isomerase_3 family  

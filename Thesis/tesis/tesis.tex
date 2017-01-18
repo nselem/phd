@@ -698,6 +698,16 @@ starts here.
   (\url{http://homepages.uni-tuebingen.de/beitz/txe.html}). Be sure to
   read the proceeding chapter on graphics and tables.
   
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \NormalTok{ArchaeasCentral <-}\StringTok{ }\KeywordTok{read.table}\NormalTok{(}\StringTok{"chapter3/ArchaeasCentral"}\NormalTok{, }\DataTypeTok{header=}\OtherTok{TRUE}\NormalTok{, }\DataTypeTok{sep=}\StringTok{"}\CharTok{\textbackslash{}t}\StringTok{"}\NormalTok{)}
+  \NormalTok{ArchaeasHeatPlot <-}\StringTok{ }\KeywordTok{read.table}\NormalTok{(}\StringTok{"chapter3/ArchaeasHeatPlot"}\NormalTok{, }\DataTypeTok{header=}\OtherTok{TRUE}\NormalTok{, }\DataTypeTok{sep=}\StringTok{"}\CharTok{\textbackslash{}t}\StringTok{"}\NormalTok{)}
+  \NormalTok{ArchaeasNp <-}\StringTok{ }\KeywordTok{read.table}\NormalTok{(}\StringTok{"chapter3/ArchaeasNp"}\NormalTok{, }\DataTypeTok{header=}\OtherTok{TRUE}\NormalTok{, }\DataTypeTok{sep=}\StringTok{"}\CharTok{\textbackslash{}t}\StringTok{"}\NormalTok{)}
+  \NormalTok{ArchaeasSMASH <-}\StringTok{ }\KeywordTok{read.table}\NormalTok{(}\StringTok{"chapter3/ArchaeasSMASH"}\NormalTok{, }\DataTypeTok{header=}\OtherTok{TRUE}\NormalTok{, }\DataTypeTok{sep=}\StringTok{"}\CharTok{\textbackslash{}t}\StringTok{"}\NormalTok{)}
+  \NormalTok{ArchaeasTaxa <-}\StringTok{ }\KeywordTok{read.table}\NormalTok{(}\StringTok{"chapter3/ArchaeasTaxa"}\NormalTok{, }\DataTypeTok{header=}\OtherTok{TRUE}\NormalTok{, }\DataTypeTok{sep=}\StringTok{"}\CharTok{\textbackslash{}t}\StringTok{"}\NormalTok{)}
+  \end{Highlighting}
+  \end{Shaded}
+  
   \hypertarget{ref_labels}{\chapter{Archaeas result Tables, Graphics,
   References, and Labels}\label{ref_labels}}
   
@@ -1042,6 +1052,16 @@ starts here.
   \href{mailto:data@reed.edu}{\nolinkurl{data@reed.edu}}) with your
   suggestions. We love to see people using \emph{R Markdown} for their
   theses, and are happy to help.
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \NormalTok{ActinoCentral <-}\StringTok{ }\KeywordTok{read.table}\NormalTok{(}\StringTok{"chapter4/ActinoCentral"}\NormalTok{, }\DataTypeTok{header=}\OtherTok{TRUE}\NormalTok{, }\DataTypeTok{sep=}\StringTok{"}\CharTok{\textbackslash{}t}\StringTok{"}\NormalTok{)}
+  \NormalTok{ActinoHeatPlot <-}\StringTok{ }\KeywordTok{read.table}\NormalTok{(}\StringTok{"chapter4/ActinoHeatPlot"}\NormalTok{, }\DataTypeTok{header=}\OtherTok{TRUE}\NormalTok{, }\DataTypeTok{sep=}\StringTok{"}\CharTok{\textbackslash{}t}\StringTok{"}\NormalTok{)}
+  \NormalTok{ActinoNp <-}\StringTok{ }\KeywordTok{read.table}\NormalTok{(}\StringTok{"chapter4/ActinoNp"}\NormalTok{, }\DataTypeTok{header=}\OtherTok{TRUE}\NormalTok{, }\DataTypeTok{sep=}\StringTok{"}\CharTok{\textbackslash{}t}\StringTok{"}\NormalTok{)}
+  \NormalTok{ActinosSmashResults <-}\StringTok{ }\KeywordTok{read.table}\NormalTok{(}\StringTok{"chapter4/ActinosSmashResults"}\NormalTok{, }\DataTypeTok{header=}\OtherTok{TRUE}\NormalTok{, }\DataTypeTok{sep=}\StringTok{"}\CharTok{\textbackslash{}t}\StringTok{"}\NormalTok{)}
+  \NormalTok{ActinoTaxa <-}\StringTok{ }\KeywordTok{read.table}\NormalTok{(}\StringTok{"chapter4/ActinoTaxa"}\NormalTok{, }\DataTypeTok{header=}\OtherTok{TRUE}\NormalTok{, }\DataTypeTok{sep=}\StringTok{"}\CharTok{\textbackslash{}t}\StringTok{"}\NormalTok{)}
+  \end{Highlighting}
+  \end{Shaded}
   
   \hypertarget{ref_labels}{\chapter{Actinobacteria EvoMining
   Results}\label{ref_labels}}
@@ -1426,16 +1446,6 @@ starts here.
   \NormalTok{CyanosCentral <-}\StringTok{ }\KeywordTok{read.table}\NormalTok{(}\StringTok{"chapter5/CyanosCentral"}\NormalTok{, }\DataTypeTok{header=}\OtherTok{TRUE}\NormalTok{, }\DataTypeTok{sep=}\StringTok{"}\CharTok{\textbackslash{}t}\StringTok{"}\NormalTok{)}
   \NormalTok{CyanosHeatPlot <-}\StringTok{ }\KeywordTok{read.table}\NormalTok{(}\StringTok{"chapter5/CyanosHeatPlot"}\NormalTok{, }\DataTypeTok{header=}\OtherTok{TRUE}\NormalTok{, }\DataTypeTok{sep=}\StringTok{"}\CharTok{\textbackslash{}t}\StringTok{"}\NormalTok{)}
   \NormalTok{CyanosNp <-}\StringTok{ }\KeywordTok{read.table}\NormalTok{(}\StringTok{"chapter5/CyanosNp"}\NormalTok{, }\DataTypeTok{header=}\OtherTok{TRUE}\NormalTok{, }\DataTypeTok{sep=}\StringTok{"}\CharTok{\textbackslash{}t}\StringTok{"}\NormalTok{)}
-  \end{Highlighting}
-  \end{Shaded}
-  
-  \begin{verbatim}
-  Warning in scan(file = file, what = what, sep = sep, quote = quote, dec =
-  dec, : EOF within quoted string
-  \end{verbatim}
-  
-  \begin{Shaded}
-  \begin{Highlighting}[]
   \NormalTok{CyanosSMASH <-}\StringTok{ }\KeywordTok{read.table}\NormalTok{(}\StringTok{"chapter5/CyanosSMASH"}\NormalTok{, }\DataTypeTok{header=}\OtherTok{TRUE}\NormalTok{, }\DataTypeTok{sep=}\StringTok{"}\CharTok{\textbackslash{}t}\StringTok{"}\NormalTok{)}
   \NormalTok{CyanosTaxa <-}\StringTok{ }\KeywordTok{read.table}\NormalTok{(}\StringTok{"chapter5/CyanosTaxa"}\NormalTok{, }\DataTypeTok{header=}\OtherTok{TRUE}\NormalTok{, }\DataTypeTok{sep=}\StringTok{"}\CharTok{\textbackslash{}t}\StringTok{"}\NormalTok{)}
   \end{Highlighting}
