@@ -52,6 +52,9 @@ library(plyr )
 library(RColorBrewer)
 library(scales)
 library(plyr)
+library(RColorBrewer)
+hm.palette <- colorRampPalette(rev(brewer.pal(11, 'Spectral')), space='Lab')  
+
 #setwd("/home/nelly/GIT/phd/Thesis/tesis/chap5_files")
 CyanosCentral <- read.table("chapter5/CyanosCentral", header=TRUE, sep="\t")
 CyanosHeatPlot <- read.table("chapter5/CyanosHeatPlot", header=TRUE, sep="\t")
@@ -61,27 +64,73 @@ CyanosTaxa <- read.table("chapter5/CyanosTaxa", header=TRUE, sep="\t")
 
 ```
 
+<!--
+1. De Np's Quiero ver cantidad y diversidad de reclutamientos, a cada familia metabolica
+   cuantos tiene y de donde provienen 
+   
+2. De antismash 
+   Familia taxonomica vs clusters
+   cluster interesante por familia taxonomica
+   Voy a usar Cyanos Taxa tambien para ver esos reclutamientos de donde provienen
 
+2. De HeatPlot quiero ordenarlo por filogenia 
+Heat plot Familia taxonomica, 
+boxplot reclutamientos para cada familia metabolica
+
+fill <- "#4271AE"
+lines <- "#1F3552"
+ggplot(mydata110, aes(x=MName, y=delta,fill=TipeAc)) + geom_boxplot()+  scale_y_continuous(name = "Difference between old activity\nand new activity by step")+scale_x_discrete(name = "Mutation name")+theme_bw()  +
+        theme(plot.title = element_text(size = 14, family = "Arial", face = "bold"),
+              text = element_text(size = 12, family = "Arial"),
+              axis.title = element_text(face="bold"),
+              axis.text.x=element_text(size = 11),
+              legend.position = "bottom") +facet_grid(mydata110$TipeAc~.,scales="free")
+       
+
+y hacer heatplots separados por ruta metabolica
+4. Inlcuir algunos arboles
+
+-->
+## Natural products recruitments
+We can see natural products origin by kingdom
+Natural products recruited by metabolic family, colored by phylogenetic origin.
+```{r NP_recruitment_taxa_cyano}
+qplot(x=Central, data=CyanosNp, geom="bar", fill=kingdom, position="stack")+theme_bw()+ theme(text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
+
+```
 
 
 ## Cyanobacterias AntiSMASH 
-```{r CyanoSMASH}
+Philogenetical diversity on Cyanobacterial dataset  
+```{r CyanoDiversity}
+#View(diamonds)
+## merge tables
+m1 <- merge(CyanosTaxa, CyanosSMASH, by.x = "RastId", by.y = "RastIds")
+m1.m <- melt(m1, id = c("RastId", "Name","Phylum","Class","Order","Family","Contigs","Size","RastNo"))
+
+qplot(x=Order, data=m1.m, geom="bar", fill=Family, position="stack")+theme_bw()+ theme(text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
+table(m1.m$Order>0,m1.m$Family>0)
+#qplot(x=clarity, data=diamonds, geom="bar", fill=cut, position="stack")
 
 ```
-Lets analize Phosphoribosyl_isomerase_3 family  
 
 ## Figures
 Central pathway expansions  
 
-```{r HeatPlots, warnings = FALSE, messages = FALSE,echo=FALSE}
+```{r HeatPlots, warnings = FALSE, message = FALSE, echo=FALSE}
 CyanosHeatPlot$RastId <- with(CyanosHeatPlot, reorder(CyanosHeatPlot$RastId, CyanosHeatPlot$TOTAL))
 CyanosHeatPlot.m <- melt(CyanosHeatPlot)
 CyanosHeatPlot.m<- ddply(CyanosHeatPlot.m, .(variable), transform,rescale=scale(value))  ## rescale escala toda la matriz, scale por columnas
 
-(heatplot <- ggplot(CyanosHeatPlot.m, aes(CyanosHeatPlot.m$variable, CyanosHeatPlot.m$RastId))+ geom_tile(aes(fill = CyanosHeatPlot.m$rescale), colour = "white") + scale_fill_gradient(low = "white", high = "steelblue")+ theme(text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) ))
+#heatplot <- ggplot(CyanosHeatPlot.m, aes(CyanosHeatPlot.m$variable, CyanosHeatPlot.m$RastId))+ geom_tile(aes(fill = CyanosHeatPlot.m$rescale), colour = "white") + scale_fill_gradient(low = "white", high = "steelblue")+ theme(text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
 
+heatplot <- ggplot(CyanosHeatPlot.m, aes(CyanosHeatPlot.m$variable, CyanosHeatPlot.m$RastId))+ geom_tile(aes(fill = CyanosHeatPlot.m$rescale), colour = "white") + scale_fill_gradientn(colours = hm.palette(100),na.value = "gray")+ theme(text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
+
+
+#+ scale_fill_gradientn(colours = hm.palette(100),na.value = "gray")
 #+geom_text(aes(label=CyanosHeatPlot.m$rescale)) 
 ggsave("chapter5/HeatPlot.pdf", plot = heatplot,height = 12, width = 6)
+
 ```
 
 Ahora si la figura
@@ -89,50 +138,59 @@ Ahora si la figura
 ```{r HeatPlots_label, results = "asis",message=FALSE}
 label(path = "chapter5/HeatPlot.pdf", caption = "Cyanobacterial Heatplot",label = "CyanoPlot", type = "figure")
 ```
+Here is a reference to the Reed logo: `r ref("CyanoPlot")`. 
+
 
 \clearpage 
 
-<!-- starts a new page and stops trying to place floats such as tables and figures -->
-
-Below we will investigate how to save the output of an **R** plot and label it in a way similar to that done above.  Recall the `flights` dataset from [](#rmd-basics).  (Note that we've shown a different way to reference a section or chapter here.)  We will next explore a bar graph with the mean flight departure delays by airline from Portland for 2014.  Note also the use of the `scale` parameter which is discussed on the next page.
-
-```{r boxplot_3, warnings = FALSE, messages = FALSE}
-```
-
-```{r box_label_3, results = "asis"}
-```
-
-A table linking these carrier codes to airline names is available at <https://github.com/ismayc/pnwflights14/blob/master/data/airlines.csv>.
-
-\clearpage
-
-Next, we will explore the use of the `scale` parameter which can be used to shrink or expand an image.  Here we use the mathematical graph stored in the "subdivision.pdf" file.  Note that we didn't specify the `caption =` or `label =` here, but we could have.
-
-```{r subdiv1_3, results = "asis"}
+```{r Heaplot_summary}
+#summary(CyanosHeatPlot.m)
+#table(CyanosHeatPlot.m$scale >=0,Deltas$DeltaPRO>=0)
 
 ```
+mm
 
-Here is a reference to this image: `r ref("subd")`.  (Move this around throughout the document as you wish.)
+<!-- starts a new page and stops trying to place floats such as tables and figures 
+-->
+```{r boxplot_CyanoHP,warnings = FALSE, message = FALSE}
+expansion_plot<-ggplot(CyanosHeatPlot.m, aes(x=CyanosHeatPlot.m$variable, y=CyanosHeatPlot.m$rescale)) + geom_boxplot()+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6), legend.position = "bottom")
 
-#### More Figure Stuff
+#ggplot(CyanosHeatPlot.m, aes(x=CyanosHeatPlot.m$variable, y=CyanosHeatPlot.m$rescale)) + geom_boxplot()+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6), legend.position = "bottom")
+#+facet_grid(CyanosTaxa$class~.,scales="free")
+#ggplot(CyanosHeatPlot.m, aes(x=CyanosHeatPlot.m$variable,y=CyanosHeatPlot.m$rescale,fill=CyanosHeatPlot.m$rescale)) 
+# +facet_grid(CyanosHeatPlot.m$rescale~.,scales="free")
 
-Lastly, we will explore how to rotate figures using the `angle` parameter.
-
-```{r subdiv1_180_3, results = "asis"}
+ggsave("chapter5/expansion_plot.pdf", plot = expansion_plot,height = 6, width = 7)
 ```
+ why figure is not here?
 
-As another example, here is a reference to this figure: `r ref("subd2", type = "figure")`.  
-
-#### Common Modifications
-
-The following figure features the more popular changes thesis students want to make to their figures. We can add math to the caption that displays below the picture, specify the size of our caption to display below the figure (list of sizes available at this [link](http://www.emerson.emory.edu/services/latex/latex_169.html#SEC169)), and also specify that a different caption `alt.cap` be what appears in the Table of Figures for this figure.
-
-If you'd like to make further tweaks to figures, you might need to invoke some \LaTeX\ code.  Please email us at <data@reed.edu> if you need assistance.
-
-```{r tinymathcap_4, results = "asis"}
+\clearpage 
+```{r boxplot_CyanoHP_label, results = "asis",message=FALSE}
+label(path = "chapter5/expansion_plot.pdf", caption = "Expansions Boxplot",label = "Cyano_expansion_boxplot", type = "figure")
 ```
+\clearpage 
+Here is a reference to the expansion boxplot: `r ref("Cyano_expansion_boxplot")`.   
 
-<!-- Note here that you need to have two backslashes before LaTeX commands such as prime -->
+
+##Selected trees from EvoMining
+##Lets analize Phosphoribosyl_isomerase_3 family  
+Figure from EvoMining
+\clearpage 
+
+```{r Phosphoribosyl_isomerase_evo_tree, results = "asis",message=FALSE, echo=FALSE}
+label(path = "chapter5/tree64.png", caption = "Phosphoribosyl isomerase EvoMiningtree", 
+      scale = .25,
+      angle = 180,
+      label = "Phosphoribosyl_isomerase_evo_tree", type = "figure")
+label(path = "chapter5/tree1.png", caption = "Phosphoribosyl isomerase EvoMiningtree", 
+      scale = .25,
+      angle = 180,
+      label = "Phosphoribosyl_isomerase_evo_tree", type = "figure")
+
+#label(path = "chapter5/tree64.png", caption = "Phosphoribosyl isomerase EvoMiningtree", 
+
+```
+\clearpage 
 
 ## Footnotes and Endnotes
 
@@ -140,7 +198,7 @@ You might want to footnote something. ^[footnote text] The footnote will be in a
 
 ## Bibliographies
 
-Of course you will need to cite things, and you will probably accumulate an armful of sources. There are a variety of tools available for creating a bibliography database (stored with the .bib extension).  In addition to BibTeX suggested below, you may want to consider using the free and easy-to-use tool called Zotero.  The Reed librarians have created Zotero documentation at <http://libguides.reed.edu/citation/zotero>.  In addition, a tutorial is available from Middlebury College at <http://sites.middlebury.edu/zoteromiddlebury/>.
+Zotero.  The Reed librarians have created Zotero documentation at <http://libguides.reed.edu/citation/zotero>.  In addition, a tutorial is available from Middlebury College at <http://sites.middlebury.edu/zoteromiddlebury/>.
 
 _R Markdown_ uses _pandoc_ (<http://pandoc.org/>) to build its bibliographies.  One nice caveat of this is that you won't have to do a second compile to load in references as standard \LaTeX\ requires. To cite references in your thesis (after creating your bibliography database), place the reference name inside square brackets and precede it by the "at" symbol.  For example, here's a reference to a book about worrying:  [@Molina1994].  This `Molina1994` entry appears in a file called `thesis.bib` in the `bib` folder.  This bibliography database file was created by a program called BibTeX.  You can call this file something else if you like (look at the YAML header in the main .Rmd file) and, by default, is to placed in the `bib` folder.  
 
@@ -150,11 +208,6 @@ If you look at the YAML header at the top of the main .Rmd file you can see that
 
 ##### Tips for Bibliographies
 
-- Like with thesis formatting, the sooner you start compiling your bibliography for something as large as thesis, the better. Typing in source after source is mind-numbing enough; do you really want to do it for hours on end in late April? Think of it as procrastination.
-- The cite key (a citation's label) needs to be unique from the other entries.
-- When you have more than one author or editor, you need to separate each author's name by the word "and" e.g. `Author = {Noble, Sam and Youngberg, Jessica},`.
-- Bibliographies made using BibTeX (whether manually or using a manager) accept \LaTeX\ markup, so you can italicize and add symbols as necessary.
-- To force capitalization in an article title or where all lowercase is generally used, bracket the capital letter in curly braces.
 - You can add a Reed Thesis citation^[@noble2002] option. The best way to do this is to use the phdthesis type of citation, and use the optional "type" field to enter "Reed thesis" or "Undergraduate thesis." 
 
 ## Anything else?

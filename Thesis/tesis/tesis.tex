@@ -524,7 +524,7 @@ starts here.
   \end{Highlighting}
   \end{Shaded}
   
-  \begin{longtable}[c]{@{}lr@{}}
+  \begin{longtable}[]{@{}lr@{}}
   \caption{Maximum Delays by Airline \label{tab:max_delay}}\tabularnewline
   \toprule
   Airline & Max Arrival Delay\tabularnewline
@@ -661,9 +661,9 @@ starts here.
   You may wish to put your reaction in a figure environment, which means
   that \LaTeX~will place the reaction where it fits and you can have a
   figure caption. You'll see further description of this \textbf{R}
-  \texttt{label} function in \protect\hyperlink{refux5flabels}{}. (Note
-  the use of the double backslash here as well as the
-  \texttt{echo\ =\ FALSE} which hides the code from the output.)
+  \texttt{label} function in \protect\hyperlink{ref_labels}{}. (Note the
+  use of the double backslash here as well as the \texttt{echo\ =\ FALSE}
+  which hides the code from the output.)
   
   \begin{figure}[h!tbp]
   \begin{center}
@@ -708,8 +708,8 @@ starts here.
   \end{Highlighting}
   \end{Shaded}
   
-  \hypertarget{refux5flabels}{\chapter{Archaeas result Tables, Graphics,
-  References, and Labels}\label{refux5flabels}}
+  \hypertarget{ref_labels}{\chapter{Archaeas result Tables, Graphics,
+  References, and Labels}\label{ref_labels}}
   
   \section{Tables}\label{tables}
   
@@ -723,78 +723,64 @@ starts here.
   attention to the alignment in the table and hyphens to create the rows
   and columns.
   
-  \begin{longtable}[c]{@{}ccc@{}}
+  \begin{longtable}[]{@{}ccc@{}}
   \caption{Correlation of Inheritance Factors for Parents and Child
   \label{tab:inher}}\tabularnewline
   \toprule
   \begin{minipage}[b]{0.29\columnwidth}\centering\strut
-  Factors
-  \strut\end{minipage} &
-  \begin{minipage}[b]{0.47\columnwidth}\centering\strut
-  Correlation between Parents \& Child
-  \strut\end{minipage} &
-  \begin{minipage}[b]{0.16\columnwidth}\centering\strut
-  Inherited
-  \strut\end{minipage}\tabularnewline
+  Factors\strut
+  \end{minipage} & \begin{minipage}[b]{0.47\columnwidth}\centering\strut
+  Correlation between Parents \& Child\strut
+  \end{minipage} & \begin{minipage}[b]{0.16\columnwidth}\centering\strut
+  Inherited\strut
+  \end{minipage}\tabularnewline
   \midrule
   \endfirsthead
   \toprule
   \begin{minipage}[b]{0.29\columnwidth}\centering\strut
-  Factors
-  \strut\end{minipage} &
-  \begin{minipage}[b]{0.47\columnwidth}\centering\strut
-  Correlation between Parents \& Child
-  \strut\end{minipage} &
-  \begin{minipage}[b]{0.16\columnwidth}\centering\strut
-  Inherited
-  \strut\end{minipage}\tabularnewline
+  Factors\strut
+  \end{minipage} & \begin{minipage}[b]{0.47\columnwidth}\centering\strut
+  Correlation between Parents \& Child\strut
+  \end{minipage} & \begin{minipage}[b]{0.16\columnwidth}\centering\strut
+  Inherited\strut
+  \end{minipage}\tabularnewline
   \midrule
   \endhead
   \begin{minipage}[t]{0.29\columnwidth}\centering\strut
-  Education
-  \strut\end{minipage} &
-  \begin{minipage}[t]{0.47\columnwidth}\centering\strut
-  -0.49
-  \strut\end{minipage} &
-  \begin{minipage}[t]{0.16\columnwidth}\centering\strut
-  Yes
-  \strut\end{minipage}\tabularnewline
+  Education\strut
+  \end{minipage} & \begin{minipage}[t]{0.47\columnwidth}\centering\strut
+  -0.49\strut
+  \end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering\strut
+  Yes\strut
+  \end{minipage}\tabularnewline
   \begin{minipage}[t]{0.29\columnwidth}\centering\strut
-  Socio-Economic Status
-  \strut\end{minipage} &
-  \begin{minipage}[t]{0.47\columnwidth}\centering\strut
-  0.28
-  \strut\end{minipage} &
-  \begin{minipage}[t]{0.16\columnwidth}\centering\strut
-  Slight
-  \strut\end{minipage}\tabularnewline
+  Socio-Economic Status\strut
+  \end{minipage} & \begin{minipage}[t]{0.47\columnwidth}\centering\strut
+  0.28\strut
+  \end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering\strut
+  Slight\strut
+  \end{minipage}\tabularnewline
   \begin{minipage}[t]{0.29\columnwidth}\centering\strut
-  Income
-  \strut\end{minipage} &
-  \begin{minipage}[t]{0.47\columnwidth}\centering\strut
-  0.08
-  \strut\end{minipage} &
-  \begin{minipage}[t]{0.16\columnwidth}\centering\strut
-  No
-  \strut\end{minipage}\tabularnewline
+  Income\strut
+  \end{minipage} & \begin{minipage}[t]{0.47\columnwidth}\centering\strut
+  0.08\strut
+  \end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering\strut
+  No\strut
+  \end{minipage}\tabularnewline
   \begin{minipage}[t]{0.29\columnwidth}\centering\strut
-  Family Size
-  \strut\end{minipage} &
-  \begin{minipage}[t]{0.47\columnwidth}\centering\strut
-  0.18
-  \strut\end{minipage} &
-  \begin{minipage}[t]{0.16\columnwidth}\centering\strut
-  Slight
-  \strut\end{minipage}\tabularnewline
+  Family Size\strut
+  \end{minipage} & \begin{minipage}[t]{0.47\columnwidth}\centering\strut
+  0.18\strut
+  \end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering\strut
+  Slight\strut
+  \end{minipage}\tabularnewline
   \begin{minipage}[t]{0.29\columnwidth}\centering\strut
-  Occupational Prestige
-  \strut\end{minipage} &
-  \begin{minipage}[t]{0.47\columnwidth}\centering\strut
-  0.21
-  \strut\end{minipage} &
-  \begin{minipage}[t]{0.16\columnwidth}\centering\strut
-  Slight
-  \strut\end{minipage}\tabularnewline
+  Occupational Prestige\strut
+  \end{minipage} & \begin{minipage}[t]{0.47\columnwidth}\centering\strut
+  0.21\strut
+  \end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering\strut
+  Slight\strut
+  \end{minipage}\tabularnewline
   \bottomrule
   \end{longtable}
   
@@ -1077,8 +1063,8 @@ starts here.
   \end{Highlighting}
   \end{Shaded}
   
-  \hypertarget{refux5flabels}{\chapter{Actinobacteria EvoMining
-  Results}\label{refux5flabels}}
+  \hypertarget{ref_labels}{\chapter{Actinobacteria EvoMining
+  Results}\label{ref_labels}}
   
   Actinobacteria is an ancient phylum \{Referencia de luis\}
   
@@ -1094,47 +1080,43 @@ starts here.
   attention to the alignment in the table and hyphens to create the rows
   and columns.
   
-  \begin{longtable}[c]{@{}ccl@{}}
+  \begin{longtable}[]{@{}ccl@{}}
   \caption{Correlation of Inheritance Factors for Parents and Child
   \label{tab:inher}}\tabularnewline
   \toprule
   \begin{minipage}[b]{0.29\columnwidth}\centering\strut
-  Factors
-  \strut\end{minipage} &
-  \begin{minipage}[b]{0.47\columnwidth}\centering\strut
-  Correlation between Parents \& Child
-  \strut\end{minipage} &
-  \begin{minipage}[b]{0.16\columnwidth}\raggedright\strut
-  \strut\end{minipage}\tabularnewline
+  Factors\strut
+  \end{minipage} & \begin{minipage}[b]{0.47\columnwidth}\centering\strut
+  Correlation between Parents \& Child\strut
+  \end{minipage} & \begin{minipage}[b]{0.16\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage}\tabularnewline
   \midrule
   \endfirsthead
   \toprule
   \begin{minipage}[b]{0.29\columnwidth}\centering\strut
-  Factors
-  \strut\end{minipage} &
-  \begin{minipage}[b]{0.47\columnwidth}\centering\strut
-  Correlation between Parents \& Child
-  \strut\end{minipage} &
-  \begin{minipage}[b]{0.16\columnwidth}\raggedright\strut
-  \strut\end{minipage}\tabularnewline
+  Factors\strut
+  \end{minipage} & \begin{minipage}[b]{0.47\columnwidth}\centering\strut
+  Correlation between Parents \& Child\strut
+  \end{minipage} & \begin{minipage}[b]{0.16\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage}\tabularnewline
   \midrule
   \endhead
   \begin{minipage}[t]{0.29\columnwidth}\centering\strut
-  GenomeDB
-  \strut\end{minipage} &
-  \begin{minipage}[t]{0.47\columnwidth}\centering\strut
-  1245
-  \strut\end{minipage} &
-  \begin{minipage}[t]{0.16\columnwidth}\raggedright\strut
-  \strut\end{minipage}\tabularnewline
+  GenomeDB\strut
+  \end{minipage} & \begin{minipage}[t]{0.47\columnwidth}\centering\strut
+  1245\strut
+  \end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage}\tabularnewline
   \begin{minipage}[t]{0.29\columnwidth}\centering\strut
-  Families
-  \strut\end{minipage} &
-  \begin{minipage}[t]{0.47\columnwidth}\centering\strut
-  65
-  \strut\end{minipage} &
-  \begin{minipage}[t]{0.16\columnwidth}\raggedright\strut
-  \strut\end{minipage}\tabularnewline
+  Families\strut
+  \end{minipage} & \begin{minipage}[t]{0.47\columnwidth}\centering\strut
+  65\strut
+  \end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage}\tabularnewline
   \bottomrule
   \end{longtable}
   
@@ -1409,221 +1391,203 @@ starts here.
   suggestions. We love to see people using \emph{R Markdown} for their
   theses, and are happy to help.
   
-  \hypertarget{refux5flabels}{\chapter{Cyanobacteria EvoMining
-  Results}\label{refux5flabels}}
+  \hypertarget{ref_labels}{\chapter{Cyanobacteria EvoMining
+  Results}\label{ref_labels}}
   
   Cyanobacteria is phylum \{Referencia de luis\}
   
   \section{Tables}\label{tables-2}
   
-  \begin{longtable}[c]{@{}ccl@{}}
+  \begin{longtable}[]{@{}ccl@{}}
   \caption{Families on Cyanobacteria \label{tab:inher}}\tabularnewline
   \toprule
   \begin{minipage}[b]{0.29\columnwidth}\centering\strut
-  Factors
-  \strut\end{minipage} &
-  \begin{minipage}[b]{0.47\columnwidth}\centering\strut
-  Correlation between Parents \& Child
-  \strut\end{minipage} &
-  \begin{minipage}[b]{0.16\columnwidth}\raggedright\strut
-  \strut\end{minipage}\tabularnewline
+  Factors\strut
+  \end{minipage} & \begin{minipage}[b]{0.47\columnwidth}\centering\strut
+  Correlation between Parents \& Child\strut
+  \end{minipage} & \begin{minipage}[b]{0.16\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage}\tabularnewline
   \midrule
   \endfirsthead
   \toprule
   \begin{minipage}[b]{0.29\columnwidth}\centering\strut
-  Factors
-  \strut\end{minipage} &
-  \begin{minipage}[b]{0.47\columnwidth}\centering\strut
-  Correlation between Parents \& Child
-  \strut\end{minipage} &
-  \begin{minipage}[b]{0.16\columnwidth}\raggedright\strut
-  \strut\end{minipage}\tabularnewline
+  Factors\strut
+  \end{minipage} & \begin{minipage}[b]{0.47\columnwidth}\centering\strut
+  Correlation between Parents \& Child\strut
+  \end{minipage} & \begin{minipage}[b]{0.16\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage}\tabularnewline
   \midrule
   \endhead
   \begin{minipage}[t]{0.29\columnwidth}\centering\strut
-  GenomeDB
-  \strut\end{minipage} &
-  \begin{minipage}[t]{0.47\columnwidth}\centering\strut
-  1245
-  \strut\end{minipage} &
-  \begin{minipage}[t]{0.16\columnwidth}\raggedright\strut
-  \strut\end{minipage}\tabularnewline
+  GenomeDB\strut
+  \end{minipage} & \begin{minipage}[t]{0.47\columnwidth}\centering\strut
+  1245\strut
+  \end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage}\tabularnewline
   \begin{minipage}[t]{0.29\columnwidth}\centering\strut
-  Families
-  \strut\end{minipage} &
-  \begin{minipage}[t]{0.47\columnwidth}\centering\strut
-  65
-  \strut\end{minipage} &
-  \begin{minipage}[t]{0.16\columnwidth}\raggedright\strut
-  \strut\end{minipage}\tabularnewline
+  Families\strut
+  \end{minipage} & \begin{minipage}[t]{0.47\columnwidth}\centering\strut
+  65\strut
+  \end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage}\tabularnewline
   \bottomrule
   \end{longtable}
   
   \clearpage
   
+  \section{Natural products
+  recruitments}\label{natural-products-recruitments}
+  
+  We can see natural products origin by kingdom Natural products recruited
+  by metabolic family, colored by phylogenetic origin.
+  
   \begin{Shaded}
   \begin{Highlighting}[]
-  \KeywordTok{library}\NormalTok{(ggplot2)}
-  \KeywordTok{library}\NormalTok{( reshape )}
+  \KeywordTok{qplot}\NormalTok{(}\DataTypeTok{x=}\NormalTok{Central, }\DataTypeTok{data=}\NormalTok{CyanosNp, }\DataTypeTok{geom=}\StringTok{"bar"}\NormalTok{, }\DataTypeTok{fill=}\NormalTok{kingdom, }\DataTypeTok{position=}\StringTok{"stack"}\NormalTok{)+}\KeywordTok{theme_bw}\NormalTok{()+}\StringTok{ }\KeywordTok{theme}\NormalTok{(}\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size=}\DecValTok{8}\NormalTok{), }\DataTypeTok{axis.text.x =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{90}\NormalTok{, }\DataTypeTok{hjust =} \DecValTok{1}\NormalTok{, }\DataTypeTok{vjust =} \FloatTok{0.5}\NormalTok{) ,}\DataTypeTok{axis.text.y =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{0}\NormalTok{, }\DataTypeTok{hjust =} \DecValTok{1}\NormalTok{, }\DataTypeTok{vjust =} \FloatTok{0.5}\NormalTok{) )}
   \end{Highlighting}
   \end{Shaded}
   
   \begin{verbatim}
-  
-  Attaching package: 'reshape'
+  Warning: `position` is deprecated
   \end{verbatim}
   
-  \begin{verbatim}
-  The following object is masked from 'package:dplyr':
-  
-      rename
-  \end{verbatim}
-  
-  \begin{Shaded}
-  \begin{Highlighting}[]
-  \KeywordTok{library}\NormalTok{(plyr )}
-  \end{Highlighting}
-  \end{Shaded}
-  
-  \begin{verbatim}
-  -------------------------------------------------------------------------
-  \end{verbatim}
-  
-  \begin{verbatim}
-  You have loaded plyr after dplyr - this is likely to cause problems.
-  If you need functions from both plyr and dplyr, please load plyr first, then dplyr:
-  library(plyr); library(dplyr)
-  \end{verbatim}
-  
-  \begin{verbatim}
-  -------------------------------------------------------------------------
-  \end{verbatim}
-  
-  \begin{verbatim}
-  
-  Attaching package: 'plyr'
-  \end{verbatim}
-  
-  \begin{verbatim}
-  The following objects are masked from 'package:reshape':
-  
-      rename, round_any
-  \end{verbatim}
-  
-  \begin{verbatim}
-  The following objects are masked from 'package:dplyr':
-  
-      arrange, count, desc, failwith, id, mutate, rename, summarise,
-      summarize
-  \end{verbatim}
-  
-  \begin{Shaded}
-  \begin{Highlighting}[]
-  \KeywordTok{library}\NormalTok{(RColorBrewer)}
-  \CommentTok{#setwd("/home/nelly/GIT/phd/Thesis/tesis/chap5_files")}
-  \NormalTok{CyanosCentral <-}\StringTok{ }\KeywordTok{read.table}\NormalTok{(}\StringTok{"chapter5/CyanosCentral"}\NormalTok{, }\DataTypeTok{header=}\OtherTok{TRUE}\NormalTok{, }\DataTypeTok{sep=}\StringTok{"}\CharTok{\textbackslash{}t}\StringTok{"}\NormalTok{)}
-  \NormalTok{CyanosHeatPlot <-}\StringTok{ }\KeywordTok{read.table}\NormalTok{(}\StringTok{"chapter5/CyanosHeatPlot"}\NormalTok{, }\DataTypeTok{header=}\OtherTok{TRUE}\NormalTok{, }\DataTypeTok{sep=}\StringTok{"}\CharTok{\textbackslash{}t}\StringTok{"}\NormalTok{)}
-  \NormalTok{CyanosNp <-}\StringTok{ }\KeywordTok{read.table}\NormalTok{(}\StringTok{"chapter5/CyanosNp"}\NormalTok{, }\DataTypeTok{header=}\OtherTok{TRUE}\NormalTok{, }\DataTypeTok{sep=}\StringTok{"}\CharTok{\textbackslash{}t}\StringTok{"}\NormalTok{)}
-  \NormalTok{CyanosSMASH <-}\StringTok{ }\KeywordTok{read.table}\NormalTok{(}\StringTok{"chapter5/CyanosSMASH"}\NormalTok{, }\DataTypeTok{header=}\OtherTok{TRUE}\NormalTok{, }\DataTypeTok{sep=}\StringTok{"}\CharTok{\textbackslash{}t}\StringTok{"}\NormalTok{)}
-  \NormalTok{CyanosTaxa <-}\StringTok{ }\KeywordTok{read.table}\NormalTok{(}\StringTok{"chapter5/CyanosTaxa"}\NormalTok{, }\DataTypeTok{header=}\OtherTok{TRUE}\NormalTok{, }\DataTypeTok{sep=}\StringTok{"}\CharTok{\textbackslash{}t}\StringTok{"}\NormalTok{)}
-  \end{Highlighting}
-  \end{Shaded}
+  \begin{center}\includegraphics{tesis_files/figure-latex/NP_recruitment_taxa_cyano-1} \end{center}
   
   \section{Cyanobacterias AntiSMASH}\label{cyanobacterias-antismash}
   
+  Philogenetical diversity on Cyanobacterial dataset
+  
   \begin{Shaded}
   \begin{Highlighting}[]
-  \CommentTok{#CyanosHeatPlot$RastId <- with(CyanosHeatPlot, reorder(CyanosHeatPlot$RastIds, CyanosHeatPlot$TOTAL))}
-  \CommentTok{#ggplot(CyanosHeatPlot, aes(variable, RastId))+ geom_raster(aes(fill=Value)) + theme(text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5)) +coord_equal()+scale_fill_gradient(low = "white", high = "black",na.value = "orange")}
+  \CommentTok{#View(diamonds)}
+  \NormalTok{## merge tables}
+  \NormalTok{m1 <-}\StringTok{ }\KeywordTok{merge}\NormalTok{(CyanosTaxa, CyanosSMASH, }\DataTypeTok{by.x =} \StringTok{"RastId"}\NormalTok{, }\DataTypeTok{by.y =} \StringTok{"RastIds"}\NormalTok{)}
+  \NormalTok{m1.m <-}\StringTok{ }\KeywordTok{melt}\NormalTok{(m1, }\DataTypeTok{id =} \KeywordTok{c}\NormalTok{(}\StringTok{"RastId"}\NormalTok{, }\StringTok{"Name"}\NormalTok{,}\StringTok{"Phylum"}\NormalTok{,}\StringTok{"Class"}\NormalTok{,}\StringTok{"Order"}\NormalTok{,}\StringTok{"Family"}\NormalTok{,}\StringTok{"Contigs"}\NormalTok{,}\StringTok{"Size"}\NormalTok{,}\StringTok{"RastNo"}\NormalTok{))}
+  
+  \KeywordTok{qplot}\NormalTok{(}\DataTypeTok{x=}\NormalTok{Order, }\DataTypeTok{data=}\NormalTok{m1.m, }\DataTypeTok{geom=}\StringTok{"bar"}\NormalTok{, }\DataTypeTok{fill=}\NormalTok{Family, }\DataTypeTok{position=}\StringTok{"stack"}\NormalTok{)+}\KeywordTok{theme_bw}\NormalTok{()+}\StringTok{ }\KeywordTok{theme}\NormalTok{(}\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size=}\DecValTok{8}\NormalTok{), }\DataTypeTok{axis.text.x =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{90}\NormalTok{, }\DataTypeTok{hjust =} \DecValTok{1}\NormalTok{, }\DataTypeTok{vjust =} \FloatTok{0.5}\NormalTok{) ,}\DataTypeTok{axis.text.y =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{0}\NormalTok{, }\DataTypeTok{hjust =} \DecValTok{1}\NormalTok{, }\DataTypeTok{vjust =} \FloatTok{0.5}\NormalTok{) )}
+  \end{Highlighting}
+  \end{Shaded}
+  
+  \begin{verbatim}
+  Warning: `position` is deprecated
+  \end{verbatim}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/CyanoDiversity-1} \end{center}
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \KeywordTok{table}\NormalTok{(m1.m$Order>}\DecValTok{0}\NormalTok{,m1.m$Family>}\DecValTok{0}\NormalTok{)}
+  \end{Highlighting}
+  \end{Shaded}
+  
+  \begin{verbatim}
+  Warning in Ops.factor(m1.m$Order, 0): '>' not meaningful for factors
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in Ops.factor(m1.m$Family, 0): '>' not meaningful for factors
+  \end{verbatim}
+  
+  \begin{verbatim}
+  < table of extent 0 x 0 >
+  \end{verbatim}
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \CommentTok{#qplot(x=clarity, data=diamonds, geom="bar", fill=cut, position="stack")}
   \end{Highlighting}
   \end{Shaded}
   
   \section{Figures}\label{figures-2}
   
-  Lets analize Phosphoribosyl\_isomerase\_3 family
+  Central pathway expansions
   
-  If your thesis has a lot of figures, \emph{R Markdown} might behave
-  better for you than that other word processor. One perk is that it will
-  automatically number the figures accordingly in each chapter. You'll
-  also be able to create a label for each figure, add a caption, and then
-  reference the figure in a way similar to what we saw with tables
-  earlier. If you label your figures, you can move the figures around and
-  \emph{R Markdown} will automatically adjust the numbering for you. No
-  need for you to remember! So that you don't have to get too far into
-  \LaTeX~to do this, a couple \textbf{R} functions have been created for
-  you to assist. You'll see their use below.
-  
-  In the \textbf{R} chunk below, we will load in a picture stored as
-  \texttt{reed.jpg} in our main directory. We then give it the caption of
-  ``Reed logo'', the label of ``reed'', and specify that this is a figure.
-  Note again the use of the \texttt{results\ =\ "asis"} specification to
-  automatically include and compile the \LaTeX~code.
+  Ahora si la figura
   
   \begin{Shaded}
   \begin{Highlighting}[]
-  \KeywordTok{label}\NormalTok{(}\DataTypeTok{path =} \StringTok{"figure/reed.jpg"}\NormalTok{, }\DataTypeTok{caption =} \StringTok{"Reed logo"}\NormalTok{, }
-        \DataTypeTok{label =} \StringTok{"reed"}\NormalTok{, }\DataTypeTok{type =} \StringTok{"figure"}\NormalTok{)}
+  \KeywordTok{label}\NormalTok{(}\DataTypeTok{path =} \StringTok{"chapter5/HeatPlot.pdf"}\NormalTok{, }\DataTypeTok{caption =} \StringTok{"Cyanobacterial Heatplot"}\NormalTok{,}\DataTypeTok{label =} \StringTok{"CyanoPlot"}\NormalTok{, }\DataTypeTok{type =} \StringTok{"figure"}\NormalTok{)}
   \end{Highlighting}
   \end{Shaded}
   
   \begin{figure}[h!tbp]
   \centering
-  \includegraphics[angle = 0,scale = 1]{figure/reed.jpg}
-  \caption[Reed logo]{\normalsize{Reed logo}}
-  \label{fig:reed}
+  \includegraphics[angle = 0,scale = 1]{chapter5/HeatPlot.pdf}
+  \caption[Cyanobacterial Heatplot]{\normalsize{Cyanobacterial Heatplot}}
+  \label{fig:CyanoPlot}
   \end{figure}
   
-  Here is a reference to the Reed logo: \autoref{fig:reed}. Note the use
-  of the inline \textbf{R} code here. By default ``figure'' is specified
-  as the type. For clarity, we could have also added the \texttt{label}
-  and \texttt{type} to the parameter specifications and this would give us
-  the same result: \autoref{fig:reed}.
+  Here is a reference to the Reed logo: \autoref{fig:CyanoPlot}.
   
   \clearpage 
   
-  Below we will investigate how to save the output of an \textbf{R} plot
-  and label it in a way similar to that done above. Recall the
-  \texttt{flights} dataset from \protect\hyperlink{rmd-basics}{}. (Note
-  that we've shown a different way to reference a section or chapter
-  here.) We will next explore a bar graph with the mean flight departure
-  delays by airline from Portland for 2014. Note also the use of the
-  \texttt{scale} parameter which is discussed on the next page.
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \CommentTok{#summary(CyanosHeatPlot.m)}
+  \CommentTok{#table(CyanosHeatPlot.m$scale >=0,Deltas$DeltaPRO>=0)}
+  \end{Highlighting}
+  \end{Shaded}
   
-  A table linking these carrier codes to airline names is available at
-  \url{https://github.com/ismayc/pnwflights14/blob/master/data/airlines.csv}.
+  mm
   
-  \clearpage
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \NormalTok{expansion_plot<-}\KeywordTok{ggplot}\NormalTok{(CyanosHeatPlot.m, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{CyanosHeatPlot.m$variable, }\DataTypeTok{y=}\NormalTok{CyanosHeatPlot.m$rescale)) +}\StringTok{ }\KeywordTok{geom_boxplot}\NormalTok{()+}\KeywordTok{theme_bw}\NormalTok{()+}\KeywordTok{theme}\NormalTok{(}\DataTypeTok{plot.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{14}\NormalTok{, }\DataTypeTok{face =} \StringTok{"bold"}\NormalTok{), }\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{12}\NormalTok{), }\DataTypeTok{axis.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{face=}\StringTok{"bold"}\NormalTok{), }\DataTypeTok{axis.text.x=}\KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{90}\NormalTok{,}\DataTypeTok{size =} \DecValTok{6}\NormalTok{), }\DataTypeTok{legend.position =} \StringTok{"bottom"}\NormalTok{)}
   
-  Next, we will explore the use of the \texttt{scale} parameter which can
-  be used to shrink or expand an image. Here we use the mathematical graph
-  stored in the ``subdivision.pdf'' file. Note that we didn't specify the
-  \texttt{caption\ =} or \texttt{label\ =} here, but we could have.
+  \CommentTok{#ggplot(CyanosHeatPlot.m, aes(x=CyanosHeatPlot.m$variable, y=CyanosHeatPlot.m$rescale)) + geom_boxplot()+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6), legend.position = "bottom")}
+  \CommentTok{#+facet_grid(CyanosTaxa$class~.,scales="free")}
+  \CommentTok{#ggplot(CyanosHeatPlot.m, aes(x=CyanosHeatPlot.m$variable,y=CyanosHeatPlot.m$rescale,fill=CyanosHeatPlot.m$rescale)) }
+  \CommentTok{# +facet_grid(CyanosHeatPlot.m$rescale~.,scales="free")}
   
-  Here is a reference to this image: \autoref{fig:subd}. (Move this around
-  throughout the document as you wish.)
+  \KeywordTok{ggsave}\NormalTok{(}\StringTok{"chapter5/expansion_plot.pdf"}\NormalTok{, }\DataTypeTok{plot =} \NormalTok{expansion_plot,}\DataTypeTok{height =} \DecValTok{6}\NormalTok{, }\DataTypeTok{width =} \DecValTok{7}\NormalTok{)}
+  \end{Highlighting}
+  \end{Shaded}
   
-  \subsubsection{More Figure Stuff}\label{more-figure-stuff-2}
+  why figure is not here?
   
-  Lastly, we will explore how to rotate figures using the \texttt{angle}
-  parameter.
+  \clearpage 
   
-  As another example, here is a reference to this figure:
-  \autoref{fig:subd2}.
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \KeywordTok{label}\NormalTok{(}\DataTypeTok{path =} \StringTok{"chapter5/expansion_plot.pdf"}\NormalTok{, }\DataTypeTok{caption =} \StringTok{"Expansions Boxplot"}\NormalTok{,}\DataTypeTok{label =} \StringTok{"Cyano_expansion_boxplot"}\NormalTok{, }\DataTypeTok{type =} \StringTok{"figure"}\NormalTok{)}
+  \end{Highlighting}
+  \end{Shaded}
   
-  \subsubsection{Common Modifications}\label{common-modifications-2}
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 1]{chapter5/expansion_plot.pdf}
+  \caption[Expansions Boxplot]{\normalsize{Expansions Boxplot}}
+  \label{fig:Cyano_expansion_boxplot}
+  \end{figure}
   
-  The following figure features the more popular changes thesis students
-  want to make to their figures. We can add math to the caption that
-  displays below the picture, specify the size of our caption to display
-  below the figure (list of sizes available at this
-  \href{http://www.emerson.emory.edu/services/latex/latex_169.html\#SEC169}{link}),
-  and also specify that a different caption \texttt{alt.cap} be what
-  appears in the Table of Figures for this figure.
+  \clearpage  Here is a reference to the expansion boxplot:
+  \autoref{fig:Cyano_expansion_boxplot}.
   
-  If you'd like to make further tweaks to figures, you might need to
-  invoke some \LaTeX~code. Please email us at
-  \href{mailto:data@reed.edu}{\nolinkurl{data@reed.edu}} if you need
-  assistance.
+  \section{Selected trees from
+  EvoMining}\label{selected-trees-from-evomining}
+  
+  \section{Lets analize Phosphoribosyl\_isomerase\_3
+  family}\label{lets-analize-phosphoribosyl_isomerase_3-family}
+  
+  Figure from EvoMining \clearpage 
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 180,scale = 0.25]{chapter5/tree64.png}
+  \caption[Phosphoribosyl isomerase EvoMiningtree]{\normalsize{Phosphoribosyl isomerase EvoMiningtree}}
+  \label{fig:Phosphoribosyl_isomerase_evo_tree}
+  \end{figure}\begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 180,scale = 0.25]{chapter5/tree1.png}
+  \caption[Phosphoribosyl isomerase EvoMiningtree]{\normalsize{Phosphoribosyl isomerase EvoMiningtree}}
+  \label{fig:Phosphoribosyl_isomerase_evo_tree}
+  \end{figure}
+  
+  \clearpage 
   
   \section{Footnotes and Endnotes}\label{footnotes-and-endnotes-2}
   
@@ -1635,12 +1599,7 @@ starts here.
   
   \section{Bibliographies}\label{bibliographies-2}
   
-  Of course you will need to cite things, and you will probably accumulate
-  an armful of sources. There are a variety of tools available for
-  creating a bibliography database (stored with the .bib extension). In
-  addition to BibTeX suggested below, you may want to consider using the
-  free and easy-to-use tool called Zotero. The Reed librarians have
-  created Zotero documentation at
+  Zotero. The Reed librarians have created Zotero documentation at
   \url{http://libguides.reed.edu/citation/zotero}. In addition, a tutorial
   is available from Middlebury College at
   \url{http://sites.middlebury.edu/zoteromiddlebury/}.
@@ -1681,25 +1640,6 @@ starts here.
   
   \begin{itemize}
   \tightlist
-  \item
-    Like with thesis formatting, the sooner you start compiling your
-    bibliography for something as large as thesis, the better. Typing in
-    source after source is mind-numbing enough; do you really want to do
-    it for hours on end in late April? Think of it as procrastination.
-  \item
-    The cite key (a citation's label) needs to be unique from the other
-    entries.
-  \item
-    When you have more than one author or editor, you need to separate
-    each author's name by the word ``and'' e.g.
-    \texttt{Author\ =\ \{Noble,\ Sam\ and\ Youngberg,\ Jessica\},}.
-  \item
-    Bibliographies made using BibTeX (whether manually or using a manager)
-    accept \LaTeX~markup, so you can italicize and add symbols as
-    necessary.
-  \item
-    To force capitalization in an article title or where all lowercase is
-    generally used, bracket the capital letter in curly braces.
   \item
     You can add a Reed Thesis citation\footnote{Noble (2002)} option. The
     best way to do this is to use the phdthesis type of citation, and use
@@ -1761,7 +1701,7 @@ starts here.
   \end{Shaded}
   
   \subsubsection{\texorpdfstring{In
-  \protect\hyperlink{refux5flabels}{}:}{In :}}\label{in}
+  \protect\hyperlink{ref_labels}{}:}{In :}}\label{in}
   
   \begin{Shaded}
   \begin{Highlighting}[]
@@ -1799,11 +1739,11 @@ starts here.
   \hypertarget{refs}{}
   \hypertarget{ref-angel2000}{}
   Angel, E. (2000). \emph{Interactive computer graphics : A top-down
-  approach with openGL}. Boston, MA: Addison Wesley Longman.
+  approach with opengl}. Boston, MA: Addison Wesley Longman.
   
   \hypertarget{ref-angel2001}{}
   Angel, E. (2001a). \emph{Batch-file computer graphics : A bottom-up
-  approach with quickTime}. Boston, MA: Wesley Addison Longman.
+  approach with quicktime}. Boston, MA: Wesley Addison Longman.
   
   \hypertarget{ref-angel2002a}{}
   Angel, E. (2001b). \emph{Test second book by angel}. Boston, MA: Wesley
@@ -1820,7 +1760,7 @@ starts here.
   (Undergraduate thesis). Reed College.
   
   \hypertarget{ref-reedweb2007}{}
-  Reed~College. (2007, March). LaTeX your document. Retrieved from
+  Reed~College. (2007, march). LaTeX your document. Retrieved from
   \url{http://web.reed.edu/cis/help/LaTeX/index.html}
 
 
