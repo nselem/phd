@@ -283,7 +283,8 @@ starts here.
     \item
       Item 3a
     \item
-      Item 3b \#\# Central DB
+      Item 3b\\
+      \#\# Central DB
     \end{itemize}
   \end{enumerate}
   
@@ -1394,50 +1395,101 @@ starts here.
   \hypertarget{ref_labels}{\chapter{Cyanobacteria EvoMining
   Results}\label{ref_labels}}
   
-  Cyanobacteria is phylum \{Referencia de luis\}
+  Cyanobacteria phylum \{Referencia de luis\}
   
   \section{Tables}\label{tables-2}
   
-  \begin{longtable}[]{@{}ccl@{}}
+  \begin{longtable}[]{@{}cc@{}}
   \caption{Families on Cyanobacteria \label{tab:inher}}\tabularnewline
   \toprule
-  \begin{minipage}[b]{0.29\columnwidth}\centering\strut
-  Factors\strut
-  \end{minipage} & \begin{minipage}[b]{0.47\columnwidth}\centering\strut
-  Correlation between Parents \& Child\strut
-  \end{minipage} & \begin{minipage}[b]{0.16\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage}\tabularnewline
+  Factors & Correlation between Parents \& Child\tabularnewline
   \midrule
   \endfirsthead
   \toprule
-  \begin{minipage}[b]{0.29\columnwidth}\centering\strut
-  Factors\strut
-  \end{minipage} & \begin{minipage}[b]{0.47\columnwidth}\centering\strut
-  Correlation between Parents \& Child\strut
-  \end{minipage} & \begin{minipage}[b]{0.16\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage}\tabularnewline
+  Factors & Correlation between Parents \& Child\tabularnewline
   \midrule
   \endhead
-  \begin{minipage}[t]{0.29\columnwidth}\centering\strut
-  GenomeDB\strut
-  \end{minipage} & \begin{minipage}[t]{0.47\columnwidth}\centering\strut
-  1245\strut
-  \end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage}\tabularnewline
-  \begin{minipage}[t]{0.29\columnwidth}\centering\strut
-  Families\strut
-  \end{minipage} & \begin{minipage}[t]{0.47\columnwidth}\centering\strut
-  65\strut
-  \end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage}\tabularnewline
+  GenomeDB & 1245\tabularnewline
+  Families & 65\tabularnewline
   \bottomrule
   \end{longtable}
   
   \clearpage
+  
+  \section{Central pathway expansions}\label{central-pathway-expansions}
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 1]{chapter5/HeatPlot.pdf}
+  \caption[Cyanobacterial Heatplot]{\normalsize{Cyanobacterial Heatplot}}
+  \label{fig:CyanoPlot}
+  \end{figure}
+  
+  Here is a reference to the HeatPlot: \autoref{fig:CyanoPlot}.
+  \clearpage 
+  
+  Natural product recruitments
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \NormalTok{EXP_SMASH<-}\KeywordTok{merge}\NormalTok{(CyanosHeatPlot,CyanosSMASH,}\DataTypeTok{by.x=}\StringTok{"RastId"}\NormalTok{,}\DataTypeTok{by.y=}\StringTok{"RastIds"}\NormalTok{)}
+  
+  \NormalTok{EXP_SMASH2<-}\KeywordTok{merge}\NormalTok{(CyanosTaxa, EXP_SMASH, }\DataTypeTok{by.x=}\StringTok{"RastId"}\NormalTok{,}\DataTypeTok{by.y=}\StringTok{"RastId"}\NormalTok{) }
+  
+  \CommentTok{#qplot(Total.x, Total.y, data = EXP_SMASH, colour=Order)+theme_bw()+}
+  \CommentTok{#}
+  \NormalTok{sn<-}\KeywordTok{qplot}\NormalTok{(TOTAL.x, TOTAL.y, }\DataTypeTok{data =} \NormalTok{EXP_SMASH2,}\DataTypeTok{colour=}\NormalTok{Order)+}\KeywordTok{theme_bw}\NormalTok{()+}\KeywordTok{facet_grid}\NormalTok{(EXP_SMASH2$Order~.,}\DataTypeTok{scales=}\StringTok{"free"}\NormalTok{)+}\StringTok{ }
+  \StringTok{        }\KeywordTok{theme}\NormalTok{(}\DataTypeTok{legend.position   =}\StringTok{"bottom"}\NormalTok{,}\DataTypeTok{plot.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{14}\NormalTok{, }\DataTypeTok{face =} \StringTok{"bold"}\NormalTok{),}
+                \DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{12}\NormalTok{),}
+                \DataTypeTok{axis.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{face=}\StringTok{"bold"}\NormalTok{),}
+                \DataTypeTok{axis.text.x=}\KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{12}\NormalTok{),}
+                \DataTypeTok{axis.text.y=}\KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{7}\NormalTok{))}
+  \KeywordTok{ggsave}\NormalTok{(}\StringTok{"chapter5/SMASHvsExpansionsbyOrder.pdf"}\NormalTok{, }\DataTypeTok{plot =} \NormalTok{sn,}\DataTypeTok{height =} \DecValTok{12}\NormalTok{, }\DataTypeTok{width =} \DecValTok{6}\NormalTok{)}
+  
+  \NormalTok{## Looking for color modifications}
+  \CommentTok{#sn + scale_color_brewer(palette="Dark2(100)")}
+  \CommentTok{#n + scale_color_brewer(palette=hm.palette(10))}
+  \NormalTok{## sn+ scale_color_hue(l=40, c=35)}
+  \end{Highlighting}
+  \end{Shaded}
+  
+  uuuf
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 1]{chapter5/SMASHvsExpansionsbyOrder.pdf}
+  \caption[Correlation between central pathway axpnasions and antismash Natural products detection]{\normalsize{Correlation between central pathway axpnasions and antismash Natural products detection}}
+  \label{fig:SMASHvsExpansionsbyOrder}
+  \end{figure}
+  
+  Here is a reference to the HeatPlot: \autoref{fig:CyanoPlot}.
+  \clearpage 
+  
+  Aqui una correlacion entre en talla de genoma y los productos de
+  antismash Aqui una correlacion entre talla de genoma y expansiones
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \NormalTok{EXP_SMASH<-}\KeywordTok{merge}\NormalTok{(CyanosHeatPlot,CyanosSMASH,}\DataTypeTok{by.x=}\StringTok{"RastId"}\NormalTok{,}\DataTypeTok{by.y=}\StringTok{"RastIds"}\NormalTok{)}
+  
+  \NormalTok{EXP_SMASH2<-}\KeywordTok{merge}\NormalTok{(CyanosTaxa, EXP_SMASH, }\DataTypeTok{by.x=}\StringTok{"RastId"}\NormalTok{,}\DataTypeTok{by.y=}\StringTok{"RastId"}\NormalTok{) }
+  
+  \KeywordTok{qplot}\NormalTok{(TOTAL.x, TOTAL.y, }\DataTypeTok{data =} \NormalTok{EXP_SMASH2,}\DataTypeTok{colour=}\NormalTok{Family)+}\KeywordTok{theme_bw}\NormalTok{()+}\KeywordTok{facet_grid}\NormalTok{(EXP_SMASH2$Order~.,}\DataTypeTok{scales=}\StringTok{"free"}\NormalTok{)+}
+  \StringTok{        }\KeywordTok{theme}\NormalTok{( }\DataTypeTok{plot.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{14}\NormalTok{, }\DataTypeTok{face =} \StringTok{"bold"}\NormalTok{),}
+                \DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{12}\NormalTok{),}
+                \DataTypeTok{axis.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{face=}\StringTok{"bold"}\NormalTok{),}
+                \DataTypeTok{axis.text.x=}\KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{12}\NormalTok{),}
+                \DataTypeTok{axis.text.y=}\KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{7}\NormalTok{))}
+  \end{Highlighting}
+  \end{Shaded}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/ANTISMASH_Expansion_Correlation_by_orden_Cyanos-1} \end{center}
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \CommentTok{#facet_grid(EXP_SMASH$Order~.,scales="free")+}
+  \end{Highlighting}
+  \end{Shaded}
   
   \section{Natural products
   recruitments}\label{natural-products-recruitments}
@@ -1457,16 +1509,29 @@ starts here.
   
   \begin{center}\includegraphics{tesis_files/figure-latex/NP_recruitment_taxa_cyano-1} \end{center}
   
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \KeywordTok{qplot}\NormalTok{(}\DataTypeTok{x=}\NormalTok{Central, }\DataTypeTok{data=}\NormalTok{CyanosNp, }\DataTypeTok{geom=}\StringTok{"bar"}\NormalTok{, }\DataTypeTok{fill=}\NormalTok{taxa, }\DataTypeTok{position=}\StringTok{"stack"}\NormalTok{)+}\KeywordTok{theme_bw}\NormalTok{()+}\StringTok{ }\KeywordTok{theme}\NormalTok{(}\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size=}\DecValTok{8}\NormalTok{), }\DataTypeTok{axis.text.x =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{90}\NormalTok{, }\DataTypeTok{hjust =} \DecValTok{1}\NormalTok{, }\DataTypeTok{vjust =} \FloatTok{0.5}\NormalTok{) ,}\DataTypeTok{axis.text.y =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{0}\NormalTok{, }\DataTypeTok{hjust =} \DecValTok{1}\NormalTok{, }\DataTypeTok{vjust =} \FloatTok{0.5}\NormalTok{) )}
+  \end{Highlighting}
+  \end{Shaded}
+  
+  \begin{verbatim}
+  Warning: `position` is deprecated
+  \end{verbatim}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/NP_recruitment_taxa_cyano-2} \end{center}
+  
   \section{Cyanobacterias AntiSMASH}\label{cyanobacterias-antismash}
   
   Philogenetical diversity on Cyanobacterial dataset
   
   \begin{Shaded}
   \begin{Highlighting}[]
-  \CommentTok{#View(diamonds)}
   \NormalTok{## merge tables}
   \NormalTok{m1 <-}\StringTok{ }\KeywordTok{merge}\NormalTok{(CyanosTaxa, CyanosSMASH, }\DataTypeTok{by.x =} \StringTok{"RastId"}\NormalTok{, }\DataTypeTok{by.y =} \StringTok{"RastIds"}\NormalTok{)}
   \NormalTok{m1.m <-}\StringTok{ }\KeywordTok{melt}\NormalTok{(m1, }\DataTypeTok{id =} \KeywordTok{c}\NormalTok{(}\StringTok{"RastId"}\NormalTok{, }\StringTok{"Name"}\NormalTok{,}\StringTok{"Phylum"}\NormalTok{,}\StringTok{"Class"}\NormalTok{,}\StringTok{"Order"}\NormalTok{,}\StringTok{"Family"}\NormalTok{,}\StringTok{"Contigs"}\NormalTok{,}\StringTok{"Size"}\NormalTok{,}\StringTok{"RastNo"}\NormalTok{))}
+  \NormalTok{m2.m<-}\KeywordTok{subset}\NormalTok{(m1.m,value>}\DecValTok{0}\NormalTok{)}
+  
   
   \KeywordTok{qplot}\NormalTok{(}\DataTypeTok{x=}\NormalTok{Order, }\DataTypeTok{data=}\NormalTok{m1.m, }\DataTypeTok{geom=}\StringTok{"bar"}\NormalTok{, }\DataTypeTok{fill=}\NormalTok{Family, }\DataTypeTok{position=}\StringTok{"stack"}\NormalTok{)+}\KeywordTok{theme_bw}\NormalTok{()+}\StringTok{ }\KeywordTok{theme}\NormalTok{(}\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size=}\DecValTok{8}\NormalTok{), }\DataTypeTok{axis.text.x =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{90}\NormalTok{, }\DataTypeTok{hjust =} \DecValTok{1}\NormalTok{, }\DataTypeTok{vjust =} \FloatTok{0.5}\NormalTok{) ,}\DataTypeTok{axis.text.y =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{0}\NormalTok{, }\DataTypeTok{hjust =} \DecValTok{1}\NormalTok{, }\DataTypeTok{vjust =} \FloatTok{0.5}\NormalTok{) )}
   \end{Highlighting}
@@ -1499,29 +1564,42 @@ starts here.
   \begin{Shaded}
   \begin{Highlighting}[]
   \CommentTok{#qplot(x=clarity, data=diamonds, geom="bar", fill=cut, position="stack")}
+  
+  \KeywordTok{qplot}\NormalTok{(}\DataTypeTok{x=}\NormalTok{Order, }\DataTypeTok{data=}\NormalTok{m2.m, }\DataTypeTok{geom=}\StringTok{"bar"}\NormalTok{, }\DataTypeTok{fill=}\NormalTok{variable, }\DataTypeTok{position=}\StringTok{"stack"}\NormalTok{,}\DataTypeTok{colours =} \KeywordTok{hm.palette}\NormalTok{(}\DecValTok{100000}\NormalTok{))+}\KeywordTok{theme_bw}\NormalTok{()+}\StringTok{ }\KeywordTok{theme}\NormalTok{(}\DataTypeTok{legend.position=}\StringTok{"none"}\NormalTok{,}\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size=}\DecValTok{8}\NormalTok{), }\DataTypeTok{axis.text.x =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{90}\NormalTok{, }\DataTypeTok{hjust =} \DecValTok{1}\NormalTok{, }\DataTypeTok{vjust =} \FloatTok{0.5}\NormalTok{) ,}\DataTypeTok{axis.text.y =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{0}\NormalTok{, }\DataTypeTok{hjust =} \DecValTok{1}\NormalTok{, }\DataTypeTok{vjust =} \FloatTok{0.5}\NormalTok{) )}
   \end{Highlighting}
   \end{Shaded}
   
-  \section{Figures}\label{figures-2}
+  \begin{verbatim}
+  Warning: `position` is deprecated
+  \end{verbatim}
   
-  Central pathway expansions
+  \begin{verbatim}
+  Warning: Ignoring unknown parameters: colours
+  \end{verbatim}
   
-  Ahora si la figura
+  \begin{center}\includegraphics{tesis_files/figure-latex/CyanoDiversity-2} \end{center}
   
   \begin{Shaded}
   \begin{Highlighting}[]
-  \KeywordTok{label}\NormalTok{(}\DataTypeTok{path =} \StringTok{"chapter5/HeatPlot.pdf"}\NormalTok{, }\DataTypeTok{caption =} \StringTok{"Cyanobacterial Heatplot"}\NormalTok{,}\DataTypeTok{label =} \StringTok{"CyanoPlot"}\NormalTok{, }\DataTypeTok{type =} \StringTok{"figure"}\NormalTok{)}
+  \KeywordTok{table}\NormalTok{(m1.m$Order>}\DecValTok{0}\NormalTok{,m1.m$Family>}\DecValTok{0}\NormalTok{)}
   \end{Highlighting}
   \end{Shaded}
   
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 0,scale = 1]{chapter5/HeatPlot.pdf}
-  \caption[Cyanobacterial Heatplot]{\normalsize{Cyanobacterial Heatplot}}
-  \label{fig:CyanoPlot}
-  \end{figure}
+  \begin{verbatim}
+  Warning in Ops.factor(m1.m$Order, 0): '>' not meaningful for factors
+  \end{verbatim}
   
-  Here is a reference to the Reed logo: \autoref{fig:CyanoPlot}.
+  \begin{verbatim}
+  Warning in Ops.factor(m1.m$Family, 0): '>' not meaningful for factors
+  \end{verbatim}
+  
+  \begin{verbatim}
+  < table of extent 0 x 0 >
+  \end{verbatim}
+  
+  \begin{quote}
+  head(table(m2.m\(Order,m2.m\)variable))
+  \end{quote}
   
   \clearpage 
   

@@ -27,23 +27,8 @@ library(reedtemplates)
 flights <- read.csv("data/flights.csv")
 ```
 
-
-# Cyanobacteria EvoMining Results {#ref_labels}
-Cyanobacteria is phylum {Referencia de luis}  
-
-## Tables
-
-----------------------------------------------------------------------------------
-  Factors                    Correlation between Parents & Child     
-------------------------- ----------------------------------------- --------------
-  GenomeDB                                  1245                         
-  
-  Families                                  65                          
-------------------------- ----------------------------------------- --------------
-Table: Families on Cyanobacteria \label{tab:inher}
-
-\clearpage
-<!-- clearpage ends the page, and also dumps out all floats.Floats are things like tables and figures. -->
+<!-- Loading data
+-->
 
 ```{r loading_tables_5,message=FALSE,echo=FALSE}
 library(ggplot2)
@@ -61,70 +46,75 @@ CyanosHeatPlot <- read.table("chapter5/CyanosHeatPlot", header=TRUE, sep="\t")
 CyanosNp <- read.table("chapter5/CyanosNp", header=TRUE, sep="\t")
 CyanosSMASH <- read.table("chapter5/CyanosSMASH", header=TRUE, sep="\t")
 CyanosTaxa <- read.table("chapter5/CyanosTaxa", header=TRUE, sep="\t")
-
 ```
 
+
+```{r CyanoSumary,echo=FALSE}
+#summary(CyanosTaxa)
+#table(CyanosTaxa$Order)
+```
+
+
+# Cyanobacteria EvoMining Results {#ref_labels}
+Cyanobacteria phylum {Referencia de luis}   
+  
+Tables
+-------------------------------------------------------------------
+  Factors                    Correlation between Parents & Child     
+------------------------- ----------------------------------------- 
+  GenomeDB                                  1245                         
+  Families                                  65                          
+------------------------- -----------------------------------------
+Table: Families on Cyanobacteria \label{tab:inher}
+
+\clearpage
+<!-- clearpage ends the page, and also dumps out all floats.Floats are things like tables and figures. 
+-->
 <!--
-1. De Np's Quiero ver cantidad y diversidad de reclutamientos, a cada familia metabolica
+Plan general 
+2. De Np's Quiero ver cantidad y diversidad de reclutamientos, a cada familia metabolica
    cuantos tiene y de donde provienen 
+   Correlacion total np's recruitment vs total antismash NP's
    
 2. De antismash 
    Familia taxonomica vs clusters
    cluster interesante por familia taxonomica
    Voy a usar Cyanos Taxa tambien para ver esos reclutamientos de donde provienen
 
-2. De HeatPlot quiero ordenarlo por filogenia 
+3. De HeatPlot quiero ordenarlo por filogenia 
 Heat plot Familia taxonomica, 
 boxplot reclutamientos para cada familia metabolica
-
-fill <- "#4271AE"
-lines <- "#1F3552"
-ggplot(mydata110, aes(x=MName, y=delta,fill=TipeAc)) + geom_boxplot()+  scale_y_continuous(name = "Difference between old activity\nand new activity by step")+scale_x_discrete(name = "Mutation name")+theme_bw()  +
-        theme(plot.title = element_text(size = 14, family = "Arial", face = "bold"),
-              text = element_text(size = 12, family = "Arial"),
-              axis.title = element_text(face="bold"),
-              axis.text.x=element_text(size = 11),
-              legend.position = "bottom") +facet_grid(mydata110$TipeAc~.,scales="free")
-       
-
 y hacer heatplots separados por ruta metabolica
+
 4. Inlcuir algunos arboles
 
 -->
-## Natural products recruitments
-We can see natural products origin by kingdom
-Natural products recruited by metabolic family, colored by phylogenetic origin.
-```{r NP_recruitment_taxa_cyano}
-qplot(x=Central, data=CyanosNp, geom="bar", fill=kingdom, position="stack")+theme_bw()+ theme(text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
-
-```
 
 
-## Cyanobacterias AntiSMASH 
-Philogenetical diversity on Cyanobacterial dataset  
-```{r CyanoDiversity}
-#View(diamonds)
-## merge tables
-m1 <- merge(CyanosTaxa, CyanosSMASH, by.x = "RastId", by.y = "RastIds")
-m1.m <- melt(m1, id = c("RastId", "Name","Phylum","Class","Order","Family","Contigs","Size","RastNo"))
-
-qplot(x=Order, data=m1.m, geom="bar", fill=Family, position="stack")+theme_bw()+ theme(text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
-table(m1.m$Order>0,m1.m$Family>0)
-#qplot(x=clarity, data=diamonds, geom="bar", fill=cut, position="stack")
-
-```
-
-## Figures
-Central pathway expansions  
-
+<!--   Correlacion total np's recruitment vs total antismash NP's
+-->
+## Central pathway expansions  
 ```{r HeatPlots, warnings = FALSE, message = FALSE, echo=FALSE}
+### ME falta ordernarlos filogeneticamente
 CyanosHeatPlot$RastId <- with(CyanosHeatPlot, reorder(CyanosHeatPlot$RastId, CyanosHeatPlot$TOTAL))
 CyanosHeatPlot.m <- melt(CyanosHeatPlot)
 CyanosHeatPlot.m<- ddply(CyanosHeatPlot.m, .(variable), transform,rescale=scale(value))  ## rescale escala toda la matriz, scale por columnas
+  
+HP_Taxa<-merge(CyanosHeatPlot,CyanosTaxa,by.x = "RastId",by.y = "RastId")
+
+HP_Taxa2<-subset(HP_Taxa,Order='Chroococcales')
+
+HP_Taxa<-HP_Taxa[order(HP_Taxa$Order,HP_Taxa$Family),]
+HP_Taxa.m<- melt(HP_Taxa)
+HP_Taxa.m<- ddply(HP_Taxa.m, .(variable), transform,rescale=scale(value))  ## rescale escala toda la matriz, scale por columnas
+
+heatplot <- ggplot(HP_Taxa.m, aes(HP_Taxa.m$variable, HP_Taxa.m$RastId))+ geom_tile(aes(fill = HP_Taxa.m$rescale), colour = "white") + scale_fill_gradientn(colours = hm.palette(100),na.value = "gray")+ theme(text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
+
 
 #heatplot <- ggplot(CyanosHeatPlot.m, aes(CyanosHeatPlot.m$variable, CyanosHeatPlot.m$RastId))+ geom_tile(aes(fill = CyanosHeatPlot.m$rescale), colour = "white") + scale_fill_gradient(low = "white", high = "steelblue")+ theme(text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
 
-heatplot <- ggplot(CyanosHeatPlot.m, aes(CyanosHeatPlot.m$variable, CyanosHeatPlot.m$RastId))+ geom_tile(aes(fill = CyanosHeatPlot.m$rescale), colour = "white") + scale_fill_gradientn(colours = hm.palette(100),na.value = "gray")+ theme(text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
+## este funciona pero lo esty tratando cambiar a ordenado
+###heatplot <- ggplot(CyanosHeatPlot.m, aes(CyanosHeatPlot.m$variable, CyanosHeatPlot.m$RastId))+ geom_tile(aes(fill = CyanosHeatPlot.m$rescale), colour = "white") + scale_fill_gradientn(colours = hm.palette(100),na.value = "gray")+ theme(text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
 
 
 #+ scale_fill_gradientn(colours = hm.palette(100),na.value = "gray")
@@ -133,12 +123,93 @@ ggsave("chapter5/HeatPlot.pdf", plot = heatplot,height = 12, width = 6)
 
 ```
 
-Ahora si la figura
-
-```{r HeatPlots_label, results = "asis",message=FALSE}
+```{r HeatPlots_label, results = "asis",message=FALSE,echo=FALSE}
 label(path = "chapter5/HeatPlot.pdf", caption = "Cyanobacterial Heatplot",label = "CyanoPlot", type = "figure")
 ```
-Here is a reference to the Reed logo: `r ref("CyanoPlot")`. 
+Here is a reference to the HeatPlot: `r ref("CyanoPlot")`. 
+\clearpage 
+
+
+
+
+Natural product recruitments
+
+```{r ANTISMASH_Expansion_Correlation_by_ORG_Cyanos}
+EXP_SMASH<-merge(CyanosHeatPlot,CyanosSMASH,by.x="RastId",by.y="RastIds")
+
+EXP_SMASH2<-merge(CyanosTaxa, EXP_SMASH, by.x="RastId",by.y="RastId") 
+
+#qplot(Total.x, Total.y, data = EXP_SMASH, colour=Order)+theme_bw()+
+#
+sn<-qplot(TOTAL.x, TOTAL.y, data = EXP_SMASH2,colour=Order)+theme_bw()+facet_grid(EXP_SMASH2$Order~.,scales="free")+ 
+        theme(legend.position	="bottom",plot.title = element_text(size = 14, face = "bold"),
+              text = element_text(size = 12),
+              axis.title = element_text(face="bold"),
+              axis.text.x=element_text(size = 12),
+              axis.text.y=element_text(size = 7))
+ggsave("chapter5/SMASHvsExpansionsbyOrder.pdf", plot = sn,height = 12, width = 6)
+
+## Looking for color modifications
+#sn + scale_color_brewer(palette="Dark2(100)")
+#n + scale_color_brewer(palette=hm.palette(10))
+## sn+ scale_color_hue(l=40, c=35)
+```
+uuuf 
+```{r SMASHvsExpansionsbyOrder_label, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter5/SMASHvsExpansionsbyOrder.pdf", caption = "Correlation between central pathway axpnasions and antismash Natural products detection",label = "SMASHvsExpansionsbyOrder", type = "figure")
+```
+Here is a reference to the HeatPlot: `r ref("CyanoPlot")`. 
+\clearpage 
+
+Aqui una correlacion entre en talla de genoma y los productos de antismash
+Aqui una correlacion entre talla de genoma y expansiones
+
+
+
+```{r ANTISMASH_Expansion_Correlation_by_orden_Cyanos}
+EXP_SMASH<-merge(CyanosHeatPlot,CyanosSMASH,by.x="RastId",by.y="RastIds")
+
+EXP_SMASH2<-merge(CyanosTaxa, EXP_SMASH, by.x="RastId",by.y="RastId") 
+
+qplot(TOTAL.x, TOTAL.y, data = EXP_SMASH2,colour=Family)+theme_bw()+facet_grid(EXP_SMASH2$Order~.,scales="free")+
+        theme( plot.title = element_text(size = 14, face = "bold"),
+              text = element_text(size = 12),
+              axis.title = element_text(face="bold"),
+              axis.text.x=element_text(size = 12),
+              axis.text.y=element_text(size = 7))
+#facet_grid(EXP_SMASH$Order~.,scales="free")+
+```
+
+
+## Natural products recruitments
+We can see natural products origin by kingdom
+Natural products recruited by metabolic family, colored by phylogenetic origin.
+```{r NP_recruitment_taxa_cyano}
+qplot(x=Central, data=CyanosNp, geom="bar", fill=kingdom, position="stack")+theme_bw()+ theme(text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
+
+qplot(x=Central, data=CyanosNp, geom="bar", fill=taxa, position="stack")+theme_bw()+ theme(text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
+```
+
+
+## Cyanobacterias AntiSMASH 
+Philogenetical diversity on Cyanobacterial dataset  
+```{r CyanoDiversity}
+## merge tables
+m1 <- merge(CyanosTaxa, CyanosSMASH, by.x = "RastId", by.y = "RastIds")
+m1.m <- melt(m1, id = c("RastId", "Name","Phylum","Class","Order","Family","Contigs","Size","RastNo"))
+m2.m<-subset(m1.m,value>0)
+
+
+qplot(x=Order, data=m1.m, geom="bar", fill=Family, position="stack")+theme_bw()+ theme(text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
+table(m1.m$Order>0,m1.m$Family>0)
+#qplot(x=clarity, data=diamonds, geom="bar", fill=cut, position="stack")
+
+qplot(x=Order, data=m2.m, geom="bar", fill=variable, position="stack",colours = hm.palette(100000))+theme_bw()+ theme(legend.position="none",text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
+table(m1.m$Order>0,m1.m$Family>0)
+
+
+```
+> head(table(m2.m$Order,m2.m$variable))
 
 
 \clearpage 
