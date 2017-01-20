@@ -56,7 +56,7 @@ CyanosTaxa <- read.table("chapter5/CyanosTaxa", header=TRUE, sep="\t")
 
 
 # Cyanobacteria EvoMining Results {#ref_labels}
-Cyanobacteria phylum {Referencia de luis}   
+Cyanobacteria phylum {Referencia}   
   
 Tables
 -------------------------------------------------------------------
@@ -75,33 +75,27 @@ Plan general
 2. De Np's Quiero ver cantidad y diversidad de reclutamientos, a cada familia metabolica
    cuantos tiene y de donde provienen 
    Correlacion total np's recruitment vs total antismash NP's
-   
 2. De antismash 
    Familia taxonomica vs clusters
    cluster interesante por familia taxonomica
    Voy a usar Cyanos Taxa tambien para ver esos reclutamientos de donde provienen
-
 3. De HeatPlot quiero ordenarlo por filogenia 
 Heat plot Familia taxonomica, 
 boxplot reclutamientos para cada familia metabolica
 y hacer heatplots separados por ruta metabolica
-
 4. Inlcuir algunos arboles
-
 -->
-
 
 <!--   Correlacion total np's recruitment vs total antismash NP's
 -->
 ## Central pathway expansions  
-```{r HeatPlots, warnings = FALSE, message = FALSE, echo=FALSE}
+Heat plot of central pathways expansions, Needs to be phylogenetically sorted.  
+```{r HeatPlots, warnings = FALSE, message = FALSE, echo=FALSE,CACHE=TRUE}
 ### ME falta ordernarlos filogeneticamente
 CyanosHeatPlot$RastId <- with(CyanosHeatPlot, reorder(CyanosHeatPlot$RastId, CyanosHeatPlot$TOTAL))
 CyanosHeatPlot.m <- melt(CyanosHeatPlot)
 CyanosHeatPlot.m<- ddply(CyanosHeatPlot.m, .(variable), transform,rescale=scale(value))  ## rescale escala toda la matriz, scale por columnas
-  
 HP_Taxa<-merge(CyanosHeatPlot,CyanosTaxa,by.x = "RastId",by.y = "RastId")
-
 HP_Taxa2<-subset(HP_Taxa,Order='Chroococcales')
 
 HP_Taxa<-HP_Taxa[order(HP_Taxa$Order,HP_Taxa$Family),]
@@ -124,106 +118,27 @@ ggsave("chapter5/HeatPlot.pdf", plot = heatplot,height = 12, width = 6)
 ```
 
 ```{r HeatPlots_label, results = "asis",message=FALSE,echo=FALSE}
-label(path = "chapter5/HeatPlot.pdf", caption = "Cyanobacterial Heatplot",label = "CyanoPlot", type = "figure")
+label(path = "chapter5/HeatPlot.pdf", caption = "Cyanobacterial Heatplot",scale=.6,label = "CyanoPlot", type = "figure")
 ```
 Here is a reference to the HeatPlot: `r ref("CyanoPlot")`. 
 \clearpage 
 
-
-
-
-Natural product recruitments
-
-```{r ANTISMASH_Expansion_Correlation_by_ORG_Cyanos}
-EXP_SMASH<-merge(CyanosHeatPlot,CyanosSMASH,by.x="RastId",by.y="RastIds")
-
-EXP_SMASH2<-merge(CyanosTaxa, EXP_SMASH, by.x="RastId",by.y="RastId") 
-
-#qplot(Total.x, Total.y, data = EXP_SMASH, colour=Order)+theme_bw()+
-#
-sn<-qplot(TOTAL.x, TOTAL.y, data = EXP_SMASH2,colour=Order)+theme_bw()+facet_grid(EXP_SMASH2$Order~.,scales="free")+ 
-        theme(legend.position	="bottom",plot.title = element_text(size = 14, face = "bold"),
-              text = element_text(size = 12),
-              axis.title = element_text(face="bold"),
-              axis.text.x=element_text(size = 12),
-              axis.text.y=element_text(size = 7))
-ggsave("chapter5/SMASHvsExpansionsbyOrder.pdf", plot = sn,height = 12, width = 6)
-
-## Looking for color modifications
-#sn + scale_color_brewer(palette="Dark2(100)")
-#n + scale_color_brewer(palette=hm.palette(10))
-## sn+ scale_color_hue(l=40, c=35)
-```
-uuuf 
-```{r SMASHvsExpansionsbyOrder_label, results = "asis",message=FALSE,echo=FALSE}
-label(path = "chapter5/SMASHvsExpansionsbyOrder.pdf", caption = "Correlation between central pathway axpnasions and antismash Natural products detection",label = "SMASHvsExpansionsbyOrder", type = "figure")
-```
-Here is a reference to the HeatPlot: `r ref("CyanoPlot")`. 
-\clearpage 
-
-Aqui una correlacion entre en talla de genoma y los productos de antismash
-Aqui una correlacion entre talla de genoma y expansiones
-
-
-
-```{r ANTISMASH_Expansion_Correlation_by_orden_Cyanos}
-EXP_SMASH<-merge(CyanosHeatPlot,CyanosSMASH,by.x="RastId",by.y="RastIds")
-
-EXP_SMASH2<-merge(CyanosTaxa, EXP_SMASH, by.x="RastId",by.y="RastId") 
-
-qplot(TOTAL.x, TOTAL.y, data = EXP_SMASH2,colour=Family)+theme_bw()+facet_grid(EXP_SMASH2$Order~.,scales="free")+
-        theme( plot.title = element_text(size = 14, face = "bold"),
-              text = element_text(size = 12),
-              axis.title = element_text(face="bold"),
-              axis.text.x=element_text(size = 12),
-              axis.text.y=element_text(size = 7))
-#facet_grid(EXP_SMASH$Order~.,scales="free")+
-```
-
-
-## Natural products recruitments
-We can see natural products origin by kingdom
-Natural products recruited by metabolic family, colored by phylogenetic origin.
-```{r NP_recruitment_taxa_cyano}
-qplot(x=Central, data=CyanosNp, geom="bar", fill=kingdom, position="stack")+theme_bw()+ theme(text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
-
-qplot(x=Central, data=CyanosNp, geom="bar", fill=taxa, position="stack")+theme_bw()+ theme(text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
-```
-
-
-## Cyanobacterias AntiSMASH 
-Philogenetical diversity on Cyanobacterial dataset  
-```{r CyanoDiversity}
-## merge tables
-m1 <- merge(CyanosTaxa, CyanosSMASH, by.x = "RastId", by.y = "RastIds")
-m1.m <- melt(m1, id = c("RastId", "Name","Phylum","Class","Order","Family","Contigs","Size","RastNo"))
-m2.m<-subset(m1.m,value>0)
-
-
-qplot(x=Order, data=m1.m, geom="bar", fill=Family, position="stack")+theme_bw()+ theme(text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
-table(m1.m$Order>0,m1.m$Family>0)
-#qplot(x=clarity, data=diamonds, geom="bar", fill=cut, position="stack")
-
-qplot(x=Order, data=m2.m, geom="bar", fill=variable, position="stack",colours = hm.palette(100000))+theme_bw()+ theme(legend.position="none",text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
-table(m1.m$Order>0,m1.m$Family>0)
-
-
-```
-> head(table(m2.m$Order,m2.m$variable))
-
-
-\clearpage 
-
-```{r Heaplot_summary}
+```{r Heaplot_summary,echo=FALSE}
 #summary(CyanosHeatPlot.m)
 #table(CyanosHeatPlot.m$scale >=0,Deltas$DeltaPRO>=0)
 
 ```
-mm
 
-<!-- starts a new page and stops trying to place floats such as tables and figures 
--->
-```{r boxplot_CyanoHP,warnings = FALSE, message = FALSE}
+<!---------------END EvoMining heatmap----------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------->
+
+
+
+
+<!--- Expansions Box plot ------------------------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------->
+### Expansions BoxPlot by metabolic family
+```{r boxplot_CyanoHP,warnings = FALSE, message = FALSE,echo=FALSE}
 expansion_plot<-ggplot(CyanosHeatPlot.m, aes(x=CyanosHeatPlot.m$variable, y=CyanosHeatPlot.m$rescale)) + geom_boxplot()+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6), legend.position = "bottom")
 
 #ggplot(CyanosHeatPlot.m, aes(x=CyanosHeatPlot.m$variable, y=CyanosHeatPlot.m$rescale)) + geom_boxplot()+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6), legend.position = "bottom")
@@ -233,55 +148,275 @@ expansion_plot<-ggplot(CyanosHeatPlot.m, aes(x=CyanosHeatPlot.m$variable, y=Cyan
 
 ggsave("chapter5/expansion_plot.pdf", plot = expansion_plot,height = 6, width = 7)
 ```
- why figure is not here?
-
-\clearpage 
 ```{r boxplot_CyanoHP_label, results = "asis",message=FALSE}
 label(path = "chapter5/expansion_plot.pdf", caption = "Expansions Boxplot",label = "Cyano_expansion_boxplot", type = "figure")
 ```
-\clearpage 
 Here is a reference to the expansion boxplot: `r ref("Cyano_expansion_boxplot")`.   
+\clearpage 
 
+<!-----------------------------END expansion boxplot ---------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------->
+
+## Genome Size correlations
+### Correlation between genome size and AntiSMASH products  
+```{r ANTISMASH_GenomeSize_Correlation_by_ORG_Cyanos2,echo=FALSE}
+EXP_SMASH<-merge(CyanosHeatPlot,CyanosSMASH,by.x="RastId",by.y="RastIds")
+EXP_SMASH2<-merge(CyanosTaxa, EXP_SMASH, by.x="RastId",by.y="RastId") 
+#qplot(Total.x, Total.y, data = EXP_SMASH, colour=Order)+theme_bw()+
+sn1<-qplot(Size, TOTAL.y, data = EXP_SMASH2,colour=Order)+theme_bw()+ theme(legend.position	="bottom",plot.title = element_text(size = 14, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 12),axis.text.y=element_text(size = 7))
+ggsave("chapter5/SMASHvsSizebyOrder.pdf", plot = sn1,height = 8, width = 6)
+
+sn2<-qplot(Size, TOTAL.y, data = EXP_SMASH2,colour=Order)+theme_bw()+facet_grid(EXP_SMASH2$Order~.,scales="free")+ theme(legend.position	="bottom",plot.title = element_text(size = 14, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 12),axis.text.y=element_text(size = 7))
+ggsave("chapter5/SMASHvsSizeGridOrder.pdf", plot = sn2,height = 8, width = 6)
+
+## Looking for color modifications
+#sn + scale_color_brewer(palette="Dark2(100)")
+#n + scale_color_brewer(palette=hm.palette(10))
+## sn+ scale_color_hue(l=40, c=35)
+```
+
+Genome size vs Total antismash cluster coloured by order  
+```{r SMASHvsSizebyOrder_label, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter5/SMASHvsSizebyOrder.pdf", caption = "Correlation between genome size and antismash Natural products detection colored by Order",scale=.6,label = "SMASHvsSizebyOrder", type = "figure")
+```
+Here is a reference to Genome size vs Total antismash cluster: `r ref("SMASHvsSizebyOrder")`. 
+\clearpage
+
+Genome size vs Total antismash cluster detected splitted by order  
+```{r SMASHvsSizeGridOrder_label, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter5/SMASHvsSizeGridOrder.pdf", caption = "Correlation between genome size and antismash Natural products detection grided by Order",scale=.6,label = "SMASHvsSizeGridOrder", type = "figure")
+```
+
+Here is a reference to Correlation between genome size and antismash Natural products detection grided by Order plot: `r ref("SMASHvsSizeGridOrder")`. 
+\clearpage 
+
+<!--------------------------------END size vs AntiSMASH correlation--------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------->
+
+
+
+
+
+<!-------------------------------- size vs Expansions correlation--------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------->
+### Correlation between genome size and Central pathway expansions  
+```{r ANTISMASH_GenomeSize_Correlation_by_ORG_Cyanos,echo=FALSE}
+#CyanosHeatPlot$RastId <- with(CyanosHeatPlot, reorder(CyanosHeatPlot$RastId, CyanosHeatPlot$TOTAL))
+#CyanosHeatPlot.m <- melt(CyanosHeatPlot)
+
+EXP_TAXA<-merge(CyanosHeatPlot,CyanosTaxa,by.x="RastId",by.y="RastId")
+
+sn4<-qplot(Size, TOTAL, data = EXP_TAXA,colour=Order)+theme_bw()+ theme(legend.position	="bottom",plot.title = element_text(size = 14, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 12),axis.text.y=element_text(size = 7))
+ggsave("chapter5/SizevsExpansionsbyOrder.pdf", plot = sn4,height = 6, width = 6)
+
+sn5<-qplot(Size, TOTAL, data = EXP_TAXA,colour=Order)+theme_bw()+facet_grid(EXP_TAXA$Order~.,scales="free")+ theme(legend.position	="bottom",plot.title = element_text(size = 14, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 12),axis.text.y=element_text(size = 7))
+ggsave("chapter5/SizevsExpansionsGridbyOrder.pdf", plot = sn5,height = 6, width = 6)
+
+## Looking for color modifications
+#sn + scale_color_brewer(palette="Dark2(100)")
+#n + scale_color_brewer(palette=hm.palette(10))
+## sn+ scale_color_hue(l=40, c=35)
+```
+Genome size vs Total central pathway expansion coloured by order  
+```{r SizevsExpansionsbyOrder_label2, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter5/SizevsExpansionsbyOrder.pdf", caption = "Correlation between genome size and central pathway expansions ",label = "SizevsExpansionsbyOrder", type = "figure")
+```
+Here is a reference to the size vs Total central pathway expansion plot: `r ref("SizevsExpansionsbyOrder")`. 
+\clearpage 
+
+
+Genome size vs Total central pathway expansion grided by order  
+```{r SizevsExpansionsGridbyOrder_label2, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter5/SizevsExpansionsGridbyOrder.pdf", caption = "Correlation between genome size and central pathway expansions grided by order",label = "SizevsExpansionsGridbyOrder", type = "figure")
+```
+Here is a reference to the Genome size vs Total central pathway expansion grided by order plot: `r ref("SizevsExpansionsGridbyOrder")`. 
+\clearpage 
+
+<!--------------------------------------------------------------------------------------------------------------------->
+
+Correlation between genome size and each of the central pathway families.
+Data are coloured by metabolic family instead of coloured by taxonomical order. This treatment allows to answer how differente metabolic families grows when genome size grow.  
+Also I want to add form given by taxonomical order.
+
+```{r ANTISMASH_GenomeSize_Correlation_by_ORG_Cyanos3,message=FALSE, echo=FALSE}
+CyanosHeatPlot$RastId <- with(CyanosHeatPlot, reorder(CyanosHeatPlot$RastId, CyanosHeatPlot$TOTAL))
+CyanosHeatPlot.m <- melt(CyanosHeatPlot)
+EXP_TAXA<-merge(CyanosHeatPlot.m,CyanosTaxa,by.x="RastId",by.y="RastId")
+
+sn6<-qplot(Size, value, data = EXP_TAXA,colour=variable,shape=Order)+theme_bw()+ theme(legend.position	="none",legend.text=element_text(size=6),plot.title = element_text(size = 14, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 12),axis.text.y=element_text(size = 7))
+ggsave("chapter5/SizevsExpansionsbyMetabolicFamily.pdf", plot = sn6,height = 6, width = 8)
+
+sn7<-qplot(Size, value, data = EXP_TAXA,colour=variable)+theme_bw()+facet_grid(EXP_TAXA$variable~.,scales="free")+ theme(legend.position	="none",plot.title = element_text(size = 14, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 12),axis.text.y=element_text(size = 7))
+ggsave("chapter5/ExpansionsbyMetabolicFamilyGrid.pdf", plot = sn7,height = 6, width = 12)
+
+## Looking for color modifications
+#sn + scale_color_brewer(palette="Dark2(100)")
+#n + scale_color_brewer(palette=hm.palette(10))
+## sn+ scale_color_hue(l=40, c=35)
+```
+
+Genome size vs Total central pathway expansion coloured by metabolic Family 
+```{r SizevsExpansionsbyMetabolicFamily_label2, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter5/SizevsExpansionsbyMetabolicFamily.pdf", caption = "Correlation between Genome size vs Total central pathway expansion coloured by metabolic Family",scale=.6,label = "SizevsExpansionsbyMetabolicFamily", type = "figure")
+```
+Here is a reference to the Genome size vs Total central pathway expansion coloured by metabolic Family plot: `r ref("SizevsExpansionsbyMetabolicFamily")`. 
+\clearpage 
+
+Future Work: Genome size vs Total central pathway expansion grided by metabolic Family 
+For clarity I need to also grid and group by Metabolic Pathway
+```{r ExpansionsbyMetabolicFamilyGrid_label2, results = "asis",message=FALSE,echo=FALSE}
+#label(path = "chapter5/ExpansionsbyMetabolicFamilyGrid.pdf", caption = "Correlation between Genome size vs Total central pathway expansion grided by metabolic Family ",label = "ExpansionsbyMetabolicFamilyGrid", type = "figure")
+```
+Here is a reference to Genome size vs Total central pathway expansion grided by metabolic Family  plot: `r ref("ExpansionsbyMetabolicFamilyGrid")`. 
+\clearpage 
+
+
+<!----------------------------END - size vs Expansions correlation--------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------->
+
+
+
+
+
+<!----------------------------Natural Products vs Expansions correlation--------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------->
+
+## Natural products  
+
+### Natural products recruitments from EvoMining heatplot
+We can see natural products recruitment after central pathways expansions colored by their kingdom.  
+Natural products recruited by metabolic family, colored by phylogenetic origin.
+```{r NP_recruitment_taxa_cyano,echo=FALSE,message=FALSE,warning=FALSE}
+RecbyKing<-qplot(x=Central, data=CyanosNp, geom="bar", fill=kingdom, position="stack")+theme_bw()+ theme(legend.position	="bottom",text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
+ggsave("chapter5/RecruitmentsbyKingdom.pdf", plot = RecbyKing,height = 6, width = 12)
+
+Recbytaxa<-qplot(x=Central, data=CyanosNp, geom="bar", fill=taxa, position="stack")+theme_bw()+ theme(legend.position	="bottom",text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
+ggsave("chapter5/RecruitmentsbyTaxa.pdf", plot = Recbytaxa,height = 6, width = 12)
+
+```
+
+
+Recruitments after central pathways expansions coloured by Kingdom
+```{r RecruitmentsbyKingdom_label2, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter5/RecruitmentsbyKingdom.pdf", caption = "Recruitmens on central families coloured by kingdom",scale=.6,label = "RecruitmentsbyKingdom", type = "figure")
+```
+Here is a reference to Recruitments after central pathways expansions colourd by Kingdom plot: `r ref("RecruitmentsbyKingdom")`. 
+
+\clearpage 
+Recruitments after central pathways expansions colourd by taxonomy
+```{r RecruitmentsbyTaxa_label2, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter5/RecruitmentsbyTaxa.pdf", caption = "Recruitmens on central families coloured by taxonomy",scale=.5,label = "RecruitmentsbyTaxa", type = "figure")
+```
+Here is a reference to Recruitments after central pathways expansions colourd by taxa plot: `r ref("RecruitmentsbyTaxa")`. 
+\clearpage 
+
+
+## Cyanobacterias AntiSMASH 
+```{r CyanoDiversity,echo=FALSE,message=FALSE,warning=FALSE}
+## merge tables
+m1 <- merge(CyanosTaxa, CyanosSMASH, by.x = "RastId", by.y = "RastIds")
+m1.m <- melt(m1, id = c("RastId", "Name","Phylum","Class","Order","Family","Contigs","Size","RastNo"))
+m2.m<-subset(m1.m,value>0)
+
+Diversity<-qplot(x=Order, data=m1.m, geom="bar", fill=Family, position="stack")+theme_bw()+ theme(text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
+#table(m1.m$Order>0,m1.m$Family>0)
+#qplot(x=clarity, data=diamonds, geom="bar", fill=cut, position="stack")
+ggsave("chapter5/Diversity.pdf", plot =Diversity,height = 6, width = 14)
+
+Smash<-qplot(x=Order, data=m2.m, geom="bar", fill=variable, position="stack",colours = hm.palette(100000))+theme_bw()+ theme(legend.position="none",text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
+#table(m1.m$Order>0,m1.m$Family>0)
+ggsave("chapter5/Smash.pdf", plot = Smash,height = 6, width = 14)
+```
+ 
+Taxonomical diversity on Cyanobacteria Data
+```{r Diversity_label2, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter5/Diversity.pdf", caption = "Diversity",scale=.6,label = "Diversity", type = "figure")
+```
+Here is a reference to Recruitments after central pathways expansions colourd by taxa plot: `r ref("Diversity")`. 
+\clearpage
+
+Smash diversity
+```{r Smash_label2, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter5/Smash.pdf", caption = "Smash",scale=.5,label = "Smash Taxonomical Diversity", type = "figure")
+```
+Here is a reference to Recruitments after central pathways expansions colourd by taxa plot: `r ref("Smash")`. 
+\clearpage
+
+### AntisSMASH vs Central Expansions  
+Is it a correlation between pangenome grow and central pathways expansions?  
+```{r ANTISMASH_Expansion_Correlation_by_ORG_Cyanos,message=FALSE, echo =FALSE}
+EXP_SMASH<-merge(CyanosHeatPlot,CyanosSMASH,by.x="RastId",by.y="RastIds")
+EXP_SMASH2<-merge(CyanosTaxa, EXP_SMASH, by.x="RastId",by.y="RastId") 
+#qplot(Total.x, Total.y, data = EXP_SMASH, colour=Order)+theme_bw()+
+sn8<-qplot(TOTAL.x, TOTAL.y, data = EXP_SMASH2,colour=Order)+theme_bw()+ theme(legend.position	="bottom",legend.text=element_text(size=10),plot.title = element_text(size = 14, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 10),axis.text.y=element_text(size = 7))
+ggsave("chapter5/SMASHvsExpansionsbyOrder.pdf", plot = sn8,height = 12, width = 6)
+
+sn9<-qplot(TOTAL.x, TOTAL.y, data = EXP_SMASH2,colour=Order)+theme_bw()+facet_grid(EXP_SMASH2$Order~.,scales="free")+ theme(legend.position	="bottom",legend.text=element_text(size=10),plot.title = element_text(size = 14, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 12),axis.text.y=element_text(size = 7))
+ggsave("chapter5/SMASHvsExpansionsbyOrderGRID.pdf", plot = sn9,height = 10, width = 6)
+
+## Looking for color modifications
+#sn + scale_color_brewer(palette="Dark2(100)")
+#n + scale_color_brewer(palette=hm.palette(10))
+## sn+ scale_color_hue(l=40, c=35)
+```
+Total central pathway expansions by genome vs Total antismash cluster detected coloured by order  
+```{r SMASHvsExpansionsbyOrder_label, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter5/SMASHvsExpansionsbyOrder.pdf", caption = "Correlation between central pathway axpnasions and antismash Natural products detection",scale=.5,label = "SMASHvsExpansionsbyOrder", type = "figure")
+```
+Here is a reference to the expansions vs antismash NP's clusters plot: `r ref("SMASHvsExpansionsbyOrder")`. 
+\clearpage 
+
+Total central pathway expansions by genome vs Total antismash cluster detected splitted by order  
+```{r SMASHvsExpansionsbyOrderGRID_label, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter5/SMASHvsExpansionsbyOrderGRID.pdf", caption = "Correlation between central pathway axpnasions and antismash Natural products detection",scale=.5,label = "SMASHvsExpansionsbyOrderGRID", type = "figure")
+```
+Here is a reference to the expansions vs antismash NP's clusters splitted by order plot `r ref("SSMASHvsExpansionsbyOrderGRID")`. 
+\clearpage 
+
+<!------------------------------------------------------------------------------------------------------------->
+
+AntisMAsh vs Expansions by taxonomic Family
+```{r ANTISMASH_Expansion_Correlation_by_Family_Cyanos,echo=FALSE,warning=FALSE}
+EXP_SMASH<-merge(CyanosHeatPlot,CyanosSMASH,by.x="RastId",by.y="RastIds")
+EXP_SMASH2<-merge(CyanosTaxa, EXP_SMASH, by.x="RastId",by.y="RastId") 
+
+npf<-qplot(TOTAL.x, TOTAL.y, data = EXP_SMASH2,colour=Family)+theme_bw()+facet_grid(EXP_SMASH2$Order~.,scales="free")+
+        theme( plot.title = element_text(size = 14, face = "bold"),
+              text = element_text(size = 12),
+              axis.title = element_text(face="bold"),
+              axis.text.x=element_text(size = 12),
+              axis.text.y=element_text(size = 7))
+ggsave("chapter5/npf.pdf", plot = npf,height = 12, width = 6)
+
+#facet_grid(EXP_SMASH$Order~.,scales="free")+
+```
+
+Natural products colured by family
+```{r npf_label, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter5/npf.pdf", caption = "Natural products by family",scale=.6,label = "npf", type = "figure")
+```
+Here is a reference to the Natural products colured by family
+ plot `r ref("npf")`. 
+\clearpage 
+
+<!------------------------------------------------------------------------------------------------------------->
 
 ##Selected trees from EvoMining
-##Lets analize Phosphoribosyl_isomerase_3 family  
+Phosphoribosyl_isomerase_3 family  
 Figure from EvoMining
-\clearpage 
 
 ```{r Phosphoribosyl_isomerase_evo_tree, results = "asis",message=FALSE, echo=FALSE}
 label(path = "chapter5/tree64.png", caption = "Phosphoribosyl isomerase EvoMiningtree", 
       scale = .25,
       angle = 180,
       label = "Phosphoribosyl_isomerase_evo_tree", type = "figure")
+
 label(path = "chapter5/tree1.png", caption = "Phosphoribosyl isomerase EvoMiningtree", 
       scale = .25,
       angle = 180,
       label = "Phosphoribosyl_isomerase_evo_tree", type = "figure")
 
-#label(path = "chapter5/tree64.png", caption = "Phosphoribosyl isomerase EvoMiningtree", 
+#label(path = "chapter5/tree64.png", caption = "Tree 64", 
 
 ```
 \clearpage 
-
-## Footnotes and Endnotes
-
-You might want to footnote something. ^[footnote text] The footnote will be in a smaller font and placed appropriately. Endnotes work in much the same way. More information can be found about both on the CUS site or feel free to reach out to <data@reed.edu>.
-
-## Bibliographies
-
-Zotero.  The Reed librarians have created Zotero documentation at <http://libguides.reed.edu/citation/zotero>.  In addition, a tutorial is available from Middlebury College at <http://sites.middlebury.edu/zoteromiddlebury/>.
-
-_R Markdown_ uses _pandoc_ (<http://pandoc.org/>) to build its bibliographies.  One nice caveat of this is that you won't have to do a second compile to load in references as standard \LaTeX\ requires. To cite references in your thesis (after creating your bibliography database), place the reference name inside square brackets and precede it by the "at" symbol.  For example, here's a reference to a book about worrying:  [@Molina1994].  This `Molina1994` entry appears in a file called `thesis.bib` in the `bib` folder.  This bibliography database file was created by a program called BibTeX.  You can call this file something else if you like (look at the YAML header in the main .Rmd file) and, by default, is to placed in the `bib` folder.  
-
-For more information about BibTeX and bibliographies, see our CUS site (<http://web.reed.edu/cis/help/latex/index.html>)^[@reedweb2007]. There are three pages on this topic:  _bibtex_ (which talks about using BibTeX, at <http://web.reed.edu/cis/help/latex/bibtex.html>), _bibtexstyles_ (about how to find and use the bibliography style that best suits your needs, at <http://web.reed.edu/cis/help/latex/bibtexstyles.html>) and _bibman_ (which covers how to make and maintain a bibliography by hand, without BibTeX, at <http://web.reed.edu/cis/help/latex/bibman.html>). The last page will not be useful unless you have only a few sources.
-
-If you look at the YAML header at the top of the main .Rmd file you can see that we can specify the style of the bibliography by referencing the appropriate csl file.  You can download a variety of different style files at <https://www.zotero.org/styles>.  Make sure to download the file into the csl folder.
-
-##### Tips for Bibliographies
-
-- You can add a Reed Thesis citation^[@noble2002] option. The best way to do this is to use the phdthesis type of citation, and use the optional "type" field to enter "Reed thesis" or "Undergraduate thesis." 
-
-## Anything else?
-
-If you'd like to see examples of other things in this template, please contact the Data @ Reed team (email <data@reed.edu>) with your suggestions. We love to see people using _R Markdown_ for their theses, and are happy to help.
-

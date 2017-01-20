@@ -525,7 +525,7 @@ starts here.
   \end{Highlighting}
   \end{Shaded}
   
-  \begin{longtable}[]{@{}lr@{}}
+  \begin{longtable}[c]{@{}lr@{}}
   \caption{Maximum Delays by Airline \label{tab:max_delay}}\tabularnewline
   \toprule
   Airline & Max Arrival Delay\tabularnewline
@@ -662,9 +662,9 @@ starts here.
   You may wish to put your reaction in a figure environment, which means
   that \LaTeX~will place the reaction where it fits and you can have a
   figure caption. You'll see further description of this \textbf{R}
-  \texttt{label} function in \protect\hyperlink{ref_labels}{}. (Note the
-  use of the double backslash here as well as the \texttt{echo\ =\ FALSE}
-  which hides the code from the output.)
+  \texttt{label} function in \protect\hyperlink{refux5flabels}{}. (Note
+  the use of the double backslash here as well as the
+  \texttt{echo\ =\ FALSE} which hides the code from the output.)
   
   \begin{figure}[h!tbp]
   \begin{center}
@@ -709,8 +709,8 @@ starts here.
   \end{Highlighting}
   \end{Shaded}
   
-  \hypertarget{ref_labels}{\chapter{Archaeas result Tables, Graphics,
-  References, and Labels}\label{ref_labels}}
+  \hypertarget{refux5flabels}{\chapter{Archaeas result Tables, Graphics,
+  References, and Labels}\label{refux5flabels}}
   
   \section{Tables}\label{tables}
   
@@ -724,64 +724,78 @@ starts here.
   attention to the alignment in the table and hyphens to create the rows
   and columns.
   
-  \begin{longtable}[]{@{}ccc@{}}
+  \begin{longtable}[c]{@{}ccc@{}}
   \caption{Correlation of Inheritance Factors for Parents and Child
   \label{tab:inher}}\tabularnewline
   \toprule
   \begin{minipage}[b]{0.29\columnwidth}\centering\strut
-  Factors\strut
-  \end{minipage} & \begin{minipage}[b]{0.47\columnwidth}\centering\strut
-  Correlation between Parents \& Child\strut
-  \end{minipage} & \begin{minipage}[b]{0.16\columnwidth}\centering\strut
-  Inherited\strut
-  \end{minipage}\tabularnewline
+  Factors
+  \strut\end{minipage} &
+  \begin{minipage}[b]{0.47\columnwidth}\centering\strut
+  Correlation between Parents \& Child
+  \strut\end{minipage} &
+  \begin{minipage}[b]{0.16\columnwidth}\centering\strut
+  Inherited
+  \strut\end{minipage}\tabularnewline
   \midrule
   \endfirsthead
   \toprule
   \begin{minipage}[b]{0.29\columnwidth}\centering\strut
-  Factors\strut
-  \end{minipage} & \begin{minipage}[b]{0.47\columnwidth}\centering\strut
-  Correlation between Parents \& Child\strut
-  \end{minipage} & \begin{minipage}[b]{0.16\columnwidth}\centering\strut
-  Inherited\strut
-  \end{minipage}\tabularnewline
+  Factors
+  \strut\end{minipage} &
+  \begin{minipage}[b]{0.47\columnwidth}\centering\strut
+  Correlation between Parents \& Child
+  \strut\end{minipage} &
+  \begin{minipage}[b]{0.16\columnwidth}\centering\strut
+  Inherited
+  \strut\end{minipage}\tabularnewline
   \midrule
   \endhead
   \begin{minipage}[t]{0.29\columnwidth}\centering\strut
-  Education\strut
-  \end{minipage} & \begin{minipage}[t]{0.47\columnwidth}\centering\strut
-  -0.49\strut
-  \end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering\strut
-  Yes\strut
-  \end{minipage}\tabularnewline
+  Education
+  \strut\end{minipage} &
+  \begin{minipage}[t]{0.47\columnwidth}\centering\strut
+  -0.49
+  \strut\end{minipage} &
+  \begin{minipage}[t]{0.16\columnwidth}\centering\strut
+  Yes
+  \strut\end{minipage}\tabularnewline
   \begin{minipage}[t]{0.29\columnwidth}\centering\strut
-  Socio-Economic Status\strut
-  \end{minipage} & \begin{minipage}[t]{0.47\columnwidth}\centering\strut
-  0.28\strut
-  \end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering\strut
-  Slight\strut
-  \end{minipage}\tabularnewline
+  Socio-Economic Status
+  \strut\end{minipage} &
+  \begin{minipage}[t]{0.47\columnwidth}\centering\strut
+  0.28
+  \strut\end{minipage} &
+  \begin{minipage}[t]{0.16\columnwidth}\centering\strut
+  Slight
+  \strut\end{minipage}\tabularnewline
   \begin{minipage}[t]{0.29\columnwidth}\centering\strut
-  Income\strut
-  \end{minipage} & \begin{minipage}[t]{0.47\columnwidth}\centering\strut
-  0.08\strut
-  \end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering\strut
-  No\strut
-  \end{minipage}\tabularnewline
+  Income
+  \strut\end{minipage} &
+  \begin{minipage}[t]{0.47\columnwidth}\centering\strut
+  0.08
+  \strut\end{minipage} &
+  \begin{minipage}[t]{0.16\columnwidth}\centering\strut
+  No
+  \strut\end{minipage}\tabularnewline
   \begin{minipage}[t]{0.29\columnwidth}\centering\strut
-  Family Size\strut
-  \end{minipage} & \begin{minipage}[t]{0.47\columnwidth}\centering\strut
-  0.18\strut
-  \end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering\strut
-  Slight\strut
-  \end{minipage}\tabularnewline
+  Family Size
+  \strut\end{minipage} &
+  \begin{minipage}[t]{0.47\columnwidth}\centering\strut
+  0.18
+  \strut\end{minipage} &
+  \begin{minipage}[t]{0.16\columnwidth}\centering\strut
+  Slight
+  \strut\end{minipage}\tabularnewline
   \begin{minipage}[t]{0.29\columnwidth}\centering\strut
-  Occupational Prestige\strut
-  \end{minipage} & \begin{minipage}[t]{0.47\columnwidth}\centering\strut
-  0.21\strut
-  \end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering\strut
-  Slight\strut
-  \end{minipage}\tabularnewline
+  Occupational Prestige
+  \strut\end{minipage} &
+  \begin{minipage}[t]{0.47\columnwidth}\centering\strut
+  0.21
+  \strut\end{minipage} &
+  \begin{minipage}[t]{0.16\columnwidth}\centering\strut
+  Slight
+  \strut\end{minipage}\tabularnewline
   \bottomrule
   \end{longtable}
   
@@ -1064,8 +1078,8 @@ starts here.
   \end{Highlighting}
   \end{Shaded}
   
-  \hypertarget{ref_labels}{\chapter{Actinobacteria EvoMining
-  Results}\label{ref_labels}}
+  \hypertarget{refux5flabels}{\chapter{Actinobacteria EvoMining
+  Results}\label{refux5flabels}}
   
   Actinobacteria is an ancient phylum \{Referencia de luis\}
   
@@ -1081,43 +1095,47 @@ starts here.
   attention to the alignment in the table and hyphens to create the rows
   and columns.
   
-  \begin{longtable}[]{@{}ccl@{}}
+  \begin{longtable}[c]{@{}ccl@{}}
   \caption{Correlation of Inheritance Factors for Parents and Child
   \label{tab:inher}}\tabularnewline
   \toprule
   \begin{minipage}[b]{0.29\columnwidth}\centering\strut
-  Factors\strut
-  \end{minipage} & \begin{minipage}[b]{0.47\columnwidth}\centering\strut
-  Correlation between Parents \& Child\strut
-  \end{minipage} & \begin{minipage}[b]{0.16\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage}\tabularnewline
+  Factors
+  \strut\end{minipage} &
+  \begin{minipage}[b]{0.47\columnwidth}\centering\strut
+  Correlation between Parents \& Child
+  \strut\end{minipage} &
+  \begin{minipage}[b]{0.16\columnwidth}\raggedright\strut
+  \strut\end{minipage}\tabularnewline
   \midrule
   \endfirsthead
   \toprule
   \begin{minipage}[b]{0.29\columnwidth}\centering\strut
-  Factors\strut
-  \end{minipage} & \begin{minipage}[b]{0.47\columnwidth}\centering\strut
-  Correlation between Parents \& Child\strut
-  \end{minipage} & \begin{minipage}[b]{0.16\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage}\tabularnewline
+  Factors
+  \strut\end{minipage} &
+  \begin{minipage}[b]{0.47\columnwidth}\centering\strut
+  Correlation between Parents \& Child
+  \strut\end{minipage} &
+  \begin{minipage}[b]{0.16\columnwidth}\raggedright\strut
+  \strut\end{minipage}\tabularnewline
   \midrule
   \endhead
   \begin{minipage}[t]{0.29\columnwidth}\centering\strut
-  GenomeDB\strut
-  \end{minipage} & \begin{minipage}[t]{0.47\columnwidth}\centering\strut
-  1245\strut
-  \end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage}\tabularnewline
+  GenomeDB
+  \strut\end{minipage} &
+  \begin{minipage}[t]{0.47\columnwidth}\centering\strut
+  1245
+  \strut\end{minipage} &
+  \begin{minipage}[t]{0.16\columnwidth}\raggedright\strut
+  \strut\end{minipage}\tabularnewline
   \begin{minipage}[t]{0.29\columnwidth}\centering\strut
-  Families\strut
-  \end{minipage} & \begin{minipage}[t]{0.47\columnwidth}\centering\strut
-  65\strut
-  \end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage}\tabularnewline
+  Families
+  \strut\end{minipage} &
+  \begin{minipage}[t]{0.47\columnwidth}\centering\strut
+  65
+  \strut\end{minipage} &
+  \begin{minipage}[t]{0.16\columnwidth}\raggedright\strut
+  \strut\end{minipage}\tabularnewline
   \bottomrule
   \end{longtable}
   
@@ -1392,14 +1410,14 @@ starts here.
   suggestions. We love to see people using \emph{R Markdown} for their
   theses, and are happy to help.
   
-  \hypertarget{ref_labels}{\chapter{Cyanobacteria EvoMining
-  Results}\label{ref_labels}}
+  \hypertarget{refux5flabels}{\chapter{Cyanobacteria EvoMining
+  Results}\label{refux5flabels}}
   
-  Cyanobacteria phylum \{Referencia de luis\}
+  Cyanobacteria phylum \{Referencia\}
   
   \section{Tables}\label{tables-2}
   
-  \begin{longtable}[]{@{}cc@{}}
+  \begin{longtable}[c]{@{}cc@{}}
   \caption{Families on Cyanobacteria \label{tab:inher}}\tabularnewline
   \toprule
   Factors & Correlation between Parents \& Child\tabularnewline
@@ -1418,9 +1436,12 @@ starts here.
   
   \section{Central pathway expansions}\label{central-pathway-expansions}
   
+  Heat plot of central pathways expansions, Needs to be phylogenetically
+  sorted.
+  
   \begin{figure}[h!tbp]
   \centering
-  \includegraphics[angle = 0,scale = 1]{chapter5/HeatPlot.pdf}
+  \includegraphics[angle = 0,scale = 0.6]{chapter5/HeatPlot.pdf}
   \caption[Cyanobacterial Heatplot]{\normalsize{Cyanobacterial Heatplot}}
   \label{fig:CyanoPlot}
   \end{figure}
@@ -1428,206 +1449,8 @@ starts here.
   Here is a reference to the HeatPlot: \autoref{fig:CyanoPlot}.
   \clearpage 
   
-  Natural product recruitments
-  
-  \begin{Shaded}
-  \begin{Highlighting}[]
-  \NormalTok{EXP_SMASH<-}\KeywordTok{merge}\NormalTok{(CyanosHeatPlot,CyanosSMASH,}\DataTypeTok{by.x=}\StringTok{"RastId"}\NormalTok{,}\DataTypeTok{by.y=}\StringTok{"RastIds"}\NormalTok{)}
-  
-  \NormalTok{EXP_SMASH2<-}\KeywordTok{merge}\NormalTok{(CyanosTaxa, EXP_SMASH, }\DataTypeTok{by.x=}\StringTok{"RastId"}\NormalTok{,}\DataTypeTok{by.y=}\StringTok{"RastId"}\NormalTok{) }
-  
-  \CommentTok{#qplot(Total.x, Total.y, data = EXP_SMASH, colour=Order)+theme_bw()+}
-  \CommentTok{#}
-  \NormalTok{sn<-}\KeywordTok{qplot}\NormalTok{(TOTAL.x, TOTAL.y, }\DataTypeTok{data =} \NormalTok{EXP_SMASH2,}\DataTypeTok{colour=}\NormalTok{Order)+}\KeywordTok{theme_bw}\NormalTok{()+}\KeywordTok{facet_grid}\NormalTok{(EXP_SMASH2$Order~.,}\DataTypeTok{scales=}\StringTok{"free"}\NormalTok{)+}\StringTok{ }
-  \StringTok{        }\KeywordTok{theme}\NormalTok{(}\DataTypeTok{legend.position   =}\StringTok{"bottom"}\NormalTok{,}\DataTypeTok{plot.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{14}\NormalTok{, }\DataTypeTok{face =} \StringTok{"bold"}\NormalTok{),}
-                \DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{12}\NormalTok{),}
-                \DataTypeTok{axis.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{face=}\StringTok{"bold"}\NormalTok{),}
-                \DataTypeTok{axis.text.x=}\KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{12}\NormalTok{),}
-                \DataTypeTok{axis.text.y=}\KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{7}\NormalTok{))}
-  \KeywordTok{ggsave}\NormalTok{(}\StringTok{"chapter5/SMASHvsExpansionsbyOrder.pdf"}\NormalTok{, }\DataTypeTok{plot =} \NormalTok{sn,}\DataTypeTok{height =} \DecValTok{12}\NormalTok{, }\DataTypeTok{width =} \DecValTok{6}\NormalTok{)}
-  
-  \NormalTok{## Looking for color modifications}
-  \CommentTok{#sn + scale_color_brewer(palette="Dark2(100)")}
-  \CommentTok{#n + scale_color_brewer(palette=hm.palette(10))}
-  \NormalTok{## sn+ scale_color_hue(l=40, c=35)}
-  \end{Highlighting}
-  \end{Shaded}
-  
-  uuuf
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 0,scale = 1]{chapter5/SMASHvsExpansionsbyOrder.pdf}
-  \caption[Correlation between central pathway axpnasions and antismash Natural products detection]{\normalsize{Correlation between central pathway axpnasions and antismash Natural products detection}}
-  \label{fig:SMASHvsExpansionsbyOrder}
-  \end{figure}
-  
-  Here is a reference to the HeatPlot: \autoref{fig:CyanoPlot}.
-  \clearpage 
-  
-  Aqui una correlacion entre en talla de genoma y los productos de
-  antismash Aqui una correlacion entre talla de genoma y expansiones
-  
-  \begin{Shaded}
-  \begin{Highlighting}[]
-  \NormalTok{EXP_SMASH<-}\KeywordTok{merge}\NormalTok{(CyanosHeatPlot,CyanosSMASH,}\DataTypeTok{by.x=}\StringTok{"RastId"}\NormalTok{,}\DataTypeTok{by.y=}\StringTok{"RastIds"}\NormalTok{)}
-  
-  \NormalTok{EXP_SMASH2<-}\KeywordTok{merge}\NormalTok{(CyanosTaxa, EXP_SMASH, }\DataTypeTok{by.x=}\StringTok{"RastId"}\NormalTok{,}\DataTypeTok{by.y=}\StringTok{"RastId"}\NormalTok{) }
-  
-  \KeywordTok{qplot}\NormalTok{(TOTAL.x, TOTAL.y, }\DataTypeTok{data =} \NormalTok{EXP_SMASH2,}\DataTypeTok{colour=}\NormalTok{Family)+}\KeywordTok{theme_bw}\NormalTok{()+}\KeywordTok{facet_grid}\NormalTok{(EXP_SMASH2$Order~.,}\DataTypeTok{scales=}\StringTok{"free"}\NormalTok{)+}
-  \StringTok{        }\KeywordTok{theme}\NormalTok{( }\DataTypeTok{plot.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{14}\NormalTok{, }\DataTypeTok{face =} \StringTok{"bold"}\NormalTok{),}
-                \DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{12}\NormalTok{),}
-                \DataTypeTok{axis.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{face=}\StringTok{"bold"}\NormalTok{),}
-                \DataTypeTok{axis.text.x=}\KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{12}\NormalTok{),}
-                \DataTypeTok{axis.text.y=}\KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{7}\NormalTok{))}
-  \end{Highlighting}
-  \end{Shaded}
-  
-  \begin{center}\includegraphics{tesis_files/figure-latex/ANTISMASH_Expansion_Correlation_by_orden_Cyanos-1} \end{center}
-  
-  \begin{Shaded}
-  \begin{Highlighting}[]
-  \CommentTok{#facet_grid(EXP_SMASH$Order~.,scales="free")+}
-  \end{Highlighting}
-  \end{Shaded}
-  
-  \section{Natural products
-  recruitments}\label{natural-products-recruitments}
-  
-  We can see natural products origin by kingdom Natural products recruited
-  by metabolic family, colored by phylogenetic origin.
-  
-  \begin{Shaded}
-  \begin{Highlighting}[]
-  \KeywordTok{qplot}\NormalTok{(}\DataTypeTok{x=}\NormalTok{Central, }\DataTypeTok{data=}\NormalTok{CyanosNp, }\DataTypeTok{geom=}\StringTok{"bar"}\NormalTok{, }\DataTypeTok{fill=}\NormalTok{kingdom, }\DataTypeTok{position=}\StringTok{"stack"}\NormalTok{)+}\KeywordTok{theme_bw}\NormalTok{()+}\StringTok{ }\KeywordTok{theme}\NormalTok{(}\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size=}\DecValTok{8}\NormalTok{), }\DataTypeTok{axis.text.x =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{90}\NormalTok{, }\DataTypeTok{hjust =} \DecValTok{1}\NormalTok{, }\DataTypeTok{vjust =} \FloatTok{0.5}\NormalTok{) ,}\DataTypeTok{axis.text.y =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{0}\NormalTok{, }\DataTypeTok{hjust =} \DecValTok{1}\NormalTok{, }\DataTypeTok{vjust =} \FloatTok{0.5}\NormalTok{) )}
-  \end{Highlighting}
-  \end{Shaded}
-  
-  \begin{verbatim}
-  Warning: `position` is deprecated
-  \end{verbatim}
-  
-  \begin{center}\includegraphics{tesis_files/figure-latex/NP_recruitment_taxa_cyano-1} \end{center}
-  
-  \begin{Shaded}
-  \begin{Highlighting}[]
-  \KeywordTok{qplot}\NormalTok{(}\DataTypeTok{x=}\NormalTok{Central, }\DataTypeTok{data=}\NormalTok{CyanosNp, }\DataTypeTok{geom=}\StringTok{"bar"}\NormalTok{, }\DataTypeTok{fill=}\NormalTok{taxa, }\DataTypeTok{position=}\StringTok{"stack"}\NormalTok{)+}\KeywordTok{theme_bw}\NormalTok{()+}\StringTok{ }\KeywordTok{theme}\NormalTok{(}\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size=}\DecValTok{8}\NormalTok{), }\DataTypeTok{axis.text.x =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{90}\NormalTok{, }\DataTypeTok{hjust =} \DecValTok{1}\NormalTok{, }\DataTypeTok{vjust =} \FloatTok{0.5}\NormalTok{) ,}\DataTypeTok{axis.text.y =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{0}\NormalTok{, }\DataTypeTok{hjust =} \DecValTok{1}\NormalTok{, }\DataTypeTok{vjust =} \FloatTok{0.5}\NormalTok{) )}
-  \end{Highlighting}
-  \end{Shaded}
-  
-  \begin{verbatim}
-  Warning: `position` is deprecated
-  \end{verbatim}
-  
-  \begin{center}\includegraphics{tesis_files/figure-latex/NP_recruitment_taxa_cyano-2} \end{center}
-  
-  \section{Cyanobacterias AntiSMASH}\label{cyanobacterias-antismash}
-  
-  Philogenetical diversity on Cyanobacterial dataset
-  
-  \begin{Shaded}
-  \begin{Highlighting}[]
-  \NormalTok{## merge tables}
-  \NormalTok{m1 <-}\StringTok{ }\KeywordTok{merge}\NormalTok{(CyanosTaxa, CyanosSMASH, }\DataTypeTok{by.x =} \StringTok{"RastId"}\NormalTok{, }\DataTypeTok{by.y =} \StringTok{"RastIds"}\NormalTok{)}
-  \NormalTok{m1.m <-}\StringTok{ }\KeywordTok{melt}\NormalTok{(m1, }\DataTypeTok{id =} \KeywordTok{c}\NormalTok{(}\StringTok{"RastId"}\NormalTok{, }\StringTok{"Name"}\NormalTok{,}\StringTok{"Phylum"}\NormalTok{,}\StringTok{"Class"}\NormalTok{,}\StringTok{"Order"}\NormalTok{,}\StringTok{"Family"}\NormalTok{,}\StringTok{"Contigs"}\NormalTok{,}\StringTok{"Size"}\NormalTok{,}\StringTok{"RastNo"}\NormalTok{))}
-  \NormalTok{m2.m<-}\KeywordTok{subset}\NormalTok{(m1.m,value>}\DecValTok{0}\NormalTok{)}
-  
-  
-  \KeywordTok{qplot}\NormalTok{(}\DataTypeTok{x=}\NormalTok{Order, }\DataTypeTok{data=}\NormalTok{m1.m, }\DataTypeTok{geom=}\StringTok{"bar"}\NormalTok{, }\DataTypeTok{fill=}\NormalTok{Family, }\DataTypeTok{position=}\StringTok{"stack"}\NormalTok{)+}\KeywordTok{theme_bw}\NormalTok{()+}\StringTok{ }\KeywordTok{theme}\NormalTok{(}\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size=}\DecValTok{8}\NormalTok{), }\DataTypeTok{axis.text.x =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{90}\NormalTok{, }\DataTypeTok{hjust =} \DecValTok{1}\NormalTok{, }\DataTypeTok{vjust =} \FloatTok{0.5}\NormalTok{) ,}\DataTypeTok{axis.text.y =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{0}\NormalTok{, }\DataTypeTok{hjust =} \DecValTok{1}\NormalTok{, }\DataTypeTok{vjust =} \FloatTok{0.5}\NormalTok{) )}
-  \end{Highlighting}
-  \end{Shaded}
-  
-  \begin{verbatim}
-  Warning: `position` is deprecated
-  \end{verbatim}
-  
-  \begin{center}\includegraphics{tesis_files/figure-latex/CyanoDiversity-1} \end{center}
-  
-  \begin{Shaded}
-  \begin{Highlighting}[]
-  \KeywordTok{table}\NormalTok{(m1.m$Order>}\DecValTok{0}\NormalTok{,m1.m$Family>}\DecValTok{0}\NormalTok{)}
-  \end{Highlighting}
-  \end{Shaded}
-  
-  \begin{verbatim}
-  Warning in Ops.factor(m1.m$Order, 0): '>' not meaningful for factors
-  \end{verbatim}
-  
-  \begin{verbatim}
-  Warning in Ops.factor(m1.m$Family, 0): '>' not meaningful for factors
-  \end{verbatim}
-  
-  \begin{verbatim}
-  < table of extent 0 x 0 >
-  \end{verbatim}
-  
-  \begin{Shaded}
-  \begin{Highlighting}[]
-  \CommentTok{#qplot(x=clarity, data=diamonds, geom="bar", fill=cut, position="stack")}
-  
-  \KeywordTok{qplot}\NormalTok{(}\DataTypeTok{x=}\NormalTok{Order, }\DataTypeTok{data=}\NormalTok{m2.m, }\DataTypeTok{geom=}\StringTok{"bar"}\NormalTok{, }\DataTypeTok{fill=}\NormalTok{variable, }\DataTypeTok{position=}\StringTok{"stack"}\NormalTok{,}\DataTypeTok{colours =} \KeywordTok{hm.palette}\NormalTok{(}\DecValTok{100000}\NormalTok{))+}\KeywordTok{theme_bw}\NormalTok{()+}\StringTok{ }\KeywordTok{theme}\NormalTok{(}\DataTypeTok{legend.position=}\StringTok{"none"}\NormalTok{,}\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size=}\DecValTok{8}\NormalTok{), }\DataTypeTok{axis.text.x =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{90}\NormalTok{, }\DataTypeTok{hjust =} \DecValTok{1}\NormalTok{, }\DataTypeTok{vjust =} \FloatTok{0.5}\NormalTok{) ,}\DataTypeTok{axis.text.y =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{0}\NormalTok{, }\DataTypeTok{hjust =} \DecValTok{1}\NormalTok{, }\DataTypeTok{vjust =} \FloatTok{0.5}\NormalTok{) )}
-  \end{Highlighting}
-  \end{Shaded}
-  
-  \begin{verbatim}
-  Warning: `position` is deprecated
-  \end{verbatim}
-  
-  \begin{verbatim}
-  Warning: Ignoring unknown parameters: colours
-  \end{verbatim}
-  
-  \begin{center}\includegraphics{tesis_files/figure-latex/CyanoDiversity-2} \end{center}
-  
-  \begin{Shaded}
-  \begin{Highlighting}[]
-  \KeywordTok{table}\NormalTok{(m1.m$Order>}\DecValTok{0}\NormalTok{,m1.m$Family>}\DecValTok{0}\NormalTok{)}
-  \end{Highlighting}
-  \end{Shaded}
-  
-  \begin{verbatim}
-  Warning in Ops.factor(m1.m$Order, 0): '>' not meaningful for factors
-  \end{verbatim}
-  
-  \begin{verbatim}
-  Warning in Ops.factor(m1.m$Family, 0): '>' not meaningful for factors
-  \end{verbatim}
-  
-  \begin{verbatim}
-  < table of extent 0 x 0 >
-  \end{verbatim}
-  
-  \begin{quote}
-  head(table(m2.m\(Order,m2.m\)variable))
-  \end{quote}
-  
-  \clearpage 
-  
-  \begin{Shaded}
-  \begin{Highlighting}[]
-  \CommentTok{#summary(CyanosHeatPlot.m)}
-  \CommentTok{#table(CyanosHeatPlot.m$scale >=0,Deltas$DeltaPRO>=0)}
-  \end{Highlighting}
-  \end{Shaded}
-  
-  mm
-  
-  \begin{Shaded}
-  \begin{Highlighting}[]
-  \NormalTok{expansion_plot<-}\KeywordTok{ggplot}\NormalTok{(CyanosHeatPlot.m, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{CyanosHeatPlot.m$variable, }\DataTypeTok{y=}\NormalTok{CyanosHeatPlot.m$rescale)) +}\StringTok{ }\KeywordTok{geom_boxplot}\NormalTok{()+}\KeywordTok{theme_bw}\NormalTok{()+}\KeywordTok{theme}\NormalTok{(}\DataTypeTok{plot.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{14}\NormalTok{, }\DataTypeTok{face =} \StringTok{"bold"}\NormalTok{), }\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{12}\NormalTok{), }\DataTypeTok{axis.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{face=}\StringTok{"bold"}\NormalTok{), }\DataTypeTok{axis.text.x=}\KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{90}\NormalTok{,}\DataTypeTok{size =} \DecValTok{6}\NormalTok{), }\DataTypeTok{legend.position =} \StringTok{"bottom"}\NormalTok{)}
-  
-  \CommentTok{#ggplot(CyanosHeatPlot.m, aes(x=CyanosHeatPlot.m$variable, y=CyanosHeatPlot.m$rescale)) + geom_boxplot()+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6), legend.position = "bottom")}
-  \CommentTok{#+facet_grid(CyanosTaxa$class~.,scales="free")}
-  \CommentTok{#ggplot(CyanosHeatPlot.m, aes(x=CyanosHeatPlot.m$variable,y=CyanosHeatPlot.m$rescale,fill=CyanosHeatPlot.m$rescale)) }
-  \CommentTok{# +facet_grid(CyanosHeatPlot.m$rescale~.,scales="free")}
-  
-  \KeywordTok{ggsave}\NormalTok{(}\StringTok{"chapter5/expansion_plot.pdf"}\NormalTok{, }\DataTypeTok{plot =} \NormalTok{expansion_plot,}\DataTypeTok{height =} \DecValTok{6}\NormalTok{, }\DataTypeTok{width =} \DecValTok{7}\NormalTok{)}
-  \end{Highlighting}
-  \end{Shaded}
-  
-  why figure is not here?
-  
-  \clearpage 
+  \subsection{Expansions BoxPlot by metabolic
+  family}\label{expansions-boxplot-by-metabolic-family}
   
   \begin{Shaded}
   \begin{Highlighting}[]
@@ -1642,16 +1465,219 @@ starts here.
   \label{fig:Cyano_expansion_boxplot}
   \end{figure}
   
-  \clearpage  Here is a reference to the expansion boxplot:
-  \autoref{fig:Cyano_expansion_boxplot}.
+  Here is a reference to the expansion boxplot:
+  \autoref{fig:Cyano_expansion_boxplot}.\\
+  \clearpage 
+  
+  \section{Genome Size correlations}\label{genome-size-correlations}
+  
+  \subsection{Correlation between genome size and AntiSMASH
+  products}\label{correlation-between-genome-size-and-antismash-products}
+  
+  Genome size vs Total antismash cluster coloured by order
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.6]{chapter5/SMASHvsSizebyOrder.pdf}
+  \caption[Correlation between genome size and antismash Natural products detection colored by Order]{\normalsize{Correlation between genome size and antismash Natural products detection colored by Order}}
+  \label{fig:SMASHvsSizebyOrder}
+  \end{figure}
+  
+  Here is a reference to Genome size vs Total antismash cluster:
+  \autoref{fig:SMASHvsSizebyOrder}. \clearpage
+  
+  Genome size vs Total antismash cluster detected splitted by order
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.6]{chapter5/SMASHvsSizeGridOrder.pdf}
+  \caption[Correlation between genome size and antismash Natural products detection grided by Order]{\normalsize{Correlation between genome size and antismash Natural products detection grided by Order}}
+  \label{fig:SMASHvsSizeGridOrder}
+  \end{figure}
+  
+  Here is a reference to Correlation between genome size and antismash
+  Natural products detection grided by Order plot:
+  \autoref{fig:SMASHvsSizeGridOrder}. \clearpage 
+  
+  \subsection{Correlation between genome size and Central pathway
+  expansions}\label{correlation-between-genome-size-and-central-pathway-expansions}
+  
+  Genome size vs Total central pathway expansion coloured by order
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 1]{chapter5/SizevsExpansionsbyOrder.pdf}
+  \caption[Correlation between genome size and central pathway expansions ]{\normalsize{Correlation between genome size and central pathway expansions }}
+  \label{fig:SizevsExpansionsbyOrder}
+  \end{figure}
+  
+  Here is a reference to the size vs Total central pathway expansion plot:
+  \autoref{fig:SizevsExpansionsbyOrder}. \clearpage 
+  
+  Genome size vs Total central pathway expansion grided by order
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 1]{chapter5/SizevsExpansionsGridbyOrder.pdf}
+  \caption[Correlation between genome size and central pathway expansions grided by order]{\normalsize{Correlation between genome size and central pathway expansions grided by order}}
+  \label{fig:SizevsExpansionsGridbyOrder}
+  \end{figure}
+  
+  Here is a reference to the Genome size vs Total central pathway
+  expansion grided by order plot:
+  \autoref{fig:SizevsExpansionsGridbyOrder}. \clearpage 
+  
+  Correlation between genome size and each of the central pathway
+  families. Data are coloured by metabolic family instead of coloured by
+  taxonomical order. This treatment allows to answer how differente
+  metabolic families grows when genome size grow.\\
+  Also I want to add form given by taxonomical order.
+  
+  \begin{verbatim}
+  Warning: The shape palette can deal with a maximum of 6 discrete values
+  because more than 6 becomes difficult to discriminate; you have
+  10. Consider specifying shapes manually if you must have them.
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning: Removed 20418 rows containing missing values (geom_point).
+  \end{verbatim}
+  
+  Genome size vs Total central pathway expansion coloured by metabolic
+  Family
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.6]{chapter5/SizevsExpansionsbyMetabolicFamily.pdf}
+  \caption[Correlation between Genome size vs Total central pathway expansion coloured by metabolic Family]{\normalsize{Correlation between Genome size vs Total central pathway expansion coloured by metabolic Family}}
+  \label{fig:SizevsExpansionsbyMetabolicFamily}
+  \end{figure}
+  
+  Here is a reference to the Genome size vs Total central pathway
+  expansion coloured by metabolic Family plot:
+  \autoref{fig:SizevsExpansionsbyMetabolicFamily}. \clearpage 
+  
+  Future Work: Genome size vs Total central pathway expansion grided by
+  metabolic Family For clarity I need to also grid and group by Metabolic
+  Pathway
+  
+  Here is a reference to Genome size vs Total central pathway expansion
+  grided by metabolic Family plot:
+  \autoref{fig:ExpansionsbyMetabolicFamilyGrid}. \clearpage 
+  
+  \section{Natural products}\label{natural-products}
+  
+  \subsection{Natural products recruitments from EvoMining
+  heatplot}\label{natural-products-recruitments-from-evomining-heatplot}
+  
+  We can see natural products recruitment after central pathways
+  expansions colored by their kingdom.\\
+  Natural products recruited by metabolic family, colored by phylogenetic
+  origin.
+  
+  Recruitments after central pathways expansions coloured by Kingdom
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.6]{chapter5/RecruitmentsbyKingdom.pdf}
+  \caption[Recruitmens on central families coloured by kingdom]{\normalsize{Recruitmens on central families coloured by kingdom}}
+  \label{fig:RecruitmentsbyKingdom}
+  \end{figure}
+  
+  Here is a reference to Recruitments after central pathways expansions
+  colourd by Kingdom plot: \autoref{fig:RecruitmentsbyKingdom}.
+  
+  \clearpage 
+  Recruitments after central pathways expansions colourd by taxonomy
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.6]{chapter5/RecruitmentsbyTaxa.pdf}
+  \caption[Recruitmens on central families coloured by taxonomy]{\normalsize{Recruitmens on central families coloured by taxonomy}}
+  \label{fig:RecruitmentsbyTaxa}
+  \end{figure}
+  
+  Here is a reference to Recruitments after central pathways expansions
+  colourd by taxa plot: \autoref{fig:RecruitmentsbyTaxa}. \clearpage 
+  
+  \section{Cyanobacterias AntiSMASH}\label{cyanobacterias-antismash}
+  
+  Taxonomical diversity on Cyanobacteria Data
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.6]{chapter5/Diversity.pdf}
+  \caption[Diversity]{\normalsize{Diversity}}
+  \label{fig:Diversity}
+  \end{figure}
+  
+  Here is a reference to Recruitments after central pathways expansions
+  colourd by taxa plot: \autoref{fig:Diversity}. \clearpage
+  
+  Smash diversity
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.6]{chapter5/Smash.pdf}
+  \caption[Smash]{\normalsize{Smash}}
+  \label{fig:Smash Taxonomical Diversity}
+  \end{figure}
+  
+  Here is a reference to Recruitments after central pathways expansions
+  colourd by taxa plot: \autoref{fig:Smash}. \clearpage
+  
+  \subsection{AntisSMASH vs Central
+  Expansions}\label{antissmash-vs-central-expansions}
+  
+  Is it a correlation between pangenome grow and central pathways
+  expansions?
+  
+  Total central pathway expansions by genome vs Total antismash cluster
+  detected coloured by order
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.5]{chapter5/SMASHvsExpansionsbyOrder.pdf}
+  \caption[Correlation between central pathway axpnasions and antismash Natural products detection]{\normalsize{Correlation between central pathway axpnasions and antismash Natural products detection}}
+  \label{fig:SMASHvsExpansionsbyOrder}
+  \end{figure}
+  
+  Here is a reference to the expansions vs antismash NP's clusters plot:
+  \autoref{fig:SMASHvsExpansionsbyOrder}. \clearpage 
+  
+  Total central pathway expansions by genome vs Total antismash cluster
+  detected splitted by order
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.5]{chapter5/SMASHvsExpansionsbyOrderGRID.pdf}
+  \caption[Correlation between central pathway axpnasions and antismash Natural products detection]{\normalsize{Correlation between central pathway axpnasions and antismash Natural products detection}}
+  \label{fig:SMASHvsExpansionsbyOrderGRID}
+  \end{figure}
+  
+  Here is a reference to the expansions vs antismash NP's clusters
+  splitted by order plot \autoref{fig:SSMASHvsExpansionsbyOrderGRID}.
+  \clearpage 
+  
+  AntisMAsh vs Expansions by taxonomic Family
+  
+  Natural products colured by family
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.6]{chapter5/npf.pdf}
+  \caption[Natural products by family]{\normalsize{Natural products by family}}
+  \label{fig:npf}
+  \end{figure}
+  
+  Here is a reference to the Natural products colured by family plot
+  \autoref{fig:npf}. \clearpage 
   
   \section{Selected trees from
   EvoMining}\label{selected-trees-from-evomining}
   
-  \section{Lets analize Phosphoribosyl\_isomerase\_3
-  family}\label{lets-analize-phosphoribosyl_isomerase_3-family}
-  
-  Figure from EvoMining \clearpage 
+  Phosphoribosyl\_isomerase\_3 family\\
+  Figure from EvoMining
   
   \begin{figure}[h!tbp]
   \centering
@@ -1666,72 +1692,6 @@ starts here.
   \end{figure}
   
   \clearpage 
-  
-  \section{Footnotes and Endnotes}\label{footnotes-and-endnotes-2}
-  
-  You might want to footnote something.\footnote{footnote text} The
-  footnote will be in a smaller font and placed appropriately. Endnotes
-  work in much the same way. More information can be found about both on
-  the CUS site or feel free to reach out to
-  \href{mailto:data@reed.edu}{\nolinkurl{data@reed.edu}}.
-  
-  \section{Bibliographies}\label{bibliographies-2}
-  
-  Zotero. The Reed librarians have created Zotero documentation at
-  \url{http://libguides.reed.edu/citation/zotero}. In addition, a tutorial
-  is available from Middlebury College at
-  \url{http://sites.middlebury.edu/zoteromiddlebury/}.
-  
-  \emph{R Markdown} uses \emph{pandoc} (\url{http://pandoc.org/}) to build
-  its bibliographies. One nice caveat of this is that you won't have to do
-  a second compile to load in references as standard \LaTeX~requires. To
-  cite references in your thesis (after creating your bibliography
-  database), place the reference name inside square brackets and precede
-  it by the ``at'' symbol. For example, here's a reference to a book about
-  worrying: (Molina \& Borkovec, 1994). This \texttt{Molina1994} entry
-  appears in a file called \texttt{thesis.bib} in the \texttt{bib} folder.
-  This bibliography database file was created by a program called BibTeX.
-  You can call this file something else if you like (look at the YAML
-  header in the main .Rmd file) and, by default, is to placed in the
-  \texttt{bib} folder.
-  
-  For more information about BibTeX and bibliographies, see our CUS site
-  (\url{http://web.reed.edu/cis/help/latex/index.html})\footnote{Reed~College
-    (2007)}. There are three pages on this topic: \emph{bibtex} (which
-  talks about using BibTeX, at
-  \url{http://web.reed.edu/cis/help/latex/bibtex.html}),
-  \emph{bibtexstyles} (about how to find and use the bibliography style
-  that best suits your needs, at
-  \url{http://web.reed.edu/cis/help/latex/bibtexstyles.html}) and
-  \emph{bibman} (which covers how to make and maintain a bibliography by
-  hand, without BibTeX, at
-  \url{http://web.reed.edu/cis/help/latex/bibman.html}). The last page
-  will not be useful unless you have only a few sources.
-  
-  If you look at the YAML header at the top of the main .Rmd file you can
-  see that we can specify the style of the bibliography by referencing the
-  appropriate csl file. You can download a variety of different style
-  files at \url{https://www.zotero.org/styles}. Make sure to download the
-  file into the csl folder.
-  
-  \paragraph{Tips for Bibliographies}\label{tips-for-bibliographies-2}
-  
-  \begin{itemize}
-  \tightlist
-  \item
-    You can add a Reed Thesis citation\footnote{Noble (2002)} option. The
-    best way to do this is to use the phdthesis type of citation, and use
-    the optional ``type'' field to enter ``Reed thesis'' or
-    ``Undergraduate thesis.''
-  \end{itemize}
-  
-  \section{Anything else?}\label{anything-else-2}
-  
-  If you'd like to see examples of other things in this template, please
-  contact the Data @ Reed team (email
-  \href{mailto:data@reed.edu}{\nolinkurl{data@reed.edu}}) with your
-  suggestions. We love to see people using \emph{R Markdown} for their
-  theses, and are happy to help.
   
   \chapter*{Conclusion}\label{conclusion}
   \addcontentsline{toc}{chapter}{Conclusion}
@@ -1779,7 +1739,7 @@ starts here.
   \end{Shaded}
   
   \subsubsection{\texorpdfstring{In
-  \protect\hyperlink{ref_labels}{}:}{In :}}\label{in}
+  \protect\hyperlink{refux5flabels}{}:}{In :}}\label{in}
   
   \begin{Shaded}
   \begin{Highlighting}[]
@@ -1817,11 +1777,11 @@ starts here.
   \hypertarget{refs}{}
   \hypertarget{ref-angel2000}{}
   Angel, E. (2000). \emph{Interactive computer graphics : A top-down
-  approach with opengl}. Boston, MA: Addison Wesley Longman.
+  approach with openGL}. Boston, MA: Addison Wesley Longman.
   
   \hypertarget{ref-angel2001}{}
   Angel, E. (2001a). \emph{Batch-file computer graphics : A bottom-up
-  approach with quicktime}. Boston, MA: Wesley Addison Longman.
+  approach with quickTime}. Boston, MA: Wesley Addison Longman.
   
   \hypertarget{ref-angel2002a}{}
   Angel, E. (2001b). \emph{Test second book by angel}. Boston, MA: Wesley
@@ -1838,7 +1798,7 @@ starts here.
   (Undergraduate thesis). Reed College.
   
   \hypertarget{ref-reedweb2007}{}
-  Reed~College. (2007, march). LaTeX your document. Retrieved from
+  Reed~College. (2007, March). LaTeX your document. Retrieved from
   \url{http://web.reed.edu/cis/help/LaTeX/index.html}
 
 
