@@ -6,6 +6,11 @@ output: pdf_document
   \setcounter{chapter}{4}
 	\setcounter{section}{0}
 
+Idea de Rosario
+-ver dell cluster de saxitoxin cuantos pasos se necesitron para llegar ahi.  
+-A donde se iria el resultado de abrir el GMP  
+-Otra vez, que Actinos tienen FolE  
+
 If we don't want Conclusion to have a chapter number next to it, we can add the `{.unnumbered}` attribute.  This has an unintended consequence of the sections being labeled as 3.6 for example though instead of 4.1.  The \LaTeX\ commands immediately following the Conclusion declaration get things back on track.
 
 #### More info
