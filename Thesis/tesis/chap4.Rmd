@@ -150,10 +150,15 @@ Here is a reference to the expansion boxplot: `r ref("Actino_expansion_boxplot")
 ## Genome Size correlations
 ### Correlation between genome size and AntiSMASH products  
 ```{r ANTISMASH_GenomeSize_Correlation_by_ORG_Actinos2,echo=FALSE}
-EXP_SMASH_Actino<-merge(ActinosHeatPlot,ActinosSMASH,by.x="RastId",by.y="RastIds")
-EXP_SMASH2_Actino<-merge(ActinosTaxa, EXP_SMASH, by.x="RastId",by.y="RastId") 
+EXP_SMASH_Actino <- cbind(ActinosSMASH, TOTAL = rowSums(ActinosSMASH))
+
+EXP_SMASH_Actino<-merge(ActinosHeatPlot,ActinosSMASH,by.x="RastId",by.y="RastId")
+EXP_SMASH_Actino <- cbind(EXP_SMASH_Actino, TOTAL = rowSums(EXP_SMASH_Actino))
+
+EXP_SMASH2_Actino<-merge(ActinosTaxa, EXP_SMASH_Actino, by.x="RastId",by.y="RastId") 
 #qplot(Total.x, Total.y, data = EXP_SMASH, colour=Order)+theme_bw()+
 sn1Actino<-qplot(Size, TOTAL.y, data = EXP_SMASH2_Actino,colour=Order)+theme_bw()+ theme(legend.position	="bottom",plot.title = element_text(size = 14, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 12),axis.text.y=element_text(size = 7))
+
 ggsave("chapter4/SMASHvsSizebyOrderActinos.pdf", plot = sn1Actino,height = 8, width = 6)
 
 sn2Actino<-qplot(Size, TOTAL.y, data = EXP_SMASH2_Actino,colour=Order)+theme_bw()+facet_grid(EXP_SMASH2_Actino$Order~.,scales="free")+ theme(legend.position	="bottom",plot.title = element_text(size = 14, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 12),axis.text.y=element_text(size = 7))
