@@ -221,7 +221,7 @@ starts here.
   table of figures, etc. should make it of great benefit to nearly anyone
   writing a thesis project.
   
-  \hypertarget{rmd-basics}{\chapter{EvoMining}\label{rmd-basics}}
+  \chapter{EvoMining}\label{rmd-basics}
   
   \textbf{EvoMining} needs. Functional genomics uses genomes in the study
   of gene and protein function{[}{]}.
@@ -393,8 +393,7 @@ starts here.
   caching to improve performance. Later in this file, you'll see a way to
   reference plots created in \textbf{R} or external figures.
   
-  \hypertarget{loading-and-exploring-data}{\section{Loading and exploring
-  data}\label{loading-and-exploring-data}}
+  \section{Loading and exploring data}\label{loading-and-exploring-data}
   
   Included in this template is a file called \texttt{flights.csv}. This
   file includes a subset of the larger dataset of information about all
@@ -525,7 +524,7 @@ starts here.
   \end{Highlighting}
   \end{Shaded}
   
-  \begin{longtable}[c]{@{}lr@{}}
+  \begin{longtable}[]{@{}lr@{}}
   \caption{Maximum Delays by Airline \label{tab:max_delay}}\tabularnewline
   \toprule
   Airline & Max Arrival Delay\tabularnewline
@@ -662,9 +661,9 @@ starts here.
   You may wish to put your reaction in a figure environment, which means
   that \LaTeX~will place the reaction where it fits and you can have a
   figure caption. You'll see further description of this \textbf{R}
-  \texttt{label} function in \protect\hyperlink{refux5flabels}{}. (Note
-  the use of the double backslash here as well as the
-  \texttt{echo\ =\ FALSE} which hides the code from the output.)
+  \texttt{label} function in \protect\hyperlink{ref_labels}{}. (Note the
+  use of the double backslash here as well as the \texttt{echo\ =\ FALSE}
+  which hides the code from the output.)
   
   \begin{figure}[h!tbp]
   \begin{center}
@@ -699,284 +698,71 @@ starts here.
   (\url{http://homepages.uni-tuebingen.de/beitz/txe.html}). Be sure to
   read the proceeding chapter on graphics and tables.
   
-  \begin{Shaded}
-  \begin{Highlighting}[]
-  \NormalTok{ArchaeasCentral <-}\StringTok{ }\KeywordTok{read.table}\NormalTok{(}\StringTok{"chapter3/ArchaeasCentral"}\NormalTok{, }\DataTypeTok{header=}\OtherTok{TRUE}\NormalTok{, }\DataTypeTok{sep=}\StringTok{"}\CharTok{\textbackslash{}t}\StringTok{"}\NormalTok{)}
-  \NormalTok{ArchaeasHeatPlot <-}\StringTok{ }\KeywordTok{read.table}\NormalTok{(}\StringTok{"chapter3/ArchaeasHeatPlot"}\NormalTok{, }\DataTypeTok{header=}\OtherTok{TRUE}\NormalTok{, }\DataTypeTok{sep=}\StringTok{"}\CharTok{\textbackslash{}t}\StringTok{"}\NormalTok{)}
-  \NormalTok{ArchaeasNp <-}\StringTok{ }\KeywordTok{read.table}\NormalTok{(}\StringTok{"chapter3/ArchaeasNp"}\NormalTok{, }\DataTypeTok{header=}\OtherTok{TRUE}\NormalTok{, }\DataTypeTok{sep=}\StringTok{"}\CharTok{\textbackslash{}t}\StringTok{"}\NormalTok{)}
-  \NormalTok{ArchaeasSMASH <-}\StringTok{ }\KeywordTok{read.table}\NormalTok{(}\StringTok{"chapter3/ArchaeasSMASH"}\NormalTok{, }\DataTypeTok{header=}\OtherTok{TRUE}\NormalTok{, }\DataTypeTok{sep=}\StringTok{"}\CharTok{\textbackslash{}t}\StringTok{"}\NormalTok{)}
-  \NormalTok{ArchaeasTaxa <-}\StringTok{ }\KeywordTok{read.table}\NormalTok{(}\StringTok{"chapter3/ArchaeasTaxa"}\NormalTok{, }\DataTypeTok{header=}\OtherTok{TRUE}\NormalTok{, }\DataTypeTok{sep=}\StringTok{"}\CharTok{\textbackslash{}t}\StringTok{"}\NormalTok{)}
-  \end{Highlighting}
-  \end{Shaded}
+  \hypertarget{ref_labels}{\chapter{Archaea EvoMining
+  Results}\label{ref_labels}}
   
-  \hypertarget{refux5flabels}{\chapter{Archaeas result Tables, Graphics,
-  References, and Labels}\label{refux5flabels}}
+  Archaea kingdom \{Referencia\}
   
   \section{Tables}\label{tables}
   
-  In addition to the tables that can be automatically generated from a
-  data frame in \textbf{R} that you saw in {[}R Markdown Basics{]} using
-  the \texttt{kable} function, you can also create tables using
-  \emph{pandoc}. (More information is available at
-  \url{http://pandoc.org/README.html\#tables}.) This might be useful if
-  you don't have values specifically stored in \textbf{R}, but you'd like
-  to display them in table form. Below is an example. Pay careful
-  attention to the alignment in the table and hyphens to create the rows
-  and columns.
-  
-  \begin{longtable}[c]{@{}ccc@{}}
-  \caption{Correlation of Inheritance Factors for Parents and Child
-  \label{tab:inher}}\tabularnewline
+  \begin{longtable}[]{@{}cc@{}}
+  \caption{Families on Cyanobacteria \label{tab:inher}}\tabularnewline
   \toprule
-  \begin{minipage}[b]{0.29\columnwidth}\centering\strut
-  Factors
-  \strut\end{minipage} &
-  \begin{minipage}[b]{0.47\columnwidth}\centering\strut
-  Correlation between Parents \& Child
-  \strut\end{minipage} &
-  \begin{minipage}[b]{0.16\columnwidth}\centering\strut
-  Inherited
-  \strut\end{minipage}\tabularnewline
+  Factors & Correlation between Parents \& Child\tabularnewline
   \midrule
   \endfirsthead
   \toprule
-  \begin{minipage}[b]{0.29\columnwidth}\centering\strut
-  Factors
-  \strut\end{minipage} &
-  \begin{minipage}[b]{0.47\columnwidth}\centering\strut
-  Correlation between Parents \& Child
-  \strut\end{minipage} &
-  \begin{minipage}[b]{0.16\columnwidth}\centering\strut
-  Inherited
-  \strut\end{minipage}\tabularnewline
+  Factors & Correlation between Parents \& Child\tabularnewline
   \midrule
   \endhead
-  \begin{minipage}[t]{0.29\columnwidth}\centering\strut
-  Education
-  \strut\end{minipage} &
-  \begin{minipage}[t]{0.47\columnwidth}\centering\strut
-  -0.49
-  \strut\end{minipage} &
-  \begin{minipage}[t]{0.16\columnwidth}\centering\strut
-  Yes
-  \strut\end{minipage}\tabularnewline
-  \begin{minipage}[t]{0.29\columnwidth}\centering\strut
-  Socio-Economic Status
-  \strut\end{minipage} &
-  \begin{minipage}[t]{0.47\columnwidth}\centering\strut
-  0.28
-  \strut\end{minipage} &
-  \begin{minipage}[t]{0.16\columnwidth}\centering\strut
-  Slight
-  \strut\end{minipage}\tabularnewline
-  \begin{minipage}[t]{0.29\columnwidth}\centering\strut
-  Income
-  \strut\end{minipage} &
-  \begin{minipage}[t]{0.47\columnwidth}\centering\strut
-  0.08
-  \strut\end{minipage} &
-  \begin{minipage}[t]{0.16\columnwidth}\centering\strut
-  No
-  \strut\end{minipage}\tabularnewline
-  \begin{minipage}[t]{0.29\columnwidth}\centering\strut
-  Family Size
-  \strut\end{minipage} &
-  \begin{minipage}[t]{0.47\columnwidth}\centering\strut
-  0.18
-  \strut\end{minipage} &
-  \begin{minipage}[t]{0.16\columnwidth}\centering\strut
-  Slight
-  \strut\end{minipage}\tabularnewline
-  \begin{minipage}[t]{0.29\columnwidth}\centering\strut
-  Occupational Prestige
-  \strut\end{minipage} &
-  \begin{minipage}[t]{0.47\columnwidth}\centering\strut
-  0.21
-  \strut\end{minipage} &
-  \begin{minipage}[t]{0.16\columnwidth}\centering\strut
-  Slight
-  \strut\end{minipage}\tabularnewline
+  GenomeDB & 876\tabularnewline
+  Phylum & 12\tabularnewline
+  Order & 23\tabularnewline
   \bottomrule
   \end{longtable}
   
-  We can also create a link to the table by doing the following:
-  \autoref{tab:inher}. If you go back to
-  \protect\hyperlink{loading-and-exploring-data}{Loading and exploring
-  data} and look at the \texttt{kable} function code, you'll see that I
-  added in a similar \texttt{\textbackslash{}\textbackslash{}label} to be
-  able to reference that table later. (The extra backslash there is a way
-  that \emph{Markdown} interfaces with \LaTeX.) We can create a reference
-  to the max delays table: \autoref{tab:max_delay}.
-  
-  The addition of the \texttt{\textbackslash{}label\{\}} option to the end
-  of the table caption allows us to then use the \LaTeX~\texttt{autoref}
-  function to produce the link. The \texttt{ref} function in \textbf{R}
-  allows for tables and figures to be referenced in the document easily
-  without having to directly use the \texttt{autoref} function. It will
-  automatically add ``Table'' before your number if you add the ``tab:''
-  prefix to your label. Note that this reference could appear anywhere
-  throughout the document.
-  
   \clearpage
+   \#\# Central pathway expansions\\
+  Heat plot of central pathways expansions, Needs to be phylogenetically
+  sorted.
   
-  \section{Figures}\label{figures}
-  
-  If your thesis has a lot of figures, \emph{R Markdown} might behave
-  better for you than that other word processor. One perk is that it will
-  automatically number the figures accordingly in each chapter. You'll
-  also be able to create a label for each figure, add a caption, and then
-  reference the figure in a way similar to what we saw with tables
-  earlier. If you label your figures, you can move the figures around and
-  \emph{R Markdown} will automatically adjust the numbering for you. No
-  need for you to remember! So that you don't have to get too far into
-  \LaTeX~to do this, a couple \textbf{R} functions have been created for
-  you to assist. You'll see their use below.
-  
-  In the \textbf{R} chunk below, we will load in a picture stored as
-  \texttt{reed.jpg} in our main directory. We then give it the caption of
-  ``Reed logo'', the label of ``reed'', and specify that this is a figure.
-  Note again the use of the \texttt{results\ =\ "asis"} specification to
-  automatically include and compile the \LaTeX~code.
-  
-  \begin{Shaded}
-  \begin{Highlighting}[]
-  \KeywordTok{label}\NormalTok{(}\DataTypeTok{path =} \StringTok{"figure/reed.jpg"}\NormalTok{, }\DataTypeTok{caption =} \StringTok{"Reed logo"}\NormalTok{, }
-        \DataTypeTok{label =} \StringTok{"reed"}\NormalTok{, }\DataTypeTok{type =} \StringTok{"figure"}\NormalTok{)}
-  \end{Highlighting}
-  \end{Shaded}
+  \begin{verbatim}
+  Warning: Ignoring unknown aesthetics: width
+  \end{verbatim}
   
   \begin{figure}[h!tbp]
   \centering
-  \includegraphics[angle = 0,scale = 1]{figure/reed.jpg}
-  \caption[Reed logo]{\normalsize{Reed logo}}
-  \label{fig:reed}
+  \includegraphics[angle = 0,scale = 0.6]{chapter3/ArchaeasHeatPlot.pdf}
+  \caption[Archaeas Heatplot]{\normalsize{Archaeas Heatplot}}
+  \label{fig:ArchaeaPlot}
   \end{figure}
   
-  Here is a reference to the Reed logo: \autoref{fig:reed}. Note the use
-  of the inline \textbf{R} code here. By default ``figure'' is specified
-  as the type. For clarity, we could have also added the \texttt{label}
-  and \texttt{type} to the parameter specifications and this would give us
-  the same result: \autoref{fig:reed}.
-  
+  Here is a reference to the HeatPlot: \autoref{fig:ArchaeaPlot}.
   \clearpage 
   
-  Below we will investigate how to save the output of an \textbf{R} plot
-  and label it in a way similar to that done above. Recall the
-  \texttt{flights} dataset from \protect\hyperlink{rmd-basics}{}. (Note
-  that we've shown a different way to reference a section or chapter
-  here.) We will next explore a bar graph with the mean flight departure
-  delays by airline from Portland for 2014. Note also the use of the
-  \texttt{scale} parameter which is discussed on the next page.
+  \subsection{Expansions BoxPlot by metabolic
+  family}\label{expansions-boxplot-by-metabolic-family}
+  
+  \begin{verbatim}
+  Warning: Removed 876 rows containing non-finite values (stat_boxplot).
+  \end{verbatim}
   
   \begin{Shaded}
   \begin{Highlighting}[]
-  \NormalTok{delay_airline <-}\StringTok{ }\NormalTok{flights %>%}\StringTok{ }\KeywordTok{group_by}\NormalTok{(carrier) %>%}
-  \StringTok{  }\KeywordTok{summarize}\NormalTok{(}\DataTypeTok{mean_dep_delay =} \KeywordTok{mean}\NormalTok{(dep_delay)) %>%}
-  \StringTok{  }\KeywordTok{ggplot}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =} \NormalTok{carrier, }\DataTypeTok{y =} \NormalTok{mean_dep_delay)) +}
-  \StringTok{  }\KeywordTok{geom_bar}\NormalTok{(}\DataTypeTok{position =} \StringTok{"identity"}\NormalTok{, }\DataTypeTok{stat =} \StringTok{"identity"}\NormalTok{, }\DataTypeTok{fill =} \StringTok{"red"}\NormalTok{)}
-  \KeywordTok{ggsave}\NormalTok{(}\StringTok{"figure/delays.pdf"}\NormalTok{, }\DataTypeTok{plot =} \NormalTok{delay_airline,}
-    \DataTypeTok{height =} \DecValTok{3}\NormalTok{, }\DataTypeTok{width =} \DecValTok{6}\NormalTok{)}
-  \end{Highlighting}
-  \end{Shaded}
-  
-  \begin{Shaded}
-  \begin{Highlighting}[]
-  \KeywordTok{label}\NormalTok{(}\DataTypeTok{path =} \StringTok{"figure/delays.pdf"}\NormalTok{, }
-        \DataTypeTok{caption =} \StringTok{"Mean Delays by Airline"}\NormalTok{, }
-        \DataTypeTok{label =} \StringTok{"delays"}\NormalTok{, }\DataTypeTok{type =} \StringTok{"figure"}\NormalTok{)}
+  \KeywordTok{label}\NormalTok{(}\DataTypeTok{path =} \StringTok{"chapter3/expansion_plot.pdf"}\NormalTok{, }\DataTypeTok{caption =} \StringTok{"Expansions Boxplot"}\NormalTok{,}\DataTypeTok{label =} \StringTok{"Archeas_expansion_boxplot"}\NormalTok{, }\DataTypeTok{type =} \StringTok{"figure"}\NormalTok{)}
   \end{Highlighting}
   \end{Shaded}
   
   \begin{figure}[h!tbp]
   \centering
-  \includegraphics[angle = 0,scale = 1]{figure/delays.pdf}
-  \caption[Mean Delays by Airline]{\normalsize{Mean Delays by Airline}}
-  \label{fig:delays}
+  \includegraphics[angle = 0,scale = 1]{chapter3/expansion_plot.pdf}
+  \caption[Expansions Boxplot]{\normalsize{Expansions Boxplot}}
+  \label{fig:Archeas_expansion_boxplot}
   \end{figure}
   
-  A table linking these carrier codes to airline names is available at
-  \url{https://github.com/ismayc/pnwflights14/blob/master/data/airlines.csv}.
-  
-  \clearpage
-  
-  Next, we will explore the use of the \texttt{scale} parameter which can
-  be used to shrink or expand an image. Here we use the mathematical graph
-  stored in the ``subdivision.pdf'' file. Note that we didn't specify the
-  \texttt{caption\ =} or \texttt{label\ =} here, but we could have.
-  
-  \begin{Shaded}
-  \begin{Highlighting}[]
-  \KeywordTok{label}\NormalTok{(}\StringTok{"figure/subdivision.pdf"}\NormalTok{, }\StringTok{"Subdiv. graph"}\NormalTok{, }\StringTok{"subd"}\NormalTok{, }
-        \DataTypeTok{scale =} \FloatTok{0.75}\NormalTok{)}
-  \end{Highlighting}
-  \end{Shaded}
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 0,scale = 0.75]{figure/subdivision.pdf}
-  \caption[Subdiv. graph]{\normalsize{Subdiv. graph}}
-  \label{fig:subd}
-  \end{figure}
-  
-  Here is a reference to this image: \autoref{fig:subd}. (Move this around
-  throughout the document as you wish.)
-  
-  \subsubsection{More Figure Stuff}\label{more-figure-stuff}
-  
-  Lastly, we will explore how to rotate figures using the \texttt{angle}
-  parameter.
-  
-  \begin{Shaded}
-  \begin{Highlighting}[]
-  \KeywordTok{label}\NormalTok{(}\StringTok{"figure/subdivision.pdf"}\NormalTok{, }
-        \StringTok{"A Larger Figure, Flipped Upside Down"}\NormalTok{, }
-        \DataTypeTok{scale =} \FloatTok{1.5}\NormalTok{,}
-        \DataTypeTok{angle =} \DecValTok{180}\NormalTok{,}
-        \DataTypeTok{label =} \StringTok{"subd2"}\NormalTok{)}
-  \end{Highlighting}
-  \end{Shaded}
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 180,scale = 1.5]{figure/subdivision.pdf}
-  \caption[A Larger Figure, Flipped Upside Down]{\normalsize{A Larger Figure, Flipped Upside Down}}
-  \label{fig:subd2}
-  \end{figure}
-  
-  As another example, here is a reference to this figure:
-  \autoref{fig:subd2}.
-  
-  \subsubsection{Common Modifications}\label{common-modifications}
-  
-  The following figure features the more popular changes thesis students
-  want to make to their figures. We can add math to the caption that
-  displays below the picture, specify the size of our caption to display
-  below the figure (list of sizes available at this
-  \href{http://www.emerson.emory.edu/services/latex/latex_169.html\#SEC169}{link}),
-  and also specify that a different caption \texttt{alt.cap} be what
-  appears in the Table of Figures for this figure.
-  
-  If you'd like to make further tweaks to figures, you might need to
-  invoke some \LaTeX~code. Please email us at
-  \href{mailto:data@reed.edu}{\nolinkurl{data@reed.edu}} if you need
-  assistance.
-  
-  \begin{Shaded}
-  \begin{Highlighting}[]
-  \KeywordTok{label}\NormalTok{(}\StringTok{"figure/subdivision.pdf"}\NormalTok{, }
-        \DataTypeTok{caption =} \StringTok{"Subdivision of arc segments"}\NormalTok{,}
-        \DataTypeTok{alt.cap =} \StringTok{"You can see that $p_3 = p_6^}\CharTok{\textbackslash{}\textbackslash{}}\StringTok{prime$"}\NormalTok{,}
-        \DataTypeTok{cap.size =} \StringTok{"footnotesize"}\NormalTok{,}
-        \DataTypeTok{label =} \StringTok{"subd3"}\NormalTok{)}
-  \end{Highlighting}
-  \end{Shaded}
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 0,scale = 1]{figure/subdivision.pdf}
-  \caption[Subdivision of arc segments]{\footnotesize{You can see that $p_3 = p_6^\prime$}}
-  \label{fig:subd3}
-  \end{figure}
+  Here is a reference to the expansion boxplot:
+  \autoref{fig:Archeas_expansion_boxplot}.\\
+  \clearpage 
   
   \section{Footnotes and Endnotes}\label{footnotes-and-endnotes}
   
@@ -1068,54 +854,50 @@ starts here.
   suggestions. We love to see people using \emph{R Markdown} for their
   theses, and are happy to help.
   
-  \hypertarget{refux5flabels}{\chapter{Actinobacteria EvoMining
-  Results}\label{refux5flabels}}
+  \hypertarget{ref_labels}{\chapter{Actinobacteria EvoMining
+  Results}\label{ref_labels}}
   
   Actinobacteria is an ancient phylum \{Referencia de luis\}
   
   \section{Tables}\label{tables-1}
   
-  \begin{longtable}[c]{@{}ccl@{}}
+  \begin{longtable}[]{@{}ccl@{}}
   \caption{Correlation of Inheritance Factors for Parents and Child
   \label{tab:inher}}\tabularnewline
   \toprule
   \begin{minipage}[b]{0.29\columnwidth}\centering\strut
-  Factors
-  \strut\end{minipage} &
-  \begin{minipage}[b]{0.47\columnwidth}\centering\strut
-  Correlation between Parents \& Child
-  \strut\end{minipage} &
-  \begin{minipage}[b]{0.16\columnwidth}\raggedright\strut
-  \strut\end{minipage}\tabularnewline
+  Factors\strut
+  \end{minipage} & \begin{minipage}[b]{0.47\columnwidth}\centering\strut
+  Correlation between Parents \& Child\strut
+  \end{minipage} & \begin{minipage}[b]{0.16\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage}\tabularnewline
   \midrule
   \endfirsthead
   \toprule
   \begin{minipage}[b]{0.29\columnwidth}\centering\strut
-  Factors
-  \strut\end{minipage} &
-  \begin{minipage}[b]{0.47\columnwidth}\centering\strut
-  Correlation between Parents \& Child
-  \strut\end{minipage} &
-  \begin{minipage}[b]{0.16\columnwidth}\raggedright\strut
-  \strut\end{minipage}\tabularnewline
+  Factors\strut
+  \end{minipage} & \begin{minipage}[b]{0.47\columnwidth}\centering\strut
+  Correlation between Parents \& Child\strut
+  \end{minipage} & \begin{minipage}[b]{0.16\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage}\tabularnewline
   \midrule
   \endhead
   \begin{minipage}[t]{0.29\columnwidth}\centering\strut
-  GenomeDB
-  \strut\end{minipage} &
-  \begin{minipage}[t]{0.47\columnwidth}\centering\strut
-  1245
-  \strut\end{minipage} &
-  \begin{minipage}[t]{0.16\columnwidth}\raggedright\strut
-  \strut\end{minipage}\tabularnewline
+  GenomeDB\strut
+  \end{minipage} & \begin{minipage}[t]{0.47\columnwidth}\centering\strut
+  1245\strut
+  \end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage}\tabularnewline
   \begin{minipage}[t]{0.29\columnwidth}\centering\strut
-  Families
-  \strut\end{minipage} &
-  \begin{minipage}[t]{0.47\columnwidth}\centering\strut
-  65
-  \strut\end{minipage} &
-  \begin{minipage}[t]{0.16\columnwidth}\raggedright\strut
-  \strut\end{minipage}\tabularnewline
+  Families\strut
+  \end{minipage} & \begin{minipage}[t]{0.47\columnwidth}\centering\strut
+  65\strut
+  \end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage}\tabularnewline
   \bottomrule
   \end{longtable}
   
@@ -1133,13 +915,11 @@ starts here.
   \label{fig:ActinoPlot}
   \end{figure}
   
-  \chapter{\texorpdfstring{Here is a reference to the HeatPlot:
-  \autoref{fig:ActinoPlot}.}{Here is a reference to the HeatPlot: .}}\label{here-is-a-reference-to-the-heatplot-.}
-  
+  Here is a reference to the HeatPlot: \autoref{fig:ActinoPlot}.
   \clearpage 
   
   \subsection{Expansions BoxPlot by metabolic
-  family}\label{expansions-boxplot-by-metabolic-family}
+  family}\label{expansions-boxplot-by-metabolic-family-1}
   
   \begin{Shaded}
   \begin{Highlighting}[]
@@ -1158,14 +938,19 @@ starts here.
   \autoref{fig:Actino_expansion_boxplot}.\\
   \clearpage 
   
-  \hypertarget{refux5flabels}{\chapter{Cyanobacteria EvoMining
-  Results}\label{refux5flabels}}
+  \section{Genome Size correlations}\label{genome-size-correlations}
+  
+  \subsection{Correlation between genome size and AntiSMASH
+  products}\label{correlation-between-genome-size-and-antismash-products}
+  
+  \hypertarget{ref_labels}{\chapter{Cyanobacteria EvoMining
+  Results}\label{ref_labels}}
   
   Cyanobacteria phylum \{Referencia\}
   
   \section{Tables}\label{tables-2}
   
-  \begin{longtable}[c]{@{}cc@{}}
+  \begin{longtable}[]{@{}cc@{}}
   \caption{Families on Cyanobacteria \label{tab:inher}}\tabularnewline
   \toprule
   Factors & Correlation between Parents \& Child\tabularnewline
@@ -1198,7 +983,7 @@ starts here.
   \clearpage 
   
   \subsection{Expansions BoxPlot by metabolic
-  family}\label{expansions-boxplot-by-metabolic-family-1}
+  family}\label{expansions-boxplot-by-metabolic-family-2}
   
   \begin{Shaded}
   \begin{Highlighting}[]
@@ -1217,10 +1002,10 @@ starts here.
   \autoref{fig:Cyano_expansion_boxplot}.\\
   \clearpage 
   
-  \section{Genome Size correlations}\label{genome-size-correlations}
+  \section{Genome Size correlations}\label{genome-size-correlations-1}
   
   \subsection{Correlation between genome size and AntiSMASH
-  products}\label{correlation-between-genome-size-and-antismash-products}
+  products}\label{correlation-between-genome-size-and-antismash-products-1}
   
   Genome size vs Total antismash cluster coloured by order
   
@@ -1335,8 +1120,8 @@ starts here.
   Here is a reference to Recruitments after central pathways expansions
   colourd by Kingdom plot: \autoref{fig:RecruitmentsbyKingdom}.
   
-  \clearpage 
-  Recruitments after central pathways expansions colourd by taxonomy
+  \clearpage  Recruitments after central pathways expansions colourd by
+  taxonomy
   
   \begin{figure}[h!tbp]
   \centering
@@ -1492,7 +1277,7 @@ starts here.
   \end{Shaded}
   
   \subsubsection{\texorpdfstring{In
-  \protect\hyperlink{refux5flabels}{}:}{In :}}\label{in}
+  \protect\hyperlink{ref_labels}{}:}{In :}}\label{in}
   
   \begin{Shaded}
   \begin{Highlighting}[]
@@ -1502,6 +1287,8 @@ starts here.
   \CommentTok{# used for labeling and referencing}
   \NormalTok{if(!}\KeywordTok{require}\NormalTok{(devtools))}
     \KeywordTok{install.packages}\NormalTok{(}\StringTok{"devtools"}\NormalTok{, }\DataTypeTok{repos =} \StringTok{"http://cran.rstudio.com"}\NormalTok{)}
+  \NormalTok{if(!}\KeywordTok{require}\NormalTok{(plyr))}
+      \KeywordTok{install.packages}\NormalTok{(}\StringTok{"plyr"}\NormalTok{, }\DataTypeTok{repos =} \StringTok{"http://cran.rstudio.com"}\NormalTok{)}
   \NormalTok{if(!}\KeywordTok{require}\NormalTok{(dplyr))}
       \KeywordTok{install.packages}\NormalTok{(}\StringTok{"dplyr"}\NormalTok{, }\DataTypeTok{repos =} \StringTok{"http://cran.rstudio.com"}\NormalTok{)}
   \NormalTok{if(!}\KeywordTok{require}\NormalTok{(ggplot2))}
@@ -1530,11 +1317,11 @@ starts here.
   \hypertarget{refs}{}
   \hypertarget{ref-angel2000}{}
   Angel, E. (2000). \emph{Interactive computer graphics : A top-down
-  approach with openGL}. Boston, MA: Addison Wesley Longman.
+  approach with opengl}. Boston, MA: Addison Wesley Longman.
   
   \hypertarget{ref-angel2001}{}
   Angel, E. (2001a). \emph{Batch-file computer graphics : A bottom-up
-  approach with quickTime}. Boston, MA: Wesley Addison Longman.
+  approach with quicktime}. Boston, MA: Wesley Addison Longman.
   
   \hypertarget{ref-angel2002a}{}
   Angel, E. (2001b). \emph{Test second book by angel}. Boston, MA: Wesley
@@ -1551,7 +1338,7 @@ starts here.
   (Undergraduate thesis). Reed College.
   
   \hypertarget{ref-reedweb2007}{}
-  Reed~College. (2007, March). LaTeX your document. Retrieved from
+  Reed~College. (2007, march). LaTeX your document. Retrieved from
   \url{http://web.reed.edu/cis/help/LaTeX/index.html}
 
 

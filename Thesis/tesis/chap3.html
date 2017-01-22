@@ -123,121 +123,42 @@ $(document).ready(function () {
 <!--
 You can delete the header-includes (lines 3-6 above) if you like and also the chunk below since it is loaded in the skeleton.Rmd file.  They are included so that chap3.Rmd will compile by itself when you hit Knit PDF.
 -->
-<pre class="r"><code>ArchaeasCentral &lt;- read.table(&quot;chapter3/ArchaeasCentral&quot;, header=TRUE, sep=&quot;\t&quot;)
-ArchaeasHeatPlot &lt;- read.table(&quot;chapter3/ArchaeasHeatPlot&quot;, header=TRUE, sep=&quot;\t&quot;)
-ArchaeasNp &lt;- read.table(&quot;chapter3/ArchaeasNp&quot;, header=TRUE, sep=&quot;\t&quot;)
-ArchaeasSMASH &lt;- read.table(&quot;chapter3/ArchaeasSMASH&quot;, header=TRUE, sep=&quot;\t&quot;)
-ArchaeasTaxa &lt;- read.table(&quot;chapter3/ArchaeasTaxa&quot;, header=TRUE, sep=&quot;\t&quot;)</code></pre>
 <div id="ref_labels" class="section level1">
-<h1>Archaeas result Tables, Graphics, References, and Labels</h1>
+<h1>Archaea EvoMining Results</h1>
+<p>Archaea kingdom {Referencia}</p>
 <div id="tables" class="section level2">
 <h2>Tables</h2>
-<p>In addition to the tables that can be automatically generated from a data frame in <strong>R</strong> that you saw in [R Markdown Basics] using the <code>kable</code> function, you can also create tables using <em>pandoc</em>. (More information is available at <a href="http://pandoc.org/README.html#tables" class="uri">http://pandoc.org/README.html#tables</a>.) This might be useful if you don’t have values specifically stored in <strong>R</strong>, but you’d like to display them in table form. Below is an example. Pay careful attention to the alignment in the table and hyphens to create the rows and columns.</p>
 <table>
-<caption>Correlation of Inheritance Factors for Parents and Child </caption>
-<colgroup>
-<col width="31%"></col>
-<col width="51%"></col>
-<col width="17%"></col>
-</colgroup>
+<caption>Families on Cyanobacteria </caption>
 <thead>
 <tr class="header">
 <th align="center">Factors</th>
 <th align="center">Correlation between Parents &amp; Child</th>
-<th align="center">Inherited</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="center">Education</td>
-<td align="center">-0.49</td>
-<td align="center">Yes</td>
+<td align="center">GenomeDB</td>
+<td align="center">876</td>
 </tr>
 <tr class="even">
-<td align="center">Socio-Economic Status</td>
-<td align="center">0.28</td>
-<td align="center">Slight</td>
+<td align="center">Phylum</td>
+<td align="center">12</td>
 </tr>
 <tr class="odd">
-<td align="center">Income</td>
-<td align="center">0.08</td>
-<td align="center">No</td>
-</tr>
-<tr class="even">
-<td align="center">Family Size</td>
-<td align="center">0.18</td>
-<td align="center">Slight</td>
-</tr>
-<tr class="odd">
-<td align="center">Occupational Prestige</td>
-<td align="center">0.21</td>
-<td align="center">Slight</td>
+<td align="center">Order</td>
+<td align="center">23</td>
 </tr>
 </tbody>
 </table>
-<p>We can also create a link to the table by doing the following: . If you go back to [Loading and exploring data] and look at the <code>kable</code> function code, you’ll see that I added in a similar <code>\\label</code> to be able to reference that table later. (The extra backslash there is a way that <em>Markdown</em> interfaces with .) We can create a reference to the max delays table: .</p>
-<p>The addition of the <code>\label{}</code> option to the end of the table caption allows us to then use the  <code>autoref</code> function to produce the link. The <code>ref</code> function in <strong>R</strong> allows for tables and figures to be referenced in the document easily without having to directly use the <code>autoref</code> function. It will automatically add “Table” before your number if you add the “tab:” prefix to your label. Note that this reference could appear anywhere throughout the document.</p>
-<!-- We will next explore ways to create this label-ref link using figures. -->
-<p></p>
-<!-- clearpage ends the page, and also dumps out all floats.
-  Floats are things like tables and figures. -->
-</div>
-<div id="figures" class="section level2">
-<h2>Figures</h2>
-<p>If your thesis has a lot of figures, <em>R Markdown</em> might behave better for you than that other word processor. One perk is that it will automatically number the figures accordingly in each chapter. You’ll also be able to create a label for each figure, add a caption, and then reference the figure in a way similar to what we saw with tables earlier. If you label your figures, you can move the figures around and <em>R Markdown</em> will automatically adjust the numbering for you. No need for you to remember! So that you don’t have to get too far into  to do this, a couple <strong>R</strong> functions have been created for you to assist. You’ll see their use below.</p>
-<!--
-One thing that may be annoying is the way _R Markdown_ handles "floats" like tables and figures (it's really \LaTeX's fault). \LaTeX\ will try to find the best place to put your object based on the text around it and until you're really, truly done writing you should just leave it where it lies. There are some optional arguments specified in the options parameter of the `label` function.  If you need to shift your figure around, it might be good to look here on tweaking the options argument:  <https://en.wikibooks.org/wiki/LaTeX/Floats,_Figures_and_Captions>
+<p><!--  EvoMining Expansions
+--> ## Central pathway expansions<br />
+Heat plot of central pathways expansions, Needs to be phylogenetically sorted.</p>
+<pre><code>## Warning: Ignoring unknown aesthetics: width</code></pre>
 
-If you need a graphic or tabular material to be part of the text, you can just put it inline. If you need it to appear in the list of figures or tables, it should be placed in a code chunk.
--->
-<p>In the <strong>R</strong> chunk below, we will load in a picture stored as <code>reed.jpg</code> in our main directory. We then give it the caption of “Reed logo”, the label of “reed”, and specify that this is a figure. Note again the use of the <code>results = &quot;asis&quot;</code> specification to automatically include and compile the  code.</p>
-<pre class="r"><code>label(path = &quot;figure/reed.jpg&quot;, caption = &quot;Reed logo&quot;, 
-      label = &quot;reed&quot;, type = &quot;figure&quot;)</code></pre>
-
-<p>Here is a reference to the Reed logo: . Note the use of the inline <strong>R</strong> code here. By default “figure” is specified as the type. For clarity, we could have also added the <code>label</code> and <code>type</code> to the parameter specifications and this would give us the same result: .</p>
-<p></p>
-<!-- starts a new page and stops trying to place floats such as tables and figures -->
-<p>Below we will investigate how to save the output of an <strong>R</strong> plot and label it in a way similar to that done above. Recall the <code>flights</code> dataset from <a href="#rmd-basics"></a>. (Note that we’ve shown a different way to reference a section or chapter here.) We will next explore a bar graph with the mean flight departure delays by airline from Portland for 2014. Note also the use of the <code>scale</code> parameter which is discussed on the next page.</p>
-<pre class="r"><code>delay_airline &lt;- flights %&gt;% group_by(carrier) %&gt;%
-  summarize(mean_dep_delay = mean(dep_delay)) %&gt;%
-  ggplot(aes(x = carrier, y = mean_dep_delay)) +
-  geom_bar(position = &quot;identity&quot;, stat = &quot;identity&quot;, fill = &quot;red&quot;)
-ggsave(&quot;figure/delays.pdf&quot;, plot = delay_airline,
-  height = 3, width = 6)</code></pre>
-<pre class="r"><code>label(path = &quot;figure/delays.pdf&quot;, 
-      caption = &quot;Mean Delays by Airline&quot;, 
-      label = &quot;delays&quot;, type = &quot;figure&quot;)</code></pre>
-
-<p>A table linking these carrier codes to airline names is available at <a href="https://github.com/ismayc/pnwflights14/blob/master/data/airlines.csv" class="uri">https://github.com/ismayc/pnwflights14/blob/master/data/airlines.csv</a>.</p>
-<p></p>
-<p>Next, we will explore the use of the <code>scale</code> parameter which can be used to shrink or expand an image. Here we use the mathematical graph stored in the “subdivision.pdf” file. Note that we didn’t specify the <code>caption =</code> or <code>label =</code> here, but we could have.</p>
-<pre class="r"><code>label(&quot;figure/subdivision.pdf&quot;, &quot;Subdiv. graph&quot;, &quot;subd&quot;, 
-      scale = 0.75)</code></pre>
-
-<p>Here is a reference to this image: . (Move this around throughout the document as you wish.)</p>
-<div id="more-figure-stuff" class="section level4">
-<h4>More Figure Stuff</h4>
-<p>Lastly, we will explore how to rotate figures using the <code>angle</code> parameter.</p>
-<pre class="r"><code>label(&quot;figure/subdivision.pdf&quot;, 
-      &quot;A Larger Figure, Flipped Upside Down&quot;, 
-      scale = 1.5,
-      angle = 180,
-      label = &quot;subd2&quot;)</code></pre>
-
-<p>As another example, here is a reference to this figure: .</p>
-</div>
-<div id="common-modifications" class="section level4">
-<h4>Common Modifications</h4>
-<p>The following figure features the more popular changes thesis students want to make to their figures. We can add math to the caption that displays below the picture, specify the size of our caption to display below the figure (list of sizes available at this <a href="http://www.emerson.emory.edu/services/latex/latex_169.html#SEC169">link</a>), and also specify that a different caption <code>alt.cap</code> be what appears in the Table of Figures for this figure.</p>
-<p>If you’d like to make further tweaks to figures, you might need to invoke some  code. Please email us at <a href="mailto:data@reed.edu">data@reed.edu</a> if you need assistance.</p>
-<pre class="r"><code>label(&quot;figure/subdivision.pdf&quot;, 
-      caption = &quot;Subdivision of arc segments&quot;,
-      alt.cap = &quot;You can see that $p_3 = p_6^\\prime$&quot;,
-      cap.size = &quot;footnotesize&quot;,
-      label = &quot;subd3&quot;)</code></pre>
-
-<!-- Note here that you need to have two backslashes before LaTeX commands such as prime -->
-</div>
+<p>Here is a reference to the HeatPlot: . </p>
+<!---------------END EvoMining heatmap----------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------->
 </div>
 <div id="footnotes-and-endnotes" class="section level2">
 <h2>Footnotes and Endnotes</h2>
