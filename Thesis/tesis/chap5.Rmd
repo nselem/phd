@@ -88,6 +88,35 @@ y hacer heatplots separados por ruta metabolica
 
 <!--  EvoMining Expansions
 -->
+
+
+<!--- Expansions Box plot ------------------------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------->
+### Expansions BoxPlot by metabolic family
+```{r boxplot_CyanoHP,warnings = FALSE, message = FALSE,echo=FALSE}
+#CyanosHeatPlot$RastId <- with(CyanosHeatPlot,reorder(CyanosHeatPlot$RastId, CyanosHeatPlot$RastId))
+CyanosTotalBP.m<-merge(CyanosHeatPlot,CyanosTaxa,by.x="RastId",by.y="RastId") ## works as expected
+CyanosHeatPlotBP.m <- melt(CyanosTotalBP.m,id =c("RastId","Name","Phylum","Class","Order","Family","RastNo","Size","Contigs"))
+CyanosHeatPlotBP.m<-subset(CyanosHeatPlotBP.m,variable!="TOTAL") ## works as expected
+
+expansion_plotCyano<-ggplot(CyanosHeatPlotBP.m, aes(x=CyanosHeatPlotBP.m$variable, y=CyanosHeatPlotBP.m$value),color="Family") + labs(x = "Metabolic Families", y = "Copies on Cyanobacteria Genomes",text = element_text(size=12)) + geom_boxplot()+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6), legend.position = "bottom")
+
+ggsave("chapter5/expansion_plotCyanos.pdf", plot = expansion_plotCyano,height = 8, width = 7)
+```
+```{r boxplot_CyanoHP_Cyano_label, results = "asis",message=FALSE}
+label(path = "chapter5/expansion_plotCyanos.pdf", caption = "Expansions Boxplot",label = "Cyano_expansion_boxplot", type = "figure")
+```
+Here is a reference to the expansion boxplot: `r ref("Cyano_expansion_boxplot")`.   
+\clearpage 
+
+<!----------------------Expansions Box plot END-------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------->
+
+
+
+
+
+
 ## Central pathway expansions  
 Heat plot of central pathways expansions, Needs to be phylogenetically sorted.  
 ```{r HeatPlots, warnings = FALSE, message = FALSE, echo=FALSE,CACHE=TRUE}
@@ -135,37 +164,13 @@ Here is a reference to the HeatPlot: `r ref("CyanoPlot")`.
 
 
 
-<!--- Expansions Box plot ------------------------------------------------------------------------------------------------->
-<!--------------------------------------------------------------------------------------------------------------->
-### Expansions BoxPlot by metabolic family
-```{r boxplot_CyanoHP,warnings = FALSE, message = FALSE,echo=FALSE}
-expansion_plot<-ggplot(CyanosHeatPlot.m, aes(x=CyanosHeatPlot.m$variable, y=CyanosHeatPlot.m$rescale)) + geom_boxplot()+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6), legend.position = "bottom")
-
-#ggplot(CyanosHeatPlot.m, aes(x=CyanosHeatPlot.m$variable, y=CyanosHeatPlot.m$rescale)) + geom_boxplot()+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6), legend.position = "bottom")
-#+facet_grid(CyanosTaxa$class~.,scales="free")
-#ggplot(CyanosHeatPlot.m, aes(x=CyanosHeatPlot.m$variable,y=CyanosHeatPlot.m$rescale,fill=CyanosHeatPlot.m$rescale)) 
-# +facet_grid(CyanosHeatPlot.m$rescale~.,scales="free")
-
-ggsave("chapter5/expansion_plot.pdf", plot = expansion_plot,height = 6, width = 7)
-```
-```{r boxplot_CyanoHP_label, results = "asis",message=FALSE}
-label(path = "chapter5/expansion_plot.pdf", caption = "Expansions Boxplot",label = "Cyano_expansion_boxplot", type = "figure")
-```
-Here is a reference to the expansion boxplot: `r ref("Cyano_expansion_boxplot")`.   
-\clearpage 
-
-<!-----------------------------END expansion boxplot ---------------------------------------------->
-<!--------------------------------------------------------------------------------------------------------------->
-
-
-
 
 
 
 ## Genome Size correlations
 ### Correlation between genome size and AntiSMASH products  
 ```{r ANTISMASH_GenomeSize_Correlation_by_ORG_Cyanos2,echo=FALSE}
-EXP_SMASH<-merge(CyanosHeatPlot,CyanosSMASH,by.x="RastId",by.y="RastIds")
+EXP_SMASH<-merge(CyanosHeatPlot,CyanosSMASH,by.x="RastId",by.y="RastId")
 EXP_SMASH2<-merge(CyanosTaxa, EXP_SMASH, by.x="RastId",by.y="RastId") 
 #qplot(Total.x, Total.y, data = EXP_SMASH, colour=Order)+theme_bw()+
 sn1<-qplot(Size, TOTAL.y, data = EXP_SMASH2,colour=Order)+theme_bw()+ theme(legend.position	="bottom",plot.title = element_text(size = 14, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 12),axis.text.y=element_text(size = 7))
@@ -325,7 +330,7 @@ Here is a reference to Recruitments after central pathways expansions colourd by
 ## Cyanobacterias AntiSMASH 
 ```{r CyanoDiversity,echo=FALSE,message=FALSE,warning=FALSE}
 ## merge tables
-m1 <- merge(CyanosTaxa, CyanosSMASH, by.x = "RastId", by.y = "RastIds")
+m1 <- merge(CyanosTaxa, CyanosSMASH, by.x = "RastId", by.y = "RastId")
 m1.m <- melt(m1, id = c("RastId", "Name","Phylum","Class","Order","Family","Contigs","Size","RastNo"))
 m2.m<-subset(m1.m,value>0)
 
@@ -360,7 +365,7 @@ Here is a reference to Recruitments after central pathways expansions colourd by
 ### AntisSMASH vs Central Expansions  
 Is it a correlation between pangenome grow and central pathways expansions?  
 ```{r ANTISMASH_Expansion_Correlation_by_ORG_Cyanos,message=FALSE, echo =FALSE}
-EXP_SMASH<-merge(CyanosHeatPlot,CyanosSMASH,by.x="RastId",by.y="RastIds")
+EXP_SMASH<-merge(CyanosHeatPlot,CyanosSMASH,by.x="RastId",by.y="RastId")
 EXP_SMASH2<-merge(CyanosTaxa, EXP_SMASH, by.x="RastId",by.y="RastId") 
 #qplot(Total.x, Total.y, data = EXP_SMASH, colour=Order)+theme_bw()+
 sn8<-qplot(TOTAL.x, TOTAL.y, data = EXP_SMASH2,colour=Order)+theme_bw()+ theme(legend.position	="bottom",legend.text=element_text(size=10),plot.title = element_text(size = 14, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 10),axis.text.y=element_text(size = 7))
@@ -395,7 +400,7 @@ Here is a reference to the expansions vs antismash NP's clusters splitted by ord
 
 AntisMAsh vs Expansions by taxonomic Family
 ```{r ANTISMASH_Expansion_Correlation_by_Family_Cyanos,echo=FALSE,warning=FALSE}
-EXP_SMASH<-merge(CyanosHeatPlot,CyanosSMASH,by.x="RastId",by.y="RastIds")
+EXP_SMASH<-merge(CyanosHeatPlot,CyanosSMASH,by.x="RastId",by.y="RastId")
 EXP_SMASH2<-merge(CyanosTaxa, EXP_SMASH, by.x="RastId",by.y="RastId") 
 
 npf<-qplot(TOTAL.x, TOTAL.y, data = EXP_SMASH2,colour=Family)+theme_bw()+facet_grid(EXP_SMASH2$Order~.,scales="free")+

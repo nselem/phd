@@ -524,7 +524,7 @@ starts here.
   \end{Highlighting}
   \end{Shaded}
   
-  \begin{longtable}[c]{@{}lr@{}}
+  \begin{longtable}[]{@{}lr@{}}
   \caption{Maximum Delays by Airline \label{tab:max_delay}}\tabularnewline
   \toprule
   Airline & Max Arrival Delay\tabularnewline
@@ -661,9 +661,9 @@ starts here.
   You may wish to put your reaction in a figure environment, which means
   that \LaTeX~will place the reaction where it fits and you can have a
   figure caption. You'll see further description of this \textbf{R}
-  \texttt{label} function in \protect\hyperlink{refux5flabels}{}. (Note
-  the use of the double backslash here as well as the
-  \texttt{echo\ =\ FALSE} which hides the code from the output.)
+  \texttt{label} function in \protect\hyperlink{ref_labels}{}. (Note the
+  use of the double backslash here as well as the \texttt{echo\ =\ FALSE}
+  which hides the code from the output.)
   
   \begin{figure}[h!tbp]
   \begin{center}
@@ -698,14 +698,23 @@ starts here.
   (\url{http://homepages.uni-tuebingen.de/beitz/txe.html}). Be sure to
   read the proceeding chapter on graphics and tables.
   
-  \hypertarget{refux5flabels}{\chapter{Archaea EvoMining
-  Results}\label{refux5flabels}}
+  \hypertarget{ref_labels}{\chapter{Archaea EvoMining
+  Results}\label{ref_labels}}
   
-  Archaea kingdom \{Referencia\}
+  Archaea kingdom \{Referencia\}\\
+  Archaea was discovered by Wolf in\\
+  Actinobacteria has proved that natural products can be found on
+  expansions from central metabolic pathways\\
+  Archaea is interesting because as we see it has a phylum that contains
+  expansions (Central and pangenomic)\\
+  on Actinobacteria previously known natural products can be detected by
+  software like antiSMASH and clusterfinder, nevertheless on Archaea a
+  whole kingdom, this products are not found. Does Archaea not produce
+  NP's or traditionally known method are nos switable for finding them?
   
   \section{Tables}\label{tables}
   
-  \begin{longtable}[c]{@{}cc@{}}
+  \begin{longtable}[]{@{}cc@{}}
   \caption{Families on Archaeabacteria \label{tab:inher}}\tabularnewline
   \toprule
   Factors & Correlation between Parents \& Child\tabularnewline
@@ -722,7 +731,29 @@ starts here.
   \end{longtable}
   
   \clearpage
-   \#\# Central pathway expansions\\
+  
+  \subsection{Expansions BoxPlot by metabolic
+  family}\label{expansions-boxplot-by-metabolic-family}
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \KeywordTok{label}\NormalTok{(}\DataTypeTok{path =} \StringTok{"chapter3/expansion_plotArchaeas.pdf"}\NormalTok{, }\DataTypeTok{caption =} \StringTok{"Expansions Boxplot"}\NormalTok{,}\DataTypeTok{label =} \StringTok{"Archaea_expansion_boxplot"}\NormalTok{, }\DataTypeTok{type =} \StringTok{"figure"}\NormalTok{)}
+  \end{Highlighting}
+  \end{Shaded}
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 1]{chapter3/expansion_plotArchaeas.pdf}
+  \caption[Expansions Boxplot]{\normalsize{Expansions Boxplot}}
+  \label{fig:Archaea_expansion_boxplot}
+  \end{figure}
+  
+  Here is a reference to the expansion boxplot:
+  \autoref{fig:Archaea_expansion_boxplot}.\\
+  \clearpage 
+  
+  \section{Central pathway expansions}\label{central-pathway-expansions}
+  
   Heat plot of central pathways expansions, Needs to be phylogenetically
   sorted.
   
@@ -738,30 +769,6 @@ starts here.
   \end{figure}
   
   Here is a reference to the HeatPlot: \autoref{fig:ArchaeaPlot}.
-  \clearpage 
-  
-  \subsection{Expansions BoxPlot by metabolic
-  family}\label{expansions-boxplot-by-metabolic-family}
-  
-  \begin{verbatim}
-  Warning: Removed 876 rows containing non-finite values (stat_boxplot).
-  \end{verbatim}
-  
-  \begin{Shaded}
-  \begin{Highlighting}[]
-  \KeywordTok{label}\NormalTok{(}\DataTypeTok{path =} \StringTok{"chapter3/Archeasexpansion_plot.pdf"}\NormalTok{, }\DataTypeTok{caption =} \StringTok{"Archeas expansions Boxplot"}\NormalTok{,}\DataTypeTok{label =} \StringTok{"Archeas_expansion_boxplot"}\NormalTok{, }\DataTypeTok{type =} \StringTok{"figure"}\NormalTok{)}
-  \end{Highlighting}
-  \end{Shaded}
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 0,scale = 1]{chapter3/Archeasexpansion_plot.pdf}
-  \caption[Archeas expansions Boxplot]{\normalsize{Archeas expansions Boxplot}}
-  \label{fig:Archeas_expansion_boxplot}
-  \end{figure}
-  
-  Here is a reference to the expansion boxplot:
-  \autoref{fig:Archeas_expansion_boxplot}.\\
   \clearpage 
   
   \section{Genome Size correlations}\label{genome-size-correlations}
@@ -882,8 +889,8 @@ starts here.
   Here is a reference to Recruitments after central pathways expansions
   colourd by Kingdom plot: \autoref{fig:ArchaeasRecruitmentsbyKingdom}.
   
-  \clearpage 
-  Recruitments after central pathways expansions colourd by taxonomy
+  \clearpage  Recruitments after central pathways expansions colourd by
+  taxonomy
   
   \begin{figure}[h!tbp]
   \centering
@@ -978,13 +985,18 @@ starts here.
   \begin{figure}[h!tbp]
   \centering
   \includegraphics[angle = 180,scale = 0.25]{chapter3/tree41.png}
-  \caption[Phosphoribosyl isomerase EvoMiningtree]{\normalsize{Phosphoribosyl isomerase EvoMiningtree}}
-  \label{fig:Phosphoribosyl_isomerase_evo_tree}
+  \caption[Phosphoribosyl isomerase A EvoMiningtree]{\normalsize{Phosphoribosyl isomerase A EvoMiningtree}}
+  \label{fig:Phosphoribosyl_isomerase_A_evo_tree}
   \end{figure}\begin{figure}[h!tbp]
   \centering
   \includegraphics[angle = 180,scale = 0.25]{chapter3/tree42.png}
-  \caption[Phosphoribosyl isomerase EvoMiningtree]{\normalsize{Phosphoribosyl isomerase EvoMiningtree}}
-  \label{fig:Phosphoribosyl_isomerase_evo_tree}
+  \caption[Phosphoribosyl isomerase other EvoMiningtree]{\normalsize{Phosphoribosyl isomerase other EvoMiningtree}}
+  \label{fig:Phosphoribosyl_isomerase_other_evo_tree}
+  \end{figure}\begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 180,scale = 0.25]{chapter3/tree65.png}
+  \caption[Phosphoribosyl anthranilate isomerase EvoMiningtree]{\normalsize{Phosphoribosyl anthranilate isomerase EvoMiningtree}}
+  \label{fig:Phosphoribosylanthranilate_isomerase_evo_tree}
   \end{figure}
   
   \clearpage 
@@ -1079,73 +1091,54 @@ starts here.
   suggestions. We love to see people using \emph{R Markdown} for their
   theses, and are happy to help.
   
-  \hypertarget{refux5flabels}{\chapter{Actinobacteria EvoMining
-  Results}\label{refux5flabels}}
+  \hypertarget{ref_labels}{\chapter{Actinobacteria EvoMining
+  Results}\label{ref_labels}}
   
   Actinobacteria is an ancient phylum \{Referencia de luis\}
   
   \section{Tables}\label{tables-1}
   
-  \begin{longtable}[c]{@{}ccl@{}}
+  \begin{longtable}[]{@{}ccl@{}}
   \caption{Correlation of Inheritance Factors for Parents and Child
   \label{tab:inher}}\tabularnewline
   \toprule
   \begin{minipage}[b]{0.29\columnwidth}\centering\strut
-  Factors
-  \strut\end{minipage} &
-  \begin{minipage}[b]{0.47\columnwidth}\centering\strut
-  Correlation between Parents \& Child
-  \strut\end{minipage} &
-  \begin{minipage}[b]{0.16\columnwidth}\raggedright\strut
-  \strut\end{minipage}\tabularnewline
+  Factors\strut
+  \end{minipage} & \begin{minipage}[b]{0.47\columnwidth}\centering\strut
+  Correlation between Parents \& Child\strut
+  \end{minipage} & \begin{minipage}[b]{0.16\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage}\tabularnewline
   \midrule
   \endfirsthead
   \toprule
   \begin{minipage}[b]{0.29\columnwidth}\centering\strut
-  Factors
-  \strut\end{minipage} &
-  \begin{minipage}[b]{0.47\columnwidth}\centering\strut
-  Correlation between Parents \& Child
-  \strut\end{minipage} &
-  \begin{minipage}[b]{0.16\columnwidth}\raggedright\strut
-  \strut\end{minipage}\tabularnewline
+  Factors\strut
+  \end{minipage} & \begin{minipage}[b]{0.47\columnwidth}\centering\strut
+  Correlation between Parents \& Child\strut
+  \end{minipage} & \begin{minipage}[b]{0.16\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage}\tabularnewline
   \midrule
   \endhead
   \begin{minipage}[t]{0.29\columnwidth}\centering\strut
-  GenomeDB
-  \strut\end{minipage} &
-  \begin{minipage}[t]{0.47\columnwidth}\centering\strut
-  1245
-  \strut\end{minipage} &
-  \begin{minipage}[t]{0.16\columnwidth}\raggedright\strut
-  \strut\end{minipage}\tabularnewline
+  GenomeDB\strut
+  \end{minipage} & \begin{minipage}[t]{0.47\columnwidth}\centering\strut
+  1245\strut
+  \end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage}\tabularnewline
   \begin{minipage}[t]{0.29\columnwidth}\centering\strut
-  Families
-  \strut\end{minipage} &
-  \begin{minipage}[t]{0.47\columnwidth}\centering\strut
-  65
-  \strut\end{minipage} &
-  \begin{minipage}[t]{0.16\columnwidth}\raggedright\strut
-  \strut\end{minipage}\tabularnewline
+  Families\strut
+  \end{minipage} & \begin{minipage}[t]{0.47\columnwidth}\centering\strut
+  65\strut
+  \end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage}\tabularnewline
   \bottomrule
   \end{longtable}
   
   \clearpage
-  
-  \section{Central pathway expansions}\label{central-pathway-expansions}
-  
-  Heat plot of central pathways expansions, Needs to be phylogenetically
-  sorted.
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 0,scale = 0.6]{chapter4/HeatPlotActinos.pdf}
-  \caption[Actinobacterial Heatplot]{\normalsize{Actinobacterial Heatplot}}
-  \label{fig:ActinoPlot}
-  \end{figure}
-  
-  Here is a reference to the HeatPlot: \autoref{fig:ActinoPlot}.
-  \clearpage 
   
   \subsection{Expansions BoxPlot by metabolic
   family}\label{expansions-boxplot-by-metabolic-family-1}
@@ -1167,10 +1160,254 @@ starts here.
   \autoref{fig:Actino_expansion_boxplot}.\\
   \clearpage 
   
+  \section{Central pathway expansions}\label{central-pathway-expansions-1}
+  
+  Heat plot of central pathways expansions, Needs to be phylogenetically
+  sorted.
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.7]{chapter4/HeatPlotActinos.pdf}
+  \caption[Actinobacterial Heatplot]{\normalsize{Actinobacterial Heatplot}}
+  \label{fig:ActinoPlot}
+  \end{figure}
+  
+  Here is a reference to the HeatPlot: \autoref{fig:ActinoPlot}.
+  \clearpage 
+  
+  PPP pahtway expansions restricted to \emph{Streptomycetaceae} family
+  HeatPlot: \autoref{fig:ActinoPlot}.
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.7]{chapter4/HeatPlotStreptoPGA.pdf}
+  \caption[Streptomyces Genomes expansions on PGA Aminoacids HeatPlot]{\normalsize{Streptomyces Genomes expansions on PGA Aminoacids HeatPlot}}
+  \label{fig:StreptoPGAPlot}
+  \end{figure}
+  
+  Here is a reference to the HeatPlot: \autoref{fig:StreptoPGAPlot}.
+  \clearpage 
+  
   \section{Genome Size correlations}\label{genome-size-correlations-1}
   
   \subsection{Correlation between genome size and AntiSMASH
   products}\label{correlation-between-genome-size-and-antismash-products-1}
+  
+  \begin{verbatim}
+  Warning: Removed 1 rows containing missing values (geom_point).
+  
+  Warning: Removed 1 rows containing missing values (geom_point).
+  \end{verbatim}
+  
+  Genome size vs Total antismash cluster coloured by order
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.6]{chapter4/ActinosSMASHvsSizebyOrder.pdf}
+  \caption[Correlation between Actinos genome size and antismash Natural products detection colored by Order]{\normalsize{Correlation between Actinos genome size and antismash Natural products detection colored by Order}}
+  \label{fig:ActinosSMASHvsSizebyOrder}
+  \end{figure}
+  
+  Here is a reference to Genome size vs Total antismash cluster:
+  \autoref{fig:ActinosSMASHvsSizebyOrder}. \clearpage
+  
+  Genome size vs Total antismash cluster detected splitted by order
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.6]{chapter4/ActinosSMASHvsSizeGridOrder.pdf}
+  \caption[Correlation between Actinos genome size and antismash Natural products detection grided by Order]{\normalsize{Correlation between Actinos genome size and antismash Natural products detection grided by Order}}
+  \label{fig:ActinosSMASHvsSizeGridOrder}
+  \end{figure}
+  
+  Here is a reference to Correlation between genome size and antismash
+  Natural products detection grided by Order plot:
+  \autoref{fig:ActinosSMASHvsSizeGridOrder}. \clearpage 
+  
+  \subsection{Correlation between genome size and Central pathway
+  expansions}\label{correlation-between-genome-size-and-central-pathway-expansions-1}
+  
+  \begin{verbatim}
+  Warning: Removed 1 rows containing missing values (geom_point).
+  
+  Warning: Removed 1 rows containing missing values (geom_point).
+  \end{verbatim}
+  
+  Genome size vs Total central pathway expansion coloured by order
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 1]{chapter4/ActinosSizevsExpansionsbyOrder.pdf}
+  \caption[Correlation between Actinos genome size and central pathway expansions ]{\normalsize{Correlation between Actinos genome size and central pathway expansions }}
+  \label{fig:ActinosSizevsExpansionsbyOrder}
+  \end{figure}
+  
+  Here is a reference to the size vs Total central pathway expansion plot:
+  \autoref{fig:ActinosSizevsExpansionsbyOrder}. \clearpage 
+  
+  Genome size vs Total central pathway expansion grided by order
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 1]{chapter4/ActinosSizevsExpansionsGridbyOrder.pdf}
+  \caption[Correlation between Actinos genome size and central pathway expansions grided by order]{\normalsize{Correlation between Actinos genome size and central pathway expansions grided by order}}
+  \label{fig:ActinosSizevsExpansionsGridbyOrder}
+  \end{figure}
+  
+  Here is a reference to the Genome size vs Total central pathway
+  expansion grided by order plot:
+  \autoref{fig:ActinosSizevsExpansionsGridbyOrder}. \clearpage 
+  
+  Correlation between genome size and each of the central pathway
+  families. Data are coloured by metabolic family instead of coloured by
+  taxonomical order. This treatment allows to answer how differente
+  metabolic families grows when genome size grow.\\
+  Also I want to add form given by taxonomical order.
+  
+  \begin{verbatim}
+  Warning: The shape palette can deal with a maximum of 6 discrete values
+  because more than 6 becomes difficult to discriminate; you have
+  32. Consider specifying shapes manually if you must have them.
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning: Removed 103306 rows containing missing values (geom_point).
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning: Removed 94 rows containing missing values (geom_point).
+  \end{verbatim}
+  
+  Genome size vs Total central pathway expansion coloured by metabolic
+  Family
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.6]{chapter4/ActinosSizevsExpansionsbyMetabolicFamily.pdf}
+  \caption[Correlation between Actinos Genome size vs Total central pathway expansion coloured by metabolic Family]{\normalsize{Correlation between Actinos Genome size vs Total central pathway expansion coloured by metabolic Family}}
+  \label{fig:ActinosSizevsExpansionsbyMetabolicFamily}
+  \end{figure}
+  
+  Here is a reference to the Genome size vs Total central pathway
+  expansion coloured by metabolic Family plot:
+  \autoref{fig:ActinosSizevsExpansionsbyMetabolicFamily}. \clearpage 
+  
+  Future Work: Genome size vs Total central pathway expansion grided by
+  metabolic Family For clarity I need to also grid and group by Metabolic
+  Pathway
+  
+  Here is a reference to Genome size vs Total central pathway expansion
+  grided by metabolic Family plot:
+  \autoref{fig:ActinosExpansionsbyMetabolicFamilyGrid}. \clearpage 
+  
+  \section{Natural products}\label{natural-products-1}
+  
+  \subsection{Natural products recruitments from EvoMining
+  heatplot}\label{natural-products-recruitments-from-evomining-heatplot-1}
+  
+  We can see natural products recruitment after central pathways
+  expansions colored by their kingdom.\\
+  Natural products recruited by metabolic family, colored by phylogenetic
+  origin.
+  
+  Recruitments after central pathways expansions coloured by Kingdom
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.6]{chapter4/ActinosRecruitmentsbyKingdom.pdf}
+  \caption[Actinos Recruitmens on central families coloured by kingdom]{\normalsize{Actinos Recruitmens on central families coloured by kingdom}}
+  \label{fig:ActinosRecruitmentsbyKingdom}
+  \end{figure}
+  
+  Here is a reference to Recruitments after central pathways expansions
+  colourd by Kingdom plot: \autoref{fig:ActinosRecruitmentsbyKingdom}.
+  
+  \clearpage  Recruitments after central pathways expansions colourd by
+  taxonomy
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.5]{chapter4/ActinosRecruitmentsbyTaxa.pdf}
+  \caption[Actinos Recruitmens on central families coloured by taxonomy]{\normalsize{Actinos Recruitmens on central families coloured by taxonomy}}
+  \label{fig:ActinosRecruitmentsbyTaxa}
+  \end{figure}
+  
+  Here is a reference to Recruitments after central pathways expansions
+  colourd by taxa plot: \autoref{fig:ActinosRecruitmentsbyTaxa}.
+  \clearpage 
+  
+  \section{Actinos AntiSMASH}\label{actinos-antismash}
+  
+  Taxonomical diversity on Actinosbacteria Data
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.6]{chapter4/ActinosDiversity.pdf}
+  \caption[Actinos Diversity]{\normalsize{Actinos Diversity}}
+  \label{fig:ActinosDiversity}
+  \end{figure}
+  
+  Here is a reference to Recruitments after central pathways expansions
+  colourd by taxa plot: \autoref{fig:ActinosDiversity}. \clearpage
+  
+  Smash diversity
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.5]{chapter4/ActinosSmash.pdf}
+  \caption[Actinos Smash Taxonomical Diversity]{\normalsize{Actinos Smash Taxonomical Diversity}}
+  \label{fig:ActinosSmash}
+  \end{figure}
+  
+  Here is a reference to Recruitments after central pathways expansions
+  colourd by taxa plot: \autoref{fig:ActinosSmash}. \clearpage
+  
+  \subsection{AntisSMASH vs Central
+  Expansions}\label{antissmash-vs-central-expansions-1}
+  
+  Is it a correlation between pangenome grow and central pathways
+  expansions?
+  
+  Total central pathway expansions by genome vs Total antismash cluster
+  detected coloured by order
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.5]{chapter4/ActinosSMASHvsExpansionsbyOrder.pdf}
+  \caption[Correlation between Actinos central pathway expansions and antismash Natural products detection]{\normalsize{Correlation between Actinos central pathway expansions and antismash Natural products detection}}
+  \label{fig:ActinosSMASHvsExpansionsbyOrder}
+  \end{figure}
+  
+  Here is a reference to the expansions vs antismash NP's clusters plot:
+  \autoref{fig:ActinosSMASHvsExpansionsbyOrder}. \clearpage 
+  
+  Total central pathway expansions by genome vs Total antismash cluster
+  detected splitted by order
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.5]{chapter4/ActinosSMASHvsExpansionsbyOrderGRID.pdf}
+  \caption[Correlation between Actinos central pathway expnasions and antismash Natural products detection]{\normalsize{Correlation between Actinos central pathway expnasions and antismash Natural products detection}}
+  \label{fig:ActinosSMASHvsExpansionsbyOrderGRID}
+  \end{figure}
+  
+  Here is a reference to the expansions vs antismash NP's clusters
+  splitted by order plot
+  \autoref{fig:ActinosSMASHvsExpansionsbyOrderGRID}. \clearpage 
+  
+  AntisMAsh vs Expansions by taxonomic Family
+  
+  Natural products colured by family
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.6]{chapter4/Actinosnpf.pdf}
+  \caption[Actinos Natural products by family]{\normalsize{Actinos Natural products by family}}
+  \label{fig:Actinosnpf}
+  \end{figure}
+  
+  Here is a reference to the Natural products colured by family plot
+  \autoref{fig:Actinosnpf}. \clearpage 
   
   \section{Selected trees from
   EvoMining}\label{selected-trees-from-evomining-1}
@@ -1199,14 +1436,14 @@ starts here.
   
   \clearpage 
   
-  \hypertarget{refux5flabels}{\chapter{Cyanobacteria EvoMining
-  Results}\label{refux5flabels}}
+  \hypertarget{ref_labels}{\chapter{Cyanobacteria EvoMining
+  Results}\label{ref_labels}}
   
   Cyanobacteria phylum \{Referencia\}
   
   \section{Tables}\label{tables-2}
   
-  \begin{longtable}[c]{@{}cc@{}}
+  \begin{longtable}[]{@{}cc@{}}
   \caption{Families on Cyanobacteria \label{tab:inher}}\tabularnewline
   \toprule
   Factors & Correlation between Parents \& Child\tabularnewline
@@ -1223,7 +1460,27 @@ starts here.
   
   \clearpage
   
-  \section{Central pathway expansions}\label{central-pathway-expansions-1}
+  \subsection{Expansions BoxPlot by metabolic
+  family}\label{expansions-boxplot-by-metabolic-family-2}
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \KeywordTok{label}\NormalTok{(}\DataTypeTok{path =} \StringTok{"chapter5/expansion_plotCyanos.pdf"}\NormalTok{, }\DataTypeTok{caption =} \StringTok{"Expansions Boxplot"}\NormalTok{,}\DataTypeTok{label =} \StringTok{"Cyano_expansion_boxplot"}\NormalTok{, }\DataTypeTok{type =} \StringTok{"figure"}\NormalTok{)}
+  \end{Highlighting}
+  \end{Shaded}
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 1]{chapter5/expansion_plotCyanos.pdf}
+  \caption[Expansions Boxplot]{\normalsize{Expansions Boxplot}}
+  \label{fig:Cyano_expansion_boxplot}
+  \end{figure}
+  
+  Here is a reference to the expansion boxplot:
+  \autoref{fig:Cyano_expansion_boxplot}.\\
+  \clearpage 
+  
+  \section{Central pathway expansions}\label{central-pathway-expansions-2}
   
   Heat plot of central pathways expansions, Needs to be phylogenetically
   sorted.
@@ -1236,26 +1493,6 @@ starts here.
   \end{figure}
   
   Here is a reference to the HeatPlot: \autoref{fig:CyanoPlot}.
-  \clearpage 
-  
-  \subsection{Expansions BoxPlot by metabolic
-  family}\label{expansions-boxplot-by-metabolic-family-2}
-  
-  \begin{Shaded}
-  \begin{Highlighting}[]
-  \KeywordTok{label}\NormalTok{(}\DataTypeTok{path =} \StringTok{"chapter5/expansion_plot.pdf"}\NormalTok{, }\DataTypeTok{caption =} \StringTok{"Expansions Boxplot"}\NormalTok{,}\DataTypeTok{label =} \StringTok{"Cyano_expansion_boxplot"}\NormalTok{, }\DataTypeTok{type =} \StringTok{"figure"}\NormalTok{)}
-  \end{Highlighting}
-  \end{Shaded}
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 0,scale = 1]{chapter5/expansion_plot.pdf}
-  \caption[Expansions Boxplot]{\normalsize{Expansions Boxplot}}
-  \label{fig:Cyano_expansion_boxplot}
-  \end{figure}
-  
-  Here is a reference to the expansion boxplot:
-  \autoref{fig:Cyano_expansion_boxplot}.\\
   \clearpage 
   
   \section{Genome Size correlations}\label{genome-size-correlations-2}
@@ -1289,7 +1526,7 @@ starts here.
   \autoref{fig:SMASHvsSizeGridOrder}. \clearpage 
   
   \subsection{Correlation between genome size and Central pathway
-  expansions}\label{correlation-between-genome-size-and-central-pathway-expansions-1}
+  expansions}\label{correlation-between-genome-size-and-central-pathway-expansions-2}
   
   Genome size vs Total central pathway expansion coloured by order
   
@@ -1354,10 +1591,10 @@ starts here.
   grided by metabolic Family plot:
   \autoref{fig:ExpansionsbyMetabolicFamilyGrid}. \clearpage 
   
-  \section{Natural products}\label{natural-products-1}
+  \section{Natural products}\label{natural-products-2}
   
   \subsection{Natural products recruitments from EvoMining
-  heatplot}\label{natural-products-recruitments-from-evomining-heatplot-1}
+  heatplot}\label{natural-products-recruitments-from-evomining-heatplot-2}
   
   We can see natural products recruitment after central pathways
   expansions colored by their kingdom.\\
@@ -1376,8 +1613,8 @@ starts here.
   Here is a reference to Recruitments after central pathways expansions
   colourd by Kingdom plot: \autoref{fig:RecruitmentsbyKingdom}.
   
-  \clearpage 
-  Recruitments after central pathways expansions colourd by taxonomy
+  \clearpage  Recruitments after central pathways expansions colourd by
+  taxonomy
   
   \begin{figure}[h!tbp]
   \centering
@@ -1416,7 +1653,7 @@ starts here.
   colourd by taxa plot: \autoref{fig:Smash}. \clearpage
   
   \subsection{AntisSMASH vs Central
-  Expansions}\label{antissmash-vs-central-expansions-1}
+  Expansions}\label{antissmash-vs-central-expansions-2}
   
   Is it a correlation between pangenome grow and central pathways
   expansions?
@@ -1476,8 +1713,68 @@ starts here.
   \end{figure}\begin{figure}[h!tbp]
   \centering
   \includegraphics[angle = 180,scale = 0.25]{chapter5/tree1.png}
-  \caption[Phosphoribosyl isomerase EvoMiningtree]{\normalsize{Phosphoribosyl isomerase EvoMiningtree}}
-  \label{fig:Phosphoribosyl_isomerase_evo_tree}
+  \caption[Phosphoglycerate dehydrogenase EvoMiningtree]{\normalsize{Phosphoglycerate dehydrogenase EvoMiningtree}}
+  \label{fig:Phosphoglycerate_dehydrogenase_evo_tree}
+  \end{figure}\begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 180,scale = 0.25]{chapter5/tree2.png}
+  \caption[Phosphoserine aminotransferase EvoMiningtree]{\normalsize{Phosphoserine aminotransferase EvoMiningtree}}
+  \label{fig:Phosphoserine_aminotransferase_evo_tree}
+  \end{figure}\begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 180,scale = 0.25]{chapter5/tree10.png}
+  \caption[Triosephosphate isomerase EvoMiningtree]{\normalsize{Triosephosphate isomerase EvoMiningtree}}
+  \label{fig:Triosephosphate_isomerase_evo_tree}
+  \end{figure}\begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 180,scale = 0.25]{chapter5/tree11.png}
+  \caption[glyceraldehyde3phosphate dehydrogenase EvoMiningtree]{\normalsize{glyceraldehyde3phosphate dehydrogenase EvoMiningtree}}
+  \label{fig:glyceraldehyde3phosphate_dehydrogenase_evo_tree}
+  \end{figure}\begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 180,scale = 0.25]{chapter5/tree12.png}
+  \caption[phosphoglycerate kinase EvoMiningtree]{\normalsize{phosphoglycerate kinase EvoMiningtree}}
+  \label{fig:phosphoglycerate_kinase_evo_tree}
+  \end{figure}\begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 180,scale = 0.25]{chapter5/tree13.png}
+  \caption[phosphoglycerate mutaseEvoMiningtree]{\normalsize{phosphoglycerate mutaseEvoMiningtree}}
+  \label{fig:phosphoglycerate_mutase_evo_tree}
+  \end{figure}\begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 180,scale = 0.25]{chapter5/tree14.png}
+  \caption[enolase EvoMiningtree]{\normalsize{enolase EvoMiningtree}}
+  \label{fig:enolase_evo_tree}
+  \end{figure}\begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 180,scale = 0.25]{chapter5/tree15.png}
+  \caption[Pyruvate kinase EvoMiningtree]{\normalsize{Pyruvate kinase EvoMiningtree}}
+  \label{fig:Pyruvate_kinase_evo_tree}
+  \end{figure}\begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 180,scale = 0.25]{chapter5/tree16.png}
+  \caption[Aspartate transaminase EvoMiningtree]{\normalsize{Aspartate transaminase EvoMiningtree}}
+  \label{fig:Aspartate_transaminase_evo_tree}
+  \end{figure}\begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 180,scale = 0.25]{chapter5/tree17.png}
+  \caption[Asparagine synthase EvoMiningtree]{\normalsize{Asparagine synthase EvoMiningtree}}
+  \label{fig:Asparagine_synthase_evo_tree}
+  \end{figure}\begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 180,scale = 0.25]{chapter5/tree18.png}
+  \caption[Aspartate kinase EvoMiningtree]{\normalsize{Aspartate kinase EvoMiningtree}}
+  \label{fig:Aspartate_kinase_evo_tree}
+  \end{figure}\begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 180,scale = 0.25]{chapter5/tree19.png}
+  \caption[Aspartate semialdehyde dehydrogenase EvoMiningtree]{\normalsize{Aspartate semialdehyde dehydrogenase EvoMiningtree}}
+  \label{fig:Aspartate_semialdehyde_dehydrogenase_evo_tree}
+  \end{figure}\begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 180,scale = 0.25]{chapter5/tree20.png}
+  \caption[Homoserine dehydrogenase EvoMiningtree]{\normalsize{Homoserine dehydrogenase EvoMiningtree}}
+  \label{fig:Homoserine_dehydrogenase_evo_tree}
   \end{figure}
   
   \clearpage 
@@ -1533,7 +1830,7 @@ starts here.
   \end{Shaded}
   
   \subsubsection{\texorpdfstring{In
-  \protect\hyperlink{refux5flabels}{}:}{In :}}\label{in}
+  \protect\hyperlink{ref_labels}{}:}{In :}}\label{in}
   
   \begin{Shaded}
   \begin{Highlighting}[]
@@ -1573,11 +1870,11 @@ starts here.
   \hypertarget{refs}{}
   \hypertarget{ref-angel2000}{}
   Angel, E. (2000). \emph{Interactive computer graphics : A top-down
-  approach with openGL}. Boston, MA: Addison Wesley Longman.
+  approach with opengl}. Boston, MA: Addison Wesley Longman.
   
   \hypertarget{ref-angel2001}{}
   Angel, E. (2001a). \emph{Batch-file computer graphics : A bottom-up
-  approach with quickTime}. Boston, MA: Wesley Addison Longman.
+  approach with quicktime}. Boston, MA: Wesley Addison Longman.
   
   \hypertarget{ref-angel2002a}{}
   Angel, E. (2001b). \emph{Test second book by angel}. Boston, MA: Wesley
@@ -1594,7 +1891,7 @@ starts here.
   (Undergraduate thesis). Reed College.
   
   \hypertarget{ref-reedweb2007}{}
-  Reed~College. (2007, March). LaTeX your document. Retrieved from
+  Reed~College. (2007, march). LaTeX your document. Retrieved from
   \url{http://web.reed.edu/cis/help/LaTeX/index.html}
 
 

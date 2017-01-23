@@ -47,7 +47,13 @@ ArchaeasTaxa <- read.table("chapter3/ArchaeasTaxa", header=TRUE, sep="\t")
 ```
 
 # Archaea EvoMining Results {#ref_labels}
-Archaea kingdom {Referencia}   
+Archaea kingdom was discovered by Wolf in   
+Actinobacteria has proved that natural products can be found on expansions from central metabolic pathways  
+Archaea is interesting because as we see it has a phylum that contains expansions (Central and pangenomic)  
+on Actinobacteria previously known natural products can be detected by software like antiSMASH and clusterfinder, nevertheless on Archaea a whole kingdom, this products are not found. Does Archaea not produce NP's or traditionally known method are nos switable for finding them? 
+
+
+
 ```{r ArchaeasSumary,echo=FALSE}
 #summary(ArchaeasTaxa)
 #table(ArchaeasTaxa$Order)
@@ -67,6 +73,32 @@ Table: Families on Archaeabacteria \label{tab:inher}
 \clearpage
 <!--  EvoMining Expansions
 -->
+
+
+<!--- Expansions Box plot ------------------------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------->
+### Expansions BoxPlot by metabolic family
+```{r boxplot_ArchaeaHP,warnings = FALSE, message = FALSE,echo=FALSE}
+#ArchaeasHeatPlot$RastId <- with(ArchaeasHeatPlot,reorder(ArchaeasHeatPlot$RastId, ArchaeasHeatPlot$RastId))
+ArchaeasTotalBP.m<-merge(ArchaeasHeatPlot,ArchaeasTaxa,by.x="RastId",by.y="RastId") ## works as expected
+ArchaeasHeatPlotBP.m <- melt(ArchaeasTotalBP.m,id =c("RastId","Name","SuperPhylum","Phylum","Class","Order","Family","RastNo","Size","Contigs"))
+ArchaeasHeatPlotBP.m<-subset(ArchaeasHeatPlotBP.m,variable!="TOTAL") ## works as expected
+
+expansion_plotArchaea<-ggplot(ArchaeasHeatPlotBP.m, aes(x=ArchaeasHeatPlotBP.m$variable, y=ArchaeasHeatPlotBP.m$value),color="Family") + labs(x = "Metabolic Families", y = "Copies on Archaeabacteria Genomes",text = element_text(size=12)) + geom_boxplot()+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6), legend.position = "bottom")
+
+ggsave("chapter3/expansion_plotArchaeas.pdf", plot = expansion_plotArchaea,height = 8, width = 7)
+```
+```{r boxplot_ArchaeaHP_Archaea_label, results = "asis",message=FALSE}
+label(path = "chapter3/expansion_plotArchaeas.pdf", caption = "Expansions Boxplot",label = "Archaea_expansion_boxplot", type = "figure")
+```
+Here is a reference to the expansion boxplot: `r ref("Archaea_expansion_boxplot")`.   
+\clearpage 
+
+
+
+<!----------------------Expansions Box plot END-------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------->
+
 ## Central pathway expansions  
 Heat plot of central pathways expansions, Needs to be phylogenetically sorted.  
 ```{r ArchaeaHeatPlots, warnings = FALSE, message = FALSE, echo=FALSE,CACHE=TRUE}
@@ -103,27 +135,6 @@ Here is a reference to the HeatPlot: `r ref("ArchaeaPlot")`.
 <!--------------------------------------------------------------------------------------------------------------->
 
 
-
-
-
-
-
-<!--- Expansions Box plot ------------------------------------------------------------------------------------------------->
-<!--------------------------------------------------------------------------------------------------------------->
-### Expansions BoxPlot by metabolic family
-```{r boxplot_ArcheasHP,warnings = FALSE, message = FALSE,echo=FALSE}
-Archeasexpansion_plot<-ggplot(ArchaeasHeatPlot.m, aes(x=ArchaeasHeatPlot.m$variable, y=ArchaeasHeatPlot.m$rescale)) + geom_boxplot()+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6), legend.position = "bottom")
-
-ggsave("chapter3/Archeasexpansion_plot.pdf", plot = Archeasexpansion_plot,height = 6, width = 7)
-```
-```{r boxplot_ArcheasHP_label, results = "asis",message=FALSE}
-label(path = "chapter3/Archeasexpansion_plot.pdf", caption = "Archeas expansions Boxplot",label = "Archeas_expansion_boxplot", type = "figure")
-```
-Here is a reference to the expansion boxplot: `r ref("Archeas_expansion_boxplot")`.   
-\clearpage 
-
-<!-----------------------------END expansion boxplot ---------------------------------------------->
-<!--------------------------------------------------------------------------------------------------------------->
 
 
 
@@ -390,7 +401,7 @@ label(path = "chapter3/tree42.png", caption = "Phosphoribosyl isomerase other Ev
       angle = 180,
       label = "Phosphoribosyl_isomerase_other_evo_tree", type = "figure")
 
-label(path = "chapter3/tree65.png", caption = "Phosphoribosylanthranilate_isomerase EvoMiningtree", 
+label(path = "chapter3/tree65.png", caption = "Phosphoribosyl anthranilate isomerase EvoMiningtree", 
       scale = .25,
       angle = 180,
       label = "Phosphoribosylanthranilate_isomerase_evo_tree", type = "figure")
