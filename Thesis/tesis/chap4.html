@@ -139,19 +139,19 @@ You can delete the header-includes (lines 3-6 above) if you like and also the ch
 <tr class="header">
 <th align="center">Factors</th>
 <th align="center">Correlation between Parents &amp; Child</th>
-<th></th>
+<th align="left"></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td align="center">GenomeDB</td>
 <td align="center">1245</td>
-<td></td>
+<td align="left"></td>
 </tr>
 <tr class="even">
 <td align="center">Families</td>
 <td align="center">65</td>
-<td></td>
+<td align="left"></td>
 </tr>
 </tbody>
 </table>
@@ -177,12 +177,13 @@ y hacer heatplots separados por ruta metabolica
 <div id="central-pathway-expansions" class="section level2">
 <h2>Central pathway expansions</h2>
 <p>Heat plot of central pathways expansions, Needs to be phylogenetically sorted.</p>
-
-</div>
-</div>
-<div id="here-is-a-reference-to-the-heatplot-." class="section level1">
-<h1>Here is a reference to the HeatPlot: .</h1>
-<p></p>
+\begin{figure}[h!tbp]
+\centering
+\includegraphics[angle = 0,scale = 0.6]{chapter4/HeatPlotActinos.pdf}
+\caption[Actinobacterial Heatplot]{\normalsize{Actinobacterial Heatplot}}
+\label{fig:ActinoPlot}
+\end{figure}
+<p>Here is a reference to the HeatPlot: . </p>
 <!---------------END EvoMining heatmap----------------------------------------------------------------------------------->
 <!--------------------------------------------------------------------------------------------------------------->
 <!--- Expansions Box plot ------------------------------------------------------------------------------------------------->
@@ -190,17 +191,51 @@ y hacer heatplots separados por ruta metabolica
 <div id="expansions-boxplot-by-metabolic-family" class="section level3">
 <h3>Expansions BoxPlot by metabolic family</h3>
 <pre class="r"><code>label(path = &quot;chapter4/expansion_plotActinos.pdf&quot;, caption = &quot;Expansions Boxplot&quot;,label = &quot;Actino_expansion_boxplot&quot;, type = &quot;figure&quot;)</code></pre>
-
+\begin{figure}[h!tbp]
+\centering
+\includegraphics[angle = 0,scale = 1]{chapter4/expansion_plotActinos.pdf}
+\caption[Expansions Boxplot]{\normalsize{Expansions Boxplot}}
+\label{fig:Actino_expansion_boxplot}
+\end{figure}
 <p>Here is a reference to the expansion boxplot: .<br />
 </p>
 <!-----------------------------END expansion boxplot ---------------------------------------------->
 <!--------------------------------------------------------------------------------------------------------------->
 </div>
+</div>
 <div id="genome-size-correlations" class="section level2">
 <h2>Genome Size correlations</h2>
 <div id="correlation-between-genome-size-and-antismash-products" class="section level3">
 <h3>Correlation between genome size and AntiSMASH products</h3>
+<!------------------------------------------------------------------------------------------------------------->
 </div>
+</div>
+<div id="selected-trees-from-evomining" class="section level2">
+<h2>Selected trees from EvoMining</h2>
+<p>Phosphoribosyl_isomerase_3 family<br />
+Figure from EvoMining</p>
+\begin{figure}[h!tbp]
+\centering
+\includegraphics[angle = 180,scale = 0.25]{chapter4/tree15.png}
+\caption[Enolase EvoMiningtree]{\normalsize{Enolase EvoMiningtree}}
+\label{fig:enolase_evo_tree}
+\end{figure}\begin{figure}[h!tbp]
+\centering
+\includegraphics[angle = 180,scale = 0.25]{chapter4/tree73.png}
+\caption[Phosphoribosyl isomerase EvoMiningtree]{\normalsize{Phosphoribosyl isomerase EvoMiningtree}}
+\label{fig:Phosphoribosyl_isomerase_evo_tree}
+\end{figure}\begin{figure}[h!tbp]
+\centering
+\includegraphics[angle = 180,scale = 0.25]{chapter4/tree47.png}
+\caption[Phosphoribosyl isomerase A EvoMiningtree]{\normalsize{Phosphoribosyl isomerase A EvoMiningtree}}
+\label{fig:Phosphoribosyl_isomerase_A_evo_tree}
+\end{figure}\begin{figure}[h!tbp]
+\centering
+\includegraphics[angle = 180,scale = 0.25]{chapter4/tree69.png}
+\caption[phosphoshikimate_carboxyvinyltransferase EvoMiningtree]{\normalsize{phosphoshikimate_carboxyvinyltransferase EvoMiningtree}}
+\label{fig:phosphoshikimate_carboxyvinyltransferase_evo_tree}
+\end{figure}
+<p></p>
 </div>
 </div>
 

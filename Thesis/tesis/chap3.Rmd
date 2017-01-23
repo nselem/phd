@@ -62,7 +62,7 @@ Tables
   Phylum                                    12   
   Order                                     23 
 ------------------------- -----------------------------------------
-Table: Families on Cyanobacteria \label{tab:inher}
+Table: Families on Archaeabacteria \label{tab:inher}
 
 \clearpage
 <!--  EvoMining Expansions
@@ -83,15 +83,6 @@ HP_Archaeas_Taxa.m<- ddply(HP_Archaeas_Taxa.m, .(variable), transform,rescale=sc
 
 Archaeas_heatplot <- ggplot(HP_Archaeas_Taxa.m, aes(HP_Archaeas_Taxa.m$variable, HP_Archaeas_Taxa.m$RastId))+ geom_tile(aes(fill = HP_Archaeas_Taxa.m$rescale,width = 2), colour = "white") + scale_fill_gradientn(colours = hm.palette(100),na.value = "gray")+ theme(text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
 
-
-#heatplot <- ggplot(ArchaeasHeatPlot.m, aes(ArchaeasHeatPlot.m$variable, ArchaeasHeatPlot.m$RastId))+ geom_tile(aes(fill = ArchaeasHeatPlot.m$rescale), colour = "white") + scale_fill_gradient(low = "white", high = "steelblue")+ theme(text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
-
-## este funciona pero lo esty tratando cambiar a ordenado
-###heatplot <- ggplot(ArchaeasHeatPlot.m, aes(ArchaeasHeatPlot.m$variable, ArchaeasHeatPlot.m$RastId))+ geom_tile(aes(fill = ArchaeasHeatPlot.m$rescale), colour = "white") + scale_fill_gradientn(colours = hm.palette(100),na.value = "gray")+ theme(text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
-
-
-#+ scale_fill_gradientn(colours = hm.palette(100),na.value = "gray")
-#+geom_text(aes(label=ArchaeasHeatPlot.m$rescale)) 
 ggsave("chapter3/ArchaeasHeatPlot.pdf", plot = Archaeas_heatplot,height = 12, width = 6)
 
 ```
@@ -136,6 +127,276 @@ Here is a reference to the expansion boxplot: `r ref("Archeas_expansion_boxplot"
 
 
 
+## Genome Size correlations
+### Correlation between genome size and AntiSMASH products  
+```{r ANTISMASH_GenomeSize_Correlation_by_ORG_Archaeas,echo=FALSE}
+ArchaeasEXP_SMASH<-merge(ArchaeasHeatPlot,ArchaeasSMASH,by.x="RastId",by.y="RastId")
+ArchaeasEXP_SMASH2<-merge(ArchaeasTaxa, ArchaeasEXP_SMASH, by.x="RastId",by.y="RastId") 
+Archaeassn1<-qplot(Size, TOTAL.y, data = ArchaeasEXP_SMASH2,colour=Order)+theme_bw()+ theme(legend.position	="bottom",plot.title = element_text(size = 14, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 12),axis.text.y=element_text(size = 7))
+ggsave("chapter3/ArchaeasSMASHvsSizebyOrder.pdf", plot = Archaeassn1,height = 8, width = 6)
+
+Archaeassn2<-qplot(Size, TOTAL.y, data = ArchaeasEXP_SMASH2,colour=Order)+theme_bw()+facet_grid(ArchaeasEXP_SMASH2$Order~.,scales="free")+ theme(legend.position	="bottom",plot.title = element_text(size = 14, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 12),axis.text.y=element_text(size = 7))
+ggsave("chapter3/ArchaeasSMASHvsSizeGridOrder.pdf", plot = Archaeassn2,height = 8, width = 6)
+
+```
+
+Genome size vs Total antismash cluster coloured by order  
+```{r ArchaeasSMASHvsSizebyOrder_label, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter3/ArchaeasSMASHvsSizebyOrder.pdf", caption = "Correlation between Archaeas genome size and antismash Natural products detection colored by Order",scale=.6,label = "ArchaeasSMASHvsSizebyOrder", type = "figure")
+```
+Here is a reference to Genome size vs Total antismash cluster: `r ref("ArchaeasSMASHvsSizebyOrder")`. 
+\clearpage
+
+Genome size vs Total antismash cluster detected splitted by order  
+```{r ArchaeasSMASHvsSizeGridOrder_label, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter3/ArchaeasSMASHvsSizeGridOrder.pdf", caption = "Correlation between Archaeas genome size and antismash Natural products detection grided by Order",scale=.6,label = "ArchaeasSMASHvsSizeGridOrder", type = "figure")
+```
+
+Here is a reference to Correlation between genome size and antismash Natural products detection grided by Order plot: `r ref("ArchaeasSMASHvsSizeGridOrder")`. 
+\clearpage 
+
+<!--------------------------------END size vs AntiSMASH correlation--------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------->
+
+
+
+
+
+
+<!-------------------------------- size vs Expansions correlation--------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------->
+### Correlation between genome size and Central pathway expansions  
+```{r ArchaeasANTISMASH_GenomeSize_Correlation_by_ORG,echo=FALSE}
+
+ArchaeasEXP_TAXA<-merge(ArchaeasHeatPlot,ArchaeasTaxa,by.x="RastId",by.y="RastId")
+
+Archaeassn4<-qplot(Size, TOTAL, data = ArchaeasEXP_TAXA,colour=Order)+theme_bw()+ theme(legend.position	="bottom",plot.title = element_text(size = 14, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 12),axis.text.y=element_text(size = 7))
+ggsave("chapter3/ArchaeasSizevsExpansionsbyOrder.pdf", plot = Archaeassn4,height = 6, width = 6)
+
+Archaeassn5<-qplot(Size, TOTAL, data = ArchaeasEXP_TAXA,colour=Order)+theme_bw()+facet_grid(ArchaeasEXP_TAXA$Order~.,scales="free")+ theme(legend.position	="bottom",plot.title = element_text(size = 14, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 12),axis.text.y=element_text(size = 7))
+ggsave("chapter3/ArchaeasSizevsExpansionsGridbyOrder.pdf", plot = Archaeassn5,height = 6, width = 6)
+
+## Looking for color modifications
+#sn + scale_color_brewer(palette="Dark2(100)")
+#n + scale_color_brewer(palette=hm.palette(10))
+## sn+ scale_color_hue(l=40, c=35)
+```
+Genome size vs Total central pathway expansion coloured by order  
+```{r ArchaeasSizevsExpansionsbyOrder_label2, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter3/ArchaeasSizevsExpansionsbyOrder.pdf", caption = "Correlation between Archaeas genome size and central pathway expansions ",label = "ArchaeasSizevsExpansionsbyOrder", type = "figure")
+```
+Here is a reference to the size vs Total central pathway expansion plot: `r ref("ArchaeasSizevsExpansionsbyOrder")`. 
+\clearpage 
+
+
+Genome size vs Total central pathway expansion grided by order  
+```{r ArchaeasSizevsExpansionsGridbyOrder_label2, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter3/ArchaeasSizevsExpansionsGridbyOrder.pdf", caption = "Correlation between Archaeas genome size and central pathway expansions grided by order",label = "ArchaeasSizevsExpansionsGridbyOrder", type = "figure")
+```
+Here is a reference to the Genome size vs Total central pathway expansion grided by order plot: `r ref("ArchaeasSizevsExpansionsGridbyOrder")`. 
+\clearpage 
+
+<!--------------------------------------------------------------------------------------------------------------------->
+
+
+
+Correlation between genome size and each of the central pathway families.
+Data are coloured by metabolic family instead of coloured by taxonomical order. This treatment allows to answer how differente metabolic families grows when genome size grow.  
+Also I want to add form given by taxonomical order.
+
+```{r ArchaeaANTISMASH_GenomeSize_Correlation_by_ORG,message=FALSE, echo=FALSE}
+ArchaeasHeatPlot$RastId <- with(ArchaeasHeatPlot, reorder(ArchaeasHeatPlot$RastId, ArchaeasHeatPlot$TOTAL))
+ArchaeasHeatPlot.m <- melt(ArchaeasHeatPlot)
+ArchaeasEXP_TAXA<-merge(ArchaeasHeatPlot.m,ArchaeasTaxa,by.x="RastId",by.y="RastId")
+
+Archaeasn6<-qplot(Size, value, data = ArchaeasEXP_TAXA,colour=variable,shape=Order)+theme_bw()+ theme(legend.position	="none",legend.text=element_text(size=6),plot.title = element_text(size = 14, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 12),axis.text.y=element_text(size = 7))
+ggsave("chapter3/ArchaeasSizevsExpansionsbyMetabolicFamily.pdf", plot = Archaeasn6,height = 6, width = 8)
+
+Archaeasn7<-qplot(Size, value, data = ArchaeasEXP_TAXA,colour=variable)+theme_bw()+facet_grid(ArchaeasEXP_TAXA$variable~.,scales="free")+ theme(legend.position	="none",plot.title = element_text(size = 14, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 12),axis.text.y=element_text(size = 7))
+ggsave("chapter3/ArchaeasExpansionsbyMetabolicFamilyGrid.pdf", plot = Archaeasn7,height = 6, width = 12)
+
+## Looking for color modifications
+#sn + scale_color_brewer(palette="Dark2(100)")
+#n + scale_color_brewer(palette=hm.palette(10))
+## sn+ scale_color_hue(l=40, c=35)
+```
+
+Genome size vs Total central pathway expansion coloured by metabolic Family 
+```{r ArchaeasSizevsExpansionsbyMetabolicFamily_label2, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter3/ArchaeasSizevsExpansionsbyMetabolicFamily.pdf", caption = "Correlation between Archaeas Genome size vs Total central pathway expansion coloured by metabolic Family",scale=.6,label = "ArchaeasSizevsExpansionsbyMetabolicFamily", type = "figure")
+```
+Here is a reference to the Genome size vs Total central pathway expansion coloured by metabolic Family plot: `r ref("ArchaeasSizevsExpansionsbyMetabolicFamily")`. 
+\clearpage 
+
+Future Work: Genome size vs Total central pathway expansion grided by metabolic Family 
+For clarity I need to also grid and group by Metabolic Pathway
+```{r ArchaeasExpansionsbyMetabolicFamilyGrid_label2, results = "asis",message=FALSE,echo=FALSE}
+#label(path = "chapter3/ArchaeasExpansionsbyMetabolicFamilyGrid.pdf", caption = "Correlation between Archaeas Genome size vs Total central pathway expansion grided by metabolic Family ",label = "ArchaeasExpansionsbyMetabolicFamilyGrid", type = "figure")
+```
+Here is a reference to Genome size vs Total central pathway expansion grided by metabolic Family  plot: `r ref("ArchaeasExpansionsbyMetabolicFamilyGrid")`. 
+\clearpage 
+
+
+<!----------------------------END - size vs Expansions correlation--------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------->
+
+
+
+
+
+
+<!----------------------------Natural Products vs Expansions correlation--------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------->
+
+## Natural products  
+
+### Natural products recruitments from EvoMining heatplot
+We can see natural products recruitment after central pathways expansions colored by their kingdom.  
+Natural products recruited by metabolic family, colored by phylogenetic origin.
+```{r ArchaeasNP_recruitment_taxa,echo=FALSE,message=FALSE,warning=FALSE}
+ArchaeasRecbyKing<-qplot(x=Central, data=ArchaeasNp, geom="bar", fill=kingdom, position="stack")+theme_bw()+ theme(legend.position	="bottom",text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
+ggsave("chapter3/ArchaeasRecruitmentsbyKingdom.pdf", plot = ArchaeasRecbyKing,height = 6, width = 12)
+
+ArchaeasRecbytaxa<-qplot(x=Central, data=ArchaeasNp, geom="bar", fill=taxa, position="stack")+theme_bw()+ theme(legend.position	="bottom",text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
+ggsave("chapter3/ArchaeasRecruitmentsbyTaxa.pdf", plot = ArchaeasRecbytaxa,height = 6, width = 12)
+
+```
+
+
+Recruitments after central pathways expansions coloured by Kingdom
+```{r ArchaeasRecruitmentsbyKingdom_label2, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter3/ArchaeasRecruitmentsbyKingdom.pdf", caption = "Archaeas Recruitmens on central families coloured by kingdom",scale=.6,label = "ArchaeasRecruitmentsbyKingdom", type = "figure")
+```
+Here is a reference to Recruitments after central pathways expansions colourd by Kingdom plot: `r ref("ArchaeasRecruitmentsbyKingdom")`. 
+
+\clearpage 
+Recruitments after central pathways expansions colourd by taxonomy
+```{r ArchaeasRecruitmentsbyTaxa_label2, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter3/ArchaeasRecruitmentsbyTaxa.pdf", caption = "Archaeas Recruitmens on central families coloured by taxonomy",scale=.5,label = "ArchaeasRecruitmentsbyTaxa", type = "figure")
+```
+Here is a reference to Recruitments after central pathways expansions colourd by taxa plot: `r ref("ArchaeasRecruitmentsbyTaxa")`. 
+\clearpage 
+
+
+
+
+## Archaeas AntiSMASH 
+```{r ArchaeasDiversity,echo=FALSE,message=FALSE,warning=FALSE}
+## merge tables
+Archaeasm1 <- merge(ArchaeasTaxa, ArchaeasSMASH, by.x = "RastId", by.y = "RastId")
+Archaeasm1.m <- melt(Archaeasm1, id = c("RastId","Name","SuperPhylum","Phylum","Class","Order","Family","Contigs","Size","RastNo"))
+Archaeasm2.m<-subset(Archaeasm1.m,value>0)
+
+ArchaeasDiversity<-qplot(x=Order, data=Archaeasm1.m, geom="bar", fill=Family, position="stack")+theme_bw()+ theme(text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
+#table(m1.m$Order>0,m1.m$Family>0)
+#qplot(x=clarity, data=diamonds, geom="bar", fill=cut, position="stack")
+ggsave("chapter3/ArchaeasDiversity.pdf", plot =ArchaeasDiversity,height = 6, width = 14)
+
+ArchaeasSmash<-qplot(x=Order, data=Archaeasm2.m, geom="bar", fill=variable, position="stack",colours = hm.palette(100000))+theme_bw()+ theme(legend.position="none",text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
+#table(m1.m$Order>0,m1.m$Family>0)
+ggsave("chapter3/ArchaeasSmash.pdf", plot = ArchaeasSmash,height = 6, width = 14)
+```
+ 
+Taxonomical diversity on Archaeasbacteria Data
+```{r ArchaeasDiversity_label2, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter3/ArchaeasDiversity.pdf", caption = "Archaeas Diversity",scale=.6,label = "ArchaeasDiversity", type = "figure")
+```
+Here is a reference to Recruitments after central pathways expansions colourd by taxa plot: `r ref("ArchaeasDiversity")`. 
+\clearpage
+
+Smash diversity
+```{r ArchaeasSmash_label2, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter3/ArchaeasSmash.pdf", caption = "Archaeas Smash Taxonomical Diversity",scale=.5,label = "ArchaeasSmash", type = "figure")
+```
+Here is a reference to Recruitments after central pathways expansions colourd by taxa plot: `r ref("ArchaeasSmash")`. 
+\clearpage
+
+
+
+### AntisSMASH vs Central Expansions  
+Is it a correlation between pangenome grow and central pathways expansions?  
+```{r ArchaeasANTISMASH_Expansion_Correlation_by_ORG,message=FALSE, echo =FALSE}
+ArchaeasEXP_SMASH<-merge(ArchaeasHeatPlot,ArchaeasSMASH,by.x="RastId",by.y="RastId")
+ArchaeasEXP_SMASH2<-merge(ArchaeasTaxa, ArchaeasEXP_SMASH, by.x="RastId",by.y="RastId") 
+#qplot(Total.x, Total.y, data = EXP_SMASH, colour=Order)+theme_bw()+
+Archaeassn8<-qplot(TOTAL.x, TOTAL.y, data = ArchaeasEXP_SMASH2,colour=Order)+theme_bw()+ theme(legend.position	="bottom",legend.text=element_text(size=10),plot.title = element_text(size = 14, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 10),axis.text.y=element_text(size = 7))
+ggsave("chapter3/ArchaeasSMASHvsExpansionsbyOrder.pdf", plot = Archaeassn8,height = 12, width = 6)
+
+Archaeassn9<-qplot(TOTAL.x, TOTAL.y, data = ArchaeasEXP_SMASH2,colour=Order)+theme_bw()+facet_grid(ArchaeasEXP_SMASH2$Order~.,scales="free")+ theme(legend.position	="bottom",legend.text=element_text(size=10),plot.title = element_text(size = 14, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 12),axis.text.y=element_text(size = 7))
+ggsave("chapter3/ArchaeasSMASHvsExpansionsbyOrderGRID.pdf", plot = Archaeassn9,height = 10, width = 6)
+
+## Looking for color modifications
+#sn + scale_color_brewer(palette="Dark2(100)")
+#n + scale_color_brewer(palette=hm.palette(10))
+## sn+ scale_color_hue(l=40, c=35)
+```
+Total central pathway expansions by genome vs Total antismash cluster detected coloured by order  
+```{r ArchaeasSMASHvsExpansionsbyOrder_label, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter3/ArchaeasSMASHvsExpansionsbyOrder.pdf", caption = "Correlation between Archaeas central pathway expansions and antismash Natural products detection",scale=.5,label = "ArchaeasSMASHvsExpansionsbyOrder", type = "figure")
+```
+Here is a reference to the expansions vs antismash NP's clusters plot: `r ref("ArchaeasSMASHvsExpansionsbyOrder")`. 
+\clearpage 
+
+Total central pathway expansions by genome vs Total antismash cluster detected splitted by order  
+```{r ArchaeasSMASHvsExpansionsbyOrderGRID_label, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter3/ArchaeasSMASHvsExpansionsbyOrderGRID.pdf", caption = "Correlation between Archaeas central pathway expnasions and antismash Natural products detection",scale=.5,label = "ArchaeasSMASHvsExpansionsbyOrderGRID", type = "figure")
+```
+Here is a reference to the expansions vs antismash NP's clusters splitted by order plot `r ref("ArchaeasSMASHvsExpansionsbyOrderGRID")`. 
+\clearpage 
+
+<!------------------------------------------------------------------------------------------------------------->
+
+
+
+
+AntisMAsh vs Expansions by taxonomic Family
+```{r ArchaeasANTISMASH_Expansion_Correlation_by_Family,echo=FALSE,warning=FALSE}
+ArchaeasEXP_SMASH<-merge(ArchaeasHeatPlot,ArchaeasSMASH,by.x="RastId",by.y="RastId")
+ArchaeasEXP_SMASH2<-merge(ArchaeasTaxa, ArchaeasEXP_SMASH, by.x="RastId",by.y="RastId") 
+
+Archaeasnpf<-qplot(TOTAL.x, TOTAL.y, data = ArchaeasEXP_SMASH2,colour=Family)+theme_bw()+facet_grid(ArchaeasEXP_SMASH2$Order~.,scales="free")+
+        theme( plot.title = element_text(size = 14, face = "bold"),
+              text = element_text(size = 12),
+              axis.title = element_text(face="bold"),
+              axis.text.x=element_text(size = 12),
+              axis.text.y=element_text(size = 7))
+ggsave("chapter3/Archaeasnpf.pdf", plot = Archaeasnpf,height = 12, width = 6)
+
+#facet_grid(EXP_SMASH$Order~.,scales="free")+
+```
+
+Natural products colured by family
+```{r Archaeasnpf_label, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter3/Archaeasnpf.pdf", caption = "Archaeas Natural products by family",scale=.6,label = "Archaeasnpf", type = "figure")
+```
+Here is a reference to the Natural products colured by family
+ plot `r ref("Archaeasnpf")`. 
+\clearpage 
+
+<!------------------------------------------------------------------------------------------------------------->
+
+##Selected trees from EvoMining
+Phosphoribosyl_isomerase_3 family  
+Figure from EvoMining
+
+```{r ArchaeasPhosphoribosyl_isomerase_evo_tree, results = "asis",message=FALSE, echo=FALSE}
+label(path = "chapter3/tree41.png", caption = "Phosphoribosyl isomerase A EvoMiningtree", 
+      scale = .25,
+      angle = 180,
+      label = "Phosphoribosyl_isomerase_A_evo_tree", type = "figure")
+
+label(path = "chapter3/tree42.png", caption = "Phosphoribosyl isomerase other EvoMiningtree", 
+      scale = .25,
+      angle = 180,
+      label = "Phosphoribosyl_isomerase_other_evo_tree", type = "figure")
+
+label(path = "chapter3/tree65.png", caption = "Phosphoribosylanthranilate_isomerase EvoMiningtree", 
+      scale = .25,
+      angle = 180,
+      label = "Phosphoribosylanthranilate_isomerase_evo_tree", type = "figure")
+
+```
+\clearpage 
 
 ## Footnotes and Endnotes
 

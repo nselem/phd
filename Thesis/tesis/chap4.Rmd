@@ -3,6 +3,7 @@ header-includes:
 - \usepackage{graphicx,latexsym}
 - \usepackage{amssymb,amsthm,amsmath}
 - \usepackage{longtable,booktabs,setspace}
+output: pdf_document
 ---
 
 <!--- Actinos-->
@@ -167,4 +168,29 @@ EXP_SMASH_Actino <- cbind(ActinosSMASH, TOTAL = rowSums(ActinosSMASH))
 #n + scale_color_brewer(palette=hm.palette(10))
 ## sn+ scale_color_hue(l=40, c=35)
 ```
+<!------------------------------------------------------------------------------------------------------------->
 
+##Selected trees from EvoMining
+
+```{r Actinos_evo_tree, results = "asis",message=FALSE, echo=FALSE}
+label(path = "chapter4/tree15.png", caption = "Enolase EvoMiningtree", 
+      scale = .3,
+      angle = 180,
+      label = "enolase_evo_tree", type = "figure")
+
+label(path = "chapter4/tree73.png", caption = "Phosphoribosyl isomerase EvoMiningtree", 
+      scale = .3,
+      angle = 180,
+      label = "Phosphoribosyl_isomerase_evo_tree", type = "figure")
+
+label(path = "chapter4/tree47.png", caption = "Phosphoribosyl isomerase A EvoMiningtree", 
+      scale = .3,
+      angle = 180,
+      label = "Phosphoribosyl_isomerase_A_evo_tree", type = "figure")
+
+label(path = "chapter4/tree69.png", caption = "phosphoshikimate carboxyvinyltransferase EvoMiningtree", 
+      scale = .3, angle = 180,label = "phosphoshikimate_c_evo_tree", type = "figure")
+
+
+```
+\clearpage 

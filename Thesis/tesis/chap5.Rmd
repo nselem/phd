@@ -3,7 +3,7 @@ header-includes:
 - \usepackage{graphicx,latexsym}
 - \usepackage{amssymb,amsthm,amsmath}
 - \usepackage{longtable,booktabs,setspace}
-output: html_document
+output: pdf_document
 ---
 
 <!--- Cyanobacteria-->
@@ -239,6 +239,8 @@ Here is a reference to the Genome size vs Total central pathway expansion grided
 
 <!--------------------------------------------------------------------------------------------------------------------->
 
+
+
 Correlation between genome size and each of the central pathway families.
 Data are coloured by metabolic family instead of coloured by taxonomical order. This treatment allows to answer how differente metabolic families grows when genome size grow.  
 Also I want to add form given by taxonomical order.
@@ -316,6 +318,10 @@ Here is a reference to Recruitments after central pathways expansions colourd by
 \clearpage 
 
 
+
+
+
+
 ## Cyanobacterias AntiSMASH 
 ```{r CyanoDiversity,echo=FALSE,message=FALSE,warning=FALSE}
 ## merge tables
@@ -346,6 +352,10 @@ label(path = "chapter5/Smash.pdf", caption = "Smash",scale=.5,label = "Smash Tax
 ```
 Here is a reference to Recruitments after central pathways expansions colourd by taxa plot: `r ref("Smash")`. 
 \clearpage
+
+
+
+
 
 ### AntisSMASH vs Central Expansions  
 Is it a correlation between pangenome grow and central pathways expansions?  
@@ -380,6 +390,9 @@ Here is a reference to the expansions vs antismash NP's clusters splitted by ord
 
 <!------------------------------------------------------------------------------------------------------------->
 
+
+
+
 AntisMAsh vs Expansions by taxonomic Family
 ```{r ANTISMASH_Expansion_Correlation_by_Family_Cyanos,echo=FALSE,warning=FALSE}
 EXP_SMASH<-merge(CyanosHeatPlot,CyanosSMASH,by.x="RastId",by.y="RastIds")
@@ -411,16 +424,76 @@ Phosphoribosyl_isomerase_3 family
 Figure from EvoMining
 
 ```{r Phosphoribosyl_isomerase_evo_tree, results = "asis",message=FALSE, echo=FALSE}
+
 label(path = "chapter5/tree64.png", caption = "Phosphoribosyl isomerase EvoMiningtree", 
       scale = .25,
       angle = 180,
       label = "Phosphoribosyl_isomerase_evo_tree", type = "figure")
 
-label(path = "chapter5/tree1.png", caption = "Phosphoribosyl isomerase EvoMiningtree", 
+label(path = "chapter5/tree1.png", caption = "Phosphoglycerate dehydrogenase EvoMiningtree",scale = .25,
+      angle = 180,
+      label = "Phosphoglycerate_dehydrogenase_evo_tree", type = "figure")
+
+label(path = "chapter5/tree2.png", caption = "Phosphoserine aminotransferase EvoMiningtree", 
       scale = .25,
       angle = 180,
-      label = "Phosphoribosyl_isomerase_evo_tree", type = "figure")
+      label = "Phosphoserine_aminotransferase_evo_tree", type = "figure")
 
+label(path = "chapter5/tree10.png", caption = "Triosephosphate isomerase EvoMiningtree", 
+      scale = .25,
+      angle = 180,
+      label = "Triosephosphate_isomerase_evo_tree", type = "figure")
+
+label(path = "chapter5/tree11.png", caption = "glyceraldehyde3phosphate dehydrogenase EvoMiningtree", 
+      scale = .25,
+      angle = 180,
+      label = "glyceraldehyde3phosphate_dehydrogenase_evo_tree", type = "figure")
+
+label(path = "chapter5/tree12.png", caption = "phosphoglycerate kinase EvoMiningtree", 
+      scale = .25,
+      angle = 180,
+      label = "phosphoglycerate_kinase_evo_tree", type = "figure")
+
+label(path = "chapter5/tree13.png", caption = "phosphoglycerate mutaseEvoMiningtree", 
+      scale = .25,
+      angle = 180,
+      label = "phosphoglycerate_mutase_evo_tree", type = "figure")
+
+label(path = "chapter5/tree14.png", caption = "enolase EvoMiningtree", 
+      scale = .25,
+      angle = 180,
+      label = "enolase_evo_tree", type = "figure")
+
+label(path = "chapter5/tree15.png", caption = "Pyruvate kinase EvoMiningtree", 
+      scale = .25,
+      angle = 180,
+      label = "Pyruvate_kinase_evo_tree", type = "figure")
+
+label(path = "chapter5/tree16.png", caption = "Aspartate transaminase EvoMiningtree", 
+      scale = .25,
+      angle = 180,
+      label = "Aspartate_transaminase_evo_tree", type = "figure")
+
+label(path = "chapter5/tree17.png", caption = "Asparagine synthase EvoMiningtree", 
+      scale = .25,
+      angle = 180,
+      label = "Asparagine_synthase_evo_tree", type = "figure")
+
+label(path = "chapter5/tree18.png", caption = "Aspartate kinase EvoMiningtree", 
+      scale = .25,
+      angle = 180,
+      label = "Aspartate_kinase_evo_tree", type = "figure")
+
+label(path = "chapter5/tree19.png", caption = "Aspartate semialdehyde dehydrogenase EvoMiningtree", 
+      scale = .25,
+      angle = 180,
+      label = "Aspartate_semialdehyde_dehydrogenase_evo_tree", type = "figure")
+
+
+label(path = "chapter5/tree20.png", caption = "Homoserine dehydrogenase EvoMiningtree", 
+      scale = .25,
+      angle = 180,
+      label = "Homoserine_dehydrogenase_evo_tree", type = "figure")
 #label(path = "chapter5/tree64.png", caption = "Tree 64", 
 
 ```
