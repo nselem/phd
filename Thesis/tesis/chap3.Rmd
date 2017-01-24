@@ -3,6 +3,7 @@ header-includes:
 - \usepackage{graphicx,latexsym}
 - \usepackage{amssymb,amsthm,amsmath}
 - \usepackage{longtable,booktabs,setspace}
+output: pdf_document
 ---
 <!--- Archaeas-->
 
@@ -47,11 +48,12 @@ ArchaeasTaxa <- read.table("chapter3/ArchaeasTaxa", header=TRUE, sep="\t")
 ```
 
 # Archaea EvoMining Results {#ref_labels}
-Archaea kingdom was discovered by Wolf in   
+Archaea kingdom was discovered by Woese in 1977 [@woese_phylogenetic_1977]   
 Actinobacteria has proved that natural products can be found on expansions from central metabolic pathways  
-Archaea is interesting because as we see it has a phylum that contains expansions (Central and pangenomic)  
+Archaea is interesting because as we will see has a phylum that contains expansions (Central and pangenomic)  
 on Actinobacteria previously known natural products can be detected by software like antiSMASH and clusterfinder, nevertheless on Archaea a whole kingdom, this products are not found. Does Archaea not produce NP's or traditionally known method are nos switable for finding them? 
-
+Archea has operons??  
+Archaea has introns?  
 
 
 ```{r ArchaeasSumary,echo=FALSE}
