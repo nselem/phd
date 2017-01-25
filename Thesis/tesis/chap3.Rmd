@@ -47,14 +47,15 @@ ArchaeasSMASH <- read.table("chapter3/ArchaeasSMASH", header=TRUE, sep="\t")
 ArchaeasTaxa <- read.table("chapter3/ArchaeasTaxa", header=TRUE, sep="\t")
 ```
 
-# Archaea EvoMining Results {#ref_labels}
-Archaea kingdom was discovered by Woese in 1977 [@woese_phylogenetic_1977]   
-Actinobacteria has proved that natural products can be found on expansions from central metabolic pathways  
-Archaea is interesting because as we will see has a phylum that contains expansions (Central and pangenomic)  
-on Actinobacteria previously known natural products can be detected by software like antiSMASH and clusterfinder, nevertheless on Archaea a whole kingdom, this products are not found. Does Archaea not produce NP's or traditionally known method are nos switable for finding them? 
-Archea has operons??  
-Archaea has introns?  
-
+# Archaea EvoMining Results {#ref_labels}   
+During the decade between 1970 and 1980, Archaea was recognized as new life domain, a kingdom different from Bacteria and Eucarya in an exciting first great application of 16S phylogeny[@woese_phylogenetic_1977,@woese_are_1981] . Main differences between this kingdoms are that Archaeal DNA is not arranged in a nucleus as in Eucarya and Archaeal celular walls are not composed from peptidoglycans as in Bacteria. Archaeal proteins may be higlhy valuable to biotechnology industry for their great stability due to extreme temperature, PH and salt content conditions on Archeal habitats. Despite no Archaeal Natural products biosynthetic gene clusters (BGC's) has been reported on MiBIG, Archaea do have BGC's, some of them seems to be acquired by horizontal gene transfer (HGT) like methano nrps {search reference}. Other Archeal natural products known are archaeosins, Diketopiperazines, Acyl Homoserine Lactones, Exopolysaccharides, Carotenoids, Biosurfactants, Phenazines and Organic Solutes but this knowledge is not comparable to Bacterial BGC's knowledge[@charlesworth_untapped_2015].  
+  
+Natural products biosynthetic gene clusters search is actually performed using either *high-confidence/low-novelty or low-confidence/high-novelty* bioinformatic approaches [@medema_computational_2015]. High confidence methods compares query sequences with previously known BGC's such as nrps or PKS, examples of this algorithms are antiSMASH and clusterfinder [@_antismash_????]. EvoMining searches on expansions from central metabolic pathways enzyme families, it has been classified as low confidence/high novelty method. EvoMining has proved useful on Actinobacteria phylum where its use lead to Arseno-compounds discovery [@cruz-morales_phylogenomic_2016]. Also on Actinobacteria antiSMASH analysis on 1245 genomes found 774 different classes of natural products, the same analysis on 876 Archaeal genomes, a full kingdom, identifies only 35 BGC's classes. So either Archaea does not have natural products BGC's or this are not yet known. Next paragraph deals with a possible approach about how natural products BGC's can be find.  
+  
+Archaea resembled Bacteria in that Archaea uses horizontal gene transfer as a genic interchange mecanism, Archaeal genomes contains operons [@howland_surprising_2000] and in general there is introns absence{Reference to Computational Methods for Understanding Bacterial and Archaeal Genomes}. Archaeas do have introns, but they are mainly located on genes that encodes ribosomal and transfer RNA [@howland_surprising_2000]. General lack of introns allows automatic genome annotation, operons gene organization permits functional inference to a certain degree and HGT contribute to expansions on Archaeal genomes. Some phylum on Archaea has an open pangenome, and as we will show on this chapter some Archaea has central pathway expansions. 
+Enzyme families from central pathways expansions, open pangenome and operon organization made EvoMining succesful on Actinobacteria, this lead us to think that evoMining is suitable to analize Archaeal genomes, even more since EvoMining is a method oriented to use evolution and its not entirelyy based on previous knowledge of BGC's sequences if evolutionary logic behave on Archaea as on bacteria, new BGC's classes may be be found on Archaea.
+  
+EvoMining is a trade off between conserved known central metabolic function and enough expansions divergence on sequence and on clusters to divergence 
 
 ```{r ArchaeasSumary,echo=FALSE}
 #summary(ArchaeasTaxa)
@@ -79,6 +80,8 @@ Table: Families on Archaeabacteria \label{tab:inher}
 
 <!--- Expansions Box plot ------------------------------------------------------------------------------------------------->
 <!--------------------------------------------------------------------------------------------------------------->
+First lets investigate if Archaea has expansions on families within central metabolic routes. Since main metabolic pathways are shared between Bacteria and Archaea makes sense to assemble Archeal EvoMining central database by using orthologous from Actinobacteria evoMining central pathways.
+
 ### Expansions BoxPlot by metabolic family
 ```{r boxplot_ArchaeaHP,warnings = FALSE, message = FALSE,echo=FALSE}
 #ArchaeasHeatPlot$RastId <- with(ArchaeasHeatPlot,reorder(ArchaeasHeatPlot$RastId, ArchaeasHeatPlot$RastId))
@@ -91,11 +94,14 @@ expansion_plotArchaea<-ggplot(ArchaeasHeatPlotBP.m, aes(x=ArchaeasHeatPlotBP.m$v
 ggsave("chapter3/expansion_plotArchaeas.pdf", plot = expansion_plotArchaea,height = 8, width = 7)
 ```
 ```{r boxplot_ArchaeaHP_Archaea_label, results = "asis",message=FALSE}
-label(path = "chapter3/expansion_plotArchaeas.pdf", caption = "Expansions Boxplot",label = "Archaea_expansion_boxplot", type = "figure")
+label(path = "chapter3/expansion_plotArchaeas.pdf", caption = "Expansions Boxplot",label = "Archaea_expansion_boxplot", type = "figure",scale=".7")
 ```
 Here is a reference to the expansion boxplot: `r ref("Archaea_expansion_boxplot")`.   
 \clearpage 
 
+
+### Expansions BoxPlot by metabolic family by phylum
+\clearpage 
 
 
 <!----------------------Expansions Box plot END-------------------------------------------------------------------->
@@ -411,6 +417,9 @@ label(path = "chapter3/tree65.png", caption = "Phosphoribosyl anthranilate isome
 ```
 \clearpage 
 
+## 
+Other possible databases Archaeal signatures *set of protein-encoding genes that function uniquely within the Archaea; most signature proteins
+have  no  recognizable  bacterial  or  eukaryal  homologs*  [@graham_archaeal_2000]
 ## Footnotes and Endnotes
 
 You might want to footnote something. ^[footnote text] The footnote will be in a smaller font and placed appropriately. Endnotes work in much the same way. More information can be found about both on the CUS site or feel free to reach out to <data@reed.edu>.

@@ -224,7 +224,7 @@ starts here.
   \chapter{EvoMining}\label{rmd-basics}
   
   \textbf{EvoMining} needs. Functional genomics uses genomes in the study
-  of gene and protein function{[}{]}.
+  of gene and protein function\protect\hyperlink{section}{}.
   
   \begin{enumerate}
   \def\labelenumi{\arabic{enumi}.}
@@ -284,7 +284,8 @@ starts here.
       Item 3a
     \item
       Item 3b\\
-      \#\# Central DB
+      \#\# Central DB We chose central pathways from (Barona-Gómez,
+      Cruz-Morales, \& Noda-García, 2012)\\
     \end{itemize}
   \end{enumerate}
   
@@ -524,7 +525,7 @@ starts here.
   \end{Highlighting}
   \end{Shaded}
   
-  \begin{longtable}[c]{@{}lr@{}}
+  \begin{longtable}[]{@{}lr@{}}
   \caption{Maximum Delays by Airline \label{tab:max_delay}}\tabularnewline
   \toprule
   Airline & Max Arrival Delay\tabularnewline
@@ -661,9 +662,9 @@ starts here.
   You may wish to put your reaction in a figure environment, which means
   that \LaTeX~will place the reaction where it fits and you can have a
   figure caption. You'll see further description of this \textbf{R}
-  \texttt{label} function in \protect\hyperlink{refux5flabels}{}. (Note
-  the use of the double backslash here as well as the
-  \texttt{echo\ =\ FALSE} which hides the code from the output.)
+  \texttt{label} function in \protect\hyperlink{ref_labels}{}. (Note the
+  use of the double backslash here as well as the \texttt{echo\ =\ FALSE}
+  which hides the code from the output.)
   
   \begin{figure}[h!tbp]
   \begin{center}
@@ -698,24 +699,68 @@ starts here.
   (\url{http://homepages.uni-tuebingen.de/beitz/txe.html}). Be sure to
   read the proceeding chapter on graphics and tables.
   
-  \hypertarget{refux5flabels}{\chapter{Archaea EvoMining
-  Results}\label{refux5flabels}}
+  \hypertarget{ref_labels}{\chapter{Archaea EvoMining
+  Results}\label{ref_labels}}
   
-  Archaea kingdom was discovered by Woese in 1977 (Woese \& Fox, 1977)\\
-  Actinobacteria has proved that natural products can be found on
-  expansions from central metabolic pathways\\
-  Archaea is interesting because as we will see has a phylum that contains
-  expansions (Central and pangenomic)\\
-  on Actinobacteria previously known natural products can be detected by
-  software like antiSMASH and clusterfinder, nevertheless on Archaea a
-  whole kingdom, this products are not found. Does Archaea not produce
-  NP's or traditionally known method are nos switable for finding them?
-  Archea has operons??\\
-  Archaea has introns?
+  During the decade between 1970 and 1980, Archaea was recognized as new
+  life domain, a kingdom different from Bacteria and Eucarya in an
+  exciting first great application of 16S phylogeny(C R Woese \& Fox,
+  1977,Carl R. Woese \& Gupta (1981)) . Main differences between this
+  kingdoms are that Archaeal DNA is not arranged in a nucleus as in
+  Eucarya and Archaeal celular walls are not composed from peptidoglycans
+  as in Bacteria. Archaeal proteins may be higlhy valuable to
+  biotechnology industry for their great stability due to extreme
+  temperature, PH and salt content conditions on Archeal habitats. Despite
+  no Archaeal Natural products biosynthetic gene clusters (BGC's) has been
+  reported on MiBIG, Archaea do have BGC's, some of them seems to be
+  acquired by horizontal gene transfer (HGT) like methano nrps \{search
+  reference\}. Other Archeal natural products known are archaeosins,
+  Diketopiperazines, Acyl Homoserine Lactones, Exopolysaccharides,
+  Carotenoids, Biosurfactants, Phenazines and Organic Solutes but this
+  knowledge is not comparable to Bacterial BGC's knowledge(Charlesworth \&
+  Burns, 2015).
+  
+  Natural products biosynthetic gene clusters search is actually performed
+  using either \emph{high-confidence/low-novelty or
+  low-confidence/high-novelty} bioinformatic approaches (Medema \&
+  Fischbach, 2015). High confidence methods compares query sequences with
+  previously known BGC's such as nrps or PKS, examples of this algorithms
+  are antiSMASH and clusterfinder ({\textbf{???}}?). EvoMining searches on
+  expansions from central metabolic pathways enzyme families, it has been
+  classified as low confidence/high novelty method. EvoMining has proved
+  useful on Actinobacteria phylum where its use lead to Arseno-compounds
+  discovery (Cruz-Morales et al., 2016). Also on Actinobacteria antiSMASH
+  analysis on 1245 genomes found 774 different classes of natural
+  products, the same analysis on 876 Archaeal genomes, a full kingdom,
+  identifies only 35 BGC's classes. So either Archaea does not have
+  natural products BGC's or this are not yet known. Next paragraph deals
+  with a possible approach about how natural products BGC's can be find.
+  
+  Archaea resembled Bacteria in that Archaea uses horizontal gene transfer
+  as a genic interchange mecanism, Archaeal genomes contains operons
+  (Howland, 2000) and in general there is introns absence\{Reference to
+  Computational Methods for Understanding Bacterial and Archaeal
+  Genomes\}. Archaeas do have introns, but they are mainly located on
+  genes that encodes ribosomal and transfer RNA (Howland, 2000). General
+  lack of introns allows automatic genome annotation, operons gene
+  organization permits functional inference to a certain degree and HGT
+  contribute to expansions on Archaeal genomes. Some phylum on Archaea has
+  an open pangenome, and as we will show on this chapter some Archaea has
+  central pathway expansions. Enzyme families from central pathways
+  expansions, open pangenome and operon organization made EvoMining
+  succesful on Actinobacteria, this lead us to think that evoMining is
+  suitable to analize Archaeal genomes, even more since EvoMining is a
+  method oriented to use evolution and its not entirelyy based on previous
+  knowledge of BGC's sequences if evolutionary logic behave on Archaea as
+  on bacteria, new BGC's classes may be be found on Archaea.
+  
+  EvoMining is a trade off between conserved known central metabolic
+  function and enough expansions divergence on sequence and on clusters to
+  divergence
   
   \section{Tables}\label{tables}
   
-  \begin{longtable}[c]{@{}cc@{}}
+  \begin{longtable}[]{@{}cc@{}}
   \caption{Families on Archaeabacteria \label{tab:inher}}\tabularnewline
   \toprule
   Factors & Correlation between Parents \& Child\tabularnewline
@@ -733,18 +778,21 @@ starts here.
   
   \clearpage
   
-  \subsection{Expansions BoxPlot by metabolic
-  family}\label{expansions-boxplot-by-metabolic-family}
+  First lets investigate if Archaea has expansions on families within
+  central metabolic routes. Since main metabolic pathways are shared
+  between Bacteria and Archaea makes sense to assemble Archeal EvoMining
+  central database by using orthologous from Actinobacteria evoMining
+  central pathways. \#\#\# Expansions BoxPlot by metabolic family
   
   \begin{Shaded}
   \begin{Highlighting}[]
-  \KeywordTok{label}\NormalTok{(}\DataTypeTok{path =} \StringTok{"chapter3/expansion_plotArchaeas.pdf"}\NormalTok{, }\DataTypeTok{caption =} \StringTok{"Expansions Boxplot"}\NormalTok{,}\DataTypeTok{label =} \StringTok{"Archaea_expansion_boxplot"}\NormalTok{, }\DataTypeTok{type =} \StringTok{"figure"}\NormalTok{)}
+  \KeywordTok{label}\NormalTok{(}\DataTypeTok{path =} \StringTok{"chapter3/expansion_plotArchaeas.pdf"}\NormalTok{, }\DataTypeTok{caption =} \StringTok{"Expansions Boxplot"}\NormalTok{,}\DataTypeTok{label =} \StringTok{"Archaea_expansion_boxplot"}\NormalTok{, }\DataTypeTok{type =} \StringTok{"figure"}\NormalTok{,}\DataTypeTok{scale=}\StringTok{".7"}\NormalTok{)}
   \end{Highlighting}
   \end{Shaded}
   
   \begin{figure}[h!tbp]
   \centering
-  \includegraphics[angle = 0,scale = 1]{chapter3/expansion_plotArchaeas.pdf}
+  \includegraphics[angle = 0,scale = .7]{chapter3/expansion_plotArchaeas.pdf}
   \caption[Expansions Boxplot]{\normalsize{Expansions Boxplot}}
   \label{fig:Archaea_expansion_boxplot}
   \end{figure}
@@ -890,8 +938,8 @@ starts here.
   Here is a reference to Recruitments after central pathways expansions
   colourd by Kingdom plot: \autoref{fig:ArchaeasRecruitmentsbyKingdom}.
   
-  \clearpage 
-  Recruitments after central pathways expansions colourd by taxonomy
+  \clearpage  Recruitments after central pathways expansions colourd by
+  taxonomy
   
   \begin{figure}[h!tbp]
   \centering
@@ -1002,7 +1050,12 @@ starts here.
   
   \clearpage 
   
-  \section{Footnotes and Endnotes}\label{footnotes-and-endnotes}
+  \hypertarget{section}{\section{}\label{section}}
+  
+  Other possible databases Archaeal signatures \emph{set of
+  protein-encoding genes that function uniquely within the Archaea; most
+  signature proteins have no recognizable bacterial or eukaryal homologs}
+  (Graham, Overbeek, Olsen, \& Woese, 2000) \#\# Footnotes and Endnotes
   
   You might want to footnote something.\footnote{footnote text} The
   footnote will be in a smaller font and placed appropriately. Endnotes
@@ -1092,61 +1145,57 @@ starts here.
   suggestions. We love to see people using \emph{R Markdown} for their
   theses, and are happy to help.
   
-  \hypertarget{refux5flabels}{\chapter{Actinobacteria EvoMining
-  Results}\label{refux5flabels}}
+  \hypertarget{ref_labels}{\chapter{Actinobacteria EvoMining
+  Results}\label{ref_labels}}
   
   Actinobacteria is an ancient phylum \{Referencia de luis\}
   
   \section{Tables}\label{tables-1}
   
-  \begin{longtable}[c]{@{}ccl@{}}
+  \begin{longtable}[]{@{}ccl@{}}
   \caption{Correlation of Inheritance Factors for Parents and Child
   \label{tab:inher}}\tabularnewline
   \toprule
   \begin{minipage}[b]{0.29\columnwidth}\centering\strut
-  Factors
-  \strut\end{minipage} &
-  \begin{minipage}[b]{0.47\columnwidth}\centering\strut
-  Correlation between Parents \& Child
-  \strut\end{minipage} &
-  \begin{minipage}[b]{0.16\columnwidth}\raggedright\strut
-  \strut\end{minipage}\tabularnewline
+  Factors\strut
+  \end{minipage} & \begin{minipage}[b]{0.47\columnwidth}\centering\strut
+  Correlation between Parents \& Child\strut
+  \end{minipage} & \begin{minipage}[b]{0.16\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage}\tabularnewline
   \midrule
   \endfirsthead
   \toprule
   \begin{minipage}[b]{0.29\columnwidth}\centering\strut
-  Factors
-  \strut\end{minipage} &
-  \begin{minipage}[b]{0.47\columnwidth}\centering\strut
-  Correlation between Parents \& Child
-  \strut\end{minipage} &
-  \begin{minipage}[b]{0.16\columnwidth}\raggedright\strut
-  \strut\end{minipage}\tabularnewline
+  Factors\strut
+  \end{minipage} & \begin{minipage}[b]{0.47\columnwidth}\centering\strut
+  Correlation between Parents \& Child\strut
+  \end{minipage} & \begin{minipage}[b]{0.16\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage}\tabularnewline
   \midrule
   \endhead
   \begin{minipage}[t]{0.29\columnwidth}\centering\strut
-  GenomeDB
-  \strut\end{minipage} &
-  \begin{minipage}[t]{0.47\columnwidth}\centering\strut
-  1245
-  \strut\end{minipage} &
-  \begin{minipage}[t]{0.16\columnwidth}\raggedright\strut
-  \strut\end{minipage}\tabularnewline
+  GenomeDB\strut
+  \end{minipage} & \begin{minipage}[t]{0.47\columnwidth}\centering\strut
+  1245\strut
+  \end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage}\tabularnewline
   \begin{minipage}[t]{0.29\columnwidth}\centering\strut
-  Families
-  \strut\end{minipage} &
-  \begin{minipage}[t]{0.47\columnwidth}\centering\strut
-  65
-  \strut\end{minipage} &
-  \begin{minipage}[t]{0.16\columnwidth}\raggedright\strut
-  \strut\end{minipage}\tabularnewline
+  Families\strut
+  \end{minipage} & \begin{minipage}[t]{0.47\columnwidth}\centering\strut
+  65\strut
+  \end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage}\tabularnewline
   \bottomrule
   \end{longtable}
   
   \clearpage
   
   \subsection{Expansions BoxPlot by metabolic
-  family}\label{expansions-boxplot-by-metabolic-family-1}
+  family}\label{expansions-boxplot-by-metabolic-family}
   
   \begin{Shaded}
   \begin{Highlighting}[]
@@ -1327,8 +1376,8 @@ starts here.
   Here is a reference to Recruitments after central pathways expansions
   colourd by Kingdom plot: \autoref{fig:ActinosRecruitmentsbyKingdom}.
   
-  \clearpage 
-  Recruitments after central pathways expansions colourd by taxonomy
+  \clearpage  Recruitments after central pathways expansions colourd by
+  taxonomy
   
   \begin{figure}[h!tbp]
   \centering
@@ -1441,14 +1490,14 @@ starts here.
   
   \clearpage 
   
-  \hypertarget{refux5flabels}{\chapter{Cyanobacteria EvoMining
-  Results}\label{refux5flabels}}
+  \hypertarget{ref_labels}{\chapter{Cyanobacteria EvoMining
+  Results}\label{ref_labels}}
   
   Cyanobacteria phylum \{Referencia\}
   
   \section{Tables}\label{tables-2}
   
-  \begin{longtable}[c]{@{}cc@{}}
+  \begin{longtable}[]{@{}cc@{}}
   \caption{Families on Cyanobacteria \label{tab:inher}}\tabularnewline
   \toprule
   Factors & Correlation between Parents \& Child\tabularnewline
@@ -1466,7 +1515,7 @@ starts here.
   \clearpage
   
   \subsection{Expansions BoxPlot by metabolic
-  family}\label{expansions-boxplot-by-metabolic-family-2}
+  family}\label{expansions-boxplot-by-metabolic-family-1}
   
   \begin{Shaded}
   \begin{Highlighting}[]
@@ -1618,8 +1667,8 @@ starts here.
   Here is a reference to Recruitments after central pathways expansions
   colourd by Kingdom plot: \autoref{fig:RecruitmentsbyKingdom}.
   
-  \clearpage 
-  Recruitments after central pathways expansions colourd by taxonomy
+  \clearpage  Recruitments after central pathways expansions colourd by
+  taxonomy
   
   \begin{figure}[h!tbp]
   \centering
@@ -1835,7 +1884,7 @@ starts here.
   \end{Shaded}
   
   \subsubsection{\texorpdfstring{In
-  \protect\hyperlink{refux5flabels}{}:}{In :}}\label{in}
+  \protect\hyperlink{ref_labels}{}:}{In :}}\label{in}
   
   \begin{Shaded}
   \begin{Highlighting}[]
@@ -1875,15 +1924,50 @@ starts here.
   \hypertarget{refs}{}
   \hypertarget{ref-angel2000}{}
   Angel, E. (2000). \emph{Interactive computer graphics : A top-down
-  approach with openGL}. Boston, MA: Addison Wesley Longman.
+  approach with opengl}. Boston, MA: Addison Wesley Longman.
   
   \hypertarget{ref-angel2001}{}
   Angel, E. (2001a). \emph{Batch-file computer graphics : A bottom-up
-  approach with quickTime}. Boston, MA: Wesley Addison Longman.
+  approach with quicktime}. Boston, MA: Wesley Addison Longman.
   
   \hypertarget{ref-angel2002a}{}
   Angel, E. (2001b). \emph{Test second book by angel}. Boston, MA: Wesley
   Addison Longman.
+  
+  \hypertarget{ref-barona-gomez_what_2012}{}
+  Barona-Gómez, F., Cruz-Morales, P., \& Noda-García, L. (2012). What can
+  genome-scale metabolic network reconstructions do for prokaryotic
+  systematics? \emph{Antonie van Leeuwenhoek}, \emph{101}(1), 35--43.
+  \url{http://doi.org/10.1007/s10482-011-9655-1}
+  
+  \hypertarget{ref-charlesworth_untapped_2015}{}
+  Charlesworth, J. C., \& Burns, B. P. (2015). Untapped Resources:
+  Biotechnological Potential of Peptides and Secondary Metabolites in
+  Archaea. \emph{Archaea}, \emph{2015}, e282035.
+  \url{http://doi.org/10.1155/2015/282035}
+  
+  \hypertarget{ref-cruz-morales_phylogenomic_2016}{}
+  Cruz-Morales, P., Kopp, J. F., Martínez-Guerrero, C., Yáñez-Guerra, L.
+  A., Selem-Mojica, N., Ramos-Aboites, H., \ldots{} Barona-Gómez, F.
+  (2016). Phylogenomic Analysis of Natural Products Biosynthetic Gene
+  Clusters Allows Discovery of Arseno-Organic Metabolites in Model
+  Streptomycetes. \emph{Genome Biology and Evolution}, \emph{8}(6),
+  1906--1916. \url{http://doi.org/10.1093/gbe/evw125}
+  
+  \hypertarget{ref-graham_archaeal_2000}{}
+  Graham, D. E., Overbeek, R., Olsen, G. J., \& Woese, C. R. (2000). An
+  archaeal genomic signature. \emph{Proceedings of the National Academy of
+  Sciences}, \emph{97}(7), 3304--3308.
+  \url{http://doi.org/10.1073/pnas.97.7.3304}
+  
+  \hypertarget{ref-howland_surprising_2000}{}
+  Howland, J. L. (2000). \emph{The surprising archaea: Discovering another
+  domain of life}. New York: Oxford University.
+  
+  \hypertarget{ref-medema_computational_2015}{}
+  Medema, M. H., \& Fischbach, M. A. (2015). Computational approaches to
+  natural product discovery. \emph{Nature Chemical Biology}, \emph{11}(9),
+  639--648. \url{http://doi.org/10.1038/nchembio.1884}
   
   \hypertarget{ref-Molina1994}{}
   Molina, S. T., \& Borkovec, T. D. (1994). The Penn State worry
@@ -1896,15 +1980,20 @@ starts here.
   (Undergraduate thesis). Reed College.
   
   \hypertarget{ref-reedweb2007}{}
-  Reed~College. (2007, March). LaTeX your document. Retrieved from
+  Reed~College. (2007, march). LaTeX your document. Retrieved from
   \url{http://web.reed.edu/cis/help/LaTeX/index.html}
   
-  \hypertarget{ref-woeseux5fphylogeneticux5f1977}{}
+  \hypertarget{ref-woese_phylogenetic_1977}{}
   Woese, C. R., \& Fox, G. E. (1977). Phylogenetic structure of the
   prokaryotic domain: The primary kingdoms. \emph{Proceedings of the
   National Academy of Sciences of the United States of America},
   \emph{74}(11), 5088--5090. Retrieved from
   \url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC432104/}
+  
+  \hypertarget{ref-woese_are_1981}{}
+  Woese, C. R., \& Gupta, R. (1981). Are archaebacteria merely derived
+  /``prokaryotes/''? \emph{Nature}, \emph{289}(5793), 95--96.
+  \url{http://doi.org/10.1038/289095a0}
 
 
   % Index?
