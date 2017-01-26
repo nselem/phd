@@ -131,7 +131,7 @@ ggplot(ArchaeasHeatPlotBP.m, aes(x=ArchaeasHeatPlotBP.m$Phylum, y=ArchaeasHeatPl
 
 ## Halobacteria
 MetFam_BP.m=subset(ArchaeasHeatPlotBP.m,Phylum=="Euryarchaeota")
-ggplot(MetFam_BP.m, aes(x=MetFam_BP.m$Order, y=MetFam_BP.m$Size))+ geom_boxplot() +theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")+ labs(x = "Copies on Archaeabacteria taxonomic groups", y = "Genome size",text = element_text(size=12)) + geom_jitter(aes(color=Family))
+ggplot(MetFam_BP.m, aes(x=MetFam_BP.m$Order, y=MetFam_BP.m$Size))+ geom_boxplot() +theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")+ labs(x = "Halobacteria orders size taxonomic groups", y = "Genome size",text = element_text(size=12)) + geom_jitter(aes(color=Family))
 
 
 #MetFam_BP.m=subset(ArchaeasHeatPlotBP.m,Family=="Methanosarcinaceae")
@@ -145,36 +145,45 @@ ggplot(MetFam_BP.m, aes(x=MetFam_BP.m$Order, y=MetFam_BP.m$Size))+ geom_boxplot(
 ## Metabolic Pathways
 MetFam=subset(ArchaeasCentral,Pathway=="PPP")
 MetFam_BP.m=ArchaeasHeatPlotBP.m[ArchaeasHeatPlotBP.m$variable %in% MetFam$Enzyme,]
-ggplot(MetFam_BP.m, aes(x=MetFam_BP.m$variable, y=MetFam_BP.m$value, fill=Order))+ labs(x = "Metabolic PPP Families", y = "Copies on Archaeabacteria Genomes",text = element_text(size=12)) + geom_boxplot() + facet_grid(. ~ Phylum)+theme_bw()+ geom_jitter(aes(color=MetFam_BP.m$Phylum))+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6), legend.position = "bottom")
-       
+ggplot(MetFam_BP.m, aes(x=MetFam_BP.m$variable, y=MetFam_BP.m$value, fill=Order))+ labs(x = "Metabolic PPP Families", y = "Copies on Archaeabacteria Genomes",text = element_text(size=12)) + geom_boxplot() + facet_grid(. ~ Phylum)+theme_bw() +theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6), legend.position = "bottom")
+#+ geom_jitter(aes(color=MetFam_BP.m$Phylum))       
+
 MetFam=subset(ArchaeasCentral,Pathway=="3PGA_AMINOACIDS")
 MetFam_BP.m=ArchaeasHeatPlotBP.m[ArchaeasHeatPlotBP.m$variable %in% MetFam$Enzyme,]
-ggplot(MetFam_BP.m, aes(x=MetFam_BP.m$variable, y=MetFam_BP.m$value, fill=Order))+ labs(x = "Metabolic PGA_AMINOACIDS Families", y = "Copies on Archaeabacteria Genomes",text = element_text(size=12)) + geom_boxplot() + facet_grid(. ~ Phylum)+theme_bw()+ geom_jitter(aes(color=MetFam_BP.m$Phylum))+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6), legend.position = "bottom")
+ggplot(MetFam_BP.m, aes(x=MetFam_BP.m$variable, y=MetFam_BP.m$value, fill=Order))+ labs(x = "Metabolic PGA_AMINOACIDS Families", y = "Copies on Archaeabacteria Genomes",text = element_text(size=12)) + geom_boxplot() + facet_grid(. ~ Phylum)+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6), legend.position = "bottom")
+#+ geom_jitter(aes(color=MetFam_BP.m$Phylum))
 
 MetFam=subset(ArchaeasCentral,Pathway=="Glycolysis")
 MetFam_BP.m=ArchaeasHeatPlotBP.m[ArchaeasHeatPlotBP.m$variable %in% MetFam$Enzyme,]
-ggplot(MetFam_BP.m, aes(x=MetFam_BP.m$variable, y=MetFam_BP.m$value, fill=Order))+ labs(x = "Metabolic Glycolysis Families", y = "Copies on Archaeabacteria Genomes",text = element_text(size=12)) + geom_boxplot() + facet_grid(. ~ Phylum)+theme_bw()+ geom_jitter(aes(color=MetFam_BP.m$Phylum))+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6), legend.position = "bottom")
+ggplot(MetFam_BP.m, aes(x=MetFam_BP.m$variable, y=MetFam_BP.m$value, fill=Order))+ labs(x = "Metabolic Glycolysis Families", y = "Copies on Archaeabacteria Genomes",text = element_text(size=12)) + geom_boxplot() + facet_grid(. ~ Phylum)+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6), legend.position = "bottom")
+#+ geom_jitter(aes(color=MetFam_BP.m$Phylum))
 
 MetFam=subset(ArchaeasCentral,Pathway=="OXALACETATE_AMINOACIDS")
 MetFam_BP.m=ArchaeasHeatPlotBP.m[ArchaeasHeatPlotBP.m$variable %in% MetFam$Enzyme,]
-ggplot(MetFam_BP.m, aes(x=MetFam_BP.m$variable, y=MetFam_BP.m$value, fill=Order))+ labs(x = "Metabolic OXALACETATE_AMINOACIDS Families", y = "Copies on Archaeabacteria Genomes",text = element_text(size=12)) + geom_boxplot() + facet_grid(. ~ Phylum)+theme_bw()+ geom_jitter(aes(color=MetFam_BP.m$Phylum))+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6), legend.position = "bottom")
+ggplot(MetFam_BP.m, aes(x=MetFam_BP.m$variable, y=MetFam_BP.m$value, fill=Order))+ labs(x = "Metabolic OXALACETATE_AMINOACIDS Families", y = "Copies on Archaeabacteria Genomes",text = element_text(size=12)) + geom_boxplot() + facet_grid(. ~ Phylum)+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6), legend.position = "bottom")
+#+ geom_jitter(aes(color=MetFam_BP.m$Phylum))
 
 MetFam=subset(ArchaeasCentral,Pathway=="R5P_AMINOACIDS")
 MetFam_BP.m=ArchaeasHeatPlotBP.m[ArchaeasHeatPlotBP.m$variable %in% MetFam$Enzyme,]
-ggplot(MetFam_BP.m, aes(x=MetFam_BP.m$variable, y=MetFam_BP.m$value, fill=Order))+ labs(x = "Metabolic R5P_AMINOACIDS Families", y = "Copies on Archaeabacteria Genomes",text = element_text(size=12)) + geom_boxplot() + facet_grid(. ~ Phylum)+theme_bw()+ geom_jitter(aes(color=MetFam_BP.m$Phylum))+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6), legend.position = "bottom")
+ggplot(MetFam_BP.m, aes(x=MetFam_BP.m$variable, y=MetFam_BP.m$value, fill=Order))+ labs(x = "Metabolic R5P_AMINOACIDS Families", y = "Copies on Archaeabacteria Genomes",text = element_text(size=12)) + geom_boxplot() + facet_grid(. ~ Phylum)+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6), legend.position = "bottom")
+ #+ geom_jitter(aes(color=MetFam_BP.m$Phylum))
 
 #
 MetFam=subset(ArchaeasCentral,Pathway=="TCA")
 MetFam_BP.m=ArchaeasHeatPlotBP.m[ArchaeasHeatPlotBP.m$variable %in% MetFam$Enzyme,]
-ggplot(MetFam_BP.m, aes(x=MetFam_BP.m$variable, y=MetFam_BP.m$value, fill=Order))+ labs(x = "Metabolic TCA Families", y = "Copies on Archaeabacteria Genomes",text = element_text(size=12)) + geom_boxplot() + facet_grid(. ~ Phylum)+theme_bw()+ geom_jitter(aes(color=MetFam_BP.m$Phylum))+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6), legend.position = "bottom")
+ggplot(MetFam_BP.m, aes(x=MetFam_BP.m$variable, y=MetFam_BP.m$value, fill=Order))+ labs(x = "Metabolic TCA Families", y = "Copies on Archaeabacteria Genomes",text = element_text(size=12)) + geom_boxplot() + facet_grid(. ~ Phylum)+theme_bw() +theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6), legend.position = "bottom")
+#+ geom_jitter(aes(color=MetFam_BP.m$Phylum))
 
 MetFam=subset(ArchaeasCentral,Pathway=="E4P_AMINO_ACIDS")
 MetFam_BP.m=ArchaeasHeatPlotBP.m[ArchaeasHeatPlotBP.m$variable %in% MetFam$Enzyme,]
-ggplot(MetFam_BP.m, aes(x=MetFam_BP.m$variable, y=MetFam_BP.m$value, fill=Order))+ labs(x = "Metabolic E4P_AMINO_ACIDS Families", y = "Copies on Archaeabacteria Genomes",text = element_text(size=12)) + geom_boxplot() + facet_grid(. ~ Phylum)+theme_bw()+ geom_jitter(aes(color=MetFam_BP.m$Phylum))+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6), legend.position = "bottom")
+ggplot(MetFam_BP.m, aes(x=MetFam_BP.m$variable, y=MetFam_BP.m$value, fill=Order))+ labs(x = "Metabolic E4P_AMINO_ACIDS Families", y = "Copies on Archaeabacteria Genomes",text = element_text(size=12)) + geom_boxplot() + facet_grid(. ~ Phylum)+theme_bw() +theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6), legend.position = "bottom")
+#+ geom_jitter(aes(color=MetFam_BP.m$Phylum))
+
 
 MetFam=subset(ArchaeasCentral,Pathway=="PYR_THR_AA")
 MetFam_BP.m=ArchaeasHeatPlotBP.m[ArchaeasHeatPlotBP.m$variable %in% MetFam$Enzyme,]
-ggplot(MetFam_BP.m, aes(x=MetFam_BP.m$variable, y=MetFam_BP.m$value, fill=Order))+ labs(x = "Metabolic Families on PYR_THR_AA pathway ", y = "Copies on Archaeabacteria Genomes",text = element_text(size=12)) + geom_boxplot() + facet_grid(. ~ Phylum)+theme_bw()+ geom_jitter(aes(color=MetFam_BP.m$Phylum))+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6), legend.position = "bottom")
+ggplot(MetFam_BP.m, aes(x=MetFam_BP.m$variable, y=MetFam_BP.m$value, fill=Order))+ labs(x = "Metabolic Families on PYR_THR_AA pathway ", y = "Copies on Archaeabacteria Genomes",text = element_text(size=12)) + geom_boxplot() + facet_grid(. ~ Phylum)+theme_bw() +theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6), legend.position = "bottom")
+#+ geom_jitter(aes(color=MetFam_BP.m$Phylum))
 
 #ggsave("chapter3/expansion_plotArchaeas.pdf", plot = expansion_plotArchaea,height = 8, width = 7)
 
