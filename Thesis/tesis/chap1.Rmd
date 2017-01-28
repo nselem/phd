@@ -6,21 +6,46 @@ The {#rmd-basics} text after the chapter declaration will allow us to link throu
 -->
 
 # EvoMining {#rmd-basics}
+## Introduction
 Enzyme promiscuity on metabolic families, can be looked on enzymes that are over a divergent process.
 
-EvoMining looks expansions on prokariotic pangenome.  
-**EvoMining** needs. Functional genomics uses genomes in the study of gene and protein function[].
+## Gen families expansions on genomes
+### Pangenomes
+Expansions are located on pangenome, Tools to analyse pangenome BPgA  
 
+## EvoMining
+EvoMining looks expansions on prokariotic pangenome.  
+Biological idea.   
+
+EvoMining was available as a consult website with 230 members of the Actinobacteria phylum as genomic data base, 226 unclassified nBGCs, and not interchangable central database 339 queries for nine pathways, including amino acid biosynthesis, glycolysis, pentose phosphate pathway, and tricarboxylic acids cycle. [@cruz-morales_phylogenomic_2016] EvoMining was proved on Actinobacteria Arseno-lipids  
+
+### Implementation  
+In order to expand **EvoMining** from a consulting website to a user-interactive genomic tool, code was developed on perl and packaged as a docker distribution. Docker is a software containerization platform that guarantee reptibilty and easy instalation.  
+
+[EvoMining wiki](https://github.com/nselem/EvoMining/wiki) 
+[Dockerhub nselem](https://hub.docker.com/u/nselem/)
+[Docker](https://www.docker.com/)  
+[CORASON](https://github.com/nselem/EvoDivMet/wiki)
+[myRAST docker](https://github.com/nselem/myrast)
+[Orthocores docker](https://github.com/nselem/orthocore)
+_Archaea_, _Actinobacteria_, _Cyanobacteria_ were used as genome DB, [MIBiG](http://mibig.secondarymetabolites.org/) was used as Natural Product DB and different Central Pathways were used.
+
+**EvoMining** needs. Functional genomics uses genomes in the study of gene and protein function[].
 1. Genomes DB
 2. Natural Products DB 
 3. Central Pathways DB 
 
-_Archaea_, _Actinobacteria_, _Cyanobacteria_ were used as genome DB, [MIBiG](http://mibig.secondarymetabolites.org/) was used as Natural Product DB and different Central Pathways were used.
-<http://rmarkdown.rstudio.com>.  
-
-## Genome DB
+#### Genome DB  
 RAST annotation of genomes was done.  
-### Phylogeny
+
+#### Phylogeny  
+```{r testingPhylogeny, echo=FALSE}
+## I'm deciding if use ape or phyloseq, learning about two libraries
+library(ape)
+MyTree <- read.tree("chapter1/TREES/100Cyanos")
+plot(MyTree, edge.width = 2,font = 0.1, edge.color = "blue",tip.color = "gray", adj=0)
+```
+
 To capture differences on genomes we sort them phylogenetically. Phylogenies can be constructed using different paradigms as Parsimony, Maximum Likelihood, and Bayesian inference. Short descriptions of the main phylogeny methods are included below.
 
 * Parsimony
@@ -39,7 +64,8 @@ To create a sublist, just indent the values a bit (at least four spaces or a tab
 1. Item 3
     - Item 3a
     - Item 3b  
-## Central DB
+    
+#### Central DB  
 We chose central pathways from [@barona-gomez_what_2012]  
 * BBH 
 Best Bidirectional Hits with studied enzymes from Central Actinobacterial pathways were selected.
@@ -50,18 +76,17 @@ Best Bidirectional Hits with studied enzymes from Central Actinobacterial pathwa
 
 [largefiles,https://help.github.com/articles/installing-git-large-file-storage/]
 
-## Natural Products DB
+#### Natural Products DB  
 Natural products was improved from previous version
 
-## Reproducibility on EvoMining code
-EvoMining Code was packaged on Docker
-## Archaeas Results
+
+### Archaeas Results
 Archaea is a kingdom of recent discovery were not many natural products has been known. On Actinobacteria, evoMining has proved its value to find new kinds of natural products. The clue to this discovery was that Actinobacteria has genomic expanssions. Now Archaea has genomic expansions, even more has central pathways genomic expansions. Are this expansions derived from  a genomic duplication?  
 Has Archaea natural products detected by antismash, and if not, where are this NP's or may Archaea doesn't have NP's.
 
 applying EvoMining to Archaea  
 
-## Otras estrategias para los clusters Argon context Idea
+### Otras estrategias para los clusters Argon context Idea
 Argon
 When you click the **Knit** button above a document will be generated that includes both content as well as the output of any embedded **R** code chunks within the document. You can embed an **R** code chunk like this (`cars` is a built-in **R** dataset):
 
@@ -69,7 +94,7 @@ When you click the **Knit** button above a document will be generated that inclu
 summary(cars)
 ```
 
-## Inline code
+### Inline code
 
 If you'd like to put the results of your analysis directly into your discussion, add inline code like this:
 
@@ -87,8 +112,10 @@ Note the use of `>` here, which signifies a quotation environment that will be i
 
 As you see with `$2 \pi$` above, mathematics can be added by surrounding the mathematical text with dollar signs.  More examples of this are in [Mathematics and Science] if you uncomment the code in [Math].  
 
-## CORASoN
 
+## CORASON: Other genome Mining tools context-based
+ 
+### CORASoN
 You can also embed plots.  For example, here is a way to use the base **R** graphics package to produce a plot using the built-in `pressure` dataset:
 
 ```{r pressure, echo = FALSE, cache = TRUE}
