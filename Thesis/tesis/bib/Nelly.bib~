@@ -178,16 +178,6 @@ Encoding: MacRoman
 	annote = {¡Bienvenido a Zotero!
 Mira la Guía de Inicio Rápido para aprender cómo empezar a recolectar, gestionar, citar y compartir tus fuentes de investigación.
 Gracias por instalar Zotero.},
-	file = {Genome Biol Evol-2016-Cruz-Morales-1906-16.pdf:/home/nelly/.mozilla/firefox/440po4x5.default/zotero/storage/AJH7BPPP/Genome Biol Evol-2016-Cruz-Morales-1906-16.pdf:application/pdf}
-}
-
-@misc{center_for_history_and_new_media_zotero_????,
-	title = {Zotero {Quick} {Start} {Guide}},
-	url = {http://zotero.org/support/quick_start_guide},
-	author = {{Center for History and New Media}},
-	annote = {¡Bienvenido a Zotero!
-Mira la Guía de Inicio Rápido para aprender cómo empezar a recolectar, gestionar, citar y compartir tus fuentes de investigación.
-Gracias por instalar Zotero.},
 	file = {Genome Biol Evol-2016-Cruz-Morales-1906-16.pdf:/home/nelly/.mozilla/firefox/y63o2qz5.default/zotero/storage/AJH7BPPP/Genome Biol Evol-2016-Cruz-Morales-1906-16.pdf:application/pdf}
 }
 
@@ -791,4 +781,43 @@ As our approach does not rely solely on sequence similarity searches of previous
 	year = {2012},
 	pages = {35--43},
 	file = {Full Text PDF:/home/nelly/.mozilla/firefox/y63o2qz5.default/zotero/storage/ZKXTFGUS/Barona-Gómez et al. - 2012 - What can genome-scale metabolic network reconstruc.pdf:application/pdf;Snapshot:/home/nelly/.mozilla/firefox/y63o2qz5.default/zotero/storage/85RZFX38/10.html:text/html}
+}
+
+@book{howland_surprising_2000,
+	address = {New York},
+	title = {The surprising archaea: discovering another domain of life},
+	isbn = {978-0-19-511183-5},
+	shorttitle = {The surprising archaea},
+	language = {English},
+	publisher = {Oxford University},
+	author = {Howland, John L},
+	year = {2000},
+	note = {OCLC: 246123870}
+}
+
+@article{medema_computational_2015,
+	title = {Computational approaches to natural product discovery},
+	volume = {11},
+	copyright = {© 2015 Nature Publishing Group, a division of Macmillan Publishers Limited. All Rights Reserved.},
+	issn = {1552-4450},
+	url = {http://www.nature.com/nchembio/journal/v11/n9/full/nchembio.1884.html},
+	doi = {10.1038/nchembio.1884},
+	abstract = {Starting with the earliest Streptomyces genome sequences, the promise of natural product genome mining has been captivating: genomics and bioinformatics would transform compound discovery from an ad hoc pursuit to a high-throughput endeavor. Until recently, however, genome mining has advanced natural product discovery only modestly. Here, we argue that the development of algorithms to mine the continuously increasing amounts of (meta)genomic data will enable the promise of genome mining to be realized. We review computational strategies that have been developed to identify biosynthetic gene clusters in genome sequences and predict the chemical structures of their products. We then discuss networking strategies that can systematize large volumes of genetic and chemical data and connect genomic information to metabolomic and phenotypic data. Finally, we provide a vision of what natural product discovery might look like in the future, specifically considering longstanding questions in microbial ecology regarding the roles of metabolites in interspecies interactions.},
+	language = {en},
+	number = {9},
+	urldate = {2017-01-24},
+	journal = {Nature Chemical Biology},
+	author = {Medema, Marnix H. and Fischbach, Michael A.},
+	month = sep,
+	year = {2015},
+	keywords = {Biosynthesis, Databases, Data mining, Natural products},
+	pages = {639--648},
+	file = {Full Text PDF:/home/nelly/.mozilla/firefox/y63o2qz5.default/zotero/storage/PXRWF24D/Medema y Fischbach - 2015 - Computational approaches to natural product discov.pdf:application/pdf;Snapshot:/home/nelly/.mozilla/firefox/y63o2qz5.default/zotero/storage/JAW7NNKN/nchembio.1884.html:text/html}
+}
+
+@misc{_antismash_????,
+	title = {{antiSMASH} 3.0—a comprehensive resource for the genome mining of biosynthetic gene clusters {\textbar} {Nucleic} {Acids} {Research} {\textbar} {Oxford} {Academic}},
+	url = {https://academic.oup.com/nar/article-lookup/doi/10.1093/nar/gkv437},
+	urldate = {2017-01-24},
+	file = {antiSMASH 3.0—a comprehensive resource for the genome mining of biosynthetic gene clusters | Nucleic Acids Research | Oxford Academic:/home/nelly/.mozilla/firefox/y63o2qz5.default/zotero/storage/8M3SBJQ4/gkv437.html:text/html}
 }
