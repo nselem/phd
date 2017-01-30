@@ -29,7 +29,86 @@ library(reedtemplates)
  * Julian simulation
  * Who has TrpF
  
+```{r load_pkgs_chapter2, message = FALSE}
+# List of packages required for this analysis
+pkg <- c("dplyr", "ggplot2", "knitr", "devtools"," reshape","RColorBrewer")
+# Check if packages are not installed and assign the
+# names of the packages not installed to the variable new.pkg
+new.pkg <- pkg[!(pkg %in% installed.packages())]
+# If there are any packages in the list that aren't installed,
+# install them
+if (length(new.pkg))
+  install.packages(new.pkg, repos = "http://cran.rstudio.com")
+# Load packages
+library(dplyr)
+library(plyr)
+library(reshape )
+library(ggplot2)
+library(knitr)
+library(RColorBrewer)
+hm.palette <- colorRampPalette(rev(brewer.pal(11, 'Spectral')), space='Lab')  
+
+```
+ 
 ## Math
+Docking simulation were calculated for Streptomyces enzymes  
+
+```{r load_data_docking}
+docking <- read.csv("chapter2/Heat.data", header=TRUE, sep="\t")
+docking.m <- melt(docking,id = "Enzima")
+#docking.m<- ddply(docking.m, .(docking.m$variable), transform, rescale=scale(value))  ## rescale escala toda la matriz, scale por columnas
+## NEcesito escalar!!!
+
+
+ggplot(docking.m, aes(x=docking.m$variable, y=docking.m$Enzima)) + labs(x = "Substrates", y = "Enzymes",text = element_text(size=12))+ geom_raster(aes(fill=docking.m$value))+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6))
+
+#+scale_fill_gradient(low = "white", high = "black",na.value = "orange")
+#+ scale_fill_gradientn(colours = hm.palette(100),na.value = "gray")
+
+
+#ggplot(docking.m, aes(x=docking.m$variable, y=docking.m$Enzima))+ geom_raster(aes(fill=docking.m$value)) +
+#  theme(text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5)) +
+#  coord_equal()+scale_fill_gradient(low = "white", high = "black",na.value = "orange")
+
+```
+
+We next introduce a useful function in the `knitr` package for making nice tables in _R Markdown_ called `kable`.  It produces the \LaTeX\ code required to make the table and is much easier to use than manually entering values into a table by copying and pasting values into Excel or \LaTeX.  This again goes to show how nice reproducible documents can be!  There is no need to copy-and-paste values to create a table.  (Note the use of `results = "asis"` here which will produce the table instead of the code to create the table.  You'll learn more about the `\\label` later.)  The `caption.short` argument is used to include a shorter version of the title to appear in the List of Tables at the beginning of the document.
+
+```{r docking_table_out, results = "asis"}
+kable(docking,  caption = "Enzymes docking \\label{tab:docking}",caption.short = "Enzymes docking ")
+
+
+```
+
+We can further look into the properties of the largest value here for American Airlines Inc.  To do so, we can isolate the row corresponding to the arrival delay of 1539 minutes for American in our original `flights` dataset.
+
+#```{r max_props}
+#flights %>% dplyr::filter(arr_delay == 1539, 
+#                   carrier_name == "American Airlines Inc.") %>%
+#  dplyr::select(-c(month, day, carrier, dest_name, hour, minute, carrier_name, arr_delay))
+#```
+
+We see that the flight occurred on March 3rd and departed a little after 2 PM on its way to Dallas/Fort Worth.  Lastly, we show how we can visualize the arrival delay of all departing flights from Portland on March 3rd against time of departure.
+
+
+#```{r march3plot, fig.height = 3, fig.width = 6}
+#flights %>% dplyr::filter(month == 3, day == 3) %>%
+#  ggplot(aes(x = dep_time, y = arr_delay)) +geom_point()
+#```
+
+<!--
+--------------------------------------------------------------------------->
+
+Genome size vs Total antismash cluster coloured by order  
+```{r PriADocking, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter2/PriAHeatPot.png", caption = "Heat Plot PriA Streptomyces vs other subtrates",scale=.6,label = "PriADocking", type = "figure")
+```
+
+Docker simulation were calculated for Streptomyces enzymes  
+Genome size vs Total antismash cluster coloured by order  
+```{r TrpFDocking, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter2/TrpFHeatPlot.png", caption = "Heat Plot TrpF Streptomyces vs other subtrates",scale=.6,label = "TrpFDocking", type = "figure")
+```
 
 \TeX\ is the best way to typeset mathematics. Donald Knuth designed \TeX\ when he got frustrated at how long it was taking the typesetters to finish his book, which contained a lot of mathematics.  One nice feature of _R Markdown_ is its ability to read \LaTeX\ code directly.
 
