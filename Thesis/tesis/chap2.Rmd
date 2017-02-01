@@ -61,24 +61,26 @@ vignette("01_06_three-tables")
 library(Biobase)
 
 # phenoData:
-tmp <- read.csv("chapter2/Substrate.data", row.names = 1,sep="\t")
+tmp <- read.csv("chapter2/ProteinData", row.names = 1,header=TRUE,sep="\t")
 pdata <- AnnotatedDataFrame(tmp)
 
-# featureData:
-tmp <- read.csv("chapter2/ProteinData", row.names = 1,sep="\t")
+  # featureData:
+tmp <- read.csv("chapter2/Substrate.data", row.names = 1,sep="\t")
 fdata <- AnnotatedDataFrame(tmp)
 
 # expression data:
-tmp <- read.table("chapter2/EnsymeVsSubstrate.data",header=TRUE,sep="\t")
+tmp <- read.table("chapter2/EnsymeVsSubstrate.data",row.names = 1,header=TRUE,sep="\t")
 m <- as.matrix(tmp)
-
+#dim(m)
+#class(m)
+#colnames(m)
+#rownames(m)
+## Names should not start on numbers never
 ## create ExpressionSet object:
-#eset <- new("ExpressionSet", exprs = m, phenoData = pdata, featureData = fdata)
+eset <- new("ExpressionSet", exprs = m, phenoData = pdata, featureData = fdata)
 
-#pData(eset)
-#fData(eset)
-#eset$treatment
-
+pData(eset)
+fData(eset)
 ```
 
 ```{r load_data_docking}
