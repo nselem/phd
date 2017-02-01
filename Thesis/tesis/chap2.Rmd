@@ -50,8 +50,36 @@ hm.palette <- colorRampPalette(rev(brewer.pal(11, 'Spectral')), space='Lab')
 
 ```
  
+ 
 ## Math
 Docking simulation were calculated for Streptomyces enzymes  
+```{r sessionInfo}
+sessionInfo()
+library(genstats)
+vignette(package="genstats")
+vignette("01_06_three-tables")
+library(Biobase)
+
+# phenoData:
+tmp <- read.csv("chapter2/Substrate.data", row.names = 1,sep="\t")
+pdata <- AnnotatedDataFrame(tmp)
+
+# featureData:
+tmp <- read.csv("chapter2/ProteinData", row.names = 1,sep="\t")
+fdata <- AnnotatedDataFrame(tmp)
+
+# expression data:
+tmp <- read.table("chapter2/EnsymeVsSubstrate.data",header=TRUE,sep="\t")
+m <- as.matrix(tmp)
+
+## create ExpressionSet object:
+#eset <- new("ExpressionSet", exprs = m, phenoData = pdata, featureData = fdata)
+
+#pData(eset)
+#fData(eset)
+#eset$treatment
+
+```
 
 ```{r load_data_docking}
 docking <- read.csv("chapter2/Heat.data", header=TRUE, sep="\t")
