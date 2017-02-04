@@ -1,0 +1,152 @@
+#NEXUS
+begin taxa;
+	dimensions ntax=58;
+	taxlabels
+	4WD0_PriB_Aaures
+	Aaur_TC1
+	Acardi_subHisA
+	Acidimicrobium_HisA
+	Auro_PriA_4X2R
+	Cdiphteriae_subHisA
+	Cjeikeum_PriA
+	Coli_K12_HisA
+	Mtub_PriA_2Y88
+	Mtub_PriA_2Y89
+	Mtub_PriA_PRFAR_3ZS4
+	Mtub_PriA_RCDRP_2Y85
+	S1813_JOHB01
+	SCT34_JSFP01
+	SCT34_JSFP01_2
+	SCoe_PriA_1VZW
+	SMg1_PriB_4X9S
+	SMg1_PriB_ATCJ01
+	Salb_ABYC01
+	Satra_JQJU01
+	Save_BAVY01
+	Save_JOFK01
+	Sbaa_JNZV01
+	Sbic_JOFS01
+	Sbik_JNWL01
+	Sbot_ARTP01
+	Scal_JOFG01
+	Scar_JNZF01
+	Scla_ADGD01
+	Scoe_PriA_2VEP
+	Scoe_PriA_2X30
+	Senterica_HisA_5AHE
+	Sery_JNZG01
+	Sfla_JOCU01
+	Sfrad_JNAD01
+	Sful_JNXH01
+	Sgha_ABYA01
+	Sglob_PriA_AJUO01
+	Sgris_JOFC01
+	Siak_JNXI01
+	Sipo_PriB_AEJC01
+	Skat_JNZY01
+	Slav_JOBU01
+	Smeg_JODL01
+	Smg1_PriB_4W9T
+	Sniv_AWQW01
+	Spur_JODS01
+	Srim_JJNO01
+	Srub_JOAQ01
+	SspC_PriB_ACEW01
+	Ssul_ARLC01
+	Ssvi_PriB_ABJJ02
+	Stsu_AJSZ01
+	Svar_JOBF01
+	Sven_10712
+	Svi_PriB_4TX9
+	Svi_PriB_4U28
+	Sxan_JNZH01
+;
+end;
+
+begin trees;
+	tree tree_1 = [&R] ((Coli_K12_HisA:0.01757,Senterica_HisA_5AHE:0.03404)[&!rotate=true]:0.47941,(Acidimicrobium_HisA[&!rotate=true]:0.5037,(((((((((((((((Srub_JOAQ01:0.02031,((Scoe_PriA_2X30[&!color=#808080]:0.00475,Scoe_PriA_2VEP[&!color=#808080]:-1.7E-4):9.0E-5,SCoe_PriA_1VZW[&!color=#808080]:-9.0E-5):0.01224):0.00144,(Sbic_JOFS01:0.0162,Save_BAVY01:0.0116):0.00448):0.00257,Sfla_JOCU01:0.00809):0.00299,Sgha_ABYA01:0.01158):0.00253,Siak_JNXI01:0.02088):0.00449,Salb_ABYC01:0.02495):0.00492,((((Scal_JOFG01:0.00907,(Sbaa_JNZV01:0.00143,Sglob_PriA_AJUO01:0.00775):0.00479):0.01366,Sful_JNXH01:0.01913):0.00919,Sgris_JOFC01:0.01421):0.01195,((Sbik_JNWL01:0.0166,Stsu_AJSZ01:0.02065):0.00841,Sven_10712:0.01987):0.00274):0.00854):0.001,(((((SCT34_JSFP01:0.02677,Srim_JJNO01:0.02484):0.00613,Satra_JQJU01:0.01487):0.00409,S1813_JOHB01:0.03019):0.0074,((Svar_JOBF01:0.02295,Sfrad_JNAD01:0.02865):0.00604,Ssul_ARLC01:0.04666):4.6E-4):0.00408,Smeg_JODL01:0.03274):0.00712):0.00373,Scla_ADGD01:0.03565):0.0036,((Sbot_ARTP01:0.01977,Sipo_PriB_AEJC01:0.00334):0.01008,(Ssvi_PriB_ABJJ02:0.0,(Svi_PriB_4U28:0.0,Svi_PriB_4TX9:0.0):0.0):0.0421):0.00728):0.00968,((((((Slav_JOBU01:0.00982,Sery_JNZG01:0.00398):0.00322,Skat_JNZY01:0.01768):0.00312,Sxan_JNZH01:0.02978):0.00193,SspC_PriB_ACEW01:0.01433):0.00419,(SMg1_PriB_ATCJ01:0.0,(SMg1_PriB_4X9S:0.0,Smg1_PriB_4W9T:0.0):0.0):0.0174):0.02784,Sniv_AWQW01:0.04938):0.01235):0.04389,(Save_JOFK01:0.04909,Spur_JODS01:0.03687):0.05695):0.06652,(((Aaur_TC1:0.0,4WD0_PriB_Aaures:0.0):0.13179,Auro_PriA_4X2R:0.18503):0.00196,Acardi_subHisA:0.25058):0.0248):0.00952,((Scar_JNZF01:0.09926,(((Mtub_PriA_2Y88:0.0,Mtub_PriA_2Y89:0.0):0.00563,Mtub_PriA_RCDRP_2Y85:-0.00105):5.3E-4,Mtub_PriA_PRFAR_3ZS4:-5.3E-4):0.13259):0.03796,(Cdiphteriae_subHisA:0.19448,Cjeikeum_PriA:0.11599):0.05887):0.01095):0.0815,SCT34_JSFP01_2:0.53173):0.26384):0.02523);
+end;
+
+begin figtree;
+	set appearance.backgroundColorAttribute="Default";
+	set appearance.backgroundColour=#ffffff;
+	set appearance.branchColorAttribute="User selection";
+	set appearance.branchColorGradient=false;
+	set appearance.branchLineWidth=1.0;
+	set appearance.branchMinLineWidth=0.0;
+	set appearance.branchWidthAttribute="Fixed";
+	set appearance.foregroundColour=#000000;
+	set appearance.hilightingGradient=false;
+	set appearance.selectionColour=#2d3680;
+	set branchLabels.colorAttribute="User selection";
+	set branchLabels.displayAttribute="Branch times";
+	set branchLabels.fontName="Abyssinica SIL";
+	set branchLabels.fontSize=8;
+	set branchLabels.fontStyle=0;
+	set branchLabels.isShown=false;
+	set branchLabels.significantDigits=4;
+	set layout.expansion=0;
+	set layout.layoutType="RECTILINEAR";
+	set layout.zoom=0;
+	set legend.attribute=null;
+	set legend.fontSize=10.0;
+	set legend.isShown=false;
+	set legend.significantDigits=4;
+	set nodeBars.barWidth=4.0;
+	set nodeBars.displayAttribute=null;
+	set nodeBars.isShown=false;
+	set nodeLabels.colorAttribute="User selection";
+	set nodeLabels.displayAttribute="Node ages";
+	set nodeLabels.fontName="Abyssinica SIL";
+	set nodeLabels.fontSize=8;
+	set nodeLabels.fontStyle=0;
+	set nodeLabels.isShown=false;
+	set nodeLabels.significantDigits=4;
+	set nodeShape.colourAttribute="User selection";
+	set nodeShape.isShown=false;
+	set nodeShape.minSize=10.0;
+	set nodeShape.scaleType=Width;
+	set nodeShape.shapeType=Circle;
+	set nodeShape.size=4.0;
+	set nodeShape.sizeAttribute="Fixed";
+	set polarLayout.alignTipLabels=false;
+	set polarLayout.angularRange=0;
+	set polarLayout.rootAngle=0;
+	set polarLayout.rootLength=100;
+	set polarLayout.showRoot=true;
+	set radialLayout.spread=0.0;
+	set rectilinearLayout.alignTipLabels=true;
+	set rectilinearLayout.curvature=0;
+	set rectilinearLayout.rootLength=100;
+	set scale.offsetAge=0.0;
+	set scale.rootAge=1.0;
+	set scale.scaleFactor=1.0;
+	set scale.scaleRoot=false;
+	set scaleAxis.automaticScale=true;
+	set scaleAxis.fontSize=8.0;
+	set scaleAxis.isShown=false;
+	set scaleAxis.lineWidth=1.0;
+	set scaleAxis.majorTicks=1.0;
+	set scaleAxis.origin=0.0;
+	set scaleAxis.reverseAxis=false;
+	set scaleAxis.showGrid=true;
+	set scaleBar.automaticScale=true;
+	set scaleBar.fontSize=10.0;
+	set scaleBar.isShown=true;
+	set scaleBar.lineWidth=1.0;
+	set scaleBar.scaleRange=0.0;
+	set tipLabels.colorAttribute="User selection";
+	set tipLabels.displayAttribute="Names";
+	set tipLabels.fontName="Abyssinica SIL";
+	set tipLabels.fontSize=10;
+	set tipLabels.fontStyle=0;
+	set tipLabels.isShown=true;
+	set tipLabels.significantDigits=4;
+	set trees.order=false;
+	set trees.orderType="increasing";
+	set trees.rooting=false;
+	set trees.rootingType="User Selection";
+	set trees.transform=false;
+	set trees.transformType="cladogram";
+end;
+

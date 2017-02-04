@@ -1,0 +1,101 @@
+BLASTP 2.2.30+
+
+
+Reference: Stephen F. Altschul, Thomas L. Madden, Alejandro A.
+Schaffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J.
+Lipman (1997), "Gapped BLAST and PSI-BLAST: a new generation of
+protein database search programs", Nucleic Acids Res. 25:3389-3402.
+
+
+Reference for composition-based statistics: Alejandro A. Schaffer,
+L. Aravind, Thomas L. Madden, Sergei Shavirin, John L. Spouge, Yuri
+I. Wolf, Eugene V. Koonin, and Stephen F. Altschul (2001),
+"Improving the accuracy of PSI-BLAST protein database searches with
+composition-based statistics and other refinements", Nucleic Acids
+Res. 29:2994-3005.
+
+
+
+Database: 4Purpeo/TempConcatenados.faa
+           287,794 sequences; 90,689,797 total letters
+
+
+
+Query= fig|6666666.103304.peg.6920
+
+Length=233
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+  fig|6666666.100157.peg.6920|213652                                    469   5e-168
+  fig|6666666.102775.peg.4194|218056                                    293   7e-99 
+
+
+> fig|6666666.100157.peg.6920|213652
+Length=233
+
+ Score =   469 bits (1206),  Expect = 5e-168, Method: Compositional matrix adjust.
+ Identities = 233/233 (100%), Positives = 233/233 (100%), Gaps = 0/233 (0%)
+
+Query  1    MYGLIQVAGIIDQAEADLIIEEGADWLGFALRLPAKNEDLSEADAAAIVKAIQPGNKGVI  60
+            MYGLIQVAGIIDQAEADLIIEEGADWLGFALRLPAKNEDLSEADAAAIVKAIQPGNKGVI
+Sbjct  1    MYGLIQVAGIIDQAEADLIIEEGADWLGFALRLPAKNEDLSEADAAAIVKAIQPGNKGVI  60
+
+Query  61   ITYLTQADEIAEFCAEIGVSAIQLHGDVTPAELSRLRTLAPDLYVLKSLVVKSDNIDELR  120
+            ITYLTQADEIAEFCAEIGVSAIQLHGDVTPAELSRLRTLAPDLYVLKSLVVKSDNIDELR
+Sbjct  61   ITYLTQADEIAEFCAEIGVSAIQLHGDVTPAELSRLRTLAPDLYVLKSLVVKSDNIDELR  120
+
+Query  121  TIVETSAEWVDMFITDSFNPATGAKGATGLTHDWSVSAELVRISPKPLMMAGGLTPENVA  180
+            TIVETSAEWVDMFITDSFNPATGAKGATGLTHDWSVSAELVRISPKPLMMAGGLTPENVA
+Sbjct  121  TIVETSAEWVDMFITDSFNPATGAKGATGLTHDWSVSAELVRISPKPLMMAGGLTPENVA  180
+
+Query  181  AAIEAVRPAAVDAHTGLEDKATRRKDRQKVRTFVQEARVAFARVAAEDGRSAS  233
+            AAIEAVRPAAVDAHTGLEDKATRRKDRQKVRTFVQEARVAFARVAAEDGRSAS
+Sbjct  181  AAIEAVRPAAVDAHTGLEDKATRRKDRQKVRTFVQEARVAFARVAAEDGRSAS  233
+
+
+> fig|6666666.102775.peg.4194|218056
+Length=227
+
+ Score =   293 bits (750),  Expect = 7e-99, Method: Compositional matrix adjust.
+ Identities = 146/218 (67%), Positives = 175/218 (80%), Gaps = 1/218 (0%)
+
+Query  4    LIQVAGIIDQAEADLIIEEGADWLGFALRLPAKNEDLSEADAAAIVKAIQPGNKGVIITY  63
+            L+QVAG+ID AEAD+II EGADWLGFALRLP+  +D++E DAA I+K +Q  + GV+I+Y
+Sbjct  7    LVQVAGVIDAAEADMIIGEGADWLGFALRLPSGKDDIAEQDAANIIKGLQSPHAGVLISY  66
+
+Query  64   LTQADEIAEFCAEIGVSAIQLHGDVTPAELSRLRTLAPDLYVLKSLVVKSDNIDELRTIV  123
+            LT A E++EFC E+GV A+QLHGDV   +L  L+ L PDL+VLKSLVVK DN +EL  +V
+Sbjct  67   LTDATEVSEFCTELGVIAVQLHGDVETEQLRLLKELRPDLFVLKSLVVKEDNAEELLRLV  126
+
+Query  124  ETSAEWVDMFITDSFNPATGAKGATGLTHDWSVSAELVRISPKPLMMAGGLTPENVAAAI  183
+            + +  +VDM+ITD+F+P TGAKGATGLTHDW+VSAELVR SPKPLMMAGGL PENV  AI
+Sbjct  127  DETHPFVDMYITDTFDPKTGAKGATGLTHDWNVSAELVRRSPKPLMMAGGLNPENVYDAI  186
+
+Query  184  EAVRPAAVDAHTGLEDKATRRKDRQKVRTFVQEARVAF  221
+             AV+PAAVDAHTGLE     RKDR KV TFV EAR AF
+Sbjct  187  VAVKPAAVDAHTGLE-GPDGRKDRAKVATFVAEARRAF  223
+
+
+
+Lambda      K        H        a         alpha
+   0.316    0.131    0.368    0.792     4.96 
+
+Gapped
+Lambda      K        H        a         alpha    sigma
+   0.267   0.0410    0.140     1.90     42.6     43.6 
+
+Effective search space used: 7451005625
+
+
+  Database: 4Purpeo/TempConcatenados.faa
+    Posted date:  Nov 2, 2016  7:36 PM
+  Number of letters in database: 90,689,797
+  Number of sequences in database:  287,794
+
+
+
+Matrix: BLOSUM62
+Gap Penalties: Existence: 11, Extension: 1
+Neighboring words threshold: 11
+Window for multiple hits: 40
