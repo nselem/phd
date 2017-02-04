@@ -56,7 +56,15 @@ CyanosTaxa <- read.table("chapter5/CyanosTaxa", header=TRUE, sep="\t")
 
 
 # Cyanobacteria EvoMining Results {#ref_labels}
+<<<<<<< HEAD
 Cyanobacteria phylum {Referencia}   
+=======
+Cyanobacteria is a photosynthetic phylum that inhabits a broad range of habitats. The broad adaptive potential is on part driven by gene-family enlargment [@larsson_genome_2011] by the analysis of 58 Cyanobacterial genomes concludes ancestor of cyanobacteria had a genome size of approx. 4.5 Mbp.
+Cyanobacteria produces natural products as pigments and toxins [@whitton_ecology_2012]   Example of a PriA cluster toxins[@moustafa_origin_2009]
+
+Fossil record situates Cyanobacteria [@whitton_ecology_2012]
+Molecular record and metabolic propoerties at [@battistuzzi_genomic_2004]
+>>>>>>> 86d01d8784a6d89912c3b8db86ea6753d5074760
   
 Tables
 -------------------------------------------------------------------

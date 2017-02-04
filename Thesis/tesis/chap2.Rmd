@@ -53,11 +53,44 @@ hm.palette <- colorRampPalette(rev(brewer.pal(11, 'Spectral')), space='Lab')
  
 ## Math
 Docking simulation were calculated for Streptomyces enzymes  
+<<<<<<< HEAD
+=======
+Procedures can be found at [Docking Protocols](https://github.com/tripplab/Docking/wiki)  
+
+1.Phylogenetic Tree
+39 Streptomyces sequences, as outgroup E coli, Arthrobacter Aurescens, Salmonella enterica and Acidimicrobium ferrooxidans PriA’s were included.
+
+
+CORASON
+PriA
+All streptomyces have a partially conserved PriA cluster. CT34 has a secondary copy whose Best hit on NCBI is Lentzea’s PriA with 50% identity 98% coverage
+
+TrpF1
+TrpF1 queries gave hits with TrpC enzyme present on every Streptomyces, additionally  S rimosus, S coelicolor, S venezuelae and S. NRRL S-1813 had an extra copy. S rimosus TrpC vicinity has PKS and siderophore genes.
+
+TrpF2
+Conserved cluster with NRPS sequences flanking TrpF2
+
+TrpF3
+Non conserved cluster
+
+TrpF4
+purpeofuscus and S bikiniensis 
+
+
+2. Heatmap
+Additionally to the sequences selected by phylogeny, Jonesia denitrificans and Streptomyces sp Mg1 TrpF sequences were added as control .
+
+>>>>>>> 86d01d8784a6d89912c3b8db86ea6753d5074760
 ```{r sessionInfo}
 sessionInfo()
 library(genstats)
 vignette(package="genstats")
+<<<<<<< HEAD
 vignette("01_06_three-tables")
+=======
+library(devtools)
+>>>>>>> 86d01d8784a6d89912c3b8db86ea6753d5074760
 library(Biobase)
 
 # phenoData:
@@ -79,8 +112,29 @@ m <- as.matrix(tmp)
 ## create ExpressionSet object:
 eset <- new("ExpressionSet", exprs = m, phenoData = pdata, featureData = fdata)
 
+<<<<<<< HEAD
 pData(eset)
 fData(eset)
+=======
+#pData(eset)
+#fData(eset)
+#vignette("01_06_three-tables")
+#con=url("http://bowtie-bio.sourceforge.net/recount/ExpressionSets/bodymap_eset.RData")
+#load(file=con)
+#close(con)
+#bm = bodymap.eset
+#bm
+#exp_data = exprs(bm)
+#dim(exp_data)
+#head(exp_data,n=5)
+#pheno_data = pData(bm)
+#dim(pheno_data)
+#head(pheno_data)
+#feature_data = fData(bm)
+#dim(fData(bodymap.eset))
+#fData(bodymap.eset)[1:10,,1]
+#devtools::session_info()
+>>>>>>> 86d01d8784a6d89912c3b8db86ea6753d5074760
 ```
 
 ```{r load_data_docking}

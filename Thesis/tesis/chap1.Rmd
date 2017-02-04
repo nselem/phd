@@ -23,9 +23,16 @@ EvoMining was available as a consult website with 230 members of the Actinobacte
 The sequenced genome of an individull in some species is just a partil print of the species geneticll repertoire  Individualls can gain and loss genes.  
 [@koonin_turbulent_2015] Pangenome is the total sequenced gene pool in a taxonomically related group.  Supergenome all the possible extant genes. About 10 times genomes. there are open, closed pangenomes.Most genomes has a core a shell and a unique genes.  
 Gene history its a tree history  
+<<<<<<< HEAD
 HGT doubles mutation rate on prokarites.  
 Maybe HGT is an selected feature, if is the case, so could be np production.  
 Some archaeas has open pangenome.  [@halachev_calculating_2011]
+=======
+HGT doubles mutation rate on prokarites.  [@koonin_turbulent_2015]
+Maybe HGT is an selected feature, if is the case, so could be np production.  
+Some archaeas has open pangenome.  [@halachev_calculating_2011]
+Shell trees converge to core trees [@narechania_random_2012]
+>>>>>>> 86d01d8784a6d89912c3b8db86ea6753d5074760
 ### Implementation  
 In order to expand **EvoMining** from a consulting website to a user-interactive genomic tool, code was developed on perl and packaged as a docker distribution. Docker is a software containerization platform that guarantee reptibilty and easy instalation.  
 
@@ -54,6 +61,10 @@ plot(MyTree, edge.width = 2,font = 0.1, edge.color = "blue",tip.color = "gray", 
 ```
 
 To capture differences on genomes we sort them phylogenetically. Phylogenies can be constructed using different paradigms as Parsimony, Maximum Likelihood, and Bayesian inference. Short descriptions of the main phylogeny methods are included below.
+<<<<<<< HEAD
+=======
+Why is a tree useful {Book reference}
+>>>>>>> 86d01d8784a6d89912c3b8db86ea6753d5074760
  why trees are useful for?  
 * Distance methods  
 * Parsimony
