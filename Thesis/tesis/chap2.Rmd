@@ -53,8 +53,7 @@ hm.palette <- colorRampPalette(rev(brewer.pal(11, 'Spectral')), space='Lab')
  
 ## Math
 Docking simulation were calculated for Streptomyces enzymes  
-<<<<<<< HEAD
-=======
+
 Procedures can be found at [Docking Protocols](https://github.com/tripplab/Docking/wiki)  
 
 1.Phylogenetic Tree
@@ -76,22 +75,16 @@ Non conserved cluster
 
 TrpF4
 purpeofuscus and S bikiniensis 
-
-
 2. Heatmap
 Additionally to the sequences selected by phylogeny, Jonesia denitrificans and Streptomyces sp Mg1 TrpF sequences were added as control .
 
->>>>>>> 86d01d8784a6d89912c3b8db86ea6753d5074760
 ```{r sessionInfo}
-sessionInfo()
 library(genstats)
-vignette(package="genstats")
-<<<<<<< HEAD
-vignette("01_06_three-tables")
-=======
 library(devtools)
->>>>>>> 86d01d8784a6d89912c3b8db86ea6753d5074760
 library(Biobase)
+sessionInfo()
+#vignette(package="genstats")
+#vignette("01_06_three-tables")
 
 # phenoData:
 tmp <- read.csv("chapter2/ProteinData", row.names = 1,header=TRUE,sep="\t")
@@ -112,29 +105,10 @@ m <- as.matrix(tmp)
 ## create ExpressionSet object:
 eset <- new("ExpressionSet", exprs = m, phenoData = pdata, featureData = fdata)
 
-<<<<<<< HEAD
-pData(eset)
-fData(eset)
-=======
 #pData(eset)
 #fData(eset)
-#vignette("01_06_three-tables")
-#con=url("http://bowtie-bio.sourceforge.net/recount/ExpressionSets/bodymap_eset.RData")
-#load(file=con)
-#close(con)
-#bm = bodymap.eset
-#bm
-#exp_data = exprs(bm)
-#dim(exp_data)
-#head(exp_data,n=5)
-#pheno_data = pData(bm)
-#dim(pheno_data)
-#head(pheno_data)
-#feature_data = fData(bm)
-#dim(fData(bodymap.eset))
-#fData(bodymap.eset)[1:10,,1]
-#devtools::session_info()
->>>>>>> 86d01d8784a6d89912c3b8db86ea6753d5074760
+#pData(eset)
+#fData(eset)
 ```
 
 ```{r load_data_docking}
@@ -166,19 +140,18 @@ kable(docking,  caption = "Enzymes docking \\label{tab:docking}",caption.short =
 
 We can further look into the properties of the largest value here for American Airlines Inc.  To do so, we can isolate the row corresponding to the arrival delay of 1539 minutes for American in our original `flights` dataset.
 
-#```{r max_props}
-#flights %>% dplyr::filter(arr_delay == 1539, 
-#                   carrier_name == "American Airlines Inc.") %>%
-#  dplyr::select(-c(month, day, carrier, dest_name, hour, minute, carrier_name, arr_delay))
-#```
+```{r max_props2}
+#flights %>% dplyr::filter(arr_delay == 1539, carrier_name == "American Airlines Inc.") %>%
+  #dplyr::select(-c(month, day, carrier, dest_name, hour, minute, carrier_name, arr_delay))
+```
 
 We see that the flight occurred on March 3rd and departed a little after 2 PM on its way to Dallas/Fort Worth.  Lastly, we show how we can visualize the arrival delay of all departing flights from Portland on March 3rd against time of departure.
 
 
-#```{r march3plot, fig.height = 3, fig.width = 6}
+```{r march3plot_2, fig.height = 3, fig.width = 6}
 #flights %>% dplyr::filter(month == 3, day == 3) %>%
 #  ggplot(aes(x = dep_time, y = arr_delay)) +geom_point()
-#```
+```
 
 <!--
 --------------------------------------------------------------------------->

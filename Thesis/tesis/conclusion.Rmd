@@ -37,4 +37,59 @@ This first appendix includes all of the R chunks of code that were hidden throug
 ```{r ref.label = 'include_packages_2', results = 'hide', echo = TRUE}
 ```
 
-# The Second Appendix, for Fun
+# The Second Appendix, Open source code on this document
+## R markdown  
+Thanks to Rmakdown  Thesis  
+Apendix one Useful docker commands   
+-Create a new repository  
+`docker build . -t evomining`  
+`docker push nselemevomining`
+
+## Docker  
+Reinicie docker para liberar puertos  
+`sudo service docker restart`   
+`docker stop $(docker ps -a -q)`  
+
+Detener todos los contenedores
+`docker rm $(docker ps -a -q)`  
+
+Remover contenedores detenidos
+`docker rm $(docker ps -q -f status=exited)`
+
+Remove all images
+`docker rmi $(docker images -q)`  
+
+Gblocks only runs inside folder /var/www/html/EvoMining  
+
+lista contenedores  
+`docker ps -a`  
+
+uninstall docker from ubuntu (Fresh start)  
+`sudo apt-get purge docker-engine`  
+`sudo apt-get autoremove --purge docker-engine`  
+`rm -rf /var/lib/docker`   # This deletes all images, containers, and volumes
+
+` docker run -i -t -v /home/nelly/GIT/EvoMining/:/var/www/html -p 80:80 newevomining /bin/bash`
+`perl startevomining`  
+
+## Git  
+`git add --all`
+`git commit -m "Some message"`  
+`git push -u origin master`  
+`git clone `
+
+## Connect GitHub and DockerHub
+automated builds
+The Dockerfile is available to anyone with access to your Docker Hub repository.
+Your repository is kept up-to-date with code changes automatically.
+
+
+## Additional resources
+
+- _Markdown_ Cheatsheet - <https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet>
+
+- _R Markdown_ Reference Guide - <https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf>
+
+- Introduction to `dplyr` - <https://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html>
+
+- `ggplot2` Documentation - <http://docs.ggplot2.org/current/>

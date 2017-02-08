@@ -23,31 +23,67 @@ EvoMining was available as a consult website with 230 members of the Actinobacte
 The sequenced genome of an individull in some species is just a partil print of the species geneticll repertoire  Individualls can gain and loss genes.  
 [@koonin_turbulent_2015] Pangenome is the total sequenced gene pool in a taxonomically related group.  Supergenome all the possible extant genes. About 10 times genomes. there are open, closed pangenomes.Most genomes has a core a shell and a unique genes.  
 Gene history its a tree history  
-<<<<<<< HEAD
+
 HGT doubles mutation rate on prokarites.  
 Maybe HGT is an selected feature, if is the case, so could be np production.  
 Some archaeas has open pangenome.  [@halachev_calculating_2011]
-=======
+
 HGT doubles mutation rate on prokarites.  [@koonin_turbulent_2015]
 Maybe HGT is an selected feature, if is the case, so could be np production.  
 Some archaeas has open pangenome.  [@halachev_calculating_2011]
 Shell trees converge to core trees [@narechania_random_2012]
->>>>>>> 86d01d8784a6d89912c3b8db86ea6753d5074760
-### Implementation  
-In order to expand **EvoMining** from a consulting website to a user-interactive genomic tool, code was developed on perl and packaged as a docker distribution. Docker is a software containerization platform that guarantee reptibilty and easy instalation.  
 
-[EvoMining wiki](https://github.com/nselem/EvoMining/wiki) 
+## EvoMining Implementation  
+**EvoMining** was expanded from a website ([http://evodivmet.langebio.cinvestav.mx/EvoMining/index.html](http://evodivmet.langebio.cinvestav.mx/EvoMining/index.html)) with limited datasets to an easy to install distribution that allows flexiblibilty on genomic, central and natural product databases. Evomining user distribution was developed on perl on Ubuntu-14.04 but wraped on [Docker](https://www.docker.com/). Docker is a software containerization platform that allows repetibilty regardless of the environment. Docker engine is avilable for Linux, Cloud, macOS 10.10.3 Yosemite or newer and even 64bit Windows 10.
+
+Dependencies that were packaged at EvoMining docker app are Apache2, muscle3.8.31, newick-utils-1.6,quicktree, blast-2.2.30, Gblocks_Linux64_0.91b perl and from cpan CGI, SVG and Statistics::Basic modules.  
+
+Github defines itself as an online project hosting using Git. Its free for open source-code hosting and facilitates team work. Includes source-code browser, in-line editing, and wikis. 
+
+Dockerhub is an apps project hosting. 
+
 [Dockerhub nselem](https://hub.docker.com/u/nselem/)
-[Docker](https://www.docker.com/)  
-[CORASON](https://github.com/nselem/EvoDivMet/wiki)
-[myRAST docker](https://github.com/nselem/myrast)
-[Orthocores docker](https://github.com/nselem/orthocore)
-_Archaea_, _Actinobacteria_, _Cyanobacteria_ were used as genome DB, [MIBiG](http://mibig.secondarymetabolites.org/) was used as Natural Product DB and different Central Pathways were used.
 
-**EvoMining** needs. Functional genomics uses genomes in the study of gene and protein function[].
+EvoMining code is open source and it is available at a github repository [github/EvoMining](https://github.com/nselem/EvoMining)
+
+Github and Dockerhub can be coneccted by the use of repositories automatically built. Among the advantages of automated builds are that the DockerHub repository is automatically kept up-to-date with code changes on GitHub and that its Dockerfile is available to anyone with access to the Docker Hub repository. EvoMining is stored on a DockerHub automated build repository linked to github EvoMining repository so that code is always actualized.
+
+To download EvoMining image from docker Hub once Docker engine is installed its necessary to run the following command at a terminal:  
+`docker pull nselem/newevomining`  
+
+To run EvoMining container  
+`docker run-i -t  -v /home/nelly/docker-evomining:/var/www/html -p 80:80 evomining /bin/bash`  
+
+To start evoMining app
+`perl startEvomining`  
+``
+Detailed tutorial, EvoMining description, pipeline and user guide are available at a wiki on github at [EvoMining wiki](https://github.com/nselem/EvoMining/wiki).
+
+Other genomic apps were containerized to docker images during this work.  
+- _myRAST_ docker- <https://github.com/nselem/myrast>  
+RAST is a bacterial and Archaeal genome annotator [@aziz_rast_2008, @overbeek_seed_2014 , @brettin_rasttk:_2015]
+This app allows myRAST functionality to upload  
+It allows EvoMining genome database annotation.   
+-_Orthocores_ docker-<https://github.com/nselem/orthocore>    
+Helps to obtain genomic core paralog free and construct genomic trees  
+-_CORASON_ docker-<https://github.com/nselem/EvoDivMet/wiki>    
+-PseudoCore github- <>  
+Genomic Core with a reference genome has the advantage of more genomes, but it is not paralog free    
+
+-RadiCal docker image  
+To detect core diferrences on a set of genomes  
+-BPGA to analize pangenome  
+
+EvoMining Dockerization was chosen to avoid future compatibilty problems, for example dependencies unavailabilty, or incompatibility between future versions of its software components. As much as reproducible research was a concerned while developing EvoMining app, reproducibilty is also important on data analysis, for that reason this document was writen using R-markdown and latex template from Reed College [@chesterismay_updated_2016]. While R-markdown allows to write and run R code and interpolate text paragraph to explain scripts and analysis.   
+
+## EvoMining Databases  
+Evomining containerized app is a user-interactive genomic tool dedicated to the study of protein function[].  
+
 1. Genomes DB
 2. Natural Products DB 
 3. Central Pathways DB 
+
+_Archaea_, _Actinobacteria_, _Cyanobacteria_ were used as genome DB, [MIBiG](http://mibig.secondarymetabolites.org/) was used as Natural Product DB and different Central Pathways were used.
 
 #### Genome DB  
 RAST annotation of genomes was done.  
@@ -61,10 +97,8 @@ plot(MyTree, edge.width = 2,font = 0.1, edge.color = "blue",tip.color = "gray", 
 ```
 
 To capture differences on genomes we sort them phylogenetically. Phylogenies can be constructed using different paradigms as Parsimony, Maximum Likelihood, and Bayesian inference. Short descriptions of the main phylogeny methods are included below.
-<<<<<<< HEAD
-=======
+
 Why is a tree useful {Book reference}
->>>>>>> 86d01d8784a6d89912c3b8db86ea6753d5074760
  why trees are useful for?  
 * Distance methods  
 * Parsimony
@@ -98,7 +132,8 @@ Best Bidirectional Hits with studied enzymes from Central Actinobacterial pathwa
 #### Natural Products DB  
 Natural products was improved from previous version
 
-
+### AntisMASH optional DB  
+AntiSMASH is [@weber_antismash_2015,@medema_antismash:_2011]  
 ### Archaeas Results
 Archaea is a kingdom of recent discovery were not many natural products has been known. On Actinobacteria, evoMining has proved its value to find new kinds of natural products. The clue to this discovery was that Actinobacteria has genomic expanssions. Now Archaea has genomic expansions, even more has central pathways genomic expansions. Are this expansions derived from  a genomic duplication?  
 Has Archaea natural products detected by antismash, and if not, where are this NP's or may Archaea doesn't have NP's.
@@ -131,6 +166,38 @@ Note the use of `>` here, which signifies a quotation environment that will be i
 
 As you see with `$2 \pi$` above, mathematics can be added by surrounding the mathematical text with dollar signs.  More examples of this are in [Mathematics and Science] if you uncomment the code in [Math].  
 
+## Recomendaciones de Luis
+Para evoMining   
+Probar distintos métodos de filogenia y después hacer la coloración.   
+maximum likelihood, Protest phyml  
+Atracción de ramas largas.  
+raxml  
+trim all vs Gblocs (Tony Galvadon)  
+
+Comparar dos árboles  
+Para ver si la evolución de los genes concatenados ha sido simultánea   
+Robinson and foulds   
+Joe Felsestein  
+Phylip  
+
+2. dist tree  
+quarter descomposition  
+peter gogarten fendou Mao  
+
+Sets de experimentos.  
+Para el experimento de los streptomyces con ruta centrales el core, analizar el problema de dominios   múltiples.  
+Dominios  
+Nan Song, Dannie durand  
+Después del blast  
+
+
+Para obtener   
+Pablo Vinuesa: Get Homologues  
+
+Burkhordelias y su toxina (Preguntar a Beto)  
+Cianobacterias y la ruta de fijación de nitrógeno.  
+
+Servidor Viernes a las 12:00   
 
 ## CORASON: Other genome Mining tools context-based
  
@@ -224,13 +291,3 @@ flights %>% dplyr::filter(month == 3, day == 3) %>%
   ggplot(aes(x = dep_time, y = arr_delay)) +
   geom_point()
 ```
-
-## Additional resources
-
-- _Markdown_ Cheatsheet - <https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet>
-
-- _R Markdown_ Reference Guide - <https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf>
-
-- Introduction to `dplyr` - <https://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html>
-
-- `ggplot2` Documentation - <http://docs.ggplot2.org/current/>

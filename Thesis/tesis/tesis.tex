@@ -233,36 +233,6 @@ starts here.
   
   \subsection{Pangenomes}\label{pangenomes}
   
-<<<<<<< HEAD
-  \section{EvoMining}\label{evomining}
-  
-  EvoMining looks expansions on prokariotic pangenome.
-  
-  \subsection{Biological Model}\label{biological-model}
-  
-  \subsection{Technical Distribution}\label{technical-distribution}
-  
-  Implementation Distribution Docker
-  
-  \textbf{EvoMining} needs. Functional genomics uses genomes in the study
-  of gene and protein function\protect\hyperlink{section}{}.
-  
-  \begin{enumerate}
-  \def\labelenumi{\arabic{enumi}.}
-  \tightlist
-  \item
-    Genomes DB
-  \item
-    Natural Products DB
-  \item
-    Central Pathways DB
-  \end{enumerate}
-  
-  \emph{Archaea}, \emph{Actinobacteria}, \emph{Cyanobacteria} were used as
-  genome DB, \href{http://mibig.secondarymetabolites.org/}{MIBiG} was used
-  as Natural Product DB and different Central Pathways were used.
-  \url{http://rmarkdown.rstudio.com}.
-=======
   Expansions are located on pangenome, Tools to analyse pangenome BPgA
   
   \section{EvoMining}\label{evomining}
@@ -286,31 +256,102 @@ starts here.
   taxonomically related group. Supergenome all the possible extant genes.
   About 10 times genomes. there are open, closed pangenomes.Most genomes
   has a core a shell and a unique genes.\\
-  Gene history its a tree history\\
+  Gene history its a tree history
+  
+  HGT doubles mutation rate on prokarites.\\
+  Maybe HGT is an selected feature, if is the case, so could be np
+  production.\\
+  Some archaeas has open pangenome. (Halachev, Loman, \& Pallen, 2011)
+  
   HGT doubles mutation rate on prokarites. (Koonin, 2015) Maybe HGT is an
   selected feature, if is the case, so could be np production.\\
-  Some archaeas has open pangenome. (Halachev, Loman, \& Pallen, 2011)
-  Shell trees converge to core trees (Narechania et al., 2012) \#\#\#
-  Implementation\\
-  In order to expand \textbf{EvoMining} from a consulting website to a
-  user-interactive genomic tool, code was developed on perl and packaged
-  as a docker distribution. Docker is a software containerization platform
-  that guarantee reptibilty and easy instalation.
+  Some archaeas has open pangenome. (Halachev et al., 2011) Shell trees
+  converge to core trees (Narechania et al., 2012)
   
-  \href{https://github.com/nselem/EvoMining/wiki}{EvoMining wiki}
+  \section{EvoMining Implementation}\label{evomining-implementation}
+  
+  \textbf{EvoMining} was expanded from a website
+  (\url{http://evodivmet.langebio.cinvestav.mx/EvoMining/index.html}) with
+  limited datasets to an easy to install distribution that allows
+  flexiblibilty on genomic, central and natural product databases.
+  Evomining user distribution was developed on perl on Ubuntu-14.04 but
+  wraped on \href{https://www.docker.com/}{Docker}. Docker is a software
+  containerization platform that allows repetibilty regardless of the
+  environment. Docker engine is avilable for Linux, Cloud, macOS 10.10.3
+  Yosemite or newer and even 64bit Windows 10.
+  
+  Dependencies that were packaged at EvoMining docker app are Apache2,
+  muscle3.8.31, newick-utils-1.6,quicktree, blast-2.2.30,
+  Gblocks\_Linux64\_0.91b perl and from cpan CGI, SVG and
+  Statistics::Basic modules.
+  
+  Github defines itself as an online project hosting using Git. Its free
+  for open source-code hosting and facilitates team work. Includes
+  source-code browser, in-line editing, and wikis.
+  
+  Dockerhub is an apps project hosting.
+  
   \href{https://hub.docker.com/u/nselem/}{Dockerhub nselem}
-  \href{https://www.docker.com/}{Docker}\\
-  \href{https://github.com/nselem/EvoDivMet/wiki}{CORASON}
-  \href{https://github.com/nselem/myrast}{myRAST docker}
-  \href{https://github.com/nselem/orthocore}{Orthocores docker}
+  
+  EvoMining code is open source and it is available at a github repository
+  \href{https://github.com/nselem/EvoMining}{github/EvoMining}
+  
+  Github and Dockerhub can be coneccted by the use of repositories
+  automatically built. Among the advantages of automated builds are that
+  the DockerHub repository is automatically kept up-to-date with code
+  changes on GitHub and that its Dockerfile is available to anyone with
+  access to the Docker Hub repository. EvoMining is stored on a DockerHub
+  automated build repository linked to github EvoMining repository so that
+  code is always actualized.
+  
+  To download EvoMining image from docker Hub once Docker engine is
+  installed its necessary to run the following command at a terminal:\\
+  \texttt{docker\ pull\ nselem/newevomining}
+  
+  To run EvoMining container\\
+  \texttt{docker\ run-i\ -t\ \ -v\ /home/nelly/docker-evomining:/var/www/html\ -p\ 80:80\ evomining\ /bin/bash}
+  
+  To start evoMining app \texttt{perl\ startEvomining}\\
+  `` Detailed tutorial, EvoMining description, pipeline and user guide are
+  available at a wiki on github at
+  \href{https://github.com/nselem/EvoMining/wiki}{EvoMining wiki}.
+  
+  Other genomic apps were containerized to docker images during this
+  work.\\
+  - \emph{myRAST} docker- \url{https://github.com/nselem/myrast}\\
+  RAST is a bacterial and Archaeal genome annotator (Aziz et al., 2008, R.
+  Overbeek et al. (2014) , Brettin et al. (2015)) This app allows myRAST
+  functionality to upload It allows EvoMining genome database annotation.
+  -\emph{Orthocores} docker-\url{https://github.com/nselem/orthocore}\\
+  Helps to obtain genomic core paralog free and construct genomic trees
+  -\emph{CORASON} docker-\url{https://github.com/nselem/EvoDivMet/wiki}\\
+  -PseudoCore github- \textless{}\textgreater{} Genomic Core with a
+  reference genome has the advantage of more genomes, but it is not
+  paralog free
+  
+  -RadiCal docker image To detect core diferrences on a set of genomes
+  -BPGA to analize pangenome All this work is concerned to reproducible
+  research (chesterismay, 2016)
+  
+  \section{EvoMining Databases}\label{evomining-databases}
+  
+  Evomining containerized app is a user-interactive genomic tool dedicated
+  to the study of protein function\protect\hyperlink{section}{}.
+  
+  \begin{enumerate}
+  \def\labelenumi{\arabic{enumi}.}
+  \tightlist
+  \item
+    Genomes DB
+  \item
+    Natural Products DB
+  \item
+    Central Pathways DB
+  \end{enumerate}
+  
   \emph{Archaea}, \emph{Actinobacteria}, \emph{Cyanobacteria} were used as
   genome DB, \href{http://mibig.secondarymetabolites.org/}{MIBiG} was used
   as Natural Product DB and different Central Pathways were used.
-  
-  \textbf{EvoMining} needs. Functional genomics uses genomes in the study
-  of gene and protein function\protect\hyperlink{section}{}. 1. Genomes DB
-  2. Natural Products DB 3. Central Pathways DB
->>>>>>> 86d01d8784a6d89912c3b8db86ea6753d5074760
   
   \subsubsection{Genome DB}\label{genome-db}
   
@@ -318,32 +359,16 @@ starts here.
   
   \subsubsection{Phylogeny}\label{phylogeny}
   
-<<<<<<< HEAD
-  To capture differences on genomes we sort them phylogenetically.
-  Phylogenies can be constructed using different paradigms as Parsimony,
-  Maximum Likelihood, and Bayesian inference. Short descriptions of the
-  main phylogeny methods are included below.
-  
-  \begin{itemize}
-  \tightlist
-  \item
-    Parsimony
-  \item
-    Maximum Likelihood
-  \item
-    Mr bayes
-  \end{itemize}
-=======
   \begin{center}\includegraphics{tesis_files/figure-latex/testingPhylogeny-1} \end{center}
   
   To capture differences on genomes we sort them phylogenetically.
   Phylogenies can be constructed using different paradigms as Parsimony,
   Maximum Likelihood, and Bayesian inference. Short descriptions of the
-  main phylogeny methods are included below. Why is a tree useful \{Book
-  reference\} why trees are useful for?\\
+  main phylogeny methods are included below.
+  
+  Why is a tree useful \{Book reference\} why trees are useful for?\\
   * Distance methods\\
   * Parsimony * Maximum Likelihood * Mr bayes
->>>>>>> 86d01d8784a6d89912c3b8db86ea6753d5074760
   
   General Trees\\
   Actinobacteria Tree, ArchaeaTree, CyanobacteriaTree.
@@ -392,20 +417,13 @@ starts here.
   
   Natural products was improved from previous version
   
-<<<<<<< HEAD
-  \subsection{Reproducibility on EvoMining
-  code}\label{reproducibility-on-evomining-code}
+  \subsection{AntisMASH optional DB}\label{antismash-optional-db}
   
-  EvoMining Code was packaged on Docker
-  
-=======
->>>>>>> 86d01d8784a6d89912c3b8db86ea6753d5074760
-  \subsection{Archaeas Results}\label{archaeas-results}
-  
-  Archaea is a kingdom of recent discovery were not many natural products
-  has been known. On Actinobacteria, evoMining has proved its value to
-  find new kinds of natural products. The clue to this discovery was that
-  Actinobacteria has genomic expanssions. Now Archaea has genomic
+  AntiSMASH is (Weber et al., 2015,Medema et al. (2011)) \#\#\# Archaeas
+  Results Archaea is a kingdom of recent discovery were not many natural
+  products has been known. On Actinobacteria, evoMining has proved its
+  value to find new kinds of natural products. The clue to this discovery
+  was that Actinobacteria has genomic expanssions. Now Archaea has genomic
   expansions, even more has central pathways genomic expansions. Are this
   expansions derived from a genomic duplication?\\
   Has Archaea natural products detected by antismash, and if not, where
@@ -469,6 +487,46 @@ starts here.
   can be added by surrounding the mathematical text with dollar signs.
   More examples of this are in {[}Mathematics and Science{]} if you
   uncomment the code in \protect\hyperlink{math}{Math}.
+  
+  \section{Recomendaciones de Luis}\label{recomendaciones-de-luis}
+  
+  Para evoMining\\
+  Probar distintos métodos de filogenia y después hacer la coloración.\\
+  maximum likelihood, Protest phyml\\
+  Atracción de ramas largas.\\
+  raxml\\
+  trim all vs Gblocs (Tony Galvadon)
+  
+  Comparar dos árboles\\
+  Para ver si la evolución de los genes concatenados ha sido simultánea\\
+  Robinson and foulds\\
+  Joe Felsestein\\
+  Phylip
+  
+  \begin{enumerate}
+  \def\labelenumi{\arabic{enumi}.}
+  \setcounter{enumi}{1}
+  \tightlist
+  \item
+    dist tree\\
+    quarter descomposition\\
+    peter gogarten fendou Mao
+  \end{enumerate}
+  
+  Sets de experimentos.\\
+  Para el experimento de los streptomyces con ruta centrales el core,
+  analizar el problema de dominios múltiples.\\
+  Dominios\\
+  Nan Song, Dannie durand\\
+  Después del blast
+  
+  Para obtener\\
+  Pablo Vinuesa: Get Homologues
+  
+  Burkhordelias y su toxina (Preguntar a Beto)\\
+  Cianobacterias y la ruta de fijación de nitrógeno.
+  
+  Servidor Viernes a las 12:00
   
   \section{CORASON: Other genome Mining tools
   context-based}\label{corason-other-genome-mining-tools-context-based}
@@ -623,11 +681,7 @@ starts here.
   \end{Highlighting}
   \end{Shaded}
   
-<<<<<<< HEAD
   \begin{longtable}[c]{@{}lr@{}}
-=======
-  \begin{longtable}[]{@{}lr@{}}
->>>>>>> 86d01d8784a6d89912c3b8db86ea6753d5074760
   \caption{Maximum Delays by Airline \label{tab:max_delay}}\tabularnewline
   \toprule
   Airline & Max Arrival Delay\tabularnewline
@@ -685,23 +739,6 @@ starts here.
   
   \begin{center}\includegraphics{tesis_files/figure-latex/march3plot-1} \end{center}
   
-  \section{Additional resources}\label{additional-resources}
-  
-  \begin{itemize}
-  \item
-    \emph{Markdown} Cheatsheet -
-    \url{https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet}
-  \item
-    \emph{R Markdown} Reference Guide -
-    \url{https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf}
-  \item
-    Introduction to \texttt{dplyr} -
-    \url{https://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html}
-  \item
-    \texttt{ggplot2} Documentation -
-    \url{http://docs.ggplot2.org/current/}
-  \end{itemize}
-  
   \chapter{PriA Family}\label{math-sci}
   
   \begin{itemize}
@@ -712,10 +749,6 @@ starts here.
     Who has TrpF
   \end{itemize}
   
-<<<<<<< HEAD
-  \hypertarget{math}{\section{Math}\label{math}}
-  
-=======
   \begin{Shaded}
   \begin{Highlighting}[]
   \CommentTok{# List of packages required for this analysis}
@@ -749,52 +782,35 @@ starts here.
   
   \hypertarget{math}{\section{Math}\label{math}}
   
-  Docking simulation were calculated for Streptomyces enzymes\\
+  Docking simulation were calculated for Streptomyces enzymes
+  
   Procedures can be found at
   \href{https://github.com/tripplab/Docking/wiki}{Docking Protocols}
   
-  \begin{Shaded}
-  \begin{Highlighting}[]
-  \KeywordTok{sessionInfo}\NormalTok{()}
-  \end{Highlighting}
-  \end{Shaded}
+  1.Phylogenetic Tree 39 Streptomyces sequences, as outgroup E coli,
+  Arthrobacter Aurescens, Salmonella enterica and Acidimicrobium
+  ferrooxidans PriA's were included.
   
-  \begin{verbatim}
-  R version 3.3.2 (2016-10-31)
-  Platform: x86_64-pc-linux-gnu (64-bit)
-  Running under: Ubuntu 14.04.5 LTS
+  CORASON PriA All streptomyces have a partially conserved PriA cluster.
+  CT34 has a secondary copy whose Best hit on NCBI is Lentzea's PriA with
+  50\% identity 98\% coverage
   
-  locale:
-   [1] LC_CTYPE=es_MX.UTF-8       LC_NUMERIC=C              
-   [3] LC_TIME=es_MX.UTF-8        LC_COLLATE=es_MX.UTF-8    
-   [5] LC_MONETARY=es_MX.UTF-8    LC_MESSAGES=es_MX.UTF-8   
-   [7] LC_PAPER=es_MX.UTF-8       LC_NAME=C                 
-   [9] LC_ADDRESS=C               LC_TELEPHONE=C            
-  [11] LC_MEASUREMENT=es_MX.UTF-8 LC_IDENTIFICATION=C       
+  TrpF1 TrpF1 queries gave hits with TrpC enzyme present on every
+  Streptomyces, additionally S rimosus, S coelicolor, S venezuelae and S.
+  NRRL S-1813 had an extra copy. S rimosus TrpC vicinity has PKS and
+  siderophore genes.
   
-  attached base packages:
-  [1] stats     graphics  grDevices utils     datasets  methods   base     
+  TrpF2 Conserved cluster with NRPS sequences flanking TrpF2
   
-  other attached packages:
-  [1] RColorBrewer_1.1-2 reshape_0.8.6      plyr_1.8.4        
-  [4] knitr_1.15.1       ggplot2_2.2.1      dplyr_0.5.0       
-  [7] ape_4.0            reedtemplates_0.1  devtools_1.12.0   
+  TrpF3 Non conserved cluster
   
-  loaded via a namespace (and not attached):
-   [1] Rcpp_0.12.9      magrittr_1.5     munsell_0.4.3    colorspace_1.3-2
-   [5] lattice_0.20-34  R6_2.2.0         highr_0.6        stringr_1.1.0   
-   [9] tools_3.3.2      parallel_3.3.2   grid_3.3.2       nlme_3.1-129    
-  [13] gtable_0.2.0     DBI_0.5-1        withr_1.0.2      htmltools_0.3.5 
-  [17] lazyeval_0.2.0   yaml_2.1.14      rprojroot_1.2    digest_0.6.12   
-  [21] assertthat_0.1   tibble_1.2       memoise_1.0.0    evaluate_0.10   
-  [25] rmarkdown_1.3    labeling_0.3     stringi_1.1.2    scales_0.4.1    
-  [29] backports_1.0.5 
-  \end{verbatim}
+  TrpF4 purpeofuscus and S bikiniensis 2. Heatmap Additionally to the
+  sequences selected by phylogeny, Jonesia denitrificans and Streptomyces
+  sp Mg1 TrpF sequences were added as control .
   
   \begin{Shaded}
   \begin{Highlighting}[]
   \KeywordTok{library}\NormalTok{(genstats)}
-  \KeywordTok{vignette}\NormalTok{(}\DataTypeTok{package=}\StringTok{"genstats"}\NormalTok{)}
   \KeywordTok{library}\NormalTok{(devtools)}
   \KeywordTok{library}\NormalTok{(Biobase)}
   \end{Highlighting}
@@ -855,6 +871,48 @@ starts here.
   
   \begin{Shaded}
   \begin{Highlighting}[]
+  \KeywordTok{sessionInfo}\NormalTok{()}
+  \end{Highlighting}
+  \end{Shaded}
+  
+  \begin{verbatim}
+  R version 3.3.2 (2016-10-31)
+  Platform: x86_64-pc-linux-gnu (64-bit)
+  Running under: Ubuntu 14.04.5 LTS
+  
+  locale:
+   [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
+   [3] LC_TIME=es_MX.UTF-8        LC_COLLATE=en_US.UTF-8    
+   [5] LC_MONETARY=es_MX.UTF-8    LC_MESSAGES=en_US.UTF-8   
+   [7] LC_PAPER=es_MX.UTF-8       LC_NAME=C                 
+   [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+  [11] LC_MEASUREMENT=es_MX.UTF-8 LC_IDENTIFICATION=C       
+  
+  attached base packages:
+  [1] parallel  stats     graphics  grDevices utils     datasets  methods  
+  [8] base     
+  
+  other attached packages:
+   [1] Biobase_2.34.0      BiocGenerics_0.20.0 genstats_0.1.02    
+   [4] RColorBrewer_1.1-2  reshape_0.8.6       plyr_1.8.4         
+   [7] knitr_1.15.1        ggplot2_2.2.1       dplyr_0.5.0        
+  [10] ape_4.0             reedtemplates_0.1   devtools_1.12.0    
+  
+  loaded via a namespace (and not attached):
+   [1] Rcpp_0.12.9      magrittr_1.5     munsell_0.4.3    colorspace_1.3-2
+   [5] lattice_0.20-34  R6_2.2.0         highr_0.6        stringr_1.1.0   
+   [9] tools_3.3.2      grid_3.3.2       nlme_3.1-129     gtable_0.2.0    
+  [13] DBI_0.5-1        withr_1.0.2      htmltools_0.3.5  lazyeval_0.2.0  
+  [17] yaml_2.1.14      rprojroot_1.2    digest_0.6.12    assertthat_0.1  
+  [21] tibble_1.2       memoise_1.0.0    evaluate_0.10    rmarkdown_1.3   
+  [25] labeling_0.3     stringi_1.1.2    scales_0.4.1     backports_1.0.5 
+  \end{verbatim}
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \CommentTok{#vignette(package="genstats")}
+  \CommentTok{#vignette("01_06_three-tables")}
+  
   \CommentTok{# phenoData:}
   \NormalTok{tmp <-}\StringTok{ }\KeywordTok{read.csv}\NormalTok{(}\StringTok{"chapter2/ProteinData"}\NormalTok{, }\DataTypeTok{row.names =} \DecValTok{1}\NormalTok{,}\DataTypeTok{header=}\OtherTok{TRUE}\NormalTok{,}\DataTypeTok{sep=}\StringTok{"}\CharTok{\textbackslash{}t}\StringTok{"}\NormalTok{)}
   \NormalTok{pdata <-}\StringTok{ }\KeywordTok{AnnotatedDataFrame}\NormalTok{(tmp)}
@@ -876,22 +934,8 @@ starts here.
   
   \CommentTok{#pData(eset)}
   \CommentTok{#fData(eset)}
-  \CommentTok{#vignette("01_06_three-tables")}
-  \CommentTok{#con=url("http://bowtie-bio.sourceforge.net/recount/ExpressionSets/bodymap_eset.RData")}
-  \CommentTok{#load(file=con)}
-  \CommentTok{#close(con)}
-  \CommentTok{#bm = bodymap.eset}
-  \CommentTok{#bm}
-  \CommentTok{#exp_data = exprs(bm)}
-  \CommentTok{#dim(exp_data)}
-  \CommentTok{#head(exp_data,n=5)}
-  \CommentTok{#pheno_data = pData(bm)}
-  \CommentTok{#dim(pheno_data)}
-  \CommentTok{#head(pheno_data)}
-  \CommentTok{#feature_data = fData(bm)}
-  \CommentTok{#dim(fData(bodymap.eset))}
-  \CommentTok{#fData(bodymap.eset)[1:10,,1]}
-  \CommentTok{#devtools::session_info()}
+  \CommentTok{#pData(eset)}
+  \CommentTok{#fData(eset)}
   \end{Highlighting}
   \end{Shaded}
   
@@ -941,7 +985,7 @@ starts here.
   \end{Highlighting}
   \end{Shaded}
   
-  \begin{longtable}[]{@{}lllllllllllllllllllll@{}}
+  \begin{longtable}[c]{@{}lllllllllllllllllllll@{}}
   \caption{Enzymes docking \label{tab:docking}}\tabularnewline
   \toprule
   Enzima & dte6\_open & dte13\_open & dte6\_closed & dte13\_closed &
@@ -1145,14 +1189,24 @@ starts here.
   the arrival delay of 1539 minutes for American in our original
   \texttt{flights} dataset.
   
-  \chapter{\texorpdfstring{\texttt{\{r\ max\_props\}\ \#flights\ \%\textgreater{}\%\ dplyr::filter(arr\_delay\ ==\ 1539,\ \ \#\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ carrier\_name\ ==\ "American\ Airlines\ Inc.")\ \%\textgreater{}\%\ \#\ \ dplyr::select(-c(month,\ day,\ carrier,\ dest\_name,\ hour,\ minute,\ carrier\_name,\ arr\_delay))\ \#}}{\{r max\_props\} \#flights \%\textgreater{}\% dplyr::filter(arr\_delay == 1539,  \#                   carrier\_name == "American Airlines Inc.") \%\textgreater{}\% \#  dplyr::select(-c(month, day, carrier, dest\_name, hour, minute, carrier\_name, arr\_delay)) \#}}\label{r-max_props-flights-dplyrfilterarr_delay-1539-carrier_name-american-airlines-inc.-dplyrselect-cmonth-day-carrier-dest_name-hour-minute-carrier_name-arr_delay}
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \CommentTok{#flights %>% dplyr::filter(arr_delay == 1539, carrier_name == "American Airlines Inc.") %>%}
+    \CommentTok{#dplyr::select(-c(month, day, carrier, dest_name, hour, minute, carrier_name, arr_delay))}
+  \end{Highlighting}
+  \end{Shaded}
   
   We see that the flight occurred on March 3rd and departed a little after
   2 PM on its way to Dallas/Fort Worth. Lastly, we show how we can
   visualize the arrival delay of all departing flights from Portland on
   March 3rd against time of departure.
   
-  \chapter{\texorpdfstring{\texttt{\{r\ march3plot,\ fig.height\ =\ 3,\ fig.width\ =\ 6\}\ \#flights\ \%\textgreater{}\%\ dplyr::filter(month\ ==\ 3,\ day\ ==\ 3)\ \%\textgreater{}\%\ \#\ \ ggplot(aes(x\ =\ dep\_time,\ y\ =\ arr\_delay))\ +geom\_point()\ \#}}{\{r march3plot, fig.height = 3, fig.width = 6\} \#flights \%\textgreater{}\% dplyr::filter(month == 3, day == 3) \%\textgreater{}\% \#  ggplot(aes(x = dep\_time, y = arr\_delay)) +geom\_point() \#}}\label{r-march3plot-fig.height-3-fig.width-6-flights-dplyrfiltermonth-3-day-3-ggplotaesx-dep_time-y-arr_delay-geom_point}
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \CommentTok{#flights %>% dplyr::filter(month == 3, day == 3) %>%}
+  \CommentTok{#  ggplot(aes(x = dep_time, y = arr_delay)) +geom_point()}
+  \end{Highlighting}
+  \end{Shaded}
   
   Genome size vs Total antismash cluster coloured by order
   
@@ -1173,7 +1227,6 @@ starts here.
   \label{fig:TrpFDocking}
   \end{figure}
   
->>>>>>> 86d01d8784a6d89912c3b8db86ea6753d5074760
   \TeX~is the best way to typeset mathematics. Donald Knuth designed
   \TeX~when he got frustrated at how long it was taking the typesetters to
   finish his book, which contained a lot of mathematics. One nice feature
@@ -1224,15 +1277,9 @@ starts here.
   You may wish to put your reaction in a figure environment, which means
   that \LaTeX~will place the reaction where it fits and you can have a
   figure caption. You'll see further description of this \textbf{R}
-<<<<<<< HEAD
   \texttt{label} function in \protect\hyperlink{refux5flabels}{}. (Note
   the use of the double backslash here as well as the
   \texttt{echo\ =\ FALSE} which hides the code from the output.)
-=======
-  \texttt{label} function in \protect\hyperlink{ref_labels}{}. (Note the
-  use of the double backslash here as well as the \texttt{echo\ =\ FALSE}
-  which hides the code from the output.)
->>>>>>> 86d01d8784a6d89912c3b8db86ea6753d5074760
   
   \begin{figure}[h!tbp]
   \begin{center}
@@ -1267,13 +1314,8 @@ starts here.
   (\url{http://homepages.uni-tuebingen.de/beitz/txe.html}). Be sure to
   read the proceeding chapter on graphics and tables.
   
-<<<<<<< HEAD
   \hypertarget{refux5flabels}{\chapter{Archaea EvoMining
   Results}\label{refux5flabels}}
-=======
-  \hypertarget{ref_labels}{\chapter{Archaea EvoMining
-  Results}\label{ref_labels}}
->>>>>>> 86d01d8784a6d89912c3b8db86ea6753d5074760
   
   During the decade between 1970 and 1980, Archaea was recognized as new
   life domain, a kingdom different from Bacteria and Eucarya in an
@@ -1298,11 +1340,7 @@ starts here.
   low-confidence/high-novelty} bioinformatic approaches (Medema \&
   Fischbach, 2015). High confidence methods compares query sequences with
   previously known BGC's such as nrps or PKS, examples of this algorithms
-<<<<<<< HEAD
   are antiSMASH and clusterfinder (\textbf{???}?). EvoMining searches on
-=======
-  are antiSMASH and clusterfinder ({\textbf{???}}?). EvoMining searches on
->>>>>>> 86d01d8784a6d89912c3b8db86ea6753d5074760
   expansions from central metabolic pathways enzyme families, it has been
   classified as low confidence/high novelty method. EvoMining has proved
   useful on Actinobacteria phylum where its use lead to Arseno-compounds
@@ -1337,11 +1375,7 @@ starts here.
   
   \section{Tables}\label{tables}
   
-<<<<<<< HEAD
   \begin{longtable}[c]{@{}cc@{}}
-=======
-  \begin{longtable}[]{@{}cc@{}}
->>>>>>> 86d01d8784a6d89912c3b8db86ea6753d5074760
   \caption{Families on Archaeabacteria \label{tab:inher}}\tabularnewline
   \toprule
   Factors & Correlation between Parents \& Child\tabularnewline
@@ -1676,13 +1710,8 @@ starts here.
   Here is a reference to Recruitments after central pathways expansions
   colourd by Kingdom plot: \autoref{fig:ArchaeasRecruitmentsbyKingdom}.
   
-<<<<<<< HEAD
   \clearpage 
   Recruitments after central pathways expansions colourd by taxonomy
-=======
-  \clearpage  Recruitments after central pathways expansions colourd by
-  taxonomy
->>>>>>> 86d01d8784a6d89912c3b8db86ea6753d5074760
   
   \begin{figure}[h!tbp]
   \centering
@@ -1888,28 +1917,18 @@ starts here.
   suggestions. We love to see people using \emph{R Markdown} for their
   theses, and are happy to help.
   
-<<<<<<< HEAD
   \hypertarget{refux5flabels}{\chapter{Actinobacteria EvoMining
   Results}\label{refux5flabels}}
-=======
-  \hypertarget{ref_labels}{\chapter{Actinobacteria EvoMining
-  Results}\label{ref_labels}}
->>>>>>> 86d01d8784a6d89912c3b8db86ea6753d5074760
   
   Actinobacteria is an ancient phylum \{Referencia de luis\}
   
   \section{Tables}\label{tables-1}
   
-<<<<<<< HEAD
   \begin{longtable}[c]{@{}ccl@{}}
-=======
-  \begin{longtable}[]{@{}ccl@{}}
->>>>>>> 86d01d8784a6d89912c3b8db86ea6753d5074760
   \caption{Correlation of Inheritance Factors for Parents and Child
   \label{tab:inher}}\tabularnewline
   \toprule
   \begin{minipage}[b]{0.29\columnwidth}\centering\strut
-<<<<<<< HEAD
   Factors
   \strut\end{minipage} &
   \begin{minipage}[b]{0.47\columnwidth}\centering\strut
@@ -1917,19 +1936,10 @@ starts here.
   \strut\end{minipage} &
   \begin{minipage}[b]{0.16\columnwidth}\raggedright\strut
   \strut\end{minipage}\tabularnewline
-=======
-  Factors\strut
-  \end{minipage} & \begin{minipage}[b]{0.47\columnwidth}\centering\strut
-  Correlation between Parents \& Child\strut
-  \end{minipage} & \begin{minipage}[b]{0.16\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage}\tabularnewline
->>>>>>> 86d01d8784a6d89912c3b8db86ea6753d5074760
   \midrule
   \endfirsthead
   \toprule
   \begin{minipage}[b]{0.29\columnwidth}\centering\strut
-<<<<<<< HEAD
   Factors
   \strut\end{minipage} &
   \begin{minipage}[b]{0.47\columnwidth}\centering\strut
@@ -1955,30 +1965,6 @@ starts here.
   \strut\end{minipage} &
   \begin{minipage}[t]{0.16\columnwidth}\raggedright\strut
   \strut\end{minipage}\tabularnewline
-=======
-  Factors\strut
-  \end{minipage} & \begin{minipage}[b]{0.47\columnwidth}\centering\strut
-  Correlation between Parents \& Child\strut
-  \end{minipage} & \begin{minipage}[b]{0.16\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage}\tabularnewline
-  \midrule
-  \endhead
-  \begin{minipage}[t]{0.29\columnwidth}\centering\strut
-  GenomeDB\strut
-  \end{minipage} & \begin{minipage}[t]{0.47\columnwidth}\centering\strut
-  1245\strut
-  \end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage}\tabularnewline
-  \begin{minipage}[t]{0.29\columnwidth}\centering\strut
-  Families\strut
-  \end{minipage} & \begin{minipage}[t]{0.47\columnwidth}\centering\strut
-  65\strut
-  \end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage}\tabularnewline
->>>>>>> 86d01d8784a6d89912c3b8db86ea6753d5074760
   \bottomrule
   \end{longtable}
   
@@ -2166,13 +2152,8 @@ starts here.
   Here is a reference to Recruitments after central pathways expansions
   colourd by Kingdom plot: \autoref{fig:ActinosRecruitmentsbyKingdom}.
   
-<<<<<<< HEAD
   \clearpage 
   Recruitments after central pathways expansions colourd by taxonomy
-=======
-  \clearpage  Recruitments after central pathways expansions colourd by
-  taxonomy
->>>>>>> 86d01d8784a6d89912c3b8db86ea6753d5074760
   
   \begin{figure}[h!tbp]
   \centering
@@ -2285,34 +2266,27 @@ starts here.
   
   \clearpage 
   
-<<<<<<< HEAD
   \hypertarget{refux5flabels}{\chapter{Cyanobacteria EvoMining
   Results}\label{refux5flabels}}
   
-  Cyanobacteria phylum \{Referencia\}
+  \textless{}\textless{}\textless{}\textless{}\textless{}\textless{}\textless{}
+  HEAD Cyanobacteria phylum \{Referencia\}\\
+  ======= Cyanobacteria is a photosynthetic phylum that inhabits a broad
+  range of habitats. The broad adaptive potential is on part driven by
+  gene-family enlargment (Larsson, Nylander, \& Bergman, 2011) by the
+  analysis of 58 Cyanobacterial genomes concludes ancestor of
+  cyanobacteria had a genome size of approx. 4.5 Mbp. Cyanobacteria
+  produces natural products as pigments and toxins (Whitton, 2012) Example
+  of a PriA cluster toxins(Moustafa et al., 2009)
+  
+  Fossil record situates Cyanobacteria (Whitton, 2012) Molecular record
+  and metabolic propoerties at (Battistuzzi, Feijao, \& Hedges, 2004)
+  \textgreater{}\textgreater{}\textgreater{}\textgreater{}\textgreater{}\textgreater{}\textgreater{}
+  86d01d8784a6d89912c3b8db86ea6753d5074760
   
   \section{Tables}\label{tables-2}
   
   \begin{longtable}[c]{@{}cc@{}}
-=======
-  \hypertarget{ref_labels}{\chapter{Cyanobacteria EvoMining
-  Results}\label{ref_labels}}
-  
-  Cyanobacteria is a photosynthetic phylum that inhabits a broad range of
-  habitats. The broad adaptive potential is on part driven by gene-family
-  enlargment (Larsson, Nylander, \& Bergman, 2011) by the analysis of 58
-  Cyanobacterial genomes concludes ancestor of cyanobacteria had a genome
-  size of approx. 4.5 Mbp. Cyanobacteria produces natural products as
-  pigments and toxins (Whitton, 2012) Example of a PriA cluster
-  toxins(Moustafa et al., 2009)
-  
-  Fossil record situates Cyanobacteria (Whitton, 2012) Molecular record
-  and metabolic propoerties at (Battistuzzi, Feijao, \& Hedges, 2004)
-  
-  \section{Tables}\label{tables-2}
-  
-  \begin{longtable}[]{@{}cc@{}}
->>>>>>> 86d01d8784a6d89912c3b8db86ea6753d5074760
   \caption{Families on Cyanobacteria \label{tab:inher}}\tabularnewline
   \toprule
   Factors & Correlation between Parents \& Child\tabularnewline
@@ -2482,13 +2456,8 @@ starts here.
   Here is a reference to Recruitments after central pathways expansions
   colourd by Kingdom plot: \autoref{fig:RecruitmentsbyKingdom}.
   
-<<<<<<< HEAD
   \clearpage 
   Recruitments after central pathways expansions colourd by taxonomy
-=======
-  \clearpage  Recruitments after central pathways expansions colourd by
-  taxonomy
->>>>>>> 86d01d8784a6d89912c3b8db86ea6753d5074760
   
   \begin{figure}[h!tbp]
   \centering
@@ -2704,11 +2673,7 @@ starts here.
   \end{Shaded}
   
   \subsubsection{\texorpdfstring{In
-<<<<<<< HEAD
   \protect\hyperlink{refux5flabels}{}:}{In :}}\label{in}
-=======
-  \protect\hyperlink{ref_labels}{}:}{In :}}\label{in}
->>>>>>> 86d01d8784a6d89912c3b8db86ea6753d5074760
   
   \begin{Shaded}
   \begin{Highlighting}[]
@@ -2733,8 +2698,74 @@ starts here.
   \end{Highlighting}
   \end{Shaded}
   
-  \chapter{The Second Appendix, for
-  Fun}\label{the-second-appendix-for-fun}
+  \chapter{The Second Appendix, Open source code on this
+  document}\label{the-second-appendix-open-source-code-on-this-document}
+  
+  \section{R markdown}\label{r-markdown}
+  
+  Thanks to Rmakdown Thesis\\
+  Apendix one Useful docker commands\\
+  -Create a new repository\\
+  \texttt{docker\ build\ .\ -t\ evomining}\\
+  \texttt{docker\ push\ nselemevomining}
+  
+  \section{Docker}\label{docker}
+  
+  Reinicie docker para liberar puertos\\
+  \texttt{sudo\ service\ docker\ restart}\\
+  \texttt{docker\ stop\ \$(docker\ ps\ -a\ -q)}
+  
+  Detener todos los contenedores
+  \texttt{docker\ rm\ \$(docker\ ps\ -a\ -q)}
+  
+  Remover contenedores detenidos
+  \texttt{docker\ rm\ \$(docker\ ps\ -q\ -f\ status=exited)}
+  
+  Remove all images \texttt{docker\ rmi\ \$(docker\ images\ -q)}
+  
+  Gblocks only runs inside folder /var/www/html/EvoMining
+  
+  lista contenedores\\
+  \texttt{docker\ ps\ -a}
+  
+  uninstall docker from ubuntu (Fresh start)\\
+  \texttt{sudo\ apt-get\ purge\ docker-engine}\\
+  \texttt{sudo\ apt-get\ autoremove\ -\/-purge\ docker-engine}\\
+  \texttt{rm\ -rf\ /var/lib/docker} \# This deletes all images,
+  containers, and volumes
+  
+  \texttt{docker\ run\ -i\ -t\ -v\ /home/nelly/GIT/EvoMining/:/var/www/html\ -p\ 80:80\ newevomining\ /bin/bash}
+  \texttt{perl\ startevomining}
+  
+  \section{Git}\label{git}
+  
+  \texttt{git\ add\ -\/-all} \texttt{git\ commit\ -m\ "Some\ message"}\\
+  \texttt{git\ push\ -u\ origin\ master}\\
+  \texttt{git\ clone}
+  
+  \section{Connect GitHub and
+  DockerHub}\label{connect-github-and-dockerhub}
+  
+  automated builds The Dockerfile is available to anyone with access to
+  your Docker Hub repository. Your repository is kept up-to-date with code
+  changes automatically.
+  
+  \section{Additional resources}\label{additional-resources}
+  
+  \begin{itemize}
+  \item
+    \emph{Markdown} Cheatsheet -
+    \url{https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet}
+  \item
+    \emph{R Markdown} Reference Guide -
+    \url{https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf}
+  \item
+    Introduction to \texttt{dplyr} -
+    \url{https://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html}
+  \item
+    \texttt{ggplot2} Documentation -
+    \url{http://docs.ggplot2.org/current/}
+  \end{itemize}
   
   \backmatter
   
@@ -2748,56 +2779,54 @@ starts here.
   \hypertarget{refs}{}
   \hypertarget{ref-angel2000}{}
   Angel, E. (2000). \emph{Interactive computer graphics : A top-down
-<<<<<<< HEAD
   approach with openGL}. Boston, MA: Addison Wesley Longman.
   
   \hypertarget{ref-angel2001}{}
   Angel, E. (2001a). \emph{Batch-file computer graphics : A bottom-up
   approach with quickTime}. Boston, MA: Wesley Addison Longman.
-=======
-  approach with opengl}. Boston, MA: Addison Wesley Longman.
-  
-  \hypertarget{ref-angel2001}{}
-  Angel, E. (2001a). \emph{Batch-file computer graphics : A bottom-up
-  approach with quicktime}. Boston, MA: Wesley Addison Longman.
->>>>>>> 86d01d8784a6d89912c3b8db86ea6753d5074760
   
   \hypertarget{ref-angel2002a}{}
   Angel, E. (2001b). \emph{Test second book by angel}. Boston, MA: Wesley
   Addison Longman.
   
-<<<<<<< HEAD
+  \hypertarget{ref-azizux5frastux5f2008}{}
+  Aziz, R. K., Bartels, D., Best, A. A., DeJongh, M., Disz, T., Edwards,
+  R. A., \ldots{} Zagnitko, O. (2008). The RAST Server: Rapid Annotations
+  using Subsystems Technology. \emph{BMC Genomics}, \emph{9}, 75.
+  \url{http://doi.org/10.1186/1471-2164-9-75}
+  
   \hypertarget{ref-barona-gomezux5fwhatux5f2012}{}
-=======
-  \hypertarget{ref-barona-gomez_what_2012}{}
->>>>>>> 86d01d8784a6d89912c3b8db86ea6753d5074760
   Barona-Gómez, F., Cruz-Morales, P., \& Noda-García, L. (2012). What can
   genome-scale metabolic network reconstructions do for prokaryotic
   systematics? \emph{Antonie van Leeuwenhoek}, \emph{101}(1), 35--43.
   \url{http://doi.org/10.1007/s10482-011-9655-1}
   
-<<<<<<< HEAD
-  \hypertarget{ref-charlesworthux5funtappedux5f2015}{}
-=======
-  \hypertarget{ref-battistuzzi_genomic_2004}{}
+  \hypertarget{ref-battistuzziux5fgenomicux5f2004}{}
   Battistuzzi, F. U., Feijao, A., \& Hedges, S. B. (2004). A genomic
   timescale of prokaryote evolution: Insights into the origin of
   methanogenesis, phototrophy, and the colonization of land. \emph{BMC
   Evolutionary Biology}, \emph{4}, 44.
   \url{http://doi.org/10.1186/1471-2148-4-44}
   
-  \hypertarget{ref-charlesworth_untapped_2015}{}
->>>>>>> 86d01d8784a6d89912c3b8db86ea6753d5074760
+  \hypertarget{ref-brettinux5frasttk:ux5f2015}{}
+  Brettin, T., Davis, J. J., Disz, T., Edwards, R. A., Gerdes, S., Olsen,
+  G. J., \ldots{} Xia, F. (2015). RASTtk: A modular and extensible
+  implementation of the RAST algorithm for building custom annotation
+  pipelines and annotating batches of genomes. \emph{Scientific Reports},
+  \emph{5}, 8365. \url{http://doi.org/10.1038/srep08365}
+  
+  \hypertarget{ref-charlesworthux5funtappedux5f2015}{}
   Charlesworth, J. C., \& Burns, B. P. (2015). Untapped Resources:
   Biotechnological Potential of Peptides and Secondary Metabolites in
   Archaea. \emph{Archaea}, \emph{2015}, e282035.
   \url{http://doi.org/10.1155/2015/282035}
   
-<<<<<<< HEAD
+  \hypertarget{ref-chesterismayux5fupdatedux5f2016}{}
+  chesterismay. (2016, September). Updated R Markdown thesis template.
+  \emph{Chester's R blog}. Retrieved from
+  \url{https://chesterismay.wordpress.com/2016/09/01/updated-r-markdown-thesis-template/}
+  
   \hypertarget{ref-cruz-moralesux5fphylogenomicux5f2016}{}
-=======
-  \hypertarget{ref-cruz-morales_phylogenomic_2016}{}
->>>>>>> 86d01d8784a6d89912c3b8db86ea6753d5074760
   Cruz-Morales, P., Kopp, J. F., Martínez-Guerrero, C., Yáñez-Guerra, L.
   A., Selem-Mojica, N., Ramos-Aboites, H., \ldots{} Barona-Gómez, F.
   (2016). Phylogenomic Analysis of Natural Products Biosynthetic Gene
@@ -2805,50 +2834,46 @@ starts here.
   Streptomycetes. \emph{Genome Biology and Evolution}, \emph{8}(6),
   1906--1916. \url{http://doi.org/10.1093/gbe/evw125}
   
-<<<<<<< HEAD
   \hypertarget{ref-grahamux5farchaealux5f2000}{}
-=======
-  \hypertarget{ref-graham_archaeal_2000}{}
->>>>>>> 86d01d8784a6d89912c3b8db86ea6753d5074760
   Graham, D. E., Overbeek, R., Olsen, G. J., \& Woese, C. R. (2000). An
   archaeal genomic signature. \emph{Proceedings of the National Academy of
   Sciences}, \emph{97}(7), 3304--3308.
   \url{http://doi.org/10.1073/pnas.97.7.3304}
   
-<<<<<<< HEAD
-  \hypertarget{ref-howlandux5fsurprisingux5f2000}{}
-  Howland, J. L. (2000). \emph{The surprising archaea: Discovering another
-  domain of life}. New York: Oxford University.
-  
-  \hypertarget{ref-medemaux5fcomputationalux5f2015}{}
-=======
-  \hypertarget{ref-halachev_calculating_2011}{}
+  \hypertarget{ref-halachevux5fcalculatingux5f2011}{}
   Halachev, M. R., Loman, N. J., \& Pallen, M. J. (2011). Calculating
   Orthologs in Bacteria and Archaea: A Divide and Conquer Approach.
   \emph{PLOS ONE}, \emph{6}(12), e28388.
   \url{http://doi.org/10.1371/journal.pone.0028388}
   
-  \hypertarget{ref-howland_surprising_2000}{}
+  \hypertarget{ref-howlandux5fsurprisingux5f2000}{}
   Howland, J. L. (2000). \emph{The surprising archaea: Discovering another
   domain of life}. New York: Oxford University.
   
-  \hypertarget{ref-koonin_turbulent_2015}{}
+  \hypertarget{ref-kooninux5fturbulentux5f2015}{}
   Koonin, E. V. (2015). The Turbulent Network Dynamics of Microbial
   Evolution and the Statistical Tree of Life. \emph{Journal of Molecular
   Evolution}, \emph{80}(5-6), 244--250.
   \url{http://doi.org/10.1007/s00239-015-9679-7}
   
-  \hypertarget{ref-larsson_genome_2011}{}
+  \hypertarget{ref-larssonux5fgenomeux5f2011}{}
   Larsson, J., Nylander, J. A., \& Bergman, B. (2011). Genome fluctuations
   in cyanobacteria reflect evolutionary, developmental and adaptive
   traits. \emph{BMC Evolutionary Biology}, \emph{11}, 187.
   \url{http://doi.org/10.1186/1471-2148-11-187}
   
-  \hypertarget{ref-medema_computational_2015}{}
->>>>>>> 86d01d8784a6d89912c3b8db86ea6753d5074760
+  \hypertarget{ref-medemaux5fcomputationalux5f2015}{}
   Medema, M. H., \& Fischbach, M. A. (2015). Computational approaches to
   natural product discovery. \emph{Nature Chemical Biology}, \emph{11}(9),
   639--648. \url{http://doi.org/10.1038/nchembio.1884}
+  
+  \hypertarget{ref-medemaux5fantismash:ux5f2011}{}
+  Medema, M. H., Blin, K., Cimermancic, P., Jager, V. de, Zakrzewski, P.,
+  Fischbach, M. A., \ldots{} Breitling, R. (2011). antiSMASH: Rapid
+  identification, annotation and analysis of secondary metabolite
+  biosynthesis gene clusters in bacterial and fungal genome sequences.
+  \emph{Nucleic Acids Research}, \emph{39}(Web Server issue), W339--W346.
+  \url{http://doi.org/10.1093/nar/gkr466}
   
   \hypertarget{ref-Molina1994}{}
   Molina, S. T., \& Borkovec, T. D. (1994). The Penn State worry
@@ -2856,15 +2881,13 @@ starts here.
   In G. C. L. Davey \& F. Tallis (Eds.), \emph{Worrying: Perspectives on
   theory, assessment and treatment} (pp. 265--283). New York: Wiley.
   
-<<<<<<< HEAD
-=======
-  \hypertarget{ref-moustafa_origin_2009}{}
+  \hypertarget{ref-moustafaux5foriginux5f2009}{}
   Moustafa, A., Loram, J. E., Hackett, J. D., Anderson, D. M., Plumley, F.
   G., \& Bhattacharya, D. (2009). Origin of Saxitoxin Biosynthetic Genes
   in Cyanobacteria. \emph{PLOS ONE}, \emph{4}(6), e5758.
   \url{http://doi.org/10.1371/journal.pone.0005758}
   
-  \hypertarget{ref-narechania_random_2012}{}
+  \hypertarget{ref-narechaniaux5frandomux5f2012}{}
   Narechania, A., Baker, R. H., Sit, R., Kolokotronis, S.-O., DeSalle, R.,
   \& Planet, P. J. (2012). Random Addition Concatenation Analysis: A Novel
   Approach to the Exploration of Phylogenomic Signal Reveals Strong
@@ -2872,38 +2895,40 @@ starts here.
   Cyanobacteria. \emph{Genome Biology and Evolution}, \emph{4}(1), 30--43.
   \url{http://doi.org/10.1093/gbe/evr121}
   
->>>>>>> 86d01d8784a6d89912c3b8db86ea6753d5074760
   \hypertarget{ref-noble2002}{}
   Noble, S. G. (2002). \emph{Turning images into simple line-art}
   (Undergraduate thesis). Reed College.
   
+  \hypertarget{ref-overbeekux5fseedux5f2014}{}
+  Overbeek, R., Olson, R., Pusch, G. D., Olsen, G. J., Davis, J. J., Disz,
+  T., \ldots{} Stevens, R. (2014). The SEED and the Rapid Annotation of
+  microbial genomes using Subsystems Technology (RAST). \emph{Nucleic
+  Acids Research}, \emph{42}(Database issue), D206--D214.
+  \url{http://doi.org/10.1093/nar/gkt1226}
+  
   \hypertarget{ref-reedweb2007}{}
-<<<<<<< HEAD
   Reed~College. (2007, March). LaTeX your document. Retrieved from
   \url{http://web.reed.edu/cis/help/LaTeX/index.html}
   
-  \hypertarget{ref-woeseux5fphylogeneticux5f1977}{}
-=======
-  Reed~College. (2007, march). LaTeX your document. Retrieved from
-  \url{http://web.reed.edu/cis/help/LaTeX/index.html}
+  \hypertarget{ref-weberux5fantismashux5f2015}{}
+  Weber, T., Blin, K., Duddela, S., Krug, D., Kim, H. U., Bruccoleri, R.,
+  \ldots{} Medema, M. H. (2015). antiSMASH 3.0---a comprehensive resource
+  for the genome mining of biosynthetic gene clusters. \emph{Nucleic Acids
+  Research}, \emph{43}(W1), W237--W243.
+  \url{http://doi.org/10.1093/nar/gkv437}
   
-  \hypertarget{ref-whitton_ecology_2012}{}
+  \hypertarget{ref-whittonux5fecologyux5f2012}{}
   Whitton, B. A. (2012). \emph{Ecology of Cyanobacteria II: Their
   Diversity in Space and Time}. Springer Science \& Business Media.
   
-  \hypertarget{ref-woese_phylogenetic_1977}{}
->>>>>>> 86d01d8784a6d89912c3b8db86ea6753d5074760
+  \hypertarget{ref-woeseux5fphylogeneticux5f1977}{}
   Woese, C. R., \& Fox, G. E. (1977). Phylogenetic structure of the
   prokaryotic domain: The primary kingdoms. \emph{Proceedings of the
   National Academy of Sciences of the United States of America},
   \emph{74}(11), 5088--5090. Retrieved from
   \url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC432104/}
   
-<<<<<<< HEAD
   \hypertarget{ref-woeseux5fareux5f1981}{}
-=======
-  \hypertarget{ref-woese_are_1981}{}
->>>>>>> 86d01d8784a6d89912c3b8db86ea6753d5074760
   Woese, C. R., \& Gupta, R. (1981). Are archaebacteria merely derived
   /``prokaryotes/''? \emph{Nature}, \emph{289}(5793), 95--96.
   \url{http://doi.org/10.1038/289095a0}
