@@ -173,53 +173,1037 @@ starts here.
   \mainmatter % here the regular arabic numbering starts
   \pagestyle{fancyplain} % turns page numbering back on
 
-  \chapter*{Introduction}\label{introduction}
-  \addcontentsline{toc}{chapter}{Introduction}
+  \chapter*{Background}\label{background}
+  \addcontentsline{toc}{chapter}{Background}
   
-  Welcome to the \emph{R Markdown} thesis template. This template is based
-  on (and in many places copied directly from) the \LaTeX~template, but
-  hopefully it will provide a nicer interface for those that have never
-  used \TeX~or \LaTeX~before. Using \emph{R Markdown} will also allow you
-  to easily keep track of your analyses in \textbf{R} chunks of code, with
-  the resulting plots and output included as well. The hope is this
-  \emph{R Markdown} template gets you in the habit of doing reproducible
-  research, which benefits you long-term as a researcher, but also will
-  greatly help anyone that is trying to reproduce or build onto your
-  results down the road.
+  Enzymes catalice chemical reactions transforming substrates into
+  producs. During 20th century enzymes were percived as highly specific
+  catalizer, nevertheless this percepcion changed with the discovery that
+  they can . This abilty to catalice several chemical functions its known
+  as enzyme promscuity. Escherichia coli contains at least 404 promiscuous
+  enzymes. La relevancia de la promiscuidad radica tanto en su papel como
+  mecanismo de evolucion de la funcion enzimatica, asi como en la
+  necesidad de su deteccion para la correccion de modelos de flujo
+  metabolico y la determinacion de efectos secundarios en drogas
+  farmacologicas. A pesar de su frecuencia e importancia aun se esta en el
+  proceso de entender las causas y las caracteristicas observables de la
+  promiscuidad enzimatica.
   
-  Hopefully, you won't have much of a learning period to go through and
-  you will reap the benefits of a nicely formatted thesis. The use of
-  \LaTeX~in combination with \emph{Markdown} is more consistent than the
-  output of a word processor, much less prone to corruption or crashing,
-  and the resulting file is smaller than a Word file. While you may have
-  never had problems using Word in the past, your thesis is likely going
-  to be about twice as large and complex as anything you've written
-  before, taxing Word's capabilities. After working with \emph{Markdown}
-  and \textbf{R} together for a few weeks, we are confident this will be
-  your reporting style of choice going forward.
+  Para estudiar la promiscuidad esta propuesta discierne entre dos
+  problemas. El primero es el de ubicar cuales familias tienen enzimas
+  promiscuas, al que llamaremos problema de las familias. El segundo es el
+  de los miembros: una vez identificada una familia promiscua, como
+  distinguir entre sus miembros enzimas con distinto nivel de
+  promiscuidad. Se ha intentado identificar enzimas promiscuas, a nivel de
+  secuencia, sin pasar por experimentacion mediante aprendizaje maquina.
+  Estos enfoques son incapaces de identificar una familia promiscua si no
+  se conoce previamente al menos un miembro promiscuo de ella. Por otra
+  parte, en el problema de los miembros se presentan dificultades cuando
+  la identidad de secuencia es alta, e.g.~en la familia PriA-HisA se sabe
+  que la enzima HisA de E. coli no es promiscua, pero PriA de Streptomyces
+  coelicolor si lo es.
   
-  \subsubsection{Why use it?}\label{why-use-it}
+  Para mejorar nuestro entendimiento del fenomeno, ademas de la
+  comparacion de secuencias es necesario integrar otros elementos de
+  analisis. Se debe notar que es practicamente imposible decir que una
+  enzima no es promiscua ya que para ello se deberian haber descartado
+  todos los posibles sustratos. Sin embargo, para el estudio de cambios en
+  promiscuidad se han detectado como elementos relevantes a los cambios en
+  vecindad genomica, los cambios en flexibilidad durante la dinamica
+  molecular, la perdida de genes centrales, y finalmente a las expansiones
+  genicas dentro de un grupo taxonomico. Estos elementos tienen en comun
+  que reflejan un cambio en alguna propiedad genomica o biofisica, de lo
+  que se deriva que el buscar cambios en la promiscuidad de una enzima
+  resulta mas factible que la busqueda intrinseca de promiscuidad, a lo
+  que aspiran los metodos basados en comparaciones de secuencias.
   
-  \emph{R Markdown} creates a simple and straightforward way to interface
-  with the beauty of \LaTeX. Packages have been written in \textbf{R} to
-  work directly with \LaTeX~to produce nicely formatting tables and
-  paragraphs. In addition to creating a user friendly interface to \LaTeX,
-  \emph{R Markdown} also allows you to read in your data, to analyze it
-  and to visualize it using \textbf{R} functions, and also to provide the
-  documentation and commentary on the results of your project. Further, it
-  allows for \textbf{R} results to be passed inline to the commentary of
-  your results. You'll see more on this later.
+  Evomining es una plataforma bioinformatica pensada para la busqueda de
+  expansiones de familias genicas de metabolismo central. Desarrollarla en
+  combinacion con algoritmos de busqueda de cambios en la vecindad
+  genomica la haran una plataforma ideal para abordar el problema de las
+  familias, proporcionando una solucion a la dificultad de no tener
+  conocimiento previo de un miembro promiscuo en la familia investigada.
+  Respecto al problema de los miembros, se propone explorar variaciones en
+  vecindad genomica, flujo genico y dinamica molecular, como candidatos a
+  reflejar la variacion en promiscuidad. Finalmente, he detectado que a
+  pesar de que pruebas in vivo son mas sensibles a niveles bajos de
+  promiscuidad que mediciones in vitro, esta ultima suele ser la unica
+  estudiada. In vivo, la metabolomica aplicada en genes biosinteticos de
+  productos naturales ha ayudado en la identificacion de sustratos, por lo
+  que esta tecnica podria ayudar a revelar el nuevo sustrato de una enzima
+  en la que se sospecha ganancia de promiscuidad. En resumen, el objetivo
+  de mi trabajo sera abordar los dos problemas de promiscuidad
+  considerando la diferenciacion in vitro e in vivo tomando como modelo
+  biologico el phylum Actinobacteria, un grupo de bacterias reconocido por
+  su diversidad metabolica donde se ha probado la existencia de
+  promiscuidad enzimatica.
   
-  \subsubsection{Who should use it?}\label{who-should-use-it}
+  \section{1 Introduction}\label{introduction}
   
-  Anyone who needs to use data analysis, math, tables, a lot of figures,
-  complex cross-references, or who just cares about the final appearance
-  of their document should use \emph{R Markdown}. Of particular use should
-  be anyone in the sciences, but the user-friendly nature of
-  \emph{Markdown} and its ability to keep track of and easily include
-  figures, automatically generate a table of contents, index, references,
-  table of figures, etc. should make it of great benefit to nearly anyone
-  writing a thesis project.
+  Para estudiar la promiscuidad es necesario contar con una definicion,
+  algunos autores emplean el termino promiscuidad para describir
+  actividades enzimaticas distintas a la funcion principal (Khersonsky \&
+  Tawfik, 2010) otros lo ven como una actividad secundaria fortuita (S. D.
+  Copley, 2003) que pudo aparecer de forma accidental o inducida
+  artificialmente (Hult \& Berglund, 2007). Otros mas, cuando una enzima
+  puede operar sobre un amplio rango de sustratos, prefieren llamarla
+  multiespecifica (Khersonsky \& Tawfik, 2010). A la accion de realizar
+  distintas funciones cataliticas, ya sea al catalizar varias reacciones
+  quimicas o bien una misma reaccion en sustratos diferentes se le conoce
+  como promiscuidad enzimatica (O'Brien \& Herschlag, 1999). Existen
+  varios tipos de promiscuidad enzimatica.
+  
+  Por sustrato cuando la reaccion es la misma pero se lleva a cabo en
+  distintos sustratos ejemplo la familia PriA (Barona Gómez \& Hodgson,
+  2003) y la familia de betalactamasas (Risso, Gavira, Gaucher, \& Sanchez
+  Ruiz, 2014)
+  
+  Catalitica cuando la enzima utiliza diferentes mecanismos de reaccion
+  y/o residuos cataliticos, e.g.~la quimotripsina puede catalizar
+  reacciones de amidasa y fosfotriesterasa en un mismo sitio activo.
+  (O'Brien \& Herschlag, 1999) Por condiciones del entorno, cuando la
+  enzima cambia su conformacion dependiendo de las condiciones quimicas y
+  fisicas presentes como pH, temperatura, solventes organicos y salinidad
+  e.g.~algunas lipasas pueden actuar como sintetizadoras de esteres en
+  lugar de hidrolasas en presencia de solventes organicos (Hult \&
+  Berglund, 2007,Kumari, Shah, \& Gupta (2007)).
+  
+  Este trabajo se enfocara a la promiscuidad por sustrato, entendiendo asi
+  que la enzima es capaz de catalizar la misma reaccion quimica en al
+  menos dos sustratos. La promiscuidad por sustrato es importante en
+  terminos evolutivos, por ejemplo la enzyme commission number (EC) separa
+  las enzimas en clases, a cada enzima se asignan 4 digitos, los tres
+  primeros corresponden a la reaccion y el ultimo al sustrato; el mayor
+  numero de sustratos (4306 clases) que de reacciones quimicas (234 en el
+  tercer nivel) sugiere que la mayor variacion evolutiva se da a nivel de
+  sustrato y no de reaccion (Li et al., 2004). Otra evidencia de la
+  importancia de la multiespecificidad por sustrato esta en el
+  descubrimiento de las superfamilias, enzimas mecanistica y
+  estructuralmente relacionadas que divergen en su afinidad por sustrato
+  (Glasner, Gerlt, \& Babbitt, 2006, Baier, Copp, \& Tokuriki (2016))
+  
+  Si bien existen familias de enzimas con alta especificidad por sustrato,
+  otras familias como el citocromo P450 (Bloom, Romero, Lu, \& Arnold,
+  2007, Nath \& Atkins (2008)) y las beta lactamasas (T. Zou, Risso,
+  Gavira, Sanchez-Ruiz, \& Ozkan, 2015) son promiscuas. Es posible que la
+  vision previa de alta especificidad se deba a que las primeras rutas
+  metabolicas estudiadas pertenecen al metabolismo central, donde la
+  especificidad puede haber sido favorecida por presiones de seleccion
+  (Firn \& Jones, 2009). Esta vision ha cambiado debido al conocimiento de
+  mas enzimas con multifuncionalidad (Jia, Cheong, \& Zhang, 2013), sin
+  afectar la eficiencia catalitica por la funcion primaria (Aharoni et
+  al., 2005). En 1976 el interes por la promiscuidad comenzo por su
+  influencia en la evolucion de la funcion enzimatica(Jensen, 1976,
+  Pandya, Farelli, Dunaway-Mariano, \& Allen (2014)), las aproximaciones
+  variaron desde la aparicion de la sintesis funcional (Dean \& Thornton,
+  2007), cuando la disponibilidad de genomas permitio la combinacion de
+  analisis filogeneticos con tecnicas de biologia molecular, bioquimica y
+  biofisica (Fig 1). En 2003 la biofisica de las proteinas entra en escena
+  al postularse que la diversidad conformacional durante la dinamica
+  molecular debe incidir en la aceptacion de distintos sustratos.
+  Recientemente se ha investigado su papel en efectos secundarios en
+  drogas farmacologicas (Nobeli, Favia, \& Thornton, 2009,Hopkins
+  (2009),Nath, Zientek, Burke, Jiang, \& Atkins (2010),Eichborn et al.
+  (2011), W. Zhang, Dourado, Fernandes, Ramos, \& Mannervik (2012), T. Zou
+  et al. (2015)). Entre 2005 y 2010 se avanza del estudio de una sola
+  familia enzimatica hacia el interes por propiedades globales, por
+  ejemplo dado un genoma se investiga la distribucion de familias
+  promiscuas en subsistemas metabolicos. En estos años, surge el
+  desarrollo de indices que reflejen las caracteristicas bioquimicas de
+  enzimas promiscuas. En 2010, comienzan los intentos por desarrollar un
+  metodo computacional de prediccion de promiscuidad. Desde 2012 a la
+  fecha, a la par que las aproximaciones bioinformaticas se multiplican,
+  se desarrollan investigaciones de aspectos biofisicos, bioquimicos y
+  evolutivos de enzimas promiscuas reafirmando que todos estos aspectos
+  estan relacionados al fenomeno. En las siguientes secciones se
+  describiran trabajos importantes sobre la relacion que guarda la
+  promiscuidad con expansiones genomicas y flexibilidad molecular. Ademas
+  se hablara sobre analisis bioquimicos y metabolicos para la descripcion
+  del fenomeno.
+  
+  \TeX~or \LaTeX~ \#\#\# 1.1. Funcion biologica de la promiscuidad
+  enzimatica\\
+  ¿Por que existe la promiscuidad enzimatica? Se tiene evidencia de dos
+  papeles biologicos: el primero proporcionar robustez a la red metabolica
+  de un organismo mediante redundancia de reacciones de otras enzimas; el
+  segundo permitir plasticidad evolutiva, es decir materia prima para la
+  adaptacion a variaciones ambientales (Aharoni et al., 2005,Sanchez-Ruiz
+  (2012), Martínez-Núñez, Rodríguez-Vázquez, \& Pérez-Rueda (2015))
+  mediante la adquisicion de nuevas funciones quimicas. Respecto a la
+  robustez, se probo que sobreexpresar enzimas promiscuas puede rescatar
+  perdidas genicas (Patrick, Quandt, Swartzlander, \& Matsumura, 2007). De
+  104 knockout sencillos de genes esenciales para E. coli K-12, 20\% de
+  las auxotrofias pudieron ser suprimidas por la sobreexpresion de
+  plasmidos que contenian enzimas promiscuas. Otro ejemplo que aporta a la
+  robustez es PriA, enzima de la ruta de histidina que realiza en la ruta
+  del triptofano la reaccion E.C. 5.3.1.24 (Barona Gómez \& Hodgson,
+  2003). En cuanto a la plasticidad se propone que para que la
+  promiscuidad pueda dar origen a la aparicion de nuevas funciones la
+  actividad promiscua debe proveer una ventaja fisiologica inmediata para
+  poder ser seleccionada positivamente, ademas una vez que una funcion
+  promiscua se vuelva relevante se debe poder mejorar mediante pocas
+  mutaciones derivando en el intercambio entre la actividad promiscua y la
+  principal(Khersonsky \& Tawfik, 2010).
+  
+  Aun cuando el producto de la promiscuidad genera metabolitos que no se
+  integran al metabolismo central de la celula, su efecto es positivo ya
+  que estos metabolitos podrian colaborar a la adaptacion al entorno
+  participando por ejemplo en una relacion de simbiosis o de competencia
+  con otros organismos. Este tipo de metabolitos, por lo general, no son
+  dañinos (Notebaart et al., 2014, Linster, Van Schaftingen, \& Hanson
+  (2013), Khanal, Yu McLoughlin, Kershner, \& Copley (2015)) y pueden
+  servir como bloques de construccion para vias metabolicas nuevas (Ma et
+  al., 2013, Adams et al. (2014), Soskine \& Tawfik (2010)). La respuesta
+  inmediata de adaptacion de un organismo podria ser una consecuencia de
+  su grado de promiscuidad.
+  
+  \subsection{1.2. Relacion del pangenoma con la promiscuidad
+  enzimatica}\label{relacion-del-pangenoma-con-la-promiscuidad-enzimatica}
+  
+  El core genome de un grupo taxonomico es el conjunto de secuencias
+  codificantes presentes en todos los organismos del grupo. En el Dominio
+  Bacteria el core esta estimado entre 200 y 300 secuencias (Halachev,
+  Loman, \& Pallen, 2011). Dada su conservacion el core genome puede
+  utilizarse para trazar mejores relaciones filogeneticas que las
+  obtenidas con el uso exclusivo de marcadores como la subunidad 16s del
+  RNA ribosomal o el gen rpoB. El pangenoma es el conjunto complemento del
+  core genome, es decir todas aquellas secuencias que estan ausentes de
+  uno o mas organismos del grupo y por lo tanto no son necesarias para
+  todos, sino solo posiblemente para el organismo que las posee. Como en
+  el pangenoma la presion de seleccion esta relajada respecto al
+  core-genome (Firn \& Jones, 2009) es el conjunto donde la plasticidad
+  genomica tiene facilidades para desarrollarse.
+  
+  Esta idea puede restringirse a subsistemas metabolicos para identificar
+  genes cuyas enzimas estan en proceso de cambio de funcion quimica, por
+  ejemplo, en este trabajo se encontro que el gen trpF esta presente en
+  solo 49 de 290 genomas analizados del genero Streptomyces por lo que se
+  encuentra en el pangenoma de triptofano de este genero taxonomico,
+  posiblemente adquiriendo una nueva funcion (Ma et al., 2013). Para
+  evitar problemas tecnicos del calculo del pangenoma existen otros
+  modelos de medicion de variabilidad del genomica entre especies
+  bacterianas (Kislyuk, Haegeman, Bergman, \& Weitz, 2011).
+  
+  \subsection{1.3 Expansion y contextos genomicos como herramienta de
+  anotacion
+  funcional}\label{expansion-y-contextos-genomicos-como-herramienta-de-anotacion-funcional}
+  
+  La diversidad enzimatica existente es el resultado de un proceso de
+  expansion, mutacion y seleccion que se ha desarrollado durante el
+  transcurso de la historia evolutiva (Khersonsky \& Tawfik, 2010, Pearson
+  (2012)). Existe evidencia de que cierto grado de promiscuidad o
+  divergencia funcional precede a la duplicacion genica (Hughes, 1994).
+  Por este motivo detectar expansiones ya sea duplicaciones o
+  transferencias horizontales (Treangen \& Rocha, 2011), puede ser un buen
+  punto de partida para determinar divergencia funcional y promiscuidad.
+  No todas las expansiones denotan cambio de funcion enzimatica, algunas
+  pueden ser meros accidentes, sin embargo dado que la funcion de una
+  enzima suele estar relacionada con sus vecinos (R. Overbeek, Fonstein,
+  D'Souza, Pusch, \& Maltsev, 1999,S. Zhao et al. (2014),S. Zhao et al.
+  (2013), Verdel-Aranda, López-Cortina, Hodgson, \& Barona-Gómez (2015)),
+  una expansion en una vecindad genomica diferente de la tradicional sera
+  un referente de adquisicion de una nueva funcion y entonces un indicador
+  de existencia previa de promiscuidad.
+  
+  La funcion de una enzima es un concepto jerarquico, dependiente de la
+  filogenia de un organismo (Szklarczyk et al., 2015,Szklarczyk et al.
+  (2015)). Para sistematizar el estudio de contextos y vecindades
+  genomicas se desarrollo Search Tool for the Retrieval of Interacting
+  Genes/Proteins STRING (Snel, Lehmann, Bork, \& Huynen, 2000), que cuenta
+  con una anotacion de ortologia jerarquica y consistente, realizada en
+  2000 organismos en cuyo marco interacciones de proteinas con
+  implicaciones funcionales son predichas tanto de novo por informacion
+  genomica de co-ocurrencia como por mineria de datos en articulos
+  publicados. STRING es una base de datos, y como tal no permite agregar
+  nuevos genomas para su analisis. Sus 2000 organismos incluyen especies
+  tanto bacterianas como eucariotas. Al existir tanta diversidad, los
+  genomas disponibles para un genero o clase especificos son escasos,
+  p.~g. de los mas de 300 genomas disponibles de Streptomyces solo 24
+  estan incluidos.
+  
+  Para resolver la baja cobertura de STRING hacia ciertos grupos
+  taxonomicos se pueden desarrollar scripts de vecindad genomica
+  utilizando RAST (Rapid Annotation using Subsystem Technology); un
+  servicio interactivo de anotacion automatica de genomas de bacterias y
+  arqueas (Aziz et al., 2008,R. Overbeek et al. (2014)) donde la funcion
+  de cada gen se asigna de acuerdo a conocimiento previo de subsecuencias
+  de organismos cercanos filogeneticamente, cuando es posible se incluye
+  en un subsistema metabolico. Estamos en una era de explosion de datos
+  genomicos, proximamente se espera contar con millones de genomas
+  bacterianos incluso provenientes de bacterias no cultivables, por ello
+  los algoritmos deben ser constantemente optimizados a los nuevos
+  volumenes de datos (Medema \& Fischbach, 2015). Ante esta expectativa
+  seria muy util desarrollar algoritmos de analisis genomico que sean de
+  codigo libre o al menos interactivos para que cada laboratorio pueda
+  personalizarlos para sus propios genomas.
+  
+  Finalmente, no solo la vecindad genomica inmediata puede ser utilizada
+  como distintivo en la busqueda de promiscuidad, diferencias en el
+  contexto genomico en genes relacionados con una enzima promiscua, sin
+  importar su ubicacion dentro del genoma tambien pueden ser relevantes
+  para la perdida o ganancia de funcion quimica (Noda-García et al.,
+  2013), (Juarez Vazquez et al 2015).
+  
+  \subsection{1. 4. Modelos bioinformaticos de
+  promiscuidad}\label{modelos-bioinformaticos-de-promiscuidad}
+  
+  Con el fin de reducir la inversion en el proceso de experimentacion, se
+  han implementado en los ultimos años algoritmos computacionales para
+  predecir promiscuidad enzimatica (Carbonell \& Faulon, 2010, Cheng et
+  al. (2012), Nagao, Nagano, \& Mizuguchi (2014), Noda-García et al.
+  (2015),Garcia-Seisdedos, Ibarra-Molero, \& Sanchez-Ruiz (2012)). Estos
+  procedimientos cuentan con un conjunto de aprendizaje, unos descriptores
+  del conjunto, una fase de ajuste de parametros y finalmente una
+  prediccion. En 2010, Carbonell propone un algoritmo de soporte vectorial
+  basado en subsecuencias de distinto tamaño que llama huellas
+  moleculares. En este trabajo aplicado sobre 500,000 proteinas reportadas
+  en la enciclopedia de Kyoto de genes y genomas (KEGG) se reporta 85\% de
+  exito en deteccion de enzimas promiscuas anotadas en KEGG. En 2012,
+  Cheng compara los metodos de random forest y soporte vectorial en 6799
+  proteinas provenientes de la base de datos Universal Protein Resource
+  (UniProt). Las enzimas son descritas con subsecuencias de aminoacidos
+  incorporando ademas caracteristicas biofisicas como polaridad. Se
+  utiliza como grupo de control a familias de enzimas donde nunca se ha
+  reportado una enzima promiscua.
+  
+  Un aspecto no considerado en estos metodos es que hay familias de
+  enzimas con alta identidad de secuencia entre sus miembros, con cambios
+  bruscos en promiscuidad, debidos por ejemplo a la dinamica genomica
+  (Noda-García et al., 2013,Verdel-Aranda et al. (2015)), lo que dificulta
+  que considerar solo la secuencia conlleve a buenos predictores de
+  promiscuidad. Cuando se obtiene una prediccion positiva utilizando los
+  modelos existentes, lo que significa es que dada esa secuencia, en su
+  familia se conoce previamente un elemento promiscuo y que ademas sus
+  subsecuencias de cierto tamaño son suficientemente similares. Estos
+  enfoques no pueden predecir de novo, en familias donde la promiscuidad
+  no ha sido previamente detectada experimentalmente, pues no consideran
+  aspectos evolutivos ni mecanisticos de las enzimas.
+  
+  Otra limitante a los enfoques descritos es que mezclan en su conjunto de
+  entrenamiento fenomenos distintos de promiscuidad. Cheng p.~g. incluye
+  enzimas moonlight que si bien poseen funciones adicionales a la
+  catalizacion, son distantes a las enzimas promiscuas (S. D. Copley,
+  2003). Ademas en ambos casos mezclan en el mismo conjunto enzimas
+  bacterianas y eucariotas, con lo que si existia una huella basada en
+  secuencia entonces esta puede diluirse por la gran distancia taxonomica
+  entre estos grupos (Tabla 1).
+  
+  \subsection{1.5. Promiscuidad in vitro y promiscuidad in
+  vivo}\label{promiscuidad-in-vitro-y-promiscuidad-in-vivo}
+  
+  La ganancia de promiscuidad no solo puede entenderse como la capacidad
+  de convertir mas sustratos (Carbonell \& Faulon, 2010), sino tambien
+  como la mejora de la capacidad catalitica respecto a ellos. El I-index
+  (Nath \& Atkins, 2008), esta definido como un rango de valores entre 0 y
+  1 que tiende a 1 entre mas parecida sea la actividad de la enzima sobre
+  distintos sustratos, la capacidad catalitica es medida en terminos del
+  cociente de Michaelis - Menten \(\frac{K_cat}{K_m}\). El indice ha sido
+  utilizado para predecir la afinidad por sustrato del citocromo P450
+  (Nath et al 2010). Una limitante del indice I es que se deben conocer
+  los sustratos a los que la enzima es afin; sin embargo se puede
+  sospechar que una enzima ha ganado promiscuidad aun sin conocer sus
+  potenciales sustratos. Otro punto a señalar es que las variables
+  Kcat,Kmson mediciones realizadas in vitro y no se consideran todos los
+  sustratos presentes in vivo. Para solventar esta dificultad e investigar
+  variaciones de sustratos nativos se pueden buscar productos similares a
+  los ya conocidos por medio de analisis metabolicos (Zelbuch et al 2015,
+  Nesvizhki et al 2007) como los empleados en la deteccion de rutas no
+  conservadas en la biosintesis de productos naturales (Medema \&
+  Fischbach 2015). En particular para este fin se ha utilizado
+  espectrometria de masas MS/MS, (Nesvizhski et al 2007, Campbell 2012)
+  combinada con molecular networking para identificar productos similares
+  (Yang et al 2013, Köcher \& Superti-Furga 2007).
+  
+  \subsection{1.6. El papel de la dinamica molecular en la
+  promiscuidad}\label{el-papel-de-la-dinamica-molecular-en-la-promiscuidad}
+  
+  La estructura tridimensional de una proteina es obtenida mediante previa
+  purificacion y cristalizacion. Aunque mucho se ha hablado de la relacion
+  estructura funcion, al cristalizar se obtienen estados conformacionales
+  homogeneos, que bien pueden no ser la unica conformacion que adopta la
+  proteina en solucion. (James \& Tawfik 2003). En particular en el
+  problema de promiscuidad, se ha observado que la variacion funcional no
+  queda obviamente reflejada en la variacion estructural, lo que sugiere
+  un rol significativo para la dinamica molecular (Parisi et al 2015,
+  Noda-Garcia et al 2013, Zou et al 2015). Se postula que un aspecto de la
+  dinamica molecular relevante para la diversificacion de especificidad
+  por sustrato es el numero de conformeros (Zea et al 2013). Por ejemplo,
+  en la actinobacteria Corynebacterium diphtheriae parece que el contexto
+  genomico correlaciona con perdida de promiscuidad de PriA ya que al
+  poseer el genoma una copia de trpF, la enzima perdio esta funcion
+  quimica conservando solo la funcion EC 5.3.1.16 correspondiente a la
+  ruta de histidina. Esta sub-funcionalizacion se refleja en la perdida de
+  estados conformacionales cambiando desde 1 estado en C. diphtheriae
+  hasta 4 presentes en la dinamica de PriA de M. tuberculosis (Noda-Garcia
+  et al 2013).
+  
+  Las regiones rigidas de una enzima proporcionan orientacion adecuada con
+  respecto a los grupos cataliticos, mientras que las regiones flexibles
+  permiten al sitio activo adaptarse a los sustratos con diferentes formas
+  y tamaños (Copley 2003). Esta consideracion sugiere que la flexibilidad
+  del sitio activo es otra caracteristica de la dinamica molecular a
+  considerar para obtener informacion de la capacidad de ligacion de una
+  enzima a distintos sustratos (Gatti \& Hollender 2013). Recientemente el
+  indice de flexibilidad dinamica (dfi) se utilizo como una medida
+  cuantitativa basado en la respuesta a perturbaciones de aminoacidos
+  (PRS). Este indice se incremento en regiones cercanas al sitio activo de
+  beta lactamasas promiscuas respecto al correspondiente dfi de
+  \(\noindent\beta\) -lactamasas especialistas existentes (Zou et l 2015).
+  
+  \subsection{1.7 Modelo biologico diversidad de
+  Actinobacteria}\label{modelo-biologico-diversidad-de-actinobacteria}
+  
+  Al escoger un conjunto acotado para investigar familias de enzimas
+  promiscuas se debe recordar que la funcionalidad es jerarquica por lo
+  que para mejorar la anotacion, es deseable reflejar el proceso evolutivo
+  y restringirse a un grupo de organismos taxonomicamente relacionados
+  (Cruz-Morales in prep 2015, Evomining). Actinobacteria es un phylum que
+  posee promiscuidad tanto en el metabolismo periferico como en el core
+  metabolico. Entre datos publicos (NCBI) y privados estan disponibles
+  alrededor de 1200 genomas no redundantes de especies de Actinobacteria.
+  Como punto de partida, se han estudiado las relaciones filogeneticas y
+  grupos de ortologia (Li et al 2003, Waterhouse et al 2013), en
+  particular en Actinobacteria para identificar relaciones entre las
+  familias del phylum, se obtuvieron arboles multilocus de entre 100 y 157
+  genomas (Gao \& Gupta 2012, Sen et al 2014). Estos estudios sugieren
+  como separar los genomas disponibles para hacer el calculo de grupos de
+  ortologia. Finalmente, se han realizado estudios de plasticidad genomica
+  en Streptomyces considerando 5 y 17 organismos de los 300 genomas
+  disponibles en la actualidad (Kim et al 2015, Zhou et al 2011) donde
+  reportan 2,018 familias en el core genome y 32,574 en el pangenoma.
+  
+  \subsection{1.8 Modelo metabolico biosintesis de
+  aminoacidos.}\label{modelo-metabolico-biosintesis-de-aminoacidos.}
+  
+  Al hacer el calculo vemos que Streptomyces, un genero del phylum
+  Actinobacteria cuenta en su genoma con un promedio de 8316 secuencias
+  codificantes segun la especie. Gran parte de estas secuencias pueden ser
+  agrupadas en subsistemas metabolicos como metabolismo de carbohidratos o
+  de lipidos; de estos subsistemas uno de los mas amplios es el
+  metabolismo de aminoacidos con entre 429 y 910 secuencias segun el
+  organismo. La sintesis de aminoacidos es un subsistema presente en todas
+  las especies pero con suficientes variaciones que permiten hacer
+  observaciones evolutivas. En un gran numero de Actinobacterias las rutas
+  de histidina y triptofano de 7 y 11 pasos respectivamente convergen en
+  una enzima bifuncional llamada PriA, que realiza tanto la funcion de
+  HisA como la de TrpF (Barona-Gomez 2003). La cantidad de familias en el
+  subsistema de metabolismo de aminoacidos, su variabilidad, su
+  conservacion entre distintos grupos taxonomicos y la existencia de estos
+  ejemplos en Actinobacteria lo posicionan como un buen punto de partida
+  para la busqueda de promiscuidad tanto de familias promiscuas como de
+  miembros promiscuos de las mismas.
+  
+  \section{2. Antecedentes}\label{antecedentes}
+  
+  En las cuatro decadas de estudio de la promiscuidad enzimatica, hemos
+  aprendido que es un fenomeno distribuido en distintos subsistemas
+  metabolicos (Nam et al 2012, Wayne et al 2007 , Copley 2015) y que su
+  existencia puede deberse tanto al desarrollo de nuevas funciones para
+  fines adaptativos (Jensen 1976, O'Brien \& Herschlag 1999, Firn \& Jones
+  2009, Copley 2015), como al rescate de una funcion perdida (Wayne et al
+  2007, Barona-Gomez 2003). Por ello la dinamica de perdida y ganancia de
+  genes asociada al contexto genomico en bacterias se relaciona con cambio
+  en la funcion enzimatica (Zhao et al 2013, Zhao et al 2014, Copley 2015,
+  Sakai et al 2006). Precisando, respecto a la ganancia de genes, se
+  postula que la bifuncionalidad precede la duplicacion (Hughes 1994,
+  O'Brien \& Herschlag 1999). Lo que implica que dada una duplicacion muy
+  posiblemente previamente la promiscuidad estuvo presente (Gerlt \&
+  Babbit 2001, Huang et al 2012, Noda-Garcia et al 2013, Risso 2014,
+  Noda-Garcia et al 2015).
+  
+  Se han desarrollado tecnicas bioquimicas y metabolicas de medicion (Nath
+  \& Atkins 2008), asi como algoritmos computacionales de prediccion de
+  promiscuidad (Carbonell \& Faulon 2010, Cheng et al 2012, Noda-Garcia
+  2015). Un aspecto a mejorar dentro del modelado es la restriccion del
+  conjunto de estudio a un grupo taxonomico tan reducido que exista
+  congruencia en las familias de ortologia y a la vez tan amplio que
+  permita observar efectos evolutivos; el phylum Actinobacteria ha probado
+  tener ejemplos de promiscuidad. Si bien la secuencia no ha sido
+  suficiente para la correcta prediccion de promiscuidad (Verdel-Aranda et
+  al 2015, Copley 2015), es posible que dentro de las tecnicas
+  computacionales la flexibilidad durante la dinamica molecular este
+  correlacionada con la promiscuidad de los miembros de una familia (James
+  \& Tawfik 2003, Zea et al 2013, Noda-Garcia 2013, Zou et al 2015).
+  
+  \subsection{2.1 Modelo biologico}\label{modelo-biologico}
+  
+  De los mas de mil genomas actualmente disponibles de Actinobacterias, se
+  seleccionaron 888 (correspondientes a 49 familias), que no estan
+  excesivamente fragmentados; es decir con un estimado de al menos 5 genes
+  por contig (Tabla 2). Estos genomas fueron divididos en tres grupos
+  (\url{http://pubseed.theseed.org/wc.cgi?request=show_otus\&base=/homes/nselem/Data/CS}),
+  uno de ellos correspondiente a Streptomycetaceae, la familia con la
+  mayor cantidad de genomas disponibles; los otros dos grupos siguieron la
+  taxonomia propuesta por Gao \& Gupta en 2012. En el grupo de 290 genomas
+  de Streptomycetaceae 2,126,832 ORFS fueron clasificados en 288,390
+  familias; de las 919,292 ORF del grupo I de Actinobacteria resultaron
+  269,406 familias. Las relaciones taxonomicas fueron corroboradas con
+  algoritmos propios basados en best bidirectional hits (BBH).
+  
+  \subsection{2.2 Subsistemas metabolicos}\label{subsistemas-metabolicos}
+  
+  Los operones his y trp de histidina (Fondi et al 2009) y triptofano
+  (Merino et al 2008) respectivamente, participantes del metabolismo de
+  aminoacidos estan ampliamente distribuidos en los organismos
+  bacterianos. En Actinobacteria la familia promiscua PriA participa en
+  ambas rutas biosinteticas, para su estudio se han generado datos
+  bioquimicos, genomicos y estructurales(Tabla 3). En bacterias gram
+  negativas estan presentes los operones his y trp y en lugar de PriA su
+  familia homologa HisA. PriA comprende un conjunto de subfamilias en
+  Actinobacteria. En Streptomyces, el gen trpF se desplaza de la vecindad
+  genomica de trp, con lo que el homologo de hisA gana promiscuidad aunque
+  con baja actividad de TrpF, a esta subfamilia se le llama PriB
+  (Verduzco-Castro et al 2015 in press). En otras Actinobacterias trpF se
+  pierde totalmente y la familia homologa de HisA, se vuelve promiscua
+  (Barona-Gomez 2003) realizando tanto la funcion quimica correspondiente
+  a HisA como la de TrpF. Finalmente en la familia subHisA se pierde la
+  funcion TrpF debido posiblemente a la ganancia del operon trp completo
+  (Noda-Garcia et al 2013) y en la familia subtrpF se conserva solo a la
+  funcion TrpF debido a la perdida del operon his (Juarez vazquez et al
+  2015 in prep). Existen al menos 43 familias de Actinobacteria sin
+  explorar respecto a la funcionalidad de PriA.
+  
+  \subsection{2.3 Contexto y vecindades
+  genomicas}\label{contexto-y-vecindades-genomicas}
+  
+  En 2012 fueron analizados 102 genomas de 29 familias de Actinobacteria
+  (Noda-Garcia 2012). sugiriendo que al menos en Corynebacteria el
+  contexto y la vecindad genomica incidian en la sub-funcionalizacion de
+  PriA en subHisA (Noda-Garcia et al 2013). Respecto a IlvC, otra familia
+  involucrada en la sintesis de aminoacidos fue estudiada y caracterizada
+  bioquimicamente en 1 Corynebacterium y 8 Streptomyces (Verdel-Aranda et
+  al 2014). Para ampliar estos resultados, utilizando la anotacion de RAST
+  y una generalizacion de la definicion de vecindad de STRING, se diseño
+  un algoritmo para identificar vecindades similares asi como uno de
+  visualizacion de contexto, ambos disponibles como software libre en
+  \url{https://github.com/nselem/perlas}.
+  
+  El algoritmo de clasificacion de vecindades permite agruparlas en
+  clusters y calificar estos clusters segun su conservacion dado un grupo
+  de bacterias. La definicion de vecindad y similitud de vecindad esta
+  descrita posteriormente en los metodos. El algoritmo fue aplicado a la
+  familia IlvC en 290 Streptomyces resultando 9 clusters (Datos:
+  \url{http://148.247.230.43/nselem/CONTEXTS/REL_St275/ilvC/Contextos.php})
+  entre los mas poblados el primero cuenta con 279 elementos, otro con 9
+  elemento y dos mas con 7 miembros (Fig 3), resultados experimentals son
+  congruentes con que existe divergencia funcional entre miembros de
+  clusters distintos (Verdel-Aranda 2015).
+  
+  \subsection{2.4 Metodos bioinformaticos}\label{metodos-bioinformaticos}
+  
+  Al evaluar PROMISE (Carbonell \& Faulon 2010) en un set de datos de la
+  familia HisA/PriA (Noda-Garcia et al 2015) obtuve que su mejor desempeño
+  es con huella molecular de tamaño 6, donde clasifica correctamente casi
+  todas las no promiscuas, (HisA) pero no sucede lo mismo con la familia
+  PriA donde tiene exito en 16 de 45 casos. Al aplicar el mismo tamaño de
+  huella a 9 miembros promiscuos de la familia IlvC no consigue predecir
+  correctamente ninguno de ellos. Por lo menos para estas familias el
+  conjunto de entrenamiento o los descriptores no son suficientes para la
+  anotacion de promiscuidad.
+  
+  \subsection{2.5 Evomining}\label{evomining}
+  
+  Evomining es una plataforma bioinformatica pensada para la
+  identificacion de productos naturales que tiene entre sus exitos la
+  identificacion de la biosintesis de arsenolipidos (Cruz-Morales 2015 in
+  press). La busqueda de productos naturales cuenta entre sus premisas que
+  estos se producen en vecindades genomicas llamadas clusters y que ademas
+  clusters cercanos (ya sea en contenido genico o en la secuencia de sus
+  componentes), exploran variaciones metabolicas, es decir sus enzimas
+  catalizan reacciones sobre sustratos parecidos aunque no identicos
+  (Cruz-Morales 2015, Medema \& Fischbach 2015). La base de evomining es
+  que las enzimas de metabolismo secundario son expansiones distantes de
+  enzimas de rutas centrales, lo que da idea de la quimica que realizan
+  dichas expansiones dejando por identificar el sustrato sobre el que
+  trabajan. La primera version de evomining cuenta con 200 genomas de
+  Actinobacteria, una base de datos de secuencias de enzimas de productos
+  naturales y otra base de datos de secuencias de enzimas de rutas
+  centrales curada a mano. Evomining esta ligada con el problema de la
+  promiscuidad porque en estas familias expandidas ya sea por duplicacion
+  o por transferencia horizontal, las expansiones pueden retener la
+  funcion quimica de las rutas centrales y viceversa, la funcion quimica
+  expandida suele estar presente antes de la duplicacion.
+  
+  Si se combinara evomining con la premisa de que vecindades distintas son
+  marcadoras de funciones quimicas distintas, al encontrar una familia
+  expandida con vecindades genomicas diferentes se podria solventar la
+  deficiencia de otros metodos bioinformaticos consistente en que para
+  identificar familias promiscuas se debe conocer previamente un miembro
+  promiscuo de la misma. (Fig 4) Asi pues al combinar evomining con
+  herramientas de vecindad genomica tanto de comparacion como de
+  visualizacion estaremos mejorando su funcionalidad en la identificacion
+  de familias promiscuas.
+  
+  \subsection{2.6 Caracterizacion in vivo}\label{caracterizacion-in-vivo}
+  
+  Algunas enzimas PriA no han mostrado promiscuidad in vitro pero si in
+  vivo ya que sobreviven en un medio sin triptofano, es decir in vivo
+  complementan la funcion trpF. Para la construccion de cepas de
+  Streptomyces con variantes no nativas de priA minimizando la
+  modificacion genomica y el efecto de sobreexpresion, se planea utilizar
+  E. coli como intermediario para realizar seleccion por auxotrofia. Se
+  cuenta con un conjunto de plasmidos para transformar a E. coli asi como
+  con las mutantes sencillas de E. coli para trpF y hisA que permiten
+  realizar seleccion por auxotrofias. Ademas tenemos una coleccion de
+  cepas nativas de Streptomyces asi como un mutante de PriA de S.
+  coelicolor. Se optimizo una reaccion de PCR para la amplificacion de un
+  segmento de DNA de S. coelicolor que contiene a priA.
+  
+  \subsection{2.7 Caracterizacion bioquimica in
+  vitro.}\label{caracterizacion-bioquimica-in-vitro.}
+  
+  De la familia PriA y sus subfamilias se han caracterizado
+  bioquimicamente miembros selectos de Actinomycetaceae,
+  Bifidobacteriaceae, Micrococcaceae, Acidimicrobiaceae, Corynebacterium,
+  Mycobacteriaceae, Streptomycetaceae, Camera (provenientes de
+  metagenoma), reconstrucciones ancestrales, 80 mutantes de
+  Corynebacterium, y 2 mutantes de Camera mediante cineticas enzimaticas
+  para calcular las constantes Kcat,Km. El genero Streptomyces, el que
+  cuenta con mayor cantidad de genomas disponibles representa una
+  oportunidad muy poco explotada de explorar la influencia del contexto y
+  la vecindad genomicas en secuencias de PriA (Tabla 3, Figura 5).
+  
+  \subsection{2.8 Modelado de dinamica
+  molecular}\label{modelado-de-dinamica-molecular}
+  
+  La dinamica es un metodo que permite hacer simulaciones de particulas
+  que sirve para obtener informacion de propiedades macroscopicas de un
+  conjunto de atomos (Meller 2001, Kukol 2015). Es util en el marco de mi
+  proyecto porque permite la exploracion del espacio conformacional, y se
+  ha visto que este esta relacionado con la actividad de la enzima
+  (Sikosek et al 2014), ademas dado un conformero permite verificar su
+  estabilidad. Resuelve la ecuacion de movimiento de Newton con base a una
+  configuracion inicial, las fuerzas interatomicas como los enlaces
+  covalentes, las fuerzas de Van der Waals y la carga de las particulas
+  (Cambpell et al 2012). Entonces para generar una simulacion de dinamica
+  molecular, debe contarse con una estructura como punto de partida, ya
+  sea esta cristalografica o modelada de novo o por homologia. El
+  laboratorio de bioinformatica y biofisica computacional ha desarrollado
+  un protocolo de generacion de modelos homologos estructurales y
+  dinamicas moleculares (Carrillo-Tripp et al 2015 in prep); con este
+  pipeline se han generado dos estructuras de Camera (Noda-Garcia et al
+  2015), 30 estructuras y dinamicas de miembros de Actinobacteriaceae y
+  Bifidobacteriaceae (Vazquez-Juarez et al in prep.) y finalmente una
+  estructura de subHisA de Corynebacterium diphteriae. En la familia
+  Streptomyces, interesante debido a su variacion en contexto genomico y
+  en mediciones in vitro aun no se modelan dinamicas moleculares aunque 40
+  estructuras por homologia estan en proceso.
+  
+  En un estudio de subHisA (Noda-Garcia et al 2013) se utilizo el metodo
+  de dinamica molecular y se comparo el numero de conformeros entre
+  miembros de subHisA y PriA, resultando mayor el de PriA como corresponde
+  a una enzima promiscua. El estudio sobre la relacion
+  dinamica-flexibilidad de \(\noindent\beta\)-lactamasas utiliza replica
+  exchange, una variacion de dinamica molecular que corre replicas en
+  paralelo a distintas temperaturas (Zhou 2007). Una desventaja de este
+  metodo es que por el costo computacional de las replicas agregar
+  explicitamente otras moleculas a la simulacion como el solvente no es
+  posible en tiempo razonable. Una vez generadas las dinamicas moleculares
+  se procedera a calcular tanto el numero de conformeros como el indice de
+  flexibilidad dsi (Zou et al 2015). Se esta desarrollando PEDB,
+  promiscuous enzyme database, una base datos genomicos, evolutivos,
+  bioquimicos y estructurales y de metabolismo de PriA en Actinobacteria
+  donde se procedera al analisis de los mismos
+  (\url{http://148.247.230.43/nselem/PHP/queries.html}).
+  
+  En conclusion la promiscuidad enzimatica es un fenomeno complejo debido
+  a multiples causas. Existe una gran variedad de estudios con enfoques
+  puntuales sobre aspectos estructurales, dinamicos y evolutivos de
+  familias de enzimas promiscuas, sin embargo hasta ahora no se han
+  reportado trabajos multidisciplinarios que involucren a todas las partes
+  involucradas (Fig 6)
+  
+  \section{3. Objetivo General}\label{objetivo-general}
+  
+  Estudiar el fenomeno de promiscuidad enzimatica tanto desarrollando
+  estrategias para identificar familias promiscuas dentro de un grupo
+  taxonomico, como comparando variaciones de promiscuidad in vitro e in
+  vivo con variaciones en contexto genomico y flexibilidad en miembros de
+  una familia. (Figura 7)
+  
+  \section{4. Objetivos particulares}\label{objetivos-particulares}
+  
+  Mejorar evomining como metodo de identificacion de familias enzimaticas
+  promiscuas aprovechando los cambios en vecindades genomicas como
+  caracteristicas informativas provenientes de datos filogenomicos.
+  Estudiar la relacion entre historias filogenomicas y procesos biofisicos
+  con la promiscuidad in vitro, a traves de mediciones de ciertas
+  caracteristicas de la familia PriA. Caracterizar cambios de promiscuidad
+  enzimatica in vivo mediante perfiles metabolomicos de actividades de
+  PriA y enzimas asociadas.
+  
+  \section{5. Estrategias}\label{estrategias}
+  
+  \subsection{5.1 La promiscuidad en familias
+  enzimaticas.}\label{la-promiscuidad-en-familias-enzimaticas.}
+  
+  Mejorar Evomining mediante la identificacion de cambios de vecindad
+  genomica en familias selectas de metabolismo central convirtiendola en
+  una plataforma de codigo libre disponible para otros investigadores.
+  
+  \subsubsection{5.1.1. Obtener informacion genomica del phylum
+  Actinobacteria.}\label{obtener-informacion-genomica-del-phylum-actinobacteria.}
+  
+  Colectar genomas de Actinobacteria de NCBI y de colecciones privadas.\\
+  \#\#\# 5.1.2. Anotar consistentemente las secuencias codificantes de
+  estos genomas.\\
+  Utilizar un anotador automatizado y desarrollar los scripts necesarios
+  para anotar los genomas.\\
+  \#\#\#\#5.1.3. Establecer las relaciones filogeneticas de los genomas
+  colectados.\\
+  Mediante el uso del core genome construir un arbol filogenomico que
+  permita establecer un marco sobre el cual hablar de cambio y que
+  facilite reclasificar los genomas mal nombrados.\\
+  \#\#\#\#\# 5.1.4. Identificar cambios en la vecindad genomica en
+  familias selectas de enzimas de metabolismo central. Clasificar
+  sistematicamente las secuencias de familias codificantes segun su
+  similitud en familias enzimaticas.\\
+  Desarrollar las herramientas bioinformaticas necesarias para separar
+  clusters de vecindades genomicas.\\
+  \#\#\#\# 5.1.5 Sistematizar Evomining para convertirla una plataforma
+  descargable y utilizable en cualquier set de datos bacterianos
+  relacionados taxonomicamente proporcionados por el usuario.\\
+  Ampliar el contenido de Evomining al integrar los genomas colectados de
+  Actinobacteria. Sistematizar la base de datos de metabolismo central.\\
+  Desarrollar la visualizacion e integrar la clasificacion de vecindades
+  genomicas como una herramienta adicional en la busqueda de promiscuidad.
+  
+  \subsubsection{5.2 Promiscuidad in vitro dentro de miembros de una
+  familia promiscua de
+  enzimas.}\label{promiscuidad-in-vitro-dentro-de-miembros-de-una-familia-promiscua-de-enzimas.}
+  
+  Dados los sustratos conocidos de PriA investigar las posibles
+  correlaciones entre mediciones de constantes cataliticas, contexto
+  genomico, vecindad genomica, numero de conformeros e indice de
+  flexibilidad.
+  
+  \subsubsection{5.2.1. Seleccionar miembros homologos de la familia de
+  enzimas.}\label{seleccionar-miembros-homologos-de-la-familia-de-enzimas.}
+  
+  Se escogieron 41 Streptomyces repartidos en un arbol de rpoB de 400
+  Streptomyces con genoma disponible. Esta seleccion incluye los seis
+  Streptomyces de los que se cuenta con cinetica enzimatica de PriA, tres
+  de ellos con estructura cristalografica.\\
+  \#\#\#\# 5.2.2. Medir cineticas enzimaticas, contexto genomico, vecindad
+  genomica, flexibilidad y numero de conformeros.\\
+  Determinar la pertenencia a uno de cuatro posibles contextos genomicos
+  respecto al gen trpF. Estudiar la existencia de distintas vecindades
+  genomicas. Determinar la cinetica enzimatica de 9 enzimas mas buscando
+  variabilidad en contexto genomico (sugeridas en la tabla 4). Obtener
+  mediante una colaboracion 37 modelos estructurales por homologia y
+  modelar dinamica molecular.
+  
+  La siguiente tabla contiene la diversidad de contextos y vecindades
+  genomicas de 41 Streptomyces respecto al gen trpF.
+  
+  \subsubsection{5.2.3. Determinar posibles correlaciones entre los datos
+  producidos.}\label{determinar-posibles-correlaciones-entre-los-datos-producidos.}
+  
+  Numero de conformeros e indice de promiscuidad.\\
+  indice de flexibilidad y numero de conformeros.\\
+  Numero de conformeros y contexto genomico.\\
+  indice de flexibilidad y contexto genomico.\\
+  Contexto genomico e indice de promiscuidad I.\\
+  Analizar las vecindades genomicas e indice de promiscuidad I.
+  
+  \subsection{5.3 Desarrollar una metodologia para la deteccion in vivo de
+  promiscuidad
+  enzimatica.}\label{desarrollar-una-metodologia-para-la-deteccion-in-vivo-de-promiscuidad-enzimatica.}
+  
+  Debido a cambios en flexibilidad o cambios de contexto genomico, se
+  puede sospechar de diferencias en la funcion quimica de dos miembros de
+  una familia de enzimas, sin conocer las diferencias a nivel de
+  sustratos. Para investigar estos cambio in vivo se propone estudiar
+  diferencias en perfiles metabolomicos de una coleccion de cepas en
+  condiciones diversas.
+  
+  \subsubsection{5.3.1.Crear cepas geneticamente modificadas con variantes
+  funcionales no nativas de PriA y enzimas
+  asociadas.}\label{crear-cepas-geneticamente-modificadas-con-variantes-funcionales-no-nativas-de-pria-y-enzimas-asociadas.}
+  
+  Dado un organismo modelo sustituir su homologo nativo de priA por una
+  variante no nativa ya sea de priA o trpF de Actinobacterias selectas de
+  las que se sospecha cambio en promiscuidad.\\
+  \#\#\#\# 5.3.2. Separar posibles productos y minimizar los falsos
+  positivos debidos a perturbaciones metabolicas no relacionadas a PriA.\\
+  Separar los metabolitos mediante cromatografia dirigida por tamaño.
+  Obtener un espectro de masas antes y despues de la sustitucion de la
+  variante y sobre las diferencias en el espectro realizar espectrometria
+  de masas en tandem (MS/MS) es decir refragmentar y analizar que los
+  fragmentos contengan partes parecidas a los sustratos conocidos.
+  
+  \section{6. Metodologia}\label{metodologia}
+  
+  A continuacion describire la metodologia para cada una de las
+  estrategias expuestas previamente. Todos los scripts desarrollados
+  fueron escritos en perl y estan disponibles en github
+  \url{https://github.com/nselem/perlas}.
+  
+  \subsection{6.1 La promiscuidad en familias
+  enzimaticas.}\label{la-promiscuidad-en-familias-enzimaticas.-1}
+  
+  \subsubsection{6.1.1. Actinobacteria
+  genomic}\label{actinobacteria-genomic}
+  
+  Para obtener informacion genomica del phylum Actinobacteria mediante la
+  coleccion de genomas de NCBI se revisaron todas las familias de
+  Actinobacteria de la base genoma de NCBI y se seleccionaron los genomas
+  con minimo 5 genes por contig. Se crearon scripts para utilizar la
+  interfaz e-utils de NCBI y descargar estos genomas desde la terminal a
+  partir de una lista de identificadores.
+  
+  \subsubsection{6.1.2 Annotation}\label{annotation}
+  
+  Para anotar consistentemente las secuencias codificantes de estos
+  genomas se utilizo el anotador automatizado RAST y se desarrollaron los
+  scripts necesarios para anotar los genomas desde la terminal, conectado
+  asi NCBI y RAST.
+  
+  \subsubsection{6.1.3 Genomic DB phylogeny}\label{genomic-db-phylogeny}
+  
+  Establecer las relaciones filogeneticas de los genomas colectados.
+  Mediante el uso del core genome para construir un arbol filogenomico,
+  para reclasificar los genomas mal nombrados.\\
+  Para obtener el core genome y en base a el reclasificar los genomas se
+  diseño el algoritmo estrellas basado en Best Bidirectional Hits (blast
+  all vs all).
+  
+  Estrellas. Se realiza un blast all vs all de genomas deseados. Para cada
+  secuencia, centrado en cada genoma se realiza una lista (estrella) de
+  sus mejores hits bidireccionales. Si las listas de todos los genomas
+  coinciden es un BBH multiple y se agrega la lista al core genome. (Fig
+  9) Una vez con el core genome completo se puede reconstruir la
+  filogenia. Este metodo fue exitoso en la deteccion de una familia
+  marcadora de Clavibacter michiganensis (2014 Rodriguez-Orduña in prep).
+  
+  \subsection{6.1.4 Identificar cambios en la vecindad genomica en
+  familias selectas de enzimas de metabolismo
+  central.}\label{identificar-cambios-en-la-vecindad-genomica-en-familias-selectas-de-enzimas-de-metabolismo-central.}
+  
+  Clasificar sistematicamente las secuencias de familias codificantes
+  segun su similitud en familias enzimaticas.
+  
+  Como se menciono en los antecedentes, se han separado 888 genomas de
+  Actinobacteria en 3 grupos taxonomicos utilizando para la anotacion la
+  tecnologia de subsistemas de RAST. Para la separacion en familias iso
+  funcionales (ortologos, paralogos y expansiones) n se utilizo RAST,
+  especificamente el script What Changed (WC) que asigna un numero a cada
+  familia, esta herramienta esta basada en k-mers, su codigo esta
+  disponible en github:
+  (\url{https://github.com/kbase/kbseed/blob/master/service-scripts/svr_CS.pl}).
+  Ademas de en los tres grupos ya mencionados, tambien se realizara una
+  clasificacion para trescientos genomas de Actinobacteria distribuidos en
+  todas sus familias taxonomicas.
+  
+  Para desarrollar las herramientas bioinformaticas necesarias para
+  separar clusters de vecindades genomicas a continuacion se describe
+  detalladamente como se definicio vecindad genomica y la relacion
+  implementada de similitud.
+  
+  \begin{enumerate}
+  \def\labelenumi{\arabic{enumi}.}
+  \item
+    Un conjunto expandido es un conjunto que contiene secuencias homologas
+    asi como sus expansiones: paralogos y transferencias horizontales.
+    Dado un conjunto de genomas, se pueden calcular y enumerar todos sus
+    contextos extendidos utilizando WC.
+  \item
+    Un PEG es un elemento de un conjunto expandido. Dado un PEG p, se
+    define CE(p) el numero del conjunto expandido de p, como el numero
+    asignado por WC al conjunto expandido a que p pertenece.
+  \item
+    La vecindad de un PEG es el conjunto de PEGs cercanos a el. Dado un
+    umbral en terminos de distancia de pares de bases entre puntos medios
+    para precisar la definicion de cercano, se pueden calcular todos los
+    contextos de un genoma.
+  \item
+    Una vecindad Aes n-similar a otra vecindad B si C=\{aA \textbar{} b B
+    ,CE(b)=CE(a)\} tiene al menos cardinalidad n. Es decir si existen al
+    menos n elementos de A que pertenecen al mismo conjunto expandido que
+    algun elemento de B.
+  \item
+    Un conjunto de vecindades es un conjunto de PEGs clusterizado segun la
+    relacion n-similaridad. Si A es n-similar a B y B esn-similar a C
+    entonces, aun si A no fuese n-similar a C, los PEGs generadores de
+    A,B,C son agrupados dentro del mismoconjunto de vecindades.
+  \item
+    Un cluster es un conjunto de conjunto de vecindades.
+  \item
+    Los clusters son evaluados segun el numero y la cardinalidad de sus
+    conjuntos de vecindades.
+  \end{enumerate}
+  
+  Sea Cl un cluster, donde CCi es un conjunto de contextos y ni es la
+  cardinalidad de CCi Cl=\{CC1,CC2,\ldots{},CCk\}
+  
+  Sean M la cardinalidad maxima de un conjunto de contextos y m la
+  cardinalidad maxima sin considerar M.
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \CommentTok{#$$   M\textbackslash{}eq\textbackslash{}max_\{ni\} i\textbackslash{}eq\{1,2,..,k\}         m\textbackslash{}eq\textbackslash{}max_ni i\textbackslash{}eq \{1,2,...,k\}  ni\textbackslash{}ne\{M\}  $$}
+  \end{Highlighting}
+  \end{Shaded}
+  
+  \[\sum_{j=1}^n (\delta\theta_j)^2 \leq {{\beta_i^2}\over{\delta_i^2 + \rho_i^2}}
+  \left[ 2\rho_i^2 + {\delta_i^2\beta_i^2\over{\delta_i^2 + \rho_i^2}} \right] \equiv \omega_i^2
+  \]
+  
+  M representa el contexto mas difundido de la enzima, dentro del grupo
+  taxonomico considerado; mes relevante porque si m es grande significa
+  que hay un segundo contexto genomico conservado en dicho grupo
+  taxonomico, y entonces posiblemente una ganancia de funcion.
+  
+  La evaluacion de Cl esta dada por una combinacion lineal de k,m y M\\
+  S(Cl)=f(k,m,M)=c1k+c2m+c3M
+  
+  Este algoritmo se puede mejorar considerando la orientacion de los genes
+  del cluster asi como clusters de los vecinos.
+  
+  \subsubsection{6.1.5 Organizar y presentar los datos en una
+  plataforma.}\label{organizar-y-presentar-los-datos-en-una-plataforma.}
+  
+  Para contribuir al desarrollo de la plataforma Evomining se
+  desarrollaran scripts de visualizacion de arboles filogeneticos y
+  contextos genomicos.
+  
+  Para facilitar el analisis visual de una vecindad genomica ya la vez
+  generar imagenes de alta calidad facilmente exportables para su uso en
+  publicaciones, se desarrollaran scripts de visualizacion que utilizaran
+  el formato Scalable Vector Graphics (SVG), dicho formato es basicamente
+  un archivo de texto XML que contiene instrucciones para que el navegador
+  realice un dibujo (W3school/SVG 2015). Al ser vectores, las imagenes
+  generadas en SVG no pierden resolucion al ser escaladas y justamente por
+  ser escalables permiten explorar con detalle grandes cantidades de datos
+  organizados por ejemplo en arboles filogeneticos. Los scripts a
+  desarrollar extraeran para cada gen informacion necesaria como
+  coordenadas, direccion, funcion quimica, etc, proveniente de la
+  anotacion de RAST y de los scripts de comparacion de vecindades
+  genomicas. La primera version de evomining fue desarrollada en el
+  lenguaje perl; este lenguaje cuenta con un modulo para facilitar la
+  elaboracion de SVG (perlmaven/SVG 2015) por lo que al utilizar SVG no se
+  agregan nuevos requerimientos a su desarrollo y se facilita su
+  portabilidad.
+  
+  Se amplificara Evomining de los 200 genomas con que contaba su version
+  inicial a los 880 colectados mudando la curacion manual de su base de
+  datos de rutas centrales a la anotacion por subsistemas de RAST.
+  Finalmente se presentara la variacion en vecindades genomicos como una
+  herramienta adicional que ayude en la busqueda de promiscuidad en
+  familias de enzimas pertenecientes al metabolismo central.
+  
+  \subsection{6.2 Promiscuidad in vitro}\label{promiscuidad-in-vitro}
+  
+  \subsubsection{6.2.1 Datos cineticos:}\label{datos-cineticos}
+  
+  En todos los ensayos enzimaticos se busca medir una señal que permita
+  una distincion clara entre sustrato y producto (Bisswanger 2011). La
+  cinetica enzimatica de PriA proveniente del genero Streptomyces sera
+  determinada como ya se ha reportado previamente, mediante el monitoreo
+  de cambios en fluorescencia (isomerizacion del sustrato PRA) o en
+  absorbancia (isomerizacion del sustrato PROFAR). En el caso de la
+  isomerizacion de PRA, debido a que contiene un anillo de antranilato, la
+  fluorescencia del sustrato PRA es 50 veces mayor que la del producto
+  1-(2-carboxyphenylamino)-1-deoxy-D-ribulose 5-phosphate (CdRP) por lo
+  que se utiliza la disminucion en fluorescencia como medida de la
+  conversion del sustrato en producto (Hommel 1995). Se mandaran
+  sintetizar estas variantes para posteriormente sobre expresarlas en E.
+  coli. Se creceran cepas modificadas de E. coli (W-, H-) en medio minimo
+  M9 enriquecido con una mezcla de aminoacidos excepto L-histidina y
+  L-triptofano y se seleccionaran por rescate de auxotrofia. Para obtener
+  la enzima necesaria para los ensayos enzimaticos se utilizaran plasmidos
+  disponibles para construcciones de sobreexpresion de proteina, despues
+  de la produccion la enzima se purificara utilizando cromatografia por
+  afinidad a niquel (Verduzco-Castro et al in press).
+  
+  Finalmente se recopilaran datos cineticos de PriA tanto privados como
+  los publicos reportados a la fecha en la BRaunschweig ENzyme DAtabase
+  (BRENDA, Scheer et al 2011). Una vez colectados los datos se anotaran en
+  PEDB, nuestra base de datos ad hoc, y se tomara como medida de
+  promiscuidad el I-index (Nath \& Atkins 2008) que se define como: I=1ln
+  Ni=1Npi( pi) donde pi=Kicat Kim / i=1NKicatKim
+  
+  \subsubsection{6.3.2 Dinamica molecular}\label{dinamica-molecular}
+  
+  Para generar dinamicas moleculares primer lugar se recolectaran las
+  estructuras tridimensionales de miembros de PriA de Actinobacteria.
+  Despues se procedera a modelar por homologia las estructuras
+  tridimensionales faltantes utilizando el pipeline del laboratorio de
+  bioinformatica y biofisica computacional. Este pipeline utiliza el
+  software Rosetta para el modelado para las estructuras y GROMACS
+  (Groningen Machine for Chemical Simulation, Van Der Spoel et al 2005)
+  para el modelado de la dinamica molecular. Esta parte del trabajo se
+  realizara en colaboracion con el laboratorio de bioinformatica y
+  biofisica computacional.
+  
+  \subsection{6.3 Promiscuidad in vivo}\label{promiscuidad-in-vivo}
+  
+  Se realizaran construcciones con variantes no nativas de priA y/o trpF
+  en Streptomyces coelicolor. Para las construcciones se amplificara
+  mediante PCR un fragmento alrededor de PriA que se insertara en un
+  vector. Este vector recombinara en E. coli con un casete provisto de un
+  gen marcador de resistencia a antibiotico y este gen recombinado se
+  pasara por conjugacion a S. coelicolor donde se espera que realice una
+  doble recombinacion. El paso por E. coli es llevado a cabo porque
+  Streptomyces no se puede transformar por electroporacion. Se
+  seleccionaran las cepas de Streptomyces resistentes al antibiotico como
+  prueba de que ya no poseen su priA nativa. Posteriormente, mediante un
+  procedimiento analogo se sustituira el gen marcador, por variantes no
+  nativas de priA/trpF.
+  
+  La cromatografia se refiere a un conjunto de metodos que separan y
+  analizan mezclas de moleculas. Basicamente estos metodos se basan en
+  diferencias en el tamaño, intercambio de iones y afinidad. (Campbell
+  Iain D. 2012) Posteriormente se combinan con espectrometria de masas que
+  es una tecnica que mide el radio masa-carga de las particulas
+  fragmentadas en iones. (Campbell Iain D. 2012). Los datos obtenidos de
+  espectrometria de masas se procesaran utilizando redes moleculares, que
+  consiste en agrupar los productos segun la similitud de sus partes.
+  Plan: 3 replicas tecnicas, 2 replicas biologicas de 5 cepas.
+  
+  \subsection{7. Consideraciones}\label{consideraciones}
+  
+  Falsos negativos respecto a promiscuidad estan muy extendidos en la
+  literatura y en las bases de datos, en parte porque la mayoria de las
+  funciones son asignadas por similitud de secuencia y dado un falso
+  negativo el error se propaga en secuencias similares. Por otro lado es
+  muy dificil demostrar un verdadero negativo a menos que se prueben todas
+  las posibilidades de sustrato para la enzima. Sin embargo el espacio de
+  sustratos puede acotarse gracias a tecnicas como el docking que esta
+  intimamente relacionado con la dinamica molecular (Campbell 2012, Kukol
+  A et al 2015). Limitar el espacio de sustratos puede retroalimentarse
+  con el estudio de la promiscuidad in vivo y viceversa.
+  
+  Con los metodos propuestos en este trabajo solo se podra detectar
+  perdida o ganancia de promiscuidad entre enzimas de organismos respecto
+  a otros miembros dentro un grupo taxonomico, no asi el estado de
+  promiscuidad intrinseco a la enzima. Si dada una enzima no se detectan
+  variaciones en contexto, vecindad genomica o flexibilidad dentro de un
+  grupo taxonomico cercano, entonces no podemos decir en principio nada
+  acerca de la promiscuidad de la variante, posiblemente es promiscua pero
+  al mantenerse constante en todos los parametros descritos, con estos
+  metodos no se puede sugerir promiscuidad. Es posible que al mirar en un
+  grupo taxonomico mas amplio se detecte una neofuncionalizacion de la
+  familia aunque tambien es posible que exista una variable z como la
+  flexibilidad de sustrato (Nobeli et al 2009, Odokonyero et al 2014) que
+  no se este considerando y que explique o sea el mejor indicador para
+  esta familia de promiscuidad enzimatica.
+  
+  Se debe considerar que si existe una correlacion vecindad
+  genomica-promiscuidad, esta no indica causa efecto, mas bien, es
+  plausible que la vecindad sea un amplificacion de diferencias en
+  secuencia, a un numero igual de variaciones en secuencia la existencia
+  de un cambio de vecindad indica un proceso mas largo y mas cambios, es
+  una amplificacion de las marcas dejadas por transformaciones
+  funcionales.
+  
+  Si bien no se resuelve el problema de anotar promiscuidad
+  automaticamente, este trabajo pretende aprovechar que los contextos
+  genomicos ayudan a la identificacion de familias promiscuas para mejorar
+  una plataforma de productos naturales, pretende tambien una confirmacion
+  de que los cambios en la dinamica molecular ayudan a identificar los
+  miembros mas promiscuos hacia actividades recien adquiridas, asi como
+  tambien ser pionero en la investigacion de promiscuidad in vivo.
   
   \chapter{EvoMining}\label{rmd-basics}
   
@@ -235,7 +1219,7 @@ starts here.
   
   Expansions are located on pangenome, Tools to analyse pangenome BPgA
   
-  \section{EvoMining}\label{evomining}
+  \section{EvoMining}\label{evomining-1}
   
   EvoMining looks expansions on prokariotic pangenome.\\
   Biological idea.
@@ -261,7 +1245,7 @@ starts here.
   HGT doubles mutation rate on prokarites.\\
   Maybe HGT is an selected feature, if is the case, so could be np
   production.\\
-  Some archaeas has open pangenome. (Halachev, Loman, \& Pallen, 2011)
+  Some archaeas has open pangenome. (Halachev et al., 2011)
   
   HGT doubles mutation rate on prokarites. (Koonin, 2015) Maybe HGT is an
   selected feature, if is the case, so could be np production.\\
@@ -321,22 +1305,32 @@ starts here.
   - \emph{myRAST} docker- \url{https://github.com/nselem/myrast}\\
   RAST is a bacterial and Archaeal genome annotator (Aziz et al., 2008, R.
   Overbeek et al. (2014) , Brettin et al. (2015)) This app allows myRAST
-  functionality to upload It allows EvoMining genome database annotation.
+  functionality to upload\\
+  It allows EvoMining genome database annotation.\\
   -\emph{Orthocores} docker-\url{https://github.com/nselem/orthocore}\\
-  Helps to obtain genomic core paralog free and construct genomic trees
+  Helps to obtain genomic core paralog free and construct genomic trees\\
   -\emph{CORASON} docker-\url{https://github.com/nselem/EvoDivMet/wiki}\\
-  -PseudoCore github- \textless{}\textgreater{} Genomic Core with a
-  reference genome has the advantage of more genomes, but it is not
-  paralog free
+  -PseudoCore github- \textless{}\textgreater{}\\
+  Genomic Core with a reference genome has the advantage of more genomes,
+  but it is not paralog free
   
-  -RadiCal docker image To detect core diferrences on a set of genomes
-  -BPGA to analize pangenome All this work is concerned to reproducible
-  research (chesterismay, 2016)
+  -RadiCal docker image\\
+  To detect core diferrences on a set of genomes\\
+  -BPGA to analize pangenome
+  
+  EvoMining Dockerization was chosen to avoid future compatibilty
+  problems, for example dependencies unavailabilty, or incompatibility
+  between future versions of its software components. As much as
+  reproducible research was a concerned while developing EvoMining app,
+  reproducibilty is also important on data analysis, for that reason this
+  document was writen using R-markdown and latex template from Reed
+  College (chesterismay, 2016). While R-markdown allows to write and run R
+  code and interpolate text paragraph to explain scripts and analysis.
   
   \section{EvoMining Databases}\label{evomining-databases}
   
   Evomining containerized app is a user-interactive genomic tool dedicated
-  to the study of protein function\protect\hyperlink{section}{}.
+  to the study of protein function{[}{]}.
   
   \begin{enumerate}
   \def\labelenumi{\arabic{enumi}.}
@@ -419,13 +1413,13 @@ starts here.
   
   \subsection{AntisMASH optional DB}\label{antismash-optional-db}
   
-  AntiSMASH is (Weber et al., 2015,Medema et al. (2011)) \#\#\# Archaeas
-  Results Archaea is a kingdom of recent discovery were not many natural
-  products has been known. On Actinobacteria, evoMining has proved its
-  value to find new kinds of natural products. The clue to this discovery
-  was that Actinobacteria has genomic expanssions. Now Archaea has genomic
-  expansions, even more has central pathways genomic expansions. Are this
-  expansions derived from a genomic duplication?\\
+  AntiSMASH is (Weber et al., 2015,Medema et al. (2011))\\
+  \#\#\# Archaeas Results Archaea is a kingdom of recent discovery were
+  not many natural products has been known. On Actinobacteria, evoMining
+  has proved its value to find new kinds of natural products. The clue to
+  this discovery was that Actinobacteria has genomic expanssions. Now
+  Archaea has genomic expansions, even more has central pathways genomic
+  expansions. Are this expansions derived from a genomic duplication?\\
   Has Archaea natural products detected by antismash, and if not, where
   are this NP's or may Archaea doesn't have NP's.
   
@@ -1314,1313 +2308,11 @@ starts here.
   (\url{http://homepages.uni-tuebingen.de/beitz/txe.html}). Be sure to
   read the proceeding chapter on graphics and tables.
   
-  \hypertarget{refux5flabels}{\chapter{Archaea EvoMining
-  Results}\label{refux5flabels}}
+  \chapter{\texorpdfstring{\texttt{\{r\ chapter3,\ child\ =\ \textquotesingle{}chap3.Rmd\textquotesingle{}\}\ \#}}{\{r chapter3, child = 'chap3.Rmd'\} \#}}\label{r-chapter3-child-chap3.rmd}
   
-  During the decade between 1970 and 1980, Archaea was recognized as new
-  life domain, a kingdom different from Bacteria and Eucarya in an
-  exciting first great application of 16S phylogeny(C R Woese \& Fox,
-  1977,Carl R. Woese \& Gupta (1981)) . Main differences between this
-  kingdoms are that Archaeal DNA is not arranged in a nucleus as in
-  Eucarya and Archaeal celular walls are not composed from peptidoglycans
-  as in Bacteria. Archaeal proteins may be higlhy valuable to
-  biotechnology industry for their great stability due to extreme
-  temperature, PH and salt content conditions on Archeal habitats. Despite
-  no Archaeal Natural products biosynthetic gene clusters (BGC's) has been
-  reported on MiBIG, Archaea do have BGC's, some of them seems to be
-  acquired by horizontal gene transfer (HGT) like methano nrps \{search
-  reference\}. Other Archeal natural products known are archaeosins,
-  Diketopiperazines, Acyl Homoserine Lactones, Exopolysaccharides,
-  Carotenoids, Biosurfactants, Phenazines and Organic Solutes but this
-  knowledge is not comparable to Bacterial BGC's knowledge(Charlesworth \&
-  Burns, 2015).
+  \chapter{\texorpdfstring{\texttt{\{r\ chapter4,\ child\ =\ \textquotesingle{}chap4.Rmd\textquotesingle{}\}\ \#}}{\{r chapter4, child = 'chap4.Rmd'\} \#}}\label{r-chapter4-child-chap4.rmd}
   
-  Natural products biosynthetic gene clusters search is actually performed
-  using either \emph{high-confidence/low-novelty or
-  low-confidence/high-novelty} bioinformatic approaches (Medema \&
-  Fischbach, 2015). High confidence methods compares query sequences with
-  previously known BGC's such as nrps or PKS, examples of this algorithms
-  are antiSMASH and clusterfinder (\textbf{???}?). EvoMining searches on
-  expansions from central metabolic pathways enzyme families, it has been
-  classified as low confidence/high novelty method. EvoMining has proved
-  useful on Actinobacteria phylum where its use lead to Arseno-compounds
-  discovery (Cruz-Morales et al., 2016). Also on Actinobacteria antiSMASH
-  analysis on 1245 genomes found 774 different classes of natural
-  products, the same analysis on 876 Archaeal genomes, a full kingdom,
-  identifies only 35 BGC's classes. So either Archaea does not have
-  natural products BGC's or this are not yet known. Next paragraph deals
-  with a possible approach about how natural products BGC's can be find.
-  
-  Archaea resembled Bacteria in that Archaea uses horizontal gene transfer
-  as a genic interchange mecanism, Archaeal genomes contains operons
-  (Howland, 2000) and in general there is introns absence\{Reference to
-  Computational Methods for Understanding Bacterial and Archaeal
-  Genomes\}. Archaeas do have introns, but they are mainly located on
-  genes that encodes ribosomal and transfer RNA (Howland, 2000). General
-  lack of introns allows automatic genome annotation, operons gene
-  organization permits functional inference to a certain degree and HGT
-  contribute to expansions on Archaeal genomes. Some phylum on Archaea has
-  an open pangenome, and as we will show on this chapter some Archaea has
-  central pathway expansions. Enzyme families from central pathways
-  expansions, open pangenome and operon organization made EvoMining
-  succesful on Actinobacteria, this lead us to think that evoMining is
-  suitable to analize Archaeal genomes, even more since EvoMining is a
-  method oriented to use evolution and its not entirelyy based on previous
-  knowledge of BGC's sequences if evolutionary logic behave on Archaea as
-  on bacteria, new BGC's classes may be be found on Archaea.
-  
-  EvoMining is a trade off between conserved known central metabolic
-  function and enough expansions divergence on sequence and on clusters to
-  divergence
-  
-  \section{Tables}\label{tables}
-  
-  \begin{longtable}[c]{@{}cc@{}}
-  \caption{Families on Archaeabacteria \label{tab:inher}}\tabularnewline
-  \toprule
-  Factors & Correlation between Parents \& Child\tabularnewline
-  \midrule
-  \endfirsthead
-  \toprule
-  Factors & Correlation between Parents \& Child\tabularnewline
-  \midrule
-  \endhead
-  GenomeDB & 876\tabularnewline
-  Phylum & 12\tabularnewline
-  Order & 23\tabularnewline
-  \bottomrule
-  \end{longtable}
-  
-  \clearpage
-  
-  First lets investigate if Archaea has expansions on families within
-  central metabolic routes. Since main metabolic pathways are shared
-  between Bacteria and Archaea makes sense to assemble Archeal EvoMining
-  central database by using orthologous from Actinobacteria evoMining
-  central pathways.
-  
-  \subsection{Expansions BoxPlot by metabolic
-  family}\label{expansions-boxplot-by-metabolic-family}
-  
-  \begin{Shaded}
-  \begin{Highlighting}[]
-  \KeywordTok{label}\NormalTok{(}\DataTypeTok{path =} \StringTok{"chapter3/expansion_plotArchaeas.pdf"}\NormalTok{, }\DataTypeTok{caption =} \StringTok{"Expansions Boxplot"}\NormalTok{,}\DataTypeTok{label =} \StringTok{"Archaea_expansion_boxplot"}\NormalTok{, }\DataTypeTok{type =} \StringTok{"figure"}\NormalTok{,}\DataTypeTok{scale=}\StringTok{".7"}\NormalTok{)}
-  \end{Highlighting}
-  \end{Shaded}
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 0,scale = .7]{chapter3/expansion_plotArchaeas.pdf}
-  \caption[Expansions Boxplot]{\normalsize{Expansions Boxplot}}
-  \label{fig:Archaea_expansion_boxplot}
-  \end{figure}
-  
-  Here is a reference to the expansion boxplot:
-  \autoref{fig:Archaea_expansion_boxplot}.\\
-  \clearpage 
-  
-  \subsection{Expansions BoxPlot by metabolic family by
-  phylum}\label{expansions-boxplot-by-metabolic-family-by-phylum}
-  
-  \begin{Shaded}
-  \begin{Highlighting}[]
-  \CommentTok{#+ geom_jitter()}
-  \CommentTok{#aes(fill = factor(vs))}
-  
-  \NormalTok{ArchaeasTotalBP.m<-}\KeywordTok{merge}\NormalTok{(ArchaeasHeatPlot,ArchaeasTaxa,}\DataTypeTok{by.x=}\StringTok{"RastId"}\NormalTok{,}\DataTypeTok{by.y=}\StringTok{"RastId"}\NormalTok{) ## works as expected}
-  \NormalTok{ArchaeasHeatPlotBP.m <-}\StringTok{ }\KeywordTok{melt}\NormalTok{(ArchaeasTotalBP.m,}\DataTypeTok{id =}\KeywordTok{c}\NormalTok{(}\StringTok{"RastId"}\NormalTok{,}\StringTok{"Name"}\NormalTok{,}\StringTok{"SuperPhylum"}\NormalTok{,}\StringTok{"Phylum"}\NormalTok{,}\StringTok{"Class"}\NormalTok{,}\StringTok{"Order"}\NormalTok{,}\StringTok{"Family"}\NormalTok{,}\StringTok{"RastNo"}\NormalTok{,}\StringTok{"Size"}\NormalTok{,}\StringTok{"Contigs"}\NormalTok{))}
-  \NormalTok{ArchaeasHeatPlotBP.m<-}\KeywordTok{subset}\NormalTok{(ArchaeasHeatPlotBP.m,variable!=}\StringTok{"TOTAL"}\NormalTok{) ## works as expected}
-  \NormalTok{ArchaeasHeatPlotBP.m<-}\KeywordTok{subset}\NormalTok{(ArchaeasHeatPlotBP.m,variable!=}\StringTok{"TOTAL"}\NormalTok{) ## works as expected}
-  
-  \NormalTok{## Each metabolic pathway se parte por phylum coloreado por order}
-  
-  \CommentTok{#3PGA_AMINOACIDS}
-  \CommentTok{#Glycolysis}
-  \CommentTok{#OXALACETATE_AMINOACIDS}
-  \CommentTok{#R5P_AMINOACIDS}
-  \CommentTok{#TCA}
-  \CommentTok{#E4P_AMINO_ACIDS}
-  \CommentTok{#PYR_THR_AA}
-  
-  \NormalTok{## Genome size}
-  \KeywordTok{ggplot}\NormalTok{(ArchaeasHeatPlotBP.m, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{ArchaeasHeatPlotBP.m$Phylum, }\DataTypeTok{y=}\NormalTok{ArchaeasHeatPlotBP.m$Size))+}\StringTok{ }\KeywordTok{geom_boxplot}\NormalTok{() +}\KeywordTok{theme}\NormalTok{(}\DataTypeTok{plot.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{14}\NormalTok{, }\DataTypeTok{face =} \StringTok{"bold"}\NormalTok{), }\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{12}\NormalTok{), }\DataTypeTok{axis.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{face=}\StringTok{"bold"}\NormalTok{), }\DataTypeTok{axis.text.x=}\KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{90}\NormalTok{,}\DataTypeTok{size =} \DecValTok{6}\NormalTok{), }\DataTypeTok{legend.position =} \StringTok{"bottom"}\NormalTok{)+}\StringTok{ }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"Copies on Archaeabacteria taxonomic groups"}\NormalTok{, }\DataTypeTok{y =} \StringTok{"Genome size"}\NormalTok{,}\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size=}\DecValTok{12}\NormalTok{))+}\KeywordTok{theme_bw}\NormalTok{()}
-  \end{Highlighting}
-  \end{Shaded}
-  
-  \begin{center}\includegraphics{tesis_files/figure-latex/ArcheaeBoxPlotByPhylum-1} \end{center}
-  
-  \begin{Shaded}
-  \begin{Highlighting}[]
-  \CommentTok{#+ geom_jitter(aes(color=ArchaeasHeatPlotBP.m$Phylum))}
-  
-  
-  \NormalTok{## Halobacteria}
-  \NormalTok{MetFam_BP.m=}\KeywordTok{subset}\NormalTok{(ArchaeasHeatPlotBP.m,Phylum==}\StringTok{"Euryarchaeota"}\NormalTok{)}
-  \KeywordTok{ggplot}\NormalTok{(MetFam_BP.m, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{MetFam_BP.m$Order, }\DataTypeTok{y=}\NormalTok{MetFam_BP.m$Size))+}\StringTok{ }\KeywordTok{geom_boxplot}\NormalTok{() +}\KeywordTok{theme}\NormalTok{(}\DataTypeTok{plot.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{14}\NormalTok{, }\DataTypeTok{face =} \StringTok{"bold"}\NormalTok{), }\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{12}\NormalTok{), }\DataTypeTok{axis.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{face=}\StringTok{"bold"}\NormalTok{), }\DataTypeTok{axis.text.x=}\KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{90}\NormalTok{,}\DataTypeTok{size =} \DecValTok{10}\NormalTok{), }\DataTypeTok{legend.position =} \StringTok{"bottom"}\NormalTok{)+}\StringTok{ }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"Halobacteria orders size taxonomic groups"}\NormalTok{, }\DataTypeTok{y =} \StringTok{"Genome size"}\NormalTok{,}\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size=}\DecValTok{12}\NormalTok{)) +}\StringTok{ }\KeywordTok{geom_jitter}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{color=}\NormalTok{Family))}
-  \end{Highlighting}
-  \end{Shaded}
-  
-  \begin{center}\includegraphics{tesis_files/figure-latex/ArcheaeBoxPlotByPhylum-2} \end{center}
-  
-  \begin{Shaded}
-  \begin{Highlighting}[]
-  \CommentTok{#MetFam_BP.m=subset(ArchaeasHeatPlotBP.m,Family=="Methanosarcinaceae")}
-  \CommentTok{#ggplot(MetFam_BP.m, aes(x=MetFam_BP.m$Size, y=MetFam_BP.m$value))}
-  \CommentTok{#+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")+ labs(x = "Copies on Archaeabacteria taxonomic groups", y = "Genome size",text = element_text(size=12)) }
-  
-  
-    \CommentTok{#geom_jitter(aes(color=ArchaeasHeatPlotBP.m$Phylum))# + facet_grid(. ~ Phylum)+theme_bw()}
-  
-  
-  \NormalTok{## Metabolic Pathways}
-  \NormalTok{MetFam=}\KeywordTok{subset}\NormalTok{(ArchaeasCentral,Pathway==}\StringTok{"PPP"}\NormalTok{)}
-  \NormalTok{MetFam_BP.m=ArchaeasHeatPlotBP.m[ArchaeasHeatPlotBP.m$variable %in%}\StringTok{ }\NormalTok{MetFam$Enzyme,]}
-  \KeywordTok{ggplot}\NormalTok{(MetFam_BP.m, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{MetFam_BP.m$variable, }\DataTypeTok{y=}\NormalTok{MetFam_BP.m$value, }\DataTypeTok{fill=}\NormalTok{Order))+}\StringTok{ }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"Metabolic PPP Families"}\NormalTok{, }\DataTypeTok{y =} \StringTok{"Copies on Archaeabacteria Genomes"}\NormalTok{,}\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size=}\DecValTok{12}\NormalTok{)) +}\StringTok{ }\KeywordTok{geom_boxplot}\NormalTok{() +}\StringTok{ }\KeywordTok{facet_grid}\NormalTok{(. ~}\StringTok{ }\NormalTok{Phylum)+}\KeywordTok{theme_bw}\NormalTok{() +}\KeywordTok{theme}\NormalTok{(}\DataTypeTok{plot.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{14}\NormalTok{, }\DataTypeTok{face =} \StringTok{"bold"}\NormalTok{), }\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{12}\NormalTok{), }\DataTypeTok{axis.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{face=}\StringTok{"bold"}\NormalTok{), }\DataTypeTok{axis.text.x=}\KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{90}\NormalTok{,}\DataTypeTok{size =} \DecValTok{6}\NormalTok{), }\DataTypeTok{legend.position =} \StringTok{"bottom"}\NormalTok{)}
-  \end{Highlighting}
-  \end{Shaded}
-  
-  \begin{center}\includegraphics{tesis_files/figure-latex/ArcheaeBoxPlotByPhylum-3} \end{center}
-  
-  \begin{Shaded}
-  \begin{Highlighting}[]
-  \CommentTok{#+ geom_jitter(aes(color=MetFam_BP.m$Phylum))       }
-  
-  \NormalTok{MetFam=}\KeywordTok{subset}\NormalTok{(ArchaeasCentral,Pathway==}\StringTok{"3PGA_AMINOACIDS"}\NormalTok{)}
-  \NormalTok{MetFam_BP.m=ArchaeasHeatPlotBP.m[ArchaeasHeatPlotBP.m$variable %in%}\StringTok{ }\NormalTok{MetFam$Enzyme,]}
-  \KeywordTok{ggplot}\NormalTok{(MetFam_BP.m, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{MetFam_BP.m$variable, }\DataTypeTok{y=}\NormalTok{MetFam_BP.m$value, }\DataTypeTok{fill=}\NormalTok{Order))+}\StringTok{ }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"Metabolic PGA_AMINOACIDS Families"}\NormalTok{, }\DataTypeTok{y =} \StringTok{"Copies on Archaeabacteria Genomes"}\NormalTok{,}\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size=}\DecValTok{12}\NormalTok{)) +}\StringTok{ }\KeywordTok{geom_boxplot}\NormalTok{() +}\StringTok{ }\KeywordTok{facet_grid}\NormalTok{(. ~}\StringTok{ }\NormalTok{Phylum)+}\KeywordTok{theme_bw}\NormalTok{()+}\KeywordTok{theme}\NormalTok{(}\DataTypeTok{plot.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{14}\NormalTok{, }\DataTypeTok{face =} \StringTok{"bold"}\NormalTok{), }\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{12}\NormalTok{), }\DataTypeTok{axis.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{face=}\StringTok{"bold"}\NormalTok{), }\DataTypeTok{axis.text.x=}\KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{90}\NormalTok{,}\DataTypeTok{size =} \DecValTok{6}\NormalTok{), }\DataTypeTok{legend.position =} \StringTok{"bottom"}\NormalTok{)}
-  \end{Highlighting}
-  \end{Shaded}
-  
-  \begin{center}\includegraphics{tesis_files/figure-latex/ArcheaeBoxPlotByPhylum-4} \end{center}
-  
-  \begin{Shaded}
-  \begin{Highlighting}[]
-  \CommentTok{#+ geom_jitter(aes(color=MetFam_BP.m$Phylum))}
-  
-  \NormalTok{MetFam=}\KeywordTok{subset}\NormalTok{(ArchaeasCentral,Pathway==}\StringTok{"Glycolysis"}\NormalTok{)}
-  \NormalTok{MetFam_BP.m=ArchaeasHeatPlotBP.m[ArchaeasHeatPlotBP.m$variable %in%}\StringTok{ }\NormalTok{MetFam$Enzyme,]}
-  \KeywordTok{ggplot}\NormalTok{(MetFam_BP.m, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{MetFam_BP.m$variable, }\DataTypeTok{y=}\NormalTok{MetFam_BP.m$value, }\DataTypeTok{fill=}\NormalTok{Order))+}\StringTok{ }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"Metabolic Glycolysis Families"}\NormalTok{, }\DataTypeTok{y =} \StringTok{"Copies on Archaeabacteria Genomes"}\NormalTok{,}\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size=}\DecValTok{12}\NormalTok{)) +}\StringTok{ }\KeywordTok{geom_boxplot}\NormalTok{() +}\StringTok{ }\KeywordTok{facet_grid}\NormalTok{(. ~}\StringTok{ }\NormalTok{Phylum)+}\KeywordTok{theme_bw}\NormalTok{()+}\KeywordTok{theme}\NormalTok{(}\DataTypeTok{plot.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{14}\NormalTok{, }\DataTypeTok{face =} \StringTok{"bold"}\NormalTok{), }\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{12}\NormalTok{), }\DataTypeTok{axis.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{face=}\StringTok{"bold"}\NormalTok{), }\DataTypeTok{axis.text.x=}\KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{90}\NormalTok{,}\DataTypeTok{size =} \DecValTok{6}\NormalTok{), }\DataTypeTok{legend.position =} \StringTok{"bottom"}\NormalTok{)}
-  \end{Highlighting}
-  \end{Shaded}
-  
-  \begin{center}\includegraphics{tesis_files/figure-latex/ArcheaeBoxPlotByPhylum-5} \end{center}
-  
-  \begin{Shaded}
-  \begin{Highlighting}[]
-  \CommentTok{#+ geom_jitter(aes(color=MetFam_BP.m$Phylum))}
-  
-  \NormalTok{MetFam=}\KeywordTok{subset}\NormalTok{(ArchaeasCentral,Pathway==}\StringTok{"OXALACETATE_AMINOACIDS"}\NormalTok{)}
-  \NormalTok{MetFam_BP.m=ArchaeasHeatPlotBP.m[ArchaeasHeatPlotBP.m$variable %in%}\StringTok{ }\NormalTok{MetFam$Enzyme,]}
-  \KeywordTok{ggplot}\NormalTok{(MetFam_BP.m, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{MetFam_BP.m$variable, }\DataTypeTok{y=}\NormalTok{MetFam_BP.m$value, }\DataTypeTok{fill=}\NormalTok{Order))+}\StringTok{ }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"Metabolic OXALACETATE_AMINOACIDS Families"}\NormalTok{, }\DataTypeTok{y =} \StringTok{"Copies on Archaeabacteria Genomes"}\NormalTok{,}\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size=}\DecValTok{12}\NormalTok{)) +}\StringTok{ }\KeywordTok{geom_boxplot}\NormalTok{() +}\StringTok{ }\KeywordTok{facet_grid}\NormalTok{(. ~}\StringTok{ }\NormalTok{Phylum)+}\KeywordTok{theme_bw}\NormalTok{()+}\KeywordTok{theme}\NormalTok{(}\DataTypeTok{plot.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{14}\NormalTok{, }\DataTypeTok{face =} \StringTok{"bold"}\NormalTok{), }\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{12}\NormalTok{), }\DataTypeTok{axis.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{face=}\StringTok{"bold"}\NormalTok{), }\DataTypeTok{axis.text.x=}\KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{90}\NormalTok{,}\DataTypeTok{size =} \DecValTok{6}\NormalTok{), }\DataTypeTok{legend.position =} \StringTok{"bottom"}\NormalTok{)}
-  \end{Highlighting}
-  \end{Shaded}
-  
-  \begin{center}\includegraphics{tesis_files/figure-latex/ArcheaeBoxPlotByPhylum-6} \end{center}
-  
-  \begin{Shaded}
-  \begin{Highlighting}[]
-  \CommentTok{#+ geom_jitter(aes(color=MetFam_BP.m$Phylum))}
-  
-  \NormalTok{MetFam=}\KeywordTok{subset}\NormalTok{(ArchaeasCentral,Pathway==}\StringTok{"R5P_AMINOACIDS"}\NormalTok{)}
-  \NormalTok{MetFam_BP.m=ArchaeasHeatPlotBP.m[ArchaeasHeatPlotBP.m$variable %in%}\StringTok{ }\NormalTok{MetFam$Enzyme,]}
-  \KeywordTok{ggplot}\NormalTok{(MetFam_BP.m, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{MetFam_BP.m$variable, }\DataTypeTok{y=}\NormalTok{MetFam_BP.m$value, }\DataTypeTok{fill=}\NormalTok{Order))+}\StringTok{ }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"Metabolic R5P_AMINOACIDS Families"}\NormalTok{, }\DataTypeTok{y =} \StringTok{"Copies on Archaeabacteria Genomes"}\NormalTok{,}\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size=}\DecValTok{12}\NormalTok{)) +}\StringTok{ }\KeywordTok{geom_boxplot}\NormalTok{() +}\StringTok{ }\KeywordTok{facet_grid}\NormalTok{(. ~}\StringTok{ }\NormalTok{Phylum)+}\KeywordTok{theme_bw}\NormalTok{()+}\KeywordTok{theme}\NormalTok{(}\DataTypeTok{plot.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{14}\NormalTok{, }\DataTypeTok{face =} \StringTok{"bold"}\NormalTok{), }\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{12}\NormalTok{), }\DataTypeTok{axis.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{face=}\StringTok{"bold"}\NormalTok{), }\DataTypeTok{axis.text.x=}\KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{90}\NormalTok{,}\DataTypeTok{size =} \DecValTok{6}\NormalTok{), }\DataTypeTok{legend.position =} \StringTok{"bottom"}\NormalTok{)}
-  \end{Highlighting}
-  \end{Shaded}
-  
-  \begin{center}\includegraphics{tesis_files/figure-latex/ArcheaeBoxPlotByPhylum-7} \end{center}
-  
-  \begin{Shaded}
-  \begin{Highlighting}[]
-   \CommentTok{#+ geom_jitter(aes(color=MetFam_BP.m$Phylum))}
-  
-  \CommentTok{#}
-  \NormalTok{MetFam=}\KeywordTok{subset}\NormalTok{(ArchaeasCentral,Pathway==}\StringTok{"TCA"}\NormalTok{)}
-  \NormalTok{MetFam_BP.m=ArchaeasHeatPlotBP.m[ArchaeasHeatPlotBP.m$variable %in%}\StringTok{ }\NormalTok{MetFam$Enzyme,]}
-  \KeywordTok{ggplot}\NormalTok{(MetFam_BP.m, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{MetFam_BP.m$variable, }\DataTypeTok{y=}\NormalTok{MetFam_BP.m$value, }\DataTypeTok{fill=}\NormalTok{Order))+}\StringTok{ }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"Metabolic TCA Families"}\NormalTok{, }\DataTypeTok{y =} \StringTok{"Copies on Archaeabacteria Genomes"}\NormalTok{,}\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size=}\DecValTok{12}\NormalTok{)) +}\StringTok{ }\KeywordTok{geom_boxplot}\NormalTok{() +}\StringTok{ }\KeywordTok{facet_grid}\NormalTok{(. ~}\StringTok{ }\NormalTok{Phylum)+}\KeywordTok{theme_bw}\NormalTok{() +}\KeywordTok{theme}\NormalTok{(}\DataTypeTok{plot.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{14}\NormalTok{, }\DataTypeTok{face =} \StringTok{"bold"}\NormalTok{), }\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{12}\NormalTok{), }\DataTypeTok{axis.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{face=}\StringTok{"bold"}\NormalTok{), }\DataTypeTok{axis.text.x=}\KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{90}\NormalTok{,}\DataTypeTok{size =} \DecValTok{6}\NormalTok{), }\DataTypeTok{legend.position =} \StringTok{"bottom"}\NormalTok{)}
-  \end{Highlighting}
-  \end{Shaded}
-  
-  \begin{center}\includegraphics{tesis_files/figure-latex/ArcheaeBoxPlotByPhylum-8} \end{center}
-  
-  \begin{Shaded}
-  \begin{Highlighting}[]
-  \CommentTok{#+ geom_jitter(aes(color=MetFam_BP.m$Phylum))}
-  
-  \NormalTok{MetFam=}\KeywordTok{subset}\NormalTok{(ArchaeasCentral,Pathway==}\StringTok{"E4P_AMINO_ACIDS"}\NormalTok{)}
-  \NormalTok{MetFam_BP.m=ArchaeasHeatPlotBP.m[ArchaeasHeatPlotBP.m$variable %in%}\StringTok{ }\NormalTok{MetFam$Enzyme,]}
-  \KeywordTok{ggplot}\NormalTok{(MetFam_BP.m, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{MetFam_BP.m$variable, }\DataTypeTok{y=}\NormalTok{MetFam_BP.m$value, }\DataTypeTok{fill=}\NormalTok{Order))+}\StringTok{ }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"Metabolic E4P_AMINO_ACIDS Families"}\NormalTok{, }\DataTypeTok{y =} \StringTok{"Copies on Archaeabacteria Genomes"}\NormalTok{,}\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size=}\DecValTok{12}\NormalTok{)) +}\StringTok{ }\KeywordTok{geom_boxplot}\NormalTok{() +}\StringTok{ }\KeywordTok{facet_grid}\NormalTok{(. ~}\StringTok{ }\NormalTok{Phylum)+}\KeywordTok{theme_bw}\NormalTok{() +}\KeywordTok{theme}\NormalTok{(}\DataTypeTok{plot.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{14}\NormalTok{, }\DataTypeTok{face =} \StringTok{"bold"}\NormalTok{), }\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{12}\NormalTok{), }\DataTypeTok{axis.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{face=}\StringTok{"bold"}\NormalTok{), }\DataTypeTok{axis.text.x=}\KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{90}\NormalTok{,}\DataTypeTok{size =} \DecValTok{6}\NormalTok{), }\DataTypeTok{legend.position =} \StringTok{"bottom"}\NormalTok{)}
-  \end{Highlighting}
-  \end{Shaded}
-  
-  \begin{center}\includegraphics{tesis_files/figure-latex/ArcheaeBoxPlotByPhylum-9} \end{center}
-  
-  \begin{Shaded}
-  \begin{Highlighting}[]
-  \CommentTok{#+ geom_jitter(aes(color=MetFam_BP.m$Phylum))}
-  
-  
-  \NormalTok{MetFam=}\KeywordTok{subset}\NormalTok{(ArchaeasCentral,Pathway==}\StringTok{"PYR_THR_AA"}\NormalTok{)}
-  \NormalTok{MetFam_BP.m=ArchaeasHeatPlotBP.m[ArchaeasHeatPlotBP.m$variable %in%}\StringTok{ }\NormalTok{MetFam$Enzyme,]}
-  \KeywordTok{ggplot}\NormalTok{(MetFam_BP.m, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{MetFam_BP.m$variable, }\DataTypeTok{y=}\NormalTok{MetFam_BP.m$value, }\DataTypeTok{fill=}\NormalTok{Order))+}\StringTok{ }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"Metabolic Families on PYR_THR_AA pathway "}\NormalTok{, }\DataTypeTok{y =} \StringTok{"Copies on Archaeabacteria Genomes"}\NormalTok{,}\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size=}\DecValTok{12}\NormalTok{)) +}\StringTok{ }\KeywordTok{geom_boxplot}\NormalTok{() +}\StringTok{ }\KeywordTok{facet_grid}\NormalTok{(. ~}\StringTok{ }\NormalTok{Phylum)+}\KeywordTok{theme_bw}\NormalTok{() +}\KeywordTok{theme}\NormalTok{(}\DataTypeTok{plot.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{14}\NormalTok{, }\DataTypeTok{face =} \StringTok{"bold"}\NormalTok{), }\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{12}\NormalTok{), }\DataTypeTok{axis.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{face=}\StringTok{"bold"}\NormalTok{), }\DataTypeTok{axis.text.x=}\KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{90}\NormalTok{,}\DataTypeTok{size =} \DecValTok{6}\NormalTok{), }\DataTypeTok{legend.position =} \StringTok{"bottom"}\NormalTok{)}
-  \end{Highlighting}
-  \end{Shaded}
-  
-  \begin{center}\includegraphics{tesis_files/figure-latex/ArcheaeBoxPlotByPhylum-10} \end{center}
-  
-  \begin{Shaded}
-  \begin{Highlighting}[]
-  \CommentTok{#+ geom_jitter(aes(color=MetFam_BP.m$Phylum))}
-  
-  \CommentTok{#ggsave("chapter3/expansion_plotArchaeas.pdf", plot = expansion_plotArchaea,height = 8, width = 7)}
-  \end{Highlighting}
-  \end{Shaded}
-  
-  \clearpage 
-  
-  \section{Central pathway expansions}\label{central-pathway-expansions}
-  
-  Heat plot of central pathways expansions, Needs to be phylogenetically
-  sorted.
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 0,scale = 0.6]{chapter3/ArchaeasHeatPlot.pdf}
-  \caption[Archaeas Heatplot]{\normalsize{Archaeas Heatplot}}
-  \label{fig:ArchaeaPlot}
-  \end{figure}
-  
-  Here is a reference to the HeatPlot: \autoref{fig:ArchaeaPlot}.
-  \clearpage 
-  
-  \section{Genome Size correlations}\label{genome-size-correlations}
-  
-  \subsection{Correlation between genome size and AntiSMASH
-  products}\label{correlation-between-genome-size-and-antismash-products}
-  
-  Genome size vs Total antismash cluster coloured by order
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 0,scale = 0.6]{chapter3/ArchaeasSMASHvsSizebyOrder.pdf}
-  \caption[Correlation between Archaeas genome size and antismash Natural products detection colored by Order]{\normalsize{Correlation between Archaeas genome size and antismash Natural products detection colored by Order}}
-  \label{fig:ArchaeasSMASHvsSizebyOrder}
-  \end{figure}
-  
-  Here is a reference to Genome size vs Total antismash cluster:
-  \autoref{fig:ArchaeasSMASHvsSizebyOrder}. \clearpage
-  
-  Genome size vs Total antismash cluster detected splitted by order
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 0,scale = 0.6]{chapter3/ArchaeasSMASHvsSizeGridOrder.pdf}
-  \caption[Correlation between Archaeas genome size and antismash Natural products detection grided by Order]{\normalsize{Correlation between Archaeas genome size and antismash Natural products detection grided by Order}}
-  \label{fig:ArchaeasSMASHvsSizeGridOrder}
-  \end{figure}
-  
-  Here is a reference to Correlation between genome size and antismash
-  Natural products detection grided by Order plot:
-  \autoref{fig:ArchaeasSMASHvsSizeGridOrder}. \clearpage 
-  
-  \subsection{Correlation between genome size and Central pathway
-  expansions}\label{correlation-between-genome-size-and-central-pathway-expansions}
-  
-  Genome size vs Total central pathway expansion coloured by order
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 0,scale = 1]{chapter3/ArchaeasSizevsExpansionsbyOrder.pdf}
-  \caption[Correlation between Archaeas genome size and central pathway expansions ]{\normalsize{Correlation between Archaeas genome size and central pathway expansions }}
-  \label{fig:ArchaeasSizevsExpansionsbyOrder}
-  \end{figure}
-  
-  Here is a reference to the size vs Total central pathway expansion plot:
-  \autoref{fig:ArchaeasSizevsExpansionsbyOrder}. \clearpage 
-  
-  Genome size vs Total central pathway expansion grided by order
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 0,scale = 1]{chapter3/ArchaeasSizevsExpansionsGridbyOrder.pdf}
-  \caption[Correlation between Archaeas genome size and central pathway expansions grided by order]{\normalsize{Correlation between Archaeas genome size and central pathway expansions grided by order}}
-  \label{fig:ArchaeasSizevsExpansionsGridbyOrder}
-  \end{figure}
-  
-  Here is a reference to the Genome size vs Total central pathway
-  expansion grided by order plot:
-  \autoref{fig:ArchaeasSizevsExpansionsGridbyOrder}. \clearpage 
-  
-  Correlation between genome size and each of the central pathway
-  families. Data are coloured by metabolic family instead of coloured by
-  taxonomical order. This treatment allows to answer how differente
-  metabolic families grows when genome size grow.\\
-  Also I want to add form given by taxonomical order.
-  
-  \begin{verbatim}
-  Warning: The shape palette can deal with a maximum of 6 discrete values
-  because more than 6 becomes difficult to discriminate; you have
-  24. Consider specifying shapes manually if you must have them.
-  \end{verbatim}
-  
-  \begin{verbatim}
-  Warning: Removed 64823 rows containing missing values (geom_point).
-  \end{verbatim}
-  
-  Genome size vs Total central pathway expansion coloured by metabolic
-  Family
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 0,scale = 0.6]{chapter3/ArchaeasSizevsExpansionsbyMetabolicFamily.pdf}
-  \caption[Correlation between Archaeas Genome size vs Total central pathway expansion coloured by metabolic Family]{\normalsize{Correlation between Archaeas Genome size vs Total central pathway expansion coloured by metabolic Family}}
-  \label{fig:ArchaeasSizevsExpansionsbyMetabolicFamily}
-  \end{figure}
-  
-  Here is a reference to the Genome size vs Total central pathway
-  expansion coloured by metabolic Family plot:
-  \autoref{fig:ArchaeasSizevsExpansionsbyMetabolicFamily}. \clearpage 
-  
-  Future Work: Genome size vs Total central pathway expansion grided by
-  metabolic Family For clarity I need to also grid and group by Metabolic
-  Pathway
-  
-  Here is a reference to Genome size vs Total central pathway expansion
-  grided by metabolic Family plot:
-  \autoref{fig:ArchaeasExpansionsbyMetabolicFamilyGrid}. \clearpage 
-  
-  \section{Natural products}\label{natural-products}
-  
-  \subsection{Natural products recruitments from EvoMining
-  heatplot}\label{natural-products-recruitments-from-evomining-heatplot}
-  
-  We can see natural products recruitment after central pathways
-  expansions colored by their kingdom.\\
-  Natural products recruited by metabolic family, colored by phylogenetic
-  origin.
-  
-  Recruitments after central pathways expansions coloured by Kingdom
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 0,scale = 0.6]{chapter3/ArchaeasRecruitmentsbyKingdom.pdf}
-  \caption[Archaeas Recruitmens on central families coloured by kingdom]{\normalsize{Archaeas Recruitmens on central families coloured by kingdom}}
-  \label{fig:ArchaeasRecruitmentsbyKingdom}
-  \end{figure}
-  
-  Here is a reference to Recruitments after central pathways expansions
-  colourd by Kingdom plot: \autoref{fig:ArchaeasRecruitmentsbyKingdom}.
-  
-  \clearpage 
-  Recruitments after central pathways expansions colourd by taxonomy
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 0,scale = 0.5]{chapter3/ArchaeasRecruitmentsbyTaxa.pdf}
-  \caption[Archaeas Recruitmens on central families coloured by taxonomy]{\normalsize{Archaeas Recruitmens on central families coloured by taxonomy}}
-  \label{fig:ArchaeasRecruitmentsbyTaxa}
-  \end{figure}
-  
-  Here is a reference to Recruitments after central pathways expansions
-  colourd by taxa plot: \autoref{fig:ArchaeasRecruitmentsbyTaxa}.
-  \clearpage 
-  
-  \section{Archaeas AntiSMASH}\label{archaeas-antismash}
-  
-  Taxonomical diversity on Archaeasbacteria Data
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 0,scale = 0.6]{chapter3/ArchaeasDiversity.pdf}
-  \caption[Archaeas Diversity]{\normalsize{Archaeas Diversity}}
-  \label{fig:ArchaeasDiversity}
-  \end{figure}
-  
-  Here is a reference to Recruitments after central pathways expansions
-  colourd by taxa plot: \autoref{fig:ArchaeasDiversity}. \clearpage
-  
-  Smash diversity
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 0,scale = 0.5]{chapter3/ArchaeasSmash.pdf}
-  \caption[Archaeas Smash Taxonomical Diversity]{\normalsize{Archaeas Smash Taxonomical Diversity}}
-  \label{fig:ArchaeasSmash}
-  \end{figure}
-  
-  Here is a reference to Recruitments after central pathways expansions
-  colourd by taxa plot: \autoref{fig:ArchaeasSmash}. \clearpage
-  
-  \subsection{AntisSMASH vs Central
-  Expansions}\label{antissmash-vs-central-expansions}
-  
-  Is it a correlation between pangenome grow and central pathways
-  expansions?
-  
-  Total central pathway expansions by genome vs Total antismash cluster
-  detected coloured by order
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 0,scale = 0.5]{chapter3/ArchaeasSMASHvsExpansionsbyOrder.pdf}
-  \caption[Correlation between Archaeas central pathway expansions and antismash Natural products detection]{\normalsize{Correlation between Archaeas central pathway expansions and antismash Natural products detection}}
-  \label{fig:ArchaeasSMASHvsExpansionsbyOrder}
-  \end{figure}
-  
-  Here is a reference to the expansions vs antismash NP's clusters plot:
-  \autoref{fig:ArchaeasSMASHvsExpansionsbyOrder}. \clearpage 
-  
-  Total central pathway expansions by genome vs Total antismash cluster
-  detected splitted by order
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 0,scale = 0.5]{chapter3/ArchaeasSMASHvsExpansionsbyOrderGRID.pdf}
-  \caption[Correlation between Archaeas central pathway expnasions and antismash Natural products detection]{\normalsize{Correlation between Archaeas central pathway expnasions and antismash Natural products detection}}
-  \label{fig:ArchaeasSMASHvsExpansionsbyOrderGRID}
-  \end{figure}
-  
-  Here is a reference to the expansions vs antismash NP's clusters
-  splitted by order plot
-  \autoref{fig:ArchaeasSMASHvsExpansionsbyOrderGRID}. \clearpage 
-  
-  AntisMAsh vs Expansions by taxonomic Family
-  
-  Natural products colured by family
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 0,scale = 0.6]{chapter3/Archaeasnpf.pdf}
-  \caption[Archaeas Natural products by family]{\normalsize{Archaeas Natural products by family}}
-  \label{fig:Archaeasnpf}
-  \end{figure}
-  
-  Here is a reference to the Natural products colured by family plot
-  \autoref{fig:Archaeasnpf}. \clearpage 
-  
-  \section{Selected trees from
-  EvoMining}\label{selected-trees-from-evomining}
-  
-  Phosphoribosyl\_isomerase\_3 family\\
-  Figure from EvoMining
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 180,scale = 0.25]{chapter3/tree41.png}
-  \caption[Phosphoribosyl isomerase A EvoMiningtree]{\normalsize{Phosphoribosyl isomerase A EvoMiningtree}}
-  \label{fig:Phosphoribosyl_isomerase_A_evo_tree}
-  \end{figure}\begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 180,scale = 0.25]{chapter3/tree42.png}
-  \caption[Phosphoribosyl isomerase other EvoMiningtree]{\normalsize{Phosphoribosyl isomerase other EvoMiningtree}}
-  \label{fig:Phosphoribosyl_isomerase_other_evo_tree}
-  \end{figure}\begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 180,scale = 0.25]{chapter3/tree65.png}
-  \caption[Phosphoribosyl anthranilate isomerase EvoMiningtree]{\normalsize{Phosphoribosyl anthranilate isomerase EvoMiningtree}}
-  \label{fig:Phosphoribosylanthranilate_isomerase_evo_tree}
-  \end{figure}
-  
-  \clearpage 
-  
-  \hypertarget{section}{\section{}\label{section}}
-  
-  Other possible databases Archaeal signatures \emph{set of
-  protein-encoding genes that function uniquely within the Archaea; most
-  signature proteins have no recognizable bacterial or eukaryal homologs}
-  (Graham, Overbeek, Olsen, \& Woese, 2000) \#\# Footnotes and Endnotes
-  
-  You might want to footnote something.\footnote{footnote text} The
-  footnote will be in a smaller font and placed appropriately. Endnotes
-  work in much the same way. More information can be found about both on
-  the CUS site or feel free to reach out to
-  \href{mailto:data@reed.edu}{\nolinkurl{data@reed.edu}}.
-  
-  \section{Bibliographies}\label{bibliographies}
-  
-  Of course you will need to cite things, and you will probably accumulate
-  an armful of sources. There are a variety of tools available for
-  creating a bibliography database (stored with the .bib extension). In
-  addition to BibTeX suggested below, you may want to consider using the
-  free and easy-to-use tool called Zotero. The Reed librarians have
-  created Zotero documentation at
-  \url{http://libguides.reed.edu/citation/zotero}. In addition, a tutorial
-  is available from Middlebury College at
-  \url{http://sites.middlebury.edu/zoteromiddlebury/}.
-  
-  \emph{R Markdown} uses \emph{pandoc} (\url{http://pandoc.org/}) to build
-  its bibliographies. One nice caveat of this is that you won't have to do
-  a second compile to load in references as standard \LaTeX~requires. To
-  cite references in your thesis (after creating your bibliography
-  database), place the reference name inside square brackets and precede
-  it by the ``at'' symbol. For example, here's a reference to a book about
-  worrying: (Molina \& Borkovec, 1994). This \texttt{Molina1994} entry
-  appears in a file called \texttt{thesis.bib} in the \texttt{bib} folder.
-  This bibliography database file was created by a program called BibTeX.
-  You can call this file something else if you like (look at the YAML
-  header in the main .Rmd file) and, by default, is to placed in the
-  \texttt{bib} folder.
-  
-  For more information about BibTeX and bibliographies, see our CUS site
-  (\url{http://web.reed.edu/cis/help/latex/index.html})\footnote{Reed~College
-    (2007)}. There are three pages on this topic: \emph{bibtex} (which
-  talks about using BibTeX, at
-  \url{http://web.reed.edu/cis/help/latex/bibtex.html}),
-  \emph{bibtexstyles} (about how to find and use the bibliography style
-  that best suits your needs, at
-  \url{http://web.reed.edu/cis/help/latex/bibtexstyles.html}) and
-  \emph{bibman} (which covers how to make and maintain a bibliography by
-  hand, without BibTeX, at
-  \url{http://web.reed.edu/cis/help/latex/bibman.html}). The last page
-  will not be useful unless you have only a few sources.
-  
-  If you look at the YAML header at the top of the main .Rmd file you can
-  see that we can specify the style of the bibliography by referencing the
-  appropriate csl file. You can download a variety of different style
-  files at \url{https://www.zotero.org/styles}. Make sure to download the
-  file into the csl folder.
-  
-  \paragraph{Tips for Bibliographies}\label{tips-for-bibliographies}
-  
-  \begin{itemize}
-  \tightlist
-  \item
-    Like with thesis formatting, the sooner you start compiling your
-    bibliography for something as large as thesis, the better. Typing in
-    source after source is mind-numbing enough; do you really want to do
-    it for hours on end in late April? Think of it as procrastination.
-  \item
-    The cite key (a citation's label) needs to be unique from the other
-    entries.
-  \item
-    When you have more than one author or editor, you need to separate
-    each author's name by the word ``and'' e.g.
-    \texttt{Author\ =\ \{Noble,\ Sam\ and\ Youngberg,\ Jessica\},}.
-  \item
-    Bibliographies made using BibTeX (whether manually or using a manager)
-    accept \LaTeX~markup, so you can italicize and add symbols as
-    necessary.
-  \item
-    To force capitalization in an article title or where all lowercase is
-    generally used, bracket the capital letter in curly braces.
-  \item
-    You can add a Reed Thesis citation\footnote{Noble (2002)} option. The
-    best way to do this is to use the phdthesis type of citation, and use
-    the optional ``type'' field to enter ``Reed thesis'' or
-    ``Undergraduate thesis.''
-  \end{itemize}
-  
-  \section{Anything else?}\label{anything-else}
-  
-  If you'd like to see examples of other things in this template, please
-  contact the Data @ Reed team (email
-  \href{mailto:data@reed.edu}{\nolinkurl{data@reed.edu}}) with your
-  suggestions. We love to see people using \emph{R Markdown} for their
-  theses, and are happy to help.
-  
-  \hypertarget{refux5flabels}{\chapter{Actinobacteria EvoMining
-  Results}\label{refux5flabels}}
-  
-  Actinobacteria is an ancient phylum \{Referencia de luis\}
-  
-  \section{Tables}\label{tables-1}
-  
-  \begin{longtable}[c]{@{}ccl@{}}
-  \caption{Correlation of Inheritance Factors for Parents and Child
-  \label{tab:inher}}\tabularnewline
-  \toprule
-  \begin{minipage}[b]{0.29\columnwidth}\centering\strut
-  Factors
-  \strut\end{minipage} &
-  \begin{minipage}[b]{0.47\columnwidth}\centering\strut
-  Correlation between Parents \& Child
-  \strut\end{minipage} &
-  \begin{minipage}[b]{0.16\columnwidth}\raggedright\strut
-  \strut\end{minipage}\tabularnewline
-  \midrule
-  \endfirsthead
-  \toprule
-  \begin{minipage}[b]{0.29\columnwidth}\centering\strut
-  Factors
-  \strut\end{minipage} &
-  \begin{minipage}[b]{0.47\columnwidth}\centering\strut
-  Correlation between Parents \& Child
-  \strut\end{minipage} &
-  \begin{minipage}[b]{0.16\columnwidth}\raggedright\strut
-  \strut\end{minipage}\tabularnewline
-  \midrule
-  \endhead
-  \begin{minipage}[t]{0.29\columnwidth}\centering\strut
-  GenomeDB
-  \strut\end{minipage} &
-  \begin{minipage}[t]{0.47\columnwidth}\centering\strut
-  1245
-  \strut\end{minipage} &
-  \begin{minipage}[t]{0.16\columnwidth}\raggedright\strut
-  \strut\end{minipage}\tabularnewline
-  \begin{minipage}[t]{0.29\columnwidth}\centering\strut
-  Families
-  \strut\end{minipage} &
-  \begin{minipage}[t]{0.47\columnwidth}\centering\strut
-  65
-  \strut\end{minipage} &
-  \begin{minipage}[t]{0.16\columnwidth}\raggedright\strut
-  \strut\end{minipage}\tabularnewline
-  \bottomrule
-  \end{longtable}
-  
-  \clearpage
-  
-  \subsection{Expansions BoxPlot by metabolic
-  family}\label{expansions-boxplot-by-metabolic-family-1}
-  
-  \begin{Shaded}
-  \begin{Highlighting}[]
-  \KeywordTok{label}\NormalTok{(}\DataTypeTok{path =} \StringTok{"chapter4/expansion_plotActinos.pdf"}\NormalTok{, }\DataTypeTok{caption =} \StringTok{"Expansions Boxplot"}\NormalTok{,}\DataTypeTok{label =} \StringTok{"Actino_expansion_boxplot"}\NormalTok{, }\DataTypeTok{type =} \StringTok{"figure"}\NormalTok{)}
-  \end{Highlighting}
-  \end{Shaded}
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 0,scale = 1]{chapter4/expansion_plotActinos.pdf}
-  \caption[Expansions Boxplot]{\normalsize{Expansions Boxplot}}
-  \label{fig:Actino_expansion_boxplot}
-  \end{figure}
-  
-  Here is a reference to the expansion boxplot:
-  \autoref{fig:Actino_expansion_boxplot}.\\
-  \clearpage 
-  
-  \section{Central pathway expansions}\label{central-pathway-expansions-1}
-  
-  Heat plot of central pathways expansions, Needs to be phylogenetically
-  sorted.
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 0,scale = 0.7]{chapter4/HeatPlotActinos.pdf}
-  \caption[Actinobacterial Heatplot]{\normalsize{Actinobacterial Heatplot}}
-  \label{fig:ActinoPlot}
-  \end{figure}
-  
-  Here is a reference to the HeatPlot: \autoref{fig:ActinoPlot}.
-  \clearpage 
-  
-  PPP pahtway expansions restricted to \emph{Streptomycetaceae} family
-  HeatPlot: \autoref{fig:ActinoPlot}.
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 0,scale = 0.7]{chapter4/HeatPlotStreptoPGA.pdf}
-  \caption[Streptomyces Genomes expansions on PGA Aminoacids HeatPlot]{\normalsize{Streptomyces Genomes expansions on PGA Aminoacids HeatPlot}}
-  \label{fig:StreptoPGAPlot}
-  \end{figure}
-  
-  Here is a reference to the HeatPlot: \autoref{fig:StreptoPGAPlot}.
-  \clearpage 
-  
-  \section{Genome Size correlations}\label{genome-size-correlations-1}
-  
-  \subsection{Correlation between genome size and AntiSMASH
-  products}\label{correlation-between-genome-size-and-antismash-products-1}
-  
-  \begin{verbatim}
-  Warning: Removed 1 rows containing missing values (geom_point).
-  
-  Warning: Removed 1 rows containing missing values (geom_point).
-  \end{verbatim}
-  
-  Genome size vs Total antismash cluster coloured by order
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 0,scale = 0.6]{chapter4/ActinosSMASHvsSizebyOrder.pdf}
-  \caption[Correlation between Actinos genome size and antismash Natural products detection colored by Order]{\normalsize{Correlation between Actinos genome size and antismash Natural products detection colored by Order}}
-  \label{fig:ActinosSMASHvsSizebyOrder}
-  \end{figure}
-  
-  Here is a reference to Genome size vs Total antismash cluster:
-  \autoref{fig:ActinosSMASHvsSizebyOrder}. \clearpage
-  
-  Genome size vs Total antismash cluster detected splitted by order
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 0,scale = 0.6]{chapter4/ActinosSMASHvsSizeGridOrder.pdf}
-  \caption[Correlation between Actinos genome size and antismash Natural products detection grided by Order]{\normalsize{Correlation between Actinos genome size and antismash Natural products detection grided by Order}}
-  \label{fig:ActinosSMASHvsSizeGridOrder}
-  \end{figure}
-  
-  Here is a reference to Correlation between genome size and antismash
-  Natural products detection grided by Order plot:
-  \autoref{fig:ActinosSMASHvsSizeGridOrder}. \clearpage 
-  
-  \subsection{Correlation between genome size and Central pathway
-  expansions}\label{correlation-between-genome-size-and-central-pathway-expansions-1}
-  
-  \begin{verbatim}
-  Warning: Removed 1 rows containing missing values (geom_point).
-  
-  Warning: Removed 1 rows containing missing values (geom_point).
-  \end{verbatim}
-  
-  Genome size vs Total central pathway expansion coloured by order
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 0,scale = 1]{chapter4/ActinosSizevsExpansionsbyOrder.pdf}
-  \caption[Correlation between Actinos genome size and central pathway expansions ]{\normalsize{Correlation between Actinos genome size and central pathway expansions }}
-  \label{fig:ActinosSizevsExpansionsbyOrder}
-  \end{figure}
-  
-  Here is a reference to the size vs Total central pathway expansion plot:
-  \autoref{fig:ActinosSizevsExpansionsbyOrder}. \clearpage 
-  
-  Genome size vs Total central pathway expansion grided by order
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 0,scale = 1]{chapter4/ActinosSizevsExpansionsGridbyOrder.pdf}
-  \caption[Correlation between Actinos genome size and central pathway expansions grided by order]{\normalsize{Correlation between Actinos genome size and central pathway expansions grided by order}}
-  \label{fig:ActinosSizevsExpansionsGridbyOrder}
-  \end{figure}
-  
-  Here is a reference to the Genome size vs Total central pathway
-  expansion grided by order plot:
-  \autoref{fig:ActinosSizevsExpansionsGridbyOrder}. \clearpage 
-  
-  Correlation between genome size and each of the central pathway
-  families. Data are coloured by metabolic family instead of coloured by
-  taxonomical order. This treatment allows to answer how differente
-  metabolic families grows when genome size grow.\\
-  Also I want to add form given by taxonomical order.
-  
-  \begin{verbatim}
-  Warning: The shape palette can deal with a maximum of 6 discrete values
-  because more than 6 becomes difficult to discriminate; you have
-  32. Consider specifying shapes manually if you must have them.
-  \end{verbatim}
-  
-  \begin{verbatim}
-  Warning: Removed 103306 rows containing missing values (geom_point).
-  \end{verbatim}
-  
-  \begin{verbatim}
-  Warning: Removed 94 rows containing missing values (geom_point).
-  \end{verbatim}
-  
-  Genome size vs Total central pathway expansion coloured by metabolic
-  Family
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 0,scale = 0.6]{chapter4/ActinosSizevsExpansionsbyMetabolicFamily.pdf}
-  \caption[Correlation between Actinos Genome size vs Total central pathway expansion coloured by metabolic Family]{\normalsize{Correlation between Actinos Genome size vs Total central pathway expansion coloured by metabolic Family}}
-  \label{fig:ActinosSizevsExpansionsbyMetabolicFamily}
-  \end{figure}
-  
-  Here is a reference to the Genome size vs Total central pathway
-  expansion coloured by metabolic Family plot:
-  \autoref{fig:ActinosSizevsExpansionsbyMetabolicFamily}. \clearpage 
-  
-  Future Work: Genome size vs Total central pathway expansion grided by
-  metabolic Family For clarity I need to also grid and group by Metabolic
-  Pathway
-  
-  Here is a reference to Genome size vs Total central pathway expansion
-  grided by metabolic Family plot:
-  \autoref{fig:ActinosExpansionsbyMetabolicFamilyGrid}. \clearpage 
-  
-  \section{Natural products}\label{natural-products-1}
-  
-  \subsection{Natural products recruitments from EvoMining
-  heatplot}\label{natural-products-recruitments-from-evomining-heatplot-1}
-  
-  We can see natural products recruitment after central pathways
-  expansions colored by their kingdom.\\
-  Natural products recruited by metabolic family, colored by phylogenetic
-  origin.
-  
-  Recruitments after central pathways expansions coloured by Kingdom
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 0,scale = 0.6]{chapter4/ActinosRecruitmentsbyKingdom.pdf}
-  \caption[Actinos Recruitmens on central families coloured by kingdom]{\normalsize{Actinos Recruitmens on central families coloured by kingdom}}
-  \label{fig:ActinosRecruitmentsbyKingdom}
-  \end{figure}
-  
-  Here is a reference to Recruitments after central pathways expansions
-  colourd by Kingdom plot: \autoref{fig:ActinosRecruitmentsbyKingdom}.
-  
-  \clearpage 
-  Recruitments after central pathways expansions colourd by taxonomy
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 0,scale = 0.5]{chapter4/ActinosRecruitmentsbyTaxa.pdf}
-  \caption[Actinos Recruitmens on central families coloured by taxonomy]{\normalsize{Actinos Recruitmens on central families coloured by taxonomy}}
-  \label{fig:ActinosRecruitmentsbyTaxa}
-  \end{figure}
-  
-  Here is a reference to Recruitments after central pathways expansions
-  colourd by taxa plot: \autoref{fig:ActinosRecruitmentsbyTaxa}.
-  \clearpage 
-  
-  \section{Actinos AntiSMASH}\label{actinos-antismash}
-  
-  Taxonomical diversity on Actinosbacteria Data
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 0,scale = 0.6]{chapter4/ActinosDiversity.pdf}
-  \caption[Actinos Diversity]{\normalsize{Actinos Diversity}}
-  \label{fig:ActinosDiversity}
-  \end{figure}
-  
-  Here is a reference to Recruitments after central pathways expansions
-  colourd by taxa plot: \autoref{fig:ActinosDiversity}. \clearpage
-  
-  Smash diversity
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 0,scale = 0.5]{chapter4/ActinosSmash.pdf}
-  \caption[Actinos Smash Taxonomical Diversity]{\normalsize{Actinos Smash Taxonomical Diversity}}
-  \label{fig:ActinosSmash}
-  \end{figure}
-  
-  Here is a reference to Recruitments after central pathways expansions
-  colourd by taxa plot: \autoref{fig:ActinosSmash}. \clearpage
-  
-  \subsection{AntisSMASH vs Central
-  Expansions}\label{antissmash-vs-central-expansions-1}
-  
-  Is it a correlation between pangenome grow and central pathways
-  expansions?
-  
-  Total central pathway expansions by genome vs Total antismash cluster
-  detected coloured by order
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 0,scale = 0.5]{chapter4/ActinosSMASHvsExpansionsbyOrder.pdf}
-  \caption[Correlation between Actinos central pathway expansions and antismash Natural products detection]{\normalsize{Correlation between Actinos central pathway expansions and antismash Natural products detection}}
-  \label{fig:ActinosSMASHvsExpansionsbyOrder}
-  \end{figure}
-  
-  Here is a reference to the expansions vs antismash NP's clusters plot:
-  \autoref{fig:ActinosSMASHvsExpansionsbyOrder}. \clearpage 
-  
-  Total central pathway expansions by genome vs Total antismash cluster
-  detected splitted by order
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 0,scale = 0.5]{chapter4/ActinosSMASHvsExpansionsbyOrderGRID.pdf}
-  \caption[Correlation between Actinos central pathway expnasions and antismash Natural products detection]{\normalsize{Correlation between Actinos central pathway expnasions and antismash Natural products detection}}
-  \label{fig:ActinosSMASHvsExpansionsbyOrderGRID}
-  \end{figure}
-  
-  Here is a reference to the expansions vs antismash NP's clusters
-  splitted by order plot
-  \autoref{fig:ActinosSMASHvsExpansionsbyOrderGRID}. \clearpage 
-  
-  AntisMAsh vs Expansions by taxonomic Family
-  
-  Natural products colured by family
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 0,scale = 0.6]{chapter4/Actinosnpf.pdf}
-  \caption[Actinos Natural products by family]{\normalsize{Actinos Natural products by family}}
-  \label{fig:Actinosnpf}
-  \end{figure}
-  
-  Here is a reference to the Natural products colured by family plot
-  \autoref{fig:Actinosnpf}. \clearpage 
-  
-  \section{Selected trees from
-  EvoMining}\label{selected-trees-from-evomining-1}
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 180,scale = 0.3]{chapter4/tree15.png}
-  \caption[Enolase EvoMiningtree]{\normalsize{Enolase EvoMiningtree}}
-  \label{fig:enolase_evo_tree}
-  \end{figure}\begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 180,scale = 0.3]{chapter4/tree73.png}
-  \caption[Phosphoribosyl isomerase EvoMiningtree]{\normalsize{Phosphoribosyl isomerase EvoMiningtree}}
-  \label{fig:Phosphoribosyl_isomerase_evo_tree}
-  \end{figure}\begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 180,scale = 0.3]{chapter4/tree47.png}
-  \caption[Phosphoribosyl isomerase A EvoMiningtree]{\normalsize{Phosphoribosyl isomerase A EvoMiningtree}}
-  \label{fig:Phosphoribosyl_isomerase_A_evo_tree}
-  \end{figure}\begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 180,scale = 0.3]{chapter4/tree69.png}
-  \caption[phosphoshikimate carboxyvinyltransferase EvoMiningtree]{\normalsize{phosphoshikimate carboxyvinyltransferase EvoMiningtree}}
-  \label{fig:phosphoshikimate_c_evo_tree}
-  \end{figure}
-  
-  \clearpage 
-  
-  \hypertarget{refux5flabels}{\chapter{Cyanobacteria EvoMining
-  Results}\label{refux5flabels}}
-  
-  \textless{}\textless{}\textless{}\textless{}\textless{}\textless{}\textless{}
-  HEAD Cyanobacteria phylum \{Referencia\}\\
-  ======= Cyanobacteria is a photosynthetic phylum that inhabits a broad
-  range of habitats. The broad adaptive potential is on part driven by
-  gene-family enlargment (Larsson, Nylander, \& Bergman, 2011) by the
-  analysis of 58 Cyanobacterial genomes concludes ancestor of
-  cyanobacteria had a genome size of approx. 4.5 Mbp. Cyanobacteria
-  produces natural products as pigments and toxins (Whitton, 2012) Example
-  of a PriA cluster toxins(Moustafa et al., 2009)
-  
-  Fossil record situates Cyanobacteria (Whitton, 2012) Molecular record
-  and metabolic propoerties at (Battistuzzi, Feijao, \& Hedges, 2004)
-  \textgreater{}\textgreater{}\textgreater{}\textgreater{}\textgreater{}\textgreater{}\textgreater{}
-  86d01d8784a6d89912c3b8db86ea6753d5074760
-  
-  \section{Tables}\label{tables-2}
-  
-  \begin{longtable}[c]{@{}cc@{}}
-  \caption{Families on Cyanobacteria \label{tab:inher}}\tabularnewline
-  \toprule
-  Factors & Correlation between Parents \& Child\tabularnewline
-  \midrule
-  \endfirsthead
-  \toprule
-  Factors & Correlation between Parents \& Child\tabularnewline
-  \midrule
-  \endhead
-  GenomeDB & 1245\tabularnewline
-  Families & 65\tabularnewline
-  \bottomrule
-  \end{longtable}
-  
-  \clearpage
-  
-  \subsection{Expansions BoxPlot by metabolic
-  family}\label{expansions-boxplot-by-metabolic-family-2}
-  
-  \begin{Shaded}
-  \begin{Highlighting}[]
-  \KeywordTok{label}\NormalTok{(}\DataTypeTok{path =} \StringTok{"chapter5/expansion_plotCyanos.pdf"}\NormalTok{, }\DataTypeTok{caption =} \StringTok{"Expansions Boxplot"}\NormalTok{,}\DataTypeTok{label =} \StringTok{"Cyano_expansion_boxplot"}\NormalTok{, }\DataTypeTok{type =} \StringTok{"figure"}\NormalTok{)}
-  \end{Highlighting}
-  \end{Shaded}
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 0,scale = 1]{chapter5/expansion_plotCyanos.pdf}
-  \caption[Expansions Boxplot]{\normalsize{Expansions Boxplot}}
-  \label{fig:Cyano_expansion_boxplot}
-  \end{figure}
-  
-  Here is a reference to the expansion boxplot:
-  \autoref{fig:Cyano_expansion_boxplot}.\\
-  \clearpage 
-  
-  \section{Central pathway expansions}\label{central-pathway-expansions-2}
-  
-  Heat plot of central pathways expansions, Needs to be phylogenetically
-  sorted.
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 0,scale = 0.6]{chapter5/HeatPlot.pdf}
-  \caption[Cyanobacterial Heatplot]{\normalsize{Cyanobacterial Heatplot}}
-  \label{fig:CyanoPlot}
-  \end{figure}
-  
-  Here is a reference to the HeatPlot: \autoref{fig:CyanoPlot}.
-  \clearpage 
-  
-  \section{Genome Size correlations}\label{genome-size-correlations-2}
-  
-  \subsection{Correlation between genome size and AntiSMASH
-  products}\label{correlation-between-genome-size-and-antismash-products-2}
-  
-  Genome size vs Total antismash cluster coloured by order
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 0,scale = 0.6]{chapter5/SMASHvsSizebyOrder.pdf}
-  \caption[Correlation between genome size and antismash Natural products detection colored by Order]{\normalsize{Correlation between genome size and antismash Natural products detection colored by Order}}
-  \label{fig:SMASHvsSizebyOrder}
-  \end{figure}
-  
-  Here is a reference to Genome size vs Total antismash cluster:
-  \autoref{fig:SMASHvsSizebyOrder}. \clearpage
-  
-  Genome size vs Total antismash cluster detected splitted by order
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 0,scale = 0.6]{chapter5/SMASHvsSizeGridOrder.pdf}
-  \caption[Correlation between genome size and antismash Natural products detection grided by Order]{\normalsize{Correlation between genome size and antismash Natural products detection grided by Order}}
-  \label{fig:SMASHvsSizeGridOrder}
-  \end{figure}
-  
-  Here is a reference to Correlation between genome size and antismash
-  Natural products detection grided by Order plot:
-  \autoref{fig:SMASHvsSizeGridOrder}. \clearpage 
-  
-  \subsection{Correlation between genome size and Central pathway
-  expansions}\label{correlation-between-genome-size-and-central-pathway-expansions-2}
-  
-  Genome size vs Total central pathway expansion coloured by order
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 0,scale = 1]{chapter5/SizevsExpansionsbyOrder.pdf}
-  \caption[Correlation between genome size and central pathway expansions ]{\normalsize{Correlation between genome size and central pathway expansions }}
-  \label{fig:SizevsExpansionsbyOrder}
-  \end{figure}
-  
-  Here is a reference to the size vs Total central pathway expansion plot:
-  \autoref{fig:SizevsExpansionsbyOrder}. \clearpage 
-  
-  Genome size vs Total central pathway expansion grided by order
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 0,scale = 1]{chapter5/SizevsExpansionsGridbyOrder.pdf}
-  \caption[Correlation between genome size and central pathway expansions grided by order]{\normalsize{Correlation between genome size and central pathway expansions grided by order}}
-  \label{fig:SizevsExpansionsGridbyOrder}
-  \end{figure}
-  
-  Here is a reference to the Genome size vs Total central pathway
-  expansion grided by order plot:
-  \autoref{fig:SizevsExpansionsGridbyOrder}. \clearpage 
-  
-  Correlation between genome size and each of the central pathway
-  families. Data are coloured by metabolic family instead of coloured by
-  taxonomical order. This treatment allows to answer how differente
-  metabolic families grows when genome size grow.\\
-  Also I want to add form given by taxonomical order.
-  
-  \begin{verbatim}
-  Warning: The shape palette can deal with a maximum of 6 discrete values
-  because more than 6 becomes difficult to discriminate; you have
-  10. Consider specifying shapes manually if you must have them.
-  \end{verbatim}
-  
-  \begin{verbatim}
-  Warning: Removed 20418 rows containing missing values (geom_point).
-  \end{verbatim}
-  
-  Genome size vs Total central pathway expansion coloured by metabolic
-  Family
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 0,scale = 0.6]{chapter5/SizevsExpansionsbyMetabolicFamily.pdf}
-  \caption[Correlation between Genome size vs Total central pathway expansion coloured by metabolic Family]{\normalsize{Correlation between Genome size vs Total central pathway expansion coloured by metabolic Family}}
-  \label{fig:SizevsExpansionsbyMetabolicFamily}
-  \end{figure}
-  
-  Here is a reference to the Genome size vs Total central pathway
-  expansion coloured by metabolic Family plot:
-  \autoref{fig:SizevsExpansionsbyMetabolicFamily}. \clearpage 
-  
-  Future Work: Genome size vs Total central pathway expansion grided by
-  metabolic Family For clarity I need to also grid and group by Metabolic
-  Pathway
-  
-  Here is a reference to Genome size vs Total central pathway expansion
-  grided by metabolic Family plot:
-  \autoref{fig:ExpansionsbyMetabolicFamilyGrid}. \clearpage 
-  
-  \section{Natural products}\label{natural-products-2}
-  
-  \subsection{Natural products recruitments from EvoMining
-  heatplot}\label{natural-products-recruitments-from-evomining-heatplot-2}
-  
-  We can see natural products recruitment after central pathways
-  expansions colored by their kingdom.\\
-  Natural products recruited by metabolic family, colored by phylogenetic
-  origin.
-  
-  Recruitments after central pathways expansions coloured by Kingdom
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 0,scale = 0.6]{chapter5/RecruitmentsbyKingdom.pdf}
-  \caption[Recruitmens on central families coloured by kingdom]{\normalsize{Recruitmens on central families coloured by kingdom}}
-  \label{fig:RecruitmentsbyKingdom}
-  \end{figure}
-  
-  Here is a reference to Recruitments after central pathways expansions
-  colourd by Kingdom plot: \autoref{fig:RecruitmentsbyKingdom}.
-  
-  \clearpage 
-  Recruitments after central pathways expansions colourd by taxonomy
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 0,scale = 0.5]{chapter5/RecruitmentsbyTaxa.pdf}
-  \caption[Recruitmens on central families coloured by taxonomy]{\normalsize{Recruitmens on central families coloured by taxonomy}}
-  \label{fig:RecruitmentsbyTaxa}
-  \end{figure}
-  
-  Here is a reference to Recruitments after central pathways expansions
-  colourd by taxa plot: \autoref{fig:RecruitmentsbyTaxa}. \clearpage 
-  
-  \section{Cyanobacterias AntiSMASH}\label{cyanobacterias-antismash}
-  
-  Taxonomical diversity on Cyanobacteria Data
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 0,scale = 0.6]{chapter5/Diversity.pdf}
-  \caption[Diversity]{\normalsize{Diversity}}
-  \label{fig:Diversity}
-  \end{figure}
-  
-  Here is a reference to Recruitments after central pathways expansions
-  colourd by taxa plot: \autoref{fig:Diversity}. \clearpage
-  
-  Smash diversity
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 0,scale = 0.5]{chapter5/Smash.pdf}
-  \caption[Smash]{\normalsize{Smash}}
-  \label{fig:Smash Taxonomical Diversity}
-  \end{figure}
-  
-  Here is a reference to Recruitments after central pathways expansions
-  colourd by taxa plot: \autoref{fig:Smash}. \clearpage
-  
-  \subsection{AntisSMASH vs Central
-  Expansions}\label{antissmash-vs-central-expansions-2}
-  
-  Is it a correlation between pangenome grow and central pathways
-  expansions?
-  
-  Total central pathway expansions by genome vs Total antismash cluster
-  detected coloured by order
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 0,scale = 0.5]{chapter5/SMASHvsExpansionsbyOrder.pdf}
-  \caption[Correlation between central pathway axpnasions and antismash Natural products detection]{\normalsize{Correlation between central pathway axpnasions and antismash Natural products detection}}
-  \label{fig:SMASHvsExpansionsbyOrder}
-  \end{figure}
-  
-  Here is a reference to the expansions vs antismash NP's clusters plot:
-  \autoref{fig:SMASHvsExpansionsbyOrder}. \clearpage 
-  
-  Total central pathway expansions by genome vs Total antismash cluster
-  detected splitted by order
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 0,scale = 0.5]{chapter5/SMASHvsExpansionsbyOrderGRID.pdf}
-  \caption[Correlation between central pathway axpnasions and antismash Natural products detection]{\normalsize{Correlation between central pathway axpnasions and antismash Natural products detection}}
-  \label{fig:SMASHvsExpansionsbyOrderGRID}
-  \end{figure}
-  
-  Here is a reference to the expansions vs antismash NP's clusters
-  splitted by order plot \autoref{fig:SSMASHvsExpansionsbyOrderGRID}.
-  \clearpage 
-  
-  AntisMAsh vs Expansions by taxonomic Family
-  
-  Natural products colured by family
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 0,scale = 0.6]{chapter5/npf.pdf}
-  \caption[Natural products by family]{\normalsize{Natural products by family}}
-  \label{fig:npf}
-  \end{figure}
-  
-  Here is a reference to the Natural products colured by family plot
-  \autoref{fig:npf}. \clearpage 
-  
-  \section{Selected trees from
-  EvoMining}\label{selected-trees-from-evomining-2}
-  
-  Phosphoribosyl\_isomerase\_3 family\\
-  Figure from EvoMining
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 180,scale = 0.25]{chapter5/tree64.png}
-  \caption[Phosphoribosyl isomerase EvoMiningtree]{\normalsize{Phosphoribosyl isomerase EvoMiningtree}}
-  \label{fig:Phosphoribosyl_isomerase_evo_tree}
-  \end{figure}\begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 180,scale = 0.25]{chapter5/tree1.png}
-  \caption[Phosphoglycerate dehydrogenase EvoMiningtree]{\normalsize{Phosphoglycerate dehydrogenase EvoMiningtree}}
-  \label{fig:Phosphoglycerate_dehydrogenase_evo_tree}
-  \end{figure}\begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 180,scale = 0.25]{chapter5/tree2.png}
-  \caption[Phosphoserine aminotransferase EvoMiningtree]{\normalsize{Phosphoserine aminotransferase EvoMiningtree}}
-  \label{fig:Phosphoserine_aminotransferase_evo_tree}
-  \end{figure}\begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 180,scale = 0.25]{chapter5/tree10.png}
-  \caption[Triosephosphate isomerase EvoMiningtree]{\normalsize{Triosephosphate isomerase EvoMiningtree}}
-  \label{fig:Triosephosphate_isomerase_evo_tree}
-  \end{figure}\begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 180,scale = 0.25]{chapter5/tree11.png}
-  \caption[glyceraldehyde3phosphate dehydrogenase EvoMiningtree]{\normalsize{glyceraldehyde3phosphate dehydrogenase EvoMiningtree}}
-  \label{fig:glyceraldehyde3phosphate_dehydrogenase_evo_tree}
-  \end{figure}\begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 180,scale = 0.25]{chapter5/tree12.png}
-  \caption[phosphoglycerate kinase EvoMiningtree]{\normalsize{phosphoglycerate kinase EvoMiningtree}}
-  \label{fig:phosphoglycerate_kinase_evo_tree}
-  \end{figure}\begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 180,scale = 0.25]{chapter5/tree13.png}
-  \caption[phosphoglycerate mutaseEvoMiningtree]{\normalsize{phosphoglycerate mutaseEvoMiningtree}}
-  \label{fig:phosphoglycerate_mutase_evo_tree}
-  \end{figure}\begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 180,scale = 0.25]{chapter5/tree14.png}
-  \caption[enolase EvoMiningtree]{\normalsize{enolase EvoMiningtree}}
-  \label{fig:enolase_evo_tree}
-  \end{figure}\begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 180,scale = 0.25]{chapter5/tree15.png}
-  \caption[Pyruvate kinase EvoMiningtree]{\normalsize{Pyruvate kinase EvoMiningtree}}
-  \label{fig:Pyruvate_kinase_evo_tree}
-  \end{figure}\begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 180,scale = 0.25]{chapter5/tree16.png}
-  \caption[Aspartate transaminase EvoMiningtree]{\normalsize{Aspartate transaminase EvoMiningtree}}
-  \label{fig:Aspartate_transaminase_evo_tree}
-  \end{figure}\begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 180,scale = 0.25]{chapter5/tree17.png}
-  \caption[Asparagine synthase EvoMiningtree]{\normalsize{Asparagine synthase EvoMiningtree}}
-  \label{fig:Asparagine_synthase_evo_tree}
-  \end{figure}\begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 180,scale = 0.25]{chapter5/tree18.png}
-  \caption[Aspartate kinase EvoMiningtree]{\normalsize{Aspartate kinase EvoMiningtree}}
-  \label{fig:Aspartate_kinase_evo_tree}
-  \end{figure}\begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 180,scale = 0.25]{chapter5/tree19.png}
-  \caption[Aspartate semialdehyde dehydrogenase EvoMiningtree]{\normalsize{Aspartate semialdehyde dehydrogenase EvoMiningtree}}
-  \label{fig:Aspartate_semialdehyde_dehydrogenase_evo_tree}
-  \end{figure}\begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 180,scale = 0.25]{chapter5/tree20.png}
-  \caption[Homoserine dehydrogenase EvoMiningtree]{\normalsize{Homoserine dehydrogenase EvoMiningtree}}
-  \label{fig:Homoserine_dehydrogenase_evo_tree}
-  \end{figure}
-  
-  \clearpage 
+  \chapter{\texorpdfstring{\texttt{\{r\ chapter5,\ child\ =\ \textquotesingle{}chap5.Rmd\textquotesingle{}\}}}{\{r chapter5, child = 'chap5.Rmd'\}}}\label{r-chapter5-child-chap5.rmd}
   
   \chapter*{Conclusion}\label{conclusion}
   \addcontentsline{toc}{chapter}{Conclusion}
@@ -2674,29 +2366,6 @@ starts here.
   
   \subsubsection{\texorpdfstring{In
   \protect\hyperlink{refux5flabels}{}:}{In :}}\label{in}
-  
-  \begin{Shaded}
-  \begin{Highlighting}[]
-  \CommentTok{# This chunk ensures that the reedtemplates package is}
-  \CommentTok{# installed and loaded. This reedtemplates package includes}
-  \CommentTok{# the template files for the thesis and also two functions}
-  \CommentTok{# used for labeling and referencing}
-  \NormalTok{if(!}\KeywordTok{require}\NormalTok{(devtools))}
-    \KeywordTok{install.packages}\NormalTok{(}\StringTok{"devtools"}\NormalTok{, }\DataTypeTok{repos =} \StringTok{"http://cran.rstudio.com"}\NormalTok{)}
-  \NormalTok{if(!}\KeywordTok{require}\NormalTok{(plyr))}
-      \KeywordTok{install.packages}\NormalTok{(}\StringTok{"plyr"}\NormalTok{, }\DataTypeTok{repos =} \StringTok{"http://cran.rstudio.com"}\NormalTok{)}
-  \NormalTok{if(!}\KeywordTok{require}\NormalTok{(dplyr))}
-      \KeywordTok{install.packages}\NormalTok{(}\StringTok{"dplyr"}\NormalTok{, }\DataTypeTok{repos =} \StringTok{"http://cran.rstudio.com"}\NormalTok{)}
-  \NormalTok{if(!}\KeywordTok{require}\NormalTok{(ggplot2))}
-      \KeywordTok{install.packages}\NormalTok{(}\StringTok{"ggplot2"}\NormalTok{, }\DataTypeTok{repos =} \StringTok{"http://cran.rstudio.com"}\NormalTok{)}
-  \NormalTok{if(!}\KeywordTok{require}\NormalTok{(reedtemplates))\{}
-    \KeywordTok{library}\NormalTok{(devtools)}
-    \NormalTok{devtools::}\KeywordTok{install_github}\NormalTok{(}\StringTok{"ismayc/reedtemplates"}\NormalTok{)}
-    \NormalTok{\}}
-  \KeywordTok{library}\NormalTok{(reedtemplates)}
-  \NormalTok{flights <-}\StringTok{ }\KeywordTok{read.csv}\NormalTok{(}\StringTok{"data/flights.csv"}\NormalTok{)}
-  \end{Highlighting}
-  \end{Shaded}
   
   \chapter{The Second Appendix, Open source code on this
   document}\label{the-second-appendix-open-source-code-on-this-document}
@@ -2777,6 +2446,19 @@ starts here.
   \setlength{\parskip}{8pt}
   
   \hypertarget{refs}{}
+  \hypertarget{ref-adamsux5fpromiscuousux5f2014}{}
+  Adams, N. E., Thiaville, J. J., Proestos, J., Juárez-Vázquez, A. L.,
+  McCoy, A. J., Barona-Gómez, F., \ldots{} Maurelli, A. T. (2014).
+  Promiscuous and Adaptable Enzymes Fill ``Holes'' in the Tetrahydrofolate
+  Pathway in Chlamydia Species. \emph{MBio}, \emph{5}(4).
+  \url{http://doi.org/10.1128/mBio.01378-14}
+  
+  \hypertarget{ref-aharoniux5fevolvabilityux5f2005}{}
+  Aharoni, A., Gaidukov, L., Khersonsky, O., Gould, S. M., Roodveldt, C.,
+  \& Tawfik, D. S. (2005). The 'evolvability' of promiscuous protein
+  functions. \emph{Nature Genetics}, \emph{37}(1), 73--76.
+  \url{http://doi.org/10.1038/ng1482}
+  
   \hypertarget{ref-angel2000}{}
   Angel, E. (2000). \emph{Interactive computer graphics : A top-down
   approach with openGL}. Boston, MA: Addison Wesley Longman.
@@ -2795,18 +2477,29 @@ starts here.
   using Subsystems Technology. \emph{BMC Genomics}, \emph{9}, 75.
   \url{http://doi.org/10.1186/1471-2164-9-75}
   
+  \hypertarget{ref-baierux5fevolutionux5f2016}{}
+  Baier, F., Copp, J. N., \& Tokuriki, N. (2016). Evolution of Enzyme
+  Superfamilies: Comprehensive Exploration of Sequence--Function
+  Relationships. \emph{Biochemistry}, \emph{55}(46), 6375--6388.
+  \url{http://doi.org/10.1021/acs.biochem.6b00723}
+  
+  \hypertarget{ref-baronagomezux5foccurrenceux5f2003}{}
+  Barona Gómez, F., \& Hodgson, D. A. (2003). Occurrence of a putative
+  ancient like isomerase involved in histidine and tryptophan
+  biosynthesis. \emph{EMBO Reports}, \emph{4}(3), 296--300.
+  \url{http://doi.org/10.1038/sj.embor.embor771}
+  
   \hypertarget{ref-barona-gomezux5fwhatux5f2012}{}
   Barona-Gómez, F., Cruz-Morales, P., \& Noda-García, L. (2012). What can
   genome-scale metabolic network reconstructions do for prokaryotic
   systematics? \emph{Antonie van Leeuwenhoek}, \emph{101}(1), 35--43.
   \url{http://doi.org/10.1007/s10482-011-9655-1}
   
-  \hypertarget{ref-battistuzziux5fgenomicux5f2004}{}
-  Battistuzzi, F. U., Feijao, A., \& Hedges, S. B. (2004). A genomic
-  timescale of prokaryote evolution: Insights into the origin of
-  methanogenesis, phototrophy, and the colonization of land. \emph{BMC
-  Evolutionary Biology}, \emph{4}, 44.
-  \url{http://doi.org/10.1186/1471-2148-4-44}
+  \hypertarget{ref-bloomux5fneutralux5f2007}{}
+  Bloom, J. D., Romero, P. A., Lu, Z., \& Arnold, F. H. (2007). Neutral
+  genetic drift can alter promiscuous protein functions, potentially
+  aiding functional evolution. \emph{Biology Direct}, \emph{2}, 17.
+  \url{http://doi.org/10.1186/1745-6150-2-17}
   
   \hypertarget{ref-brettinux5frasttk:ux5f2015}{}
   Brettin, T., Davis, J. J., Disz, T., Edwards, R. A., Gerdes, S., Olsen,
@@ -2815,16 +2508,27 @@ starts here.
   pipelines and annotating batches of genomes. \emph{Scientific Reports},
   \emph{5}, 8365. \url{http://doi.org/10.1038/srep08365}
   
-  \hypertarget{ref-charlesworthux5funtappedux5f2015}{}
-  Charlesworth, J. C., \& Burns, B. P. (2015). Untapped Resources:
-  Biotechnological Potential of Peptides and Secondary Metabolites in
-  Archaea. \emph{Archaea}, \emph{2015}, e282035.
-  \url{http://doi.org/10.1155/2015/282035}
+  \hypertarget{ref-carbonellux5fmolecularux5f2010}{}
+  Carbonell, P., \& Faulon, J.-L. (2010). Molecular signatures-based
+  prediction of enzyme promiscuity. \emph{Bioinformatics}, \emph{26}(16),
+  2012--2019. \url{http://doi.org/10.1093/bioinformatics/btq317}
+  
+  \hypertarget{ref-chengux5fglobalux5f2012}{}
+  Cheng, X.-Y., Huang, W.-J., Hu, S.-C., Zhang, H.-L., Wang, H., Zhang,
+  J.-X., \ldots{} Ji, Z.-L. (2012). A Global Characterization and
+  Identification of Multifunctional Enzymes. \emph{PLoS ONE}, \emph{7}(6).
+  \url{http://doi.org/10.1371/journal.pone.0038979}
   
   \hypertarget{ref-chesterismayux5fupdatedux5f2016}{}
   chesterismay. (2016, September). Updated R Markdown thesis template.
   \emph{Chester's R blog}. Retrieved from
   \url{https://chesterismay.wordpress.com/2016/09/01/updated-r-markdown-thesis-template/}
+  
+  \hypertarget{ref-copleyux5fenzymesux5f2003}{}
+  Copley, S. D. (2003). Enzymes with extra talents: Moonlighting functions
+  and catalytic promiscuity. \emph{Current Opinion in Chemical Biology},
+  \emph{7}(2), 265--272.
+  \url{http://doi.org/10.1016/S1367-5931(03)00032-2}
   
   \hypertarget{ref-cruz-moralesux5fphylogenomicux5f2016}{}
   Cruz-Morales, P., Kopp, J. F., Martínez-Guerrero, C., Yáñez-Guerra, L.
@@ -2834,11 +2538,33 @@ starts here.
   Streptomycetes. \emph{Genome Biology and Evolution}, \emph{8}(6),
   1906--1916. \url{http://doi.org/10.1093/gbe/evw125}
   
-  \hypertarget{ref-grahamux5farchaealux5f2000}{}
-  Graham, D. E., Overbeek, R., Olsen, G. J., \& Woese, C. R. (2000). An
-  archaeal genomic signature. \emph{Proceedings of the National Academy of
-  Sciences}, \emph{97}(7), 3304--3308.
-  \url{http://doi.org/10.1073/pnas.97.7.3304}
+  \hypertarget{ref-deanux5fmechanisticux5f2007}{}
+  Dean, A. M., \& Thornton, J. W. (2007). Mechanistic approaches to the
+  study of evolution. \emph{Nature Reviews. Genetics}, \emph{8}(9),
+  675--688. \url{http://doi.org/10.1038/nrg2160}
+  
+  \hypertarget{ref-vonux5feichbornux5fpromiscuous:ux5f2011}{}
+  Eichborn, J. von, Murgueitio, M. S., Dunkel, M., Koerner, S., Bourne, P.
+  E., \& Preissner, R. (2011). PROMISCUOUS: A database for network-based
+  drug-repositioning. \emph{Nucleic Acids Research}, \emph{39}(suppl\_1),
+  D1060--D1066. \url{http://doi.org/10.1093/nar/gkq1037}
+  
+  \hypertarget{ref-firnux5fdarwinianux5f2009}{}
+  Firn, R. D., \& Jones, C. G. (2009). A Darwinian view of metabolism:
+  Molecular properties determine fitness. \emph{Journal of Experimental
+  Botany}, \emph{60}(3), 719--726. \url{http://doi.org/10.1093/jxb/erp002}
+  
+  \hypertarget{ref-garcia-seisdedosux5fprobingux5f2012}{}
+  Garcia-Seisdedos, H., Ibarra-Molero, B., \& Sanchez-Ruiz, J. M. (2012).
+  Probing the Mutational Interplay between Primary and Promiscuous Protein
+  Functions: A Computational-Experimental Approach. \emph{PLOS
+  Computational Biology}, \emph{8}(6), e1002558.
+  \url{http://doi.org/10.1371/journal.pcbi.1002558}
+  
+  \hypertarget{ref-glasnerux5fevolutionux5f2006}{}
+  Glasner, M. E., Gerlt, J. A., \& Babbitt, P. C. (2006). Evolution of
+  enzyme superfamilies. \emph{Current Opinion in Chemical Biology},
+  \emph{10}(5), 492--497. \url{http://doi.org/10.1016/j.cbpa.2006.08.012}
   
   \hypertarget{ref-halachevux5fcalculatingux5f2011}{}
   Halachev, M. R., Loman, N. J., \& Pallen, M. J. (2011). Calculating
@@ -2846,9 +2572,50 @@ starts here.
   \emph{PLOS ONE}, \emph{6}(12), e28388.
   \url{http://doi.org/10.1371/journal.pone.0028388}
   
-  \hypertarget{ref-howlandux5fsurprisingux5f2000}{}
-  Howland, J. L. (2000). \emph{The surprising archaea: Discovering another
-  domain of life}. New York: Oxford University.
+  \hypertarget{ref-hopkinsux5fdrugux5f2009}{}
+  Hopkins, A. L. (2009). Drug discovery: Predicting promiscuity.
+  \emph{Nature}, \emph{462}(7270), 167--168.
+  \url{http://doi.org/10.1038/462167a}
+  
+  \hypertarget{ref-hughesux5fevolutionux5f1994}{}
+  Hughes, A. L. (1994). The Evolution of Functionally Novel Proteins after
+  Gene Duplication. \emph{Proceedings of the Royal Society of London B:
+  Biological Sciences}, \emph{256}(1346), 119--124.
+  \url{http://doi.org/10.1098/rspb.1994.0058}
+  
+  \hypertarget{ref-hultux5fenzymeux5f2007}{}
+  Hult, K., \& Berglund, P. (2007). Enzyme promiscuity: Mechanism and
+  applications. \emph{Trends in Biotechnology}, \emph{25}(5), 231--238.
+  \url{http://doi.org/10.1016/j.tibtech.2007.03.002}
+  
+  \hypertarget{ref-jensenux5fenzymeux5f1976}{}
+  Jensen. (1976). Enzyme Recruitment in Evolution of New Function.
+  \emph{Annual Review of Microbiology}, \emph{30}(1), 409--425.
+  \url{http://doi.org/10.1146/annurev.mi.30.100176.002205}
+  
+  \hypertarget{ref-jiaux5fmultifunctionalux5f2013}{}
+  Jia, B., Cheong, G.-W., \& Zhang, S. (2013). Multifunctional enzymes in
+  archaea: Promiscuity and moonlight. \emph{Extremophiles}, \emph{17}(2),
+  193--203. \url{http://doi.org/10.1007/s00792-012-0509-1}
+  
+  \hypertarget{ref-khanalux5fdifferentialux5f2015}{}
+  Khanal, A., Yu McLoughlin, S., Kershner, J. P., \& Copley, S. D. (2015).
+  Differential Effects of a Mutation on the Normal and Promiscuous
+  Activities of Orthologs: Implications for Natural and Directed
+  Evolution. \emph{Molecular Biology and Evolution}, \emph{32}(1),
+  100--108. \url{http://doi.org/10.1093/molbev/msu271}
+  
+  \hypertarget{ref-khersonskyux5fenzymeux5f2010}{}
+  Khersonsky, O., \& Tawfik, D. S. (2010). Enzyme promiscuity: A
+  mechanistic and evolutionary perspective. \emph{Annual Review of
+  Biochemistry}, \emph{79}, 471--505.
+  \url{http://doi.org/10.1146/annurev-biochem-030409-143718}
+  
+  \hypertarget{ref-kislyukux5fgenomicux5f2011}{}
+  Kislyuk, A. O., Haegeman, B., Bergman, N. H., \& Weitz, J. S. (2011).
+  Genomic fluidity: An integrative view of gene diversity within microbial
+  populations. \emph{BMC Genomics}, \emph{12}, 32.
+  \url{http://doi.org/10.1186/1471-2164-12-32}
   
   \hypertarget{ref-kooninux5fturbulentux5f2015}{}
   Koonin, E. V. (2015). The Turbulent Network Dynamics of Microbial
@@ -2856,11 +2623,37 @@ starts here.
   Evolution}, \emph{80}(5-6), 244--250.
   \url{http://doi.org/10.1007/s00239-015-9679-7}
   
-  \hypertarget{ref-larssonux5fgenomeux5f2011}{}
-  Larsson, J., Nylander, J. A., \& Bergman, B. (2011). Genome fluctuations
-  in cyanobacteria reflect evolutionary, developmental and adaptive
-  traits. \emph{BMC Evolutionary Biology}, \emph{11}, 187.
-  \url{http://doi.org/10.1186/1471-2148-11-187}
+  \hypertarget{ref-kumariux5fpreparationux5f2007}{}
+  Kumari, V., Shah, S., \& Gupta, M. N. (2007). Preparation of Biodiesel
+  by Lipase-Catalyzed Transesterification of High Free Fatty Acid
+  Containing Oil from Madhuca indica. \emph{Energy \& Fuels},
+  \emph{21}(1), 368--372. \url{http://doi.org/10.1021/ef0602168}
+  
+  \hypertarget{ref-liux5fcomputationalux5f2004}{}
+  Li, C., Henry, C. S., Jankowski, M. D., Ionita, J. A., Hatzimanikatis,
+  V., \& Broadbelt, L. J. (2004). Computational discovery of biochemical
+  routes to specialty chemicals. \emph{Chemical Engineering Science},
+  \emph{59}(22--23), 5051--5060.
+  \url{http://doi.org/10.1016/j.ces.2004.09.021}
+  
+  \hypertarget{ref-linsterux5fmetaboliteux5f2013}{}
+  Linster, C. L., Van Schaftingen, E., \& Hanson, A. D. (2013). Metabolite
+  damage and its repair or pre-emption. \emph{Nature Chemical Biology},
+  \emph{9}(2), 72--80. \url{http://doi.org/10.1038/nchembio.1141}
+  
+  \hypertarget{ref-maux5funconventionalux5f2013}{}
+  Ma, H.-M., Zhou, Q., Tang, Y.-M., Zhang, Z., Chen, Y.-S., He, H.-Y.,
+  \ldots{} Tang, G.-L. (2013). Unconventional Origin and Hybrid System for
+  Construction of Pyrrolopyrrole Moiety in Kosinostatin Biosynthesis.
+  \emph{Chemistry \& Biology}, \emph{20}(6), 796--805.
+  \url{http://doi.org/10.1016/j.chembiol.2013.04.013}
+  
+  \hypertarget{ref-martinez-nunezux5flifestyleux5f2015}{}
+  Martínez-Núñez, M. A., Rodríguez-Vázquez, K., \& Pérez-Rueda, E. (2015).
+  The lifestyle of prokaryotic organisms influences the repertoire of
+  promiscuous enzymes. \emph{Proteins: Structure, Function, and
+  Bioinformatics}, \emph{83}(9), 1625--1631.
+  \url{http://doi.org/10.1002/prot.24847}
   
   \hypertarget{ref-medemaux5fcomputationalux5f2015}{}
   Medema, M. H., \& Fischbach, M. A. (2015). Computational approaches to
@@ -2875,17 +2668,11 @@ starts here.
   \emph{Nucleic Acids Research}, \emph{39}(Web Server issue), W339--W346.
   \url{http://doi.org/10.1093/nar/gkr466}
   
-  \hypertarget{ref-Molina1994}{}
-  Molina, S. T., \& Borkovec, T. D. (1994). The Penn State worry
-  questionnaire: Psychometric properties and associated characteristics.
-  In G. C. L. Davey \& F. Tallis (Eds.), \emph{Worrying: Perspectives on
-  theory, assessment and treatment} (pp. 265--283). New York: Wiley.
-  
-  \hypertarget{ref-moustafaux5foriginux5f2009}{}
-  Moustafa, A., Loram, J. E., Hackett, J. D., Anderson, D. M., Plumley, F.
-  G., \& Bhattacharya, D. (2009). Origin of Saxitoxin Biosynthetic Genes
-  in Cyanobacteria. \emph{PLOS ONE}, \emph{4}(6), e5758.
-  \url{http://doi.org/10.1371/journal.pone.0005758}
+  \hypertarget{ref-nagaoux5fpredictionux5f2014}{}
+  Nagao, C., Nagano, N., \& Mizuguchi, K. (2014). Prediction of Detailed
+  Enzyme Functions and Identification of Specificity Determining Residues
+  by Random Forests. \emph{PLOS ONE}, \emph{9}(1), e84623.
+  \url{http://doi.org/10.1371/journal.pone.0084623}
   
   \hypertarget{ref-narechaniaux5frandomux5f2012}{}
   Narechania, A., Baker, R. H., Sit, R., Kolokotronis, S.-O., DeSalle, R.,
@@ -2895,9 +2682,51 @@ starts here.
   Cyanobacteria. \emph{Genome Biology and Evolution}, \emph{4}(1), 30--43.
   \url{http://doi.org/10.1093/gbe/evr121}
   
-  \hypertarget{ref-noble2002}{}
-  Noble, S. G. (2002). \emph{Turning images into simple line-art}
-  (Undergraduate thesis). Reed College.
+  \hypertarget{ref-nathux5fquantitativeux5f2008}{}
+  Nath, A., \& Atkins, W. M. (2008). A Quantitative Index of Substrate
+  Promiscuity. \emph{Biochemistry}, \emph{47}(1), 157--166.
+  \url{http://doi.org/10.1021/bi701448p}
+  
+  \hypertarget{ref-nathux5fquantifyingux5f2010}{}
+  Nath, A., Zientek, M. A., Burke, B. J., Jiang, Y., \& Atkins, W. M.
+  (2010). Quantifying and Predicting the Promiscuity and Isoform
+  Specificity of Small-Molecule Cytochrome P450 Inhibitors. \emph{Drug
+  Metabolism and Disposition}, \emph{38}(12), 2195--2203.
+  \url{http://doi.org/10.1124/dmd.110.034645}
+  
+  \hypertarget{ref-nobeliux5fproteinux5f2009}{}
+  Nobeli, I., Favia, A. D., \& Thornton, J. M. (2009). Protein promiscuity
+  and its implications for biotechnology. \emph{Nature Biotechnology},
+  \emph{27}(2), 157--167. \url{http://doi.org/10.1038/nbt1519}
+  
+  \hypertarget{ref-noda-garciaux5fevolutionux5f2013}{}
+  Noda-García, L., Camacho-Zarco, A. R., Medina-Ruíz, S., Gaytán, P.,
+  Carrillo-Tripp, M., Fülöp, V., \& Barona-Gómez, F. (2013). Evolution of
+  Substrate Specificity in a Recipient's Enzyme Following Horizontal Gene
+  Transfer. \emph{Molecular Biology and Evolution}, \emph{30}(9),
+  2024--2034. \url{http://doi.org/10.1093/molbev/mst115}
+  
+  \hypertarget{ref-noda-garciaux5finsightsux5f2015}{}
+  Noda-García, L., Juárez-Vázquez, A. L., Ávila-Arcos, M. C.,
+  Verduzco-Castro, E. A., Montero-Morán, G., Gaytán, P., \ldots{}
+  Barona-Gómez, F. (2015). Insights into the evolution of enzyme substrate
+  promiscuity after the discovery of \(\beta\alpha_8\) isomerase
+  evolutionary intermediates from a diverse metagenome. \emph{BMC
+  Evolutionary Biology}, \emph{15}.
+  \url{http://doi.org/10.1186/s12862-015-0378-1}
+  
+  \hypertarget{ref-notebaartux5fnetwork-levelux5f2014}{}
+  Notebaart, R. A., Szappanos, B., Kintses, B., Pál, F., Györkei, Á.,
+  Bogos, B., \ldots{} Papp, B. (2014). Network-level architecture and the
+  evolutionary potential of underground metabolism. \emph{Proceedings of
+  the National Academy of Sciences}, \emph{111}(32), 11762--11767.
+  \url{http://doi.org/10.1073/pnas.1406102111}
+  
+  \hypertarget{ref-overbeekux5fuseux5f1999}{}
+  Overbeek, R., Fonstein, M., D'Souza, M., Pusch, G. D., \& Maltsev, N.
+  (1999). The use of gene clusters to infer functional coupling.
+  \emph{Proceedings of the National Academy of Sciences}, \emph{96}(6),
+  2896--2901. \url{http://doi.org/10.1073/pnas.96.6.2896}
   
   \hypertarget{ref-overbeekux5fseedux5f2014}{}
   Overbeek, R., Olson, R., Pusch, G. D., Olsen, G. J., Davis, J. J., Disz,
@@ -2906,9 +2735,73 @@ starts here.
   Acids Research}, \emph{42}(Database issue), D206--D214.
   \url{http://doi.org/10.1093/nar/gkt1226}
   
-  \hypertarget{ref-reedweb2007}{}
-  Reed~College. (2007, March). LaTeX your document. Retrieved from
-  \url{http://web.reed.edu/cis/help/LaTeX/index.html}
+  \hypertarget{ref-obrienux5fcatalyticux5f1999}{}
+  O'Brien, P. J., \& Herschlag, D. (1999). Catalytic promiscuity and the
+  evolution of new enzymatic activities. \emph{Chemistry \& Biology},
+  \emph{6}(4), R91--R105.
+  \url{http://doi.org/10.1016/S1074-5521(99)80033-7}
+  
+  \hypertarget{ref-pandyaux5fenzymeux5f2014}{}
+  Pandya, C., Farelli, J. D., Dunaway-Mariano, D., \& Allen, K. N. (2014).
+  Enzyme Promiscuity: Engine of Evolutionary Innovation. \emph{Journal of
+  Biological Chemistry}, \emph{289}(44), 30229--30236.
+  \url{http://doi.org/10.1074/jbc.R114.572990}
+  
+  \hypertarget{ref-patrickux5fmulticopyux5f2007}{}
+  Patrick, W. M., Quandt, E. M., Swartzlander, D. B., \& Matsumura, I.
+  (2007). Multicopy Suppression Underpins Metabolic Evolvability.
+  \emph{Molecular Biology and Evolution}, \emph{24}(12), 2716--2722.
+  \url{http://doi.org/10.1093/molbev/msm204}
+  
+  \hypertarget{ref-pearsonux5fprehistoricux5f2012}{}
+  Pearson, H. (2012). Prehistoric proteins: Raising the dead. \emph{Nature
+  News}, \emph{483}(7390), 390. \url{http://doi.org/10.1038/483390a}
+  
+  \hypertarget{ref-rissoux5fphenotypicux5f2014}{}
+  Risso, V. A., Gavira, J. A., Gaucher, E. A., \& Sanchez Ruiz, J. M.
+  (2014). Phenotypic comparisons of consensus variants versus laboratory
+  resurrections of precambrian proteins. \emph{Proteins: Structure,
+  Function, and Bioinformatics}, \emph{82}(6), 887--896.
+  \url{http://doi.org/10.1002/prot.24575}
+  
+  \hypertarget{ref-sanchez-ruizux5fpromiscuityux5f2012}{}
+  Sanchez-Ruiz, J. M. (2012). On promiscuity, changing environments and
+  the possibility of replaying the molecular tape of life.
+  \emph{Biochemical Journal}, \emph{445}(1), e1--e3.
+  \url{http://doi.org/10.1042/BJ20120806}
+  
+  \hypertarget{ref-snelux5fstring:ux5f2000}{}
+  Snel, B., Lehmann, G., Bork, P., \& Huynen, M. A. (2000). STRING: A
+  web-server to retrieve and display the repeatedly occurring
+  neighbourhood of a gene. \emph{Nucleic Acids Research}, \emph{28}(18),
+  3442--3444. Retrieved from
+  \url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC110752/}
+  
+  \hypertarget{ref-soskineux5fmutationalux5f2010}{}
+  Soskine, M., \& Tawfik, D. S. (2010). Mutational effects and the
+  evolution of new protein functions. \emph{Nature Reviews Genetics},
+  \emph{11}(8), 572--582. \url{http://doi.org/10.1038/nrg2808}
+  
+  \hypertarget{ref-szklarczykux5fstringux5f2015}{}
+  Szklarczyk, D., Franceschini, A., Wyder, S., Forslund, K., Heller, D.,
+  Huerta-Cepas, J., \ldots{} Mering, C. von. (2015). STRING v10:
+  Protein--protein interaction networks, integrated over the tree of life.
+  \emph{Nucleic Acids Research}, \emph{43}(D1), D447--D452.
+  \url{http://doi.org/10.1093/nar/gku1003}
+  
+  \hypertarget{ref-treangenux5fhorizontalux5f2011}{}
+  Treangen, T. J., \& Rocha, E. P. C. (2011). Horizontal Transfer, Not
+  Duplication, Drives the Expansion of Protein Families in Prokaryotes.
+  \emph{PLOS Genetics}, \emph{7}(1), e1001284.
+  \url{http://doi.org/10.1371/journal.pgen.1001284}
+  
+  \hypertarget{ref-verdel-arandaux5fmolecularux5f2015}{}
+  Verdel-Aranda, K., López-Cortina, S. T., Hodgson, D. A., \&
+  Barona-Gómez, F. (2015). Molecular annotation of ketol-acid
+  reductoisomerases from Streptomyces reveals a novel amino acid
+  biosynthesis interlock mediated by enzyme promiscuity. \emph{Microbial
+  Biotechnology}, \emph{8}(2), 239--252.
+  \url{http://doi.org/10.1111/1751-7915.12175}
   
   \hypertarget{ref-weberux5fantismashux5f2015}{}
   Weber, T., Blin, K., Duddela, S., Krug, D., Kim, H. U., Bruccoleri, R.,
@@ -2917,21 +2810,31 @@ starts here.
   Research}, \emph{43}(W1), W237--W243.
   \url{http://doi.org/10.1093/nar/gkv437}
   
-  \hypertarget{ref-whittonux5fecologyux5f2012}{}
-  Whitton, B. A. (2012). \emph{Ecology of Cyanobacteria II: Their
-  Diversity in Space and Time}. Springer Science \& Business Media.
+  \hypertarget{ref-zhangux5fmultidimensionalux5f2012}{}
+  Zhang, W., Dourado, D. F. A. R., Fernandes, P. A., Ramos, M. J., \&
+  Mannervik, B. (2012). Multidimensional epistasis and fitness landscapes
+  in enzyme evolution. \emph{Biochemical Journal}, \emph{445}(1), 39--46.
+  \url{http://doi.org/10.1042/BJ20120136}
   
-  \hypertarget{ref-woeseux5fphylogeneticux5f1977}{}
-  Woese, C. R., \& Fox, G. E. (1977). Phylogenetic structure of the
-  prokaryotic domain: The primary kingdoms. \emph{Proceedings of the
-  National Academy of Sciences of the United States of America},
-  \emph{74}(11), 5088--5090. Retrieved from
-  \url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC432104/}
+  \hypertarget{ref-zhaoux5fdiscoveryux5f2013}{}
+  Zhao, S., Kumar, R., Sakai, A., Vetting, M. W., Wood, B. M., Brown, S.,
+  \ldots{} Jacobson, M. P. (2013). Discovery of new enzymes and metabolic
+  pathways by using structure and genome context. \emph{Nature},
+  \emph{502}(7473), 698--702. \url{http://doi.org/10.1038/nature12576}
   
-  \hypertarget{ref-woeseux5fareux5f1981}{}
-  Woese, C. R., \& Gupta, R. (1981). Are archaebacteria merely derived
-  /``prokaryotes/''? \emph{Nature}, \emph{289}(5793), 95--96.
-  \url{http://doi.org/10.1038/289095a0}
+  \hypertarget{ref-zhaoux5fpredictionux5f2014}{}
+  Zhao, S., Sakai, A., Zhang, X., Vetting, M. W., Kumar, R., Hillerich,
+  B., \ldots{} Jacobson, M. P. (2014). Prediction and characterization of
+  enzymatic activities guided by sequence similarity and genome
+  neighborhood networks. \emph{ELife}, \emph{3}, e03275.
+  \url{http://doi.org/10.7554/eLife.03275}
+  
+  \hypertarget{ref-zouux5fevolutionux5f2015}{}
+  Zou, T., Risso, V. A., Gavira, J. A., Sanchez-Ruiz, J. M., \& Ozkan, S.
+  B. (2015). Evolution of Conformational Dynamics Determines the
+  Conversion of a Promiscuous Generalist into a Specialist Enzyme.
+  \emph{Molecular Biology and Evolution}, \emph{32}(1), 132--143.
+  \url{http://doi.org/10.1093/molbev/msu281}
 
 
   % Index?
