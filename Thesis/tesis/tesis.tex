@@ -108,6 +108,8 @@
 \setlength{\parskip}{0pt}
 
 % Added by CII
+  %\setlength{\parskip}{\baselineskip}
+  \usepackage[parfill]{parskip}
 
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
@@ -154,7 +156,7 @@ starts here.
     \end{preface}
   
       \hypersetup{linkcolor=black}
-    \setcounter{tocdepth}{2}
+    \setcounter{tocdepth}{3}
     \tableofcontents
   
       \listoftables
@@ -242,31 +244,37 @@ starts here.
   
   Para estudiar la promiscuidad es necesario contar con una definicion,
   algunos autores emplean el termino promiscuidad para describir
-  actividades enzimaticas distintas a la funcion principal (Khersonsky \&
-  Tawfik, 2010) otros lo ven como una actividad secundaria fortuita (S. D.
-  Copley, 2003) que pudo aparecer de forma accidental o inducida
-  artificialmente (Hult \& Berglund, 2007). Otros mas, cuando una enzima
-  puede operar sobre un amplio rango de sustratos, prefieren llamarla
-  multiespecifica (Khersonsky \& Tawfik, 2010). A la accion de realizar
-  distintas funciones cataliticas, ya sea al catalizar varias reacciones
-  quimicas o bien una misma reaccion en sustratos diferentes se le conoce
-  como promiscuidad enzimatica (O'Brien \& Herschlag, 1999). Existen
+  actividades enzimaticas distintas a la funcion principal
+  {[}\protect\hyperlink{ref-khersonskyux5fenzymeux5f2010}{4}{]} otros lo
+  ven como una actividad secundaria fortuita
+  {[}\protect\hyperlink{ref-copleyux5fenzymesux5f2003}{5}{]} que pudo
+  aparecer de forma accidental o inducida artificialmente
+  {[}\protect\hyperlink{ref-hultux5fenzymeux5f2007}{6}{]}. Otros mas,
+  cuando una enzima puede operar sobre un amplio rango de sustratos,
+  prefieren llamarla multiespecifica
+  {[}\protect\hyperlink{ref-khersonskyux5fenzymeux5f2010}{4}{]}. A la
+  accion de realizar distintas funciones cataliticas, ya sea al catalizar
+  varias reacciones quimicas o bien una misma reaccion en sustratos
+  diferentes se le conoce como promiscuidad enzimatica
+  {[}\protect\hyperlink{ref-obrienux5fcatalyticux5f1999}{7}{]}. Existen
   varios tipos de promiscuidad enzimatica.
   
   Por sustrato cuando la reaccion es la misma pero se lleva a cabo en
-  distintos sustratos ejemplo la familia PriA (Barona Gómez \& Hodgson,
-  2003) y la familia de betalactamasas (Risso, Gavira, Gaucher, \& Sanchez
-  Ruiz, 2014)
+  distintos sustratos ejemplo la familia PriA
+  {[}\protect\hyperlink{ref-baronagomezux5foccurrenceux5f2003}{8}{]} y la
+  familia de betalactamasas
+  {[}\protect\hyperlink{ref-rissoux5fphenotypicux5f2014}{9}{]}
   
   Catalitica cuando la enzima utiliza diferentes mecanismos de reaccion
   y/o residuos cataliticos, e.g.~la quimotripsina puede catalizar
   reacciones de amidasa y fosfotriesterasa en un mismo sitio activo.
-  (O'Brien \& Herschlag, 1999) Por condiciones del entorno, cuando la
-  enzima cambia su conformacion dependiendo de las condiciones quimicas y
-  fisicas presentes como pH, temperatura, solventes organicos y salinidad
-  e.g.~algunas lipasas pueden actuar como sintetizadoras de esteres en
-  lugar de hidrolasas en presencia de solventes organicos (Hult \&
-  Berglund, 2007,Kumari, Shah, \& Gupta (2007)).
+  {[}\protect\hyperlink{ref-obrienux5fcatalyticux5f1999}{7}{]} Por
+  condiciones del entorno, cuando la enzima cambia su conformacion
+  dependiendo de las condiciones quimicas y fisicas presentes como pH,
+  temperatura, solventes organicos y salinidad e.g.~algunas lipasas pueden
+  actuar como sintetizadoras de esteres en lugar de hidrolasas en
+  presencia de solventes organicos
+  {[}\protect\hyperlink{ref-hultux5fenzymeux5f2007}{6}{]}.
   
   Este trabajo se enfocara a la promiscuidad por sustrato, entendiendo asi
   que la enzima es capaz de catalizar la misma reaccion quimica en al
@@ -276,50 +284,53 @@ starts here.
   primeros corresponden a la reaccion y el ultimo al sustrato; el mayor
   numero de sustratos (4306 clases) que de reacciones quimicas (234 en el
   tercer nivel) sugiere que la mayor variacion evolutiva se da a nivel de
-  sustrato y no de reaccion (Li et al., 2004). Otra evidencia de la
-  importancia de la multiespecificidad por sustrato esta en el
-  descubrimiento de las superfamilias, enzimas mecanistica y
+  sustrato y no de reaccion
+  {[}\protect\hyperlink{ref-liux5fcomputationalux5f2004}{11}{]}. Otra
+  evidencia de la importancia de la multiespecificidad por sustrato esta
+  en el descubrimiento de las superfamilias, enzimas mecanistica y
   estructuralmente relacionadas que divergen en su afinidad por sustrato
-  (Glasner, Gerlt, \& Babbitt, 2006, Baier, Copp, \& Tokuriki (2016))
+  {[}\protect\hyperlink{ref-glasnerux5fevolutionux5f2006}{12}{]}
   
   Si bien existen familias de enzimas con alta especificidad por sustrato,
-  otras familias como el citocromo P450 (Bloom, Romero, Lu, \& Arnold,
-  2007, Nath \& Atkins (2008)) y las beta lactamasas (T. Zou, Risso,
-  Gavira, Sanchez-Ruiz, \& Ozkan, 2015) son promiscuas. Es posible que la
-  vision previa de alta especificidad se deba a que las primeras rutas
-  metabolicas estudiadas pertenecen al metabolismo central, donde la
-  especificidad puede haber sido favorecida por presiones de seleccion
-  (Firn \& Jones, 2009). Esta vision ha cambiado debido al conocimiento de
-  mas enzimas con multifuncionalidad (Jia, Cheong, \& Zhang, 2013), sin
-  afectar la eficiencia catalitica por la funcion primaria (Aharoni et
-  al., 2005). En 1976 el interes por la promiscuidad comenzo por su
-  influencia en la evolucion de la funcion enzimatica(Jensen, 1976,
-  Pandya, Farelli, Dunaway-Mariano, \& Allen (2014)), las aproximaciones
-  variaron desde la aparicion de la sintesis funcional (Dean \& Thornton,
-  2007), cuando la disponibilidad de genomas permitio la combinacion de
-  analisis filogeneticos con tecnicas de biologia molecular, bioquimica y
-  biofisica (Fig 1). En 2003 la biofisica de las proteinas entra en escena
-  al postularse que la diversidad conformacional durante la dinamica
+  otras familias como el citocromo P450
+  {[}\protect\hyperlink{ref-bloomux5fneutralux5f2007}{14}{]} y las beta
+  lactamasas {[}\protect\hyperlink{ref-zouux5fevolutionux5f2015}{16}{]}
+  son promiscuas. Es posible que la vision previa de alta especificidad se
+  deba a que las primeras rutas metabolicas estudiadas pertenecen al
+  metabolismo central, donde la especificidad puede haber sido favorecida
+  por presiones de seleccion
+  {[}\protect\hyperlink{ref-firnux5fdarwinianux5f2009}{17}{]}. Esta vision
+  ha cambiado debido al conocimiento de mas enzimas con multifuncionalidad
+  {[}\protect\hyperlink{ref-jiaux5fmultifunctionalux5f2013}{18}{]}, sin
+  afectar la eficiencia catalitica por la funcion primaria
+  {[}\protect\hyperlink{ref-aharoniux5fevolvabilityux5f2005}{19}{]}. En
+  1976 el interes por la promiscuidad comenzo por su influencia en la
+  evolucion de la funcion
+  enzimatica{[}\protect\hyperlink{ref-jensenux5fenzymeux5f1976}{20}{]},
+  las aproximaciones variaron desde la aparicion de la sintesis funcional
+  {[}\protect\hyperlink{ref-deanux5fmechanisticux5f2007}{22}{]}, cuando la
+  disponibilidad de genomas permitio la combinacion de analisis
+  filogeneticos con tecnicas de biologia molecular, bioquimica y biofisica
+  (Fig 1). En 2003 la biofisica de las proteinas entra en escena al
+  postularse que la diversidad conformacional durante la dinamica
   molecular debe incidir en la aceptacion de distintos sustratos.
   Recientemente se ha investigado su papel en efectos secundarios en
-  drogas farmacologicas (Nobeli, Favia, \& Thornton, 2009,Hopkins
-  (2009),Nath, Zientek, Burke, Jiang, \& Atkins (2010),Eichborn et al.
-  (2011), W. Zhang, Dourado, Fernandes, Ramos, \& Mannervik (2012), T. Zou
-  et al. (2015)). Entre 2005 y 2010 se avanza del estudio de una sola
-  familia enzimatica hacia el interes por propiedades globales, por
-  ejemplo dado un genoma se investiga la distribucion de familias
-  promiscuas en subsistemas metabolicos. En estos años, surge el
-  desarrollo de indices que reflejen las caracteristicas bioquimicas de
-  enzimas promiscuas. En 2010, comienzan los intentos por desarrollar un
-  metodo computacional de prediccion de promiscuidad. Desde 2012 a la
-  fecha, a la par que las aproximaciones bioinformaticas se multiplican,
-  se desarrollan investigaciones de aspectos biofisicos, bioquimicos y
-  evolutivos de enzimas promiscuas reafirmando que todos estos aspectos
-  estan relacionados al fenomeno. En las siguientes secciones se
-  describiran trabajos importantes sobre la relacion que guarda la
-  promiscuidad con expansiones genomicas y flexibilidad molecular. Ademas
-  se hablara sobre analisis bioquimicos y metabolicos para la descripcion
-  del fenomeno.
+  drogas farmacologicas
+  {[}\protect\hyperlink{ref-nobeliux5fproteinux5f2009}{23}{]}. Entre 2005
+  y 2010 se avanza del estudio de una sola familia enzimatica hacia el
+  interes por propiedades globales, por ejemplo dado un genoma se
+  investiga la distribucion de familias promiscuas en subsistemas
+  metabolicos. En estos años, surge el desarrollo de indices que reflejen
+  las caracteristicas bioquimicas de enzimas promiscuas. En 2010,
+  comienzan los intentos por desarrollar un metodo computacional de
+  prediccion de promiscuidad. Desde 2012 a la fecha, a la par que las
+  aproximaciones bioinformaticas se multiplican, se desarrollan
+  investigaciones de aspectos biofisicos, bioquimicos y evolutivos de
+  enzimas promiscuas reafirmando que todos estos aspectos estan
+  relacionados al fenomeno. En las siguientes secciones se describiran
+  trabajos importantes sobre la relacion que guarda la promiscuidad con
+  expansiones genomicas y flexibilidad molecular. Ademas se hablara sobre
+  analisis bioquimicos y metabolicos para la descripcion del fenomeno.
   
   \TeX~or \LaTeX~ \#\#\# 1.1. Funcion biologica de la promiscuidad
   enzimatica\\
@@ -327,62 +338,68 @@ starts here.
   papeles biologicos: el primero proporcionar robustez a la red metabolica
   de un organismo mediante redundancia de reacciones de otras enzimas; el
   segundo permitir plasticidad evolutiva, es decir materia prima para la
-  adaptacion a variaciones ambientales (Aharoni et al., 2005,Sanchez-Ruiz
-  (2012), Martínez-Núñez, Rodríguez-Vázquez, \& Pérez-Rueda (2015))
+  adaptacion a variaciones ambientales
+  {[}\protect\hyperlink{ref-aharoniux5fevolvabilityux5f2005}{19}{]}
   mediante la adquisicion de nuevas funciones quimicas. Respecto a la
   robustez, se probo que sobreexpresar enzimas promiscuas puede rescatar
-  perdidas genicas (Patrick, Quandt, Swartzlander, \& Matsumura, 2007). De
-  104 knockout sencillos de genes esenciales para E. coli K-12, 20\% de
-  las auxotrofias pudieron ser suprimidas por la sobreexpresion de
-  plasmidos que contenian enzimas promiscuas. Otro ejemplo que aporta a la
-  robustez es PriA, enzima de la ruta de histidina que realiza en la ruta
-  del triptofano la reaccion E.C. 5.3.1.24 (Barona Gómez \& Hodgson,
-  2003). En cuanto a la plasticidad se propone que para que la
-  promiscuidad pueda dar origen a la aparicion de nuevas funciones la
-  actividad promiscua debe proveer una ventaja fisiologica inmediata para
-  poder ser seleccionada positivamente, ademas una vez que una funcion
-  promiscua se vuelva relevante se debe poder mejorar mediante pocas
-  mutaciones derivando en el intercambio entre la actividad promiscua y la
-  principal(Khersonsky \& Tawfik, 2010).
+  perdidas genicas
+  {[}\protect\hyperlink{ref-patrickux5fmulticopyux5f2007}{30}{]}. De 104
+  knockout sencillos de genes esenciales para E. coli K-12, 20\% de las
+  auxotrofias pudieron ser suprimidas por la sobreexpresion de plasmidos
+  que contenian enzimas promiscuas. Otro ejemplo que aporta a la robustez
+  es PriA, enzima de la ruta de histidina que realiza en la ruta del
+  triptofano la reaccion E.C. 5.3.1.24
+  {[}\protect\hyperlink{ref-baronagomezux5foccurrenceux5f2003}{8}{]}. En
+  cuanto a la plasticidad se propone que para que la promiscuidad pueda
+  dar origen a la aparicion de nuevas funciones la actividad promiscua
+  debe proveer una ventaja fisiologica inmediata para poder ser
+  seleccionada positivamente, ademas una vez que una funcion promiscua se
+  vuelva relevante se debe poder mejorar mediante pocas mutaciones
+  derivando en el intercambio entre la actividad promiscua y la
+  principal{[}\protect\hyperlink{ref-khersonskyux5fenzymeux5f2010}{4}{]}.
   
   Aun cuando el producto de la promiscuidad genera metabolitos que no se
   integran al metabolismo central de la celula, su efecto es positivo ya
   que estos metabolitos podrian colaborar a la adaptacion al entorno
   participando por ejemplo en una relacion de simbiosis o de competencia
   con otros organismos. Este tipo de metabolitos, por lo general, no son
-  dañinos (Notebaart et al., 2014, Linster, Van Schaftingen, \& Hanson
-  (2013), Khanal, Yu McLoughlin, Kershner, \& Copley (2015)) y pueden
-  servir como bloques de construccion para vias metabolicas nuevas (Ma et
-  al., 2013, Adams et al. (2014), Soskine \& Tawfik (2010)). La respuesta
-  inmediata de adaptacion de un organismo podria ser una consecuencia de
-  su grado de promiscuidad.
+  dañinos
+  {[}\protect\hyperlink{ref-notebaartux5fnetwork-levelux5f2014}{31}{]} y
+  pueden servir como bloques de construccion para vias metabolicas nuevas
+  {[}\protect\hyperlink{ref-maux5funconventionalux5f2013}{34}{]}. La
+  respuesta inmediata de adaptacion de un organismo podria ser una
+  consecuencia de su grado de promiscuidad.
   
   \subsection{1.2. Relacion del pangenoma con la promiscuidad
   enzimatica}\label{relacion-del-pangenoma-con-la-promiscuidad-enzimatica}
   
   El core genome de un grupo taxonomico es el conjunto de secuencias
   codificantes presentes en todos los organismos del grupo. En el Dominio
-  Bacteria el core esta estimado entre 200 y 300 secuencias (Halachev,
-  Loman, \& Pallen, 2011). Dada su conservacion el core genome puede
-  utilizarse para trazar mejores relaciones filogeneticas que las
-  obtenidas con el uso exclusivo de marcadores como la subunidad 16s del
-  RNA ribosomal o el gen rpoB. El pangenoma es el conjunto complemento del
-  core genome, es decir todas aquellas secuencias que estan ausentes de
-  uno o mas organismos del grupo y por lo tanto no son necesarias para
-  todos, sino solo posiblemente para el organismo que las posee. Como en
-  el pangenoma la presion de seleccion esta relajada respecto al
-  core-genome (Firn \& Jones, 2009) es el conjunto donde la plasticidad
-  genomica tiene facilidades para desarrollarse.
+  Bacteria el core esta estimado entre 200 y 300 secuencias
+  {[}\protect\hyperlink{ref-halachevux5fcalculatingux5f2011}{37}{]}. Dada
+  su conservacion el core genome puede utilizarse para trazar mejores
+  relaciones filogeneticas que las obtenidas con el uso exclusivo de
+  marcadores como la subunidad 16s del RNA ribosomal o el gen rpoB. El
+  pangenoma es el conjunto complemento del core genome, es decir todas
+  aquellas secuencias que estan ausentes de uno o mas organismos del grupo
+  y por lo tanto no son necesarias para todos, sino solo posiblemente para
+  el organismo que las posee. Como en el pangenoma la presion de seleccion
+  esta relajada respecto al core-genome
+  {[}\protect\hyperlink{ref-firnux5fdarwinianux5f2009}{17}{]} es el
+  conjunto donde la plasticidad genomica tiene facilidades para
+  desarrollarse.
   
   Esta idea puede restringirse a subsistemas metabolicos para identificar
   genes cuyas enzimas estan en proceso de cambio de funcion quimica, por
   ejemplo, en este trabajo se encontro que el gen trpF esta presente en
   solo 49 de 290 genomas analizados del genero Streptomyces por lo que se
   encuentra en el pangenoma de triptofano de este genero taxonomico,
-  posiblemente adquiriendo una nueva funcion (Ma et al., 2013). Para
+  posiblemente adquiriendo una nueva funcion
+  {[}\protect\hyperlink{ref-maux5funconventionalux5f2013}{34}{]}. Para
   evitar problemas tecnicos del calculo del pangenoma existen otros
   modelos de medicion de variabilidad del genomica entre especies
-  bacterianas (Kislyuk, Haegeman, Bergman, \& Weitz, 2011).
+  bacterianas
+  {[}\protect\hyperlink{ref-kislyukux5fgenomicux5f2011}{38}{]}.
   
   \subsection{1.3 Expansion y contextos genomicos como herramienta de
   anotacion
@@ -390,34 +407,37 @@ starts here.
   
   La diversidad enzimatica existente es el resultado de un proceso de
   expansion, mutacion y seleccion que se ha desarrollado durante el
-  transcurso de la historia evolutiva (Khersonsky \& Tawfik, 2010, Pearson
-  (2012)). Existe evidencia de que cierto grado de promiscuidad o
-  divergencia funcional precede a la duplicacion genica (Hughes, 1994).
-  Por este motivo detectar expansiones ya sea duplicaciones o
-  transferencias horizontales (Treangen \& Rocha, 2011), puede ser un buen
-  punto de partida para determinar divergencia funcional y promiscuidad.
-  No todas las expansiones denotan cambio de funcion enzimatica, algunas
-  pueden ser meros accidentes, sin embargo dado que la funcion de una
-  enzima suele estar relacionada con sus vecinos (R. Overbeek, Fonstein,
-  D'Souza, Pusch, \& Maltsev, 1999,S. Zhao et al. (2014),S. Zhao et al.
-  (2013), Verdel-Aranda, López-Cortina, Hodgson, \& Barona-Gómez (2015)),
-  una expansion en una vecindad genomica diferente de la tradicional sera
-  un referente de adquisicion de una nueva funcion y entonces un indicador
-  de existencia previa de promiscuidad.
+  transcurso de la historia evolutiva
+  {[}\protect\hyperlink{ref-khersonskyux5fenzymeux5f2010}{4}{]}. Existe
+  evidencia de que cierto grado de promiscuidad o divergencia funcional
+  precede a la duplicacion genica
+  {[}\protect\hyperlink{ref-hughesux5fevolutionux5f1994}{40}{]}. Por este
+  motivo detectar expansiones ya sea duplicaciones o transferencias
+  horizontales
+  {[}\protect\hyperlink{ref-treangenux5fhorizontalux5f2011}{41}{]}, puede
+  ser un buen punto de partida para determinar divergencia funcional y
+  promiscuidad. No todas las expansiones denotan cambio de funcion
+  enzimatica, algunas pueden ser meros accidentes, sin embargo dado que la
+  funcion de una enzima suele estar relacionada con sus vecinos
+  {[}\protect\hyperlink{ref-overbeekux5fuseux5f1999}{42}{]}, una expansion
+  en una vecindad genomica diferente de la tradicional sera un referente
+  de adquisicion de una nueva funcion y entonces un indicador de
+  existencia previa de promiscuidad.
   
   La funcion de una enzima es un concepto jerarquico, dependiente de la
-  filogenia de un organismo (Szklarczyk et al., 2015,Szklarczyk et al.
-  (2015)). Para sistematizar el estudio de contextos y vecindades
-  genomicas se desarrollo Search Tool for the Retrieval of Interacting
-  Genes/Proteins STRING (Snel, Lehmann, Bork, \& Huynen, 2000), que cuenta
-  con una anotacion de ortologia jerarquica y consistente, realizada en
-  2000 organismos en cuyo marco interacciones de proteinas con
-  implicaciones funcionales son predichas tanto de novo por informacion
-  genomica de co-ocurrencia como por mineria de datos en articulos
-  publicados. STRING es una base de datos, y como tal no permite agregar
-  nuevos genomas para su analisis. Sus 2000 organismos incluyen especies
-  tanto bacterianas como eucariotas. Al existir tanta diversidad, los
-  genomas disponibles para un genero o clase especificos son escasos,
+  filogenia de un organismo
+  {[}\protect\hyperlink{ref-szklarczykux5fstringux5f2015}{46}{]}. Para
+  sistematizar el estudio de contextos y vecindades genomicas se
+  desarrollo Search Tool for the Retrieval of Interacting Genes/Proteins
+  STRING {[}\protect\hyperlink{ref-snelux5fstring:ux5f2000}{47}{]}, que
+  cuenta con una anotacion de ortologia jerarquica y consistente,
+  realizada en 2000 organismos en cuyo marco interacciones de proteinas
+  con implicaciones funcionales son predichas tanto de novo por
+  informacion genomica de co-ocurrencia como por mineria de datos en
+  articulos publicados. STRING es una base de datos, y como tal no permite
+  agregar nuevos genomas para su analisis. Sus 2000 organismos incluyen
+  especies tanto bacterianas como eucariotas. Al existir tanta diversidad,
+  los genomas disponibles para un genero o clase especificos son escasos,
   p.~g. de los mas de 300 genomas disponibles de Streptomyces solo 24
   estan incluidos.
   
@@ -425,33 +445,34 @@ starts here.
   taxonomicos se pueden desarrollar scripts de vecindad genomica
   utilizando RAST (Rapid Annotation using Subsystem Technology); un
   servicio interactivo de anotacion automatica de genomas de bacterias y
-  arqueas (Aziz et al., 2008,R. Overbeek et al. (2014)) donde la funcion
-  de cada gen se asigna de acuerdo a conocimiento previo de subsecuencias
-  de organismos cercanos filogeneticamente, cuando es posible se incluye
-  en un subsistema metabolico. Estamos en una era de explosion de datos
-  genomicos, proximamente se espera contar con millones de genomas
-  bacterianos incluso provenientes de bacterias no cultivables, por ello
-  los algoritmos deben ser constantemente optimizados a los nuevos
-  volumenes de datos (Medema \& Fischbach, 2015). Ante esta expectativa
-  seria muy util desarrollar algoritmos de analisis genomico que sean de
-  codigo libre o al menos interactivos para que cada laboratorio pueda
-  personalizarlos para sus propios genomas.
+  arqueas {[}\protect\hyperlink{ref-azizux5frastux5f2008}{48}{]} donde la
+  funcion de cada gen se asigna de acuerdo a conocimiento previo de
+  subsecuencias de organismos cercanos filogeneticamente, cuando es
+  posible se incluye en un subsistema metabolico. Estamos en una era de
+  explosion de datos genomicos, proximamente se espera contar con millones
+  de genomas bacterianos incluso provenientes de bacterias no cultivables,
+  por ello los algoritmos deben ser constantemente optimizados a los
+  nuevos volumenes de datos
+  {[}\protect\hyperlink{ref-medemaux5fcomputationalux5f2015}{50}{]}. Ante
+  esta expectativa seria muy util desarrollar algoritmos de analisis
+  genomico que sean de codigo libre o al menos interactivos para que cada
+  laboratorio pueda personalizarlos para sus propios genomas.
   
   Finalmente, no solo la vecindad genomica inmediata puede ser utilizada
   como distintivo en la busqueda de promiscuidad, diferencias en el
   contexto genomico en genes relacionados con una enzima promiscua, sin
   importar su ubicacion dentro del genoma tambien pueden ser relevantes
-  para la perdida o ganancia de funcion quimica (Noda-García et al.,
-  2013), (Juarez Vazquez et al 2015).
+  para la perdida o ganancia de funcion quimica
+  {[}\protect\hyperlink{ref-noda-garciaux5fevolutionux5f2013}{51}{]},
+  (Juarez Vazquez et al 2015).
   
   \subsection{1. 4. Modelos bioinformaticos de
   promiscuidad}\label{modelos-bioinformaticos-de-promiscuidad}
   
   Con el fin de reducir la inversion en el proceso de experimentacion, se
   han implementado en los ultimos años algoritmos computacionales para
-  predecir promiscuidad enzimatica (Carbonell \& Faulon, 2010, Cheng et
-  al. (2012), Nagao, Nagano, \& Mizuguchi (2014), Noda-García et al.
-  (2015),Garcia-Seisdedos, Ibarra-Molero, \& Sanchez-Ruiz (2012)). Estos
+  predecir promiscuidad enzimatica
+  {[}\protect\hyperlink{ref-carbonellux5fmolecularux5f2010}{52}{]}. Estos
   procedimientos cuentan con un conjunto de aprendizaje, unos descriptores
   del conjunto, una fase de ajuste de parametros y finalmente una
   prediccion. En 2010, Carbonell propone un algoritmo de soporte vectorial
@@ -469,50 +490,56 @@ starts here.
   Un aspecto no considerado en estos metodos es que hay familias de
   enzimas con alta identidad de secuencia entre sus miembros, con cambios
   bruscos en promiscuidad, debidos por ejemplo a la dinamica genomica
-  (Noda-García et al., 2013,Verdel-Aranda et al. (2015)), lo que dificulta
-  que considerar solo la secuencia conlleve a buenos predictores de
-  promiscuidad. Cuando se obtiene una prediccion positiva utilizando los
-  modelos existentes, lo que significa es que dada esa secuencia, en su
-  familia se conoce previamente un elemento promiscuo y que ademas sus
-  subsecuencias de cierto tamaño son suficientemente similares. Estos
-  enfoques no pueden predecir de novo, en familias donde la promiscuidad
-  no ha sido previamente detectada experimentalmente, pues no consideran
-  aspectos evolutivos ni mecanisticos de las enzimas.
+  {[}\protect\hyperlink{ref-noda-garciaux5fevolutionux5f2013}{51}{]}, lo
+  que dificulta que considerar solo la secuencia conlleve a buenos
+  predictores de promiscuidad. Cuando se obtiene una prediccion positiva
+  utilizando los modelos existentes, lo que significa es que dada esa
+  secuencia, en su familia se conoce previamente un elemento promiscuo y
+  que ademas sus subsecuencias de cierto tamaño son suficientemente
+  similares. Estos enfoques no pueden predecir de novo, en familias donde
+  la promiscuidad no ha sido previamente detectada experimentalmente, pues
+  no consideran aspectos evolutivos ni mecanisticos de las enzimas.
   
   Otra limitante a los enfoques descritos es que mezclan en su conjunto de
   entrenamiento fenomenos distintos de promiscuidad. Cheng p.~g. incluye
   enzimas moonlight que si bien poseen funciones adicionales a la
-  catalizacion, son distantes a las enzimas promiscuas (S. D. Copley,
-  2003). Ademas en ambos casos mezclan en el mismo conjunto enzimas
-  bacterianas y eucariotas, con lo que si existia una huella basada en
-  secuencia entonces esta puede diluirse por la gran distancia taxonomica
-  entre estos grupos (Tabla 1).
+  catalizacion, son distantes a las enzimas promiscuas
+  {[}\protect\hyperlink{ref-copleyux5fenzymesux5f2003}{5}{]}. Ademas en
+  ambos casos mezclan en el mismo conjunto enzimas bacterianas y
+  eucariotas, con lo que si existia una huella basada en secuencia
+  entonces esta puede diluirse por la gran distancia taxonomica entre
+  estos grupos (Tabla 1).
   
   \subsection{1.5. Promiscuidad in vitro y promiscuidad in
   vivo}\label{promiscuidad-in-vitro-y-promiscuidad-in-vivo}
   
   La ganancia de promiscuidad no solo puede entenderse como la capacidad
-  de convertir mas sustratos (Carbonell \& Faulon, 2010), sino tambien
-  como la mejora de la capacidad catalitica respecto a ellos. El I-index
-  (Nath \& Atkins, 2008), esta definido como un rango de valores entre 0 y
-  1 que tiende a 1 entre mas parecida sea la actividad de la enzima sobre
-  distintos sustratos, la capacidad catalitica es medida en terminos del
-  cociente de Michaelis - Menten \(\frac{K_cat}{K_m}\). El indice ha sido
-  utilizado para predecir la afinidad por sustrato del citocromo P450
-  (Nath et al 2010). Una limitante del indice I es que se deben conocer
-  los sustratos a los que la enzima es afin; sin embargo se puede
-  sospechar que una enzima ha ganado promiscuidad aun sin conocer sus
-  potenciales sustratos. Otro punto a señalar es que las variables
-  Kcat,Kmson mediciones realizadas in vitro y no se consideran todos los
-  sustratos presentes in vivo. Para solventar esta dificultad e investigar
-  variaciones de sustratos nativos se pueden buscar productos similares a
-  los ya conocidos por medio de analisis metabolicos (Zelbuch et al 2015,
-  Nesvizhki et al 2007) como los empleados en la deteccion de rutas no
-  conservadas en la biosintesis de productos naturales (Medema \&
-  Fischbach 2015). En particular para este fin se ha utilizado
-  espectrometria de masas MS/MS, (Nesvizhski et al 2007, Campbell 2012)
+  de convertir mas sustratos
+  {[}\protect\hyperlink{ref-carbonellux5fmolecularux5f2010}{52}{]}, sino
+  tambien como la mejora de la capacidad catalitica respecto a ellos. El
+  I-index {[}\protect\hyperlink{ref-nathux5fquantitativeux5f2008}{15}{]},
+  esta definido como un rango de valores entre 0 y 1 que tiende a 1 entre
+  mas parecida sea la actividad de la enzima sobre distintos sustratos, la
+  capacidad catalitica es medida en terminos del cociente de Michaelis -
+  Menten \(\frac{K_{cat}}{K_m}\). El indice ha sido utilizado para
+  predecir la afinidad por sustrato del citocromo P450
+  {[}\protect\hyperlink{ref-nathux5fquantifyingux5f2010}{25}{]}. Una
+  limitante del indice \(I\) es que se deben conocer los sustratos a los
+  que la enzima es afin; sin embargo se puede sospechar que una enzima ha
+  ganado promiscuidad aun sin conocer sus potenciales sustratos. Otro
+  punto a señalar es que las variables Kcat,Kmson mediciones realizadas in
+  vitro y no se consideran todos los sustratos presentes in vivo. Para
+  solventar esta dificultad e investigar variaciones de sustratos nativos
+  se pueden buscar productos similares a los ya conocidos por medio de
+  analisis metabolicos
+  {[}\protect\hyperlink{ref-nesvizhskiiux5fanalysisux5f2007}{57}{]} como
+  los empleados en la deteccion de rutas no conservadas en la biosintesis
+  de productos naturales
+  {[}\protect\hyperlink{ref-medemaux5fcomputationalux5f2015}{50}{]}. En
+  particular para este fin se ha utilizado espectrometria de masas MS/MS,
+  {[}\protect\hyperlink{ref-nesvizhskiiux5fanalysisux5f2007}{57}{]}
   combinada con molecular networking para identificar productos similares
-  (Yang et al 2013, Köcher \& Superti-Furga 2007).
+  {[}\protect\hyperlink{ref-yangux5fmolecularux5f2013}{59}{]}
   
   \subsection{1.6. El papel de la dinamica molecular en la
   promiscuidad}\label{el-papel-de-la-dinamica-molecular-en-la-promiscuidad}
@@ -521,34 +548,41 @@ starts here.
   purificacion y cristalizacion. Aunque mucho se ha hablado de la relacion
   estructura funcion, al cristalizar se obtienen estados conformacionales
   homogeneos, que bien pueden no ser la unica conformacion que adopta la
-  proteina en solucion. (James \& Tawfik 2003). En particular en el
-  problema de promiscuidad, se ha observado que la variacion funcional no
-  queda obviamente reflejada en la variacion estructural, lo que sugiere
-  un rol significativo para la dinamica molecular (Parisi et al 2015,
-  Noda-Garcia et al 2013, Zou et al 2015). Se postula que un aspecto de la
-  dinamica molecular relevante para la diversificacion de especificidad
-  por sustrato es el numero de conformeros (Zea et al 2013). Por ejemplo,
-  en la actinobacteria Corynebacterium diphtheriae parece que el contexto
-  genomico correlaciona con perdida de promiscuidad de PriA ya que al
-  poseer el genoma una copia de trpF, la enzima perdio esta funcion
+  proteina en solucion.
+  {[}\protect\hyperlink{ref-jamesux5fconformationalux5f2003}{61}{]}. En
+  particular en el problema de promiscuidad, se ha observado que la
+  variacion funcional no queda obviamente reflejada en la variacion
+  estructural, lo que sugiere un rol significativo para la dinamica
+  molecular
+  {[}\protect\hyperlink{ref-parisiux5fconformationalux5f2015}{62}{]}. Se
+  postula que un aspecto de la dinamica molecular relevante para la
+  diversificacion de especificidad por sustrato es el numero de
+  conformeros
+  {[}\protect\hyperlink{ref-javierux5fzeaux5fproteinux5f2013}{63}{]}. Por
+  ejemplo, en la actinobacteria Corynebacterium diphtheriae parece que el
+  contexto genomico correlaciona con perdida de promiscuidad de PriA ya
+  que al poseer el genoma una copia de trpF, la enzima perdio esta funcion
   quimica conservando solo la funcion EC 5.3.1.16 correspondiente a la
   ruta de histidina. Esta sub-funcionalizacion se refleja en la perdida de
   estados conformacionales cambiando desde 1 estado en C. diphtheriae
-  hasta 4 presentes en la dinamica de PriA de M. tuberculosis (Noda-Garcia
-  et al 2013).
+  hasta 4 presentes en la dinamica de PriA de M. tuberculosis
+  {[}\protect\hyperlink{ref-noda-garciaux5fevolutionux5f2013}{51}{]}.
   
   Las regiones rigidas de una enzima proporcionan orientacion adecuada con
   respecto a los grupos cataliticos, mientras que las regiones flexibles
   permiten al sitio activo adaptarse a los sustratos con diferentes formas
-  y tamaños (Copley 2003). Esta consideracion sugiere que la flexibilidad
-  del sitio activo es otra caracteristica de la dinamica molecular a
-  considerar para obtener informacion de la capacidad de ligacion de una
-  enzima a distintos sustratos (Gatti \& Hollender 2013). Recientemente el
-  indice de flexibilidad dinamica (dfi) se utilizo como una medida
-  cuantitativa basado en la respuesta a perturbaciones de aminoacidos
-  (PRS). Este indice se incremento en regiones cercanas al sitio activo de
-  beta lactamasas promiscuas respecto al correspondiente dfi de
-  \(\noindent\beta\) -lactamasas especialistas existentes (Zou et l 2015).
+  y tamaños {[}\protect\hyperlink{ref-copleyux5fenzymesux5f2003}{5}{]}.
+  Esta consideracion sugiere que la flexibilidad del sitio activo es otra
+  caracteristica de la dinamica molecular a considerar para obtener
+  informacion de la capacidad de ligacion de una enzima a distintos
+  sustratos
+  {[}\protect\hyperlink{ref-gatti-lafranconiux5fflexibilityux5f2013}{64}{]}.
+  Recientemente el indice de flexibilidad dinamica (dfi) se utilizo como
+  una medida cuantitativa basado en la respuesta a perturbaciones de
+  aminoacidos (PRS). Este indice se incremento en regiones cercanas al
+  sitio activo de beta lactamasas promiscuas respecto al correspondiente
+  dfi de \(\noindent\beta\) -lactamasas especialistas existentes
+  {[}\protect\hyperlink{ref-zouux5fevolutionux5f2015}{16}{]}.
   
   \subsection{1.7 Modelo biologico diversidad de
   Actinobacteria}\label{modelo-biologico-diversidad-de-actinobacteria}
@@ -557,20 +591,22 @@ starts here.
   promiscuas se debe recordar que la funcionalidad es jerarquica por lo
   que para mejorar la anotacion, es deseable reflejar el proceso evolutivo
   y restringirse a un grupo de organismos taxonomicamente relacionados
-  (Cruz-Morales in prep 2015, Evomining). Actinobacteria es un phylum que
-  posee promiscuidad tanto en el metabolismo periferico como en el core
-  metabolico. Entre datos publicos (NCBI) y privados estan disponibles
-  alrededor de 1200 genomas no redundantes de especies de Actinobacteria.
-  Como punto de partida, se han estudiado las relaciones filogeneticas y
-  grupos de ortologia (Li et al 2003, Waterhouse et al 2013), en
-  particular en Actinobacteria para identificar relaciones entre las
-  familias del phylum, se obtuvieron arboles multilocus de entre 100 y 157
-  genomas (Gao \& Gupta 2012, Sen et al 2014). Estos estudios sugieren
-  como separar los genomas disponibles para hacer el calculo de grupos de
-  ortologia. Finalmente, se han realizado estudios de plasticidad genomica
-  en Streptomyces considerando 5 y 17 organismos de los 300 genomas
-  disponibles en la actualidad (Kim et al 2015, Zhou et al 2011) donde
-  reportan 2,018 familias en el core genome y 32,574 en el pangenoma.
+  {[}\protect\hyperlink{ref-cruz-moralesux5fphylogenomicux5f2016}{65}{]}.
+  Actinobacteria es un phylum que posee promiscuidad tanto en el
+  metabolismo periferico como en el core metabolico. Entre datos publicos
+  (NCBI) y privados estan disponibles alrededor de 1200 genomas no
+  redundantes de especies de Actinobacteria. Como punto de partida, se han
+  estudiado las relaciones filogeneticas y grupos de ortologia
+  {[}\protect\hyperlink{ref-liux5forthomclux5f2003}{66}{]}, en particular
+  en Actinobacteria para identificar relaciones entre las familias del
+  phylum, se obtuvieron arboles multilocus de entre 100 y 157 genomas
+  {[}\protect\hyperlink{ref-gaoux5fphylogeneticux5f2012}{68}{]}. Estos
+  estudios sugieren como separar los genomas disponibles para hacer el
+  calculo de grupos de ortologia. Finalmente, se han realizado estudios de
+  plasticidad genomica en Streptomyces considerando 5 y 17 organismos de
+  los 300 genomas disponibles en la actualidad
+  {[}\protect\hyperlink{ref-zhouux5fgenomeux5f2012}{70}{]} donde reportan
+  2,018 familias en el core genome y 32,574 en el pangenoma.
   
   \subsection{1.8 Modelo metabolico biosintesis de
   aminoacidos.}\label{modelo-metabolico-biosintesis-de-aminoacidos.}
@@ -586,44 +622,49 @@ starts here.
   observaciones evolutivas. En un gran numero de Actinobacterias las rutas
   de histidina y triptofano de 7 y 11 pasos respectivamente convergen en
   una enzima bifuncional llamada PriA, que realiza tanto la funcion de
-  HisA como la de TrpF (Barona-Gomez 2003). La cantidad de familias en el
-  subsistema de metabolismo de aminoacidos, su variabilidad, su
-  conservacion entre distintos grupos taxonomicos y la existencia de estos
-  ejemplos en Actinobacteria lo posicionan como un buen punto de partida
-  para la busqueda de promiscuidad tanto de familias promiscuas como de
-  miembros promiscuos de las mismas.
+  HisA como la de TrpF
+  {[}\protect\hyperlink{ref-baronagomezux5foccurrenceux5f2003}{8}{]}. La
+  cantidad de familias en el subsistema de metabolismo de aminoacidos, su
+  variabilidad, su conservacion entre distintos grupos taxonomicos y la
+  existencia de estos ejemplos en Actinobacteria lo posicionan como un
+  buen punto de partida para la busqueda de promiscuidad tanto de familias
+  promiscuas como de miembros promiscuos de las mismas.
   
   \section{2. Antecedentes}\label{antecedentes}
   
   En las cuatro decadas de estudio de la promiscuidad enzimatica, hemos
   aprendido que es un fenomeno distribuido en distintos subsistemas
-  metabolicos (Nam et al 2012, Wayne et al 2007 , Copley 2015) y que su
-  existencia puede deberse tanto al desarrollo de nuevas funciones para
-  fines adaptativos (Jensen 1976, O'Brien \& Herschlag 1999, Firn \& Jones
-  2009, Copley 2015), como al rescate de una funcion perdida (Wayne et al
-  2007, Barona-Gomez 2003). Por ello la dinamica de perdida y ganancia de
-  genes asociada al contexto genomico en bacterias se relaciona con cambio
-  en la funcion enzimatica (Zhao et al 2013, Zhao et al 2014, Copley 2015,
-  Sakai et al 2006). Precisando, respecto a la ganancia de genes, se
-  postula que la bifuncionalidad precede la duplicacion (Hughes 1994,
-  O'Brien \& Herschlag 1999). Lo que implica que dada una duplicacion muy
-  posiblemente previamente la promiscuidad estuvo presente (Gerlt \&
-  Babbit 2001, Huang et al 2012, Noda-Garcia et al 2013, Risso 2014,
-  Noda-Garcia et al 2015).
+  metabolicos {[}\protect\hyperlink{ref-namux5fnetworkux5f2012}{72}{]} y
+  que su existencia puede deberse tanto al desarrollo de nuevas funciones
+  para fines adaptativos
+  {[}\protect\hyperlink{ref-jensenux5fenzymeux5f1976}{20}{]}, como al
+  rescate de una funcion perdida
+  {[}\protect\hyperlink{ref-patrickux5fmulticopyux5f2007}{30}{]}. Por ello
+  la dinamica de perdida y ganancia de genes asociada al contexto genomico
+  en bacterias se relaciona con cambio en la funcion enzimatica
+  {[}\protect\hyperlink{ref-zhaoux5fdiscoveryux5f2013}{44}{]}. Precisando,
+  respecto a la ganancia de genes, se postula que la bifuncionalidad
+  precede la duplicacion
+  {[}\protect\hyperlink{ref-hughesux5fevolutionux5f1994}{40}{]}. Lo que
+  implica que dada una duplicacion muy posiblemente previamente la
+  promiscuidad estuvo presente
+  {[}\protect\hyperlink{ref-gerltux5fdivergentux5f2001}{74}{]}.
   
-  Se han desarrollado tecnicas bioquimicas y metabolicas de medicion (Nath
-  \& Atkins 2008), asi como algoritmos computacionales de prediccion de
-  promiscuidad (Carbonell \& Faulon 2010, Cheng et al 2012, Noda-Garcia
-  2015). Un aspecto a mejorar dentro del modelado es la restriccion del
-  conjunto de estudio a un grupo taxonomico tan reducido que exista
-  congruencia en las familias de ortologia y a la vez tan amplio que
-  permita observar efectos evolutivos; el phylum Actinobacteria ha probado
-  tener ejemplos de promiscuidad. Si bien la secuencia no ha sido
-  suficiente para la correcta prediccion de promiscuidad (Verdel-Aranda et
-  al 2015, Copley 2015), es posible que dentro de las tecnicas
-  computacionales la flexibilidad durante la dinamica molecular este
-  correlacionada con la promiscuidad de los miembros de una familia (James
-  \& Tawfik 2003, Zea et al 2013, Noda-Garcia 2013, Zou et al 2015).
+  Se han desarrollado tecnicas bioquimicas y metabolicas de medicion
+  {[}\protect\hyperlink{ref-nathux5fquantitativeux5f2008}{15}{]}, asi como
+  algoritmos computacionales de prediccion de promiscuidad
+  {[}\protect\hyperlink{ref-carbonellux5fmolecularux5f2010}{52}{]}. Un
+  aspecto a mejorar dentro del modelado es la restriccion del conjunto de
+  estudio a un grupo taxonomico tan reducido que exista congruencia en las
+  familias de ortologia y a la vez tan amplio que permita observar efectos
+  evolutivos; el phylum Actinobacteria ha probado tener ejemplos de
+  promiscuidad. Si bien la secuencia no ha sido suficiente para la
+  correcta prediccion de promiscuidad
+  {[}\protect\hyperlink{ref-verdel-arandaux5fmolecularux5f2015}{45}{]}, es
+  posible que dentro de las tecnicas computacionales la flexibilidad
+  durante la dinamica molecular este correlacionada con la promiscuidad de
+  los miembros de una familia
+  {[}\protect\hyperlink{ref-jamesux5fconformationalux5f2003}{61}{]}.
   
   \subsection{2.1 Modelo biologico}\label{modelo-biologico}
   
@@ -642,26 +683,31 @@ starts here.
   
   \subsection{2.2 Subsistemas metabolicos}\label{subsistemas-metabolicos}
   
-  Los operones his y trp de histidina (Fondi et al 2009) y triptofano
-  (Merino et al 2008) respectivamente, participantes del metabolismo de
-  aminoacidos estan ampliamente distribuidos en los organismos
-  bacterianos. En Actinobacteria la familia promiscua PriA participa en
-  ambas rutas biosinteticas, para su estudio se han generado datos
-  bioquimicos, genomicos y estructurales(Tabla 3). En bacterias gram
-  negativas estan presentes los operones his y trp y en lugar de PriA su
-  familia homologa HisA. PriA comprende un conjunto de subfamilias en
-  Actinobacteria. En Streptomyces, el gen trpF se desplaza de la vecindad
-  genomica de trp, con lo que el homologo de hisA gana promiscuidad aunque
-  con baja actividad de TrpF, a esta subfamilia se le llama PriB
-  (Verduzco-Castro et al 2015 in press). En otras Actinobacterias trpF se
-  pierde totalmente y la familia homologa de HisA, se vuelve promiscua
-  (Barona-Gomez 2003) realizando tanto la funcion quimica correspondiente
-  a HisA como la de TrpF. Finalmente en la familia subHisA se pierde la
-  funcion TrpF debido posiblemente a la ganancia del operon trp completo
-  (Noda-Garcia et al 2013) y en la familia subtrpF se conserva solo a la
-  funcion TrpF debido a la perdida del operon his (Juarez vazquez et al
-  2015 in prep). Existen al menos 43 familias de Actinobacteria sin
-  explorar respecto a la funcionalidad de PriA.
+  Los operones his y trp de histidina
+  {[}\protect\hyperlink{ref-fondiux5fevolutionux5f2009}{76}{]} y
+  triptofano {[}\protect\hyperlink{ref-merinoux5fevolutionux5f2008}{77}{]}
+  respectivamente, participantes del metabolismo de aminoacidos estan
+  ampliamente distribuidos en los organismos bacterianos. En
+  Actinobacteria la familia promiscua PriA participa en ambas rutas
+  biosinteticas, para su estudio se han generado datos bioquimicos,
+  genomicos y estructurales(Tabla 3). En bacterias gram negativas estan
+  presentes los operones his y trp y en lugar de PriA su familia homologa
+  HisA. PriA comprende un conjunto de subfamilias en Actinobacteria. En
+  Streptomyces, el gen trpF se desplaza de la vecindad genomica de trp,
+  con lo que el homologo de hisA gana promiscuidad aunque con baja
+  actividad de TrpF, a esta subfamilia se le llama PriB
+  {[}\protect\hyperlink{ref-verduzco-castroux5fco-occurrenceux5f2016}{78}{]}.
+  En otras Actinobacterias trpF se pierde totalmente y la familia homologa
+  de HisA, se vuelve promiscua
+  {[}\protect\hyperlink{ref-baronagomezux5foccurrenceux5f2003}{8}{]}
+  realizando tanto la funcion quimica correspondiente a HisA como la de
+  TrpF. Finalmente en la familia subHisA se pierde la funcion TrpF debido
+  posiblemente a la ganancia del operon trp completo
+  {[}\protect\hyperlink{ref-noda-garciaux5fevolutionux5f2013}{51}{]} y en
+  la familia subtrpF se conserva solo a la funcion TrpF debido a la
+  perdida del operon his {[}Juarez vazquez et al 2015 in prep{]}. Existen
+  al menos 43 familias de Actinobacteria sin explorar respecto a la
+  funcionalidad de PriA.
   
   \subsection{2.3 Contexto y vecindades
   genomicas}\label{contexto-y-vecindades-genomicas}
@@ -1228,7 +1274,8 @@ starts here.
   Actinobacteria phylum as genomic data base, 226 unclassified nBGCs, and
   not interchangable central database 339 queries for nine pathways,
   including amino acid biosynthesis, glycolysis, pentose phosphate
-  pathway, and tricarboxylic acids cycle. (Cruz-Morales et al., 2016)
+  pathway, and tricarboxylic acids cycle.
+  {[}\protect\hyperlink{ref-cruz-moralesux5fphylogenomicux5f2016}{65}{]}
   EvoMining was proved on Actinobacteria Arseno-lipids
   
   \section{Pangenome}\label{pangenome}
@@ -1236,21 +1283,26 @@ starts here.
   The sequenced genome of an individull in some species is just a partil
   print of the species geneticll repertoire Individualls can gain and loss
   genes.\\
-  (Koonin, 2015) Pangenome is the total sequenced gene pool in a
-  taxonomically related group. Supergenome all the possible extant genes.
-  About 10 times genomes. there are open, closed pangenomes.Most genomes
-  has a core a shell and a unique genes.\\
+  {[}\protect\hyperlink{ref-kooninux5fturbulentux5f2015}{79}{]} Pangenome
+  is the total sequenced gene pool in a taxonomically related group.
+  Supergenome all the possible extant genes. About 10 times genomes. there
+  are open, closed pangenomes.Most genomes has a core a shell and a unique
+  genes.\\
   Gene history its a tree history
   
   HGT doubles mutation rate on prokarites.\\
   Maybe HGT is an selected feature, if is the case, so could be np
   production.\\
-  Some archaeas has open pangenome. (Halachev et al., 2011)
+  Some archaeas has open pangenome.
+  {[}\protect\hyperlink{ref-halachevux5fcalculatingux5f2011}{37}{]}
   
-  HGT doubles mutation rate on prokarites. (Koonin, 2015) Maybe HGT is an
-  selected feature, if is the case, so could be np production.\\
-  Some archaeas has open pangenome. (Halachev et al., 2011) Shell trees
-  converge to core trees (Narechania et al., 2012)
+  HGT doubles mutation rate on prokarites.
+  {[}\protect\hyperlink{ref-kooninux5fturbulentux5f2015}{79}{]} Maybe HGT
+  is an selected feature, if is the case, so could be np production.\\
+  Some archaeas has open pangenome.
+  {[}\protect\hyperlink{ref-halachevux5fcalculatingux5f2011}{37}{]} Shell
+  trees converge to core trees
+  {[}\protect\hyperlink{ref-narechaniaux5frandomux5f2012}{80}{]}
   
   \section{EvoMining Implementation}\label{evomining-implementation}
   
@@ -1303,9 +1355,9 @@ starts here.
   Other genomic apps were containerized to docker images during this
   work.\\
   - \emph{myRAST} docker- \url{https://github.com/nselem/myrast}\\
-  RAST is a bacterial and Archaeal genome annotator (Aziz et al., 2008, R.
-  Overbeek et al. (2014) , Brettin et al. (2015)) This app allows myRAST
-  functionality to upload\\
+  RAST is a bacterial and Archaeal genome annotator
+  {[}\protect\hyperlink{ref-azizux5frastux5f2008}{48}{]} This app allows
+  myRAST functionality to upload\\
   It allows EvoMining genome database annotation.\\
   -\emph{Orthocores} docker-\url{https://github.com/nselem/orthocore}\\
   Helps to obtain genomic core paralog free and construct genomic trees\\
@@ -1324,8 +1376,10 @@ starts here.
   reproducible research was a concerned while developing EvoMining app,
   reproducibilty is also important on data analysis, for that reason this
   document was writen using R-markdown and latex template from Reed
-  College (chesterismay, 2016). While R-markdown allows to write and run R
-  code and interpolate text paragraph to explain scripts and analysis.
+  College
+  {[}\protect\hyperlink{ref-chesterismayux5fupdatedux5f2016}{82}{]}. While
+  R-markdown allows to write and run R code and interpolate text paragraph
+  to explain scripts and analysis.
   
   \section{EvoMining Databases}\label{evomining-databases}
   
@@ -1393,8 +1447,8 @@ starts here.
   
   \subsubsection{Central DB}\label{central-db}
   
-  We chose central pathways from (Barona-Gómez, Cruz-Morales, \&
-  Noda-García, 2012)\\
+  We chose central pathways from
+  {[}\protect\hyperlink{ref-barona-gomezux5fwhatux5f2012}{83}{]}\\
   * BBH Best Bidirectional Hits with studied enzymes from Central
   Actinobacterial pathways were selected.
   
@@ -1413,7 +1467,8 @@ starts here.
   
   \subsection{AntisMASH optional DB}\label{antismash-optional-db}
   
-  AntiSMASH is (Weber et al., 2015,Medema et al. (2011))\\
+  AntiSMASH is
+  {[}\protect\hyperlink{ref-weberux5fantismashux5f2015}{84}{]}\\
   \#\#\# Archaeas Results Archaea is a kingdom of recent discovery were
   not many natural products has been known. On Actinobacteria, evoMining
   has proved its value to find new kinds of natural products. The clue to
@@ -2446,395 +2501,516 @@ starts here.
   \setlength{\parskip}{8pt}
   
   \hypertarget{refs}{}
-  \hypertarget{ref-adamsux5fpromiscuousux5f2014}{}
-  Adams, N. E., Thiaville, J. J., Proestos, J., Juárez-Vázquez, A. L.,
-  McCoy, A. J., Barona-Gómez, F., \ldots{} Maurelli, A. T. (2014).
-  Promiscuous and Adaptable Enzymes Fill ``Holes'' in the Tetrahydrofolate
-  Pathway in Chlamydia Species. \emph{MBio}, \emph{5}(4).
-  \url{http://doi.org/10.1128/mBio.01378-14}
-  
-  \hypertarget{ref-aharoniux5fevolvabilityux5f2005}{}
-  Aharoni, A., Gaidukov, L., Khersonsky, O., Gould, S. M., Roodveldt, C.,
-  \& Tawfik, D. S. (2005). The 'evolvability' of promiscuous protein
-  functions. \emph{Nature Genetics}, \emph{37}(1), 73--76.
-  \url{http://doi.org/10.1038/ng1482}
-  
   \hypertarget{ref-angel2000}{}
-  Angel, E. (2000). \emph{Interactive computer graphics : A top-down
-  approach with openGL}. Boston, MA: Addison Wesley Longman.
+  1. Angel E. Interactive computer graphics : A top-down approach with
+  openGL. Boston, MA: Addison Wesley Longman; 2000.
   
   \hypertarget{ref-angel2001}{}
-  Angel, E. (2001a). \emph{Batch-file computer graphics : A bottom-up
-  approach with quickTime}. Boston, MA: Wesley Addison Longman.
+  2. Angel E. Batch-file computer graphics : A bottom-up approach with
+  quickTime. Boston, MA: Wesley Addison Longman; 2001.
   
   \hypertarget{ref-angel2002a}{}
-  Angel, E. (2001b). \emph{Test second book by angel}. Boston, MA: Wesley
-  Addison Longman.
-  
-  \hypertarget{ref-azizux5frastux5f2008}{}
-  Aziz, R. K., Bartels, D., Best, A. A., DeJongh, M., Disz, T., Edwards,
-  R. A., \ldots{} Zagnitko, O. (2008). The RAST Server: Rapid Annotations
-  using Subsystems Technology. \emph{BMC Genomics}, \emph{9}, 75.
-  \url{http://doi.org/10.1186/1471-2164-9-75}
-  
-  \hypertarget{ref-baierux5fevolutionux5f2016}{}
-  Baier, F., Copp, J. N., \& Tokuriki, N. (2016). Evolution of Enzyme
-  Superfamilies: Comprehensive Exploration of Sequence--Function
-  Relationships. \emph{Biochemistry}, \emph{55}(46), 6375--6388.
-  \url{http://doi.org/10.1021/acs.biochem.6b00723}
-  
-  \hypertarget{ref-baronagomezux5foccurrenceux5f2003}{}
-  Barona Gómez, F., \& Hodgson, D. A. (2003). Occurrence of a putative
-  ancient like isomerase involved in histidine and tryptophan
-  biosynthesis. \emph{EMBO Reports}, \emph{4}(3), 296--300.
-  \url{http://doi.org/10.1038/sj.embor.embor771}
-  
-  \hypertarget{ref-barona-gomezux5fwhatux5f2012}{}
-  Barona-Gómez, F., Cruz-Morales, P., \& Noda-García, L. (2012). What can
-  genome-scale metabolic network reconstructions do for prokaryotic
-  systematics? \emph{Antonie van Leeuwenhoek}, \emph{101}(1), 35--43.
-  \url{http://doi.org/10.1007/s10482-011-9655-1}
-  
-  \hypertarget{ref-bloomux5fneutralux5f2007}{}
-  Bloom, J. D., Romero, P. A., Lu, Z., \& Arnold, F. H. (2007). Neutral
-  genetic drift can alter promiscuous protein functions, potentially
-  aiding functional evolution. \emph{Biology Direct}, \emph{2}, 17.
-  \url{http://doi.org/10.1186/1745-6150-2-17}
-  
-  \hypertarget{ref-brettinux5frasttk:ux5f2015}{}
-  Brettin, T., Davis, J. J., Disz, T., Edwards, R. A., Gerdes, S., Olsen,
-  G. J., \ldots{} Xia, F. (2015). RASTtk: A modular and extensible
-  implementation of the RAST algorithm for building custom annotation
-  pipelines and annotating batches of genomes. \emph{Scientific Reports},
-  \emph{5}, 8365. \url{http://doi.org/10.1038/srep08365}
-  
-  \hypertarget{ref-carbonellux5fmolecularux5f2010}{}
-  Carbonell, P., \& Faulon, J.-L. (2010). Molecular signatures-based
-  prediction of enzyme promiscuity. \emph{Bioinformatics}, \emph{26}(16),
-  2012--2019. \url{http://doi.org/10.1093/bioinformatics/btq317}
-  
-  \hypertarget{ref-chengux5fglobalux5f2012}{}
-  Cheng, X.-Y., Huang, W.-J., Hu, S.-C., Zhang, H.-L., Wang, H., Zhang,
-  J.-X., \ldots{} Ji, Z.-L. (2012). A Global Characterization and
-  Identification of Multifunctional Enzymes. \emph{PLoS ONE}, \emph{7}(6).
-  \url{http://doi.org/10.1371/journal.pone.0038979}
-  
-  \hypertarget{ref-chesterismayux5fupdatedux5f2016}{}
-  chesterismay. (2016, September). Updated R Markdown thesis template.
-  \emph{Chester's R blog}. Retrieved from
-  \url{https://chesterismay.wordpress.com/2016/09/01/updated-r-markdown-thesis-template/}
-  
-  \hypertarget{ref-copleyux5fenzymesux5f2003}{}
-  Copley, S. D. (2003). Enzymes with extra talents: Moonlighting functions
-  and catalytic promiscuity. \emph{Current Opinion in Chemical Biology},
-  \emph{7}(2), 265--272.
-  \url{http://doi.org/10.1016/S1367-5931(03)00032-2}
-  
-  \hypertarget{ref-cruz-moralesux5fphylogenomicux5f2016}{}
-  Cruz-Morales, P., Kopp, J. F., Martínez-Guerrero, C., Yáñez-Guerra, L.
-  A., Selem-Mojica, N., Ramos-Aboites, H., \ldots{} Barona-Gómez, F.
-  (2016). Phylogenomic Analysis of Natural Products Biosynthetic Gene
-  Clusters Allows Discovery of Arseno-Organic Metabolites in Model
-  Streptomycetes. \emph{Genome Biology and Evolution}, \emph{8}(6),
-  1906--1916. \url{http://doi.org/10.1093/gbe/evw125}
-  
-  \hypertarget{ref-deanux5fmechanisticux5f2007}{}
-  Dean, A. M., \& Thornton, J. W. (2007). Mechanistic approaches to the
-  study of evolution. \emph{Nature Reviews. Genetics}, \emph{8}(9),
-  675--688. \url{http://doi.org/10.1038/nrg2160}
-  
-  \hypertarget{ref-vonux5feichbornux5fpromiscuous:ux5f2011}{}
-  Eichborn, J. von, Murgueitio, M. S., Dunkel, M., Koerner, S., Bourne, P.
-  E., \& Preissner, R. (2011). PROMISCUOUS: A database for network-based
-  drug-repositioning. \emph{Nucleic Acids Research}, \emph{39}(suppl\_1),
-  D1060--D1066. \url{http://doi.org/10.1093/nar/gkq1037}
-  
-  \hypertarget{ref-firnux5fdarwinianux5f2009}{}
-  Firn, R. D., \& Jones, C. G. (2009). A Darwinian view of metabolism:
-  Molecular properties determine fitness. \emph{Journal of Experimental
-  Botany}, \emph{60}(3), 719--726. \url{http://doi.org/10.1093/jxb/erp002}
-  
-  \hypertarget{ref-garcia-seisdedosux5fprobingux5f2012}{}
-  Garcia-Seisdedos, H., Ibarra-Molero, B., \& Sanchez-Ruiz, J. M. (2012).
-  Probing the Mutational Interplay between Primary and Promiscuous Protein
-  Functions: A Computational-Experimental Approach. \emph{PLOS
-  Computational Biology}, \emph{8}(6), e1002558.
-  \url{http://doi.org/10.1371/journal.pcbi.1002558}
-  
-  \hypertarget{ref-glasnerux5fevolutionux5f2006}{}
-  Glasner, M. E., Gerlt, J. A., \& Babbitt, P. C. (2006). Evolution of
-  enzyme superfamilies. \emph{Current Opinion in Chemical Biology},
-  \emph{10}(5), 492--497. \url{http://doi.org/10.1016/j.cbpa.2006.08.012}
-  
-  \hypertarget{ref-halachevux5fcalculatingux5f2011}{}
-  Halachev, M. R., Loman, N. J., \& Pallen, M. J. (2011). Calculating
-  Orthologs in Bacteria and Archaea: A Divide and Conquer Approach.
-  \emph{PLOS ONE}, \emph{6}(12), e28388.
-  \url{http://doi.org/10.1371/journal.pone.0028388}
-  
-  \hypertarget{ref-hopkinsux5fdrugux5f2009}{}
-  Hopkins, A. L. (2009). Drug discovery: Predicting promiscuity.
-  \emph{Nature}, \emph{462}(7270), 167--168.
-  \url{http://doi.org/10.1038/462167a}
-  
-  \hypertarget{ref-hughesux5fevolutionux5f1994}{}
-  Hughes, A. L. (1994). The Evolution of Functionally Novel Proteins after
-  Gene Duplication. \emph{Proceedings of the Royal Society of London B:
-  Biological Sciences}, \emph{256}(1346), 119--124.
-  \url{http://doi.org/10.1098/rspb.1994.0058}
-  
-  \hypertarget{ref-hultux5fenzymeux5f2007}{}
-  Hult, K., \& Berglund, P. (2007). Enzyme promiscuity: Mechanism and
-  applications. \emph{Trends in Biotechnology}, \emph{25}(5), 231--238.
-  \url{http://doi.org/10.1016/j.tibtech.2007.03.002}
-  
-  \hypertarget{ref-jensenux5fenzymeux5f1976}{}
-  Jensen. (1976). Enzyme Recruitment in Evolution of New Function.
-  \emph{Annual Review of Microbiology}, \emph{30}(1), 409--425.
-  \url{http://doi.org/10.1146/annurev.mi.30.100176.002205}
-  
-  \hypertarget{ref-jiaux5fmultifunctionalux5f2013}{}
-  Jia, B., Cheong, G.-W., \& Zhang, S. (2013). Multifunctional enzymes in
-  archaea: Promiscuity and moonlight. \emph{Extremophiles}, \emph{17}(2),
-  193--203. \url{http://doi.org/10.1007/s00792-012-0509-1}
-  
-  \hypertarget{ref-khanalux5fdifferentialux5f2015}{}
-  Khanal, A., Yu McLoughlin, S., Kershner, J. P., \& Copley, S. D. (2015).
-  Differential Effects of a Mutation on the Normal and Promiscuous
-  Activities of Orthologs: Implications for Natural and Directed
-  Evolution. \emph{Molecular Biology and Evolution}, \emph{32}(1),
-  100--108. \url{http://doi.org/10.1093/molbev/msu271}
+  3. Angel E. Test second book by angel. Boston, MA: Wesley Addison
+  Longman; 2001.
   
   \hypertarget{ref-khersonskyux5fenzymeux5f2010}{}
-  Khersonsky, O., \& Tawfik, D. S. (2010). Enzyme promiscuity: A
-  mechanistic and evolutionary perspective. \emph{Annual Review of
-  Biochemistry}, \emph{79}, 471--505.
-  \url{http://doi.org/10.1146/annurev-biochem-030409-143718}
+  4. Khersonsky O, Tawfik DS. Enzyme promiscuity: A mechanistic and
+  evolutionary perspective. Annual Review of Biochemistry. 2010;79:
+  471--505.
+  doi:\href{https://doi.org/10.1146/annurev-biochem-030409-143718}{10.1146/annurev-biochem-030409-143718}
   
-  \hypertarget{ref-kislyukux5fgenomicux5f2011}{}
-  Kislyuk, A. O., Haegeman, B., Bergman, N. H., \& Weitz, J. S. (2011).
-  Genomic fluidity: An integrative view of gene diversity within microbial
-  populations. \emph{BMC Genomics}, \emph{12}, 32.
-  \url{http://doi.org/10.1186/1471-2164-12-32}
+  \hypertarget{ref-copleyux5fenzymesux5f2003}{}
+  5. Copley SD. Enzymes with extra talents: Moonlighting functions and
+  catalytic promiscuity. Current Opinion in Chemical Biology. 2003;7:
+  265--272.
+  doi:\href{https://doi.org/10.1016/S1367-5931(03)00032-2}{10.1016/S1367-5931(03)00032-2}
   
-  \hypertarget{ref-kooninux5fturbulentux5f2015}{}
-  Koonin, E. V. (2015). The Turbulent Network Dynamics of Microbial
-  Evolution and the Statistical Tree of Life. \emph{Journal of Molecular
-  Evolution}, \emph{80}(5-6), 244--250.
-  \url{http://doi.org/10.1007/s00239-015-9679-7}
-  
-  \hypertarget{ref-kumariux5fpreparationux5f2007}{}
-  Kumari, V., Shah, S., \& Gupta, M. N. (2007). Preparation of Biodiesel
-  by Lipase-Catalyzed Transesterification of High Free Fatty Acid
-  Containing Oil from Madhuca indica. \emph{Energy \& Fuels},
-  \emph{21}(1), 368--372. \url{http://doi.org/10.1021/ef0602168}
-  
-  \hypertarget{ref-liux5fcomputationalux5f2004}{}
-  Li, C., Henry, C. S., Jankowski, M. D., Ionita, J. A., Hatzimanikatis,
-  V., \& Broadbelt, L. J. (2004). Computational discovery of biochemical
-  routes to specialty chemicals. \emph{Chemical Engineering Science},
-  \emph{59}(22--23), 5051--5060.
-  \url{http://doi.org/10.1016/j.ces.2004.09.021}
-  
-  \hypertarget{ref-linsterux5fmetaboliteux5f2013}{}
-  Linster, C. L., Van Schaftingen, E., \& Hanson, A. D. (2013). Metabolite
-  damage and its repair or pre-emption. \emph{Nature Chemical Biology},
-  \emph{9}(2), 72--80. \url{http://doi.org/10.1038/nchembio.1141}
-  
-  \hypertarget{ref-maux5funconventionalux5f2013}{}
-  Ma, H.-M., Zhou, Q., Tang, Y.-M., Zhang, Z., Chen, Y.-S., He, H.-Y.,
-  \ldots{} Tang, G.-L. (2013). Unconventional Origin and Hybrid System for
-  Construction of Pyrrolopyrrole Moiety in Kosinostatin Biosynthesis.
-  \emph{Chemistry \& Biology}, \emph{20}(6), 796--805.
-  \url{http://doi.org/10.1016/j.chembiol.2013.04.013}
-  
-  \hypertarget{ref-martinez-nunezux5flifestyleux5f2015}{}
-  Martínez-Núñez, M. A., Rodríguez-Vázquez, K., \& Pérez-Rueda, E. (2015).
-  The lifestyle of prokaryotic organisms influences the repertoire of
-  promiscuous enzymes. \emph{Proteins: Structure, Function, and
-  Bioinformatics}, \emph{83}(9), 1625--1631.
-  \url{http://doi.org/10.1002/prot.24847}
-  
-  \hypertarget{ref-medemaux5fcomputationalux5f2015}{}
-  Medema, M. H., \& Fischbach, M. A. (2015). Computational approaches to
-  natural product discovery. \emph{Nature Chemical Biology}, \emph{11}(9),
-  639--648. \url{http://doi.org/10.1038/nchembio.1884}
-  
-  \hypertarget{ref-medemaux5fantismash:ux5f2011}{}
-  Medema, M. H., Blin, K., Cimermancic, P., Jager, V. de, Zakrzewski, P.,
-  Fischbach, M. A., \ldots{} Breitling, R. (2011). antiSMASH: Rapid
-  identification, annotation and analysis of secondary metabolite
-  biosynthesis gene clusters in bacterial and fungal genome sequences.
-  \emph{Nucleic Acids Research}, \emph{39}(Web Server issue), W339--W346.
-  \url{http://doi.org/10.1093/nar/gkr466}
-  
-  \hypertarget{ref-nagaoux5fpredictionux5f2014}{}
-  Nagao, C., Nagano, N., \& Mizuguchi, K. (2014). Prediction of Detailed
-  Enzyme Functions and Identification of Specificity Determining Residues
-  by Random Forests. \emph{PLOS ONE}, \emph{9}(1), e84623.
-  \url{http://doi.org/10.1371/journal.pone.0084623}
-  
-  \hypertarget{ref-narechaniaux5frandomux5f2012}{}
-  Narechania, A., Baker, R. H., Sit, R., Kolokotronis, S.-O., DeSalle, R.,
-  \& Planet, P. J. (2012). Random Addition Concatenation Analysis: A Novel
-  Approach to the Exploration of Phylogenomic Signal Reveals Strong
-  Agreement between Core and Shell Genomic Partitions in the
-  Cyanobacteria. \emph{Genome Biology and Evolution}, \emph{4}(1), 30--43.
-  \url{http://doi.org/10.1093/gbe/evr121}
-  
-  \hypertarget{ref-nathux5fquantitativeux5f2008}{}
-  Nath, A., \& Atkins, W. M. (2008). A Quantitative Index of Substrate
-  Promiscuity. \emph{Biochemistry}, \emph{47}(1), 157--166.
-  \url{http://doi.org/10.1021/bi701448p}
-  
-  \hypertarget{ref-nathux5fquantifyingux5f2010}{}
-  Nath, A., Zientek, M. A., Burke, B. J., Jiang, Y., \& Atkins, W. M.
-  (2010). Quantifying and Predicting the Promiscuity and Isoform
-  Specificity of Small-Molecule Cytochrome P450 Inhibitors. \emph{Drug
-  Metabolism and Disposition}, \emph{38}(12), 2195--2203.
-  \url{http://doi.org/10.1124/dmd.110.034645}
-  
-  \hypertarget{ref-nobeliux5fproteinux5f2009}{}
-  Nobeli, I., Favia, A. D., \& Thornton, J. M. (2009). Protein promiscuity
-  and its implications for biotechnology. \emph{Nature Biotechnology},
-  \emph{27}(2), 157--167. \url{http://doi.org/10.1038/nbt1519}
-  
-  \hypertarget{ref-noda-garciaux5fevolutionux5f2013}{}
-  Noda-García, L., Camacho-Zarco, A. R., Medina-Ruíz, S., Gaytán, P.,
-  Carrillo-Tripp, M., Fülöp, V., \& Barona-Gómez, F. (2013). Evolution of
-  Substrate Specificity in a Recipient's Enzyme Following Horizontal Gene
-  Transfer. \emph{Molecular Biology and Evolution}, \emph{30}(9),
-  2024--2034. \url{http://doi.org/10.1093/molbev/mst115}
-  
-  \hypertarget{ref-noda-garciaux5finsightsux5f2015}{}
-  Noda-García, L., Juárez-Vázquez, A. L., Ávila-Arcos, M. C.,
-  Verduzco-Castro, E. A., Montero-Morán, G., Gaytán, P., \ldots{}
-  Barona-Gómez, F. (2015). Insights into the evolution of enzyme substrate
-  promiscuity after the discovery of \(\beta\alpha_8\) isomerase
-  evolutionary intermediates from a diverse metagenome. \emph{BMC
-  Evolutionary Biology}, \emph{15}.
-  \url{http://doi.org/10.1186/s12862-015-0378-1}
-  
-  \hypertarget{ref-notebaartux5fnetwork-levelux5f2014}{}
-  Notebaart, R. A., Szappanos, B., Kintses, B., Pál, F., Györkei, Á.,
-  Bogos, B., \ldots{} Papp, B. (2014). Network-level architecture and the
-  evolutionary potential of underground metabolism. \emph{Proceedings of
-  the National Academy of Sciences}, \emph{111}(32), 11762--11767.
-  \url{http://doi.org/10.1073/pnas.1406102111}
-  
-  \hypertarget{ref-overbeekux5fuseux5f1999}{}
-  Overbeek, R., Fonstein, M., D'Souza, M., Pusch, G. D., \& Maltsev, N.
-  (1999). The use of gene clusters to infer functional coupling.
-  \emph{Proceedings of the National Academy of Sciences}, \emph{96}(6),
-  2896--2901. \url{http://doi.org/10.1073/pnas.96.6.2896}
-  
-  \hypertarget{ref-overbeekux5fseedux5f2014}{}
-  Overbeek, R., Olson, R., Pusch, G. D., Olsen, G. J., Davis, J. J., Disz,
-  T., \ldots{} Stevens, R. (2014). The SEED and the Rapid Annotation of
-  microbial genomes using Subsystems Technology (RAST). \emph{Nucleic
-  Acids Research}, \emph{42}(Database issue), D206--D214.
-  \url{http://doi.org/10.1093/nar/gkt1226}
+  \hypertarget{ref-hultux5fenzymeux5f2007}{}
+  6. Hult K, Berglund P. Enzyme promiscuity: Mechanism and applications.
+  Trends in Biotechnology. 2007;25: 231--238.
+  doi:\href{https://doi.org/10.1016/j.tibtech.2007.03.002}{10.1016/j.tibtech.2007.03.002}
   
   \hypertarget{ref-obrienux5fcatalyticux5f1999}{}
-  O'Brien, P. J., \& Herschlag, D. (1999). Catalytic promiscuity and the
-  evolution of new enzymatic activities. \emph{Chemistry \& Biology},
-  \emph{6}(4), R91--R105.
-  \url{http://doi.org/10.1016/S1074-5521(99)80033-7}
+  7. O'Brien PJ, Herschlag D. Catalytic promiscuity and the evolution of
+  new enzymatic activities. Chemistry \& Biology. 1999;6: R91--R105.
+  doi:\href{https://doi.org/10.1016/S1074-5521(99)80033-7}{10.1016/S1074-5521(99)80033-7}
   
-  \hypertarget{ref-pandyaux5fenzymeux5f2014}{}
-  Pandya, C., Farelli, J. D., Dunaway-Mariano, D., \& Allen, K. N. (2014).
-  Enzyme Promiscuity: Engine of Evolutionary Innovation. \emph{Journal of
-  Biological Chemistry}, \emph{289}(44), 30229--30236.
-  \url{http://doi.org/10.1074/jbc.R114.572990}
-  
-  \hypertarget{ref-patrickux5fmulticopyux5f2007}{}
-  Patrick, W. M., Quandt, E. M., Swartzlander, D. B., \& Matsumura, I.
-  (2007). Multicopy Suppression Underpins Metabolic Evolvability.
-  \emph{Molecular Biology and Evolution}, \emph{24}(12), 2716--2722.
-  \url{http://doi.org/10.1093/molbev/msm204}
-  
-  \hypertarget{ref-pearsonux5fprehistoricux5f2012}{}
-  Pearson, H. (2012). Prehistoric proteins: Raising the dead. \emph{Nature
-  News}, \emph{483}(7390), 390. \url{http://doi.org/10.1038/483390a}
+  \hypertarget{ref-baronagomezux5foccurrenceux5f2003}{}
+  8. Barona Gómez F, Hodgson DA. Occurrence of a putative ancient like
+  isomerase involved in histidine and tryptophan biosynthesis. EMBO
+  reports. 2003;4: 296--300.
+  doi:\href{https://doi.org/10.1038/sj.embor.embor771}{10.1038/sj.embor.embor771}
   
   \hypertarget{ref-rissoux5fphenotypicux5f2014}{}
-  Risso, V. A., Gavira, J. A., Gaucher, E. A., \& Sanchez Ruiz, J. M.
-  (2014). Phenotypic comparisons of consensus variants versus laboratory
-  resurrections of precambrian proteins. \emph{Proteins: Structure,
-  Function, and Bioinformatics}, \emph{82}(6), 887--896.
-  \url{http://doi.org/10.1002/prot.24575}
+  9. Risso VA, Gavira JA, Gaucher EA, Sanchez Ruiz JM. Phenotypic
+  comparisons of consensus variants versus laboratory resurrections of
+  precambrian proteins. Proteins: Structure, Function, and Bioinformatics.
+  2014;82: 887--896.
+  doi:\href{https://doi.org/10.1002/prot.24575}{10.1002/prot.24575}
   
-  \hypertarget{ref-sanchez-ruizux5fpromiscuityux5f2012}{}
-  Sanchez-Ruiz, J. M. (2012). On promiscuity, changing environments and
-  the possibility of replaying the molecular tape of life.
-  \emph{Biochemical Journal}, \emph{445}(1), e1--e3.
-  \url{http://doi.org/10.1042/BJ20120806}
+  \hypertarget{ref-kumariux5fpreparationux5f2007}{}
+  10. Kumari V, Shah S, Gupta MN. Preparation of Biodiesel by
+  Lipase-Catalyzed Transesterification of High Free Fatty Acid Containing
+  Oil from Madhuca indica. Energy \& Fuels. 2007;21: 368--372.
+  doi:\href{https://doi.org/10.1021/ef0602168}{10.1021/ef0602168}
   
-  \hypertarget{ref-snelux5fstring:ux5f2000}{}
-  Snel, B., Lehmann, G., Bork, P., \& Huynen, M. A. (2000). STRING: A
-  web-server to retrieve and display the repeatedly occurring
-  neighbourhood of a gene. \emph{Nucleic Acids Research}, \emph{28}(18),
-  3442--3444. Retrieved from
-  \url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC110752/}
+  \hypertarget{ref-liux5fcomputationalux5f2004}{}
+  11. Li C, Henry CS, Jankowski MD, Ionita JA, Hatzimanikatis V, Broadbelt
+  LJ. Computational discovery of biochemical routes to specialty
+  chemicals. Chemical Engineering Science. 2004;59: 5051--5060.
+  doi:\href{https://doi.org/10.1016/j.ces.2004.09.021}{10.1016/j.ces.2004.09.021}
   
-  \hypertarget{ref-soskineux5fmutationalux5f2010}{}
-  Soskine, M., \& Tawfik, D. S. (2010). Mutational effects and the
-  evolution of new protein functions. \emph{Nature Reviews Genetics},
-  \emph{11}(8), 572--582. \url{http://doi.org/10.1038/nrg2808}
+  \hypertarget{ref-glasnerux5fevolutionux5f2006}{}
+  12. Glasner ME, Gerlt JA, Babbitt PC. Evolution of enzyme superfamilies.
+  Current Opinion in Chemical Biology. 2006;10: 492--497.
+  doi:\href{https://doi.org/10.1016/j.cbpa.2006.08.012}{10.1016/j.cbpa.2006.08.012}
   
-  \hypertarget{ref-szklarczykux5fstringux5f2015}{}
-  Szklarczyk, D., Franceschini, A., Wyder, S., Forslund, K., Heller, D.,
-  Huerta-Cepas, J., \ldots{} Mering, C. von. (2015). STRING v10:
-  Protein--protein interaction networks, integrated over the tree of life.
-  \emph{Nucleic Acids Research}, \emph{43}(D1), D447--D452.
-  \url{http://doi.org/10.1093/nar/gku1003}
+  \hypertarget{ref-baierux5fevolutionux5f2016}{}
+  13. Baier F, Copp JN, Tokuriki N. Evolution of Enzyme Superfamilies:
+  Comprehensive Exploration of Sequence--Function Relationships.
+  Biochemistry. 2016;55: 6375--6388.
+  doi:\href{https://doi.org/10.1021/acs.biochem.6b00723}{10.1021/acs.biochem.6b00723}
   
-  \hypertarget{ref-treangenux5fhorizontalux5f2011}{}
-  Treangen, T. J., \& Rocha, E. P. C. (2011). Horizontal Transfer, Not
-  Duplication, Drives the Expansion of Protein Families in Prokaryotes.
-  \emph{PLOS Genetics}, \emph{7}(1), e1001284.
-  \url{http://doi.org/10.1371/journal.pgen.1001284}
+  \hypertarget{ref-bloomux5fneutralux5f2007}{}
+  14. Bloom JD, Romero PA, Lu Z, Arnold FH. Neutral genetic drift can
+  alter promiscuous protein functions, potentially aiding functional
+  evolution. Biology Direct. 2007;2: 17.
+  doi:\href{https://doi.org/10.1186/1745-6150-2-17}{10.1186/1745-6150-2-17}
   
-  \hypertarget{ref-verdel-arandaux5fmolecularux5f2015}{}
-  Verdel-Aranda, K., López-Cortina, S. T., Hodgson, D. A., \&
-  Barona-Gómez, F. (2015). Molecular annotation of ketol-acid
-  reductoisomerases from Streptomyces reveals a novel amino acid
-  biosynthesis interlock mediated by enzyme promiscuity. \emph{Microbial
-  Biotechnology}, \emph{8}(2), 239--252.
-  \url{http://doi.org/10.1111/1751-7915.12175}
-  
-  \hypertarget{ref-weberux5fantismashux5f2015}{}
-  Weber, T., Blin, K., Duddela, S., Krug, D., Kim, H. U., Bruccoleri, R.,
-  \ldots{} Medema, M. H. (2015). antiSMASH 3.0---a comprehensive resource
-  for the genome mining of biosynthetic gene clusters. \emph{Nucleic Acids
-  Research}, \emph{43}(W1), W237--W243.
-  \url{http://doi.org/10.1093/nar/gkv437}
-  
-  \hypertarget{ref-zhangux5fmultidimensionalux5f2012}{}
-  Zhang, W., Dourado, D. F. A. R., Fernandes, P. A., Ramos, M. J., \&
-  Mannervik, B. (2012). Multidimensional epistasis and fitness landscapes
-  in enzyme evolution. \emph{Biochemical Journal}, \emph{445}(1), 39--46.
-  \url{http://doi.org/10.1042/BJ20120136}
-  
-  \hypertarget{ref-zhaoux5fdiscoveryux5f2013}{}
-  Zhao, S., Kumar, R., Sakai, A., Vetting, M. W., Wood, B. M., Brown, S.,
-  \ldots{} Jacobson, M. P. (2013). Discovery of new enzymes and metabolic
-  pathways by using structure and genome context. \emph{Nature},
-  \emph{502}(7473), 698--702. \url{http://doi.org/10.1038/nature12576}
-  
-  \hypertarget{ref-zhaoux5fpredictionux5f2014}{}
-  Zhao, S., Sakai, A., Zhang, X., Vetting, M. W., Kumar, R., Hillerich,
-  B., \ldots{} Jacobson, M. P. (2014). Prediction and characterization of
-  enzymatic activities guided by sequence similarity and genome
-  neighborhood networks. \emph{ELife}, \emph{3}, e03275.
-  \url{http://doi.org/10.7554/eLife.03275}
+  \hypertarget{ref-nathux5fquantitativeux5f2008}{}
+  15. Nath A, Atkins WM. A Quantitative Index of Substrate Promiscuity.
+  Biochemistry. 2008;47: 157--166.
+  doi:\href{https://doi.org/10.1021/bi701448p}{10.1021/bi701448p}
   
   \hypertarget{ref-zouux5fevolutionux5f2015}{}
-  Zou, T., Risso, V. A., Gavira, J. A., Sanchez-Ruiz, J. M., \& Ozkan, S.
-  B. (2015). Evolution of Conformational Dynamics Determines the
-  Conversion of a Promiscuous Generalist into a Specialist Enzyme.
-  \emph{Molecular Biology and Evolution}, \emph{32}(1), 132--143.
-  \url{http://doi.org/10.1093/molbev/msu281}
+  16. Zou T, Risso VA, Gavira JA, Sanchez-Ruiz JM, Ozkan SB. Evolution of
+  Conformational Dynamics Determines the Conversion of a Promiscuous
+  Generalist into a Specialist Enzyme. Molecular Biology and Evolution.
+  2015;32: 132--143.
+  doi:\href{https://doi.org/10.1093/molbev/msu281}{10.1093/molbev/msu281}
+  
+  \hypertarget{ref-firnux5fdarwinianux5f2009}{}
+  17. Firn RD, Jones CG. A Darwinian view of metabolism: Molecular
+  properties determine fitness. Journal of Experimental Botany. 2009;60:
+  719--726.
+  doi:\href{https://doi.org/10.1093/jxb/erp002}{10.1093/jxb/erp002}
+  
+  \hypertarget{ref-jiaux5fmultifunctionalux5f2013}{}
+  18. Jia B, Cheong G-W, Zhang S. Multifunctional enzymes in archaea:
+  Promiscuity and moonlight. Extremophiles. 2013;17: 193--203.
+  doi:\href{https://doi.org/10.1007/s00792-012-0509-1}{10.1007/s00792-012-0509-1}
+  
+  \hypertarget{ref-aharoniux5fevolvabilityux5f2005}{}
+  19. Aharoni A, Gaidukov L, Khersonsky O, Gould SM, Roodveldt C, Tawfik
+  DS. The 'evolvability' of promiscuous protein functions. Nature
+  Genetics. 2005;37: 73--76.
+  doi:\href{https://doi.org/10.1038/ng1482}{10.1038/ng1482}
+  
+  \hypertarget{ref-jensenux5fenzymeux5f1976}{}
+  20. Jensen. Enzyme Recruitment in Evolution of New Function. Annual
+  Review of Microbiology. 1976;30: 409--425.
+  doi:\href{https://doi.org/10.1146/annurev.mi.30.100176.002205}{10.1146/annurev.mi.30.100176.002205}
+  
+  \hypertarget{ref-pandyaux5fenzymeux5f2014}{}
+  21. Pandya C, Farelli JD, Dunaway-Mariano D, Allen KN. Enzyme
+  Promiscuity: Engine of Evolutionary Innovation. Journal of Biological
+  Chemistry. 2014;289: 30229--30236.
+  doi:\href{https://doi.org/10.1074/jbc.R114.572990}{10.1074/jbc.R114.572990}
+  
+  \hypertarget{ref-deanux5fmechanisticux5f2007}{}
+  22. Dean AM, Thornton JW. Mechanistic approaches to the study of
+  evolution. Nature reviews Genetics. 2007;8: 675--688.
+  doi:\href{https://doi.org/10.1038/nrg2160}{10.1038/nrg2160}
+  
+  \hypertarget{ref-nobeliux5fproteinux5f2009}{}
+  23. Nobeli I, Favia AD, Thornton JM. Protein promiscuity and its
+  implications for biotechnology. Nature Biotechnology. 2009;27: 157--167.
+  doi:\href{https://doi.org/10.1038/nbt1519}{10.1038/nbt1519}
+  
+  \hypertarget{ref-hopkinsux5fdrugux5f2009}{}
+  24. Hopkins AL. Drug discovery: Predicting promiscuity. Nature.
+  2009;462: 167--168.
+  doi:\href{https://doi.org/10.1038/462167a}{10.1038/462167a}
+  
+  \hypertarget{ref-nathux5fquantifyingux5f2010}{}
+  25. Nath A, Zientek MA, Burke BJ, Jiang Y, Atkins WM. Quantifying and
+  Predicting the Promiscuity and Isoform Specificity of Small-Molecule
+  Cytochrome P450 Inhibitors. Drug Metabolism and Disposition. 2010;38:
+  2195--2203.
+  doi:\href{https://doi.org/10.1124/dmd.110.034645}{10.1124/dmd.110.034645}
+  
+  \hypertarget{ref-vonux5feichbornux5fpromiscuous:ux5f2011}{}
+  26. Eichborn J von, Murgueitio MS, Dunkel M, Koerner S, Bourne PE,
+  Preissner R. PROMISCUOUS: A database for network-based
+  drug-repositioning. Nucleic Acids Research. 2011;39: D1060--D1066.
+  doi:\href{https://doi.org/10.1093/nar/gkq1037}{10.1093/nar/gkq1037}
+  
+  \hypertarget{ref-zhangux5fmultidimensionalux5f2012}{}
+  27. Zhang W, Dourado DFAR, Fernandes PA, Ramos MJ, Mannervik B.
+  Multidimensional epistasis and fitness landscapes in enzyme evolution.
+  Biochemical Journal. 2012;445: 39--46.
+  doi:\href{https://doi.org/10.1042/BJ20120136}{10.1042/BJ20120136}
+  
+  \hypertarget{ref-sanchez-ruizux5fpromiscuityux5f2012}{}
+  28. Sanchez-Ruiz JM. On promiscuity, changing environments and the
+  possibility of replaying the molecular tape of life. Biochemical
+  Journal. 2012;445: e1--e3.
+  doi:\href{https://doi.org/10.1042/BJ20120806}{10.1042/BJ20120806}
+  
+  \hypertarget{ref-martinez-nunezux5flifestyleux5f2015}{}
+  29. Martínez-Núñez MA, Rodríguez-Vázquez K, Pérez-Rueda E. The lifestyle
+  of prokaryotic organisms influences the repertoire of promiscuous
+  enzymes. Proteins: Structure, Function, and Bioinformatics. 2015;83:
+  1625--1631.
+  doi:\href{https://doi.org/10.1002/prot.24847}{10.1002/prot.24847}
+  
+  \hypertarget{ref-patrickux5fmulticopyux5f2007}{}
+  30. Patrick WM, Quandt EM, Swartzlander DB, Matsumura I. Multicopy
+  Suppression Underpins Metabolic Evolvability. Molecular Biology and
+  Evolution. 2007;24: 2716--2722.
+  doi:\href{https://doi.org/10.1093/molbev/msm204}{10.1093/molbev/msm204}
+  
+  \hypertarget{ref-notebaartux5fnetwork-levelux5f2014}{}
+  31. Notebaart RA, Szappanos B, Kintses B, Pál F, Györkei Á, Bogos B, et
+  al. Network-level architecture and the evolutionary potential of
+  underground metabolism. Proceedings of the National Academy of Sciences.
+  2014;111: 11762--11767.
+  doi:\href{https://doi.org/10.1073/pnas.1406102111}{10.1073/pnas.1406102111}
+  
+  \hypertarget{ref-linsterux5fmetaboliteux5f2013}{}
+  32. Linster CL, Van Schaftingen E, Hanson AD. Metabolite damage and its
+  repair or pre-emption. Nature Chemical Biology. 2013;9: 72--80.
+  doi:\href{https://doi.org/10.1038/nchembio.1141}{10.1038/nchembio.1141}
+  
+  \hypertarget{ref-khanalux5fdifferentialux5f2015}{}
+  33. Khanal A, Yu McLoughlin S, Kershner JP, Copley SD. Differential
+  Effects of a Mutation on the Normal and Promiscuous Activities of
+  Orthologs: Implications for Natural and Directed Evolution. Molecular
+  Biology and Evolution. 2015;32: 100--108.
+  doi:\href{https://doi.org/10.1093/molbev/msu271}{10.1093/molbev/msu271}
+  
+  \hypertarget{ref-maux5funconventionalux5f2013}{}
+  34. Ma H-M, Zhou Q, Tang Y-M, Zhang Z, Chen Y-S, He H-Y, et al.
+  Unconventional Origin and Hybrid System for Construction of
+  Pyrrolopyrrole Moiety in Kosinostatin Biosynthesis. Chemistry \&
+  Biology. 2013;20: 796--805.
+  doi:\href{https://doi.org/10.1016/j.chembiol.2013.04.013}{10.1016/j.chembiol.2013.04.013}
+  
+  \hypertarget{ref-adamsux5fpromiscuousux5f2014}{}
+  35. Adams NE, Thiaville JJ, Proestos J, Juárez-Vázquez AL, McCoy AJ,
+  Barona-Gómez F, et al. Promiscuous and Adaptable Enzymes Fill ``Holes''
+  in the Tetrahydrofolate Pathway in Chlamydia Species. mBio. 2014;5.
+  doi:\href{https://doi.org/10.1128/mBio.01378-14}{10.1128/mBio.01378-14}
+  
+  \hypertarget{ref-soskineux5fmutationalux5f2010}{}
+  36. Soskine M, Tawfik DS. Mutational effects and the evolution of new
+  protein functions. Nature Reviews Genetics. 2010;11: 572--582.
+  doi:\href{https://doi.org/10.1038/nrg2808}{10.1038/nrg2808}
+  
+  \hypertarget{ref-halachevux5fcalculatingux5f2011}{}
+  37. Halachev MR, Loman NJ, Pallen MJ. Calculating Orthologs in Bacteria
+  and Archaea: A Divide and Conquer Approach. PLOS ONE. 2011;6: e28388.
+  doi:\href{https://doi.org/10.1371/journal.pone.0028388}{10.1371/journal.pone.0028388}
+  
+  \hypertarget{ref-kislyukux5fgenomicux5f2011}{}
+  38. Kislyuk AO, Haegeman B, Bergman NH, Weitz JS. Genomic fluidity: An
+  integrative view of gene diversity within microbial populations. BMC
+  Genomics. 2011;12: 32.
+  doi:\href{https://doi.org/10.1186/1471-2164-12-32}{10.1186/1471-2164-12-32}
+  
+  \hypertarget{ref-pearsonux5fprehistoricux5f2012}{}
+  39. Pearson H. Prehistoric proteins: Raising the dead. Nature News.
+  2012;483: 390.
+  doi:\href{https://doi.org/10.1038/483390a}{10.1038/483390a}
+  
+  \hypertarget{ref-hughesux5fevolutionux5f1994}{}
+  40. Hughes AL. The Evolution of Functionally Novel Proteins after Gene
+  Duplication. Proceedings of the Royal Society of London B: Biological
+  Sciences. 1994;256: 119--124.
+  doi:\href{https://doi.org/10.1098/rspb.1994.0058}{10.1098/rspb.1994.0058}
+  
+  \hypertarget{ref-treangenux5fhorizontalux5f2011}{}
+  41. Treangen TJ, Rocha EPC. Horizontal Transfer, Not Duplication, Drives
+  the Expansion of Protein Families in Prokaryotes. PLOS Genetics. 2011;7:
+  e1001284.
+  doi:\href{https://doi.org/10.1371/journal.pgen.1001284}{10.1371/journal.pgen.1001284}
+  
+  \hypertarget{ref-overbeekux5fuseux5f1999}{}
+  42. Overbeek R, Fonstein M, D'Souza M, Pusch GD, Maltsev N. The use of
+  gene clusters to infer functional coupling. Proceedings of the National
+  Academy of Sciences. 1999;96: 2896--2901.
+  doi:\href{https://doi.org/10.1073/pnas.96.6.2896}{10.1073/pnas.96.6.2896}
+  
+  \hypertarget{ref-zhaoux5fpredictionux5f2014}{}
+  43. Zhao S, Sakai A, Zhang X, Vetting MW, Kumar R, Hillerich B, et al.
+  Prediction and characterization of enzymatic activities guided by
+  sequence similarity and genome neighborhood networks. eLife. 2014;3:
+  e03275.
+  doi:\href{https://doi.org/10.7554/eLife.03275}{10.7554/eLife.03275}
+  
+  \hypertarget{ref-zhaoux5fdiscoveryux5f2013}{}
+  44. Zhao S, Kumar R, Sakai A, Vetting MW, Wood BM, Brown S, et al.
+  Discovery of new enzymes and metabolic pathways by using structure and
+  genome context. Nature. 2013;502: 698--702.
+  doi:\href{https://doi.org/10.1038/nature12576}{10.1038/nature12576}
+  
+  \hypertarget{ref-verdel-arandaux5fmolecularux5f2015}{}
+  45. Verdel-Aranda K, López-Cortina ST, Hodgson DA, Barona-Gómez F.
+  Molecular annotation of ketol-acid reductoisomerases from Streptomyces
+  reveals a novel amino acid biosynthesis interlock mediated by enzyme
+  promiscuity. Microbial Biotechnology. 2015;8: 239--252.
+  doi:\href{https://doi.org/10.1111/1751-7915.12175}{10.1111/1751-7915.12175}
+  
+  \hypertarget{ref-szklarczykux5fstringux5f2015}{}
+  46. Szklarczyk D, Franceschini A, Wyder S, Forslund K, Heller D,
+  Huerta-Cepas J, et al. STRING v10: Protein--protein interaction
+  networks, integrated over the tree of life. Nucleic Acids Research.
+  2015;43: D447--D452.
+  doi:\href{https://doi.org/10.1093/nar/gku1003}{10.1093/nar/gku1003}
+  
+  \hypertarget{ref-snelux5fstring:ux5f2000}{}
+  47. Snel B, Lehmann G, Bork P, Huynen MA. STRING: A web-server to
+  retrieve and display the repeatedly occurring neighbourhood of a gene.
+  Nucleic Acids Research. 2000;28: 3442--3444. Available:
+  \url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC110752/}
+  
+  \hypertarget{ref-azizux5frastux5f2008}{}
+  48. Aziz RK, Bartels D, Best AA, DeJongh M, Disz T, Edwards RA, et al.
+  The RAST Server: Rapid Annotations using Subsystems Technology. BMC
+  Genomics. 2008;9: 75.
+  doi:\href{https://doi.org/10.1186/1471-2164-9-75}{10.1186/1471-2164-9-75}
+  
+  \hypertarget{ref-overbeekux5fseedux5f2014}{}
+  49. Overbeek R, Olson R, Pusch GD, Olsen GJ, Davis JJ, Disz T, et al.
+  The SEED and the Rapid Annotation of microbial genomes using Subsystems
+  Technology (RAST). Nucleic Acids Research. 2014;42: D206--D214.
+  doi:\href{https://doi.org/10.1093/nar/gkt1226}{10.1093/nar/gkt1226}
+  
+  \hypertarget{ref-medemaux5fcomputationalux5f2015}{}
+  50. Medema MH, Fischbach MA. Computational approaches to natural product
+  discovery. Nature Chemical Biology. 2015;11: 639--648.
+  doi:\href{https://doi.org/10.1038/nchembio.1884}{10.1038/nchembio.1884}
+  
+  \hypertarget{ref-noda-garciaux5fevolutionux5f2013}{}
+  51. Noda-García L, Camacho-Zarco AR, Medina-Ruíz S, Gaytán P,
+  Carrillo-Tripp M, Fülöp V, et al. Evolution of Substrate Specificity in
+  a Recipient's Enzyme Following Horizontal Gene Transfer. Molecular
+  Biology and Evolution. 2013;30: 2024--2034.
+  doi:\href{https://doi.org/10.1093/molbev/mst115}{10.1093/molbev/mst115}
+  
+  \hypertarget{ref-carbonellux5fmolecularux5f2010}{}
+  52. Carbonell P, Faulon J-L. Molecular signatures-based prediction of
+  enzyme promiscuity. Bioinformatics. 2010;26: 2012--2019.
+  doi:\href{https://doi.org/10.1093/bioinformatics/btq317}{10.1093/bioinformatics/btq317}
+  
+  \hypertarget{ref-chengux5fglobalux5f2012}{}
+  53. Cheng X-Y, Huang W-J, Hu S-C, Zhang H-L, Wang H, Zhang J-X, et al. A
+  Global Characterization and Identification of Multifunctional Enzymes.
+  PLoS ONE. 2012;7.
+  doi:\href{https://doi.org/10.1371/journal.pone.0038979}{10.1371/journal.pone.0038979}
+  
+  \hypertarget{ref-nagaoux5fpredictionux5f2014}{}
+  54. Nagao C, Nagano N, Mizuguchi K. Prediction of Detailed Enzyme
+  Functions and Identification of Specificity Determining Residues by
+  Random Forests. PLOS ONE. 2014;9: e84623.
+  doi:\href{https://doi.org/10.1371/journal.pone.0084623}{10.1371/journal.pone.0084623}
+  
+  \hypertarget{ref-noda-garciaux5finsightsux5f2015}{}
+  55. Noda-García L, Juárez-Vázquez AL, Ávila-Arcos MC, Verduzco-Castro
+  EA, Montero-Morán G, Gaytán P, et al. Insights into the evolution of
+  enzyme substrate promiscuity after the discovery of \(\beta\alpha_8\)
+  isomerase evolutionary intermediates from a diverse metagenome. BMC
+  Evolutionary Biology. 2015;15.
+  doi:\href{https://doi.org/10.1186/s12862-015-0378-1}{10.1186/s12862-015-0378-1}
+  
+  \hypertarget{ref-garcia-seisdedosux5fprobingux5f2012}{}
+  56. Garcia-Seisdedos H, Ibarra-Molero B, Sanchez-Ruiz JM. Probing the
+  Mutational Interplay between Primary and Promiscuous Protein Functions:
+  A Computational-Experimental Approach. PLOS Computational Biology.
+  2012;8: e1002558.
+  doi:\href{https://doi.org/10.1371/journal.pcbi.1002558}{10.1371/journal.pcbi.1002558}
+  
+  \hypertarget{ref-nesvizhskiiux5fanalysisux5f2007}{}
+  57. Nesvizhskii AI, Vitek O, Aebersold R. Analysis and validation of
+  proteomic data generated by tandem mass spectrometry. Nature Methods.
+  2007;4: 787--797.
+  doi:\href{https://doi.org/10.1038/nmeth1088}{10.1038/nmeth1088}
+  
+  \hypertarget{ref-campbellux5fbiophysicalux5f2012}{}
+  58. Campbell I. Biophysical Techniques - Paperback - Iain D. Campbell -
+  Oxford University Press {[}Internet{]}. 2012. Available:
+  \url{https://global.oup.com/ushe/product/biophysical-techniques-9780199642144?cc=mx\&lang=en\&}
+  
+  \hypertarget{ref-yangux5fmolecularux5f2013}{}
+  59. Yang JY, Sanchez LM, Rath CM, Liu X, Boudreau PD, Bruns N, et al.
+  Molecular Networking as a Dereplication Strategy. Journal of Natural
+  Products. 2013;76: 1686--1699.
+  doi:\href{https://doi.org/10.1021/np400413s}{10.1021/np400413s}
+  
+  \hypertarget{ref-kocherux5fmassux5f2007}{}
+  60. Köcher T, Superti-Furga G. Mass spectrometry--based functional
+  proteomics: From molecular machines to protein networks. Nature Methods.
+  2007;4: 807--815.
+  doi:\href{https://doi.org/10.1038/nmeth1093}{10.1038/nmeth1093}
+  
+  \hypertarget{ref-jamesux5fconformationalux5f2003}{}
+  61. James LC, Tawfik DS. Conformational diversity and protein evolution
+  -- a 60-year-old hypothesis revisited. Trends in Biochemical Sciences.
+  2003;28: 361--368.
+  doi:\href{https://doi.org/10.1016/S0968-0004(03)00135-X}{10.1016/S0968-0004(03)00135-X}
+  
+  \hypertarget{ref-parisiux5fconformationalux5f2015}{}
+  62. Parisi G, Zea DJ, Monzon AM, Marino-Buslje C. Conformational
+  diversity and the emergence of sequence signatures during evolution.
+  Current Opinion in Structural Biology. 2015;32: 58--65.
+  doi:\href{https://doi.org/10.1016/j.sbi.2015.02.005}{10.1016/j.sbi.2015.02.005}
+  
+  \hypertarget{ref-javierux5fzeaux5fproteinux5f2013}{}
+  63. Javier Zea D, Miguel Monzon A, Fornasari MS, Marino-Buslje C, Parisi
+  G. Protein Conformational Diversity Correlates with Evolutionary Rate.
+  Molecular Biology and Evolution. 2013;30: 1500--1503.
+  doi:\href{https://doi.org/10.1093/molbev/mst065}{10.1093/molbev/mst065}
+  
+  \hypertarget{ref-gatti-lafranconiux5fflexibilityux5f2013}{}
+  64. Gatti-Lafranconi P, Hollfelder F. Flexibility and Reactivity in
+  Promiscuous Enzymes. ChemBioChem. 2013;14: 285--292.
+  doi:\href{https://doi.org/10.1002/cbic.201200628}{10.1002/cbic.201200628}
+  
+  \hypertarget{ref-cruz-moralesux5fphylogenomicux5f2016}{}
+  65. Cruz-Morales P, Kopp JF, Martínez-Guerrero C, Yáñez-Guerra LA,
+  Selem-Mojica N, Ramos-Aboites H, et al. Phylogenomic Analysis of Natural
+  Products Biosynthetic Gene Clusters Allows Discovery of Arseno-Organic
+  Metabolites in Model Streptomycetes. Genome Biology and Evolution.
+  2016;8: 1906--1916.
+  doi:\href{https://doi.org/10.1093/gbe/evw125}{10.1093/gbe/evw125}
+  
+  \hypertarget{ref-liux5forthomclux5f2003}{}
+  66. Li L, Stoeckert CJ, Roos DS. OrthoMCL: Identification of Ortholog
+  Groups for Eukaryotic Genomes. Genome Research. 2003;13: 2178--2189.
+  doi:\href{https://doi.org/10.1101/gr.1224503}{10.1101/gr.1224503}
+  
+  \hypertarget{ref-waterhouseux5forthodbux5f2013}{}
+  67. Waterhouse RM, Tegenfeldt F, Li J, Zdobnov EM, Kriventseva EV.
+  OrthoDB: A hierarchical catalog of animal, fungal and bacterial
+  orthologs. Nucleic Acids Research. 2013;41: D358--D365.
+  doi:\href{https://doi.org/10.1093/nar/gks1116}{10.1093/nar/gks1116}
+  
+  \hypertarget{ref-gaoux5fphylogeneticux5f2012}{}
+  68. Gao B, Gupta RS. Phylogenetic Framework and Molecular Signatures for
+  the Main Clades of the Phylum Actinobacteria. Microbiology and Molecular
+  Biology Reviews : MMBR. 2012;76: 66--112.
+  doi:\href{https://doi.org/10.1128/MMBR.05011-11}{10.1128/MMBR.05011-11}
+  
+  \hypertarget{ref-senux5fphylogenyux5f2014}{}
+  69. Sen A, Daubin V, Abrouk D, Gifford I, Berry AM, Normand P. Phylogeny
+  of the class Actinobacteria revisited in the light of complete genomes.
+  The orders ``Frankiales'' and Micrococcales should be split into
+  coherent entities: Proposal of Frankiales ord. nov., Geodermatophilales
+  ord. nov., Acidothermales ord. nov. and Nakamurellales ord. nov.
+  International Journal of Systematic and Evolutionary Microbiology.
+  2014;64: 3821--3832.
+  doi:\href{https://doi.org/10.1099/ijs.0.063966-0}{10.1099/ijs.0.063966-0}
+  
+  \hypertarget{ref-zhouux5fgenomeux5f2012}{}
+  70. Zhou Z, Gu J, Li Y-Q, Wang Y. Genome plasticity and systems
+  evolution in Streptomyces. BMC Bioinformatics. 2012;13: S8.
+  doi:\href{https://doi.org/10.1186/1471-2105-13-S10-S8}{10.1186/1471-2105-13-S10-S8}
+  
+  \hypertarget{ref-kimux5fcomparativeux5f2015}{}
+  71. Kim J-N, Kim Y, Jeong Y, Roe J-H, Kim B-G, Cho B-K. Comparative
+  Genomics Reveals the Core and Accessory Genomes of Streptomyces Species.
+  Journal of Microbiology and Biotechnology. 2015;25: 1599--1605.
+  doi:\href{https://doi.org/10.4014/jmb.1504.04008}{10.4014/jmb.1504.04008}
+  
+  \hypertarget{ref-namux5fnetworkux5f2012}{}
+  72. Nam H, Lewis NE, Lerman JA, Lee D-H, Chang RL, Kim D, et al. Network
+  Context and Selection in the Evolution to Enzyme Specificity. Science.
+  2012;337: 1101--1104.
+  doi:\href{https://doi.org/10.1126/science.1216861}{10.1126/science.1216861}
+  
+  \hypertarget{ref-copleyux5fevolutionaryux5f2015}{}
+  73. Copley SD. An Evolutionary Biochemist's Perspective on Promiscuity.
+  Trends in biochemical sciences. 2015;40: 72--78.
+  doi:\href{https://doi.org/10.1016/j.tibs.2014.12.004}{10.1016/j.tibs.2014.12.004}
+  
+  \hypertarget{ref-gerltux5fdivergentux5f2001}{}
+  74. Divergent Evolution of Enzymatic Function: Mechanistically Diverse
+  Superfamilies and Functionally Distinct Suprafamilies. Annual Review of
+  Biochemistry. 2001;70: 209--246.
+  doi:\href{https://doi.org/10.1146/annurev.biochem.70.1.209}{10.1146/annurev.biochem.70.1.209}
+  
+  \hypertarget{ref-huangux5fenzymeux5f2012}{}
+  75. Huang R, Hippauf F, Rohrbeck D, Haustein M, Wenke K, Feike J, et al.
+  Enzyme functional evolution through improved catalysis of ancestrally
+  nonpreferred substrates. Proceedings of the National Academy of
+  Sciences. 2012;109: 2966--2971.
+  doi:\href{https://doi.org/10.1073/pnas.1019605109}{10.1073/pnas.1019605109}
+  
+  \hypertarget{ref-fondiux5fevolutionux5f2009}{}
+  76. Fondi M, Emiliani G, Liò P, Gribaldo S, Fani R. The evolution of
+  histidine biosynthesis in archaea: Insights into the his genes structure
+  and organization in LUCA. Journal of Molecular Evolution. 2009;69:
+  512--526.
+  doi:\href{https://doi.org/10.1007/s00239-009-9286-6}{10.1007/s00239-009-9286-6}
+  
+  \hypertarget{ref-merinoux5fevolutionux5f2008}{}
+  77. Merino E, Jensen RA, Yanofsky C. Evolution of bacterial trp operons
+  and their regulation. Current opinion in microbiology. 2008;11: 78--86.
+  doi:\href{https://doi.org/10.1016/j.mib.2008.02.005}{10.1016/j.mib.2008.02.005}
+  
+  \hypertarget{ref-verduzco-castroux5fco-occurrenceux5f2016}{}
+  78. Verduzco-Castro EA, Michalska K, Endres M, Juárez-Vazquez AL,
+  Noda-García L, Chang C, et al. Co-occurrence of analogous enzymes
+  determines evolution of a novel \(\beta\alpha_8\)-isomerase sub-family
+  after non-conserved mutations in flexible loop. Biochemical Journal.
+  2016;473: 1141--1152.
+  doi:\href{https://doi.org/10.1042/BJ20151271}{10.1042/BJ20151271}
+  
+  \hypertarget{ref-kooninux5fturbulentux5f2015}{}
+  79. Koonin EV. The Turbulent Network Dynamics of Microbial Evolution and
+  the Statistical Tree of Life. Journal of Molecular Evolution. 2015;80:
+  244--250.
+  doi:\href{https://doi.org/10.1007/s00239-015-9679-7}{10.1007/s00239-015-9679-7}
+  
+  \hypertarget{ref-narechaniaux5frandomux5f2012}{}
+  80. Narechania A, Baker RH, Sit R, Kolokotronis S-O, DeSalle R, Planet
+  PJ. Random Addition Concatenation Analysis: A Novel Approach to the
+  Exploration of Phylogenomic Signal Reveals Strong Agreement between Core
+  and Shell Genomic Partitions in the Cyanobacteria. Genome Biology and
+  Evolution. 2012;4: 30--43.
+  doi:\href{https://doi.org/10.1093/gbe/evr121}{10.1093/gbe/evr121}
+  
+  \hypertarget{ref-brettinux5frasttk:ux5f2015}{}
+  81. Brettin T, Davis JJ, Disz T, Edwards RA, Gerdes S, Olsen GJ, et al.
+  RASTtk: A modular and extensible implementation of the RAST algorithm
+  for building custom annotation pipelines and annotating batches of
+  genomes. Scientific Reports. 2015;5: 8365.
+  doi:\href{https://doi.org/10.1038/srep08365}{10.1038/srep08365}
+  
+  \hypertarget{ref-chesterismayux5fupdatedux5f2016}{}
+  82. chesterismay. Updated R Markdown thesis template {[}Internet{]}.
+  Chester's R blog. 2016. Available:
+  \url{https://chesterismay.wordpress.com/2016/09/01/updated-r-markdown-thesis-template/}
+  
+  \hypertarget{ref-barona-gomezux5fwhatux5f2012}{}
+  83. Barona-Gómez F, Cruz-Morales P, Noda-García L. What can genome-scale
+  metabolic network reconstructions do for prokaryotic systematics?
+  Antonie van Leeuwenhoek. 2012;101: 35--43.
+  doi:\href{https://doi.org/10.1007/s10482-011-9655-1}{10.1007/s10482-011-9655-1}
+  
+  \hypertarget{ref-weberux5fantismashux5f2015}{}
+  84. Weber T, Blin K, Duddela S, Krug D, Kim HU, Bruccoleri R, et al.
+  antiSMASH 3.0---a comprehensive resource for the genome mining of
+  biosynthetic gene clusters. Nucleic Acids Research. 2015;43: W237--W243.
+  doi:\href{https://doi.org/10.1093/nar/gkv437}{10.1093/nar/gkv437}
+  
+  \hypertarget{ref-medemaux5fantismash:ux5f2011}{}
+  85. Medema MH, Blin K, Cimermancic P, Jager V de, Zakrzewski P,
+  Fischbach MA, et al. antiSMASH: Rapid identification, annotation and
+  analysis of secondary metabolite biosynthesis gene clusters in bacterial
+  and fungal genome sequences. Nucleic Acids Research. 2011;39:
+  W339--W346.
+  doi:\href{https://doi.org/10.1093/nar/gkr466}{10.1093/nar/gkr466}
 
 
   % Index?
