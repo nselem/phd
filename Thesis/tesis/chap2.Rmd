@@ -52,7 +52,8 @@ hm.palette <- colorRampPalette(rev(brewer.pal(11, 'Spectral')), space='Lab')
  
  
 ## Math
-Docking simulation were calculated for Streptomyces enzymes  
+Docking simulation were calculated for Streptomyces enzymes. TrpF enzymes from Strptomyces Mg1, Jonesia denitrificans, were added as controls
+
 
 Procedures can be found at [Docking Protocols](https://github.com/tripplab/Docking/wiki)  
 
@@ -78,11 +79,11 @@ purpeofuscus and S bikiniensis
 2. Heatmap
 Additionally to the sequences selected by phylogeny, Jonesia denitrificans and Streptomyces sp Mg1 TrpF sequences were added as control .
 
-```{r sessionInfo}
+```{r sessionInfo,echo=FALSE}
 library(genstats)
 library(devtools)
 library(Biobase)
-sessionInfo()
+library(scales)
 #vignette(package="genstats")
 #vignette("01_06_three-tables")
 
@@ -110,23 +111,51 @@ eset <- new("ExpressionSet", exprs = m, phenoData = pdata, featureData = fdata)
 #pData(eset)
 #fData(eset)
 ```
+Substrate table  
+```{r Substrates_table_out, results = "asis"}
+table <- read.csv("chapter2/Substrate.data", row.names = 1,sep="\t")
+kable(table,  caption = "Substrates \\label{tab:substrates}",caption.short = "Substrates ")
+```
+Observaciones Mauricio  
+- falta el pie de figura
+Substrate docking over enzymes from extended PriA families. Substrates 1-20  
+  
+- falta el dendograma arriba de los sustratos (indicar cuál es pra y cuál profar)   
+
+- falta la escala de colores (con valores y unidades). Cuando agregues el dendograma de los sutratos va a quedar un cuadrante vacío en la parte superior izquierda, en ese espacio pon la escala de forma horizontal  
+
+
+- intenta aumentar el contraste de color entre el valor mínimo y máximo de la escala  
+Intente varias Figuras  
+
+- repite las etiquetas de los sutratos abajo del heatmap  
+Pendiende  
+
+- hay inconsistencias en los nombres de la enzimas (eg, Ssvi y Svi, SMgl y Smgl, etc)  
+Árbol nuevo sin datos faltantes  
+
+- para el caso de las enzimas sin datos, usa negro en lugar de amarillo  
+LISTO  
+
+- "Controles TrpF/subTrpF" (debe estar en inglés), puede ser confuso poner dos etiquetas para la misma función  
 
 ```{r load_data_docking}
-docking <- read.csv("chapter2/Heat.data", header=TRUE, sep="\t")
+docking <- read.csv("chapter2/SmallHeat.data", header=TRUE, sep="\t")
+EnzymeOrder=factor(docking$Enzima,levels=unique(docking$Enzima))
 docking.m <- melt(docking,id = "Enzima")
-#docking.m<- ddply(docking.m, .(docking.m$variable), transform, rescale=scale(value))  ## rescale escala toda la matriz, scale por columnas
-## NEcesito escalar!!!
+docking.m <- ddply(docking.m, .(variable), transform,rescale = rescale(value))
+docking.m$Enzima <- factor(docking.m$Enzima, levels = rev(docking.m$Enzima[order(EnzymeOrder)]))
 
+ggplot(docking.m, aes(x=variable, y=Enzima)) + labs(x = "Substrates", y = "Enzymes",text = element_text(size=12))+ geom_raster(aes(fill=value))+scale_fill_gradient(low = "white", high = "steelblue",na.value = "black")+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6))
 
-ggplot(docking.m, aes(x=docking.m$variable, y=docking.m$Enzima)) + labs(x = "Substrates", y = "Enzymes",text = element_text(size=12))+ geom_raster(aes(fill=docking.m$value))+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6))
+ggplot(docking.m, aes(x=variable, y=Enzima)) + labs(x = "Substrates", y = "Enzymes",text = element_text(size=12))+ geom_raster(aes(fill=value))+scale_fill_gradient(low = "white", high = "black",na.value = "black")+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6))
 
-#+scale_fill_gradient(low = "white", high = "black",na.value = "orange")
-#+ scale_fill_gradientn(colours = hm.palette(100),na.value = "gray")
+ggplot(docking.m, aes(x=variable, y=Enzima)) + labs(x = "Substrates", y = "Enzymes",text = element_text(size=12))+ geom_raster(aes(fill=value))+scale_fill_gradient(low = "white", high = "steelblue",na.value = "black")+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6))+ scale_fill_gradientn(colours = hm.palette(100),na.value = "gray")
 
+## boxplot de los sustratos
+ggplot(docking.m, aes(x=variable, y=Enzima)) + labs(x = "Substrates", y = "Enzymes",text = element_text(size=12))+ geom_raster(aes(fill=value))+scale_fill_gradient(low = "white", high = "steelblue",na.value = "black")+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6))
 
-#ggplot(docking.m, aes(x=docking.m$variable, y=docking.m$Enzima))+ geom_raster(aes(fill=docking.m$value)) +
-#  theme(text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5)) +
-#  coord_equal()+scale_fill_gradient(low = "white", high = "black",na.value = "orange")
+ggplot(docking.m, aes(x=variable, y=value)) + labs(x = "Metabolic Families", y = "Copies on Actinobacteria Genomes",text = element_text(size=12)) + geom_boxplot()+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6), legend.position = "bottom")
 
 ```
 
@@ -282,3 +311,8 @@ Many of the symbols you will need can be found on the math page <http://web.reed
 
 You will probably find the resources at <http://www.lecb.ncifcrf.gov/~toms/latex.html> helpful, particularly the links to bsts for various journals. You may also be interested in TeXShade for nucleotide typesetting (<http://homepages.uni-tuebingen.de/beitz/txe.html>).  Be sure to read the proceeding chapter on graphics and tables.
 
+
+```{r endsession}
+sessionInfo()
+
+```

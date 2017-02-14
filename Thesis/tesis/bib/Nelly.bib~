@@ -1,6 +1,114 @@
 This file was created with JabRef 2.2.
 Encoding: MacRoman
 
+@unpublished{unpublished,
+  author       = {Peter Marcheford}, 
+  title        = {The title of the work},
+  note         = {An optional note},
+  month        = 7,
+  year         = 1993
+}
+
+@article{coyle_mysteries_2016,
+	title = {Mysteries in a {Minimal} {Genome}},
+	volume = {2},
+	issn = {2374-7943},
+	url = {http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4882734/},
+	doi = {10.1021/acscentsci.6b00110},
+	number = {5},
+	urldate = {2017-02-13},
+	journal = {ACS Central Science},
+	author = {Coyle, Maxwell and Hu, Jennifer and Gartner, Zev},
+	month = may,
+	year = {2016},
+	pmid = {27280161},
+	pmcid = {PMC4882734},
+	pages = {274--277},
+	file = {PubMed Central Full Text PDF:/home/nelly/.mozilla/firefox/8e2ipeap.default/zotero/storage/QXKJXE34/Coyle et al. - 2016 - Mysteries in a Minimal Genome.pdf:application/pdf}
+}
+@article{woese_towards_1990,
+	title = {Towards a natural system of organisms: proposal for the domains {Archaea}, {Bacteria}, and {Eucarya}},
+	volume = {87},
+	issn = {0027-8424},
+	shorttitle = {Towards a natural system of organisms},
+	abstract = {Molecular structures and sequences are generally more revealing of evolutionary relationships than are classical phenotypes (particularly so among microorganisms). Consequently, the basis for the definition of taxa has progressively shifted from the organismal to the cellular to the molecular level. Molecular comparisons show that life on this planet divides into three primary groupings, commonly known as the eubacteria, the archaebacteria, and the eukaryotes. The three are very dissimilar, the differences that separate them being of a more profound nature than the differences that separate typical kingdoms, such as animals and plants. Unfortunately, neither of the conventionally accepted views of the natural relationships among living systems--i.e., the five-kingdom taxonomy or the eukaryote-prokaryote dichotomy--reflects this primary tripartite division of the living world. To remedy this situation we propose that a formal system of organisms be established in which above the level of kingdom there exists a new taxon called a "domain." Life on this planet would then be seen as comprising three domains, the Bacteria, the Archaea, and the Eucarya, each containing two or more kingdoms. (The Eucarya, for example, contain Animalia, Plantae, Fungi, and a number of others yet to be defined). Although taxonomic structure within the Bacteria and Eucarya is not treated herein, Archaea is formally subdivided into the two kingdoms Euryarchaeota (encompassing the methanogens and their phenotypically diverse relatives) and Crenarchaeota (comprising the relatively tight clustering of extremely thermophilic archaebacteria, whose general phenotype appears to resemble most the ancestral phenotype of the Archaea.},
+	language = {eng},
+	number = {12},
+	journal = {Proceedings of the National Academy of Sciences of the United States of America},
+	author = {Woese, C. R. and Kandler, O. and Wheelis, M. L.},
+	month = jun,
+	year = {1990},
+	pmid = {2112744},
+	pmcid = {PMC54159},
+	keywords = {Archaea, bacteria, Biological Evolution, Cells, Eukaryotic Cells, Phylogeny},
+	pages = {4576--4579}
+}
+
+@article{graham_archaeal_2000,
+	title = {An archaeal genomic signature},
+	volume = {97},
+	issn = {0027-8424, 1091-6490},
+	url = {http://www.pnas.org/content/97/7/3304},
+	doi = {10.1073/pnas.97.7.3304},
+	abstract = {Comparisons of complete genome sequences allow the most objective and comprehensive descriptions possible of a lineage's evolution. This communication uses the completed genomes from four major euryarchaeal taxa to define a genomic signature for the Euryarchaeota and, by extension, the Archaea as a whole. The signature is defined in terms of the set of protein-encoding genes found in at least two diverse members of the euryarchaeal taxa that function uniquely within the Archaea; most signature proteins have no recognizable bacterial or eukaryal homologs. By this definition, 351 clusters of signature proteins have been identified. Functions of most proteins in this signature set are currently unknown. At least 70\% of the clusters that contain proteins from all the euryarchaeal genomes also have crenarchaeal homologs. This conservative set, which appears refractory to horizontal gene transfer to the Bacteria or the Eukarya, would seem to reflect the significant innovations that were unique and fundamental to the archaeal “design fabric.” Genomic protein signature analysis methods may be extended to characterize the evolution of any phylogenetically defined lineage. The complete set of protein clusters for the archaeal genomic signature is presented as supplementary material (see the PNAS web site, www.pnas.org).},
+	language = {en},
+	number = {7},
+	urldate = {2017-02-13},
+	journal = {Proceedings of the National Academy of Sciences},
+	author = {Graham, David E. and Overbeek, Ross and Olsen, Gary J. and Woese, Carl R.},
+	month = mar,
+	year = {2000},
+	keywords = {Archaea, biological classification, protein clusters, taxonomic domains},
+	pages = {3304--3308},
+	file = {Full Text PDF:/home/nelly/.mozilla/firefox/8e2ipeap.default/zotero/storage/KN6BA95H/Graham et al. - 2000 - An archaeal genomic signature.pdf:application/pdf;Snapshot:/home/nelly/.mozilla/firefox/8e2ipeap.default/zotero/storage/698Q2WWQ/3304.html:text/html}
+}
+
+@article{woese_universal_1998,
+	title = {The universal ancestor},
+	volume = {95},
+	issn = {0027-8424, 1091-6490},
+	url = {http://www.pnas.org/content/95/12/6854},
+	abstract = {A genetic annealing model for the universal ancestor of all extant life is presented; the name of the model derives from its resemblance to physical annealing. The scenario pictured starts when “genetic temperatures” were very high, cellular entities (progenotes) were very simple, and information processing systems were inaccurate. Initially, both mutation rate and lateral gene transfer levels were elevated. The latter was pandemic and pervasive to the extent that it, not vertical inheritance, defined the evolutionary dynamic. As increasingly complex and precise biological structures and processes evolved, both the mutation rate and the scope and level of lateral gene transfer, i.e., evolutionary temperature, dropped, and the evolutionary dynamic gradually became that characteristic of modern cells. The various subsystems of the cell “crystallized,” i.e., became refractory to lateral gene transfer, at different stages of “cooling,” with the translation apparatus probably crystallizing first. Organismal lineages, and so organisms as we know them, did not exist at these early stages. The universal phylogenetic tree, therefore, is not an organismal tree at its base but gradually becomes one as its peripheral branchings emerge. The universal ancestor is not a discrete entity. It is, rather, a diverse community of cells that survives and evolves as a biological unit. This communal ancestor has a physical history but not a genealogical one. Over time, this ancestor refined into a smaller number of increasingly complex cell types with the ancestors of the three primary groupings of organisms arising as a result.},
+	language = {en},
+	number = {12},
+	urldate = {2017-02-13},
+	journal = {Proceedings of the National Academy of Sciences},
+	author = {Woese, Carl},
+	month = jun,
+	year = {1998},
+	pmid = {9618502},
+	keywords = {communal ancestor, evolutionary temperature, genetic annealing, lateral gene transfer, progenote},
+	pages = {6854--6859},
+	file = {Full Text PDF:/home/nelly/.mozilla/firefox/8e2ipeap.default/zotero/storage/T2X4F4CP/Woese - 1998 - The universal ancestor.pdf:application/pdf;Snapshot:/home/nelly/.mozilla/firefox/8e2ipeap.default/zotero/storage/H5SI3FSS/6854.html:text/html}
+}
+
+@article{woese_are_1981,
+	title = {Are archaebacteria merely derived ‘prokaryotes’?},
+	volume = {289},
+	copyright = {© 1981 Nature Publishing Group},
+	issn = {0028-0836},
+	url = {http://www.nature.com/nature/journal/v289/n5793/abs/289095a0.html},
+	doi = {10.1038/289095a0},
+	language = {en},
+	number = {5793},
+	urldate = {2017-02-13},
+	journal = {Nature},
+	author = {Woese, Carl R. and Gupta, Ramesh},
+	month = jan,
+	year = {1981},
+	pages = {95--96},
+	file = {Full Text PDF:/home/nelly/.mozilla/firefox/8e2ipeap.default/zotero/storage/JCMK8RKX/Woese and Gupta - 1981 - Are archaebacteria merely derived ‘prokaryotes’.pdf:application/pdf;Snapshot:/home/nelly/.mozilla/firefox/8e2ipeap.default/zotero/storage/RNBKUEC9/289095a0.html:text/html}
+}
+
+@phdthesis{noda_estudio_2012,
+  author       = {Lianet Noda-Garcia}, 
+  title        = {Estudio de la evolución molecular de la función enzimática susando como modelo una enzima con características ancestrales},
+  school       = {Langebio, CINVESTAV},
+  year         = 2012,
+  address      = {Irapuato, GTO},
+  month        = 10
+}
+
 @BOOK{angel2000,
   title = {Interactive Computer Graphics : A Top-Down Approach with OpenGL},
   publisher = {Addison Wesley Longman},
@@ -256,6 +364,94 @@ Encoding: MacRoman
 	file = {Full Text PDF:/home/nelly/.mozilla/firefox/8e2ipeap.default/zotero/storage/Z6W9GH9I/Harvey et al. - 2015 - The re-emergence of natural products for drug disc.pdf:application/pdf;Snapshot:/home/nelly/.mozilla/firefox/8e2ipeap.default/zotero/storage/JU7RHPZR/nrd4510.html:text/html}
 }
 
+@article{makarova_comparative_1999,
+	title = {Comparative {Genomics} of the {Archaea} ({Euryarchaeota}): {Evolution} of {Conserved} {Protein} {Families}, the {Stable} {Core}, and the {Variable} {Shell}},
+	volume = {9},
+	issn = {1088-9051, 1549-5469},
+	shorttitle = {Comparative {Genomics} of the {Archaea} ({Euryarchaeota})},
+	url = {http://genome.cshlp.org/content/9/7/608},
+	doi = {10.1101/gr.9.7.608},
+	abstract = {An international, peer-reviewed genome sciences journal featuring outstanding original research that offers novel insights into the biology of all organisms},
+	language = {en},
+	number = {7},
+	urldate = {2017-02-12},
+	journal = {Genome Research},
+	author = {Makarova, Kira S. and Aravind, L. and Galperin, Michael Y. and Grishin, Nick V. and Tatusov, Roman L. and Wolf, Yuri I. and Koonin, Eugene V.},
+	month = jul,
+	year = {1999},
+	pmid = {10413400},
+	keywords = {Amino Acid Sequence, Archaeal Proteins, Bacterial Proteins, Conserved Sequence, Eukaryotic Cells, Euryarchaeota, Evolution, Molecular, Genes, Archaeal, Genetic Variation, Genome, Phylogeny, Sequence alignment, Sequence Homology, Amino Acid},
+	pages = {608--628},
+	file = {Full Text PDF:/home/nelly/.mozilla/firefox/8e2ipeap.default/zotero/storage/VAAUHNKT/Makarova et al. - 1999 - Comparative Genomics of the Archaea (Euryarchaeota.pdf:application/pdf;Snapshot:/home/nelly/.mozilla/firefox/8e2ipeap.default/zotero/storage/Z7HSBKHH/240.html:text/html}
+}
+
+@article{medema_computational_2016,
+	title = {Computational genomic identification and functional reconstitution of plant natural product biosynthetic pathways},
+	volume = {33},
+	issn = {1460-4752},
+	doi = {10.1039/c6np00035e},
+	abstract = {Covering: 2003 to 2016The last decade has seen the first major discoveries regarding the genomic basis of plant natural product biosynthetic pathways. Four key computationally driven strategies have been developed to identify such pathways, which make use of physical clustering, co-expression, evolutionary co-occurrence and epigenomic co-regulation of the genes involved in producing a plant natural product. Here, we discuss how these approaches can be used for the discovery of plant biosynthetic pathways encoded by both chromosomally clustered and non-clustered genes. Additionally, we will discuss opportunities to prioritize plant gene clusters for experimental characterization, and end with a forward-looking perspective on how synthetic biology technologies will allow effective functional reconstitution of candidate pathways using a variety of genetic systems.},
+	language = {eng},
+	number = {8},
+	journal = {Natural Product Reports},
+	author = {Medema, Marnix H. and Osbourn, Anne},
+	month = aug,
+	year = {2016},
+	pmid = {27321668},
+	pmcid = {PMC4987707},
+	pages = {951--962}
+}
+@article{medema_minimum_2015,
+	title = {Minimum {Information} about a {Biosynthetic} {Gene} cluster},
+	volume = {11},
+	copyright = {© 2015 Nature Publishing Group, a division of Macmillan Publishers Limited. All Rights Reserved.},
+	issn = {1552-4450},
+	url = {http://www.nature.com/nchembio/journal/v11/n9/full/nchembio.1890.html},
+	doi = {10.1038/nchembio.1890},
+	abstract = {A wide variety of enzymatic pathways that produce specialized metabolites in bacteria, fungi and plants are known to be encoded in biosynthetic gene clusters. Information about these clusters, pathways and metabolites is currently dispersed throughout the literature, making it difficult to exploit. To facilitate consistent and systematic deposition and retrieval of data on biosynthetic gene clusters, we propose the Minimum Information about a Biosynthetic Gene cluster (MIBiG) data standard.},
+	language = {en},
+	number = {9},
+	urldate = {2017-02-12},
+	journal = {Nature Chemical Biology},
+	author = {Medema, Marnix H. and Kottmann, Renzo and Yilmaz, Pelin and Cummings, Matthew and Biggins, John B. and Blin, Kai and de Bruijn, Irene and Chooi, Yit Heng and Claesen, Jan and Coates, R. Cameron and Cruz-Morales, Pablo and Duddela, Srikanth and Düsterhus, Stephanie and Edwards, Daniel J. and Fewer, David P. and Garg, Neha and Geiger, Christoph and Gomez-Escribano, Juan Pablo and Greule, Anja and Hadjithomas, Michalis and Haines, Anthony S. and Helfrich, Eric J. N. and Hillwig, Matthew L. and Ishida, Keishi and Jones, Adam C. and Jones, Carla S. and Jungmann, Katrin and Kegler, Carsten and Kim, Hyun Uk and Kötter, Peter and Krug, Daniel and Masschelein, Joleen and Melnik, Alexey V. and Mantovani, Simone M. and Monroe, Emily A. and Moore, Marcus and Moss, Nathan and Nützmann, Hans-Wilhelm and Pan, Guohui and Pati, Amrita and Petras, Daniel and Reen, F. Jerry and Rosconi, Federico and Rui, Zhe and Tian, Zhenhua and Tobias, Nicholas J. and Tsunematsu, Yuta and Wiemann, Philipp and Wyckoff, Elizabeth and Yan, Xiaohui and Yim, Grace and Yu, Fengan and Xie, Yunchang and Aigle, Bertrand and Apel, Alexander K. and Balibar, Carl J. and Balskus, Emily P. and Barona-Gómez, Francisco and Bechthold, Andreas and Bode, Helge B. and Borriss, Rainer and Brady, Sean F. and Brakhage, Axel A. and Caffrey, Patrick and Cheng, Yi-Qiang and Clardy, Jon and Cox, Russell J. and De Mot, René and Donadio, Stefano and Donia, Mohamed S. and van der Donk, Wilfred A. and Dorrestein, Pieter C. and Doyle, Sean and Driessen, Arnold J. M. and Ehling-Schulz, Monika and Entian, Karl-Dieter and Fischbach, Michael A. and Gerwick, Lena and Gerwick, William H. and Gross, Harald and Gust, Bertolt and Hertweck, Christian and Höfte, Monica and Jensen, Susan E. and Ju, Jianhua and Katz, Leonard and Kaysser, Leonard and Klassen, Jonathan L. and Keller, Nancy P. and Kormanec, Jan and Kuipers, Oscar P. and Kuzuyama, Tomohisa and Kyrpides, Nikos C. and Kwon, Hyung-Jin and Lautru, Sylvie and Lavigne, Rob and Lee, Chia Y. and Linquan, Bai and Liu, Xinyu and Liu, Wen and Luzhetskyy, Andriy and Mahmud, Taifo and Mast, Yvonne and Méndez, Carmen and Metsä-Ketelä, Mikko and Micklefield, Jason and Mitchell, Douglas A. and Moore, Bradley S. and Moreira, Leonilde M. and Müller, Rolf and Neilan, Brett A. and Nett, Markus and Nielsen, Jens and O'Gara, Fergal and Oikawa, Hideaki and Osbourn, Anne and Osburne, Marcia S. and Ostash, Bohdan and Payne, Shelley M. and Pernodet, Jean-Luc and Petricek, Miroslav and Piel, Jörn and Ploux, Olivier and Raaijmakers, Jos M. and Salas, José A. and Schmitt, Esther K. and Scott, Barry and Seipke, Ryan F. and Shen, Ben and Sherman, David H. and Sivonen, Kaarina and Smanski, Michael J. and Sosio, Margherita and Stegmann, Evi and Süssmuth, Roderich D. and Tahlan, Kapil and Thomas, Christopher M. and Tang, Yi and Truman, Andrew W. and Viaud, Muriel and Walton, Jonathan D. and Walsh, Christopher T. and Weber, Tilmann and van Wezel, Gilles P. and Wilkinson, Barrie and Willey, Joanne M. and Wohlleben, Wolfgang and Wright, Gerard D. and Ziemert, Nadine and Zhang, Changsheng and Zotchev, Sergey B. and Breitling, Rainer and Takano, Eriko and Glöckner, Frank Oliver},
+	month = sep,
+	year = {2015},
+	keywords = {Biosynthesis, Natural products, Sequence annotation, Synthetic biology},
+	pages = {625--631},
+	file = {Full Text PDF:/home/nelly/.mozilla/firefox/8e2ipeap.default/zotero/storage/236TRFJH/Medema et al. - 2015 - Minimum Information about a Biosynthetic Gene clus.pdf:application/pdf;Snapshot:/home/nelly/.mozilla/firefox/8e2ipeap.default/zotero/storage/AMUUFC5F/nchembio.1890.html:text/html}
+}
+
+@article{iqbal_natural_2016,
+	title = {Natural {Product} {Discovery} through {Improved} {Functional} {Metagenomics} in {Streptomyces}},
+	volume = {138},
+	issn = {0002-7863},
+	url = {http://dx.doi.org/10.1021/jacs.6b02921},
+	doi = {10.1021/jacs.6b02921},
+	abstract = {Because the majority of environmental bacteria are not easily culturable, access to many bacterially encoded secondary metabolites will be dependent on the development of improved functional metagenomic screening methods. In this study, we examined a collection of diverse Streptomyces species for the best innate ability to heterologously express biosynthetic gene clusters. We then optimized methods for constructing high quality metagenomic cosmid libraries in the best Streptomyces host. An initial screen of a 1.5 million-membered metagenomic library constructed in Streptomyces albus, the species that exhibited the highest propensity for heterologous expression of gene clusters, led to the identification of the novel natural product metatricycloene (1). Metatricycloene is a tricyclic polyene encoded by a reductive, iterative polyketide-like gene cluster. Related gene clusters found in sequenced genomes appear to encode a largely unexplored collection of structurally diverse, polyene-based metabolites.},
+	number = {30},
+	urldate = {2017-02-12},
+	journal = {Journal of the American Chemical Society},
+	author = {Iqbal, Hala A. and Low-Beinart, Lila and Obiajulu, Joseph U. and Brady, Sean F.},
+	month = aug,
+	year = {2016},
+	pages = {9341--9344},
+	file = {ACS Full Text Snapshot:/home/nelly/.mozilla/firefox/8e2ipeap.default/zotero/storage/I7TBI6SB/jacs.html:text/html}
+}
+
+@article{computational_pan-genomics_consortium_computational_2016,
+	title = {Computational pan-genomics: status, promises and challenges},
+	issn = {1477-4054},
+	shorttitle = {Computational pan-genomics},
+	doi = {10.1093/bib/bbw089},
+	abstract = {Many disciplines, from human genetics and oncology to plant breeding, microbiology and virology, commonly face the challenge of analyzing rapidly increasing numbers of genomes. In case of Homo sapiens, the number of sequenced genomes will approach hundreds of thousands in the next few years. Simply scaling up established bioinformatics pipelines will not be sufficient for leveraging the full potential of such rich genomic data sets. Instead, novel, qualitatively different computational methods and paradigms are needed. We will witness the rapid extension of computational pan-genomics, a new sub-area of research in computational biology. In this article, we generalize existing definitions and understand a pan-genome as any collection of genomic sequences to be analyzed jointly or to be used as a reference. We examine already available approaches to construct and use pan-genomes, discuss the potential benefits of future technologies and methodologies and review open challenges from the vantage point of the above-mentioned biological disciplines. As a prominent example for a computational paradigm shift, we particularly highlight the transition from the representation of reference genomes as strings to representations as graphs. We outline how this and other challenges from different application domains translate into common computational problems, point out relevant bioinformatics techniques and identify open problems in computer science. With this review, we aim to increase awareness that a joint approach to computational pan-genomics can help address many of the problems currently faced in various domains.},
+	language = {eng},
+	journal = {Briefings in Bioinformatics},
+	author = {{Computational Pan-Genomics Consortium}},
+	month = oct,
+	year = {2016},
+	pmid = {27769991},
+	keywords = {data structures, haplotypes, pan-genome, read mapping, sequence graph}
+}
 @misc{chesterismay_updated_2016,
 	title = {Updated {R} {Markdown} thesis template},
 	url = {https://chesterismay.wordpress.com/2016/09/01/updated-r-markdown-thesis-template/},
@@ -704,7 +900,7 @@ As our approach does not rely solely on sequence similarity searches of previous
 }
 
 @article{verduzco-castro_co-occurrence_2016,
-	title = {Co-occurrence of analogous enzymes determines evolution of a novel (βα)8-isomerase sub-family after non-conserved mutations in flexible loop},
+	title = {Co-occurrence of analogous enzymes determines evolution of a novel $\beta\alpha_8$-isomerase sub-family after non-conserved mutations in flexible loop},
 	volume = {473},
 	copyright = {© 2016 Authors; published by Portland Press Limited},
 	issn = {0264-6021, 1470-8728},
@@ -1173,7 +1369,7 @@ and diterpenes in rice (Oryza sativa; the momilactone and phytocassane clusters;
 	file = {Full Text PDF:/home/nelly/.mozilla/firefox/8e2ipeap.default/zotero/storage/N2SFJ7IF/Adams et al. - 2014 - Promiscuous and Adaptable Enzymes Fill “Holes” in .pdf:application/pdf;PubMed Central Full Text PDF:/home/nelly/.mozilla/firefox/8e2ipeap.default/zotero/storage/PDQFNP7R/Adams et al. - 2014 - Promiscuous and Adaptable Enzymes Fill “Holes” in .pdf:application/pdf;Snapshot:/home/nelly/.mozilla/firefox/8e2ipeap.default/zotero/storage/GTES8WVT/e01378-14.html:text/html}
 }
 
-@book{garrett_archaea:_2008,
+@book{garrett_archaea_2008,
 	title = {Archaea: {Evolution}, {Physiology}, and {Molecular} {Biology}},
 	isbn = {978-1-4051-7148-9},
 	shorttitle = {Archaea},
@@ -1343,7 +1539,7 @@ Supplementary data are available at Bioinformatics online.},
 	file = {Snapshot:/home/nelly/.mozilla/firefox/8e2ipeap.default/zotero/storage/2RS8XGIT/srep08365.html:text/html}
 }
 
-@misc{_powerful_????,
+@misc{phyloseq_powerful_2016,
 	title = {Powerful tree graphics with ggplot2},
 	url = {http://joey711.github.io/phyloseq/plot_tree-examples.html},
 	urldate = {2017-01-28},
@@ -1770,7 +1966,7 @@ Supplementary data are available at Bioinformatics online.},
 	file = {sync [Zotero Documentation]:/home/nelly/.mozilla/firefox/8e2ipeap.default/zotero/storage/FBX9RB35/sync.html:text/html}
 }
 
-@article{_divergent_2001,
+@article{gerlt_divergent_2001,
 	title = {Divergent {Evolution} of {Enzymatic} {Function}: {Mechanistically} {Diverse} {Superfamilies} and {Functionally} {Distinct} {Suprafamilies}},
 	volume = {70},
 	shorttitle = {Divergent {Evolution} of {Enzymatic} {Function}},
@@ -2045,7 +2241,7 @@ Key Concepts
 	file = {Full Text PDF:/home/nelly/.mozilla/firefox/8e2ipeap.default/zotero/storage/Z6ATUVG3/Khanal et al. - 2015 - Differential Effects of a Mutation on the Normal a.pdf:application/pdf;Snapshot:/home/nelly/.mozilla/firefox/8e2ipeap.default/zotero/storage/U7BNGR89/Differential-Effects-of-a-Mutation-on-the-Normal.html:text/html}
 }
 
-@book{_molecular_????,
+@book{kukol_molecular_2008,
 	title = {Molecular {Modeling} of {Proteins} {\textbar} {Andreas} {Kukol} {\textbar} {Springer}},
 	url = {http://www.springer.com/us/book/9781588298645},
 	abstract = {Molecular modeling has undergone a remarkable transformation in the last 20 years, as biomolecular simulation moves from the realm of specialists to the...},
@@ -3043,7 +3239,7 @@ Brachybacterium
 	file = {Horizontal Transfer, Not Duplication, Drives the Expansion of Protein Families in Prokaryotes:/home/nelly/.mozilla/firefox/8e2ipeap.default/zotero/storage/NZ5CNANV/article.html:text/html}
 }
 
-@article{van_der_spoel_gromacs:_2005,
+@article{van_der_spoel_gromacs_2005,
 	title = {{GROMACS}: {Fast}, flexible, and free},
 	volume = {26},
 	issn = {1096-987X},
@@ -3115,4 +3311,58 @@ Brachybacterium
 	keywords = {Catalysis, Catalytic Domain, Enzymes, Evolution, Molecular, Humans, Substrate Specificity},
 	pages = {471--505},
 	file = {Full Text PDF:/home/nelly/.mozilla/firefox/8e2ipeap.default/zotero/storage/DMSTAUMM/2010 - Enzyme Promiscuity A Mechanistic and Evolutionary.pdf:application/pdf;Full Text PDF:/home/nelly/.mozilla/firefox/8e2ipeap.default/zotero/storage/RM5NRDIT/2010 - Enzyme Promiscuity A Mechanistic and Evolutionary.pdf:application/pdf;Full Text PDF:/home/nelly/.mozilla/firefox/8e2ipeap.default/zotero/storage/T7KICTE2/2010 - Enzyme Promiscuity A Mechanistic and Evolutionary.pdf:application/pdf;Full Text PDF:/home/nelly/.mozilla/firefox/8e2ipeap.default/zotero/storage/VVHEEFSZ/2010 - Enzyme Promiscuity A Mechanistic and Evolutionary.pdf:application/pdf}
+}
+
+@article{kim_comparative_2015,
+	title = {Comparative {Genomics} {Reveals} the {Core} and {Accessory} {Genomes} of {Streptomyces} {Species}},
+	volume = {25},
+	issn = {1738-8872},
+	doi = {10.4014/jmb.1504.04008},
+	abstract = {The development of rapid and efficient genome sequencing methods has enabled us to study the evolutionary background of bacterial genetic information. Here, we present comparative genomic analysis of 17 Streptomyces species, for which the genome has been completely sequenced, using the pan-genome approach. The analysis revealed that 34,592 ortholog clusters constituted the pan-genome of these Streptomyces species, including 2,018 in the core genome, 11,743 in the dispensable genome, and 20,831 in the unique genome. The core genome was converged to a smaller number of genes than reported previously, with 3,096 gene families. Functional enrichment analysis showed that genes involved in transcription were most abundant in the Streptomyces pan-genome. Finally, we investigated core genes for the sigma factors, mycothiol biosynthesis pathway, and secondary metabolism pathways; our data showed that many genes involved in stress response and morphological differentiation were commonly expressed in Streptomyces species. Elucidation of the core genome offers a basis for understanding the functional evolution of Streptomyces species and provides insights into target selection for the construction of industrial strains.},
+	language = {eng},
+	number = {10},
+	journal = {Journal of Microbiology and Biotechnology},
+	author = {Kim, Ji-Nu and Kim, Yeonbum and Jeong, Yujin and Roe, Jung-Hye and Kim, Byung-Gee and Cho, Byung-Kwan},
+	month = oct,
+	year = {2015},
+	pmid = {26032364},
+	keywords = {Comparative genomics, Computational Biology, core genome, Genes, Bacterial, Genetic Variation, Genome, Bacterial, Genomics, pan-genome, Streptomyces},
+	pages = {1599--1605}
+}
+
+@article{fondi_evolution_2009,
+	title = {The evolution of histidine biosynthesis in archaea: insights into the his genes structure and organization in {LUCA}},
+	volume = {69},
+	issn = {1432-1432},
+	shorttitle = {The evolution of histidine biosynthesis in archaea},
+	doi = {10.1007/s00239-009-9286-6},
+	abstract = {The available sequences of genes encoding the enzymes associated with histidine biosynthesis suggest that this is an ancient metabolic pathway that was assembled prior to the diversification of Bacteria, Archaea, and Eucarya. Paralogous duplication, gene elongation, and fusion events of several different his genes have played a major role in shaping this biosynthetic route. We have analyzed the structure and organization of histidine biosynthetic genes from 55 complete archaeal genomes and combined it with phylogenetic inference in order to investigate the mechanisms responsible for the assembly of the his pathway and the origin of his operons. We show that a wide variety of different organizations of his genes exists in Archaea and that some his genes or entire his (sub-)operons have been likely transferred horizontally between Archaea and Bacteria. However, we show that, in most Archaea, his genes are monofunctional (except for hisD) and scattered throughout the genome, suggesting that his operons might have been assembled multiple times during evolution and that in some cases they are the result of recent evolutionary events. An evolutionary model for the structure and organization of his genes in LUCA is proposed.},
+	language = {eng},
+	number = {5},
+	journal = {Journal of Molecular Evolution},
+	author = {Fondi, Marco and Emiliani, Giovanni and Liò, Pietro and Gribaldo, Simonetta and Fani, Renato},
+	month = nov,
+	year = {2009},
+	pmid = {19888544},
+	keywords = {Archaea, Archaeal Proteins, Evolution, Molecular, Histidine, Operon, Phylogeny},
+	pages = {512--526}
+}
+
+@article{merino_evolution_2008,
+	title = {Evolution of bacterial trp operons and their regulation},
+	volume = {11},
+	issn = {1369-5274},
+	url = {http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2387123/},
+	doi = {10.1016/j.mib.2008.02.005},
+	abstract = {Survival and replication of most bacteria require the ability to synthesize the amino acid L-tryptophan whenever it is not available from the environment. In this article we describe the genes, operons, proteins, and reactions involved in tryptophan biosynthesis in bacteria, and the mechanisms they use in regulating tryptophan formation. We show that although the reactions of tryptophan biosynthesis are essentially identical, gene organization varies among species - from whole-pathway operons to completely dispersed genes. We also show that the regulatory mechanisms used for these genes vary greatly. We address the question - what are some potential advantages of the gene organization and regulation variation associated with this conserved, important pathway?},
+	number = {2},
+	urldate = {2017-02-10},
+	journal = {Current opinion in microbiology},
+	author = {Merino, Enrique and Jensen, Roy A and Yanofsky, Charles},
+	month = apr,
+	year = {2008},
+	pmid = {18374625},
+	pmcid = {PMC2387123},
+	pages = {78--86},
+	file = {PubMed Central Full Text PDF:/home/nelly/.mozilla/firefox/8e2ipeap.default/zotero/storage/FIVEFB8J/Merino et al. - 2008 - Evolution of bacterial trp operons and their regul.pdf:application/pdf}
 }
