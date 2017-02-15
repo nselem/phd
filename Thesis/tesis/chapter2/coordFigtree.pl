@@ -10,9 +10,9 @@ chomp $line;
 #print $line;
 	my $y;
 	my $name;
-	if ($line=~/matrix/ and $line=~/1044/){
+	if ($line=~/matrix/ and $line=~/190/){  ## la coordenada x de la transformacion
 		#print "Line: $line\n";
-		$line=~s/1044,(\d*\.*\d*)//;
+		$line=~s/190,(\d*\.*\d*)//;
 	 	$y=$1;
 		print "$y\t";
 		}

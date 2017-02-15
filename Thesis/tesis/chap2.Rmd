@@ -31,7 +31,7 @@ library(reedtemplates)
  
 ```{r load_pkgs_chapter2, message = FALSE}
 # List of packages required for this analysis
-pkg <- c("dplyr", "ggplot2", "knitr", "devtools"," reshape","RColorBrewer")
+pkg <- c("dplyr", "ggplot2", "knitr", "devtools","RColorBrewer")
 # Check if packages are not installed and assign the
 # names of the packages not installed to the variable new.pkg
 new.pkg <- pkg[!(pkg %in% installed.packages())]
@@ -42,7 +42,7 @@ if (length(new.pkg))
 # Load packages
 library(dplyr)
 library(plyr)
-library(reshape )
+library(reshape)
 library(ggplot2)
 library(knitr)
 library(RColorBrewer)
@@ -54,7 +54,7 @@ library(scales) #
 library(xlsx) # For save data on excel
 ```
  
- Strpetomyces genera has differences on PriA funcion. PriA 
+ Streptomyces genera has differences on PriA funcion. PriA 
 ## Math
 Docking simulation were calculated for Streptomyces enzymes. TrpF enzymes from Strptomyces Mg1, Jonesia denitrificans, were added as controls
 
@@ -117,10 +117,14 @@ Substrate table
 table <- read.csv("chapter2/Substrate.data", row.names = 1,sep="\t")
 kable(table,  caption = "Substrates \\label{tab:substrates}",caption.short = "Substrates ")
 ```
-Subi a mazroca para mrBayes PriAjulian.nxs  
-Baje el arbol PriAjulian.nxs  
-Obtuve las coordenadas con el script
-Hice el heatplot en R para obtener los colores 
+mrBayes PriAjulian.nxs on mazorca goes to PriAjulian.con.tre
+PriAjulian.con.tre was open with figtree and saved as SVG
+To get coordinates: `coordtree.pl PriAjulian.SVG`  
+Heatplot color are from ggplot R
+mydata.xls lo guardoen mydata.cvs
+perl read_mydata.pl mydata.cvs >Heat.colors
+mnually edit Heat.colors by adding headers enzymas y substrates
+perl heatFromRGB.pl Heat.colors YPriAJulian
 Hice el heatplot en SVG con el script   
 
 Observaciones Mauricio  
@@ -153,20 +157,32 @@ docking.m <- melt(docking,id = "Enzima")
 docking.m <- ddply(docking.m, .(variable), transform,rescale = rescale(value))
 docking.m$Enzima <- factor(docking.m$Enzima, levels = rev(docking.m$Enzima[order(EnzymeOrder)]))
 
+################# on white and blue
 ggplot(docking.m, aes(x=variable, y=Enzima)) + labs(x = "Substrates", y = "Enzymes",text = element_text(size=12))+ geom_raster(aes(fill=value))+scale_fill_gradient(low = "white", high = "steelblue",na.value = "black")+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6))
 
-ggplot(docking.m, aes(x=variable, y=Enzima)) + labs(x = "Substrates", y = "Enzymes",text = element_text(size=12))+ geom_raster(aes(fill=value))+scale_fill_gradient(low = "white", high = "black",na.value = "black")+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6))
-
-ggplot(docking.m, aes(x=variable, y=Enzima)) + labs(x = "Substrates", y = "Enzymes",text = element_text(size=12))+ geom_raster(aes(fill=value))+scale_fill_gradient(low = "white", high = "steelblue",na.value = "black")+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6))+ scale_fill_gradientn(colours = hm.palette(100),na.value = "gray")
-
-## boxplot de los sustratos
-ggplot(docking.m, aes(x=variable, y=Enzima)) + labs(x = "Substrates", y = "Enzymes",text = element_text(size=12))+ geom_raster(aes(fill=value))+scale_fill_gradient(low = "white", high = "steelblue",na.value = "black")+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6))
-
-p<-ggplot(docking.m, aes(x=variable, y=Enzima)) + labs(x = "Substrates", y = "Enzymes",text = element_text(size=12))+ geom_raster(aes(fill=value))+scale_fill_gradient(low = "white", high = "steelblue",na.value = "black")+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6))
+ ## black and white
+p<-ggplot(docking.m, aes(x=variable, y=Enzima)) + labs(x = "Substrates", y = "Enzymes",text = element_text(size=12))+ geom_raster(aes(fill=value))+scale_fill_gradient(low = "white", high = "black",na.value = "black")+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6))
 g <- ggplot_build(p)
 g$data[[1]]["fill"]
 g$data[[1]]
 write.xlsx(g$data[[1]], "chapter2/mydata.xlsx")
+
+
+##on colors
+
+color<-ggplot(docking.m, aes(x=variable, y=Enzima)) + labs(x = "Substrates", y = "Enzymes",text = element_text(size=12))+ geom_raster(aes(fill=value))+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6))+ scale_fill_gradientn(colours = hm.palette(100),na.value = "gray")
+gcolor <- ggplot_build(color)
+gcolor$data[[1]]["fill"]
+gcolor$data[[1]]
+write.xlsx(gcolor$data[[1]], "chapter2/mydataColor.xlsx")
+
+ggplot(docking.m, aes(x=variable, y=Enzima)) + labs(x = "Substrates", y = "Enzymes",text = element_text(size=12))+ geom_raster(aes(fill=value))+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6))+ scale_fill_gradientn(colours = hm.palette(100),na.value = "gray")
+
+
+## boxplot de los sustratos
+ggplot(docking.m, aes(x=variable, y=Enzima)) + labs(x = "Substrates", y = "Enzymes",text = element_text(size=12))+ geom_raster(aes(fill=value))+ scale_fill_gradientn(colours = hm.palette(100),na.value = "gray")+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6))
+
+
 
 ggplot(docking.m, aes(x=variable, y=value)) + labs(x = "Metabolic Families", y = "Copies on Actinobacteria Genomes",text = element_text(size=12)) + geom_boxplot()+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6), legend.position = "bottom")
 

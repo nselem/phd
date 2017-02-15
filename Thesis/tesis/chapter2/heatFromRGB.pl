@@ -33,14 +33,15 @@ my $Rowsize = scalar @DATA ;
 for (my $row=1; $row<$Rowsize;$row++){
 	for(my $col=1; $col<$Colsize;$col++){
 		my $enzyme=$DATA[$row][0];
+		#print "enzyme $enzyme\n";
 		my $val=$DATA[$row][$col];
 		my $y=$YCOORD{$enzyme};
 		my $x=(10)*int($col);
 		my $color=$val ;
 		my $substrate=$DATA[0][$col];
 			DrawSquare($row,$col,$x,$y,$color);  ## row -> y column -> x
-		print "Pause at DrawSquare($row,$col,$x,$y,$color)";
-		my $pAuse=<STDIN>;
+		#print "Pause at DrawSquare($row,$col,$x,$y,$color)";
+		#my $pAuse=<STDIN>;
 		
 		}	
 	}
@@ -98,7 +99,11 @@ sub readData{
 	my $rows=0;
 	foreach my $line (<FILE>){
 		chomp $line;
+		#print "line $line\n";
 		@{$refDATA->[$rows]}=split(/\t/,$line);
+		#print "Enzyme $refDATA->[$rows][0]\n";
+		#print "pause";
+		#my $pause ="<STDIN>";
 		$rows++;
 		}
 	close FILE;
@@ -231,6 +236,7 @@ sub readCoord{
 
 	open (COORD,$coord)or die $!;
 	foreach my $line(<COORD>){
+		#print "line $line\n";
 		chomp $line;
 		my@st=split('\t',$line);
 		$refCOORD->{$st[1]}=$st[0];
