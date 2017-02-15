@@ -47,10 +47,14 @@ library(ggplot2)
 library(knitr)
 library(RColorBrewer)
 hm.palette <- colorRampPalette(rev(brewer.pal(11, 'Spectral')), space='Lab')  
-
+library(genstats) ## Next libraries are for coursera
+library(devtools)
+library(Biobase)
+library(scales) # 
+library(xlsx) # For save data on excel
 ```
  
- 
+ Strpetomyces genera has differences on PriA funcion. PriA 
 ## Math
 Docking simulation were calculated for Streptomyces enzymes. TrpF enzymes from Strptomyces Mg1, Jonesia denitrificans, were added as controls
 
@@ -80,10 +84,7 @@ purpeofuscus and S bikiniensis
 Additionally to the sequences selected by phylogeny, Jonesia denitrificans and Streptomyces sp Mg1 TrpF sequences were added as control .
 
 ```{r sessionInfo,echo=FALSE}
-library(genstats)
-library(devtools)
-library(Biobase)
-library(scales)
+
 #vignette(package="genstats")
 #vignette("01_06_three-tables")
 
@@ -116,6 +117,12 @@ Substrate table
 table <- read.csv("chapter2/Substrate.data", row.names = 1,sep="\t")
 kable(table,  caption = "Substrates \\label{tab:substrates}",caption.short = "Substrates ")
 ```
+Subi a mazroca para mrBayes PriAjulian.nxs  
+Baje el arbol PriAjulian.nxs  
+Obtuve las coordenadas con el script
+Hice el heatplot en R para obtener los colores 
+Hice el heatplot en SVG con el script   
+
 Observaciones Mauricio  
 - falta el pie de figura
 Substrate docking over enzymes from extended PriA families. Substrates 1-20  
@@ -154,6 +161,12 @@ ggplot(docking.m, aes(x=variable, y=Enzima)) + labs(x = "Substrates", y = "Enzym
 
 ## boxplot de los sustratos
 ggplot(docking.m, aes(x=variable, y=Enzima)) + labs(x = "Substrates", y = "Enzymes",text = element_text(size=12))+ geom_raster(aes(fill=value))+scale_fill_gradient(low = "white", high = "steelblue",na.value = "black")+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6))
+
+p<-ggplot(docking.m, aes(x=variable, y=Enzima)) + labs(x = "Substrates", y = "Enzymes",text = element_text(size=12))+ geom_raster(aes(fill=value))+scale_fill_gradient(low = "white", high = "steelblue",na.value = "black")+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6))
+g <- ggplot_build(p)
+g$data[[1]]["fill"]
+g$data[[1]]
+write.xlsx(g$data[[1]], "chapter2/mydata.xlsx")
 
 ggplot(docking.m, aes(x=variable, y=value)) + labs(x = "Metabolic Families", y = "Copies on Actinobacteria Genomes",text = element_text(size=12)) + geom_boxplot()+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6), legend.position = "bottom")
 
