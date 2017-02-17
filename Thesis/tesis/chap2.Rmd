@@ -124,7 +124,7 @@ Heatplot color are from ggplot R
 mydata.xls lo guardoen mydata.cvs
 perl read_mydata.pl mydata.cvs >Heat.colors
 mnually edit Heat.colors by adding headers enzymas y substrates
-perl heatFromRGB.pl Heat.colors YPriAJulian
+perl heatFromRGB.pl HeatColor YPriAJulian
 Hice el heatplot en SVG con el script   
 
 Observaciones Mauricio  

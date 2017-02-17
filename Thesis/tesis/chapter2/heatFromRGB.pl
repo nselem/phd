@@ -126,10 +126,9 @@ sub DrawSquare{
 	# in pixels and we can add style just asw we  did with the circle.
 	$svg->rectangle(
 	    x => $x,
-	    y => $y,
-		
-	    width  => 10,
-	    height => 10,
+	    y => $y,		
+	    width  => 12,
+	    height => 12,
 	    style => {
         	'fill'           => "$color",
 	        'stroke'         => 'black',
