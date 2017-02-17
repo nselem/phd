@@ -25,9 +25,9 @@ library(reedtemplates)
 
 
 # PriA Family {#math-sci}
-
- * Julian simulation
- * Who has TrpF
+PriA isomerase is a promiscuous enzyme involved in histidine and Triptophan pathways. This enzyme family catalize convertions HisA and TrpF converting ProFAR on  and PRA into products.
+PriA can be found at Actinobacteria phylum.   
+  
  
 ```{r load_pkgs_chapter2, message = FALSE}
 # List of packages required for this analysis
@@ -53,8 +53,9 @@ library(Biobase)
 library(scales) # 
 library(xlsx) # For save data on excel
 ```
- 
- Streptomyces genera has differences on PriA funcion. PriA 
+
+##Methods
+ 52 Streptomyces genera has differences on PriA funcion. PriA 
 ## Math
 Docking simulation were calculated for Streptomyces enzymes. TrpF enzymes from Strptomyces Mg1, Jonesia denitrificans, were added as controls
 
@@ -81,6 +82,7 @@ Non conserved cluster
 TrpF4
 purpeofuscus and S bikiniensis 
 2. Heatmap
+
 Additionally to the sequences selected by phylogeny, Jonesia denitrificans and Streptomyces sp Mg1 TrpF sequences were added as control .
 
 ```{r sessionInfo,echo=FALSE}
@@ -106,12 +108,8 @@ m <- as.matrix(tmp)
 ## Names should not start on numbers never
 ## create ExpressionSet object:
 eset <- new("ExpressionSet", exprs = m, phenoData = pdata, featureData = fdata)
-
-#pData(eset)
-#fData(eset)
-#pData(eset)
-#fData(eset)
 ```
+
 Substrate table  
 ```{r Substrates_table_out, results = "asis"}
 table <- read.csv("chapter2/Substrate.data", row.names = 1,sep="\t")
@@ -158,20 +156,26 @@ docking.m <- ddply(docking.m, .(variable), transform,rescale = rescale(value))
 docking.m$Enzima <- factor(docking.m$Enzima, levels = rev(docking.m$Enzima[order(EnzymeOrder)]))
 
 ################# on white and blue
-ggplot(docking.m, aes(x=variable, y=Enzima)) + labs(x = "Substrates", y = "Enzymes",text = element_text(size=12))+ geom_raster(aes(fill=value))+scale_fill_gradient(low = "white", high = "steelblue",na.value = "black")+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6))
+blueHeatPlot<-ggplot(docking.m, aes(x=variable, y=Enzima)) + labs(x = "Substrates", y = "Enzymes",text = element_text(size=12))+ geom_raster(aes(fill=value))+scale_fill_gradient(low = "white", high = "steelblue",na.value = "black")+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6))
+ggsave("chapter2/blueHeatPlot.pdf", plot = blueHeatPlot,height = 36, width = 24)
+
 
  ## black and white
-p<-ggplot(docking.m, aes(x=variable, y=Enzima)) + labs(x = "Substrates", y = "Enzymes",text = element_text(size=12))+ geom_raster(aes(fill=value))+scale_fill_gradient(low = "white", high = "black",na.value = "black")+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6))
-g <- ggplot_build(p)
+blackHeatPlot<-ggplot(docking.m, aes(x=variable, y=Enzima)) + labs(x = "Substrates", y = "Enzymes",text = element_text(size=12))+ geom_raster(aes(fill=value))+scale_fill_gradient(low = "white", high = "black",na.value = "black")+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6))
+ggsave("chapter2/blackHeatPlot.pdf", plot = blackHeatPlot,height = 36, width = 24)
+
+g <- ggplot_build(blackHeatPlot)
 g$data[[1]]["fill"]
 g$data[[1]]
-write.xlsx(g$data[[1]], "chapter2/mydata.xlsx")
+write.xlsx(g$data[[1]], "chapter2/mydatablack.xlsx")
 
 
 ##on colors
 
-color<-ggplot(docking.m, aes(x=variable, y=Enzima)) + labs(x = "Substrates", y = "Enzymes",text = element_text(size=12))+ geom_raster(aes(fill=value))+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6))+ scale_fill_gradientn(colours = hm.palette(100),na.value = "gray")
-gcolor <- ggplot_build(color)
+colorHeatPlot<-ggplot(docking.m, aes(x=variable, y=Enzima)) + labs(x = "Substrates", y = "Enzymes",text = element_text(size=12))+ geom_raster(aes(fill=value))+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6))+ scale_fill_gradientn(colours = hm.palette(100),na.value = "gray")
+ggsave("chapter2/colorHeatPlot.pdf", plot = colorHeatPlot,height = 36, width = 24)
+
+gcolor <- ggplot_build(colorHeatPlot)
 gcolor$data[[1]]["fill"]
 gcolor$data[[1]]
 write.xlsx(gcolor$data[[1]], "chapter2/mydataColor.xlsx")
