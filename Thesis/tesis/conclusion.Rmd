@@ -60,19 +60,19 @@ ssh or bash into a running docker container
 Stop all containers  
 `docker rm $(docker ps -a -q)`  
 
-Remove stopped containers  
+Remove stopped containers   
 `docker rm $(docker ps -q -f status=exited)`
 
-Remove all images
+Remove all images  
 `docker rmi $(docker images -q)`  
 
-uninstall docker from ubuntu (Fresh start)  
-`sudo apt-get purge docker-engine`  
-`sudo apt-get autoremove --purge docker-engine`  
+uninstall docker from ubuntu (Fresh start)   
+`sudo apt-get purge docker-engine`   
+`sudo apt-get autoremove --purge docker-engine`    
 `rm -rf /var/lib/docker`   # This deletes all images, containers, and volumes
 
 Run Evomining container using nselem/newevomining image  
-` docker run -i -t -v /home/nelly/GIT/EvoMining/:/var/www/html -p 80:80 nselem/newevomining /bin/bash`
+` docker run -i -t -v /home/nelly/GIT/EvoMining/:/var/www/html/EvoMining/exchange -p 80:80 nselem/newevomining /bin/bash`
   
 Start evomining inside this container   
 `perl startevomining`  
