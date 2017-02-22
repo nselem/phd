@@ -202,6 +202,11 @@ Servidor Viernes a las 12:00
 ## CORASON: Other genome Mining tools context-based
  
 ### CORASoN
+_CORe Analysis of Syntenic Orthologs to prioritize Natural Product-Biosynthetic Gene Cluster_  
+*CORASoN* is a genomic tool that helps to prioritize BGC's  
+Given a cluster CORASON searchs for similar ones on a GENOME database and calculates all genes in common their CORE. using this information to construct a tree and sort clusters according to them. This Core may suggest molecular CORE.  
+
+
 You can also embed plots.  For example, here is a way to use the base **R** graphics package to produce a plot using the built-in `pressure` dataset:
 
 ```{r pressure, echo = FALSE, cache = TRUE}

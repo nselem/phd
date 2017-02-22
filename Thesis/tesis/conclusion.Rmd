@@ -46,37 +46,51 @@ Apendix one Useful docker commands
 `docker push nselemevomining`
 
 ## Docker  
-Reinicie docker para liberar puertos  
+Restart docker and free all ports  
 `sudo service docker restart`   
-`docker stop $(docker ps -a -q)`  
 
-Detener todos los contenedores
+liast containers  
+`docker ps -a`  
+
+ssh or bash into a running docker container  
+`sudo docker exec -i -t romantic_brahmagupta /bin/bash`
+`docker exec -it <mycontainer> bash`  
+
+
+Stop all containers  
 `docker rm $(docker ps -a -q)`  
 
-Remover contenedores detenidos
+Remove stopped containers  
 `docker rm $(docker ps -q -f status=exited)`
 
 Remove all images
 `docker rmi $(docker images -q)`  
-
-Gblocks only runs inside folder /var/www/html/EvoMining  
-
-lista contenedores  
-`docker ps -a`  
 
 uninstall docker from ubuntu (Fresh start)  
 `sudo apt-get purge docker-engine`  
 `sudo apt-get autoremove --purge docker-engine`  
 `rm -rf /var/lib/docker`   # This deletes all images, containers, and volumes
 
-` docker run -i -t -v /home/nelly/GIT/EvoMining/:/var/www/html -p 80:80 newevomining /bin/bash`
+Run Evomining container using nselem/newevomining image  
+` docker run -i -t -v /home/nelly/GIT/EvoMining/:/var/www/html -p 80:80 nselem/newevomining /bin/bash`
+  
+Start evomining inside this container   
 `perl startevomining`  
 
+Vizualice a tree  
+`http://10.10.100.234/EvoMining/cgi-bin/color_tree.pl?9&&/var/www/html/EvoMining/exchange/CyanosBBH_MiBIG_DB.faa_CYANOS`
+file 9.new must be on folder volume CyanosBBH_MiBIG_DB.faa_CYANOS  
+
+Find a perl module  
+`perl -MList::Util -e'print $_ . " => " . $INC{$_} . "\n" for keys %INC'`
+EvoMining notes  
+Gblocks only runs inside folder /var/www/html/EvoMining  
+
 ## Git  
-`git add --all`
-`git commit -m "Some message"`  
-`git push -u origin master`  
-`git clone `
+`git add --all`  
+`git commit -m "Some message"`   
+`git push -u origin master`   
+`git clone `  
 
 ## Connect GitHub and DockerHub
 automated builds
