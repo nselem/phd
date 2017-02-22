@@ -26,15 +26,15 @@ Gene history its a tree history
 
 HGT doubles mutation rate on prokarites.  
 Maybe HGT is an selected feature, if is the case, so could be np production.  
-Some archaeas has open pangenome.  [@halachev_calculating_2011]
+Some archaeas has open pangenome.  [@halachev_calculating_2011]  
 
-HGT doubles mutation rate on prokarites.  [@koonin_turbulent_2015]
+HGT doubles mutation rate on prokarites.  [@koonin_turbulent_2015]  
 Maybe HGT is an selected feature, if is the case, so could be np production.  
 Some archaeas has open pangenome.  [@halachev_calculating_2011]
 Shell trees converge to core trees [@narechania_random_2012]
 
 ## EvoMining Implementation  
-**EvoMining** was expanded from a website ([http://evodivmet.langebio.cinvestav.mx/EvoMining/index.html](http://evodivmet.langebio.cinvestav.mx/EvoMining/index.html)) with limited datasets to an easy to install distribution that allows flexiblibilty on genomic, central and natural product databases. Evomining user distribution was developed on perl on Ubuntu-14.04 but wraped on [Docker](https://www.docker.com/). Docker is a software containerization platform that allows repetibilty regardless of the environment. Docker engine is avilable for Linux, Cloud, macOS 10.10.3 Yosemite or newer and even 64bit Windows 10.
+**EvoMining** was expanded from a website   ([http://evodivmet.langebio.cinvestav.mx/EvoMining/index.html](http://evodivmet.langebio.cinvestav.mx/EvoMining/index.html)) with limited datasets to an easy to install distribution that allows flexiblibilty on genomic, central and natural product databases. Evomining user distribution was developed on perl on Ubuntu-14.04 but wraped on [Docker](https://www.docker.com/). Docker is a software containerization platform that allows repetibilty regardless of the environment. Docker engine is avilable for Linux, Cloud, macOS 10.10.3 Yosemite or newer and even 64bit Windows 10.
 
 Dependencies that were packaged at EvoMining docker app are Apache2, muscle3.8.31, newick-utils-1.6,quicktree, blast-2.2.30, Gblocks_Linux64_0.91b perl and from cpan CGI, SVG and Statistics::Basic modules.  
 
@@ -46,7 +46,7 @@ Dockerhub is an apps project hosting.
 
 EvoMining code is open source and it is available at a github repository [github/EvoMining](https://github.com/nselem/EvoMining)
 
-Github and Dockerhub can be coneccted by the use of repositories automatically built. Among the advantages of automated builds are that the DockerHub repository is automatically kept up-to-date with code changes on GitHub and that its Dockerfile is available to anyone with access to the Docker Hub repository. EvoMining is stored on a DockerHub automated build repository linked to github EvoMining repository so that code is always actualized.
+Github and Dockerhub can be coneccted by using automated built repositories. Among the advantages of automated builds are that DockerHub repository is automatically kept up-to-date with code changes on GitHub and that its Dockerfile is available to anyone with access to Docker Hub repository. EvoMining is stored on a DockerHub automated build repository linked to github EvoMining repository so that code is always actualized.
 
 To download EvoMining image from docker Hub once Docker engine is installed its necessary to run the following command at a terminal:  
 `docker pull nselem/newevomining`  
@@ -199,30 +199,24 @@ Cianobacterias y la ruta de fijación de nitrógeno.
 
 Servidor Viernes a las 12:00   
 
-## CORASON: Other genome Mining tools context-based
- 
-### CORASoN  
-Genome fluidity on Bacteria is source of biosynthetic gene clusters (BGCs) abundance, in fact almost all  bacterial genome sequenced contributes with new genes and gene clusters to the Bacterial Pangenome. Because of this gene diversity helped by sequence technology advances, researchers often have a large set of genomes that wish to analize in search of a particular gene cluster variations. As an answer to BGCs analysis CORASON allows users to find and visualice variations of a given gene cluster sorting them according to the conserved core phylogeny. 
-  
-To find cluster variations, given a query protein sequence that belongs to this reference cluster, CORASON will search on a Bacterial genome database all gene clusters that contains orthologues of the query-protein and at least another sequence from the reference cluster. Orthologues on variation clusters are coloured within a gradient according to its identity percentage with the reference cluster sequences.  
+## CORASON-BGCs: Other genome Mining tools context-based
+###CORe Analysis of Syntenic Orthologs to prioritize Natural Product-Biosynthetic Gene Cluster
 
-The cluster core attempts to identify a set of functions conserved on this particular biosynthetic BGC. The core genome on a taxonomical group is the set of coding sequences that are shared between all group members, this definition may be transform on the cluster core by being applied to a set of gene clusters instead of on a set of genomes. If exists a cluster core on variation clusters a report about gene function will be provided, also core sequences will be concatenated to construct a phylogenetic tree.   
+Genome fluidity on Bacteria is source of biosynthetic gene clusters (BGCs) abundance, in fact almost all  bacterial genome sequenced contributes with new genes and gene clusters to the Bacterial Pangenome. Because of this gene diversity helped by sequence technology advances, researchers often have a large set of genomes that wish to analize in search of a particular gene cluster variations. As an answer to BGCs analysis CORASON allows users to find and visualice variations of a given gene cluster sorting them according to the conserved core phylogeny.   
+     
+To find cluster variations, given a query protein sequence that belongs to a reference cluster, CORASON will search on a Bacterial genome database all gene clusters that contains orthologues of the query-protein and at least another sequence from the reference cluster. Orthologues on variation clusters are coloured within a gradient according to its identity percentage with the reference cluster sequences.   
+     
+The cluster core attempts to identify a set of functions conserved on this particular biosynthetic BGC. The core genome on a taxonomical group is the set of coding sequences that are shared between all group members, this definition may be adapted to the cluster core by using a set of gene clusters instead of a set of genomes. A report about gene function will be provided whenever a cluster core exists also core sequences will be concatenated to construct a phylogenetic tree and sort variation clusters accordingly.     
+     
+Functional annotations are provided by RAST annotation service due to that CORASON genomic databases must be RAST files. Any archaeal or bacterial genome can be RAST annotated either on the website or by command line using myrast server. 
 
-To provide functional annotations RAST bacterial and archaeal annotation service was used. Genomic databases on CORASON must be RAST annotated before used. 
+Finally, in order to provide an easy to install distribution CORASON was packaged on docker containerization platform. Software dependencies such as BLAST 2.2.30, muscle3.8.3, GBlocksLinux64_0.91b, quicktree, newick-utils-1.6, and CORASON code were wrapped together on CORASON docker container. Tutorial and software are available at github. 
 
-To provide an easy installation BLAST 2.2.30, muscle3.8.3, GBlocksLinux64_0.91b, quicktree,newick-utils-1.6, CORASON software and all dependecies are packaged on a docker container. Docker is a container platform that allows easy distributions. 
+CORASON inputs are a genomic database, a reference cluster and an enzyme inside this cluster, CORASON outputs are newick trees, core functional report and a cluster variation SVG file. SVG format among being high quality scalable graphics, also allow to display metadata such as gene function and genome coordinates just by mouse over figures on a browser facilitating genomic analysis.  
+
+In conclusion CORASON is an easy to install comparative genomic visual tool on a customizable genome database that allows users to visualice variations of a reference gene cluster identifing its core functions and finally sorting variations according to their evolutionary history helping to prioritize clusters that may be involved on chemical novelty. 
 
 
-CORASON outputs are newick trees, core functional report and cluster variation SVG file. Svg among being high quality scalable graphics, also allows to display metadata such as gene function and genome coordinates facilitating genomic analysis.  
-
-EvoMining allows identification of potentially divergent sequences from an expanded enzyme family, evominig-hits can be processed by CORASON to identify variation on its cluster, so on perspective EvoMining and CORASON together can help to prioritize clusters that may be involved on chemical novelty. 
-
-As an answer to BGCs analysis CORASON allows users to find and visualice variations of a given gene cluster sorting them according to the conserved core phylogeny. 
-CORASON provides an easy to install comparative genomic visual tool on a customizable genome database.  
-  
-  
-Example Siderophore  
- 
 You can also embed plots.  For example, here is a way to use the base **R** graphics package to produce a plot using the built-in `pressure` dataset:
 
 ```{r pressure, echo = FALSE, cache = TRUE}
