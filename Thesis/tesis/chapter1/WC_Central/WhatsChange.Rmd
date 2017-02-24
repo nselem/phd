@@ -29,25 +29,64 @@ indx <- which((Frecuencia[]) > 110) ;
 indx
 ```
 ##Data Bases
+###Central pathways  
+Central database were chosen by BBH from 
 -Actino  
-
+Corynebacterium glutamicum     
+242137	6666666.112876	Streptomyces coelicolor A3(2) NC_003888.3	1	8667507	2015-03-27    
+288055	6666666.146923	Mycobacterium tuberculosis H37Rv NC_000962.3	1	4411532  
+  
 -Archaea 
-
+closed  
+390224	6666666.211599	Methanosarcina acetivorans C2A C2A AE010299.1	1	5751492	SELECTED	Euryarchaeota	Methanomicrobia  
+390346	6666666.211718	Nanoarchaeum equitans Kin4-M - AE017199.1	1	490885	SELECTED	DPANN group	Nanoarchaeota  
+390660	6666666.211909	Natronomonas pharaonis DSM 2160 Gabara CR936257.1	1	2595221	SELECTED	Euryarchaeota	Halobacteria    
+390189	6666666.211567	Sulfolobus solfataricus P2 P2 AE006641.1	1	2992245	SELECTED	TACK group	Crenarchaeota    
 -Cyanos  
+391213	6666666.212444	Cyanothece sp. ATCC 51142 CP000806.1	1	4934271	Cyanobacteria; Oscillatoriophycideae; Oscillatoriales  
 
-[WC Data](http://pubseed.theseed.org/wc.cgi?request=show_otus&base=/homes/nselem/Data/CS)
-In order to investigate some other functions  we took 100Cyanos, 100Archaea , 118 Actinos Closed  
-Those families present on at least every organism  to asure they have expanssions  
-Cyanos  
-Actinos  
-Archaea  
-Streptomyces  
+391246	6666666.212477	Synechococcus sp. PCC 7002 CP000951.1	1	3008047	Cyanobacteria; Synechococcales; Synechococcaceae  
+
+351204	6666666.189647	Arthrospira platensis C1 	1	6089210
+
+### Genome Dynamics  
+Among BBH central databases, genomic dynamics was included.  
+Whats change site:[WC Data](http://pubseed.theseed.org/wc.cgi?request=show_otus&base=/homes/nselem/Data/CS)  
+
+groups were formed with 100Cyanos, 100Archaea , 118 Actinos Closed, 43StreptosClosed    
+Selected organims were  
+ 
+
+
+Those families present on at least as much as genomes on the group    
+Cyanos  100 647  
+Abundant.Families.100Cyanos  
+Actinos  118  132  
+Abundant.Families.43Strepto  
+Archaea  100  35  
+Abundant.Families.Actinos  
+Streptomyces  43  1263  
+Abundant.Families.Archaeas  
+
 Those families expanded on at least two groups  
-
+`cat *Abun* | cut -f3| sort | uniq -c | sort >Abundance.all`  
+<!--cut -f3 Abundant.Families.100Cyanos |sort >f3Cyanos-->
+<!--Excel sorted-->
+  
 Those Families expanded on Archaea  and not expanded on Actino  
+`comm -23 f3Archaeas f3Actinos >ArchaeasNoActinos`  
+Those Families expanded on Actino and not on Archaea   
+`comm -13 f3Archaeas f3Actinos >ActinosNoArchaea`  
+  
+Those families expanded on Streptomyces but not in ActinoBacteria   
+`comm -13 f343Strepto f3Actinos >ActinosNoStrepto`  
+Those Families expanded on Actinobacteria and not in Streptomyces   
+` comm -23 f343Strepto f3Actinos >StreptoNoActinos `  
 
-Those Families expanded on Actino and not on Archaea  
-Those Families expanded on Cyano   
+Those Families expanded on Cyano and not in Actino  
+`comm -23 f3Cyanos f3Actinos >CyanosNoActinos`  
+  
+
 
 ## Including Plots
 
