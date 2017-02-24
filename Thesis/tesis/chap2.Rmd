@@ -52,6 +52,17 @@ library(xlsx) # For save data on excel
 PriA isomerase is a promiscuous enzyme involved in histidine and Triptophan pathways. This enzyme family catalize convertions HisA and TrpF converting ProFAR on  and PRA into products.
 PriA can be found at Actinobacteria phylum.
 
+\clearpage  
+
+## Enzymes  
+39 Streptomyces PriA sequences has differences on PriA funcion. PriA 
+1.Phylogenetic Tree
+39 Streptomyces sequences, as outgroup E coli, Arthrobacter Aurescens, Salmonella enterica and Acidimicrobium ferrooxidans PriA’s were included.
+
+as an outgroup with HisA activity Enterobacterias _Salmonella enterica_ (PDB:5AHE), _Escherichia coli K12_
+_Acidimicrobium ferrooxydans_ (PDB:4WD0)
+Additionally to the sequences selected by phylogeny, Jonesia denitrificans and Streptomyces sp Mg1 TrpF sequences were added as control .
+
 PriA  
 _Mycobacterium tuberculosis_ (Mtub PDB:2Y88,2Y89,2Y85,3ZS4)
 _Streptomyces coelicolor_ (Scoe PDB:2VEP,2X30,1VZW),_Streptomyces globisporus_,
@@ -60,27 +71,17 @@ _Corynebacterium jeikeum_
 
 subHisA  
 _Corynebacterium diphteriae_
-_Actinomyces car_ (PDB:4X2R) _Acidimicrobium ferrooxydans_ (PDB:4WD0) 
+_Actinomyces car_ (PDB:4X2R)  
 
 subTrpF  
 _Arthrobacter aurescens_ (PDB:4WD0)
 
  
-as an outgroup from HisA family _Salmonella enterica_ (PDB:5AHE), _Escherichia coli K12_
-
 PriB  
 _Streptomyces ipomoeae_, _Streptomyces sviceus_ (PDB:4U28,4TX9)  
 TrpF controls _Jonesia denitrificans_ (PDB:4WUI) _Chlamidya thrachomatis_, _Streptomyces sp. Mg1_ TrpF and _Actinomyces odontolyticus_ were included  
 
 Streptomyces 34 paralogous
-
-\clearpage  
-## Enzymes  
-52 Streptomyces genera has differences on PriA funcion. PriA 
-1.Phylogenetic Tree
-39 Streptomyces sequences, as outgroup E coli, Arthrobacter Aurescens, Salmonella enterica and Acidimicrobium ferrooxidans PriA’s were included.
-
-Additionally to the sequences selected by phylogeny, Jonesia denitrificans and Streptomyces sp Mg1 TrpF sequences were added as control .
 
 ## CORASON
 PriA
@@ -99,7 +100,8 @@ TrpF4
 purpeofuscus and S bikiniensis 
 2. Heatmap
 
- \clearpage 
+ \clearpage  
+ 
 ## Structures
 ```{r Enzymes_PDB_out, results = "asis"}
 table <- read.csv("chapter2/EstructurasPDB", row.names = 1,sep="\t")
@@ -109,6 +111,7 @@ kable(table,  caption = "Enzyme PDB \\label{tab:Enzyme PDB}",caption.short = "En
 \clearpage 
 ## Substrates  
 20 substrates were collected from literature and chemioinformatics predictions.   
+S13,S14,!5,S16 light activated substrates, S3 PRA, S7 PROFAR, S6 GMP, S11 GTP, S17 PRAP, S18 Compound V, S17 PraP
 ```{r Substrates_table_out, results = "asis"}
 table <- read.csv("chapter2/Substrate.data", row.names = 1,sep="\t")
 kable(table,  caption = "Substrates \\label{tab:substrates}",caption.short = "Substrates ")
@@ -245,6 +248,14 @@ ggplot(docking.m, aes(x=variable, y=value)) + labs(x = "Metabolic Families", y =
  ```{r Figure_Heatplot, results = "asis",message=FALSE,echo=FALSE}
 label(path = "chapter2/Figura1_4.pdf", caption = "Heatplot docking PriA enzyme Family vs substrates",label = "Heatplod PriA docking", type = "figure")
 ```
+
+```{r Chemical_table_out, results = "asis"}
+chemical <- read.csv("chapter2/chemical.data.csv", row.names = 1,sep="\t")
+kable(chemical,  caption = "PriA enzymatic kinetics \\label{tab:chemical}",caption.short = "PriA Kinetics ")
+```
+  
+Con actividad de FolE i.e activa para el compuesto V										Adams et al (2014)
+
 
 We can further look into the properties of the largest value here for American Airlines Inc.  To do so, we can isolate the row corresponding to the arrival delay of 1539 minutes for American in our original `flights` dataset.
 
