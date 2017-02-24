@@ -23,13 +23,7 @@ if(!require(reedtemplates)){
 library(reedtemplates)
 ```
 
-
-# PriA Family {#math-sci}
-PriA isomerase is a promiscuous enzyme involved in histidine and Triptophan pathways. This enzyme family catalize convertions HisA and TrpF converting ProFAR on  and PRA into products.
-PriA can be found at Actinobacteria phylum.   
-  
- 
-```{r load_pkgs_chapter2, message = FALSE}
+```{r load_pkgs_chapter2, message = FALSE,echo=FALSE}
 # List of packages required for this analysis
 pkg <- c("dplyr", "ggplot2", "knitr", "devtools","RColorBrewer")
 # Check if packages are not installed and assign the
@@ -54,19 +48,41 @@ library(scales) #
 library(xlsx) # For save data on excel
 ```
 
-##Methods
- 52 Streptomyces genera has differences on PriA funcion. PriA 
-## Math
-Docking simulation were calculated for Streptomyces enzymes. TrpF enzymes from Strptomyces Mg1, Jonesia denitrificans, were added as controls
+# PriA Family {#math-sci}
+PriA isomerase is a promiscuous enzyme involved in histidine and Triptophan pathways. This enzyme family catalize convertions HisA and TrpF converting ProFAR on  and PRA into products.
+PriA can be found at Actinobacteria phylum.
 
+PriA  
+_Mycobacterium tuberculosis_ (Mtub PDB:2Y88,2Y89,2Y85,3ZS4)
+_Streptomyces coelicolor_ (Scoe PDB:2VEP,2X30,1VZW),_Streptomyces globisporus_,
+_Actynomyces urogenitalis_ 4X2R
+_Corynebacterium jeikeum_ 
 
-Procedures can be found at [Docking Protocols](https://github.com/tripplab/Docking/wiki)  
+subHisA  
+_Corynebacterium diphteriae_
+_Actinomyces car_ (PDB:4X2R) _Acidimicrobium ferrooxydans_ (PDB:4WD0) 
 
+subTrpF  
+_Arthrobacter aurescens_ (PDB:4WD0)
+
+ 
+as an outgroup from HisA family _Salmonella enterica_ (PDB:5AHE), _Escherichia coli K12_
+
+PriB  
+_Streptomyces ipomoeae_, _Streptomyces sviceus_ (PDB:4U28,4TX9)  
+TrpF controls _Jonesia denitrificans_ (PDB:4WUI) _Chlamidya thrachomatis_, _Streptomyces sp. Mg1_ TrpF and _Actinomyces odontolyticus_ were included  
+
+Streptomyces 34 paralogous
+
+\clearpage  
+## Enzymes  
+52 Streptomyces genera has differences on PriA funcion. PriA 
 1.Phylogenetic Tree
 39 Streptomyces sequences, as outgroup E coli, Arthrobacter Aurescens, Salmonella enterica and Acidimicrobium ferrooxidans PriA’s were included.
 
+Additionally to the sequences selected by phylogeny, Jonesia denitrificans and Streptomyces sp Mg1 TrpF sequences were added as control .
 
-CORASON
+## CORASON
 PriA
 All streptomyces have a partially conserved PriA cluster. CT34 has a secondary copy whose Best hit on NCBI is Lentzea’s PriA with 50% identity 98% coverage
 
@@ -83,7 +99,37 @@ TrpF4
 purpeofuscus and S bikiniensis 
 2. Heatmap
 
-Additionally to the sequences selected by phylogeny, Jonesia denitrificans and Streptomyces sp Mg1 TrpF sequences were added as control .
+ \clearpage 
+## Structures
+```{r Enzymes_PDB_out, results = "asis"}
+table <- read.csv("chapter2/EstructurasPDB", row.names = 1,sep="\t")
+kable(table,  caption = "Enzyme PDB \\label{tab:Enzyme PDB}",caption.short = "Enzyme PDB ")
+```
+ 
+\clearpage 
+## Substrates  
+20 substrates were collected from literature and chemioinformatics predictions.   
+```{r Substrates_table_out, results = "asis"}
+table <- read.csv("chapter2/Substrate.data", row.names = 1,sep="\t")
+kable(table,  caption = "Substrates \\label{tab:substrates}",caption.short = "Substrates ")
+```
+
+ ```{r Eschema1, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter2/esquema_quimico-1-1.pdf", caption = "Substrates 1",label = "Substrates chemical 1", type = "figure")
+```
+ ```{r Eschema2, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter2/esquema_quimico-2-2.pdf", caption = "Substrates 2",label = "Substrates chemical 2", type = "figure")
+```
+ ```{r Eschema3, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter2/esquema_quimico-3-3.pdf", caption = "Substrates 3",label = "Substrates chemical 3", type = "figure")
+```
+ ```{r Eschema4, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter2/esquema_quimico-4-4.pdf", caption = "Substrates 4",label = "Substrates chemical 4", type = "figure")
+```
+## Docking  
+Docking simulation were calculated for PriA Streptomyces enzymes. TrpF enzymes from Strptomyces Mg1, Jonesia denitrificans, were added as controls
+
+Procedures can be found at [Docking Protocols](https://github.com/tripplab/Docking/wiki)  
 
 ```{r sessionInfo,echo=FALSE}
 
@@ -109,22 +155,19 @@ m <- as.matrix(tmp)
 ## create ExpressionSet object:
 eset <- new("ExpressionSet", exprs = m, phenoData = pdata, featureData = fdata)
 ```
-
-Substrate table  
-```{r Substrates_table_out, results = "asis"}
-table <- read.csv("chapter2/Substrate.data", row.names = 1,sep="\t")
-kable(table,  caption = "Substrates \\label{tab:substrates}",caption.short = "Substrates ")
-```
+<!-- to change R colors to my wn perl heatplot
+H
 mrBayes PriAjulian.nxs on mazorca goes to PriAjulian.con.tre
 PriAjulian.con.tre was open with figtree and saved as SVG
 To get coordinates: `coordtree.pl PriAjulian.SVG`  
 Heatplot color are from ggplot R
 mydata.xls lo guardoen mydata.cvs
 perl read_mydata.pl mydata.cvs >Heat.colors
-mnually edit Heat.colors by adding headers enzymas y substrates
+manually edit Heat.colors by adding headers enzymas y substrates
 perl heatFromRGB.pl HeatColor YPriAJulian
 Hice el heatplot en SVG con el script   
-
+-->
+<!--
 Observaciones Mauricio  
 - falta el pie de figura
 Substrate docking over enzymes from extended PriA families. Substrates 1-20  
@@ -147,9 +190,16 @@ Pendiende
 LISTO  
 
 - "Controles TrpF/subTrpF" (debe estar en inglés), puede ser confuso poner dos etiquetas para la misma función  
+-->
+\clearpage 
 
-```{r load_data_docking}
+```{r docking_table_out, results = "asis"}
 docking <- read.csv("chapter2/SmallHeat.data", header=TRUE, sep="\t")
+kable(docking,  caption = "Enzymes docking \\label{tab:docking}",caption.short = "Enzymes docking ")
+```
+\clearpage 
+
+```{r load_data_docking, echo=FALSE}
 EnzymeOrder=factor(docking$Enzima,levels=unique(docking$Enzima))
 docking.m <- melt(docking,id = "Enzima")
 docking.m <- ddply(docking.m, .(variable), transform,rescale = rescale(value))
@@ -165,8 +215,8 @@ blackHeatPlot<-ggplot(docking.m, aes(x=variable, y=Enzima)) + labs(x = "Substrat
 ggsave("chapter2/blackHeatPlot.pdf", plot = blackHeatPlot,height = 36, width = 24)
 
 g <- ggplot_build(blackHeatPlot)
-g$data[[1]]["fill"]
-g$data[[1]]
+#g$data[[1]]["fill"]
+#g$data[[1]]
 write.xlsx(g$data[[1]], "chapter2/mydatablack.xlsx")
 
 
@@ -176,8 +226,8 @@ colorHeatPlot<-ggplot(docking.m, aes(x=variable, y=Enzima)) + labs(x = "Substrat
 ggsave("chapter2/colorHeatPlot.pdf", plot = colorHeatPlot,height = 36, width = 24)
 
 gcolor <- ggplot_build(colorHeatPlot)
-gcolor$data[[1]]["fill"]
-gcolor$data[[1]]
+#gcolor$data[[1]]["fill"]
+#gcolor$data[[1]]
 write.xlsx(gcolor$data[[1]], "chapter2/mydataColor.xlsx")
 
 ggplot(docking.m, aes(x=variable, y=Enzima)) + labs(x = "Substrates", y = "Enzymes",text = element_text(size=12))+ geom_raster(aes(fill=value))+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6))+ scale_fill_gradientn(colours = hm.palette(100),na.value = "gray")
@@ -192,12 +242,8 @@ ggplot(docking.m, aes(x=variable, y=value)) + labs(x = "Metabolic Families", y =
 
 ```
 
-We next introduce a useful function in the `knitr` package for making nice tables in _R Markdown_ called `kable`.  It produces the \LaTeX\ code required to make the table and is much easier to use than manually entering values into a table by copying and pasting values into Excel or \LaTeX.  This again goes to show how nice reproducible documents can be!  There is no need to copy-and-paste values to create a table.  (Note the use of `results = "asis"` here which will produce the table instead of the code to create the table.  You'll learn more about the `\\label` later.)  The `caption.short` argument is used to include a shorter version of the title to appear in the List of Tables at the beginning of the document.
-
-```{r docking_table_out, results = "asis"}
-kable(docking,  caption = "Enzymes docking \\label{tab:docking}",caption.short = "Enzymes docking ")
-
-
+ ```{r Figure_Heatplot, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter2/Figura1_4.pdf", caption = "Heatplot docking PriA enzyme Family vs substrates",label = "Heatplod PriA docking", type = "figure")
 ```
 
 We can further look into the properties of the largest value here for American Airlines Inc.  To do so, we can isolate the row corresponding to the arrival delay of 1539 minutes for American in our original `flights` dataset.
