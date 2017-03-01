@@ -2,12 +2,9 @@
 header-includes:
 - \usepackage{amssymb,amsthm,amsmath}
 - \usepackage{chemarr}
+- \usepackage[caption=false]{subfig}
 output: pdf_document
 ---
-
-<!--
-You can delete the header-includes (lines 3-5 above) if you like and also the chunk below since it is loaded in the skeleton.Rmd file.  They are included so that chap2.Rmd will compile by itself when you hit Knit PDF.
--->
 
 ```{r include_reedtemplates_2, include = FALSE}
 # This chunk ensures that the reedtemplates package is installed and loaded
@@ -49,20 +46,44 @@ library(xlsx) # For save data on excel
 ```
 
 # PriA Family {#math-sci}
-PriA isomerase is a promiscuous enzyme involved in histidine and Triptophan pathways. This enzyme family catalize convertions HisA and TrpF converting ProFAR on  and PRA into products.
-PriA can be found at Actinobacteria phylum.
+Actinobacterial PriA is a promiscuous homologe of enterobacteria HisA family. PriA promiscuous enzyme family is involved in histidine and triptophan turning ProFAR into PRFAR while acting as a HisA and isomerizes PRA into CdRP acting as TrpF.  
 
-\clearpage  
+PriA shows a functional gradient on Actinobacteria that split this family into several enzymatic subfamilies. Among PriA subfamilies there is PriB on Streptomyces that shows little trpF activity and an out of context TrpF gene, there is subHisA on Corynebacteria and Actinomyces that has lost trpF activity, and finally there is subTrpF on Actinomyces that has lost HisA activity.   
 
-## Enzymes  
-39 Streptomyces PriA sequences has differences on PriA funcion. PriA 
-1.Phylogenetic Tree
-39 Streptomyces sequences, as outgroup E coli, Arthrobacter Aurescens, Salmonella enterica and Acidimicrobium ferrooxidans PriA’s were included.
+Some of this enzymes were selected on search of new promiscuous functions, candidate catalized reactions where investigating by exploring substrates chemically similar to native ones.   
 
-as an outgroup with HisA activity Enterobacterias _Salmonella enterica_ (PDB:5AHE), _Escherichia coli K12_
+EvoMining has detected one PriA paralogue on Actinobacteria and an expanssion conserved on a saxitoxin cluster on Cyanobacteria [@moustafa_origin_2009].  
+\clearpage   
+  
+## CORASON
+PriA
+All streptomyces have a partially conserved PriA cluster. CT34 has a secondary copy whose best hit on NCBI is Lentzea’s PriA with 50% identity 98% coverage
+
+TrpF1
+TrpF1 queries gave hits with TrpC enzyme present on every Streptomyces, additionally  S rimosus, S coelicolor, S venezuelae and S. NRRL S-1813 had an extra copy. S rimosus TrpC vicinity has PKS and siderophore genes.
+
+TrpF2
+Conserved cluster with NRPS sequences flanking TrpF2
+
+TrpF3
+Non conserved cluster
+
+TrpF4
+purpeofuscus and S bikiniensis 
+ \clearpage  
+ 
+## Selected enzymes to investigate affinity of substrates similar to PRA and PROFAR  
+Since on _Streptomyces_ has been found representatives from PriA and PriB families, 39 homologue sequences were selected to perform docking enzyme-substrate analysis. This PriA/Prib selected sequences belong to _Streptomyces_ evenly ditributed on an RpoB species tree wiht different conditions about TrpF presence/absence. Other chemically characterized PriA Actinobacterial homologues were included on this studio, and finally HisA from _Escherichia coli_, _Arthrobacter Aurescens_, _Salmonella enterica_ and _Acidimicrobium ferrooxidans_ and Actinobacterial TrpF were added as controls.  
+
+When exists cristal structures were used otherwise homologues structures were generated using as template the closest enzyme with cristal structure available.  
+
+Controls  
+HisA Enterobacteria enzymes from _Salmonella enterica_ (PDB:5AHE), _Escherichia coli K12_ 
 _Acidimicrobium ferrooxydans_ (PDB:4WD0)
-Additionally to the sequences selected by phylogeny, Jonesia denitrificans and Streptomyces sp Mg1 TrpF sequences were added as control .
 
+TrpF Actinobacteria Jonesia denitrificans and Streptomyces sp Mg1 sequences.
+
+Chemically characterized Actinobacterial enzymes  
 PriA  
 _Mycobacterium tuberculosis_ (Mtub PDB:2Y88,2Y89,2Y85,3ZS4)
 _Streptomyces coelicolor_ (Scoe PDB:2VEP,2X30,1VZW),_Streptomyces globisporus_,
@@ -76,47 +97,36 @@ _Actinomyces car_ (PDB:4X2R)
 subTrpF  
 _Arthrobacter aurescens_ (PDB:4WD0)
 
- 
 PriB  
 _Streptomyces ipomoeae_, _Streptomyces sviceus_ (PDB:4U28,4TX9)  
 TrpF controls _Jonesia denitrificans_ (PDB:4WUI) _Chlamidya thrachomatis_, _Streptomyces sp. Mg1_ TrpF and _Actinomyces odontolyticus_ were included  
 
-Streptomyces 34 paralogous
-
-## CORASON
-PriA
-All streptomyces have a partially conserved PriA cluster. CT34 has a secondary copy whose Best hit on NCBI is Lentzea’s PriA with 50% identity 98% coverage
-
-TrpF1
-TrpF1 queries gave hits with TrpC enzyme present on every Streptomyces, additionally  S rimosus, S coelicolor, S venezuelae and S. NRRL S-1813 had an extra copy. S rimosus TrpC vicinity has PKS and siderophore genes.
-
-TrpF2
-Conserved cluster with NRPS sequences flanking TrpF2
-
-TrpF3
-Non conserved cluster
-
-TrpF4
-purpeofuscus and S bikiniensis 
-2. Heatmap
-
- \clearpage  
+\clearpage  
+   
  
-## Structures
+## PriA cristal structures on PDB  
 ```{r Enzymes_PDB_out, results = "asis"}
 table <- read.csv("chapter2/EstructurasPDB", row.names = 1,sep="\t")
 kable(table,  caption = "Enzyme PDB \\label{tab:Enzyme PDB}",caption.short = "Enzyme PDB ")
 ```
- 
-\clearpage 
-## Substrates  
-20 substrates were collected from literature and chemioinformatics predictions.   
-S13,S14,!5,S16 light activated substrates, S3 PRA, S7 PROFAR, S6 GMP, S11 GTP, S17 PRAP, S18 Compound V, S17 PraP
+
+\clearpage  
+
+## Similar substrates to PRA and PROFAR suggested by Tanimoto distance or previously tested   
+S1,S2,...S20 substrates were collected from literature and chemioinformatics predictions. S3 PRA and S7 PROFAR are native substrates, S13-S16  are light activated substrates,  S17 PRAP, S18 Compound V, were found on literature, S6 GMP, S11 GTP and other were suggested by chemioinformatics.  
 ```{r Substrates_table_out, results = "asis"}
 table <- read.csv("chapter2/Substrate.data", row.names = 1,sep="\t")
 kable(table,  caption = "Substrates \\label{tab:substrates}",caption.short = "Substrates ")
 ```
 
+```{r Tanimoto, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter2/SubstratesClustering.png", caption = "Substrates clustering according to Tanimoto distance",scale=.6,label = "Substrates Tanimoto distance", type = "figure")
+```
+
+On next figure we can see their chemical structures.
+
+\clearpage   
+    
  ```{r Eschema1, results = "asis",message=FALSE,echo=FALSE}
 label(path = "chapter2/esquema_quimico-1-1.pdf", caption = "Substrates 1",label = "Substrates chemical 1", type = "figure")
 ```
@@ -129,8 +139,8 @@ label(path = "chapter2/esquema_quimico-3-3.pdf", caption = "Substrates 3",label 
  ```{r Eschema4, results = "asis",message=FALSE,echo=FALSE}
 label(path = "chapter2/esquema_quimico-4-4.pdf", caption = "Substrates 4",label = "Substrates chemical 4", type = "figure")
 ```
-## Docking  
-Docking simulation were calculated for PriA Streptomyces enzymes. TrpF enzymes from Strptomyces Mg1, Jonesia denitrificans, were added as controls
+## Docking between PriA enzymes and selected substrates     
+Docking simulation were calculated for PriA _Streptomyces_ enzymes. TrpF enzymes from _Streptomyces Mg1, Jonesia denitrificans, were added as controls_
 
 Procedures can be found at [Docking Protocols](https://github.com/tripplab/Docking/wiki)  
 
@@ -159,7 +169,6 @@ m <- as.matrix(tmp)
 eset <- new("ExpressionSet", exprs = m, phenoData = pdata, featureData = fdata)
 ```
 <!-- to change R colors to my wn perl heatplot
-H
 mrBayes PriAjulian.nxs on mazorca goes to PriAjulian.con.tre
 PriAjulian.con.tre was open with figtree and saved as SVG
 To get coordinates: `coordtree.pl PriAjulian.SVG`  
@@ -170,61 +179,37 @@ manually edit Heat.colors by adding headers enzymas y substrates
 perl heatFromRGB.pl HeatColor YPriAJulian
 Hice el heatplot en SVG con el script   
 -->
+
 <!--
 Observaciones Mauricio  
+ Figura/tabla de funcionalidad de familias  
+ Separar datos experimentales por funcion y poner  pie de tabla  
+ en la figura colorear por funcion, solo 3 grupos  
+
+Poner Figura suplementaria PRA PROFAR presencia ausencia trpF
+
+
 - falta el pie de figura
 Substrate docking over enzymes from extended PriA families. Substrates 1-20  
   
-- falta el dendograma arriba de los sustratos (indicar cuál es pra y cuál profar)   
-
-- falta la escala de colores (con valores y unidades). Cuando agregues el dendograma de los sutratos va a quedar un cuadrante vacío en la parte superior izquierda, en ese espacio pon la escala de forma horizontal  
-
+- poner unidades en la escala  
 
 - intenta aumentar el contraste de color entre el valor mínimo y máximo de la escala  
-Intente varias Figuras  
+invertir colores 
 
 - repite las etiquetas de los sutratos abajo del heatmap  
 Pendiende  
 
-- hay inconsistencias en los nombres de la enzimas (eg, Ssvi y Svi, SMgl y Smgl, etc)  
-Árbol nuevo sin datos faltantes  
-
-- para el caso de las enzimas sin datos, usa negro en lugar de amarillo  
-LISTO  
-
-- "Controles TrpF/subTrpF" (debe estar en inglés), puede ser confuso poner dos etiquetas para la misma función  
 -->
-\clearpage 
-
-```{r docking_table_out, results = "asis"}
-docking <- read.csv("chapter2/SmallHeat.data", header=TRUE, sep="\t")
-kable(docking,  caption = "Enzymes docking \\label{tab:docking}",caption.short = "Enzymes docking ")
-```
-\clearpage 
-
+  
 ```{r load_data_docking, echo=FALSE}
+docking <- read.csv("chapter2/SmallHeat.data", header=TRUE, sep="\t")
 EnzymeOrder=factor(docking$Enzima,levels=unique(docking$Enzima))
 docking.m <- melt(docking,id = "Enzima")
 docking.m <- ddply(docking.m, .(variable), transform,rescale = rescale(value))
 docking.m$Enzima <- factor(docking.m$Enzima, levels = rev(docking.m$Enzima[order(EnzymeOrder)]))
 
-################# on white and blue
-blueHeatPlot<-ggplot(docking.m, aes(x=variable, y=Enzima)) + labs(x = "Substrates", y = "Enzymes",text = element_text(size=12))+ geom_raster(aes(fill=value))+scale_fill_gradient(low = "white", high = "steelblue",na.value = "black")+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6))
-ggsave("chapter2/blueHeatPlot.pdf", plot = blueHeatPlot,height = 36, width = 24)
-
-
- ## black and white
-blackHeatPlot<-ggplot(docking.m, aes(x=variable, y=Enzima)) + labs(x = "Substrates", y = "Enzymes",text = element_text(size=12))+ geom_raster(aes(fill=value))+scale_fill_gradient(low = "white", high = "black",na.value = "black")+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6))
-ggsave("chapter2/blackHeatPlot.pdf", plot = blackHeatPlot,height = 36, width = 24)
-
-g <- ggplot_build(blackHeatPlot)
-#g$data[[1]]["fill"]
-#g$data[[1]]
-write.xlsx(g$data[[1]], "chapter2/mydatablack.xlsx")
-
-
 ##on colors
-
 colorHeatPlot<-ggplot(docking.m, aes(x=variable, y=Enzima)) + labs(x = "Substrates", y = "Enzymes",text = element_text(size=12))+ geom_raster(aes(fill=value))+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6))+ scale_fill_gradientn(colours = hm.palette(100),na.value = "gray")
 ggsave("chapter2/colorHeatPlot.pdf", plot = colorHeatPlot,height = 36, width = 24)
 
@@ -233,176 +218,155 @@ gcolor <- ggplot_build(colorHeatPlot)
 #gcolor$data[[1]]
 write.xlsx(gcolor$data[[1]], "chapter2/mydataColor.xlsx")
 
-ggplot(docking.m, aes(x=variable, y=Enzima)) + labs(x = "Substrates", y = "Enzymes",text = element_text(size=12))+ geom_raster(aes(fill=value))+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6))+ scale_fill_gradientn(colours = hm.palette(100),na.value = "gray")
-
-
-## boxplot de los sustratos
 ggplot(docking.m, aes(x=variable, y=Enzima)) + labs(x = "Substrates", y = "Enzymes",text = element_text(size=12))+ geom_raster(aes(fill=value))+ scale_fill_gradientn(colours = hm.palette(100),na.value = "gray")+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6))
 
 
-
-ggplot(docking.m, aes(x=variable, y=value)) + labs(x = "Metabolic Families", y = "Copies on Actinobacteria Genomes",text = element_text(size=12)) + geom_boxplot()+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6), legend.position = "bottom")
-
 ```
 
- ```{r Figure_Heatplot, results = "asis",message=FALSE,echo=FALSE}
+```{r Figure_Heatplot, results = "asis",message=FALSE,echo=FALSE}
 label(path = "chapter2/Figura1_4.pdf", caption = "Heatplot docking PriA enzyme Family vs substrates",label = "Heatplod PriA docking", type = "figure")
 ```
-
-```{r Chemical_table_out, results = "asis"}
-chemical <- read.csv("chapter2/chemical.data.csv", row.names = 1,sep="\t")
-kable(chemical,  caption = "PriA enzymatic kinetics \\label{tab:chemical}",caption.short = "PriA Kinetics ")
-```
-  
-Con actividad de FolE i.e activa para el compuesto V										Adams et al (2014)
-
-
-We can further look into the properties of the largest value here for American Airlines Inc.  To do so, we can isolate the row corresponding to the arrival delay of 1539 minutes for American in our original `flights` dataset.
-
-```{r max_props2}
-#flights %>% dplyr::filter(arr_delay == 1539, carrier_name == "American Airlines Inc.") %>%
-  #dplyr::select(-c(month, day, carrier, dest_name, hour, minute, carrier_name, arr_delay))
-```
-
-We see that the flight occurred on March 3rd and departed a little after 2 PM on its way to Dallas/Fort Worth.  Lastly, we show how we can visualize the arrival delay of all departing flights from Portland on March 3rd against time of departure.
-
-
-```{r march3plot_2, fig.height = 3, fig.width = 6}
-#flights %>% dplyr::filter(month == 3, day == 3) %>%
-#  ggplot(aes(x = dep_time, y = arr_delay)) +geom_point()
-```
-
-<!--
---------------------------------------------------------------------------->
-
-Genome size vs Total antismash cluster coloured by order  
+ 
 ```{r PriADocking, results = "asis",message=FALSE,echo=FALSE}
 label(path = "chapter2/PriAHeatPot.png", caption = "Heat Plot PriA Streptomyces vs other subtrates",scale=.6,label = "PriADocking", type = "figure")
 ```
 
-Docker simulation were calculated for Streptomyces enzymes  
+```{r substrateBox}
+## boxplot de los sustratos
+ggplot(docking.m, aes(x=variable, y=value)) + labs(x = "Substrates", y = "Affinity",text = element_text(size=12)) + geom_boxplot()+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6), legend.position = "bottom")
+
+```
+
+\clearpage  
+
+## Activity 
+Activity essays were performed with active PriA from _Streptomyces coelicolor_ and the inactive mutant D11A.  
+  
+Enzymes were cloned on coli V68 strains, overexpression were induced and protein were purified.  
+
+```{r mutControl, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter2/MutantControl.png", caption = "Scoe and non functional Scoe PriA acting on dGTP",scale=.6,label = "PriARutas", type = "figure")
+```
+  
+\clearpage  
+  
+```{r activity}
+
+GTP <- read.table("chapter2/GTP.activity", header=TRUE, sep="\t")
+dGTP <- read.table("chapter2/dGTP.activity", header=TRUE, sep="\t")
+GTP.m <- melt(GTP,id="Time")
+
+plot(GTP.m$Time, GTP.m$value, col=GTP.m$variable, pch=19)
+
+plot.new()
+legend("center", legend = unique(GTP.m$variable), col = unique(GTP.m$variable), pch=19)
+
+ggplot(GTP.m, aes(x=Time, y=value,color=variable)) + geom_point()+ facet_wrap(~ variable)+theme_bw()+theme(plot.title = element_text(size = 8, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.y=element_text(angle = 30,size = 1), legend.position = "bottom")+ scale_size_area()
+
+```
+
+```{r docking_table_out, results = "asis"}
+docking <- read.csv("chapter2/SmallHeat.data", header=TRUE, sep="\t")
+kable(docking,  caption = "Enzymes docking \\label{tab:docking}",caption.short = "Enzymes docking ")
+```
+\clearpage 
+
+
+ 
+   
+
+## Molecular dynamics vs experimental data  
+
+PriA activity on S3  (PRA)
+   
+$$ 
+\begin{tabular}{ l c r l l l l l}
+\hline \\ [-1.5ex]
+organism  &Family & $K_M    $     & $k_{cat}$        & $\frac{k_{cat}}{K_M}$ &Pre MD & Pos MD & Reference  \\ [1ex]
+\hline \\ [-1.5ex]
+Afer	    &HisA   & $1.1\pm0.2$   &$	0.05\pm0.001	$& 0.045	              &-10.1	&-12.3   	 &Noda-García L et al 2015\\ [1ex]
+Ecoli	    &HisA   &$	1.6	        $&$ 	  	4.9       $&3.1                   &-9.9   &-16	     &Henn-Sax et al. (2002)\\ [1ex]
+Sent	    &HisA   &$	17.0 \pm0.1 $&$	7.8 \pm 2.4	  $&$4.5 × 10^5          $&-10.3  &-20.1     &Söderholm A et al (2015)\\ [1ex]
+Aaur	    &PriB   &$	2.1 \pm 0.5 $& $	1.8 \pm 0.2 	$&0.9                   &-7.4   &   		   &verduzco-castro 2016\\ [1ex]
+Sipo	    &PriB   &$	3.8\pm0.2	  $&$0.82\pm0.02	    $&0.21	                &-8.2	  &-14.7	   &verduzco-castro 2016\\ [1ex]
+SspC	    &PriB   &$	11.4\pm3.4	$&$2.53\pm0.74	    $&0.22                  &	-8.5	&-12.7	   &verduzco-castro 2016\\ [1ex]
+SMg1	    &PriB   &$	13.2\pm3.4	$&$0.92\pm0.19	    $&0.069	                &-8	    &-15.2     &verduzco-castro 2016\\ [1ex]
+Ssvi	    &PriB   &$	3.9\pm0.89	$&$0.69\pm0.04	    $&0.18	                &-8.2	  &-16.7     &verduzco-castro 2016\\ [1ex]
+Scoe	    &PriA   &$	3.6\pm0.7	  $&$ 1.3\pm0.2	    $  &0.4	                  &-8.4	  &-15	     &Noda-García et al (2010)\\ [1ex]
+Sglob	    &PriA   & $4.2\pm0.8	 $ & $0.74\pm0.03	 $   &0.18	                &-9.2	  &-16.7	   &verduzco-castro\\ [1ex]
+Mtub 2Y85	&priA   &$	19	0.23	  $&$0.012	-9.7		  $&                      &       &          &Due et al 2011\\ [1ex]
+Mtub 3ZS4	&priA   &$	?			      $&$-9.9		        $&                      &       &          &Due et al 2011 (To be published)\\ [1ex]
+Auro	    &priA   &$	4.0 \pm 0.9	$&$0.2 \pm 0.03	  $&0.04	                &-9.2		&          &Vazquez-Juarez (2016)\\ [1ex]
+Cjei	    &PriA   &$	2.3 \pm 0.2	$&$0.9 \pm 0.08	  $&0.39	                &-8.5		&          &Noda-García et al (2013)\\ [1ex]
+Cdip	    &subHisA&$	4.4 \pm 0.5	$&$2.6 \pm 0.3	    $&0.59	                &-9.2		&          &Noda-García et al (2013)\\ [1ex]
+SMg1 TrpF	&TrpF3  &	-	             &-	               &-	                    &-6.9	  &-9.6	     &verduzco-castro 2016\\ [1ex]
+Jden	    &TrpF3  &	-	             &-	               &-	       -7.2	        &-9.4	  &$16.8\pm3.3$&	Verduzco-Castro E et al  2016\\ [1ex]
+Acar      &SubHisA&	0.02					 &                 &	                    &       &          &			\\ [1ex]
+Aodo	    &SubTrpF&		-	           &-	               &-                     &       &          &\\ [1ex]
+\hline
+\end{tabular}
+\label{table:name}
+$$ 
+    
+PriA activity on S7  (PROFAR)
+$$ \centering 
+\begin{tabular}{ l c r l l l l l}
+\hline \\ [-1.5ex]
+organism  &Family  &  $K_M$ & $k_{cat}$& $\frac{k{cat}}{K_M}$ &Pre MD &Pos MD &Reference  \\ [1ex]
+\hline \\ [-1.5ex]
+Afer      &HisA    &-            &-                &-          &-9.2    &-9        &Noda-García L et al. (2015)   \\ [1ex]
+Ecoli     &HisA    &-            &-                &-          &-9      &-11.1     &Henn-Sax et al. (2002)\\ [1ex]
+Sent      &HisA    &-            & -               &-          &-9.6    &-10.2     &Söderholm A et al (2015)\\ [1ex]
+Aaur      &PriB    &$26.3\pm6.3$ & $0.37\pm 0.09$  & 0.014     &-7.1    &-         &verduzco-castro 2016\\ [1ex]
+Sipo      &PriB    &$60.8\pm1.1$ &$8.25\pm0.4 $    &0.14       &-8      &-8.5      &verduzco-castro 2016 \\ [1ex]
+SspC      &PriB    &$149.9\pm29$ &$1.4\pm0.12 $    &0.009      &-8.5    &-10.8     &verduzco-castro 2016\\ [1ex]
+SMg1      &PriB    &$129.6\pm34$ &$0.29\pm0.04$    &0.0022     &-7.5    &-11       &verduzco-castro 2016\\ [1ex]
+Ssvi      &PriB    &$24.5\pm4.0$ &$1.6\pm0.29 $    &0.067      &-8      &-9.7      &verduzco-castro 2016 \\ [1ex]
+Scoe      &PriA    &$5.0\pm0.08$ &$3.4\pm0.09  $   &0.7        &-8      &-9.4      &Noda-García et al (2010)   \\ [1ex]
+Sglob     &PriA    &$11\pm1.0$  &$3.8\pm0.2  $     &0.34       &-8.7    &-9.4      &verduzco-castro 2016  \\ [1ex]
+Mtub2Y85  &priA    &21         &3.6         &0.17       &-8.6    &          &Due et al 2011                        \\ [1ex] 
+Mtub3ZS4  &priA    &           &            &           &-9.3    &          &Due et al 2011 (To be published)      \\ [1ex] 
+Auro      &priA    &$23 \pm 6.5 $  &$0.5\pm0.05 $&0.02       &-9.3    &          &Vazquez-Juarez (2016)                 \\ [1ex] 
+Cjei      &PriA    &$5.1 \pm1.0$  &$1.6 \pm 0.16 $&0.31       &-9      &          &Noda-García et al (2013)              \\ [1ex]
+Cdip      &subHisA &-          &-           &-          &-8.8    &          &Noda-García et al (2013)              \\ [1ex]
+SMg1 TrpF &TrpF3   &$8.4\pm1.7$    &$10.5\pm2.4$    &1.25       &-7.6    &-9        &verduzco-castro     \\ [1ex] 
+Jden      &TrpF3   &$16.8\pm3.3$   &$27\pm1.6$      &1.6        &-7.6    &-7.7      &verduzco-castro     \\ [1ex] 
+Acar      &SubHisA &Na         &Na          &0.02       &Na      &Na        &Na                                    \\ [1ex] 
+Aodo      &SubTrpF &-          &-           &-          &-       &Na        &Na                                    \\ [1ex]
+
+\hline
+\end{tabular}
+\label{table:mi table}$$
+<!--
+\caption[Table caption text]{Table taken from \cite[p.10]{verduzco-castro_co-occurrence_2016} }
+
+\label{table:name}
+
+-->
+  
+Con actividad de FolE i.e activa para el compuesto V										Adams et al (2014)
 Genome size vs Total antismash cluster coloured by order  
-```{r TrpFDocking, results = "asis",message=FALSE,echo=FALSE}
-label(path = "chapter2/TrpFHeatPlot.png", caption = "Heat Plot TrpF Streptomyces vs other subtrates",scale=.6,label = "TrpFDocking", type = "figure")
+  
+\clearpage  
+  
+## Non darwinian trayectories  
+
+
+
+```{r PriARutas, results = "asis",message=FALSE,echo=FALSE}
+label(path = "conclusion/Solocirculos.png", caption = "Non darwinian trayectories",scale=.6,label = "PriARutas", type = "figure")
 ```
 
-\TeX\ is the best way to typeset mathematics. Donald Knuth designed \TeX\ when he got frustrated at how long it was taking the typesetters to finish his book, which contained a lot of mathematics.  One nice feature of _R Markdown_ is its ability to read \LaTeX\ code directly.
-
-If you are doing a thesis that will involve lots of math, you will want to read the following section which has been commented out. If you're not going to use math, skip over or delete this next commented section.
-
-
-<!-- MATH and PHYSICS majors: Uncomment the following section -->
-<!--
-$$\sum_{j=1}^n (\delta\theta_j)^2 \leq {{\beta_i^2}\over{\delta_i^2 + \rho_i^2}}
-\left[ 2\rho_i^2 + {\delta_i^2\beta_i^2\over{\delta_i^2 + \rho_i^2}} \right] \equiv \omega_i^2
-$$
-
-From Informational Dynamics, we have the following (Dave Braden):
-
-After _n_ such encounters the posterior density for $\theta$ is
-
-$$
-\pi(\theta|X_1< y_1,\dots,X_n<y_n) \varpropto \pi(\theta) \prod_{i=1}^n\int_{-\infty}^{y_i}
-   \exp\left(-{(x-\theta)^2\over{2\sigma^2}}\right)\ dx
-$$
-
-Another equation:
-
-$$\det\left|\,\begin{matrix}%
-c_0&c_1\hfill&c_2\hfill&\ldots&c_n\hfill\cr
-c_1&c_2\hfill&c_3\hfill&\ldots&c_{n+1}\hfill\cr
-c_2&c_3\hfill&c_4\hfill&\ldots&c_{n+2}\hfill\cr
-\,\vdots\hfill&\,\vdots\hfill&
-  \,\vdots\hfill&&\,\vdots\hfill\cr
-c_n&c_{n+1}\hfill&c_{n+2}\hfill&\ldots&c_{2n}\hfill\cr
-\end{matrix}\right|>0$$
-
-
-Lapidus and Pindar, Numerical Solution of Partial Differential Equations in Science and
-Engineering.  Page 54
-
-$$
-\int_t\left\{\sum_{j=1}^3 T_j \left({d\phi_j\over dt}+k\phi_j\right)-kT_e\right\}w_i(t)\ dt=0,
-   \qquad\quad i=1,2,3.
-$$
-
-L\&P  Galerkin method weighting functions.  Page 55
-
-$$
-\sum_{j=1}^3 T_j\int_0^1\left\{{d\phi_j\over dt} + k\phi_j\right\} \phi_i\ dt
-   = \int_{0}^1k\,T_e\phi_idt, \qquad i=1,2,3 $$
-
-Another L\&P (p145)
-
-$$
-\int_{-1}^1\!\int_{-1}^1\!\int_{-1}^1 f\big(\xi,\eta,\zeta\big)
-   = \sum_{k=1}^n\sum_{j=1}^n\sum_{i=1}^n w_i w_j w_k f\big( \xi,\eta,\zeta\big).
-$$
-
-Another L\&P (p126)
-
-$$
-\int_{A_e} (\,\cdot\,) dx dy = \int_{-1}^1\!\int_{-1}^1 (\,\cdot\,) \det[J] d\xi d\eta.
-$$
--->
-
-## Chemistry 101: Symbols
-
-Chemical formulas will look best if they are not italicized. Get around math mode's automatic italicizing in \LaTeX\ by using the argument `$\mathrm{formula here}$`, with your formula inside the curly brackets.  (Notice the use of the backticks here which enclose text that acts as code.)
-
-So, $\mathrm{Fe_2^{2+}Cr_2O_4}$ is written `$\mathrm{Fe_2^{2+}Cr_2O_4}$`.
-
-<!--
-The \noindent command below does what you'd expect:  it forces the current line/paragraph to not indent. This was done here to match the format of the LaTeX thesis PDF.
--->
-
-\noindent Exponent or Superscript: $\mathrm{O^-}$
-
-\noindent Subscript: $\mathrm{CH_4}$
-
-To stack numbers or letters as in $\mathrm{Fe_2^{2+}}$, the subscript is defined first, and then the superscript is defined.
-
-\noindent Angstrom: ${\AA}$
-
-\noindent Bullet: CuCl $\bullet$ $\mathrm{7H_{2}O}$
-
-\noindent Double Dagger: $\ddag$
-
-\noindent Delta: $\Delta$
-
-\noindent Reaction Arrows: $\longrightarrow$ or  $\xrightarrow{solution}$
-
-\noindent Resonance Arrows: $\leftrightarrow$
-
-\noindent Reversible Reaction Arrows: $\rightleftharpoons$ or $\xrightleftharpoons[ ]{solution}$ (the latter requires the `chemarr` \LaTeX\ package which is automatically loaded in this template)
-
-### Typesetting reactions
-
-You may wish to put your reaction in a figure environment, which means that \LaTeX\ will place the reaction where it fits and you can have a figure caption.  You'll see further description of this **R** `label` function in [](#ref_labels). (Note the use of the double backslash here as well as the `echo = FALSE` which hides the code from the output.)
-
-```{r chem_reac_figure, results = "asis", echo = FALSE}
-label(path = "$\\mathrm{C_6H_{12}O_6  + 6O_2} \\longrightarrow \\mathrm{6CO_2 + 6H_2O}$", 
-      caption = "Combustion of glucose", 
-      label = "comb-gluc", 
-      type = "chem.reac")
+```{r PriARutasPRA, results = "asis",message=FALSE,echo=FALSE}
+label(path = "conclusion/SolocirculosPRA.png", caption = "Positive increments on PRA",scale=.6,label = "PRARutas", type = "figure")
 ```
 
-### Other examples of reactions
-
-$\mathrm{NH_4Cl_{(s)}}$ $\rightleftharpoons$ $\mathrm{NH_{3(g)}+HCl_{(g)}}$
-
-\noindent $\mathrm{MeCH_2Br + Mg}$ $\xrightarrow[below]{above}$ $\mathrm{MeCH_2\bullet Mg \bullet Br}$
-
-## Physics
-
-Many of the symbols you will need can be found on the math page <http://web.reed.edu/cis/help/latex/math.html> and the Comprehensive \LaTeX\ Symbol Guide (<http://mirror.utexas.edu/ctan/info/symbols/comprehensive/symbols-letter.pdf>).
-
-## Biology
-
-You will probably find the resources at <http://www.lecb.ncifcrf.gov/~toms/latex.html> helpful, particularly the links to bsts for various journals. You may also be interested in TeXShade for nucleotide typesetting (<http://homepages.uni-tuebingen.de/beitz/txe.html>).  Be sure to read the proceeding chapter on graphics and tables.
+```{r PriARutasPRO, results = "asis",message=FALSE,echo=FALSE}
+label(path = "conclusion/SolocirculosPRO.png", caption = "Positive increments on ProFAR",scale=.6,label = "ProFARRutas", type = "figure")
+```
 
 
 ```{r endsession}
-sessionInfo()
+#sessionInfo()
 
 ```

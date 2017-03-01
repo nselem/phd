@@ -78,6 +78,11 @@ Tables
 Table: Families on Archaeabacteria \label{tab:inher}
 
 \clearpage
+
+```{r ArchealResults, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter3/PosterArcheas.pdf", caption = "EvoMining Archaeas",scale=.9,label = "EvoMining Archaeas", type = "figure")
+```
+
 <!--  EvoMining Expansions
 -->
 
