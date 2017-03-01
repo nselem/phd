@@ -71,7 +71,7 @@
 \title{Enzymatic Promiscuity}
 \author{Nelly Selem}
 % The month and year that you submit your FINAL draft TO THE LIBRARY (May or December)
-\date{May 2016}
+\date{Nov 2016}
 \division{Mathematics and Natural Sciences}
 \advisor{Francisco Barona Gomez}
 %If you have two advisors for some reason, you can use the following
@@ -945,7 +945,7 @@ starts here.
   Streptomyces con genoma disponible. Esta seleccion incluye los seis
   Streptomyces de los que se cuenta con cinetica enzimatica de PriA, tres
   de ellos con estructura cristalografica.\\
-  \#\#\#\#Medir cineticas enzimaticas, contexto genomico, vecindad
+  \#\#\#\# Medir cineticas enzimaticas, contexto genomico, vecindad
   genomica, flexibilidad y numero de conformeros.\\
   Determinar la pertenencia a uno de cuatro posibles contextos genomicos
   respecto al gen trpF. Estudiar la existencia de distintas vecindades
@@ -2026,223 +2026,74 @@ starts here.
   finally sorting variations according to their evolutionary history
   helping to prioritize clusters that may be involved on chemical novelty.
   
-  You can also embed plots. For example, here is a way to use the base
-  \textbf{R} graphics package to produce a plot using the built-in
-  \texttt{pressure} dataset:
-  
-  \begin{center}\includegraphics{tesis_files/figure-latex/pressure-1} \end{center}
-  
-  Note that the \texttt{echo\ =\ FALSE} parameter was added to the code
-  chunk to prevent printing of the \textbf{R} code that generated the
-  plot. There are plenty of other ways to add chunk options. More
-  information is available at \url{http://yihui.name/knitr/options/}.
-  
-  Another useful chunk option is the setting of \texttt{cache\ =\ TRUE} as
-  you see here. If document rendering becomes time consuming due to long
-  computations or plots that are expensive to generate you can use knitr
-  caching to improve performance. Later in this file, you'll see a way to
-  reference plots created in \textbf{R} or external figures.
-  
-  \section{Loading and exploring data}\label{loading-and-exploring-data}
-  
-  Included in this template is a file called \texttt{flights.csv}. This
-  file includes a subset of the larger dataset of information about all
-  flights that departed from Seattle and Portland in 2014. More
-  information about this dataset and its \textbf{R} package is available
-  at \url{http://github.com/ismayc/pnwflights14}. This subset includes
-  only Portland flights and only rows that were complete with no missing
-  values. Merges were also done with the \texttt{airports} and
-  \texttt{airlines} data sets in the \texttt{pnwflights14} package to get
-  more descriptive airport and airline names.
-  
-  We can load in this data set using the following command:
-  
-  \begin{Shaded}
-  \begin{Highlighting}[]
-  \NormalTok{flights <-}\StringTok{ }\KeywordTok{read.csv}\NormalTok{(}\StringTok{"data/flights.csv"}\NormalTok{)}
-  \end{Highlighting}
-  \end{Shaded}
-  
-  The data is now stored in the data frame called \texttt{flights} in
-  \textbf{R}. To get a better feel for the variables included in this
-  dataset we can use a variety of functions. Here we can see the
-  dimensions (rows by columns) and also the names of the columns.
-  
-  \begin{Shaded}
-  \begin{Highlighting}[]
-  \KeywordTok{dim}\NormalTok{(flights)}
-  \end{Highlighting}
-  \end{Shaded}
-  
-  \begin{verbatim}
-  [1] 52808    16
-  \end{verbatim}
-  
-  \begin{Shaded}
-  \begin{Highlighting}[]
-  \KeywordTok{names}\NormalTok{(flights)}
-  \end{Highlighting}
-  \end{Shaded}
-  
-  \begin{verbatim}
-   [1] "month"        "day"          "dep_time"     "dep_delay"   
-   [5] "arr_time"     "arr_delay"    "carrier"      "tailnum"     
-   [9] "flight"       "dest"         "air_time"     "distance"    
-  [13] "hour"         "minute"       "carrier_name" "dest_name"   
-  \end{verbatim}
-  
-  Another good idea is to take a look at the dataset in table form. With
-  this dataset having more than 50,000 rows, we won't explicitly show the
-  results of the command here. I recommend you enter the command into the
-  Console \textbf{\emph{after}} you have run the \textbf{R} chunks above
-  to load the data into \textbf{R}.
-  
-  \begin{Shaded}
-  \begin{Highlighting}[]
-  \KeywordTok{View}\NormalTok{(flights)}
-  \end{Highlighting}
-  \end{Shaded}
-  
-  While not required, it is highly recommended you use the \texttt{dplyr}
-  package to manipulate and summarize your data set as needed. It uses a
-  syntax that is easy to understand using chaining operations. Below I've
-  created a few examples of using \texttt{dplyr} to get information about
-  the Portland flights in 2014. You will also see the use of the
-  \texttt{ggplot2} package, which produces beautiful, high-quality
-  academic visuals.
-  
-  We begin by checking to ensure that needed packages are installed and
-  then we load them into our current working environment:
-  
-  The example we show here does the following:
-  
-  \begin{itemize}
-  \item
-    Selects only the \texttt{carrier\_name} and \texttt{arr\_delay} from
-    the \texttt{flights} dataset and then assigns this subset to a new
-    variable called \texttt{flights2}.
-  \item
-    Using \texttt{flights2}, we determine the largest arrival delay for
-    each of the carriers.
-  \end{itemize}
-  
-  \begin{Shaded}
-  \begin{Highlighting}[]
-  \NormalTok{flights2 <-}\StringTok{ }\NormalTok{flights %>%}\StringTok{ }\NormalTok{dplyr::}\KeywordTok{select}\NormalTok{(carrier_name, arr_delay)}
-  \NormalTok{max_delays <-}\StringTok{ }\NormalTok{flights2 %>%}\StringTok{ }\KeywordTok{group_by}\NormalTok{(carrier_name) %>%}
-  \StringTok{  }\KeywordTok{summarize}\NormalTok{(}\DataTypeTok{max_arr_delay =} \KeywordTok{max}\NormalTok{(arr_delay, }\DataTypeTok{na.rm =} \OtherTok{TRUE}\NormalTok{))}
-  \end{Highlighting}
-  \end{Shaded}
-  
-  We next introduce a useful function in the \texttt{knitr} package for
-  making nice tables in \emph{R Markdown} called \texttt{kable}. It
-  produces the \LaTeX~code required to make the table and is much easier
-  to use than manually entering values into a table by copying and pasting
-  values into Excel or \LaTeX. This again goes to show how nice
-  reproducible documents can be! There is no need to copy-and-paste values
-  to create a table. (Note the use of \texttt{results\ =\ "asis"} here
-  which will produce the table instead of the code to create the table.
-  You'll learn more about the
-  \texttt{\textbackslash{}\textbackslash{}label} later.) The
-  \texttt{caption.short} argument is used to include a shorter version of
-  the title to appear in the List of Tables at the beginning of the
-  document.
-  
-  \begin{Shaded}
-  \begin{Highlighting}[]
-  \KeywordTok{kable}\NormalTok{(max_delays, }\DataTypeTok{col.names =} \KeywordTok{c}\NormalTok{(}\StringTok{"Airline"}\NormalTok{, }\StringTok{"Max Arrival Delay"}\NormalTok{),}
-        \DataTypeTok{caption =} \StringTok{"Maximum Delays by Airline }\CharTok{\textbackslash{}\textbackslash{}}\StringTok{label\{tab:max_delay\}"}\NormalTok{,}
-        \DataTypeTok{caption.short =} \StringTok{"Max Delays by Airline"}\NormalTok{)}
-  \end{Highlighting}
-  \end{Shaded}
-  
-  \begin{longtable}[c]{@{}lr@{}}
-  \caption{Maximum Delays by Airline \label{tab:max_delay}}\tabularnewline
-  \toprule
-  Airline & Max Arrival Delay\tabularnewline
-  \midrule
-  \endfirsthead
-  \toprule
-  Airline & Max Arrival Delay\tabularnewline
-  \midrule
-  \endhead
-  Alaska Airlines Inc. & 338\tabularnewline
-  American Airlines Inc. & 1539\tabularnewline
-  Delta Air Lines Inc. & 651\tabularnewline
-  Frontier Airlines Inc. & 575\tabularnewline
-  Hawaiian Airlines Inc. & 407\tabularnewline
-  JetBlue Airways & 273\tabularnewline
-  SkyWest Airlines Inc. & 421\tabularnewline
-  Southwest Airlines Co. & 694\tabularnewline
-  United Air Lines Inc. & 472\tabularnewline
-  US Airways Inc. & 347\tabularnewline
-  Virgin America & 366\tabularnewline
-  \bottomrule
-  \end{longtable}
-  
-  We can further look into the properties of the largest value here for
-  American Airlines Inc. To do so, we can isolate the row corresponding to
-  the arrival delay of 1539 minutes for American in our original
-  \texttt{flights} dataset.
-  
-  \begin{Shaded}
-  \begin{Highlighting}[]
-  \NormalTok{flights %>%}\StringTok{ }\NormalTok{dplyr::}\KeywordTok{filter}\NormalTok{(arr_delay ==}\StringTok{ }\DecValTok{1539}\NormalTok{, }
-                     \NormalTok{carrier_name ==}\StringTok{ "American Airlines Inc."}\NormalTok{) %>%}
-  \StringTok{  }\NormalTok{dplyr::}\KeywordTok{select}\NormalTok{(-}\KeywordTok{c}\NormalTok{(month, day, carrier, dest_name, hour, }
-              \NormalTok{minute, carrier_name, arr_delay))}
-  \end{Highlighting}
-  \end{Shaded}
-  
-  \begin{verbatim}
-    dep_time dep_delay arr_time tailnum flight dest air_time distance
-  1     1403      1553     1934  N595AA   1568  DFW      182     1616
-  \end{verbatim}
-  
-  We see that the flight occurred on March 3rd and departed a little after
-  2 PM on its way to Dallas/Fort Worth. Lastly, we show how we can
-  visualize the arrival delay of all departing flights from Portland on
-  March 3rd against time of departure.
-  
-  \begin{Shaded}
-  \begin{Highlighting}[]
-  \NormalTok{flights %>%}\StringTok{ }\NormalTok{dplyr::}\KeywordTok{filter}\NormalTok{(month ==}\StringTok{ }\DecValTok{3}\NormalTok{, day ==}\StringTok{ }\DecValTok{3}\NormalTok{) %>%}
-  \StringTok{  }\KeywordTok{ggplot}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =} \NormalTok{dep_time, }\DataTypeTok{y =} \NormalTok{arr_delay)) +}
-  \StringTok{  }\KeywordTok{geom_point}\NormalTok{()}
-  \end{Highlighting}
-  \end{Shaded}
-  
-  \begin{center}\includegraphics{tesis_files/figure-latex/march3plot-1} \end{center}
-  
   \chapter{PriA Family}\label{math-sci}
   
-  PriA is an homologous of HisA,\\
-  on Actinobacteria phylum, TrpF is gene lost.
+  Actinobacterial PriA is a promiscuous homologe of enterobacteria HisA
+  family. PriA promiscuous enzyme family is involved in histidine and
+  triptophan turning ProFAR into PRFAR while acting as a HisA and
+  isomerizes PRA into CdRP acting as TrpF.
   
-  PriA is a promiscuous enzyme family involved in histidine and triptophan
-  pathways performing HisA and TrpF functions respectibly. This enzyme
-  family catalizes convertions converting ProFAR into PRFAR acting as a
-  HisA and isomerizes PRA into CdRP acting as TrpF.
+  PriA shows a functional gradient on Actinobacteria that split this
+  family into several enzymatic subfamilies. Among PriA subfamilies there
+  is PriB on Streptomyces that shows little trpF activity and an out of
+  context TrpF gene, there is subHisA on Corynebacteria and Actinomyces
+  that has lost trpF activity, and finally there is subTrpF on Actinomyces
+  that has lost HisA activity.
   
-  PriA shows a functional gradient on Actinobacteria that dicide this
-  family into enzymatic subfamilies. Between PriA subfamilies there is
-  PriB family on Streptomyces with little trpF activity, subHisA on
-  Corynebacteria and Actinomyces, subTrpF on Actinomyces,
+  Some of this enzymes were selected on search of new promiscuous
+  functions, candidate catalized reactions where investigating by
+  exploring substrates chemically similar to native ones.
   
-  \clearpage  
+  EvoMining has detected one PriA paralogue on Actinobacteria and an
+  expanssion conserved on a saxitoxin cluster on Cyanobacteria
+  {[}\protect\hyperlink{ref-moustafaux5foriginux5f2009}{94}{]}.\\
+  \clearpage   
   
-  \section{Enzymes}\label{enzymes}
+  \section{CORASON}\label{corason}
   
-  39 Streptomyces PriA sequence 39 Streptomyces sequences, as outgroup E
-  coli, Arthrobacter Aurescens, Salmonella enterica and Acidimicrobium
-  ferrooxidans PriA's were included.
+  PriA All streptomyces have a partially conserved PriA cluster. CT34 has
+  a secondary copy whose best hit on NCBI is Lentzea's PriA with 50\%
+  identity 98\% coverage
   
-  as an outgroup with HisA activity Enterobacterias \emph{Salmonella
-  enterica} (PDB:5AHE), \emph{Escherichia coli K12} \emph{Acidimicrobium
-  ferrooxydans} (PDB:4WD0) Additionally to the sequences selected by
-  phylogeny, Jonesia denitrificans and Streptomyces sp Mg1 TrpF sequences
-  were added as control .
+  TrpF1 TrpF1 queries gave hits with TrpC enzyme present on every
+  Streptomyces, additionally S rimosus, S coelicolor, S venezuelae and S.
+  NRRL S-1813 had an extra copy. S rimosus TrpC vicinity has PKS and
+  siderophore genes.
   
+  TrpF2 Conserved cluster with NRPS sequences flanking TrpF2
+  
+  TrpF3 Non conserved cluster
+  
+  TrpF4 purpeofuscus and S bikiniensis \clearpage  
+  
+  \section{Selected enzymes to investigate affinity of substrates similar
+  to PRA and
+  PROFAR}\label{selected-enzymes-to-investigate-affinity-of-substrates-similar-to-pra-and-profar}
+  
+  Since on \emph{Streptomyces} has been found representatives from PriA
+  and PriB families, 39 homologue sequences were selected to perform
+  docking enzyme-substrate analysis. This PriA/Prib selected sequences
+  belong to \emph{Streptomyces} evenly ditributed on an RpoB species tree
+  wiht different conditions about TrpF presence/absence. Other chemically
+  characterized PriA Actinobacterial homologues were included on this
+  studio, and finally HisA from \emph{Escherichia coli},
+  \emph{Arthrobacter Aurescens}, \emph{Salmonella enterica} and
+  \emph{Acidimicrobium ferrooxidans} and Actinobacterial TrpF were added
+  as controls.
+  
+  When exists cristal structures were used otherwise homologues structures
+  were generated using as template the closest enzyme with cristal
+  structure available.
+  
+  Controls\\
+  HisA Enterobacteria enzymes from \emph{Salmonella enterica} (PDB:5AHE),
+  \emph{Escherichia coli K12} \emph{Acidimicrobium ferrooxydans}
+  (PDB:4WD0)
+  
+  TrpF Actinobacteria Jonesia denitrificans and Streptomyces sp Mg1
+  sequences.
+  
+  Chemically characterized Actinobacterial enzymes\\
   PriA\\
   \emph{Mycobacterium tuberculosis} (Mtub PDB:2Y88,2Y89,2Y85,3ZS4)
   \emph{Streptomyces coelicolor} (Scoe
@@ -2262,28 +2113,10 @@ starts here.
   thrachomatis}, \emph{Streptomyces sp. Mg1} TrpF and \emph{Actinomyces
   odontolyticus} were included
   
-  Streptomyces 34 paralogous
-  
-  \section{CORASON}\label{corason}
-  
-  PriA All streptomyces have a partially conserved PriA cluster. CT34 has
-  a secondary copy whose Best hit on NCBI is Lentzea's PriA with 50\%
-  identity 98\% coverage
-  
-  TrpF1 TrpF1 queries gave hits with TrpC enzyme present on every
-  Streptomyces, additionally S rimosus, S coelicolor, S venezuelae and S.
-  NRRL S-1813 had an extra copy. S rimosus TrpC vicinity has PKS and
-  siderophore genes.
-  
-  TrpF2 Conserved cluster with NRPS sequences flanking TrpF2
-  
-  TrpF3 Non conserved cluster
-  
-  TrpF4 purpeofuscus and S bikiniensis 2. Heatmap
-  
   \clearpage  
   
-  \section{Structures}\label{structures}
+  \section{PriA cristal structures on
+  PDB}\label{pria-cristal-structures-on-pdb}
   
   \begin{Shaded}
   \begin{Highlighting}[]
@@ -2352,12 +2185,17 @@ starts here.
   \bottomrule
   \end{longtable}
   
-  \clearpage 
-  \#\# Substrates\\
-  20 substrates were collected from literature and chemioinformatics
-  predictions.\\
-  S13,S14,!5,S16 light activated substrates, S3 PRA, S7 PROFAR, S6 GMP,
-  S11 GTP, S17 PRAP, S18 Compound V, S17 PraP
+  \clearpage  
+  
+  \section{Similar substrates to PRA and PROFAR suggested by Tanimoto
+  distance or previously
+  tested}\label{similar-substrates-to-pra-and-profar-suggested-by-tanimoto-distance-or-previously-tested}
+  
+  S1,S2,\ldots{}S20 substrates were collected from literature and
+  chemioinformatics predictions. S3 PRA and S7 PROFAR are native
+  substrates, S13-S16 are light activated substrates, S17 PRAP, S18
+  Compound V, were found on literature, S6 GMP, S11 GTP and other were
+  suggested by chemioinformatics.
   
   \begin{Shaded}
   \begin{Highlighting}[]
@@ -2413,6 +2251,17 @@ starts here.
   \end{longtable}
   
   \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.6]{chapter2/SubstratesClustering.png}
+  \caption[Substrates clustering according to Tanimoto distance]{\normalsize{Substrates clustering according to Tanimoto distance}}
+  \label{fig:Substrates Tanimoto distance}
+  \end{figure}
+  
+  On next figure we can see their chemical structures.
+  
+  \clearpage   
+  
+  \begin{figure}[h!tbp]
    \centering
    \includegraphics[angle = 0,scale = 1]{chapter2/esquema_quimico-1-1.pdf}
    \caption[Substrates 1]{\normalsize{Substrates 1}}
@@ -2440,16 +2289,103 @@ starts here.
    \label{fig:Substrates chemical 4}
    \end{figure}
   
-  \section{Docking}\label{docking}
+  \section{Docking between PriA enzymes and selected
+  substrates}\label{docking-between-pria-enzymes-and-selected-substrates}
   
-  Docking simulation were calculated for PriA Streptomyces enzymes. TrpF
-  enzymes from Strptomyces Mg1, Jonesia denitrificans, were added as
-  controls
+  Docking simulation were calculated for PriA \emph{Streptomyces} enzymes.
+  TrpF enzymes from \emph{Streptomyces Mg1, Jonesia denitrificans, were
+  added as controls}
   
   Procedures can be found at
   \href{https://github.com/tripplab/Docking/wiki}{Docking Protocols}
   
-  \clearpage 
+  \begin{center}\includegraphics{tesis_files/figure-latex/load_data_docking-1} \end{center}
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 1]{chapter2/Figura1_4.pdf}
+  \caption[Heatplot docking PriA enzyme Family vs substrates]{\normalsize{Heatplot docking PriA enzyme Family vs substrates}}
+  \label{fig:Heatplod PriA docking}
+  \end{figure}
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.6]{chapter2/PriAHeatPot.png}
+  \caption[Heat Plot PriA Streptomyces vs other subtrates]{\normalsize{Heat Plot PriA Streptomyces vs other subtrates}}
+  \label{fig:PriADocking}
+  \end{figure}
+  
+  \section{GTP is the substrate with best PriA
+  affinity}\label{gtp-is-the-substrate-with-best-pria-affinity}
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \NormalTok{## boxplot de los sustratos}
+  \KeywordTok{ggplot}\NormalTok{(docking.m, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{variable, }\DataTypeTok{y=}\NormalTok{value)) +}\StringTok{ }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"Substrates"}\NormalTok{, }\DataTypeTok{y =} \StringTok{"Affinity"}\NormalTok{,}\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size=}\DecValTok{12}\NormalTok{)) +}\StringTok{ }\KeywordTok{geom_boxplot}\NormalTok{()+}\KeywordTok{theme_bw}\NormalTok{()+}\KeywordTok{theme}\NormalTok{(}\DataTypeTok{plot.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{14}\NormalTok{, }\DataTypeTok{face =} \StringTok{"bold"}\NormalTok{), }\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{12}\NormalTok{), }\DataTypeTok{axis.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{face=}\StringTok{"bold"}\NormalTok{), }\DataTypeTok{axis.text.x=}\KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{90}\NormalTok{,}\DataTypeTok{size =} \DecValTok{6}\NormalTok{), }\DataTypeTok{legend.position =} \StringTok{"bottom"}\NormalTok{)}
+  \end{Highlighting}
+  \end{Shaded}
+  
+  \begin{verbatim}
+  Warning: Removed 100 rows containing non-finite values (stat_boxplot).
+  \end{verbatim}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/substrateBox-1} \end{center}
+  
+  \clearpage  
+  
+  \section{PriA Activity on GTP}\label{pria-activity-on-gtp}
+  
+  Activity was measured fluorometrically in 96-well plates (Nuc 96-Well
+  Optical Botto Plates) in a TECAN infinite M1000 plate reader (excitation
+  at 286 nm and emission at 386 nm)
+  
+  Preliminar activity essays were performed on an active PriA from
+  \emph{Streptomyces coelicolor} and an inactive mutant D11A.
+  
+  Enzymes were cloned on coli V68 strains, overexpression were induced and
+  protein were purified.
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.6]{chapter2/MutantControl.png}
+  \caption[Scoe and non functional Scoe PriA acting on dGTP]{\normalsize{Scoe and non functional Scoe PriA acting on dGTP}}
+  \label{fig:PriARutas}
+  \end{figure}
+  
+  \clearpage  
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \NormalTok{GTP <-}\StringTok{ }\KeywordTok{read.table}\NormalTok{(}\StringTok{"chapter2/GTP.activity"}\NormalTok{, }\DataTypeTok{header=}\OtherTok{TRUE}\NormalTok{, }\DataTypeTok{sep=}\StringTok{"}\CharTok{\textbackslash{}t}\StringTok{"}\NormalTok{)}
+  \NormalTok{dGTP <-}\StringTok{ }\KeywordTok{read.table}\NormalTok{(}\StringTok{"chapter2/dGTP.activity"}\NormalTok{, }\DataTypeTok{header=}\OtherTok{TRUE}\NormalTok{, }\DataTypeTok{sep=}\StringTok{"}\CharTok{\textbackslash{}t}\StringTok{"}\NormalTok{)}
+  \NormalTok{GTP.m <-}\StringTok{ }\KeywordTok{melt}\NormalTok{(GTP,}\DataTypeTok{id=}\StringTok{"Time"}\NormalTok{)}
+  
+  \KeywordTok{plot}\NormalTok{(GTP.m$Time, GTP.m$value, }\DataTypeTok{col=}\NormalTok{GTP.m$variable, }\DataTypeTok{pch=}\DecValTok{19}\NormalTok{)}
+  \end{Highlighting}
+  \end{Shaded}
+  
+  \begin{verbatim}
+  Warning in xy.coords(x, y, xlabel, ylabel, log): NAs introduced by coercion
+  \end{verbatim}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/activity-1} \end{center}
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \KeywordTok{plot.new}\NormalTok{()}
+  \KeywordTok{legend}\NormalTok{(}\StringTok{"center"}\NormalTok{, }\DataTypeTok{legend =} \KeywordTok{unique}\NormalTok{(GTP.m$variable), }\DataTypeTok{col =} \KeywordTok{unique}\NormalTok{(GTP.m$variable), }\DataTypeTok{pch=}\DecValTok{19}\NormalTok{)}
+  \end{Highlighting}
+  \end{Shaded}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/activity-2} \end{center}
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \KeywordTok{ggplot}\NormalTok{(GTP.m, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{Time, }\DataTypeTok{y=}\NormalTok{value,}\DataTypeTok{color=}\NormalTok{variable)) +}\StringTok{ }\KeywordTok{geom_point}\NormalTok{()+}\StringTok{ }\KeywordTok{facet_wrap}\NormalTok{(~}\StringTok{ }\NormalTok{variable)+}\KeywordTok{theme_bw}\NormalTok{()+}\KeywordTok{theme}\NormalTok{(}\DataTypeTok{plot.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{8}\NormalTok{, }\DataTypeTok{face =} \StringTok{"bold"}\NormalTok{), }\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{12}\NormalTok{), }\DataTypeTok{axis.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{face=}\StringTok{"bold"}\NormalTok{), }\DataTypeTok{axis.text.y=}\KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{30}\NormalTok{,}\DataTypeTok{size =} \DecValTok{1}\NormalTok{), }\DataTypeTok{legend.position =} \StringTok{"bottom"}\NormalTok{)+}\StringTok{ }\KeywordTok{scale_size_area}\NormalTok{()}
+  \end{Highlighting}
+  \end{Shaded}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/activity-3} \end{center}
   
   \begin{Shaded}
   \begin{Highlighting}[]
@@ -2652,27 +2588,12 @@ starts here.
   \bottomrule
   \end{longtable}
   
-  \begin{center}\includegraphics{tesis_files/figure-latex/load_data_docking-1} \end{center}
+  \section{Molecular dynamics vs experimental
+  data}\label{molecular-dynamics-vs-experimental-data}
   
-  \begin{center}\includegraphics{tesis_files/figure-latex/load_data_docking-2} \end{center}
-  
-  \begin{verbatim}
-  Warning: Removed 100 rows containing non-finite values (stat_boxplot).
-  \end{verbatim}
-  
-  \begin{center}\includegraphics{tesis_files/figure-latex/load_data_docking-3} \end{center}
-  
-  \begin{figure}[h!tbp]
-   \centering
-   \includegraphics[angle = 0,scale = 1]{chapter2/Figura1_4.pdf}
-   \caption[Heatplot docking PriA enzyme Family vs substrates]{\normalsize{Heatplot docking PriA enzyme Family vs substrates}}
-   \label{fig:Heatplod PriA docking}
-   \end{figure}
-  
-  PriA S3
+  PriA activity on S3 (PRA)
   
   \[ 
-  \begin{table}
   \begin{tabular}{ l c r l l l l l}
   \hline \\ [-1.5ex]
   organism  &Family & $K_M    $     & $k_{cat}$        & $\frac{k_{cat}}{K_M}$ &Pre MD & Pos MD & Reference  \\ [1ex]
@@ -2699,11 +2620,9 @@ starts here.
   \hline
   \end{tabular}
   \label{table:name}
-  \end{table}
   \]
   
-  PriA S7\\
-  \$\$ \centering 
+  PriA activity on S7 (PROFAR) \$\$ \centering 
   
   \begin{tabular}{ l c r l l l l l}
   \hline \\ [-1.5ex]
@@ -2737,176 +2656,36 @@ starts here.
   Con actividad de FolE i.e activa para el compuesto V Adams et al (2014)
   Genome size vs Total antismash cluster coloured by order
   
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 0,scale = 0.6]{chapter2/PriAHeatPot.png}
-  \caption[Heat Plot PriA Streptomyces vs other subtrates]{\normalsize{Heat Plot PriA Streptomyces vs other subtrates}}
-  \label{fig:PriADocking}
-  \end{figure}
+  \clearpage  
   
-  Docker simulation were calculated for Streptomyces enzymes\\
-  Genome size vs Total antismash cluster coloured by order
+  \section{Non darwinian trayectories}\label{non-darwinian-trayectories}
   
   \begin{figure}[h!tbp]
   \centering
-  \includegraphics[angle = 0,scale = 0.6]{chapter2/TrpFHeatPlot.png}
-  \caption[Heat Plot TrpF Streptomyces vs other subtrates]{\normalsize{Heat Plot TrpF Streptomyces vs other subtrates}}
-  \label{fig:TrpFDocking}
+  \includegraphics[angle = 0,scale = 0.6]{conclusion/Solocirculos.png}
+  \caption[Non darwinian trayectories]{\normalsize{Non darwinian trayectories}}
+  \label{fig:PriARutas}
   \end{figure}
-  
-  \section{Latex no Docking}\label{latex-no-docking}
-  
-  We can further look into the properties of the largest value here for
-  American Airlines Inc. To do so, we can isolate the row corresponding to
-  the arrival delay of 1539 minutes for American in our original
-  \texttt{flights} dataset.
-  
-  \begin{Shaded}
-  \begin{Highlighting}[]
-  \CommentTok{#flights %>% dplyr::filter(arr_delay == 1539, carrier_name == "American Airlines Inc.") %>%}
-    \CommentTok{#dplyr::select(-c(month, day, carrier, dest_name, hour, minute, carrier_name, arr_delay))}
-  \end{Highlighting}
-  \end{Shaded}
-  
-  We see that the flight occurred on March 3rd and departed a little after
-  2 PM on its way to Dallas/Fort Worth. Lastly, we show how we can
-  visualize the arrival delay of all departing flights from Portland on
-  March 3rd against time of departure.
-  
-  \begin{Shaded}
-  \begin{Highlighting}[]
-  \CommentTok{#flights %>% dplyr::filter(month == 3, day == 3) %>%}
-  \CommentTok{#  ggplot(aes(x = dep_time, y = arr_delay)) +geom_point()}
-  \end{Highlighting}
-  \end{Shaded}
-  
-  \TeX~is the best way to typeset mathematics. Donald Knuth designed
-  \TeX~when he got frustrated at how long it was taking the typesetters to
-  finish his book, which contained a lot of mathematics. One nice feature
-  of \emph{R Markdown} is its ability to read \LaTeX~code directly.
-  
-  If you are doing a thesis that will involve lots of math, you will want
-  to read the following section which has been commented out. If you're
-  not going to use math, skip over or delete this next commented section.
-  
-  \section{Chemistry 101: Symbols}\label{chemistry-101-symbols}
-  
-  Chemical formulas will look best if they are not italicized. Get around
-  math mode's automatic italicizing in \LaTeX~by using the argument
-  \texttt{\$\textbackslash{}mathrm\{formula\ here\}\$}, with your formula
-  inside the curly brackets. (Notice the use of the backticks here which
-  enclose text that acts as code.)
-  
-  So, \(\mathrm{Fe_2^{2+}Cr_2O_4}\) is written
-  \texttt{\$\textbackslash{}mathrm\{Fe\_2\^{}\{2+\}Cr\_2O\_4\}\$}.
-  
-  \noindent Exponent or Superscript: \(\mathrm{O^-}\)
-  
-  \noindent Subscript: \(\mathrm{CH_4}\)
-  
-  To stack numbers or letters as in \(\mathrm{Fe_2^{2+}}\), the subscript
-  is defined first, and then the superscript is defined.
-  
-  \noindent Angstrom: \({\AA}\)
-  
-  \noindent Bullet: CuCl \(\bullet\) \(\mathrm{7H_{2}O}\)
-  
-  \noindent Double Dagger: \(\ddag\)
-  
-  \noindent Delta: \(\Delta\)
-  
-  \noindent Reaction Arrows: \(\longrightarrow\) or
-  \(\xrightarrow{solution}\)
-  
-  \noindent Resonance Arrows: \(\leftrightarrow\)
-  
-  \noindent Reversible Reaction Arrows: \(\rightleftharpoons\) or
-  \(\xrightleftharpoons[ ]{solution}\) (the latter requires the
-  \texttt{chemarr} \LaTeX~package which is automatically loaded in this
-  template)
-  
-  \subsection{Typesetting reactions}\label{typesetting-reactions}
-  
-  You may wish to put your reaction in a figure environment, which means
-  that \LaTeX~will place the reaction where it fits and you can have a
-  figure caption. You'll see further description of this \textbf{R}
-  \texttt{label} function in \protect\hyperlink{refux5flabels}{}. (Note
-  the use of the double backslash here as well as the
-  \texttt{echo\ =\ FALSE} which hides the code from the output.)
   
   \begin{figure}[h!tbp]
-  \begin{center}
-  $\mathrm{C_6H_{12}O_6  + 6O_2} \longrightarrow \mathrm{6CO_2 + 6H_2O}$
-  \caption{Combustion of glucose}
-  \label{fig:comb-gluc}
-  \end{center}
+  \centering
+  \includegraphics[angle = 0,scale = 0.6]{conclusion/SolocirculosPRA.png}
+  \caption[Positive increments on PRA]{\normalsize{Positive increments on PRA}}
+  \label{fig:PRARutas}
   \end{figure}
   
-  \subsection{Other examples of
-  reactions}\label{other-examples-of-reactions}
-  
-  \(\mathrm{NH_4Cl_{(s)}}\) \(\rightleftharpoons\)
-  \(\mathrm{NH_{3(g)}+HCl_{(g)}}\)
-  
-  \noindent \(\mathrm{MeCH_2Br + Mg}\) \(\xrightarrow[below]{above}\)
-  \(\mathrm{MeCH_2\bullet Mg \bullet Br}\)
-  
-  \section{Physics}\label{physics}
-  
-  Many of the symbols you will need can be found on the math page
-  \url{http://web.reed.edu/cis/help/latex/math.html} and the Comprehensive
-  \LaTeX~Symbol Guide
-  (\url{http://mirror.utexas.edu/ctan/info/symbols/comprehensive/symbols-letter.pdf}).
-  
-  \section{Biology}\label{biology}
-  
-  You will probably find the resources at
-  \url{http://www.lecb.ncifcrf.gov/~toms/latex.html} helpful, particularly
-  the links to bsts for various journals. You may also be interested in
-  TeXShade for nucleotide typesetting
-  (\url{http://homepages.uni-tuebingen.de/beitz/txe.html}). Be sure to
-  read the proceeding chapter on graphics and tables.
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.6]{conclusion/SolocirculosPRO.png}
+  \caption[Positive increments on ProFAR]{\normalsize{Positive increments on ProFAR}}
+  \label{fig:ProFARRutas}
+  \end{figure}
   
   \begin{Shaded}
   \begin{Highlighting}[]
-  \KeywordTok{sessionInfo}\NormalTok{()}
+  \CommentTok{#sessionInfo()}
   \end{Highlighting}
   \end{Shaded}
-  
-  \begin{verbatim}
-  R version 3.3.2 (2016-10-31)
-  Platform: x86_64-pc-linux-gnu (64-bit)
-  Running under: Ubuntu 14.04.5 LTS
-  
-  locale:
-   [1] LC_CTYPE=en_US.UTF-8          LC_NUMERIC=C                 
-   [3] LC_TIME=es_MX.UTF-8           LC_COLLATE=en_US.UTF-8       
-   [5] LC_MONETARY=es_MX.UTF-8       LC_MESSAGES=en_US.UTF-8      
-   [7] LC_PAPER=es_MX.UTF-8          LC_NAME=es_MX.UTF-8          
-   [9] LC_ADDRESS=es_MX.UTF-8        LC_TELEPHONE=es_MX.UTF-8     
-  [11] LC_MEASUREMENT=es_MX.UTF-8    LC_IDENTIFICATION=es_MX.UTF-8
-  
-  attached base packages:
-  [1] parallel  stats     graphics  grDevices utils     datasets  methods  
-  [8] base     
-  
-  other attached packages:
-   [1] xlsx_0.5.7          xlsxjars_0.6.1      rJava_0.9-8        
-   [4] scales_0.4.1        Biobase_2.34.0      BiocGenerics_0.20.0
-   [7] genstats_0.1.02     RColorBrewer_1.1-2  reshape_0.8.6      
-  [10] plyr_1.8.4          ape_4.0             knitr_1.15.1       
-  [13] ggplot2_2.2.1       dplyr_0.5.0         reedtemplates_0.1  
-  [16] devtools_1.12.0    
-  
-  loaded via a namespace (and not attached):
-   [1] Rcpp_0.12.9      highr_0.6        tools_3.3.2      digest_0.6.12   
-   [5] evaluate_0.10    memoise_1.0.0    tibble_1.2       gtable_0.2.0    
-   [9] nlme_3.1-131     lattice_0.20-34  DBI_0.5-1        yaml_2.1.14     
-  [13] withr_1.0.2      stringr_1.1.0    rprojroot_1.2    grid_3.3.2      
-  [17] R6_2.2.0         rmarkdown_1.3    magrittr_1.5     backports_1.0.5 
-  [21] htmltools_0.3.5  assertthat_0.1   colorspace_1.3-2 labeling_0.3    
-  [25] stringi_1.1.2    lazyeval_0.2.0   munsell_0.4.3   
-  \end{verbatim}
   
   \hypertarget{refux5flabels}{\chapter{Archaea EvoMining
   Results}\label{refux5flabels}}
@@ -2990,6 +2769,13 @@ starts here.
   \end{longtable}
   
   \clearpage
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.9]{chapter3/PosterArcheas.pdf}
+  \caption[EvoMining Archaeas]{\normalsize{EvoMining Archaeas}}
+  \label{fig:EvoMining Archaeas}
+  \end{figure}
   
   First lets investigate if Archaea has expansions on families within
   central metabolic routes. Since main metabolic pathways are shared
@@ -4379,6 +4165,35 @@ starts here.
   \item
     \texttt{ggplot2} Documentation -
     \url{http://docs.ggplot2.org/current/}
+  \end{itemize}
+  
+  \chapter{The third Appendix, Other contributions during my
+  phd}\label{the-third-appendix-other-contributions-during-my-phd}
+  
+  \section{Accepted}\label{accepted}
+  
+  -Evomining identifies Arsenolipids biosynthetic cluster
+  
+  \section{Submitted}\label{submitted}
+  
+  \begin{itemize}
+  \tightlist
+  \item
+    Siderophore micrococcus cluster identified by CORASON\\
+  \item
+    CORASON find genomes that owns cluster from cyanobacterial
+    metagenome\\
+  \item
+    Streptomyces central pathways expanssions
+  \end{itemize}
+  
+  \section{On preparation}\label{on-preparation}
+  
+  \begin{itemize}
+  \tightlist
+  \item
+    PriA non Darwinian trayectories\\
+    poner figura James unidades docking
   \end{itemize}
   
   \backmatter

@@ -231,6 +231,7 @@ label(path = "chapter2/Figura1_4.pdf", caption = "Heatplot docking PriA enzyme F
 label(path = "chapter2/PriAHeatPot.png", caption = "Heat Plot PriA Streptomyces vs other subtrates",scale=.6,label = "PriADocking", type = "figure")
 ```
 
+## GTP is the substrate with best PriA affinity
 ```{r substrateBox}
 ## boxplot de los sustratos
 ggplot(docking.m, aes(x=variable, y=value)) + labs(x = "Substrates", y = "Affinity",text = element_text(size=12)) + geom_boxplot()+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6), legend.position = "bottom")
@@ -239,9 +240,11 @@ ggplot(docking.m, aes(x=variable, y=value)) + labs(x = "Substrates", y = "Affini
 
 \clearpage  
 
-## Activity 
-Activity essays were performed with active PriA from _Streptomyces coelicolor_ and the inactive mutant D11A.  
-  
+## PriA Activity on GTP
+ Activity was measured fluorometrically in 96-well plates (Nuc 96-Well Optical Botto Plates) in a TECAN infinite M1000 plate reader (excitation at 286 nm and emission at 386 nm)
+
+Preliminar activity essays were performed on an active PriA from _Streptomyces coelicolor_ and an inactive mutant D11A.  
+
 Enzymes were cloned on coli V68 strains, overexpression were induced and protein were purified.  
 
 ```{r mutControl, results = "asis",message=FALSE,echo=FALSE}

@@ -302,13 +302,12 @@
     A Thesis \\
     Presented to \\
     \@thedivisionof \ \@division \\
-    Reed College
-    \vfil
+LANGEBIO-CINVESTAV  \vfil
     \centerline{\hbox to \wd0 {\hbox{}\hrulefill\hbox{}}}
     \vfil
     In Partial Fulfillment \\
     of the Requirements for the Degree \\
-    Bachelor of Arts
+    Science Philosophy Doctor 
     \vfil
     \centerline{\hbox to \wd0 {\hbox{}\hrulefill\hbox{}}}
     \bigskip
