@@ -46,13 +46,17 @@ library(xlsx) # For save data on excel
 ```
 
 # PriA Family {#math-sci}
-Actinobacterial PriA is a promiscuous homologe of enterobacteria HisA family. PriA promiscuous enzyme family is involved in histidine and triptophan turning ProFAR into PRFAR while acting as a HisA and isomerizes PRA into CdRP acting as TrpF.  
+Actinobacterial PriA is a promiscuous homologue of enterobacteria HisA enzymatic family. HisA converts ProFAR into PRFAR on histidine pathway, most actinobacteria has lost trpF gene on triptophane pathway, PriA among isomerizing PROFAR also converts PRA into CdRP acting as TrpF on triptophane pathway.  
 
-PriA shows a functional gradient on Actinobacteria that split this family into several enzymatic subfamilies. Among PriA subfamilies there is PriB on Streptomyces that shows little trpF activity and an out of context TrpF gene, there is subHisA on Corynebacteria and Actinomyces that has lost trpF activity, and finally there is subTrpF on Actinomyces that has lost HisA activity.   
+PriA has shown a functional gradient on Actinobacteria that split this family into several enzymatic subfamilies. Among PriA subfamilies there is PriB on Streptomyces that shows little trpF activity and an out of context TrpF gene, there is subHisA on Corynebacteria and Actinomyces that has lost trpF activity, and finally there is subTrpF on Actinomyces that has lost HisA activity.   
 
 Some of this enzymes were selected on search of new promiscuous functions, candidate catalized reactions where investigating by exploring substrates chemically similar to native ones.   
 
 EvoMining has detected one PriA paralogue on Actinobacteria and an expanssion conserved on a saxitoxin cluster on Cyanobacteria [@moustafa_origin_2009].  
+PriA    
+PriB  
+SubHisA  
+subTrpF  
 \clearpage   
   
 ## CORASON
@@ -200,10 +204,39 @@ invertir colores
 - repite las etiquetas de los sutratos abajo del heatmap  
 Pendiende  
 
+JOHAN /MAURICIo
+Poner que No es todo el univrso de sustratos sino solo el de KEGG
+
+Hacer mejor curvas con los valores, en lugar del heatplot
+
+Hacer docking con otras plantillas (2VEP vs 2X30)
+
+Analisis cuantitativo de los datos.  
+
+PACO
+Tipo de seleccion en todo PriA  
+
 -->
+```{r johan}
+docking <- read.csv("chapter2/SmallHeat.data", header=TRUE, sep="\t")
+
+for (i in 2:21)
+{plot(density(docking[,i],na.rm=T)); rug(docking[,i]);browser()}
+corrplot(cor(docking[-c(5,12,13,38,51),-1]))
+## Leer sobre la incertidumbre del 2 y explicarla  
+## Y leer el paper de Julian y el de mauricio sobre reportes de docking
+  
+```
+
+
+
   
 ```{r load_data_docking, echo=FALSE}
 docking <- read.csv("chapter2/SmallHeat.data", header=TRUE, sep="\t")
+
+
+
+
 EnzymeOrder=factor(docking$Enzima,levels=unique(docking$Enzima))
 docking.m <- melt(docking,id = "Enzima")
 docking.m <- ddply(docking.m, .(variable), transform,rescale = rescale(value))
@@ -218,10 +251,16 @@ gcolor <- ggplot_build(colorHeatPlot)
 #gcolor$data[[1]]
 write.xlsx(gcolor$data[[1]], "chapter2/mydataColor.xlsx")
 
-ggplot(docking.m, aes(x=variable, y=Enzima)) + labs(x = "Substrates", y = "Enzymes",text = element_text(size=12))+ geom_raster(aes(fill=value))+ scale_fill_gradientn(colours = hm.palette(100),na.value = "gray")+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6))
+
 
 
 ```
+
+
+```{r heatonPDF}
+ggplot(docking.m, aes(x=variable, y=Enzima)) + labs(x = "Substrates", y = "Enzymes",text = element_text(size=12))+ scale_fill_gradientn(colours = hm.palette(100),na.value = "gray")+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6))
+```
+
 
 ```{r Figure_Heatplot, results = "asis",message=FALSE,echo=FALSE}
 label(path = "chapter2/Figura1_4.pdf", caption = "Heatplot docking PriA enzyme Family vs substrates",label = "Heatplod PriA docking", type = "figure")
@@ -264,17 +303,23 @@ plot(GTP.m$Time, GTP.m$value, col=GTP.m$variable, pch=19)
 plot.new()
 legend("center", legend = unique(GTP.m$variable), col = unique(GTP.m$variable), pch=19)
 
-ggplot(GTP.m, aes(x=Time, y=value,color=variable)) + geom_point()+ facet_wrap(~ variable)+theme_bw()+theme(plot.title = element_text(size = 8, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.y=element_text(angle = 30,size = 1), legend.position = "bottom")+ scale_size_area()
+ggplot(GTP.m, aes(x=Time, y=value,color=variable)) + geom_point()+ facet_wrap(~ variable)+ geom_smooth()+theme_bw()+theme(plot.title = element_text(size = 8, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.y=element_text(angle = 30,size = 1), legend.position = "bottom")+ scale_size_area()
 
+ggplot(GTP.m, aes(x=Time, y=value,color=variable)) + geom_point()+ geom_smooth()+theme_bw()+theme(plot.title = element_text(size = 8, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.y=element_text(angle = 30,size = 1), legend.position = "bottom")+ scale_size_area()
 ```
+
+the two enzymes with activity  
+_Thermomonospora curvata_ thermophilic Actinobacteria from Thermomonosporaceae genus, it can be found in compost and participate in the active degradation of cellulose [@chertkov_complete_2011]. 
+
+
+Jonesia trpF shows no activity
+_Jonesia denitrificans_ is classified as a pathogenic organism for animals, reported genome was originally isolated from cooked ox blood [@pukall_complete_2009].  
 
 ```{r docking_table_out, results = "asis"}
 docking <- read.csv("chapter2/SmallHeat.data", header=TRUE, sep="\t")
 kable(docking,  caption = "Enzymes docking \\label{tab:docking}",caption.short = "Enzymes docking ")
 ```
 \clearpage 
-
-
  
    
 
@@ -367,6 +412,15 @@ label(path = "conclusion/SolocirculosPRA.png", caption = "Positive increments on
 ```{r PriARutasPRO, results = "asis",message=FALSE,echo=FALSE}
 label(path = "conclusion/SolocirculosPRO.png", caption = "Positive increments on ProFAR",scale=.6,label = "ProFARRutas", type = "figure")
 ```
+
+HisF
+Arabinosa
+TrpC
+TrpD
+acido antranilico
+PRPP
+gliceroles de Ana
+checar resistencias
 
 
 ```{r endsession}

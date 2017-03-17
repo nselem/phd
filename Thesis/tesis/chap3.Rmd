@@ -51,6 +51,104 @@ ArchaeasSMASH <- read.table("chapter3/ArchaeasSMASH", header=TRUE, sep="\t")
 ArchaeasTaxa <- read.table("chapter3/ArchaeasTaxa", header=TRUE, sep="\t")
 ```
 
+
+```{r learningHeatPlots}
+########################################################
+## Trying to sort the heatplot 
+## Reading heatplot table and taxa information and saving it on data.frame data structure
+ArchaeasHeatPlot <- read.table("chapter3/ArchaeasHeatPlot", header=TRUE, sep="\t")
+ArchaeasTaxa <- read.table("chapter3/ArchaeasTaxa", header=TRUE, sep="\t")
+hm.palette <- colorRampPalette(rev(brewer.pal(11, 'Spectral')), space='Lab')  
+
+## Adding order variable 
+ArchaeasHeatPlot$order<-c(1:nrow(ArchaeasHeatPlot))
+
+#sorting RastId it accordig to order variable
+ArchaeasHeatPlot$RastId <- with(ArchaeasHeatPlot,reorder(ArchaeasHeatPlot$RastId, ArchaeasHeatPlot$order))
+
+# Merging heatplot and axonomy table into one table
+HP_Archaeas_Taxa<-merge(ArchaeasHeatPlot,ArchaeasTaxa,by.x = "RastId",by.y = "RastId")
+
+#HP_Archaeas_Taxa<-HP_Archaeas_Taxa[order(HP_Archaeas_Taxa$Order,HP_Archaeas_Taxa$Family),]
+
+# Melting information leting as variables just enzymatic families and copy number
+HP_Archaeas_Taxa.m<- melt(HP_Archaeas_Taxa)
+
+#HP_Archaeas_Taxa.m<- ddply(HP_Archaeas_Taxa.m, .(variable), transform,rescale=scale(value))  ## 
+
+# Cleaning data
+HP_Archaeas_Taxa.m<- ddply(HP_Archaeas_Taxa.m, .(variable), transform,value)  ## 
+HP_Archaeas_Taxa.m<- ddply(HP_Archaeas_Taxa.m, .(variable), transform,rescale=scale(value))  ## 
+
+small<-HP_Archaeas_Taxa.m[which(HP_Archaeas_Taxa.m$RastId=='389007' | HP_Archaeas_Taxa.m$RastId=='390212' | HP_Archaeas_Taxa.m$RastId=='388991' | HP_Archaeas_Taxa.m$RastId=='388992' | HP_Archaeas_Taxa.m$RastId=='388199'| HP_Archaeas_Taxa.m$RastId=='388200'|  HP_Archaeas_Taxa.m$RastId=='388201'),]
+
+
+
+#Este no
+small[ !small$variable %in% c("Contigs", "Size","TOTAL"), ] 
+#Este Escogiendo que variables quiero
+small<-small[small$variable %in% c("Phosphoglycerate_dehydrogenase", "Isopropyl_malate_synthase","Alanine_dehydrogenase","Asparagine_synthase"), ] 
+
+#small$RastId<-factor(unique(small$RastId), c("390212","389007","388991","388992"))
+#small$order <- c("1", "2", "3","4")
+#small
+#small$RastId<-factor(unique(small$RastId),small$RastId[order(unique(small$order))])
+#small$RastId
+
+## geom tile with rescale rescala por column
+        # Graph! with rescale
+ggplot(small, aes(small$variable, small$RastId,label=round(small$rescale,digits=1)))+ geom_tile(aes(fill = small$rescale), colour = "white") + scale_fill_gradientn(colours = hm.palette(100),na.value = "gray")+ theme(text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5))+geom_text(size=4,check_overlap = TRUE)
+
+## Graph scaled according to whole matrix 
+ggplot(small, aes(small$variable, small$RastId,label=round(small$value,digits=1)))+ geom_tile(aes(fill = small$value), colour = "white") + scale_fill_gradientn(colours = hm.palette(100),na.value = "gray")+ theme(text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5))+geom_text(size=4,check_overlap = TRUE)
+
+## Graph coloured by columns, showing true values, not scaled
+ggplot(small, aes(small$variable, small$RastId,label=round(small$value,digits=1)))+ geom_tile(aes(fill = small$rescale), colour = "white") + scale_fill_gradientn(colours = hm.palette(100),na.value = "gray")+ theme(text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5))+geom_text(size=4,check_overlap = TRUE)
+
+####################################################
+### Color according to mean plus standar deviation
+####
+
+## Expansion function IDea I could Also do a reduction function..
+expansion <- function(x) {
+  mean = mean(x) 
+  sd = sd(x) 
+  expansion=mean+sd
+  reduction=mean-sd
+  cutoff=c(expansion,reduction)
+  return(cutoff)
+  }
+
+
+## For all families print what means an Archaeal expansion
+for (family in unique(small$variable)){
+    ## Defining what is an expansion
+    fam_cutoff<-expansion(small$value[which(small$variable==family)])
+    print(paste("For family", family,"expansion means",fam_cutoff[1]))
+    print(paste("For family", family,"reduction means",fam_cutoff[2]))
+    
+    ## Finding wich values on that families are expansions
+    ## that means wich genomes ahs an expansion on that family
+    for(smallvalue in small$value[which(small$variable==family)]){
+      if(smallvalue>fam_cutoff[1]){
+        print(paste("This is an expansion",smallvalue,">",fam_cutoff[1]))
+      }
+      else if(smallvalue<fam_cutoff[2]){
+        print(paste("This is a reduction",smallvalue,"<",fam_cutoff[2]))
+        }
+      else{
+        print (paste ("Among average",smallvalue,"<",fam_cutoff[1]))}
+    }
+    fam_cutoff<-NULL
+}
+
+## HAcer una estructura de datos, expansion, reduction normal
+
+```
+
+
+
+
 # Archaea EvoMining Results {#ref_labels}   
 During the decade between 1970 and 1980, Archaea was recognized as new life domain, a kingdom different from Bacteria and Eucarya in an exciting first great application of 16S phylogeny[@woese_phylogenetic_1977,@woese_are_1981] . Main differences between this kingdoms are that Archaeal DNA is not arranged in a nucleus as in Eucarya and Archaeal celular walls are not composed from peptidoglycans as in Bacteria. Archaeal proteins may be higlhy valuable to biotechnology industry for their great stability due to extreme temperature, PH and salt content conditions on Archeal habitats. Despite no Archaeal Natural products biosynthetic gene clusters (BGC's) has been reported on MiBIG, Archaea do have BGC's, some of them seems to be acquired by horizontal gene transfer (HGT) like methano nrps {search reference}. Other Archeal natural products known are archaeosins, Diketopiperazines, Acyl Homoserine Lactones, Exopolysaccharides, Carotenoids, Biosurfactants, Phenazines and Organic Solutes but this knowledge is not comparable to Bacterial BGC's knowledge[@charlesworth_untapped_2015].  
   
@@ -102,6 +200,7 @@ expansion_plotArchaea<-ggplot(ArchaeasHeatPlotBP.m, aes(x=ArchaeasHeatPlotBP.m$v
 
 ggsave("chapter3/expansion_plotArchaeas.pdf", plot = expansion_plotArchaea,height = 8, width = 7)
 ```
+
 ```{r boxplot_ArchaeaHP_Archaea_label, results = "asis",message=FALSE}
 label(path = "chapter3/expansion_plotArchaeas.pdf", caption = "Expansions Boxplot",label = "Archaea_expansion_boxplot", type = "figure",scale=".7")
 ```
@@ -198,13 +297,18 @@ ggplot(MetFam_BP.m, aes(x=MetFam_BP.m$variable, y=MetFam_BP.m$value, fill=Order)
 
 
 <!----------------------Expansions Box plot END-------------------------------------------------------------------->
-<!--------------------------------------------------------------------------------------------------------------->
+<!------------------------------------------------------------------------------------------------s--------------->
+
+
+
 
 ## Central pathway expansions  
 Heat plot of central pathways expansions, Needs to be phylogenetically sorted.  
 ```{r ArchaeaHeatPlots, warnings = FALSE, message = FALSE, echo=FALSE,CACHE=TRUE}
 ### ME falta ordernarlos filogeneticamente
-ArchaeasHeatPlot$RastId <- with(ArchaeasHeatPlot, reorder(ArchaeasHeatPlot$RastId, ArchaeasHeatPlot$TOTAL))
+ArchaeasHeatPlot <- read.table("chapter3/ArchaeasHeatPlot", header=TRUE, sep="\t")
+ArchaeasHeatPlot$order<-c(1:nrow(ArchaeasHeatPlot))
+ArchaeasHeatPlot$RastId <- with(ArchaeasHeatPlot,reorder(ArchaeasHeatPlot$RastId, ArchaeasHeatPlot$order))
 ArchaeasHeatPlot.m <- melt(ArchaeasHeatPlot)
 ArchaeasHeatPlot.m<- ddply(ArchaeasHeatPlot.m, .(variable), transform,rescale=scale(value))  ## rescale escala toda la matriz, scale por columnas
 HP_Archaeas_Taxa<-merge(ArchaeasHeatPlot,ArchaeasTaxa,by.x = "RastId",by.y = "RastId")
@@ -215,6 +319,8 @@ HP_Archaeas_Taxa.m<- melt(HP_Archaeas_Taxa)
 HP_Archaeas_Taxa.m<- ddply(HP_Archaeas_Taxa.m, .(variable), transform,rescale=scale(value))  ## rescale escala toda la matriz, scale por columnas
 
 Archaeas_heatplot <- ggplot(HP_Archaeas_Taxa.m, aes(HP_Archaeas_Taxa.m$variable, HP_Archaeas_Taxa.m$RastId))+ geom_tile(aes(fill = HP_Archaeas_Taxa.m$rescale), colour = "white") + scale_fill_gradientn(colours = hm.palette(100),na.value = "gray")+ theme(text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
+
+ggplot(HP_Archaeas_Taxa.m, aes(HP_Archaeas_Taxa.m$variable, HP_Archaeas_Taxa.m$RastId))+ geom_tile(aes(fill = HP_Archaeas_Taxa.m$rescale), colour = "white") + scale_fill_gradientn(colours = hm.palette(100),na.value = "gray")+ theme(text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
 
 ggsave("chapter3/ArchaeasHeatPlot.pdf", plot = Archaeas_heatplot,height = 12, width = 6)
 

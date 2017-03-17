@@ -1,0 +1,58 @@
+---
+title: "TrpF activity assay protocol"
+author: "NellySelem"
+date: "March 2, 2017"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+##Materials  
+Incubator  
+Refrigerated centrifugal    
+Sonicator  
+column HisTrapHP  
+Fluorimeter  
+
+_Lysis Buffer_  
+-Tris-HCL pH 7.5 10mM  
+-EDTA  ph 7.7
+-NaCl
+-Glycerol  
+-DTT  (Fresh addition)
+-Mix protease inhibitor (Fresh addition)  
+-Lysozyme  (Fresh addition)  
+  
+_Buffer A_  (Niquel affinity purification)  
+-Tris-HCL    
+-NaCL 500mM    
+-Ajustar pH 7.5    
+  
+_Buffer B_ (Niquel affinity purification)  
+-Tris-HCL    
+NaCl 500mM    
+Imidazol 500 mM    
+Ajustar pH a 7.5    
+
+*Note* On all buffers above potasium phosphate pH 7.5 10mM or Hepes 50mM could have been used without notice protein quality or quantity variations.  
+
+_Reaction buffer TrpF assay_  
+-Tris-HCL 59 mM pH 7.5  
+-MgCl2 mM  
+-EDTA 0.5 mM  
+Anthranilic acid stock 1mM (this is the substrate that varias) store at -20|C  
+PRPP stock 10mM  (Final concentration must be always 5M times when compared with anthranilic acid) store at -20°C  
+DTT stock 64mM (Final concentration 0.4 mM) store at -20°  
+
+## Purification of auxiliary enzymes yTrpD tmTrpC ScoePria D11PriA  
+### Expression of plasmid on cell cultures  
+1. Prepare chemically competent (Calcium)  Rosseta 2 and C41pGROELcells/ES  
+2. Transform with plasid pET28_ytrpD (kanamycin resitent) on Rosseta 2, pQEI_tmtrpC (Amp resistent) on PGROEL/ES, for Scoe and D11 v68 transformed cells are available.  
+3. Incubate 1Lt cultive 37°C with correspondent antibiotic (Estria en una caja, preinoculo over night)  
+L arabinosa en el caso de pGROEL/ES_pQEI_tmtrpC y crecer a 37°C  
+4 Once .6 oD is reache inducir con .5 mM de iPTG and incubate 20°C overnigth  
+16° degrees V68  
+
+## Purification

@@ -1,0 +1,66 @@
+---
+title: "Curriculum"
+author: "NellySelem"
+date: "March 6, 2017"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#Desarrollo de Software  
+## EvoMining  
+Desarrollo de la plataforma EvoMining de minería de datos genómicos, disponible en
+https://github.com/nselem/EvoMining  
+
+##CORASON  
+Deasrrollo de plataforma de búsqueda y priorización de clusters biosintéticos, disponible en
+https://github.com/nselem/EvoDivMet  
+
+#Artículos publicados  
+Phylogenomic Analysis of Natural Products Biosynthetic Gene Clusters Allows Discovery of Arseno-Organic Metabolites in Model Streptomycetes.  
+http://gbe.oxfordjournals.org/content/8/6/1906  
+
+#Artículos sometidos  
+1.Actinobacteria phylogenomics, selective isolation from an iron oligotrophic environment and siderophore functional characterization, unveil novel desferrioxamine molecular ecological and functional traits   
+
+2.The cycad coralloid root contains a diverse endophytic bacterial community with novel biosynthetic gene clusters unique to its microbiome  
+
+##Artículos en Borrador
+1.Gene family expansion facilitates metabolic robustness during natural product biosynthesis   
+2.Evolution of multi-functionality imposes strong canalization of evolutionary trajectories and limits Darwinian evolution
+
+#Capacitación tecnologica  
+##Estancia en Argonne (taller RAST/PATRIC)  
+Aprendí a utilizar las herramientas de anotación y genome mining RAST y Patric en el laboratorio Argonne. http://enews.patricbrc.org/4433/4433/ 
+
+#Otros:  
+##Google Summer of Code 2014  
+Gané el verano del código de google y desarrollé mi propuesta problemas de genómica y biomatemáticas en WebWork, plataforma opensource en perl de problemas de ciencias que se autoevalúan. 
+
+#Difusion de la ciencia    
+## Difución de ciencia a científicos
+###Unam Taller de Genoma Bacteriano    
+En la Unam ENES, unidad León en la carrera de Ciencias Agrogenómicas di un taller acerca del genoma bacteriano. Comparamos diversos genomas de la misma especie, y vimos que diferían en el contenido génico, así introdujimos los conceptos de pangenoma y coregenome. Utilizamos el anotador genómico RAST y los lenguajes de programación PHP y MySQL.  
+
+###Software-Carpentry Workshop  
+Mayo 30,31 Junio 1,2  
+Junio 8,9 2016  
+Participé como instructor en el curso de software carpentry de introducción al cómputo científico.
+http://liz-fernandez.github.io/2016-06-08-LANGEBIO-Mexico/  
+
+###Descripción de actividades  
+http://www.cyverse.org/blog/events/cyverse-tools-and-services-data-carpentry-workshop-langebio-cinvestav-irapuato-mx-may-30  
+
+Enseñamos a científicos a hacer su trabajo bioinformático organizado, eficiente y replicable con herramientas como R, linux, docker y atmosphere.  
+Artículos publicados  
+Artículos sometidos  
+
+##Difusión de ciencia al público general  
+1.Semana de la ciencia del colegio del Bosque 2017   
+2.Niños y Jóvenes en la Ciencia ciclo 2015-2016 SICES  
+3.Taller el microbioma te acompaña CIMAT 2016  
+4.Día abierto CINVESTAV 23 Semana Nacional de ciencia y tecnología 2016  
+
+
