@@ -49,7 +49,7 @@ Apendix one Useful docker commands
 Restart docker and free all ports  
 `sudo service docker restart`   
 
-liast containers  
+list containers  
 `docker ps -a`  
 
 ssh or bash into a running docker container  

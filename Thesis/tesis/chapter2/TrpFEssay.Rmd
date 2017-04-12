@@ -1,58 +1,552 @@
 ---
-title: "TrpF activity assay protocol"
+title: "PriA activity assay protocol"
 author: "NellySelem"
 date: "March 2, 2017"
 output: pdf_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+---
+header-includes:
+- \usepackage{amssymb,amsthm,amsmath}
+- \usepackage{chemarr}
+- \usepackage[caption=false]{subfig}
+output: pdf_document
+---
+
+```{r include_reedtemplates_2, include = FALSE}
+# This chunk ensures that the reedtemplates package is installed and loaded
+# This reedtemplates package includes the template files for the thesis and also
+# two functions used for labeling and referencing
+if(!require(devtools))
+  install.packages("devtools", repos = "http://cran.rstudio.com")
+
+if(!require(reedtemplates)){
+  library(devtools)
+  devtools::install_github("ismayc/reedtemplates")
+  }
+library(reedtemplates)
+```
+
+```{r load_pkgs_chapter2, message = FALSE,echo=FALSE}
+# List of packages required for this analysis
+pkg <- c("dplyr", "ggplot2", "knitr", "devtools","RColorBrewer")
+# Check if packages are not installed and assign the
+# names of the packages not installed to the variable new.pkg
+new.pkg <- pkg[!(pkg %in% installed.packages())]
+# If there are any packages in the list that aren't installed,
+# install them
+if (length(new.pkg))
+  install.packages(new.pkg, repos = "http://cran.rstudio.com")
+# Load packages
+library(dplyr)
+library(plyr)
+library(reshape)
+library(ggplot2)
+library(knitr)
+library(RColorBrewer)
+hm.palette <- colorRampPalette(rev(brewer.pal(11, 'Spectral')), space='Lab')  
+library(genstats) ## Next libraries are for coursera
+library(devtools)
+library(Biobase)
+library(scales) # 
+library(xlsx) # For save data on excel
 ```
 
 ##Materials  
-Incubator  
-Refrigerated centrifugal    
-Sonicator  
-column HisTrapHP  
-Fluorimeter  
+-Incubator  
+-Refrigerated centrifuge    
+-Sonicator  
+-Column HisTrapHP  
+-Column AKTA-FPLC
+-Column Vivapure mini
+-Fluorimeter  
 
+##Buffers
+  
 _Lysis Buffer_  
--Tris-HCL pH 7.5 10mM  
--EDTA  ph 7.7
--NaCl
--Glycerol  
--DTT  (Fresh addition)
--Mix protease inhibitor (Fresh addition)  
--Lysozyme  (Fresh addition)  
+-Tris-HCL $pH 7.5$  $10mM$  (or Potassium phosphate $pH 7.5$ $10mM$)    
+-EDTA  $pH 7.7$  
+-NaCl  $50mM$
+-Glycerol $5\%$   
+-DTT  $0.1mM$(Fresh addition)  
+-Mix protease inhibitor (Fresh addition)    
+-Lysozyme $10\frac{mg}{ml}$ (Fresh addition)  
   
-_Buffer A_  (Niquel affinity purification)  
--Tris-HCL    
--NaCL 500mM    
--Ajustar pH 7.5    
   
-_Buffer B_ (Niquel affinity purification)  
--Tris-HCL    
-NaCl 500mM    
-Imidazol 500 mM    
-Ajustar pH a 7.5    
+_Buffer A_  (nickel affinity purification)  
+-Tris-HCL $50mM$ or Potassium phosphate $50mM$     
+-NaCl $300mM$ (Buffer A available at $500mM$)      
+Adjust $pH$ at$7.5$      
+  
+  
+_Buffer B_ (Nickel affinity purification)  
+-Tris-HCL $50mM$ or Potassium phosphate $50mM$     
+-NaCL $300mM$ (Buffer B available at $500mM$)      
+-Imidazol $500 mM$      
+Adjust $pH$ a $7.5$    
 
-*Note* On all buffers above potasium phosphate pH 7.5 10mM or Hepes 50mM could have been used without notice protein quality or quantity variations.  
+  
+*Note* Potassium phosphate $pH 7.5$ $10mM$ or Hepes $50mM$ could have been used on above buffers without noticing protein quality or quantity variations.  
 
+  
 _Reaction buffer TrpF assay_  
--Tris-HCL 59 mM pH 7.5  
--MgCl2 mM  
--EDTA 0.5 mM  
-Anthranilic acid stock 1mM (this is the substrate that varias) store at -20|C  
-PRPP stock 10mM  (Final concentration must be always 5M times when compared with anthranilic acid) store at -20°C  
-DTT stock 64mM (Final concentration 0.4 mM) store at -20°  
+-Tris-HCL $50 mM$  $pH 7.5$  
+-$MgCl_2$ $2mM$  
+-EDTA $0.5 mM$  
+Following reaction buffer components must be added at the moment of essay and stocks must be prepared using as solvent the _TrpF reaction buffer_ previously described, NOT water. This precaution is to avoid alterations on reactives concentrations.  
+  
+-Anthranilic acid stock $1mM$ (this is the substrate that varies) store at $-20^{\circ}C$   
+(Needs to be prepared but there is sigma dust available)  ¿PREGUNTA: cúanto volumen preparo de este?  
+-PRPP stock $10mM$  ¿PREGUNTA: cúanto volumen preparo de este?  
+(Final concentration must be always 5 times molar when compared with anthranilic acid) store at $-20^{\circ}C$  
+-DTT stock $64mM$ (Final concentration 0.4 mM) store at $-20^{\circ}$  
+¿PREGUNTA: cúanto volumen preparo de este?  
+  
+_Reaction buffer proFAR assay_    
+TES $50mM$   (573mg p/50ml)  
+Ammonium bicarbonate $200mM$  (790.5mg p/50ml)  
+H_20 miliQ 50ml (¿PREGUNTA si debe llevar agua?)   
+  
+Additionally HisF must be added to each pool on plate   
+HisF $2.5mM$ by pool  ($10\mu l$ by pool on a stock at 40 $\mu M$)  
+  
+On Final volume of 160 $\mu l$ by pool $x\mu l=\frac{(2.5mM)(160\mu l)}{40mM}=10\mu l$  
+ 
+Calculate TES grams at $50mM$ on a final volum of $50 ml$  
+$C_F=50mM$ $V_F= 50ml$  
+$C_F=0.05M$  $V_F=0.05 L$  
+$mw=229.25\frac{g}{mol}$  
+  
+(Molaridad)(Volumen)= $\frac{gramos}{peso molecular}$  
+(0.05M)(0.05L)=$\frac{x gramos}{ 229.25 \frac{g}{mol}}$  
+x gramos = (0.05M)(0.05L) 229.25 $\frac{g}{mol}$   
+x=0.573g=573mg  
+  
+Calculate ammonium bicarbonate grams at $200mM$ on a final volume of $50 ml$   
+$C_F=200mM$ $V_F= 50ml$  
+$C_F=0.2M$  $V_F=0.05 L$  
+$mw=79.056\frac{g}{mol}$  
+  
+(Molaridad)(Volumen)= $\frac{gramos}{peso molecular}$  
+(0.2M)(0.05L)=$\frac{x gramos}{ 79.056 \frac{g}{mol}}$  
+x gramos = (0.2M)(0.05L) 79.056 $\frac{g}{mol}$   
+x=0.7905g=790.5mg  
+  
+  
+## Strains
+$$
+\centering
+\label{my-label enzyme}
+\begin{tabular}{ l l l l}
+\hline \\ [-1.5ex]
+Enzyme  & from Organism & Cloned at   & Antibiotic resitance\\ [1ex]
+\hline \\ [-1.5ex]
+\hline
+PriA & S. coelicolor & E coli V69  & Ampicilina \\  [1ex]
+D11A & S. coelicolor  & E coli V69 &  Ampicilina \\  [1ex]
+TrpC &  & C41 pGROEL/ES & Ampiciline\\  [1ex]
+TrpD &  & Rosseta 2  & kanamycin \\  [1ex]
+\hline
+\end{tabular}
+$$
 
-## Purification of auxiliary enzymes yTrpD tmTrpC ScoePria D11PriA  
+## Enzymes available as cristals at -80C
+$$
+\centering
+\label{my-label enzyme}
+\begin{tabular}{ l l c c}
+\hline \\ [-1.5ex]
+Enzyme  & from Organism & Concentration   & Concentration \\ [1ex]
+\hline \\ [-1.5ex]
+\hline
+PriB & SMg1   & $461\mu M$  & 12  $\frac{mg}{ml}$\\  [1ex]
+PriB & Ssvi   & $100\mu M$  & 2.6 $\frac{mg}{ml}$  \\  [1ex]
+PriB & JDen   & $215\mu M$  & 5.6 $\frac{mg}{ml}$ \\  [1ex]
+PriA & Tcur   & $335\mu M$  & 8.7 $\frac{mg}{ml}$\\  [1ex]
+PriA & Sros   & $450\mu M$  & 11.7$\frac{mg}{ml}$\\  [1ex]
+PriA & Smeg   & $370\mu M$  & 10  $\frac{mg}{ml}$\\  [1ex]
+PriB & Sspc   & $1346\mu M$ & 35  $\frac{mg}{ml}$\\  [1ex]
+\hline
+\end{tabular}
+$$
+
+Desired enzymes: all PriA, trpF and folE available at lab.  
+
+\clearpage 
+
+## Purification of essay enzymes yTrpD, tmTrpC, ScoePria, D11PriA  
+  
 ### Expression of plasmid on cell cultures  
-1. Prepare chemically competent (Calcium)  Rosseta 2 and C41pGROELcells/ES  
-2. Transform with plasid pET28_ytrpD (kanamycin resitent) on Rosseta 2, pQEI_tmtrpC (Amp resistent) on PGROEL/ES, for Scoe and D11 v68 transformed cells are available.  
-3. Incubate 1Lt cultive 37°C with correspondent antibiotic (Estria en una caja, preinoculo over night)  
-L arabinosa en el caso de pGROEL/ES_pQEI_tmtrpC y crecer a 37°C  
-4 Once .6 oD is reache inducir con .5 mM de iPTG and incubate 20°C overnigth  
-16° degrees V68  
+1. Cell preparation. Prepare chemically competent (Calcium)  
+-Rosseta 2 (for TrpD)  
+-C41 pGROEL/ES  (for TrpC)  
+-V69(for Scoe PriA and D11A)  
+  
+2. Transformation  
+use plasmids   
+-pET28_ytrpD (kanamycin resistant) on Rosseta 2   
+-pQEI_tmtrpC (Ampiciline resistant) on PGROEL/ES,  
+-Scoe and D11 v68 transformed cells V69 are available.    
+  
+3. Incubation. Incubate 1Lt culture at $37^{\circ}C$ with correspondent antibiotic (Bacteria previously streaking on petri dish, and an over night pre-inoculation $37^{\circ}C$)  
+Note: Addition L-Arabinose to pGROEL/ES_ pQEI_ tmtrpC 
 
-## Purification
+4. Induction. Once $0.6-0.8 OD$ at $600nm$ is reached, induce culture with IPTG $.5 mM$  and incubate overnight at  
+-$-20^{\circ}C$  (Rosseta 2 and C41 pGROEL/ES)  
+-$-16^{\circ}C$ degrees  (V68 cells)  
+IPTG cold $1M$ $500\mu l$ p/flask $1L$   
+
+## Purification 
+TrpC and TrpD will be purified by Nickel chromatography using AKTA-FPLC while ScoePriA and D11A purification will be done by Nickel chromatography using vivapure columns  
+
+### Centrifugation
+1. Centrifuge on $.5L$ cans  (Cans as big as possible)  
+rotor that suits for cans (On $.5L$ cans rotor code is 03)  
+Karina: velocity $6000 rpm$  Time $15 min$
+Ana: $7000rpm$ for $10 min$
+At this point experiment may be interrupted and pellet can be stored at $-80^{\circ}$ on Falcon tubes  
+To restart this protocol re suspend pellet on $25 ml$ lysis buffer keeping on ice all the following steps.  
+  
+### Sonication
+We sonicate pellet to disrupt cells and get the proteins. All reactives must be cooled previously and kept on ice.  
+  
+Add fresh components to Lysis buffer:  
+-Add proteasas inhibitor mix $2\mu l$ (Protein Box)  
+-Add DTT $.1 25\mu l$
+-Karina: Add Lysozyme $\frac{2mg}{ml}$  $100\mu l$  
+-Ana: Add Lysozyme $\frac{10mg}{ml}$($1000X$)  $100\mu l$ 
+  
+2. Resuspension. Add lysis Buffer $25ml$ to resuspend pellet and put test tubes on an small glass ware with ice  
+
+3. Sonication. After buffer addition sonicate:       
+$7$ times sonication $20s$ with $1min$ rest between every sonication cycle.    
+Only total time of sonication must be entered on sonicaction device ($140s$).    
+
+4. Centrifugation. After sonication centrifuge on refrigerated centrifuge at ??°C  
+karina: After sonication centrifuge $25 min$ at $8000 rpm$  
+Ana: After sonication centrifugal $25 min$ at $8000 rpm$  
+
+5. Inject into AKTA-FPL previously balanced with Buffer A   (or vivapure balanced with bufferA)  
+
+6.Wash with 5% Buffer B and subsequently with an imidazol gradient (Buffer B) from 5% to 60% on 16 vol of the column with a flux of 1ml/min. Conserve each elution tube properly labeled.  
+What we did to purificate Scoe PriA  was an imidazol gradient:  
+  
+Flask each one with a 100ml were prepared. columns were washed with 20ml of this tubes PREGUNTA: Tiempo y revoluciones de la centrifuga??  
+Imidazol concentration=x  
+v=(x=)100ml/500mM  
+$$
+\centering
+\label{my-label enzyme}
+\begin{tabular}{ l l c c}
+\hline \\ [-1.5ex]
+\hline
+Imidazol (mM) & BufferB (ml) & BufferA (ml)\\  [1ex]
+\hline \\ [-1.5ex]
+\hline
+50 & 10 & 90\\  [1ex]
+100& 20  & 80\\  [1ex]
+150& 30  & 70\\  [1ex]
+300& 60 & 40\\  [1ex]
+500& 100 &0\\  [1ex]
+\hline
+\end{tabular}
+$$
+  
+7.Recover the fractions that contains the protein that elutes approximately at 150-200 mM imidazol. Collect the relevant fractions. At this point a protein gel can be run to check protein elution
+
+8.Concentrate the protein using AMICON tubes until an approximate concentration of $90 \frac{\mu g}{\mu l}$ ($2ml$ vol approx)  
+9.Check purity by SDS-PAGE gel    
+on _S coelicolor_ PriA molecular weight is around 25.7 kDa (length 240 aminoacids), 
+on _T maritima_ TrpC molecular weight is around 27.5 kDa (length 242 aminoacids)
+10. Add glycerol at a final concentration of 15% and quantify using Bradford. Store at -80C
+
+
+_TrpC important before step 5_  
+After centrifuge step 4 :    
+Heat supernatant by 15 min at 65C  
+Centrifuge at 10000rpm by 20min. Recover the supernatant.  
+
+Continue with steps 5-10 as in trpD purification.  
+
+On protein activity is more important to be pure than to have protein abundance.  
+
+## TrpF activity  
+Important notes
+-Reaction buffer does not contain Anthranilic acid (AA) or PRPP, neither does contain DTT, this reactives are prepared separately an added at the moment of the essay.  
+-Maximum AA concentration that can be used to obtain confident data initial velocities without noise is 150MM  
+- It is important, before realizing enzyme kinetics, to determine suitable for  concentration of the enzyme in process of characterization,  to avoid "initial velocities lost" or substrate hydrolysis 
+- Kinetics were done on 96 plates especial to measure fluorescence, but from 8 to 8 reactions, i. e. every time 8 substrate concentrations using a multichanel pipette.  
+
+The enzymatic reaction to form PRA was realized using yTrpD at 25° starting with the addition of this enzyme at $1\mu M$ and tmTrpC at 1$\mu M$. Measures were made on a fluorimeter (TECAN) using excitation wavelength of 310 and emission wave length 400 nm  for anthranilic acid. Before starting measures, the equipment needs to calculate a series of parameters different for each measure, this conduces to lost time on the starting reaction, but for the PRA synthesis this is not important,  
+
+When yTrpD is added a decreasing is observed on the fluorescence signal, this effect is due to the enzyme excess. Once the fluorescence signal is constant (i.e once all AA has been converted to PRA) the equipment is paused and kept on the same program, so when resuming time won't be lost by parameters adjustments mentioned before.  The next reaction is started with the addtion of TrpF activity enzyme, the enzymatic catlysis is monitored by 10 min following de fluorsence diminishing nos due to the PRA dissaperaing (exitation wave length 310 nm emission wavelength 400 nm)  
+
+Obtaining of catalytic parameters to the TrpF activity 
+Once the temporal progress of the TrpF enzyme reaction is obtained (enzymatic kinetics), initial velocities can be determined, with the linear part of the curve were PRA uptake is observed.
+
+Catalytic parameters were obtained by non linear interpolation to the Michaelis-Menten equation using the program Micro Cal Origin version 5.0 considering to the adjustment the standard deviation of the triplicate essays. To this adjustment initial velocities vs concentrations of substrate PRA were graphed.  
+
+### Protein Gel  
+
+### Concentration   
+concentrate on columns amicon (pink cover 10kDa)  
+when stored for long periods leave on ethanol at 20%, to reuse trow ethanol out and wash many times with miliQ water
+the protein will be trap inside filter, discard supernatant.
+
+Bradford  
+measure a 595nm clear box
+$$
+\centering
+\label{my-label enzyme}
+\begin{tabular}{ l l l }
+\hline \\ [-1.5ex]
+Enzyme  & Bradford & $H_2O$ \\ [1ex]
+\hline \\ [-1.5ex]
+\hline
+ 0  & 40  & 155   \\  [1ex]
+ 5  & 40  & 150  \\  [1ex]
+ 10 & 40  & 110  \\  [1ex]
+ 50 & 40  & 60  \\  [1ex]
+100 & 40  &     \\  [1ex]
+\hline
+\end{tabular}
+$$
+
+ wait 5 min and measure
+
+###Quantification  
+Bradford  
+Save at $-80^{\circ}$ or better run the essay the same day.  
+
+Substrates must be loaded on box
+  
+## GTP enzymatic assay  
+  
+Based on docking GTP affinity a preliminary enzymatic assay was performed.  
+  
+### Preliminar dGTP assay conditions:  
+  
+$1\mu M$ dGTP (Invitrogen)  
+TrpF Buffer (50mM Tris-HCL buffer pH8.0, 5% glycerol, 0.5 mM EDTA, 0.1mM DTT)  
+50nM PriA vs 50 nM PriA D11A  
+
+Method: Fluorimetry (clear box)
+Excitation wavelength: 255 nm
+Emission wavelength: 334 nm
+
+```{r mutControl, results = "asis",message=FALSE,echo=FALSE}
+label(path = "MutantControl.png", caption = "Scoe and non functional Scoe PriA acting on dGTP",scale=.6,label = "PriARutas", type = "figure")
+```
+
+
+### Preliminar assays to test enzyme activity   (Ernesto)
+To test preliminary results we perform the following activity test assays.  
+  
+We will use $160 \mu l$ as final reaction volume.     
+$150 \mu l$ Buffer  
+$5\mu l$ substrate at $50 \mu M$  (Stock at $1.6 mM$)  
+$5 \mu l$ enzyme at $2.5 \mu M$  (Stock at $80 \mu M$)  
+   
+Now I will calculate substrate stock concentration needed to obtain a final concentration of $50 \mu M$ on a final volume of $160 \mu l$ adding $5 \mu l$ of substrate.  
+$C_1=\frac{50\mu M \times 160\mu l}{5 \mu l}=1600\mu M = 1.6mM$      
+So we need to prepare an stock of $1.6mM$ of substrate concentration. Commercial stock is at $100mM$ , so on a first dilution 1:10 named $C_0$, (90$H_20$ $\mu l$ and 10 $mu l$ GTP) we obtain our lab stock at $10mM$.  
+To obtain $1.6 mM$ again the formula $C_1 V_1=C_2 V_2$ was used. $100\mu l$ were prepared thinking on 10 reactions of $5 \mu l$ each one.  
+$V_1=\frac{1.6mM\times 100\mu l}{10mM}=16\mu l$  
+so $16 \mu l$ substrate was diluted on 84 $\mu l$ of $H_2O$.
+  
+Next I will explain calculus of enzyme stock concentration needed in order to obtain a final concentration of $2.5 \mu l$ on a final volume of $160 \mu l$ adding $5 \mu l$ of enzyme.  
+$C_1=\frac{2.5\mu M \times 160\mu l}{5 \mu l}=80\mu M$    
+So we need to prepare an stock of $80\mu M$ of enzyme concentration. An example was calculated using again the formula $C_1 V_1=C_2 V_2$.     
+  
+Example  
+We will prepare $20 \mu l$ of stock because we need $15 \mu l$ for three reactions. A little excess must ALWAYS be prepared for pipeting needs.  
+_Streptomyces sp Mg1_ enzyme concentration obtained was $461 \mu M$, so to obtain $20 \mu l$ we must add:  $V_1=\frac{80\times 20}{461}\mu l= 3.4 \mu l$    
+$3.4 \mu l$ of enzyme to $16.6\mu l$ TrpF reaction buffer.  
+Generalizing:  
+$C_1=x\mu M$, $V_1=y$, $C_2=80\mu M$, $V_2=20\mu l$  
+  
+$$
+\centering
+\label{enzyme_volume_gtp}
+\begin{tabular}{ l l c c c}
+\hline \\ [-1.5ex]
+Enzyme  & from Organism & Concentration   & Enzyme $\mu l$ & Buffer $\mu l$\\ [1ex]
+\hline \\ [-1.5ex]
+\hline
+PriB & SMg1   & $461\mu M$  & 3.4 & 16.6\\  [1ex]
+PriB & Ssvi   & $100\mu M$  & 16  & 4  \\  [1ex]
+PriB & JDen   & $215\mu M$  & 7.4 & 12.6 \\  [1ex]
+PriA & Tcur   & $335\mu M$  & 4.7 & 15.3\\  [1ex]
+PriA & Sros   & $450\mu M$  & 3.5 & 16.5\\  [1ex]
+PriA & Smeg   & $370\mu M$  & 4.3 &15.7 \\  [1ex]
+PriB & Sspc   & $1346\mu M$ & 1.1 &18.9  \\  [1ex]
+\hline
+\end{tabular}
+$$
+
+### Results 
+```{r activity, message = FALSE,echo=FALSE,warning=FALSE}
+GTP <- read.table("GTP.activity", header=TRUE, sep="\t")
+dGTP <- read.table("dGTP.activity", header=TRUE, sep="\t")
+GTP.m <- melt(GTP,id="Time")
+
+plot(GTP.m$Time, GTP.m$value, col=GTP.m$variable, pch=19)
+
+plot.new()
+legend("bottom", legend = unique(GTP.m$variable), col = unique(GTP.m$variable), pch=19)
+
+```
+
+the two enzymes with major activity were:   
+_Thermomonospora curvata_ thermophilic Actinobacteria from Thermomonosporaceae genus, it can be found in compost and participate in the active degradation of cellulose [@chertkov_complete_2011]. 
+Jonesia trpF shows no activity
+
+_Jonesia denitrificans_ is classified as a pathogenic organism for animals, reported genome was originally isolated from cooked ox blood [@pukall_complete_2009].  
+
+```{r activity_splited, message = FALSE,echo=FALSE,warning=FALSE}
+
+ggplot(GTP.m, aes(x=Time, y=value,color=variable)) + geom_point()+ facet_wrap(~ variable)+ geom_smooth()+theme_bw()+theme(plot.title = element_text(size = 8, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.y=element_text(angle = 30,size = 1), legend.position = "bottom")+ scale_size_area()
+```
+
+\clearpage   
+
+ 
+### Karina second attempt to obtain enzyme kinetics.  
+Now we will try substrate at different concentrations.  
+
+GTP is commercially available at stocks of $100mM$
+We want 8 different concentrations between 0 and 50mM on a final volume of $160\mu l$. We chose 0,0.5,1,1.5,5,10,20,50 as the eight points.  
+
+Dilutions were made to reach this concentrations.
+$C_{stock}= 100mM$ dil0  
+$C_0= 10mM=10000\mu M$ dil1 1:10
+$C_1= 1000\mu M$ dil1 1:10
+$C_2= 100\mu M$ dil2  1:10
+$C_3= 10\mu M$ dil3  1:10
+$C_4= 1\mu M$ dil4 1:10
+
+$[S] =[dGTP]=10000\mu M$  
+$[E]=50nM$  
+
+$$
+\label{Sco_jueves}
+\begin{tabular}{c c c c}
+\hline \\ [-1.5ex]
+Concentration $(\mu M)$  & Buffer $(\mu l)$ & Enzyme $(\mu l)$   & dGTP $(\mu l)$\\ [1ex]
+\hline \\ [-1.5ex]
+\hline
+   0  & 156.1  & 3.9 & 0 dil4   \\  [1ex]
+   0.5& 148.1  & 3.9 & 8 dil4\\  [1ex]
+   1  &  140.1   & 3.9 & 16 dil4\\  [1ex]
+   1.5&  132.1 & 3.9 & 24 dil4\\  [1ex]
+   5  &76.1  & 3.9 & 80 dil4  \\  [1ex]
+  10  & 140.1  & 3.9 & 16 dil3\\  [1ex]
+  20  & 124.1  & 3.9 & 32 dil3\\  [1ex]
+  50  & 76.1  & 3.9 & 80 dil3\\  [1ex]
+\hline
+\end{tabular}
+$$
+
+
+## ProFAR Enzymatic assay 
+black box
+Aldo: proFAR is an accoplated essay with tHisF enzyme (_Thermothoga maritima_) cloned on pET-15b.   
+
+Reaction suggested by Aldo:     
+24 $\mu M$ ProFAR  
+$0.36 \mu M$ SubHisA $pH 7.5$   
+HisF excess $2.5 \mu M$   
+
+Substrate concentrations  
+Total volume = $160 \mu l$  
+Enzyme concentration according to substrate  
+HisF 40 each/hole 5 $\mu l$   
+  
+
+$$
+\centering
+\label{Sco_jueves}
+\begin{tabular}{c c c c}
+\hline \\ [-1.5ex]
+Concentration  & Buffer $(\mu l)$ & Enzyme $(\mu l)$   & proFAR $(\mu l)$\\ [1ex]
+\hline \\ [-1.5ex]
+\hline
+ 0 & 155.4  & 4.6 & 0   \\  [1ex]
+   & 152.2  & 4.6 & 3.2 \\  [1ex]
+   &  149   & 4.6 & 6.4 \\  [1ex]
+   &  142.6 & 4.6 & 12.8\\  [1ex]
+   & 139.4  & 4.6 & 16   \\  [1ex]
+   & 136.2  & 4.6 & 19.2 \\  [1ex]
+   & 131.4  & 4.6 & 24 \\  [1ex]
+   & 123.4  & 4.6 & 32 \\  [1ex]
+\hline
+\end{tabular}
+$$
+
+$$
+\centering
+\label{Sco_viernes}
+\begin{tabular}{c c c c}
+\hline \\ [-1.5ex]
+Concentration  & Buffer $(\mu l)$ & Enzyme $(\mu l)$   & proFAR $(\mu l)$\\ [1ex]
+\hline \\ [-1.5ex]
+\hline
+ 0 & 156.1  & 3.9 & 0   \\  [1ex]
+   & 152.9  & 3.9 & 3.2 \\  [1ex]
+   & 149.7  & 3.9 & 6.4 \\  [1ex]
+   & 143.3 & 3.9 & 12.8\\  [1ex]
+   & 140.1  & 3.9 & 16   \\  [1ex]
+   & 136.9  & 3.9 & 19.2 \\  [1ex]
+   & 132.1  & 3.9 & 24 \\  [1ex]
+   & 124.1  & 3.9 & 32 \\  [1ex]
+\hline
+\end{tabular}
+$$
+
+$$
+\centering
+\label{ScoD11_A}Niquel 
+\begin{tabular}{c c c c}
+\hline \\ [-1.5ex]
+Concentration  & Buffer $(\mu l)$ & Enzyme $(\mu l)$   & proFAR $(\mu l)$\\ [1ex]
+\hline \\ [-1.5ex]
+\hline
+ 0 & 154.6  & 5.4 & 0   \\  [1ex]
+   & 151.4  & 5.4 & 3.2 \\  [1ex]
+   & 148.2   & 5.4 & 6.4 \\  [1ex]
+   & 141.8 & 5.4 & 12.8\\  [1ex]
+   & 138.6  & 5.4 & 16   \\  [1ex]
+   & 135.4  & 5.4 & 19.2 \\  [1ex]
+   & 130.6  & 5.4 & 24 \\  [1ex]
+   & 122.6  & 5.4 & 32 \\  [1ex]
+\hline
+\end{tabular}
+$$
+Buffer essay proFAR ammonium Bicarbonate 790.5 mg left: 200mM
+TES 573 mg left a 50mM vF 50 ml
+
+\clearpage   
+
+
+## PRA enzymatic assay
+clear box
+
+##ProFAR synthesis (From Thesis Aldo)  
+## Optimum ph determination for hisA activity  
+## Determination of cineticl parameters  
+## Todo list
+Ask Brieba for 1g L-arabinose         Status: Not done
+Check Resistance from TrpD and TrpC    Status: Done
+
+## Other Reactives available
+-Anthranilic acid (room temperature reactive)
+(Box ProFAR synthesis -20C)
+-D-ribose 5 phosphate disodium salt hidrate 
+-D ribose 5 phosphate disodium salt hidrate
+-Phosphoenol piruvic acid  monosodium salt hidrate
+-5phospho Dribose 1 diphosphate pentasodium salt
+-piruvate kinase
+-Adenosin 5 triphosphate disodium salt hidrate
+-pyrophosphatase inorganic from ecoli  
+-Adenosin 5 triphosphate ATP 
+

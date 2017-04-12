@@ -29,6 +29,7 @@ if(!require(reedtemplates)){
   devtools::install_github("ismayc/reedtemplates")
   }
 library(reedtemplates)
+flights <- read.csv("data/flights.csv")
 ```
 
 
@@ -50,61 +51,6 @@ ArchaeasSMASH <- read.table("chapter3/ArchaeasSMASH", header=TRUE, sep="\t")
 ArchaeasTaxa <- read.table("chapter3/ArchaeasTaxa", header=TRUE, sep="\t")
 ```
 
-```{r creating_practiceSet}
-ArchaeasHeatPlot <- read.table("chapter3/ArchaeasHeatPlot", header=TRUE, sep="\t")
-ArchaeasTaxa <- read.table("chapter3/ArchaeasTaxa", header=TRUE, sep="\t")
-
-## Adding order variable 
-ArchaeasHeatPlot$order<-c(1:nrow(ArchaeasHeatPlot))
-
-#sorting RastId it accordig to order variable
-ArchaeasHeatPlot$RastId <- with(ArchaeasHeatPlot,reorder(ArchaeasHeatPlot$RastId, ArchaeasHeatPlot$order))
-
-# Merging heatplot and taxonomy table into one table
-HP_Archaeas_Taxa<-merge(ArchaeasHeatPlot,ArchaeasTaxa,by.x = "RastId",by.y = "RastId")
-HP_Archaeas_Taxa.m<- melt(HP_Archaeas_Taxa)
-
-HP_Archaeas_Taxa.m<- ddply(HP_Archaeas_Taxa.m, .(variable), transform,rescale=scale(value))  ## 
-
-small<-HP_Archaeas_Taxa.m[which(HP_Archaeas_Taxa.m$RastId=='389007' | HP_Archaeas_Taxa.m$RastId=='390212' | HP_Archaeas_Taxa.m$RastId=='388991' | HP_Archaeas_Taxa.m$RastId=='388992' | HP_Archaeas_Taxa.m$RastId=='388199'| HP_Archaeas_Taxa.m$RastId=='388200'|  HP_Archaeas_Taxa.m$RastId=='388201'),]
-
-#Este Escogiendo que variables quiero
-small<-small[small$variable %in% c("Phosphoglycerate_dehydrogenase", "Isopropyl_malate_synthase","Alanine_dehydrogenase","Asparagine_synthase"), ] 
-## use http://colorbrewer2.org/ to find optimal divergent color palette (or set own)
- 
-small.m<- ddply(small, .(variable),summarize, mean = round(mean(value), 2),sd = round(sd(value), 2),expansion=mean+sd, reduction=mean-sd)  ## 
-rownames(small.m)<-small.m$variable
-```
-
-
-
-```{r coloring_test_set}
-color_exp<-function(x){
-  # Pendiente pasarle un dataframe en lugar de tener fijo small.m como variable global
-  result=0
-  expansion<-NULL
-  reduction<-NULL
-  local_value=x[1,"value"]
-  met_family<-x[1,"variable"]
-  Rast=x[1,1]
-  #print ("rast",Rast)
-  # print(paste(x,"family",met_family,"value",local_value,"Rast",Rast))
-  expansion<-small.m$expansion [which(small.m$variable==met_family)] 
-  reduction<-small.m$reduction [which(small.m$variable==met_family)] 
-  if (local_value>=expansion){result= 1}
-  else if (local_value<=reduction){result= -1}
-  return (result)
-}
-
-small.expansion<-adply(small,1,color_exp)
-
-#small.expansion$V1
-#color_palette <- colorRampPalette(c("#3794bf", "#FFFFFF","#df8640"))
-
-ggplot(small.expansion, aes(small.expansion$variable, small.expansion$RastId,label=round(small.expansion$value)))+ geom_tile(aes(fill = small.expansion$V1), colour = "white") + scale_fill_gradientn(colours = hm.palette(100),na.value = "gray")+ theme(text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5))+geom_text(size=4,check_overlap = TRUE)
-
-```
-
 
 ```{r learningHeatPlots}
 ########################################################
@@ -113,47 +59,43 @@ ggplot(small.expansion, aes(small.expansion$variable, small.expansion$RastId,lab
 ArchaeasHeatPlot <- read.table("chapter3/ArchaeasHeatPlot", header=TRUE, sep="\t")
 ArchaeasTaxa <- read.table("chapter3/ArchaeasTaxa", header=TRUE, sep="\t")
 hm.palette <- colorRampPalette(rev(brewer.pal(11, 'Spectral')), space='Lab')  
+
 ## Adding order variable 
 ArchaeasHeatPlot$order<-c(1:nrow(ArchaeasHeatPlot))
+
 #sorting RastId it accordig to order variable
 ArchaeasHeatPlot$RastId <- with(ArchaeasHeatPlot,reorder(ArchaeasHeatPlot$RastId, ArchaeasHeatPlot$order))
+
 # Merging heatplot and taxonomy table into one table
 HP_Archaeas_Taxa<-merge(ArchaeasHeatPlot,ArchaeasTaxa,by.x = "RastId",by.y = "RastId")
+
+
+#HP_Archaeas_Taxa<-HP_Archaeas_Taxa[order(HP_Archaeas_Taxa$Order,HP_Archaeas_Taxa$Family),]
+
 # Melting information leting as variables just enzymatic families and copy number
 HP_Archaeas_Taxa.m<- melt(HP_Archaeas_Taxa)
+
+#HP_Archaeas_Taxa.m<- ddply(HP_Archaeas_Taxa.m, .(variable), transform,rescale=scale(value))  ## 
+
 
 # Cleaning data
 HP_Archaeas_Taxa.m<- ddply(HP_Archaeas_Taxa.m, .(variable), transform,value)  ## 
 HP_Archaeas_Taxa.m<- ddply(HP_Archaeas_Taxa.m, .(variable), transform,rescale=scale(value))  ## 
 
-HP_Archeas.calcs<- ddply(HP_Archaeas_Taxa.m, .(variable),summarize, mean = round(mean(value), 2),sd = round(sd(value), 2),expansion=mean+sd, reduction=mean-sd)  ## 
+small<-HP_Archaeas_Taxa.m[which(HP_Archaeas_Taxa.m$RastId=='389007' | HP_Archaeas_Taxa.m$RastId=='390212' | HP_Archaeas_Taxa.m$RastId=='388991' | HP_Archaeas_Taxa.m$RastId=='388992' | HP_Archaeas_Taxa.m$RastId=='388199'| HP_Archaeas_Taxa.m$RastId=='388200'|  HP_Archaeas_Taxa.m$RastId=='388201'),]
 
-rownames(HP_Archeas.calcs)<-HP_Archeas.calcs$variable
-#########################################################3
-color_exp<-function(x){
-  # Pendiente pasarle un dataframe en lugar de tener fijo small.m como variable global
-  result=0
-  expansion<-NULL
-  reduction<-NULL
-  local_value=x[1,"value"]
-  met_family<-x[1,"variable"]
-  Rast=x[1,1]
-  #print ("rast",Rast)
-  # print(paste(x,"family",met_family,"value",local_value,"Rast",Rast))
-  expansion<-HP_Archeas.calcs$expansion [which(small.m$variable==met_family)] 
-  reduction<-HP_Archeas.calcs$reduction [which(small.m$variable==met_family)] 
-  if (local_value>=expansion){result= 1}
-  else if (local_value<=reduction){result= -1}
-  return (result)
-}
+
+
+#Este no
 small[ !small$variable %in% c("Contigs", "Size","TOTAL"), ] 
-##Bueno aqui voy
-##Heat.expansion<-adply(HP_Archaeas_Taxa.m[!HP_Archaeas_Taxa.m$variable %in% c("Contigs", "Size","TOTAL","order","RastNo"), ],1,color_exp)
+#Este Escogiendo que variables quiero
+small<-small[small$variable %in% c("Phosphoglycerate_dehydrogenase", "Isopropyl_malate_synthase","Alanine_dehydrogenase","Asparagine_synthase"), ] 
 
-
-#####################################333
-#############################################
-
+#small$RastId<-factor(unique(small$RastId), c("390212","389007","388991","388992"))
+#small$order <- c("1", "2", "3","4")
+#small
+#small$RastId<-factor(unique(small$RastId),small$RastId[order(unique(small$order))])
+#small$RastId
 
 ## geom tile with rescale rescala por column
         # Graph! with rescale
@@ -169,12 +111,92 @@ ggplot(small, aes(small$variable, small$RastId,label=round(small$value,digits=1)
 ### Color according to mean plus standar deviation
 ####
 
+
+
+## Expansion function IDea I could Also do a reduction function..
+expansion <- function(x) {
+  mean = mean(x) 
+  sd = sd(x) 
+  expansion=mean+sd
+  reduction=mean-sd
+  cutoff=c(expansion,reduction)
+  return(cutoff)
+  }
+
+#expansion.table<-[family,]
+
+family<-"Asparagine_synthase"
+family
+for(row in small[which(small$variable==family),]){
+        class(row)
+       # print(paste("RastId",row[26]))
+      }
+    
+
+## For all families print what means an Archaeal expansion
+for (family in unique(small$variable)){
+    ## Defining what is an expansion
+    fam_cutoff<-expansion(small$value[which(small$variable==family)])
+    print(paste("For family", family,"expansion means",fam_cutoff[1]))
+    print(paste("For family", family,"reduction means",fam_cutoff[2]))
+    ## Finding wich values on that families are expansions
+    ## that means wich genomes ahs an expansion on that family
+    for(smallvalue in small$value[which(small$variable==family)]){
+      if(smallvalue>fam_cutoff[1]){
+        print(paste("This is an expansion",smallvalue,">",fam_cutoff[1]))
+      }
+      else if(smallvalue<fam_cutoff[2]){
+        print(paste("This is a reduction",smallvalue,"<",fam_cutoff[2]))
+        }
+      else{
+        print (paste ("Among average",smallvalue,"<",fam_cutoff[1]))}
+    }
+    fam_cutoff<-NULL
+}
+
+## HAcer una estructura de datos, expansion, reduction normal
+#RastId #orden #Metabolicfamily #expansion {0,-1,1}
+
+
+
 ################# trying to make heatplot colors on dataframe
 
 small.m<- ddply(small, .(variable),summarize, mean = round(mean(value), 2),sd = round(sd(value), 2),expansion=mean+sd, reduction=mean-sd)  ## 
 rownames(small.m)<-small.m$variable
 
 ####################################################################
+```
+
+```{r dplyrdata}
+
+color_exp<-function(x){
+  result=0
+  expansion<-NULL
+  reduction<-NULL
+  local_value=x[1,"value"]
+  met_family<-x[1,"variable"]
+  Rast=x[1,1]
+  print ("nuevo")
+  print (paste("met",met_family,"rast",Rast,"value",local_value))
+#print ("rast",Rast)
+# print(paste(x,"family",met_family,"value",local_value,"Rast",Rast))
+  print("mm")
+
+  expansion<-small.m$expansion [which(small.m$variable==met_family)] 
+  reduction<-small.m$reduction [which(small.m$variable==met_family)] 
+  print(paste("exp",expansion,"red",reduction))        
+  if (local_value>=expansion){result= 1}
+  else if (local_value<=reduction){result= -1}
+  return (result)
+}
+
+small.expansion<-adply(small,1,color_exp)
+
+small.expansion$V1
+
+ggplot(small.expansion, aes(small.expansion$variable, small.expansion$RastId,label=round(small.expansion$value)))+ geom_tile(aes(fill = small.expansion$V1), colour = "white") + scale_fill_gradientn(colours = hm.palette(100),na.value = "gray")+ theme(text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5))+geom_text(size=4,check_overlap = TRUE)
+
+
 ```
 
 
