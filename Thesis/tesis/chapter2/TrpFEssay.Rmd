@@ -50,6 +50,7 @@ library(devtools)
 library(Biobase)
 library(scales) # 
 library(xlsx) # For save data on excel
+library(knitr)
 ```
 
 ##Materials  
@@ -57,29 +58,67 @@ library(xlsx) # For save data on excel
 -Refrigerated centrifuge    
 -Sonicator  
 -Column HisTrapHP  
--Column AKTA-FPLC
--Column Vivapure mini
+-Column AKTA-FPLC  
+-Column Vivapure mini  
 -Fluorimeter  
 
 ##Buffers
   
-_Lysis Buffer_  
--Tris-HCL $pH 7.5$  $10mM$  (or Potassium phosphate $pH 7.5$ $10mM$)    
--EDTA  $pH 7.7$  
--NaCl  $50mM$
--Glycerol $5\%$   
--DTT  $0.1mM$(Fresh addition)  
--Mix protease inhibitor (Fresh addition)    
--Lysozyme $10\frac{mg}{ml}$ (Fresh addition)  
+### _Lysis Buffer_  
+Potassium phosphate $pH 7.5$ $10mM$ can also be used instead of Tris-HCL    
+$$
+\label{Reaction_Buffer_TrpF}
+\begin{tabular}{ l l l l}
+\hline \\ [-1.5ex]
+ Component              &    Stock   & Final               &    Condition\\ [1ex]
+\hline \\ [-1.5ex]
+ Tris-HCL               &      1M    &     $10mM$          &    $pH 7.5$ \\ [1ex]
+ EDTA                   &     500mM  &    $0.5mM$          &     pH 7.7\\ [1ex]
+ NaCl                   &      1M    &    $50mM$           &    -       \\ [1ex]
+ Glycerol               & $50\%$ &     $5\%$    &   -       \\ [1ex]
+ DTT                    &   324mM    &   $0.1mM$           &   Fresh addition\\ [1ex]
+ Mix protease inhibitor &        -   &   $0.5 ul$          &   Fresh addition\\ [1ex]
+Lysozyme                &$10\frac{mg}{ml}$ &        1000X  &   Fresh addition\\ [1ex]
+\hline
+\end{tabular}
+$$
+
+
+*** 
+  TRIS-HCL stock: Calculate TRIS-HCL grams at $1M$ on a final volume of $200 ml$  
+$C_F=1M$ $V_F= 200ml$ = $V_F=0.2 L$ , $mw=121.14\frac{g}{mol}$  
   
+$Molaridad\times Volumen$ = $\frac{gramos}{peso molecular}$  
+ $1M\times 0.2L =\frac{x gramos}{ 121.14 \frac{g}{mol}}$  
+x gramos = (1M)(0.2L) 121.14 $\frac{g}{mol}$=`r 1*0.2*121.14` g = `r 1000*0.01*0.2*121.14` mg   
+
+**** 
+  Calculate EDTA grams at $500mM$ on a final volum of $20 ml$  
+$C_F=500mM$ $V_F= 200ml$,$C_F=.5M$  $V_F=0.02 L$,$mw=372.24\frac{g}{mol}$  
   
-_Buffer A_  (nickel affinity purification)  
+(Molaridad)(Volumen)= $\frac{gramos}{peso molecular}$  
+(0.5M)(0.02L)=$\frac{x gramos}{ 372.24 \frac{g}{mol}}$  
+x gramos = (0.5M)(0.02L) 372.24 $\frac{g}{mol}$ =`r .5*0.02*372.24` g= `r .5*0.02*372.24 *1000`mg   
+
+ 
+  To prepare 50ml from stocks:  
+Tris-HCL:  x1M=1000mM=(50ml)(10mM)-> x=`r 50*10/1000` ml=`r 50*10/1000*1000`$\mu l$    
+EDTA:       x500mM=(50ml)-> 0.5mM x=`r 50*.5/500` ml  =`r 50*.5/500*1000` $\mu l$    
+NaCl: x1M=1000mM=(50ml)50mM ->  x=`r 50*50/1000` ml  
+Glycerol x50%= (50ml)5% ->x=`r 50*5/50`ml  
+DTT x 364mM =(50ml)0.1mM ->x=`r 50*.1/364`= `r 50*.1/364*1000`ml  $\mu l$  
+Mix protease inhibitor ->x=  
+lysosyme 
+
+***
+### _Buffer A_  (nickel affinity purification)  
 -Tris-HCL $50mM$ or Potassium phosphate $50mM$     
 -NaCl $300mM$ (Buffer A available at $500mM$)      
 Adjust $pH$ at$7.5$      
   
-  
-_Buffer B_ (Nickel affinity purification)  
+***
+
+### _Buffer B_ (Nickel affinity purification)  
 -Tris-HCL $50mM$ or Potassium phosphate $50mM$     
 -NaCL $300mM$ (Buffer B available at $500mM$)      
 -Imidazol $500 mM$      
@@ -88,19 +127,77 @@ Adjust $pH$ a $7.5$
   
 *Note* Potassium phosphate $pH 7.5$ $10mM$ or Hepes $50mM$ could have been used on above buffers without noticing protein quality or quantity variations.  
 
+\clearpage 
+
+### _Reaction buffer TrpF assay_  
+Reaction Buffer stock  500ml  
+
+
+\label{Reaction_Buffer_TrpF}
+\begin{tabular}{ l l l l}
+\hline \\ [-1.5ex]
+Reactive  & Stock Concentration & Final Concentration   & Condition\\ [1ex]
+\hline \\ [-1.5ex]
+\hline
+Tris-HCL &       & $50 mM$  & $pH 7.5$ \\  [1ex]
+$MgCl_2$ &       & $2mM$    &   \\  [1ex]
+EDTA     &       & $0.5 mM$ & \\  [1ex]
+\hline
+\end{tabular}
+
+Following reaction buffer components must be added at the moment of essay and stocks must be prepared using as solvent the _TrpF reaction buffer_ previously described, NOT water. This precaution is to avoid alterations on reactive concentrations.  This components must be stored at $-20^{\circ}C$  
   
-_Reaction buffer TrpF assay_  
--Tris-HCL $50 mM$  $pH 7.5$  
--$MgCl_2$ $2mM$  
--EDTA $0.5 mM$  
-Following reaction buffer components must be added at the moment of essay and stocks must be prepared using as solvent the _TrpF reaction buffer_ previously described, NOT water. This precaution is to avoid alterations on reactives concentrations.  
+At the moment of essay prepare reaction Buffer: 5 ml will be enough for 24 holes of $160\mu l$  
+
+\label{Reaction_Buffer_TrpF}
+\begin{tabular}{ l l l l}
+\hline \\ [-1.5ex]
+Reactive  & Stock Concentration & Final Concentration   & Volume on $5ml$\\ [1ex]
+\hline \\ [-1.5ex]
+\hline
+Anthranilic acid & 100mM  & $0-200\mu M$   & see trpF assay\\  [1ex]
+PRPP &   20mM    &  1mM   &    `r 1000*5*1/20` $\mu l$ \\  [1ex]
+DTT     &  324mM & $0.4 mM$ & `r 1000*5*.4/324` $\mu l$\\  [1ex]
+
+\hline
+\end{tabular}
   
--Anthranilic acid stock $1mM$ (this is the substrate that varies) store at $-20^{\circ}C$   
-(Needs to be prepared but there is sigma dust available)  ¿PREGUNTA: cúanto volumen preparo de este?  
--PRPP stock $10mM$  ¿PREGUNTA: cúanto volumen preparo de este?  
-(Final concentration must be always 5 times molar when compared with anthranilic acid) store at $-20^{\circ}C$  
--DTT stock $64mM$ (Final concentration 0.4 mM) store at $-20^{\circ}$  
-¿PREGUNTA: cúanto volumen preparo de este?  
++this is the substrate that varies from 0 to $200\mu M$ store at $-20^{\circ}C$   
+(Needs to be prepared but there is sigma dust available)  
+
+AA stock $100mM$ $5ml$  
+$(.005L)(.1M)=\frac{xg}{137.14\frac{g}{mol}}$ 
+```{r AA_100mM_5ml}
+AA=.005*.1*137.14
+```
+$x=(.005)(.1)(137.14)g=0.06857g=68.57mg$  
+
+
+-PRPP stock $20mM$ 10ml  
+(Final concentration must be always 5 times molar when compared with anthranilic acid) store at 
+$-20^{\circ}C$
+First stock $20mM$ $10ml$  
+$(.01L)(.02M)=\frac{xg}{499.98\frac{g}{mol}}$ 
+```{r PRPP_20mM_10ml}
+PRPP=.01*.02*499.98
+```
+$x=(.01)(.02)(499.98)g=0.099996g=99.996mg$  
+  
+-DTT stock $324mM$ (Final concentration 0.4 mM) store at $-20^{\circ}$  
+1g on 20ml of reaction Buffer   
+$(20ml)(xM)=\frac{1g}{154.253\frac{g}{mol}}$  
+  $xM=\frac{1g}{154.253\frac{g}{mol}\times .02L}$    
+ 
+```{r DTT_stock_1g_20ml}
+DTT=1/(154.253*.02)
+``` 
+  $x=0.3241428M=324mM$  
+
+Prepare 5ml of Reaction Buffer with DTT and PRPP  
+DTT: $(5ml)(.4mM)=xml(324mM)$ ->  $DTT_f=$ `r 5*.4/324` ml = `r 1000*5*.4/324` $\mu l$.    
+PRPP=$(5ml)(1mM)=xml(20mM)$ =  $PRPP_f=$ `r 5*1/20` ml = `r 1000*5*1/20` $\mu l$.    
+
+\clearpage 
   
 _Reaction buffer proFAR assay_    
 TES $50mM$   (573mg p/50ml)  
@@ -111,7 +208,7 @@ Additionally HisF must be added to each pool on plate
 HisF $2.5mM$ by pool  ($10\mu l$ by pool on a stock at 40 $\mu M$)  
   
 On Final volume of 160 $\mu l$ by pool $x\mu l=\frac{(2.5mM)(160\mu l)}{40mM}=10\mu l$  
- 
+ $100mM$
 Calculate TES grams at $50mM$ on a final volum of $50 ml$  
 $C_F=50mM$ $V_F= 50ml$  
 $C_F=0.05M$  $V_F=0.05 L$  
@@ -125,12 +222,15 @@ x=0.573g=573mg
 Calculate ammonium bicarbonate grams at $200mM$ on a final volume of $50 ml$   
 $C_F=200mM$ $V_F= 50ml$  
 $C_F=0.2M$  $V_F=0.05 L$  
-$mw=79.056\frac{g}{mol}$  
+$mw=79.056\frac{g}{mol}$  `r 50*.1/364`
   
 (Molaridad)(Volumen)= $\frac{gramos}{peso molecular}$  
 (0.2M)(0.05L)=$\frac{x gramos}{ 79.056 \frac{g}{mol}}$  
 x gramos = (0.2M)(0.05L) 79.056 $\frac{g}{mol}$   
 x=0.7905g=790.5mg  
+
+\clearpage 
+
   
   
 ## Strains
@@ -212,7 +312,7 @@ We sonicate pellet to disrupt cells and get the proteins. All reactives must be 
   
 Add fresh components to Lysis buffer:  
 -Add proteasas inhibitor mix $2\mu l$ (Protein Box)  
--Add DTT $.1 25\mu l$
+-Add DTT $.1 25\mu l$  
 -Karina: Add Lysozyme $\frac{2mg}{ml}$  $100\mu l$  
 -Ana: Add Lysozyme $\frac{10mg}{ml}$($1000X$)  $100\mu l$ 
   
@@ -478,7 +578,8 @@ Concentration  & Buffer $(\mu l)$ & Enzyme $(\mu l)$   & proFAR $(\mu l)$\\ [1ex
    & 139.4  & 4.6 & 16   \\  [1ex]
    & 136.2  & 4.6 & 19.2 \\  [1ex]
    & 131.4  & 4.6 & 24 \\  [1ex]
-   & 123.4  & 4.6 & 32 \\  [1ex]
+   & 123.4  & 4.6 & 32 *** 
+\\  [1ex]
 \hline
 \end{tabular}
 $$
@@ -529,24 +630,76 @@ TES 573 mg left a 50mM vF 50 ml
 
 
 ## PRA enzymatic assay
-clear box
+_Substrate_  
+-TrpF  
+-TrpC $40 \mu M$  
+-TrpD $40 \mu M$  
+-Anthranilic acid(AA) (stored at -20C)  
+-Reaction Buffer TrpF    
+
+-AA dilution at $100\mu M$ from a 10mM stock.    
+Dilutions were made to reach this concentrations.  
+$D_{stock}= 100mM$ dil0    
+$AA_1= 10mM=10000\mu M$ dil1 1:10  
+$AA_2= 1mM$ dil2 1:10  
+$AA_3= 100\mu M$ dil3  1:10  
+Reactions are on holes of $160\mu l$  
+  
+-Example:  Calculate volume for $5\mu M$ on $160 \mu l$ from Dil3($100\mu M$)  
+$x\mu l= \frac{5\mu M \times 160 \mu l}{100\mu M}$  
+$x=\frac{5\times 160}{100}=8 \mu l$  
+  
+-Example:  Calculate volume for enzymes: $1\mu M$ TrpC enzyme on $160 \mu l$ from stock($40\mu M$)  
+$x\mu l= \frac{1\mu M \times 160 \mu l}{40\mu M}$  
+$x=\frac{1\times 160}{40}=4 \mu l$  
+
+-Essay perform on clear box
+
+Volumes on table are on $\mu l$  
+```{r PRA_essay_DATA, echo=FALSE}
+
+AAdata <- read.table(header=TRUE, text='
+ AA_microMolar AA_Volume  Dilution TrpC  TrpD 
+  0                0        -        4   4    
+  1                1.6      AA_Dil3  4   4    
+  5                8        AA_Dil3  4   4    
+  10               16       AA_Dil3  4   4    
+  50               8        AA_Dil2  4   4    
+  100              16       AA_Dil2  4   4    
+  150              24       AA_Dil2  4   4    
+  200              32       AA_Dil2  4   4    
+')
+#TrpF Concentration
+varia=4
+#TrpF volume  
+AAdata["TrpF"] <- varia # That creates the new column named "MY_NEW_COLUMN" filled with "NA"
+
+
+AAdata["Buffer"] <- NA # That creates the new column named "MY_NEW_COLUMN" filled with "NA"
+#AAdata$Buffer <- as.numeric(160-AAdata$AA_Volume - AAdata$AA_TrpC -AAdata$AA_TrpD  -AAdata$AA_TrpF)# As an example, the new column receives
+AAdata$Buffer <- 160-AAdata$AA_Volume- AAdata$TrpC -AAdata$TrpD  -AAdata$TrpF
+
+kable(AAdata)
+```
+
+\clearpage 
 
 ##ProFAR synthesis (From Thesis Aldo)  
 ## Optimum ph determination for hisA activity  
-## Determination of cineticl parameters  
+## Determination of cinetic parameters  
 ## Todo list
 Ask Brieba for 1g L-arabinose         Status: Not done
 Check Resistance from TrpD and TrpC    Status: Done
 
 ## Other Reactives available
--Anthranilic acid (room temperature reactive)
-(Box ProFAR synthesis -20C)
--D-ribose 5 phosphate disodium salt hidrate 
--D ribose 5 phosphate disodium salt hidrate
--Phosphoenol piruvic acid  monosodium salt hidrate
--5phospho Dribose 1 diphosphate pentasodium salt
--piruvate kinase
--Adenosin 5 triphosphate disodium salt hidrate
--pyrophosphatase inorganic from ecoli  
--Adenosin 5 triphosphate ATP 
+-Anthranilic acid (room temperature reactive)  
+(Box ProFAR synthesis -20C)  
+-D-ribose 5 phosphate disodium salt hidrate   
+-D ribose 5 phosphate disodium salt hidrate  
+-Phosphoenol piruvic acid  monosodium salt hidrate  
+-5phospho Dribose 1 diphosphate pentasodium salt  
+-piruvate kinase  
+-Adenosin 5 triphosphate disodium salt hidrate  
+-pyrophosphatase inorganic from ecoli    
+-Adenosin 5 triphosphate ATP  
 
