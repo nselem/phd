@@ -222,7 +222,7 @@ docking <- read.csv("chapter2/SmallHeat.data", header=TRUE, sep="\t")
 
 for (i in 2:21)
 {plot(density(docking[,i],na.rm=T)); rug(docking[,i]);browser()}
-corrplot(cor(docking[-c(5,12,13,38,51),-1]))
+plot(cor(docking[-c(5,12,13,38,51),-1]))
 ## Leer sobre la incertidumbre del 2 y explicarla  
 ## Y leer el paper de Julian y el de mauricio sobre reportes de docking
   
@@ -409,7 +409,7 @@ label(path = "conclusion/Solocirculos.png", caption = "Non darwinian trayectorie
 label(path = "conclusion/SolocirculosPRA.png", caption = "Positive increments on PRA",scale=.6,label = "PRARutas", type = "figure")
 ```
 
-```{r PriARutasPRO, results = "asis",message=FALSE,echo=FALSE}
+```{r PriARutasPRO2, results = "asis",message=FALSE,echo=FALSE}
 label(path = "conclusion/SolocirculosPRO.png", caption = "Positive increments on ProFAR",scale=.6,label = "ProFARRutas", type = "figure")
 ```
 
@@ -421,6 +421,10 @@ acido antranilico
 PRPP
 gliceroles de Ana
 checar resistencias
+
+```{r gel, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter2/Geles/PriAAbril30.png", caption = "gel",scale=.6,label = "gel", type = "figure")
+```
 
 
 ```{r endsession}

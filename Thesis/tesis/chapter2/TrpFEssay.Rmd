@@ -68,17 +68,18 @@ library(knitr)
 Potassium phosphate $pH 7.5$ $10mM$ can also be used instead of Tris-HCL    
 $$
 \label{Reaction_Buffer_TrpF}
-\begin{tabular}{ l l l l}
+\begin{tabular}{ l l l l l}
 \hline \\ [-1.5ex]
- Component              &    Stock   & Final               &    Condition\\ [1ex]
+ Component              &    Stock   & Final               & volume &    Condition\\ [1ex]
 \hline \\ [-1.5ex]
- Tris-HCL               &      1M    &     $10mM$          &    $pH 7.5$ \\ [1ex]
- EDTA                   &     500mM  &    $0.5mM$          &     pH 7.7\\ [1ex]
- NaCl                   &      1M    &    $50mM$           &    -       \\ [1ex]
- Glycerol               & $50\%$ &     $5\%$    &   -       \\ [1ex]
- DTT                    &   324mM    &   $0.1mM$           &   Fresh addition\\ [1ex]
- Mix protease inhibitor &        -   &   $0.5 ul$          &   Fresh addition\\ [1ex]
-Lysozyme                &$10\frac{mg}{ml}$ &        1000X  &   Fresh addition\\ [1ex]
+ Tris-HCL               &      1M    &     $10mM$          &    $500 \mu l$ & $pH 7.5$ \\ [1ex]
+ EDTA                   &     500mM  &    $0.5mM$          &    $50  \mu l$ & pH 7.7\\ [1ex]
+ NaCl                   &      1M    &    $50mM$           &    2.5 ml & -       \\ [1ex]
+ Glycerol               & $50\%$ &     $5\%$    &             5 ml  &-       \\ [1ex]
+ DTT                    &   324mM    &   $0.1mM$    &       `r 50*.1/324*1000` $\mu l$     &Fresh addition\\ [1ex]
+ Mix protease inhibitor &        -   &   $0.5 \mu l by ml$&   $25 \mu l$  &   Fresh addition\\ [1ex]
+Lysozyme                &$10\frac{mg}{ml}$ &        1000X  &  $50 \mu l$  &Fresh addition\\ [1ex]
+$H_2O$&                               &                    &  41.95 ml          & \\ [1ex]
 \hline
 \end{tabular}
 $$
@@ -108,7 +109,7 @@ NaCl: x1M=1000mM=(50ml)50mM ->  x=`r 50*50/1000` ml
 Glycerol x50%= (50ml)5% ->x=`r 50*5/50`ml  
 $H_2O$ -> `r  50- 50*5/50-50*50/1000-50*.5/500-50*10/1000`ml  
   _Fresh addition_
-DTT x 364mM =(50ml)0.1mM ->x=`r 50*.1/364`= `r 50*.1/364*1000`ml  $\mu l$  
+DTT x 324mM =(50ml)0.1mM ->x=`r 50*.1/324`= `r 50*.1/324*1000`ml  $\mu l$  
 Mix protease inhibitor $.5\mu l$ by ml -> `r .5*50` $\mu l$  
 lysosyme 10mg/ml 1000X on 50ml -> $50 \mu l$  
 
@@ -132,22 +133,39 @@ Adjust $pH$ a $7.5$
 \clearpage 
 
 ### _Reaction buffer TrpF assay_  
-Reaction Buffer stock  500ml  
-
+Pre reaction Buffer   
+volumes to prepare 50ml of TrpF reaction buffer stock   
 
 \label{Reaction_Buffer_TrpF}
-\begin{tabular}{ l l l l}
+\begin{tabular}{ l l l l l}
 \hline \\ [-1.5ex]
-Reactive  & Stock Concentration & Final Concentration   & Condition\\ [1ex]
+Reactive  & Stock Concentration & Final Concentration   & Volume & Condition\\ [1ex]
 \hline \\ [-1.5ex]
 \hline
-Tris-HCL &       & $50 mM$  & $pH 7.5$ \\  [1ex]
-$MgCl_2$ &       & $2mM$    &   \\  [1ex]
-EDTA     &       & $0.5 mM$ & \\  [1ex]
+Tris-HCL &  1M     & $50 mM$  & `r 50*50/1000` ml &$pH 7.5$ \\  [1ex]
+$MgCl_2$ &  1M     & $2mM$    & `r 50*2/1000` ml & \\  [1ex]
+EDTA     &  500mM  & $0.5 mM$ & `r 50*0.5/500` ml &\\  [1ex]
 \hline
 \end{tabular}
+$H_2O$ = `r 50-50*50/1000-50*2/1000-50*0.5/500`  ml  
 
-Following reaction buffer components must be added at the moment of essay and stocks must be prepared using as solvent the _TrpF reaction buffer_ previously described, NOT water. This precaution is to avoid alterations on reactive concentrations.  This components must be stored at $-20^{\circ}C$  
+  
+Stocks:  
+  
+$MgCl_2$ stock at 1M on 10ml.    
+$MgCl_2$ mw:95,211 g/mol  
+$(.01L)(1M)=\frac{xg}{95.211\frac{g}{mol}}$  = `r .01*1*95.211` g = `r 1000*.01*1*95.211` mg
+
+***  
+
+Volumes to 50ml stock  
+Tris-HCL: x 1M= x 1000mM =50ml $\times 50 mM$ -> x= `r 50*50/1000` ml  
+$MgCl_2$: x 1M= x 1000mM= 50ml $\times 2mM$  -> x=  `r 50*2/1000` ml =  `r 1000*50*2/1000` $\mu l$  
+EDTA:     x 500mM = 50ml $\times 0.5 mM$  -> x= `r 50*0.5/500` ml = `r 1000*50*0.5/500` $\mu l$     
+
+***
+
+Following reaction buffer components must be added at the moment of assay and stocks must be prepared using as solvent the _TrpF pre reaction buffer solution_ previously described, NOT water. This precaution is to avoid alterations on reactive concentrations.  This components must be stored at $-20^{\circ}C$  
   
 At the moment of essay prepare reaction Buffer: 5 ml will be enough for 24 holes of $160\mu l$  
 
@@ -157,8 +175,8 @@ At the moment of essay prepare reaction Buffer: 5 ml will be enough for 24 holes
 Reactive  & Stock Concentration & Final Concentration   & Volume on $5ml$\\ [1ex]
 \hline \\ [-1.5ex]
 \hline
-Anthranilic acid & 100mM  & $0-200\mu M$   & see trpF assay\\  [1ex]
-PRPP &   20mM    &  1mM   &    `r 1000*5*1/20` $\mu l$ \\  [1ex]
+Anthranilic acid & 33mM  & $0-200\mu M$   & see trpF assay\\  [1ex]
+PRPP &   24mM    &  1mM   &    `r 1000*5*1/24` $\mu l$ \\  [1ex]
 DTT     &  324mM & $0.4 mM$ & `r 1000*5*.4/324` $\mu l$\\  [1ex]
 
 \hline
@@ -166,24 +184,29 @@ DTT     &  324mM & $0.4 mM$ & `r 1000*5*.4/324` $\mu l$\\  [1ex]
   
 +this is the substrate that varies from 0 to $200\mu M$ store at $-20^{\circ}C$   
 (Needs to be prepared but there is sigma dust available)  
-
-AA stock $100mM$ $5ml$  
-$(.005L)(.1M)=\frac{xg}{137.14\frac{g}{mol}}$ 
+  
+***  
+  
+Stocks:  
+AA stock $xmM$ $15ml$  $68.57mg$ (15ml are minimum to prepare solution)
+$(.015L)(xM)=\frac{68.57g}{137.14\frac{g}{mol}}$ 
 ```{r AA_100mM_5ml}
-AA=.005*.1*137.14
+AA=68.57/(137.14*.015)
 ```
-$x=(.005)(.1)(137.14)g=0.06857g=68.57mg$  
+$x=(68.57)/(137.14*.015)g=0.06857g=68.57mg$  
 
 
--PRPP stock $20mM$ 10ml  
-(Final concentration must be always 5 times molar when compared with anthranilic acid) store at 
-$-20^{\circ}C$
-First stock $20mM$ $10ml$  
-$(.01L)(.02M)=\frac{xg}{499.98\frac{g}{mol}}$ 
-```{r PRPP_20mM_10ml}
-PRPP=.01*.02*499.98
+-PRPP stock $xmM$ 10ml  
+(Final concentration must be always 5 times molar when compared with anthranilic acid) store at $-20^{\circ}C$ Comes in small quantites, be careful.  
+
+First stock $xmM$ $10ml$  
+$(.01L)(xM)=\frac{120mg}{499.98\frac{g}{mol}}$ 
+```{r PRPP_xmM_10ml_120mg}
+PRPP=1000*.12/(499.98*.01)
 ```
-$x=(.01)(.02)(499.98)g=0.099996g=99.996mg$  
+> $x=\frac{(.12)(499.98)}{(.01)}M$ = `r PRPP`mM
+
+***
   
 -DTT stock $324mM$ (Final concentration 0.4 mM) store at $-20^{\circ}$  
 1g on 20ml of reaction Buffer   
@@ -195,9 +218,11 @@ DTT=1/(154.253*.02)
 ``` 
   $x=0.3241428M=324mM$  
 
+***
+
 Prepare 5ml of Reaction Buffer with DTT and PRPP  
 DTT: $(5ml)(.4mM)=xml(324mM)$ ->  $DTT_f=$ `r 5*.4/324` ml = `r 1000*5*.4/324` $\mu l$.    
-PRPP=$(5ml)(1mM)=xml(20mM)$ =  $PRPP_f=$ `r 5*1/20` ml = `r 1000*5*1/20` $\mu l$.    
+PRPP=$(5ml)(1mM)=xml(24mM)$ =  $PRPP_f=$ `r 5*1/24` ml = `r 1000*5*1/24` $\mu l$.    
 
 \clearpage 
   
@@ -310,7 +335,7 @@ At this point experiment may be interrupted and pellet can be stored at $-80^{\c
 To restart this protocol re suspend pellet on $25 ml$ lysis buffer keeping on ice all the following steps.  
   
 ### Sonication
-We sonicate pellet to disrupt cells and get the proteins. All reactives must be cooled previously and kept on ice.  
+We sonicate pellet to disrupt cells and get the proteins. All reactives must be cooled previously and kept on ice.  The sonicator must touch the falcon tube. Falcon must be kept on ice.
   
 Add fresh components to Lysis buffer:  
 -Add proteasas inhibitor mix $2\mu l$ (Protein Box)  
@@ -322,47 +347,215 @@ Add fresh components to Lysis buffer:
 
 3. Sonication. After buffer addition sonicate:       
 $7$ times sonication $20s$ with $1min$ rest between every sonication cycle.    
-Only total time of sonication must be entered on sonicaction device ($140s$).    
+Only total time of sonication must be entered on sonicaction device ($140s$).  
 
 4. Centrifugation. After sonication centrifuge on refrigerated centrifuge at ??°C  
 karina: After sonication centrifuge $25 min$ at $8000 rpm$  
 Ana: After sonication centrifugal $25 min$ at $8000 rpm$  
 
+
 5. Inject into AKTA-FPL previously balanced with Buffer A   (or vivapure balanced with bufferA)  
+When vivapure is being used, the supernatant must be filtered on .45 $\mu l$ filters to avoid column damage.  
 
 6.Wash with 5% Buffer B and subsequently with an imidazol gradient (Buffer B) from 5% to 60% on 16 vol of the column with a flux of 1ml/min. Conserve each elution tube properly labeled.  
 What we did to purificate Scoe PriA  was an imidazol gradient:  
   
-Flask each one with a 100ml were prepared. columns were washed with 20ml of this tubes PREGUNTA: Tiempo y revoluciones de la centrifuga??  
+Flask each one with a 100ml were prepared. columns were washed with 20ml of this tubes at 2000rpm 5 min  
 Imidazol concentration=x  
-v=(x=)100ml/500mM  
-$$
-\centering
+v: (x=)100ml/500mM    
+
 \label{my-label enzyme}
-\begin{tabular}{ l l c c}
+\begin{tabular}{ l l c c l}
 \hline \\ [-1.5ex]
-\hline
-Imidazol (mM) & BufferB (ml) & BufferA (ml)\\  [1ex]
+Flask & BufferB (mM)   & BufferB (ml)  & Buffer A ml & Buffer B  \\  [1ex]
 \hline \\ [-1.5ex]
-\hline
-50 & 10 & 90\\  [1ex]
-100& 20  & 80\\  [1ex]
-150& 30  & 70\\  [1ex]
-300& 60 & 40\\  [1ex]
-500& 100 &0\\  [1ex]
+1 & 50& 10&  90& 10 \\  [1ex]
+2 & 100& 20& 80& 20 \\  [1ex]
+3 & 150& 30& 70 & 30 \\  [1ex]
+4 & 300& 60& 40 & 60 \\  [1ex]
+5 & 500& 100& 0& 100 \\  [1ex]
 \hline
 \end{tabular}
-$$
-  
-7.Recover the fractions that contains the protein that elutes approximately at 150-200 mM imidazol. Collect the relevant fractions. At this point a protein gel can be run to check protein elution
 
-8.Concentrate the protein using AMICON tubes until an approximate concentration of $90 \frac{\mu g}{\mu l}$ ($2ml$ vol approx)  
+Flask must be ketp cold.  
+
+7.Recover the fractions that contains the protein that elutes approximately at 150-200 mM imidazol. (TrpC, TrpD) or 300mM imidazol (must PriA). Collect the relevant fractions. At this point a protein gel can be run to check protein elution.
+
+8.Concentrate the protein using AMICON tubes 10kDa (all molecules below this weight will be discarded, molecules with weight above 10kDa such as PriA will be ketp inside the tube) until an approximate concentration of $90 \frac{\mu g}{\mu l}$ ($1ml$ vol approx). Because imidazol>200mM reacts with Bradford, protein on amicon must be washed with 10 ml of buffer A to eliminate imidazol (4ml each time on amicon tube).
+
 9.Check purity by SDS-PAGE gel    
 on _S coelicolor_ PriA molecular weight is around 25.7 kDa (length 240 aminoacids), 
 on _T maritima_ TrpC molecular weight is around 27.5 kDa (length 242 aminoacids)
 10. Add glycerol at a final concentration of 15% and quantify using Bradford. Store at -80C
 
 
+
+## Bradford calibration curve  
+After protein concentration, 100 ul sample must be washed with 900 ul Buffer A (free of imidazol) 
+$$
+\label{ScoD11_A} 
+\begin{tabular}{c c c c}
+\hline 
+BSA $\mu l$ por ml & BSA $\mu l$ & Bradford $\mu l$ & Other \\ [1ex]
+\hline \\ [-1.5ex]  
+0                & 0      & 40 & $H_2O$ 160 $\mu l$   \\ [1 ex]
+10               & 160    & 40 &    -                 \\ [1 ex]
+20               & 160    & 40 & -                    \\ [1 ex]
+40               & 160    & 40 & -                    \\ [1 ex]
+60               & 160    & 40 &-                     \\ [1 ex]
+100              & 160    & 40 & -                    \\ [1 ex]
+0                &   0    & 40 &  PriA 5 $\mu l$   $H_2O$ 155 $\mu l$   \\ [1 ex]
+0                &   0    & 40 &  PriA 20 $\mu l$   $H_2O$ 130 $\mu l$  \\ [1 ex]
+
+\hline  
+\end {tabular}
+$$
+
+Mix well while pipeting. Holes with protein content must become blue.  
+Incubate 5 min.  
+Measure at 595 abs (TECAN).
+5 ul y 50  de proteina  
+
+BSA on ug/ml
+
+
+```{r BSA_Bradford}
+## 160 ul of BSA on this concentrations on ug/ml were added to a 40 ul of Bradford
+##BSA concentration on ug/ml
+BSAConcentrationStock<-c(0,10,20,40,60,100)
+
+#adding .16 ml on plates  
+vol<-160
+Bradford_df = data.frame(BSAConcentrationStock,vol)   
+
+## quantity of microgrames on .16 ml
+Bradford_df["Quantity"]<-BSAConcentrationStock*.160
+## concentration after added 40 ul bradford (total 200 ul)
+Bradford_df["Concentration200"]<-Bradford_df["Quantity"]/.2
+
+
+## This are the absorbance measures for the different BSA concentrations  
+Abs1BSA<-c(0.2649999857,0.4329000115,0.6754000187,0.9449999928,1.24240005,1.432000041)
+Abs2BSA<-c(0.2948000133,0.4298999906,0.7348999977,0.9965000153,1.225999951,1.494899988)
+
+Bradford_df["Abs1BSA"]<-Abs1BSA
+Bradford_df["Abs2BSA"]<-Abs2BSA
+
+## mean value of measures
+Bradford_df$mean<-rowMeans(subset(Bradford_df, select = c(Abs1BSA, Abs2BSA)), na.rm = TRUE)
+
+#adjusting blank
+Bradford_df$meanAdjusted<-Bradford_df$mean-Bradford_df$mean[1]
+BSA.lm = lm(meanAdjusted ~ Concentration200, data=Bradford_df) 
+coeffs = coefficients(BSA.lm); coeffs 
+
+b=coeffs[1]
+m=coeffs[2]
+
+eq = function(x){x*m+b}
+plot(Bradford_df$Concentration200,Bradford_df$meanAdjusted,type="l")
+#par(new=TRUE)
+plot(eq, 1,100)
+```
+
+
+```{r PriA_measures}
+##  ul of 
+vol=5
+type="Scoe"
+ABS1=0.932099998	
+ABS2=1.048400044
+Pria_df=data.frame(vol,type,ABS1,ABS2)
+Pria_df$type<-as.character(Pria_df$type)
+data2=c(20,"Scoe",1.639400005,1.569700003)
+data3=c(5,"D11A",0.575600028,	0.576099992)
+data4=c(20,"D11A",1.039499998,	1.067399979)
+data5=c(160,"test",.69085,	.69085)
+
+Pria_df=rbind(Pria_df,data2)
+Pria_df=rbind(Pria_df,data3)
+Pria_df=rbind(Pria_df,data4)
+Pria_df=rbind(Pria_df,data5)
+
+Pria_df$mean<-rowMeans(cbind(as.numeric(Pria_df$ABS1),as.numeric(Pria_df$ABS2)))
+
+## Pasando absorbancia a concentration de proteina en 200 ul (ug/ml)
+inter = function(y){(y-b)/m}
+Pria_df$concentration200<-inter(Pria_df$mean)
+
+## protein quantity on ug on 200 ul
+Pria_df["Quantity"]=Pria_df$concentration200*.2
+
+### Inicial concentration  C200_vol200=Cinicial_Vinicial
+Pria_df["ConcentrationInitial"]=Pria_df$Quantity/(.001*as.numeric(Pria_df$vol))
+
+kable(Bradford_df)
+kable(Pria_df)
+
+```
+
+Since 1kDa = 1Kg/mol and PriA Scoe molecular weight  is 25.7kDa we have that  
+$M\times V = \frac{g}{mw}$  
+$M=\frac{g}{V}\times\frac{1}{mw}$ 
+
+```{r molarity}
+## mas on Kda = kg/mol  
+mw<-25.7 
+# converting to g/mol  
+mwgram<-mw*1000  
+## concentration on g/L (after convert ug/ml)
+concentScoe<-2.352
+concentD11A<-1.248
+## Concentration on uM (10**6M)
+molar = function(x){(10**6)*x/mwgram}
+molar(concentScoe)
+molar(concentD11A)
+```
+## on uM
+> So Scoe concentration is `r molar(concentScoe)`  and D11A is  `r molar(concentD11A)` $\mu M$
+```{r adjustingM}
+
+## we want final concentration 2.4uM on a final volume of 160 ul
+## ciVi=CfVf
+## Vi =CfVf/Vi
+## Cf= 80uM Vf=5ul Vi=?ul Ci=x
+
+adjustMol = function(x){2.5*160/x} 
+## this are the ul need from stock cristal enzyme that will be diluted on buffer to complete 160 ul 
+adjustMol(molar(concentScoe))
+adjustMol(molar(concentD11A))
+```
+
+
+
+## Gel   
+
+grosor del gel.75  
+fijarse concentracion acrilamida
+pero la mayoría eluyen al 60% de imidazol 500mM
+Se pone primero el gel separador, y se le agrega el alcohol  isobutanol  
+Despues de media hora se tira el alcohol, se lava con abundante agua se tira el agua volteando el gel, y finalmente sin tocar el gel se seca con una sanita,   
+Se agrega el gel cargador, se coloca el peine sin dejar burbujas.  
+
+18ul vol final de pozo  
+16 $\mu l$ muestra por $4 \mu l$ buffer carga morado  
+heat at 95C by 5 min  
+10 $m ul$ marcador de peso molecular
+Note it is useful to take a picture of the hole content , to keep track of the muestra.    
+  
+### COOMASSIE COLOIDAL  
+Todos los reactivos deben agregarse poco a poco al agua en el orden indicado  y esperar a que se disuelvan antes de agregar el siguiente.
+- 650ml  de H2O  
+- 100g de sulfato de amonio  
+- .4g Coomassie G  
+- 30ml de Ácido Fosfórico (en el cuarto de quimica, mucho cuidado con este ácido es muy fuerte, si se tira un acido echarle cal)  
+- 200ml de Etanol  
+- Ajustar con H2O a 1 L  
+Nota: El Etanol debe agregarse poco a poco para evitar precipitación de sales  
+tubos amicon de 10000 kDa    
+
+  El AA no se disuelve tan facil 68mg 15 ml  
+  
 _TrpC important before step 5_  
 After centrifuge step 4 :    
 Heat supernatant by 15 min at 65C  
@@ -425,7 +618,13 @@ Substrates must be loaded on box
 ## GTP enzymatic assay  
   
 Based on docking GTP affinity a preliminary enzymatic assay was performed.  
-  
+  Sugerencia de lia... buscar niveles intracelulares de GTP (Bionumbers DB)  
+  Intracellular GTP concentration in glucose-fed, exponentially growing E. coli 	Bacteria Escherichia coli 	4.9 	mM 	104697 	
+  Aumentar al orden de mM  
+Bennett BD, Kimball EH... 
+
+Poner como control Gtp en buffer sin enzima  
+EDTA, 0.1mM DTT probar quitar estos componentes  
 ### Preliminar dGTP assay conditions:  
   
 $1\mu M$ dGTP (Invitrogen)  
@@ -448,18 +647,26 @@ We will use $160 \mu l$ as final reaction volume.
 $150 \mu l$ Buffer  
 $5\mu l$ substrate at $50 \mu M$  (Stock at $1.6 mM$)  
 $5 \mu l$ enzyme at $2.5 \mu M$  (Stock at $80 \mu M$)  
-   
+    
+   ***
+     
 Now I will calculate substrate stock concentration needed to obtain a final concentration of $50 \mu M$ on a final volume of $160 \mu l$ adding $5 \mu l$ of substrate.  
 $C_1=\frac{50\mu M \times 160\mu l}{5 \mu l}=1600\mu M = 1.6mM$      
-So we need to prepare an stock of $1.6mM$ of substrate concentration. Commercial stock is at $100mM$ , so on a first dilution 1:10 named $C_0$, (90$H_20$ $\mu l$ and 10 $mu l$ GTP) we obtain our lab stock at $10mM$.  
+So we need to prepare an stock of $1.6mM$ of substrate concentration. Commercial stock is at $100mM$ , so on a first dilution 1:10 named $C_0$, (90$H_20$ $\mu l$ and 10 $mu l$ GTP) we obtain our lab stock at $10mM$.
+  
+***
+  
 To obtain $1.6 mM$ again the formula $C_1 V_1=C_2 V_2$ was used. $100\mu l$ were prepared thinking on 10 reactions of $5 \mu l$ each one.  
 $V_1=\frac{1.6mM\times 100\mu l}{10mM}=16\mu l$  
 so $16 \mu l$ substrate was diluted on 84 $\mu l$ of $H_2O$.
-  
+    
+  ***
+    
 Next I will explain calculus of enzyme stock concentration needed in order to obtain a final concentration of $2.5 \mu l$ on a final volume of $160 \mu l$ adding $5 \mu l$ of enzyme.  
 $C_1=\frac{2.5\mu M \times 160\mu l}{5 \mu l}=80\mu M$    
 So we need to prepare an stock of $80\mu M$ of enzyme concentration. An example was calculated using again the formula $C_1 V_1=C_2 V_2$.     
-  
+    
+  *** 
 Example  
 We will prepare $20 \mu l$ of stock because we need $15 \mu l$ for three reactions. A little excess must ALWAYS be prepared for pipeting needs.  
 _Streptomyces sp Mg1_ enzyme concentration obtained was $461 \mu M$, so to obtain $20 \mu l$ we must add:  $V_1=\frac{80\times 20}{461}\mu l= 3.4 \mu l$    
@@ -467,6 +674,8 @@ $3.4 \mu l$ of enzyme to $16.6\mu l$ TrpF reaction buffer.
 Generalizing:  
 $C_1=x\mu M$, $V_1=y$, $C_2=80\mu M$, $V_2=20\mu l$  
   
+  ***  
+     
 $$
 \centering
 \label{enzyme_volume_gtp}
@@ -634,52 +843,66 @@ TES 573 mg left a 50mM vF 50 ml
 ## PRA enzymatic assay
 _Substrate_  
 -TrpF  
--TrpC $40 \mu M$  
--TrpD $40 \mu M$  
+-TrpC $40 \mu M$  Stock  
+-TrpD $40 \mu M$  Stock  
 -Anthranilic acid(AA) (stored at -20C)  
 -Reaction Buffer TrpF    
 
--AA dilution at $100\mu M$ from a 10mM stock.    
+-AA dilution at $33\mu M$ from a 33mM stock.    
 Dilutions were made to reach this concentrations.  
-$D_{stock}= 100mM$ dil0    
-$AA_1= 10mM=10000\mu M$ dil1 1:10  
-$AA_2= 1mM$ dil2 1:10  
-$AA_3= 100\mu M$ dil3  1:10  
+$D_{stock}= 33mM$ dil0    
+$AA_1= 3.3mM=3300\mu M$ dil1 1:10  
+$AA_2= .33mM$ dil2 1:10  
+$AA_3= 33\mu M$ dil3  1:10  
 Reactions are on holes of $160\mu l$  
+
+  ***
   
 -Example:  Calculate volume for $5\mu M$ on $160 \mu l$ from Dil3($100\mu M$)  
 $x\mu l= \frac{5\mu M \times 160 \mu l}{100\mu M}$  
 $x=\frac{5\times 160}{100}=8 \mu l$  
-  
+
+***
+
 -Example:  Calculate volume for enzymes: $1\mu M$ TrpC enzyme on $160 \mu l$ from stock($40\mu M$)  
 $x\mu l= \frac{1\mu M \times 160 \mu l}{40\mu M}$  
 $x=\frac{1\times 160}{40}=4 \mu l$  
 
--Essay perform on clear box
+***
 
+-Essay perform on clear box
+Following table is an example with Scoe when 8.23ul leads fo a final concentration of 2.5uM on 160ul  
 Volumes on table are on $\mu l$  
 ```{r PRA_essay_DATA, echo=FALSE}
 
 AAdata <- read.table(header=TRUE, text='
- AA_microMolar AA_Volume  Dilution TrpC  TrpD 
-  0                0        -        4   4    
-  1                1.6      AA_Dil3  4   4    
-  5                8        AA_Dil3  4   4    
-  10               16       AA_Dil3  4   4    
-  50               8        AA_Dil2  4   4    
-  100              16       AA_Dil2  4   4    
-  150              24       AA_Dil2  4   4    
-  200              32       AA_Dil2  4   4    
+ TrpC TrpD AA_microMolar  AA_Dilution  
+  4     4         0        0           
+  4     4         1        3    
+  4     4         5        3   
+  4     4         10       2   
+  4     4         50       2   
+  4     4        100       1 
+  4     4        150       1  
+  4     4        200       1  
 ')
-#TrpF Concentration
-varia=4
+
+#stock_con=33uM
+stock_con<-33000
+
+#Calculating volumes accordi
+AAdata["Vol"] <-round(160*AAdata["AA_microMolar"]/(stock_con*10**(-1*AAdata["AA_Dilution"])),digits = 2) # That creates the new column named "MY_NEW_COLUMN" 
+
+#TrpF Concentration (ul needed to lead final concentration to 2.4uM)
+varia=8.237179
 #TrpF volume  
-AAdata["TrpF"] <- varia # That creates the new column named "MY_NEW_COLUMN" filled with "NA"
+AAdata["TrpF"] <- round(varia,digits=2) # That creates the new column named "MY_NEW_COLUMN" filled with "NA"
 
 
 AAdata["Buffer"] <- NA # That creates the new column named "MY_NEW_COLUMN" filled with "NA"
-#AAdata$Buffer <- as.numeric(160-AAdata$AA_Volume - AAdata$AA_TrpC -AAdata$AA_TrpD  -AAdata$AA_TrpF)# As an example, the new column receives
-AAdata$Buffer <- 160-AAdata$AA_Volume- AAdata$TrpC -AAdata$TrpD  -AAdata$TrpF
+
+# As an example, the new column receives
+AAdata$Buffer <- 160-AAdata$Vol-AAdata$TrpC-AAdata$TrpD-AAdata$TrpF  
 
 kable(AAdata)
 ```
@@ -704,4 +927,77 @@ Check Resistance from TrpD and TrpC    Status: Done
 -Adenosin 5 triphosphate disodium salt hidrate  
 -pyrophosphatase inorganic from ecoli    
 -Adenosin 5 triphosphate ATP  
+
+## Process data
+First I saved file as scv tablar separated    
+perl -p -i -e 's/,/\t/g' Pra_scoe1.csv   
+An cut it to obtain just data  
+tail -n +39 Pra_scoe1.csv | head -n-3 > Pra_scoe1.data  
+perl -p -i -e 's/\sNr\.|\s\[\w*\]|\.\s\[.*\]//g' Pra_scoe1.data
+
+```{r Cinetics}
+library(reshape)
+tablePRA <- read.csv("chapter2/cineticas/Pra_scoe1.data", sep="\t") 
+PRAassay.m <- melt(tablePRA,id="Time")
+plot(PRAassay.m$Time, PRAassay.m$value, col=PRAassay.m$variable, pch=19)
+plot.new()
+legend("center", legend = unique(PRAassay.m$variable), col = unique(PRAassay.m$variable), pch=19)
+
+AA_Con<-c(0,0,1,	1,	5,	5,	10,	10,	50,	50,	100,	100,	150,	150,	200,	200)
+Fluor<-c(141,	125,	183,	190,	328,	434,	599,	582,	5456,	4767,	16756,	15523,	28072,	28501,	34844,	38941)
+
+
+meanVector <- function(argument1) {
+   odd<-argument1[c(TRUE, FALSE)] 
+   even<-argument1[c(FALSE,TRUE)]
+   result<-(odd+even)/2
+    return(result)
+}
+
+AA_mean<-meanVector(AA_Con)
+Fluor_mean<-meanVector(Fluor)
+
+UFR.lm = lm( Fluor_mean ~ AA_mean) 
+coeffs = coefficients(UFR.lm); coeffs 
+
+b=coeffs[1]
+m=coeffs[2]
+
+UAR_interpol = function(x){x*m+b}
+plot(AA_mean, Fluor_mean,ylab="UAR",xlab="AA uM", pch=19)
+par(new=TRUE)
+plot(UAR_interpol,yaxt="n",xaxt="n",xlab="",ylab="", 1,200)
+
+AAcon = function(y){(y-b)/m}
+AAcon(30000)
+
+PRAassay2<- AAcon(tablePRA)
+PRAassay2["Time"]<- tablePRA["Time"]
+PRAassay2$Cycle <- NULL
+PRAassay2$Temp <- NULL
+PRAassay2.m <- melt(PRAassay2,id="Time")
+plot(PRAassay2.m$Time, PRAassay2.m$value, col=PRAassay2.m$variable, pch=19)
+plot.new()
+legend("center", legend = unique(PRAassay2.m$variable), col = unique(PRAassay2.m$variable), pch=19)
+
+## pendientes (slopes)
+# time when TrpF is added
+cuttime<-283
+PRAassay2Time<-PRAassay2[which(PRAassay2$Time >= cuttime),]
+# vector with slopes for each dataset
+V0 <- apply(PRAassay2Time, 2, function(x) coefficients(lm(x ~ PRAassay2Time$Time))[1])
+
+## Hacer el plot para comprobar
+x1<-PRAassay2Time$Time
+y1<-PRAassay2Time$Scoe0
+test.lm<-lm(  x1 ~ y1)
+coeffs = coefficients(test.lm); 
+test.b=coeffs[1]
+test.m=coeffs[2]
+test_interpol = function(x){x*test.m+test.b}
+
+plot(x1, y1, ylab="UAR",xlab="Time", pch=19)
+par(new=TRUE)
+plot(test_interpol, yaxt="n",xaxt="n",xlab="",ylab="", 1,800)
+```
 
