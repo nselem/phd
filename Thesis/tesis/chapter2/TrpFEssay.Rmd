@@ -989,15 +989,17 @@ V0 <- apply(PRAassay2Time, 2, function(x) coefficients(lm(x ~ PRAassay2Time$Time
 
 ## Hacer el plot para comprobar
 x1<-PRAassay2Time$Time
-y1<-PRAassay2Time$Scoe0
+y1<-PRAassay2Time$Scoe10
 test.lm<-lm(  x1 ~ y1)
 coeffs = coefficients(test.lm); 
 test.b=coeffs[1]
 test.m=coeffs[2]
+
 test_interpol = function(x){x*test.m+test.b}
 
-plot(x1, y1, ylab="UAR",xlab="Time", pch=19)
+plot(x1, y1, ylab="UAR",xlab="Time", legend="test.m",pch=19)
 par(new=TRUE)
 plot(test_interpol, yaxt="n",xaxt="n",xlab="",ylab="", 1,800)
+
 ```
 
