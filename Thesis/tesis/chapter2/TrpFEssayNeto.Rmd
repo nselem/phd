@@ -768,9 +768,8 @@ $$
 
 
 ## ProFAR Enzymatic assay 
-black box
+-Essay perform on clear box  
 Aldo: proFAR is an accoplated essay with tHisF enzyme (_Thermothoga maritima_) cloned on pET-15b.   
-
 Reaction suggested by Aldo:     
 24 $\mu M$ ProFAR  
 $0.36 \mu M$ SubHisA $pH 7.5$   
@@ -849,63 +848,88 @@ TES 573 mg left a 50mM vF 50 ml
 
 
 ## PRA enzymatic assay
-_Substrate_  
--TrpF  
--TrpC $40 \mu M$  Stock  
--TrpD $40 \mu M$  Stock  
--Anthranilic acid(AA) (stored at -20C)  
--Reaction Buffer TrpF    
+Fluorescence (black box) Excitation 310 emission 400 nm Anthranilic acid TECAN
+```{r stock,echo=FALSE}
+TrpC_stock=60 ##uM
+TrpD_stock=40 ##uM
+TrpF_stock=48.5 ##uM
+type="D11A"
+AA_Stock=33 ##mM
+hole_vol=160 ##ul
+TrpF_final=2.4 ##uM final concentration on hole
+TrpF_vol=hole_vol*TrpF_final/TrpF_stock
+```
 
--AA dilution at $33\mu M$ from a 33mM stock.    
+_Reactives_  
+  
+>-TrpF  
+
+>-TrpC `r TrpC_stock` $\mu M$  Stock  
+
+>-TrpD `r TrpD_stock` $\mu M$  Stock   
+
+>-Anthranilic acid(AA) (stored at -20C)  
+
+>-Reaction Buffer TrpF    
+
+
+_AA dilution_  
+AA dilution at `r AA_Stock` $\mu M$ from a `r AA_Stock`mM stock.    
 Dilutions were made to reach this concentrations.  
-$D_{stock}= 33mM$ dil0    
-$AA_1= 3.3mM=3300\mu M$ dil1 1:10  
-$AA_2= .33mM$ dil2 1:10  
-$AA_3= 33\mu M$ dil3  1:10  
-Reactions are on holes of $160\mu l$  
+$D_{stock}=$ `r AA_Stock` $mM$ dil0    
+$AA_1=$ `r AA_Stock/10`mM=`r AA_Stock*100`$\mu M$ dil1 1:10  
+$AA_2=$ `r AA_Stock/100`mM dil2 1:10  
+$AA_3=$ `r AA_Stock`$\mu M$ dil3  1:10  
+Reactions are on holes of `r hole_vol` $\mu l$  
 
   ***
   
--Example:  Calculate volume for $5\mu M$ on $160 \mu l$ from Dil3($100\mu M$)  
-$x\mu l= \frac{5\mu M \times 160 \mu l}{100\mu M}$  
-$x=\frac{5\times 160}{100}=8 \mu l$  
+-Example:  Calculate volume for $5\mu M$ on `r hole_vol` $\mu l$ from Dil3(`r AA_Stock`$\mu M$)  
+$x\mu l= \frac{5\mu M \times `r hole_vol` \mu l}{`r AA_Stock`\mu M}$  
+$x=\frac{5\times `r hole_vol`}{`r AA_Stock`}=$ `r 5*hole_vol/AA_Stock` $\mu l$  
 
 ***
 
--Example:  Calculate volume for enzymes: $1\mu M$ TrpC enzyme on $160 \mu l$ from stock($40\mu M$)  
-$x\mu l= \frac{1\mu M \times 160 \mu l}{40\mu M}$  
-$x=\frac{1\times 160}{40}=4 \mu l$  
+-Example:  Calculate volume for enzymes: $1\mu M$ TrpC enzyme on $`r hole_vol` \mu l$ from stock $`r TrpC_stock` \mu M$ 
+$x\mu l `r TrpC_stock`\mu M= 1\mu M \times `r hole_vol` \mu l$  
 
-***
+> $x=$  `r  hole_vol*1/TrpC_stock` $\mu l$  
 
--Essay perform on clear box
-Following table is an example with Scoe when 8.23ul leads fo a final concentration of 2.5uM on 160ul  
+
+Following table is an example with `r type` Scoe at `r TrpF_stock` when $`r  TrpF_vol` \mu l$ leads fo a final concentration of $`r TrpF_final` \mu M$ on $`r hole_vol` \mu l$    
 Volumes on table are on $\mu l$  
+
 ```{r PRA_essay_DATA, echo=FALSE}
+TrpC<-rep(2.6,8)
+TrpD<-rep(4,8)  ## 
+AA_microMolar<-rev(c(1.25, 2.5,3.75,6.25,10, 20, 37.5,62.5))
+
+
+
 
 AAdata <- read.table(header=TRUE, text='
- TrpC TrpD AA_microMolar  AA_Dilution  
-  4     4         0        0           
-  4     4         1        3    
-  4     4         5        3   
-  4     4         10       2   
-  4     4         50       2   
-  4     4        100       1 
-  4     4        150       1  
-  4     4        200       1  
+  AA_Dilution  
+  1           
+  2    
+  2   
+  2   
+  2   
+  3 
+  3  
+  3  
 ')
-
+AAdata["AA_uM"]<-AA_microMolar
 #stock_con=33uM
-stock_con<-33000
+stock_con<-AA_Stock*1000
 
 #Calculating volumes accordi
-AAdata["Vol"] <-round(160*AAdata["AA_microMolar"]/(stock_con*10**(-1*AAdata["AA_Dilution"])),digits = 2) # That creates the new column named "MY_NEW_COLUMN" 
+AAdata["Vol"] <-round(hole_vol*AAdata["AA_uM"]/(stock_con*10**(-1*AAdata["AA_Dilution"])),digits = 2) # That creates the new column named "MY_NEW_COLUMN" 
 
-#TrpF Concentration (ul needed to lead final concentration to 2.4uM)
-varia=8.237179
+#TrpF Concentration (ul needed to lead final concentration to 2.4uM) (TrpF_vol)
 #TrpF volume  
-AAdata["TrpF"] <- round(varia,digits=2) # That creates the new column named "MY_NEW_COLUMN" filled with "NA"
-
+AAdata["TrpF"] <- round(TrpF_vol,digits=2) # That creates the new column named "MY_NEW_COLUMN" filled with "NA"
+AAdata["TrpC"]<-TrpC
+AAdata["TrpD"]<-TrpD
 
 AAdata["Buffer"] <- NA # That creates the new column named "MY_NEW_COLUMN" filled with "NA"
 
@@ -945,32 +969,40 @@ Check Resistance from TrpD and TrpC    Status: Done
 #tail -n +39 Pra_scoe1.csv | head -n-3 > Pra_scoe1.data  
 #perl -p -i -e 's/\sNr\.|\s\[\w*\]|\.\s\[.*\]//g' Pra_scoe1.data
 
-tablePRA <- read.table("cineticas/Pra_scoe1.data",header=TRUE, sep="\t") 
+#tablePRA <- read.table("cineticas/Pra_scoe1.data",header=TRUE, sep="\t") 
+tablePRA <- read.table("cineticas/PRA_TrpF_Jden_20150423.data",header=TRUE, sep="\t") 
+
 ## visualising full data
 tablePRA$Temp<-NULL
 tablePRA$Cycle<-NULL
 PRAassay.m <- melt(tablePRA,id="Time")
-plot(PRAassay.m$Time, PRAassay.m$value, col=PRAassay.m$variable, pch=19)
+plot(PRAassay.m$Time, PRAassay.m$value, col=PRAassay.m$variable, xlab="Time [s]",ylab="Fluorescence", pch=19)
 par(new=TRUE)
 legend("right", legend = rev(unique(PRAassay.m$variable)), col = rev(unique(PRAassay.m$variable)),pch=19,bg="white")
 ```
-
 ```{r FluorescenceRelativeUnits}
 ## getting Units of relative fluorescence before adding PriA
-AA_Con<-c(0,0,1,	1,	5,	5,	10,	10,	50,	50,	100,	100,	150,	150,	200,	200)
+AA_Con<-rep(c(1.25,	2.5,	3.75,	6.25,	10,	20,	37.5,	62.5),3)
+
 ## at time 196.2, when all AA is converted fluorescence data where
-Fluor<-c(141,	125,	183,	190,	328,	434,	599,	582,	5456,	4767,	16756,	15523,	28072,	28501,	34844,	38941)
+Fluor<-c(5773,7005,7512,9468,11966,17115,29515,41468,5779,6635,7437,9073,11777,16850,27559,41135,5499,6740,7497,8996,10980,17626,27017,41486)
 
 ## the true false if because we have use 2 columns on plate with same concentration on row, if more columns are to be used this must be adpated
-meanVector <- function(argument1) {
-   odd<-argument1[c(TRUE, FALSE)] 
-   even<-argument1[c(FALSE,TRUE)]
-   result<-(odd+even)/2
-    return(result)
-}
+meanVector <- function(argument1,n){
+  m=n-1
+  resul=rep(0,8)
+  
+ for (i in 0:m) {
+   for (j in 1:8) {
+    #print(c(i,j))
+     resul[j]=resul[j]+argument1[i*8+j]/n
+    }
+ }
+  return(resul)
+  }
 
-AA_mean<-meanVector(AA_Con)
-Fluor_mean<-meanVector(Fluor)
+AA_mean<-meanVector(AA_Con,3)
+Fluor_mean<-meanVector(Fluor,3)
 
 UFR.lm = lm( Fluor_mean ~ AA_mean) 
 coeffs = coefficients(UFR.lm); coeffs 
@@ -980,7 +1012,7 @@ m=coeffs[2]
 
 UAR_interpol = function(x){x*m+b}
 ## since all AA is converted to PRA we set x axis as PRA uM
-plot(AA_mean, Fluor_mean,ylab="UAR",xlab="PRA uM", pch=19)
+plot(AA_mean, Fluor_mean,ylab="URF",xlab="PRA uM", pch=19)
 par(new=TRUE)
 plot(UAR_interpol,yaxt="n",xaxt="n",xlab="",ylab="", 1,200)
 
@@ -992,37 +1024,43 @@ PRAassay2["Time"]<- tablePRA["Time"]
 PRAassay2$Cycle <- NULL
 PRAassay2$Temp <- NULL
 PRAassay2.m <- melt(PRAassay2,id="Time")
-plot(PRAassay2.m$Time, PRAassay2.m$value, col=PRAassay2.m$variable, pch=19)
+plot(PRAassay2.m$Time, PRAassay2.m$value, col=PRAassay2.m$variable, xlab="Time", ylab="URF PRA uM",pch=19)
 par(new=TRUE)
 legend("right", legend = unique(PRAassay2.m$variable), col = unique(PRAassay2.m$variable), pch=19,box.lwd=0, bg="white")
 
-## pendientes (slopes)
+##
+
+```
+
+```{r slopes}
+ ##pendientes (slopes) of linear part of the curve
 # time when TrpF is added
-cuttime<-283
-PRAassay2Time<-PRAassay2[which(PRAassay2$Time >= cuttime),]
+cuttime<-60
+maxtime=200
+PRAassay2Time<-PRAassay2[which(PRAassay2$Time >= cuttime & PRAassay2$Time <= maxtime),]
 # vector with slopes for each dataset
 V0 <- apply(PRAassay2Time, 2, function(x) coefficients(lm(x ~ PRAassay2Time$Time))[2])
 
-## Hacer el plot para comprobar
-x1<-PRAassay2Time$Time
-y1<-PRAassay2Time$Scoe10
-test.lm<-lm(  x1 ~ y1)
-coeffs = coefficients(test.lm); 
-test.b=coeffs[1]
-test.m=coeffs[2]
+## Hacer un plot para comprobar
+#x1<-PRAassay2Time$Time
+#y1<-PRAassay2Time$Scoe10
+#test.lm<-lm(  x1 ~ y1)
+#coeffs = coefficients(test.lm); 
+#test.b=coeffs[1]
+#test.m=coeffs[2]
 
-test_interpol = function(x){x*test.m+test.b}
+#test_interpol = function(x){x*test.m+test.b}
 
-plot(x1, y1, ylab="UAR",xlab="Time", pch=19)
-par(new=TRUE)
-text<-c("slope",test.m)
+#plot(x1, y1, ylab="UAR",xlab="Time", pch=19)
+#par(new=TRUE)
+#text<-c("slope",test.m)
 
-plot(test_interpol, yaxt="n",xaxt="n",xlab="",ylab="", 1,800)
-legend("topright", legend = text,  pch=19)
+#plot(test_interpol, yaxt="n",xaxt="n",xlab="",ylab="", 1,800)
+#legend("topright", legend = text,  pch=19)
 
 ## ploting PRA degradation part with slope and slope labels
 PRAassay2Time.m <- melt(PRAassay2Time,id="Time")
-plot(PRAassay2Time.m$Time, PRAassay2Time.m$value, col=PRAassay2Time.m$variable, pch=19, xlim=c(cuttime-50,1000),bty='L')
+plot(PRAassay2Time.m$Time, PRAassay2Time.m$value, col=PRAassay2Time.m$variable, pch=19, xlim=c(cuttime-50,maxtime+50),bty='L')
 
 V1 <- apply(PRAassay2Time[,2:ncol(PRAassay2Time)], 2, function(x) coefficients(lm(x ~ PRAassay2Time$Time)))
 apply(V1, 2, function(x) {abline(x, col = PRAassay2Time.m$variable)  })
@@ -1035,44 +1073,58 @@ legend(800,200, legend = slopeText, col = rev(unique(PRAassay2Time.m$variable)),
 ## get relevant velocities and get correspondent concentrations
 ## V0 or slopes are on [PRA]uM/s 
 # slopes stores the slope, with TRUE , FALSE the desired enzyme can be selected, One more than one is tested on a plate always check if it is the desired one.
-slopes=(round(V0[-1],digits=6))[c(TRUE,FALSE)]
+slopes=(round(V0[-1],digits=6))[c(TRUE)]
 concentration<-as.matrix(PRAassay2Time[1,names(slopes)])
 #slopes
 #concentration
-slopes=as.matrix((round(V0[-1],digits=6))[c(TRUE,FALSE)])
+slopes=as.matrix((round(V0[-1],digits=6))[c(TRUE)])
 row.names(slopes) <- NULL 
-slopes<-c(slopes)
+slopes<-c(slopes)## plot on r base
+
+slopes
 # in concentration I stored the inital substrate concentration  
 row.names(concentration) <- NULL 
 concentration<-c(concentration)
 slopes
 concentration
+```
 
+
+
+```{r michelis}
 ## interpolar michaelis-menden
 
 #https://rpubs.com/RomanL/6752
 #https://davetang.org/muse/2013/05/17/fitting-a-michaelis-mentens-curve-using/
 #S <-concentration
-S <-c(0,1,5,10,50,100,150,200)
+S <-rep(c(1.25,	2.5,	3.75,	6.25,	10,	20,	37.5,	62.5),3)
 v <-slopes
-mm <- data.frame(S,v)                                                                                         
-
+#S<-S[c(TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE)]
+#v<-v[c(TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE)]
+v<--1*v
+S
+#v<-c(0.3603103582,16.57656773,	24.8040479769,	33.0302900927,	62.7172421841,	75.5304893321,	116.8260724776,102.9074874195,3.6271404012,	2.2514345242,	16.7047071749,	42.3110498213,	58.3542961723,	105.7449137008	,141.0720079924,	134.5096147278,4.3589042967,	17.6008720996,	21.843520163,	52.5170349751,	71.583299178,	113.2694343876	,176.6405805269	,183.8715503108)
+mm <- data.frame(S,v)                                                                                 
 model.drm <- drm(v ~ S, data = mm, fct = MM.2())
 summary(model.drm)
 ## first value equal km
 ## second value = vm
-
+Km=coefficients(model.drm)[1]
+Vmax=2*coefficients(model.drm)[2]
+Enzyme=2.5 #2.5uM
+Kcat=Vmax*Enzyme  
+Km
+Vmax
+Kcat
 mml <- data.frame(S = seq(0, max(mm$S), length.out = 100))
 mml$v <- predict(model.drm, newdata = mml)
 
+
 ## plot on r base
-plot(mm,log='',xlim=c(-0.1,210), ylim=c(-0.01,.01), xlab="Reads", ylab="Transcripts")
+plot(mm,log='',xlim=c(0,max(mm$S)), ylim=c(0,max(mm$v)), xlab="Reads", ylab="Transcripts")
 
 ##plot on ggplot
 ggplot(mm, aes(x = S, y = v)) + theme_bw() + xlab("Concentration [uM]") + ylab("Speed [d[PRA]uM/s]") + ggtitle("Michaelis-Menten kinetics") +  geom_point(alpha = 0.5) + geom_line(data = mml, aes(x = S, y = v), colour = "red")
 
 ggsave("mm.pdf", width = 6, height = 4)
-
-
 ```
-
