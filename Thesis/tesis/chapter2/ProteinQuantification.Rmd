@@ -1,0 +1,195 @@
+---
+title: "ProteinQuantification"
+author: "NellySelem"
+date: "May 18, 2017"
+output: pdf_document
+---
+
+```{r include_reedtemplates_PQ, include = FALSE}
+# This chunk ensures that the reedtemplates package is installed and loaded
+# This reedtemplates package includes the template files for the thesis and also
+# two functions used for labeling and referencing
+if(!require(devtools))
+  install.packages("devtools", repos = "http://cran.rstudio.com")
+
+if(!require(reedtemplates)){
+  library(devtools)
+  devtools::install_github("ismayc/reedtemplates")
+  }
+library(reedtemplates)
+```
+
+```{r load_pkgs_chapterPQ, message = FALSE,echo=FALSE}
+# List of packages required for this analysis
+pkg <- c("dplyr", "ggplot2", "knitr", "devtools","RColorBrewer")
+# Check if packages are not installed and assign the
+# names of the packages not installed to the variable new.pkg
+new.pkg <- pkg[!(pkg %in% installed.packages())]
+# If there are any packages in the list that aren't installed,
+# install them
+if (length(new.pkg))
+  install.packages(new.pkg, repos = "http://cran.rstudio.com")
+# Load packages
+library(dplyr)
+library(plyr)
+library(reshape) ## melt
+library(ggplot2)
+library(knitr)
+library(RColorBrewer)
+hm.palette <- colorRampPalette(rev(brewer.pal(11, 'Spectral')), space='Lab')  
+library(genstats) ## Next libraries are for coursera
+library(devtools)
+library(Biobase)
+library(scales) # 
+library(xlsx) # For save data on excel
+library(knitr)
+library(drc) # for fitting Michaelis Menten model
+library(ggplot2) # for drawing
+
+```
+
+## Protein Quantification
+### Bradford calibration curve  
+Mix well while pipeting. Holes with protein content must become blue.  
+Incubate 5 min.  
+Measure at 595 abs (TECAN). clear box.  
+5 ul y 50ul of protein. Take measures inside the curve range.  
+BSA on ug/ml
+
+$$ \label{ScoD11_A} 
+\begin{tabular}{c c c c}
+\hline 
+BSA $\mu l$ por ml & BSA $\mu l$ & Bradford $\mu l$ & Other \\ [1ex]
+\hline \\ [-1.5ex]  
+0                & 0      & 40 & $H_2O$ 160 $\mu l$   \\ [1 ex]
+10               & 160    & 40 &    -                 \\ [1 ex]
+20               & 160    & 40 & -                    \\ [1 ex]
+40               & 160    & 40 & -                    \\ [1 ex]
+60               & 160    & 40 &-                     \\ [1 ex]
+100              & 160    & 40 & -                    \\ [1 ex]
+0                &   0    & 40 &  PriA 5 $\mu l$   $H_2O$ 155 $\mu l$   \\ [1 ex]
+0                &   0    & 40 &  PriA 20 $\mu l$   $H_2O$ 130 $\mu l$  \\ [1 ex]
+
+\hline  
+\end {tabular}
+$$
+
+
+
+
+```{r BSA_Bradford}
+## 160 ul of BSA on this concentrations on ug/ml were added to a 40 ul of Bradford
+##BSA concentration on ug/ml
+BSAConcentrationStock<-c(0,10,20,40,60,100)
+
+#adding .16 ml on plates  
+vol<-160
+Bradford_df = data.frame(BSAConcentrationStock,vol)   
+
+## quantity of microgrames on .16 ml
+Bradford_df["Quantity"]<-BSAConcentrationStock*.160
+## concentration after added 40 ul bradford (total 200 ul)
+Bradford_df["Concentration200"]<-Bradford_df["Quantity"]/.2
+
+
+## This are the absorbance measures for the different BSA concentrations  
+Abs1BSA<-c(0.2649999857,0.4329000115,0.6754000187,0.9449999928,1.24240005,1.432000041)
+Abs2BSA<-c(0.2948000133,0.4298999906,0.7348999977,0.9965000153,1.225999951,1.494899988)
+
+Bradford_df["Abs1BSA"]<-Abs1BSA
+Bradford_df["Abs2BSA"]<-Abs2BSA
+
+## mean value of measures
+Bradford_df$mean<-rowMeans(subset(Bradford_df, select = c(Abs1BSA, Abs2BSA)), na.rm = TRUE)
+
+#adjusting blank
+Bradford_df$meanAdjusted<-Bradford_df$mean-Bradford_df$mean[1]
+BSA.lm = lm(meanAdjusted ~ Concentration200, data=Bradford_df) 
+coeffs = coefficients(BSA.lm); coeffs 
+
+b=coeffs[1]
+m=coeffs[2]
+
+eq = function(x){x*m+b}
+plot(Bradford_df$Concentration200,Bradford_df$meanAdjusted,type="l")
+par(new=TRUE)
+plot(eq, 1,100)
+```
+
+
+### Enzyme quantification
+For Bradford to work properly After protein concentration, 900 ul Buffer A (free of imidazol) must be added to 100 $\mu l$ sample
+
+```{r PriA_measures}
+##  ul of 
+vol=5
+type="Scoe"
+ABS1=0.932099998	
+ABS2=1.048400044
+Pria_df=data.frame(vol,type,ABS1,ABS2)
+Pria_df$type<-as.character(Pria_df$type)
+data2=c(20,"Scoe",1.639400005,1.569700003)
+data3=c(5,"D11A",0.575600028,	0.576099992)
+data4=c(20,"D11A",1.039499998,	1.067399979)
+data5=c(160,"test",.69085,	.69085)
+
+## add data to dataframe Pria_df
+Pria_df=rbind(Pria_df,data2)
+Pria_df=rbind(Pria_df,data3)
+Pria_df=rbind(Pria_df,data4)
+Pria_df=rbind(Pria_df,data5)
+
+Pria_df$mean<-rowMeans(cbind(as.numeric(Pria_df$ABS1),as.numeric(Pria_df$ABS2)))
+
+## Pasando absorbancia a concentration de proteina en 200 ul (ug/ml)
+## kari values 
+#m=0.004679534923
+#b=0.103674687
+
+inter = function(y){(y-b)/m}
+Pria_df$concentration200<-inter(Pria_df$mean)
+
+## protein quantity on ug on 200 ul
+Pria_df["Quantity"]=Pria_df$concentration200*.2
+
+### Inicial concentration  C200_vol200=Cinicial_Vinicial
+Pria_df["ConcentrationInitial"]=Pria_df$Quantity/(.001*as.numeric(Pria_df$vol))
+
+kable(Bradford_df)
+kable(Pria_df)
+
+```
+
+Since 1kDa = 1Kg/mol and PriA Scoe molecular weight  is 25.7kDa we have that  
+$M\times V = \frac{g}{mw}$  
+$M=\frac{g}{V}\times\frac{1}{mw}$ 
+
+```{r molarity}
+## mas on Kda = kg/mol  
+mw<-25.7 
+# converting to g/mol  
+mwgram<-mw*1000  
+## concentration on g/L (after convert ug/ml)
+concentScoe<-2.352
+concentD11A<-1.248
+## Concentration on uM (10**6M)
+molar = function(x){(10**6)*x/mwgram}
+molar(concentScoe)
+molar(concentD11A)
+```
+## Concentration on microMolar
+> So Scoe concentration is `r molar(concentScoe)`  and D11A is  `r molar(concentD11A)` $\mu M$
+
+```{r adjustingM}
+
+## we want final concentration 2.4uM on a final volume of 160 ul
+## ciVi=CfVf
+## Vi =CfVf/Vi
+## Cf= 80uM Vf=5ul Vi=?ul Ci=x
+
+adjustMol = function(x){2.5*160/x} 
+## this are the ul need from stock cristal enzyme that will be diluted on buffer to complete 160 ul 
+adjustMol(molar(concentScoe))
+adjustMol(molar(concentD11A))
+```
+

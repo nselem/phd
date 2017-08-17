@@ -403,3 +403,20 @@ CORASON inputs are a genomic database, a reference cluster and an enzyme inside 
 
 In conclusion CORASON is an easy to install comparative genomic visual tool on a customizable genome database that allows users to visualice variations of a reference gene cluster identifing its core functions and finally sorting variations according to their evolutionary history helping to prioritize clusters that may be involved on chemical novelty. 
 
+## Tree methods (from antiSMASH textual quotation)
+_Multiple methods exist to construct phylogenetic trees based on multiple sequence
+alignments. Depending on the desired output tree characteristics, the number of input
+sequences, and other constraints, the most appropriate method should be chosen. A
+popular algorithm among the distance-matrix based methods is the Neighbour-Joining
+algorithm that uses bottom-up clustering to create the tree. Neighbour-Joining is
+comparatively fast method, but the correctness of the tree depends on the accuracy and
+additivity of the underlying distance matrix. Maximum parsimony methods try to identify
+the tree that uses the smallest number of evolution events to explain the observed
+sequence data. While maximum parsimony algorithms build very accurate trees, their
+computation tends to be relatively slow compared to distance-matrix based methods.
+Maximum likelihood methods use probability distributions to assess the likelihood of a given
+5
+http://mc.manuscriptcentral.com/bibManuscripts submitted to Briefings in Bioinformatics
+phylogenetic tree according to a substitution model. This method unfortunately has a high
+complexity for computing the optimal tree. Many current tools use a combination of
+methods_

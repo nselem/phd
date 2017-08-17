@@ -1,0 +1,186 @@
+---
+title: "GTPkinetics"
+author: "NellySelem"
+date: "May 18, 2017"
+output: pdf_document
+---
+---
+title: "TrpF_kinetics"
+author: "NellySelem"
+date: "May 18, 2017"
+output: html_document
+---
+
+
+## Process data
+```{r include_reedtemplates_GTPkinetics, include = FALSE}
+# This chunk ensures that the reedtemplates package is installed and loaded
+# This reedtemplates package includes the template files for the thesis and also
+# two functions used for labeling and referencing
+if(!require(devtools))
+  install.packages("devtools", repos = "http://cran.rstudio.com")
+
+if(!require(reedtemplates)){
+  library(devtools)
+  devtools::install_github("ismayc/reedtemplates")
+  }
+library(reedtemplates)
+```
+
+```{r load_pkgs_GTPkinetics, message = FALSE,echo=FALSE}
+# List of packages required for this analysis
+pkg <- c("dplyr", "ggplot2", "knitr", "devtools","RColorBrewer")
+# Check if packages are not installed and assign the
+# names of the packages not installed to the variable new.pkg
+new.pkg <- pkg[!(pkg %in% installed.packages())]
+# If there are any packages in the list that aren't installed,
+# install them
+if (length(new.pkg))
+  install.packages(new.pkg, repos = "http://cran.rstudio.com")
+# Load packages
+library(dplyr)
+library(plyr)
+library(reshape) ## melt
+library(ggplot2)
+library(knitr)
+library(RColorBrewer)
+hm.palette <- colorRampPalette(rev(brewer.pal(11, 'Spectral')), space='Lab')  
+library(genstats) ## Next libraries are for coursera
+library(devtools)
+library(Biobase)
+library(scales) # 
+library(xlsx) # For save data on excel
+library(knitr)
+library(drc) # for fitting Michaelis Menten model
+library(ggplot2) # for drawing
+
+```
+
+```{r CineticsGTP}
+#First I saved file as scv tablar separated    
+#perl -p -i -e 's/,/\t/g' Pra_scoe1.csv   
+#An cut it to obtain just data  
+#tail -n +39 Pra_scoe1.csv | head -n-3 > Pra_scoe1.data  
+#perl -p -i -e 's/\sNr\.|\s\[\w*\]|\.\s\[.*\]//g' Pra_scoe1.data
+#tablePRA <- read.table("chapter2/cineticas/Pra_scoe1.data",header=TRUE, sep="\t") 
+#tablePRA <- read.table("cineticas/Pra_scoe1.data",header=TRUE, sep="\t") 
+tablePRA <- read.table("cineticas/GTP1uM_5mM.data",header=TRUE, sep="\t") 
+
+tablePRA <- read.table("cineticas/dGTP20150819_2.data",header=TRUE, sep="\t") 
+## visualising full data
+tablePRA$Temp<-NULL
+tablePRA$Cycle<-NULL
+
+##hubo unos pozos donde no pusimos enzima, solo sustrato
+## debo recordar cuales :()
+## To select only certain column
+cols1 <- c(1,2,5,8,11,14,17,20) ##GTPuM
+cols2 <- c(1,3,6,9,12,15,18,21) ##dGTP uM
+cols3 <- c(1,4,7,10,13,16,19,22) ##dGTP mM
+cols4 <- c(1,6,5) ##dGTP mM
+
+tablePRA<-tablePRA[,cols4]
+
+PRAassay.m <- melt(tablePRA,id="Time")
+plot(PRAassay.m$Time, PRAassay.m$value, col=PRAassay.m$variable,  xlab="Time [s]",ylab="Fluorescence", pch=19,bty='L')
+par(xpd = TRUE)
+legend("right", legend = rev(unique(PRAassay.m$variable)), col = rev(unique(PRAassay.m$variable)),pch=19,bg="white")
+```
+
+```{r FluorescenceRelativeUnitsGTP}
+## getting Units of relative fluorescence before adding PriA
+#AA_Con<-rev(rep(c(1.25,	2.5,	3.75,	6.25,	10,	20,	37.5),3))
+AA_Con<-c(0,5,10,50,100,150,250,500)
+
+## at time 196.2, when all AA is converted fluorescence data where
+Fluor<-c(806,2080,4124,12022,25880,41374,44290,42483)
+
+## the true false if because we have use 2 columns on plate with same concentration on row, if more columns are to be used this must be adpated
+meanVector <- function(argument1,n){
+  m=n-1
+  resul=rep(0,8)
+  
+ for (i in 0:m) {
+   for (j in 1:8) {
+    #print(c(i,j))
+     resul[j]=resul[j]+argument1[i*8+j]/n
+    }
+ }
+  return(resul)
+  }
+
+AA_mean<-meanVector(AA_Con,1)
+Fluor_mean<-meanVector(Fluor,1)
+
+##Cutting outlayers
+AA_mean=AA_mean[1:7]
+Fluor_mean=Fluor_mean[1:7]
+
+UFR.lm = lm( Fluor_mean ~ AA_mean) 
+coeffs = coefficients(UFR.lm); coeffs 
+
+b=coeffs[1]
+m=coeffs[2]
+
+UAR_interpol = function(x){x*m+b}
+## since all AA is converted to PRA we set x axis as PRA uM
+plot(AA_mean, Fluor_mean,ylab="URF",xlab="PRA uM", pch=19)
+par(new=TRUE)
+plot(UAR_interpol,yaxt="n",xaxt="n",xlab="",ylab="", 1,200)
+
+AAcon = function(y){(y-b)/m}
+AAcon(30000)
+
+PRAassay2<- AAcon(tablePRA)
+PRAassay2["Time"]<- tablePRA["Time"]
+#PRAassay2<-PRAassay2[,cols1]
+
+### End selection of columns
+
+PRAassay2$Cycle <- NULL
+PRAassay2$Temp <- NULL
+PRAassay2.m <- melt(PRAassay2,id="Time")
+plot(PRAassay2.m$Time, PRAassay2.m$value, col=PRAassay2.m$variable, xlab="Time", ylab="URF PRA uM",pch=19)
+par(new=TRUE)
+legend("right", legend = unique(PRAassay2.m$variable), col = unique(PRAassay2.m$variable), pch=19,box.lwd=0, bg="white")
+##
+
+```
+
+```{r slopesGTP}
+ ##pendientes (slopes) of linear part of the curve
+# time when TrpF is added
+cuttime<-100
+maxtime=1500
+PRAassay2Time<-PRAassay2[which(PRAassay2$Time >= cuttime & PRAassay2$Time <= maxtime),]
+# vector with slopes for each dataset
+V0 <- apply(PRAassay2Time, 2, function(x) coefficients(lm(x ~ PRAassay2Time$Time,na.action=na.omit))[2])
+
+PRAassay2Time.m <- melt(PRAassay2Time,id="Time")
+plot(PRAassay2Time.m$Time, PRAassay2Time.m$value, col=PRAassay2Time.m$variable,xlab="Time", ylab="URF PRA uM", pch=19, xlim=c(cuttime-50,maxtime+50),bty='L')
+
+V1 <- apply(PRAassay2Time[,2:ncol(PRAassay2Time)], 2, function(x) coefficients(lm(x ~ PRAassay2Time$Time,na.action=na.omit)))
+apply(V1, 2, function(x) {abline(x, col = PRAassay2Time.m$variable)  })
+par(xpd = TRUE)
+slopeText2="m ="
+slopeText<-paste(slopeText2,rev(round(V0[-1],digits=6)),rev(names(V0[-1])))
+legend(450,100, legend = slopeText, col = rev(unique(PRAassay2Time.m$variable)), pch=19,box.lwd=0, bg="white")
+
+## get relevant velocities and get correspondent concentrations
+## V0 or slopes are on [PRA]uM/s 
+# slopes stores the slope, with TRUE , FALSE the desired enzyme can be selected, One more than one is tested on a plate always check if it is the desired one.
+slopes=(round(V0[-1],digits=6))[c(TRUE)]
+concentration<-as.matrix(PRAassay2Time[1,names(slopes)])
+#slopes
+#concentration
+slopes=as.matrix((round(V0[-1],digits=6))[c(TRUE)])
+row.names(slopes) <- NULL 
+slopes<-c(slopes)## plot on r base
+
+slopes
+# in concentration I stored the inital substrate concentration  
+row.names(concentration) <- NULL 
+concentration<-c(concentration)
+slopes
+concentration
+```

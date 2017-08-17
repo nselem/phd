@@ -1973,15 +1973,23 @@ starts here.
   Product-Biosynthetic Gene
   Cluster}\label{core-analysis-of-syntenic-orthologs-to-prioritize-natural-product-biosynthetic-gene-cluster}
   
-  Genome fluidity on Bacteria is source of biosynthetic gene clusters
-  (BGCs) abundance, in fact almost all bacterial genome sequenced
-  contributes with new genes and gene clusters to the Bacterial Pangenome.
-  As a consequence of gene diversity helped by sequence technology
-  advances, researchers often have a large set of genomes that wish to
-  analize in search of a particular gene cluster variation. Answering BGCs
-  analysis needs CORASON allows users to find and visualice variations of
-  a given gene cluster sorting them according to the conserved core
-  phylogeny.
+  Bacterial biosynthetic gene clusters (BGCs) known are always increasing,
+  almost all bacterial genome sequenced contributes with new genes and
+  gene clusters to the known Bacterial Pangenome. In consequence of gene
+  diversity and sequence technology advances researchers often have a
+  large set of genomes to analize in search of a particular gene cluster
+  variation. Answering BGCs analysis needs, CORASON allows users to find
+  and visualice variations of a given gene cluster sorting them according
+  to the conserved core cluster phylogeny.
+  
+  The core genome on a taxonomical group is the set of coding sequences
+  that are shared between all group members, this definition may be
+  adapted to the cluster core by exploring a set of gene clusters instead
+  of a set of genomes. The cluster core attempts to identify a set of
+  functions conserved on a particular BGC variations. A report about gene
+  function using RAST technology will be provided whenever a cluster core
+  exists and core sequences will be concatenated to construct a
+  phylogenetic tree and sort variation clusters accordingly.
   
   To find cluster variations, given a query protein sequence that belongs
   to a reference cluster, CORASON will search on a Bacterial genome
@@ -1991,23 +1999,9 @@ starts here.
   according to its identity percentage with the reference cluster
   sequences.
   
-  The cluster core attempts to identify a set of functions conserved on
-  this particular biosynthetic BGC. The core genome on a taxonomical group
-  is the set of coding sequences that are shared between all group
-  members, this definition may be adapted to the cluster core by using a
-  set of gene clusters instead of a set of genomes. A report about gene
-  function will be provided whenever a cluster core exists also core
-  sequences will be concatenated to construct a phylogenetic tree and sort
-  variation clusters accordingly.
-  
-  Functional annotations are provided by RAST annotation service due to
-  that CORASON genomic databases must be RAST files. Any archaeal or
-  bacterial genome can be RAST annotated either on the website or by
-  command line using myrast server.
-  
-  Finally, in order to provide an easy to install distribution CORASON was
-  packaged on docker containerization platform. Software dependencies such
-  as BLAST 2.2.30, muscle3.8.3, GBlocksLinux64\_0.91b, quicktree,
+  Finally, in order to provide an easy to install distribution, CORASON
+  was packaged on docker containerization platform. Software dependencies
+  such as BLAST 2.2.30, muscle3.8.3, GBlocksLinux64\_0.91b, quicktree,
   newick-utils-1.6, and CORASON code were wrapped together on CORASON
   docker container.
   \href{https://github.com/nselem/EvoDivMet/wiki}{Tutorial} and software
@@ -2028,12 +2022,13 @@ starts here.
   
   \chapter{PriA Family}\label{math-sci}
   
-  Actinobacterial PriA is a promiscuous homologe of enterobacteria HisA
-  family. PriA promiscuous enzyme family is involved in histidine and
-  triptophan turning ProFAR into PRFAR while acting as a HisA and
-  isomerizes PRA into CdRP acting as TrpF.
+  Actinobacterial PriA is a promiscuous homologue of enterobacteria HisA
+  enzymatic family. HisA converts ProFAR into PRFAR on histidine pathway,
+  most actinobacteria has lost trpF gene on triptophane pathway, PriA
+  among isomerizing PROFAR also converts PRA into CdRP acting as TrpF on
+  triptophane pathway.
   
-  PriA shows a functional gradient on Actinobacteria that split this
+  PriA has shown a functional gradient on Actinobacteria that split this
   family into several enzymatic subfamilies. Among PriA subfamilies there
   is PriB on Streptomyces that shows little trpF activity and an out of
   context TrpF gene, there is subHisA on Corynebacteria and Actinomyces
@@ -2047,6 +2042,10 @@ starts here.
   EvoMining has detected one PriA paralogue on Actinobacteria and an
   expanssion conserved on a saxitoxin cluster on Cyanobacteria
   {[}\protect\hyperlink{ref-moustafaux5foriginux5f2009}{94}{]}.\\
+  PriA\\
+  PriB\\
+  SubHisA\\
+  subTrpF\\
   \clearpage   
   
   \section{CORASON}\label{corason}
@@ -2299,7 +2298,195 @@ starts here.
   Procedures can be found at
   \href{https://github.com/tripplab/Docking/wiki}{Docking Protocols}
   
-  \begin{center}\includegraphics{tesis_files/figure-latex/load_data_docking-1} \end{center}
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \NormalTok{docking <-}\StringTok{ }\KeywordTok{read.csv}\NormalTok{(}\StringTok{"chapter2/SmallHeat.data"}\NormalTok{, }\DataTypeTok{header=}\OtherTok{TRUE}\NormalTok{, }\DataTypeTok{sep=}\StringTok{"}\CharTok{\textbackslash{}t}\StringTok{"}\NormalTok{)}
+  
+  \NormalTok{for (i in }\DecValTok{2}\NormalTok{:}\DecValTok{21}\NormalTok{)}
+  \NormalTok{\{}\KeywordTok{plot}\NormalTok{(}\KeywordTok{density}\NormalTok{(docking[,i],}\DataTypeTok{na.rm=}\NormalTok{T)); }\KeywordTok{rug}\NormalTok{(docking[,i]);}\KeywordTok{browser}\NormalTok{()\}}
+  \end{Highlighting}
+  \end{Shaded}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/johan-1} \end{center}
+  
+  \begin{verbatim}
+  Called from: eval(expr, envir, enclos)
+  debug at <text>#4: plot(density(docking[, i], na.rm = T))
+  \end{verbatim}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/johan-2} \end{center}
+  
+  \begin{verbatim}
+  debug at <text>#4: rug(docking[, i])
+  debug at <text>#4: browser()
+  debug at <text>#4: plot(density(docking[, i], na.rm = T))
+  \end{verbatim}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/johan-3} \end{center}
+  
+  \begin{verbatim}
+  debug at <text>#4: rug(docking[, i])
+  debug at <text>#4: browser()
+  debug at <text>#4: plot(density(docking[, i], na.rm = T))
+  \end{verbatim}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/johan-4} \end{center}
+  
+  \begin{verbatim}
+  debug at <text>#4: rug(docking[, i])
+  debug at <text>#4: browser()
+  debug at <text>#4: plot(density(docking[, i], na.rm = T))
+  \end{verbatim}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/johan-5} \end{center}
+  
+  \begin{verbatim}
+  debug at <text>#4: rug(docking[, i])
+  debug at <text>#4: browser()
+  debug at <text>#4: plot(density(docking[, i], na.rm = T))
+  \end{verbatim}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/johan-6} \end{center}
+  
+  \begin{verbatim}
+  debug at <text>#4: rug(docking[, i])
+  debug at <text>#4: browser()
+  debug at <text>#4: plot(density(docking[, i], na.rm = T))
+  \end{verbatim}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/johan-7} \end{center}
+  
+  \begin{verbatim}
+  debug at <text>#4: rug(docking[, i])
+  debug at <text>#4: browser()
+  debug at <text>#4: plot(density(docking[, i], na.rm = T))
+  \end{verbatim}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/johan-8} \end{center}
+  
+  \begin{verbatim}
+  debug at <text>#4: rug(docking[, i])
+  debug at <text>#4: browser()
+  debug at <text>#4: plot(density(docking[, i], na.rm = T))
+  \end{verbatim}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/johan-9} \end{center}
+  
+  \begin{verbatim}
+  debug at <text>#4: rug(docking[, i])
+  debug at <text>#4: browser()
+  debug at <text>#4: plot(density(docking[, i], na.rm = T))
+  \end{verbatim}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/johan-10} \end{center}
+  
+  \begin{verbatim}
+  debug at <text>#4: rug(docking[, i])
+  debug at <text>#4: browser()
+  debug at <text>#4: plot(density(docking[, i], na.rm = T))
+  \end{verbatim}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/johan-11} \end{center}
+  
+  \begin{verbatim}
+  debug at <text>#4: rug(docking[, i])
+  debug at <text>#4: browser()
+  debug at <text>#4: plot(density(docking[, i], na.rm = T))
+  \end{verbatim}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/johan-12} \end{center}
+  
+  \begin{verbatim}
+  debug at <text>#4: rug(docking[, i])
+  debug at <text>#4: browser()
+  debug at <text>#4: plot(density(docking[, i], na.rm = T))
+  \end{verbatim}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/johan-13} \end{center}
+  
+  \begin{verbatim}
+  debug at <text>#4: rug(docking[, i])
+  debug at <text>#4: browser()
+  debug at <text>#4: plot(density(docking[, i], na.rm = T))
+  \end{verbatim}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/johan-14} \end{center}
+  
+  \begin{verbatim}
+  debug at <text>#4: rug(docking[, i])
+  debug at <text>#4: browser()
+  debug at <text>#4: plot(density(docking[, i], na.rm = T))
+  \end{verbatim}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/johan-15} \end{center}
+  
+  \begin{verbatim}
+  debug at <text>#4: rug(docking[, i])
+  debug at <text>#4: browser()
+  debug at <text>#4: plot(density(docking[, i], na.rm = T))
+  \end{verbatim}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/johan-16} \end{center}
+  
+  \begin{verbatim}
+  debug at <text>#4: rug(docking[, i])
+  debug at <text>#4: browser()
+  debug at <text>#4: plot(density(docking[, i], na.rm = T))
+  \end{verbatim}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/johan-17} \end{center}
+  
+  \begin{verbatim}
+  debug at <text>#4: rug(docking[, i])
+  debug at <text>#4: browser()
+  debug at <text>#4: plot(density(docking[, i], na.rm = T))
+  \end{verbatim}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/johan-18} \end{center}
+  
+  \begin{verbatim}
+  debug at <text>#4: rug(docking[, i])
+  debug at <text>#4: browser()
+  debug at <text>#4: plot(density(docking[, i], na.rm = T))
+  \end{verbatim}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/johan-19} \end{center}
+  
+  \begin{verbatim}
+  debug at <text>#4: rug(docking[, i])
+  debug at <text>#4: browser()
+  debug at <text>#4: plot(density(docking[, i], na.rm = T))
+  \end{verbatim}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/johan-20} \end{center}
+  
+  \begin{verbatim}
+  debug at <text>#4: rug(docking[, i])
+  debug at <text>#4: browser()
+  \end{verbatim}
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \KeywordTok{plot}\NormalTok{(}\KeywordTok{cor}\NormalTok{(docking[-}\KeywordTok{c}\NormalTok{(}\DecValTok{5}\NormalTok{,}\DecValTok{12}\NormalTok{,}\DecValTok{13}\NormalTok{,}\DecValTok{38}\NormalTok{,}\DecValTok{51}\NormalTok{),-}\DecValTok{1}\NormalTok{]))}
+  \end{Highlighting}
+  \end{Shaded}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/johan-21} \end{center}
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \NormalTok{## Leer sobre la incertidumbre del 2 y explicarla  }
+  \NormalTok{## Y leer el paper de Julian y el de mauricio sobre reportes de docking}
+  \end{Highlighting}
+  \end{Shaded}
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \KeywordTok{ggplot}\NormalTok{(docking.m, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{variable, }\DataTypeTok{y=}\NormalTok{Enzima)) +}\StringTok{ }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"Substrates"}\NormalTok{, }\DataTypeTok{y =} \StringTok{"Enzymes"}\NormalTok{,}\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size=}\DecValTok{12}\NormalTok{))+}\StringTok{ }\KeywordTok{scale_fill_gradientn}\NormalTok{(}\DataTypeTok{colours =} \KeywordTok{hm.palette}\NormalTok{(}\DecValTok{100}\NormalTok{),}\DataTypeTok{na.value =} \StringTok{"gray"}\NormalTok{)+}\KeywordTok{theme_bw}\NormalTok{()+}\KeywordTok{theme}\NormalTok{(}\DataTypeTok{plot.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{14}\NormalTok{, }\DataTypeTok{face =} \StringTok{"bold"}\NormalTok{), }\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{12}\NormalTok{), }\DataTypeTok{axis.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{face=}\StringTok{"bold"}\NormalTok{), }\DataTypeTok{axis.text.x=}\KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{90}\NormalTok{,}\DataTypeTok{size =} \DecValTok{6}\NormalTok{))}
+  \end{Highlighting}
+  \end{Shaded}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/heatonPDF-1} \end{center}
   
   \begin{figure}[h!tbp]
   \centering
@@ -2381,11 +2568,514 @@ starts here.
   
   \begin{Shaded}
   \begin{Highlighting}[]
-  \KeywordTok{ggplot}\NormalTok{(GTP.m, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{Time, }\DataTypeTok{y=}\NormalTok{value,}\DataTypeTok{color=}\NormalTok{variable)) +}\StringTok{ }\KeywordTok{geom_point}\NormalTok{()+}\StringTok{ }\KeywordTok{facet_wrap}\NormalTok{(~}\StringTok{ }\NormalTok{variable)+}\KeywordTok{theme_bw}\NormalTok{()+}\KeywordTok{theme}\NormalTok{(}\DataTypeTok{plot.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{8}\NormalTok{, }\DataTypeTok{face =} \StringTok{"bold"}\NormalTok{), }\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{12}\NormalTok{), }\DataTypeTok{axis.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{face=}\StringTok{"bold"}\NormalTok{), }\DataTypeTok{axis.text.y=}\KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{30}\NormalTok{,}\DataTypeTok{size =} \DecValTok{1}\NormalTok{), }\DataTypeTok{legend.position =} \StringTok{"bottom"}\NormalTok{)+}\StringTok{ }\KeywordTok{scale_size_area}\NormalTok{()}
+  \KeywordTok{ggplot}\NormalTok{(GTP.m, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{Time, }\DataTypeTok{y=}\NormalTok{value,}\DataTypeTok{color=}\NormalTok{variable)) +}\StringTok{ }\KeywordTok{geom_point}\NormalTok{()+}\StringTok{ }\KeywordTok{facet_wrap}\NormalTok{(~}\StringTok{ }\NormalTok{variable)+}\StringTok{ }\KeywordTok{geom_smooth}\NormalTok{()+}\KeywordTok{theme_bw}\NormalTok{()+}\KeywordTok{theme}\NormalTok{(}\DataTypeTok{plot.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{8}\NormalTok{, }\DataTypeTok{face =} \StringTok{"bold"}\NormalTok{), }\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{12}\NormalTok{), }\DataTypeTok{axis.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{face=}\StringTok{"bold"}\NormalTok{), }\DataTypeTok{axis.text.y=}\KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{30}\NormalTok{,}\DataTypeTok{size =} \DecValTok{1}\NormalTok{), }\DataTypeTok{legend.position =} \StringTok{"bottom"}\NormalTok{)+}\StringTok{ }\KeywordTok{scale_size_area}\NormalTok{()}
   \end{Highlighting}
   \end{Shaded}
   
+  \begin{verbatim}
+  `geom_smooth()` using method = 'loess'
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : span too small. fewer data values than degrees of freedom.
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : at 227.79
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : radius 64.12
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : all data on boundary of neighborhood. make span bigger
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : pseudoinverse used at 227.79
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : neighborhood radius 8.0075
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : reciprocal condition number 1
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : at 1845.3
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : radius 64.12
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : all data on boundary of neighborhood. make span bigger
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : There are other near singularities as well. 64.12
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : zero-width neighborhood. make span bigger
+  
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : zero-width neighborhood. make span bigger
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning: Computation failed in `stat_smooth()`:
+  NA/NaN/Inf in foreign function call (arg 5)
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : span too small. fewer data values than degrees of freedom.
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : at 474.62
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : radius 15.07
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : all data on boundary of neighborhood. make span bigger
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : pseudoinverse used at 474.62
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : neighborhood radius 3.882
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : reciprocal condition number 1
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : at 1258.8
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : radius 15.07
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : all data on boundary of neighborhood. make span bigger
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : There are other near singularities as well. 15.07
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : zero-width neighborhood. make span bigger
+  
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : zero-width neighborhood. make span bigger
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning: Computation failed in `stat_smooth()`:
+  NA/NaN/Inf in foreign function call (arg 5)
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : span too small. fewer data values than degrees of freedom.
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : at 859.79
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : radius 47.817
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : all data on boundary of neighborhood. make span bigger
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : pseudoinverse used at 859.79
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : neighborhood radius 6.915
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : reciprocal condition number 1
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : at 2256.6
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : radius 47.817
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : all data on boundary of neighborhood. make span bigger
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : There are other near singularities as well. 47.817
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : zero-width neighborhood. make span bigger
+  
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : zero-width neighborhood. make span bigger
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning: Computation failed in `stat_smooth()`:
+  NA/NaN/Inf in foreign function call (arg 5)
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : span too small. fewer data values than degrees of freedom.
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : at 1084.3
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : radius 0.7208
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : all data on boundary of neighborhood. make span bigger
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : pseudoinverse used at 1084.3
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : neighborhood radius 0.849
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : reciprocal condition number 1
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : at 1255.7
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : radius 0.7208
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : all data on boundary of neighborhood. make span bigger
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : There are other near singularities as well. 0.7208
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : zero-width neighborhood. make span bigger
+  
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : zero-width neighborhood. make span bigger
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning: Computation failed in `stat_smooth()`:
+  NA/NaN/Inf in foreign function call (arg 5)
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : span too small. fewer data values than degrees of freedom.
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : at 1470.5
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : radius 7.7869
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : all data on boundary of neighborhood. make span bigger
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : pseudoinverse used at 1470.5
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : neighborhood radius 2.7905
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : reciprocal condition number 1
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : at 2034.2
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : radius 7.7869
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : all data on boundary of neighborhood. make span bigger
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : There are other near singularities as well. 7.7869
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : zero-width neighborhood. make span bigger
+  
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : zero-width neighborhood. make span bigger
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning: Computation failed in `stat_smooth()`:
+  NA/NaN/Inf in foreign function call (arg 5)
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : span too small. fewer data values than degrees of freedom.
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : at 2612.2
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : radius 2.1199
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : all data on boundary of neighborhood. make span bigger
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : pseudoinverse used at 2612.2
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : neighborhood radius 1.456
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : reciprocal condition number 1
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : at 2906.4
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : radius 2.1199
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : all data on boundary of neighborhood. make span bigger
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : There are other near singularities as well. 2.1199
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : zero-width neighborhood. make span bigger
+  
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : zero-width neighborhood. make span bigger
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning: Computation failed in `stat_smooth()`:
+  NA/NaN/Inf in foreign function call (arg 5)
+  \end{verbatim}
+  
   \begin{center}\includegraphics{tesis_files/figure-latex/activity-3} \end{center}
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \KeywordTok{ggplot}\NormalTok{(GTP.m, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{Time, }\DataTypeTok{y=}\NormalTok{value,}\DataTypeTok{color=}\NormalTok{variable)) +}\StringTok{ }\KeywordTok{geom_point}\NormalTok{()+}\StringTok{ }\KeywordTok{geom_smooth}\NormalTok{()+}\KeywordTok{theme_bw}\NormalTok{()+}\KeywordTok{theme}\NormalTok{(}\DataTypeTok{plot.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{8}\NormalTok{, }\DataTypeTok{face =} \StringTok{"bold"}\NormalTok{), }\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{12}\NormalTok{), }\DataTypeTok{axis.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{face=}\StringTok{"bold"}\NormalTok{), }\DataTypeTok{axis.text.y=}\KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{30}\NormalTok{,}\DataTypeTok{size =} \DecValTok{1}\NormalTok{), }\DataTypeTok{legend.position =} \StringTok{"bottom"}\NormalTok{)+}\StringTok{ }\KeywordTok{scale_size_area}\NormalTok{()}
+  \end{Highlighting}
+  \end{Shaded}
+  
+  \begin{verbatim}
+  `geom_smooth()` using method = 'loess'
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : span too small. fewer data values than degrees of freedom.
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : at 1470.5
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : radius 7.7869
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : all data on boundary of neighborhood. make span bigger
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : pseudoinverse used at 1470.5
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : neighborhood radius 2.7905
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : reciprocal condition number 1
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : at 2034.2
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : radius 7.7869
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : all data on boundary of neighborhood. make span bigger
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : There are other near singularities as well. 7.7869
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : zero-width neighborhood. make span bigger
+  
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : zero-width neighborhood. make span bigger
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning: Computation failed in `stat_smooth()`:
+  NA/NaN/Inf in foreign function call (arg 5)
+  \end{verbatim}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/activity-4} \end{center}
+  
+  the two enzymes with activity\\
+  \emph{Thermomonospora curvata} thermophilic Actinobacteria from
+  Thermomonosporaceae genus, it can be found in compost and participate in
+  the active degradation of cellulose
+  {[}\protect\hyperlink{ref-chertkovux5fcompleteux5f2011}{140}{]}.
+  
+  Jonesia trpF shows no activity \emph{Jonesia denitrificans} is
+  classified as a pathogenic organism for animals, reported genome was
+  originally isolated from cooked ox blood
+  {[}\protect\hyperlink{ref-pukallux5fcompleteux5f2009}{141}{]}.
   
   \begin{Shaded}
   \begin{Highlighting}[]
@@ -2681,9 +3371,279 @@ starts here.
   \label{fig:ProFARRutas}
   \end{figure}
   
+  HisF Arabinosa TrpC TrpD acido antranilico PRPP gliceroles de Ana checar
+  resistencias
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.6]{chapter2/Geles/PriAAbril30.png}
+  \caption[gel]{\normalsize{gel}}
+  \label{fig:gel}
+  \end{figure}
+  
   \begin{Shaded}
   \begin{Highlighting}[]
   \CommentTok{#sessionInfo()}
+  \end{Highlighting}
+  \end{Shaded}
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \NormalTok{ArchaeasHeatPlot <-}\StringTok{ }\KeywordTok{read.table}\NormalTok{(}\StringTok{"chapter3/ArchaeasHeatPlot"}\NormalTok{, }\DataTypeTok{header=}\OtherTok{TRUE}\NormalTok{, }\DataTypeTok{sep=}\StringTok{"}\CharTok{\textbackslash{}t}\StringTok{"}\NormalTok{)}
+  \NormalTok{ArchaeasTaxa <-}\StringTok{ }\KeywordTok{read.table}\NormalTok{(}\StringTok{"chapter3/ArchaeasTaxa"}\NormalTok{, }\DataTypeTok{header=}\OtherTok{TRUE}\NormalTok{, }\DataTypeTok{sep=}\StringTok{"}\CharTok{\textbackslash{}t}\StringTok{"}\NormalTok{)}
+  
+  \NormalTok{## Adding order variable }
+  \NormalTok{ArchaeasHeatPlot$order<-}\KeywordTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{:}\KeywordTok{nrow}\NormalTok{(ArchaeasHeatPlot))}
+  
+  \CommentTok{#sorting RastId it accordig to order variable}
+  \NormalTok{ArchaeasHeatPlot$RastId <-}\StringTok{ }\KeywordTok{with}\NormalTok{(ArchaeasHeatPlot,}\KeywordTok{reorder}\NormalTok{(ArchaeasHeatPlot$RastId, ArchaeasHeatPlot$order))}
+  
+  \CommentTok{# Merging heatplot and taxonomy table into one table}
+  \NormalTok{HP_Archaeas_Taxa<-}\KeywordTok{merge}\NormalTok{(ArchaeasHeatPlot,ArchaeasTaxa,}\DataTypeTok{by.x =} \StringTok{"RastId"}\NormalTok{,}\DataTypeTok{by.y =} \StringTok{"RastId"}\NormalTok{)}
+  \NormalTok{HP_Archaeas_Taxa.m<-}\StringTok{ }\KeywordTok{melt}\NormalTok{(HP_Archaeas_Taxa)}
+  \end{Highlighting}
+  \end{Shaded}
+  
+  \begin{verbatim}
+  Using RastId, Name, SuperPhylum, Phylum, Class, Order, Family as id variables
+  \end{verbatim}
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \NormalTok{HP_Archaeas_Taxa.m<-}\StringTok{ }\KeywordTok{ddply}\NormalTok{(HP_Archaeas_Taxa.m, .(variable), transform,}\DataTypeTok{rescale=}\KeywordTok{scale}\NormalTok{(value))  ## }
+  
+  \NormalTok{small<-HP_Archaeas_Taxa.m[}\KeywordTok{which}\NormalTok{(HP_Archaeas_Taxa.m$RastId==}\StringTok{'389007'} \NormalTok{|}\StringTok{ }\NormalTok{HP_Archaeas_Taxa.m$RastId==}\StringTok{'390212'} \NormalTok{|}\StringTok{ }\NormalTok{HP_Archaeas_Taxa.m$RastId==}\StringTok{'388991'} \NormalTok{|}\StringTok{ }\NormalTok{HP_Archaeas_Taxa.m$RastId==}\StringTok{'388992'} \NormalTok{|}\StringTok{ }\NormalTok{HP_Archaeas_Taxa.m$RastId==}\StringTok{'388199'}\NormalTok{|}\StringTok{ }\NormalTok{HP_Archaeas_Taxa.m$RastId==}\StringTok{'388200'}\NormalTok{|}\StringTok{  }\NormalTok{HP_Archaeas_Taxa.m$RastId==}\StringTok{'388201'}\NormalTok{),]}
+  
+  \CommentTok{#Este Escogiendo que variables quiero}
+  \NormalTok{small<-small[small$variable %in%}\StringTok{ }\KeywordTok{c}\NormalTok{(}\StringTok{"Phosphoglycerate_dehydrogenase"}\NormalTok{, }\StringTok{"Isopropyl_malate_synthase"}\NormalTok{,}\StringTok{"Alanine_dehydrogenase"}\NormalTok{,}\StringTok{"Asparagine_synthase"}\NormalTok{), ] }
+  \NormalTok{## use http://colorbrewer2.org/ to find optimal divergent color palette (or set own)}
+   
+  \NormalTok{small.m<-}\StringTok{ }\KeywordTok{ddply}\NormalTok{(small, .(variable),summarize, }\DataTypeTok{mean =} \KeywordTok{round}\NormalTok{(}\KeywordTok{mean}\NormalTok{(value), }\DecValTok{2}\NormalTok{),}\DataTypeTok{sd =} \KeywordTok{round}\NormalTok{(}\KeywordTok{sd}\NormalTok{(value), }\DecValTok{2}\NormalTok{),}\DataTypeTok{expansion=}\NormalTok{mean+sd, }\DataTypeTok{reduction=}\NormalTok{mean-sd)  ## }
+  \KeywordTok{rownames}\NormalTok{(small.m)<-small.m$variable}
+  \end{Highlighting}
+  \end{Shaded}
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \NormalTok{color_exp<-function(x)\{}
+    \CommentTok{# Pendiente pasarle un dataframe en lugar de tener fijo small.m como variable global}
+    \NormalTok{result=}\DecValTok{0}
+    \NormalTok{expansion<-}\OtherTok{NULL}
+    \NormalTok{reduction<-}\OtherTok{NULL}
+    \NormalTok{local_value=x[}\DecValTok{1}\NormalTok{,}\StringTok{"value"}\NormalTok{]}
+    \NormalTok{met_family<-x[}\DecValTok{1}\NormalTok{,}\StringTok{"variable"}\NormalTok{]}
+    \NormalTok{Rast=x[}\DecValTok{1}\NormalTok{,}\DecValTok{1}\NormalTok{]}
+    \CommentTok{#print ("rast",Rast)}
+    \CommentTok{# print(paste(x,"family",met_family,"value",local_value,"Rast",Rast))}
+    \NormalTok{expansion<-small.m$expansion [}\KeywordTok{which}\NormalTok{(small.m$variable==met_family)] }
+    \NormalTok{reduction<-small.m$reduction [}\KeywordTok{which}\NormalTok{(small.m$variable==met_family)] }
+    \NormalTok{if (local_value>=expansion)\{result=}\StringTok{ }\DecValTok{1}\NormalTok{\}}
+    \NormalTok{else if (local_value<=reduction)\{result=}\StringTok{ }\NormalTok{-}\DecValTok{1}\NormalTok{\}}
+    \KeywordTok{return} \NormalTok{(result)}
+  \NormalTok{\}}
+  
+  \NormalTok{small.expansion<-}\KeywordTok{adply}\NormalTok{(small,}\DecValTok{1}\NormalTok{,color_exp)}
+  
+  \CommentTok{#small.expansion$V1}
+  \CommentTok{#color_palette <- colorRampPalette(c("#3794bf", "#FFFFFF","#df8640"))}
+  
+  \KeywordTok{ggplot}\NormalTok{(small.expansion, }\KeywordTok{aes}\NormalTok{(small.expansion$variable, small.expansion$RastId,}\DataTypeTok{label=}\KeywordTok{round}\NormalTok{(small.expansion$value)))+}\StringTok{ }\KeywordTok{geom_tile}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{fill =} \NormalTok{small.expansion$V1), }\DataTypeTok{colour =} \StringTok{"white"}\NormalTok{) +}\StringTok{ }\KeywordTok{scale_fill_gradientn}\NormalTok{(}\DataTypeTok{colours =} \KeywordTok{hm.palette}\NormalTok{(}\DecValTok{100}\NormalTok{),}\DataTypeTok{na.value =} \StringTok{"gray"}\NormalTok{)+}\StringTok{ }\KeywordTok{theme}\NormalTok{(}\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size=}\DecValTok{8}\NormalTok{), }\DataTypeTok{axis.text.x =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{90}\NormalTok{, }\DataTypeTok{hjust =} \DecValTok{1}\NormalTok{, }\DataTypeTok{vjust =} \FloatTok{0.5}\NormalTok{) ,}\DataTypeTok{axis.text.y =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{0}\NormalTok{, }\DataTypeTok{hjust =} \DecValTok{1}\NormalTok{, }\DataTypeTok{vjust =} \FloatTok{0.5}\NormalTok{))+}\KeywordTok{geom_text}\NormalTok{(}\DataTypeTok{size=}\DecValTok{4}\NormalTok{,}\DataTypeTok{check_overlap =} \OtherTok{TRUE}\NormalTok{)}
+  \end{Highlighting}
+  \end{Shaded}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/coloring_test_set-1} \end{center}
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \NormalTok{########################################################}
+  \NormalTok{## Trying to sort the heatplot }
+  \NormalTok{## Reading heatplot table and taxa information and saving it on data.frame data structure}
+  \NormalTok{ArchaeasHeatPlot <-}\StringTok{ }\KeywordTok{read.table}\NormalTok{(}\StringTok{"chapter3/ArchaeasHeatPlot"}\NormalTok{, }\DataTypeTok{header=}\OtherTok{TRUE}\NormalTok{, }\DataTypeTok{sep=}\StringTok{"}\CharTok{\textbackslash{}t}\StringTok{"}\NormalTok{)}
+  \NormalTok{ArchaeasTaxa <-}\StringTok{ }\KeywordTok{read.table}\NormalTok{(}\StringTok{"chapter3/ArchaeasTaxa"}\NormalTok{, }\DataTypeTok{header=}\OtherTok{TRUE}\NormalTok{, }\DataTypeTok{sep=}\StringTok{"}\CharTok{\textbackslash{}t}\StringTok{"}\NormalTok{)}
+  \NormalTok{hm.palette <-}\StringTok{ }\KeywordTok{colorRampPalette}\NormalTok{(}\KeywordTok{rev}\NormalTok{(}\KeywordTok{brewer.pal}\NormalTok{(}\DecValTok{11}\NormalTok{, }\StringTok{'Spectral'}\NormalTok{)), }\DataTypeTok{space=}\StringTok{'Lab'}\NormalTok{)  }
+  \NormalTok{## Adding order variable }
+  \NormalTok{ArchaeasHeatPlot$order<-}\KeywordTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{:}\KeywordTok{nrow}\NormalTok{(ArchaeasHeatPlot))}
+  \CommentTok{#sorting RastId it accordig to order variable}
+  \NormalTok{ArchaeasHeatPlot$RastId <-}\StringTok{ }\KeywordTok{with}\NormalTok{(ArchaeasHeatPlot,}\KeywordTok{reorder}\NormalTok{(ArchaeasHeatPlot$RastId, ArchaeasHeatPlot$order))}
+  \CommentTok{# Merging heatplot and taxonomy table into one table}
+  \NormalTok{HP_Archaeas_Taxa<-}\KeywordTok{merge}\NormalTok{(ArchaeasHeatPlot,ArchaeasTaxa,}\DataTypeTok{by.x =} \StringTok{"RastId"}\NormalTok{,}\DataTypeTok{by.y =} \StringTok{"RastId"}\NormalTok{)}
+  \CommentTok{# Melting information leting as variables just enzymatic families and copy number}
+  \NormalTok{HP_Archaeas_Taxa.m<-}\StringTok{ }\KeywordTok{melt}\NormalTok{(HP_Archaeas_Taxa)}
+  \end{Highlighting}
+  \end{Shaded}
+  
+  \begin{verbatim}
+  Using RastId, Name, SuperPhylum, Phylum, Class, Order, Family as id variables
+  \end{verbatim}
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \CommentTok{# Cleaning data}
+  \NormalTok{HP_Archaeas_Taxa.m<-}\StringTok{ }\KeywordTok{ddply}\NormalTok{(HP_Archaeas_Taxa.m, .(variable), transform,value)  ## }
+  \NormalTok{HP_Archaeas_Taxa.m<-}\StringTok{ }\KeywordTok{ddply}\NormalTok{(HP_Archaeas_Taxa.m, .(variable), transform,}\DataTypeTok{rescale=}\KeywordTok{scale}\NormalTok{(value))  ## }
+  
+  \NormalTok{HP_Archeas.calcs<-}\StringTok{ }\KeywordTok{ddply}\NormalTok{(HP_Archaeas_Taxa.m, .(variable),summarize, }\DataTypeTok{mean =} \KeywordTok{round}\NormalTok{(}\KeywordTok{mean}\NormalTok{(value), }\DecValTok{2}\NormalTok{),}\DataTypeTok{sd =} \KeywordTok{round}\NormalTok{(}\KeywordTok{sd}\NormalTok{(value), }\DecValTok{2}\NormalTok{),}\DataTypeTok{expansion=}\NormalTok{mean+sd, }\DataTypeTok{reduction=}\NormalTok{mean-sd)  ## }
+  
+  \KeywordTok{rownames}\NormalTok{(HP_Archeas.calcs)<-HP_Archeas.calcs$variable}
+  \NormalTok{#########################################################3}
+  \NormalTok{color_exp<-function(x)\{}
+    \CommentTok{# Pendiente pasarle un dataframe en lugar de tener fijo small.m como variable global}
+    \NormalTok{result=}\DecValTok{0}
+    \NormalTok{expansion<-}\OtherTok{NULL}
+    \NormalTok{reduction<-}\OtherTok{NULL}
+    \NormalTok{local_value=x[}\DecValTok{1}\NormalTok{,}\StringTok{"value"}\NormalTok{]}
+    \NormalTok{met_family<-x[}\DecValTok{1}\NormalTok{,}\StringTok{"variable"}\NormalTok{]}
+    \NormalTok{Rast=x[}\DecValTok{1}\NormalTok{,}\DecValTok{1}\NormalTok{]}
+    \CommentTok{#print ("rast",Rast)}
+    \CommentTok{# print(paste(x,"family",met_family,"value",local_value,"Rast",Rast))}
+    \NormalTok{expansion<-HP_Archeas.calcs$expansion [}\KeywordTok{which}\NormalTok{(small.m$variable==met_family)] }
+    \NormalTok{reduction<-HP_Archeas.calcs$reduction [}\KeywordTok{which}\NormalTok{(small.m$variable==met_family)] }
+    \NormalTok{if (local_value>=expansion)\{result=}\StringTok{ }\DecValTok{1}\NormalTok{\}}
+    \NormalTok{else if (local_value<=reduction)\{result=}\StringTok{ }\NormalTok{-}\DecValTok{1}\NormalTok{\}}
+    \KeywordTok{return} \NormalTok{(result)}
+  \NormalTok{\}}
+  \NormalTok{small[ !small$variable %in%}\StringTok{ }\KeywordTok{c}\NormalTok{(}\StringTok{"Contigs"}\NormalTok{, }\StringTok{"Size"}\NormalTok{,}\StringTok{"TOTAL"}\NormalTok{), ] }
+  \end{Highlighting}
+  \end{Shaded}
+  
+  \begin{verbatim}
+        RastId                                                   Name
+  1     388199           Haloferax sp ATCC BAA-644ATCC BAA-644 AOLF01
+  2     388200 Candidatus Methanoperedens nitroreducensANME-2d JMIY01
+  3     388201 Marine group II euryarchaeote REDSEA-S40_B11N13 LURX01
+  551   388991                     Uncultured Acidilobus sp MG AYMA01
+  552   388992 Candidate divison MSBL1 archaeon SCGC-AAA259O05 LHXV01
+  567   389007                   Uncultured Acidilobus sp OSP8 AYMC01
+  690   390212    Archaeoglobus fulgidus DSM 8774 DSM 8774 CP006577.1
+  14017 388199           Haloferax sp ATCC BAA-644ATCC BAA-644 AOLF01
+  14018 388200 Candidatus Methanoperedens nitroreducensANME-2d JMIY01
+  14019 388201 Marine group II euryarchaeote REDSEA-S40_B11N13 LURX01
+  14567 388991                     Uncultured Acidilobus sp MG AYMA01
+  14568 388992 Candidate divison MSBL1 archaeon SCGC-AAA259O05 LHXV01
+  14583 389007                   Uncultured Acidilobus sp OSP8 AYMC01
+  14706 390212    Archaeoglobus fulgidus DSM 8774 DSM 8774 CP006577.1
+  63073 388199           Haloferax sp ATCC BAA-644ATCC BAA-644 AOLF01
+  63074 388200 Candidatus Methanoperedens nitroreducensANME-2d JMIY01
+  63075 388201 Marine group II euryarchaeote REDSEA-S40_B11N13 LURX01
+  63623 388991                     Uncultured Acidilobus sp MG AYMA01
+  63624 388992 Candidate divison MSBL1 archaeon SCGC-AAA259O05 LHXV01
+  63639 389007                   Uncultured Acidilobus sp OSP8 AYMC01
+  63762 390212    Archaeoglobus fulgidus DSM 8774 DSM 8774 CP006577.1
+  68329 388199           Haloferax sp ATCC BAA-644ATCC BAA-644 AOLF01
+  68330 388200 Candidatus Methanoperedens nitroreducensANME-2d JMIY01
+  68331 388201 Marine group II euryarchaeote REDSEA-S40_B11N13 LURX01
+  68879 388991                     Uncultured Acidilobus sp MG AYMA01
+  68880 388992 Candidate divison MSBL1 archaeon SCGC-AAA259O05 LHXV01
+  68895 389007                   Uncultured Acidilobus sp OSP8 AYMC01
+  69018 390212    Archaeoglobus fulgidus DSM 8774 DSM 8774 CP006577.1
+          SuperPhylum        Phylum           Class             Order
+  1     Euryarchaeota Euryarchaeota    Halobacteria     Haloferacales
+  2     Euryarchaeota Euryarchaeota Methanomicrobia Methanosarcinales
+  3     Euryarchaeota Euryarchaeota    unclassified      unclassified
+  551      TACK group Crenarchaeota    Thermoprotei      Acidilobales
+  552   Euryarchaeota Euryarchaeota    unclassified      unclassified
+  567      TACK group Crenarchaeota    Thermoprotei      Acidilobales
+  690   Euryarchaeota Euryarchaeota    Archaeoglobi   Archaeoglobales
+  14017 Euryarchaeota Euryarchaeota    Halobacteria     Haloferacales
+  14018 Euryarchaeota Euryarchaeota Methanomicrobia Methanosarcinales
+  14019 Euryarchaeota Euryarchaeota    unclassified      unclassified
+  14567    TACK group Crenarchaeota    Thermoprotei      Acidilobales
+  14568 Euryarchaeota Euryarchaeota    unclassified      unclassified
+  14583    TACK group Crenarchaeota    Thermoprotei      Acidilobales
+  14706 Euryarchaeota Euryarchaeota    Archaeoglobi   Archaeoglobales
+  63073 Euryarchaeota Euryarchaeota    Halobacteria     Haloferacales
+  63074 Euryarchaeota Euryarchaeota Methanomicrobia Methanosarcinales
+  63075 Euryarchaeota Euryarchaeota    unclassified      unclassified
+  63623    TACK group Crenarchaeota    Thermoprotei      Acidilobales
+  63624 Euryarchaeota Euryarchaeota    unclassified      unclassified
+  63639    TACK group Crenarchaeota    Thermoprotei      Acidilobales
+  63762 Euryarchaeota Euryarchaeota    Archaeoglobi   Archaeoglobales
+  68329 Euryarchaeota Euryarchaeota    Halobacteria     Haloferacales
+  68330 Euryarchaeota Euryarchaeota Methanomicrobia Methanosarcinales
+  68331 Euryarchaeota Euryarchaeota    unclassified      unclassified
+  68879    TACK group Crenarchaeota    Thermoprotei      Acidilobales
+  68880 Euryarchaeota Euryarchaeota    unclassified      unclassified
+  68895    TACK group Crenarchaeota    Thermoprotei      Acidilobales
+  69018 Euryarchaeota Euryarchaeota    Archaeoglobi   Archaeoglobales
+                     Family                       variable value     rescale
+  1          Haloferacaceae Phosphoglycerate_dehydrogenase     5  1.72610114
+  2     Methanoperedenaceae Phosphoglycerate_dehydrogenase     1 -0.60015209
+  3            unclassified Phosphoglycerate_dehydrogenase     1 -0.60015209
+  551         Acidilobaceae Phosphoglycerate_dehydrogenase     1 -0.60015209
+  552          unclassified Phosphoglycerate_dehydrogenase     1 -0.60015209
+  567         Acidilobaceae Phosphoglycerate_dehydrogenase     1 -0.60015209
+  690      Archaeoglobaceae Phosphoglycerate_dehydrogenase     2 -0.01858878
+  14017      Haloferacaceae            Asparagine_synthase     2  0.08780760
+  14018 Methanoperedenaceae            Asparagine_synthase     3  0.89748609
+  14019        unclassified            Asparagine_synthase     0 -1.53154939
+  14567       Acidilobaceae            Asparagine_synthase     1 -0.72187090
+  14568        unclassified            Asparagine_synthase     1 -0.72187090
+  14583       Acidilobaceae            Asparagine_synthase     1 -0.72187090
+  14706    Archaeoglobaceae            Asparagine_synthase     1 -0.72187090
+  63073      Haloferacaceae          Alanine_dehydrogenase     5  1.53589524
+  63074 Methanoperedenaceae          Alanine_dehydrogenase     1 -0.26825391
+  63075        unclassified          Alanine_dehydrogenase     0 -0.71929120
+  63623       Acidilobaceae          Alanine_dehydrogenase     0 -0.71929120
+  63624        unclassified          Alanine_dehydrogenase     1 -0.26825391
+  63639       Acidilobaceae          Alanine_dehydrogenase     0 -0.71929120
+  63762    Archaeoglobaceae          Alanine_dehydrogenase     0 -0.71929120
+  68329      Haloferacaceae      Isopropyl_malate_synthase     3  0.49494473
+  68330 Methanoperedenaceae      Isopropyl_malate_synthase     4  1.23231138
+  68331        unclassified      Isopropyl_malate_synthase     1 -0.97978855
+  68879       Acidilobaceae      Isopropyl_malate_synthase     0 -1.71715520
+  68880        unclassified      Isopropyl_malate_synthase     2 -0.24242191
+  68895       Acidilobaceae      Isopropyl_malate_synthase     0 -1.71715520
+  69018    Archaeoglobaceae      Isopropyl_malate_synthase     2 -0.24242191
+  \end{verbatim}
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \NormalTok{##Bueno aqui voy}
+  \NormalTok{##Heat.expansion<-adply(HP_Archaeas_Taxa.m[!HP_Archaeas_Taxa.m$variable %in% c("Contigs", "Size","TOTAL","order","RastNo"), ],1,color_exp)}
+  
+  
+  \NormalTok{#####################################333}
+  \NormalTok{#############################################}
+  
+  
+  \NormalTok{## geom tile with rescale rescala por column}
+          \CommentTok{# Graph! with rescale}
+  \KeywordTok{ggplot}\NormalTok{(small, }\KeywordTok{aes}\NormalTok{(small$variable, small$RastId,}\DataTypeTok{label=}\KeywordTok{round}\NormalTok{(small$rescale,}\DataTypeTok{digits=}\DecValTok{1}\NormalTok{)))+}\StringTok{ }\KeywordTok{geom_tile}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{fill =} \NormalTok{small$rescale), }\DataTypeTok{colour =} \StringTok{"white"}\NormalTok{) +}\StringTok{ }\KeywordTok{scale_fill_gradientn}\NormalTok{(}\DataTypeTok{colours =} \KeywordTok{hm.palette}\NormalTok{(}\DecValTok{100}\NormalTok{),}\DataTypeTok{na.value =} \StringTok{"gray"}\NormalTok{)+}\StringTok{ }\KeywordTok{theme}\NormalTok{(}\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size=}\DecValTok{8}\NormalTok{), }\DataTypeTok{axis.text.x =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{90}\NormalTok{, }\DataTypeTok{hjust =} \DecValTok{1}\NormalTok{, }\DataTypeTok{vjust =} \FloatTok{0.5}\NormalTok{) ,}\DataTypeTok{axis.text.y =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{0}\NormalTok{, }\DataTypeTok{hjust =} \DecValTok{1}\NormalTok{, }\DataTypeTok{vjust =} \FloatTok{0.5}\NormalTok{))+}\KeywordTok{geom_text}\NormalTok{(}\DataTypeTok{size=}\DecValTok{4}\NormalTok{,}\DataTypeTok{check_overlap =} \OtherTok{TRUE}\NormalTok{)}
+  \end{Highlighting}
+  \end{Shaded}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/learningHeatPlots-1} \end{center}
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \NormalTok{## Graph scaled according to whole matrix }
+  \KeywordTok{ggplot}\NormalTok{(small, }\KeywordTok{aes}\NormalTok{(small$variable, small$RastId,}\DataTypeTok{label=}\KeywordTok{round}\NormalTok{(small$value,}\DataTypeTok{digits=}\DecValTok{1}\NormalTok{)))+}\StringTok{ }\KeywordTok{geom_tile}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{fill =} \NormalTok{small$value), }\DataTypeTok{colour =} \StringTok{"white"}\NormalTok{) +}\StringTok{ }\KeywordTok{scale_fill_gradientn}\NormalTok{(}\DataTypeTok{colours =} \KeywordTok{hm.palette}\NormalTok{(}\DecValTok{100}\NormalTok{),}\DataTypeTok{na.value =} \StringTok{"gray"}\NormalTok{)+}\StringTok{ }\KeywordTok{theme}\NormalTok{(}\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size=}\DecValTok{8}\NormalTok{), }\DataTypeTok{axis.text.x =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{90}\NormalTok{, }\DataTypeTok{hjust =} \DecValTok{1}\NormalTok{, }\DataTypeTok{vjust =} \FloatTok{0.5}\NormalTok{) ,}\DataTypeTok{axis.text.y =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{0}\NormalTok{, }\DataTypeTok{hjust =} \DecValTok{1}\NormalTok{, }\DataTypeTok{vjust =} \FloatTok{0.5}\NormalTok{))+}\KeywordTok{geom_text}\NormalTok{(}\DataTypeTok{size=}\DecValTok{4}\NormalTok{,}\DataTypeTok{check_overlap =} \OtherTok{TRUE}\NormalTok{)}
+  \end{Highlighting}
+  \end{Shaded}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/learningHeatPlots-2} \end{center}
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \NormalTok{## Graph coloured by columns, showing true values, not scaled}
+  \KeywordTok{ggplot}\NormalTok{(small, }\KeywordTok{aes}\NormalTok{(small$variable, small$RastId,}\DataTypeTok{label=}\KeywordTok{round}\NormalTok{(small$value,}\DataTypeTok{digits=}\DecValTok{1}\NormalTok{)))+}\StringTok{ }\KeywordTok{geom_tile}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{fill =} \NormalTok{small$rescale), }\DataTypeTok{colour =} \StringTok{"white"}\NormalTok{) +}\StringTok{ }\KeywordTok{scale_fill_gradientn}\NormalTok{(}\DataTypeTok{colours =} \KeywordTok{hm.palette}\NormalTok{(}\DecValTok{100}\NormalTok{),}\DataTypeTok{na.value =} \StringTok{"gray"}\NormalTok{)+}\StringTok{ }\KeywordTok{theme}\NormalTok{(}\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size=}\DecValTok{8}\NormalTok{), }\DataTypeTok{axis.text.x =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{90}\NormalTok{, }\DataTypeTok{hjust =} \DecValTok{1}\NormalTok{, }\DataTypeTok{vjust =} \FloatTok{0.5}\NormalTok{) ,}\DataTypeTok{axis.text.y =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{0}\NormalTok{, }\DataTypeTok{hjust =} \DecValTok{1}\NormalTok{, }\DataTypeTok{vjust =} \FloatTok{0.5}\NormalTok{))+}\KeywordTok{geom_text}\NormalTok{(}\DataTypeTok{size=}\DecValTok{4}\NormalTok{,}\DataTypeTok{check_overlap =} \OtherTok{TRUE}\NormalTok{)}
+  \end{Highlighting}
+  \end{Shaded}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/learningHeatPlots-3} \end{center}
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \NormalTok{####################################################}
+  \NormalTok{### Color according to mean plus standar deviation}
+  \NormalTok{####}
+  
+  \NormalTok{################# trying to make heatplot colors on dataframe}
+  
+  \NormalTok{small.m<-}\StringTok{ }\KeywordTok{ddply}\NormalTok{(small, .(variable),summarize, }\DataTypeTok{mean =} \KeywordTok{round}\NormalTok{(}\KeywordTok{mean}\NormalTok{(value), }\DecValTok{2}\NormalTok{),}\DataTypeTok{sd =} \KeywordTok{round}\NormalTok{(}\KeywordTok{sd}\NormalTok{(value), }\DecValTok{2}\NormalTok{),}\DataTypeTok{expansion=}\NormalTok{mean+sd, }\DataTypeTok{reduction=}\NormalTok{mean-sd)  ## }
+  \KeywordTok{rownames}\NormalTok{(small.m)<-small.m$variable}
+  
+  \NormalTok{####################################################################}
   \end{Highlighting}
   \end{Shaded}
   
@@ -2966,6 +3926,8 @@ starts here.
   Heat plot of central pathways expansions, Needs to be phylogenetically
   sorted.
   
+  \begin{center}\includegraphics{tesis_files/figure-latex/ArchaeaHeatPlots-1} \end{center}
+  
   \begin{figure}[h!tbp]
   \centering
   \includegraphics[angle = 0,scale = 0.6]{chapter3/ArchaeasHeatPlot.pdf}
@@ -3047,7 +4009,7 @@ starts here.
   \end{verbatim}
   
   \begin{verbatim}
-  Warning: Removed 64823 rows containing missing values (geom_point).
+  Warning: Removed 65604 rows containing missing values (geom_point).
   \end{verbatim}
   
   Genome size vs Total central pathway expansion coloured by metabolic
@@ -3238,7 +4200,7 @@ starts here.
   cite references in your thesis (after creating your bibliography
   database), place the reference name inside square brackets and precede
   it by the ``at'' symbol. For example, here's a reference to a book about
-  worrying: {[}\protect\hyperlink{ref-Molina1994}{140}{]}. This
+  worrying: {[}\protect\hyperlink{ref-Molina1994}{142}{]}. This
   \texttt{Molina1994} entry appears in a file called \texttt{thesis.bib}
   in the \texttt{bib} folder. This bibliography database file was created
   by a program called BibTeX. You can call this file something else if you
@@ -3246,7 +4208,7 @@ starts here.
   to placed in the \texttt{bib} folder.
   
   For more information about BibTeX and bibliographies, see our CUS site
-  (\url{http://web.reed.edu/cis/help/latex/index.html})\footnote{{[}\protect\hyperlink{ref-reedweb2007}{141}{]}}.
+  (\url{http://web.reed.edu/cis/help/latex/index.html})\footnote{{[}\protect\hyperlink{ref-reedweb2007}{143}{]}}.
   There are three pages on this topic: \emph{bibtex} (which talks about
   using BibTeX, at \url{http://web.reed.edu/cis/help/latex/bibtex.html}),
   \emph{bibtexstyles} (about how to find and use the bibliography style
@@ -3287,7 +4249,7 @@ starts here.
     To force capitalization in an article title or where all lowercase is
     generally used, bracket the capital letter in curly braces.
   \item
-    You can add a Reed Thesis citation\footnote{{[}\protect\hyperlink{ref-noble2002}{142}{]}}
+    You can add a Reed Thesis citation\footnote{{[}\protect\hyperlink{ref-noble2002}{144}{]}}
     option. The best way to do this is to use the phdthesis type of
     citation, and use the optional ``type'' field to enter ``Reed thesis''
     or ``Undergraduate thesis.''
@@ -4069,7 +5031,7 @@ starts here.
   \NormalTok{if(!}\KeywordTok{require}\NormalTok{(devtools))}
     \KeywordTok{install.packages}\NormalTok{(}\StringTok{"devtools"}\NormalTok{, }\DataTypeTok{repos =} \StringTok{"http://cran.rstudio.com"}\NormalTok{)}
   \NormalTok{if(!}\KeywordTok{require}\NormalTok{(plyr))}
-      \KeywordTok{install.packages}\NormalTok{(}\StringTok{"plyr"}\NormalTok{, }\DataTypeTok{repos =} \StringTok{"http://cran.rstudio.com"}\NormalTok{)}
+      \KeywordTok{install.packages}\NormalTok{(}\StringTok{"plyr"}\NormalTok{, }\DataTypeTok{repos =} \StringTok{"http://cran.rstudio.com"}\NormalTok{) ## this shoul always go before dplyr}
   \NormalTok{if(!}\KeywordTok{require}\NormalTok{(dplyr))}
       \KeywordTok{install.packages}\NormalTok{(}\StringTok{"dplyr"}\NormalTok{, }\DataTypeTok{repos =} \StringTok{"http://cran.rstudio.com"}\NormalTok{)}
   \NormalTok{if(!}\KeywordTok{require}\NormalTok{(ggplot2))}
@@ -4079,7 +5041,6 @@ starts here.
     \NormalTok{devtools::}\KeywordTok{install_github}\NormalTok{(}\StringTok{"ismayc/reedtemplates"}\NormalTok{)}
     \NormalTok{\}}
   \KeywordTok{library}\NormalTok{(reedtemplates)}
-  \NormalTok{flights <-}\StringTok{ }\KeywordTok{read.csv}\NormalTok{(}\StringTok{"data/flights.csv"}\NormalTok{)}
   \end{Highlighting}
   \end{Shaded}
   
@@ -4099,7 +5060,7 @@ starts here.
   Restart docker and free all ports\\
   \texttt{sudo\ service\ docker\ restart}
   
-  liast containers\\
+  list containers\\
   \texttt{docker\ ps\ -a}
   
   ssh or bash into a running docker container\\
@@ -5024,18 +5985,31 @@ starts here.
   W339--W346.
   doi:\href{https://doi.org/10.1093/nar/gkr466}{10.1093/nar/gkr466}
   
+  \hypertarget{ref-chertkovux5fcompleteux5f2011}{}
+  140. Chertkov O, Sikorski J, Nolan M, Lapidus A, Lucas S, Del Rio TG, et
+  al. Complete genome sequence of Thermomonospora curvata type strain
+  (B9T). Standards in Genomic Sciences. 2011;4: 13--22.
+  doi:\href{https://doi.org/10.4056/sigs.1453580}{10.4056/sigs.1453580}
+  
+  \hypertarget{ref-pukallux5fcompleteux5f2009}{}
+  141. Pukall R, Gehrich-Schröter G, Lapidus A, Nolan M, Glavina Del Rio
+  T, Lucas S, et al. Complete genome sequence of Jonesia denitrificans
+  type strain (Prevot 55134T). Standards in Genomic Sciences. 2009;1:
+  262--269.
+  doi:\href{https://doi.org/10.4056/sigs.41646}{10.4056/sigs.41646}
+  
   \hypertarget{ref-Molina1994}{}
-  140. Molina ST, Borkovec TD. The Penn State worry questionnaire:
+  142. Molina ST, Borkovec TD. The Penn State worry questionnaire:
   Psychometric properties and associated characteristics. In: Davey GCL,
   Tallis F, editors. Worrying: Perspectives on theory, assessment and
   treatment. New York: Wiley; 1994. pp. 265--283.
   
   \hypertarget{ref-reedweb2007}{}
-  141. Reed~College. LaTeX your document {[}Internet{]}. 2007. Available:
+  143. Reed~College. LaTeX your document {[}Internet{]}. 2007. Available:
   \url{http://web.reed.edu/cis/help/LaTeX/index.html}
   
   \hypertarget{ref-noble2002}{}
-  142. Noble SG. Turning images into simple line-art. Undergraduate
+  144. Noble SG. Turning images into simple line-art. Undergraduate
   thesis, Reed College. 2002.
 
 

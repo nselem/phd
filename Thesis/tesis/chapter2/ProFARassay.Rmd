@@ -1,0 +1,232 @@
+---
+title: "ProFARassay"
+author: "NellySelem"
+date: "May 18, 2017"
+output: pdf_document
+---
+
+```{r include_reedtemplates_proFAR, include = FALSE}
+# This chunk ensures that the reedtemplates package is installed and loaded
+# This reedtemplates package includes the template files for the thesis and also
+# two functions used for labeling and referencing
+if(!require(devtools))
+  install.packages("devtools", repos = "http://cran.rstudio.com")
+
+if(!require(reedtemplates)){
+  library(devtools)
+  devtools::install_github("ismayc/reedtemplates")
+  }
+library(reedtemplates)
+```
+
+```{r load_pkgs_proFAR, message = FALSE,echo=FALSE}
+# List of packages required for this analysis
+pkg <- c("dplyr", "ggplot2", "knitr", "devtools","RColorBrewer")
+# Check if packages are not installed and assign the
+# names of the packages not installed to the variable new.pkg
+new.pkg <- pkg[!(pkg %in% installed.packages())]
+# If there are any packages in the list that aren't installed,
+# install them
+if (length(new.pkg))
+  install.packages(new.pkg, repos = "http://cran.rstudio.com")
+# Load packages
+library(dplyr)
+library(plyr)
+library(reshape) ## melt
+library(ggplot2)
+library(knitr)
+library(RColorBrewer)
+hm.palette <- colorRampPalette(rev(brewer.pal(11, 'Spectral')), space='Lab')  
+library(genstats) ## Next libraries are for coursera
+library(devtools)
+library(Biobase)
+library(scales) # 
+library(xlsx) # For save data on excel
+library(knitr)
+library(drc) # for fitting Michaelis Menten model
+library(ggplot2) # for drawing
+
+```
+
+## ProFAR Enzymatic assay 
+-Essay perform on clear box  
+This is a fluorimetric assay, that measures proFAR dissapering and AICAR forming. Meassureas are taken on AICAR at 300nm. ProFAR extintion coefficient: 6069 L/M *cm a 300 nm  
+Aldo: proFAR is an accoplated essay with tHisF enzyme (_Thermothoga maritima_) cloned on pET-15b.   
+Reaction suggested by Aldo:     
+24 $\mu M$ ProFAR  
+$0.36 \mu M$ SubHisA $pH 7.5$   
+HisF excess $2.5 \mu M$   
+
+Substrate concentrations  
+Total volume = $160 \mu l$  
+Enzyme concentration according to substrate  
+HisF 40 uM each/hole 5 $\mu l$   
+To obtain kinetic parameters Beer-Lambert law must be used on all data: Absorbance equal to extintion coefficient (L/M*cm) times pole large on cm times solute concentration (M/L)  
+  
+A= e*l*C  
+
+Once data are transformed from absorbance to concentration units, initial velocity $V_0$ can be computed (Concentration/time). For each ProFAR concentration an initial velocity will be obtained and Michaleis Menden parameters can be used. Pole longitud l will be considered as 1 on a fix volume of 160ul (Ernesto) (160 ul) Lianet  
+
+$$
+\centering
+\label{Sco_jueves}
+\begin{tabular}{c c c c}
+\hline \\ [-1.5ex]
+Concentration  & Buffer $(\mu l)$ & Enzyme $(\mu l)$   & proFAR $(\mu l)$\\ [1ex]
+\hline \\ [-1.5ex]
+\hline
+ 0 & 155.4  & 4.6 & 0   \\  [1ex]
+   & 152.2  & 4.6 & 3.2 \\  [1ex]
+   &  149   & 4.6 & 6.4 \\  [1ex]
+   &  142.6 & 4.6 & 12.8\\  [1ex]
+   & 139.4  & 4.6 & 16   \\  [1ex]
+   & 136.2  & 4.6 & 19.2 \\  [1ex]
+   & 131.4  & 4.6 & 24 \\  [1ex]
+   & 123.4  & 4.6 & 32 *** 
+\\  [1ex]
+\hline
+\end{tabular}
+$$
+
+$$
+\centering
+\label{Sco_viernes}
+\begin{tabular}{c c c c}
+\hline \\ [-1.5ex]
+Concentration  & Buffer $(\mu l)$ & Enzyme $(\mu l)$   & proFAR $(\mu l)$\\ [1ex]
+\hline \\ [-1.5ex]
+\hline
+ 0 & 156.1  & 3.9 & 0   \\  [1ex]
+   & 152.9  & 3.9 & 3.2 \\  [1ex]
+   & 149.7  & 3.9 & 6.4 \\  [1ex]
+   & 143.3 & 3.9 & 12.8\\  [1ex]
+   & 140.1  & 3.9 & 16   \\  [1ex]
+   & 136.9  & 3.9 & 19.2 \\  [1ex]
+   & 132.1  & 3.9 & 24 \\  [1ex]
+   & 124.1  & 3.9 & 32 \\  [1ex]
+\hline
+\end{tabular}
+$$
+
+$$
+\centering
+\label{ScoD11_A}Niquel 
+\begin{tabular}{c c c c}
+\hline \\ [-1.5ex]
+Concentration  & Buffer $(\mu l)$ & Enzyme $(\mu l)$   & proFAR $(\mu l)$\\ [1ex]
+\hline \\ [-1.5ex]
+\hline
+ 0 & 154.6  & 5.4 & 0   \\  [1ex]
+   & 151.4  & 5.4 & 3.2 \\  [1ex]
+   & 148.2   & 5.4 & 6.4 \\  [1ex]
+   & 141.8 & 5.4 & 12.8\\  [1ex]
+   & 138.6  & 5.4 & 16   \\  [1ex]
+   & 135.4  & 5.4 & 19.2 \\  [1ex]
+   & 130.6  & 5.4 & 24 \\  [1ex]
+   & 122.6  & 5.4 & 32 \\  [1ex]
+\hline
+\end{tabular}
+$$
+Buffer essay proFAR ammonium Bicarbonate 790.5 mg left: 200mM
+TES 573 mg left a 50mM vF 50 ml
+ProFARstock
+\clearpage   
+## Calculate your own proFAR data
+```{r ProFAR_Stocks}
+#PriA_stock=48.5 ##uM D11A
+PriA_stock=40 ##uM Scoe
+HisF_stock=40 ##uM Scoe
+
+type="Scoe"
+hole_vol=170 ##ul
+#PriA_final=2 ##uM final concentration on hole
+PriA_final=.020 ##uM = 20 nM final concentration on hole
+HisF_final=1.25 ##uM = 20 nM final concentration on hole
+
+PriA_vol=hole_vol*PriA_final/PriA_stock
+PriA_Dil1=PriA_vol*10 ## Dil 1:10
+
+HisF_vol=hole_vol*HisF_final/HisF_stock
+PlateColum=2
+## 
+proFAR_stock=300000 ##300,000nM-> 500uM-> .5mM
+#proFAR_stock=300 ##500,000nM-> 500uM-> .5mM
+ProFAR_mw=577.331 #http://www.genome.jp/dbget-bin/www_bget?cpd:C04896
+```
+
+```{r ProFARStock}
+vol_stock_ProFAR=316 ##ul `r vol_stock_ProFAR`
+#con_stock_ProFAR=300 ##uM `r con_stock_ProFAR`
+con_stock_ProFAR=300 ##uM `r con_stock_ProFAR`
+```
+
+Now I will calculate ProFAR g needed to obtain a final concentration of $`r con_stock_ProFAR` \mu M$ on a final volume of $`r vol_stock_ProFAR`\mu l$ 
+$Molaridad\times Volumen$ = $\frac{gramos}{peso molecular}$  
+
+$(\frac{`r con_stock_ProFAR`}{10^6}M\times\frac{`r vol_stock_ProFAR`}{10^6}L)=\frac{x gramos}{ `r ProFAR_mw` \frac{g}{mol}}$   
+
+x gramos = $\frac{`r con_stock_ProFAR`}{10^6}M\frac{`r vol_stock_ProFAR`}{10^6}L`r ProFAR_mw`\frac{g}{mol}$
+
+So ProFAR quantity needed is
+
+$`r ProFAR_mw*con_stock_ProFAR*vol_stock_ProFAR/10**(12)` g =`r (1000*ProFAR_mw*con_stock_ProFAR*vol_stock_ProFAR)/10**(12)` mg$ 
+
+ProFAR must be diluted on ProFAR Reaction Buffer 1X
+
+***
+```{r proFAR_tables}
+
+PriA<-rep(PriA_Dil1,8)  ## 
+HisF<-rep(HisF_vol,8) 
+# Concentration between 0 -100 uM
+proFARdata <- read.table(header=TRUE, text='
+  proFAR_uM  
+  100          
+  75   
+  60
+  50
+  40
+  20
+  10
+  0  
+')
+
+#Calculating volumes according to data
+proFARdata["Vol"] <-round(1000*hole_vol*proFARdata["proFAR_uM"]/proFAR_stock,digits=2) # That creates the new column named "MY_NEW_COLUMN" 
+
+#proFARdata["PriA_Dil1_nM"]<-1000*round(PriA_final,digits=2)
+proFARdata["PriA_ul"]<-round(PriA,digits=2)
+#proFARdata["HisF_uM"]<-round(HisF_final,digits=2)
+proFARdata["HisF_ul"]<-round(HisF,digits=2)
+
+# As an example, the new column receives
+proFARdata$Buffer <- round(hole_vol-proFARdata$Vol-proFARdata$PriA_ul,digits=2)
+
+kable(proFARdata)
+```
+
+With PriA Dilution at 4uM to get a final concentration of  
+With 
+\clearpage  
+  
+  
+
+##ProFAR synthesis (From Thesis Aldo)  
+## Optimum ph determination for hisA activity  
+## Determination of cinetic parameters  
+## Todo list
+Ask Brieba for 1g L-arabinose         Status: Not done
+Check Resistance from TrpD and TrpC    Status: Done
+
+## Other Reactives available
+-Anthranilic acid (room temperature reactive)  
+(Box ProFAR synthesis -20C)  
+-D-ribose 5 phosphate disodium salt hidrate   
+-D ribose 5 phosphate disodium salt hidrate  
+-Phosphoenol piruvic acid  monosodium salt hidrate  
+-5phospho Dribose 1 diphosphate pentasodium salt  
+-piruvate kinase  
+-Adenosin 5 triphosphate disodium salt hidrate  
+-pyrophosphatase inorganic from ecoli    
+-Adenosin 5 triphosphate ATP  
+

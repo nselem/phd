@@ -8,39 +8,73 @@ output: pdf_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+# Nelly Sélem Mojica.  
+nselem84@gmail.com, (+52) 462 199 10 69,  
+Estudiante de cuarto año de doctorado en Biología integrativa.  
+Langebio-Cinvestav, laboratorio de Evolución de la diversidad metabólica.   
+
+## Información profesional 
+2012 - 2013 Bioinformática en LANGEBIO (Laboratorio Nacional de genómica para la biodiversidad)  
+2010 - 2012 Profesora de matemáticas y desarrolladora de software educativo en el Instituto politécnico Nacional.
+
+## Educación  
+- Estudiante de doctorado de Biología integrativa desde 2014. Langebio Cinvestav Irapuato.  
+- Maestría en matemáticas. 2010 CIMAT Guanajuato,México.  
+- Licenciada en matemáticas. 2006 Univesidad de Guanajuato.  
+- Técnico Laboratorista clínico. 1999 CBTis 56, Iguala; Guerrero.  
+
+#Artículos publicados  
+1. Cellular ``bauplans'': Evolving unicellular forms by means of Julia sets and Pickover biomorphs. Nelly Selem Mojica and Jorge Navarro and Pedro C. Marijuan and Rafael Lahoz-Beltra. Biosystems, 98(1):19-30, 2009
+
+2. Phylogenomic Analysis of Natural Products Biosynthetic Gene Clusters Allows Discovery of Arseno-Organic Metabolites in Model Streptomycetes. Cruz-Morales P, Kopp JF, Martínez-Guerrero C, Yáñez-Guerra LA, Selem-Mojica N, Ramos-Aboites H, Feldmann J, Barona-Gómez F. Genome Biol Evol. 2016 Jul 2;8(6):1906-16. doi: 10.1093/gbe/evw125. http://gbe.oxfordjournals.org/content/8/6/1906  
+
+#Artículos sometidos  
+1. Actinobacteria phylogenomics, selective isolation from an iron oligotrophic environment and siderophore functional characterization, unveil novel desferrioxamine molecular ecological and functional traits   
+
+2. The cycad coralloid root contains a diverse endophytic bacterial community with novel biosynthetic gene clusters unique to its microbiome  
+
+##Artículos en Borrador
+1.Gene family expansion facilitates metabolic robustness during natural product biosynthesis   
+2.Evolution of multi-functionality imposes strong canalization of evolutionary trajectories and limits Darwinian evolution
+3.Genomic Comparison of Nontyphoidal Salmonella enterica Strains of Different Serovars From a Beef Slaughter Operation
+
+# Distinciones recientes:  
+-2014 Gané el Google Summer of code GSOC2014 (verano del código de google) y desarrollé mi propuesta de problemas de genómica y biomatemáticas en WebWork, plataforma open source en perl de problemas de ciencias que se autoevalúan. 
+
+-2017 1° Microbial Genomics best genomics poster prize dirante el congreso internacional de Biología de Actinobacteria en Jeju, Corea
+
+## Distinciones anteriores
+- Trabajo de tesis con honores 2005: “Complex Variable applied to a cellular model using a genetic algorithm”  
+- 2º lugar olimpiada mexicana de matemáticas 1999 México   
+- 2º lugar olimpiada centroamericana y del caribe de matemáticas 1999 Costa Rica   
+- 1° Premio juvenil al desarrollo académico en el estado de Guerrero 1999 México   
+- 1° Concurso Nacional de ensayo "La ciencia para todos" 1999 México   
+- 2° concurso nacional de Biología CONACIBA 1998 México  
+- 15 años en la selección nacional de Hockey. 4° Colombia 2012, World  inline hockey championships.   
 
 #Desarrollo de Software  
 ## EvoMining  
 Desarrollo de la plataforma EvoMining de minería de datos genómicos, disponible en
-https://github.com/nselem/EvoMining  
+https://github.com/nselem/EvoMining
 
 ##CORASON  
 Deasrrollo de plataforma de búsqueda y priorización de clusters biosintéticos, disponible en
 https://github.com/nselem/EvoDivMet  
 
-#Artículos publicados  
-Phylogenomic Analysis of Natural Products Biosynthetic Gene Clusters Allows Discovery of Arseno-Organic Metabolites in Model Streptomycetes.  
-http://gbe.oxfordjournals.org/content/8/6/1906  
-
-#Artículos sometidos  
-1.Actinobacteria phylogenomics, selective isolation from an iron oligotrophic environment and siderophore functional characterization, unveil novel desferrioxamine molecular ecological and functional traits   
-
-2.The cycad coralloid root contains a diverse endophytic bacterial community with novel biosynthetic gene clusters unique to its microbiome  
-
-##Artículos en Borrador
-1.Gene family expansion facilitates metabolic robustness during natural product biosynthesis   
-2.Evolution of multi-functionality imposes strong canalization of evolutionary trajectories and limits Darwinian evolution
-
-#Capacitación tecnologica  
-##Estancia en Argonne (taller RAST/PATRIC)  
-Aprendí a utilizar las herramientas de anotación y genome mining RAST y Patric en el laboratorio Argonne. http://enews.patricbrc.org/4433/4433/ 
-
-#Otros:  
-##Google Summer of Code 2014  
-Gané el verano del código de google y desarrollé mi propuesta problemas de genómica y biomatemáticas en WebWork, plataforma opensource en perl de problemas de ciencias que se autoevalúan. 
+  
+# Talleres y congresos
+- 2017 ISBA International Symposium of Biology of Actinobacteria, Jeju Corea.
+- 2016 Software carpentry. LANGEBIO, México.  
+- 2015 Anotación y genome mining RAST y Patric. Argonne National Laboratory.  
+- 2014 SPI Taller de solución de problemas industriales. CIMAT.   
+- 2012 Introducción a Mathematica y su uso en el Área de Cómputo en Paralelo - HPC. ISUM México  
+- 2012 Computational cell biology Cold Spring Harbor Laboratory.   
+- 2011 New Orleans WeBWork consultant Workshop.  
+- 2011 Taller de estrategias didácticas para la enseñanza de las ciencias básicas para ingenieria  
+- 2011 Implementaciones de unidades de aprendizaje para la modalidad virtual mediante moodle  
 
 #Difusion de la ciencia    
-## Difución de ciencia a científicos
+## Difusión de ciencia a científicos
 ###Unam Taller de Genoma Bacteriano    
 En la Unam ENES, unidad León en la carrera de Ciencias Agrogenómicas di un taller acerca del genoma bacteriano. Comparamos diversos genomas de la misma especie, y vimos que diferían en el contenido génico, así introdujimos los conceptos de pangenoma y coregenome. Utilizamos el anotador genómico RAST y los lenguajes de programación PHP y MySQL.  
 
@@ -54,13 +88,11 @@ http://liz-fernandez.github.io/2016-06-08-LANGEBIO-Mexico/
 http://www.cyverse.org/blog/events/cyverse-tools-and-services-data-carpentry-workshop-langebio-cinvestav-irapuato-mx-may-30  
 
 Enseñamos a científicos a hacer su trabajo bioinformático organizado, eficiente y replicable con herramientas como R, linux, docker y atmosphere.  
-Artículos publicados  
-Artículos sometidos  
 
 ##Difusión de ciencia al público general  
-1.Semana de la ciencia del colegio del Bosque 2017   
-2.Niños y Jóvenes en la Ciencia ciclo 2015-2016 SICES  
-3.Taller el microbioma te acompaña CIMAT 2016  
-4.Día abierto CINVESTAV 23 Semana Nacional de ciencia y tecnología 2016  
-
+1. Semana de la ciencia del colegio del Bosque 2017   
+2. Niños y Jóvenes en la Ciencia ciclo 2015-2016 SICES  
+3. Taller el microbioma te acompaña CIMAT 2016  
+4. Día abierto CINVESTAV 23 Semana Nacional de ciencia y tecnología 2016  
+5. Profesor ayudante de Clubes de Ciencia México 2014 (Este proyecto ganó el tercer lugar en la competencia de inovación educativa en la escuela de graduados de Harvard). 
 
