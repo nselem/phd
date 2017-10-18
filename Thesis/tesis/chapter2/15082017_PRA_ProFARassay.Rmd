@@ -156,7 +156,7 @@ AAdata <- data.frame(TrpC, TrpD, HisF, PriA)
 
 ## Substrates
 AAdata$AA_Dil <- rep(1,8)
-AA_microMolar<-c(50,50,50,50,50,50,50,50)
+AA_microMolar<-c(0,25,50,75,100,0,50,100)
 AAdata["AA_uM"]<-AA_microMolar
 #stock_con=33uM
 stock_con<-AA_Stock*1000 ## on mM
@@ -164,7 +164,7 @@ stock_con<-AA_Stock*1000 ## on mM
 AAdata["AA_Vol"] <-round(hole_vol*AAdata["AA_uM"]/(stock_con*10**(-1*AAdata["AA_Dil"])),digits = 2) # That creates the new column named "MY_NEW_COLUMN" 
 
 ProFAR<-rep(4,8)  ## 
-AAdata["Pro_uM"]<-c(0,25,50,75,100,0,50,100)
+AAdata["Pro_uM"]<-c(50,50,50,50,50,50,50,50)
 AAdata["Pro_vol"]<-round(hole_vol*AAdata["Pro_uM"]/ProFAR_Stock,2)
 
 AAdata["BuffPRA"] <- NA

@@ -55,8 +55,15 @@ TrpF_stock=40 ##uM
 type="Scoe"  #organism from 
 AA_Stock=33 ##mM
 hole_vol=170 ##ul
-TrpF_final=2.4 ##uM final concentration on hole
-TrpF_vol=hole_vol*TrpF_final/TrpF_stock  
+TrpF_final=1 ##uM = 800 nM final concentration on hole
+TrpC_final=1 ##uM = 800 nM final concentration on hole
+TrpD_final=2 ##uM final concentration on hole
+
+## this are final volumes
+TrpF_vol=round(hole_vol*TrpF_final/TrpF_stock,2)
+TrpC_vol=round(hole_vol*TrpC_final/TrpC_stock,2)
+TrpD_vol=round(hole_vol*TrpD_final/TrpD_stock,2)
+
 ```
 
 ## PRA enzymatic assay
@@ -125,8 +132,8 @@ Following table is an example with `r type` PriA at `r TrpF_stock` $\mu M$ when 
 Volumes on table are on $\mu l$  
 
 ```{r PRA_essay_DATA, echo=FALSE}
-TrpC<-rep(2.6,8)
-TrpD<-rep(4,8)  ## 
+TrpC<-rep(TrpC_vol,8)
+TrpD<-rep(TrpD_vol,8)  ## 
 AA_microMolar<-rev(c(1.25, 2.5,3.75,6.25,10, 20, 37.5,62.5))
 AAdata <- read.table(header=TRUE, text='
   AA_Dilution  
@@ -149,7 +156,7 @@ AAdata["Vol"] <-round(hole_vol*AAdata["AA_uM"]/(stock_con*10**(-1*AAdata["AA_Dil
 #TrpF Concentration (ul needed to lead final concentration to 2.4uM) (TrpF_vol)
 #TrpF volume  
 #AAdata["TrpF "] <- round(TrpF_vol,digits=2) # That creates the new column named "MY_NEW_COLUMN" filled with "NA"
-AAdata["TrpF"]<-2 ## muy activa en este caso recordad concentracion distinta a la hora de michaelis
+AAdata["TrpF"]<-TrpF_vol ## muy activa en este caso recordad concentracion distinta a la hora de michaelis
 AAdata["TrpC"]<-TrpC
 AAdata["TrpD"]<-TrpD
 
@@ -163,5 +170,5 @@ kable(AAdata)
 
 With TrpC Stock `r TrpC_stock` $\mu M$ TrpD Stock `r TrpD_stock` $\mu M$ TrpF Stock `r TrpF_stock` $\mu M$ 
 
-
+With TrpC final `r TrpC_final` $\mu M$ TrpD final `r TrpD_final` $\mu M$ TrpF final `r TrpF_final` $\mu M$ 
 

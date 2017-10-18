@@ -1,0 +1,405 @@
+---
+header-includes:
+- \usepackage{graphicx,latexsym}
+- \usepackage{amssymb,amsthm,amsmath}
+- \usepackage{longtable,booktabs,setspace}
+output: pdf_document
+---
+
+```{r include_packages_4, include = FALSE}
+# This chunk ensures that the reedtemplates package is
+# installed and loaded. This reedtemplates package includes
+# the template files for the thesis and also two functions
+# used for labeling and referencing
+if(!require(devtools))
+  install.packages("devtools", repos = "http://cran.rstudio.com")
+if(!require(dplyr))
+    install.packages("dplyr", repos = "http://cran.rstudio.com")   ##Split data frame, apply function, and return results in a data frame.
+if(!require(ggplot2))
+    install.packages("ggplot2", repos = "http://cran.rstudio.com")
+if(!require(reedtemplates)){
+  library(devtools)
+  devtools::install_github("ismayc/reedtemplates")
+  }
+library(reedtemplates)
+flights <- read.csv("data/flights.csv")
+```
+
+
+
+
+
+```{r loading_tables_Actino,message=FALSE,echo=FALSE}
+library(ggplot2)
+library( reshape )
+library(plyr ) 
+library(RColorBrewer)
+library(scales)
+library(RColorBrewer)
+hm.palette <- colorRampPalette(rev(brewer.pal(11, 'Spectral')), space='Lab')  
+
+ActinosCentral <- read.table("chapter4/ActinoCentral", header=TRUE, sep="\t")
+ActinosNp <- read.table("chapter4/ActinoNp", header=TRUE, sep="\t")
+ActinosSMASH <- read.table("chapter4/ActinosSMASH", header=TRUE, sep="\t")
+ActinosTaxa <- read.table("chapter4/ActinoTaxa", header=TRUE, sep="\t")
+ActinosHeatPlot <- read.table("chapter4/HeatPlotDetoxins", header=TRUE, sep="\t")
+
+```
+
+
+```{r Actinosumary,echo=FALSE}
+#summary(ActinosTaxa)
+#table(ActinosTaxa$Order)
+```
+
+
+
+\clearpage
+### Expansions BoxPlot by metabolic family
+```{r boxplot_ActinoHP,warnings = FALSE, message = FALSE,echo=FALSE}
+#ActinosHeatPlot$RastId <- with(ActinosHeatPlot,reorder(ActinosHeatPlot$RastId, ActinosHeatPlot$RastId))
+ActinosTotalBP.m<-merge(ActinosHeatPlot,ActinosTaxa,by.x="RastId",by.y="RastId") ## works as expected
+ActinosHeatPlotBP.m <- melt(ActinosTotalBP.m,id =c("RastId","Name","Phylum","Class","Order","Family","RastNo","Size","Contigs"))
+ActinosHeatPlotBP.m<-subset(ActinosHeatPlotBP.m,variable!="TOTAL") ## works as expected
+
+expansion_plotActino<-ggplot(ActinosHeatPlotBP.m, aes(x=ActinosHeatPlotBP.m$variable, y=ActinosHeatPlotBP.m$value),color="Family") + labs(x = "Metabolic Families", y = "Copies on Actinobacteria Genomes",text = element_text(size=12)) + geom_boxplot()+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 14), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")
+
+ggsave("chapter4/expansionDetoxins_plotActinos.pdf", plot = expansion_plotActino,height = 8, width = 7)
+```
+```{r boxplot_ActinoHP_Actino_label, results = "asis",message=FALSE}
+label(path = "chapter4/expansion_plotActinos.pdf", caption = "Expansions Boxplot",label = "Actino_expansion_boxplot", type = "figure")
+```
+Here is a reference to the expansion boxplot: `r ref("Actino_expansion_boxplot")`.   
+\clearpage 
+
+
+
+
+## Central pathway expansions  
+Heat plot of central pathways expansions, Needs to be phylogenetically sorted.  
+```{r HeatPlotsActino, warning = FALSE, message = FALSE, echo=FALSE,CACHE=TRUE}
+### ME falta ordernarlos filogeneticamente
+ActinosHeatPlot$RastId <- with(ActinosHeatPlot,reorder(ActinosHeatPlot$RastId, ActinosHeatPlot$RastId))
+ActinosHeatPlot.m <- melt(ActinosHeatPlot)
+ActinosHeatPlot.m<- ddply(ActinosHeatPlot.m, .(variable), transform,rescale=scale(value))  ## rescale escala toda la matriz, scale por columnas
+
+HP_TaxaActino<-merge(ActinosHeatPlot,ActinosTaxa,by.x = "RastId",by.y = "RastId")
+HP_TaxaActino<-HP_TaxaActino[order(HP_TaxaActino$Order,HP_TaxaActino$Family),]
+HP_TaxaActino.m<- melt(HP_TaxaActino)
+HP_TaxaActino.m<- ddply(HP_TaxaActino.m, .(variable), transform,rescale=scale(value))  ## rescale escala toda la matriz, scale por columnas
+
+heatplotActinos<-ggplot(HP_TaxaActino.m, aes(HP_TaxaActino.m$variable, HP_TaxaActino.m$RastId))+ labs(x = "Metabolic Families", y = "Genomes",text = element_text(size=12))+geom_tile(aes(fill = HP_TaxaActino.m$rescale ), colour = "white") +scale_fill_gradientn(colours = hm.palette(100),na.value = "gray")+ theme(legend.text=element_text(size=12), legend.position = "bottom",text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5,size=2) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
+#+ facet_wrap(~Family, ncol=2)
+ggsave("chapter4/HeatPlotActinos.pdf", plot = heatplotActinos,height = 36, width = 24)
+
+## Only some metabolic Family
+PGA_AMINOACIDS=subset(ActinosCentral,Pathway=="PPP")
+HP_PGA_AMINOACIDS=ActinosHeatPlot.m[ActinosHeatPlot.m$variable %in% PGA_AMINOACIDS$Enzyme,]
+
+## That metabolic pathway now restricted to some Taxonomic family
+Strepto<-subset(ActinosTaxa,Family=="Streptomycetaceae")
+HP_Strepto<-merge(HP_PGA_AMINOACIDS,Strepto,by.x = "RastId",by.y = "RastId")
+HP_Strepto.m<- melt(HP_Strepto)
+HP_Strepto.m<- ddply(HP_Strepto.m, .(variable), transform,rescale=scale(value))  ## rescale escala toda la matriz, scale por columnas
+
+heatplot_StreptoPGA<-ggplot(HP_Strepto.m, aes(HP_Strepto.m$variable, HP_Strepto.m$RastId))+ labs(x = "Metabolic Families", y = "Streptomyces Genomes expansions on PGA Aminoacids",text = element_text(size=12))+geom_tile(aes(fill = HP_Strepto.m$rescale ), colour = "white")+ scale_fill_gradientn(colours = hm.palette(100),na.value = "gray")+ theme(legend.text=element_text(size=20), text = element_text(size=8), axis.text.x = element_text(angle = 330, hjust = 0, vjust = 1,size=20) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust =1) )
+
+ggsave("chapter4/HeatPlotStreptoPGA.pdf", plot = heatplot_StreptoPGA,height = 36, width = 24)
+
+```
+
+```{r HeatPlots_Actino_label, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter4/HeatPlotActinos.pdf", caption = "Actinobacterial Heatplot",scale=.7,label = "ActinoPlot", type = "figure")
+```
+Here is a reference to the HeatPlot: `r ref("ActinoPlot")`. 
+\clearpage 
+
+```{r Heaplot_summary_Actino,echo=FALSE}
+#summary(ActinosHeatPlot.m)
+#table(ActinosHeatPlot.m$scale >=0,Deltas$DeltaPRO>=0)
+
+```
+PPP pahtway expansions restricted to *Streptomycetaceae* family HeatPlot: `r ref("ActinoPlot")`. 
+
+```{r HeatPlots_Strepto_PGA_label, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter4/HeatPlotStreptoPGA.pdf", caption = "Streptomyces Genomes expansions on PGA Aminoacids HeatPlot",scale=.7,label = "StreptoPGAPlot", type = "figure")
+```
+Here is a reference to the HeatPlot: `r ref("StreptoPGAPlot")`. 
+\clearpage 
+
+<!---------------END EvoMining heatmap----------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------->
+
+## Genome Size correlations
+### Correlation between genome size and AntiSMASH products  
+```{r ANTISMASH_GenomeSize_Correlation_by_ORG_Actinos,echo=FALSE}
+ActinosEXP_SMASH<-merge(ActinosHeatPlot,ActinosSMASH,by.x="RastId",by.y="RastId")
+
+
+ActinosEXP_SMASH2<-merge(ActinosTaxa, ActinosEXP_SMASH, by.x="RastId",by.y="RastId") 
+Actinossn1<-qplot(Size, TOTAL.y, data = ActinosEXP_SMASH2,colour=Order)+theme_bw()+ theme(legend.position	="bottom",plot.title = element_text(size = 14, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 12),axis.text.y=element_text(size = 7))
+ggsave("chapter4/ActinosSMASHvsSizebyOrder.pdf", plot = Actinossn1,height = 8, width = 6)
+
+Actinossn2<-qplot(Size, TOTAL.y, data = ActinosEXP_SMASH2,colour=Order)+theme_bw()+facet_grid(ActinosEXP_SMASH2$Order~.,scales="free")+ theme(legend.position	="bottom",plot.title = element_text(size = 14, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 12),axis.text.y=element_text(size = 7))
+ggsave("chapter4/ActinosSMASHvsSizeGridOrder.pdf", plot = Actinossn2,height = 8, width = 6)
+
+```
+
+Genome size vs Total antismash cluster coloured by order  
+```{r ActinosSMASHvsSizebyOrder_label, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter4/ActinosSMASHvsSizebyOrder.pdf", caption = "Correlation between Actinos genome size and antismash Natural products detection colored by Order",scale=.6,label = "ActinosSMASHvsSizebyOrder", type = "figure")
+```
+Here is a reference to Genome size vs Total antismash cluster: `r ref("ActinosSMASHvsSizebyOrder")`. 
+\clearpage
+
+Genome size vs Total antismash cluster detected splitted by order  
+```{r ActinosSMASHvsSizeGridOrder_label, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter4/ActinosSMASHvsSizeGridOrder.pdf", caption = "Correlation between Actinos genome size and antismash Natural products detection grided by Order",scale=.6,label = "ActinosSMASHvsSizeGridOrder", type = "figure")
+```
+
+Here is a reference to Correlation between genome size and antismash Natural products detection grided by Order plot: `r ref("ActinosSMASHvsSizeGridOrder")`. 
+\clearpage 
+
+<!--------------------------------END size vs AntiSMASH correlation--------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------->
+
+
+<!-------------------------------- size vs Expansions correlation--------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------->
+### Correlation between genome size and Central pathway expansions  
+```{r ActinosANTISMASH_GenomeSize_Correlation_by_ORG,echo=FALSE}
+
+ActinosEXP_TAXA<-merge(ActinosHeatPlot,ActinosTaxa,by.x="RastId",by.y="RastId")
+
+Actinossn4<-qplot(Size, TOTAL, data = ActinosEXP_TAXA,colour=Order)+theme_bw()+ theme(legend.position	="bottom",plot.title = element_text(size = 14, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 12),axis.text.y=element_text(size = 7))
+ggsave("chapter4/ActinosSizevsExpansionsbyOrder.pdf", plot = Actinossn4,height = 6, width = 6)
+
+Actinossn5<-qplot(Size, TOTAL, data = ActinosEXP_TAXA,colour=Order)+theme_bw()+facet_grid(ActinosEXP_TAXA$Order~.,scales="free")+ theme(legend.position	="bottom",plot.title = element_text(size = 14, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 12),axis.text.y=element_text(size = 7))
+ggsave("chapter4/ActinosSizevsExpansionsGridbyOrder.pdf", plot = Actinossn5,height = 6, width = 6)
+
+## Looking for color modifications
+#sn + scale_color_brewer(palette="Dark2(100)")
+#n + scale_color_brewer(palette=hm.palette(10))
+## sn+ scale_color_hue(l=40, c=35)
+```
+Genome size vs Total central pathway expansion coloured by order  
+```{r ActinosSizevsExpansionsbyOrder_label2, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter4/ActinosSizevsExpansionsbyOrder.pdf", caption = "Correlation between Actinos genome size and central pathway expansions ",label = "ActinosSizevsExpansionsbyOrder", type = "figure")
+```
+Here is a reference to the size vs Total central pathway expansion plot: `r ref("ActinosSizevsExpansionsbyOrder")`. 
+\clearpage 
+
+Genome size vs Total central pathway expansion grided by order  
+```{r ActinosSizevsExpansionsGridbyOrder_label2, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter4/ActinosSizevsExpansionsGridbyOrder.pdf", caption = "Correlation between Actinos genome size and central pathway expansions grided by order",label = "ActinosSizevsExpansionsGridbyOrder", type = "figure")
+```
+Here is a reference to the Genome size vs Total central pathway expansion grided by order plot: `r ref("ActinosSizevsExpansionsGridbyOrder")`. 
+\clearpage 
+
+<!--------------------------------------------------------------------------------------------------------------------->
+
+
+
+Correlation between genome size and each of the central pathway families.
+Data are coloured by metabolic family instead of coloured by taxonomical order. This treatment allows to answer how differente metabolic families grows when genome size grow.  
+Also I want to add form given by taxonomical order.
+
+```{r ActinoANTISMASH_GenomeSize_Correlation_by_ORG,message=FALSE, echo=FALSE}
+ActinosHeatPlot$RastId <- with(ActinosHeatPlot, reorder(ActinosHeatPlot$RastId, ActinosHeatPlot$TOTAL))
+ActinosHeatPlot.m <- melt(ActinosHeatPlot)
+ActinosEXP_TAXA<-merge(ActinosHeatPlot.m,ActinosTaxa,by.x="RastId",by.y="RastId")
+
+Actinosn6<-qplot(Size, value, data = ActinosEXP_TAXA,colour=variable,shape=Order)+theme_bw()+ theme(legend.position	="none",legend.text=element_text(size=6),plot.title = element_text(size = 14, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 12),axis.text.y=element_text(size = 7))
+ggsave("chapter4/ActinosSizevsExpansionsbyMetabolicFamily.pdf", plot = Actinosn6,height = 6, width = 8)
+
+Actinosn7<-qplot(Size, value, data = ActinosEXP_TAXA,colour=variable)+theme_bw()+facet_grid(ActinosEXP_TAXA$variable~.,scales="free")+ theme(legend.position	="none",plot.title = element_text(size = 14, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 12),axis.text.y=element_text(size = 7))
+ggsave("chapter4/ActinosExpansionsbyMetabolicFamilyGrid.pdf", plot = Actinosn7,height = 6, width = 12)
+
+## Looking for color modifications
+#sn + scale_color_brewer(palette="Dark2(100)")
+#n + scale_color_brewer(palette=hm.palette(10))
+## sn+ scale_color_hue(l=40, c=35)
+```
+
+Genome size vs Total central pathway expansion coloured by metabolic Family 
+```{r ActinosSizevsExpansionsbyMetabolicFamily_label2, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter4/ActinosSizevsExpansionsbyMetabolicFamily.pdf", caption = "Correlation between Actinos Genome size vs Total central pathway expansion coloured by metabolic Family",scale=.6,label = "ActinosSizevsExpansionsbyMetabolicFamily", type = "figure")
+```
+Here is a reference to the Genome size vs Total central pathway expansion coloured by metabolic Family plot: `r ref("ActinosSizevsExpansionsbyMetabolicFamily")`. 
+\clearpage 
+
+Future Work: Genome size vs Total central pathway expansion grided by metabolic Family 
+For clarity I need to also grid and group by Metabolic Pathway
+```{r ActinosExpansionsbyMetabolicFamilyGrid_label2, results = "asis",message=FALSE,echo=FALSE}
+#label(path = "chapter4/ActinosExpansionsbyMetabolicFamilyGrid.pdf", caption = "Correlation between Actinos Genome size vs Total central pathway expansion grided by metabolic Family ",label = "ActinosExpansionsbyMetabolicFamilyGrid", type = "figure")
+```
+Here is a reference to Genome size vs Total central pathway expansion grided by metabolic Family  plot: `r ref("ActinosExpansionsbyMetabolicFamilyGrid")`. 
+\clearpage 
+
+
+<!----------------------------END - size vs Expansions correlation--------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------->
+
+
+
+
+
+<!----------------------------Natural Products vs Expansions correlation--------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------->
+
+## Natural products  
+
+### Natural products recruitments from EvoMining heatplot
+We can see natural products recruitment after central pathways expansions colored by their kingdom.  
+Natural products recruited by metabolic family, colored by phylogenetic origin.
+```{r ActinosNP_recruitment_taxa,echo=FALSE,message=FALSE,warning=FALSE}
+ActinosRecbyKing<-qplot(x=Central, data=ActinosNp, geom="bar", fill=kingdom, position="stack")+theme_bw()+ theme(legend.position	="bottom",text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
+ggsave("chapter4/ActinosRecruitmentsbyKingdom.pdf", plot = ActinosRecbyKing,height = 6, width = 12)
+
+ActinosRecbytaxa<-qplot(x=Central, data=ActinosNp, geom="bar", fill=taxa, position="stack")+theme_bw()+ theme(legend.position	="bottom",text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
+ggsave("chapter4/ActinosRecruitmentsbyTaxa.pdf", plot = ActinosRecbytaxa,height = 6, width = 12)
+
+```
+
+
+Recruitments after central pathways expansions coloured by Kingdom
+```{r ActinosRecruitmentsbyKingdom_label2, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter4/ActinosRecruitmentsbyKingdom.pdf", caption = "Actinos Recruitmens on central families coloured by kingdom",scale=.6,label = "ActinosRecruitmentsbyKingdom", type = "figure")
+```
+Here is a reference to Recruitments after central pathways expansions colourd by Kingdom plot: `r ref("ActinosRecruitmentsbyKingdom")`. 
+
+\clearpage 
+Recruitments after central pathways expansions colourd by taxonomy
+```{r ActinosRecruitmentsbyTaxa_label2, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter4/ActinosRecruitmentsbyTaxa.pdf", caption = "Actinos Recruitmens on central families coloured by taxonomy",scale=.5,label = "ActinosRecruitmentsbyTaxa", type = "figure")
+```
+Here is a reference to Recruitments after central pathways expansions colourd by taxa plot: `r ref("ActinosRecruitmentsbyTaxa")`. 
+\clearpage 
+
+
+
+
+## Actinos AntiSMASH 
+```{r ActinosDiversity,echo=FALSE,message=FALSE,warning=FALSE}
+## merge tables
+Actinosm1 <- merge(ActinosTaxa, ActinosSMASH, by.x = "RastId", by.y = "RastId")
+Actinosm1.m <- melt(Actinosm1, id = c("RastId","Name","Phylum","Class","Order","Family","Contigs","Size","RastNo"))
+Actinosm2.m<-subset(Actinosm1.m,value>0)
+
+ActinosDiversity<-qplot(x=Order, data=Actinosm1.m, geom="bar", fill=Family, position="stack")+theme_bw()+ theme(text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
+#table(m1.m$Order>0,m1.m$Family>0)
+#qplot(x=clarity, data=diamonds, geom="bar", fill=cut, position="stack")
+ggsave("chapter4/ActinosDiversity.pdf", plot =ActinosDiversity,height = 6, width = 14)
+
+ActinosSmash<-qplot(x=Order, data=Actinosm2.m, geom="bar", fill=variable, position="stack",colours = hm.palette(100000))+theme_bw()+ theme(legend.position="none",text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
+#table(m1.m$Order>0,m1.m$Family>0)
+ggsave("chapter4/ActinosSmash.pdf", plot = ActinosSmash,height = 6, width = 14)
+```
+ 
+Taxonomical diversity on Actinosbacteria Data
+```{r ActinosDiversity_label2, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter4/ActinosDiversity.pdf", caption = "Actinos Diversity",scale=.6,label = "ActinosDiversity", type = "figure")
+```
+Here is a reference to Recruitments after central pathways expansions colourd by taxa plot: `r ref("ActinosDiversity")`. 
+\clearpage
+
+Smash diversity
+```{r ActinosSmash_label2, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter4/ActinosSmash.pdf", caption = "Actinos Smash Taxonomical Diversity",scale=.5,label = "ActinosSmash", type = "figure")
+```
+Here is a reference to Recruitments after central pathways expansions colourd by taxa plot: `r ref("ActinosSmash")`. 
+\clearpage
+
+
+
+
+### AntisSMASH vs Central Expansions  
+Is it a correlation between pangenome grow and central pathways expansions?  
+```{r ActinosANTISMASH_Expansion_Correlation_by_ORG,message=FALSE, echo =FALSE}
+ActinosEXP_SMASH<-merge(ActinosHeatPlot,ActinosSMASH,by.x="RastId",by.y="RastId")
+ActinosEXP_SMASH2<-merge(ActinosTaxa, ActinosEXP_SMASH, by.x="RastId",by.y="RastId") 
+#qplot(Total.x, Total.y, data = EXP_SMASH, colour=Order)+theme_bw()+
+Actinossn8<-qplot(TOTAL.x, TOTAL.y, data = ActinosEXP_SMASH2,colour=Order)+theme_bw()+ theme(legend.position	="bottom",legend.text=element_text(size=10),plot.title = element_text(size = 14, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 10),axis.text.y=element_text(size = 7))
+ggsave("chapter4/ActinosSMASHvsExpansionsbyOrder.pdf", plot = Actinossn8,height = 12, width = 6)
+
+Actinossn9<-qplot(TOTAL.x, TOTAL.y, data = ActinosEXP_SMASH2,colour=Order)+theme_bw()+facet_grid(ActinosEXP_SMASH2$Order~.,scales="free")+ theme(legend.position	="bottom",legend.text=element_text(size=10),plot.title = element_text(size = 14, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 12),axis.text.y=element_text(size = 7))
+ggsave("chapter4/ActinosSMASHvsExpansionsbyOrderGRID.pdf", plot = Actinossn9,height = 10, width = 6)
+
+## Looking for color modifications
+#sn + scale_color_brewer(palette="Dark2(100)")
+#n + scale_color_brewer(palette=hm.palette(10))
+## sn+ scale_color_hue(l=40, c=35)
+```
+Total central pathway expansions by genome vs Total antismash cluster detected coloured by order  
+```{r ActinosSMASHvsExpansionsbyOrder_label, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter4/ActinosSMASHvsExpansionsbyOrder.pdf", caption = "Correlation between Actinos central pathway expansions and antismash Natural products detection",scale=.5,label = "ActinosSMASHvsExpansionsbyOrder", type = "figure")
+```
+Here is a reference to the expansions vs antismash NP's clusters plot: `r ref("ActinosSMASHvsExpansionsbyOrder")`. 
+\clearpage 
+
+Total central pathway expansions by genome vs Total antismash cluster detected splitted by order  
+```{r ActinosSMASHvsExpansionsbyOrderGRID_label, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter4/ActinosSMASHvsExpansionsbyOrderGRID.pdf", caption = "Correlation between Actinos central pathway expnasions and antismash Natural products detection",scale=.5,label = "ActinosSMASHvsExpansionsbyOrderGRID", type = "figure")
+```
+Here is a reference to the expansions vs antismash NP's clusters splitted by order plot `r ref("ActinosSMASHvsExpansionsbyOrderGRID")`. 
+\clearpage 
+
+<!------------------------------------------------------------------------------------------------------------->
+
+
+
+
+
+
+AntisMAsh vs Expansions by taxonomic Family
+```{r ActinosANTISMASH_Expansion_Correlation_by_Family,echo=FALSE,warning=FALSE}
+ActinosEXP_SMASH<-merge(ActinosHeatPlot,ActinosSMASH,by.x="RastId",by.y="RastId")
+ActinosEXP_SMASH2<-merge(ActinosTaxa, ActinosEXP_SMASH, by.x="RastId",by.y="RastId") 
+
+Actinosnpf<-qplot(TOTAL.x, TOTAL.y, data = ActinosEXP_SMASH2,colour=Family)+theme_bw()+facet_grid(ActinosEXP_SMASH2$Order~.,scales="free")+
+        theme( plot.title = element_text(size = 14, face = "bold"),
+              text = element_text(size = 12),
+              axis.title = element_text(face="bold"),
+              axis.text.x=element_text(size = 12),
+              axis.text.y=element_text(size = 7))
+ggsave("chapter4/Actinosnpf.pdf", plot = Actinosnpf,height = 12, width = 6)
+
+#facet_grid(EXP_SMASH$Order~.,scales="free")+
+```
+
+Natural products colured by family
+```{r Actinosnpf_label, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter4/Actinosnpf.pdf", caption = "Actinos Natural products by family",scale=.6,label = "Actinosnpf", type = "figure")
+```
+Here is a reference to the Natural products colured by family
+ plot `r ref("Actinosnpf")`. 
+\clearpage 
+
+<!------------------------------------------------------------------------------------------------------------->
+
+
+
+##Selected trees from EvoMining
+
+```{r Actinos_evo_tree, results = "asis",message=FALSE, echo=FALSE}
+label(path = "chapter4/tree15.png", caption = "Enolase EvoMiningtree", 
+      scale = .3,
+      angle = 180,
+      label = "enolase_evo_tree", type = "figure")
+
+label(path = "chapter4/tree73.png", caption = "Phosphoribosyl isomerase EvoMiningtree", 
+      scale = .3,
+      angle = 180,
+      label = "Phosphoribosyl_isomerase_evo_tree", type = "figure")
+
+label(path = "chapter4/tree47.png", caption = "Phosphoribosyl isomerase A EvoMiningtree", 
+      scale = .3,
+      angle = 180,
+      label = "Phosphoribosyl_isomerase_A_evo_tree", type = "figure")
+
+label(path = "chapter4/tree69.png", caption = "phosphoshikimate carboxyvinyltransferase EvoMiningtree", 
+      scale = .3, angle = 180,label = "phosphoshikimate_c_evo_tree", type = "figure")
+
+
+```
+\clearpage 

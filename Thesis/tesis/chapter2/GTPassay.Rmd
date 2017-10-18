@@ -162,12 +162,12 @@ GTP is commercially available at stocks of $100mM$
 We want 8 different concentrations between 0 and 50mM on a final volume of $160\mu l$. We chose 0,0.5,1,1.5,5,10,20,50 as the eight points.  
 
 Dilutions were made to reach this concentrations.
-$C_{stock}= 100mM$ dil0  
-$C_0= 10mM=10000\mu M$ dil1 1:10
-$C_1= 1000\mu M$ dil1 1:10
-$C_2= 100\mu M$ dil2  1:10
-$C_3= 10\mu M$ dil3  1:10
-$C_4= 1\mu M$ dil4 1:10
+$C_{stock}= 100mM$ dil0  Stock original
+$C_0= 10mM=10000\mu M$ dil1 1:10 primera dilucsio la llame dil0 Stock de nelly
+$C_1= 1000\mu M$ dil2 1:10
+$C_2= 100\mu M$ dil3  1:10
+$C_3= 10\mu M$ dil4 1:10
+$C_4= 1\mu M$ dil5 1:10
 
 $[S] =[dGTP]=10000\mu M$  
 $[E]=50nM$  
@@ -196,44 +196,49 @@ $$
 #PriA_stock=48.5 ##uM D11A
 PriA_stock=40 ##uM Scoe
 type="Scoe"
-hole_vol=160 ##ul
-PriA_final=2 ##uM final concentration on hole
+hole_vol=170 ##ul
+PriA_final=1 ##uM final concentration on hole
 #PriA_final=.050 ##uM = 50 nM final concentration on hole
 PriA_vol=hole_vol*PriA_final/PriA_stock
 PlateColum=2
 ## 
-GTP_stock=100000 ##100000nM-> 1000uM-> 1mM
+GTP_stock=100000000 ##100,000,000nM-> 100,000uM-> 100mM
 ```
 
 
 ```{r GTP_tables}
 
+GTPdata <- read.table(header=TRUE, text='
+  GTP_Dilution  
+  3       
+  3   
+  3   
+  4  
+  4  
+  4 
+  4 
+  5  
+')
+
+
 PriA<-rep(PriA_vol,8)  ## 
 
 ##Use following line when mM concentrations are needed
-GTP_mM<-rev(c(0,0,.5,1,2.5,5,10,15))  # en 150  eliminamos la enzima columna
-
-GTPdata <- read.table(header=TRUE, text='
-  GTP_Dilution  
- 0          
-  0   
-  0   
-  0  
-  1  
-  1 
-  1 
-  1  
-')
-GTPdata["GTP_uM"]<-GTP_mM*1000
+#GTP_mM<-rev(c(0,0,.5,1,2.5,5,10,15))  # en 150  eliminamos la enzima columna
+#GTPdata["GTP_uM"]<-GTP_mM*1000
 
 ##Use following line when uM concentrations are needed, please comment when no needed
-#GTP_uM<-rev(c(0, .5,1,2,5, 10,25,50)) 
+GTP_uM<-rev(c(0, .5,1,2,5, 10,25,50)) 
+GTPdata["GTP_uM"]<-GTP_uM
+
+#GTP_uM<-rev(c(0,0,.0005,.0001,2.5,5,10,15))  # en 150  eliminamos la enzima columna
+
 #GTPdata["GTP_uM"]<-GTP_uM
 
 #Calculating volumes accordi
-GTPdata["Vol"] <-round(hole_vol*GTPdata["GTP_uM"]/(GTP_stock*10**(-1*GTPdata["GTP_Dilution"])),digits = 2) # That creates the new column named "MY_NEW_COLUMN" 
+GTPdata["Vol"] <-1000*hole_vol*GTPdata["GTP_uM"]/(GTP_stock*10**(-1*GTPdata["GTP_Dilution"])) # That creates the new column named "MY_NEW_COLUMN" 
 
-GTPdata["PriA_ul"]<-round(PriA,digits=2)
+GTPdata["PriA_ul"]<-round(PriA_vol,digits=2)
 
 # As an example, the new column receives
 GTPdata$Buffer <- round(160-GTPdata$Vol-GTPdata$PriA_ul,digits=2)
@@ -241,6 +246,7 @@ GTPdata$Buffer <- round(160-GTPdata$Vol-GTPdata$PriA_ul,digits=2)
 kable(GTPdata)
 ```
 
+GTP Stock  100 $mM$ PriA final `r PriA_final` $\mu M$ 
 \clearpage  
   
   

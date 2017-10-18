@@ -60,8 +60,8 @@ library(ggplot2) # for drawing
 #tail -n +39 Pra_scoe1.csv | head -n-3 > Pra_scoe1.data  
 #perl -p -i -e 's/\sNr\.|\s\[\w*\]|\.\s\[.*\]//g' Pra_scoe1.data
 #tablePRAPRO <- read.table(s"chapter2/cineticas/Pra_scoe1.data",header=TRUE, sep="\t") 
-tablePRO <- read.table("15082017_praproAbsorbanceCombined.data",header=TRUE, sep="\t") 
-tablePRA <- read.table("15082017_praproFluorescenceCombined.data",header=TRUE, sep="\t") 
+tablePRO <- read.table("cineticas/18082017_PraProfarAbsorbanceCombined.data",header=TRUE, sep="\t") 
+tablePRA <- read.table("cineticas/18082017_PraProfarFluorCombined.data",header=TRUE, sep="\t") 
 #tablePRA <- read.table("15082017_praOSCURO.data",header=TRUE, sep="\t") 
 
 
@@ -75,6 +75,8 @@ b<-tablePRO$Time[c(TRUE,FALSE)]+19.15
 tablePRO$Time[c(TRUE, FALSE)] <- a
 tablePRO$Time[c(FALSE, TRUE)] <- b
 tablePRO$Time
+tablePRO<-tablePRO[grep("Pro|Time", colnames(tablePRO))]
+#tablePRA<-tablePRA[grep("Pra|Time", colnames(tablePRA))]
 
 PROassay.m <- melt(tablePRO,id="Time")
 
@@ -96,6 +98,7 @@ b<-tablePRA$Time[c(TRUE,FALSE)]+19.15
 tablePRA$Time[c(TRUE, FALSE)] <- a
 tablePRA$Time[c(FALSE, TRUE)] <- b
 tablePRA$Time
+tablePRA<-tablePRA[grep("Pra|Time", colnames(tablePRA))]
 
 PRAassay.m <- melt(tablePRA,id="Time")
 plot(PRAassay.m$Time, PRAassay.m$value, col=PRAassay.m$variable,  xlab="Time [s]",ylab="Fluorescence", pch=19,bty='L')
