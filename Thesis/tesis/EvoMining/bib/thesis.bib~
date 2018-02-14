@@ -1,0 +1,120 @@
+This file was created with JabRef 2.2.
+Encoding: MacRoman
+
+@article{spellberg_future_2014,
+	title = {The future of antibiotics},
+	volume = {18},
+	issn = {1364-8535},
+	url = {https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4075146/},
+	doi = {10.1186/cc13948},
+	abstract = {Antibiotic resistance continues to spread even as society is experiencing a market failure of new antibiotic research and development (R\&D). Scientific, economic, and regulatory barriers all contribute to the antibiotic market failure. Scientific solutions to rekindle R\&D include finding new screening strategies to identify novel antibiotic scaffolds and transforming the way we think about treating infections, such that the goal is to disarm the pathogen without killing it or modulate the host response to the organism without targeting the organism for destruction. Future economic strategies are likely to focus on ‘push’ incentives offered by public-private partnerships as well as increasing pricing by focusing development on areas of high unmet need. Such strategies can also help protect new antibiotics from overuse after marketing. Regulatory reform is needed to re-establish feasible and meaningful traditional antibiotic pathways, to create novel limited-use pathways that focus on highly resistant infections, and to harmonize regulatory standards across nations. We need new antibiotics with which to treat our patients. But we also need to protect those new antibiotics from misuse when they become available. If we want to break the cycle of resistance and change the current landscape, disruptive approaches that challenge long-standing dogma will be needed.},
+	number = {3},
+	urldate = {2017-12-29},
+	journal = {Critical Care},
+	author = {Spellberg, Brad},
+	year = {2014},
+	pmid = {25043962},
+	pmcid = {PMC4075146},
+	pages = {228}
+}
+
+@misc{ruttimann_2020_2006,
+	type = {News},
+	title = {2020 computing: {Milestones} in scientific computing},
+	copyright = {2006 Nature Publishing Group},
+	shorttitle = {2020 computing},
+	url = {https://www.nature.com/articles/440399a},
+	abstract = {2020 computing: Milestones in scientific computing},
+	language = {En},
+	urldate = {2017-12-29},
+	author = {Ruttimann, Jacqueline},
+	month = mar,
+	year = {2006},
+	note = {DOI: 10.1038/440399a}
+}
+
+@article{markowetz_all_2017,
+	title = {All biology is computational biology},
+	volume = {15},
+	issn = {1545-7885},
+	url = {http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.2002050},
+	doi = {10.1371/journal.pbio.2002050},
+	abstract = {Here, I argue that computational thinking and techniques are so central to the quest of understanding life that today all biology is computational biology. Computational biology brings order into our understanding of life, it makes biological concepts rigorous and testable, and it provides a reference map that holds together individual insights. The next modern synthesis in biology will be driven by mathematical, statistical, and computational methods being absorbed into mainstream biological training, turning biology into a quantitative science.},
+	number = {3},
+	urldate = {2017-12-28},
+	journal = {PLOS Biology},
+	author = {Markowetz, Florian},
+	month = sep,
+	year = {2017},
+	keywords = {Biologists, Biology and life sciences, Computational biology, Computerized simulations, Computers, Genome analysis, Genomic medicine, Plant genomics},
+	pages = {e2002050}
+}
+
+@article{wohlleben_antibiotic_2016,
+	title = {Antibiotic drug discovery},
+	volume = {9},
+	issn = {1751-7915},
+	url = {https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4993170/},
+	doi = {10.1111/1751-7915.12388},
+	abstract = {Due to the threat posed by the increase of highly resistant pathogenic bacteria, there is an urgent need for new antibiotics; all the more so since in the last 20 years, the approval for new antibacterial agents had decreased. The field of natural product discovery has undergone a tremendous development over the past few years. This has been the consequence of several new and revolutionizing drug discovery and development techniques, which is initiating a ‘New Age of Antibiotic Discovery’. In this review, we concentrate on the most significant discovery approaches during the last and present years and comment on the challenges facing the community in the coming years.},
+	number = {5},
+	urldate = {2017-12-24},
+	journal = {Microbial Biotechnology},
+	author = {Wohlleben, Wolfgang and Mast, Yvonne and Stegmann, Evi and Ziemert, Nadine},
+	month = jul,
+	year = {2016},
+	pmid = {27470984},
+	pmcid = {PMC4993170},
+	pages = {541--548}
+}
+
+@incollection{adamek_mining_2017,
+	series = {Methods in {Molecular} {Biology}},
+	title = {Mining {Bacterial} {Genomes} for {Secondary} {Metabolite} {Gene} {Clusters}},
+	isbn = {9781493966325 9781493966349},
+	url = {https://link.springer.com/protocol/10.1007/978-1-4939-6634-9_2},
+	abstract = {With the emergence of bacterial resistance against frequently used antibiotics, novel antibacterial compounds are urgently needed. Traditional bioactivity-guided drug discovery strategies involve laborious screening efforts and display high rediscovery rates. With the progress in next generation sequencing methods and the knowledge that the majority of antibiotics in clinical use are produced as secondary metabolites by bacteria, mining bacterial genomes for secondary metabolites with antimicrobial activity is a promising approach, which can guide a more time and cost-effective identification of novel compounds. However, what sounds easy to accomplish, comes with several challenges. To date, several tools for the prediction of secondary metabolite gene clusters are available, some of which are based on the detection of signature genes, while others are searching for specific patterns in gene content or regulation.Apart from the mere identification of gene clusters, several other factors such as determining cluster boundaries and assessing the novelty of the detected cluster are important. For this purpose, comparison of the predicted secondary metabolite genes with different cluster and compound databases is necessary. Furthermore, it is advisable to classify detected clusters into gene cluster families. So far, there is no standardized procedure for genome mining; however, different approaches to overcome all of these challenges exist and are addressed in this chapter. We give practical guidance on the workflow for secondary metabolite gene cluster identification, which includes the determination of gene cluster boundaries, addresses problems occurring with the use of draft genomes, and gives an outlook on the different methods for gene cluster classification. Based on comprehensible examples a protocol is set, which should enable the readers to mine their own genome data for interesting secondary metabolites.},
+	language = {en},
+	urldate = {2017-12-24},
+	booktitle = {Antibiotics},
+	publisher = {Humana Press, New York, NY},
+	author = {Adamek, Martina and Spohn, Marius and Stegmann, Evi and Ziemert, Nadine},
+	year = {2017},
+	note = {DOI: 10.1007/978-1-4939-6634-9\_2},
+	pages = {23--47}
+}
+
+@article{scheffler_antimicrobials_2013,
+	title = {Antimicrobials, drug discovery, and genome mining},
+	volume = {97},
+	issn = {0175-7598, 1432-0614},
+	url = {https://link.springer.com/article/10.1007/s00253-012-4609-8},
+	doi = {10.1007/s00253-012-4609-8},
+	abstract = {Over the years, antibiotics have provided an effective treatment for a number of microbial diseases. However recently, there has been an increase in resistant microorganisms that have adapted to our current antibiotics. One of the most dangerous pathogens is methicillin-resistant Staphylococcus aureus (MRSA). With the rise in the cases of MRSA and other resistant pathogens such as vancomycin-resistant Staphylococcus aureus, the need for new antibiotics increases every day. Many challenges face the discovery and development of new antibiotics, making it difficult for these new drugs to reach the market, especially since many of the pharmaceutical companies have stopped searching for antibiotics. With the advent of genome sequencing, new antibiotics are being found by the techniques of genome mining, offering hope for the future.},
+	language = {en},
+	number = {3},
+	urldate = {2017-12-24},
+	journal = {Applied Microbiology and Biotechnology},
+	author = {Scheffler, R. J. and Colmer, S. and Tynan, H. and Demain, A. L. and Gullo, V. P.},
+	month = feb,
+	year = {2013},
+	pages = {969--978}
+}
+
+
+@article{land_insights_2015,
+	title = {Insights from 20 years of bacterial genome sequencing},
+	volume = {15},
+	issn = {1438-793X},
+	url = {http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4361730/},
+	doi = {10.1007/s10142-015-0433-4},
+	abstract = {Since the first two complete bacterial genome sequences were published in 1995, the science of bacteria has dramatically changed. Using third-generation DNA sequencing, it is possible to completely sequence a bacterial genome in a few hours and identify some types of methylation sites along the genome as well. Sequencing of bacterial genome sequences is now a standard procedure, and the information from tens of thousands of bacterial genomes has had a major impact on our views of the bacterial world. In this review, we explore a series of questions to highlight some insights that comparative genomics has produced. To date, there are genome sequences available from 50 different bacterial phyla and 11 different archaeal phyla. However, the distribution is quite skewed towards a few phyla that contain model organisms. But the breadth is continuing to improve, with projects dedicated to filling in less characterized taxonomic groups. The clustered regularly interspaced short palindromic repeats (CRISPR)-Cas system provides bacteria with immunity against viruses, which outnumber bacteria by tenfold. How fast can we go? Second-generation sequencing has produced a large number of draft genomes (close to 90 \% of bacterial genomes in GenBank are currently not complete); third-generation sequencing can potentially produce a finished genome in a few hours, and at the same time provide methlylation sites along the entire chromosome. The diversity of bacterial communities is extensive as is evident from the genome sequences available from 50 different bacterial phyla and 11 different archaeal phyla. Genome sequencing can help in classifying an organism, and in the case where multiple genomes of the same species are available, it is possible to calculate the pan- and core genomes; comparison of more than 2000 Escherichia coli genomes finds an E. coli core genome of about 3100 gene families and a total of about 89,000 different gene families. Why do we care about bacterial genome sequencing? There are many practical applications, such as genome-scale metabolic modeling, biosurveillance, bioforensics, and infectious disease epidemiology. In the near future, high-throughput sequencing of patient metagenomic samples could revolutionize medicine in terms of speed and accuracy of finding pathogens and knowing how to treat them.},
+	number = {2},
+	urldate = {2017-01-28},
+	journal = {Functional \& Integrative Genomics},
+	author = {Land, Miriam and Hauser, Loren and Jun, Se-Ran and Nookaew, Intawat and Leuze, Michael R. and Ahn, Tae-Hyuk and Karpinets, Tatiana and Lund, Ole and Kora, Guruprased and Wassenaar, Trudy and Poudel, Suresh and Ussery, David W.},
+	year = {2015},
+	pmid = {25722247},
+	pmcid = {PMC4361730},
+	pages = {141--161}
+}

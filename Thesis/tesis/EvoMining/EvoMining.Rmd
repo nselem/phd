@@ -1,0 +1,49 @@
+---
+title: "EvoMining"
+author: "Nelly Selem"
+date: "December31, 2017"
+output:
+  html_document: default
+  pdf_document: default
+  word_document: default
+bibliography: bib/thesis.bib
+nocite: |
+  @cibrian-jaramillo_increasing_2016,@barona-gomez_what_2012,@cruz-morales_phylogenomic_2016,@medema_minimum_2015,@ziemert_evolution_2016,@medema_computational_2015
+  @dufresne_algorithmique_2016@,@blin_recent_nodate,@kurtboke_revisiting_2017,@miller_interpreting_2017,@schniete_expanding_2017,@kim_recent_2017,@robertsen_toward_2017,@juarez-vazquez_evolution_nodate,@chavali_bioinformatics_nodate,@tracanna_mining_2017,@ren_breaking_2017,@choudhary_current_2017,@alanjary_antibiotic_2017,@chevrette_sandpuma:_2017,@wohlleben_antibiotic_2016,@weber_secondary_2016
+  
+---
+
+```{r setup, include=FALSE}
+library(knitr)
+knitr::opts_chunk$set(echo = TRUE)
+```
+[@cibrian-jaramillo_increasing_2016] m [@medema_computational_2015,@blin_recent_nodate]
+EvoMining is a visual, evolutionary based genome mining tool with the milestone of prioritize non standard secondary metabolite pathways. The algorithm follows enzyme families from central pathways on their recruitment as components of natural products biosynthetic gene clusters (BGCs). The assumption behind EvoMining is that on prokaryotic genomes enzyme families are expanded frequently either by duplication or by horizontal gene transfer and that this expansions are acting as evolutionary raw material being recruited into secondary metabolism to perform nobel chemical functionalities. A proof of concept of EvoMining idea was provided by the discovery of an arseno compound on Streptomyces coelicolor [@cruz-morales_phylogenomic_2016], nevertheless. Despite EvoMining analysis has recently being present on the natural products field [@blin_recent_nodate,@alanjary_antibiotic_2017,@ziemert_evolution_2016,@miller_interpreting_2017] EvoMining software has not been released, on this work we free EvoMining as a downloadable stand alone tool implemented on a docker container. EvoMining is free and open to all users and there is no login requirement.  
+
+EvoMining inputs are a custom genomic database (genomic-DB), a central pathways database (central-DB) and a natural product database (natural-DB) composed of genes that belongs to experimentally tested BGCs. The genomic-DB is a collection of genomes in RAST format from taxonomically related organisms. The natural-DB currently comprises all sequences that belongs to some BGCS from The Minimum Information about a Biosynthetic Gene cluster (MIBiG) [@medema_minimum_2015]. Finally the also customizable central-DB used on this studio contains nine central pathways of Actinobacteria including amino acid biosynthesis, glycolysis, pentose phosphate pathway, and tricarboxylic acids cycle[@barona-gomez_what_2012]  
+  
+EvoMining will identify those expanded families of the central-DB within the genomic-DB that has at least a recruited member onto the natural-DB, proceeding then to the reconstruction of the evolutionary history of the enzyme family. Given an enzyme from the central-DB, the product of EvoMining analysis is an interactive color coded tree of the enzyme expanded family where best bidirectional hits (BBH) of central-DB are differentiated from Natural Products members and those expansions close to a Natural Product sequence that are not BBH with central-DB enzymes are emphasised as putative nobel recruitments into secondary metabolism.  
+
+Here we present the EvoMining expansions analysis using different genome-DB such as Actinobacteria, Cyanobacteria, Pseudomonas and Archaea. To present complementation possibilities of central DB an example of what we called backward EvoMining was incorporated: BGCs from S coelicolor available at Mi-BIG were analyzed EvoMining backwards and all enzyme families expanded but not over represented were followed. Finally to prioritize which clusters possess more metabolite variations, assuming a link between genomic and metabolite plasticity we apply the idea of classifying the saturation of a pangenome as open/closed pangenome measuring BGCs as open / closed BGC.  
+
+EvoMining code and components (blast, muscle, FastTree, newick utilities, Gblocks,apache and SVG perl module) are wrapped on the docker container  nselem/newevomining downloadable at the Docker hub. Code is available at at github: nselem/EvoMining and manual at https://github.com/nselem/EvoMining/wiki. EvoMining tool will allow researchers to examine their own genomes and their own enzyme families in the search of expansions involved on nobel secondary metabolism.  
+  [@dufresne_algorithmique_2016,@blin_recent_nodate,@kurtboke_revisiting_2017,@miller_interpreting_2017,@schniete_expanding_2017,@kim_recent_2017,@robertsen_toward_2017,@juarez-vazquez_evolution_nodate,@chavali_bioinformatics_nodate,@tracanna_mining_2017,@ren_breaking_2017,@choudhary_current_2017,@alanjary_antibiotic_2017,@chevrette_sandpuma:_2017,@wohlleben_antibiotic_2016,@weber_secondary_2016]
+## Manual pages 
+github  
+
+
+```{r CoelicolorMiBig, results = "asis"}
+table <- read.csv("CoelicolorMiBIG", row.names = 1,sep="\t")
+kable(table,  caption = "Coelicolor\\label{tab:Coelicolor MiBig}",caption.short = "CoelicolorMiBig ")
+```
+  
+Figure 1  EvoMining pipe-line  
+Figure 2  Expansions on some databases  
+Figure 3  Expansions on genomic dinamics  (Bakward EvoMining)    
+Coelicolor clusters
+Figure 4  Pan cluster Idea on closed Streptomyces  
+Open /closed coelicolor
+Took 15 custers from Streptomyces coelicolor on MiBig Analize its open/close pancluster according to EvoMining backwards  
+
+```{r bib, child = 'bibliography.Rmd'}
+```
