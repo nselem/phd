@@ -119,7 +119,7 @@ kable(table,  caption = "Enzyme PDB \\label{tab:Enzyme PDB}",caption.short = "En
 ## Similar substrates to PRA and PROFAR suggested by Tanimoto distance or previously tested   
 S1,S2,...S20 substrates were collected from literature and chemioinformatics predictions. S3 PRA and S7 PROFAR are native substrates, S13-S16  are light activated substrates,  S17 PRAP, S18 Compound V, were found on literature, S6 GMP, S11 GTP and other were suggested by chemioinformatics.  
 ```{r Substrates_table_out, results = "asis"}
-table <- read.csv("chapter2/Substrate.data", row.names = 1,sep="\t")
+ztable <- read.csv("chapter2/Substrate.data", row.names = 1,sep="\t")
 kable(table,  caption = "Substrates \\label{tab:substrates}",caption.short = "Substrates ")
 ```
 
