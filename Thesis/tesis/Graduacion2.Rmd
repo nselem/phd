@@ -1,0 +1,153 @@
+---
+title: "Nelly Sélem"
+date: "Febrero, 2018"
+#geometry: "left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1cm,bottom=1"
+output:
+  pdf_document: default
+  #pandoc_args: [    "-V", "classoption=twocolumn"]
+  word_document: default
+   - \definecolor{VividPurple}{HTML}{3E0097}
+   - \colorlet{heading}{VividPurple}
+   - \colorlet{accent}{VividPurple}
+fontsize: 11pt
+#geometry: "left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1cm,bottom=1cm"
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+M. en C. María Dolores Sánchez Soler  
+Secretaria Técnica del Consejo Nacional de Posgrado  
+Directora Adjunta de Posgrados y Becas  
+  
+Presente  
+ASUNTO: Respuesta y consideraciones con respecto a la evaluación de pares hecha al
+Programa de Doctorado en Ciencias en Biología Integrativa (003649) del Centro de
+Investigación y de Estudios Avanzados del I.P.N.  
+  
+Estimada M. en C. María Dolores Sánchez Soler,  
+  
+Respecto a la situación de Condicionamiento  del programa de DOCTORADO EN CIENCIAS
+EN BIOLOGÍA INTEGRATIVA que usted coordina, le comento que el CNP nos solicita por
+escrito los avances y la fecha en que la estudiante Nelly Sélem Mojica podrá tener el grado.
+Sugiero que en una carta sencilla pudiera hacernos llegar esta información.  
+
+
+# Requisitos Cubiertos:   
+1. Estancia académica internacional: 1.5 meses Wageningen UR con Marnix Medema.    
+2. Congreso internacional: ISBA, Jeju Corea 2017. Premio al mejor poster (Microbiology Society).      						
+3. Trabajo de divulgacion: UNAM taller del genoma bacteriano 50 hrs								
+4. Colaboraciones: Artículos publicados:3, artículos sometidos:2, artículos en borrador:4, agradecimientos:5.  
+5. Todos los créditos del programa.  
+  
+# Requisitos faltantes:  
+Para concluir el programa de posgrado se requiere la publicación de un artículo y la entrega y revisión de tesis, para ello se propone el siguiente calendario:  
+2 artículos sometidos de primer autor en abril de 2018.  
+Entrega del primer borrador de tesis mayo 2018.  
+Entrega de la primera revisión de tesis junio 2018.  
+Obtención de grado julio 2018.  
+  
+La tesis constará de cinco capítulos soportados por los siguientes trabajos:
+- Introducción: Una introducción a mi trabajo citado en las revisiones: Briefings in bioinformatics 2017(https://doi.org/10.1093/bib/bbx146) y Nature chemical Biology 2015 (doi:10.1038/nchembio.1884) 
+- Capítulo uno: El trabajo de el artículo sometido *The cycad coralloid root contains a diverse endophytic bacterial community with novel biosynthetic gene clusters unique to its microbiome.* donde soy coautora.  
+- capítulo 2: El trabajo de dos artículos, el primero donde soy coautorapublicado en Genome Biol Evol. 2016 y el segundo *EvoMining 2.0: A customizable computational pipeline for evolutionary reconstructions during genome mining.* propuesto como el primero de mis artículos como primer autor.  
+- capitulo 3 El trabajo de dos artículos el primero donde soy coautora *Actinobacteria phylogenomics, selective isolation from an iron oligotrophic environment and siderophore functional characterization, unveil novel desferrioxamine molecular ecological and functional traits* publicado en FEMS Microbiology Ecology 2017 y el segundo será el segundo de mis artículos como primer autor * A computational framework for rapid exploration and classification of biosynthetic diversity from large-scale genomic and metabolomic data*.  
+- capítulo 4: Artículo en borrador *Evolution of multi-functionality imposes strong canalization of evolutionary trajectories and limits Darwinian evolution*.  
+
+Atentamente,  
+  
+Dra. Laila Pamela Partida Martínez
+Coordinadora Académica
+Programa de Posgrado en Biología Integrativa
+laila.partida@cinvestav.mx
+
+
+Más información sobre el contenido de la tesis, publicaciones, congresos y cursos se adjunta en el Anexo.  
+
+# ANEXO
+## Artículos propuestos de primer autor:  
+- EvoMining 2.0: A customizable computational pipeline for evolutionary reconstructions during genome mining. Nelly Selem-Mojica, Pablo Cruz-Morales, Christian Eduardo, ...,  and Francisco Barona-Gómez  							
+https://github.com/nselem/EvoMining/wiki  
+
+- A computational framework for rapid exploration and classification of biosynthetic diversity from large-scale genomic and metabolomic data by Jorge Navaro & Sélem-Mojica Nelly, Cruz-Morales Pablo, Satria A. Kautsar, Neil L. Kelleher, William W. Metcalf, Marnix Medema and Barona-Gomez Francisco  
+https://github.com/nselem/EvoDivMet/wiki   https://docs.google.com/document/d/10lcpxyZ7kYx_rQFy8ECseRL6obDmnWn8mPm2rFQ-6CU/edit?usp=sharing  
+
+
+### Talleres y congresos en los que se ha participado:  
+2018 Ponente en Software tools for mathematics. Morelia, Michoacán.  
+2017 Ponente de BIRS en la Casa Matemática de Oaxaca en el taller: Challenges and Synergies in the Analysis of Large-Scale Population-Based Biomedical Data.    
+2017 Curso de Genómica microbiana de Asociación Mexicana de Microbiología (Ayudante)    
+2017 Software carpentry Certificación de instructor.  
+2017 Nebula guanajuato colabora. Proyecto MicroZoo.  
+2016 Software carpentry. LANGEBIO, México.  (Asistente)  
+2015 Anotación y genome mining RAST y Patric. Argonne National Laboratory.  
+2014 Google summer of code terminado o bien el google summer of code 2018.     
+  
+## Artículos publicados   
+  
+1. Phylogenomic Analysis of Natural Products Biosynthetic Gene Clusters Allows Discovery of Arseno-Organic Metabolites in Model Streptomycetes. Cruz-Morales P, Kopp JF, Martínez-Guerrero C, Yáñez-Guerra LA, Selem-Mojica N, Ramos-Aboites H, Feldmann J, Barona-Gómez F. Genome Biol Evol. 2016 Jul 2;8(6):1906-16. doi: 10.1093/gbe/evw125. http://gbe.oxfordjournals.org/content/8/6/1906  
+
+2. Actinobacteria phylogenomics, selective isolation from an iron oligotrophic environment and siderophore functional characterization, unveil novel desferrioxamine molecular ecological and functional traits. Pablo Cruz-Morales  Hilda E. Ramos-Aboites  Cuauhtémoc Licona-Cassani Nelly Selem-Mójica  Paulina M. Mejía-Ponce  Valeria Souza-Saldívar Francisco Barona-Gómez. FEMS Microbiology Ecology, Volume 93, Issue 9, 1 September 2017, fix086, https://doi.org/10.1093/femsec/fix086   
+
+3. Expanding Primary Metabolism Helps Generate the Metabolic Robustness To Facilitate Antibiotic Biosynthesis in Streptomyces. Jana K. Schniete, Pablo Cruz-Morales, Nelly Selem-Mojica, Lorena T. Fernández-Martínez, Iain S. Hunter, Francisco Barona-Gómez, Paul A. Hoskisson. Mbio 2018. https://doi.org/10.1128/MBIO.02283-17  
+
+## Artículos sometidos  
+1. The cycad coralloid root contains a diverse endophytic bacterial community with novel biosynthetic gene clusters unique to its microbiome. Angelica Cibrian Jaramillo, Pablo Cruz-Morales, Antonio Corona-Gomez, Nelly Selem-Mojica, Miguel A. Perez-Farrera, Francisco Barona-Gomez, doi: https://doi.org/10.1101/121160   
+  
+2. Typhoid toxins and VirB/D4 plasmids in environmental nontyphoidal Salmonella: a fitness advantage in the bovine host?  Enrique Jesús Delgado-Suárez, , Nelly Selem-Mojica, Rocío Ortíz-López, Wondwossen A. Gebreyes, Marc W. Allard, Francisco Barona-Gómez, and María Salud Rubio-Lozano  
+
+## Artículos en borrador	
+1. Evolution of multi-functionality imposes strong canalization of evolutionary trajectories and limits Darwinian evolution. Lianet Noda-García, Ernesto A. Verduzco-Castro, Nelly Sélem-Mojica & Francisco Barona-Gómez  
+  
+2. A computational framework for rapid exploration and classification of biosynthetic diversity from large-scale genomic and metabolomic data by Jorge Navaro & Sélem-Mojica Nelly, Cruz-Morales Pablo, Satria A. Kautsar, Neil L. Kelleher, William W. Metcalf, Marnix Medema and Barona-Gomez Francisco  
+
+3. EvoMining 2.0: A customizable computational pipeline for evolutionary reconstructions during genome mining. Nelly Selem-Mojica, Pablo Cruz-Morales, Christian Eduardo, ...,  and Francisco Barona-Gómez  
+  
+4. An exploration of tRNA-utilizing enzymes using EvoMining reveals novel BGCs in Actinobacteria. Paulina M. Mejía-Ponce, César Aguilar, Nelly Selem-Mojica, Hilda E. Ramos-Aboites, Pablo Cruz-Morales and Francisco Barona-Gómez   
+
+## Agradecimientos recibidos en artículos publicados    
+  
+- Espinosa-Cantú, A., Ascencio, D., Barona-Gómez, F., & DeLuna, A. (2015). Gene duplication and the evolution of moonlighting proteins. Frontiers in Genetics, 6, 227. http://doi.org/10.3389/fgene.2015.00227  
+  
+- Ana Lilia Juárez-Vázquez et al (2017) Evolution of substrate specificity in a retained enzyme driven by gene loss. E-life DOI: 10.7554/eLife.22679   
+
+- Lianet Noda-García, Ana L. Juárez-Vázquez, María C. Ávila-Arcos, Ernesto A. Verduzco-Castro, Gabriela Montero-Morán, Paul Gaytán, Mauricio Carrillo-Tripp and Francisco Barona-Gómez.Insights into the evolution of enzyme substrate promiscuity after the discovery of $\beta\alpha_8$ isomerase evolutionary intermediates from a diverse metagenome. BMC Evolutionary Biology 2015.  
+
+- Karina Gutiérrez-García, Adriana Neira-González, Rosa Martha Pérez-Gutiérrez, Giovana Granados-Ramírez, Ramon Zarraga, Kazimierz Wrobel, Francisco Barona-Gómez and Luis B. Flores-Cotera. Phylogenomics of 2,4-Diacetylphloroglucinol-Producing Pseudomonas and Novel Antiglycation Endophytes from Piper auritum. J. Nat. Prod., 2017, 80 (7), pp 1955–1963. DOI: 10.1021/acs.jnatprod.6b00823  
+
+## Tesis				
+### Un enfoque integrativo hacia la detección de divergencia funcional enzimática.  
+ 
+### Introducción.   
+    
+    1. Biológica. Core Genome, relaciones filogenéticas, familias enzimáticas, función, metabolismo secundario, promiscuidad.  
+    2. Informatica. Repetibilidad, open software, Documentación.     
+  
+### Capítulo 1. 
+Orthocore: Una plataforma estandarizada para encontrar genes conservados en grupos de genomas procariotes para una adecuada reconstrucción filogenética.  (ESPECIES core/pangenomas)  
+   1.1 El core de Actinomicetes y el pseudocore de micrococcales.  
+### Capítulo 2 
+EvoMining: estudio de expansiones de familias enzimáticas en distintos grupos de procariontes mediante el desarrollo de un software portable.  (FAMILIAS DE ENZIMAS con miembros divergentes)  
+  2.1 Actinobacteria  
+  2.2 Cyanobacteria  
+  2.3 Archaea  
+  2.4 Expansiones de Pseudomonas de la familia enzimática TauD  
+  2.5 Por qué el contexto genómico aportaría al conocimiento de la función enzimática.  
+    
+### Capítulo 3. 
+CORASON software portable para el estudio de variantes en el contenido génico de clusters biosintéticos y su relación con la variación metabólica, usando la enzima TauD como caso de estudio.  (CLUSTERS DE ENZIMAS)  
+  3.1 Clusters biosintéticos, concepto de similitud en un cluster  
+  3.2 Qué es CORASON y cómo CORASON aborda los subclusters utilizando orthocore.  
+  3.3 Relación con otros programas de análisis de clusters    
+  3.4 TauD ejemplo de la relación entre la variación del contenido genico de un cluster con la variación en la producción de metabolitos.  
+  
+### Capítulo 4. PriA: las expansiones son una marca que suele señalar divergencia funcional, pero no son necesarias para que esta ocurra.  (UNA ENZIMA SIN EXPANSIONES PERO CON DIVERGENCIA FUNCIONAL)  
+   4.1 PriA es una enzima promiscua no expandida en Actinobacteria.  
+   4.2 PriA está en distintos contextos genómicos relacionados a sus dos funciones conocidas.  
+   4.3 Modelado computacional de sustratos alternativos de PriA  
+   4.4 Análisis de trayectorias Evolutivas de PriA
+   4.5 Interacción de sustratos de PriA durante la promiscuidad enzimática.  
+   4.6 Análisis de promiscuidad mediante la medición de flexibilidad conformacional mediante el estudio de residuos         covariados. 
+
