@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg height="300" onload="Init(evt)" onmousemove=" GetTrueCoords(evt); 
+			ShowTooltip(evt, true)" onmouseout="ShowTooltip(evt, false)" width="1000" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<script />
+	<polyline points="10,50 810,50 " style="fill-opacity: 0; stroke: rgb(250,123,23)" />
+	<polyline points="10,100 810,100 " style="fill-opacity: 0; stroke: rgb(250,123,23)" />
+	<polyline points="10,150 810,150 " style="fill-opacity: 0; stroke: rgb(250,123,23)" />
+	<text x="20" y="30">Pseudomonas amygdali pv. Lachrymans LCWT01    Gen:3312
+</text>
+	<polygon points="807,42 807,58 810,58 810,50 810,42 " style="fill: rgb(144,130,130); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>1 Pseudomonas amygdali pv. Lachrymans LCWT01 3 -7 - fig|6666666.136867.peg.3304
+ Colicin immunity protein</title></polygon>
+	<polygon points="788,42 788,58 797.37,58 799,50 797.37,42 " style="fill: rgb(144,130,130); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>1 Pseudomonas amygdali pv. Lachrymans LCWT01 22 11 - fig|6666666.136867.peg.3305
+ Colicin immunity protein</title></polygon>
+	<polygon points="648,42 648,58 686.37,58 688,50 686.37,42 " style="fill: rgb(144,130,130); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>1 Pseudomonas amygdali pv. Lachrymans LCWT01 162 122 - fig|6666666.136867.peg.3306
+ YD repeat protein</title></polygon>
+	<polygon points="605,42 605,58 643.37,58 645,50 643.37,42 " style="fill: rgb(144,130,130); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>1 Pseudomonas amygdali pv. Lachrymans LCWT01 205 165 - fig|6666666.136867.peg.3307
+ YD repeat protein</title></polygon>
+	<polygon points="591,42 591,58 598.37,58 600,50 598.37,42 " style="fill: rgb(144,130,130); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>1 Pseudomonas amygdali pv. Lachrymans LCWT01 219 210 - fig|6666666.136867.peg.3308
+ FIG00957886: hypothetical protein</title></polygon>
+	<polygon points="528,42 528,58 569.37,58 571,50 569.37,42 " style="fill: rgb(144,130,130); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>1 Pseudomonas amygdali pv. Lachrymans LCWT01 282 239 - fig|6666666.136867.peg.3309
+ Taurine-binding periplasmic protein TauA</title></polygon>
+	<polygon points="490,42 490,58 524.37,58 526,50 524.37,42 " style="fill: rgb(144,130,130); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>1 Pseudomonas amygdali pv. Lachrymans LCWT01 320 284 - fig|6666666.136867.peg.3310
+ Taurine transport system permease protein TauC</title></polygon>
+	<polygon points="449,42 449,58 484.37,58 486,50 484.37,42 " style="fill: rgb(144,130,130); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>1 Pseudomonas amygdali pv. Lachrymans LCWT01 361 324 - fig|6666666.136867.peg.3311
+ Taurine transport ATP-binding protein TauB</title></polygon>
+	<polygon points="410,42 410,58 446.37,58 448,50 446.37,42 " style="fill: rgb(186,238,238); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>1 Pseudomonas amygdali pv. Lachrymans LCWT01 400 362 - fig|6666666.136867.peg.3312
+ Alpha-ketoglutarate-dependent taurine dioxygenase (EC 1.14.11.17)</title></polygon>
+	<polygon points="401,42 401,58 272.63,58 271,50 272.63,42 " style="fill: rgb(144,130,130); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>1 Pseudomonas amygdali pv. Lachrymans LCWT01 409 539 + fig|6666666.136867.peg.3313
+ Autotransporter</title></polygon>
+	<polygon points="214,42 214,58 264.37,58 266,50 264.37,42 " style="fill: rgb(144,130,130); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>1 Pseudomonas amygdali pv. Lachrymans LCWT01 596 544 - fig|6666666.136867.peg.3314
+ membrane protein, putative</title></polygon>
+	<polygon points="206,42 206,58 210.37,58 212,50 210.37,42 " style="fill: rgb(144,130,130); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>1 Pseudomonas amygdali pv. Lachrymans LCWT01 604 598 - fig|6666666.136867.peg.3315
+ hypothetical protein</title></polygon>
+	<polygon points="206,42 206,58 157.63,58 156,50 157.63,42 " style="fill: rgb(144,130,130); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>1 Pseudomonas amygdali pv. Lachrymans LCWT01 604 654 + fig|6666666.136867.peg.3316
+ Secretory lipase precursor</title></polygon>
+	<polygon points="117,42 117,58 147.37,58 149,50 147.37,42 " style="fill: rgb(144,130,130); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>1 Pseudomonas amygdali pv. Lachrymans LCWT01 693 661 - fig|6666666.136867.peg.3317
+ Methionine ABC transporter substrate-binding protein</title></polygon>
+	<polygon points="69,42 69,58 107.37,58 109,50 107.37,42 " style="fill: rgb(144,130,130); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>1 Pseudomonas amygdali pv. Lachrymans LCWT01 741 701 - fig|6666666.136867.peg.3318
+ Functional role page for Anaerobic nitric oxide reductase transcription regulator NorR</title></polygon>
+	<polygon points="41,42 41,58 64.37,58 66,50 64.37,42 " style="fill: rgb(144,130,130); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>1 Pseudomonas amygdali pv. Lachrymans LCWT01 769 744 - fig|6666666.136867.peg.3319
+ FIG00956489: hypothetical protein</title></polygon>
+	<polygon points="10,42 10,58 30.37,58 32,50 30.37,42 " style="fill: rgb(144,130,130); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>1 Pseudomonas amygdali pv. Lachrymans LCWT01 832 778 - fig|6666666.136867.peg.3320
+ Hexuronate transporter</title></polygon>
+	<text x="20" y="80">Pseudomonas amygdali pv. Dendropanacis JYHG01    Gen:832
+</text>
+	<polygon points="10,92 10,108 24.37,108 26,100 24.37,92 " style="fill: rgb(144,130,130); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>2 Pseudomonas amygdali pv. Dendropanacis JYHG01 -16 16 + fig|6666666.135348.peg.824
+ Methionine ABC transporter substrate-binding protein</title></polygon>
+	<polygon points="156,92 156,108 148.63,108 147,100 148.63,92 " style="fill: rgb(144,130,130); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>2 Pseudomonas amygdali pv. Dendropanacis JYHG01 146 137 - fig|6666666.135348.peg.828
+ FIG00957912: hypothetical protein</title></polygon>
+	<polygon points="201,92 201,108 176.63,108 175,100 176.63,92 " style="fill: rgb(144,130,130); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>2 Pseudomonas amygdali pv. Dendropanacis JYHG01 191 165 - fig|6666666.135348.peg.829
+ FIG00957912: hypothetical protein</title></polygon>
+	<polygon points="259,92 259,108 203.63,108 202,100 203.63,92 " style="fill: rgb(144,130,130); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>2 Pseudomonas amygdali pv. Dendropanacis JYHG01 249 192 - fig|6666666.135348.peg.830
+ FIG00962602: hypothetical protein</title></polygon>
+	<polygon points="82,92 82,108 34.63,108 33,100 34.63,92 " style="fill: rgb(144,130,130); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>2 Pseudomonas amygdali pv. Dendropanacis JYHG01 72 23 - fig|6666666.135348.peg.825
+ Secretory lipase precursor</title></polygon>
+	<polygon points="396,92 396,108 267.63,108 266,100 267.63,92 " style="fill: rgb(144,130,130); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>2 Pseudomonas amygdali pv. Dendropanacis JYHG01 386 256 - fig|6666666.135348.peg.831
+ Autotransporter</title></polygon>
+	<polygon points="410,92 410,108 442.37,108 444,100 442.37,92 " style="fill: rgb(186,238,238); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>2 Pseudomonas amygdali pv. Dendropanacis JYHG01 400 434 + fig|6666666.135348.peg.832
+ Alpha-ketoglutarate-dependent taurine dioxygenase (EC 1.14.11.17)</title></polygon>
+	<polygon points="445,92 445,108 480.37,108 482,100 480.37,92 " style="fill: rgb(144,130,130); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>2 Pseudomonas amygdali pv. Dendropanacis JYHG01 435 472 + fig|6666666.135348.peg.833
+ Taurine transport ATP-binding protein TauB</title></polygon>
+	<polygon points="486,92 486,108 520.37,108 522,100 520.37,92 " style="fill: rgb(144,130,130); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>2 Pseudomonas amygdali pv. Dendropanacis JYHG01 476 512 + fig|6666666.135348.peg.834
+ Taurine transport system permease protein TauC</title></polygon>
+	<polygon points="524,92 524,108 565.37,108 567,100 565.37,92 " style="fill: rgb(144,130,130); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>2 Pseudomonas amygdali pv. Dendropanacis JYHG01 514 557 + fig|6666666.135348.peg.835
+ Taurine-binding periplasmic protein TauA</title></polygon>
+	<polygon points="588,92 588,108 595.37,108 597,100 595.37,92 " style="fill: rgb(144,130,130); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>2 Pseudomonas amygdali pv. Dendropanacis JYHG01 578 587 + fig|6666666.135348.peg.836
+ FIG00957886: hypothetical protein</title></polygon>
+	<polygon points="601,92 601,108 639.37,108 641,100 639.37,92 " style="fill: rgb(144,130,130); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>2 Pseudomonas amygdali pv. Dendropanacis JYHG01 591 631 + fig|6666666.135348.peg.837
+ YD repeat protein</title></polygon>
+	<polygon points="644,92 644,108 674.37,108 676,100 674.37,92 " style="fill: rgb(144,130,130); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>2 Pseudomonas amygdali pv. Dendropanacis JYHG01 634 666 + fig|6666666.135348.peg.838
+ YD repeat protein</title></polygon>
+	<polygon points="82,92 82,108 86.37,108 88,100 86.37,92 " style="fill: rgb(144,130,130); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>2 Pseudomonas amygdali pv. Dendropanacis JYHG01 72 78 + fig|6666666.135348.peg.826
+ hypothetical protein</title></polygon>
+	<polygon points="95,92 95,108 140.37,108 142,100 140.37,92 " style="fill: rgb(144,130,130); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>2 Pseudomonas amygdali pv. Dendropanacis JYHG01 85 132 + fig|6666666.135348.peg.827
+ membrane protein, putative</title></polygon>
+	<text x="20" y="130">Pseudomonas coronafaciens JSED01    Gen:4360
+</text>
+	<polygon points="410,142 410,158 444.37,158 446,150 444.37,142 " style="fill: rgb(186,238,238); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>3 Pseudomonas coronafaciens JSED01 400 436 + fig|6666666.137752.peg.4360
+ Alpha-ketoglutarate-dependent taurine dioxygenase (EC 1.14.11.17)</title></polygon>
+	<polygon points="469,142 469,158 448.63,158 447,150 448.63,142 " style="fill: rgb(144,130,130); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>3 Pseudomonas coronafaciens JSED01 459 437 - fig|6666666.137752.peg.4361
+ Ribosomal-protein-serine acetyltransferase (EC 2.3.1.-)</title></polygon>
+	<polygon points="475,142 475,158 520.37,158 522,150 520.37,142 " style="fill: rgb(144,130,130); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>3 Pseudomonas coronafaciens JSED01 465 512 + fig|6666666.137752.peg.4362
+ Carboxynorspermidine dehydrogenase</title></polygon>
+	<polygon points="523,142 523,158 541.37,158 543,150 541.37,142 " style="fill: rgb(144,130,130); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>3 Pseudomonas coronafaciens JSED01 513 533 + fig|6666666.137752.peg.4363
+ FIG00956515: hypothetical protein</title></polygon>
+	<polygon points="607,142 607,158 563.63,158 562,150 563.63,142 " style="fill: rgb(144,130,130); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>3 Pseudomonas coronafaciens JSED01 597 552 - fig|6666666.137752.peg.4364
+ hypothetical protein</title></polygon>
+	<!-- 
+	Generated using the Perl SVG Module V2.78
+	by Ronan Oger
+	Info: http://www.roitsystems.com/
+ -->
+</svg>

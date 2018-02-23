@@ -103,6 +103,9 @@ ActinosTotalBP.m<-merge(ActinosHeatPlot,ActinosTaxa,by.x="RastId",by.y="RastId")
 ActinosHeatPlotBP.m <- melt(ActinosTotalBP.m,id =c("RastId","Name","Phylum","Class","Order","Family","RastNo","Size","Contigs"))
 ActinosHeatPlotBP.m<-subset(ActinosHeatPlotBP.m,variable!="TOTAL") ## works as expected
 
+ggplot(ActinosHeatPlotBP.m, aes(x=ActinosHeatPlotBP.m$variable, y=ActinosHeatPlotBP.m$value),color="Family") + labs(x = "Metabolic Families", y = "Copies on Actinobacteria Genomes",text = element_text(size=12)) + geom_boxplot()+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6), legend.position = "bottom")
+
+
 expansion_plotActino<-ggplot(ActinosHeatPlotBP.m, aes(x=ActinosHeatPlotBP.m$variable, y=ActinosHeatPlotBP.m$value),color="Family") + labs(x = "Metabolic Families", y = "Copies on Actinobacteria Genomes",text = element_text(size=12)) + geom_boxplot()+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6), legend.position = "bottom")
 
 ggsave("chapter4/expansion_plotActinos.pdf", plot = expansion_plotActino,height = 8, width = 7)
