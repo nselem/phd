@@ -3,14 +3,15 @@ title: "EvoMining"
 author: "Nelly Selem"
 date: "December31, 2017"
 output:
+  word_document: default
   pdf_document: default
   html_document: default
-  word_document: default
 nocite: |
   @cibrian-jaramillo_increasing_2016,@barona-gomez_what_2012,@cruz-morales_phylogenomic_2016,@medema_minimum_2015,@ziemert_evolution_2016,@medema_computational_2015
   @dufresne_algorithmique_2016@,@blin_recent_nodate,@kurtboke_revisiting_2017,@miller_interpreting_2017,@schniete_expanding_2017,@kim_recent_2017,@robertsen_toward_2017,@juarez-vazquez_evolution_nodate,@chavali_bioinformatics_nodate,@tracanna_mining_2017,@ren_breaking_2017,@choudhary_current_2017,@alanjary_antibiotic_2017,@chevrette_sandpuma:_2017,@wohlleben_antibiotic_2016,@weber_secondary_2016
 bibliography: bib/thesis.bib
 ---
+
 
 ```{r setup, include=FALSE}
 library(knitr)
@@ -26,6 +27,15 @@ library(scales)
 library(RColorBrewer)
 hm.palette <- colorRampPalette(rev(brewer.pal(11, 'Spectral')), space='Lab')  
 ```
+
+<!--codigo de evoMining display column even if only ceros, se despliega si le bajas el score a cero, pero quiero que se despliegue siempre-->
+<!-- Plan
+Figura 1 Figuras/EvoMiningPipeline.svg 
+Figura 2 Figuras/TauDpseudomonas2.svg 
+Figura 3 Figuras/GenomicDBS.svg Semana 2
+Figura 4 Figuras/Backward.svg   Semana 1 
+Figura 5 Figuras/PanCluster.svg  Semana 3
+-->
 
 ## EvoMining 2.0: A customizable computational pipeline for evolutionary reconstructions during genome mining  
 Selem-Mojica Nelly, Cruz-Morales Pablo, Martínez-Guerrero Christian , ...,  and Barona-Gómez Francisco   							  
@@ -66,7 +76,8 @@ Finally to prioritize which clusters possess more metabolite variations, assumin
 ### Figure 1  EvoMining pipe-line   
  EvoMining is a visual, evolutionary based genome mining tool with the milestone of prioritize non standard secondary metabolite pathways. The algorithm follows enzyme families from central pathways on their recruitment as components of natural products biosynthetic gene clusters (BGCs) within a genomic database. 
   
-![Pipeline](EvoMiningPipeline.svg)  
+Figure1  
+![Pipeline](Figuras/EvoMiningPipeline.svg)  
   
 EvoMining inputs are a (1) a custom genomic database (genomic-DB), (2) a central pathways database (central-DB) and (3) a natural product database (natural-DB) composed of genes that belongs to experimentally tested BGCs. 
  These three databases are provided and can be modified, replaced and expanded by the user. In this work genomic-DB are  collection of up to date genomes in RAST format from taxonomically related organisms such as Actinobacteria, Cyanobacteria, Pseudomonas and Archaea. Selection of this taxa obeys to the possibility of comparing well known NPs producing organisms such as Actinobacteria and Cyanobacteria in contrast with Archaea that has been poorly investigated. The central-DB contains nine central pathways from Actinobacteria previously curated [@barona-gomez_what_2012], plus an update of seed metabolic enzymes identified after manual curation congruent with the central EvoMining paradigm.  The natural-DB currently comprises all sequences that belongs to some BGCs from The Minimum Information about a Biosynthetic Gene cluster (MIBiG) [@medema_minimum_2015].   
@@ -76,57 +87,121 @@ As output EvoMining identifies on the genomic-DB those expanded families from th
 EvoMining code and components (blast, muscle, FastTree, newick utilities, Gblocks,apache and SVG perl module) are wrapped on the docker container  nselem/newevomining downloadable at the Docker hub. Code is available at at github: nselem/EvoMining and manual at https://github.com/nselem/EvoMining/wiki. EvoMining tool will allow researchers to examine their own genomes and their own enzyme families in the search of expansions involved on nobel secondary metabolism.  
 
 EvoMining will identify those expanded families of the central-DB within the genomic-DB that has at least a recruited member onto the natural-DB, proceeding then to the reconstruction of the evolutionary history of the enzyme family. Given an enzyme from the central-DB, the product of EvoMining analysis is an interactive color coded tree of the enzyme expanded family where best bidirectional hits (BBH) of central-DB are differentiated from Natural Products members and those expansions close to a Natural Product sequence that are not BBH with central-DB enzymes are emphasised as putative nobel recruitments into secondary metabolism.   
-  
+
 ### Figure 2  Expansions on some databases   
 
 Archaea Cyanobacteria, and Actinobacteria based on central metabolism from actinobacteria  
 2.1 Expansions same central  
 Expansions other central  
 To acotate the search for enzymes of recent recruitment into natural products
-  ![TauD](Figura3MiBIG/TauDpseudomonas2.svg)  
+  ![TauD](Figuras/TauDpseudomonas2.svg)  
 
+![GenomicDatabases](Figuras/GenomicDBS.svg)
 ### Figure  3.1  Expansions on genomic dinamics  
         3.2(Bakward EvoMining)    
         Coelicolor clusters  
 Esto se hará solo sobre Streptomyces de los 1246  
 
 ```{r CoelicolorMiBig, results = "asis"}
-table <- read.csv("Figura3MiBIG/CoelicolorMiBIG", row.names = 1,sep="\t")
+table <- read.csv("Figuras/CoelicolorMiBIG", row.names = 1,sep="\t")
 kable(table,  caption = "Coelicolor\\label{tab:Coelicolor MiBig}",caption.short = "CoelicolorMiBig ")
 ```
      
 
 ```{r}
-tableExp <- read.csv("Figura3MiBIG/ExpansionBlast.data", header=TRUE, sep="\t")  
-tableDistribution <- read.csv("Figura3MiBIG/Enzymes.Distribution", header=TRUE, sep="\t")  
+# Expansions of enzime sequences from MiBIG from S coelicolor will be explored within the scope of the genomic database Streptomyces. The goal is to recover those enzymes that are not yet been considered as common on secondary metabolism. 
+## Moda is the most common copy number on an organism, Organisms with an extra copy are the ones that may have this copy recrutied into secondary metabolism
+# This extra copy on at least 4 organismos
+## In addtiion the distribution of the enzyme is deseried present on at least half o the organisms (Not to exclusive)
+## Too exclusive means only belong to secondary metabolism, we are looking for switches  
+## looking for an esay number between 0 and one that reflects too expanded, too exclusive
+#  y el exp number,  mas entre .2<= Exp <=.6 y analizar eso árboles.  
+# One minus average organisms that contains one copy.
+# More copies than organisms this number tends to one   ## too expanded
+# few copies  on homogeneously on few organisms tends to cero ## too particular  
+# two copies by organism .5  , that is not usually the case  because there is some variance 
 
-##Reducing tableExp to those I have distribution
-tableExp=tableExp[tableExp$Enzyme %in% names(tableDistribution),]
-TableExpOrder <- tableExp[order(tableExp$Enzyme),] 
-tableDistribution <- tableDistribution[,order(names(tableDistribution))] 
-tableDistribution
 
-#tableExp$Enzyme
-## Nuevo plan enviar todas a las expansiones en evomining con la base genomica de Streptomyces.  De ahi sacar la moda
-#y el exp number, mas presente en la mitad de los organismos
-# mas entre 2y 6 y analizar eso árboles.  
-
-OneOrMode <- function(x){
+#### Functions   
+OneOrMode <- function(x){ #max between 0 and one
 a = table(x) # x is a vector
 moda=a[which.max(a)]
 inte=max(1,as.integer(names(moda)))
 return(inte)
 }
 
-moda=apply(tableDistribution,2, OneOrMode)
-moda
-#names(moda)
-TableExpOrder$Moda=moda
+Mode <- function(x){ ## mode
+a = table(x) # x is a vector
+moda=a[which.max(a)]
+inte=as.integer(names(moda))
+return(inte)
+}
+
+
+OrganismsExtraCopy <- function(x){ ##how many organisms has an extra copy than the mode
+  a = table(x) # x is a vector  
+  moda=a[which.max(a)]
+  inte=as.integer(names(moda)) #the moda
+  subx<-as.integer(a[which(as.integer(names(a))>inte)]) ## vector of organisms with extra copies
+  suma<-sum(subx) ## how many
+return(suma)
+}
+
+OrgAtLeastOneCopy <- function(x){ ##how many organisms has an extra copy than the mode
+  a = table(x) # x is a vector  
+  subx<-as.integer(a[which(as.integer(names(a))>0)]) ## vector of organisms with extra copies
+  suma<-sum(subx) ## how many
+return(suma)
+}
+
+
+Copies <- function(x){ ##how many organisms has an extra copy than the mode
+  suma<-sum(x) ## how many
+return(suma)
+}
+
+######## Reading and sorting data   
+## Read EvoMining tables
+tableExp <- read.csv("Figuras/ExpansionBlast.data", header=TRUE, sep="\t")  
+tableDistribution <- read.csv("Figuras/Enzymes.Distribution", header=TRUE, row.names=1,sep="\t")  
+
 #necesito poner el valor de names de moda en el renglon con el mismo valor en enzima
-TableExpOrder$ExpNum=(moda-TableExpOrder$Organisms/TableExpOrder$Copies)/(moda)  
+#number of organisms greater than mode  at least tenpercent of the genome
+##Reducing tableExp to those I have distribution
+tableExp=tableExp[tableExp$Enzyme %in% names(tableDistribution),]
+tableExp <- tableExp[order(tableExp$Enzyme),] 
+tableDistribution <- tableDistribution[,order(names(tableDistribution))] 
 
 
-ggplot(TableExpOrder,aes(x=Enzyme, y=ExpNum, color=BGC))+ geom_point() + labs(x = "Metabolic Families", y = "Exp Number Actinobacteria Genomes",text = element_text(size=12)) + theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6), legend.position = "bottom")
+################# Extra copy present at least in three organism
+tableDistribution$Enzyme_151
+sum(tableDistribution$Enzyme_151)
+
+modaOrOne=apply(tableDistribution,2, OneOrMode)
+modaOrOne
+
+moda=apply(tableDistribution,2, Mode)
+moda
+
+ExtraCopy=apply(tableDistribution,2, OrganismsExtraCopy)
+ExtraCopy
+
+OneCopy=apply(tableDistribution,2, OrgAtLeastOneCopy)
+OneCopy
+
+CopiesEvo=apply(tableDistribution,2, Copies)
+#CopiesEvo
+
+Average=colMeans(tableDistribution)
+Average
+CopiesEvo
+
+#names(moda)
+tableExp$Moda=moda
+tableExp$Average=Average
+tableExp$ExtraCopy=ExtraCopy
+tableExp$OneCopy=OneCopy
+tableExp$CopiesEvo=CopiesEvo
 
 
 
@@ -134,17 +209,47 @@ ggplot(TableExpOrder,aes(x=Enzyme, y=ExpNum, color=BGC))+ geom_point() + labs(x 
 #More copies than organisms this number tends to one   ## too expanded
 # few copies  on homogeneously on few organisms tends to cero ## too particular  
 # two copies by organism   .5  , that is not usually the case  because there is some variance 
+tableExp$ExpNum=(modaOrOne-tableExp$OneCopy/tableExp$CopiesEvo)/(modaOrOne)  
+tableExp$ExpNum
+tableExp$Enzyme <- factor(tableExp$Enzyme, levels = tableExp$Enzime[order(tableExp$Order)])
+##tableExp <- factor(tableExp, levels = tableExp[order(tableExp$Order)])
+tableExp$Enzyme
+
+#str(tableExp)
+#tableExp2 <- tableExp[order(tableExp$Order),] 
+
+require("svglite")
 
 
+#save the plot in a variable image to be able to export to svg
+    image=ggplot(tableExp,aes(x=tableExp$Order, y=tableExp$ExpNum, color=tableExp$BGC, size = tableExp$Moda))+ geom_point() + labs(x = "Metabolic Families", y = "Exp Number Actinobacteria Genomes",text = element_text(size=12)) + theme_bw()+theme(plot.title = element_text(size = 20, face = "bold"), text = element_text(size = 14), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 16), legend.position = "bottom")
+    
+    ggplot(tableExp,aes(x=tableExp$Order, y=tableExp$ExpNum, color=tableExp$BGC, size = tableExp$Moda))+ geom_point() + labs(x = "Metabolic Families", y = "Exp Number Actinobacteria Genomes",text = element_text(size=12)) + theme_bw()+theme(plot.title = element_text(size = 20, face = "bold"), text = element_text(size = 14), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 16), legend.position = "right")
+    
+    ggsave(file="test.svg", plot=image, width=20, height=8)
+
+    
+tableEnzymeReduced=subset(tableExp,tableExp$ExpNum<=.6 & tableExp$ExpNum>= .2 )
+    ggplot(tableEnzymeReduced,aes(x=tableEnzymeReduced$Order, y=tableEnzymeReduced$ExpNum, color=tableEnzymeReduced$BGC, size = tableEnzymeReduced$Moda))+ geom_point() + labs(x = "Metabolic Families", y = "Exp Number Actinobacteria Genomes",text = element_text(size=12)) + theme_bw()+theme(plot.title = element_text(size = 20, face = "bold"), text = element_text(size = 14), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 16), legend.position = "right")
 
 #kable(tableExp,  caption = "CoelicolorExpansions\\label{tab:Coelicolor Expansions}",caption.short = "CoelicolorExpansions")
 ```
 
 Presence Absence
 EvoMining was run over enzymes with expansion number between .1 and .6
-
+Figuras/GenomicDBS.svg
 ### Figure 4  Pan cluster Idea on closed Streptomyces  
+
+![Cluster visualization](Figuras/PanCluster.svg)
+
 Open /closed coelicolor How spread is the cluster
+  How to describe the cluster  
+  Conservation  
+  Enzymes that appear x% 
+  
+  Variability   How variable is the region  
+  derivative of rarefaction curve   
+  
   
 Took 15 clusters from Streptomyces coelicolor on MiBig Analize its open/close pancluster according to EvoMining backwards  
 O sea 15 corasones, no necesito escoger las query enzyme, al menos 3 por cluster... y que no sean NRPS o PKS
@@ -154,3 +259,4 @@ O sea 15 corasones, no necesito escoger las query enzyme, al menos 3 por cluster
 
 ```{r bib, child = 'bibliography.Rmd'}
 ```
+  
