@@ -163,7 +163,10 @@ return(suma)
 ######## Reading and sorting data   
 ## Read EvoMining tables
 tableExp <- read.csv("Figuras/ExpansionBlast.data", header=TRUE, sep="\t")  
+tableCentral <- read.csv("Figuras/Central.data", header=TRUE, sep="\t")  
+
 tableDistribution <- read.csv("Figuras/Enzymes.Distribution", header=TRUE, row.names=1,sep="\t")  
+tableCentralDistribution <- read.csv("Figuras/CentralEnymes.Distribution.csv", header=TRUE, row.names=1,sep="\t")  
 
 #necesito poner el valor de names de moda en el renglon con el mismo valor en enzima
 #number of organisms greater than mode  at least tenpercent of the genome
@@ -177,22 +180,30 @@ tableDistribution <- tableDistribution[,order(names(tableDistribution))]
 tableDistribution$Enzyme_151
 sum(tableDistribution$Enzyme_151)
 
+
 modaOrOne=apply(tableDistribution,2, OneOrMode)
+CentralmodaOrOne=apply(tableCentralDistribution,2, OneOrMode)
 modaOrOne
 
 moda=apply(tableDistribution,2, Mode)
+Centralmoda=apply(tableCentralDistribution,2, Mode)
+
 moda
 
 ExtraCopy=apply(tableDistribution,2, OrganismsExtraCopy)
+CentralExtraCopy=apply(tableCentralDistribution,2, OrganismsExtraCopy)
 ExtraCopy
 
 OneCopy=apply(tableDistribution,2, OrgAtLeastOneCopy)
+CentralOneCopy=apply(tableCentralDistribution,2, OrgAtLeastOneCopy)
 OneCopy
 
 CopiesEvo=apply(tableDistribution,2, Copies)
+CentralCopiesEvo=apply(tableCentralDistribution,2, Copies)
 #CopiesEvo
 
 Average=colMeans(tableDistribution)
+CentralAverage=colMeans(tableCentralDistribution)
 Average
 CopiesEvo
 
@@ -203,6 +214,11 @@ tableExp$ExtraCopy=ExtraCopy
 tableExp$OneCopy=OneCopy
 tableExp$CopiesEvo=CopiesEvo
 
+tableCentral$Moda=Centralmoda
+tableCentral$Average=CentralAverage
+tableCentral$ExtraCopy=CentralExtraCopy
+tableCentral$OneCopy=CentralOneCopy
+tableCentral$CopiesEvo=CentralCopiesEvo
 
 
 #One minus average organisms that contains one copy.
@@ -210,8 +226,18 @@ tableExp$CopiesEvo=CopiesEvo
 # few copies  on homogeneously on few organisms tends to cero ## too particular  
 # two copies by organism   .5  , that is not usually the case  because there is some variance 
 tableExp$ExpNum=(modaOrOne-tableExp$OneCopy/tableExp$CopiesEvo)/(modaOrOne)  
-tableExp$ExpNum
-tableExp$Enzyme <- factor(tableExp$Enzyme, levels = tableExp$Enzime[order(tableExp$Order)])
+tableCentral$ExpNum=(CentralmodaOrOne-tableCentral$OneCopy/tableCentral$CopiesEvo)/(CentralmodaOrOne)  
+#tableExp$ExpNum
+#tableExp$Enzyme <- factor(tableExp$Enzyme, levels = tableExp$Enzime[order(tableExp$Order)])
+ tableExp$Enzyme<-with(tableExp,reorder(tableExp$Enzyme, tableExp$Order))
+str(tableExp)
+#tableExp$ExpNum <- factor(tableExp$ExpNum, levels = tableExp$ExpNum[order(tableExp$Order)])
+#tableExp$Moda<- factor(tableExp$Moda, levels = tableExp$Moda[order(tableExp$Order)])
+#tableExp$Average<- factor(tableExp$Average, levels = tableExp$Average[order(tableExp$Order)])
+#tableExp$ExtraCopy<- factor(tableExp$ExtraCopy, levels = tableExp$ExtraCopy[order(tableExp$Order)])
+#tableExp$OneCopy<- factor(tableExp$OneCopy, levels = tableExp$OneCopy[order(tableExp$Order)])
+#tableExp$CopiesEvo<- factor(tableExp$CopiesEvo, levels = tableExp$CopiesEvo[order(tableExp$Order)])
+
 ##tableExp <- factor(tableExp, levels = tableExp[order(tableExp$Order)])
 tableExp$Enzyme
 
