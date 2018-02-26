@@ -147,9 +147,9 @@ OrganismsExtraCopy <- function(x){ ##how many organisms has an extra copy than t
 return(suma)
 }
 
-OrgAtLeastOneCopy <- function(x){ ##how many organisms has an extra copy than the mode
+OrgAtLeastOneCopy <- function(x){ ##how many organisms has a copy 
   a = table(x) # x is a vector  
-  subx<-as.integer(a[which(as.integer(names(a))>0)]) ## vector of organisms with extra copies
+  subx<-as.integer(a[which(as.integer(names(a))>0)]) ## vector of organnisms with at least one copy
   suma<-sum(subx) ## how many
 return(suma)
 }
@@ -163,8 +163,8 @@ return(suma)
 ######## Reading and sorting data   
 ## Read EvoMining tables
 tableExp <- read.csv("Figuras/ExpansionBlast.data", header=TRUE, sep="\t")  
-tableCentral <- read.csv("Figuras/Central.data", header=TRUE, sep="\t")  
 
+tableCentral <- read.csv("Figuras/Central.data", header=TRUE, sep="\t")  
 tableDistribution <- read.csv("Figuras/Enzymes.Distribution", header=TRUE, row.names=1,sep="\t")  
 tableCentralDistribution <- read.csv("Figuras/CentralEnymes.Distribution.csv", header=TRUE, row.names=1,sep="\t")  
 
@@ -175,44 +175,46 @@ tableExp=tableExp[tableExp$Enzyme %in% names(tableDistribution),]
 tableExp <- tableExp[order(tableExp$Enzyme),] 
 tableDistribution <- tableDistribution[,order(names(tableDistribution))] 
 
+tableExpOriginal <- read.csv("Figuras/ExpansionBlast.data", header=TRUE, sep="\t")  
+tableExpOriginal=tableExp[tableExp$Enzyme %in% names(tableDistribution),]
+tableExpOriginal <- tableExp[order(tableExp$Enzyme),] 
 
-################# Extra copy present at least in three organism
-tableDistribution$Enzyme_151
-sum(tableDistribution$Enzyme_151)
-
-
-modaOrOne=apply(tableDistribution,2, OneOrMode)
-CentralmodaOrOne=apply(tableCentralDistribution,2, OneOrMode)
-modaOrOne
-
+################# Processing functions BGC data  
+modaOrOne=apply(tableDistribution,2, OneOrMode)  
 moda=apply(tableDistribution,2, Mode)
-Centralmoda=apply(tableCentralDistribution,2, Mode)
-
-moda
-
 ExtraCopy=apply(tableDistribution,2, OrganismsExtraCopy)
-CentralExtraCopy=apply(tableCentralDistribution,2, OrganismsExtraCopy)
-ExtraCopy
-
 OneCopy=apply(tableDistribution,2, OrgAtLeastOneCopy)
-CentralOneCopy=apply(tableCentralDistribution,2, OrgAtLeastOneCopy)
-OneCopy
-
 CopiesEvo=apply(tableDistribution,2, Copies)
-CentralCopiesEvo=apply(tableCentralDistribution,2, Copies)
-#CopiesEvo
-
 Average=colMeans(tableDistribution)
-CentralAverage=colMeans(tableCentralDistribution)
-Average
-CopiesEvo
-
 #names(moda)
 tableExp$Moda=moda
 tableExp$Average=Average
 tableExp$ExtraCopy=ExtraCopy
 tableExp$OneCopy=OneCopy
 tableExp$CopiesEvo=CopiesEvo
+#modaOrOne
+#moda
+#ExtraCopy
+#OneCopy
+CopiesEvo
+#Average
+#CopiesEvo
+sum(tableDistribution$Enzyme_108)
+
+
+tableExpOriginal$Moda=moda
+tableExpOriginal$Average=Average
+tableExpOriginal$ExtraCopy=ExtraCopy
+tableExpOriginal$OneCopy=OneCopy
+tableExpOriginal$CopiesEvo=CopiesEvo
+
+################# Processing functions central data  
+ CentralmodaOrOne=apply(tableCentralDistribution,2, OneOrMode)
+Centralmoda=apply(tableCentralDistribution,2, Mode)
+CentralExtraCopy=apply(tableCentralDistribution,2, OrganismsExtraCopy)
+CentralOneCopy=apply(tableCentralDistribution,2, OrgAtLeastOneCopy)
+CentralCopiesEvo=apply(tableCentralDistribution,2, Copies)
+CentralAverage=colMeans(tableCentralDistribution)
 
 tableCentral$Moda=Centralmoda
 tableCentral$Average=CentralAverage
@@ -220,42 +222,46 @@ tableCentral$ExtraCopy=CentralExtraCopy
 tableCentral$OneCopy=CentralOneCopy
 tableCentral$CopiesEvo=CentralCopiesEvo
 
-
 #One minus average organisms that contains one copy.
 #More copies than organisms this number tends to one   ## too expanded
 # few copies  on homogeneously on few organisms tends to cero ## too particular  
 # two copies by organism   .5  , that is not usually the case  because there is some variance 
-tableExp$ExpNum=(modaOrOne-tableExp$OneCopy/tableExp$CopiesEvo)/(modaOrOne)  
-tableCentral$ExpNum=(CentralmodaOrOne-tableCentral$OneCopy/tableCentral$CopiesEvo)/(CentralmodaOrOne)  
-#tableExp$ExpNum
-#tableExp$Enzyme <- factor(tableExp$Enzyme, levels = tableExp$Enzime[order(tableExp$Order)])
- tableExp$Enzyme<-with(tableExp,reorder(tableExp$Enzyme, tableExp$Order))
-str(tableExp)
-#tableExp$ExpNum <- factor(tableExp$ExpNum, levels = tableExp$ExpNum[order(tableExp$Order)])
-#tableExp$Moda<- factor(tableExp$Moda, levels = tableExp$Moda[order(tableExp$Order)])
-#tableExp$Average<- factor(tableExp$Average, levels = tableExp$Average[order(tableExp$Order)])
-#tableExp$ExtraCopy<- factor(tableExp$ExtraCopy, levels = tableExp$ExtraCopy[order(tableExp$Order)])
-#tableExp$OneCopy<- factor(tableExp$OneCopy, levels = tableExp$OneCopy[order(tableExp$Order)])
-#tableExp$CopiesEvo<- factor(tableExp$CopiesEvo, levels = tableExp$CopiesEvo[order(tableExp$Order)])
+#tableExp$ExpNum=(modaOrOne-tableExp$OneCopy/tableExp$CopiesEvo)/(modaOrOne)  
+#tableCentral$ExpNum=(CentralmodaOrOne-tableCentral$OneCopy/tableCentral$CopiesEvo)/(CentralmodaOrOne)  
 
-##tableExp <- factor(tableExp, levels = tableExp[order(tableExp$Order)])
-tableExp$Enzyme
+tableExp$ExpNum=1-tableExp$OneCopy/tableExp$CopiesEvo
+tableCentral$ExpNum=1-tableCentral$OneCopy/tableCentral$CopiesEvo
 
+
+tableExp<-tableExp[order(tableExp$Order),]
+#tableCentral$Order=tableCentral$Order+193
+tableCentral$Order
+tableCentral<-tableCentral[order(tableCentral$Order),]
+tableEnzymeReduced=subset(tableExp,tableExp$ExpNum<=.6 & tableExp$ExpNum>= .2 )
+
+total <- rbind(tableExp,tableCentral)
+todosImage<-ggplot(total,aes(x=total$Order, y=total$ExpNum,  color=total$BGC, size = total$Moda))+facet_wrap(~ total$Type)+ geom_point(shape=20) + labs(x = "Metabolic Families", y = "Exp Number Actinobacteria Genomes",text = element_text(size=12)) + theme_bw()+theme(plot.title = element_text(size = 20, face = "bold"), text = element_text(size = 14), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 16), legend.position = "right")
+
+ggplot(total,aes(x=total$Order, y=total$ExpNum,  color=total$BGC, size = total$Moda))+facet_wrap(~ total$Type)+ geom_point(shape=18) + labs(x = "Metabolic Families", y = "Exp Number Actinobacteria Genomes",text = element_text(size=12)) + theme_bw()+theme(plot.title = element_text(size = 20, face = "bold"), text = element_text(size = 14), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 16), legend.position = "right")
+
+  ggsave(file="todosImage.svg", plot=todosImage, width=30, height=8)
+  
 #str(tableExp)
-#tableExp2 <- tableExp[order(tableExp$Order),] 
-
+#tableExp$Enzyme
+## ploting images
 require("svglite")
 
-
 #save the plot in a variable image to be able to export to svg
-    image=ggplot(tableExp,aes(x=tableExp$Order, y=tableExp$ExpNum, color=tableExp$BGC, size = tableExp$Moda))+ geom_point() + labs(x = "Metabolic Families", y = "Exp Number Actinobacteria Genomes",text = element_text(size=12)) + theme_bw()+theme(plot.title = element_text(size = 20, face = "bold"), text = element_text(size = 14), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 16), legend.position = "bottom")
+    imageBGC=ggplot(tableExp,aes(x=tableExp$Order, y=tableExp$ExpNum, color=tableExp$BGC, size = tableExp$Moda))+ geom_point() + labs(x = "Metabolic Families", y = "Exp Number Actinobacteria Genomes",text = element_text(size=12)) + theme_bw()+theme(plot.title = element_text(size = 20, face = "bold"), text = element_text(size = 14), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 16), legend.position = "bottom")
+  ggsave(file="imageBGC.svg", plot=imageBGC, width=20, height=8)
+  
+  ggplot(tableExp,aes(x=tableExp$Order, y=tableExp$ExpNum, color=tableExp$BGC, size = tableExp$Moda))+ geom_point() + labs(x = "Metabolic Families", y = "Exp Number Actinobacteria Genomes",text = element_text(size=12)) + theme_bw()+theme(plot.title = element_text(size = 20, face = "bold"), text = element_text(size = 14), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 16), legend.position = "right")
     
-    ggplot(tableExp,aes(x=tableExp$Order, y=tableExp$ExpNum, color=tableExp$BGC, size = tableExp$Moda))+ geom_point() + labs(x = "Metabolic Families", y = "Exp Number Actinobacteria Genomes",text = element_text(size=12)) + theme_bw()+theme(plot.title = element_text(size = 20, face = "bold"), text = element_text(size = 14), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 16), legend.position = "right")
-    
-    ggsave(file="test.svg", plot=image, width=20, height=8)
+  imageCentral= ggplot(tableCentral,aes(x=tableCentral$Order, y=tableCentral$ExpNum, color=tableCentral$BGC, size = tableCentral$Moda))+ geom_point() + labs(x = "Metabolic Families", y = "Exp Number Actinobacteria Genomes",text = element_text(size=12)) + theme_bw()+theme(plot.title = element_text(size = 20, face = "bold"), text = element_text(size = 14), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 16), legend.position = "right")
+  ggsave(file="imageCentral.svg", plot=imageCentral, width=20, height=8)
 
     
-tableEnzymeReduced=subset(tableExp,tableExp$ExpNum<=.6 & tableExp$ExpNum>= .2 )
+
     ggplot(tableEnzymeReduced,aes(x=tableEnzymeReduced$Order, y=tableEnzymeReduced$ExpNum, color=tableEnzymeReduced$BGC, size = tableEnzymeReduced$Moda))+ geom_point() + labs(x = "Metabolic Families", y = "Exp Number Actinobacteria Genomes",text = element_text(size=12)) + theme_bw()+theme(plot.title = element_text(size = 20, face = "bold"), text = element_text(size = 14), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 16), legend.position = "right")
 
 #kable(tableExp,  caption = "CoelicolorExpansions\\label{tab:Coelicolor Expansions}",caption.short = "CoelicolorExpansions")
