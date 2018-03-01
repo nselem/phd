@@ -90,16 +90,125 @@ EvoMining will identify those expanded families of the central-DB within the gen
 
 ### Figure 2  Expansions on some databases   
 
-Archaea Cyanobacteria, and Actinobacteria based on central metabolism from actinobacteria  
 2.1 Expansions same central  
+```{r GenomicDatabase,warnings = FALSE, message = FALSE,echo=FALSE}
+library(reshape )
+library(RColorBrewer)
+library(scales)
+library(RColorBrewer)
+library(ggplot2)
+tropical=c('darkorange','dodgerblue','hotpink')
+palette(tropical)
+
+hm.palette <- colorRampPalette(rev(brewer.pal(11, 'Spectral')), space='Lab')  
+
+ArchaeasCentral <- read.table("../chapter3/ArchaeasCentral", header=TRUE, sep="\t")
+ArchaeasHeatPlot <- read.table("../chapter3/ArchaeasHeatPlot", header=TRUE, sep="\t")
+ArchaeasNp <- read.table("../chapter3/ArchaeasNp", header=TRUE, sep="\t")
+ArchaeasSMASH <- read.table("../chapter3/ArchaeasSMASH", header=TRUE, sep="\t")
+ArchaeasTaxa <- read.table("../chapter3/ArchaeasTaxa", header=TRUE, sep="\t")
+ArchaeasTaxa$Kingdom<-"Archea"
+
+ActinosCentral <- read.table("../chapter4/ActinoCentral", header=TRUE, sep="\t")
+ActinosHeatPlot <- read.table("../chapter4/ActinoHeatPlot", header=TRUE, sep="\t")
+ActinosNp <- read.table("../chapter4/ActinoNp", header=TRUE, sep="\t")
+ActinosSMASH <- read.table("../chapter4/ActinosSMASH", header=TRUE, sep="\t")
+ActinosTaxa <- read.table("../chapter4/ActinoTaxa", header=TRUE, sep="\t")
+ActinosTaxa$Kingdom<-"Actinos"
+ActinosTaxa$SuperPhylum<-"Actinos"
+
+CyanosCentral <- read.table("../chapter5/CyanosCentral", header=TRUE, sep="\t")
+CyanosHeatPlot <- read.table("../chapter5/CyanosHeatPlot", header=TRUE, sep="\t")
+CyanosNp <- read.table("../chapter5/CyanosNp", header=TRUE, sep="\t")
+CyanosSMASH <- read.table("../chapter5/CyanosSMASH", header=TRUE, sep="\t")
+CyanosTaxa <- read.table("../chapter5/CyanosTaxa", header=TRUE, sep="\t")
+CyanosTaxa$Kingdom<-"Cyanos"
+CyanosTaxa$SuperPhylum<-"Cyanobacteria"
+
+TodosTaxa<-rbind(ArchaeasTaxa,CyanosTaxa,ActinosTaxa)
+names(ArchaeasHeatPlot)
+
+ArHP<-ArchaeasHeatPlot[,intersect(intersect(names(CyanosHeatPlot),names(ActinosHeatPlot)),names(ArchaeasHeatPlot))]
+CyHP<-CyanosHeatPlot[,intersect(intersect(names(CyanosHeatPlot),names(ActinosHeatPlot)),names(ArchaeasHeatPlot))]
+AcHP<-ActinosHeatPlot[,intersect(intersect(names(CyanosHeatPlot),names(ActinosHeatPlot)),names(ArchaeasHeatPlot))]
+TodosHP<-rbind(ArHP,CyHP,AcHP)
+TodosEXP_TAXA<-merge(TodosHP,TodosTaxa,by.x="RastId",by.y="RastId")
+
+str(TodosHP)
+intersect(names(CyanosHeatPlot),names(ArchaeasHeatPlot))
+intersect(intersect(names(CyanosHeatPlot),names(ActinosHeatPlot)),names(ArchaeasHeatPlot))
+
+## Genome Size vs central expansion
+qplot(TodosEXP_TAXA$Size, TodosEXP_TAXA$TOTAL, data = TodosEXP_TAXA,colour=TodosEXP_TAXA$Order)+facet_grid(TodosEXP_TAXA$Kingdom~.,scales="free")+theme_bw()+ theme(legend.position	="none",plot.title = element_text(size = 14, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 12),axis.text.y=element_text(size = 7))
+
+##################### Fin genome size vs central expansion  
+
+## Box plot por familia y point Genome 
+TodosHP$RastId <- with(TodosHP, reorder(TodosHP$RastId, TodosHP$TOTAL))
+TodosHP.m <- melt(TodosEXP_TAXA,id = c("RastId","Kingdom","Name","SuperPhylum","Phylum","Class","Order","Family","Contigs","Size","RastNo"))
+TodosHP.m<-subset(TodosHP.m,variable!="TOTAL")
+
+#ArchaeasHeatPlot$RastId <- with(ArchaeasHeatPlot, reorder(ArchaeasHeatPlot$RastId, ArchaeasHeatPlot$TOTAL))
+#ArchaeasHeatPlot.m <- melt(ArchaeasHeatPlot)
+#ArchaeasHeatPlot.m<-subset(ArchaeasHeatPlot.m,variable!="TOTAL")
+
+CyanosHeatPlot$RastId <- with(CyanosHeatPlot, reorder(CyanosHeatPlot$RastId, CyanosHeatPlot$TOTAL))
+CyanosHeatPlot.m <- melt(CyanosHeatPlot)
+CyanosHeatPlot.m<-subset(CyanosHeatPlot.m,variable!="TOTAL")
+
+#ActinosHeatPlot$RastId <- with(ActinosHeatPlot, reorder(ActinosHeatPlot$RastId, ActinosHeatPlot$TOTAL))
+#ActinosHeatPlot.m <- melt(ActinosHeatPlot)
+#ActinosHeatPlot.m<-subset(ActinosHeatPlot.m,variable!="TOTAL")
+
+
+##no lista la quier en colores  Boxplot expansiones en familias+ facet_grid(TodosHP.m$Kingdom~.,scales="free")
+ggplot(TodosHP.m, aes(x=TodosHP.m$variable, y=TodosHP.m$value,color=TodosHP.m$Kingdom)) +labs(x = "Metabolic Families", y = "Copies on Archaeabacteria Genomes",text = element_text(size=12)) + geom_boxplot()+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")
+
+
+## point quiero expansiones vs ??
+TodosEXP_TAXA.m<-merge(TodosHP.m,TodosTaxa,by.x="RastId",by.y="RastId")
+qplot(Size, value, data = TodosEXP_TAXA.m,colour=variable)+facet_grid(TodosEXP_TAXA$Kingdom~.,scales="free")+theme_bw()+ theme(legend.position	="none",legend.text=element_text(size=6),plot.title = element_text(size = 14, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 12),axis.text.y=element_text(size = 7))
+
+
+#1 Tener un dataframe de todos de antismash para hacer greficas de diversidad  
+#Todosm1 <- merge(TodosTaxa, TodosSMASH, by.x = "RastId", by.y = "RastId")
+#Archaeasm1.m <- melt(Archaeasm1, id = c("RastId","Name","SuperPhylum","Phylum","Class","Order","Family","Contigs","Size","RastNo"))
+#Archaeasm2.m<-subset(Archaeasm1.m,value>0)
+
+
+#2 Tener boxplot de expansiones por familia por kingdom LISTOOO
+#3 Escoger una familia para analizar a detalle por genero y poner sus árboles  PriA por ejemplo  
+```
+
+Expansions are correlated with genome side, at different velocities, not linearly, Archaea Bacteria are smaller in size until now, Cyanobacteria correlation is weaker. 
+
+Archaea has central expansions and has BGCs  
+  
+### Archaea fits as EvoMining central DB  
+During the decade between 1970 and 1980, Archaea was recognized as new life domain, a kingdom different from Bacteria and Eucarya in an exciting first great application of 16S phylogeny[@woese_phylogenetic_1977,@woese_are_1981] . Main differences between this kingdoms are that Archaeal DNA is not arranged in a nucleus as in Eucarya and Archaeal celular walls are not composed from peptidoglycans as in Bacteria. Archaeal proteins may be higlhy valuable to biotechnology industry for their great stability due to extreme temperature, PH and salt content conditions on Archeal habitats. Despite no Archaeal Natural products biosynthetic gene clusters (BGC's) has been reported on MiBIG, Archaea do have BGC's, some of them seems to be acquired by horizontal gene transfer (HGT) like methano nrps {search reference}. Other Archeal natural products known are archaeosins, Diketopiperazines, Acyl Homoserine Lactones, Exopolysaccharides, Carotenoids, Biosurfactants, Phenazines and Organic Solutes but this knowledge is not comparable to Bacterial BGC's knowledge[@charlesworth_untapped_2015].  
+  
+Natural products biosynthetic gene clusters search is actually performed using either *high-confidence/low-novelty or low-confidence/high-novelty* bioinformatic approaches [@medema_computational_2015]. High confidence methods compares query sequences with previously known BGC's such as nrps or PKS, examples of this algorithms are antiSMASH and clusterfinder [@_antismash_????]. EvoMining searches on expansions from central metabolic pathways enzyme families, it has been classified as low confidence/high novelty method. EvoMining has proved useful on Actinobacteria phylum where its use lead to Arseno-compounds discovery [@cruz-morales_phylogenomic_2016]. Also on Actinobacteria antiSMASH analysis on 1245 genomes found 774 different classes of natural products, the same analysis on 876 Archaeal genomes, a full kingdom, identifies only 35 BGC's classes. So either Archaea does not have natural products BGC's or this are not yet known. Next paragraph deals with a possible approach about how natural products BGC's can be find.  
+  
+Archaea resembled Bacteria in that Archaea uses horizontal gene transfer as a genic interchange mecanism, Archaeal genomes contains operons [@howland_surprising_2000] and in general there is introns absence{Reference to Computational Methods for Understanding Bacterial and Archaeal Genomes}. Archaeas do have introns, but they are mainly located on genes that encodes ribosomal and transfer RNA [@howland_surprising_2000]. General lack of introns allows automatic genome annotation, operons gene organization permits functional inference to a certain degree and HGT contribute to expansions on Archaeal genomes. Some phylum on Archaea has an open pangenome, and as we will show on this chapter some Archaea has central pathway expansions. 
+Enzyme families from central pathways expansions, open pangenome and operon organization made EvoMining succesful on Actinobacteria, this lead us to think that evoMining is suitable to analize Archaeal genomes, even more since EvoMining is a method oriented to use evolution and its not entirelyy based on previous knowledge of BGC's sequences if evolutionary logic behave on Archaea as on bacteria, new BGC's classes may be found on Archaea.
+  
+EvoMining is a trade off between conserved known central metabolic function and enough expansions divergence on sequence and on clusters to divergence 
+
+Beside the already tested 240 Actinobacteria database, other genomic database can be explored. On this case we tested exapnsions on Archaea Cyanobacteria, and Actinobacteria based on central metabolism from actinobacteria  
+
+On cyanobacteria PriA an enzyme with no previously knwon secondary metabolism on Actinobacteria has been recruited into saxitoxin cluster.   
+
+![GenomicDatabases](Figuras/GenomicDBS.svg)
+
 Expansions other central  
 To acotate the search for enzymes of recent recruitment into natural products
   ![TauD](Figuras/TauDpseudomonas2.svg)  
 
-![GenomicDatabases](Figuras/GenomicDBS.svg)
+As we have explored other genomic databases, central database is also customizable, on this case we have use TauD en enzyme from taurine asimilation sistem on enterobacteria, on the genomic database Pseudomonas. Enzymes does not necesary have to be central, in the sense that they belong to the core of its taxonomic group, but at least should have expansions.  
+
 ### Figure  3.1  Expansions on genomic dinamics  
-        3.2(Bakward EvoMining)    
-        Coelicolor clusters  
+3.2(Bakward EvoMining)    
+Coelicolor clusters  
 Esto se hará solo sobre Streptomyces de los 1246  
 
 ```{r CoelicolorMiBig, results = "asis"}
@@ -108,7 +217,7 @@ kable(table,  caption = "Coelicolor\\label{tab:Coelicolor MiBig}",caption.short 
 ```
      
 
-```{r}
+```{r ExpNumber,warnings = FALSE, message = FALSE,echo=FALSE}
 # Expansions of enzime sequences from MiBIG from S coelicolor will be explored within the scope of the genomic database Streptomyces. The goal is to recover those enzymes that are not yet been considered as common on secondary metabolism. 
 ## Moda is the most common copy number on an organism, Organisms with an extra copy are the ones that may have this copy recrutied into secondary metabolism
 # This extra copy on at least 4 organismos
