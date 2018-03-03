@@ -30,11 +30,11 @@ hm.palette <- colorRampPalette(rev(brewer.pal(11, 'Spectral')), space='Lab')
 
 <!--codigo de evoMining display column even if only ceros, se despliega si le bajas el score a cero, pero quiero que se despliegue siempre-->
 <!-- Plan
-Figura 1 Figuras/EvoMiningPipeline.svg 
-Figura 2 Figuras/TauDpseudomonas2.svg 
-Figura 3 Figuras/GenomicDBS.svg Semana 2
-Figura 4 Figuras/Backward.svg   Semana 1 
-Figura 5 Figuras/PanCluster.svg  Semana 3
+Figura 1 Figuras/EvoMiningPipeline.svg Metabolismo expansion
+Figura 2 Figuras/GenomicDBS.svg Semana 2 Base genomica ->PriA
+Figura 3 Figuras/TauDpseudomonas2.svg Base central -> TauD
+Figura 4 Figuras/Backward.svg   Semana 1 AntiSMASH  
+Figura 5 Figuras/PanCluster.svg  Semana 3  Poner los clusters de la nueva Familia  
 -->
 
 ## EvoMining 2.0: A customizable computational pipeline for evolutionary reconstructions during genome mining  
@@ -47,7 +47,7 @@ Cómo se ha resuelto el problema hasta ahora
 Que aporta EvoMining  
 Qué se hace en este estudio  
 Cuáles son las perspectivas  -->
-Microbial natural products has importance in human health and life. Due to the abundance of genomic and metagenomic data, new natural products research by genome mining is a growing field. Traditional genome mining  approaches explored bacterial genomes localizing marks of previously knwon secondary metabolism enzymes organized on biosynthetic gene clusters (BGCs). Here we present EvoMining a downloadable visual genome mining tool that incorporates evolution theory into genome mining. On EvoMining databases are customizable, its based on enzyme expansions not on BGCs. The advantage of this method is that every expanded enzyme family is a candidate to explore recruitments, and all prokatyiotic genome, even the unexplored Archaea kingdom. On this study EvoMining was applied to several database such as Cyanobacteria, Actinobacteria, Pseudomonas and Archea studying expansions for enzyme families such as TauD and other enzymes recently recruited onto secondary metabolism. Finally the genomic plasticity of Streptomyces coelicolor known BGCs i explored generlizind applying the open/Close pangenome approach to a BGCs. This Evolutionary methods open the door to discover not previously knwon chemical compounds at private genome collections and prioritize them according to their genomic plasticity.    
+Microbial natural products has importance in human health and life. Due to the abundance of genomic and metagenomic data, new natural products research by genome mining is a growing field. Traditional genome mining  approaches explored bacterial genomes localizing marks of previously knwon secondary metabolism enzymes organized on biosynthetic gene clusters (BGCs). Here we present EvoMining a downloadable visual genome mining tool that incorporates evolution theory into genome mining. On EvoMining databases are customizable, its based on enzyme expansions not on BGCs. The advantage of this method is that every expanded enzyme family is a candidate to explore recruitments, and all prokatyiotic genome, even the unexplored Archaea kingdom. On this study EvoMining was applied to several database such as Cyanobacteria, Actinobacteria, Pseudomonas and Archaea studying expansions for enzyme families such as PriA,TauD and other enzymes recently recruited onto secondary metabolism. Finally the genomic plasticity of Streptomyces coelicolor known BGCs is explored generalizing/applying the open/Close pangenome approach to a BGCs. This Evolutionary methods open the door to discover not previously knwon chemical compounds at private genome collections and prioritize them according to their genomic plasticity.    
   
 ## Introduction  
 <!--
@@ -74,7 +74,7 @@ Finally to prioritize which clusters possess more metabolite variations, assumin
 ##  Results and Discussion   
 
 ### Figure 1  EvoMining pipe-line   
- EvoMining is a visual, evolutionary based genome mining tool with the milestone of prioritize non standard secondary metabolite pathways. The algorithm follows enzyme families from central pathways on their recruitment as components of natural products biosynthetic gene clusters (BGCs) within a genomic database. 
+ EvoMining is a visual genome mining tool that following evolutionary principles has the milestone of prioritize non standard secondary metabolite pathways. The algorithm follows enzyme families from central pathways on their recruitment as components of natural products biosynthetic gene clusters (BGCs) within a genomic database. 
   
 Figure1  
 ![Pipeline](Figuras/EvoMiningPipeline.svg)  
@@ -89,7 +89,27 @@ EvoMining code and components (blast, muscle, FastTree, newick utilities, Gblock
 EvoMining will identify those expanded families of the central-DB within the genomic-DB that has at least a recruited member onto the natural-DB, proceeding then to the reconstruction of the evolutionary history of the enzyme family. Given an enzyme from the central-DB, the product of EvoMining analysis is an interactive color coded tree of the enzyme expanded family where best bidirectional hits (BBH) of central-DB are differentiated from Natural Products members and those expansions close to a Natural Product sequence that are not BBH with central-DB enzymes are emphasised as putative nobel recruitments into secondary metabolism.   
 
 ### Figure 2  Expansions on some databases   
+El reclutamiento de una enzima en una ruta de metabolismo secundario 
+The expansioness of a family depends on the clade.  
+Expansions are correlated with genome side, at different velocities, not linearly, Archaea Bacteria are smaller in size until now, Cyanobacteria correlation is weaker. 
 
+Archaea has central expansions and has BGCs  
+  
+### Archaea fits as EvoMining central DB  
+During the decade between 1970 and 1980, Archaea was recognized as new life domain, a kingdom different from Bacteria and Eucarya in an exciting first great application of 16S phylogeny[@woese_phylogenetic_1977,@woese_are_1981] . Main differences between this kingdoms are that Archaeal DNA is not arranged in a nucleus as in Eucarya and Archaeal celular walls are not composed from peptidoglycans as in Bacteria. Archaeal proteins may be higlhy valuable to biotechnology industry for their great stability due to extreme temperature, PH and salt content conditions on Archeal habitats. Despite no Archaeal Natural products biosynthetic gene clusters (BGC's) has been reported on MiBIG, Archaea do have BGC's, some of them seems to be acquired by horizontal gene transfer (HGT) like methano nrps {search reference}. Other Archeal natural products known are archaeosins, Diketopiperazines, Acyl Homoserine Lactones, Exopolysaccharides, Carotenoids, Biosurfactants, Phenazines and Organic Solutes but this knowledge is not comparable to Bacterial BGC's knowledge[@charlesworth_untapped_2015].  
+  
+Natural products biosynthetic gene clusters search is actually performed using either *high-confidence/low-novelty or low-confidence/high-novelty* bioinformatic approaches [@medema_computational_2015]. High confidence methods compares query sequences with previously known BGC's such as nrps or PKS, examples of this algorithms are antiSMASH and clusterfinder [@_antismash_????]. EvoMining searches on expansions from central metabolic pathways enzyme families, it has been classified as low confidence/high novelty method. EvoMining has proved useful on Actinobacteria phylum where its use lead to Arseno-compounds discovery [@cruz-morales_phylogenomic_2016]. Also on Actinobacteria antiSMASH analysis on 1245 genomes found 774 different classes of natural products, the same analysis on 876 Archaeal genomes, a full kingdom, identifies only 35 BGC's classes. So either Archaea does not have natural products BGC's or this are not yet known. Next paragraph deals with a possible approach about how natural products BGC's can be find.  
+  
+Archaea resembled Bacteria in that Archaea uses horizontal gene transfer as a genic interchange mecanism, Archaeal genomes contains operons [@howland_surprising_2000] and in general there is introns absence{Reference to Computational Methods for Understanding Bacterial and Archaeal Genomes}. Archaeas do have introns, but they are mainly located on genes that encodes ribosomal and transfer RNA [@howland_surprising_2000]. General lack of introns allows automatic genome annotation, operons gene organization permits functional inference to a certain degree and HGT contribute to expansions on Archaeal genomes. Some phylum on Archaea has an open pangenome, and as we will show on this chapter some Archaea has central pathway expansions. 
+Enzyme families from central pathways expansions, open pangenome and operon organization made EvoMining succesful on Actinobacteria, this lead us to think that evoMining is suitable to analize Archaeal genomes, even more since EvoMining is a method oriented to use evolution and its not entirelyy based on previous knowledge of BGC's sequences if evolutionary logic behave on Archaea as on bacteria, new BGC's classes may be found on Archaea.
+  
+EvoMining is a trade off between conserved known central metabolic function and enough expansions divergence on sequence and on clusters to divergence 
+
+Beside the already tested 240 Actinobacteria database, other genomic database can be explored. On this case we tested exapnsions on Archaea Cyanobacteria, and Actinobacteria based on central metabolism from actinobacteria  
+
+On cyanobacteria PriA an enzyme with no previously knwon secondary metabolism on Actinobacteria has been recruited into saxitoxin cluster.   
+
+![GenomicDatabases](Figuras/GenomicDBS.svg)
 2.1 Expansions same central  
 ```{r GenomicDatabase,warnings = FALSE, message = FALSE,echo=FALSE}
 library(reshape )
@@ -97,6 +117,7 @@ library(RColorBrewer)
 library(scales)
 library(RColorBrewer)
 library(ggplot2)
+library(dplyr)
 tropical=c('darkorange','dodgerblue','hotpink')
 palette(tropical)
 
@@ -108,6 +129,7 @@ ArchaeasNp <- read.table("../chapter3/ArchaeasNp", header=TRUE, sep="\t")
 ArchaeasSMASH <- read.table("../chapter3/ArchaeasSMASH", header=TRUE, sep="\t")
 ArchaeasTaxa <- read.table("../chapter3/ArchaeasTaxa", header=TRUE, sep="\t")
 ArchaeasTaxa$Kingdom<-"Archea"
+ArchaeasSMASH$Kingdom<-"Archea"
 
 ActinosCentral <- read.table("../chapter4/ActinoCentral", header=TRUE, sep="\t")
 ActinosHeatPlot <- read.table("../chapter4/ActinoHeatPlot", header=TRUE, sep="\t")
@@ -115,6 +137,7 @@ ActinosNp <- read.table("../chapter4/ActinoNp", header=TRUE, sep="\t")
 ActinosSMASH <- read.table("../chapter4/ActinosSMASH", header=TRUE, sep="\t")
 ActinosTaxa <- read.table("../chapter4/ActinoTaxa", header=TRUE, sep="\t")
 ActinosTaxa$Kingdom<-"Actinos"
+ActinosSMASH$Kingdom<-"Actinos"
 ActinosTaxa$SuperPhylum<-"Actinos"
 
 CyanosCentral <- read.table("../chapter5/CyanosCentral", header=TRUE, sep="\t")
@@ -123,6 +146,8 @@ CyanosNp <- read.table("../chapter5/CyanosNp", header=TRUE, sep="\t")
 CyanosSMASH <- read.table("../chapter5/CyanosSMASH", header=TRUE, sep="\t")
 CyanosTaxa <- read.table("../chapter5/CyanosTaxa", header=TRUE, sep="\t")
 CyanosTaxa$Kingdom<-"Cyanos"
+CyanosSMASH$Kingdom<-"Cyanos"
+
 CyanosTaxa$SuperPhylum<-"Cyanobacteria"
 
 TodosTaxa<-rbind(ArchaeasTaxa,CyanosTaxa,ActinosTaxa)
@@ -148,26 +173,14 @@ TodosHP$RastId <- with(TodosHP, reorder(TodosHP$RastId, TodosHP$TOTAL))
 TodosHP.m <- melt(TodosEXP_TAXA,id = c("RastId","Kingdom","Name","SuperPhylum","Phylum","Class","Order","Family","Contigs","Size","RastNo"))
 TodosHP.m<-subset(TodosHP.m,variable!="TOTAL")
 
-#ArchaeasHeatPlot$RastId <- with(ArchaeasHeatPlot, reorder(ArchaeasHeatPlot$RastId, ArchaeasHeatPlot$TOTAL))
-#ArchaeasHeatPlot.m <- melt(ArchaeasHeatPlot)
-#ArchaeasHeatPlot.m<-subset(ArchaeasHeatPlot.m,variable!="TOTAL")
 
 CyanosHeatPlot$RastId <- with(CyanosHeatPlot, reorder(CyanosHeatPlot$RastId, CyanosHeatPlot$TOTAL))
 CyanosHeatPlot.m <- melt(CyanosHeatPlot)
 CyanosHeatPlot.m<-subset(CyanosHeatPlot.m,variable!="TOTAL")
 
-#ActinosHeatPlot$RastId <- with(ActinosHeatPlot, reorder(ActinosHeatPlot$RastId, ActinosHeatPlot$TOTAL))
-#ActinosHeatPlot.m <- melt(ActinosHeatPlot)
-#ActinosHeatPlot.m<-subset(ActinosHeatPlot.m,variable!="TOTAL")
-
 
 ##no lista la quier en colores  Boxplot expansiones en familias+ facet_grid(TodosHP.m$Kingdom~.,scales="free")
 ggplot(TodosHP.m, aes(x=TodosHP.m$variable, y=TodosHP.m$value,color=TodosHP.m$Kingdom)) +labs(x = "Metabolic Families", y = "Copies on Archaeabacteria Genomes",text = element_text(size=12)) + geom_boxplot()+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")
-
-
-## point quiero expansiones vs ??
-TodosEXP_TAXA.m<-merge(TodosHP.m,TodosTaxa,by.x="RastId",by.y="RastId")
-qplot(Size, value, data = TodosEXP_TAXA.m,colour=variable)+facet_grid(TodosEXP_TAXA$Kingdom~.,scales="free")+theme_bw()+ theme(legend.position	="none",legend.text=element_text(size=6),plot.title = element_text(size = 14, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 12),axis.text.y=element_text(size = 7))
 
 
 #1 Tener un dataframe de todos de antismash para hacer greficas de diversidad  
@@ -175,30 +188,18 @@ qplot(Size, value, data = TodosEXP_TAXA.m,colour=variable)+facet_grid(TodosEXP_T
 #Archaeasm1.m <- melt(Archaeasm1, id = c("RastId","Name","SuperPhylum","Phylum","Class","Order","Family","Contigs","Size","RastNo"))
 #Archaeasm2.m<-subset(Archaeasm1.m,value>0)
 
-
+names(CyanosSMASH)
+intersect(names(CyanosSMASH),names(ArchaeasSMASH))
+union( union(names(CyanosSMASH),names(ArchaeasSMASH)),names(ActinosSMASH))
+## HACEr una funcion con la diversidad de Archaea 
+lista<-list(CyanosSMASH,ArchaeasSMASH,ActinosSMASH)
+TODOS_SMASH<-bind_rows(lista)
+aver<-TODOS_SMASH[TODOS_SMASH$RastId=="389046",]$TOTAL
+aver
 #2 Tener boxplot de expansiones por familia por kingdom LISTOOO
 #3 Escoger una familia para analizar a detalle por genero y poner sus árboles  PriA por ejemplo  
 ```
 
-Expansions are correlated with genome side, at different velocities, not linearly, Archaea Bacteria are smaller in size until now, Cyanobacteria correlation is weaker. 
-
-Archaea has central expansions and has BGCs  
-  
-### Archaea fits as EvoMining central DB  
-During the decade between 1970 and 1980, Archaea was recognized as new life domain, a kingdom different from Bacteria and Eucarya in an exciting first great application of 16S phylogeny[@woese_phylogenetic_1977,@woese_are_1981] . Main differences between this kingdoms are that Archaeal DNA is not arranged in a nucleus as in Eucarya and Archaeal celular walls are not composed from peptidoglycans as in Bacteria. Archaeal proteins may be higlhy valuable to biotechnology industry for their great stability due to extreme temperature, PH and salt content conditions on Archeal habitats. Despite no Archaeal Natural products biosynthetic gene clusters (BGC's) has been reported on MiBIG, Archaea do have BGC's, some of them seems to be acquired by horizontal gene transfer (HGT) like methano nrps {search reference}. Other Archeal natural products known are archaeosins, Diketopiperazines, Acyl Homoserine Lactones, Exopolysaccharides, Carotenoids, Biosurfactants, Phenazines and Organic Solutes but this knowledge is not comparable to Bacterial BGC's knowledge[@charlesworth_untapped_2015].  
-  
-Natural products biosynthetic gene clusters search is actually performed using either *high-confidence/low-novelty or low-confidence/high-novelty* bioinformatic approaches [@medema_computational_2015]. High confidence methods compares query sequences with previously known BGC's such as nrps or PKS, examples of this algorithms are antiSMASH and clusterfinder [@_antismash_????]. EvoMining searches on expansions from central metabolic pathways enzyme families, it has been classified as low confidence/high novelty method. EvoMining has proved useful on Actinobacteria phylum where its use lead to Arseno-compounds discovery [@cruz-morales_phylogenomic_2016]. Also on Actinobacteria antiSMASH analysis on 1245 genomes found 774 different classes of natural products, the same analysis on 876 Archaeal genomes, a full kingdom, identifies only 35 BGC's classes. So either Archaea does not have natural products BGC's or this are not yet known. Next paragraph deals with a possible approach about how natural products BGC's can be find.  
-  
-Archaea resembled Bacteria in that Archaea uses horizontal gene transfer as a genic interchange mecanism, Archaeal genomes contains operons [@howland_surprising_2000] and in general there is introns absence{Reference to Computational Methods for Understanding Bacterial and Archaeal Genomes}. Archaeas do have introns, but they are mainly located on genes that encodes ribosomal and transfer RNA [@howland_surprising_2000]. General lack of introns allows automatic genome annotation, operons gene organization permits functional inference to a certain degree and HGT contribute to expansions on Archaeal genomes. Some phylum on Archaea has an open pangenome, and as we will show on this chapter some Archaea has central pathway expansions. 
-Enzyme families from central pathways expansions, open pangenome and operon organization made EvoMining succesful on Actinobacteria, this lead us to think that evoMining is suitable to analize Archaeal genomes, even more since EvoMining is a method oriented to use evolution and its not entirelyy based on previous knowledge of BGC's sequences if evolutionary logic behave on Archaea as on bacteria, new BGC's classes may be found on Archaea.
-  
-EvoMining is a trade off between conserved known central metabolic function and enough expansions divergence on sequence and on clusters to divergence 
-
-Beside the already tested 240 Actinobacteria database, other genomic database can be explored. On this case we tested exapnsions on Archaea Cyanobacteria, and Actinobacteria based on central metabolism from actinobacteria  
-
-On cyanobacteria PriA an enzyme with no previously knwon secondary metabolism on Actinobacteria has been recruited into saxitoxin cluster.   
-
-![GenomicDatabases](Figuras/GenomicDBS.svg)
 
 Expansions other central  
 To acotate the search for enzymes of recent recruitment into natural products
