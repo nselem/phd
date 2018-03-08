@@ -24,8 +24,18 @@ library( reshape )
 library(plyr ) 
 library(RColorBrewer)
 library(scales)
-library(RColorBrewer)
+library(dplyr)
+if(!require(devtools))
+  install.packages("devtools", repos = "http://cran.rstudio.com")
+if(!require(easyGgplot2))
+  install_github("kassambara/easyGgplot2")
+library(easyGgplot2)
+
 hm.palette <- colorRampPalette(rev(brewer.pal(11, 'Spectral')), space='Lab')  
+tropical=c('darkorange','dodgerblue','hotpink')
+palette(tropical)
+
+
 ```
 
 <!--codigo de evoMining display column even if only ceros, se despliega si le bajas el score a cero, pero quiero que se despliegue siempre-->
@@ -112,17 +122,7 @@ On cyanobacteria PriA an enzyme with no previously knwon secondary metabolism on
 ![GenomicDatabases](Figuras/GenomicDBS.svg)
 2.1 Expansions same central  
 ```{r GenomicDatabase,warnings = FALSE, message = FALSE,echo=FALSE}
-library(reshape )
-library(RColorBrewer)
-library(scales)
-library(RColorBrewer)
-library(ggplot2)
-library(dplyr)
-tropical=c('darkorange','dodgerblue','hotpink')
-palette(tropical)
-
-hm.palette <- colorRampPalette(rev(brewer.pal(11, 'Spectral')), space='Lab')  
-
+######################## Loading data  
 ArchaeasCentral <- read.table("../chapter3/ArchaeasCentral", header=TRUE, sep="\t")
 ArchaeasHeatPlot <- read.table("../chapter3/ArchaeasHeatPlot", header=TRUE, sep="\t")
 ArchaeasNp <- read.table("../chapter3/ArchaeasNp", header=TRUE, sep="\t")
@@ -147,11 +147,13 @@ CyanosSMASH <- read.table("../chapter5/CyanosSMASH", header=TRUE, sep="\t")
 CyanosTaxa <- read.table("../chapter5/CyanosTaxa", header=TRUE, sep="\t")
 CyanosTaxa$Kingdom<-"Cyanos"
 CyanosSMASH$Kingdom<-"Cyanos"
-
 CyanosTaxa$SuperPhylum<-"Cyanobacteria"
+########################### End of loading data
 
+#################################################################
+## Joining data frames heat plot and taxa
 TodosTaxa<-rbind(ArchaeasTaxa,CyanosTaxa,ActinosTaxa)
-names(ArchaeasHeatPlot)
+#names(ArchaeasHeatPlot)
 
 ArHP<-ArchaeasHeatPlot[,intersect(intersect(names(CyanosHeatPlot),names(ActinosHeatPlot)),names(ArchaeasHeatPlot))]
 CyHP<-CyanosHeatPlot[,intersect(intersect(names(CyanosHeatPlot),names(ActinosHeatPlot)),names(ArchaeasHeatPlot))]
@@ -159,45 +161,157 @@ AcHP<-ActinosHeatPlot[,intersect(intersect(names(CyanosHeatPlot),names(ActinosHe
 TodosHP<-rbind(ArHP,CyHP,AcHP)
 TodosEXP_TAXA<-merge(TodosHP,TodosTaxa,by.x="RastId",by.y="RastId")
 
-str(TodosHP)
-intersect(names(CyanosHeatPlot),names(ArchaeasHeatPlot))
-intersect(intersect(names(CyanosHeatPlot),names(ActinosHeatPlot)),names(ArchaeasHeatPlot))
+#str(TodosHP)
+#intersect(names(CyanosHeatPlot),names(ArchaeasHeatPlot))
+#intersect(intersect(names(CyanosHeatPlot),names(ActinosHeatPlot)),names(ArchaeasHeatPlot))
+####  End of joining dataframes
+###########################################################################################
 
-## Genome Size vs central expansion
-qplot(TodosEXP_TAXA$Size, TodosEXP_TAXA$TOTAL, data = TodosEXP_TAXA,colour=TodosEXP_TAXA$Order)+facet_grid(TodosEXP_TAXA$Kingdom~.,scales="free")+theme_bw()+ theme(legend.position	="none",plot.title = element_text(size = 14, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 12),axis.text.y=element_text(size = 7))
+################# Graphs 
 
-##################### Fin genome size vs central expansion  
 
-## Box plot por familia y point Genome 
+## 1) Genome Size vs central expansion by facets 
+GenomeSizeVsCentralExpansion<-qplot(TodosEXP_TAXA$Size, TodosEXP_TAXA$TOTAL, data = TodosEXP_TAXA,colour=TodosEXP_TAXA$Order)+facet_grid(TodosEXP_TAXA$Kingdom~.,scales="free")+theme_bw()+ theme(legend.position	="none",plot.title = element_text(size = 14, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 12),axis.text.y=element_text(size = 7))
+ggsave(file="GenomeSizeVsCentralExpansion.svg", plot=GenomeSizeVsCentralExpansion, width=30, height=8)
+## End genome size vs central expansion  
+
+## 2) Box plot Expansiones familia y point Genome 
 TodosHP$RastId <- with(TodosHP, reorder(TodosHP$RastId, TodosHP$TOTAL))
 TodosHP.m <- melt(TodosEXP_TAXA,id = c("RastId","Kingdom","Name","SuperPhylum","Phylum","Class","Order","Family","Contigs","Size","RastNo"))
 TodosHP.m<-subset(TodosHP.m,variable!="TOTAL")
+#CyanosHeatPlot$RastId <- with(CyanosHeatPlot, reorder(CyanosHeatPlot$RastId, CyanosHeatPlot$TOTAL))
+#CyanosHeatPlot.m <- melt(CyanosHeatPlot)
+#CyanosHeatPlot.m<-subset(CyanosHeatPlot.m,variable!="TOTAL")
+##   Boxplot expansiones en familias en colores por reinos
+BoxCentralFamilies<-ggplot(TodosHP.m, aes(x=TodosHP.m$variable, y=TodosHP.m$value,color=TodosHP.m$Kingdom)) +labs(x = "Metabolic Families", y = "Copy number on Genomes",text = element_text(size=12)) + geom_boxplot()+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")
+ggsave(file="BoxCentralFamilies.svg", plot=BoxCentralFamilies, width=30, height=8)
+############### End of boxplot   
 
+######## 3) NOT READY Diversity of antiSMASH detection on 3 genomic DBs
+CyanosSMASH.m <- melt(CyanosSMASH,id = c("RastId","Kingdom"))  
+CyanosSMASH.m<-CyanosSMASH.m[(CyanosSMASH.m$value!=0)&(CyanosSMASH.m$value!="Cyanos")&(CyanosSMASH.m$variable!="TOTAL"),]
+ArchaeasSMASH.m <- melt(ArchaeasSMASH,id = c("RastId","Kingdom"))  
+ArchaeasSMASH.m<-ArchaeasSMASH.m[(ArchaeasSMASH.m$value!=0)&(ArchaeasSMASH.m$value!="Archea")&(ArchaeasSMASH.m$variable!="TOTAL"),]
+ActinosSMASH.m <- melt(ActinosSMASH,id = c("RastId","Kingdom"))  
+ActinosSMASH.m<-ActinosSMASH.m[(ActinosSMASH.m$value!=0)&(ActinosSMASH.m$value!="Actinos")&(ActinosSMASH.m$variable!="TOTAL"),]
+Todos_SMASH<-rbind(ActinosSMASH.m,CyanosSMASH.m,ArchaeasSMASH.m)
+DiversitySMASH<-ggplot2.barplot(data=Todos_SMASH, xName="Kingdom",  groupName="variable",showLegend=FALSE)
+ggsave(file="DiversitySMASH.svg", plot=DiversitySMASH, width=30, height=8)
 
-CyanosHeatPlot$RastId <- with(CyanosHeatPlot, reorder(CyanosHeatPlot$RastId, CyanosHeatPlot$TOTAL))
-CyanosHeatPlot.m <- melt(CyanosHeatPlot)
-CyanosHeatPlot.m<-subset(CyanosHeatPlot.m,variable!="TOTAL")
-
-
-##no lista la quier en colores  Boxplot expansiones en familias+ facet_grid(TodosHP.m$Kingdom~.,scales="free")
-ggplot(TodosHP.m, aes(x=TodosHP.m$variable, y=TodosHP.m$value,color=TodosHP.m$Kingdom)) +labs(x = "Metabolic Families", y = "Copies on Archaeabacteria Genomes",text = element_text(size=12)) + geom_boxplot()+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")
-
-
-#1 Tener un dataframe de todos de antismash para hacer greficas de diversidad  
-#Todosm1 <- merge(TodosTaxa, TodosSMASH, by.x = "RastId", by.y = "RastId")
-#Archaeasm1.m <- melt(Archaeasm1, id = c("RastId","Name","SuperPhylum","Phylum","Class","Order","Family","Contigs","Size","RastNo"))
-#Archaeasm2.m<-subset(Archaeasm1.m,value>0)
-
-names(CyanosSMASH)
-intersect(names(CyanosSMASH),names(ArchaeasSMASH))
-union( union(names(CyanosSMASH),names(ArchaeasSMASH)),names(ActinosSMASH))
 ## HACEr una funcion con la diversidad de Archaea 
-lista<-list(CyanosSMASH,ArchaeasSMASH,ActinosSMASH)
-TODOS_SMASH<-bind_rows(lista)
-aver<-TODOS_SMASH[TODOS_SMASH$RastId=="389046",]$TOTAL
-aver
+#lista<-list(CyanosSMASH,ArchaeasSMASH,ActinosSMASH)
+#lista<-list(NonZeroCyanos,NonZeroArchaeas,NonZeroActinos)
+#TODOS_SMASH<-bind_rows(lista)
+#aver<-TODOS_SMASH[TODOS_SMASH$RastId=="389046",]$TOTAL
+#aver
 #2 Tener boxplot de expansiones por familia por kingdom LISTOOO
 #3 Escoger una familia para analizar a detalle por genero y poner sus árboles  PriA por ejemplo  
+
+## Good code but not in use  
+#names(CyanosSMASH)
+#intersect(names(CyanosSMASH),names(ArchaeasSMASH))
+#nonzero <- function(x) sum(x != 0)
+#NonZeroCyanos<-numcolwise(nonzero)(CyanosSMASH)
+#NonZeroArchaeas<-numcolwise(nonzero)(ArchaeasSMASH)
+#NonZeroActinos<-numcolwise(nonzero)(ActinosSMASH)
+#union( union(names(CyanosSMASH),names(ArchaeasSMASH)),names(ActinosSMASH))
+#union( union(names(NonZeroCyanos),names(NonZeroArchaeas)),names(NonZeroActinos))
+
+################## Init Figura antiSMASH propuesta por Paco Simil paper EvoMining  
+# Previous                            #     Current      
+#Genomic DB 230 genomas               #     Genomic DB   1245 genomes
+# Central 106 families                #     Central 93 families 
+# 226 BGCs                            #     1296 BGCs with 44552 enzymes
+# Previous results            ######################################
+# 101 expandidas                      #     93 Expansions, O bien 80 si consideramos solo expansiones on at least 1% (12.45) of organisms # Expandidas en coelicolor 33
+# 23 enzimas con reclutamientos       #      82 ?? Recruitments  11 non recruitments 76 according to dataframe. 
+
+## plan para replicar la figura CONSULTAR CON PACO Qué familias   
+## Hacer un script que obtenga los BBH de las central con cada familia expandida 
+## De los que nos son BBH cuales son antiSMASH /Cluster Finder  
+## Cuales son MIBIG  
+## Cuales no son nada.  
+
+## I´m starting with Actinobacteria  
+## 1) Identifying Familis with expansions  
+## ActinosHeatPlot Has the hits    
+ ## Now need a function how many organisms has expansions and in total how many expansions are from the 95 families  
+#compare two vectors if ai > bi then 1 
+ActinosHP <-ActinosHeatPlot
+str(ActinosHP)
+rownames(ActinosHP) <- ActinosHeatPlot[,1]
+  HeatAverage=colMeans(ActinosHP)
+  HeatSD=apply(ActinosHP, 2, sd)
+ExpTresHold<-HeatAverage+HeatSD
+
+### Coelicolor expansions   
+Coelicolor<-ActinosHP["242137",]
+names(Coelicolor)
+Coelicolor<-Coelicolor[!names(Coelicolor) %in% c("TOTAL","RastId")]
+ExpTresHold2<-ExpTresHold[!names(ExpTresHold) %in% c("TOTAL","RastId")]
+CoeliExpansions<-Coelicolor>ExpTresHold2
+CoeliExpansionsTotal<-sum(CoeliExpansions) ## how many expansions
+CoeliExpansionsTotal ## 34
+CoeliExpansionsFamilies<-Coelicolor[CoeliExpansions]## which families are expanded   
+CoeliExpansionsFamilies
+CoeliExpansionsFamilies<-names(Coelicolor)[CoeliExpansions]## which families are expanded   
+CoeliExpansionsFamilies
+########### End coelicolor expansions 
+
+############## starting families exapnsions 
+ExpTresHold$RastId<-"Treshold"
+
+ActinosHP<-rbind (ActinosHP, ExpTresHold)  
+
+FamiliesExpanded <- function(x){ ## is a column
+  ultimo<-tail(x, n=1)
+  subx<-x>ultimo ## vector of organisms with extra copies
+  suma<-sum(subx) ## how many
+return(suma)
+}
+
+ExpandedFamilies=apply(ActinosHP,2, FamiliesExpanded)  
+ExpandedFamilies<-ExpandedFamilies[!names(ExpandedFamilies) %in% c("TOTAL","RastId")]
+str(ExpandedFamilies)
+nonzero <- function(x) sum(x != 0)
+zero <- function(x) sum(x == 0)
+Atleast1Percent<- function(x) sum(x >12.45)  
+
+NonZeroExpandedFamilies<-nonzero(ExpandedFamilies)
+ZeroExpandedFamilies<-zero(ExpandedFamilies)
+Percent1ExpandedFamilies<-Atleast1Percent(ExpandedFamilies)
+ZeroExpandedFamilies
+NonZeroExpandedFamilies
+Percent1ExpandedFamilies
+
+ExpandedFamilies["Phosphoglycerate_dehydrogenase"]
+#qplot(1:length(ExpandedFamilies), ExpandedFamilies, xlab ="Families") + geom_line()
+qplot(names(ExpandedFamilies), ExpandedFamilies, xlab ="Families") + geom_line()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")
+
+### Ahora quien de estas familias tienen reclutamientos   
+## Quiero grafica familia vs #reclutamientos 
+ActinosNpReduced<-subset(ActinosNp,ActinosNp$np!="none")
+cdata <- ddply(ActinosNpReduced, "Central", summarise,Nps  = length(np))
+rownames(cdata) <- cdata[,1]
+names(ExpandedFamilies)
+row.names(cdata)
+
+## Eliminar los 11 nones
+ExpandedAndRecruited<-intersect(names(ExpandedFamilies),row.names(cdata))
+cdata2<-subset(cdata,row.names(cdata) %in% ExpandedAndRecruited)
+ExpandedFamilies2<-ExpandedFamilies[names(ExpandedFamilies) %in% ExpandedAndRecruited]
+cdata2<-cdata2[match(names(ExpandedFamilies2), cdata2$Central),]
+cdata2$Expansions=ExpandedFamilies2  
+cdata2.m<- melt(cdata2,id = c("Central"))
+Solo me falta graficar
+#ggplot2.barplot(data=cdata2.m, xName="Central",
+                groupName="value")
+#cdata
+#summary(ActinosNp)
+## Quito none, interseccion y stack bar
+
+#qplot(x=Central, data=ActinosNp, geom="bar", fill=np, position="stack")+theme_bw()+ theme(legend.position	="none",text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
+
 ```
 
 
@@ -219,10 +333,10 @@ kable(table,  caption = "Coelicolor\\label{tab:Coelicolor MiBig}",caption.short 
      
 
 ```{r ExpNumber,warnings = FALSE, message = FALSE,echo=FALSE}
-# Expansions of enzime sequences from MiBIG from S coelicolor will be explored within the scope of the genomic database Streptomyces. The goal is to recover those enzymes that are not yet been considered as common on secondary metabolism. 
+# Expansions of enzyme sequences from MiBIG from S coelicolor will be explored within the scope of the genomic database Streptomyces. The goal is to recover those enzymes that are not yet been considered as common on secondary metabolism. 
 ## Moda is the most common copy number on an organism, Organisms with an extra copy are the ones that may have this copy recrutied into secondary metabolism
 # This extra copy on at least 4 organismos
-## In addtiion the distribution of the enzyme is deseried present on at least half o the organisms (Not to exclusive)
+## In addtiion the distribution of the enzyme is desired to be present on at least half o the organisms (Not to exclusive)
 ## Too exclusive means only belong to secondary metabolism, we are looking for switches  
 ## looking for an esay number between 0 and one that reflects too expanded, too exclusive
 #  y el exp number,  mas entre .2<= Exp <=.6 y analizar eso árboles.  
@@ -232,7 +346,7 @@ kable(table,  caption = "Coelicolor\\label{tab:Coelicolor MiBig}",caption.short 
 # two copies by organism .5  , that is not usually the case  because there is some variance 
 
 
-#### Functions   
+######### Functions   
 OneOrMode <- function(x){ #max between 0 and one
 a = table(x) # x is a vector
 moda=a[which.max(a)]
@@ -246,7 +360,6 @@ moda=a[which.max(a)]
 inte=as.integer(names(moda))
 return(inte)
 }
-
 
 OrganismsExtraCopy <- function(x){ ##how many organisms has an extra copy than the mode
   a = table(x) # x is a vector  
@@ -271,9 +384,8 @@ return(suma)
 }
 
 ######## Reading and sorting data   
-## Read EvoMining tables
-tableExp <- read.csv("Figuras/ExpansionBlast.data", header=TRUE, sep="\t")  
-
+## Read EvoMining tables (head plots)
+tableExp <- read.csv("Figuras/ExpansionBlast.data", header=TRUE, sep="\t")  ### Expansions from coelicolor
 tableCentral <- read.csv("Figuras/Central.data", header=TRUE, sep="\t")  
 tableDistribution <- read.csv("Figuras/Enzymes.Distribution", header=TRUE, row.names=1,sep="\t")  
 tableCentralDistribution <- read.csv("Figuras/CentralEnymes.Distribution.csv", header=TRUE, row.names=1,sep="\t")  
@@ -416,8 +528,13 @@ Open /closed coelicolor How spread is the cluster
 Took 15 clusters from Streptomyces coelicolor on MiBig Analize its open/close pancluster according to EvoMining backwards  
 O sea 15 corasones, no necesito escoger las query enzyme, al menos 3 por cluster... y que no sean NRPS o PKS
   
-## MEthodology
+## Methodology
+## Acknowledgments
+Secretaria de Inovacion, Keri Ernesto,
+
     [@dufresne_algorithmique_2016,@blin_recent_nodate,@kurtboke_revisiting_2017,@miller_interpreting_2017,@schniete_expanding_2017,@kim_recent_2017,@robertsen_toward_2017,@juarez-vazquez_evolution_nodate,@chavali_bioinformatics_nodate,@tracanna_mining_2017,@ren_breaking_2017,@choudhary_current_2017,@alanjary_antibiotic_2017,@chevrette_sandpuma:_2017,@wohlleben_antibiotic_2016,@weber_secondary_2016]
+    
+    
 
 ```{r bib, child = 'bibliography.Rmd'}
 ```
