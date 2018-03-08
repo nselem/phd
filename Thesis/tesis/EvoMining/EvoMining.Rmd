@@ -172,7 +172,7 @@ TodosEXP_TAXA<-merge(TodosHP,TodosTaxa,by.x="RastId",by.y="RastId")
 
 ## 1) Genome Size vs central expansion by facets 
 GenomeSizeVsCentralExpansion<-qplot(TodosEXP_TAXA$Size, TodosEXP_TAXA$TOTAL, data = TodosEXP_TAXA,colour=TodosEXP_TAXA$Order)+facet_grid(TodosEXP_TAXA$Kingdom~.,scales="free")+theme_bw()+ theme(legend.position	="none",plot.title = element_text(size = 14, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 12),axis.text.y=element_text(size = 7))
-ggsave(file="GenomeSizeVsCentralExpansion.svg", plot=GenomeSizeVsCentralExpansion, width=30, height=8)
+####ggsave(file="GenomeSizeVsCentralExpansion.svg", plot=GenomeSizeVsCentralExpansion, width=30, height=8)
 ## End genome size vs central expansion  
 
 ## 2) Box plot Expansiones familia y point Genome 
@@ -184,7 +184,7 @@ TodosHP.m<-subset(TodosHP.m,variable!="TOTAL")
 #CyanosHeatPlot.m<-subset(CyanosHeatPlot.m,variable!="TOTAL")
 ##   Boxplot expansiones en familias en colores por reinos
 BoxCentralFamilies<-ggplot(TodosHP.m, aes(x=TodosHP.m$variable, y=TodosHP.m$value,color=TodosHP.m$Kingdom)) +labs(x = "Metabolic Families", y = "Copy number on Genomes",text = element_text(size=12)) + geom_boxplot()+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")
-ggsave(file="BoxCentralFamilies.svg", plot=BoxCentralFamilies, width=30, height=8)
+####ggsave(file="BoxCentralFamilies.svg", plot=BoxCentralFamilies, width=30, height=8)
 ############### End of boxplot   
 
 ######## 3) NOT READY Diversity of antiSMASH detection on 3 genomic DBs
@@ -196,7 +196,7 @@ ActinosSMASH.m <- melt(ActinosSMASH,id = c("RastId","Kingdom"))
 ActinosSMASH.m<-ActinosSMASH.m[(ActinosSMASH.m$value!=0)&(ActinosSMASH.m$value!="Actinos")&(ActinosSMASH.m$variable!="TOTAL"),]
 Todos_SMASH<-rbind(ActinosSMASH.m,CyanosSMASH.m,ArchaeasSMASH.m)
 DiversitySMASH<-ggplot2.barplot(data=Todos_SMASH, xName="Kingdom",  groupName="variable",showLegend=FALSE)
-ggsave(file="DiversitySMASH.svg", plot=DiversitySMASH, width=30, height=8)
+####ggsave(file="DiversitySMASH.svg", plot=DiversitySMASH, width=30, height=8)
 
 ## HACEr una funcion con la diversidad de Archaea 
 #lista<-list(CyanosSMASH,ArchaeasSMASH,ActinosSMASH)
@@ -303,9 +303,11 @@ ExpandedFamilies2<-ExpandedFamilies[names(ExpandedFamilies) %in% ExpandedAndRecr
 cdata2<-cdata2[match(names(ExpandedFamilies2), cdata2$Central),]
 cdata2$Expansions=ExpandedFamilies2  
 cdata2.m<- melt(cdata2,id = c("Central"))
-Solo me falta graficar
-#ggplot2.barplot(data=cdata2.m, xName="Central",
-                groupName="value")
+##### Solo me falta graficar
+
+ggplot(cdata2.m, aes(x = cdata2.m$Central, y = cdata2.m$value, fill = cdata2.m$variable))+ geom_bar(stat = "identity")+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")
+
+### ggplot2.barplot(data=cdata2.m, xName="Central",  groupName="value")
 #cdata
 #summary(ActinosNp)
 ## Quito none, interseccion y stack bar
