@@ -48,7 +48,7 @@ Figura 5 Figuras/PanCluster.svg  Semana 3  Poner los clusters de la nueva Famili
 -->
 
 ## EvoMining 2.0: A customizable computational pipeline for evolutionary reconstructions during genome mining  
-Selem-Mojica Nelly, Cruz-Morales Pablo, Martínez-Guerrero Christian , ...,  and Barona-Gómez Francisco   							  
+Selem-Mojica Nelly,  Martínez-Guerrero Christian , ...,  and Barona-Gómez Francisco   							  
   
 ## Abstract  
 <!-- Por qué son importantes los productos naturales  
@@ -120,9 +120,11 @@ Beside the already tested 240 Actinobacteria database, other genomic database ca
 
 On cyanobacteria PriA an enzyme with no previously knwon secondary metabolism on Actinobacteria has been recruited into saxitoxin cluster.   
 
-![GenomicDatabases](Figuras/GenomicDBS.svg)
-2.1 Expansions same central  
-```{r GenomicDatabase,warnings = FALSE, message = FALSE,echo=FALSE}
+![GenomicDatabases](Figuras/GenomicDBS.svg)  
+
+## 2.1 Expansions same central  
+
+```{r GenomicDatabase,warnings = FALSE, message = FALSE,echo=FALSE, results='hide'}
 ######################## Loading data  
 ArchaeasCentral <- read.table("../chapter3/ArchaeasCentral", header=TRUE, sep="\t")
 ArchaeasHeatPlot <- read.table("../chapter3/ArchaeasHeatPlot", header=TRUE, sep="\t")
@@ -200,6 +202,7 @@ ActinosSMASH.m <- melt(ActinosSMASH,id = c("RastId","Kingdom"))
 ActinosSMASH.m<-ActinosSMASH.m[(ActinosSMASH.m$value!=0)&(ActinosSMASH.m$value!="Actinos")&(ActinosSMASH.m$variable!="TOTAL"),]
 Todos_SMASH<-rbind(ActinosSMASH.m,CyanosSMASH.m,ArchaeasSMASH.m)
 DiversitySMASH<-ggplot2.barplot(data=Todos_SMASH, xName="Kingdom",  groupName="variable",showLegend=FALSE)
+
 ####ggsave(file="DiversitySMASH.svg", plot=DiversitySMASH, width=30, height=8)
 
 ## HACEr una funcion con la diversidad de Archaea 
@@ -309,7 +312,7 @@ cdata2$Expansions=ExpandedFamilies2
 cdata2.m<- melt(cdata2,id = c("Central"))
 ##### Solo me falta graficar
 
-ggplot(cdata2.m, aes(x = cdata2.m$Central, y = cdata2.m$value, fill = cdata2.m$variable))+ geom_bar(stat = "identity")+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")
+figure<-ggplot(cdata2.m, aes(x = cdata2.m$Central, y = cdata2.m$value, fill = cdata2.m$variable))+ geom_bar(stat = "identity")+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")
 
 ### ggplot2.barplot(data=cdata2.m, xName="Central",  groupName="value")
 #cdata
@@ -322,23 +325,24 @@ ggplot(cdata2.m, aes(x = cdata2.m$Central, y = cdata2.m$value, fill = cdata2.m$v
 
 
 Expansions other central  
-To acotate the search for enzymes of recent recruitment into natural products
+To limitate the search for enzymes of recent recruitment into natural products
   ![TauD](Figuras/TauDpseudomonas2.svg)  
 
-As we have explored other genomic databases, central database is also customizable, on this case we have use TauD en enzyme from taurine asimilation sistem on enterobacteria, on the genomic database Pseudomonas. Enzymes does not necesary have to be central, in the sense that they belong to the core of its taxonomic group, but at least should have expansions.  
+As we have explored other genomic databases, central database  customization is also implemented, on this case we have use TauD en enzyme from taurine assimilation system on enterobacteria, on the genomic database Pseudomonas. Enzymes does not necessary have to be central, in the sense that they belong to the core of its taxonomic group, but at least should have expansions.  
 
 ### Figure  3.1  Expansions on genomic dinamics  
-3.2(Bakward EvoMining)    
+3.2(Backward Evening)    
 Coelicolor clusters  
 Esto se hará solo sobre Streptomyces de los 1246  
 
-```{r CoelicolorMiBig, results = "asis"}
+HERE TABLE WITH CLUSTERS
+```{r CoelicolorMiBig, warnings = FALSE, message = FALSE,echo=FALSE, results='hide'}
 table <- read.csv("Figuras/CoelicolorMiBIG", row.names = 1,sep="\t")
 kable(table,  caption = "Coelicolor\\label{tab:Coelicolor MiBig}",caption.short = "CoelicolorMiBig ")
 ```
      
 
-```{r ExpNumber,warnings = FALSE, message = FALSE,echo=FALSE}
+```{r ExpNumber,warnings = FALSE, message = FALSE,echo=FALSE, results='hide'}
 # Expansions of enzyme sequences from MiBIG from S coelicolor will be explored within the scope of the genomic database Streptomyces. The goal is to recover those enzymes that are not yet been considered as common on secondary metabolism. 
 ## Moda is the most common copy number on an organism, Organisms with an extra copy are the ones that may have this copy recrutied into secondary metabolism
 # This extra copy on at least 4 organismos
@@ -500,16 +504,16 @@ qplot(x=Central, data=StreptoNp, geom="bar", fill=kingdom, position="stack")+the
 
 qplot(x=Central, data=StreptoNp, geom="bar", fill=taxa, position="stack")+theme_bw()+ theme(legend.position	="bottom",text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
 
-mm<-count(StreptoNp$Central)
-small<-mm[which(mm$freq<50),]
-str(mm)
+#mm<-count(StreptoNp$Central)
+#small<-mm[which(mm$freq<50),]
+#str(mm)
 
-StreptoNpSmall=StreptoNp[StreptoNp$Central %in% small$x,]
-StreptoNp$Central %in% small$x
+#StreptoNpSmall=StreptoNp[StreptoNp$Central %in% small$x,]
+#StreptoNp$Central %in% small$x
 
-qplot(x=Central, data=StreptoNpSmall, geom="bar", fill=kingdom, position="stack")+theme_bw()+ theme(legend.position	="bottom",text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
+#qplot(x=Central, data=StreptoNpSmall, geom="bar", fill=kingdom, position="stack")+theme_bw()+ theme(legend.position	="bottom",text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
 
-qplot(x=Central, data=StreptoNpSmall, geom="bar", fill=taxa, position="stack")+theme_bw()+ theme(legend.position	="bottom",text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
+#qplot(x=Central, data=StreptoNpSmall, geom="bar", fill=taxa, position="stack")+theme_bw()+ theme(legend.position	="bottom",text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
 
 
 #kable(tableExp,  caption = "CoelicolorExpansions\\label{tab:Coelicolor Expansions}",caption.short = "CoelicolorExpansions")
@@ -519,34 +523,29 @@ Presence Absence
 EvoMining was run over enzymes with expansion number between .1 and .6
 Figuras/GenomicDBS.svg
 
-## Methodology
-Figure 1 Pipeline  
-
-EvoMining algorithm and all its dependencies: blast, muscle, Gblocks, Quicktree and newick utilities were packaged on a docker container available at dockerhub, every container has inside EvoMining code which turns EvoMining in a totally open standalone tool, code at github. EvoMining analysis inputs are a genomic database (Genomic-DB), a database of seed family enzymes (Central-DB), and a natural product DB (np-DB), optionally antiSMASH analysis of the genomic DB may be used. Genomes on genomic-DB must be annotated by RAST, sequences of the central-DB and on np-DB must be on fasta format. MiBIG repository was used as default np-DB. Once databases are set, the first EvoMining step is to retrieve from the genomic-DB all sequences corresponding to the expanded families of the central-DB, to this end a blastp search (Default:e-value 0.001, score 100) with query seed enzymes from the central-DB against the genome-DB is conducted. Next, Best bidirectional hits between the expanded families from the previous step and enzymes
-
+<!--!
+## old 
   starts with a blast search with query the CentralDB against the genomic DB,  comprises a docker  
-s
+by 25 private Actinobacteria genomes and 1221 public Actinobacterial genomes with at least 3 genes by contig on average available at NCBI on 2016
+this requirement provides functional annotation when looking for the genomic context of a particular enzyme.--->
+## Methodology
+<!--- Pipeline --->
+EvoMining algorithm and all its dependencies: blast, muscle, Gblocks, Quicktree and newick utilities were packaged on a docker container available at dockerhub. Every EvoMining container has the code inside which turns EvoMining in a totally open standalone genome mining tool, Dockerfile and code are available at github. EvoMining inputs are a genomic database (genomic-DB), a seed family enzymes database from central or shell metabolism (central-DB), and a set of sequences experimentally tested to be part of natural products biosynthetical gene clusters (np-DB), optionally a database containing antiSMASH analysis of the genomic DB may be integrated to the pipeline. To standardize protein annotation and take advantage of functional annotation genomes on genomic-DB were processed by the Rapid Annotation using Subsystem Technology (RAST) platform. Sequences of the central-DB and np-DB must be on fasta format. MIBiG repository was used and is included on EvoMining docker image as default np-DB, metadata such as producer organism and kind of compound are also integrated to the np-DB. 
 
-this requirement provides functional annotation when looking for the genomic context of a particular enzyme.
+Once databases are set analysis of expansions-recruitment of enzyme families from central-DB within the context of the genomic and natural product databases is performed by EvoMining. The first step, initialized by the user trough the web interface, is to retrieve from the genomic-DB all those sequences that belong to the expanded families enzymes of the central-DB. To this end a blastp search (default:e-value 0.001, score 100) using as queries seed enzymes from the central-DB is run against the genome-DB. Next it is established which sequences are the most conserved respect to the central-DB, to this end best bidirectional hits between the expanded families and central-DB are identified and stored in a temporal database (conserved-db). Next a heat plot is displayed pinpointing by family which organisms posses an expansion on its copy number, on this work an expansion is understood as an organisms that posses a number of sequences on certain family above the average plus an standard deviation. To identify expanded enzyme families that may also have been recruited into secondary metabolism, i.e. which enzyme families has some members into the natural product database, a new blastp search (e-value 0.001) is run onto the np-DB using as queries all sequences on expanded families.
 
-Figure 2 Databases 
-Three genomic database were integrated by 1245 Actinobacteria, 416 Cyanobacteria, 876 Archaea. Genomes were annotated by RAST.     
-Central database were conformed by organisms X! X2 X3 on Actinobacteria Y1 Y2 Y· Cyanonbacteria, Z1 Z2 Z3 on Archaea 
-Enzymes that are shared between this three taxonomical groups expansions were calculated, blast 0.0001, score 100 lenght bla bla
-AntiSMASH version bla antiSMASH files, recruitment were run. 
-r scripts at
-Some trees were runned PriA 
+At this point families that exhibits expansions and recruitments may be selected by the user to posterior phylogenetical analysis. Selected expanded-recruited enzyme families are then aligned with muscle, automatically curated by Gblocks, and phylogenetically reconstructed by Quicktree. Once the tree is available EvoMining gives evolutionary insights by coloring the expanded family differentiating its history as follows: in red enzyme sequences stored on the conserved-DB, in blue sequences from np-db, on cyan antiSMASH known hits if antiSMASH-DB was provided, and in green EvoMining predictions. An EvoMining prediction are all those enzymes divergent enough from central metabolism that were not red marked and similar enough to secondary metabolism that are closer to a np-DB sequence (blue) than to a conserved-db sequence (red). All enzymes not marked on red or cyan close to a blue enzyme and that are not on sister leaves with a red enzyme are green colored. This algorithm leaves black leaves on many cases.
 
-Central database expanded to only central enzymas to shell metabolism, TauD was selected as an example, against XX Pseudomonas, it has a recruited 
-Pseudomonas,
-Figure 3 TauD  
-TauD pseudomonas  
-How where nps predicted  
-All data base are available at Zenodo (Doi numbers genomic-DB: STREPTOMYCES,  Actinobacteria, Cyanobacteria, Pseudomonas, Archaea, central-DB:  Actinobacteria, Cyanobacteria, Pseudomonas, Archaea, lividans/coelicolor BGC ) 
+<!--- databases --->
+To study the nature of expansions on other taxonomic groups beside Actinobacteria, three genomic databases were integrated by 1245 Actinobacteria, 416 Cyanobacteria, 876 Archaea, all genomes were annotated by RAST and mined by AntiSMASH stand alone docker parameters XXXXX. For this work Actinobacteria central-DB is composed by 295 Actinobacteria sequences of central enzymes organized in ninety-three families involved in nine pathways, including amino acid biosynthesis, glycolysis, pentose phosphate pathway, and tricarboxylic acids cycle. Seed sequences were taken mainly from 1) *Streptomyces coelicolor A3*, 2) *Mycobacterium tuberculosis H37Rv* and 3) *Corynebacterium glutamicum*. To integrate Cyanobacteria central-DB best bidirectional hits of Actinobacteria central-DB were selected among three organisms distributed on Cyanobacteria phylum 1)* Cyanothece sp. ATCC 51142*, 2) *Synechococcus sp. PCC 7002 CP000951.1*, 3) *Synechocystis sp. PCC 6803 AP012205.1*. Same procedure was taken to assemble Archaea central-DB, selecting organisms from diverse sections of Archaea kingdom, on this case 1) *Natronomonas pharaonis*, 2) *Methanosarcina acetivorans*, 3) *Sulfolobus solfataricus* and 4) *Nanoarchaeum equitans Kin4-M*. Expansions of enzyme families shared between this three taxonomic groups were calculated with EvoMining default parameters. Graphics for the data analysis on this work were generated by r, to guarantee reproducibilty a rmarkdown document is available at: github/nselem/phd. Finally, EvoMining evolutionary analysis was conducted on PriA enzyme family on the three genomic database with default EvoMining parameters.  
 
-Figure 4  Central vs Natural
-Enzyme sequences from S. coelicolor and S. lividans byosynthetic gene clusters were retrieved from MiBiG to test how will behave as seeds from backward EvoMining  
+To amplify the concept of central-DB to shell-DB allowing to explore expansions beyond just enzymes belonging to the core genome of a taxonomic group a shell enzyme was explored. TauD, an enzyme that belongs to the shell genome on Pseudomonas was selected as seed of central-DB. Pseudomonas genome-DB  was integrated as follows (KARINA como integraste la base de Pseudomonas, how where nps predicted). Genomes on genome-DB were RAST annotated and on this case no antiSMASH mining was conducted. EvoMining expansion-recruitment and phylogenetical analysis with default parameters was conducted for TauD enzyme family.  
+
+Backward Enzyme sequences from S. coelicolor and S. lividans biosynthetic gene clusters were retrieved from MiBiG to test how will behave as seeds from backward EvoMining  
 Average copy number  
+<!--### Backward EvoMining Central vs Natural-->
+All databases are downloadable at Zenodo (Doi numbers genomic-DB: STREPTOMYCES,  Actinobacteria, Cyanobacteria, Pseudomonas, Archaea, central-DB:  Actinobacteria, Cyanobacteria, Pseudomonas, Archaea, lividans/coelicolor BGC ) 
+
 
 ## Acknowledgments
 Secretaria de Inovacion, Conabio:Keri/Ernesto, Argonne cluster
