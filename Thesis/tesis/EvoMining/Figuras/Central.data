@@ -35,7 +35,7 @@ Enzyme_33	OXALACETATE_AMINOACIDS	cystathione_beta_lyase	33	Central
 Enzyme_34	OXALACETATE_AMINOACIDS	Methionine_synthase	34	Central
 Enzyme_35	OXALACETATE_AMINOACIDS	argininosuccinate_lyase	35	Central
 Enzyme_36	PPP	Glucose_6_phosphate_dehydrogenase	36	Central
-Enzyme_37	PPP	6_phosphogluconolactonase	37	Central
+Enzyme_37	PPP	X6_phosphogluconolactonase	37	Central
 Enzyme_38	PPP	phosphogluconate_dehydrogenase	38	Central
 Enzyme_39	PPP	Ribulose_phosphate_3_epimerase	39	Central
 Enzyme_40	PPP	Ribose_5_phosphate_isomerase	40	Central
@@ -62,12 +62,12 @@ Enzyme_60	TCA	Succinate_dehydrogenase_flavoprotein	60	Central
 Enzyme_61	TCA	fumarate_reductase_ironsulfur_subunit	61	Central
 Enzyme_62	TCA	fumarate_hydratase	62	Central
 Enzyme_63	TCA	malate_dehydrogenase	63	Central
-Enzyme_64	E4P_AMINOACIDS	2_dehydro_3_deoxyphosphoheptonate_aldolase	64	Central
-Enzyme_65	E4P_AMINOACIDS	3_dehydroquinate_synthase	65	Central
-Enzyme_66	E4P_AMINOACIDS	3_dehydroquinate_dehydratase	66	Central
+Enzyme_64	E4P_AMINOACIDS	X2_dehydro_3_deoxyphosphoheptonate_aldolase	64	Central
+Enzyme_65	E4P_AMINOACIDS	X3_dehydroquinate_synthase	65	Central
+Enzyme_66	E4P_AMINOACIDS	X3_dehydroquinate_dehydratase	66	Central
 Enzyme_67	E4P_AMINOACIDS	Shikimate_dehydrogenase	67	Central
 Enzyme_68	E4P_AMINOACIDS	Shikimate_kinase	68	Central
-Enzyme_69	E4P_AMINOACIDS	3_phosphoshikimate_1carboxyvinyltransferase	69	Central
+Enzyme_69	E4P_AMINOACIDS	X3_phosphoshikimate_1carboxyvinyltransferase	69	Central
 Enzyme_70	E4P_AMINOACIDS	Chorismate_synthase	70	Central
 Enzyme_71	E4P_AMINOACIDS	Anthranilate_synthase_component_1	71	Central
 Enzyme_72	E4P_AMINOACIDS	Anthranilate_phosphoribosyltransferase	72	Central
@@ -91,4 +91,4 @@ Enzyme_89	PYR_THR_AA	Branchedchain_amino_acid_transaminase	89	Central
 Enzyme_90	PYR_THR_AA	Isopropyl_malate_synthase	90	Central
 Enzyme_91	PYR_THR_AA	isopropylmalate_isomerase_large_subunit	91	Central
 Enzyme_92	PYR_THR_AA	isopropylmalate_isomerase_small_subunit	92	Central
-Enzyme_93	PYR_THR_AA	3isopropylmalate_dehydrogenase_1	93	Central
+Enzyme_93	PYR_THR_AA	X3isopropylmalate_dehydrogenase_1	93	Central

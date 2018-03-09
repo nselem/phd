@@ -36,7 +36,7 @@ cystathione_beta_lyase	0	OXALACETATE_AMINOACIDS	17
 Methionine_synthase	4	OXALACETATE_AMINOACIDS	18
 argininosuccinate_lyase	3	OXALACETATE_AMINOACIDS	19
 Glucose_6_phosphate_dehydrogenase	3	PPP	1
-6_phosphogluconolactonase	3	PPP	2
+X6_phosphogluconolactonase	3	PPP	2
 phosphogluconate_dehydrogenase	3	PPP	3
 Ribulose_phosphate_3_epimerase	3	PPP	4
 Ribose_5_phosphate_isomerase	1	PPP	5
@@ -64,12 +64,12 @@ Succinate_dehydrogenase_flavoprotein	3	TCA	10
 fumarate_reductase_ironsulfur_subunit	4	TCA	11
 fumarate_hydratase	3	TCA	12
 malate_dehydrogenase	3	TCA	13
-2_dehydro_3_deoxyphosphoheptonate_aldolase	0	E4P_AMINO_ACIDS	1
-3_dehydroquinate_synthase	3	E4P_AMINO_ACIDS	2
-3_dehydroquinate_dehydratase	3	E4P_AMINO_ACIDS	3
+X2_dehydro_3_deoxyphosphoheptonate_aldolase	0	E4P_AMINO_ACIDS	1
+X3_dehydroquinate_synthase	3	E4P_AMINO_ACIDS	2
+X3_dehydroquinate_dehydratase	3	E4P_AMINO_ACIDS	3
 Shikimate_dehydrogenase	3	E4P_AMINO_ACIDS	4
 Shikimate_kinase	4	E4P_AMINO_ACIDS	5
-3_phosphoshikimatecarboxyvinyltransferase	3	E4P_AMINO_ACIDS	6
+X3_phosphoshikimatecarboxyvinyltransferase	3	E4P_AMINO_ACIDS	6
 Chorismate_synthase	3	E4P_AMINO_ACIDS	7
 Anthranilate_synthase_component	3	E4P_AMINO_ACIDS	8
 Anthranilate_phosphoribosyltransferase	3	E4P_AMINO_ACIDS	9
@@ -93,4 +93,4 @@ Branchedchain_amino_acid_transaminase	4	PYR_THR_AA	6
 Isopropyl_malate_synthase	3	PYR_THR_AA	7
 isopropylmalate_isomerase_large_subunit	3	PYR_THR_AA	8
 isopropylmalate_isomerase_small_subunit	1	PYR_THR_AA	9
-3isopropylmalate_dehydrogenase	3	PYR_THR_AA	10
+X3isopropylmalate_dehydrogenase	3	PYR_THR_AA	10
