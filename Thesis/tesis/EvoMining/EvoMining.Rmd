@@ -97,7 +97,8 @@ As output EvoMining identifies on the genomic-DB those expanded families from th
 EvoMining code and components (blast, muscle, FastTree, newick utilities, Gblocks,apache and SVG perl module) are wrapped on the docker container  nselem/newevomining downloadable at the Docker hub. Code is available at at github: nselem/EvoMining and manual at https://github.com/nselem/EvoMining/wiki. EvoMining tool will allow researchers to examine their own genomes and their own enzyme families in the search of expansions involved on nobel secondary metabolism.  
 
 EvoMining will identify those expanded families of the central-DB within the genomic-DB that has at least a recruited member onto the natural-DB, proceeding then to the reconstruction of the evolutionary history of the enzyme family. Given an enzyme from the central-DB, the product of EvoMining analysis is an interactive color coded tree of the enzyme expanded family where best bidirectional hits (BBH) of central-DB are differentiated from Natural Products members and those expansions close to a Natural Product sequence that are not BBH with central-DB enzymes are emphasised as putative nobel recruitments into secondary metabolism.   
-
+EvoMining algorithm was used before with XXX bacteria XX central, nvertheless  
+Genomic DB 
 ### Figure 2  Expansions on some databases   
 El reclutamiento de una enzima en una ruta de metabolismo secundario 
 The expansioness of a family depends on the clade.  
@@ -153,8 +154,11 @@ CyanosTaxa$SuperPhylum<-"Cyanobacteria"
 #################################################################
 ## Joining data frames heat plot and taxa
 TodosTaxa<-rbind(ArchaeasTaxa,CyanosTaxa,ActinosTaxa)
-#names(ArchaeasHeatPlot)
 
+#names(ArchaeasHeatPlot)
+intersect(names(CyanosHeatPlot),names(ActinosHeatPlot))
+
+intersect(intersect(names(CyanosHeatPlot),names(ActinosHeatPlot)),names(ArchaeasHeatPlot))
 ArHP<-ArchaeasHeatPlot[,intersect(intersect(names(CyanosHeatPlot),names(ActinosHeatPlot)),names(ArchaeasHeatPlot))]
 CyHP<-CyanosHeatPlot[,intersect(intersect(names(CyanosHeatPlot),names(ActinosHeatPlot)),names(ArchaeasHeatPlot))]
 AcHP<-ActinosHeatPlot[,intersect(intersect(names(CyanosHeatPlot),names(ActinosHeatPlot)),names(ArchaeasHeatPlot))]
@@ -387,10 +391,10 @@ return(suma)
 
 ######## Reading and sorting data   
 ## Read EvoMining tables (head plots)
-tableExp <- read.csv("Figuras/ExpansionBlast.data", header=TRUE, sep="\t")  ### Expansions from coelicolor
-tableCentral <- read.csv("Figuras/Central.data", header=TRUE, sep="\t")  
-tableDistribution <- read.csv("Figuras/Enzymes.Distribution", header=TRUE, row.names=1,sep="\t")  
-tableCentralDistribution <- read.csv("Figuras/CentralEnymes.Distribution.csv", header=TRUE, row.names=1,sep="\t")  
+tableExp <- read.csv("Figuras/ExpansionBlast.data", header=TRUE, sep="\t")  ### Enzyme BGC Function from MiBIG coelicolor
+tableCentral <- read.csv("Figuras/Central.data", header=TRUE, sep="\t")  ### Enzyme Subsystem Function from  
+tableDistribution <- read.csv("Figuras/Enzymes.Distribution", header=TRUE, row.names=1,sep="\t")  ### Expansions from coelicolor (Heat plot score 0)
+tableCentralDistribution <- read.csv("Figuras/CentralEnymes.Distribution.csv", header=TRUE, row.names=1,sep="\t") #Expansions from 93 enzimas central metabolism   
 
 #necesito poner el valor de names de moda en el renglon con el mismo valor en enzima
 #number of organisms greater than mode  at least tenpercent of the genome
@@ -514,25 +518,38 @@ qplot(x=Central, data=StreptoNpSmall, geom="bar", fill=taxa, position="stack")+t
 Presence Absence
 EvoMining was run over enzymes with expansion number between .1 and .6
 Figuras/GenomicDBS.svg
-### Figure 4  Pan cluster Idea on closed Streptomyces  
 
-![Cluster visualization](Figuras/PanCluster.svg)
-
-Open /closed coelicolor How spread is the cluster
-  How to describe the cluster  
-  Conservation  
-  Enzymes that appear x% 
-  
-  Variability   How variable is the region  
-  derivative of rarefaction curve   
-  
-  
-Took 15 clusters from Streptomyces coelicolor on MiBig Analize its open/close pancluster according to EvoMining backwards  
-O sea 15 corasones, no necesito escoger las query enzyme, al menos 3 por cluster... y que no sean NRPS o PKS
-  
 ## Methodology
+Figure 1 Pipeline  
+
+EvoMining algorithm and all its dependencies: blast, muscle, Gblocks, Quicktree and newick utilities were packaged on a docker container available at dockerhub, every container has inside EvoMining code which turns EvoMining in a totally open standalone tool, code at github. EvoMining analysis inputs are a genomic database (Genomic-DB), a database of seed family enzymes (Central-DB), and a natural product DB (np-DB), optionally antiSMASH analysis of the genomic DB may be used. Genomes on genomic-DB must be annotated by RAST, sequences of the central-DB and on np-DB must be on fasta format. MiBIG repository was used as default np-DB. Once databases are set, the first EvoMining step is to retrieve from the genomic-DB all sequences corresponding to the expanded families of the central-DB, to this end a blastp search (Default:e-value 0.001, score 100) with query seed enzymes from the central-DB against the genome-DB is conducted. Next, Best bidirectional hits between the expanded families from the previous step and enzymes
+
+  starts with a blast search with query the CentralDB against the genomic DB,  comprises a docker  
+s
+
+this requirement provides functional annotation when looking for the genomic context of a particular enzyme.
+
+Figure 2 Databases 
+Three genomic database were integrated by 1245 Actinobacteria, 416 Cyanobacteria, 876 Archaea. Genomes were annotated by RAST.     
+Central database were conformed by organisms X! X2 X3 on Actinobacteria Y1 Y2 Y· Cyanonbacteria, Z1 Z2 Z3 on Archaea 
+Enzymes that are shared between this three taxonomical groups expansions were calculated, blast 0.0001, score 100 lenght bla bla
+AntiSMASH version bla antiSMASH files, recruitment were run. 
+r scripts at
+Some trees were runned PriA 
+
+Central database expanded to only central enzymas to shell metabolism, TauD was selected as an example, against XX Pseudomonas, it has a recruited 
+Pseudomonas,
+Figure 3 TauD  
+TauD pseudomonas  
+How where nps predicted  
+All data base are available at Zenodo (Doi numbers genomic-DB: STREPTOMYCES,  Actinobacteria, Cyanobacteria, Pseudomonas, Archaea, central-DB:  Actinobacteria, Cyanobacteria, Pseudomonas, Archaea, lividans/coelicolor BGC ) 
+
+Figure 4  Central vs Natural
+Enzyme sequences from S. coelicolor and S. lividans byosynthetic gene clusters were retrieved from MiBiG to test how will behave as seeds from backward EvoMining  
+Average copy number  
+
 ## Acknowledgments
-Secretaria de Inovacion, Keri Ernesto,
+Secretaria de Inovacion, Conabio:Keri/Ernesto, Argonne cluster
 
     [@dufresne_algorithmique_2016,@blin_recent_nodate,@kurtboke_revisiting_2017,@miller_interpreting_2017,@schniete_expanding_2017,@kim_recent_2017,@robertsen_toward_2017,@juarez-vazquez_evolution_nodate,@chavali_bioinformatics_nodate,@tracanna_mining_2017,@ren_breaking_2017,@choudhary_current_2017,@alanjary_antibiotic_2017,@chevrette_sandpuma:_2017,@wohlleben_antibiotic_2016,@weber_secondary_2016]
     
