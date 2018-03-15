@@ -107,6 +107,8 @@ Your repository is kept up-to-date with code changes automatically.
 
 - `ggplot2` Documentation - <http://docs.ggplot2.org/current/>
 
+Docker antiSMASH  run_antismash /<some>.gbk ~/as_results --knownclusterblast --inclusive --cf_threshold 0.7  
+
 # The third Appendix, Other contributions during my phd  
 ## Accepted  
 -Evomining identifies Arsenolipids biosynthetic cluster  

@@ -1,6 +1,8 @@
 use strict;
+### This file uses vuelta.bbh  
+## Returns 
 
-my $file=$ARGV[0];
+my $file=$ARGV[0]; ##vuelta<name>.bbh
 
 open (FILE,$file) or die;
 my %HASH;

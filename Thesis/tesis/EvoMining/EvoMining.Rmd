@@ -556,4 +556,24 @@ Secretaria de Inovacion, Conabio:Keri/Ernesto, Argonne cluster
 
 ```{r bib, child = 'bibliography.Rmd'}
 ```
+  <!--
+  1) Every BBH:
+  perl GetBBH.pl vueltaArcheas.blast.bbh 
+  output *.bbh
   
+  2) Family Number From evoMiningHeatmap
+  Crear archivo vi Central.numbers
+      1	Phosphoglycerate_dehydrogenase
+      2	Phosphoserine_aminotransferase
+      .
+      .
+      .
+      
+  3) All sequences on tree
+  ls *concat.fasta |sort -g|while read line; do num=$(grep '>' $line|sort|uniq|wc); echo $line $num; done|cut -d' ' -f1,2  
+  
+  4) BBH on tree (first red colored)
+  perl GetBBHonTree.pl Central.numbers 
+  output *.bbh.tree
+
+  -->
