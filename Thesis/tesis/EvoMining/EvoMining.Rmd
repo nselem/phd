@@ -571,9 +571,15 @@ Secretaria de Inovacion, Conabio:Keri/Ernesto, Argonne cluster
       
   3) All sequences on tree
   ls *concat.fasta |sort -g|while read line; do num=$(grep '>' $line|sort|uniq|wc); echo $line $num; done|cut -d' ' -f1,2  
+  concat contains cyan, black and red leaves but not the oranges
   
   4) BBH on tree (first red colored)
   perl GetBBHonTree.pl Central.numbers 
   output *.bbh.tree
-
+  6) Blue MiBig
+  ls *Uniq|sort -g |while read line; do num=$(wc $line); echo $line $num; done
+   Non existent files are 0 hits
+   
+   7) Orange leaves (Central seeds/queries)
+   
   -->
