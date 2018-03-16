@@ -10,6 +10,7 @@ my $fileSMASH=$ARGV[1]; ##Central.numbers
 
 open (FILE,$fileCENTRAL) or die;
 
+getSMASH();
 my $fasta;
 
 foreach my $line (<FILE>){
@@ -19,6 +20,7 @@ foreach my $line (<FILE>){
 	getSMASHonTree($fasta,$fileSMASH);
 		}
 
+sub getSMASH7
 sub getSMASHonTree{
 	my $fileFasta=shift;
 	my $fileSMASH=shift;
