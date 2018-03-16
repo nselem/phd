@@ -557,11 +557,11 @@ Secretaria de Inovacion, Conabio:Keri/Ernesto, Argonne cluster
 ```{r bib, child = 'bibliography.Rmd'}
 ```
   <!--
-  1) Every BBH:
-  perl GetBBH.pl vueltaArcheas.blast.bbh 
+  1) Every BBH: (BBH Totales) Directly from blast not all of this sequences will go to EvoMining heat plot due to EvoMining restriction
+  perl GetBBH.pl vueltaArcheas.blast.bbh |sort
   output *.bbh
   
-  2) Family Number From evoMiningHeatmap
+  2) Family Number From evoMiningHeatmap  ##Fallo, pendiente HAcerlo con los.central
   Crear archivo vi Central.numbers
       1	Phosphoglycerate_dehydrogenase
       2	Phosphoserine_aminotransferase
@@ -569,17 +569,33 @@ Secretaria de Inovacion, Conabio:Keri/Ernesto, Argonne cluster
       .
       .
       
-  3) All sequences on tree
-  ls *concat.fasta |sort -g|while read line; do num=$(grep '>' $line|sort|uniq|wc); echo $line $num; done|cut -d' ' -f1,2  
-  concat contains cyan, black and red leaves but not the oranges
+  3) All sequences on tree but oranges (TOTALTree)  
+  ls *concat.fasta |sort -g|while read line; do num=$(grep '>' $line|sort|uniq|wc); echo $line $num; done|cut -d' ' -f1,2   
+  concat contains cyan, black and red leaves but not the oranges  
   
-  4) BBH on tree (first red colored)
-  perl GetBBHonTree.pl Central.numbers 
-  output *.bbh.tree
-  6) Blue MiBig
-  ls *Uniq|sort -g |while read line; do num=$(wc $line); echo $line $num; done
+  4) candidates to BBH on tree first red colored  (FirstRED)
+  perl GetBBHonTree.pl Central.numbers  
+  output .bbh.tree  
+  
+  5) AntiSMASH on sequences on tree  CYAN
+   Ids antiSMASH file  cut -f2 Archeas_Smash |sort >Archeas_Smash_F1  
+   Ids list ls *concat.fasta|sort -g |while read line; do grep '>' $line|cut -d'|' -f2 |sort >$line.ids; done  
+   ls *ids |sort -g |while read line; do comm -12 Archeas_Smash_F1 $line>$line.smash; done  
+   output .smash
+   ls *smash|sort -g |while read line; do wc $line; done
+   
+   
+  6) AntiSMASH on BBH on tree (AntiSMASHonTree) CYAN_OVER_RED
+    perl GetBBHonTreeAndonSmash.pl Central.numbers  
+    Output .bbh_smash
+
+  7) Blue MiBig BLUE
+   ls *Uniq|sort -g |while read line; do num=$(wc $line); echo $line $num; done
    Non existent files are 0 hits
    
-   7) Orange leaves (Central seeds/queries)
-   
-  -->
+  8) Orange leaves (Central seeds/queries) ORANGE
+     ls *central |sort -g | while read line; do num=$(grep '>' $line |sort|uniq |wc); echo $line $num; done  
+     RED=FirstRED-CYAN_OVER_RED  
+     BLACK=TOTALTree-RED-CYAN-BLUE  
+       
+  -->   
