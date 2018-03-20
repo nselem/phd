@@ -560,14 +560,11 @@ Secretaria de Inovacion, Conabio:Keri/Ernesto, Argonne cluster
   1) Every BBH: (BBH Totales) Directly from blast not all of this sequences will go to EvoMining heat plot due to EvoMining restriction
   perl GetBBH.pl vueltaArcheas.blast.bbh |sort
   output *.bbh
+  on excell sort families alphabetically 
   
-  2) Family Number From evoMiningHeatmap  ##Fallo, pendiente HAcerlo con los.central
+  2) Family Number From evoMiningHeatmap  ##Fallo, cyanos heatplot revisar correctos
   Crear archivo vi Central.numbers
-      1	Phosphoglycerate_dehydrogenase
-      2	Phosphoserine_aminotransferase
-      .
-      .
-      .
+  ls *central|sort -g |while read line; do fam=$(head -n1 $line|cut -d'|' -f3|rev  | cut -d'_' -f2- | rev);num=$(echo $line|cut -d'.' -f1);echo -e $num'\t'$fam; done>Central.numbers
       
   3) All sequences on tree but oranges (TOTALTree)  
   ls *concat.fasta |sort -g|while read line; do num=$(grep '>' $line|sort|uniq|wc); echo $line $num; done|cut -d' ' -f1,2   
@@ -577,7 +574,7 @@ Secretaria de Inovacion, Conabio:Keri/Ernesto, Argonne cluster
   perl GetBBHonTree.pl Central.numbers  
   output .bbh.tree  
   
-  5) AntiSMASH on sequences on tree  CYAN
+  5) AntiSMASH on sequences on tree  CYAN  
    Ids antiSMASH file  cut -f2 Archeas_Smash |sort >Archeas_Smash_F1  
    Ids list ls *concat.fasta|sort -g |while read line; do grep '>' $line|cut -d'|' -f2 |sort >$line.ids; done  
    ls *ids |sort -g |while read line; do comm -12 Archeas_Smash_F1 $line>$line.smash; done  
