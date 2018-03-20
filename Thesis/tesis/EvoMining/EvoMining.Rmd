@@ -115,6 +115,51 @@ Archaea resembled Bacteria in that Archaea uses horizontal gene transfer as a ge
 Enzyme families from central pathways expansions, open pangenome and operon organization made EvoMining succesful on Actinobacteria, this lead us to think that evoMining is suitable to analize Archaeal genomes, even more since EvoMining is a method oriented to use evolution and its not entirelyy based on previous knowledge of BGC's sequences if evolutionary logic behave on Archaea as on bacteria, new BGC's classes may be found on Archaea.
   
 EvoMining is a trade off between conserved known central metabolic function and enough expansions divergence on sequence and on clusters to divergence 
+```{r Figure_Pablo2}
+CyanosColors <- read.table("CYANOS/Cyanos.Central.Colors", header=TRUE, sep="\t")
+CyanosColors$Kingdom<-"Cyanos"
+CyanosColors$Red_Final<-CyanosColors$FirstRED-CyanosColors$CYAN_OVER_RED
+CyanosColors$Cyan_Cyan<-CyanosColors$CYAN -CyanosColors$CYAN_OVER_RED
+CyanosColors$Black<-CyanosColors$TOTALTree-(CyanosColors$CYAN+CyanosColors$Red_Final+CyanosColors$Azul_NP)  
+
+ArchaeasColors <- read.table("ARCHAEAS/Archeas.Central.Colors", header=TRUE, sep="\t")
+ArchaeasColors$Kingdom<-"Archaea"
+ArchaeasColors$Red_Final<-ArchaeasColors$FirstRED-ArchaeasColors$CYAN_OVER_RED
+ArchaeasColors$Cyan_Cyan<-ArchaeasColors$CYAN -ArchaeasColors$CYAN_OVER_RED
+ArchaeasColors$Black<-ArchaeasColors$TOTALTree-(ArchaeasColors$CYAN+ArchaeasColors$Red_Final+ArchaeasColors$Azul_NP)  
+
+rownames(ArchaeasColors) <- ArchaeasColors[,2]
+rownames(CyanosColors) <- CyanosColors[,2]
+
+Cyanos.Colors.Reduced<-CyanosColors[intersect(row.names(ArchaeasColors),row.names(CyanosColors)),]
+Archaeas.Colors.Reduced<-ArchaeasColors[intersect(row.names(ArchaeasColors),row.names(CyanosColors)),]  
+
+str(Archaeas.Colors.Reduced)  
+str(Cyanos.Colors.Reduced)  
+Todos.Colors<-rbind(Archaeas.Colors.Reduced,Cyanos.Colors.Reduced)   
+
+#Todos.Colors$Red_Final<-Todos.Colors$FirstRED-Todos.Colors$CYAN_OVER_RED
+#Todos.Colors$Cyan_Cyan<-Todos.Colors$CYAN -Todos.Colors$CYAN_OVER_RED
+#Todos.Colors$Black<-Todos.Colors$TOTALTree-(Todos.Colors$CYAN+Todos.Colors$Red_Final+Todos.Colors$Azul_NP)  
+
+Colors=Todos.Colors[names(Todos.Colors) %in% c("Red_Final","CYAN_OVER_RED","Cyan_Cyan","Black","Azul_NP","ORANGE","Kingdom")]
+
+Cyanos.Colors.Reduced=Cyanos.Colors.Reduced[names(Cyanos.Colors.Reduced) %in% c("Family","Red_Final","CYAN_OVER_RED","Cyan_Cyan","Black","Azul_NP","ORANGE","Kingdom")]
+Cyanos.Colors.Reduced<-Cyanos.Colors.Reduced[c(1,6,3,4,5,7,2,8)]
+Cyanos.Colors.Reduced.m<- melt(Cyanos.Colors.Reduced,id = c("Family","Kingdom"))
+
+ggplot(Cyanos.Colors.Reduced.m, aes(x = Cyanos.Colors.Reduced.m$Family, y = Cyanos.Colors.Reduced.m$value,  fill = Cyanos.Colors.Reduced.m$variable)) +geom_bar(stat = "identity")+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")+
+    scale_fill_manual(values=c( "#A901DB","#0000FF", "#FAAC58","#FF0000", "#58FAF4","#000000", "#E69F00"))
+
+
+Colors.m<- melt(Todos.Colors,id = c("Family","Kingdom"))
+
+##### Solo me falta graficar  
+ggplot(Colors.m, aes(x = Colors.m$Family, y = Colors.m$value,  fill = Colors.m$variable)) +geom_bar(stat = "identity")+facet_grid(~Colors.m$Kingdom)+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")+
+    scale_fill_manual(values=c( "#A901DB","#0000FF", "#FAAC58","#FF0000", "#58FAF4","#000000", "#E69F00"))
+
+
+```
 
 Beside the already tested 240 Actinobacteria database, other genomic database can be explored. On this case we tested exapnsions on Archaea Cyanobacteria, and Actinobacteria based on central metabolism from actinobacteria  
 
@@ -189,7 +234,7 @@ TodosHP.m<-subset(TodosHP.m,variable!="TOTAL")
 #CyanosHeatPlot.m <- melt(CyanosHeatPlot)
 #CyanosHeatPlot.m<-subset(CyanosHeatPlot.m,variable!="TOTAL")
 ##   Boxplot expansiones en familias en colores por reinos
-BoxCentralFamilies<-ggplot(TodosHP.m, aes(x=TodosHP.m$variable, y=TodosHP.m$value,color=TodosHP.m$Kingdom)) +labs(x = "Metabolic Families", y = "Copy number on Genomes",text = element_text(size=12)) + geom_boxplot()+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")
+BoxCentralFamilies<-ggplot(TodosHP.m, aes(x=TodosHP.m$variable, y=TodosHP.m$value,color=TodosHP.m$Kingdom)) +labs(x = "Metabolic Families", y = "Copy number on Genomes",text = element_text(size=12)) + geom_boxplot()+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")  
 ####ggsave(file="BoxCentralFamilies.svg", plot=BoxCentralFamilies, width=30, height=8)
 ############### End of boxplot   
 
@@ -310,8 +355,8 @@ ExpandedFamilies2<-ExpandedFamilies[names(ExpandedFamilies) %in% ExpandedAndRecr
 cdata2<-cdata2[match(names(ExpandedFamilies2), cdata2$Central),]
 cdata2$Expansions=ExpandedFamilies2  
 cdata2.m<- melt(cdata2,id = c("Central"))
-##### Solo me falta graficar
 
+##### Solo me falta graficar  
 figure<-ggplot(cdata2.m, aes(x = cdata2.m$Central, y = cdata2.m$value, fill = cdata2.m$variable))+ geom_bar(stat = "identity")+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")
 
 ### ggplot2.barplot(data=cdata2.m, xName="Central",  groupName="value")
@@ -575,11 +620,12 @@ Secretaria de Inovacion, Conabio:Keri/Ernesto, Argonne cluster
   output .bbh.tree  
   
   5) AntiSMASH on sequences on tree  CYAN  
-   Ids antiSMASH file  cut -f2 Archeas_Smash |sort >Archeas_Smash_F1  
+   Ids antiSMASH file  
+   cut -f2 Archeas_Smash |sort >Archeas_Smash_F1  
    Ids list ls *concat.fasta|sort -g |while read line; do grep '>' $line|cut -d'|' -f2 |sort >$line.ids; done  
    ls *ids |sort -g |while read line; do comm -12 Archeas_Smash_F1 $line>$line.smash; done  
    output .smash
-   ls *smash|sort -g |while read line; do wc $line; done
+   ls *smash|sort -g |while read line; do num=$(wc -l<$line);echo -e $num'\t'$line; done
    
    
   6) AntiSMASH on BBH on tree (AntiSMASHonTree) CYAN_OVER_RED
@@ -587,7 +633,7 @@ Secretaria de Inovacion, Conabio:Keri/Ernesto, Argonne cluster
     Output .bbh_smash
 
   7) Blue MiBig BLUE
-   ls *Uniq|sort -g |while read line; do num=$(wc $line); echo $line $num; done
+seq 81|while read line; do if [ -f $line.fasta_ExpandedVsNp.blast.2.recruitedUniq ];  then num=$(wc -l <$line.fasta_ExpandedVsNp.blast.2.recruitedUniq);  else num=0; fi; echo -e $line'\t'$num; done
    Non existent files are 0 hits
    
   8) Orange leaves (Central seeds/queries) ORANGE
