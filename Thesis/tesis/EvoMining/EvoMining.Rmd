@@ -118,14 +118,14 @@ EvoMining is a trade off between conserved known central metabolic function and 
 ```{r Figure_Pablo2}
 CyanosColors <- read.table("CYANOS/Cyanos.Central.Colors", header=TRUE, sep="\t")
 CyanosColors$Kingdom<-"Cyanos"
-CyanosColors$Red_Final<-CyanosColors$FirstRED-CyanosColors$CYAN_OVER_RED
-CyanosColors$Cyan_Cyan<-CyanosColors$CYAN -CyanosColors$CYAN_OVER_RED
+CyanosColors$Red_Final<-CyanosColors$FirstRED-CyanosColors$CYAN_OVER_RED  
+CyanosColors$Cyan_Cyan<-CyanosColors$CYAN -CyanosColors$CYAN_OVER_RED  
 CyanosColors$Black<-CyanosColors$TOTALTree-(CyanosColors$CYAN+CyanosColors$Red_Final+CyanosColors$Azul_NP)  
-
-ArchaeasColors <- read.table("ARCHAEAS/Archeas.Central.Colors", header=TRUE, sep="\t")
-ArchaeasColors$Kingdom<-"Archaea"
-ArchaeasColors$Red_Final<-ArchaeasColors$FirstRED-ArchaeasColors$CYAN_OVER_RED
-ArchaeasColors$Cyan_Cyan<-ArchaeasColors$CYAN -ArchaeasColors$CYAN_OVER_RED
+  
+ArchaeasColors <- read.table("ARCHAEAS/Archeas.Central.Colors", header=TRUE, sep="\t")  
+ArchaeasColors$Kingdom<-"Archaea"  
+ArchaeasColors$Red_Final<-ArchaeasColors$FirstRED-ArchaeasColors$CYAN_OVER_RED  
+ArchaeasColors$Cyan_Cyan<-ArchaeasColors$CYAN -ArchaeasColors$CYAN_OVER_RED  
 ArchaeasColors$Black<-ArchaeasColors$TOTALTree-(ArchaeasColors$CYAN+ArchaeasColors$Red_Final+ArchaeasColors$Azul_NP)  
 
 rownames(ArchaeasColors) <- ArchaeasColors[,2]
@@ -133,30 +133,34 @@ rownames(CyanosColors) <- CyanosColors[,2]
 
 Cyanos.Colors.Reduced<-CyanosColors[intersect(row.names(ArchaeasColors),row.names(CyanosColors)),]
 Archaeas.Colors.Reduced<-ArchaeasColors[intersect(row.names(ArchaeasColors),row.names(CyanosColors)),]  
+arrange(Archaeas.Colors.Reduced, Num)
+arrange(Cyanos.Colors.Reduced, Num)
 
-str(Archaeas.Colors.Reduced)  
-str(Cyanos.Colors.Reduced)  
-Todos.Colors<-rbind(Archaeas.Colors.Reduced,Cyanos.Colors.Reduced)   
+#str(Archaeas.Colors.Reduced)  
+#str(Cyanos.Colors.Reduced)  
+#Todos.Colors<-rbind(Archaeas.Colors.Reduced,Cyanos.Colors.Reduced)   
 
-#Todos.Colors$Red_Final<-Todos.Colors$FirstRED-Todos.Colors$CYAN_OVER_RED
-#Todos.Colors$Cyan_Cyan<-Todos.Colors$CYAN -Todos.Colors$CYAN_OVER_RED
-#Todos.Colors$Black<-Todos.Colors$TOTALTree-(Todos.Colors$CYAN+Todos.Colors$Red_Final+Todos.Colors$Azul_NP)  
+#Colors=Todos.Colors[names(Todos.Colors) %in% c("Family","Azul_NP","Black","Cyan_Cyan","CYAN_OVER_RED","Red_Final","ORANGE","Kingdom")]
+#Colors<-Colors[c(1,3,8,7,2,4,6,5)]
+Cyanos.Colors.Reduced=Cyanos.Colors.Reduced[names(Cyanos.Colors.Reduced) %in% c("Family","Azul_NP","Black","Cyan_Cyan","CYAN_OVER_RED","Red_Final","ORANGE","Kingdom")]
+Cyanos.Colors.Reduced<-Cyanos.Colors.Reduced[c(1,3,8,7,2,4,6,5)]
+Archaeas.Colors.Reduced=Archaeas.Colors.Reduced[names(Archaeas.Colors.Reduced) %in% c("Family","Azul_NP","Black","Cyan_Cyan","CYAN_OVER_RED","Red_Final","ORANGE","Kingdom")]
+Archaeas.Colors.Reduced<-Archaeas.Colors.Reduced[c(1,3,8,7,2,4,6,5)]
 
-Colors=Todos.Colors[names(Todos.Colors) %in% c("Red_Final","CYAN_OVER_RED","Cyan_Cyan","Black","Azul_NP","ORANGE","Kingdom")]
 
-Cyanos.Colors.Reduced=Cyanos.Colors.Reduced[names(Cyanos.Colors.Reduced) %in% c("Family","Red_Final","CYAN_OVER_RED","Cyan_Cyan","Black","Azul_NP","ORANGE","Kingdom")]
-Cyanos.Colors.Reduced<-Cyanos.Colors.Reduced[c(1,6,3,4,5,7,2,8)]
 Cyanos.Colors.Reduced.m<- melt(Cyanos.Colors.Reduced,id = c("Family","Kingdom"))
+Archaeas.Colors.Reduced.m<- melt(Archaeas.Colors.Reduced,id = c("Family","Kingdom"))
+#Colors.m<- melt(Colors,id = c("Family","Kingdom"))
 
-ggplot(Cyanos.Colors.Reduced.m, aes(x = Cyanos.Colors.Reduced.m$Family, y = Cyanos.Colors.Reduced.m$value,  fill = Cyanos.Colors.Reduced.m$variable)) +geom_bar(stat = "identity")+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")+
-    scale_fill_manual(values=c( "#A901DB","#0000FF", "#FAAC58","#FF0000", "#58FAF4","#000000", "#E69F00"))
 
+ggplot(Cyanos.Colors.Reduced.m, aes(x = Cyanos.Colors.Reduced.m$Family, y = Cyanos.Colors.Reduced.m$value,  fill = Cyanos.Colors.Reduced.m$variable)) +geom_bar(stat = "identity")+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")+ scale_fill_manual(values=c("#0000FF","#000000","#A901DB", "#58FAF4","#FAAC58", "#FF0000"))
 
-Colors.m<- melt(Todos.Colors,id = c("Family","Kingdom"))
+ggplot(Archaeas.Colors.Reduced.m, aes(x = Archaeas.Colors.Reduced.m$Family, y = Archaeas.Colors.Reduced.m$value,  fill = Archaeas.Colors.Reduced.m$variable)) +geom_bar(stat = "identity")+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")+ scale_fill_manual(values=c("#0000FF","#000000","#A901DB", "#58FAF4","#FAAC58", "#FF0000"))
+
+#Colors.m<- melt(Todos.Colors,id = c("Family","Kingdom"))
 
 ##### Solo me falta graficar  
-ggplot(Colors.m, aes(x = Colors.m$Family, y = Colors.m$value,  fill = Colors.m$variable)) +geom_bar(stat = "identity")+facet_grid(~Colors.m$Kingdom)+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")+
-    scale_fill_manual(values=c( "#A901DB","#0000FF", "#FAAC58","#FF0000", "#58FAF4","#000000", "#E69F00"))
+#ggplot(Colors.m, aes(x = Colors.m$Family, y = Colors.m$value, group(Kingdom),  fill = Colors.m$variable)) +geom_bar(stat = "identity")+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")+ scale_fill_manual(values=c("#0000FF","#000000","#A901DB", "#58FAF4","#FAAC58", "#FF0000"))
 
 
 ```
