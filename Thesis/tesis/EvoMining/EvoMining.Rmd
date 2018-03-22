@@ -1,7 +1,7 @@
 ---
-title: "EvoMining"
-author: "Nelly Selem"
-date: "December31, 2017"
+title: "EvoMining 2.0: A customizable computational pipeline for evolutionary reconstructions during genome mining "
+author: "Selem-Mojica Nelly,  Martínez-Guerrero Christian , ...,  and Barona-Gómez Francisco   							  "
+date: "March, 2018"
 output:
   word_document: default
   pdf_document: default
@@ -46,9 +46,6 @@ Figura 3 Figuras/TauDpseudomonas2.svg Base central -> TauD
 Figura 4 Figuras/Backward.svg   Semana 1 AntiSMASH  
 Figura 5 Figuras/PanCluster.svg  Semana 3  Poner los clusters de la nueva Familia  
 -->
-
-## EvoMining 2.0: A customizable computational pipeline for evolutionary reconstructions during genome mining  
-Selem-Mojica Nelly,  Martínez-Guerrero Christian , ...,  and Barona-Gómez Francisco   							  
   
 ## Abstract  
 <!-- Por qué son importantes los productos naturales  
@@ -83,7 +80,7 @@ Finally to prioritize which clusters possess more metabolite variations, assumin
 
 ##  Results and Discussion   
 
-### Figure 1  EvoMining pipe-line   
+### Section 1 EvoMining Updated model and pipeline   
  EvoMining is a visual genome mining tool that following evolutionary principles has the milestone of prioritize non standard secondary metabolite pathways. The algorithm follows enzyme families from central pathways on their recruitment as components of natural products biosynthetic gene clusters (BGCs) within a genomic database. 
   
 Figure1  
@@ -98,12 +95,37 @@ EvoMining code and components (blast, muscle, FastTree, newick utilities, Gblock
 
 EvoMining will identify those expanded families of the central-DB within the genomic-DB that has at least a recruited member onto the natural-DB, proceeding then to the reconstruction of the evolutionary history of the enzyme family. Given an enzyme from the central-DB, the product of EvoMining analysis is an interactive color coded tree of the enzyme expanded family where best bidirectional hits (BBH) of central-DB are differentiated from Natural Products members and those expansions close to a Natural Product sequence that are not BBH with central-DB enzymes are emphasised as putative nobel recruitments into secondary metabolism.   
 EvoMining algorithm was used before with XXX bacteria XX central, nvertheless  
-Genomic DB 
-### Figure 2  Expansions on some databases   
+Genomic DB  
+  
+### Figure 2  Update and insights from genomic databases   
+  
+Feature           EvoMining 1                   EvoMining 2  
+--------------   ----------------------------   -------------------  
+Genomic-DB     
+                  Actinobacteria 230 genomes    Actinobacteria 1245 genomes                      
+                                                Cyanobacteria 416 genomes       
+                                                Archaea 876 genomes 
+Central                                 
+                  Actinobacteria 103 families   Actinobacteria 93 families                   
+                                                Cyanobacteria  81 families      
+                                                Archaea 80 families
+Natural-DB                                                                                                    
+                  Manual curation   MiBIG
+Code                                                                 
+                  Consulting web site           Standalone tool
+                               
+---------------  ----------------------------   -------------------    
+
+
 El reclutamiento de una enzima en una ruta de metabolismo secundario 
 The expansioness of a family depends on the clade.  
-Expansions are correlated with genome side, at different velocities, not linearly, Archaea Bacteria are smaller in size until now, Cyanobacteria correlation is weaker. 
-
+Expansions are correlated with genome side, at different velocities, not linearly, Archaea Bacteria are smaller in size until now, Cyanobacteria correlation is weaker.  
+  
+#### 2a Lineage specific  
+![Pipeline](Figuras/GenomicDBS.svg)    
+  
+#### 2b Families
+![Pipeline](GenomicDiversity.svg)  
 Archaea has central expansions and has BGCs  
   
 ### Archaea fits as EvoMining central DB  
@@ -115,7 +137,54 @@ Archaea resembled Bacteria in that Archaea uses horizontal gene transfer as a ge
 Enzyme families from central pathways expansions, open pangenome and operon organization made EvoMining succesful on Actinobacteria, this lead us to think that evoMining is suitable to analize Archaeal genomes, even more since EvoMining is a method oriented to use evolution and its not entirelyy based on previous knowledge of BGC's sequences if evolutionary logic behave on Archaea as on bacteria, new BGC's classes may be found on Archaea.
   
 EvoMining is a trade off between conserved known central metabolic function and enough expansions divergence on sequence and on clusters to divergence 
-```{r Figure_Pablo2}
+```{r Figure_Pablo2 ,warnings = FALSE, message = FALSE,echo=FALSE, results='hide'}
+  
+#  1) Every BBH: (BBH Totales) Directly from blast not all of this sequences will go to EvoMining heat plot due to EvoMining restriction
+#  perl GetBBH.pl vueltaArcheas.blast.bbh |sort
+#  output *.bbh
+#  on excell sort families alphabetically 
+  
+#  2) Family Number From evoMiningHeatmap  ##Fallo, cyanos heatplot revisar correctos
+#  Crear archivo vi Central.numbers
+#  ls *central|sort -g |while read line; do fam=$(head -n1 $line|cut -d'|' -f3|rev  | cut -d'_' -f2- | rev);num=$(echo $line|cut -d'.' -f1);echo -e $num'\t'$fam; done>Central.numbers
+      
+#  3) All sequences on tree but oranges (TOTALTree)  
+#  ls *concat.fasta |sort -g|while read line; do num=$(grep '>' $line|sort|uniq|wc); echo $line $num; done|cut -d' ' -f1,2   
+#  concat contains cyan, black and red leaves but not the oranges  
+  
+#  4) candidates to BBH on tree first red colored  (FirstRED)
+#  perl GetBBHonTree.pl Central.numbers  
+#  output .bbh.tree  
+  
+#  5) AntiSMASH on sequences on tree  CYAN  
+#   Ids antiSMASH file  
+#   cut -f2 Archeas_Smash |sort >Archeas_Smash_F1  
+#   Ids list ls *concat.fasta|sort -g |while read line; do grep '>' $line|cut -d'|' -f2 |sort >$line.ids; done  
+#   ls *ids |sort -g |while read line; do comm -12 Archeas_Smash_F1 $line>$line.smash; done  
+#   output .smash
+#   ls *smash|sort -g |while read line; do num=$(wc -l<$line);echo -e $num'\t'$line; done
+   
+   
+#  6) AntiSMASH on BBH on tree (AntiSMASHonTree) CYAN_OVER_RED
+#    perl GetBBHonTreeAndonSmash.pl Central.numbers  
+#    Output .bbh_smash
+
+#  7) Blue MiBig BLUE
+# seq 81|while read line; do if [ -f $line.fasta_ExpandedVsNp.blast.2.recruitedUniq ];  then num=$(wc -l <$line.fasta_ExpandedVsNp.blast.2.recruitedUniq);  else num=0; fi; echo -e $line'\t'$num; done
+#   Non existent files are 0 hits
+   
+ # 8) Orange leaves (Central seeds/queries) ORANGE
+ #    ls *central |sort -g | while read line; do num=$(grep '>' $line |sort|uniq |wc); echo $line $num; done  
+ #    RED=FirstRED-CYAN_OVER_RED  
+ #    BLACK=TOTALTree-RED-CYAN-BLUE  
+       
+  
+ActinosColors <- read.table("ACTINOS/Actinos.Central.Colors", header=TRUE, sep="\t")
+ActinosColors$Kingdom<-"Actinos"
+ActinosColors$Red_Final<-ActinosColors$FirstRED-ActinosColors$CYAN_OVER_RED  
+ActinosColors$Cyan_Cyan<-ActinosColors$CYAN -ActinosColors$CYAN_OVER_RED  
+ActinosColors$Black<-ActinosColors$TOTALTree-(ActinosColors$CYAN+ActinosColors$Red_Final+ActinosColors$Azul_NP)
+
 CyanosColors <- read.table("CYANOS/Cyanos.Central.Colors", header=TRUE, sep="\t")
 CyanosColors$Kingdom<-"Cyanos"
 CyanosColors$Red_Final<-CyanosColors$FirstRED-CyanosColors$CYAN_OVER_RED  
@@ -130,48 +199,71 @@ ArchaeasColors$Black<-ArchaeasColors$TOTALTree-(ArchaeasColors$CYAN+ArchaeasColo
 
 rownames(ArchaeasColors) <- ArchaeasColors[,2]
 rownames(CyanosColors) <- CyanosColors[,2]
+rownames(ActinosColors) <- ActinosColors[,2]
 
-Cyanos.Colors.Reduced<-CyanosColors[intersect(row.names(ArchaeasColors),row.names(CyanosColors)),]
-Archaeas.Colors.Reduced<-ArchaeasColors[intersect(row.names(ArchaeasColors),row.names(CyanosColors)),]  
-arrange(Archaeas.Colors.Reduced, Num)
+#Actinos.Colors.Reduced<-ActinosColors
+Actinos.Colors.Reduced<-ActinosColors[intersect(intersect(row.names(ArchaeasColors),row.names(ActinosColors)),row.names(CyanosColors)),]
+arrange(Actinos.Colors.Reduced, Num)
+
+#Cyanos.Colors.Reduced<-CyanosColors  
+Cyanos.Colors.Reduced<-CyanosColors[intersect(intersect(row.names(ArchaeasColors),row.names(ActinosColors)),row.names(CyanosColors)),]
 arrange(Cyanos.Colors.Reduced, Num)
 
-#str(Archaeas.Colors.Reduced)  
-#str(Cyanos.Colors.Reduced)  
-#Todos.Colors<-rbind(Archaeas.Colors.Reduced,Cyanos.Colors.Reduced)   
+#Archaeas.Colors.Reduced<-ArchaeasColors
+Archaeas.Colors.Reduced<-ArchaeasColors[intersect(intersect(row.names(ArchaeasColors),row.names(ActinosColors)),row.names(CyanosColors)),] 
+arrange(Archaeas.Colors.Reduced, Num)
 
-#Colors=Todos.Colors[names(Todos.Colors) %in% c("Family","Azul_NP","Black","Cyan_Cyan","CYAN_OVER_RED","Red_Final","ORANGE","Kingdom")]
-#Colors<-Colors[c(1,3,8,7,2,4,6,5)]
+
+#str(ActinosTaxa) #1245
+#str(CyanosTaxa) #416
+#str(ArchaeasTaxa) #876
+
+
+Actinos.Colors.Reduced=Actinos.Colors.Reduced[names(Actinos.Colors.Reduced) %in% c("Family","Azul_NP","Black","Cyan_Cyan","CYAN_OVER_RED","Red_Final","ORANGE","Kingdom")]
+Actinos.Colors.Reduced<-Actinos.Colors.Reduced[c(1,3,8,7,2,4,6,5)]
+
 Cyanos.Colors.Reduced=Cyanos.Colors.Reduced[names(Cyanos.Colors.Reduced) %in% c("Family","Azul_NP","Black","Cyan_Cyan","CYAN_OVER_RED","Red_Final","ORANGE","Kingdom")]
 Cyanos.Colors.Reduced<-Cyanos.Colors.Reduced[c(1,3,8,7,2,4,6,5)]
+
 Archaeas.Colors.Reduced=Archaeas.Colors.Reduced[names(Archaeas.Colors.Reduced) %in% c("Family","Azul_NP","Black","Cyan_Cyan","CYAN_OVER_RED","Red_Final","ORANGE","Kingdom")]
 Archaeas.Colors.Reduced<-Archaeas.Colors.Reduced[c(1,3,8,7,2,4,6,5)]
 
-
+Actinos.Colors.Reduced.m<- melt(Actinos.Colors.Reduced,id = c("Family","Kingdom"))
 Cyanos.Colors.Reduced.m<- melt(Cyanos.Colors.Reduced,id = c("Family","Kingdom"))
 Archaeas.Colors.Reduced.m<- melt(Archaeas.Colors.Reduced,id = c("Family","Kingdom"))
 #Colors.m<- melt(Colors,id = c("Family","Kingdom"))
+Actinos.Colors.Reduced.m$value<-Actinos.Colors.Reduced.m$value/1245
+Cyanos.Colors.Reduced.m$value<-Cyanos.Colors.Reduced.m$value/416  
+Archaeas.Colors.Reduced.m$value<-Archaeas.Colors.Reduced.m$value/876
 
 
-ggplot(Cyanos.Colors.Reduced.m, aes(x = Cyanos.Colors.Reduced.m$Family, y = Cyanos.Colors.Reduced.m$value,  fill = Cyanos.Colors.Reduced.m$variable)) +geom_bar(stat = "identity")+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")+ scale_fill_manual(values=c("#0000FF","#000000","#A901DB", "#58FAF4","#FAAC58", "#FF0000"))
 
-ggplot(Archaeas.Colors.Reduced.m, aes(x = Archaeas.Colors.Reduced.m$Family, y = Archaeas.Colors.Reduced.m$value,  fill = Archaeas.Colors.Reduced.m$variable)) +geom_bar(stat = "identity")+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")+ scale_fill_manual(values=c("#0000FF","#000000","#A901DB", "#58FAF4","#FAAC58", "#FF0000"))
+#ggplot(Actinos.Colors.Reduced.m, aes(x = Actinos.Colors.Reduced.m$Family, y = Actinos.Colors.Reduced.m$value,  fill = Actinos.Colors.Reduced.m$variable)) +geom_bar(stat = "identity")+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")+ scale_fill_manual(values=c("#0000FF","#000000", "#58FAF4","#A901DB","#FAAC58", "#FF0000"))
 
-#Colors.m<- melt(Todos.Colors,id = c("Family","Kingdom"))
+ActinoColor<-ggplot(Actinos.Colors.Reduced.m, aes(x = Actinos.Colors.Reduced.m$Family, y = Actinos.Colors.Reduced.m$value,  fill = Actinos.Colors.Reduced.m$variable)) +geom_bar(stat = "identity")+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")+ scale_fill_manual(values=c("#0000FF","#000000", "#58FAF4","#A901DB","#FAAC58", "#FF0000"))
+ggsave(file="ActinoColor.svg", plot=ActinoColor, width=30, height=40)
+  
 
-##### Solo me falta graficar  
-#ggplot(Colors.m, aes(x = Colors.m$Family, y = Colors.m$value, group(Kingdom),  fill = Colors.m$variable)) +geom_bar(stat = "identity")+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")+ scale_fill_manual(values=c("#0000FF","#000000","#A901DB", "#58FAF4","#FAAC58", "#FF0000"))
+#ggplot(Cyanos.Colors.Reduced.m, aes(x = Cyanos.Colors.Reduced.m$Family, y = Cyanos.Colors.Reduced.m$value,  fill = Cyanos.Colors.Reduced.m$variable)) +geom_bar(stat = "identity")+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")+ scale_fill_manual(values=c("#0000FF","#000000", "#58FAF4","#A901DB","#FAAC58", "#FF0000"))
 
+CyanoColor<-ggplot(Cyanos.Colors.Reduced.m, aes(x = Cyanos.Colors.Reduced.m$Family, y = Cyanos.Colors.Reduced.m$value,  fill = Cyanos.Colors.Reduced.m$variable)) +geom_bar(stat = "identity")+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")+ scale_fill_manual(values=c("#0000FF","#000000", "#58FAF4","#A901DB","#FAAC58", "#FF0000"))
+  ggsave(file="CyanoColor.svg", plot=CyanoColor, width=30, height=40)
+
+  
+ArchaeaColor<-ggplot(Archaeas.Colors.Reduced.m, aes(x = Archaeas.Colors.Reduced.m$Family, y = Archaeas.Colors.Reduced.m$value,  fill = Archaeas.Colors.Reduced.m$variable)) +geom_bar(stat = "identity")+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")+ scale_fill_manual(values=c("#0000FF","#000000", "#58FAF4","#A901DB","#FAAC58", "#FF0000"))
+ggsave(file="ArchaeaColor.svg", plot=ArchaeaColor, width=30, height=40)
 
 ```
 
-Beside the already tested 240 Actinobacteria database, other genomic database can be explored. On this case we tested exapnsions on Archaea Cyanobacteria, and Actinobacteria based on central metabolism from actinobacteria  
+Beside the already tested 240 Actinobacteria database, other genomic database can be explored. On this case we tested exapnsions on 876 Archaea 416 Cyanobacteria, and 1245 Actinobacteria based on central metabolism from actinobacteria  
 
 On cyanobacteria PriA an enzyme with no previously knwon secondary metabolism on Actinobacteria has been recruited into saxitoxin cluster.   
 
 ![GenomicDatabases](Figuras/GenomicDBS.svg)  
 
-## 2.1 Expansions same central  
+## 3 Update and insights from central DB
+## 4 Update and insights from Natural products DB
+Backward EvoMining  
 
 ```{r GenomicDatabase,warnings = FALSE, message = FALSE,echo=FALSE, results='hide'}
 ######################## Loading data  
@@ -201,6 +293,9 @@ CyanosTaxa$Kingdom<-"Cyanos"
 CyanosSMASH$Kingdom<-"Cyanos"
 CyanosTaxa$SuperPhylum<-"Cyanobacteria"
 ########################### End of loading data
+#str(ActinosTaxa) #1245
+#str(CyanosTaxa) #416
+#str(ArchaeasTaxa) #876
 
 #################################################################
 ## Joining data frames heat plot and taxa
@@ -342,7 +437,7 @@ Percent1ExpandedFamilies
 
 ExpandedFamilies["Phosphoglycerate_dehydrogenase"]
 #qplot(1:length(ExpandedFamilies), ExpandedFamilies, xlab ="Families") + geom_line()
-qplot(names(ExpandedFamilies), ExpandedFamilies, xlab ="Families") + geom_line()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")
+FiguraExpanded<-qplot(names(ExpandedFamilies), ExpandedFamilies, xlab ="Families") + geom_line()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")
 
 ### Ahora quien de estas familias tienen reclutamientos   
 ## Quiero grafica familia vs #reclutamientos 
@@ -375,7 +470,7 @@ figure<-ggplot(cdata2.m, aes(x = cdata2.m$Central, y = cdata2.m$value, fill = cd
 
 Expansions other central  
 To limitate the search for enzymes of recent recruitment into natural products
-  ![TauD](Figuras/TauDpseudomonas2.svg)  
+![TauD](Figuras/TauDpseudomonas2.svg)  
 
 As we have explored other genomic databases, central database  customization is also implemented, on this case we have use TauD en enzyme from taurine assimilation system on enterobacteria, on the genomic database Pseudomonas. Enzymes does not necessary have to be central, in the sense that they belong to the core of its taxonomic group, but at least should have expansions.  
 
@@ -523,7 +618,7 @@ tableEnzymeReduced=subset(tableExp,tableExp$ExpNum<=.6 & tableExp$ExpNum>= .2 )
 total <- rbind(tableExp,tableCentral)
 todosImage<-ggplot(total,aes(x=total$Order, y=total$ExpNum,  color=total$BGC, size = total$Moda))+facet_wrap(~ total$Type)+ geom_point(shape=20) + labs(x = "Metabolic Families", y = "Exp Number Actinobacteria Genomes",text = element_text(size=12)) + theme_bw()+theme(plot.title = element_text(size = 20, face = "bold"), text = element_text(size = 14), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 16), legend.position = "right")
 
-ggplot(total,aes(x=total$Order, y=total$ExpNum,  color=total$BGC, size = total$Moda))+facet_wrap(~ total$Type)+ geom_point(shape=18) + labs(x = "Metabolic Families", y = "Exp Number Actinobacteria Genomes",text = element_text(size=12)) + theme_bw()+theme(plot.title = element_text(size = 20, face = "bold"), text = element_text(size = 14), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 16), legend.position = "right")
+#ggplot(total,aes(x=total$Order, y=total$ExpNum,  color=total$BGC, size = total$Moda))+facet_wrap(~ total$Type)+ geom_point(shape=18) + labs(x = "Metabolic Families", y = "Exp Number Actinobacteria Genomes",text = element_text(size=12)) + theme_bw()+theme(plot.title = element_text(size = 20, face = "bold"), text = element_text(size = 14), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 16), legend.position = "right")
 
   ggsave(file="todosImage.svg", plot=todosImage, width=30, height=8)
   
@@ -533,25 +628,25 @@ ggplot(total,aes(x=total$Order, y=total$ExpNum,  color=total$BGC, size = total$M
 require("svglite")
 
 #save the plot in a variable image to be able to export to svg
-    imageBGC=ggplot(tableExp,aes(x=tableExp$Order, y=tableExp$ExpNum, color=tableExp$BGC, size = tableExp$Moda))+ geom_point() + labs(x = "Metabolic Families", y = "Exp Number Actinobacteria Genomes",text = element_text(size=12)) + theme_bw()+theme(plot.title = element_text(size = 20, face = "bold"), text = element_text(size = 14), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 16), legend.position = "bottom")
+    imageBGC<-ggplot(tableExp,aes(x=tableExp$Order, y=tableExp$ExpNum, color=tableExp$BGC, size = tableExp$Moda))+ geom_point() + labs(x = "Metabolic Families", y = "Exp Number Actinobacteria Genomes",text = element_text(size=12)) + theme_bw()+theme(plot.title = element_text(size = 20, face = "bold"), text = element_text(size = 14), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 16), legend.position = "bottom")
   ggsave(file="imageBGC.svg", plot=imageBGC, width=20, height=8)
   
-  ggplot(tableExp,aes(x=tableExp$Order, y=tableExp$ExpNum, color=tableExp$BGC, size = tableExp$Moda))+ geom_point() + labs(x = "Metabolic Families", y = "Exp Number Actinobacteria Genomes",text = element_text(size=12)) + theme_bw()+theme(plot.title = element_text(size = 20, face = "bold"), text = element_text(size = 14), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 16), legend.position = "right")
+#  ggplot(tableExp,aes(x=tableExp$Order, y=tableExp$ExpNum, color=tableExp$BGC, size = tableExp$Moda))+ geom_point() + labs(x = "Metabolic Families", y = "Exp Number Actinobacteria Genomes",text = element_text(size=12)) + theme_bw()+theme(plot.title = element_text(size = 20, face = "bold"), text = element_text(size = 14), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 16), legend.position = "right")
     
   imageCentral= ggplot(tableCentral,aes(x=tableCentral$Order, y=tableCentral$ExpNum, color=tableCentral$BGC, size = tableCentral$Moda))+ geom_point() + labs(x = "Metabolic Families", y = "Exp Number Actinobacteria Genomes",text = element_text(size=12)) + theme_bw()+theme(plot.title = element_text(size = 20, face = "bold"), text = element_text(size = 14), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 16), legend.position = "right")
   ggsave(file="imageCentral.svg", plot=imageCentral, width=20, height=8)
 
     
 
-    ggplot(tableEnzymeReduced,aes(x=tableEnzymeReduced$Order, y=tableEnzymeReduced$ExpNum, color=tableEnzymeReduced$BGC, size = tableEnzymeReduced$Moda))+ geom_point() + labs(x = "Metabolic Families", y = "Exp Number Actinobacteria Genomes",text = element_text(size=12)) + theme_bw()+theme(plot.title = element_text(size = 20, face = "bold"), text = element_text(size = 14), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 16), legend.position = "right")
+ figura1<-ggplot(tableEnzymeReduced,aes(x=tableEnzymeReduced$Order, y=tableEnzymeReduced$ExpNum, color=tableEnzymeReduced$BGC, size = tableEnzymeReduced$Moda))+ geom_point() + labs(x = "Metabolic Families", y = "Exp Number Actinobacteria Genomes",text = element_text(size=12)) + theme_bw()+theme(plot.title = element_text(size = 20, face = "bold"), text = element_text(size = 14), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 16), legend.position = "right")
 
     
 StreptoNp <- read.table("Figuras/naturalProductsEnzymeReduced.data", header=TRUE, sep="\t")
 
 
-qplot(x=Central, data=StreptoNp, geom="bar", fill=kingdom, position="stack")+theme_bw()+ theme(legend.position	="bottom",text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
+figura2<-qplot(x=Central, data=StreptoNp, geom="bar", fill=kingdom, position="stack")+theme_bw()+ theme(legend.position	="bottom",text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
 
-qplot(x=Central, data=StreptoNp, geom="bar", fill=taxa, position="stack")+theme_bw()+ theme(legend.position	="bottom",text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
+figura3<-qplot(x=Central, data=StreptoNp, geom="bar", fill=taxa, position="stack")+theme_bw()+ theme(legend.position	="bottom",text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
 
 #mm<-count(StreptoNp$Central)
 #small<-mm[which(mm$freq<50),]
@@ -605,44 +700,3 @@ Secretaria de Inovacion, Conabio:Keri/Ernesto, Argonne cluster
 
 ```{r bib, child = 'bibliography.Rmd'}
 ```
-  <!--
-  1) Every BBH: (BBH Totales) Directly from blast not all of this sequences will go to EvoMining heat plot due to EvoMining restriction
-  perl GetBBH.pl vueltaArcheas.blast.bbh |sort
-  output *.bbh
-  on excell sort families alphabetically 
-  
-  2) Family Number From evoMiningHeatmap  ##Fallo, cyanos heatplot revisar correctos
-  Crear archivo vi Central.numbers
-  ls *central|sort -g |while read line; do fam=$(head -n1 $line|cut -d'|' -f3|rev  | cut -d'_' -f2- | rev);num=$(echo $line|cut -d'.' -f1);echo -e $num'\t'$fam; done>Central.numbers
-      
-  3) All sequences on tree but oranges (TOTALTree)  
-  ls *concat.fasta |sort -g|while read line; do num=$(grep '>' $line|sort|uniq|wc); echo $line $num; done|cut -d' ' -f1,2   
-  concat contains cyan, black and red leaves but not the oranges  
-  
-  4) candidates to BBH on tree first red colored  (FirstRED)
-  perl GetBBHonTree.pl Central.numbers  
-  output .bbh.tree  
-  
-  5) AntiSMASH on sequences on tree  CYAN  
-   Ids antiSMASH file  
-   cut -f2 Archeas_Smash |sort >Archeas_Smash_F1  
-   Ids list ls *concat.fasta|sort -g |while read line; do grep '>' $line|cut -d'|' -f2 |sort >$line.ids; done  
-   ls *ids |sort -g |while read line; do comm -12 Archeas_Smash_F1 $line>$line.smash; done  
-   output .smash
-   ls *smash|sort -g |while read line; do num=$(wc -l<$line);echo -e $num'\t'$line; done
-   
-   
-  6) AntiSMASH on BBH on tree (AntiSMASHonTree) CYAN_OVER_RED
-    perl GetBBHonTreeAndonSmash.pl Central.numbers  
-    Output .bbh_smash
-
-  7) Blue MiBig BLUE
-seq 81|while read line; do if [ -f $line.fasta_ExpandedVsNp.blast.2.recruitedUniq ];  then num=$(wc -l <$line.fasta_ExpandedVsNp.blast.2.recruitedUniq);  else num=0; fi; echo -e $line'\t'$num; done
-   Non existent files are 0 hits
-   
-  8) Orange leaves (Central seeds/queries) ORANGE
-     ls *central |sort -g | while read line; do num=$(grep '>' $line |sort|uniq |wc); echo $line $num; done  
-     RED=FirstRED-CYAN_OVER_RED  
-     BLACK=TOTALTree-RED-CYAN-BLUE  
-       
-  -->   
