@@ -54,7 +54,11 @@ Cómo se ha resuelto el problema hasta ahora
 Que aporta EvoMining  
 Qué se hace en este estudio  
 Cuáles son las perspectivas  -->
+
+<!---
 Microbial natural products has importance in human health and life. Due to the abundance of genomic and metagenomic data, new natural products research by genome mining is a growing field. Traditional genome mining  approaches explored bacterial genomes localizing marks of previously knwon secondary metabolism enzymes organized on biosynthetic gene clusters (BGCs). Here we present EvoMining a downloadable visual genome mining tool that incorporates evolution theory into genome mining. On EvoMining databases are customizable, its based on enzyme expansions not on BGCs. The advantage of this method is that every expanded enzyme family is a candidate to explore recruitments, and all prokatyiotic genome, even the unexplored Archaea kingdom. On this study EvoMining was applied to several database such as Cyanobacteria, Actinobacteria, Pseudomonas and Archaea studying expansions for enzyme families such as PriA,TauD and other enzymes recently recruited onto secondary metabolism. Finally the genomic plasticity of Streptomyces coelicolor known BGCs is explored generalizing/applying the open/Close pangenome approach to a BGCs. This Evolutionary methods open the door to discover not previously knwon chemical compounds at private genome collections and prioritize them according to their genomic plasticity.    
+  --->
+  
   
 ## Introduction  
 <!--
@@ -67,6 +71,7 @@ Microbial natural products has importance in human health and life. Due to the a
 - Repetibilidad  y personalización permiten exploración.  
 -->
 
+<!---
 Natural products are synthesized by biosynthetical gene clusters (BGCs) codified on the genome of a wide range of microorganisms. Enzymes that belong to a BGC can either be mainly restricted to secondary metabolism, or be a recent recruitment acting as accesory enzymes.  
 With the genomic era and 500,000 prokaryotic genomes available at NCBI, there has been a oom of development of specilized genome mining software. Traditional approaches are based on recognize marks of enzymes devoted to secondary metabolism [@antismash], or domains [@clusterfinder] lattely Evolution [@arts nadine].   
 On prokaryotic genomes enzyme families are expanded frequently either by duplication or by horizontal gene transfer and that this expansions are acting as evolutionary raw material being recruited into secondary metabolism to perform nobel chemical functionalities. A proof of concept of EvoMining idea was provided by the discovery of an arseno compound on Streptomyces coelicolor [@cruz-morales_phylogenomic_2016], nevertheless. 
@@ -77,11 +82,12 @@ Despite Actinobacteria are great natural product producers [@omura] other micror
 Here we present the EvoMining expansions analysis using different genome-DB such as Actinobacteria, Cyanobacteria, Pseudomonas and Archaea. To enrich possibilities of central DB an example of what we called backward EvoMining was incorporated: BGCs from S coelicolor available at Mi-BIG were analyzed EvoMining backwards and all enzyme families expanded but not over represented were followed. 
 
 Finally to prioritize which clusters possess more metabolite variations, assuming a link between genomic and metabolite plasticity we introduce the idea of classifying the saturation of a pangenome as open/closed pangenome measuring BGCs as open / closed BGC.    
+--> 
 
 ##  Results and Discussion   
 
-### Section 1 EvoMining Updated model and pipeline   
- EvoMining is a visual genome mining tool that following evolutionary principles has the milestone of prioritize non standard secondary metabolite pathways. The algorithm follows enzyme families from central pathways on their recruitment as components of natural products biosynthetic gene clusters (BGCs) within a genomic database. 
+### Section 1 EvoMining 2.0 Updated model and pipeline   
+EvoMining is a visual genome mining tool that following evolutionary principles has the milestone of prioritize non standard secondary metabolite pathways. The algorithm follows enzyme families from central pathways on their recruitment as components of natural products biosynthetic gene clusters (BGCs) within a genomic database. 
   
 Figure1  
 ![Pipeline](Figuras/EvoMiningPipeline.svg)  
@@ -94,176 +100,40 @@ As output EvoMining identifies on the genomic-DB those expanded families from th
 EvoMining code and components (blast, muscle, FastTree, newick utilities, Gblocks,apache and SVG perl module) are wrapped on the docker container  nselem/newevomining downloadable at the Docker hub. Code is available at at github: nselem/EvoMining and manual at https://github.com/nselem/EvoMining/wiki. EvoMining tool will allow researchers to examine their own genomes and their own enzyme families in the search of expansions involved on nobel secondary metabolism.  
 
 EvoMining will identify those expanded families of the central-DB within the genomic-DB that has at least a recruited member onto the natural-DB, proceeding then to the reconstruction of the evolutionary history of the enzyme family. Given an enzyme from the central-DB, the product of EvoMining analysis is an interactive color coded tree of the enzyme expanded family where best bidirectional hits (BBH) of central-DB are differentiated from Natural Products members and those expansions close to a Natural Product sequence that are not BBH with central-DB enzymes are emphasised as putative nobel recruitments into secondary metabolism.   
-EvoMining algorithm was used before with XXX bacteria XX central, nvertheless  
+EvoMining algorithm was used before with 230 Actinobacteria 106 central families, nvertheless  
 Genomic DB  
-  
-### Figure 2  Update and insights from genomic databases   
-  
-Feature           EvoMining 1                   EvoMining 2  
---------------   ----------------------------   -------------------  
+
+Feature           EvoMining 1                   EvoMining 2                    Novel insights
+--------------   ----------------------------   ------------------------      ------------------------  
+Code                                                                  
+                  Consulting web site           Standalone docker tool    
+Databases      
+                  Fixed                         Customizable                     
 Genomic-DB     
-                  Actinobacteria 230 genomes    Actinobacteria 1245 genomes                      
+                  Actinobacteria 230 genomes    Actinobacteria 1245 genomes   EvoMining predictions are lineage dependnet                    
                                                 Cyanobacteria 416 genomes       
-                                                Archaea 876 genomes 
-Central                                 
-                  Actinobacteria 103 families   Actinobacteria 93 families                   
+                                                Archaea 876 genomes  
+Central-DB                                 
+                  Actinobacteria 106 families   Actinobacteria 106 families                  
                                                 Cyanobacteria  81 families      
-                                                Archaea 80 families
+                                                Archaea 80 families  
+                                                RetroEvoMining XX num
 Natural-DB                                                                                                    
-                  Manual curation   MiBIG
-Code                                                                 
-                  Consulting web site           Standalone tool
+                  Manual curation               MiBIG
                                
 ---------------  ----------------------------   -------------------    
-
+  
+  <!-- *Repetir  de las 93  a 106-->
+### Section 2  Update and insights from genomic databases   
+  
 
 El reclutamiento de una enzima en una ruta de metabolismo secundario 
 The expansioness of a family depends on the clade.  
 Expansions are correlated with genome side, at different velocities, not linearly, Archaea Bacteria are smaller in size until now, Cyanobacteria correlation is weaker.  
   
 #### 2a Lineage specific  
-![Pipeline](Figuras/GenomicDBS.svg)    
-  
-#### 2b Families
-![Pipeline](GenomicDiversity.svg)  
-Archaea has central expansions and has BGCs  
-  
-### Archaea fits as EvoMining central DB  
-During the decade between 1970 and 1980, Archaea was recognized as new life domain, a kingdom different from Bacteria and Eucarya in an exciting first great application of 16S phylogeny[@woese_phylogenetic_1977,@woese_are_1981] . Main differences between this kingdoms are that Archaeal DNA is not arranged in a nucleus as in Eucarya and Archaeal celular walls are not composed from peptidoglycans as in Bacteria. Archaeal proteins may be higlhy valuable to biotechnology industry for their great stability due to extreme temperature, PH and salt content conditions on Archeal habitats. Despite no Archaeal Natural products biosynthetic gene clusters (BGC's) has been reported on MiBIG, Archaea do have BGC's, some of them seems to be acquired by horizontal gene transfer (HGT) like methano nrps {search reference}. Other Archeal natural products known are archaeosins, Diketopiperazines, Acyl Homoserine Lactones, Exopolysaccharides, Carotenoids, Biosurfactants, Phenazines and Organic Solutes but this knowledge is not comparable to Bacterial BGC's knowledge[@charlesworth_untapped_2015].  
-  
-Natural products biosynthetic gene clusters search is actually performed using either *high-confidence/low-novelty or low-confidence/high-novelty* bioinformatic approaches [@medema_computational_2015]. High confidence methods compares query sequences with previously known BGC's such as nrps or PKS, examples of this algorithms are antiSMASH and clusterfinder [@_antismash_????]. EvoMining searches on expansions from central metabolic pathways enzyme families, it has been classified as low confidence/high novelty method. EvoMining has proved useful on Actinobacteria phylum where its use lead to Arseno-compounds discovery [@cruz-morales_phylogenomic_2016]. Also on Actinobacteria antiSMASH analysis on 1245 genomes found 774 different classes of natural products, the same analysis on 876 Archaeal genomes, a full kingdom, identifies only 35 BGC's classes. So either Archaea does not have natural products BGC's or this are not yet known. Next paragraph deals with a possible approach about how natural products BGC's can be find.  
-  
-Archaea resembled Bacteria in that Archaea uses horizontal gene transfer as a genic interchange mecanism, Archaeal genomes contains operons [@howland_surprising_2000] and in general there is introns absence{Reference to Computational Methods for Understanding Bacterial and Archaeal Genomes}. Archaeas do have introns, but they are mainly located on genes that encodes ribosomal and transfer RNA [@howland_surprising_2000]. General lack of introns allows automatic genome annotation, operons gene organization permits functional inference to a certain degree and HGT contribute to expansions on Archaeal genomes. Some phylum on Archaea has an open pangenome, and as we will show on this chapter some Archaea has central pathway expansions. 
-Enzyme families from central pathways expansions, open pangenome and operon organization made EvoMining succesful on Actinobacteria, this lead us to think that evoMining is suitable to analize Archaeal genomes, even more since EvoMining is a method oriented to use evolution and its not entirelyy based on previous knowledge of BGC's sequences if evolutionary logic behave on Archaea as on bacteria, new BGC's classes may be found on Archaea.
-  
-EvoMining is a trade off between conserved known central metabolic function and enough expansions divergence on sequence and on clusters to divergence 
-```{r Figure_Pablo2 ,warnings = FALSE, message = FALSE,echo=FALSE, results='hide'}
-  
-#  1) Every BBH: (BBH Totales) Directly from blast not all of this sequences will go to EvoMining heat plot due to EvoMining restriction
-#  perl GetBBH.pl vueltaArcheas.blast.bbh |sort
-#  output *.bbh
-#  on excell sort families alphabetically 
-  
-#  2) Family Number From evoMiningHeatmap  ##Fallo, cyanos heatplot revisar correctos
-#  Crear archivo vi Central.numbers
-#  ls *central|sort -g |while read line; do fam=$(head -n1 $line|cut -d'|' -f3|rev  | cut -d'_' -f2- | rev);num=$(echo $line|cut -d'.' -f1);echo -e $num'\t'$fam; done>Central.numbers
-      
-#  3) All sequences on tree but oranges (TOTALTree)  
-#  ls *concat.fasta |sort -g|while read line; do num=$(grep '>' $line|sort|uniq|wc); echo $line $num; done|cut -d' ' -f1,2   
-#  concat contains cyan, black and red leaves but not the oranges  
-  
-#  4) candidates to BBH on tree first red colored  (FirstRED)
-#  perl GetBBHonTree.pl Central.numbers  
-#  output .bbh.tree  
-  
-#  5) AntiSMASH on sequences on tree  CYAN  
-#   Ids antiSMASH file  
-#   cut -f2 Archeas_Smash |sort >Archeas_Smash_F1  
-#   Ids list ls *concat.fasta|sort -g |while read line; do grep '>' $line|cut -d'|' -f2 |sort >$line.ids; done  
-#   ls *ids |sort -g |while read line; do comm -12 Archeas_Smash_F1 $line>$line.smash; done  
-#   output .smash
-#   ls *smash|sort -g |while read line; do num=$(wc -l<$line);echo -e $num'\t'$line; done
-   
-   
-#  6) AntiSMASH on BBH on tree (AntiSMASHonTree) CYAN_OVER_RED
-#    perl GetBBHonTreeAndonSmash.pl Central.numbers  
-#    Output .bbh_smash
+![GenomicDatabases](Figuras/GenomicDBS.svg)  <!--Poner juntos cyanos Archea, marcar por forma orden favorito -->
 
-#  7) Blue MiBig BLUE
-# seq 81|while read line; do if [ -f $line.fasta_ExpandedVsNp.blast.2.recruitedUniq ];  then num=$(wc -l <$line.fasta_ExpandedVsNp.blast.2.recruitedUniq);  else num=0; fi; echo -e $line'\t'$num; done
-#   Non existent files are 0 hits
-   
- # 8) Orange leaves (Central seeds/queries) ORANGE
- #    ls *central |sort -g | while read line; do num=$(grep '>' $line |sort|uniq |wc); echo $line $num; done  
- #    RED=FirstRED-CYAN_OVER_RED  
- #    BLACK=TOTALTree-RED-CYAN-BLUE  
-       
-  
-ActinosColors <- read.table("ACTINOS/Actinos.Central.Colors", header=TRUE, sep="\t")
-ActinosColors$Kingdom<-"Actinos"
-ActinosColors$Red_Final<-ActinosColors$FirstRED-ActinosColors$CYAN_OVER_RED  
-ActinosColors$Cyan_Cyan<-ActinosColors$CYAN -ActinosColors$CYAN_OVER_RED  
-ActinosColors$Black<-ActinosColors$TOTALTree-(ActinosColors$CYAN+ActinosColors$Red_Final+ActinosColors$Azul_NP)
-
-CyanosColors <- read.table("CYANOS/Cyanos.Central.Colors", header=TRUE, sep="\t")
-CyanosColors$Kingdom<-"Cyanos"
-CyanosColors$Red_Final<-CyanosColors$FirstRED-CyanosColors$CYAN_OVER_RED  
-CyanosColors$Cyan_Cyan<-CyanosColors$CYAN -CyanosColors$CYAN_OVER_RED  
-CyanosColors$Black<-CyanosColors$TOTALTree-(CyanosColors$CYAN+CyanosColors$Red_Final+CyanosColors$Azul_NP)  
-  
-ArchaeasColors <- read.table("ARCHAEAS/Archeas.Central.Colors", header=TRUE, sep="\t")  
-ArchaeasColors$Kingdom<-"Archaea"  
-ArchaeasColors$Red_Final<-ArchaeasColors$FirstRED-ArchaeasColors$CYAN_OVER_RED  
-ArchaeasColors$Cyan_Cyan<-ArchaeasColors$CYAN -ArchaeasColors$CYAN_OVER_RED  
-ArchaeasColors$Black<-ArchaeasColors$TOTALTree-(ArchaeasColors$CYAN+ArchaeasColors$Red_Final+ArchaeasColors$Azul_NP)  
-
-rownames(ArchaeasColors) <- ArchaeasColors[,2]
-rownames(CyanosColors) <- CyanosColors[,2]
-rownames(ActinosColors) <- ActinosColors[,2]
-
-#Actinos.Colors.Reduced<-ActinosColors
-Actinos.Colors.Reduced<-ActinosColors[intersect(intersect(row.names(ArchaeasColors),row.names(ActinosColors)),row.names(CyanosColors)),]
-arrange(Actinos.Colors.Reduced, Num)
-
-#Cyanos.Colors.Reduced<-CyanosColors  
-Cyanos.Colors.Reduced<-CyanosColors[intersect(intersect(row.names(ArchaeasColors),row.names(ActinosColors)),row.names(CyanosColors)),]
-arrange(Cyanos.Colors.Reduced, Num)
-
-#Archaeas.Colors.Reduced<-ArchaeasColors
-Archaeas.Colors.Reduced<-ArchaeasColors[intersect(intersect(row.names(ArchaeasColors),row.names(ActinosColors)),row.names(CyanosColors)),] 
-arrange(Archaeas.Colors.Reduced, Num)
-
-
-#str(ActinosTaxa) #1245
-#str(CyanosTaxa) #416
-#str(ArchaeasTaxa) #876
-
-
-Actinos.Colors.Reduced=Actinos.Colors.Reduced[names(Actinos.Colors.Reduced) %in% c("Family","Azul_NP","Black","Cyan_Cyan","CYAN_OVER_RED","Red_Final","ORANGE","Kingdom")]
-Actinos.Colors.Reduced<-Actinos.Colors.Reduced[c(1,3,8,7,2,4,6,5)]
-
-Cyanos.Colors.Reduced=Cyanos.Colors.Reduced[names(Cyanos.Colors.Reduced) %in% c("Family","Azul_NP","Black","Cyan_Cyan","CYAN_OVER_RED","Red_Final","ORANGE","Kingdom")]
-Cyanos.Colors.Reduced<-Cyanos.Colors.Reduced[c(1,3,8,7,2,4,6,5)]
-
-Archaeas.Colors.Reduced=Archaeas.Colors.Reduced[names(Archaeas.Colors.Reduced) %in% c("Family","Azul_NP","Black","Cyan_Cyan","CYAN_OVER_RED","Red_Final","ORANGE","Kingdom")]
-Archaeas.Colors.Reduced<-Archaeas.Colors.Reduced[c(1,3,8,7,2,4,6,5)]
-
-Actinos.Colors.Reduced.m<- melt(Actinos.Colors.Reduced,id = c("Family","Kingdom"))
-Cyanos.Colors.Reduced.m<- melt(Cyanos.Colors.Reduced,id = c("Family","Kingdom"))
-Archaeas.Colors.Reduced.m<- melt(Archaeas.Colors.Reduced,id = c("Family","Kingdom"))
-#Colors.m<- melt(Colors,id = c("Family","Kingdom"))
-Actinos.Colors.Reduced.m$value<-Actinos.Colors.Reduced.m$value/1245
-Cyanos.Colors.Reduced.m$value<-Cyanos.Colors.Reduced.m$value/416  
-Archaeas.Colors.Reduced.m$value<-Archaeas.Colors.Reduced.m$value/876
-
-
-
-#ggplot(Actinos.Colors.Reduced.m, aes(x = Actinos.Colors.Reduced.m$Family, y = Actinos.Colors.Reduced.m$value,  fill = Actinos.Colors.Reduced.m$variable)) +geom_bar(stat = "identity")+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")+ scale_fill_manual(values=c("#0000FF","#000000", "#58FAF4","#A901DB","#FAAC58", "#FF0000"))
-
-ActinoColor<-ggplot(Actinos.Colors.Reduced.m, aes(x = Actinos.Colors.Reduced.m$Family, y = Actinos.Colors.Reduced.m$value,  fill = Actinos.Colors.Reduced.m$variable)) +geom_bar(stat = "identity")+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")+ scale_fill_manual(values=c("#0000FF","#000000", "#58FAF4","#A901DB","#FAAC58", "#FF0000"))
-ggsave(file="ActinoColor.svg", plot=ActinoColor, width=30, height=40)
-  
-
-#ggplot(Cyanos.Colors.Reduced.m, aes(x = Cyanos.Colors.Reduced.m$Family, y = Cyanos.Colors.Reduced.m$value,  fill = Cyanos.Colors.Reduced.m$variable)) +geom_bar(stat = "identity")+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")+ scale_fill_manual(values=c("#0000FF","#000000", "#58FAF4","#A901DB","#FAAC58", "#FF0000"))
-
-CyanoColor<-ggplot(Cyanos.Colors.Reduced.m, aes(x = Cyanos.Colors.Reduced.m$Family, y = Cyanos.Colors.Reduced.m$value,  fill = Cyanos.Colors.Reduced.m$variable)) +geom_bar(stat = "identity")+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")+ scale_fill_manual(values=c("#0000FF","#000000", "#58FAF4","#A901DB","#FAAC58", "#FF0000"))
-  ggsave(file="CyanoColor.svg", plot=CyanoColor, width=30, height=40)
-
-  
-ArchaeaColor<-ggplot(Archaeas.Colors.Reduced.m, aes(x = Archaeas.Colors.Reduced.m$Family, y = Archaeas.Colors.Reduced.m$value,  fill = Archaeas.Colors.Reduced.m$variable)) +geom_bar(stat = "identity")+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")+ scale_fill_manual(values=c("#0000FF","#000000", "#58FAF4","#A901DB","#FAAC58", "#FF0000"))
-ggsave(file="ArchaeaColor.svg", plot=ArchaeaColor, width=30, height=40)
-
-```
-
-Beside the already tested 240 Actinobacteria database, other genomic database can be explored. On this case we tested exapnsions on 876 Archaea 416 Cyanobacteria, and 1245 Actinobacteria based on central metabolism from actinobacteria  
-
-On cyanobacteria PriA an enzyme with no previously knwon secondary metabolism on Actinobacteria has been recruited into saxitoxin cluster.   
-
-![GenomicDatabases](Figuras/GenomicDBS.svg)  
-
-## 3 Update and insights from central DB
-## 4 Update and insights from Natural products DB
-Backward EvoMining  
 
 ```{r GenomicDatabase,warnings = FALSE, message = FALSE,echo=FALSE, results='hide'}
 ######################## Loading data  
@@ -302,9 +172,9 @@ CyanosTaxa$SuperPhylum<-"Cyanobacteria"
 TodosTaxa<-rbind(ArchaeasTaxa,CyanosTaxa,ActinosTaxa)
 
 #names(ArchaeasHeatPlot)
-intersect(names(CyanosHeatPlot),names(ActinosHeatPlot))
+#intersect(names(CyanosHeatPlot),names(ActinosHeatPlot))
 
-intersect(intersect(names(CyanosHeatPlot),names(ActinosHeatPlot)),names(ArchaeasHeatPlot))
+#intersect(intersect(names(CyanosHeatPlot),names(ActinosHeatPlot)),names(ArchaeasHeatPlot))
 ArHP<-ArchaeasHeatPlot[,intersect(intersect(names(CyanosHeatPlot),names(ActinosHeatPlot)),names(ArchaeasHeatPlot))]
 CyHP<-CyanosHeatPlot[,intersect(intersect(names(CyanosHeatPlot),names(ActinosHeatPlot)),names(ArchaeasHeatPlot))]
 AcHP<-ActinosHeatPlot[,intersect(intersect(names(CyanosHeatPlot),names(ActinosHeatPlot)),names(ArchaeasHeatPlot))]
@@ -312,19 +182,22 @@ TodosHP<-rbind(ArHP,CyHP,AcHP)
 TodosEXP_TAXA<-merge(TodosHP,TodosTaxa,by.x="RastId",by.y="RastId")
 
 #str(TodosHP)
-#intersect(names(CyanosHeatPlot),names(ArchaeasHeatPlot))
-#intersect(intersect(names(CyanosHeatPlot),names(ActinosHeatPlot)),names(ArchaeasHeatPlot))
 ####  End of joining dataframes
-###########################################################################################
-
+##########################################################################################################
+##########################################################################################################
+##########################################################################################################
 ################# Graphs 
+#########################################################################################################
 
-
+#########################################################################################################
 ## 1) Genome Size vs central expansion by facets 
-GenomeSizeVsCentralExpansion<-qplot(TodosEXP_TAXA$Size, TodosEXP_TAXA$TOTAL, data = TodosEXP_TAXA,colour=TodosEXP_TAXA$Order)+facet_grid(TodosEXP_TAXA$Kingdom~.,scales="free")+theme_bw()+ theme(legend.position	="none",plot.title = element_text(size = 14, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 12),axis.text.y=element_text(size = 7))
-####ggsave(file="GenomeSizeVsCentralExpansion.svg", plot=GenomeSizeVsCentralExpansion, width=30, height=8)
+GenomeSizeVsCentralExpansion<-qplot(TodosEXP_TAXA$Size, TodosEXP_TAXA$TOTAL, data = TodosEXP_TAXA,colour=TodosEXP_TAXA$Order)+facet_grid(TodosEXP_TAXA$Kingdom~.,scales="fixed")+theme_bw()+ theme(legend.position	="bottom",plot.title = element_text(size = 24, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 20),axis.text.y=element_text(size = 16)) +labs(x = "Genome size (bp)",    y = "Total number of expansions from central families",colour="Order" )
+ggsave(file="Figuras/GenomeSizeVsCentralExpansion.svg", plot=GenomeSizeVsCentralExpansion, width=10, height=10)
 ## End genome size vs central expansion  
+##########################################################################################################
 
+
+#############################################################################################################################
 ## 2) Box plot Expansiones familia y point Genome 
 TodosHP$RastId <- with(TodosHP, reorder(TodosHP$RastId, TodosHP$TOTAL))
 TodosHP.m <- melt(TodosEXP_TAXA,id = c("RastId","Kingdom","Name","SuperPhylum","Phylum","Class","Order","Family","Contigs","Size","RastNo"))
@@ -333,9 +206,11 @@ TodosHP.m<-subset(TodosHP.m,variable!="TOTAL")
 #CyanosHeatPlot.m <- melt(CyanosHeatPlot)
 #CyanosHeatPlot.m<-subset(CyanosHeatPlot.m,variable!="TOTAL")
 ##   Boxplot expansiones en familias en colores por reinos
-BoxCentralFamilies<-ggplot(TodosHP.m, aes(x=TodosHP.m$variable, y=TodosHP.m$value,color=TodosHP.m$Kingdom)) +labs(x = "Metabolic Families", y = "Copy number on Genomes",text = element_text(size=12)) + geom_boxplot()+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")  
+BoxCentralFamilies<-ggplot(TodosHP.m, aes(x=TodosHP.m$variable, y=TodosHP.m$value,color=TodosHP.m$Kingdom)) +labs(x = "Metabolic Families", y = "Copy number on Genomes",text = element_text(size=12)) + geom_boxplot()+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")
 ####ggsave(file="BoxCentralFamilies.svg", plot=BoxCentralFamilies, width=30, height=8)
 ############### End of boxplot   
+##########################################################################################################
+
 
 ######## 3) NOT READY Diversity of antiSMASH detection on 3 genomic DBs
 CyanosSMASH.m <- melt(CyanosSMASH,id = c("RastId","Kingdom"))  
@@ -467,20 +342,169 @@ figure<-ggplot(cdata2.m, aes(x = cdata2.m$Central, y = cdata2.m$value, fill = cd
 
 ```
 
+  
+#### 2b Diversity on central Families according to the lineage  
+![Pipeline](GenomicDiversity.svg)  
+<!-- this is the code for GenomicDiversity Figure-->
+```{r Figure_Pablo2 ,warnings = FALSE, message = FALSE,echo=FALSE, results='hide'}
+  
+#  1) Every BBH: (BBH Totales) Directly from blast not all of this sequences will go to EvoMining heat plot due to EvoMining restriction
+#  perl GetBBH.pl vueltaArcheas.blast.bbh |sort
+#  output *.bbh
+#  on excell sort families alphabetically 
+  
+#  2) Family Number From evoMiningHeatmap  ##Fallo, cyanos heatplot revisar correctos
+#  Crear archivo vi Central.numbers
+#  ls *central|sort -g |while read line; do fam=$(head -n1 $line|cut -d'|' -f3|rev  | cut -d'_' -f2- | rev);num=$(echo $line|cut -d'.' -f1);echo -e $num'\t'$fam; done>Central.numbers
+      
+#  3) All sequences on tree but oranges (TOTALTree)  
+#  ls *concat.fasta |sort -g|while read line; do num=$(grep '>' $line|sort|uniq|wc); echo $line $num; done|cut -d' ' -f1,2   
+#  concat contains cyan, black and red leaves but not the oranges  
+  
+#  4) candidates to BBH on tree first red colored  (FirstRED)
+#  perl GetBBHonTree.pl Central.numbers  
+#  output .bbh.tree  
+  
+#  5) AntiSMASH on sequences on tree  CYAN  
+#   Ids antiSMASH file  
+#   cut -f2 Archeas_Smash |sort >Archeas_Smash_F1  
+#   Ids list ls *concat.fasta|sort -g |while read line; do grep '>' $line|cut -d'|' -f2 |sort >$line.ids; done  
+#   ls *ids |sort -g |while read line; do comm -12 Archeas_Smash_F1 $line>$line.smash; done  
+#   output .smash
+#   ls *smash|sort -g |while read line; do num=$(wc -l<$line);echo -e $num'\t'$line; done
+   
+   
+#  6) AntiSMASH on BBH on tree (AntiSMASHonTree) CYAN_OVER_RED
+#    perl GetBBHonTreeAndonSmash.pl Central.numbers  
+#    Output .bbh_smash
 
+#  7) Blue MiBig BLUE
+# seq 81|while read line; do if [ -f $line.fasta_ExpandedVsNp.blast.2.recruitedUniq ];  then num=$(wc -l <$line.fasta_ExpandedVsNp.blast.2.recruitedUniq);  else num=0; fi; echo -e $line'\t'$num; done
+#   Non existent files are 0 hits
+   
+ # 8) Orange leaves (Central seeds/queries) ORANGE
+ #    ls *central |sort -g | while read line; do num=$(grep '>' $line |sort|uniq |wc); echo $line $num; done  
+ #    RED=FirstRED-CYAN_OVER_RED  
+ #    BLACK=TOTALTree-RED-CYAN-BLUE  
+       
+  
+ActinosColors <- read.table("ACTINOS/Actinos.Central.Colors", header=TRUE, sep="\t")
+ActinosColors$Kingdom<-"Actinos"
+ActinosColors$Red_Final<-ActinosColors$FirstRED-ActinosColors$CYAN_OVER_RED  
+ActinosColors$Cyan_Cyan<-ActinosColors$CYAN -ActinosColors$CYAN_OVER_RED  
+ActinosColors$Black<-ActinosColors$TOTALTree-(ActinosColors$CYAN+ActinosColors$Red_Final+ActinosColors$Azul_NP)
+
+CyanosColors <- read.table("CYANOS/Cyanos.Central.Colors", header=TRUE, sep="\t")
+CyanosColors$Kingdom<-"Cyanos"
+CyanosColors$Red_Final<-CyanosColors$FirstRED-CyanosColors$CYAN_OVER_RED  
+CyanosColors$Cyan_Cyan<-CyanosColors$CYAN -CyanosColors$CYAN_OVER_RED  
+CyanosColors$Black<-CyanosColors$TOTALTree-(CyanosColors$CYAN+CyanosColors$Red_Final+CyanosColors$Azul_NP)  
+  
+ArchaeasColors <- read.table("ARCHAEAS/Archeas.Central.Colors", header=TRUE, sep="\t")  
+ArchaeasColors$Kingdom<-"Archaea"  
+ArchaeasColors$Red_Final<-ArchaeasColors$FirstRED-ArchaeasColors$CYAN_OVER_RED  
+ArchaeasColors$Cyan_Cyan<-ArchaeasColors$CYAN -ArchaeasColors$CYAN_OVER_RED  
+ArchaeasColors$Black<-ArchaeasColors$TOTALTree-(ArchaeasColors$CYAN+ArchaeasColors$Red_Final+ArchaeasColors$Azul_NP)  
+
+rownames(ArchaeasColors) <- ArchaeasColors[,2]
+rownames(CyanosColors) <- CyanosColors[,2]
+rownames(ActinosColors) <- ActinosColors[,2]
+
+#Actinos.Colors.Reduced<-ActinosColors
+Actinos.Colors.Reduced<-ActinosColors[intersect(intersect(row.names(ArchaeasColors),row.names(ActinosColors)),row.names(CyanosColors)),]
+arrange(Actinos.Colors.Reduced, Num)
+
+#Cyanos.Colors.Reduced<-CyanosColors  
+Cyanos.Colors.Reduced<-CyanosColors[intersect(intersect(row.names(ArchaeasColors),row.names(ActinosColors)),row.names(CyanosColors)),]
+arrange(Cyanos.Colors.Reduced, Num)
+
+#Archaeas.Colors.Reduced<-ArchaeasColors
+Archaeas.Colors.Reduced<-ArchaeasColors[intersect(intersect(row.names(ArchaeasColors),row.names(ActinosColors)),row.names(CyanosColors)),] 
+arrange(Archaeas.Colors.Reduced, Num)
+
+
+#str(ActinosTaxa) #1245
+#str(CyanosTaxa) #416
+#str(ArchaeasTaxa) #876
+
+
+Actinos.Colors.Reduced=Actinos.Colors.Reduced[names(Actinos.Colors.Reduced) %in% c("Family","Azul_NP","Black","Cyan_Cyan","CYAN_OVER_RED","Red_Final","ORANGE","Kingdom")]
+Actinos.Colors.Reduced<-Actinos.Colors.Reduced[c(1,3,8,7,2,4,6,5)]
+
+Cyanos.Colors.Reduced=Cyanos.Colors.Reduced[names(Cyanos.Colors.Reduced) %in% c("Family","Azul_NP","Black","Cyan_Cyan","CYAN_OVER_RED","Red_Final","ORANGE","Kingdom")]
+Cyanos.Colors.Reduced<-Cyanos.Colors.Reduced[c(1,3,8,7,2,4,6,5)]
+
+Archaeas.Colors.Reduced=Archaeas.Colors.Reduced[names(Archaeas.Colors.Reduced) %in% c("Family","Azul_NP","Black","Cyan_Cyan","CYAN_OVER_RED","Red_Final","ORANGE","Kingdom")]
+Archaeas.Colors.Reduced<-Archaeas.Colors.Reduced[c(1,3,8,7,2,4,6,5)]
+
+Actinos.Colors.Reduced.m<- melt(Actinos.Colors.Reduced,id = c("Family","Kingdom"))
+Cyanos.Colors.Reduced.m<- melt(Cyanos.Colors.Reduced,id = c("Family","Kingdom"))
+Archaeas.Colors.Reduced.m<- melt(Archaeas.Colors.Reduced,id = c("Family","Kingdom"))
+#Colors.m<- melt(Colors,id = c("Family","Kingdom"))
+Actinos.Colors.Reduced.m$value<-Actinos.Colors.Reduced.m$value/1245
+Cyanos.Colors.Reduced.m$value<-Cyanos.Colors.Reduced.m$value/416  
+Archaeas.Colors.Reduced.m$value<-Archaeas.Colors.Reduced.m$value/876
+
+
+
+#ggplot(Actinos.Colors.Reduced.m, aes(x = Actinos.Colors.Reduced.m$Family, y = Actinos.Colors.Reduced.m$value,  fill = Actinos.Colors.Reduced.m$variable)) +geom_bar(stat = "identity")+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")+ scale_fill_manual(values=c("#0000FF","#000000", "#58FAF4","#A901DB","#FAAC58", "#FF0000"))
+
+ActinoColor<-ggplot(Actinos.Colors.Reduced.m, aes(x = Actinos.Colors.Reduced.m$Family, y = Actinos.Colors.Reduced.m$value,  fill = Actinos.Colors.Reduced.m$variable)) +geom_bar(stat = "identity")+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")+ scale_fill_manual(values=c("#0000FF","#000000", "#58FAF4","#A901DB","#FAAC58", "#FF0000"))
+ggsave(file="ActinoColor.svg", plot=ActinoColor, width=30, height=40)
+  
+
+#ggplot(Cyanos.Colors.Reduced.m, aes(x = Cyanos.Colors.Reduced.m$Family, y = Cyanos.Colors.Reduced.m$value,  fill = Cyanos.Colors.Reduced.m$variable)) +geom_bar(stat = "identity")+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")+ scale_fill_manual(values=c("#0000FF","#000000", "#58FAF4","#A901DB","#FAAC58", "#FF0000"))
+
+CyanoColor<-ggplot(Cyanos.Colors.Reduced.m, aes(x = Cyanos.Colors.Reduced.m$Family, y = Cyanos.Colors.Reduced.m$value,  fill = Cyanos.Colors.Reduced.m$variable)) +geom_bar(stat = "identity")+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")+ scale_fill_manual(values=c("#0000FF","#000000", "#58FAF4","#A901DB","#FAAC58", "#FF0000"))
+  ggsave(file="CyanoColor.svg", plot=CyanoColor, width=30, height=40)
+
+  
+ArchaeaColor<-ggplot(Archaeas.Colors.Reduced.m, aes(x = Archaeas.Colors.Reduced.m$Family, y = Archaeas.Colors.Reduced.m$value,  fill = Archaeas.Colors.Reduced.m$variable)) +geom_bar(stat = "identity")+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")+ scale_fill_manual(values=c("#0000FF","#000000", "#58FAF4","#A901DB","#FAAC58", "#FF0000"))
+ggsave(file="ArchaeaColor.svg", plot=ArchaeaColor, width=30, height=40)
+
+```
+
+Archaea has central expansions and has BGCs  
+  
+#### Archaea fits as EvoMining central DB  
+During the decade between 1970 and 1980, Archaea was recognized as new life domain, a kingdom different from Bacteria and Eucarya in an exciting first great application of 16S phylogeny[@woese_phylogenetic_1977,@woese_are_1981] . Main differences between this kingdoms are that Archaeal DNA is not arranged in a nucleus as in Eucarya and Archaeal celular walls are not composed from peptidoglycans as in Bacteria. Archaeal proteins may be higlhy valuable to biotechnology industry for their great stability due to extreme temperature, PH and salt content conditions on Archeal habitats. Despite no Archaeal Natural products biosynthetic gene clusters (BGC's) has been reported on MiBIG, Archaea do have BGC's, some of them seems to be acquired by horizontal gene transfer (HGT) like methano nrps {search reference}. Other Archeal natural products known are archaeosins, Diketopiperazines, Acyl Homoserine Lactones, Exopolysaccharides, Carotenoids, Biosurfactants, Phenazines and Organic Solutes but this knowledge is not comparable to Bacterial BGC's knowledge[@charlesworth_untapped_2015].  
+  
+Natural products biosynthetic gene clusters search is actually performed using either *high-confidence/low-novelty or low-confidence/high-novelty* bioinformatic approaches [@medema_computational_2015]. High confidence methods compares query sequences with previously known BGC's such as nrps or PKS, examples of this algorithms are antiSMASH and clusterfinder [@_antismash_????]. EvoMining searches on expansions from central metabolic pathways enzyme families, it has been classified as low confidence/high novelty method. EvoMining has proved useful on Actinobacteria phylum where its use lead to Arseno-compounds discovery [@cruz-morales_phylogenomic_2016]. Also on Actinobacteria antiSMASH analysis on 1245 genomes found 774 different classes of natural products, the same analysis on 876 Archaeal genomes, a full kingdom, identifies only 35 BGC's classes. So either Archaea does not have natural products BGC's or this are not yet known. Next paragraph deals with a possible approach about how natural products BGC's can be find.  
+  
+Archaea resembled Bacteria in that Archaea uses horizontal gene transfer as a genic interchange mecanism, Archaeal genomes contains operons [@howland_surprising_2000] and in general there is introns absence{Reference to Computational Methods for Understanding Bacterial and Archaeal Genomes}. Archaeas do have introns, but they are mainly located on genes that encodes ribosomal and transfer RNA [@howland_surprising_2000]. General lack of introns allows automatic genome annotation, operons gene organization permits functional inference to a certain degree and HGT contribute to expansions on Archaeal genomes. Some phylum on Archaea has an open pangenome, and as we will show on this chapter some Archaea has central pathway expansions. 
+Enzyme families from central pathways expansions, open pangenome and operon organization made EvoMining succesful on Actinobacteria, this lead us to think that evoMining is suitable to analize Archaeal genomes, even more since EvoMining is a method oriented to use evolution and its not entirelyy based on previous knowledge of BGC's sequences if evolutionary logic behave on Archaea as on bacteria, new BGC's classes may be found on Archaea.
+  
+EvoMining is a trade off between conserved known central metabolic function and enough expansions divergence on sequence and on clusters to divergence 
+
+Beside the already tested 240 Actinobacteria database, other genomic database can be explored. On this case we tested exapnsions on 876 Archaea 416 Cyanobacteria, and 1245 Actinobacteria based on central metabolism from actinobacteria  
+
+On cyanobacteria PriA an enzyme with no previously knwon secondary metabolism on Actinobacteria has been recruited into saxitoxin cluster.   
+
+
+### Section 3 Update and insights from central DB  
 Expansions other central  
 To limitate the search for enzymes of recent recruitment into natural products
 ![TauD](Figuras/TauDpseudomonas2.svg)  
 
 As we have explored other genomic databases, central database  customization is also implemented, on this case we have use TauD en enzyme from taurine assimilation system on enterobacteria, on the genomic database Pseudomonas. Enzymes does not necessary have to be central, in the sense that they belong to the core of its taxonomic group, but at least should have expansions.  
 
-### Figure  3.1  Expansions on genomic dinamics  
+<!--!
+## old 
+  starts with a blast search with query the CentralDB against the genomic DB,  comprises a docker  
+by 25 private Actinobacteria genomes and 1221 public Actinobacterial genomes with at least 3 genes by contig on average available at NCBI on 2016
+this requirement provides functional annotation when looking for the genomic context of a particular enzyme.--->
+
+### Section 4 Update and insights from Natural products DB
+Backward EvoMining  
+![TauD](Figuras/naturalDB.svg)  
+
+![TauD](Figuras/EvoBackward.svg)  
 3.2(Backward Evening)    
 Coelicolor clusters  
 Esto se hará solo sobre Streptomyces de los 1246  
 
 HERE TABLE WITH CLUSTERS
-```{r CoelicolorMiBig, warnings = FALSE, message = FALSE,echo=FALSE, results='hide'}
+```{r CoelicolorMiBig, warnings = FALSE, message = FALSE,echo=FALSE}
 table <- read.csv("Figuras/CoelicolorMiBIG", row.names = 1,sep="\t")
 kable(table,  caption = "Coelicolor\\label{tab:Coelicolor MiBig}",caption.short = "CoelicolorMiBig ")
 ```
@@ -507,14 +531,12 @@ moda=a[which.max(a)]
 inte=max(1,as.integer(names(moda)))
 return(inte)
 }
-
 Mode <- function(x){ ## mode
 a = table(x) # x is a vector
 moda=a[which.max(a)]
 inte=as.integer(names(moda))
 return(inte)
 }
-
 OrganismsExtraCopy <- function(x){ ##how many organisms has an extra copy than the mode
   a = table(x) # x is a vector  
   moda=a[which.max(a)]
@@ -523,48 +545,60 @@ OrganismsExtraCopy <- function(x){ ##how many organisms has an extra copy than t
   suma<-sum(subx) ## how many
 return(suma)
 }
-
-OrgAtLeastOneCopy <- function(x){ ##how many organisms has a copy 
+OrgAtLeastOneCopy <- function(x){ ##how many organisms has at least one copy 
   a = table(x) # x is a vector  
   subx<-as.integer(a[which(as.integer(names(a))>0)]) ## vector of organnisms with at least one copy
   suma<-sum(subx) ## how many
 return(suma)
 }
-
-
 Copies <- function(x){ ##how many organisms has an extra copy than the mode
-  suma<-sum(x) ## how many
+  suma<-sum(x,na.rm = TRUE) ## how many
 return(suma)
 }
 
 ######## Reading and sorting data   
-## Read EvoMining tables (head plots)
-tableExp <- read.csv("Figuras/ExpansionBlast.data", header=TRUE, sep="\t")  ### Enzyme BGC Function from MiBIG coelicolor
-tableCentral <- read.csv("Figuras/Central.data", header=TRUE, sep="\t")  ### Enzyme Subsystem Function from  
-tableDistribution <- read.csv("Figuras/Enzymes.Distribution", header=TRUE, row.names=1,sep="\t")  ### Expansions from coelicolor (Heat plot score 0)
-tableCentralDistribution <- read.csv("Figuras/CentralEnymes.Distribution.csv", header=TRUE, row.names=1,sep="\t") #Expansions from 93 enzimas central metabolism   
+## Read enzyme names. origin(Central/Coelicolor/lividans) and BGC from MiBIG
+CoelicolortableExp <- read.csv("Figuras/CoelicolorExpansionBlast.data", header=TRUE, sep="\t")  ### Enzyme BGC Function from MiBIG coelicolor
+LividanstableExp <- read.csv("Figuras/LividansExpansionBlast.data", header=TRUE, sep="\t")  ### Enzyme BGC Function from MiBIG coelicolor
+tableCentral <- read.csv("Figuras/Central.data", header=TRUE, sep="\t")  ### Enzyme Subsystem Function from central metabolism  
+CoelicolortableExp$Org<-"coelicolor"
+LividanstableExp$Org<-"lividans"
+tableExp<-rbind(CoelicolortableExp,LividanstableExp)
+rownames(tableExp) <- tableExp[,1]
 
+## Read EvoMining tables (head plots)
+tableDistribution <- read.csv("Figuras/CoelicolorEnzymes.Distribution", header=TRUE, row.names=1,sep="\t")  ### Expansions from coelicolor (Heat plot score 0)
+LivitableDistribution <- read.csv("Figuras/LiviEnzymes.Distribution", header=TRUE, row.names=1,sep="\t")  ### Expansions from coelicolor (Heat plot score 0)
+tableCentralDistribution <- read.csv("Figuras/CentralEnymes.Distribution.csv", header=TRUE, row.names=1,sep="\t") #Expansions from 93 enzimas central metabolism   
+tableNaturalDistribution<- merge(LivitableDistribution, tableDistribution, by=0, all=TRUE) 
+
+rownames(tableNaturalDistribution) <- tableNaturalDistribution[,1]
+tableNaturalDistribution$Row.names<-NULL
+#str(tableNaturalDistribution)
+
+#tableNaturalDistribution$Enzyme_74
+#LivitableDistribution$Enzyme_74
+#tableDistribution$Enzyme_74
+
+## both lividans and coelicolor are in one table now   
+  
 #necesito poner el valor de names de moda en el renglon con el mismo valor en enzima
 #number of organisms greater than mode  at least tenpercent of the genome
-##Reducing tableExp to those I have distribution
-tableExp=tableExp[tableExp$Enzyme %in% names(tableDistribution),]
-tableExp <- tableExp[order(tableExp$Enzyme),] 
-tableDistribution <- tableDistribution[,order(names(tableDistribution))] 
+##Reducing CoelicolortableExp to those I have distribution
 
-tableExpOriginal <- read.csv("Figuras/ExpansionBlast.data", header=TRUE, sep="\t")  
-tableExpOriginal=tableExp[tableExp$Enzyme %in% names(tableDistribution),]
-tableExpOriginal <- tableExp[order(tableExp$Enzyme),] 
+tableExp=tableExp[tableExp$Enzyme %in% names(tableNaturalDistribution),]
+##str(tableExp)
+tableExp <- tableExp[order(tableExp$Enzyme),] ## Sort rows by enzyme
+##str(tableExp)
+tableNaturalDistribution <- tableNaturalDistribution[,order(names(tableNaturalDistribution))] #Sort columns by table Natural distribution  
+
 
 ################# Processing functions BGC data  
-modaOrOne=apply(tableDistribution,2, OneOrMode)  
-moda=apply(tableDistribution,2, Mode)
-ExtraCopy=apply(tableDistribution,2, OrganismsExtraCopy)
-OneCopy=apply(tableDistribution,2, OrgAtLeastOneCopy)
-CopiesEvo=apply(tableDistribution,2, Copies)
-Average=colMeans(tableDistribution)
-#names(moda)
-tableExp$Moda=moda
-tableExp$Average=Average
+modaOrOne=apply(tableNaturalDistribution,2, OneOrMode)  ##minimum 1 or moda
+moda=apply(tableNaturalDistribution,2, Mode) ## moda
+ExtraCopy=apply(tableNaturalDistribution,2, OrganismsExtraCopy) ## HOw many extra copies are 
+OneCopy=apply(tableNaturalDistribution,2, OrgAtLeastOneCopy)
+CopiesEvo=apply(tableNaturalDistribution,2, Copies)
 tableExp$ExtraCopy=ExtraCopy
 tableExp$OneCopy=OneCopy
 tableExp$CopiesEvo=CopiesEvo
@@ -577,12 +611,18 @@ CopiesEvo
 #CopiesEvo
 sum(tableDistribution$Enzyme_108)
 
+#necesito poner el valor de names de Average en el renglon con el mismo valor en enzima en tableExp
+Average=colMeans(tableNaturalDistribution,na.rm = TRUE)
+tableExp<-tableExp[match(names(Average), tableExp$Enzyme),]
+Average["Enzyme_215"]
+tableExp$Average<-Average
+moda["Enzyme_215"]
+tableExp["Enzyme_215","Average"]
+tableExp["Enzyme_215","Function"]
 
-tableExpOriginal$Moda=moda
-tableExpOriginal$Average=Average
-tableExpOriginal$ExtraCopy=ExtraCopy
-tableExpOriginal$OneCopy=OneCopy
-tableExpOriginal$CopiesEvo=CopiesEvo
+tableExp<-tableExp[match(names(moda), tableExp$Enzyme),]
+tableExp$Moda<-moda
+tableExp["Enzyme_215","Moda"]
 
 ################# Processing functions central data  
  CentralmodaOrOne=apply(tableCentralDistribution,2, OneOrMode)
@@ -598,12 +638,6 @@ tableCentral$ExtraCopy=CentralExtraCopy
 tableCentral$OneCopy=CentralOneCopy
 tableCentral$CopiesEvo=CentralCopiesEvo
 
-#One minus average organisms that contains one copy.
-#More copies than organisms this number tends to one   ## too expanded
-# few copies  on homogeneously on few organisms tends to cero ## too particular  
-# two copies by organism   .5  , that is not usually the case  because there is some variance 
-#tableExp$ExpNum=(modaOrOne-tableExp$OneCopy/tableExp$CopiesEvo)/(modaOrOne)  
-#tableCentral$ExpNum=(CentralmodaOrOne-tableCentral$OneCopy/tableCentral$CopiesEvo)/(CentralmodaOrOne)  
 
 tableExp$ExpNum=1-tableExp$OneCopy/tableExp$CopiesEvo
 tableCentral$ExpNum=1-tableCentral$OneCopy/tableCentral$CopiesEvo
@@ -615,31 +649,35 @@ tableCentral$Order
 tableCentral<-tableCentral[order(tableCentral$Order),]
 tableEnzymeReduced=subset(tableExp,tableExp$ExpNum<=.6 & tableExp$ExpNum>= .2 )
 
+tableExp[215,"Org"]<-"AroA"
+LivitableDistribution$Enzyme_215
+
+tableCentral$Org<-"Actinobacteria"
+tableCentral[69,"Org"]<-"AroA"
+tableCentral[69,"Function"]
+
 total <- rbind(tableExp,tableCentral)
 todosImage<-ggplot(total,aes(x=total$Order, y=total$ExpNum,  color=total$BGC, size = total$Moda))+facet_wrap(~ total$Type)+ geom_point(shape=20) + labs(x = "Metabolic Families", y = "Exp Number Actinobacteria Genomes",text = element_text(size=12)) + theme_bw()+theme(plot.title = element_text(size = 20, face = "bold"), text = element_text(size = 14), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 16), legend.position = "right")
 
-#ggplot(total,aes(x=total$Order, y=total$ExpNum,  color=total$BGC, size = total$Moda))+facet_wrap(~ total$Type)+ geom_point(shape=18) + labs(x = "Metabolic Families", y = "Exp Number Actinobacteria Genomes",text = element_text(size=12)) + theme_bw()+theme(plot.title = element_text(size = 20, face = "bold"), text = element_text(size = 14), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 16), legend.position = "right")
+ggplot(total,aes(x=total$Order, y=total$ExpNum,  color=total$Org, size = total$Moda, shape=total$Org))+facet_wrap(~ total$Type)+ geom_point() + labs(x = "Metabolic Families", y = "Exp Number Actinobacteria Genomes",text = element_text(size=12)) + theme_bw()+theme(plot.title = element_text(size = 20, face = "bold"), text = element_text(size = 14), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 16), legend.position = "right")
 
-  ggsave(file="todosImage.svg", plot=todosImage, width=30, height=8)
-  
-#str(tableExp)
-#tableExp$Enzyme
+
+#str(CoelicolortableExp)
+#CoelicolortableExp$Enzyme
 ## ploting images
+  #############################################################################################################################################
 require("svglite")
 
-#save the plot in a variable image to be able to export to svg
-    imageBGC<-ggplot(tableExp,aes(x=tableExp$Order, y=tableExp$ExpNum, color=tableExp$BGC, size = tableExp$Moda))+ geom_point() + labs(x = "Metabolic Families", y = "Exp Number Actinobacteria Genomes",text = element_text(size=12)) + theme_bw()+theme(plot.title = element_text(size = 20, face = "bold"), text = element_text(size = 14), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 16), legend.position = "bottom")
-  ggsave(file="imageBGC.svg", plot=imageBGC, width=20, height=8)
-  
-#  ggplot(tableExp,aes(x=tableExp$Order, y=tableExp$ExpNum, color=tableExp$BGC, size = tableExp$Moda))+ geom_point() + labs(x = "Metabolic Families", y = "Exp Number Actinobacteria Genomes",text = element_text(size=12)) + theme_bw()+theme(plot.title = element_text(size = 20, face = "bold"), text = element_text(size = 14), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 16), legend.position = "right")
-    
   imageCentral= ggplot(tableCentral,aes(x=tableCentral$Order, y=tableCentral$ExpNum, color=tableCentral$BGC, size = tableCentral$Moda))+ geom_point() + labs(x = "Metabolic Families", y = "Exp Number Actinobacteria Genomes",text = element_text(size=12)) + theme_bw()+theme(plot.title = element_text(size = 20, face = "bold"), text = element_text(size = 14), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 16), legend.position = "right")
+  
+  ggplot(tableCentral,aes(x=tableCentral$Order, y=tableCentral$ExpNum, color=tableCentral$BGC, size = tableCentral$Moda))+ geom_point() + labs(x = "Metabolic Families", y = "Exp Number Actinobacteria Genomes",text = element_text(size=12)) + theme_bw()+theme(plot.title = element_text(size = 20, face = "bold"), text = element_text(size = 14), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 16), legend.position = "right")
   ggsave(file="imageCentral.svg", plot=imageCentral, width=20, height=8)
 
     
-
+### Aqui aquellas que no tenian tantos reclutamientos/expansions
  figura1<-ggplot(tableEnzymeReduced,aes(x=tableEnzymeReduced$Order, y=tableEnzymeReduced$ExpNum, color=tableEnzymeReduced$BGC, size = tableEnzymeReduced$Moda))+ geom_point() + labs(x = "Metabolic Families", y = "Exp Number Actinobacteria Genomes",text = element_text(size=12)) + theme_bw()+theme(plot.title = element_text(size = 20, face = "bold"), text = element_text(size = 14), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 16), legend.position = "right")
 
+ 
     
 StreptoNp <- read.table("Figuras/naturalProductsEnzymeReduced.data", header=TRUE, sep="\t")
 
@@ -660,18 +698,15 @@ figura3<-qplot(x=Central, data=StreptoNp, geom="bar", fill=taxa, position="stack
 #qplot(x=Central, data=StreptoNpSmall, geom="bar", fill=taxa, position="stack")+theme_bw()+ theme(legend.position	="bottom",text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
 
 
-#kable(tableExp,  caption = "CoelicolorExpansions\\label{tab:Coelicolor Expansions}",caption.short = "CoelicolorExpansions")
+#kable(CoelicolortableExp,  caption = "CoelicolorExpansions\\label{tab:Coelicolor Expansions}",caption.short = "CoelicolorExpansions")
 ```
 
 Presence Absence
 EvoMining was run over enzymes with expansion number between .1 and .6
 Figuras/GenomicDBS.svg
 
-<!--!
-## old 
-  starts with a blast search with query the CentralDB against the genomic DB,  comprises a docker  
-by 25 private Actinobacteria genomes and 1221 public Actinobacterial genomes with at least 3 genes by contig on average available at NCBI on 2016
-this requirement provides functional annotation when looking for the genomic context of a particular enzyme.--->
+
+
 ## Methodology
 <!--- Pipeline --->
 EvoMining algorithm and all its dependencies: blast, muscle, Gblocks, Quicktree and newick utilities were packaged on a docker container available at dockerhub. Every EvoMining container has the code inside which turns EvoMining in a totally open standalone genome mining tool, Dockerfile and code are available at github. EvoMining inputs are a genomic database (genomic-DB), a seed family enzymes database from central or shell metabolism (central-DB), and a set of sequences experimentally tested to be part of natural products biosynthetical gene clusters (np-DB), optionally a database containing antiSMASH analysis of the genomic DB may be integrated to the pipeline. To standardize protein annotation and take advantage of functional annotation genomes on genomic-DB were processed by the Rapid Annotation using Subsystem Technology (RAST) platform. Sequences of the central-DB and np-DB must be on fasta format. MIBiG repository was used and is included on EvoMining docker image as default np-DB, metadata such as producer organism and kind of compound are also integrated to the np-DB. 
