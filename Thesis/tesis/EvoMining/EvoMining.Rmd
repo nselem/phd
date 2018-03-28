@@ -199,19 +199,27 @@ return(suma)
 CoelicolortableExp <- read.csv("Figuras/CoelicolorExpansionBlast.data", header=TRUE, sep="\t")  ### Enzyme BGC Function from MiBIG coelicolor
 LividanstableExp <- read.csv("Figuras/LividansExpansionBlast.data", header=TRUE, sep="\t")  ### Enzyme BGC Function from MiBIG coelicolor
 tableCentral <- read.csv("Figuras/Central.data", header=TRUE, sep="\t")  ### Enzyme Subsystem Function from central metabolism  
-CoelicolortableExp$Org<-"coelicolor"
-LividanstableExp$Org<-"lividans"
+
+
+CoelicolortableExp$Org<-"Actinobacteria"
+LividanstableExp$Org<-"Actinobacteria"
+
 tableExp<-rbind(CoelicolortableExp,LividanstableExp)
 rownames(tableExp) <- tableExp[,1]
 
 ## Read EvoMining tables (head plots)
-tableDistribution <- read.csv("Figuras/CoelicolorEnzymes.Distribution", header=TRUE, row.names=1,sep="\t")  ### Expansions from coelicolor (Heat plot score 0)
-LivitableDistribution <- read.csv("Figuras/LiviEnzymes.Distribution", header=TRUE, row.names=1,sep="\t")  ### Expansions from coelicolor (Heat plot score 0)
-tableCentralDistribution <- read.csv("Figuras/CentralEnymes.Distribution.csv", header=TRUE, row.names=1,sep="\t") #Expansions from 93 enzimas central metabolism   
+#tableDistribution <- read.csv("Figuras/CoelicolorEnzymes.Distribution", header=TRUE, row.names=1,sep="\t")  ### Expansions from coelicolor (Heat plot score 0)
+#LivitableDistribution <- read.csv("Figuras/LiviEnzymes.Distribution", header=TRUE, row.names=1,sep="\t")  ### Expansions from coelicolor (Heat plot score 0)
+#tableCentralDistribution <- read.csv("Figuras/CentralEnymes.Distribution.csv", header=TRUE, row.names=1,sep="\t") #Expansions from 93 enzimas central metabolism   
+
+tableDistribution <- read.csv("Figuras/Coeli100", header=TRUE, row.names=1,sep="\t")   ### Enzyme BGC Function from MiBIG coelicolor
+LivitableDistribution  <- read.csv("Figuras/Livi100",header=TRUE, row.names=1,sep="\t")   ### Enzyme BGC Function from MiBIG coelicolor
+tableCentralDistribution <- read.csv("Figuras/Central100", header=TRUE, row.names=1,sep="\t")  ### Enzyme Subsystem Function from central metabolism  
+
 tableNaturalDistribution<- merge(LivitableDistribution, tableDistribution, by=0, all=TRUE) 
 
 rownames(tableNaturalDistribution) <- tableNaturalDistribution[,1]
-tableNaturalDistribution$Row.names<-NULL
+tableNaturalDistribution$Row.name<-NULL
 #str(tableNaturalDistribution)
 
 #tableNaturalDistribution$Enzyme_74
@@ -300,19 +308,19 @@ str(tableEnzymeIntermediate)
 tableEnzymeSuper=subset(tableExp,tableExp$ExpNum>.6)
 str(tableEnzymeSuper)
 
-
+tableExp$Org<-"Actinobacteria"
 tableExp[215,"Org"]<-"AroA"
 LivitableDistribution$Enzyme_215
 
 tableCentral$Org<-"Actinobacteria"
-tableCentral[69,"Org"]<-"AroA"
-tableCentral[69,"Function"]
+tableCentral[47,"Org"]<-"AroA"
+tableCentral[47,"Function"]
 
 total <- rbind(tableExp,tableCentral)
-todosImage<-ggplot(total,aes(x=total$Order, y=total$ExpNum,  color=total$BGC, size = total$Moda, shape=total$Org))+facet_wrap(~ total$Type)+ geom_point() + labs(x = "Metabolic Families", y = "Exp Number Actinobacteria Genomes",text = element_text(size=12)) + theme_bw()+theme(plot.title = element_text(size = 20, face = "bold"), text = element_text(size = 14), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 16), legend.position = "right")+ scale_shape_manual(values = c(0, 8, 2, 1))+ scale_y_continuous(breaks=c(0,.1, .2,.3,.4,.5, .6,.7,.8,.9,1))
+todosImage<-ggplot(total,aes(x=total$Order, y=total$ExpNum,  color=total$BGC, size = total$Moda, shape=total$Org))+facet_wrap(~ total$Type)+ geom_point() + labs(x = "Metabolic Families", y = "Exp Number Actinobacteria Genomes",text = element_text(size=12)) + theme_bw()+theme(plot.title = element_text(size = 20, face = "bold"), text = element_text(size = 14), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 16), legend.position = "right")+ scale_shape_manual(values = c(2,8))+ scale_y_continuous(breaks=c(0,.1, .2,.3,.4,.5, .6,.7,.8,.9,1))
   ggsave(file="Figuras/todosImage.svg", plot=todosImage, width=20, height=8)
 
-ggplot(total,aes(x=total$Order, y=total$ExpNum,  color=total$BGC, size = total$Moda, shape=total$Org))+facet_wrap(~ total$Type)+ geom_point() + labs(x = "Metabolic Families", y = "Exp Number Actinobacteria Genomes",text = element_text(size=12)) + theme_bw()+theme(plot.title = element_text(size = 20, face = "bold"), text = element_text(size = 14), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 16), legend.position = "right")+ scale_shape_manual(values = c(0, 8, 2, 1))+ scale_y_continuous(breaks=c(0,.1, .2,.3,.4,.5, .6,.7,.8,.9,1))
+ggplot(total,aes(x=total$Order, y=total$ExpNum,  color=total$BGC, size = total$Moda, shape=total$Org))+facet_wrap(~ total$Type)+ geom_point() + labs(x = "Metabolic Families", y = "Exp Number Actinobacteria Genomes",text = element_text(size=12)) + theme_bw()+theme(plot.title = element_text(size = 20, face = "bold"), text = element_text(size = 14), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 16), legend.position = "right")+ scale_shape_manual(values = c(1,8))+ scale_y_continuous(breaks=c(0,.1, .2,.3,.4,.5, .6,.7,.8,.9,1))
 
 #str(CoelicolortableExp)
 #CoelicolortableExp$Enzyme
