@@ -121,8 +121,357 @@ Natural-DB
                   Manual curation               MiBIG
                                
 ---------------  ----------------------------   -------------------    
+ 
+### Section 2  Update and insights from genomic databases   
+<!-- new genome DB was contructed after testing new central -DB--> 
+EvoMining discovery of arsenopoliketydes was set on a genomic database of Actinobacteria, a phylum known by being source of natural products biosynthetic gene clusters. Nevertheless, EvoMining genomic model i.e. that secondary metabolism BGCs often includes enzymes from enzyme families that have been expanded and recruited to perform new metabolic functions is not exclusive of Actinobacteria. As a consecuence EvoMining can be applied to other bacterial taxonomical groups beside Actinobacteria but potential genomic databases should at least posses expansions of enzyme families from central metabolism. 
+
+As candidates to new genomic databases were selected genus Pseudomonas, phylum Cyanobacteria and kingdom Archaea. Pseudomonas and Cyanobacteria were chosen because of their known presence of biosynthetic gene clusters, there are respectively 60 and 58 BGCs reported on MiBIG. Archaea is the opposite case, there is not archaeal BGC reported on MiBIG. Archaea resembled Bacteria in the facts that i) Archaea uses horizontal gene transfer as a genic interchange mecanism, ii) Archaeal genomes contains operons [@howland_surprising_2000] and  iii) in general there is introns absence{Reference to Computational Methods for Understanding Bacterial and Archaeal Genomes}.  Archaeas do have introns, but they are mainly located on genes that encodes ribosomal and transfer RNA [@howland_surprising_2000]. General lack of introns allows automatic genome annotation just like Bacteria, operon gene organization permits functional inference to a certain degree and HGT contribute to expansions on Archaeal genomes. Some phylum on Archaea has an open pangenome, and as we will show some Archaea has central pathway expansions. This lead us to think that evoMining is suitable to analize Archaeal genomes, even more if evolutionary logic behave on Archaea as on bacteria, since EvoMining is an evolutionary oriented method, not entirely based on previous knowledge of BGC's sequences, new BGC's classes may be found on Archaea.
+
+Previous EvoMining genome-DB comprises 230 genomes from Actinobacteria with 106 central families as the corresponding central-DB. Candidate genomic databases were explore to determine wether or not other they actually posses expansions of families devoted to central metabolism. Because families that are in the core genome of a taxonomical group may not exists on another group, before exploring enzyme family expansions besides Actinobacteria on the new genomic databases it is needed a previous identification of central families themselves on the other taxa. A common set of central enzyme families was determined for *Actinobacteria*, *Cyanobacteria*, *Pseudomonas* and *Archaeas* by finding best bidirectional hits (BBH) of original 339 seeds belonging to the 106 central Actinobacteria enzyme families on the following genomes: 1)Cyanobacteria phylum: * Cyanothece sp. ATCC 51142*, *Synechococcus sp. PCC 7002 CP000951.1*, *Synechocystis sp. PCC 6803 AP012205.1*, 2)Pseudomonas generus *Pseudomonas fluorescens pf0-1*,*Pseudomonas protegens Pf5*,*Pseudomonas syringae pv. actinidiae ICMP 18884 NZ_CM0027 51.1*,*Pseudomonas fulva 12-X NC_015556.1*
+3) Archaea kingdom *Natronomonas pharaonis*,*Methanosarcina acetivorans*, *Sulfolobus solfataricus* and *Nanoarchaeum equitans Kin4-M*. To avoid missing some BBH due to genome quality selected genomes were chosen to be on one contig. As an outcome of this process a central database with 42 enzyme families common to all taxonomical groups was assembled. New genomic databases were integrated by 876 Archaea genomes, 416 Cyanobacteria genomes, and 219 Pseudomonas genomes. Actinobacteria database was expanded from 230 to 1244 Actinobacteria genomes. Finally, with the central and genomic databases properly assembled *Actinobacteria*, *Cyanobacteria*, *Pseudomonas* and *Archaeas* were explored in search of central enzyme families expansions. 
+
+This results showed that expansion of a central family is clade specific, a family can be expanded on Actinobacteria but not on Cyanobacteria, even more a family can be part of the core of Actinobacteria but not exist on Archaea.
+Expansions were find to be similar in these 4 taxonomical groups, 
+
+
+On cyanobacteria PriA an enzyme with no previously knwon secondary metabolism on Actinobacteria has been recruited into saxitoxin cluster.  
+Para aumentar la base de datos tomamos retroevomining y obtuvimos 2 en comun.. falta considerar las super duplicadas...
+Finalmente tomamos una enzima del shell en lugar de el core. (Puede ser del shell de streptomyces)
+
+
+<!-- there are central expansions -->
+
+```{r GenomicDatabase,warnings = FALSE, message = FALSE,echo=FALSE, results='hide'}
+######################## Loading data  
+ArchaeasCentral <- read.table("../chapter3/ArchaeasCentral", header=TRUE, sep="\t")
+ArchaeasHeatPlot <- read.table("../chapter3/ArchaeasHeatPlot", header=TRUE, sep="\t")
+ArchaeasNp <- read.table("../chapter3/ArchaeasNp", header=TRUE, sep="\t")
+ArchaeasSMASH <- read.table("../chapter3/ArchaeasSMASH", header=TRUE, sep="\t")
+ArchaeasTaxa <- read.table("../chapter3/ArchaeasTaxa", header=TRUE, sep="\t")
+ArchaeasTaxa$Kingdom<-"Archea"
+ArchaeasSMASH$Kingdom<-"Archea"
+
+ActinosCentral <- read.table("../chapter4/ActinoCentral", header=TRUE, sep="\t")
+ActinosHeatPlot <- read.table("../chapter4/ActinoHeatPlot", header=TRUE, sep="\t")
+ActinosNp <- read.table("../chapter4/ActinoNp", header=TRUE, sep="\t")
+ActinosSMASH <- read.table("../chapter4/ActinosSMASH", header=TRUE, sep="\t")
+ActinosTaxa <- read.table("../chapter4/ActinoTaxa", header=TRUE, sep="\t")
+ActinosTaxa$Kingdom<-"Actinos"
+ActinosSMASH$Kingdom<-"Actinos"
+ActinosTaxa$SuperPhylum<-"Actinos"
+
+CyanosCentral <- read.table("../chapter5/CyanosCentral", header=TRUE, sep="\t")
+CyanosHeatPlot <- read.table("../chapter5/CyanosHeatPlot", header=TRUE, sep="\t")
+CyanosNp <- read.table("../chapter5/CyanosNp", header=TRUE, sep="\t")
+CyanosSMASH <- read.table("../chapter5/CyanosSMASH", header=TRUE, sep="\t")
+CyanosTaxa <- read.table("../chapter5/CyanosTaxa", header=TRUE, sep="\t")
+CyanosTaxa$Kingdom<-"Cyanos"
+CyanosSMASH$Kingdom<-"Cyanos"
+CyanosTaxa$SuperPhylum<-"Cyanobacteria"
+########################### End of loading data
+#str(ActinosTaxa) #1245
+#str(CyanosTaxa) #416
+#str(ArchaeasTaxa) #876
+
+#################################################################
+## Joining data frames heat plot and taxa
+TodosTaxa<-rbind(ArchaeasTaxa,CyanosTaxa,ActinosTaxa)
+
+#names(ArchaeasHeatPlot)
+#intersect(names(CyanosHeatPlot),names(ActinosHeatPlot))
+
+#intersect(intersect(names(CyanosHeatPlot),names(ActinosHeatPlot)),names(ArchaeasHeatPlot))
+ArHP<-ArchaeasHeatPlot[,intersect(intersect(names(CyanosHeatPlot),names(ActinosHeatPlot)),names(ArchaeasHeatPlot))]
+CyHP<-CyanosHeatPlot[,intersect(intersect(names(CyanosHeatPlot),names(ActinosHeatPlot)),names(ArchaeasHeatPlot))]
+AcHP<-ActinosHeatPlot[,intersect(intersect(names(CyanosHeatPlot),names(ActinosHeatPlot)),names(ArchaeasHeatPlot))]
+TodosHP<-rbind(ArHP,CyHP,AcHP)
+TodosEXP_TAXA<-merge(TodosHP,TodosTaxa,by.x="RastId",by.y="RastId")
+
+#str(TodosHP)
+####  End of joining dataframes
+##########################################################################################################
+##########################################################################################################
+##########################################################################################################
+################# Graphs 
+#########################################################################################################
+
+#########################################################################################################
+## 1) Genome Size vs central expansion by facets 
+GenomeSizeVsCentralExpansion<-qplot(TodosEXP_TAXA$Size, TodosEXP_TAXA$TOTAL, data = TodosEXP_TAXA,colour=TodosEXP_TAXA$Order)+facet_grid(TodosEXP_TAXA$Kingdom~.,scales="fixed")+theme_bw()+ theme(legend.position	="bottom",plot.title = element_text(size = 24, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 20),axis.text.y=element_text(size = 16)) +labs(x = "Genome size (bp)",    y = "Total number of expansions from central families",colour="Order" )
+ggsave(file="Figuras/GenomeSizeVsCentralExpansion.svg", plot=GenomeSizeVsCentralExpansion, width=10, height=10)
+## End genome size vs central expansion  
+##########################################################################################################
+
+
+#############################################################################################################################
+## 2) Box plot Expansiones familia y point Genome 
+TodosHP$RastId <- with(TodosHP, reorder(TodosHP$RastId, TodosHP$TOTAL))
+TodosHP.m <- melt(TodosEXP_TAXA,id = c("RastId","Kingdom","Name","SuperPhylum","Phylum","Class","Order","Family","Contigs","Size","RastNo"))
+TodosHP.m<-subset(TodosHP.m,variable!="TOTAL")
+#CyanosHeatPlot$RastId <- with(CyanosHeatPlot, reorder(CyanosHeatPlot$RastId, CyanosHeatPlot$TOTAL))
+#CyanosHeatPlot.m <- melt(CyanosHeatPlot)
+#CyanosHeatPlot.m<-subset(CyanosHeatPlot.m,variable!="TOTAL")
+##   Boxplot expansiones en familias en colores por reinos
+BoxCentralFamilies<-ggplot(TodosHP.m, aes(x=TodosHP.m$variable, y=TodosHP.m$value,color=TodosHP.m$Kingdom)) +labs(x = "Metabolic Families", y = "Copy number on Genomes",text = element_text(size=12)) + geom_boxplot()+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")
+####ggsave(file="BoxCentralFamilies.svg", plot=BoxCentralFamilies, width=30, height=8)
+############### End of boxplot   
+##########################################################################################################
+
+
+######## 3) NOT READY Diversity of antiSMASH detection on 3 genomic DBs
+CyanosSMASH.m <- melt(CyanosSMASH,id = c("RastId","Kingdom"))  
+CyanosSMASH.m<-CyanosSMASH.m[(CyanosSMASH.m$value!=0)&(CyanosSMASH.m$value!="Cyanos")&(CyanosSMASH.m$variable!="TOTAL"),]
+ArchaeasSMASH.m <- melt(ArchaeasSMASH,id = c("RastId","Kingdom"))  
+ArchaeasSMASH.m<-ArchaeasSMASH.m[(ArchaeasSMASH.m$value!=0)&(ArchaeasSMASH.m$value!="Archea")&(ArchaeasSMASH.m$variable!="TOTAL"),]
+ActinosSMASH.m <- melt(ActinosSMASH,id = c("RastId","Kingdom"))  
+ActinosSMASH.m<-ActinosSMASH.m[(ActinosSMASH.m$value!=0)&(ActinosSMASH.m$value!="Actinos")&(ActinosSMASH.m$variable!="TOTAL"),]
+Todos_SMASH<-rbind(ActinosSMASH.m,CyanosSMASH.m,ArchaeasSMASH.m)
+DiversitySMASH<-ggplot2.barplot(data=Todos_SMASH, xName="Kingdom",  groupName="variable",showLegend=FALSE)
+
+####ggsave(file="DiversitySMASH.svg", plot=DiversitySMASH, width=30, height=8)
+
+## HACEr una funcion con la diversidad de Archaea 
+#lista<-list(CyanosSMASH,ArchaeasSMASH,ActinosSMASH)
+#lista<-list(NonZeroCyanos,NonZeroArchaeas,NonZeroActinos)
+#TODOS_SMASH<-bind_rows(lista)
+#aver<-TODOS_SMASH[TODOS_SMASH$RastId=="389046",]$TOTAL
+#aver
+#2 Tener boxplot de expansiones por familia por kingdom LISTOOO
+#3 Escoger una familia para analizar a detalle por genero y poner sus árboles  PriA por ejemplo  
+
+## Good code but not in use  
+#names(CyanosSMASH)
+#intersect(names(CyanosSMASH),names(ArchaeasSMASH))
+#nonzero <- function(x) sum(x != 0)
+#NonZeroCyanos<-numcolwise(nonzero)(CyanosSMASH)
+#NonZeroArchaeas<-numcolwise(nonzero)(ArchaeasSMASH)
+#NonZeroActinos<-numcolwise(nonzero)(ActinosSMASH)
+#union( union(names(CyanosSMASH),names(ArchaeasSMASH)),names(ActinosSMASH))
+#union( union(names(NonZeroCyanos),names(NonZeroArchaeas)),names(NonZeroActinos))
+
+################## Init Figura antiSMASH propuesta por Paco Simil paper EvoMining  
+# Previous                            #     Current      
+#Genomic DB 230 genomas               #     Genomic DB   1245 genomes
+# Central 106 families                #     Central 93 families 
+# 226 BGCs                            #     1296 BGCs with 44552 enzymes
+# Previous results            ######################################
+# 101 expandidas                      #     93 Expansions, O bien 80 si consideramos solo expansiones on at least 1% (12.45) of organisms # Expandidas en coelicolor 33
+# 23 enzimas con reclutamientos       #      82 ?? Recruitments  11 non recruitments 76 according to dataframe. 
+
+## plan para replicar la figura CONSULTAR CON PACO Qué familias   
+## Hacer un script que obtenga los BBH de las central con cada familia expandida 
+## De los que nos son BBH cuales son antiSMASH /Cluster Finder  
+## Cuales son MIBIG  
+## Cuales no son nada.  
+
+## I´m starting with Actinobacteria  
+## 1) Identifying Familis with expansions  
+## ActinosHeatPlot Has the hits    
+ ## Now need a function how many organisms has expansions and in total how many expansions are from the 95 families  
+#compare two vectors if ai > bi then 1 
+ActinosHP <-ActinosHeatPlot
+str(ActinosHP)
+rownames(ActinosHP) <- ActinosHeatPlot[,1]
+  HeatAverage=colMeans(ActinosHP)
+  HeatSD=apply(ActinosHP, 2, sd)
+ExpTresHold<-HeatAverage+HeatSD
+
+### Coelicolor expansions   
+Coelicolor<-ActinosHP["242137",]
+names(Coelicolor)
+Coelicolor<-Coelicolor[!names(Coelicolor) %in% c("TOTAL","RastId")]
+ExpTresHold2<-ExpTresHold[!names(ExpTresHold) %in% c("TOTAL","RastId")]
+CoeliExpansions<-Coelicolor>ExpTresHold2
+CoeliExpansionsTotal<-sum(CoeliExpansions) ## how many expansions
+CoeliExpansionsTotal ## 34
+CoeliExpansionsFamilies<-Coelicolor[CoeliExpansions]## which families are expanded   
+CoeliExpansionsFamilies
+CoeliExpansionsFamilies<-names(Coelicolor)[CoeliExpansions]## which families are expanded   
+CoeliExpansionsFamilies
+########### End coelicolor expansions 
+
+############## starting families exapnsions 
+ExpTresHold$RastId<-"Treshold"
+
+ActinosHP<-rbind (ActinosHP, ExpTresHold)  
+
+FamiliesExpanded <- function(x){ ## is a column
+  ultimo<-tail(x, n=1)
+  subx<-x>ultimo ## vector of organisms with extra copies
+  suma<-sum(subx) ## how many
+return(suma)
+}
+
+ExpandedFamilies=apply(ActinosHP,2, FamiliesExpanded)  
+ExpandedFamilies<-ExpandedFamilies[!names(ExpandedFamilies) %in% c("TOTAL","RastId")]
+str(ExpandedFamilies)
+nonzero <- function(x) sum(x != 0)
+zero <- function(x) sum(x == 0)
+Atleast1Percent<- function(x) sum(x >12.45)  
+
+NonZeroExpandedFamilies<-nonzero(ExpandedFamilies)
+ZeroExpandedFamilies<-zero(ExpandedFamilies)
+Percent1ExpandedFamilies<-Atleast1Percent(ExpandedFamilies)
+ZeroExpandedFamilies
+NonZeroExpandedFamilies
+Percent1ExpandedFamilies
+
+ExpandedFamilies["Phosphoglycerate_dehydrogenase"]
+#qplot(1:length(ExpandedFamilies), ExpandedFamilies, xlab ="Families") + geom_line()
+FiguraExpanded<-qplot(names(ExpandedFamilies), ExpandedFamilies, xlab ="Families") + geom_line()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")
+
+### Ahora quien de estas familias tienen reclutamientos   
+## Quiero grafica familia vs #reclutamientos 
+ActinosNpReduced<-subset(ActinosNp,ActinosNp$np!="none")
+cdata <- ddply(ActinosNpReduced, "Central", summarise,Nps  = length(np))
+rownames(cdata) <- cdata[,1]
+names(ExpandedFamilies)
+row.names(cdata)
+
+## Eliminar los 11 nones
+ExpandedAndRecruited<-intersect(names(ExpandedFamilies),row.names(cdata))
+cdata2<-subset(cdata,row.names(cdata) %in% ExpandedAndRecruited)
+ExpandedFamilies2<-ExpandedFamilies[names(ExpandedFamilies) %in% ExpandedAndRecruited]
+cdata2<-cdata2[match(names(ExpandedFamilies2), cdata2$Central),]
+cdata2$Expansions=ExpandedFamilies2  
+cdata2.m<- melt(cdata2,id = c("Central"))
+
+##### Solo me falta graficar  
+figure<-ggplot(cdata2.m, aes(x = cdata2.m$Central, y = cdata2.m$value, fill = cdata2.m$variable))+ geom_bar(stat = "identity")+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")
+
+### ggplot2.barplot(data=cdata2.m, xName="Central",  groupName="value")
+#cdata
+#summary(ActinosNp)
+## Quito none, interseccion y stack bar
+
+#qplot(x=Central, data=ActinosNp, geom="bar", fill=np, position="stack")+theme_bw()+ theme(legend.position	="none",text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
+
+```
+
   
-  <!-- *Repetir  de las 93  a 106-->  
+#### 2a Lineage specific  
+#### 2b Diversity on central Families according to the lineage  
+<!-- this is the code for GenomicDiversity Figure-->
+```{r Figure_Pablo2 ,warnings = FALSE, message = FALSE,echo=FALSE, results='hide'}
+  
+#  1) Every BBH: (BBH Totales) Directly from blast not all of this sequences will go to EvoMining heat plot due to EvoMining restriction
+#  perl GetBBH.pl vueltaArcheas.blast.bbh |sort
+#  output *.bbh
+#  on excell sort families alphabetically 
+  
+#  2) Family Number From evoMiningHeatmap  ##Fallo, cyanos heatplot revisar correctos
+#  Crear archivo vi Central.numbers
+#  ls *central|sort -g |while read line; do fam=$(head -n1 $line|cut -d'|' -f3|rev  | cut -d'_' -f2- | rev);num=$(echo $line|cut -d'.' -f1);echo -e $num'\t'$fam; done>Central.numbers
+      
+#  3) All sequences on tree but oranges (TOTALTree)  
+#  ls *concat.fasta |sort -g|while read line; do num=$(grep '>' $line|sort|uniq|wc); echo $line $num; done|cut -d' ' -f1,2   
+#  concat contains cyan, black and red leaves but not the oranges  
+  
+#  4) candidates to BBH on tree first red colored  (FirstRED)
+#  perl GetBBHonTree.pl Central.numbers  
+#  output .bbh.tree  
+  
+#  5) AntiSMASH on sequences on tree  CYAN  
+#   Ids antiSMASH file  
+#   cut -f2 Archeas_Smash |sort >Archeas_Smash_F1  
+#   Ids list ls *concat.fasta|sort -g |while read line; do grep '>' $line|cut -d'|' -f2 |sort >$line.ids; done  
+#   ls *ids |sort -g |while read line; do comm -12 Archeas_Smash_F1 $line>$line.smash; done  
+#   output .smash
+#   ls *smash|sort -g |while read line; do num=$(wc -l<$line);echo -e $num'\t'$line; done
+   
+   
+#  6) AntiSMASH on BBH on tree (AntiSMASHonTree) CYAN_OVER_RED
+#    perl GetBBHonTreeAndonSmash.pl Central.numbers  
+#    Output .bbh_smash
+
+#  7) Blue MiBig BLUE
+# seq 81|while read line; do if [ -f $line.fasta_ExpandedVsNp.blast.2.recruitedUniq ];  then num=$(wc -l <$line.fasta_ExpandedVsNp.blast.2.recruitedUniq);  else num=0; fi; echo -e $line'\t'$num; done
+#   Non existent files are 0 hits
+   
+ # 8) Orange leaves (Central seeds/queries) ORANGE
+ #    ls *central |sort -g | while read line; do num=$(grep '>' $line |sort|uniq |wc); echo $line $num; done  
+ #    RED=FirstRED-CYAN_OVER_RED  
+ #    BLACK=TOTALTree-RED-CYAN-BLUE  
+       
+  
+ActinosColors <- read.table("ACTINOS/Actinos.Central.Colors", header=TRUE, sep="\t")
+ActinosColors$Kingdom<-"Actinos"
+ActinosColors$Red_Final<-ActinosColors$FirstRED-ActinosColors$CYAN_OVER_RED  
+ActinosColors$Cyan_Cyan<-ActinosColors$CYAN -ActinosColors$CYAN_OVER_RED  
+ActinosColors$Black<-ActinosColors$TOTALTree-(ActinosColors$CYAN+ActinosColors$Red_Final+ActinosColors$Azul_NP)
+
+CyanosColors <- read.table("CYANOS/Cyanos.Central.Colors", header=TRUE, sep="\t")
+CyanosColors$Kingdom<-"Cyanos"
+CyanosColors$Red_Final<-CyanosColors$FirstRED-CyanosColors$CYAN_OVER_RED  
+CyanosColors$Cyan_Cyan<-CyanosColors$CYAN -CyanosColors$CYAN_OVER_RED  
+CyanosColors$Black<-CyanosColors$TOTALTree-(CyanosColors$CYAN+CyanosColors$Red_Final+CyanosColors$Azul_NP)  
+  
+ArchaeasColors <- read.table("ARCHAEAS/Archeas.Central.Colors", header=TRUE, sep="\t")  
+ArchaeasColors$Kingdom<-"Archaea"  
+ArchaeasColors$Red_Final<-ArchaeasColors$FirstRED-ArchaeasColors$CYAN_OVER_RED  
+ArchaeasColors$Cyan_Cyan<-ArchaeasColors$CYAN -ArchaeasColors$CYAN_OVER_RED  
+ArchaeasColors$Black<-ArchaeasColors$TOTALTree-(ArchaeasColors$CYAN+ArchaeasColors$Red_Final+ArchaeasColors$Azul_NP)  
+
+rownames(ArchaeasColors) <- ArchaeasColors[,2]
+rownames(CyanosColors) <- CyanosColors[,2]
+rownames(ActinosColors) <- ActinosColors[,2]
+
+#Actinos.Colors.Reduced<-ActinosColors
+Actinos.Colors.Reduced<-ActinosColors[intersect(intersect(row.names(ArchaeasColors),row.names(ActinosColors)),row.names(CyanosColors)),]
+arrange(Actinos.Colors.Reduced, Num)
+
+#Cyanos.Colors.Reduced<-CyanosColors  
+Cyanos.Colors.Reduced<-CyanosColors[intersect(intersect(row.names(ArchaeasColors),row.names(ActinosColors)),row.names(CyanosColors)),]
+arrange(Cyanos.Colors.Reduced, Num)
+
+#Archaeas.Colors.Reduced<-ArchaeasColors
+Archaeas.Colors.Reduced<-ArchaeasColors[intersect(intersect(row.names(ArchaeasColors),row.names(ActinosColors)),row.names(CyanosColors)),] 
+arrange(Archaeas.Colors.Reduced, Num)
+
+
+#str(ActinosTaxa) #1245
+#str(CyanosTaxa) #416
+#str(ArchaeasTaxa) #876
+
+
+Actinos.Colors.Reduced=Actinos.Colors.Reduced[names(Actinos.Colors.Reduced) %in% c("Family","Azul_NP","Black","Cyan_Cyan","CYAN_OVER_RED","Red_Final","ORANGE","Kingdom")]
+Actinos.Colors.Reduced<-Actinos.Colors.Reduced[c(1,3,8,7,2,4,6,5)]
+
+Cyanos.Colors.Reduced=Cyanos.Colors.Reduced[names(Cyanos.Colors.Reduced) %in% c("Family","Azul_NP","Black","Cyan_Cyan","CYAN_OVER_RED","Red_Final","ORANGE","Kingdom")]
+Cyanos.Colors.Reduced<-Cyanos.Colors.Reduced[c(1,3,8,7,2,4,6,5)]
+
+Archaeas.Colors.Reduced=Archaeas.Colors.Reduced[names(Archaeas.Colors.Reduced) %in% c("Family","Azul_NP","Black","Cyan_Cyan","CYAN_OVER_RED","Red_Final","ORANGE","Kingdom")]
+Archaeas.Colors.Reduced<-Archaeas.Colors.Reduced[c(1,3,8,7,2,4,6,5)]
+
+Actinos.Colors.Reduced.m<- melt(Actinos.Colors.Reduced,id = c("Family","Kingdom"))
+Cyanos.Colors.Reduced.m<- melt(Cyanos.Colors.Reduced,id = c("Family","Kingdom"))
+Archaeas.Colors.Reduced.m<- melt(Archaeas.Colors.Reduced,id = c("Family","Kingdom"))
+#Colors.m<- melt(Colors,id = c("Family","Kingdom"))
+Actinos.Colors.Reduced.m$value<-Actinos.Colors.Reduced.m$value/1245
+Cyanos.Colors.Reduced.m$value<-Cyanos.Colors.Reduced.m$value/416  
+Archaeas.Colors.Reduced.m$value<-Archaeas.Colors.Reduced.m$value/876
+
+
+
+#ggplot(Actinos.Colors.Reduced.m, aes(x = Actinos.Colors.Reduced.m$Family, y = Actinos.Colors.Reduced.m$value,  fill = Actinos.Colors.Reduced.m$variable)) +geom_bar(stat = "identity")+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")+ scale_fill_manual(values=c("#0000FF","#000000", "#58FAF4","#A901DB","#FAAC58", "#FF0000"))
+
+ActinoColor<-ggplot(Actinos.Colors.Reduced.m, aes(x = Actinos.Colors.Reduced.m$Family, y = Actinos.Colors.Reduced.m$value,  fill = Actinos.Colors.Reduced.m$variable)) +geom_bar(stat = "identity")+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")+ scale_fill_manual(values=c("#0000FF","#000000", "#58FAF4","#A901DB","#FAAC58", "#FF0000"))
+ggsave(file="ActinoColor.svg", plot=ActinoColor, width=30, height=40)
+  
+
+#ggplot(Cyanos.Colors.Reduced.m, aes(x = Cyanos.Colors.Reduced.m$Family, y = Cyanos.Colors.Reduced.m$value,  fill = Cyanos.Colors.Reduced.m$variable)) +geom_bar(stat = "identity")+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")+ scale_fill_manual(values=c("#0000FF","#000000", "#58FAF4","#A901DB","#FAAC58", "#FF0000"))
+
+CyanoColor<-ggplot(Cyanos.Colors.Reduced.m, aes(x = Cyanos.Colors.Reduced.m$Family, y = Cyanos.Colors.Reduced.m$value,  fill = Cyanos.Colors.Reduced.m$variable)) +geom_bar(stat = "identity")+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")+ scale_fill_manual(values=c("#0000FF","#000000", "#58FAF4","#A901DB","#FAAC58", "#FF0000"))
+  ggsave(file="CyanoColor.svg", plot=CyanoColor, width=30, height=40)
+
+  
+ArchaeaColor<-ggplot(Archaeas.Colors.Reduced.m, aes(x = Archaeas.Colors.Reduced.m$Family, y = Archaeas.Colors.Reduced.m$value,  fill = Archaeas.Colors.Reduced.m$variable)) +geom_bar(stat = "identity")+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")+ scale_fill_manual(values=c("#0000FF","#000000", "#58FAF4","#A901DB","#FAAC58", "#FF0000"))
+ggsave(file="ArchaeaColor.svg", plot=ArchaeaColor, width=30, height=40)
+
+```
+
+  <!-- *Repetir  de las 93  a 106  DONE-->  
 ### From 
 
 235 Enzymes from BGC clusters were tested 
@@ -365,41 +714,8 @@ EvoMining was run over enzymes with expansion number between .1 and .6
 Figuras/GenomicDBS.svg
 
 
-### Section 2  Update and insights from genomic databases   
-<!-- new genome DB was contructed after testing new central -DB--> 
-EvoMining previous version genome-DB comprises 230 genomes from Actinobacteria, a phylum known by being a source of natural products biosynthetic gene clusters. EvoMining genomic model takes as postulates that secondary metbolism BGCs often includes enzymes that come from enzyme families that have been expanded and recruited to perform new metabolic functions. These assumptions are satisfied by other bacteria that posses expansions of enzyme families from central metabolism, as a consecuence EvoMining can be applied to other bacterial taxonomical groups beside Actinobacteria. Cyanobacteria for example is another phylum with known presence of biosynthetic gene clusters.
-
-Archaea resembled Bacteria in that Archaea uses horizontal gene transfer as a genic interchange mecanism, Archaeal genomes contains operons [@howland_surprising_2000] and in general there is introns absence{Reference to Computational Methods for Understanding Bacterial and Archaeal Genomes}. Archaeas do have introns, but they are mainly located on genes that encodes ribosomal and transfer RNA [@howland_surprising_2000]. General lack of introns allows automatic genome annotation, operons gene organization permits functional inference to a certain degree and HGT contribute to expansions on Archaeal genomes. Some phylum on Archaea has an open pangenome, and as we will show on this chapter some Archaea has central pathway expansions. 
-Enzyme families from central pathways expansions, open pangenome and operon organization made EvoMining succesful on Actinobacteria, this lead us to think that evoMining is suitable to analize Archaeal genomes, even more since EvoMining is a method oriented to use evolution and its not entirely based on previous knowledge of BGC's sequences if evolutionary logic behave on Archaea as on bacteria, new BGC's classes may be found on Archaea.
 
 
-as genomic-DB 230 genomes with 106 central families as the corresponding central-DB. 
-To incorporate other genomic databases to the pipeline it was important to determine wether or not other taxonomic groups actually posses expansions of families devoted to central metabolism. Nevertheless before exploring expansions from central enzyme families on other taxa beside Actinobacteria it is needed a previous identification of central families themselves on the new genomic databases. A common set of central enzyme families was determined for *Actinobacteria*, *Cyanobacteria*, *Pseudomonas* and even *Archaeas* by finding  best bidirectional hits (BBH) of original 339 seeds belonging to the 106 central Actinobacteria enzyme families on selected genomes. To avoid missing some BBH due to genome quality selected genomes were chosen to be on one contig. As an outcome of this process a database with 42 enzyme families common to this taxonomical groups was assembled, and *Actinobacteria*, *Cyanobacteria*, *Pseudomonas* and *Archaeas* were explored in search of central enzyme families expansions. 
-
-Selected genomes were BBH from 106 central enzyme families were searched are 1)Cyanobacteria phylum: * Cyanothece sp. ATCC 51142*, *Synechococcus sp. PCC 7002 CP000951.1*, *Synechocystis sp. PCC 6803 AP012205.1*, 2)Pseudomonas generus *Pseudomonas fluorescens pf0-1*,*Pseudomonas protegens Pf5*,*Pseudomonas syringae pv. actinidiae ICMP 18884 NZ_CM0027 51.1*,*Pseudomonas fulva 12-X NC_015556.1*
-3) Archaea kingdom *Natronomonas pharaonis*,*Methanosarcina acetivorans*, *Sulfolobus solfataricus* and *Nanoarchaeum equitans Kin4-M*.
-
-
-This results showed that expansion of a central family is calde specific, a family can be expanded on Actinobacteria but not on Cyanobacteria, even more a family can be part of the core of Actinobacteria but not exist on Archaea.
-Expansions were find to be similar in these 4 taxonomical groups, 
-
-Beside the already tested 240 Actinobacteria database, other genomic database can be explored. On this case we tested exapnsions on 876 Archaea 416 Cyanobacteria, and 1245 Actinobacteria based on central metabolism from actinobacteria  
-
-On cyanobacteria PriA an enzyme with no previously knwon secondary metabolism on Actinobacteria has been recruited into saxitoxin cluster.  
-Para aumentar la base de datos tomamos retroevomining y obtuvimos 2 en comun.. falta considerar las super duplicadas...
-Finalmente tomamos una enzima del shell en lugar de el core. (Puede ser del shell de streptomyces)
-
-EvoMining algorithm was used before with 230 Actinobacteria 106 central families, nvertheless  
-
-
-
-#### Discussion 
-During the decade between 1970 and 1980, Archaea was recognized as new life domain, a kingdom different from Bacteria and Eucarya in an exciting first great application of 16S phylogeny[@woese_phylogenetic_1977,@woese_are_1981] . Main differences between this kingdoms are that Archaeal DNA is not arranged in a nucleus as in Eucarya and Archaeal celular walls are not composed from peptidoglycans as in Bacteria. Archaeal proteins may be higlhy valuable to biotechnology industry for their great stability due to extreme temperature, PH and salt content conditions on Archeal habitats. Despite no Archaeal Natural products biosynthetic gene clusters (BGC's) has been reported on MiBIG, Archaea do have BGC's, some of them seems to be acquired by horizontal gene transfer (HGT) like methano nrps {search reference}. Other Archeal natural products known are archaeosins, Diketopiperazines, Acyl Homoserine Lactones, Exopolysaccharides, Carotenoids, Biosurfactants, Phenazines and Organic Solutes but this knowledge is not comparable to Bacterial BGC's knowledge[@charlesworth_untapped_2015].  
-  
-Natural products biosynthetic gene clusters search is actually performed using either *high-confidence/low-novelty or low-confidence/high-novelty* bioinformatic approaches [@medema_computational_2015]. High confidence methods compares query sequences with previously known BGC's such as nrps or PKS, examples of this algorithms are antiSMASH and clusterfinder [@_antismash_????]. EvoMining searches on expansions from central metabolic pathways enzyme families, it has been classified as low confidence/high novelty method. EvoMining has proved useful on Actinobacteria phylum where its use lead to Arseno-compounds discovery [@cruz-morales_phylogenomic_2016]. Also on Actinobacteria antiSMASH analysis on 1245 genomes found 774 different classes of natural products, the same analysis on 876 Archaeal genomes, a full kingdom, identifies only 35 BGC's classes. So either Archaea does not have natural products BGC's or this are not yet known. Next paragraph deals with a possible approach about how natural products BGC's can be find.  
-  
-  
-EvoMining is a trade off between conserved known central metabolic function and enough expansions divergence on sequence and on clusters to divergence 
 
 <!-- genomic results -->
 
@@ -407,341 +723,6 @@ El reclutamiento de una enzima en una ruta de metabolismo secundario
 The expansioness of a family depends on the clade.  
 Expansions are correlated with genome side, at different velocities, not linearly, Archaea Bacteria are smaller in size until now, Cyanobacteria correlation is weaker.  
   
-#### 2a Lineage specific  
-
-
-```{r GenomicDatabase,warnings = FALSE, message = FALSE,echo=FALSE, results='hide'}
-######################## Loading data  
-ArchaeasCentral <- read.table("../chapter3/ArchaeasCentral", header=TRUE, sep="\t")
-ArchaeasHeatPlot <- read.table("../chapter3/ArchaeasHeatPlot", header=TRUE, sep="\t")
-ArchaeasNp <- read.table("../chapter3/ArchaeasNp", header=TRUE, sep="\t")
-ArchaeasSMASH <- read.table("../chapter3/ArchaeasSMASH", header=TRUE, sep="\t")
-ArchaeasTaxa <- read.table("../chapter3/ArchaeasTaxa", header=TRUE, sep="\t")
-ArchaeasTaxa$Kingdom<-"Archea"
-ArchaeasSMASH$Kingdom<-"Archea"
-
-ActinosCentral <- read.table("../chapter4/ActinoCentral", header=TRUE, sep="\t")
-ActinosHeatPlot <- read.table("../chapter4/ActinoHeatPlot", header=TRUE, sep="\t")
-ActinosNp <- read.table("../chapter4/ActinoNp", header=TRUE, sep="\t")
-ActinosSMASH <- read.table("../chapter4/ActinosSMASH", header=TRUE, sep="\t")
-ActinosTaxa <- read.table("../chapter4/ActinoTaxa", header=TRUE, sep="\t")
-ActinosTaxa$Kingdom<-"Actinos"
-ActinosSMASH$Kingdom<-"Actinos"
-ActinosTaxa$SuperPhylum<-"Actinos"
-
-CyanosCentral <- read.table("../chapter5/CyanosCentral", header=TRUE, sep="\t")
-CyanosHeatPlot <- read.table("../chapter5/CyanosHeatPlot", header=TRUE, sep="\t")
-CyanosNp <- read.table("../chapter5/CyanosNp", header=TRUE, sep="\t")
-CyanosSMASH <- read.table("../chapter5/CyanosSMASH", header=TRUE, sep="\t")
-CyanosTaxa <- read.table("../chapter5/CyanosTaxa", header=TRUE, sep="\t")
-CyanosTaxa$Kingdom<-"Cyanos"
-CyanosSMASH$Kingdom<-"Cyanos"
-CyanosTaxa$SuperPhylum<-"Cyanobacteria"
-########################### End of loading data
-#str(ActinosTaxa) #1245
-#str(CyanosTaxa) #416
-#str(ArchaeasTaxa) #876
-
-#################################################################
-## Joining data frames heat plot and taxa
-TodosTaxa<-rbind(ArchaeasTaxa,CyanosTaxa,ActinosTaxa)
-
-#names(ArchaeasHeatPlot)
-#intersect(names(CyanosHeatPlot),names(ActinosHeatPlot))
-
-#intersect(intersect(names(CyanosHeatPlot),names(ActinosHeatPlot)),names(ArchaeasHeatPlot))
-ArHP<-ArchaeasHeatPlot[,intersect(intersect(names(CyanosHeatPlot),names(ActinosHeatPlot)),names(ArchaeasHeatPlot))]
-CyHP<-CyanosHeatPlot[,intersect(intersect(names(CyanosHeatPlot),names(ActinosHeatPlot)),names(ArchaeasHeatPlot))]
-AcHP<-ActinosHeatPlot[,intersect(intersect(names(CyanosHeatPlot),names(ActinosHeatPlot)),names(ArchaeasHeatPlot))]
-TodosHP<-rbind(ArHP,CyHP,AcHP)
-TodosEXP_TAXA<-merge(TodosHP,TodosTaxa,by.x="RastId",by.y="RastId")
-
-#str(TodosHP)
-####  End of joining dataframes
-##########################################################################################################
-##########################################################################################################
-##########################################################################################################
-################# Graphs 
-#########################################################################################################
-
-#########################################################################################################
-## 1) Genome Size vs central expansion by facets 
-GenomeSizeVsCentralExpansion<-qplot(TodosEXP_TAXA$Size, TodosEXP_TAXA$TOTAL, data = TodosEXP_TAXA,colour=TodosEXP_TAXA$Order)+facet_grid(TodosEXP_TAXA$Kingdom~.,scales="fixed")+theme_bw()+ theme(legend.position	="bottom",plot.title = element_text(size = 24, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 20),axis.text.y=element_text(size = 16)) +labs(x = "Genome size (bp)",    y = "Total number of expansions from central families",colour="Order" )
-ggsave(file="Figuras/GenomeSizeVsCentralExpansion.svg", plot=GenomeSizeVsCentralExpansion, width=10, height=10)
-## End genome size vs central expansion  
-##########################################################################################################
-
-
-#############################################################################################################################
-## 2) Box plot Expansiones familia y point Genome 
-TodosHP$RastId <- with(TodosHP, reorder(TodosHP$RastId, TodosHP$TOTAL))
-TodosHP.m <- melt(TodosEXP_TAXA,id = c("RastId","Kingdom","Name","SuperPhylum","Phylum","Class","Order","Family","Contigs","Size","RastNo"))
-TodosHP.m<-subset(TodosHP.m,variable!="TOTAL")
-#CyanosHeatPlot$RastId <- with(CyanosHeatPlot, reorder(CyanosHeatPlot$RastId, CyanosHeatPlot$TOTAL))
-#CyanosHeatPlot.m <- melt(CyanosHeatPlot)
-#CyanosHeatPlot.m<-subset(CyanosHeatPlot.m,variable!="TOTAL")
-##   Boxplot expansiones en familias en colores por reinos
-BoxCentralFamilies<-ggplot(TodosHP.m, aes(x=TodosHP.m$variable, y=TodosHP.m$value,color=TodosHP.m$Kingdom)) +labs(x = "Metabolic Families", y = "Copy number on Genomes",text = element_text(size=12)) + geom_boxplot()+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")
-####ggsave(file="BoxCentralFamilies.svg", plot=BoxCentralFamilies, width=30, height=8)
-############### End of boxplot   
-##########################################################################################################
-
-
-######## 3) NOT READY Diversity of antiSMASH detection on 3 genomic DBs
-CyanosSMASH.m <- melt(CyanosSMASH,id = c("RastId","Kingdom"))  
-CyanosSMASH.m<-CyanosSMASH.m[(CyanosSMASH.m$value!=0)&(CyanosSMASH.m$value!="Cyanos")&(CyanosSMASH.m$variable!="TOTAL"),]
-ArchaeasSMASH.m <- melt(ArchaeasSMASH,id = c("RastId","Kingdom"))  
-ArchaeasSMASH.m<-ArchaeasSMASH.m[(ArchaeasSMASH.m$value!=0)&(ArchaeasSMASH.m$value!="Archea")&(ArchaeasSMASH.m$variable!="TOTAL"),]
-ActinosSMASH.m <- melt(ActinosSMASH,id = c("RastId","Kingdom"))  
-ActinosSMASH.m<-ActinosSMASH.m[(ActinosSMASH.m$value!=0)&(ActinosSMASH.m$value!="Actinos")&(ActinosSMASH.m$variable!="TOTAL"),]
-Todos_SMASH<-rbind(ActinosSMASH.m,CyanosSMASH.m,ArchaeasSMASH.m)
-DiversitySMASH<-ggplot2.barplot(data=Todos_SMASH, xName="Kingdom",  groupName="variable",showLegend=FALSE)
-
-####ggsave(file="DiversitySMASH.svg", plot=DiversitySMASH, width=30, height=8)
-
-## HACEr una funcion con la diversidad de Archaea 
-#lista<-list(CyanosSMASH,ArchaeasSMASH,ActinosSMASH)
-#lista<-list(NonZeroCyanos,NonZeroArchaeas,NonZeroActinos)
-#TODOS_SMASH<-bind_rows(lista)
-#aver<-TODOS_SMASH[TODOS_SMASH$RastId=="389046",]$TOTAL
-#aver
-#2 Tener boxplot de expansiones por familia por kingdom LISTOOO
-#3 Escoger una familia para analizar a detalle por genero y poner sus árboles  PriA por ejemplo  
-
-## Good code but not in use  
-#names(CyanosSMASH)
-#intersect(names(CyanosSMASH),names(ArchaeasSMASH))
-#nonzero <- function(x) sum(x != 0)
-#NonZeroCyanos<-numcolwise(nonzero)(CyanosSMASH)
-#NonZeroArchaeas<-numcolwise(nonzero)(ArchaeasSMASH)
-#NonZeroActinos<-numcolwise(nonzero)(ActinosSMASH)
-#union( union(names(CyanosSMASH),names(ArchaeasSMASH)),names(ActinosSMASH))
-#union( union(names(NonZeroCyanos),names(NonZeroArchaeas)),names(NonZeroActinos))
-
-################## Init Figura antiSMASH propuesta por Paco Simil paper EvoMining  
-# Previous                            #     Current      
-#Genomic DB 230 genomas               #     Genomic DB   1245 genomes
-# Central 106 families                #     Central 93 families 
-# 226 BGCs                            #     1296 BGCs with 44552 enzymes
-# Previous results            ######################################
-# 101 expandidas                      #     93 Expansions, O bien 80 si consideramos solo expansiones on at least 1% (12.45) of organisms # Expandidas en coelicolor 33
-# 23 enzimas con reclutamientos       #      82 ?? Recruitments  11 non recruitments 76 according to dataframe. 
-
-## plan para replicar la figura CONSULTAR CON PACO Qué familias   
-## Hacer un script que obtenga los BBH de las central con cada familia expandida 
-## De los que nos son BBH cuales son antiSMASH /Cluster Finder  
-## Cuales son MIBIG  
-## Cuales no son nada.  
-
-## I´m starting with Actinobacteria  
-## 1) Identifying Familis with expansions  
-## ActinosHeatPlot Has the hits    
- ## Now need a function how many organisms has expansions and in total how many expansions are from the 95 families  
-#compare two vectors if ai > bi then 1 
-ActinosHP <-ActinosHeatPlot
-str(ActinosHP)
-rownames(ActinosHP) <- ActinosHeatPlot[,1]
-  HeatAverage=colMeans(ActinosHP)
-  HeatSD=apply(ActinosHP, 2, sd)
-ExpTresHold<-HeatAverage+HeatSD
-
-### Coelicolor expansions   
-Coelicolor<-ActinosHP["242137",]
-names(Coelicolor)
-Coelicolor<-Coelicolor[!names(Coelicolor) %in% c("TOTAL","RastId")]
-ExpTresHold2<-ExpTresHold[!names(ExpTresHold) %in% c("TOTAL","RastId")]
-CoeliExpansions<-Coelicolor>ExpTresHold2
-CoeliExpansionsTotal<-sum(CoeliExpansions) ## how many expansions
-CoeliExpansionsTotal ## 34
-CoeliExpansionsFamilies<-Coelicolor[CoeliExpansions]## which families are expanded   
-CoeliExpansionsFamilies
-CoeliExpansionsFamilies<-names(Coelicolor)[CoeliExpansions]## which families are expanded   
-CoeliExpansionsFamilies
-########### End coelicolor expansions 
-
-############## starting families exapnsions 
-ExpTresHold$RastId<-"Treshold"
-
-ActinosHP<-rbind (ActinosHP, ExpTresHold)  
-
-FamiliesExpanded <- function(x){ ## is a column
-  ultimo<-tail(x, n=1)
-  subx<-x>ultimo ## vector of organisms with extra copies
-  suma<-sum(subx) ## how many
-return(suma)
-}
-
-ExpandedFamilies=apply(ActinosHP,2, FamiliesExpanded)  
-ExpandedFamilies<-ExpandedFamilies[!names(ExpandedFamilies) %in% c("TOTAL","RastId")]
-str(ExpandedFamilies)
-nonzero <- function(x) sum(x != 0)
-zero <- function(x) sum(x == 0)
-Atleast1Percent<- function(x) sum(x >12.45)  
-
-NonZeroExpandedFamilies<-nonzero(ExpandedFamilies)
-ZeroExpandedFamilies<-zero(ExpandedFamilies)
-Percent1ExpandedFamilies<-Atleast1Percent(ExpandedFamilies)
-ZeroExpandedFamilies
-NonZeroExpandedFamilies
-Percent1ExpandedFamilies
-
-ExpandedFamilies["Phosphoglycerate_dehydrogenase"]
-#qplot(1:length(ExpandedFamilies), ExpandedFamilies, xlab ="Families") + geom_line()
-FiguraExpanded<-qplot(names(ExpandedFamilies), ExpandedFamilies, xlab ="Families") + geom_line()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")
-
-### Ahora quien de estas familias tienen reclutamientos   
-## Quiero grafica familia vs #reclutamientos 
-ActinosNpReduced<-subset(ActinosNp,ActinosNp$np!="none")
-cdata <- ddply(ActinosNpReduced, "Central", summarise,Nps  = length(np))
-rownames(cdata) <- cdata[,1]
-names(ExpandedFamilies)
-row.names(cdata)
-
-## Eliminar los 11 nones
-ExpandedAndRecruited<-intersect(names(ExpandedFamilies),row.names(cdata))
-cdata2<-subset(cdata,row.names(cdata) %in% ExpandedAndRecruited)
-ExpandedFamilies2<-ExpandedFamilies[names(ExpandedFamilies) %in% ExpandedAndRecruited]
-cdata2<-cdata2[match(names(ExpandedFamilies2), cdata2$Central),]
-cdata2$Expansions=ExpandedFamilies2  
-cdata2.m<- melt(cdata2,id = c("Central"))
-
-##### Solo me falta graficar  
-figure<-ggplot(cdata2.m, aes(x = cdata2.m$Central, y = cdata2.m$value, fill = cdata2.m$variable))+ geom_bar(stat = "identity")+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")
-
-### ggplot2.barplot(data=cdata2.m, xName="Central",  groupName="value")
-#cdata
-#summary(ActinosNp)
-## Quito none, interseccion y stack bar
-
-#qplot(x=Central, data=ActinosNp, geom="bar", fill=np, position="stack")+theme_bw()+ theme(legend.position	="none",text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
-
-```
-
-  
-#### 2b Diversity on central Families according to the lineage  
-
-<!-- this is the code for GenomicDiversity Figure-->
-```{r Figure_Pablo2 ,warnings = FALSE, message = FALSE,echo=FALSE, results='hide'}
-  
-#  1) Every BBH: (BBH Totales) Directly from blast not all of this sequences will go to EvoMining heat plot due to EvoMining restriction
-#  perl GetBBH.pl vueltaArcheas.blast.bbh |sort
-#  output *.bbh
-#  on excell sort families alphabetically 
-  
-#  2) Family Number From evoMiningHeatmap  ##Fallo, cyanos heatplot revisar correctos
-#  Crear archivo vi Central.numbers
-#  ls *central|sort -g |while read line; do fam=$(head -n1 $line|cut -d'|' -f3|rev  | cut -d'_' -f2- | rev);num=$(echo $line|cut -d'.' -f1);echo -e $num'\t'$fam; done>Central.numbers
-      
-#  3) All sequences on tree but oranges (TOTALTree)  
-#  ls *concat.fasta |sort -g|while read line; do num=$(grep '>' $line|sort|uniq|wc); echo $line $num; done|cut -d' ' -f1,2   
-#  concat contains cyan, black and red leaves but not the oranges  
-  
-#  4) candidates to BBH on tree first red colored  (FirstRED)
-#  perl GetBBHonTree.pl Central.numbers  
-#  output .bbh.tree  
-  
-#  5) AntiSMASH on sequences on tree  CYAN  
-#   Ids antiSMASH file  
-#   cut -f2 Archeas_Smash |sort >Archeas_Smash_F1  
-#   Ids list ls *concat.fasta|sort -g |while read line; do grep '>' $line|cut -d'|' -f2 |sort >$line.ids; done  
-#   ls *ids |sort -g |while read line; do comm -12 Archeas_Smash_F1 $line>$line.smash; done  
-#   output .smash
-#   ls *smash|sort -g |while read line; do num=$(wc -l<$line);echo -e $num'\t'$line; done
-   
-   
-#  6) AntiSMASH on BBH on tree (AntiSMASHonTree) CYAN_OVER_RED
-#    perl GetBBHonTreeAndonSmash.pl Central.numbers  
-#    Output .bbh_smash
-
-#  7) Blue MiBig BLUE
-# seq 81|while read line; do if [ -f $line.fasta_ExpandedVsNp.blast.2.recruitedUniq ];  then num=$(wc -l <$line.fasta_ExpandedVsNp.blast.2.recruitedUniq);  else num=0; fi; echo -e $line'\t'$num; done
-#   Non existent files are 0 hits
-   
- # 8) Orange leaves (Central seeds/queries) ORANGE
- #    ls *central |sort -g | while read line; do num=$(grep '>' $line |sort|uniq |wc); echo $line $num; done  
- #    RED=FirstRED-CYAN_OVER_RED  
- #    BLACK=TOTALTree-RED-CYAN-BLUE  
-       
-  
-ActinosColors <- read.table("ACTINOS/Actinos.Central.Colors", header=TRUE, sep="\t")
-ActinosColors$Kingdom<-"Actinos"
-ActinosColors$Red_Final<-ActinosColors$FirstRED-ActinosColors$CYAN_OVER_RED  
-ActinosColors$Cyan_Cyan<-ActinosColors$CYAN -ActinosColors$CYAN_OVER_RED  
-ActinosColors$Black<-ActinosColors$TOTALTree-(ActinosColors$CYAN+ActinosColors$Red_Final+ActinosColors$Azul_NP)
-
-CyanosColors <- read.table("CYANOS/Cyanos.Central.Colors", header=TRUE, sep="\t")
-CyanosColors$Kingdom<-"Cyanos"
-CyanosColors$Red_Final<-CyanosColors$FirstRED-CyanosColors$CYAN_OVER_RED  
-CyanosColors$Cyan_Cyan<-CyanosColors$CYAN -CyanosColors$CYAN_OVER_RED  
-CyanosColors$Black<-CyanosColors$TOTALTree-(CyanosColors$CYAN+CyanosColors$Red_Final+CyanosColors$Azul_NP)  
-  
-ArchaeasColors <- read.table("ARCHAEAS/Archeas.Central.Colors", header=TRUE, sep="\t")  
-ArchaeasColors$Kingdom<-"Archaea"  
-ArchaeasColors$Red_Final<-ArchaeasColors$FirstRED-ArchaeasColors$CYAN_OVER_RED  
-ArchaeasColors$Cyan_Cyan<-ArchaeasColors$CYAN -ArchaeasColors$CYAN_OVER_RED  
-ArchaeasColors$Black<-ArchaeasColors$TOTALTree-(ArchaeasColors$CYAN+ArchaeasColors$Red_Final+ArchaeasColors$Azul_NP)  
-
-rownames(ArchaeasColors) <- ArchaeasColors[,2]
-rownames(CyanosColors) <- CyanosColors[,2]
-rownames(ActinosColors) <- ActinosColors[,2]
-
-#Actinos.Colors.Reduced<-ActinosColors
-Actinos.Colors.Reduced<-ActinosColors[intersect(intersect(row.names(ArchaeasColors),row.names(ActinosColors)),row.names(CyanosColors)),]
-arrange(Actinos.Colors.Reduced, Num)
-
-#Cyanos.Colors.Reduced<-CyanosColors  
-Cyanos.Colors.Reduced<-CyanosColors[intersect(intersect(row.names(ArchaeasColors),row.names(ActinosColors)),row.names(CyanosColors)),]
-arrange(Cyanos.Colors.Reduced, Num)
-
-#Archaeas.Colors.Reduced<-ArchaeasColors
-Archaeas.Colors.Reduced<-ArchaeasColors[intersect(intersect(row.names(ArchaeasColors),row.names(ActinosColors)),row.names(CyanosColors)),] 
-arrange(Archaeas.Colors.Reduced, Num)
-
-
-#str(ActinosTaxa) #1245
-#str(CyanosTaxa) #416
-#str(ArchaeasTaxa) #876
-
-
-Actinos.Colors.Reduced=Actinos.Colors.Reduced[names(Actinos.Colors.Reduced) %in% c("Family","Azul_NP","Black","Cyan_Cyan","CYAN_OVER_RED","Red_Final","ORANGE","Kingdom")]
-Actinos.Colors.Reduced<-Actinos.Colors.Reduced[c(1,3,8,7,2,4,6,5)]
-
-Cyanos.Colors.Reduced=Cyanos.Colors.Reduced[names(Cyanos.Colors.Reduced) %in% c("Family","Azul_NP","Black","Cyan_Cyan","CYAN_OVER_RED","Red_Final","ORANGE","Kingdom")]
-Cyanos.Colors.Reduced<-Cyanos.Colors.Reduced[c(1,3,8,7,2,4,6,5)]
-
-Archaeas.Colors.Reduced=Archaeas.Colors.Reduced[names(Archaeas.Colors.Reduced) %in% c("Family","Azul_NP","Black","Cyan_Cyan","CYAN_OVER_RED","Red_Final","ORANGE","Kingdom")]
-Archaeas.Colors.Reduced<-Archaeas.Colors.Reduced[c(1,3,8,7,2,4,6,5)]
-
-Actinos.Colors.Reduced.m<- melt(Actinos.Colors.Reduced,id = c("Family","Kingdom"))
-Cyanos.Colors.Reduced.m<- melt(Cyanos.Colors.Reduced,id = c("Family","Kingdom"))
-Archaeas.Colors.Reduced.m<- melt(Archaeas.Colors.Reduced,id = c("Family","Kingdom"))
-#Colors.m<- melt(Colors,id = c("Family","Kingdom"))
-Actinos.Colors.Reduced.m$value<-Actinos.Colors.Reduced.m$value/1245
-Cyanos.Colors.Reduced.m$value<-Cyanos.Colors.Reduced.m$value/416  
-Archaeas.Colors.Reduced.m$value<-Archaeas.Colors.Reduced.m$value/876
-
-
-
-#ggplot(Actinos.Colors.Reduced.m, aes(x = Actinos.Colors.Reduced.m$Family, y = Actinos.Colors.Reduced.m$value,  fill = Actinos.Colors.Reduced.m$variable)) +geom_bar(stat = "identity")+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")+ scale_fill_manual(values=c("#0000FF","#000000", "#58FAF4","#A901DB","#FAAC58", "#FF0000"))
-
-ActinoColor<-ggplot(Actinos.Colors.Reduced.m, aes(x = Actinos.Colors.Reduced.m$Family, y = Actinos.Colors.Reduced.m$value,  fill = Actinos.Colors.Reduced.m$variable)) +geom_bar(stat = "identity")+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")+ scale_fill_manual(values=c("#0000FF","#000000", "#58FAF4","#A901DB","#FAAC58", "#FF0000"))
-ggsave(file="ActinoColor.svg", plot=ActinoColor, width=30, height=40)
-  
-
-#ggplot(Cyanos.Colors.Reduced.m, aes(x = Cyanos.Colors.Reduced.m$Family, y = Cyanos.Colors.Reduced.m$value,  fill = Cyanos.Colors.Reduced.m$variable)) +geom_bar(stat = "identity")+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")+ scale_fill_manual(values=c("#0000FF","#000000", "#58FAF4","#A901DB","#FAAC58", "#FF0000"))
-
-CyanoColor<-ggplot(Cyanos.Colors.Reduced.m, aes(x = Cyanos.Colors.Reduced.m$Family, y = Cyanos.Colors.Reduced.m$value,  fill = Cyanos.Colors.Reduced.m$variable)) +geom_bar(stat = "identity")+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")+ scale_fill_manual(values=c("#0000FF","#000000", "#58FAF4","#A901DB","#FAAC58", "#FF0000"))
-  ggsave(file="CyanoColor.svg", plot=CyanoColor, width=30, height=40)
-
-  
-ArchaeaColor<-ggplot(Archaeas.Colors.Reduced.m, aes(x = Archaeas.Colors.Reduced.m$Family, y = Archaeas.Colors.Reduced.m$value,  fill = Archaeas.Colors.Reduced.m$variable)) +geom_bar(stat = "identity")+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")+ scale_fill_manual(values=c("#0000FF","#000000", "#58FAF4","#A901DB","#FAAC58", "#FF0000"))
-ggsave(file="ArchaeaColor.svg", plot=ArchaeaColor, width=30, height=40)
-
-```
-
-Archaea has central expansions and has BGCs  
-  
- 
 
 
 ### Section 3 Update and insights from central DB  
@@ -758,7 +739,6 @@ this requirement provides functional annotation when looking for the genomic con
 
 ### Section 4 Update and insights from Natural products DB
 Backward EvoMining  
-
 
 
 ## Methodology
@@ -778,6 +758,14 @@ Backward Enzyme sequences from S. coelicolor and S. lividans biosynthetic gene c
 Average copy number  
 <!--### Backward EvoMining Central vs Natural-->
 All databases are downloadable at Zenodo (Doi numbers genomic-DB: STREPTOMYCES,  Actinobacteria, Cyanobacteria, Pseudomonas, Archaea, central-DB:  Actinobacteria, Cyanobacteria, Pseudomonas, Archaea, lividans/coelicolor BGC ) 
+#### Discussion 
+During the decade between 1970 and 1980, Archaea was recognized as new life domain, a kingdom different from Bacteria and Eucarya in an exciting first great application of 16S phylogeny[@woese_phylogenetic_1977,@woese_are_1981] . Main differences between this kingdoms are that Archaeal DNA is not arranged in a nucleus as in Eucarya and Archaeal celular walls are not composed from peptidoglycans as in Bacteria. Archaeal proteins may be higlhy valuable to biotechnology industry for their great stability due to extreme temperature, PH and salt content conditions on Archeal habitats. Despite no Archaeal Natural products biosynthetic gene clusters (BGC's) has been reported on MiBIG, Archaea do have BGC's, some of them seems to be acquired by horizontal gene transfer (HGT) like methano nrps {search reference}. Other Archeal natural products known are archaeosins, Diketopiperazines, Acyl Homoserine Lactones, Exopolysaccharides, Carotenoids, Biosurfactants, Phenazines and Organic Solutes but this knowledge is not comparable to Bacterial BGC's knowledge[@charlesworth_untapped_2015].  
+  
+Natural products biosynthetic gene clusters search is actually performed using either *high-confidence/low-novelty or low-confidence/high-novelty* bioinformatic approaches [@medema_computational_2015]. High confidence methods compares query sequences with previously known BGC's such as nrps or PKS, examples of this algorithms are antiSMASH and clusterfinder [@_antismash_????]. EvoMining searches on expansions from central metabolic pathways enzyme families, it has been classified as low confidence/high novelty method. EvoMining has proved useful on Actinobacteria phylum where its use lead to Arseno-compounds discovery [@cruz-morales_phylogenomic_2016]. Also on Actinobacteria antiSMASH analysis on 1245 genomes found 774 different classes of natural products, the same analysis on 876 Archaeal genomes, a full kingdom, identifies only 35 BGC's classes. So either Archaea does not have natural products BGC's or this are not yet known. Next paragraph deals with a possible approach about how natural products BGC's can be find.  
+  
+  
+EvoMining is a trade off between conserved known central metabolic function and enough expansions divergence on sequence and on clusters to divergence 
+
 
 ## Figures  
 ![Pipeline](Figuras/EvoMiningPipeline.svg)  
