@@ -86,13 +86,11 @@ Finally to prioritize which clusters possess more metabolite variations, assumin
 
 ##  Results and Discussion   
 
-### Section 1 EvoMining 2.0 Updated model and pipeline   
+### Section 1 EvoMining 2.0 Updated model and pipeline  
+<!-- software results-->
 EvoMining is a visual genome mining tool that following evolutionary principles has the milestone of prioritize non standard secondary metabolite pathways. The algorithm follows enzyme families from central pathways on their recruitment as components of natural products biosynthetic gene clusters (BGCs) within a genomic database. 
   
-Figure1  
-![Pipeline](Figuras/EvoMiningPipeline.svg)  
-  
-EvoMining inputs are a (1) a custom genomic database (genomic-DB), (2) a central pathways database (central-DB) and (3) a natural product database (natural-DB) composed of genes that belongs to experimentally tested BGCs. 
+  EvoMining inputs are a (1) a custom genomic database (genomic-DB), (2) a central pathways database (central-DB) and (3) a natural product database (natural-DB) composed of genes that belongs to experimentally tested BGCs. 
  These three databases are provided and can be modified, replaced and expanded by the user. In this work genomic-DB are  collection of up to date genomes in RAST format from taxonomically related organisms such as Actinobacteria, Cyanobacteria, Pseudomonas and Archaea. Selection of this taxa obeys to the possibility of comparing well known NPs producing organisms such as Actinobacteria and Cyanobacteria in contrast with Archaea that has been poorly investigated. The central-DB contains nine central pathways from Actinobacteria previously curated [@barona-gomez_what_2012], plus an update of seed metabolic enzymes identified after manual curation congruent with the central EvoMining paradigm.  The natural-DB currently comprises all sequences that belongs to some BGCs from The Minimum Information about a Biosynthetic Gene cluster (MIBiG) [@medema_minimum_2015].   
 
 As output EvoMining identifies on the genomic-DB those expanded families from the central-DB that has at least a recruited member onto the natural-DB, proceeding then to the reconstruction of the evolutionary history of the enzyme family. Given an enzyme from the central-DB, the product of EvoMining analysis is a color coded tree of the expanded enzyme family that provides information about the metabolic fate. Specifically, enzymes from central metabolism are differentiated from known Natural Products enzymes and those expansions with potential activity into secondary metabolism are emphasised as putative novel recruitments. Further analysis of these hits allows visualization of the genomic vicinity guiding to the discovery of novel BGCs. In addition to the updates associated to the workflow of EvoMining, the version to be released will include the possibility of defining the dynamics of the gene content of any given BGC to explore the chemical plasticity related to EvoMining hits. This allows to prioritize which clusters possess more metabolite variations, therefore unmasking biosynthetic darkmatter (Medema and Fischbach 2015, Blin et al. 2017). 
@@ -100,7 +98,8 @@ As output EvoMining identifies on the genomic-DB those expanded families from th
 EvoMining code and components (blast, muscle, FastTree, newick utilities, Gblocks,apache and SVG perl module) are wrapped on the docker container  nselem/newevomining downloadable at the Docker hub. Code is available at at github: nselem/EvoMining and manual at https://github.com/nselem/EvoMining/wiki. EvoMining tool will allow researchers to examine their own genomes and their own enzyme families in the search of expansions involved on nobel secondary metabolism.  
 
 EvoMining will identify those expanded families of the central-DB within the genomic-DB that has at least a recruited member onto the natural-DB, proceeding then to the reconstruction of the evolutionary history of the enzyme family. Given an enzyme from the central-DB, the product of EvoMining analysis is an interactive color coded tree of the enzyme expanded family where best bidirectional hits (BBH) of central-DB are differentiated from Natural Products members and those expansions close to a Natural Product sequence that are not BBH with central-DB enzymes are emphasised as putative nobel recruitments into secondary metabolism.   
-EvoMining algorithm was used before with 230 Actinobacteria 106 central families, nvertheless  
+
+
 Genomic DB  
 
 Feature           EvoMining 1                   EvoMining 2                    Novel insights
@@ -131,7 +130,6 @@ Natural-DB
 56 intermediate  
 124 Super  
 
-![TauD](Figuras/EvoBackward2.svg)  
 3.2(Backward Evening)    
 Coelicolor clusters  
 
@@ -216,10 +214,11 @@ tableDistribution <- read.csv("Figuras/Coeli100", header=TRUE, row.names=1,sep="
 LivitableDistribution  <- read.csv("Figuras/Livi100",header=TRUE, row.names=1,sep="\t")   ### Enzyme BGC Function from MiBIG coelicolor
 tableCentralDistribution <- read.csv("Figuras/Central100", header=TRUE, row.names=1,sep="\t")  ### Enzyme Subsystem Function from central metabolism  
 
+tableDistribution[1,Enzyme_19]
 tableNaturalDistribution<- merge(LivitableDistribution, tableDistribution, by=0, all=TRUE) 
 
 rownames(tableNaturalDistribution) <- tableNaturalDistribution[,1]
-tableNaturalDistribution$Row.name<-NULL
+tableNaturalDistribution$Row.names<-NULL
 #str(tableNaturalDistribution)
 
 #tableNaturalDistribution$Enzyme_74
@@ -367,14 +366,48 @@ Figuras/GenomicDBS.svg
 
 
 ### Section 2  Update and insights from genomic databases   
+<!-- new genome DB was contructed after testing new central -DB--> 
+EvoMining previous version genome-DB comprises 230 genomes from Actinobacteria, a phylum known by being a source of natural products biosynthetic gene clusters. EvoMining genomic model takes as postulates that secondary metbolism BGCs often includes enzymes that come from enzyme families that have been expanded and recruited to perform new metabolic functions. These assumptions are satisfied by other bacteria that posses expansions of enzyme families from central metabolism, as a consecuence EvoMining can be applied to other bacterial taxonomical groups beside Actinobacteria. Cyanobacteria for example is another phylum with known presence of biosynthetic gene clusters.
+
+Archaea resembled Bacteria in that Archaea uses horizontal gene transfer as a genic interchange mecanism, Archaeal genomes contains operons [@howland_surprising_2000] and in general there is introns absence{Reference to Computational Methods for Understanding Bacterial and Archaeal Genomes}. Archaeas do have introns, but they are mainly located on genes that encodes ribosomal and transfer RNA [@howland_surprising_2000]. General lack of introns allows automatic genome annotation, operons gene organization permits functional inference to a certain degree and HGT contribute to expansions on Archaeal genomes. Some phylum on Archaea has an open pangenome, and as we will show on this chapter some Archaea has central pathway expansions. 
+Enzyme families from central pathways expansions, open pangenome and operon organization made EvoMining succesful on Actinobacteria, this lead us to think that evoMining is suitable to analize Archaeal genomes, even more since EvoMining is a method oriented to use evolution and its not entirely based on previous knowledge of BGC's sequences if evolutionary logic behave on Archaea as on bacteria, new BGC's classes may be found on Archaea.
+
+
+as genomic-DB 230 genomes with 106 central families as the corresponding central-DB. 
+To incorporate other genomic databases to the pipeline it was important to determine wether or not other taxonomic groups actually posses expansions of families devoted to central metabolism. Nevertheless before exploring expansions from central enzyme families on other taxa beside Actinobacteria it is needed a previous identification of central families themselves on the new genomic databases. A common set of central enzyme families was determined for *Actinobacteria*, *Cyanobacteria*, *Pseudomonas* and even *Archaeas* by finding  best bidirectional hits (BBH) of original 339 seeds belonging to the 106 central Actinobacteria enzyme families on selected genomes. To avoid missing some BBH due to genome quality selected genomes were chosen to be on one contig. As an outcome of this process a database with 42 enzyme families common to this taxonomical groups was assembled, and *Actinobacteria*, *Cyanobacteria*, *Pseudomonas* and *Archaeas* were explored in search of central enzyme families expansions. 
+
+Selected genomes were BBH from 106 central enzyme families were searched are 1)Cyanobacteria phylum: * Cyanothece sp. ATCC 51142*, *Synechococcus sp. PCC 7002 CP000951.1*, *Synechocystis sp. PCC 6803 AP012205.1*, 2)Pseudomonas generus *Pseudomonas fluorescens pf0-1*,*Pseudomonas protegens Pf5*,*Pseudomonas syringae pv. actinidiae ICMP 18884 NZ_CM0027 51.1*,*Pseudomonas fulva 12-X NC_015556.1*
+3) Archaea kingdom *Natronomonas pharaonis*,*Methanosarcina acetivorans*, *Sulfolobus solfataricus* and *Nanoarchaeum equitans Kin4-M*.
+
+
+This results showed that expansion of a central family is calde specific, a family can be expanded on Actinobacteria but not on Cyanobacteria, even more a family can be part of the core of Actinobacteria but not exist on Archaea.
+Expansions were find to be similar in these 4 taxonomical groups, 
+
+Beside the already tested 240 Actinobacteria database, other genomic database can be explored. On this case we tested exapnsions on 876 Archaea 416 Cyanobacteria, and 1245 Actinobacteria based on central metabolism from actinobacteria  
+
+On cyanobacteria PriA an enzyme with no previously knwon secondary metabolism on Actinobacteria has been recruited into saxitoxin cluster.  
+Para aumentar la base de datos tomamos retroevomining y obtuvimos 2 en comun.. falta considerar las super duplicadas...
+Finalmente tomamos una enzima del shell en lugar de el core. (Puede ser del shell de streptomyces)
+
+EvoMining algorithm was used before with 230 Actinobacteria 106 central families, nvertheless  
+
+
+
+#### Discussion 
+During the decade between 1970 and 1980, Archaea was recognized as new life domain, a kingdom different from Bacteria and Eucarya in an exciting first great application of 16S phylogeny[@woese_phylogenetic_1977,@woese_are_1981] . Main differences between this kingdoms are that Archaeal DNA is not arranged in a nucleus as in Eucarya and Archaeal celular walls are not composed from peptidoglycans as in Bacteria. Archaeal proteins may be higlhy valuable to biotechnology industry for their great stability due to extreme temperature, PH and salt content conditions on Archeal habitats. Despite no Archaeal Natural products biosynthetic gene clusters (BGC's) has been reported on MiBIG, Archaea do have BGC's, some of them seems to be acquired by horizontal gene transfer (HGT) like methano nrps {search reference}. Other Archeal natural products known are archaeosins, Diketopiperazines, Acyl Homoserine Lactones, Exopolysaccharides, Carotenoids, Biosurfactants, Phenazines and Organic Solutes but this knowledge is not comparable to Bacterial BGC's knowledge[@charlesworth_untapped_2015].  
   
+Natural products biosynthetic gene clusters search is actually performed using either *high-confidence/low-novelty or low-confidence/high-novelty* bioinformatic approaches [@medema_computational_2015]. High confidence methods compares query sequences with previously known BGC's such as nrps or PKS, examples of this algorithms are antiSMASH and clusterfinder [@_antismash_????]. EvoMining searches on expansions from central metabolic pathways enzyme families, it has been classified as low confidence/high novelty method. EvoMining has proved useful on Actinobacteria phylum where its use lead to Arseno-compounds discovery [@cruz-morales_phylogenomic_2016]. Also on Actinobacteria antiSMASH analysis on 1245 genomes found 774 different classes of natural products, the same analysis on 876 Archaeal genomes, a full kingdom, identifies only 35 BGC's classes. So either Archaea does not have natural products BGC's or this are not yet known. Next paragraph deals with a possible approach about how natural products BGC's can be find.  
+  
+  
+EvoMining is a trade off between conserved known central metabolic function and enough expansions divergence on sequence and on clusters to divergence 
+
+<!-- genomic results -->
 
 El reclutamiento de una enzima en una ruta de metabolismo secundario 
 The expansioness of a family depends on the clade.  
 Expansions are correlated with genome side, at different velocities, not linearly, Archaea Bacteria are smaller in size until now, Cyanobacteria correlation is weaker.  
   
 #### 2a Lineage specific  
-![GenomicDatabases](Figuras/GenomicDBS.svg)  <!--Poner juntos cyanos Archea, marcar por forma orden favorito -->
 
 
 ```{r GenomicDatabase,warnings = FALSE, message = FALSE,echo=FALSE, results='hide'}
@@ -586,7 +619,7 @@ figure<-ggplot(cdata2.m, aes(x = cdata2.m$Central, y = cdata2.m$value, fill = cd
 
   
 #### 2b Diversity on central Families according to the lineage  
-![Pipeline](GenomicDiversity.svg)  
+
 <!-- this is the code for GenomicDiversity Figure-->
 ```{r Figure_Pablo2 ,warnings = FALSE, message = FALSE,echo=FALSE, results='hide'}
   
@@ -708,25 +741,12 @@ ggsave(file="ArchaeaColor.svg", plot=ArchaeaColor, width=30, height=40)
 
 Archaea has central expansions and has BGCs  
   
-#### Archaea fits as EvoMining central DB  
-During the decade between 1970 and 1980, Archaea was recognized as new life domain, a kingdom different from Bacteria and Eucarya in an exciting first great application of 16S phylogeny[@woese_phylogenetic_1977,@woese_are_1981] . Main differences between this kingdoms are that Archaeal DNA is not arranged in a nucleus as in Eucarya and Archaeal celular walls are not composed from peptidoglycans as in Bacteria. Archaeal proteins may be higlhy valuable to biotechnology industry for their great stability due to extreme temperature, PH and salt content conditions on Archeal habitats. Despite no Archaeal Natural products biosynthetic gene clusters (BGC's) has been reported on MiBIG, Archaea do have BGC's, some of them seems to be acquired by horizontal gene transfer (HGT) like methano nrps {search reference}. Other Archeal natural products known are archaeosins, Diketopiperazines, Acyl Homoserine Lactones, Exopolysaccharides, Carotenoids, Biosurfactants, Phenazines and Organic Solutes but this knowledge is not comparable to Bacterial BGC's knowledge[@charlesworth_untapped_2015].  
-  
-Natural products biosynthetic gene clusters search is actually performed using either *high-confidence/low-novelty or low-confidence/high-novelty* bioinformatic approaches [@medema_computational_2015]. High confidence methods compares query sequences with previously known BGC's such as nrps or PKS, examples of this algorithms are antiSMASH and clusterfinder [@_antismash_????]. EvoMining searches on expansions from central metabolic pathways enzyme families, it has been classified as low confidence/high novelty method. EvoMining has proved useful on Actinobacteria phylum where its use lead to Arseno-compounds discovery [@cruz-morales_phylogenomic_2016]. Also on Actinobacteria antiSMASH analysis on 1245 genomes found 774 different classes of natural products, the same analysis on 876 Archaeal genomes, a full kingdom, identifies only 35 BGC's classes. So either Archaea does not have natural products BGC's or this are not yet known. Next paragraph deals with a possible approach about how natural products BGC's can be find.  
-  
-Archaea resembled Bacteria in that Archaea uses horizontal gene transfer as a genic interchange mecanism, Archaeal genomes contains operons [@howland_surprising_2000] and in general there is introns absence{Reference to Computational Methods for Understanding Bacterial and Archaeal Genomes}. Archaeas do have introns, but they are mainly located on genes that encodes ribosomal and transfer RNA [@howland_surprising_2000]. General lack of introns allows automatic genome annotation, operons gene organization permits functional inference to a certain degree and HGT contribute to expansions on Archaeal genomes. Some phylum on Archaea has an open pangenome, and as we will show on this chapter some Archaea has central pathway expansions. 
-Enzyme families from central pathways expansions, open pangenome and operon organization made EvoMining succesful on Actinobacteria, this lead us to think that evoMining is suitable to analize Archaeal genomes, even more since EvoMining is a method oriented to use evolution and its not entirelyy based on previous knowledge of BGC's sequences if evolutionary logic behave on Archaea as on bacteria, new BGC's classes may be found on Archaea.
-  
-EvoMining is a trade off between conserved known central metabolic function and enough expansions divergence on sequence and on clusters to divergence 
-
-Beside the already tested 240 Actinobacteria database, other genomic database can be explored. On this case we tested exapnsions on 876 Archaea 416 Cyanobacteria, and 1245 Actinobacteria based on central metabolism from actinobacteria  
-
-On cyanobacteria PriA an enzyme with no previously knwon secondary metabolism on Actinobacteria has been recruited into saxitoxin cluster.   
+ 
 
 
 ### Section 3 Update and insights from central DB  
 Expansions other central  
 To limitate the search for enzymes of recent recruitment into natural products
-![TauD](Figuras/TauDpseudomonas2.svg)  
 
 As we have explored other genomic databases, central database  customization is also implemented, on this case we have use TauD en enzyme from taurine assimilation system on enterobacteria, on the genomic database Pseudomonas. Enzymes does not necessary have to be central, in the sense that they belong to the core of its taxonomic group, but at least should have expansions.  
 
@@ -738,7 +758,6 @@ this requirement provides functional annotation when looking for the genomic con
 
 ### Section 4 Update and insights from Natural products DB
 Backward EvoMining  
-![TauD](Figuras/naturalDB.svg)  
 
 
 
@@ -760,6 +779,13 @@ Average copy number
 <!--### Backward EvoMining Central vs Natural-->
 All databases are downloadable at Zenodo (Doi numbers genomic-DB: STREPTOMYCES,  Actinobacteria, Cyanobacteria, Pseudomonas, Archaea, central-DB:  Actinobacteria, Cyanobacteria, Pseudomonas, Archaea, lividans/coelicolor BGC ) 
 
+## Figures  
+![Pipeline](Figuras/EvoMiningPipeline.svg)  
+![GenomicDatabases](Figuras/CentralDB.svg)  <!--Poner juntos cyanos Archea, marcar por forma orden favorito -->
+![BackwardEvomining](Figuras/EvoBackward2.svg)  
+![EnzymeFamilies](GenomicDiversity.svg)  
+![TauD](Figuras/TauDpseudomonas2.svg)  
+![Shell enzyme](Figuras/naturalDB.svg)  
 
 ## Acknowledgments
 Secretaria de Inovacion, Conabio:Keri/Ernesto, Argonne cluster Cocina Tepeyac
