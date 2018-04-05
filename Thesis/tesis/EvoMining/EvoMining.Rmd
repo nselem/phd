@@ -144,16 +144,22 @@ Finalmente tomamos una enzima del shell en lugar de el core. (Puede ser del shel
 
 ```{r GenomicDatabase,warnings = FALSE, message = FALSE,echo=FALSE, results='hide'}
 ######################## Loading data  
-ArchaeasCentral <- read.table("../chapter3/ArchaeasCentral", header=TRUE, sep="\t")
-ArchaeasHeatPlot <- read.table("../chapter3/ArchaeasHeatPlot", header=TRUE, sep="\t")
+#ArchaeasCentral <- read.table("../chapter3/ArchaeasCentral", header=TRUE, sep="\t")
+#ArchaeasHeatPlot <- read.table("../chapter3/ArchaeasHeatPlot", header=TRUE, sep="\t")
+
+ArchaeasCentral <- read.table("ARCHAEAS/Archaeas.Central", header=TRUE, sep="\t")
+ArchaeasHeatPlot <- read.table("ARCHAEAS/HM_44_Archaea", header=TRUE, sep="\t")
 ArchaeasNp <- read.table("../chapter3/ArchaeasNp", header=TRUE, sep="\t")
 ArchaeasSMASH <- read.table("../chapter3/ArchaeasSMASH", header=TRUE, sep="\t")
 ArchaeasTaxa <- read.table("../chapter3/ArchaeasTaxa", header=TRUE, sep="\t")
 ArchaeasTaxa$Kingdom<-"Archea"
 ArchaeasSMASH$Kingdom<-"Archea"
 
-ActinosCentral <- read.table("../chapter4/ActinoCentral", header=TRUE, sep="\t")
-ActinosHeatPlot <- read.table("../chapter4/ActinoHeatPlot", header=TRUE, sep="\t")
+#ActinosCentral <- read.table("../chapter4/ActinoCentral", header=TRUE, sep="\t")
+#ActinosHeatPlot <- read.table("../chapter4/ActinoHeatPlot", header=TRUE, sep="\t")
+ActinosCentral <- read.table("ACTINOS/Actinos.Central", header=TRUE, sep="\t")
+ActinosHeatPlot <- read.table("ACTINOS/HM_44_Actinos", header=TRUE, sep="\t")
+
 ActinosNp <- read.table("../chapter4/ActinoNp", header=TRUE, sep="\t")
 ActinosSMASH <- read.table("../chapter4/ActinosSMASH", header=TRUE, sep="\t")
 ActinosTaxa <- read.table("../chapter4/ActinoTaxa", header=TRUE, sep="\t")
@@ -161,8 +167,11 @@ ActinosTaxa$Kingdom<-"Actinos"
 ActinosSMASH$Kingdom<-"Actinos"
 ActinosTaxa$SuperPhylum<-"Actinos"
 
-CyanosCentral <- read.table("../chapter5/CyanosCentral", header=TRUE, sep="\t")
-CyanosHeatPlot <- read.table("../chapter5/CyanosHeatPlot", header=TRUE, sep="\t")
+#CyanosCentral <- read.table("../chapter5/CyanosCentral", header=TRUE, sep="\t")
+#CyanosHeatPlot <- read.table("../chapter5/CyanosHeatPlot", header=TRUE, sep="\t")
+
+CyanosCentral <- read.table("CYANOS/Cyanos.Central", header=TRUE, sep="\t")
+CyanosHeatPlot <- read.table("CYANOS/HM_44_Cyanos", header=TRUE, sep="\t")
 CyanosNp <- read.table("../chapter5/CyanosNp", header=TRUE, sep="\t")
 CyanosSMASH <- read.table("../chapter5/CyanosSMASH", header=TRUE, sep="\t")
 CyanosTaxa <- read.table("../chapter5/CyanosTaxa", header=TRUE, sep="\t")
@@ -199,6 +208,9 @@ TodosEXP_TAXA<-merge(TodosHP,TodosTaxa,by.x="RastId",by.y="RastId")
 #########################################################################################################
 ## 1) Genome Size vs central expansion by facets 
 GenomeSizeVsCentralExpansion<-qplot(TodosEXP_TAXA$Size, TodosEXP_TAXA$TOTAL, data = TodosEXP_TAXA,colour=TodosEXP_TAXA$Order)+facet_grid(TodosEXP_TAXA$Kingdom~.,scales="fixed")+theme_bw()+ theme(legend.position	="bottom",plot.title = element_text(size = 24, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 20),axis.text.y=element_text(size = 16)) +labs(x = "Genome size (bp)",    y = "Total number of expansions from central families",colour="Order" )
+
+qplot(TodosEXP_TAXA$Size, TodosEXP_TAXA$TOTAL, data = TodosEXP_TAXA,colour=TodosEXP_TAXA$Order)+facet_grid(TodosEXP_TAXA$Kingdom~.,scales="fixed")+theme_bw()+ theme(legend.position	="bottom",plot.title = element_text(size = 24, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 20),axis.text.y=element_text(size = 16)) +labs(x = "Genome size (bp)",    y = "Total number of expansions from central families",colour="Order" )
+
 ggsave(file="Figuras/GenomeSizeVsCentralExpansion.svg", plot=GenomeSizeVsCentralExpansion, width=10, height=10)
 ## End genome size vs central expansion  
 ##########################################################################################################
