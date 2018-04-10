@@ -131,6 +131,8 @@ As candidates to new genomic databases were selected genus Pseudomonas, phylum C
 Previous EvoMining genome-DB comprises 230 genomes from Actinobacteria with 106 central families as the corresponding central-DB. Candidate genomic databases were explore to determine wether or not other they actually posses expansions of families devoted to central metabolism. Because families that are in the core genome of a taxonomical group may not exists on another group, before exploring enzyme family expansions besides Actinobacteria on the new genomic databases it is needed a previous identification of central families themselves on the other taxa. A common set of central enzyme families was determined for *Actinobacteria*, *Cyanobacteria*, *Pseudomonas* and *Archaeas* by finding best bidirectional hits (BBH) of original 339 seeds belonging to the 106 central Actinobacteria enzyme families on the following genomes: 1)Cyanobacteria phylum: * Cyanothece sp. ATCC 51142*, *Synechococcus sp. PCC 7002 CP000951.1*, *Synechocystis sp. PCC 6803 AP012205.1*, 2)Pseudomonas generus *Pseudomonas fluorescens pf0-1*,*Pseudomonas protegens Pf5*,*Pseudomonas syringae pv. actinidiae ICMP 18884 NZ_CM0027 51.1*,*Pseudomonas fulva 12-X NC_015556.1*
 3) Archaea kingdom *Natronomonas pharaonis*,*Methanosarcina acetivorans*, *Sulfolobus solfataricus* and *Nanoarchaeum equitans Kin4-M*. To avoid missing some BBH due to genome quality selected genomes were chosen to be on one contig. As an outcome of this process a central database with 42 enzyme families common to all taxonomical groups was assembled. New genomic databases were integrated by 876 Archaea genomes, 416 Cyanobacteria genomes, and 219 Pseudomonas genomes. Actinobacteria database was expanded from 230 to 1244 Actinobacteria genomes. Finally, with the central and genomic databases properly assembled *Actinobacteria*, *Cyanobacteria*, *Pseudomonas* and *Archaeas* were explored in search of central enzyme families expansions. 
 
+Archaea has not big genomes, at the same genome size Pseudomonas has more expansions. Streptomycetales are the genus with more expansions onn Actinobacteria.  Cyanobacteria larger genomes may be contaminated..
+
 This results showed that expansion of a central family is clade specific, a family can be expanded on Actinobacteria but not on Cyanobacteria, even more a family can be part of the core of Actinobacteria but not exist on Archaea.
 Expansions were find to be similar in these 4 taxonomical groups, 
 
@@ -144,48 +146,76 @@ Finalmente tomamos una enzima del shell en lugar de el core. (Puede ser del shel
 
 ```{r GenomicDatabase,warnings = FALSE, message = FALSE,echo=FALSE, results='hide'}
 ######################## Loading data  
-ArchaeasCentral <- read.table("../chapter3/ArchaeasCentral", header=TRUE, sep="\t")
-ArchaeasHeatPlot <- read.table("../chapter3/ArchaeasHeatPlot", header=TRUE, sep="\t")
+#ArchaeasCentral <- read.table("../chapter3/ArchaeasCentral", header=TRUE, sep="\t")
+#ArchaeasHeatPlot <- read.table("../chapter3/ArchaeasHeatPlot", header=TRUE, sep="\t")
+
+PseudomonasCentral <- read.table("PSEUDOMONAS/Pseudomonas.Central", header=TRUE, sep="\t")
+PseudomonasHeatPlot <- read.table("PSEUDOMONAS/HM_44_Pseudomonas", header=TRUE, sep="\t")
+PseudomonasTaxa <- read.table("PSEUDOMONAS/Pseudomonas.taxa", header=TRUE, sep="\t")
+PseudomonasTaxa$Kingdom<-"Pseudomonas"
+PseudomonasTaxa$shape<-"Pseudomonas"
+PseudomonasTaxa$shape[which(PseudomonasTaxa$Shape == "protegens")]<-"protegens"
+
+
+ArchaeasCentral <- read.table("ARCHAEAS/Archaeas.Central", header=TRUE, sep="\t")
+ArchaeasHeatPlot <- read.table("ARCHAEAS/HM_44_Archaea", header=TRUE, sep="\t")
 ArchaeasNp <- read.table("../chapter3/ArchaeasNp", header=TRUE, sep="\t")
 ArchaeasSMASH <- read.table("../chapter3/ArchaeasSMASH", header=TRUE, sep="\t")
-ArchaeasTaxa <- read.table("../chapter3/ArchaeasTaxa", header=TRUE, sep="\t")
-ArchaeasTaxa$Kingdom<-"Archea"
-ArchaeasSMASH$Kingdom<-"Archea"
+ArchaeasTaxa <- read.table("ARCHAEAS/ArchaeasTaxa", header=TRUE, sep="\t")
+ArchaeasTaxa$shape<-"Archaea"
+ArchaeasTaxa$Kingdom<-"Archaea"
+ArchaeasSMASH$Kingdom<-"Archaea"
+ArchaeasTaxa$shape[which(ArchaeasTaxa$Order == "Natrialbales")]<-"Natrialbales"
 
-ActinosCentral <- read.table("../chapter4/ActinoCentral", header=TRUE, sep="\t")
-ActinosHeatPlot <- read.table("../chapter4/ActinoHeatPlot", header=TRUE, sep="\t")
+#ActinosCentral <- read.table("../chapter4/ActinoCentral", header=TRUE, sep="\t")
+#ActinosHeatPlot <- read.table("../chapter4/ActinoHeatPlot", header=TRUE, sep="\t")
+ActinosCentral <- read.table("ACTINOS/Actinos.Central", header=TRUE, sep="\t")
+ActinosHeatPlot <- read.table("ACTINOS/HM_44_Actinos", header=TRUE, sep="\t")
+
 ActinosNp <- read.table("../chapter4/ActinoNp", header=TRUE, sep="\t")
 ActinosSMASH <- read.table("../chapter4/ActinosSMASH", header=TRUE, sep="\t")
-ActinosTaxa <- read.table("../chapter4/ActinoTaxa", header=TRUE, sep="\t")
+ActinosTaxa <- read.table("ACTINOS/ActinoTaxa", header=TRUE, sep="\t")
 ActinosTaxa$Kingdom<-"Actinos"
+ActinosTaxa$shape<-"Actinos"
 ActinosSMASH$Kingdom<-"Actinos"
 ActinosTaxa$SuperPhylum<-"Actinos"
 
-CyanosCentral <- read.table("../chapter5/CyanosCentral", header=TRUE, sep="\t")
-CyanosHeatPlot <- read.table("../chapter5/CyanosHeatPlot", header=TRUE, sep="\t")
+ActinosTaxa$shape<-"Actinos"
+ActinosTaxa$shape[which(ActinosTaxa$Order == "Streptomycetales")]<-"Streptomycetales"
+ActinosTaxa$shape
+
+#CyanosCentral <- read.table("../chapter5/CyanosCentral", header=TRUE, sep="\t")
+#CyanosHeatPlot <- read.table("../chapter5/CyanosHeatPlot", header=TRUE, sep="\t")
+CyanosCentral <- read.table("CYANOS/Cyanos.Central", header=TRUE, sep="\t")
+CyanosHeatPlot <- read.table("CYANOS/HM_44_Cyanos", header=TRUE, sep="\t")
 CyanosNp <- read.table("../chapter5/CyanosNp", header=TRUE, sep="\t")
-CyanosSMASH <- read.table("../chapter5/CyanosSMASH", header=TRUE, sep="\t")
-CyanosTaxa <- read.table("../chapter5/CyanosTaxa", header=TRUE, sep="\t")
+CyanosSMASH <- read.table("CYANOS/CyanosSMASH", header=TRUE, sep="\t")
+CyanosTaxa <- read.table("CYANOS/CyanosTaxa", header=TRUE, sep="\t")
 CyanosTaxa$Kingdom<-"Cyanos"
+CyanosTaxa$shape<-"Cyanos"
 CyanosSMASH$Kingdom<-"Cyanos"
 CyanosTaxa$SuperPhylum<-"Cyanobacteria"
+CyanosTaxa$shape[which(CyanosTaxa$Order == "Nostocales")]<-"Nostocales"
+ActinosTaxa$shape
 ########################### End of loading data
-#str(ActinosTaxa) #1245
-#str(CyanosTaxa) #416
-#str(ArchaeasTaxa) #876
+str(ActinosTaxa) #1245
+str(CyanosTaxa) #416
+str(ArchaeasTaxa) #876
+str(PseudomonasTaxa) #876
 
 #################################################################
 ## Joining data frames heat plot and taxa
-TodosTaxa<-rbind(ArchaeasTaxa,CyanosTaxa,ActinosTaxa)
+TodosTaxa<-rbind(ArchaeasTaxa,CyanosTaxa,ActinosTaxa,PseudomonasTaxa)
 
 #names(ArchaeasHeatPlot)
 #intersect(names(CyanosHeatPlot),names(ActinosHeatPlot))
 
 #intersect(intersect(names(CyanosHeatPlot),names(ActinosHeatPlot)),names(ArchaeasHeatPlot))
-ArHP<-ArchaeasHeatPlot[,intersect(intersect(names(CyanosHeatPlot),names(ActinosHeatPlot)),names(ArchaeasHeatPlot))]
-CyHP<-CyanosHeatPlot[,intersect(intersect(names(CyanosHeatPlot),names(ActinosHeatPlot)),names(ArchaeasHeatPlot))]
-AcHP<-ActinosHeatPlot[,intersect(intersect(names(CyanosHeatPlot),names(ActinosHeatPlot)),names(ArchaeasHeatPlot))]
-TodosHP<-rbind(ArHP,CyHP,AcHP)
+ArHP<-ArchaeasHeatPlot[,intersect(names(PseudomonasHeatPlot),intersect(intersect(names(CyanosHeatPlot),names(ActinosHeatPlot)),names(ArchaeasHeatPlot)))]
+CyHP<-CyanosHeatPlot[,intersect(names(PseudomonasHeatPlot),intersect(intersect(names(CyanosHeatPlot),names(ActinosHeatPlot)),names(ArchaeasHeatPlot)))]
+AcHP<-ActinosHeatPlot[,intersect(names(PseudomonasHeatPlot),intersect(intersect(names(CyanosHeatPlot),names(ActinosHeatPlot)),names(ArchaeasHeatPlot)))]
+PsHP<-PseudomonasHeatPlot[,intersect(names(PseudomonasHeatPlot),intersect(intersect(names(CyanosHeatPlot),names(ActinosHeatPlot)),names(ArchaeasHeatPlot)))]
+TodosHP<-rbind(ArHP,CyHP,AcHP,PsHP)
 TodosEXP_TAXA<-merge(TodosHP,TodosTaxa,by.x="RastId",by.y="RastId")
 
 #str(TodosHP)
@@ -198,11 +228,21 @@ TodosEXP_TAXA<-merge(TodosHP,TodosTaxa,by.x="RastId",by.y="RastId")
 
 #########################################################################################################
 ## 1) Genome Size vs central expansion by facets 
-GenomeSizeVsCentralExpansion<-qplot(TodosEXP_TAXA$Size, TodosEXP_TAXA$TOTAL, data = TodosEXP_TAXA,colour=TodosEXP_TAXA$Order)+facet_grid(TodosEXP_TAXA$Kingdom~.,scales="fixed")+theme_bw()+ theme(legend.position	="bottom",plot.title = element_text(size = 24, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 20),axis.text.y=element_text(size = 16)) +labs(x = "Genome size (bp)",    y = "Total number of expansions from central families",colour="Order" )
+GenomeSizeVsCentralExpansion<-qplot(TodosEXP_TAXA$Size, TodosEXP_TAXA$TOTAL, data = TodosEXP_TAXA,colour=TodosEXP_TAXA$Kingdom,shape=TodosEXP_TAXA$shape)+theme_bw()+ theme(legend.position	="bottom",plot.title = element_text(size = 24, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 20),axis.text.y=element_text(size = 16)) +labs(x = "Genome size (bp)",    y = "Total number of expansions from central families",colour="Order" )+ scale_shape_manual(values =  c(1,1,1,18,18,18,1,18))
+
+
+qplot(TodosEXP_TAXA$Size, TodosEXP_TAXA$TOTAL, data = TodosEXP_TAXA,colour=TodosEXP_TAXA$Kingdom,shape=TodosEXP_TAXA$shape)+theme_bw()+ theme(legend.position	="bottom",plot.title = element_text(size = 24, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 20),axis.text.y=element_text(size = 16)) +labs(x = "Genome size (bp)",    y = "Total number of expansions from central families",colour="Order" )+ scale_shape_manual(values = c(1,1,1,18,18,18,1,18))
+
+#qplot(TodosEXP_TAXA$Size, TodosEXP_TAXA$TOTAL, data = TodosEXP_TAXA,colour=TodosEXP_TAXA$Kingdom)+facet_grid(TodosEXP_TAXA$Kingdom ~ .)+theme_bw()+ theme(legend.position	="bottom",plot.title = element_text(size = 24, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 20),axis.text.y=element_text(size = 16)) +labs(x = "Genome size (bp)",    y = "Total number of expansions from central families",colour="Order" )+ scale_shape_manual(values = c(1,1,1,18,18,1,18,18))
+
 ggsave(file="Figuras/GenomeSizeVsCentralExpansion.svg", plot=GenomeSizeVsCentralExpansion, width=10, height=10)
 ## End genome size vs central expansion  
 ##########################################################################################################
 
+
+```
+
+```{r}
 
 #############################################################################################################################
 ## 2) Box plot Expansiones familia y point Genome 
