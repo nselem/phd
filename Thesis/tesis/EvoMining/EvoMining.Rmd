@@ -421,7 +421,7 @@ figure<-ggplot(cdata2.m, aes(x = cdata2.m$Central, y = cdata2.m$value, fill = cd
 #  5) AntiSMASH on sequences on tree  CYAN  
 #   Ids antiSMASH file  
 # cp smash into evomining folder
-#   cut -f2 Archeas_Smash |sort >Archeas_Smash_F1  
+#   cut -f2 *smash |sort > ._F1  
 #   Ids list 
 # ls *concat.fasta|sort -g |while read line; do grep '>' $line|cut -d'|' -f2 |sort >$line.ids; done  
 #   ls *ids |sort -g |while read line; do comm -12 Archeas_Smash_F1 $line>$line.smash; done  
@@ -434,7 +434,7 @@ figure<-ggplot(cdata2.m, aes(x = cdata2.m$Central, y = cdata2.m$value, fill = cd
 #    Output .bbh_smash
 
 #  7) Blue MiBig BLUE
-# seq 42|while read line; do if [ -f $line.fasta_ExpandedVsNp.blast.2.recruitedUniq ];  then num=$(wc -l <$line.fasta_ExpandedVsNp.blast.2.recruitedUniq);  else num=0; fi; echo -e $line'\t'$num; done
+# seq 44|while read line; do if [ -f $line.fasta_ExpandedVsNp.blast.2.recruitedUniq ];  then num=$(wc -l <$line.fasta_ExpandedVsNp.blast.2.recruitedUniq);  else num=0; fi; echo -e $line'\t'$num; done
 #   Non existent files are 0 hits
    
  # 8) Orange leaves (Central seeds/queries) ORANGE
@@ -443,38 +443,56 @@ figure<-ggplot(cdata2.m, aes(x = cdata2.m$Central, y = cdata2.m$value, fill = cd
  #    BLACK=TOTALTree-RED-CYAN-BLUE  
        
   
-ActinosColors <- read.table("ACTINOS/Actinos.Central.Colors", header=TRUE, sep="\t")
+ActinosColors <- read.table("ACTINOS/Actinos44.bars", header=TRUE, sep="\t")
 ActinosColors$Kingdom<-"Actinos"
 ActinosColors$Red_Final<-ActinosColors$FirstRED-ActinosColors$CYAN_OVER_RED  
 ActinosColors$Cyan_Cyan<-ActinosColors$CYAN -ActinosColors$CYAN_OVER_RED  
 ActinosColors$Black<-ActinosColors$TOTALTree-(ActinosColors$CYAN+ActinosColors$Red_Final+ActinosColors$Azul_NP)
 
-CyanosColors <- read.table("CYANOS/Cyanos.Central.Colors", header=TRUE, sep="\t")
+PseudoColors <- read.table("PSEUDOMONAS/Pseudos44.bar", header=TRUE, sep="\t")
+PseudoColors$Kingdom<-"Pseudo"
+PseudoColors$Red_Final<-PseudoColors$FirstRED-PseudoColors$CYAN_OVER_RED  
+PseudoColors$Cyan_Cyan<-PseudoColors$CYAN -PseudoColors$CYAN_OVER_RED  
+PseudoColors$Black<-PseudoColors$TOTALTree-(PseudoColors$CYAN+PseudoColors$Red_Final+PseudoColors$Azul_NP)
+
+CyanosColors <- read.table("CYANOS/Cyanos44.bars", header=TRUE, sep="\t")
 CyanosColors$Kingdom<-"Cyanos"
 CyanosColors$Red_Final<-CyanosColors$FirstRED-CyanosColors$CYAN_OVER_RED  
 CyanosColors$Cyan_Cyan<-CyanosColors$CYAN -CyanosColors$CYAN_OVER_RED  
 CyanosColors$Black<-CyanosColors$TOTALTree-(CyanosColors$CYAN+CyanosColors$Red_Final+CyanosColors$Azul_NP)  
   
-ArchaeasColors <- read.table("ARCHAEAS/Archeas.Central.Colors", header=TRUE, sep="\t")  
+ArchaeasColors <- read.table("ARCHAEAS/Archaeas44.bars", header=TRUE, sep="\t")  
 ArchaeasColors$Kingdom<-"Archaea"  
 ArchaeasColors$Red_Final<-ArchaeasColors$FirstRED-ArchaeasColors$CYAN_OVER_RED  
 ArchaeasColors$Cyan_Cyan<-ArchaeasColors$CYAN -ArchaeasColors$CYAN_OVER_RED  
 ArchaeasColors$Black<-ArchaeasColors$TOTALTree-(ArchaeasColors$CYAN+ArchaeasColors$Red_Final+ArchaeasColors$Azul_NP)  
 
 rownames(ArchaeasColors) <- ArchaeasColors[,2]
+rownames(PseudoColors) <- PseudoColors[,2]
 rownames(CyanosColors) <- CyanosColors[,2]
 rownames(ActinosColors) <- ActinosColors[,2]
 
 #Actinos.Colors.Reduced<-ActinosColors
-Actinos.Colors.Reduced<-ActinosColors[intersect(intersect(row.names(ArchaeasColors),row.names(ActinosColors)),row.names(CyanosColors)),]
+#intersect(row.names(PseudoColors),intersect(intersect(row.names(ArchaeasColors),row.names(ActinosColors)),row.names(CyanosColors)))
+intersect(row.names(ArchaeasColors),intersect(row.names(ActinosColors),row.names(CyanosColors)))
+
+row.names(ArchaeasColors)
+
+
+Actinos.Colors.Reduced<-ActinosColors[intersect(row.names(PseudoColors),intersect(intersect(row.names(ArchaeasColors),row.names(ActinosColors)),row.names(CyanosColors))),]
 arrange(Actinos.Colors.Reduced, Num)
 
+#Pseudo.Colors.Reduced<-PseudoColors
+Pseudo.Colors.Reduced<-PseudoColors[intersect(row.names(ActinosColors),intersect(intersect(row.names(ArchaeasColors),row.names(PseudoColors)),row.names(CyanosColors))),]
+arrange(Pseudo.Colors.Reduced, Num)
+
+
 #Cyanos.Colors.Reduced<-CyanosColors  
-Cyanos.Colors.Reduced<-CyanosColors[intersect(intersect(row.names(ArchaeasColors),row.names(ActinosColors)),row.names(CyanosColors)),]
+Cyanos.Colors.Reduced<-CyanosColors[intersect(row.names(PseudoColors),intersect(intersect(row.names(ArchaeasColors),row.names(ActinosColors)),row.names(CyanosColors))),]
 arrange(Cyanos.Colors.Reduced, Num)
 
 #Archaeas.Colors.Reduced<-ArchaeasColors
-Archaeas.Colors.Reduced<-ArchaeasColors[intersect(intersect(row.names(ArchaeasColors),row.names(ActinosColors)),row.names(CyanosColors)),] 
+Archaeas.Colors.Reduced<-ArchaeasColors[intersect(row.names(PseudoColors),intersect(intersect(row.names(ArchaeasColors),row.names(ActinosColors)),row.names(CyanosColors))),] 
 arrange(Archaeas.Colors.Reduced, Num)
 
 
@@ -486,6 +504,9 @@ arrange(Archaeas.Colors.Reduced, Num)
 Actinos.Colors.Reduced=Actinos.Colors.Reduced[names(Actinos.Colors.Reduced) %in% c("Family","Azul_NP","Black","Cyan_Cyan","CYAN_OVER_RED","Red_Final","ORANGE","Kingdom")]
 Actinos.Colors.Reduced<-Actinos.Colors.Reduced[c(1,3,8,7,2,4,6,5)]
 
+Pseudo.Colors.Reduced=Pseudo.Colors.Reduced[names(Pseudo.Colors.Reduced) %in% c("Family","Azul_NP","Black","Cyan_Cyan","CYAN_OVER_RED","Red_Final","ORANGE","Kingdom")]
+Pseudo.Colors.Reduced<-Pseudo.Colors.Reduced[c(1,3,8,7,2,4,6,5)]
+
 Cyanos.Colors.Reduced=Cyanos.Colors.Reduced[names(Cyanos.Colors.Reduced) %in% c("Family","Azul_NP","Black","Cyan_Cyan","CYAN_OVER_RED","Red_Final","ORANGE","Kingdom")]
 Cyanos.Colors.Reduced<-Cyanos.Colors.Reduced[c(1,3,8,7,2,4,6,5)]
 
@@ -493,10 +514,13 @@ Archaeas.Colors.Reduced=Archaeas.Colors.Reduced[names(Archaeas.Colors.Reduced) %
 Archaeas.Colors.Reduced<-Archaeas.Colors.Reduced[c(1,3,8,7,2,4,6,5)]
 
 Actinos.Colors.Reduced.m<- melt(Actinos.Colors.Reduced,id = c("Family","Kingdom"))
+Pseudo.Colors.Reduced.m<- melt(Pseudo.Colors.Reduced,id = c("Family","Kingdom"))
 Cyanos.Colors.Reduced.m<- melt(Cyanos.Colors.Reduced,id = c("Family","Kingdom"))
 Archaeas.Colors.Reduced.m<- melt(Archaeas.Colors.Reduced,id = c("Family","Kingdom"))
 #Colors.m<- melt(Colors,id = c("Family","Kingdom"))
+
 Actinos.Colors.Reduced.m$value<-Actinos.Colors.Reduced.m$value/1245
+Pseudo.Colors.Reduced.m$value<-Pseudo.Colors.Reduced.m$value/217
 Cyanos.Colors.Reduced.m$value<-Cyanos.Colors.Reduced.m$value/416  
 Archaeas.Colors.Reduced.m$value<-Archaeas.Colors.Reduced.m$value/876
 
@@ -504,17 +528,19 @@ Archaeas.Colors.Reduced.m$value<-Archaeas.Colors.Reduced.m$value/876
 
 #ggplot(Actinos.Colors.Reduced.m, aes(x = Actinos.Colors.Reduced.m$Family, y = Actinos.Colors.Reduced.m$value,  fill = Actinos.Colors.Reduced.m$variable)) +geom_bar(stat = "identity")+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")+ scale_fill_manual(values=c("#0000FF","#000000", "#58FAF4","#A901DB","#FAAC58", "#FF0000"))
 
-ActinoColor<-ggplot(Actinos.Colors.Reduced.m, aes(x = Actinos.Colors.Reduced.m$Family, y = Actinos.Colors.Reduced.m$value,  fill = Actinos.Colors.Reduced.m$variable)) +geom_bar(stat = "identity")+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")+ scale_fill_manual(values=c("#0000FF","#000000", "#58FAF4","#A901DB","#FAAC58", "#FF0000"))
+ActinoColor<-ggplot(Actinos.Colors.Reduced.m, aes(x = Actinos.Colors.Reduced.m$Family, y = Actinos.Colors.Reduced.m$value,  fill = Actinos.Colors.Reduced.m$variable)) +geom_bar(stat = "identity")+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 50), legend.position = "bottom")+ scale_fill_manual(values=c("#0000FF","#000000", "#58FAF4","#A901DB","#FAAC58", "#FF0000"))
 ggsave(file="ActinoColor.svg", plot=ActinoColor, width=30, height=40)
   
+PseudomonasColor<-ggplot(Pseudo.Colors.Reduced.m, aes(x = Pseudo.Colors.Reduced.m$Family, y = Pseudo.Colors.Reduced.m$value,  fill = Pseudo.Colors.Reduced.m$variable)) +geom_bar(stat = "identity")+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 50), legend.position = "bottom")+ scale_fill_manual(values=c("#0000FF","#000000", "#58FAF4","#A901DB","#FAAC58", "#FF0000"))
+ggsave(file="PseudoColor.svg", plot=PseudomonasColor, width=30, height=40)
 
 #ggplot(Cyanos.Colors.Reduced.m, aes(x = Cyanos.Colors.Reduced.m$Family, y = Cyanos.Colors.Reduced.m$value,  fill = Cyanos.Colors.Reduced.m$variable)) +geom_bar(stat = "identity")+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")+ scale_fill_manual(values=c("#0000FF","#000000", "#58FAF4","#A901DB","#FAAC58", "#FF0000"))
 
-CyanoColor<-ggplot(Cyanos.Colors.Reduced.m, aes(x = Cyanos.Colors.Reduced.m$Family, y = Cyanos.Colors.Reduced.m$value,  fill = Cyanos.Colors.Reduced.m$variable)) +geom_bar(stat = "identity")+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")+ scale_fill_manual(values=c("#0000FF","#000000", "#58FAF4","#A901DB","#FAAC58", "#FF0000"))
+CyanoColor<-ggplot(Cyanos.Colors.Reduced.m, aes(x = Cyanos.Colors.Reduced.m$Family, y = Cyanos.Colors.Reduced.m$value,  fill = Cyanos.Colors.Reduced.m$variable)) +geom_bar(stat = "identity")+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 50), legend.position = "bottom")+ scale_fill_manual(values=c("#0000FF","#000000", "#58FAF4","#A901DB","#FAAC58", "#FF0000"))
   ggsave(file="CyanoColor.svg", plot=CyanoColor, width=30, height=40)
 
   
-ArchaeaColor<-ggplot(Archaeas.Colors.Reduced.m, aes(x = Archaeas.Colors.Reduced.m$Family, y = Archaeas.Colors.Reduced.m$value,  fill = Archaeas.Colors.Reduced.m$variable)) +geom_bar(stat = "identity")+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")+ scale_fill_manual(values=c("#0000FF","#000000", "#58FAF4","#A901DB","#FAAC58", "#FF0000"))
+ArchaeaColor<-ggplot(Archaeas.Colors.Reduced.m, aes(x = Archaeas.Colors.Reduced.m$Family, y = Archaeas.Colors.Reduced.m$value,  fill = Archaeas.Colors.Reduced.m$variable)) +geom_bar(stat = "identity")+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 50), legend.position = "bottom")+ scale_fill_manual(values=c("#0000FF","#000000", "#58FAF4","#A901DB","#FAAC58", "#FF0000"))
 ggsave(file="ArchaeaColor.svg", plot=ArchaeaColor, width=30, height=40)
 
 ```
