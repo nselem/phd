@@ -141,8 +141,17 @@ On cyanobacteria PriA an enzyme with no previously knwon secondary metabolism on
 Para aumentar la base de datos tomamos retroevomining y obtuvimos 2 en comun.. falta considerar las super duplicadas...
 Finalmente tomamos una enzima del shell en lugar de el core. (Puede ser del shell de streptomyces)
 
+Now that a common set of central enzymes are determined, we can explore differences of the families across selected taxa 
 
+#### 2b Diversity on central Families according to the lineage  
 <!-- there are central expansions -->
+
+<!-- genomic results -->
+
+El reclutamiento de una enzima en una ruta de metabolismo secundario 
+The expansioness of a family depends on the clade.  
+Expansions are correlated with genome side, at different velocities, not linearly, Archaea Bacteria are smaller in size until now, Cyanobacteria correlation is weaker.  
+  
 
 ```{r GenomicDatabase,warnings = FALSE, message = FALSE,echo=FALSE, results='hide'}
 ######################## Loading data  
@@ -242,7 +251,7 @@ ggsave(file="Figuras/GenomeSizeVsCentralExpansion.svg", plot=GenomeSizeVsCentral
 
 ```
 
-```{r}
+```{r other}
 
 #############################################################################################################################
 ## 2) Box plot Expansiones familia y point Genome 
@@ -388,15 +397,12 @@ figure<-ggplot(cdata2.m, aes(x = cdata2.m$Central, y = cdata2.m$value, fill = cd
 #qplot(x=Central, data=ActinosNp, geom="bar", fill=np, position="stack")+theme_bw()+ theme(legend.position	="none",text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
 
 ```
-
-
-#### 2a Lineage specific  
-#### 2b Diversity on central Families according to the lineage  
 <!-- this is the code for GenomicDiversity Figure-->
 ```{r Figure_Pablo2 ,warnings = FALSE, message = FALSE,echo=FALSE, results='hide'}
   
 #  1) Every BBH: (BBH Totales) Directly from blast not all of this sequences will go to EvoMining heat plot due to EvoMining restriction
-#  perl GetBBH.pl vueltaArcheas.blast.bbh |sort
+# cp BBH/*/aux_files/vuelta*.blast.bbh .
+#  perl GetBBH.pl vuelta*.blast.bbh |sort
 #  output *.bbh
 #  on excell sort families alphabetically 
   
@@ -406,7 +412,7 @@ figure<-ggplot(cdata2.m, aes(x = cdata2.m$Central, y = cdata2.m$value, fill = cd
       
 #  3) All sequences on tree but oranges (TOTALTree)  
 #  ls *concat.fasta |sort -g|while read line; do num=$(grep '>' $line|sort|uniq|wc); echo $line $num; done|cut -d' ' -f1,2   
-#  concat contains cyan, black and red leaves but not the oranges  
+# concat contains cyan, black and red leaves but not the oranges  
   
 #  4) candidates to BBH on tree first red colored  (FirstRED)
 #  perl GetBBHonTree.pl Central.numbers  
@@ -414,8 +420,10 @@ figure<-ggplot(cdata2.m, aes(x = cdata2.m$Central, y = cdata2.m$value, fill = cd
   
 #  5) AntiSMASH on sequences on tree  CYAN  
 #   Ids antiSMASH file  
+# cp smash into evomining folder
 #   cut -f2 Archeas_Smash |sort >Archeas_Smash_F1  
-#   Ids list ls *concat.fasta|sort -g |while read line; do grep '>' $line|cut -d'|' -f2 |sort >$line.ids; done  
+#   Ids list 
+# ls *concat.fasta|sort -g |while read line; do grep '>' $line|cut -d'|' -f2 |sort >$line.ids; done  
 #   ls *ids |sort -g |while read line; do comm -12 Archeas_Smash_F1 $line>$line.smash; done  
 #   output .smash
 #   ls *smash|sort -g |while read line; do num=$(wc -l<$line);echo -e $num'\t'$line; done
@@ -426,7 +434,7 @@ figure<-ggplot(cdata2.m, aes(x = cdata2.m$Central, y = cdata2.m$value, fill = cd
 #    Output .bbh_smash
 
 #  7) Blue MiBig BLUE
-# seq 81|while read line; do if [ -f $line.fasta_ExpandedVsNp.blast.2.recruitedUniq ];  then num=$(wc -l <$line.fasta_ExpandedVsNp.blast.2.recruitedUniq);  else num=0; fi; echo -e $line'\t'$num; done
+# seq 42|while read line; do if [ -f $line.fasta_ExpandedVsNp.blast.2.recruitedUniq ];  then num=$(wc -l <$line.fasta_ExpandedVsNp.blast.2.recruitedUniq);  else num=0; fi; echo -e $line'\t'$num; done
 #   Non existent files are 0 hits
    
  # 8) Orange leaves (Central seeds/queries) ORANGE
@@ -511,9 +519,27 @@ ggsave(file="ArchaeaColor.svg", plot=ArchaeaColor, width=30, height=40)
 
 ```
 
-  <!-- *Repetir  de las 93  a 106  DONE-->  
-### From 
 
+
+
+
+### Section 3 Update and insights from central DB  
+core/ shell genome
+Expansions other central  
+To limitate the search for enzymes of recent recruitment into natural products
+
+As we have explored other genomic databases, central database  customization is also implemented, on this case we have use TauD en enzyme from taurine assimilation system on enterobacteria, on the genomic database Pseudomonas. Enzymes does not necessary have to be central, in the sense that they belong to the core of its taxonomic group, but at least should have expansions.  
+
+<!--!
+## old 
+  starts with a blast search with query the CentralDB against the genomic DB,  comprises a docker  
+by 25 private Actinobacteria genomes and 1221 public Actinobacterial genomes with at least 3 genes by contig on average available at NCBI on 2016
+this requirement provides functional annotation when looking for the genomic context of a particular enzyme.--->
+
+### Section 4 Update and insights from Natural products DB
+Backward EvoMining  
+
+### From Backward EvoMining natural products DB
 235 Enzymes from BGC clusters were tested 
 55 reduced  
 56 intermediate  
@@ -538,32 +564,6 @@ Presence Absence
 EvoMining was run over enzymes with expansion number between .1 and .6
 Figuras/GenomicDBS.svg
 
-
-
-
-
-<!-- genomic results -->
-
-El reclutamiento de una enzima en una ruta de metabolismo secundario 
-The expansioness of a family depends on the clade.  
-Expansions are correlated with genome side, at different velocities, not linearly, Archaea Bacteria are smaller in size until now, Cyanobacteria correlation is weaker.  
-  
-
-
-### Section 3 Update and insights from central DB  
-Expansions other central  
-To limitate the search for enzymes of recent recruitment into natural products
-
-As we have explored other genomic databases, central database  customization is also implemented, on this case we have use TauD en enzyme from taurine assimilation system on enterobacteria, on the genomic database Pseudomonas. Enzymes does not necessary have to be central, in the sense that they belong to the core of its taxonomic group, but at least should have expansions.  
-
-<!--!
-## old 
-  starts with a blast search with query the CentralDB against the genomic DB,  comprises a docker  
-by 25 private Actinobacteria genomes and 1221 public Actinobacterial genomes with at least 3 genes by contig on average available at NCBI on 2016
-this requirement provides functional annotation when looking for the genomic context of a particular enzyme.--->
-
-### Section 4 Update and insights from Natural products DB
-Backward EvoMining  
 
 
 ## Methodology
