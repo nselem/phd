@@ -128,10 +128,16 @@ EvoMining discovery of arsenopoliketydes was set on a genomic database of Actino
 
 As candidates to new genomic databases were selected genus Pseudomonas, phylum Cyanobacteria and kingdom Archaea. Pseudomonas and Cyanobacteria were chosen because of their known presence of biosynthetic gene clusters, there are respectively 60 and 58 BGCs reported on MiBIG. Archaea is the opposite case, there is not archaeal BGC reported on MiBIG. Archaea resembled Bacteria in the facts that i) Archaea uses horizontal gene transfer as a genic interchange mecanism, ii) Archaeal genomes contains operons [@howland_surprising_2000] and  iii) in general there is introns absence{Reference to Computational Methods for Understanding Bacterial and Archaeal Genomes}.  Archaeas do have introns, but they are mainly located on genes that encodes ribosomal and transfer RNA [@howland_surprising_2000]. General lack of introns allows automatic genome annotation just like Bacteria, operon gene organization permits functional inference to a certain degree and HGT contribute to expansions on Archaeal genomes. Some phylum on Archaea has an open pangenome, and as we will show some Archaea has central pathway expansions. This lead us to think that evoMining is suitable to analize Archaeal genomes, even more if evolutionary logic behave on Archaea as on bacteria, since EvoMining is an evolutionary oriented method, not entirely based on previous knowledge of BGC's sequences, new BGC's classes may be found on Archaea.
 
-Previous EvoMining genome-DB comprises 230 genomes from Actinobacteria with 106 central families as the corresponding central-DB. Candidate genomic databases were explore to determine wether or not other they actually posses expansions of families devoted to central metabolism. Because families that are in the core genome of a taxonomical group may not exists on another group, before exploring enzyme family expansions besides Actinobacteria on the new genomic databases it is needed a previous identification of central families themselves on the other taxa. A common set of central enzyme families was determined for *Actinobacteria*, *Cyanobacteria*, *Pseudomonas* and *Archaeas* by finding best bidirectional hits (BBH) of original 339 seeds belonging to the 106 central Actinobacteria enzyme families on the following genomes: 1)Cyanobacteria phylum: * Cyanothece sp. ATCC 51142*, *Synechococcus sp. PCC 7002 CP000951.1*, *Synechocystis sp. PCC 6803 AP012205.1*, 2)Pseudomonas generus *Pseudomonas fluorescens pf0-1*,*Pseudomonas protegens Pf5*,*Pseudomonas syringae pv. actinidiae ICMP 18884 NZ_CM0027 51.1*,*Pseudomonas fulva 12-X NC_015556.1*
-3) Archaea kingdom *Natronomonas pharaonis*,*Methanosarcina acetivorans*, *Sulfolobus solfataricus* and *Nanoarchaeum equitans Kin4-M*. To avoid missing some BBH due to genome quality selected genomes were chosen to be on one contig. As an outcome of this process a central database with 42 enzyme families common to all taxonomical groups was assembled. New genomic databases were integrated by 876 Archaea genomes, 416 Cyanobacteria genomes, and 219 Pseudomonas genomes. Actinobacteria database was expanded from 230 to 1244 Actinobacteria genomes. Finally, with the central and genomic databases properly assembled *Actinobacteria*, *Cyanobacteria*, *Pseudomonas* and *Archaeas* were explored in search of central enzyme families expansions. 
+Previous EvoMining genome-DB comprises 230 genomes from Actinobacteria with 106 central families as the corresponding central-DB. Candidate genomic databases were explore to determine wether or not other taxa posses expansions of enzymatic families devoted to central metabolism. Some families in the core genome of a taxonomical group may not exists on another, because of that, before exploring enzyme family expansions besides Actinobacteria on new genomic databases, it is needed a previous identification of central families themselves on the other taxa. A common set of central enzyme families was determined for *Actinobacteria*, *Cyanobacteria*, *Pseudomonas* and *Archaeas* by finding best bidirectional hits (BBH) of original 339 seeds belonging to the 106 central Actinobacteria enzyme families on the following genomes: 1)Cyanobacteria phylum: * Cyanothece sp. ATCC 51142*, *Synechococcus sp. PCC 7002 CP000951.1*, *Synechocystis sp. PCC 6803 AP012205.1*, 2)Pseudomonas generus *Pseudomonas fluorescens pf0-1*,*Pseudomonas protegens Pf5*,*Pseudomonas syringae pv. actinidiae ICMP 18884 NZ_CM0027 51.1*,*Pseudomonas fulva 12-X NC_015556.1* 3) Archaea kingdom *Natronomonas pharaonis*,*Methanosarcina acetivorans*, *Sulfolobus solfataricus* and *Nanoarchaeum equitans Kin4-M*. To avoid missing BBH due to genome quality selected genomes were chosen to be on one contig. As an outcome of this process a central database with 42 enzyme families common to all taxonomical groups was assembled. Candidate genomic databases were integrated by 876 Archaea genomes, 416 Cyanobacteria genomes, and 219 Pseudomonas genomes. Actinobacteria database was expanded from 230 to 1244 Actinobacteria genomes. Finally, with the central and genomic databases as described, taxas *Actinobacteria*, *Cyanobacteria*, *Pseudomonas* and *Archaeas* were explored in search of central enzyme families expansions. (Figure 2A)
 
-Archaea has not big genomes, at the same genome size Pseudomonas has more expansions. Streptomycetales are the genus with more expansions onn Actinobacteria.  Cyanobacteria larger genomes may be contaminated..
+As it could be expected, central families expansions increases whith genome size, nevertheless at different velocities and not linearly, the growth rate is different on each genomic group. Archaea, Cyanobacteria, Actinobacteria and Pseudomonas expansions behave similar until a genome size of 5,000,000 bp, after that genome size Pseudomonas number of elements on the 42 expanded central families grows faster than Actinobacteria, which in turn surpasses Cyanobacteria and Archaea, but Archaea  does not have until now many genomes bigger than 5000000 bp. *Streptomycetales* and *Nostocales* orders from Actinobacteria and Cyanobacteria respectively are among the orders with bigger genome size and also bigger Number of expansions. Some of the biggest Cyanobacteria genomes may be a contamination (Hassalya bisoydea). 
+
+Now that a common set of central enzymes are determined, and that it is shown that all genomic database posses expansions of central families, even at different rates, differences of the families across selected taxa can be explored.
+
+#### 2b Diversity on central Families according to the lineage  
+<!-- there are central expansions -->
+Expansions and recruitments of the 42 common central families were quantified by EvoMining on *Actinobacteria*, *Cyanobacteria*, *Pseudomonas* and *Archaeas* (Figure 2B). Families like 
+Wether a family is expanded or not depends on the taxa selected as genomic-DB
 
 This results showed that expansion of a central family is clade specific, a family can be expanded on Actinobacteria but not on Cyanobacteria, even more a family can be part of the core of Actinobacteria but not exist on Archaea.
 Expansions were find to be similar in these 4 taxonomical groups, 
@@ -141,19 +147,9 @@ On cyanobacteria PriA an enzyme with no previously knwon secondary metabolism on
 Para aumentar la base de datos tomamos retroevomining y obtuvimos 2 en comun.. falta considerar las super duplicadas...
 Finalmente tomamos una enzima del shell en lugar de el core. (Puede ser del shell de streptomyces)
 
-Now that a common set of central enzymes are determined, we can explore differences of the families across selected taxa 
-
-#### 2b Diversity on central Families according to the lineage  
-<!-- there are central expansions -->
-
-<!-- genomic results -->
-
-El reclutamiento de una enzima en una ruta de metabolismo secundario 
-The expansioness of a family depends on the clade.  
-Expansions are correlated with genome side, at different velocities, not linearly, Archaea Bacteria are smaller in size until now, Cyanobacteria correlation is weaker.  
   
 
-```{r GenomicDatabase,warnings = FALSE, message = FALSE,echo=FALSE, results='hide'}
+```{r GenomicDatabase, eval=FALSE, message=FALSE, include=FALSE, results='hide', warnings=FALSE}
 ######################## Loading data  
 #ArchaeasCentral <- read.table("../chapter3/ArchaeasCentral", header=TRUE, sep="\t")
 #ArchaeasHeatPlot <- read.table("../chapter3/ArchaeasHeatPlot", header=TRUE, sep="\t")
@@ -251,7 +247,7 @@ ggsave(file="Figuras/GenomeSizeVsCentralExpansion.svg", plot=GenomeSizeVsCentral
 
 ```
 
-```{r other}
+```{r other, eval=FALSE, include=FALSE}
 
 #############################################################################################################################
 ## 2) Box plot Expansiones familia y point Genome 
@@ -398,7 +394,7 @@ figure<-ggplot(cdata2.m, aes(x = cdata2.m$Central, y = cdata2.m$value, fill = cd
 
 ```
 <!-- this is the code for GenomicDiversity Figure-->
-```{r Figure_Pablo2 ,warnings = FALSE, message = FALSE,echo=FALSE, results='hide'}
+```{r Figure_Pablo2, eval=FALSE, message=FALSE, include=FALSE, results='hide', warnings=FALSE}
   
 #  1) Every BBH: (BBH Totales) Directly from blast not all of this sequences will go to EvoMining heat plot due to EvoMining restriction
 # cp BBH/*/aux_files/vuelta*.blast.bbh .
@@ -420,10 +416,10 @@ figure<-ggplot(cdata2.m, aes(x = cdata2.m$Central, y = cdata2.m$value, fill = cd
   
 #  5) AntiSMASH on sequences on tree  CYAN  
 #   Ids antiSMASH file  
-# cp smash into evomining folder
+#   cp smash into evomining folder
 #   cut -f2 *smash |sort > ._F1  
 #   Ids list 
-# ls *concat.fasta|sort -g |while read line; do grep '>' $line|cut -d'|' -f2 |sort >$line.ids; done  
+#   ls *concat.fasta|sort -g |while read line; do grep '>' $line|cut -d'|' -f2 |sort >$line.ids; done  
 #   ls *ids |sort -g |while read line; do comm -12 Archeas_Smash_F1 $line>$line.smash; done  
 #   output .smash
 #   ls *smash|sort -g |while read line; do num=$(wc -l<$line);echo -e $num'\t'$line; done
@@ -546,9 +542,6 @@ ggsave(file="ArchaeaColor.svg", plot=ArchaeaColor, width=30, height=40)
 ```
 
 
-
-
-
 ### Section 3 Update and insights from central DB  
 core/ shell genome
 Expansions other central  
@@ -619,13 +612,12 @@ EvoMining is a trade off between conserved known central metabolic function and 
 
 
 ## Figures  
+<!---
 ![Pipeline](Figuras/EvoMiningPipeline.svg)  
-![GenomicDatabases](Figuras/CentralDB.svg)  <!--Poner juntos cyanos Archea, marcar por forma orden favorito -->
+![GenomicDatabases](Figuras/CentralDB.svg)
 ![BackwardEvomining](Figuras/EvoBackward2.svg)  
-![EnzymeFamilies](GenomicDiversity.svg)  
-![TauD](Figuras/TauDpseudomonas2.svg)  
-![Shell enzyme](Figuras/naturalDB.svg)  
-
+![ShellEnzyme TauD](Figuras/TauDpseudomonas2.svg)  
+--->
 ## Acknowledgments
 Secretaria de Inovacion, Conabio:Keri/Ernesto, Argonne cluster Cocina Tepeyac
 
