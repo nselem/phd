@@ -591,11 +591,14 @@ Cyanos.Colors.Reduced.m$value<-Cyanos.Colors.Reduced.m$value/416
 Archaeas.Colors.Reduced.m$value<-Archaeas.Colors.Reduced.m$value/876
 
 Todos.Colors.Reduced.m<-rbind(Actinos.Colors.Reduced.m,Archaeas.Colors.Reduced.m,Cyanos.Colors.Reduced.m,Pseudo.Colors.Reduced.m)
+
+
+
 RetroEvoMining.Colors.Reduced.m<-subset(Todos.Colors.Reduced.m, Family=="Enzyme_26" | Family=="Enzyme_215")
 Todos.Colors.Reduced.m<-subset(Todos.Colors.Reduced.m, Family!="Enzyme_215")
 Todos.Colors.Reduced.m<-subset(Todos.Colors.Reduced.m, Family!="Enzyme_26")
 Todos.Colors.Reduced.m<-subset(Todos.Colors.Reduced.m, Family!="Enzyme_215")
-Todos.Colors.Reduced.m<-subset(Todos.Colors.Reduced.m, Family!="Acetylornithine_aminotransferase")
+#Todos.Colors.Reduced.m<-subset(Todos.Colors.Reduced.m, Family!="Acetylornithine_aminotransferase")
 
 
 TodosColor<-ggplot(Todos.Colors.Reduced.m, aes(x = Todos.Colors.Reduced.m$Family, y = Todos.Colors.Reduced.m$value,  fill = Todos.Colors.Reduced.m$variable)) +geom_bar(stat = "identity")+facet_grid(Todos.Colors.Reduced.m$Kingdom ~ .)+theme(plot.title = element_text(size = 50, face = "bold"), text = element_text(size = 60), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = -90,size = 40,vjust=0),axis.text.y=element_text(size = 30), legend.position = "bottom")+ scale_fill_manual(values=c("#0000FF","#000000", "#58FAF4","#A901DB","#FAAC58", "#FF0000"))
@@ -620,6 +623,20 @@ CyanoColor<-ggplot(Cyanos.Colors.Reduced.m, aes(x = Cyanos.Colors.Reduced.m$Fami
   
 ArchaeaColor<-ggplot(Archaeas.Colors.Reduced.m, aes(x = Archaeas.Colors.Reduced.m$Family, y = Archaeas.Colors.Reduced.m$value,  fill = Archaeas.Colors.Reduced.m$variable)) +geom_bar(stat = "identity")+theme(plot.title = element_text(size = 50, face = "bold"), text = element_text(size = 50), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 30), legend.position = "bottom")+ scale_fill_manual(values=c("#0000FF","#000000", "#58FAF4","#A901DB","#FAAC58", "#FF0000"))
 ggsave(file="ArchaeaColor.svg", plot=ArchaeaColor, width=30, height=40)
+
+for (fam in unique(Todos.Colors.Reduced.m$Family)){
+  fam_box<-subset(Todos.Colors.Reduced.m, Family==fam)
+  fam_box$Kingdom2 <- factor(fam_box$Kingdom, c("Actinobacteria","Cyanobacteria","Pseudomonas","Archaea"))
+  
+   fam_gg<-ggplot(fam_box, aes(x = fam_box$Kingdom2, y = fam_box$value,  fill = fam_box$variable)) +geom_bar(stat = "identity")+theme(plot.title = element_text(size = 10, face = "bold"), text = element_text(size = 10), axis.title = element_text(face="bold"), axis.text.x=element_text(size = 6,vjust=0),axis.text.y=element_text(size = 10), legend.position = "none")+ scale_fill_manual(values=c("#0000FF","#000000", "#58FAF4","#A901DB","#FAAC58", "#FF0000"))+labs(title = fam_box$Family,x="",y="" )
+   #+coord_cartesian(ylim = c(0, 5)) 
+   ggsave(file=paste("figuras42/",fam,".svg"), plot=fam_gg, width=3, height=4, device = svg)
+}
+
+  Todos.Colors.Reduced.m$Kingdom2 <- factor(Todos.Colors.Reduced.m$Kingdom, c("Actinobacteria","Cyanobacteria","Pseudomonas","Archaea"))
+  
+  #glutamate<-subset(Todos.Colors.Reduced.m, Family=="glutamate_dehydrogenase")
+#ggplot(glutamate, aes(x = glutamate$Family, y = glutamate$value,  fill = glutamate$variable)) +geom_bar(stat = "identity")+facet_grid(. ~ glutamate$Kingdom)+theme(plot.title = element_text(size = 30, face = "bold"), text = element_text(size = 20), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = -90,size = 10,vjust=0),axis.text.y=element_text(size = 10), legend.position = "bottom")+ scale_fill_manual(values=c("#0000FF","#000000", "#58FAF4","#A901DB","#FAAC58", "#FF0000"))
 
 ```
 
