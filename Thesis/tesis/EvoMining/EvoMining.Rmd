@@ -626,15 +626,25 @@ ggsave(file="ArchaeaColor.svg", plot=ArchaeaColor, width=30, height=40)
 
 for (fam in unique(Todos.Colors.Reduced.m$Family)){
   fam_box<-subset(Todos.Colors.Reduced.m, Family==fam)
-  fam_box$Kingdom2 <- factor(fam_box$Kingdom, c("Actinobacteria","Cyanobacteria","Pseudomonas","Archaea"))
-  
-   fam_gg<-ggplot(fam_box, aes(x = fam_box$Kingdom2, y = fam_box$value,  fill = fam_box$variable)) +geom_bar(stat = "identity")+theme(plot.title = element_text(size = 10, face = "bold"), text = element_text(size = 10), axis.title = element_text(face="bold"), axis.text.x=element_text(size = 6,vjust=0),axis.text.y=element_text(size = 10), legend.position = "none")+ scale_fill_manual(values=c("#0000FF","#000000", "#58FAF4","#A901DB","#FAAC58", "#FF0000"))+labs(title = fam_box$Family,x="",y="" )
+   ## Sorting according to paper
+    fam_box$Kingdom2 <- factor(fam_box$Kingdom, c("Actinobacteria","Cyanobacteria","Pseudomonas","Archaea"))
+   #df<-fam_box
+   #df$X5 <- apply(df, 1, function(x) diff(range(x)))
+### 
+    ## Calculating size of expanded family
+  Vector<-c(sum(subset(fam_box, Kingdom=="Archaea")$value),sum(subset(fam_box, Kingdom=="Pseudomonas")$value),sum(subset(fam_box, Kingdom=="Cyanobacteria")$value),sum(subset(fam_box, Kingdom=="Actinobacteria")$value))
+    ## Calculating maximum difference
+  diference <-diff(range(Vector))
+  print (paste (diference,"diference",fam))
+
+    ##Ploting individual families on 4 taxa
+     fam_gg<-ggplot(fam_box, aes(x = fam_box$Kingdom2, y = fam_box$value,  fill = fam_box$variable)) +geom_bar(stat = "identity")+theme(plot.title = element_text(size = 10, face = "bold"), text = element_text(size = 10), axis.title = element_text(face="bold"), axis.text.x=element_text(size = 6,vjust=0),axis.text.y=element_text(size = 10), legend.position = "none")+ scale_fill_manual(values=c("#0000FF","#000000", "#58FAF4","#A901DB","#FAAC58", "#FF0000"))+labs(title = fam_box$Family,x="",y="" )
    #+coord_cartesian(ylim = c(0, 5)) 
    ggsave(file=paste("figuras42/",fam,".svg"), plot=fam_gg, width=3, height=4, device = svg)
 }
 
-  Todos.Colors.Reduced.m$Kingdom2 <- factor(Todos.Colors.Reduced.m$Kingdom, c("Actinobacteria","Cyanobacteria","Pseudomonas","Archaea"))
-  
+
+  Vector
   #glutamate<-subset(Todos.Colors.Reduced.m, Family=="glutamate_dehydrogenase")
 #ggplot(glutamate, aes(x = glutamate$Family, y = glutamate$value,  fill = glutamate$variable)) +geom_bar(stat = "identity")+facet_grid(. ~ glutamate$Kingdom)+theme(plot.title = element_text(size = 30, face = "bold"), text = element_text(size = 20), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = -90,size = 10,vjust=0),axis.text.y=element_text(size = 10), legend.position = "bottom")+ scale_fill_manual(values=c("#0000FF","#000000", "#58FAF4","#A901DB","#FAAC58", "#FF0000"))
 
