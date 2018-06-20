@@ -38,7 +38,7 @@ library(ggplot2)
 library(knitr)
 library(RColorBrewer)
 hm.palette <- colorRampPalette(rev(brewer.pal(11, 'Spectral')), space='Lab')  
-library(genstats) ## Next libraries are for coursera
+#library(genstats) ## Next libraries are for coursera
 library(devtools)
 library(Biobase)
 library(scales) # 
