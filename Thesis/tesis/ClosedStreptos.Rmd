@@ -51,7 +51,7 @@ docking <- read.csv("chapter2/table05", header=TRUE, sep="\t")
 genomeOrder=factor(docking$genome,levels=unique(docking$genome))
 names(docking)
 
-docking.m <- melt(dockingS,id = "genome")
+docking.m <- melt(docking,id = "genome")
 docking.m <- ddply(docking.m, .(variable), transform,rescale = rescale(value))
 docking.m$genome <- factor(docking.m$genome, levels = rev(docking.m$genome[order(genomeOrder)]))
 docking.m$variable <- factor(docking.m$variable, levels = names(rev(sort(apply(docking[,-1],2,sum)))))
@@ -67,7 +67,7 @@ docking.m$variable
 ggplot(docking.m, aes(x=variable, y=genome)) + labs(x = "Substrates", y = "genome",text = element_text(size=12))+ geom_raster(aes(fill=value))+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6))+scale_fill_gradient(low = "white", high = "black",na.value = "orange")
   #scale_fill_gradientn(colours = hm.palette(100),na.value = "gray")
 
-colorHeatPlot<-ggplot(docking.m, aes(x=variable, y=genome)) + labs(x = "Gene cluster Families", y = "genome",text = element_text(size=12))+geom_raster(aes(fill=value))+theme_bw()+theme(legend.position="none",plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6))+ scale_fill_gradientn(colours = hm.palette(100),na.value = "gray")
+colorHeatPlot<-ggplot(docking.m, aes(x=variable, y=genome)) + labs(x = "Substrates", y = "genome",text = element_text(size=12))+ geom_raster(aes(fill=value))+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6))+scale_fill_gradient(low = "white", high = "black",na.value = "orange")
 ggsave(file="chapter2/BigSCAPEheatplot05.svg", plot=colorHeatPlot, width=10, height=15)
 
 #gcolor$data[[1]]["fill"]
