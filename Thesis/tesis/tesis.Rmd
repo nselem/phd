@@ -21,7 +21,7 @@ preface: >
   This is an example of a thesis setup to use the reed thesis document class.
 bibliography: bib/Nelly.bib
 # Download your specific bibliography database file and refer to it in the line above.
-csl: csl/plos-biology.csl #apa.csl
+csl: csl/vancouver-brackets.csl #apa.csl
 # Download your specific csl file and refer to it in the line above.
 output: 
   reedtemplates::reed_thesis:
