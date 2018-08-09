@@ -158,3 +158,11 @@ There are no conflicts to declare.
 ```{r bib, child = 'bibliography.Rmd'}
 ```
 
+<!-- EvoMining trees treatment for paper 
+cp 1.pp.svg.new 1.svg
+vi 1.svg
+:%s/\n<title/<title/
+:wq
+perl -ne '!/text>/ && print' 2.svg | perl -ne '!/<text/ && print' >2.1.svg
+perl -p -i -e {s/r=\'[0-9]\'/r=\'40\'/} 1.1.svg
+--!>
