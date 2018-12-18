@@ -25,6 +25,7 @@ library(scales)
 library(dplyr)
 if(!require(devtools))
   install.packages("devtools", repos = "http://cran.rstudio.com")
+library(devtools)
 if(!require(easyGgplot2))
   install_github("kassambara/easyGgplot2")
 library(easyGgplot2)
@@ -233,6 +234,13 @@ ggsave(file="Figuras/GenomeSizeVsCentralExpansion.svg", plot=GenomeSizeVsCentral
 
 ```
 
+
+
+
+
+
+
+
 ```{r other, eval=FALSE, include=FALSE}
 
 #############################################################################################################################
@@ -245,6 +253,8 @@ TodosHP.m<-subset(TodosHP.m,variable!="TOTAL")
 #CyanosHeatPlot.m<-subset(CyanosHeatPlot.m,variable!="TOTAL")
 ##   Boxplot expansiones en familias en colores por reinos
 BoxCentralFamilies<-ggplot(TodosHP.m, aes(x=TodosHP.m$variable, y=TodosHP.m$value,color=TodosHP.m$Kingdom)) +labs(x = "Metabolic Families", y = "Copy number on Genomes",text = element_text(size=12)) + geom_boxplot()+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")
+
+
 ####ggsave(file="BoxCentralFamilies.svg", plot=BoxCentralFamilies, width=30, height=8)
 ############### End of boxplot   
 ##########################################################################################################
@@ -568,6 +578,38 @@ Vector
 
 ```
 
+
+```{r OrderSizes}
+
+#> oind <- order(as.numeric(by(DF$cost, DF$type, median)))    
+#> DF$type <- ordered(DF$type, levels=levels(DF$type)[oind])   
+#>
+#> boxplot(cost ~ type, data=DF)    # now it is ordered by median
+
+##Cyanobacteria
+OrderCyanoSize<-order(as.numeric(by(CyanosTaxa$Size,CyanosTaxa$Order,median)))
+CyanosTaxa$Order<-ordered(CyanosTaxa$Order,levels=levels(CyanosTaxa$Order)[OrderCyanoSize])
+
+CyanoSizes<-ggplot(CyanosTaxa, aes(x=CyanosTaxa$Order, y=CyanosTaxa$Size)) +labs(x = "Order", y = "Genome Size",text = element_text(size=14)) + geom_boxplot()+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 14), axis.title = element_text(face="bold"), axis.text.x=element_text(angle =90,size = 14), legend.position = "bottom")
+ggsave(file="CyanoSizes.svg", plot=CyanoSizes, width=6, height=5)
+
+##Actinobacteria
+OrderActinosSize<-order(as.numeric(by(ActinosTaxa$Size,ActinosTaxa$Order,median)))
+ActinosTaxa$Order<-ordered(ActinosTaxa$Order,levels=levels(ActinosTaxa$Order)[OrderActinosSize])
+
+ActinoSizes<-ggplot(ActinosTaxa, aes(x=ActinosTaxa$Order, y=ActinosTaxa$Size)) +labs(x = "Order", y = "Genome Size",text = element_text(size=12)) + geom_boxplot()+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 14), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 14), legend.position = "bottom")
+ggsave(file="ActinoSizes.svg", plot=ActinoSize, width=12, height=5)
+
+## Archaea
+OrderArchaeasSize<-order(as.numeric(by(ArchaeasTaxa$Size,ArchaeasTaxa$Order,median)))
+ArchaeasTaxa$Order<-ordered(ArchaeasTaxa$Order,levels=levels(ArchaeasTaxa$Order)[OrderArchaeasSize])
+
+ArchaeaSizes<-ggplot(ArchaeasTaxa, aes(x=ArchaeasTaxa$Order, y=ArchaeasTaxa$Size)) +labs(x = "Order", y = "Genome Size",text = element_text(size=12)) + geom_boxplot()+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 14), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 14), legend.position = "bottom")
+ggsave(file="ArchaeaSizes.svg", plot=ArchaeaSizes, width=8, height=5)
+
+## Pseudomonas
+ggplot(PseudomonasTaxa, aes(x=PseudomonasTaxa$Shape, y=PseudomonasTaxa$Size)) +labs(x = "Metabolic Families", y = "Copy number on Genomes",text = element_text(size=12)) + geom_boxplot()+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")
+```
 
 <!---
 ![Pipeline](Figuras/EvoMiningPipeline.svg)  
