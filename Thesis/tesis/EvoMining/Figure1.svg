@@ -15,7 +15,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="Figure1.svg"
+   sodipodi:docname="Figure1.pdf"
    inkscape:export-filename="/media/strain/disco2/GIT/phd/Thesis/tesis/EvoMining/Figure1.png"
    inkscape:export-xdpi="578.10999"
    inkscape:export-ydpi="578.10999">
@@ -26,9 +26,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.2627416"
+     inkscape:zoom="0.5656854"
      inkscape:cx="528.0935"
-     inkscape:cy="802.62794"
+     inkscape:cy="307.65317"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -3508,7 +3508,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -9458,72 +9458,6 @@
          d="m 429.979,682.4432 c -0.31415,-0.81867 -0.13627,-1.92341 0.39528,-2.45497 1.38192,-1.38191 4.00025,-0.1189 3.63928,1.75549 -0.40208,2.08782 -3.30845,2.5917 -4.03456,0.69948 z"
          style="fill:#892ca0;stroke-width:0.52078474;stroke-miterlimit:4;stroke-dasharray:none" />
     </g>
-    <text
-       xml:space="preserve"
-       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Liberation Sans;-inkscape-font-specification:Liberation Sans"
-       x="60"
-       y="822.36218"
-       id="text4099"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan4101"
-         x="60"
-         y="822.36218"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial"><tspan
-   style="font-weight:bold"
-   id="tspan4112">Figure 1. EvoMining pipeline, databases and enzyme’s origin and fate.  a) </tspan>EvoMining pipeline and </tspan><tspan
-         sodipodi:role="line"
-         x="60"
-         y="839.86218"
-         id="tspan4123"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial">databases. Homologues and expansions of seed enzymes (orange) from Enzyme DB are searched in </tspan><tspan
-         sodipodi:role="line"
-         x="60"
-         y="857.36218"
-         id="tspan4125"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial">the Genome DB. The outcome is integrated as the expanded EF.  BBHs of seed enzymes (red) are </tspan><tspan
-         sodipodi:role="line"
-         x="60"
-         y="874.86218"
-         id="tspan4127"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial">marked as conserved metabolism. The EF are amplified after being compared against the NP DB (blue) </tspan><tspan
-         sodipodi:role="line"
-         x="60"
-         y="892.36218"
-         id="tspan4129"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial">to find enzymes of the family recruited into NP biosynthesis. Optionally, antiSMASH predictions (cyan) </tspan><tspan
-         sodipodi:role="line"
-         x="60"
-         y="909.86218"
-         id="tspan4131"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial">can be added by the user. Enzyme predictions belonging to specialized metabolism by antiSMASH, but </tspan><tspan
-         sodipodi:role="line"
-         x="60"
-         y="927.36218"
-         id="tspan4135"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial">that at the same time were marked red as members of conserved metabolism, are defined as transition </tspan><tspan
-         sodipodi:role="line"
-         x="60"
-         y="944.86218"
-         id="tspan4137"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial">enzymes (purple). <tspan
-   style="font-weight:bold"
-   id="tspan4144">b) EvoMining phylogenetic output</tspan>. A phylogenetic reconstruction of an EF is done </tspan><tspan
-         sodipodi:role="line"
-         x="60"
-         y="962.36218"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial"
-         id="tspan4170">to differentiate expansions of unknown metabolic fate (gray) from enzymes closer to recruitments (blue) </tspan><tspan
-         sodipodi:role="line"
-         x="60"
-         y="979.86218"
-         id="tspan4139"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial">or to conserved metabolic enzymes (red). The resulting enzymes are the EvoMining predictions (green), </tspan><tspan
-         sodipodi:role="line"
-         x="60"
-         y="997.36218"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial"
-         id="tspan4158">which represent novel enzymes devoted to specialized metabolism.  </tspan></text>
     <g
        transform="matrix(0.95265827,0,0,0.95265827,10.019022,-349.13381)"
        id="g6773-4-3"
