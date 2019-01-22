@@ -123,6 +123,7 @@ Para mejorar nuestro entendimiento del fenomeno, ademas de la comparacion de sec
 ## El establecimiento de un marco de conservación permite distinguir cambios  
 Para poder establecer diferencias en el número de copias debemos trabajar en la construcción de un marco filogenético consistente que permita ordenar inclusive organismos de la misma especie. Para ello pueden utilizarse el core genome el total de genes conservado de cada genoma en un grupo taxonómico. [@metaphor ]
   
+Para distinguir cambios primero se tiene que establecer un marco de conservación. 
  <!---     Clasificación y variantes de enzimas acorde a su función -->
    
 ## La genómica comparativa como herramienta en la disticinción de miembros promiscuos    
@@ -177,11 +178,11 @@ En conclusion la promiscuidad enzimatica es un fenomeno complejo debido a multip
     
 \clearpage  
   
-# Pregunta biológica 
+# Pregunta biológica  {.unnumbered}
   
 \clearpage  
   
-# Objetivos 
+# Objetivos  {.unnumbered}
 
 ## Objetivo General   
   
@@ -194,7 +195,7 @@ Caracterizar cambios de promiscuidad enzimatica in vivo mediante perfiles metabo
   
 \clearpage  
   
-# Estrategias  
+# Estrategias   {.unnumbered}
 ### La promiscuidad en familias enzimaticas.  
   
 Mejorar Evomining mediante la  identificacion de cambios de vecindad genomica en familias selectas de metabolismo central convirtiendola en una plataforma de codigo libre disponible para otros investigadores.  
@@ -248,7 +249,7 @@ Separar los metabolitos mediante cromatografia dirigida por tamaño. Obtener un 
    
 \clearpage  
   
-#Metodologia
+#Metodologia  {.unnumbered}
 A continuacion describire la metodologia para cada una de las estrategias expuestas previamente. Todos los scripts desarrollados fueron escritos en perl y estan disponibles en github https://github.com/nselem/perlas.
   
 ###La promiscuidad en familias enzimaticas.  

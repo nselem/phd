@@ -1,12 +1,11 @@
 ---
 author: 'Nelly Selem'
-date: 'Nov 2016'
-division: 'Mathematics and Natural Sciences'
+date: 'Enero 2019'
 advisor: 'Francisco Barona Gomez'
 #altadvisor: 'Your Other Advisor'
 # Delete line 6 if you only have one advisor
-department: 'Mathematics'
-title: 'Occurrence and variation of promiscuity in specialized metabolism pathways are revealed by evolutive genome mining bioinformatic tools.'
+department: 'Evolución de la diversidad metabólica'
+title: 'La occurrencia y variación de la promiscuidad en rutas del metabolismo especializado son reveladas por herramientas bioinformáticas evolutivas.'
 abstract: >
   `r paste(readLines('abstract.Rmd'), collapse = ' ')`
 # If you'd rather include the preliminary content in files instead of inline
@@ -74,7 +73,7 @@ This is an R chunk and chap0.Rmd refers to the Introductory chapter.  Feel free 
 This is for including Chapter 1.  Notice that it's also good practice to name your chunk.  This will help you debug potential issues as you knit.  The chunk above is called intro and the one below is called chapter1.  Feel free to change the name of the Rmd file as you wish, but don't forget to change it here from chap1.Rmd.
 -->
 <!--- Genome Mining-->
-```{r chapter1, child = 'chap1.Rmd'}
+```{r capitulo1, child = 'chap1.Rmd'}
 ```
 
 <!--
