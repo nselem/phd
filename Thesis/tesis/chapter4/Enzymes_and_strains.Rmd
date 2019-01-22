@@ -1,0 +1,48 @@
+---
+title: "Enzymes_and_strains"
+author: "NellySelem"
+date: "May 18, 2017"
+output:
+  pdf_document: default
+  html_document: default
+---
+## Strains
+$$
+\centering
+\label{my-label enzyme}
+\begin{tabular}{ l l l l}
+\hline \\ [-1.5ex]
+Enzyme  & from Organism & Cloned at   & Antibiotic resitance\\ [1ex]
+\hline \\ [-1.5ex]
+\hline
+PriA & S. coelicolor & E coli V69  & Ampiciline \\  [1ex]
+D11A & S. coelicolor  & E coli V69 &  Ampiciline \\  [1ex]
+TrpC &  & E coli V69 & Ampiciline\\  [1ex]
+TrpD &  & Rosseta 2  & kanamycin \\  [1ex]
+\hline
+\end{tabular}
+$$
+
+## Enzymes available as cristals at -80C
+$$
+\centering
+\label{my-label enzyme}
+\begin{tabular}{ l l c c}
+\hline \\ [-1.5ex]
+Enzyme  & from Organism & Concentration   & Concentration \\ [1ex]
+\hline \\ [-1.5ex]
+\hline
+PriB & SMg1   & $461\mu M$  & 12  $\frac{mg}{ml}$\\  [1ex]
+PriB & Ssvi   & $100\mu M$  & 2.6 $\frac{mg}{ml}$  \\  [1ex]
+PriB & JDen   & $215\mu M$  & 5.6 $\frac{mg}{ml}$ \\  [1ex]
+PriA & Tcur   & $335\mu M$  & 8.7 $\frac{mg}{ml}$\\  [1ex]
+PriA & Sros   & $450\mu M$  & 11.7$\frac{mg}{ml}$\\  [1ex]
+PriA & Smeg   & $370\mu M$  & 10  $\frac{mg}{ml}$\\  [1ex]
+PriB & Sspc   & $1346\mu M$ & 35  $\frac{mg}{ml}$\\  [1ex]
+\hline
+\end{tabular}
+$$
+
+Desired enzymes: all PriA, trpF and folE available at lab.  
+
+\clearpage 

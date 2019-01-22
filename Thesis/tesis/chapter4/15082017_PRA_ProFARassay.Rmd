@@ -1,0 +1,187 @@
+---
+title: "PRAassay"
+author: "NellySelem"
+date: "May 18, 2017"
+output: pdf_document
+---
+
+```{r include_reedtemplates_PRA, include = FALSE}
+# This chunk ensures that the reedtemplates package is installed and loaded
+# This reedtemplates package includes the template files for the thesis and also
+# two functions used for labeling and referencing
+if(!require(devtools))
+  install.packages("devtools", repos = "http://cran.rstudio.com")
+
+if(!require(reedtemplates)){
+  library(devtools)
+  devtools::install_github("ismayc/reedtemplates")
+  }
+library(reedtemplates)
+```
+
+```{r load_pkgs_PRA, message = FALSE,echo=FALSE}
+# List of packages required for this analysis
+pkg <- c("dplyr", "ggplot2", "knitr", "devtools","RColorBrewer")
+# Check if packages are not installed and assign the
+# names of the packages not installed to the variable new.pkg
+new.pkg <- pkg[!(pkg %in% installed.packages())]
+# If there are any packages in the list that aren't installed,
+# install them
+if (length(new.pkg))
+  install.packages(new.pkg, repos = "http://cran.rstudio.com")
+# Load packages
+library(dplyr)
+library(plyr)
+library(reshape) ## melt
+library(ggplot2)
+library(knitr)
+library(RColorBrewer)
+hm.palette <- colorRampPalette(rev(brewer.pal(11, 'Spectral')), space='Lab')  
+library(genstats) ## Next libraries are for coursera
+library(devtools)
+library(Biobase)
+library(scales) # 
+library(xlsx) # For save data on excel
+library(knitr)
+library(drc) # for fitting Michaelis Menten model
+library(ggplot2) # for drawing
+
+```
+
+```{r stock,echo=FALSE}
+TrpC_stock=60 ##uM
+TrpD_stock=40 ##uM
+HisF_stock=40 ##uM Scoe
+PriA_stock=40 ##uM
+type="Scoe"  #organism from 
+
+AA_Stock=33 ##mM
+hole_vol=170 ##ul
+
+PlateColum=2
+## 
+
+
+```
+
+## ProFAR quantification
+
+# ProFAR Preparation
+From proFAR dust stock on -80° take 5.5mg on 500ml Buffer   
+70 ul from this solution on 100ul Buffer gives proFAR 100uM  
+CI   VI  = CF VF  
+     70  =100uM 170 ul
+     
+     
+```{r ProFARConcentration}
+## Stock ProFAR uM
+
+ProFAR_Stock=170*100/70
+ProFAR_Stock
+```
+
+## PRA enzymatic assay
+## TrpF activity  
+50 uM ProFAR and PRA
+100uM ProFAR and PRA
+
+_Reactives_  
+  
+>-TrpF  
+
+>-TrpC `r TrpC_stock` $\mu M$  Stock  
+
+>-TrpD `r TrpD_stock` $\mu M$  Stock   
+
+>-Anthranilic acid(AA) (stored at -20C)  
+
+>-Reaction Buffer TrpF    
+
+>Fluorescence box (black box) 
+
+>Excitation 310 emission 400 nm Anthranilic acid TECAN
+
+
+_AA dilution_  
+AA dilution at `r AA_Stock` $\mu M$ from a `r AA_Stock`mM stock.    
+Dilutions were made to reach this concentrations.  
+$D_{stock}=$ `r AA_Stock` $mM$ dil0    
+$AA_1=$ `r AA_Stock/10`mM=`r AA_Stock*100`$\mu M$ dil1 1:10  
+$AA_2=$ `r AA_Stock/100`mM dil2 1:10  
+$AA_3=$ `r AA_Stock`$\mu M$ dil3  1:10  
+Reactions are on holes of `r hole_vol` $\mu l$  
+
+  ***
+  
+-Example:  Calculate volume for $5\mu M$ on `r hole_vol` $\mu l$ from Dil3(`r AA_Stock`$\mu M$)  
+$x\mu l= \frac{5\mu M \times `r hole_vol` \mu l}{`r AA_Stock`\mu M}$  
+$x=\frac{5\times `r hole_vol`}{`r AA_Stock`}=$ `r 5*hole_vol/AA_Stock` $\mu l$  
+
+***
+
+-Example:  Calculate volume for enzymes: $1\mu M$ TrpC enzyme on $`r hole_vol` \mu l$ from stock $`r TrpC_stock` \mu M$ 
+$x\mu l `r TrpC_stock`\mu M= 1\mu M \times `r hole_vol` \mu l$  
+
+> $x=$  `r  hole_vol*1/TrpC_stock` $\mu l$  
+
+```{r TrpC_final,echo=FALSE}
+## This script transforms Final concentrations on final volumes
+PriA_final=1 ##uM = 800 nM final concentration on hole
+HisF_final=1.25 ##uM final concentration on hole
+TrpC_final=1 ##uM = 800 nM final concentration on hole
+TrpD_final=2 ##uM final concentration on hole
+
+## this are final volumes
+PriA_vol=round(hole_vol*PriA_final/PriA_stock,2)
+HisF_vol=round(hole_vol*HisF_final/HisF_stock,2)
+TrpC_vol=round(hole_vol*TrpC_final/TrpC_stock,2)
+TrpD_vol=round(hole_vol*TrpD_final/TrpD_stock,2)
+```
+
+
+Following table is an example with `r type` PriA at `r PriA_stock` $\mu M$ when $`r  PriA_vol` \mu l$ leads fo a final concentration of $`r PriA_final` \mu M$ on $`r hole_vol` \mu l$    
+Volumes on table are on $\mu l$  
+
+# Assay table
+
+```{r PRA_essay_DATA, echo=FALSE}
+
+## Enzymes volumes
+TrpC<-rep(TrpC_vol,8)
+TrpD<-rep(TrpD_vol,8)  ## 
+HisF<-c(rep(HisF_vol,5),0,0,0)  ## 
+PriA<-rep(PriA_vol,8)
+AAdata <- data.frame(TrpC, TrpD, HisF, PriA)
+
+
+## Substrates
+AAdata$AA_Dil <- rep(1,8)
+AA_microMolar<-c(0,25,50,75,100,0,50,100)
+AAdata["AA_uM"]<-AA_microMolar
+#stock_con=33uM
+stock_con<-AA_Stock*1000 ## on mM
+#Calculating volumes according
+AAdata["AA_Vol"] <-round(hole_vol*AAdata["AA_uM"]/(stock_con*10**(-1*AAdata["AA_Dil"])),digits = 2) # That creates the new column named "MY_NEW_COLUMN" 
+
+ProFAR<-rep(4,8)  ## 
+AAdata["Pro_uM"]<-c(50,50,50,50,50,50,50,50)
+AAdata["Pro_vol"]<-round(hole_vol*AAdata["Pro_uM"]/ProFAR_Stock,2)
+
+AAdata["BuffPRA"] <- NA
+AAdata["BuffPRA"] <- NA
+Buffer<-hole_vol-AAdata$AA_Vol-AAdata$Pro_vol-AAdata$TrpC-AAdata$TrpD-AAdata$PriA-AAdata$HisF 
+
+AAdata$BuffPRA <- Buffer/2
+AAdata["BuffPro"] <- Buffer/2
+
+
+kable(AAdata)
+```
+
+With TrpC Stock `r TrpC_stock` $\mu M$ TrpD Stock `r TrpD_stock` $\mu M$ PriA Stock `r PriA_stock` $\mu M$ HisF `r HisF_stock` $\mu M$
+
+With TrpC final `r TrpC_final` $\mu M$ TrpD final `r TrpD_final` $\mu M$ PriA final `r PriA_final` $\mu M$ HisF final `r HisF_final` $\mu M$
+
+From proFAR dust stock on -80° take 5.5mg on 500ml Buffer  
+
+

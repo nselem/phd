@@ -84,15 +84,15 @@ Immediately below is the chunk for Chapter 2.
 <!--- PriA family-->
 ```{r chapter2, child = 'chap2.Rmd'}```
 
-<!--- Archaeas-->
+<!--- EvoMining -->
 ```{r chapter3, child = 'chap3.Rmd'}
 ```
 
-<!--- Actinos-->
+<!--- CORASON -->
 ```{r chapter4, child = 'chap4.Rmd'}
 ```
 
-<!--- Cyanobacteria-->
+<!--- PriA EvCouplings -->
 ```{r chapter5, child = 'chap5.Rmd'}
 ```
 <!--
