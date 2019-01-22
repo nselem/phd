@@ -150,7 +150,7 @@ Para mejorar nuestro entendimiento del fenomeno, ademas de la comparacion de sec
 <!--- Clasificacion taxonomica correcta  metaphor -->  
     
 ## El establecimiento de un marco de conservación permite distinguir cambios  
-  
+Para distinguir cambios primero se tiene que establecer un marco de conservación. 
  <!---     Clasificación y variantes de enzimas acorde a su función -->
    
 ## La genómica comparativa como herramienta en la disticinción de miembros promiscuos    
@@ -167,11 +167,11 @@ La promiscuidad nos interesa por su produccion de variantes. Si bien en rutas ce
    
 \clearpage  
   
-# Pregunta biológica 
+# Pregunta biológica  {.unnumbered}
   
 \clearpage  
   
-# Objetivos 
+# Objetivos  {.unnumbered}
 
 ## Objetivo General   
   
@@ -184,7 +184,7 @@ Caracterizar cambios de promiscuidad enzimatica in vivo mediante perfiles metabo
   
 \clearpage  
   
-# Estrategias  
+# Estrategias   {.unnumbered}
 ### La promiscuidad en familias enzimaticas.  
   
 Mejorar Evomining mediante la  identificacion de cambios de vecindad genomica en familias selectas de metabolismo central convirtiendola en una plataforma de codigo libre disponible para otros investigadores.  
@@ -238,7 +238,7 @@ Separar los metabolitos mediante cromatografia dirigida por tamaño. Obtener un 
    
 \clearpage  
   
-#Metodologia
+#Metodologia  {.unnumbered}
 A continuacion describire la metodologia para cada una de las estrategias expuestas previamente. Todos los scripts desarrollados fueron escritos en perl y estan disponibles en github https://github.com/nselem/perlas.
   
 ###La promiscuidad en familias enzimaticas.  

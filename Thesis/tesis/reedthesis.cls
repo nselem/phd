@@ -198,9 +198,9 @@
 \def\department#1{\gdef \@department{#1}}
 \def\@department{\@latex@warning@no@line{No \noexpand\department given}}
 \def\thedivisionof#1{\gdef \@thedivisionof{#1}}
-\def\@thedivisionof{The Division of}
+\def\@thedivisionof{}
 \def\approvedforthe#1{\gdef \@approvedforthe{#1}}
-\def\@approvedforthe{Division}
+\def\@approvedforthe{el laboratorio}
 \def\advisor#1{\gdef \@advisor{#1}}
 \def\@advisor{\@latex@warning@no@line{No \noexpand\advisor given}}
 \def\altadvisor#1{\gdef \@altadvisor{#1} \@altadvisortrue}
@@ -233,7 +233,7 @@
   \else
     \@restonecolfalse
   \fi
-  \chapter*{Acknowledgements}
+  \chapter*{Agradecimientos}
   \fontsize{12}{14}\selectfont
 }{\clearpage \if@restonecol\twocolumn\fi}%
 
@@ -243,7 +243,7 @@
   \else
     \@restonecolfalse
   \fi
-  \chapter*{Preface}
+  \chapter*{Prefacio}
   \fontsize{12}{14}\selectfont
 }{\clearpage \if@restonecol\twocolumn\fi}%
 % End of CII add
@@ -264,7 +264,7 @@
   \else
     \@restonecolfalse
   \fi
-  \chapter*{Dedication}
+  \chapter*{Dedicatoria}
   \fontsize{12}{14}\selectfont
 }{\clearpage \if@restonecol\twocolumn\fi}%
 
@@ -290,7 +290,7 @@
   \let \footnote \thanks
 
   \baselineskip = 1.4\baselineskip
-  \setbox0=\hbox{of the Requirements for the Degree}
+  \setbox0=\hbox{de los requerimientos para el grado}
 
   \begin{center}
     \setcounter{page}{1}
@@ -299,15 +299,15 @@
     \vfil
     \centerline{\hbox to \wd0 {\hbox{}\hrulefill\hbox{}}}
     \vfil
-    A Thesis \\
-    Presented to \\
+    Una tesis \\
+    presentada a  \\
     \@thedivisionof \ \@division \\
-LANGEBIO-CINVESTAV  \vfil
+	LANGEBIO-CINVESTAV  \vfil
     \centerline{\hbox to \wd0 {\hbox{}\hrulefill\hbox{}}}
     \vfil
-    In Partial Fulfillment \\
-    of the Requirements for the Degree \\
-    Science Philosophy Doctor 
+    Para cumplir con los \\
+    requerimientos de la obtenci\'on del grado \\
+    de Doctor en Ciencias 
     \vfil
     \centerline{\hbox to \wd0 {\hbox{}\hrulefill\hbox{}}}
     \bigskip
@@ -325,12 +325,12 @@ LANGEBIO-CINVESTAV  \vfil
 %% Approved for the division page
   \cleardoublepage
   {\fontsize{12}{14}
-  \setbox0=\hbox{Approved for the \@approvedforthe}
+  \setbox0=\hbox{Aprobado por \@approvedforthe}
   \thispagestyle{empty}
   \null\vfil		% just below center of page
   \par\vskip 6cm	% below center, not center
   \centerline{\copy0}	% approved
-  \centerline{(\@department)} %major
+  \centerline{\@department} %major
   \vskip 1cm		%space to sign
   \centerline{\makebox[\wd0][c]{\hrulefill}
 	\if@altadvisor \makebox[.5in]{} \makebox[\wd0][c]{\hrulefill} \fi}
