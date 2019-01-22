@@ -6,7 +6,7 @@ advisor: 'Francisco Barona Gomez'
 #altadvisor: 'Your Other Advisor'
 # Delete line 6 if you only have one advisor
 department: 'Mathematics'
-title: 'Enzymatic Promiscuity'
+title: 'Occurrence and variation of promiscuity in specialized metabolism pathways are revealed by evolutive genome mining bioinformatic tools.'
 abstract: >
   `r paste(readLines('abstract.Rmd'), collapse = ' ')`
 # If you'd rather include the preliminary content in files instead of inline

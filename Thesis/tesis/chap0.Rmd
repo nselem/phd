@@ -1,19 +1,37 @@
 ---
+header-includes:
+- \usepackage{graphicx,latexsym}
+- \usepackage{amssymb,amsthm,amsmath}
+- \usepackage{longtable,booktabs,setspace}
 output: pdf_document
 ---
+```{r include_packages_2, include = FALSE}
+# This chunk ensures that the reedtemplates package is
+# installed and loaded. This reedtemplates package includes
+# the template files for the thesis and also two functions
+# used for labeling and referencing
+if(!require(devtools))
+  install.packages("devtools", repos = "http://cran.rstudio.com")
+if(!require(plyr))
+    install.packages("plyr", repos = "http://cran.rstudio.com") ## this shoul always go before dplyr
+if(!require(dplyr))
+    install.packages("dplyr", repos = "http://cran.rstudio.com")
+if(!require(ggplot2))
+    install.packages("ggplot2", repos = "http://cran.rstudio.com")
+if(!require(reedtemplates)){
+  library(devtools)
+  devtools::install_github("ismayc/reedtemplates")
+  }
+library(reedtemplates)
+```
+
+
 <!-- The {.unnumbered} option here means that the introduction will be "Chapter 0." -->
 
-# Background {.unnumbered}
 
-Enzymes catalice chemical reactions transforming substrates into producs. During 20th century enzymes were percived as highly specific catalizer, nevertheless this percepcion changed with the discovery that they can . This abilty to catalice several chemical functions its known as enzyme promscuity. Escherichia coli contains at least 404 promiscuous enzymes. La relevancia de la promiscuidad radica tanto en su papel como mecanismo de evolucion de la funcion enzimatica, asi como en la necesidad de su deteccion para la correccion de modelos de flujo metabolico y la determinacion de efectos secundarios en drogas farmacologicas. A pesar de su frecuencia e importancia aun se esta en el proceso de entender las causas y las caracteristicas observables de la promiscuidad enzimatica.
-  
-Para estudiar la promiscuidad esta propuesta discierne entre dos problemas. El primero es el de ubicar cuales familias tienen enzimas promiscuas, al que llamaremos problema de las familias. El segundo es el de los miembros: una vez identificada una familia promiscua, como distinguir entre sus miembros enzimas con distinto nivel de promiscuidad. Se ha intentado identificar enzimas promiscuas, a nivel de secuencia, sin pasar por experimentacion mediante aprendizaje maquina. Estos enfoques son incapaces de identificar una familia promiscua si no se conoce previamente al menos un miembro promiscuo de ella. Por otra parte, en el problema de los miembros se presentan dificultades cuando la identidad de secuencia es alta, e.g. en la familia PriA-HisA se sabe que la enzima HisA de E. coli no es promiscua, pero PriA de Streptomyces coelicolor si lo es. 
-  
-Para mejorar nuestro entendimiento del fenomeno, ademas de la comparacion de secuencias es necesario integrar otros elementos de analisis. Se debe notar que es practicamente imposible decir que una enzima no es promiscua ya que para ello se deberian haber descartado todos los posibles sustratos. Sin embargo, para el estudio de cambios en promiscuidad se han detectado como elementos relevantes a los cambios en vecindad genomica, los cambios en flexibilidad durante la dinamica molecular, la perdida de genes centrales, y finalmente a las expansiones genicas dentro de un grupo taxonomico. Estos elementos tienen en comun que reflejan un cambio en alguna propiedad genomica o biofisica, de lo que se deriva que el buscar cambios en la promiscuidad de una enzima resulta mas factible que la busqueda intrinseca de promiscuidad, a lo que aspiran los metodos basados en comparaciones de secuencias. 
-  
-Evomining es una plataforma bioinformatica pensada para la busqueda de expansiones de familias genicas de metabolismo central. Desarrollarla en combinacion con algoritmos de busqueda de cambios en la vecindad genomica la haran una plataforma ideal para abordar el problema de las familias, proporcionando una solucion a la dificultad de no tener conocimiento previo de un miembro promiscuo en la familia investigada. Respecto al problema de los miembros, se propone explorar variaciones en vecindad genomica, flujo genico y dinamica molecular, como candidatos a reflejar la variacion en promiscuidad. Finalmente, he detectado que a pesar de que pruebas in vivo son mas sensibles a niveles bajos de promiscuidad que mediciones in vitro, esta ultima suele ser la unica estudiada. In vivo, la metabolomica aplicada en genes biosinteticos de productos naturales ha ayudado en la identificacion de sustratos, por lo que esta tecnica podria ayudar a revelar el nuevo sustrato de una enzima en la que se sospecha ganancia de promiscuidad. En resumen, el objetivo de mi trabajo sera abordar los dos problemas de promiscuidad considerando la diferenciacion in vitro e in vivo tomando como modelo biologico el phylum Actinobacteria, un grupo de bacterias reconocido por su diversidad metabolica donde se ha probado la existencia de promiscuidad enzimatica. 
-    
-## Introduction  
+# Introducción  
+
+Las enzimas catalizan reacciones químicas transformando sustratos en productos. During 20th century enzymes were percived as highly specific catalizer, nevertheless this percepcion changed with the discovery that they can . This abilty to catalice several chemical functions its known as enzyme promscuity. Escherichia coli contains at least 404 promiscuous enzymes. La relevancia de la promiscuidad radica tanto en su papel como mecanismo de evolucion de la funcion enzimatica, asi como en la necesidad de su deteccion para la correccion de modelos de flujo metabolico y la determinacion de efectos secundarios en drogas farmacologicas. A pesar de su frecuencia e importancia aun se esta en el proceso de entender las causas y las caracteristicas observables de la promiscuidad enzimatica.
   
 Para estudiar la promiscuidad es necesario contar con una definicion, algunos autores emplean el termino promiscuidad para describir actividades enzimaticas distintas a la funcion principal [@khersonsky_enzyme_2010] otros lo ven como una actividad secundaria fortuita [@copley_enzymes_2003] que pudo aparecer de forma accidental o inducida artificialmente [@hult_enzyme_2007]. Otros mas, cuando una enzima puede operar sobre un amplio rango de sustratos, prefieren llamarla multiespecifica [@khersonsky_enzyme_2010]. A la accion de realizar distintas funciones cataliticas, ya sea al catalizar varias reacciones quimicas o bien una misma reaccion en sustratos diferentes se le conoce como promiscuidad enzimatica [@obrien_catalytic_1999]. Existen varios tipos de promiscuidad enzimatica.    
 
@@ -26,8 +44,8 @@ Por condiciones del entorno, cuando la enzima cambia su conformacion dependiendo
   
 Si bien existen familias de enzimas con alta especificidad por sustrato, otras familias como el citocromo P450 [@bloom_neutral_2007, @nath_quantitative_2008] y las beta lactamasas [@zou_evolution_2015] son promiscuas. Es posible que la vision previa de alta especificidad se deba a que las primeras rutas metabolicas estudiadas pertenecen al metabolismo central, donde la especificidad puede haber sido favorecida por presiones de seleccion [@firn_darwinian_2009]. Esta vision ha cambiado debido al conocimiento de mas enzimas con multifuncionalidad [@jia_multifunctional_2013], sin afectar la eficiencia catalitica por la funcion primaria [@aharoni_evolvability_2005]. En 1976 el interes por la promiscuidad comenzo por su influencia en la evolucion de la funcion enzimatica[@jensen_enzyme_1976, @pandya_enzyme_2014], las aproximaciones variaron desde la aparicion de la sintesis funcional [@dean_mechanistic_2007], cuando la disponibilidad de genomas permitio la combinacion de analisis filogeneticos con tecnicas de biologia molecular, bioquimica y biofisica (Fig 1). En 2003 la biofisica de las proteinas entra en escena al postularse que la diversidad conformacional durante la dinamica molecular debe incidir en la aceptacion de distintos sustratos. Recientemente se ha investigado su papel en efectos secundarios en drogas farmacologicas  [@nobeli_protein_2009,@hopkins_drug_2009,@nath_quantifying_2010,@von_eichborn_promiscuous:_2011, @zhang_multidimensional_2012, @zou_evolution_2015]. Entre 2005 y 2010 se avanza del estudio de una sola familia enzimatica hacia el interes por propiedades globales, por ejemplo dado un genoma se investiga la distribucion de familias promiscuas en subsistemas metabolicos. En estos años, surge el desarrollo de indices que reflejen las caracteristicas bioquimicas de enzimas promiscuas. En 2010, comienzan los intentos por desarrollar un metodo computacional de prediccion de promiscuidad. Desde 2012 a la fecha, a la par que las aproximaciones bioinformaticas se multiplican, se desarrollan investigaciones de aspectos biofisicos, bioquimicos y evolutivos de enzimas promiscuas reafirmando que todos estos aspectos estan relacionados al fenomeno. En las siguientes secciones se describiran trabajos importantes sobre la relacion que guarda la promiscuidad con expansiones genomicas y flexibilidad molecular. Ademas se hablara sobre analisis bioquimicos y metabolicos para la descripcion del fenomeno.
   
-\TeX\ or \LaTeX\   
 ### Funcion biologica de la promiscuidad enzimatica  
+  
 ¿Por que existe la promiscuidad enzimatica? Se tiene evidencia de dos papeles biologicos: el primero proporcionar robustez a la red metabolica de un organismo mediante redundancia de reacciones de otras enzimas; el segundo permitir plasticidad evolutiva, es decir materia prima para la adaptacion a variaciones ambientales [@aharoni_evolvability_2005,@sanchez-ruiz_promiscuity_2012, @martinez-nunez_lifestyle_2015] mediante la adquisicion de nuevas funciones quimicas. Respecto a la robustez, se probo que sobreexpresar enzimas promiscuas puede rescatar perdidas genicas [@patrick_multicopy_2007]. De 104 knockout sencillos de genes esenciales para  E. coli K-12, 20% de las auxotrofias pudieron ser suprimidas por la sobreexpresion de plasmidos que contenian enzimas promiscuas. Otro ejemplo que aporta a la robustez es PriA, enzima de la ruta de histidina que realiza en la ruta del triptofano la reaccion E.C. 5.3.1.24 [@baronagomez_occurrence_2003]. En cuanto a la plasticidad se propone que para que la promiscuidad pueda dar origen a la aparicion de nuevas funciones la actividad promiscua debe proveer una ventaja fisiologica inmediata para poder ser seleccionada positivamente, ademas una vez que una funcion promiscua se vuelva relevante se debe poder mejorar mediante pocas mutaciones derivando en el intercambio entre la actividad promiscua y la principal[@khersonsky_enzyme_2010].  
 
 Aun cuando el producto de la promiscuidad genera metabolitos que no se integran al metabolismo central de la celula, su efecto es positivo ya que estos metabolitos podrian colaborar a la adaptacion al entorno participando por ejemplo en una relacion de simbiosis o de competencia con otros organismos. Este tipo de metabolitos, por lo general, no son dañinos [@notebaart_network-level_2014, @linster_metabolite_2013, @khanal_differential_2015] y pueden servir como bloques de construccion para vias metabolicas nuevas [@ma_unconventional_2013, @adams_promiscuous_2014, @soskine_mutational_2010]. La respuesta inmediata de adaptacion de un organismo podria ser una consecuencia de su grado de promiscuidad.    
@@ -67,7 +85,6 @@ Al escoger un conjunto acotado para investigar familias de enzimas promiscuas se
 ###Modelo metabolico biosintesis de aminoacidos.  
 Al hacer el calculo vemos que Streptomyces, un genero del phylum Actinobacteria cuenta en su genoma con un promedio de 8316 secuencias codificantes segun la especie. Gran parte de estas secuencias pueden ser agrupadas en subsistemas metabolicos como metabolismo de carbohidratos o de lipidos; de estos subsistemas uno de los mas amplios es el metabolismo de aminoacidos con entre 429 y 910 secuencias segun el organismo.  La sintesis de aminoacidos es un subsistema presente en todas las especies pero con suficientes variaciones que permiten hacer observaciones evolutivas. En un gran numero de Actinobacterias las rutas de histidina y triptofano de 7 y 11 pasos respectivamente convergen en una enzima bifuncional llamada PriA, que realiza tanto la funcion de HisA como la de TrpF [@baronagomez_occurrence_2003]. La cantidad de familias en el subsistema de metabolismo de aminoacidos, su variabilidad, su conservacion entre distintos grupos taxonomicos  y la existencia de estos ejemplos en Actinobacteria lo posicionan como un buen punto de partida para la busqueda de promiscuidad tanto de familias promiscuas como de miembros promiscuos de las mismas.  
   
-## Antecedentes   
 En las cuatro decadas de estudio de la promiscuidad enzimatica, hemos aprendido que es un fenomeno distribuido en distintos subsistemas metabolicos [@nam_network_2012] y que su existencia puede deberse tanto al desarrollo de nuevas funciones para fines adaptativos [@jensen_enzyme_1976,@obrien_catalytic_1999,@firn_darwinian_2009,@copley_evolutionary_2015], como al rescate de una funcion perdida [@patrick_multicopy_2007,@baronagomez_occurrence_2003]. Por ello la dinamica de perdida y ganancia de genes asociada al contexto genomico en bacterias se relaciona con cambio en la funcion enzimatica [@zhao_discovery_2013,@zhao_prediction_2014, @copley_evolutionary_2015]. Precisando, respecto a la ganancia de genes, se postula que la bifuncionalidad precede la duplicacion [@hughes_evolution_1994,@obrien_catalytic_1999]. Lo que implica que dada una duplicacion muy posiblemente previamente la promiscuidad estuvo presente [@gerlt_divergent_2001,@huang_enzyme_2012,@noda-garcia_evolution_2013,@risso_phenotypic_2014]. 
   
 Se han desarrollado tecnicas bioquimicas y metabolicas de medicion [@nath_quantitative_2008], asi como algoritmos computacionales de prediccion de promiscuidad [@carbonell_molecular_2010,@cheng_global_2012,@noda-garcia_insights_2015]. Un aspecto a mejorar dentro del modelado es la restriccion del conjunto de estudio a un grupo taxonomico tan reducido que exista congruencia en las familias de ortologia y a la vez tan amplio que permita observar efectos evolutivos; el phylum Actinobacteria ha probado tener ejemplos de promiscuidad. Si bien la secuencia no ha sido suficiente para la correcta prediccion de promiscuidad [@verdel-aranda_molecular_2015,@copley_evolutionary_2015], es posible que dentro de las tecnicas computacionales la flexibilidad durante la dinamica molecular este correlacionada con la promiscuidad de los miembros de una familia [@james_conformational_2003,@javier_zea_protein_2013,@noda-garcia_evolution_2013,@zou_evolution_2015]. 
@@ -103,7 +120,59 @@ La dinamica es un metodo que permite hacer simulaciones de particulas que sirve 
 En un estudio de subHisA [@noda_estudio_2012] se utilizo el metodo de dinamica molecular y se comparo el numero de conformeros entre miembros de subHisA y PriA, resultando mayor el de PriA como corresponde a una enzima promiscua. El estudio sobre la relacion dinamica-flexibilidad de $\noindent\beta$-lactamasas  utiliza replica exchange, una variacion de dinamica molecular que corre replicas en paralelo a distintas temperaturas [@bai_replica_2006]. Una desventaja de este metodo es que por el costo computacional de las replicas agregar explicitamente otras moleculas a la simulacion como el solvente no es posible en tiempo razonable. Una vez generadas las dinamicas moleculares se procedera a calcular tanto el numero de conformeros como el indice de flexibilidad dsi [@zou_evolution_2015]. Se esta desarrollando PEDB, promiscuous enzyme database, una base datos genomicos, evolutivos, bioquimicos y estructurales y de metabolismo de PriA en Actinobacteria donde se procedera al analisis de los mismos (http://148.247.230.43/nselem/PHP/queries.html).
   
 En conclusion la promiscuidad enzimatica es un fenomeno complejo debido a multiples causas. Existe una gran variedad de estudios con enfoques puntuales sobre aspectos estructurales, dinamicos y evolutivos de familias de enzimas promiscuas, sin embargo hasta ahora no se han reportado trabajos multidisciplinarios que involucren a todas las partes involucradas (Fig 6)
+
+\clearpage  
+
+<!--- ##################################################################################################################################################### --->  
   
+# Antecedentes {.unnumbered}
+
+<!------------- Poner antecedentes directos a mi trabajo -->
+
+```{r Antecedentes conceptuales, results = "asis",message=FALSE, echo=FALSE}
+      label(path = "chapter0/AntecedentesConceptuales.png", caption = "Antecedentes Conceptuales", 
+      scale = .9,
+      label = "Antecedentes conceptuales de promiscuidad", type = "figure")
+```
+
+<!--- Problema de promiscuidad, cuales familias son promiscuas -->
+
+
+## No todos los elementos de una familia serán promiscuos. 
+Este trabajo discierne entre diversas preguntas acerca de promiscuidad enzimática. Un primer problema consiste en ubicar cuáles familias enzimáticas tienen al menos una enzima promiscua, esta  es una propiedad de las familias. El segundo problema es que una vez identificada una familia con enzimas promiscuas esto no implica que todos sus miembros sean promiscuos por lo que queda pendiente un mecanismo para distinguir el nivel de promiscuidad de cada enzima, esta es una propiedad de las enzimas individuales. Se ha intentado identificar enzimas promiscuas, a nivel de secuencia, sin pasar por experimentacion mediante aprendizaje maquina. Estos enfoques son incapaces de identificar una familia promiscua si no se conoce previamente al menos un miembro promiscuo de ella. Por otra parte, en el problema de los miembros se presentan dificultades cuando la identidad de secuencia es alta, e.g. en la familia PriA-HisA se sabe que la enzima HisA de E. coli no es promiscua, pero PriA de Streptomyces coelicolor si lo es. 
+
+<!--  medición promiscuidad nos quedamos genómica comparada medición estructural 
+<! para la genómica -->  
+  
+## Antecedentes conceptuales   
+Para mejorar nuestro entendimiento del fenomeno, ademas de la comparacion de secuencias es necesario integrar otros elementos de analisis. Se debe notar que es practicamente imposible decir que una enzima no es promiscua ya que para ello se deberian haber descartado todos los posibles sustratos. Sin embargo, para el estudio de cambios en promiscuidad se han detectado como elementos relevantes a los cambios en vecindad genomica, los cambios en flexibilidad durante la dinamica molecular, la perdida de genes centrales, y finalmente a las expansiones genicas dentro de un grupo taxonomico. Estos elementos tienen en comun que reflejan un cambio en alguna propiedad genomica o biofisica, de lo que se deriva que el buscar cambios en la promiscuidad de una enzima resulta mas factible que la busqueda intrinseca de promiscuidad, a lo que aspiran los metodos basados en comparaciones de secuencias. 
+  
+<!--- Clasificacion taxonomica correcta  metaphor -->  
+    
+## El establecimiento de un marco de conservación permite distinguir cambios  
+  
+ <!---     Clasificación y variantes de enzimas acorde a su función -->
+   
+## La genómica comparativa como herramienta en la disticinción de miembros promiscuos    
+Evomining es una plataforma bioinformatica pensada para la busqueda de expansiones de familias genicas de metabolismo central. Desarrollarla en combinacion con algoritmos de busqueda de cambios en la vecindad genomica la haran una plataforma ideal para abordar el problema de las familias, proporcionando una solucion a la dificultad de no tener conocimiento previo de un miembro promiscuo en la familia investigada. Respecto al problema de los miembros, se propone explorar variaciones en vecindad genomica, flujo genico y dinamica molecular, como candidatos a reflejar la variacion en promiscuidad. Finalmente, he detectado que a pesar de que pruebas in vivo son mas sensibles a niveles bajos de promiscuidad que mediciones in vitro, esta ultima suele ser la unica estudiada. In vivo, la metabolomica aplicada en genes biosinteticos de productos naturales ha ayudado en la identificacion de sustratos, por lo que esta tecnica podria ayudar a revelar el nuevo sustrato de una enzima en la que se sospecha ganancia de promiscuidad. En resumen, el objetivo de mi trabajo sera abordar los dos problemas de promiscuidad considerando la diferenciacion in vitro e in vivo tomando como modelo biologico el phylum Actinobacteria, un grupo de bacterias reconocido por su diversidad metabolica donde se ha probado la existencia de promiscuidad enzimatica. 
+
+<!---     Clasificación y variantes de clusters -->
+  
+## La genómica comparativa como herramienta en la priorización de clusters promiscuos    
+La promiscuidad nos interesa por su produccion de variantes. Si bien en rutas centrales rescata la función en metaboismo secundario crea nuevas variantes moleculares que permiten adaptación, de hecho pangenomas grandes correlacioan con aparición de nuevas funciones enzimáticas. Considero que el concepto de promiscuidad puede ser extendido a un nuevo niivel. Promiscuidad enzimatica, promiscuida de familia, promiscuidad de cluster. En rutas centrales robustez, pero en metabolismo secundario platicidad. Pangenoma abierto cerrado, Aqui proponemos organizar los clusters y finalmente la medida de su apertura. variantes de clusters producen nuevos compuestos, ya sea por promiscuidad enzimática en un core conservado o por variación en la presencia / ausencia de genes. Un cluster recibe los mismos sustratos y los transforma en diferentes productos. 
+  
+<!---    Variación dentro de la familia priA -->
+  
+## Estudio de una familia  PriA      
+   
+\clearpage  
+  
+# Pregunta biológica 
+  
+\clearpage  
+  
+# Objetivos 
+
 ## Objetivo General   
   
 Estudiar el fenomeno de promiscuidad enzimatica tanto desarrollando estrategias para identificar familias promiscuas dentro de un grupo taxonomico, como comparando variaciones de promiscuidad in vitro e in vivo  con variaciones en contexto genomico y flexibilidad en miembros de una familia. (Figura 7)
@@ -112,8 +181,10 @@ Estudiar el fenomeno de promiscuidad enzimatica tanto desarrollando estrategias 
 Mejorar evomining como metodo de identificacion de familias enzimaticas promiscuas aprovechando los cambios en vecindades genomicas como caracteristicas informativas provenientes de datos filogenomicos. 
 Estudiar la relacion entre historias filogenomicas y procesos biofisicos con la promiscuidad in vitro, a traves de mediciones de ciertas caracteristicas de la familia PriA.
 Caracterizar cambios de promiscuidad enzimatica in vivo mediante perfiles metabolomicos de actividades de PriA y enzimas asociadas.
-
-## Estrategias  
+  
+\clearpage  
+  
+# Estrategias  
 ### La promiscuidad en familias enzimaticas.  
   
 Mejorar Evomining mediante la  identificacion de cambios de vecindad genomica en familias selectas de metabolismo central convirtiendola en una plataforma de codigo libre disponible para otros investigadores.  
@@ -164,9 +235,10 @@ Debido a cambios en flexibilidad o cambios de contexto genomico, se puede sospec
 Dado un organismo modelo sustituir su homologo nativo de priA por una variante no nativa ya sea de priA o trpF de Actinobacterias selectas de las que se sospecha cambio en promiscuidad.  
 ####Separar posibles productos y minimizar los falsos positivos debidos a perturbaciones metabolicas no relacionadas a PriA.    
 Separar los metabolitos mediante cromatografia dirigida por tamaño. Obtener un espectro de masas antes y despues de  la sustitucion de la variante y sobre las diferencias en el espectro realizar espectrometria de masas en tandem (MS/MS) es decir refragmentar  y analizar que los fragmentos contengan partes parecidas a los sustratos conocidos.
+   
+\clearpage  
   
-
-##Metodologia
+#Metodologia
 A continuacion describire la metodologia para cada una de las estrategias expuestas previamente. Todos los scripts desarrollados fueron escritos en perl y estan disponibles en github https://github.com/nselem/perlas.
   
 ###La promiscuidad en familias enzimaticas.  
