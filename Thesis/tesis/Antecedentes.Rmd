@@ -3,7 +3,10 @@ header-includes:
 - \usepackage{graphicx,latexsym}
 - \usepackage{amssymb,amsthm,amsmath}
 - \usepackage{longtable,booktabs,setspace}
-output: pdf_document
+output:
+  pdf_document: default
+  html_document: default
+  word_document: default
 ---
 ```{r include_packages_Antecedentes, include = FALSE}
 # This chunk ensures that the reedtemplates package is
@@ -38,42 +41,40 @@ library(reedtemplates)
 <!--- niveles FIGURa 1
 1 Promiscuidad enzimática review evolutionary view [@copley_evolutionary_2015]
 2 Neo funcionalizacion  Noel [@weng_remarkable_2012]
-3 Nobeli familias de enzimas [@nobeli_protein_2009]
+3 Nobeli familias de enzimas [@nobeli_protein_2009] X
 4 Estudio de familias  koonin ?? Core / Pangenome 
 5 Genomica y promiscuidad. 
 El genoma bacteriano 
-Promiscuidad en el pangenoma .. Pangenoma por exploracion,  
+Promiscuidad en el pangenoma .. Pangenoma por exploracion,  [@martinez-nunez_lifestyle_2015]
 Bacterial /archaeal genome [@koonin_comparison_1997]  
 Bacteria Archaea genome [@koonin_genomics_2008]  
 Genomas retrospectiva 20 años [@land_insights_2015]
 
-En extra copias por neofuncionalizacion. [@schniete_expanding_2018, @verdel-aranda_molecular_2015]
+En extra copias por neofuncionalizacion. [@schniete_expanding_2018, @verdel-aranda_molecular_2015,  @caetano-anolles_origin_2009]
+Las mutaciones tienen efecto principal en funcion secundaria mientras se retiene la funcion principal [aharoni_evolvability_2005,@bloom_neutral_2007]
 Metabolismo central de genomas reducidos JEnsen [@jensen_enzyme_1976]
-
-
-
-
 6 Promiscuidad en metabolismo especializado  [@weng_remarkable_2012]
 
 Conclusión aparece/desaparece por ciertos sustratos. 
 
 --->
 
+## La promiscuidad puede abordarse a distintos niveles: enzima individual, familia, ruta de metabólica y organismo.  
+  
+El estudio del metabolismo puede abordarse a varios niveles: genes, enzimas, familias enzimáticas, rutas metabólicas, organismos e inclusive comunidades. De la misma forma si se entiende a la promiscuidad como funciones metabólicas alternativas puede observarse promiscuidad a distintos niveles, desde un mismo gen que presenta splicing alternativo, una misma enzima que presenta funciones alternativas, o una familia de enzimas con un origen evolutivo común donde los homólogos correspondientes a varios organismos son promiscuos [@nobeli_protein_2009]. Generalizando estas nociones, si consideramos como la unidad de estudio a una ruta biosintética, podemos llamarla ruta promiscua a las rutas que generan productos metabólicos alternativos[@XXXX,@XXX]. Así pues la *Figura 1* muestra tres niveles en los que se puede estudiar la promiscuidad: i) Distinguiendo familias de enzimas promiscuas de familias especialistas, ii) Estudiando enzimas específicas de una familia enzimática y finalmente,  iii) en rutas de metabolismo especializado. 
 
-## Existe promiscuidad a nivel enzima, a nivel familia e inclusive a nivel ruta de metabolismo especializado.  
-
-El estudio del metabolismo puede abordarse a varios niveles: genes, enzimas, familias enzimáticas, rutas metabólicas, organismos e inclusive comunidades. De la misma forma si se entiende la promiscuidad como funciones metabólicas alternativas puede observarse promiscuidad a distintos niveles, desde un mismo gen que presenta splicing alternativo . la variación es la materia prima de la evolucion. la promiscuidad enzimática podemos estudiarla en esos mismos. tres de ellos son: i) en una enzima de un organismo en particular, ii) en una familia de enzimas homólogas iii) en rutas de metabolismo especializado. En este trabajo se discierne entre las preguntas ¿es esta familia promiscua?, ¿Dentro de esta familia promiscua, es promiscua la enzima perteneciente a este organismo?, ¿Es este cluster biosintético promiscuo?. El primer problema consiste en ubicar cuáles familias enzimáticas tienen al menos una enzima promiscua, esta  es una propiedad de las familias. El segundo problema consiste en identifcar individualmente enzimas promiscuas en una familia promiscuas, esta es una propiedad de las enzimas  no de las familias. Y finalmente si entendemos un cluster biosintético como un conjunto de enzimas que reciben un sustrato, podemos generalizar la noción de promiscuidad a rutas biosintéticas de metabolismo especializado.  
-
-
+En este trabajo se discierne entre las preguntas ¿es esta familia promiscua?, ¿Dentro de esta familia promiscua, es promiscua la enzima perteneciente a este organismo?, ¿Es este cluster biosintético promiscuo?. El primer problema consiste en ubicar cuáles familias enzimáticas tienen al menos una enzima promiscua, esta  es una propiedad de las familias. El segundo problema consiste en identifcar individualmente enzimas promiscuas en una familia promiscuas, esta es una propiedad de las enzimas  no de las familias. Y finalmente si entendemos un cluster biosintético como un conjunto de enzimas que reciben un sustrato, podemos generalizar la noción de promiscuidad a rutas biosintéticas de metabolismo especializado.  
 
 
 <!--   FIGURA 2 medición promiscuidad nos quedamos genómica comparada medición estructural 
 <! para la genómica 
 1  Carbonell fallo prediccion por enzima [@carbonell_molecular_2010]
-2  Estructuras flexibles   [@zou_evolution_2015, ]
-3  E life contexto genomico  []
-4  pangenome promiscuity  ??? []
-5  Tesis Lianet in vivo in vitro []
+2  Estructuras flexibles   [@zou_evolution_2015, @gatti-lafranconi_flexibility_2013 ]
+3  E life contexto genomico  [@juarez-vazquez_evolution_2017]
+4  pangenome promiscuity  ??? [@martinez-nunez_lifestyle_2015] Duplicacion y neo funcionalizacion
+5  Tesis Lianet in vivo in vitro [@noda_tesis_2012]
+6  Promiscuidad es material para la inovacion evolutiva [@pandya_enzyme_2014,@khersonsky_enzyme_2010]
+7 A pesar de que haya distintos modelos de duplicacion neofuncionalizacion [soskine_mutational_2010]
 --->
 
 ```{r Antecedentes_conceptuales_imagen, results = "asis",message=FALSE, echo=FALSE}
@@ -86,6 +87,7 @@ El estudio del metabolismo puede abordarse a varios niveles: genes, enzimas, fam
 ## Antecedentes conceptuales   
 Para mejorar nuestro entendimiento del fenomeno, ademas de la comparacion de secuencias es necesario integrar otros elementos de analisis. Se debe notar que es practicamente imposible decir que una enzima no es promiscua ya que para ello se deberian haber descartado todos los posibles sustratos. Sin embargo, para el estudio de cambios en promiscuidad se han detectado como elementos relevantes a los cambios en vecindad genomica, los cambios en flexibilidad durante la dinamica molecular, la perdida de genes centrales, y finalmente a las expansiones genicas dentro de un grupo taxonomico. Estos elementos tienen en comun que reflejan un cambio en alguna propiedad genomica o biofisica, de lo que se deriva que el buscar cambios en la promiscuidad de una enzima resulta mas factible que la busqueda intrinseca de promiscuidad, a lo que aspiran los metodos basados en comparaciones de secuencias. 
 
+la variación es la materia prima de la evolucion. 
 Se ha intentado identificar enzimas promiscuas, a nivel de secuencia, sin pasar por experimentacion mediante aprendizaje maquina. Estos enfoques son incapaces de identificar una familia promiscua si no se conoce previamente al menos un miembro promiscuo de ella. Por otra parte, en el problema de los miembros se presentan dificultades cuando la identidad de secuencia es alta, e.g. en la familia PriA-HisA se sabe que la enzima HisA de E. coli no es promiscua, pero PriA de Streptomyces coelicolor si lo es. 
 
   
@@ -104,10 +106,12 @@ Bacterias de la misma especie tienen genomas distintos. Para poder establecer di
 Para distinguir cambios primero se tiene que establecer un marco de conservación. 
 
  <!---    EVOMINING  Clasificación y variantes de enzimas acorde a su función 
-  1 ARTS
-  2 EvoMining
-  3 Carbonell  
-  4 Camera    
+  1 ARTS       [@alanjary_antibiotic_2017]
+  2 EvoMining  [@cruz-morales_phylogenomic_2016]
+  3 Carbonell  [@carbonell_molecular_2010]
+  4 Camera     [@noda-garcia_insights_2015]
+  Solo se exploran ciertos linajes 
+  Se ha avanzado en archaea [@martinez-nunez_promiscuity_Archaea_2017]
   --->
 ## La genómica comparativa como herramienta en la distinción de miembros promiscuos    
 Evomining es una plataforma bioinformatica pensada para la busqueda de expansiones de familias genicas de metabolismo central. Desarrollarla en combinacion con algoritmos de busqueda de cambios en la vecindad genomica la haran una plataforma ideal para abordar el problema de las familias, proporcionando una solucion a la dificultad de no tener conocimiento previo de un miembro promiscuo en la familia investigada. Respecto al problema de los miembros, se propone explorar variaciones en vecindad genomica, flujo genico y dinamica molecular, como candidatos a reflejar la variacion en promiscuidad. Finalmente, he detectado que a pesar de que pruebas in vivo son mas sensibles a niveles bajos de promiscuidad que mediciones in vitro, esta ultima suele ser la unica estudiada. In vivo, la metabolomica aplicada en genes biosinteticos de productos naturales ha ayudado en la identificacion de sustratos, por lo que esta tecnica podria ayudar a revelar el nuevo sustrato de una enzima en la que se sospecha ganancia de promiscuidad. En resumen, el objetivo de mi trabajo sera abordar los dos problemas de promiscuidad considerando la diferenciacion in vitro e in vivo tomando como modelo biologico el phylum Actinobacteria, un grupo de bacterias reconocido por su diversidad metabolica donde se ha probado la existencia de promiscuidad enzimatica. 
@@ -117,11 +121,15 @@ Evomining es una plataforma bioinformatica pensada para la identificacion de pro
 Si se combinara evomining con la premisa de que vecindades distintas son marcadoras de funciones quimicas distintas, al encontrar una familia expandida con vecindades genomicas diferentes se podria solventar la deficiencia de otros metodos bioinformaticos consistente en que para identificar familias promiscuas se debe conocer previamente un miembro promiscuo de la misma. (Fig 4) Asi pues al combinar evomining con herramientas de vecindad genomica tanto de comparacion como de visualizacion estaremos mejorando su funcionalidad en la identificacion de familias promiscuas.
 
 <!---    CORASON  Clasificación y variantes de clusters 
-1 String 
-2 RAST  
-3 clusterblast  bases privadas Archaeas 
-4 AntiSMASH  
-5 Cluster Finder  
+1 String                               [@snel_string_2000]
+2 RAST                                 [@aziz_rast_2008,@overbeek_seed_2014]
+3 clusterblast bases privadas Archaeas [@medema_ClusterBlast_2013]
+4 AntiSMASH                            [@weber_antismash3_2015,@medema_computational_2015,@ziemert_evolution_genome_mining_2016]
+5 Natural products en archaea [@charlesworth_untapped_natural_products_Archaea_2015] 
+6 Docker [@noauthor_docker_2018, @boettiger_introduction_2015]
+7 Containers [@schulz_use_2016, @gruening_recommendations_2018 ]
+
+
 --->
 ## La genómica comparativa como herramienta en la priorización de clusters promiscuos    
 
@@ -131,7 +139,7 @@ La promiscuidad nos interesa por su produccion de variantes. Si bien en rutas ce
 ### Expansion y contextos genomicos como herramienta de anotacion funcional  
 La diversidad enzimatica existente es el resultado de un proceso de expansion, mutacion y seleccion que se ha desarrollado durante el transcurso de la historia evolutiva [@khersonsky_enzyme_2010, @pearson_prehistoric_2012]. Existe evidencia de que cierto grado de promiscuidad o divergencia funcional precede a la duplicacion genica [@hughes_evolution_1994]. Por este motivo detectar expansiones ya sea duplicaciones o transferencias horizontales [@treangen_horizontal_2011], puede ser un buen punto de partida para determinar divergencia funcional y promiscuidad. No todas las expansiones denotan cambio de funcion enzimatica, algunas pueden ser meros accidentes, sin embargo dado que la funcion de una enzima suele estar relacionada con sus vecinos [@overbeek_use_1999,@zhao_prediction_2014,@zhao_discovery_2013, @verdel-aranda_molecular_2015],  una expansion en una vecindad genomica diferente de la tradicional sera un referente de adquisicion de una nueva funcion y entonces un indicador de existencia previa de promiscuidad.  
   
-La funcion de una enzima es un concepto jerarquico, dependiente de la filogenia de un organismo [@szklarczyk_string_2015,@szklarczyk_string_2015]. Para sistematizar el estudio de contextos y vecindades genomicas se desarrollo Search Tool for the Retrieval of Interacting Genes/Proteins STRING [@snel_string:_2000], que cuenta con una anotacion de ortologia jerarquica y consistente, realizada en 2000 organismos en cuyo marco interacciones de proteinas con implicaciones funcionales son predichas tanto de novo por informacion genomica de co-ocurrencia como por mineria de datos en articulos publicados. STRING es una base de datos, y como tal no permite agregar nuevos genomas para su analisis. Sus 2000 organismos incluyen especies tanto bacterianas como eucariotas. Al existir tanta diversidad, los genomas disponibles para un genero o clase especificos son escasos, p. g. de los mas de 300 genomas disponibles de Streptomyces solo 24 estan incluidos. 
+La funcion de una enzima es un concepto jerarquico, dependiente de la filogenia de un organismo [@szklarczyk_string_2015]. Para sistematizar el estudio de contextos y vecindades genomicas se desarrollo Search Tool for the Retrieval of Interacting Genes/Proteins STRING [@snel_string_2000], que cuenta con una anotacion de ortologia jerarquica y consistente, realizada en 2000 organismos en cuyo marco interacciones de proteinas con implicaciones funcionales son predichas tanto de novo por informacion genomica de co-ocurrencia como por mineria de datos en articulos publicados. STRING es una base de datos, y como tal no permite agregar nuevos genomas para su analisis. Sus 2000 organismos incluyen especies tanto bacterianas como eucariotas. Al existir tanta diversidad, los genomas disponibles para un genero o clase especificos son escasos, p. g. de los mas de 300 genomas disponibles de Streptomyces solo 24 estan incluidos. 
   
 Para resolver la baja cobertura de STRING hacia ciertos grupos taxonomicos se pueden desarrollar scripts de vecindad genomica utilizando RAST (Rapid Annotation using Subsystem Technology); un servicio interactivo de anotacion automatica de genomas de bacterias y arqueas [@aziz_rast_2008,@overbeek_seed_2014] donde la funcion de cada gen se asigna de acuerdo a conocimiento previo de subsecuencias de organismos cercanos filogeneticamente, cuando es posible se incluye en un subsistema metabolico. Estamos en una era de explosion de datos genomicos, proximamente se espera contar con millones de genomas bacterianos incluso provenientes de bacterias no cultivables, por ello los algoritmos deben ser constantemente optimizados a los nuevos volumenes de datos [@medema_computational_2015]. Ante esta expectativa seria muy util desarrollar algoritmos de analisis genomico que sean de codigo libre o al menos interactivos para que cada laboratorio pueda personalizarlos para sus propios genomas.
   
@@ -142,7 +150,7 @@ Al evaluar PROMISE [@carbonell_molecular_2010] en un set de datos de la familia 
   
    
 ###Contexto y vecindades genomicas  
-En 2012 fueron analizados 102 genomas de 29 familias de Actinobacteria [@noda_estudio_2012]. sugiriendo que al menos en Corynebacteria el contexto y la vecindad genomica incidian en la sub-funcionalizacion de PriA en subHisA [@noda-garcia_evolution_2013]. Respecto a IlvC, otra familia involucrada en la sintesis de aminoacidos fue estudiada y caracterizada bioquimicamente en 1 Corynebacterium y 8 Streptomyces [@verdel-aranda_molecular_2015]. Para ampliar estos resultados, utilizando la anotacion de RAST y una generalizacion de la definicion de vecindad de STRING, se diseño un algoritmo para identificar vecindades similares asi como uno de visualizacion de contexto, ambos disponibles como software libre en github [nselem/perlas](https://github.com/nselem/perlas) .  
+En 2012 fueron analizados 102 genomas de 29 familias de Actinobacteria [@noda_estudio_2012]. sugiriendo que al menos en *Corynebacteria* el contexto y la vecindad genomica incidian en la sub-funcionalizacion de PriA en subHisA [@noda-garcia_evolution_2013]. Respecto a IlvC, otra familia involucrada en la sintesis de aminoacidos fue estudiada y caracterizada bioquimicamente en 1 Corynebacterium y 8 Streptomyces [@verdel-aranda_molecular_2015]. Para ampliar estos resultados, utilizando la anotacion de RAST y una generalizacion de la definicion de vecindad de STRING, se diseño un algoritmo para identificar vecindades similares asi como uno de visualizacion de contexto, ambos disponibles como software libre en github [nselem/perlas](https://github.com/nselem/perlas) .  
   
 El algoritmo de clasificacion de vecindades permite agruparlas en clusters y calificar estos clusters segun su conservacion dado un grupo de bacterias. La definicion de vecindad y similitud de vecindad esta descrita posteriormente en los metodos. El algoritmo fue aplicado a la familia IlvC en 290 Streptomyces resultando 9 clusters [Datos](http://148.247.230.43/nselem/CONTEXTS/REL_St275/ilvC/Contextos.php) entre los mas poblados el primero cuenta con 279 elementos, otro con 9 elemento y dos mas con 7 miembros (Fig 3), resultados experimentals son congruentes con que existe divergencia funcional entre miembros de clusters distintos [@verdel-aranda_molecular_2015]
 
@@ -151,10 +159,10 @@ Natural products genomic era[@harvey_re-emergence_2015]
   <!---    Variación dentro de la familia priA -->
 
 <!--- PriA  
-Investigacion otros taxa de Investigacion en Actinos  
-Variacion residuos  Tesis Lia pendiente analizar rutas  
-Docking estrategias moleculares Lia articulo  
-Ernesto articulo  GTP  
+Investigacion otros taxa de Investigacion en Actinos  [@juarez-vazquez_evolution_2017, @verduzco-castro_co-occurrence_2016, @noda-garcia_evolution_2013, @baronagomez_occurrence_2003,@newton_structural_hisA_innovation_2017,@koenigsknecht_perturbations_HisA_Salmonella_2012,@soderholm_two-step_HisA_2015]
+Variacion residuos  Tesis Lia pendiente analizar rutas  2017 HisA[@noda_tesis_2012] 
+Docking estrategias moleculares Lia articulo  [@noda-garcia_evolution_2013]
+Ernesto articulo  GTP [@verduzco-castro_co-occurrence_2016] 
 --->
   
 ## Estudio de una familia  PriA      
@@ -171,14 +179,7 @@ En un estudio de subHisA [@noda_estudio_2012] se utilizo el metodo de dinamica m
   
 En conclusion la promiscuidad enzimatica es un fenomeno complejo debido a multiples causas. Existe una gran variedad de estudios con enfoques puntuales sobre aspectos estructurales, dinamicos y evolutivos de familias de enzimas promiscuas, sin embargo hasta ahora no se han reportado trabajos multidisciplinarios que involucren a todas las partes involucradas (Fig 6)
     
-<!--  medición promiscuidad nos quedamos genómica comparada medición estructural 
-<! para la genómica -->  
-  
-<!--- Clasificacion taxonomica correcta  metaphor -->  
-    
- <!---     Clasificación y variantes de enzimas acorde a su función -->
-   
-<!---     Clasificación y variantes de clusters -->
+
   
     
 \clearpage  
