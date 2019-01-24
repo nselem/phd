@@ -178,7 +178,8 @@ starts here.
   \mainmatter % here the regular arabic numbering starts
   \pagestyle{fancyplain} % turns page numbering back on
 
-  \chapter{Introducción}\label{introduccion}
+  \chapter*{Introducción}\label{introduccion}
+  \addcontentsline{toc}{chapter}{Introducción}
   
   Las enzimas catalizan reacciones químicas transformando sustratos en
   productos. During 20th century enzymes were percived as highly specific
@@ -348,77 +349,13 @@ starts here.
   medicion de variabilidad del genomica entre especies bacterianas
   {[}\protect\hyperlink{ref-kislyuk_genomic_2011}{35}{]}.
   
-  \subsection{Expansion y contextos genomicos como herramienta de
-  anotacion
-  funcional}\label{expansion-y-contextos-genomicos-como-herramienta-de-anotacion-funcional}
-  
-  La diversidad enzimatica existente es el resultado de un proceso de
-  expansion, mutacion y seleccion que se ha desarrollado durante el
-  transcurso de la historia evolutiva
-  {[}\protect\hyperlink{ref-khersonsky_enzyme_2010}{1}{]}. Existe
-  evidencia de que cierto grado de promiscuidad o divergencia funcional
-  precede a la duplicacion genica
-  {[}\protect\hyperlink{ref-hughes_evolution_1994}{37}{]}. Por este motivo
-  detectar expansiones ya sea duplicaciones o transferencias horizontales
-  {[}\protect\hyperlink{ref-treangen_horizontal_2011}{38}{]}, puede ser un
-  buen punto de partida para determinar divergencia funcional y
-  promiscuidad. No todas las expansiones denotan cambio de funcion
-  enzimatica, algunas pueden ser meros accidentes, sin embargo dado que la
-  funcion de una enzima suele estar relacionada con sus vecinos
-  {[}\protect\hyperlink{ref-overbeek_use_1999}{39}{]}, una expansion en
-  una vecindad genomica diferente de la tradicional sera un referente de
-  adquisicion de una nueva funcion y entonces un indicador de existencia
-  previa de promiscuidad.
-  
-  La funcion de una enzima es un concepto jerarquico, dependiente de la
-  filogenia de un organismo
-  {[}\protect\hyperlink{ref-szklarczyk_string_2015}{43}{]}. Para
-  sistematizar el estudio de contextos y vecindades genomicas se
-  desarrollo Search Tool for the Retrieval of Interacting Genes/Proteins
-  STRING {[}\protect\hyperlink{ref-snel_string:_2000}{44}{]}, que cuenta
-  con una anotacion de ortologia jerarquica y consistente, realizada en
-  2000 organismos en cuyo marco interacciones de proteinas con
-  implicaciones funcionales son predichas tanto de novo por informacion
-  genomica de co-ocurrencia como por mineria de datos en articulos
-  publicados. STRING es una base de datos, y como tal no permite agregar
-  nuevos genomas para su analisis. Sus 2000 organismos incluyen especies
-  tanto bacterianas como eucariotas. Al existir tanta diversidad, los
-  genomas disponibles para un genero o clase especificos son escasos,
-  p.~g. de los mas de 300 genomas disponibles de Streptomyces solo 24
-  estan incluidos.
-  
-  Para resolver la baja cobertura de STRING hacia ciertos grupos
-  taxonomicos se pueden desarrollar scripts de vecindad genomica
-  utilizando RAST (Rapid Annotation using Subsystem Technology); un
-  servicio interactivo de anotacion automatica de genomas de bacterias y
-  arqueas {[}\protect\hyperlink{ref-aziz_rast_2008}{45}{]} donde la
-  funcion de cada gen se asigna de acuerdo a conocimiento previo de
-  subsecuencias de organismos cercanos filogeneticamente, cuando es
-  posible se incluye en un subsistema metabolico. Estamos en una era de
-  explosion de datos genomicos, proximamente se espera contar con millones
-  de genomas bacterianos incluso provenientes de bacterias no cultivables,
-  por ello los algoritmos deben ser constantemente optimizados a los
-  nuevos volumenes de datos
-  {[}\protect\hyperlink{ref-medema_computational_2015}{47}{]}. Ante esta
-  expectativa seria muy util desarrollar algoritmos de analisis genomico
-  que sean de codigo libre o al menos interactivos para que cada
-  laboratorio pueda personalizarlos para sus propios genomas.
-  
-  Finalmente, no solo la vecindad genomica inmediata puede ser utilizada
-  como distintivo en la busqueda de promiscuidad, diferencias en el
-  contexto genomico en genes relacionados con una enzima promiscua, sin
-  importar su ubicacion dentro del genoma tambien pueden ser relevantes
-  para la perdida o ganancia de funcion quimica
-  {[}\protect\hyperlink{ref-noda-garcia_evolution_2013}{48}{]}, (Juarez
-  Vazquez et al 2015).
-  
   \subsection{Modelos bioinformaticos de
   promiscuidad}\label{modelos-bioinformaticos-de-promiscuidad}
   
   Con el fin de reducir la inversion en el proceso de experimentacion, se
   han implementado en los ultimos años algoritmos computacionales para
   predecir promiscuidad enzimatica
-  {[}\protect\hyperlink{ref-carbonell_molecular_2010}{49}{]}. Estos
+  {[}\protect\hyperlink{ref-carbonell_molecular_2010}{36}{]}. Estos
   procedimientos cuentan con un conjunto de aprendizaje, unos descriptores
   del conjunto, una fase de ajuste de parametros y finalmente una
   prediccion. En 2010, Carbonell propone un algoritmo de soporte vectorial
@@ -436,7 +373,7 @@ starts here.
   Un aspecto no considerado en estos metodos es que hay familias de
   enzimas con alta identidad de secuencia entre sus miembros, con cambios
   bruscos en promiscuidad, debidos por ejemplo a la dinamica genomica
-  {[}\protect\hyperlink{ref-noda-garcia_evolution_2013}{48}{]}, lo que
+  {[}\protect\hyperlink{ref-noda-garcia_evolution_2013}{41}{]}, lo que
   dificulta que considerar solo la secuencia conlleve a buenos predictores
   de promiscuidad. Cuando se obtiene una prediccion positiva utilizando
   los modelos existentes, lo que significa es que dada esa secuencia, en
@@ -460,7 +397,7 @@ starts here.
   
   La ganancia de promiscuidad no solo puede entenderse como la capacidad
   de convertir mas sustratos
-  {[}\protect\hyperlink{ref-carbonell_molecular_2010}{49}{]}, sino tambien
+  {[}\protect\hyperlink{ref-carbonell_molecular_2010}{36}{]}, sino tambien
   como la mejora de la capacidad catalitica respecto a ellos. El I-index
   {[}\protect\hyperlink{ref-nath_quantitative_2008}{12}{]}, esta definido
   como un rango de valores entre 0 y 1 que tiende a 1 entre mas parecida
@@ -476,14 +413,14 @@ starts here.
   no se consideran todos los sustratos presentes in vivo. Para solventar
   esta dificultad e investigar variaciones de sustratos nativos se pueden
   buscar productos similares a los ya conocidos por medio de analisis
-  metabolicos {[}\protect\hyperlink{ref-nesvizhskii_analysis_2007}{54}{]}
+  metabolicos {[}\protect\hyperlink{ref-nesvizhskii_analysis_2007}{43}{]}
   como los empleados en la deteccion de rutas no conservadas en la
   biosintesis de productos naturales
-  {[}\protect\hyperlink{ref-medema_computational_2015}{47}{]}. En
+  {[}\protect\hyperlink{ref-medema_computational_2015}{44}{]}. En
   particular para este fin se ha utilizado espectrometria de masas MS/MS,
-  {[}\protect\hyperlink{ref-nesvizhskii_analysis_2007}{54}{]} combinada
+  {[}\protect\hyperlink{ref-nesvizhskii_analysis_2007}{43}{]} combinada
   con molecular networking para identificar productos similares
-  {[}\protect\hyperlink{ref-yang_molecular_2013}{56}{]}
+  {[}\protect\hyperlink{ref-yang_molecular_2013}{46}{]}
   
   \subsection{El papel de la dinamica molecular en la
   promiscuidad}\label{el-papel-de-la-dinamica-molecular-en-la-promiscuidad}
@@ -493,14 +430,14 @@ starts here.
   estructura funcion, al cristalizar se obtienen estados conformacionales
   homogeneos, que bien pueden no ser la unica conformacion que adopta la
   proteina en solucion.
-  {[}\protect\hyperlink{ref-james_conformational_2003}{58}{]}. En
+  {[}\protect\hyperlink{ref-james_conformational_2003}{48}{]}. En
   particular en el problema de promiscuidad, se ha observado que la
   variacion funcional no queda obviamente reflejada en la variacion
   estructural, lo que sugiere un rol significativo para la dinamica
-  molecular {[}\protect\hyperlink{ref-parisi_conformational_2015}{59}{]}.
+  molecular {[}\protect\hyperlink{ref-parisi_conformational_2015}{49}{]}.
   Se postula que un aspecto de la dinamica molecular relevante para la
   diversificacion de especificidad por sustrato es el numero de
-  conformeros {[}\protect\hyperlink{ref-javier_zea_protein_2013}{60}{]}.
+  conformeros {[}\protect\hyperlink{ref-javier_zea_protein_2013}{50}{]}.
   Por ejemplo, en la actinobacteria Corynebacterium diphtheriae parece que
   el contexto genomico correlaciona con perdida de promiscuidad de PriA ya
   que al poseer el genoma una copia de trpF, la enzima perdio esta funcion
@@ -508,7 +445,7 @@ starts here.
   ruta de histidina. Esta sub-funcionalizacion se refleja en la perdida de
   estados conformacionales cambiando desde 1 estado en C. diphtheriae
   hasta 4 presentes en la dinamica de PriA de M. tuberculosis
-  {[}\protect\hyperlink{ref-noda-garcia_evolution_2013}{48}{]}.
+  {[}\protect\hyperlink{ref-noda-garcia_evolution_2013}{41}{]}.
   
   Las regiones rigidas de una enzima proporcionan orientacion adecuada con
   respecto a los grupos cataliticos, mientras que las regiones flexibles
@@ -518,7 +455,7 @@ starts here.
   caracteristica de la dinamica molecular a considerar para obtener
   informacion de la capacidad de ligacion de una enzima a distintos
   sustratos
-  {[}\protect\hyperlink{ref-gatti-lafranconi_flexibility_2013}{61}{]}.
+  {[}\protect\hyperlink{ref-gatti-lafranconi_flexibility_2013}{51}{]}.
   Recientemente el indice de flexibilidad dinamica (dfi) se utilizo como
   una medida cuantitativa basado en la respuesta a perturbaciones de
   aminoacidos (PRS). Este indice se incremento en regiones cercanas al
@@ -533,21 +470,21 @@ starts here.
   promiscuas se debe recordar que la funcionalidad es jerarquica por lo
   que para mejorar la anotacion, es deseable reflejar el proceso evolutivo
   y restringirse a un grupo de organismos taxonomicamente relacionados
-  {[}\protect\hyperlink{ref-cruz-morales_phylogenomic_2016}{62}{]}.
+  {[}\protect\hyperlink{ref-cruz-morales_phylogenomic_2016}{52}{]}.
   Actinobacteria es un phylum que posee promiscuidad tanto en el
   metabolismo periferico como en el core metabolico. Entre datos publicos
   (NCBI) y privados estan disponibles alrededor de 1200 genomas no
   redundantes de especies de Actinobacteria. Como punto de partida, se han
   estudiado las relaciones filogeneticas y grupos de ortologia
-  {[}\protect\hyperlink{ref-li_orthomcl_2003}{63}{]}, en particular en
+  {[}\protect\hyperlink{ref-li_orthomcl_2003}{53}{]}, en particular en
   Actinobacteria para identificar relaciones entre las familias del
   phylum, se obtuvieron arboles multilocus de entre 100 y 157 genomas
-  {[}\protect\hyperlink{ref-gao_phylogenetic_2012}{65}{]}. Estos estudios
+  {[}\protect\hyperlink{ref-gao_phylogenetic_2012}{55}{]}. Estos estudios
   sugieren como separar los genomas disponibles para hacer el calculo de
   grupos de ortologia. Finalmente, se han realizado estudios de
   plasticidad genomica en Streptomyces considerando 5 y 17 organismos de
   los 300 genomas disponibles en la actualidad
-  {[}\protect\hyperlink{ref-zhou_genome_2012}{67}{]} donde reportan 2,018
+  {[}\protect\hyperlink{ref-zhou_genome_2012}{57}{]} donde reportan 2,018
   familias en el core genome y 32,574 en el pangenoma.
   
   \subsection{Modelo metabolico biosintesis de
@@ -574,24 +511,24 @@ starts here.
   
   En las cuatro decadas de estudio de la promiscuidad enzimatica, hemos
   aprendido que es un fenomeno distribuido en distintos subsistemas
-  metabolicos {[}\protect\hyperlink{ref-nam_network_2012}{69}{]} y que su
+  metabolicos {[}\protect\hyperlink{ref-nam_network_2012}{59}{]} y que su
   existencia puede deberse tanto al desarrollo de nuevas funciones para
   fines adaptativos {[}\protect\hyperlink{ref-jensen_enzyme_1976}{17}{]},
   como al rescate de una funcion perdida
   {[}\protect\hyperlink{ref-patrick_multicopy_2007}{27}{]}. Por ello la
   dinamica de perdida y ganancia de genes asociada al contexto genomico en
   bacterias se relaciona con cambio en la funcion enzimatica
-  {[}\protect\hyperlink{ref-zhao_discovery_2013}{41}{]}. Precisando,
+  {[}\protect\hyperlink{ref-zhao_discovery_2013}{61}{]}. Precisando,
   respecto a la ganancia de genes, se postula que la bifuncionalidad
   precede la duplicacion
-  {[}\protect\hyperlink{ref-hughes_evolution_1994}{37}{]}. Lo que implica
+  {[}\protect\hyperlink{ref-hughes_evolution_1994}{63}{]}. Lo que implica
   que dada una duplicacion muy posiblemente previamente la promiscuidad
-  estuvo presente {[}\protect\hyperlink{ref-gerlt_divergent_2001}{71}{]}.
+  estuvo presente {[}\protect\hyperlink{ref-gerlt_divergent_2001}{64}{]}.
   
   Se han desarrollado tecnicas bioquimicas y metabolicas de medicion
   {[}\protect\hyperlink{ref-nath_quantitative_2008}{12}{]}, asi como
   algoritmos computacionales de prediccion de promiscuidad
-  {[}\protect\hyperlink{ref-carbonell_molecular_2010}{49}{]}. Un aspecto a
+  {[}\protect\hyperlink{ref-carbonell_molecular_2010}{36}{]}. Un aspecto a
   mejorar dentro del modelado es la restriccion del conjunto de estudio a
   un grupo taxonomico tan reducido que exista congruencia en las familias
   de ortologia y a la vez tan amplio que permita observar efectos
@@ -602,7 +539,7 @@ starts here.
   posible que dentro de las tecnicas computacionales la flexibilidad
   durante la dinamica molecular este correlacionada con la promiscuidad de
   los miembros de una familia
-  {[}\protect\hyperlink{ref-james_conformational_2003}{58}{]}.
+  {[}\protect\hyperlink{ref-james_conformational_2003}{48}{]}.
   
   \subsection{Modelo biologico}\label{modelo-biologico}
   
@@ -622,8 +559,8 @@ starts here.
   \subsection{Subsistemas metabolicos}\label{subsistemas-metabolicos}
   
   Los operones his y trp de histidina
-  {[}\protect\hyperlink{ref-fondi_evolution_2009}{73}{]} y triptofano
-  {[}\protect\hyperlink{ref-merino_evolution_2008}{74}{]} respectivamente,
+  {[}\protect\hyperlink{ref-fondi_evolution_2009}{66}{]} y triptofano
+  {[}\protect\hyperlink{ref-merino_evolution_2008}{67}{]} respectivamente,
   participantes del metabolismo de aminoacidos estan ampliamente
   distribuidos en los organismos bacterianos. En Actinobacteria la familia
   promiscua PriA participa en ambas rutas biosinteticas, para su estudio
@@ -634,27 +571,249 @@ starts here.
   de la vecindad genomica de trp, con lo que el homologo de hisA gana
   promiscuidad aunque con baja actividad de TrpF, a esta subfamilia se le
   llama PriB
-  {[}\protect\hyperlink{ref-verduzco-castro_co-occurrence_2016}{75}{]}. En
+  {[}\protect\hyperlink{ref-verduzco-castro_co-occurrence_2016}{68}{]}. En
   otras Actinobacterias trpF se pierde totalmente y la familia homologa de
   HisA, se vuelve promiscua
   {[}\protect\hyperlink{ref-baronagomez_occurrence_2003}{5}{]} realizando
   tanto la funcion quimica correspondiente a HisA como la de TrpF.
   Finalmente en la familia subHisA se pierde la funcion TrpF debido
   posiblemente a la ganancia del operon trp completo
-  {[}\protect\hyperlink{ref-noda-garcia_evolution_2013}{48}{]} y en la
+  {[}\protect\hyperlink{ref-noda-garcia_evolution_2013}{41}{]} y en la
   familia subtrpF se conserva solo a la funcion TrpF debido a la perdida
   del operon his {[}Juarez vazquez et al 2015 in prep{]}. Existen al menos
   43 familias de Actinobacteria sin explorar respecto a la funcionalidad
   de PriA.
   
+  \clearpage  
+  
+  \chapter*{Antecedentes}\label{antecedentes}
+  \addcontentsline{toc}{chapter}{Antecedentes}
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.9]{chapter0/AntecedentesConceptuales.png}
+  \caption[Antecedentes Conceptuales]{\normalsize{Antecedentes Conceptuales}}
+  \label{fig:Antecedentes conceptuales de promiscuidad}
+  \end{figure}
+  
+  \section{Existe promiscuidad a nivel enzima, a nivel familia e inclusive
+  a nivel ruta de metabolismo
+  especializado.}\label{existe-promiscuidad-a-nivel-enzima-a-nivel-familia-e-inclusive-a-nivel-ruta-de-metabolismo-especializado.}
+  
+  La promiscuidad metabólica puede abordarse a varios niveles, tres de
+  ellos son: i) en una enzima de un organismo en particular, ii) en una
+  familia de enzimas homólogas iii) en rutas de metabolismo especializado.
+  En este trabajo se discierne entre las preguntas ¿es esta familia
+  promiscua?, ¿Dentro de esta familia promiscua, es promiscua la enzima
+  perteneciente a este organismo?, ¿Es este cluster biosintético
+  promiscuo?. El primer problema consiste en ubicar cuáles familias
+  enzimáticas tienen al menos una enzima promiscua, esta es una propiedad
+  de las familias. El segundo problema consiste en identifcar
+  individualmente enzimas promiscuas en una familia promiscuas, esta es
+  una propiedad de las enzimas no de las familias. Y finalmente si
+  entendemos un cluster biosintético como un conjunto de enzimas que
+  reciben un sustrato, podemos generalizar la noción de promiscuidad a
+  rutas biosintéticas de metabolismo especializado.
+  
+  Se ha intentado identificar enzimas promiscuas, a nivel de secuencia,
+  sin pasar por experimentacion mediante aprendizaje maquina. Estos
+  enfoques son incapaces de identificar una familia promiscua si no se
+  conoce previamente al menos un miembro promiscuo de ella. Por otra
+  parte, en el problema de los miembros se presentan dificultades cuando
+  la identidad de secuencia es alta, e.g.~en la familia PriA-HisA se sabe
+  que la enzima HisA de E. coli no es promiscua, pero PriA de Streptomyces
+  coelicolor si lo es.
+  
+  \section{Antecedentes conceptuales}\label{antecedentes-conceptuales}
+  
+  Para mejorar nuestro entendimiento del fenomeno, ademas de la
+  comparacion de secuencias es necesario integrar otros elementos de
+  analisis. Se debe notar que es practicamente imposible decir que una
+  enzima no es promiscua ya que para ello se deberian haber descartado
+  todos los posibles sustratos. Sin embargo, para el estudio de cambios en
+  promiscuidad se han detectado como elementos relevantes a los cambios en
+  vecindad genomica, los cambios en flexibilidad durante la dinamica
+  molecular, la perdida de genes centrales, y finalmente a las expansiones
+  genicas dentro de un grupo taxonomico. Estos elementos tienen en comun
+  que reflejan un cambio en alguna propiedad genomica o biofisica, de lo
+  que se deriva que el buscar cambios en la promiscuidad de una enzima
+  resulta mas factible que la busqueda intrinseca de promiscuidad, a lo
+  que aspiran los metodos basados en comparaciones de secuencias.
+  
+  \section{El establecimiento de un marco de conservación permite
+  distinguir
+  cambios}\label{el-establecimiento-de-un-marco-de-conservacion-permite-distinguir-cambios}
+  
+  Bacterias de la misma especie tienen genomas distintos. Para poder
+  establecer diferencias en el número de copias debemos trabajar en la
+  construcción de un marco filogenético consistente que permita ordenar
+  inclusive organismos de la misma especie. Para ello pueden utilizarse el
+  core genome el total de genes conservado de cada genoma en un grupo
+  taxonómico. {[}\protect\hyperlink{ref-van_der_veen_metaphor_2014}{69}{]}
+  piloplan Para distinguir cambios primero se tiene que establecer un
+  marco de conservación.
+  
+  \section{La genómica comparativa como herramienta en la distinción de
+  miembros
+  promiscuos}\label{la-genomica-comparativa-como-herramienta-en-la-distincion-de-miembros-promiscuos}
+  
+  Evomining es una plataforma bioinformatica pensada para la busqueda de
+  expansiones de familias genicas de metabolismo central. Desarrollarla en
+  combinacion con algoritmos de busqueda de cambios en la vecindad
+  genomica la haran una plataforma ideal para abordar el problema de las
+  familias, proporcionando una solucion a la dificultad de no tener
+  conocimiento previo de un miembro promiscuo en la familia investigada.
+  Respecto al problema de los miembros, se propone explorar variaciones en
+  vecindad genomica, flujo genico y dinamica molecular, como candidatos a
+  reflejar la variacion en promiscuidad. Finalmente, he detectado que a
+  pesar de que pruebas in vivo son mas sensibles a niveles bajos de
+  promiscuidad que mediciones in vitro, esta ultima suele ser la unica
+  estudiada. In vivo, la metabolomica aplicada en genes biosinteticos de
+  productos naturales ha ayudado en la identificacion de sustratos, por lo
+  que esta tecnica podria ayudar a revelar el nuevo sustrato de una enzima
+  en la que se sospecha ganancia de promiscuidad. En resumen, el objetivo
+  de mi trabajo sera abordar los dos problemas de promiscuidad
+  considerando la diferenciacion in vitro e in vivo tomando como modelo
+  biologico el phylum Actinobacteria, un grupo de bacterias reconocido por
+  su diversidad metabolica donde se ha probado la existencia de
+  promiscuidad enzimatica.
+  
+  Evomining es una plataforma bioinformatica pensada para la
+  identificacion de productos naturales que tiene entre sus exitos la
+  identificacion de la biosintesis de arsenolipidos
+  {[}\protect\hyperlink{ref-cruz-morales_phylogenomic_2016}{52}{]}. La
+  busqueda de productos naturales cuenta entre sus premisas que estos se
+  producen en vecindades genomicas llamadas clusters y que ademas clusters
+  cercanos (ya sea en contenido genico o en la secuencia de sus
+  componentes), exploran variaciones metabolicas, es decir sus enzimas
+  catalizan reacciones sobre sustratos parecidos aunque no identicos
+  {[}\protect\hyperlink{ref-cruz-morales_phylogenomic_2016}{52}{]}. La
+  base de evomining es que las enzimas de metabolismo secundario son
+  expansiones distantes de enzimas de rutas centrales, lo que da idea de
+  la quimica que realizan dichas expansiones dejando por identificar el
+  sustrato sobre el que trabajan. La primera version de evomining cuenta
+  con 200 genomas de Actinobacteria, una base de datos de secuencias de
+  enzimas de productos naturales y otra base de datos de secuencias de
+  enzimas de rutas centrales curada a mano. Evomining esta ligada con el
+  problema de la promiscuidad porque en estas familias expandidas ya sea
+  por duplicacion o por transferencia horizontal, las expansiones pueden
+  retener la funcion quimica de las rutas centrales y viceversa, la
+  funcion quimica expandida suele estar presente antes de la duplicacion.
+  
+  Si se combinara evomining con la premisa de que vecindades distintas son
+  marcadoras de funciones quimicas distintas, al encontrar una familia
+  expandida con vecindades genomicas diferentes se podria solventar la
+  deficiencia de otros metodos bioinformaticos consistente en que para
+  identificar familias promiscuas se debe conocer previamente un miembro
+  promiscuo de la misma. (Fig 4) Asi pues al combinar evomining con
+  herramientas de vecindad genomica tanto de comparacion como de
+  visualizacion estaremos mejorando su funcionalidad en la identificacion
+  de familias promiscuas.
+  
+  \section{La genómica comparativa como herramienta en la priorización de
+  clusters
+  promiscuos}\label{la-genomica-comparativa-como-herramienta-en-la-priorizacion-de-clusters-promiscuos}
+  
+  La promiscuidad nos interesa por su produccion de variantes. Si bien en
+  rutas centrales rescata la función en metaboismo secundario crea nuevas
+  variantes moleculares que permiten adaptación, de hecho pangenomas
+  grandes correlacioan con aparición de nuevas funciones enzimáticas.
+  Considero que el concepto de promiscuidad puede ser extendido a un nuevo
+  niivel. Promiscuidad enzimatica, promiscuida de familia, promiscuidad de
+  cluster. En rutas centrales robustez, pero en metabolismo secundario
+  platicidad. Pangenoma abierto cerrado, Aqui proponemos organizar los
+  clusters y finalmente la medida de su apertura. variantes de clusters
+  producen nuevos compuestos, ya sea por promiscuidad enzimática en un
+  core conservado o por variación en la presencia / ausencia de genes. Un
+  cluster recibe los mismos sustratos y los transforma en diferentes
+  productos.
+  
+  \subsection{Expansion y contextos genomicos como herramienta de
+  anotacion
+  funcional}\label{expansion-y-contextos-genomicos-como-herramienta-de-anotacion-funcional}
+  
+  La diversidad enzimatica existente es el resultado de un proceso de
+  expansion, mutacion y seleccion que se ha desarrollado durante el
+  transcurso de la historia evolutiva
+  {[}\protect\hyperlink{ref-khersonsky_enzyme_2010}{1}{]}. Existe
+  evidencia de que cierto grado de promiscuidad o divergencia funcional
+  precede a la duplicacion genica
+  {[}\protect\hyperlink{ref-hughes_evolution_1994}{63}{]}. Por este motivo
+  detectar expansiones ya sea duplicaciones o transferencias horizontales
+  {[}\protect\hyperlink{ref-treangen_horizontal_2011}{71}{]}, puede ser un
+  buen punto de partida para determinar divergencia funcional y
+  promiscuidad. No todas las expansiones denotan cambio de funcion
+  enzimatica, algunas pueden ser meros accidentes, sin embargo dado que la
+  funcion de una enzima suele estar relacionada con sus vecinos
+  {[}\protect\hyperlink{ref-overbeek_use_1999}{72}{]}, una expansion en
+  una vecindad genomica diferente de la tradicional sera un referente de
+  adquisicion de una nueva funcion y entonces un indicador de existencia
+  previa de promiscuidad.
+  
+  La funcion de una enzima es un concepto jerarquico, dependiente de la
+  filogenia de un organismo
+  {[}\protect\hyperlink{ref-szklarczyk_string_2015}{73}{]}. Para
+  sistematizar el estudio de contextos y vecindades genomicas se
+  desarrollo Search Tool for the Retrieval of Interacting Genes/Proteins
+  STRING {[}\protect\hyperlink{ref-snel_string:_2000}{74}{]}, que cuenta
+  con una anotacion de ortologia jerarquica y consistente, realizada en
+  2000 organismos en cuyo marco interacciones de proteinas con
+  implicaciones funcionales son predichas tanto de novo por informacion
+  genomica de co-ocurrencia como por mineria de datos en articulos
+  publicados. STRING es una base de datos, y como tal no permite agregar
+  nuevos genomas para su analisis. Sus 2000 organismos incluyen especies
+  tanto bacterianas como eucariotas. Al existir tanta diversidad, los
+  genomas disponibles para un genero o clase especificos son escasos,
+  p.~g. de los mas de 300 genomas disponibles de Streptomyces solo 24
+  estan incluidos.
+  
+  Para resolver la baja cobertura de STRING hacia ciertos grupos
+  taxonomicos se pueden desarrollar scripts de vecindad genomica
+  utilizando RAST (Rapid Annotation using Subsystem Technology); un
+  servicio interactivo de anotacion automatica de genomas de bacterias y
+  arqueas {[}\protect\hyperlink{ref-aziz_rast_2008}{75}{]} donde la
+  funcion de cada gen se asigna de acuerdo a conocimiento previo de
+  subsecuencias de organismos cercanos filogeneticamente, cuando es
+  posible se incluye en un subsistema metabolico. Estamos en una era de
+  explosion de datos genomicos, proximamente se espera contar con millones
+  de genomas bacterianos incluso provenientes de bacterias no cultivables,
+  por ello los algoritmos deben ser constantemente optimizados a los
+  nuevos volumenes de datos
+  {[}\protect\hyperlink{ref-medema_computational_2015}{44}{]}. Ante esta
+  expectativa seria muy util desarrollar algoritmos de analisis genomico
+  que sean de codigo libre o al menos interactivos para que cada
+  laboratorio pueda personalizarlos para sus propios genomas.
+  
+  Finalmente, no solo la vecindad genomica inmediata puede ser utilizada
+  como distintivo en la busqueda de promiscuidad, diferencias en el
+  contexto genomico en genes relacionados con una enzima promiscua, sin
+  importar su ubicacion dentro del genoma tambien pueden ser relevantes
+  para la perdida o ganancia de funcion quimica
+  {[}\protect\hyperlink{ref-noda-garcia_evolution_2013}{41}{]}, (Juarez
+  Vazquez et al 2015).
+  
+  \subsection{Metodos bioinformaticos}\label{metodos-bioinformaticos}
+  
+  Al evaluar PROMISE
+  {[}\protect\hyperlink{ref-carbonell_molecular_2010}{36}{]} en un set de
+  datos de la familia HisA/PriA
+  {[}\protect\hyperlink{ref-noda-garcia_insights_2015}{39}{]} obtuve que
+  su mejor desempeño es con huella molecular de tamaño 6, donde clasifica
+  correctamente casi todas las no promiscuas, (HisA) pero no sucede lo
+  mismo con la familia PriA donde tiene exito en 16 de 45 casos. Al
+  aplicar el mismo tamaño de huella a 9 miembros promiscuos de la familia
+  IlvC no consigue predecir correctamente ninguno de ellos. Por lo menos
+  para estas familias el conjunto de entrenamiento o los descriptores no
+  son suficientes para la anotacion de promiscuidad.
+  
   \subsection{Contexto y vecindades
   genomicas}\label{contexto-y-vecindades-genomicas}
   
   En 2012 fueron analizados 102 genomas de 29 familias de Actinobacteria
-  {[}\protect\hyperlink{ref-noda_estudio_2012}{76}{]}. sugiriendo que al
+  {[}\protect\hyperlink{ref-noda_estudio_2012}{77}{]}. sugiriendo que al
   menos en Corynebacteria el contexto y la vecindad genomica incidian en
   la sub-funcionalizacion de PriA en subHisA
-  {[}\protect\hyperlink{ref-noda-garcia_evolution_2013}{48}{]}. Respecto a
+  {[}\protect\hyperlink{ref-noda-garcia_evolution_2013}{41}{]}. Respecto a
   IlvC, otra familia involucrada en la sintesis de aminoacidos fue
   estudiada y caracterizada bioquimicamente en 1 Corynebacterium y 8
   Streptomyces
@@ -677,53 +836,10 @@ starts here.
   clusters distintos
   {[}\protect\hyperlink{ref-verdel-aranda_molecular_2015}{42}{]}
   
-  \subsection{Metodos bioinformaticos}\label{metodos-bioinformaticos}
+  Natural products genomic
+  era{[}\protect\hyperlink{ref-harvey_re-emergence_2015}{78}{]}
   
-  Al evaluar PROMISE
-  {[}\protect\hyperlink{ref-carbonell_molecular_2010}{49}{]} en un set de
-  datos de la familia HisA/PriA
-  {[}\protect\hyperlink{ref-noda-garcia_insights_2015}{52}{]} obtuve que
-  su mejor desempeño es con huella molecular de tamaño 6, donde clasifica
-  correctamente casi todas las no promiscuas, (HisA) pero no sucede lo
-  mismo con la familia PriA donde tiene exito en 16 de 45 casos. Al
-  aplicar el mismo tamaño de huella a 9 miembros promiscuos de la familia
-  IlvC no consigue predecir correctamente ninguno de ellos. Por lo menos
-  para estas familias el conjunto de entrenamiento o los descriptores no
-  son suficientes para la anotacion de promiscuidad.
-  
-  \subsection{Evomining}\label{evomining}
-  
-  Evomining es una plataforma bioinformatica pensada para la
-  identificacion de productos naturales que tiene entre sus exitos la
-  identificacion de la biosintesis de arsenolipidos
-  {[}\protect\hyperlink{ref-cruz-morales_phylogenomic_2016}{62}{]}. La
-  busqueda de productos naturales cuenta entre sus premisas que estos se
-  producen en vecindades genomicas llamadas clusters y que ademas clusters
-  cercanos (ya sea en contenido genico o en la secuencia de sus
-  componentes), exploran variaciones metabolicas, es decir sus enzimas
-  catalizan reacciones sobre sustratos parecidos aunque no identicos
-  {[}\protect\hyperlink{ref-cruz-morales_phylogenomic_2016}{62}{]}. La
-  base de evomining es que las enzimas de metabolismo secundario son
-  expansiones distantes de enzimas de rutas centrales, lo que da idea de
-  la quimica que realizan dichas expansiones dejando por identificar el
-  sustrato sobre el que trabajan. La primera version de evomining cuenta
-  con 200 genomas de Actinobacteria, una base de datos de secuencias de
-  enzimas de productos naturales y otra base de datos de secuencias de
-  enzimas de rutas centrales curada a mano. Evomining esta ligada con el
-  problema de la promiscuidad porque en estas familias expandidas ya sea
-  por duplicacion o por transferencia horizontal, las expansiones pueden
-  retener la funcion quimica de las rutas centrales y viceversa, la
-  funcion quimica expandida suele estar presente antes de la duplicacion.
-  
-  Si se combinara evomining con la premisa de que vecindades distintas son
-  marcadoras de funciones quimicas distintas, al encontrar una familia
-  expandida con vecindades genomicas diferentes se podria solventar la
-  deficiencia de otros metodos bioinformaticos consistente en que para
-  identificar familias promiscuas se debe conocer previamente un miembro
-  promiscuo de la misma. (Fig 4) Asi pues al combinar evomining con
-  herramientas de vecindad genomica tanto de comparacion como de
-  visualizacion estaremos mejorando su funcionalidad en la identificacion
-  de familias promiscuas.
+  \section{Estudio de una familia PriA}\label{estudio-de-una-familia-pria}
   
   \subsection{Caracterizacion in vivo}\label{caracterizacion-in-vivo}
   
@@ -760,15 +876,15 @@ starts here.
   La dinamica es un metodo que permite hacer simulaciones de particulas
   que sirve para obtener informacion de propiedades macroscopicas de un
   conjunto de atomos
-  {[}\protect\hyperlink{ref-petrenko_molecular_2001}{77}{]}. Es util en el
+  {[}\protect\hyperlink{ref-petrenko_molecular_2001}{79}{]}. Es util en el
   marco de mi proyecto porque permite la exploracion del espacio
   conformacional, y se ha visto que este esta relacionado con la actividad
-  de la enzima {[}\protect\hyperlink{ref-sikosek_biophysics_2014}{79}{]},
+  de la enzima {[}\protect\hyperlink{ref-sikosek_biophysics_2014}{81}{]},
   ademas dado un conformero permite verificar su estabilidad. Resuelve la
   ecuacion de movimiento de Newton con base a una configuracion inicial,
   las fuerzas interatomicas como los enlaces covalentes, las fuerzas de
   Van der Waals y la carga de las
-  particulas{[}\protect\hyperlink{ref-campbell_biophysical_2012}{55}{]}.
+  particulas{[}\protect\hyperlink{ref-campbell_biophysical_2012}{45}{]}.
   Entonces para generar una simulacion de dinamica molecular, debe
   contarse con una estructura como punto de partida, ya sea esta
   cristalografica o modelada de novo o por homologia. El laboratorio de
@@ -776,7 +892,7 @@ starts here.
   generacion de modelos homologos estructurales y dinamicas moleculares
   (Carrillo-Tripp et al 2015 in prep); con este pipeline se han generado
   dos estructuras de Camera
-  {[}\protect\hyperlink{ref-noda-garcia_insights_2015}{52}{]}, 30
+  {[}\protect\hyperlink{ref-noda-garcia_insights_2015}{39}{]}, 30
   estructuras y dinamicas de miembros de Actinobacteriaceae y
   Bifidobacteriaceae (Vazquez-Juarez et al in prep.) y finalmente una
   estructura de subHisA de Corynebacterium diphteriae. En la familia
@@ -785,14 +901,14 @@ starts here.
   estructuras por homologia estan en proceso.
   
   En un estudio de subHisA
-  {[}\protect\hyperlink{ref-noda_estudio_2012}{76}{]} se utilizo el metodo
+  {[}\protect\hyperlink{ref-noda_estudio_2012}{77}{]} se utilizo el metodo
   de dinamica molecular y se comparo el numero de conformeros entre
   miembros de subHisA y PriA, resultando mayor el de PriA como corresponde
   a una enzima promiscua. El estudio sobre la relacion
   dinamica-flexibilidad de \(\noindent\beta\)-lactamasas utiliza replica
   exchange, una variacion de dinamica molecular que corre replicas en
   paralelo a distintas temperaturas
-  {[}\protect\hyperlink{ref-bai_replica_2006}{80}{]}. Una desventaja de
+  {[}\protect\hyperlink{ref-bai_replica_2006}{82}{]}. Una desventaja de
   este metodo es que por el costo computacional de las replicas agregar
   explicitamente otras moleculas a la simulacion como el solvente no es
   posible en tiempo razonable. Una vez generadas las dinamicas moleculares
@@ -809,105 +925,6 @@ starts here.
   familias de enzimas promiscuas, sin embargo hasta ahora no se han
   reportado trabajos multidisciplinarios que involucren a todas las partes
   involucradas (Fig 6)
-  
-  \clearpage  
-  
-  \chapter*{Antecedentes}\label{antecedentes}
-  \addcontentsline{toc}{chapter}{Antecedentes}
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 0,scale = 0.9]{chapter0/AntecedentesConceptuales.png}
-  \caption[Antecedentes Conceptuales]{\normalsize{Antecedentes Conceptuales}}
-  \label{fig:Antecedentes conceptuales de promiscuidad}
-  \end{figure}
-  
-  \section{No todos los elementos de una familia serán
-  promiscuos.}\label{no-todos-los-elementos-de-una-familia-seran-promiscuos.}
-  
-  Este trabajo discierne entre diversas preguntas acerca de promiscuidad
-  enzimática. Un primer problema consiste en ubicar cuáles familias
-  enzimáticas tienen al menos una enzima promiscua, esta es una propiedad
-  de las familias. El segundo problema es que una vez identificada una
-  familia con enzimas promiscuas esto no implica que todos sus miembros
-  sean promiscuos por lo que queda pendiente un mecanismo para distinguir
-  el nivel de promiscuidad de cada enzima, esta es una propiedad de las
-  enzimas individuales. Se ha intentado identificar enzimas promiscuas, a
-  nivel de secuencia, sin pasar por experimentacion mediante aprendizaje
-  maquina. Estos enfoques son incapaces de identificar una familia
-  promiscua si no se conoce previamente al menos un miembro promiscuo de
-  ella. Por otra parte, en el problema de los miembros se presentan
-  dificultades cuando la identidad de secuencia es alta, e.g.~en la
-  familia PriA-HisA se sabe que la enzima HisA de E. coli no es promiscua,
-  pero PriA de Streptomyces coelicolor si lo es.
-  
-  \section{Antecedentes conceptuales}\label{antecedentes-conceptuales}
-  
-  Para mejorar nuestro entendimiento del fenomeno, ademas de la
-  comparacion de secuencias es necesario integrar otros elementos de
-  analisis. Se debe notar que es practicamente imposible decir que una
-  enzima no es promiscua ya que para ello se deberian haber descartado
-  todos los posibles sustratos. Sin embargo, para el estudio de cambios en
-  promiscuidad se han detectado como elementos relevantes a los cambios en
-  vecindad genomica, los cambios en flexibilidad durante la dinamica
-  molecular, la perdida de genes centrales, y finalmente a las expansiones
-  genicas dentro de un grupo taxonomico. Estos elementos tienen en comun
-  que reflejan un cambio en alguna propiedad genomica o biofisica, de lo
-  que se deriva que el buscar cambios en la promiscuidad de una enzima
-  resulta mas factible que la busqueda intrinseca de promiscuidad, a lo
-  que aspiran los metodos basados en comparaciones de secuencias.
-  
-  \section{El establecimiento de un marco de conservación permite
-  distinguir
-  cambios}\label{el-establecimiento-de-un-marco-de-conservacion-permite-distinguir-cambios}
-  
-  Para distinguir cambios primero se tiene que establecer un marco de
-  conservación.
-  
-  \section{La genómica comparativa como herramienta en la disticinción de
-  miembros
-  promiscuos}\label{la-genomica-comparativa-como-herramienta-en-la-disticincion-de-miembros-promiscuos}
-  
-  Evomining es una plataforma bioinformatica pensada para la busqueda de
-  expansiones de familias genicas de metabolismo central. Desarrollarla en
-  combinacion con algoritmos de busqueda de cambios en la vecindad
-  genomica la haran una plataforma ideal para abordar el problema de las
-  familias, proporcionando una solucion a la dificultad de no tener
-  conocimiento previo de un miembro promiscuo en la familia investigada.
-  Respecto al problema de los miembros, se propone explorar variaciones en
-  vecindad genomica, flujo genico y dinamica molecular, como candidatos a
-  reflejar la variacion en promiscuidad. Finalmente, he detectado que a
-  pesar de que pruebas in vivo son mas sensibles a niveles bajos de
-  promiscuidad que mediciones in vitro, esta ultima suele ser la unica
-  estudiada. In vivo, la metabolomica aplicada en genes biosinteticos de
-  productos naturales ha ayudado en la identificacion de sustratos, por lo
-  que esta tecnica podria ayudar a revelar el nuevo sustrato de una enzima
-  en la que se sospecha ganancia de promiscuidad. En resumen, el objetivo
-  de mi trabajo sera abordar los dos problemas de promiscuidad
-  considerando la diferenciacion in vitro e in vivo tomando como modelo
-  biologico el phylum Actinobacteria, un grupo de bacterias reconocido por
-  su diversidad metabolica donde se ha probado la existencia de
-  promiscuidad enzimatica.
-  
-  \section{La genómica comparativa como herramienta en la priorización de
-  clusters
-  promiscuos}\label{la-genomica-comparativa-como-herramienta-en-la-priorizacion-de-clusters-promiscuos}
-  
-  La promiscuidad nos interesa por su produccion de variantes. Si bien en
-  rutas centrales rescata la función en metaboismo secundario crea nuevas
-  variantes moleculares que permiten adaptación, de hecho pangenomas
-  grandes correlacioan con aparición de nuevas funciones enzimáticas.
-  Considero que el concepto de promiscuidad puede ser extendido a un nuevo
-  niivel. Promiscuidad enzimatica, promiscuida de familia, promiscuidad de
-  cluster. En rutas centrales robustez, pero en metabolismo secundario
-  platicidad. Pangenoma abierto cerrado, Aqui proponemos organizar los
-  clusters y finalmente la medida de su apertura. variantes de clusters
-  producen nuevos compuestos, ya sea por promiscuidad enzimática en un
-  core conservado o por variación en la presencia / ausencia de genes. Un
-  cluster recibe los mismos sustratos y los transforma en diferentes
-  productos.
-  
-  \section{Estudio de una familia PriA}\label{estudio-de-una-familia-pria}
   
   \clearpage  
   
@@ -1167,8 +1184,7 @@ starts here.
   \end{Shaded}
   
   \[\sum_{j=1}^n (\delta\theta_j)^2 \leq {{\beta_i^2}\over{\delta_i^2 + \rho_i^2}}
-  \left[ 2\rho_i^2 + {\delta_i^2\beta_i^2\over{\delta_i^2 + \rho_i^2}} \right] \equiv \omega_i^2
-  \]
+  \left[ 2\rho_i^2 + {\delta_i^2\beta_i^2\over{\delta_i^2 + \rho_i^2}} \right] \equiv \omega_i^2\]
   
   M representa el contexto mas difundido de la enzima, dentro del grupo
   taxonomico considerado; mes relevante porque si m es grande significa
@@ -1219,7 +1235,7 @@ starts here.
   
   En todos los ensayos enzimaticos se busca medir una señal que permita
   una distincion clara entre sustrato y producto
-  {[}\protect\hyperlink{ref-bisswanger_general_2011}{81}{]}. La cinetica
+  {[}\protect\hyperlink{ref-bisswanger_general_2011}{83}{]}. La cinetica
   enzimatica de PriA proveniente del genero Streptomyces sera determinada
   como ya se ha reportado previamente, mediante el monitoreo de cambios en
   fluorescencia (isomerizacion del sustrato PRA) o en absorbancia
@@ -1229,7 +1245,7 @@ starts here.
   1-(2-carboxyphenylamino)-1-deoxy-D-ribulose 5-phosphate (CdRP) por lo
   que se utiliza la disminucion en fluorescencia como medida de la
   conversion del sustrato en producto
-  {[}\protect\hyperlink{ref-hommel_phosphoribosyl_1995}{82}{]}. Se
+  {[}\protect\hyperlink{ref-hommel_phosphoribosyl_1995}{84}{]}. Se
   mandaran sintetizar estas variantes para posteriormente sobre
   expresarlas en E. coli. Se creceran cepas modificadas de E. coli (W-,
   H-) en medio minimo M9 enriquecido con una mezcla de aminoacidos excepto
@@ -1238,11 +1254,11 @@ starts here.
   utilizaran plasmidos disponibles para construcciones de sobreexpresion
   de proteina, despues de la produccion la enzima se purificara utilizando
   cromatografia por afinidad a niquel
-  {[}\protect\hyperlink{ref-verduzco-castro_co-occurrence_2016}{75}{]}.
+  {[}\protect\hyperlink{ref-verduzco-castro_co-occurrence_2016}{68}{]}.
   
   Finalmente se recopilaran datos cineticos de PriA tanto privados como
   los publicos reportados a la fecha en la BRaunschweig ENzyme DAtabase
-  BRENDA {[}\protect\hyperlink{ref-scheer_brenda_2011}{83}{]}. Una vez
+  BRENDA {[}\protect\hyperlink{ref-scheer_brenda_2011}{85}{]}. Una vez
   colectados los datos se anotaran en PEDB, nuestra base de datos ad hoc,
   y se tomara como medida de promiscuidad el I-index
   {[}\protect\hyperlink{ref-nath_quantitative_2008}{12}{]} que se define
@@ -1257,7 +1273,7 @@ starts here.
   bioinformatica y biofisica computacional. Este pipeline utiliza el
   software Rosetta para el modelado para las estructuras y GROMACS
   Groningen Machine for Chemical Simulation,
-  {[}\protect\hyperlink{ref-van_der_spoel_gromacs_2005}{84}{]} para el
+  {[}\protect\hyperlink{ref-van_der_spoel_gromacs_2005}{86}{]} para el
   modelado de la dinamica molecular. Esta parte del trabajo se realizara
   en colaboracion con el laboratorio de bioinformatica y biofisica
   computacional.
@@ -1280,10 +1296,10 @@ starts here.
   La cromatografia se refiere a un conjunto de metodos que separan y
   analizan mezclas de moleculas. Basicamente estos metodos se basan en
   diferencias en el tamaño, intercambio de iones y afinidad.
-  {[}\protect\hyperlink{ref-campbell_biophysical_2012}{55}{]}
+  {[}\protect\hyperlink{ref-campbell_biophysical_2012}{45}{]}
   Posteriormente se combinan con espectrometria de masas que es una
   tecnica que mide el radio masa-carga de las particulas fragmentadas en
-  iones. {[}\protect\hyperlink{ref-campbell_biophysical_2012}{55}{]}. Los
+  iones. {[}\protect\hyperlink{ref-campbell_biophysical_2012}{45}{]}. Los
   datos obtenidos de espectrometria de masas se procesaran utilizando
   redes moleculares, que consiste en agrupar los productos segun la
   similitud de sus partes. Plan: 3 replicas tecnicas, 2 replicas
@@ -1299,7 +1315,7 @@ starts here.
   las posibilidades de sustrato para la enzima. Sin embargo el espacio de
   sustratos puede acotarse gracias a tecnicas como el docking que esta
   intimamente relacionado con la dinamica molecular
-  {[}\protect\hyperlink{ref-campbell_biophysical_2012}{55}{]}. Limitar el
+  {[}\protect\hyperlink{ref-campbell_biophysical_2012}{45}{]}. Limitar el
   espacio de sustratos puede retroalimentarse con el estudio de la
   promiscuidad in vivo y viceversa.
   
@@ -1335,88 +1351,86 @@ starts here.
   miembros mas promiscuos hacia actividades recien adquiridas, asi como
   tambien ser pionero en la investigacion de promiscuidad in vivo.
   
-  Gene cluster plants{[}\protect\hyperlink{ref-osbourn_gene_2010}{86}{]}\\
+  Gene cluster plants{[}\protect\hyperlink{ref-osbourn_gene_2010}{88}{]}\\
   Archaeal core
-  {[}\protect\hyperlink{ref-makarova_comparative_1999}{87}{]}\\
-  Natural products genomic
-  era{[}\protect\hyperlink{ref-harvey_re-emergence_2015}{88}{]}\\
+  {[}\protect\hyperlink{ref-makarova_comparative_1999}{89}{]}\\
   Methanosarcina reconstruction
-  {[}\protect\hyperlink{ref-benedict_genome-scale_2012}{89}{]}\\
-  Archaea phylum{[}\protect\hyperlink{ref-seitz_genomic_2016}{90}{]}\\
+  {[}\protect\hyperlink{ref-benedict_genome-scale_2012}{90}{]}\\
+  Archaea phylum{[}\protect\hyperlink{ref-seitz_genomic_2016}{91}{]}\\
   Prediction for possible products of promiscuous
   enzymes{[}{\textbf{???}}{]}\\
-  Saxitoxin {[}\protect\hyperlink{ref-moustafa_origin_2009}{91}{]}\\
+  Saxitoxin {[}\protect\hyperlink{ref-moustafa_origin_2009}{92}{]}\\
   Plants clusters
-  {[}\protect\hyperlink{ref-medema_computational_2016}{92}{]}\\
-  MiBIG {[}\protect\hyperlink{ref-medema_minimum_2015}{93}{]}\\
+  {[}\protect\hyperlink{ref-medema_computational_2016}{93}{]}\\
+  MiBIG {[}\protect\hyperlink{ref-medema_minimum_2015}{94}{]}\\
   Metagenomics on Streptomyces
-  {[}\protect\hyperlink{ref-iqbal_natural_2016}{94}{]}\\
+  {[}\protect\hyperlink{ref-iqbal_natural_2016}{95}{]}\\
   Sulfolobus reconsruction
-  {[}\protect\hyperlink{ref-ulas_genome-scale_2012}{95}{]}\\
+  {[}\protect\hyperlink{ref-ulas_genome-scale_2012}{96}{]}\\
   Archaeal Natural
-  products{[}\protect\hyperlink{ref-charlesworth_untapped_2015}{96}{]}\\
+  products{[}\protect\hyperlink{ref-charlesworth_untapped_2015}{97}{]}\\
   Computational Pangenomics
-  {[}\protect\hyperlink{ref-computational_pan-genomics_consortium_computational_2016}{97}{]}\\
+  {[}\protect\hyperlink{ref-computational_pan-genomics_consortium_computational_2016}{98}{]}\\
   Cuántos genes ``obtenidos por EvoMining'' son core/ cloud/stand alone\\
   Qué porcentaje de genes únicos recupera EvoMining\\
   Eucarya paralogs reshape gene clusters
-  {[}\protect\hyperlink{ref-chan_remodelling_2015}{98}{]}\\
+  {[}\protect\hyperlink{ref-chan_remodelling_2015}{99}{]}\\
   Microbial dark mater
-  {[}\protect\hyperlink{ref-rinke_insights_2013}{99}{]}\\
+  {[}\protect\hyperlink{ref-rinke_insights_2013}{100}{]}\\
   Archaea anaerobica carbon
-  {[}\protect\hyperlink{ref-castelle_genomic_2015}{100}{]} Archaea Eucarya
-  gap loki{[}\protect\hyperlink{ref-spang_complex_2015}{101}{]}\\
+  {[}\protect\hyperlink{ref-castelle_genomic_2015}{101}{]} Archaea Eucarya
+  gap loki{[}\protect\hyperlink{ref-spang_complex_2015}{102}{]}\\
   Archaea and
-  eucarya{[}\protect\hyperlink{ref-koonin_archaeal_2015}{102}{]}\\
-  BPGA {[}\protect\hyperlink{ref-chaudhari_bpga-_2016}{103}{]} genes
+  eucarya{[}\protect\hyperlink{ref-koonin_archaeal_2015}{103}{]}\\
+  BPGA {[}\protect\hyperlink{ref-chaudhari_bpga-_2016}{104}{]} genes
   esenciales bacteria
-  minima{[}\protect\hyperlink{ref-glass_essential_2006}{104}{]}\\
-  Radical {[}\protect\hyperlink{ref-narechania_random_2012}{105}{]}\\
+  minima{[}\protect\hyperlink{ref-glass_essential_2006}{105}{]}\\
+  Radical {[}\protect\hyperlink{ref-narechania_random_2012}{106}{]}\\
   RaxML large philogenies
-  {[}\protect\hyperlink{ref-stamatakis_raxml_2014}{106}{]}\\
+  {[}\protect\hyperlink{ref-stamatakis_raxml_2014}{107}{]}\\
   R phylogenies
-  {[}\protect\hyperlink{ref-phyloseq_powerful_2016}{107}{]}\\
+  {[}\protect\hyperlink{ref-phyloseq_powerful_2016}{108}{]}\\
   Streptomyces exploradores
-  {[}\protect\hyperlink{ref-zacharia_exploring_2017}{108}{]}\\
-  LUCA {[}\protect\hyperlink{ref-woese_universal_1998}{109}{]} Luchando
+  {[}\protect\hyperlink{ref-zacharia_exploring_2017}{109}{]}\\
+  LUCA {[}\protect\hyperlink{ref-woese_universal_1998}{110}{]} Luchando
   por el reconocimiento de
-  Archaea{[}\protect\hyperlink{ref-woese_are_1981}{110}{]},{[}\protect\hyperlink{ref-woese_towards_1990}{111}{]}
+  Archaea{[}\protect\hyperlink{ref-woese_are_1981}{111}{]},{[}\protect\hyperlink{ref-woese_towards_1990}{112}{]}
   The primary kingdoms
-  {[}\protect\hyperlink{ref-woese_phylogenetic_1977}{112}{]}\\
+  {[}\protect\hyperlink{ref-woese_phylogenetic_1977}{113}{]}\\
   Predicccion aRchaeas
-  {[}\protect\hyperlink{ref-woese_there_1994}{113}{]}\\
-  RASt archaea {[}\protect\hyperlink{ref-graham_archaeal_2000}{114}{]}
+  {[}\protect\hyperlink{ref-woese_there_1994}{114}{]}\\
+  RASt archaea {[}\protect\hyperlink{ref-graham_archaeal_2000}{115}{]}
   Book Archaea
-  {[}\protect\hyperlink{ref-howland_surprising_2000}{115}{]}\\
+  {[}\protect\hyperlink{ref-howland_surprising_2000}{116}{]}\\
   Computational methods for bacterial and archaeal genomes
-  {[}\protect\hyperlink{ref-xu_computational_2008}{116}{]}\\
-  Archaeas boook {[}\protect\hyperlink{ref-garrett_archaea_2008}{117}{]}\\
+  {[}\protect\hyperlink{ref-xu_computational_2008}{117}{]}\\
+  Archaeas boook {[}\protect\hyperlink{ref-garrett_archaea_2008}{118}{]}\\
   Bacterial /archaeal genome
-  {[}\protect\hyperlink{ref-koonin_comparison_1997}{118}{]}\\
+  {[}\protect\hyperlink{ref-koonin_comparison_1997}{119}{]}\\
   Bacteria Archaea genome
-  {[}\protect\hyperlink{ref-koonin_genomics_2008}{119}{]}\\
+  {[}\protect\hyperlink{ref-koonin_genomics_2008}{120}{]}\\
   Tree of life and HGC
-  {[}\protect\hyperlink{ref-koonin_turbulent_2015}{120}{]}\\
+  {[}\protect\hyperlink{ref-koonin_turbulent_2015}{121}{]}\\
   Genomas retrospectiva 20 años
-  {[}\protect\hyperlink{ref-land_insights_2015}{121}{]}\\
+  {[}\protect\hyperlink{ref-land_insights_2015}{122}{]}\\
   GC content plasmido genoma
-  {[}\protect\hyperlink{ref-nishida_evolution_2012}{122}{]} Genoma
-  minimo{[}\protect\hyperlink{ref-coyle_mysteries_2016}{123}{]}\\
-  Phylogeny R {[}\protect\hyperlink{ref-omeara_cran_2016}{124}{]}\\
+  {[}\protect\hyperlink{ref-nishida_evolution_2012}{123}{]} Genoma
+  minimo{[}\protect\hyperlink{ref-coyle_mysteries_2016}{124}{]}\\
+  Phylogeny R {[}\protect\hyperlink{ref-omeara_cran_2016}{125}{]}\\
   Cyanobacteria fluctuacion genomica y adaptacion
-  {[}\protect\hyperlink{ref-larsson_genome_2011}{125}{]}\\
+  {[}\protect\hyperlink{ref-larsson_genome_2011}{126}{]}\\
   Ecology of cyanobacterua
-  {[}\protect\hyperlink{ref-whitton_ecology_2012}{126}{]}\\
+  {[}\protect\hyperlink{ref-whitton_ecology_2012}{127}{]}\\
   Histdine
-  biosynthesis{[}\protect\hyperlink{ref-cohen_biosynthesis_2004}{127}{]}\\
+  biosynthesis{[}\protect\hyperlink{ref-cohen_biosynthesis_2004}{128}{]}\\
   PriA reconstruction
-  {[}\protect\hyperlink{ref-plach_long-term_2016}{128}{]}\\
+  {[}\protect\hyperlink{ref-plach_long-term_2016}{129}{]}\\
   Escala temporl bacterias
-  {[}\protect\hyperlink{ref-battistuzzi_genomic_2004}{129}{]}\\
+  {[}\protect\hyperlink{ref-battistuzzi_genomic_2004}{130}{]}\\
   Pangenome size
-  {[}\protect\hyperlink{ref-lapierre_estimating_2009}{130}{]}\\
+  {[}\protect\hyperlink{ref-lapierre_estimating_2009}{131}{]}\\
   variabilidad del 16s
-  {[}\protect\hyperlink{ref-vetrovsky_variability_2013}{131}{]}
+  {[}\protect\hyperlink{ref-vetrovsky_variability_2013}{132}{]}
   
   \begin{Shaded}
   \begin{Highlighting}[]
@@ -1450,7 +1464,7 @@ starts here.
   
   Expansions are located on pangenome, Tools to analyse pangenome BPgA
   
-  \section{EvoMining}\label{evomining-1}
+  \section{EvoMining}\label{evomining}
   
   EvoMining looks expansions on prokariotic pangenome.\\
   Biological idea.
@@ -1460,7 +1474,7 @@ starts here.
   not interchangable central database 339 queries for nine pathways,
   including amino acid biosynthesis, glycolysis, pentose phosphate
   pathway, and tricarboxylic acids cycle.
-  {[}\protect\hyperlink{ref-cruz-morales_phylogenomic_2016}{62}{]}
+  {[}\protect\hyperlink{ref-cruz-morales_phylogenomic_2016}{52}{]}
   EvoMining was proved on Actinobacteria Arseno-lipids
   
   \section{Pangenome}\label{pangenome}
@@ -1468,7 +1482,7 @@ starts here.
   The sequenced genome of an individull in some species is just a partil
   print of the species geneticll repertoire Individualls can gain and loss
   genes.\\
-  {[}\protect\hyperlink{ref-koonin_turbulent_2015}{120}{]} Pangenome is
+  {[}\protect\hyperlink{ref-koonin_turbulent_2015}{121}{]} Pangenome is
   the total sequenced gene pool in a taxonomically related group.
   Supergenome all the possible extant genes. About 10 times genomes. there
   are open, closed pangenomes.Most genomes has a core a shell and a unique
@@ -1482,12 +1496,12 @@ starts here.
   {[}\protect\hyperlink{ref-halachev_calculating_2011}{34}{]}
   
   HGT doubles mutation rate on prokarites.
-  {[}\protect\hyperlink{ref-koonin_turbulent_2015}{120}{]} Maybe HGT is an
+  {[}\protect\hyperlink{ref-koonin_turbulent_2015}{121}{]} Maybe HGT is an
   selected feature, if is the case, so could be np production.\\
   Some archaeas has open pangenome.
   {[}\protect\hyperlink{ref-halachev_calculating_2011}{34}{]} Shell trees
   converge to core trees
-  {[}\protect\hyperlink{ref-narechania_random_2012}{105}{]}
+  {[}\protect\hyperlink{ref-narechania_random_2012}{106}{]}
   
   \section{EvoMining Implementation}\label{evomining-implementation}
   
@@ -1541,7 +1555,7 @@ starts here.
   work.\\
   - \emph{myRAST} docker- \url{https://github.com/nselem/myrast}\\
   RAST is a bacterial and Archaeal genome annotator
-  {[}\protect\hyperlink{ref-aziz_rast_2008}{45}{]} This app allows myRAST
+  {[}\protect\hyperlink{ref-aziz_rast_2008}{75}{]} This app allows myRAST
   functionality to upload\\
   It allows EvoMining genome database annotation.\\
   -\emph{Orthocores} docker-\url{https://github.com/nselem/orthocore}\\
@@ -1561,7 +1575,7 @@ starts here.
   reproducible research was a concerned while developing EvoMining app,
   reproducibilty is also important on data analysis, for that reason this
   document was writen using R-markdown and latex template from Reed
-  College {[}\protect\hyperlink{ref-chesterismay_updated_2016}{133}{]}.
+  College {[}\protect\hyperlink{ref-chesterismay_updated_2016}{134}{]}.
   While R-markdown allows to write and run R code and interpolate text
   paragraph to explain scripts and analysis.
   
@@ -1632,7 +1646,7 @@ starts here.
   \subsubsection{Central DB}\label{central-db}
   
   We chose central pathways from
-  {[}\protect\hyperlink{ref-barona-gomez_what_2012}{134}{]}\\
+  {[}\protect\hyperlink{ref-barona-gomez_what_2012}{135}{]}\\
   * BBH Best Bidirectional Hits with studied enzymes from Central
   Actinobacterial pathways were selected.
   
@@ -1770,7 +1784,7 @@ starts here.
   
   \subsection{AntisMASH optional DB}\label{antismash-optional-db}
   
-  AntiSMASH is {[}\protect\hyperlink{ref-weber_antismash_2015}{135}{]}\\
+  AntiSMASH is {[}\protect\hyperlink{ref-weber_antismash_2015}{136}{]}\\
   \#\#\# Archaeas Results Archaea is a kingdom of recent discovery were
   not many natural products has been known. On Actinobacteria, evoMining
   has proved its value to find new kinds of natural products. The clue to
@@ -2120,7 +2134,7 @@ starts here.
   
   EvoMining has detected one PriA paralogue on Actinobacteria and an
   expanssion conserved on a saxitoxin cluster on Cyanobacteria
-  {[}\protect\hyperlink{ref-moustafa_origin_2009}{91}{]}.\\
+  {[}\protect\hyperlink{ref-moustafa_origin_2009}{92}{]}.\\
   PriA\\
   PriB\\
   SubHisA\\
@@ -3164,12 +3178,12 @@ starts here.
   \emph{Thermomonospora curvata} thermophilic Actinobacteria from
   Thermomonosporaceae genus, it can be found in compost and participate in
   the active degradation of cellulose
-  {[}\protect\hyperlink{ref-chertkov_complete_2011}{137}{]}.
+  {[}\protect\hyperlink{ref-chertkov_complete_2011}{138}{]}.
   
   Jonesia trpF shows no activity \emph{Jonesia denitrificans} is
   classified as a pathogenic organism for animals, reported genome was
   originally isolated from cooked ox blood
-  {[}\protect\hyperlink{ref-pukall_complete_2009}{138}{]}.
+  {[}\protect\hyperlink{ref-pukall_complete_2009}{139}{]}.
   
   \begin{Shaded}
   \begin{Highlighting}[]
@@ -3914,46 +3928,49 @@ starts here.
   Genomics {[}Internet{]}. 2011 {[}cited 2017 Jan 26{]};12:32. Available
   from: \url{http://dx.doi.org/10.1186/1471-2164-12-32}
   
-  \hypertarget{ref-pearson_prehistoric_2012}{}
-  36. Pearson H. Prehistoric proteins: Raising the dead. Nature News
-  {[}Internet{]}. 2012 Mar {[}cited 2017 Feb 9{]};483(7390):390. Available
+  \hypertarget{ref-carbonell_molecular_2010}{}
+  36. Carbonell P, Faulon J-L. Molecular signatures-based prediction of
+  enzyme promiscuity. Bioinformatics {[}Internet{]}. 2010 Aug {[}cited
+  2017 Feb 8{]};26(16):2012--9. Available from:
+  \url{https://academic.oup.com/bioinformatics/article/26/16/2012/215921/Molecular-signatures-based-prediction-of-enzyme}
+  
+  \hypertarget{ref-cheng_global_2012}{}
+  37. Cheng X-Y, Huang W-J, Hu S-C, Zhang H-L, Wang H, Zhang J-X, et al. A
+  Global Characterization and Identification of Multifunctional Enzymes.
+  PLoS ONE {[}Internet{]}. 2012 Jun {[}cited 2017 Feb 8{]};7(6). Available
+  from: \url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3377604/}
+  
+  \hypertarget{ref-nagao_prediction_2014}{}
+  38. Nagao C, Nagano N, Mizuguchi K. Prediction of Detailed Enzyme
+  Functions and Identification of Specificity Determining Residues by
+  Random Forests. PLOS ONE {[}Internet{]}. 2014 Jan {[}cited 2017 Feb
+  8{]};9(1):e84623. Available from:
+  \url{http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0084623}
+  
+  \hypertarget{ref-noda-garcia_insights_2015}{}
+  39. Noda-García L, Juárez-Vázquez AL, Ávila-Arcos MC, Verduzco-Castro
+  EA, Montero-Morán G, Gaytán P, et al. Insights into the evolution of
+  enzyme substrate promiscuity after the discovery of \(\beta\alpha_8\)
+  isomerase evolutionary intermediates from a diverse metagenome. BMC
+  Evolutionary Biology {[}Internet{]}. 2015 Jun {[}cited 2017 Jan
+  31{]};15. Available from:
+  \url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4462073/}
+  
+  \hypertarget{ref-garcia-seisdedos_probing_2012}{}
+  40. Garcia-Seisdedos H, Ibarra-Molero B, Sanchez-Ruiz JM. Probing the
+  Mutational Interplay between Primary and Promiscuous Protein Functions:
+  A Computational-Experimental Approach. PLOS Computational Biology
+  {[}Internet{]}. 2012 Jun {[}cited 2017 Feb 8{]};8(6):e1002558. Available
   from:
-  \url{http://www.nature.com/news/prehistoric-proteins-raising-the-dead-1.10261}
+  \url{http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1002558}
   
-  \hypertarget{ref-hughes_evolution_1994}{}
-  37. Hughes AL. The Evolution of Functionally Novel Proteins after Gene
-  Duplication. Proceedings of the Royal Society of London B: Biological
-  Sciences {[}Internet{]}. 1994 May {[}cited 2017 Feb
-  8{]};256(1346):119--24. Available from:
-  \url{http://rspb.royalsocietypublishing.org/content/256/1346/119}
-  
-  \hypertarget{ref-treangen_horizontal_2011}{}
-  38. Treangen TJ, Rocha EPC. Horizontal Transfer, Not Duplication, Drives
-  the Expansion of Protein Families in Prokaryotes. PLOS Genetics
-  {[}Internet{]}. 2011 Jan {[}cited 2017 Feb 9{]};7(1):e1001284. Available
-  from:
-  \url{http://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1001284}
-  
-  \hypertarget{ref-overbeek_use_1999}{}
-  39. Overbeek R, Fonstein M, D'Souza M, Pusch GD, Maltsev N. The use of
-  gene clusters to infer functional coupling. Proceedings of the National
-  Academy of Sciences {[}Internet{]}. 1999 Mar {[}cited 2017 Feb
-  9{]};96(6):2896--901. Available from:
-  \url{http://www.pnas.org/content/96/6/2896}
-  
-  \hypertarget{ref-zhao_prediction_2014}{}
-  40. Zhao S, Sakai A, Zhang X, Vetting MW, Kumar R, Hillerich B, et al.
-  Prediction and characterization of enzymatic activities guided by
-  sequence similarity and genome neighborhood networks. eLife
-  {[}Internet{]}. 2014 Jun {[}cited 2017 Feb 9{]};3:e03275. Available
-  from: \url{https://elifesciences.org/content/3/e03275v2}
-  
-  \hypertarget{ref-zhao_discovery_2013}{}
-  41. Zhao S, Kumar R, Sakai A, Vetting MW, Wood BM, Brown S, et al.
-  Discovery of new enzymes and metabolic pathways by using structure and
-  genome context. Nature {[}Internet{]}. 2013 Oct {[}cited 2017 Feb
-  9{]};502(7473):698--702. Available from:
-  \url{http://www.nature.com/nature/journal/v502/n7473/full/nature12576.html}
+  \hypertarget{ref-noda-garcia_evolution_2013}{}
+  41. Noda-García L, Camacho-Zarco AR, Medina-Ruíz S, Gaytán P,
+  Carrillo-Tripp M, Fülöp V, et al. Evolution of Substrate Specificity in
+  a Recipient's Enzyme Following Horizontal Gene Transfer. Molecular
+  Biology and Evolution {[}Internet{]}. 2013 Sep {[}cited 2017 Jan
+  31{]};30(9):2024--34. Available from:
+  \url{https://academic.oup.com/mbe/article/30/9/2024/1000280/Evolution-of-Substrate-Specificity-in-a-Recipient}
   
   \hypertarget{ref-verdel-aranda_molecular_2015}{}
   42. Verdel-Aranda K, López-Cortina ST, Hodgson DA, Barona-Gómez F.
@@ -3963,139 +3980,67 @@ starts here.
   2017 Feb 9{]};8(2):239--52. Available from:
   \url{http://onlinelibrary.wiley.com/doi/10.1111/1751-7915.12175/abstract}
   
-  \hypertarget{ref-szklarczyk_string_2015}{}
-  43. Szklarczyk D, Franceschini A, Wyder S, Forslund K, Heller D,
-  Huerta-Cepas J, et al. STRING v10: Protein--protein interaction
-  networks, integrated over the tree of life. Nucleic Acids Research
-  {[}Internet{]}. 2015 Jan {[}cited 2017 Feb 9{]};43(D1):D447--52.
-  Available from:
-  \url{https://academic.oup.com/nar/article/43/D1/D447/2435295/STRING-v10-protein-protein-interaction-networks}
-  
-  \hypertarget{ref-snel_string:_2000}{}
-  44. Snel B, Lehmann G, Bork P, Huynen MA. STRING: A web-server to
-  retrieve and display the repeatedly occurring neighbourhood of a gene.
-  Nucleic Acids Research {[}Internet{]}. 2000 Sep {[}cited 2017 Feb
-  9{]};28(18):3442--4. Available from:
-  \url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC110752/}
-  
-  \hypertarget{ref-aziz_rast_2008}{}
-  45. Aziz RK, Bartels D, Best AA, DeJongh M, Disz T, Edwards RA, et al.
-  The RAST Server: Rapid Annotations using Subsystems Technology. BMC
-  Genomics {[}Internet{]}. 2008 Feb {[}cited 2017 Feb 7{]};9:75. Available
-  from: \url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2265698/}
-  
-  \hypertarget{ref-overbeek_seed_2014}{}
-  46. Overbeek R, Olson R, Pusch GD, Olsen GJ, Davis JJ, Disz T, et al.
-  The SEED and the Rapid Annotation of microbial genomes using Subsystems
-  Technology (RAST). Nucleic Acids Research {[}Internet{]}. 2014 Jan
-  {[}cited 2017 Feb 7{]};42(Database issue):D206--14. Available from:
-  \url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3965101/}
-  
-  \hypertarget{ref-medema_computational_2015}{}
-  47. Medema MH, Fischbach MA. Computational approaches to natural product
-  discovery. Nature Chemical Biology {[}Internet{]}. 2015 Sep {[}cited
-  2017 Jan 24{]};11(9):639--48. Available from:
-  \url{http://www.nature.com/nchembio/journal/v11/n9/full/nchembio.1884.html}
-  
-  \hypertarget{ref-noda-garcia_evolution_2013}{}
-  48. Noda-García L, Camacho-Zarco AR, Medina-Ruíz S, Gaytán P,
-  Carrillo-Tripp M, Fülöp V, et al. Evolution of Substrate Specificity in
-  a Recipient's Enzyme Following Horizontal Gene Transfer. Molecular
-  Biology and Evolution {[}Internet{]}. 2013 Sep {[}cited 2017 Jan
-  31{]};30(9):2024--34. Available from:
-  \url{https://academic.oup.com/mbe/article/30/9/2024/1000280/Evolution-of-Substrate-Specificity-in-a-Recipient}
-  
-  \hypertarget{ref-carbonell_molecular_2010}{}
-  49. Carbonell P, Faulon J-L. Molecular signatures-based prediction of
-  enzyme promiscuity. Bioinformatics {[}Internet{]}. 2010 Aug {[}cited
-  2017 Feb 8{]};26(16):2012--9. Available from:
-  \url{https://academic.oup.com/bioinformatics/article/26/16/2012/215921/Molecular-signatures-based-prediction-of-enzyme}
-  
-  \hypertarget{ref-cheng_global_2012}{}
-  50. Cheng X-Y, Huang W-J, Hu S-C, Zhang H-L, Wang H, Zhang J-X, et al. A
-  Global Characterization and Identification of Multifunctional Enzymes.
-  PLoS ONE {[}Internet{]}. 2012 Jun {[}cited 2017 Feb 8{]};7(6). Available
-  from: \url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3377604/}
-  
-  \hypertarget{ref-nagao_prediction_2014}{}
-  51. Nagao C, Nagano N, Mizuguchi K. Prediction of Detailed Enzyme
-  Functions and Identification of Specificity Determining Residues by
-  Random Forests. PLOS ONE {[}Internet{]}. 2014 Jan {[}cited 2017 Feb
-  8{]};9(1):e84623. Available from:
-  \url{http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0084623}
-  
-  \hypertarget{ref-noda-garcia_insights_2015}{}
-  52. Noda-García L, Juárez-Vázquez AL, Ávila-Arcos MC, Verduzco-Castro
-  EA, Montero-Morán G, Gaytán P, et al. Insights into the evolution of
-  enzyme substrate promiscuity after the discovery of \(\beta\alpha_8\)
-  isomerase evolutionary intermediates from a diverse metagenome. BMC
-  Evolutionary Biology {[}Internet{]}. 2015 Jun {[}cited 2017 Jan
-  31{]};15. Available from:
-  \url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4462073/}
-  
-  \hypertarget{ref-garcia-seisdedos_probing_2012}{}
-  53. Garcia-Seisdedos H, Ibarra-Molero B, Sanchez-Ruiz JM. Probing the
-  Mutational Interplay between Primary and Promiscuous Protein Functions:
-  A Computational-Experimental Approach. PLOS Computational Biology
-  {[}Internet{]}. 2012 Jun {[}cited 2017 Feb 8{]};8(6):e1002558. Available
-  from:
-  \url{http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1002558}
-  
   \hypertarget{ref-nesvizhskii_analysis_2007}{}
-  54. Nesvizhskii AI, Vitek O, Aebersold R. Analysis and validation of
+  43. Nesvizhskii AI, Vitek O, Aebersold R. Analysis and validation of
   proteomic data generated by tandem mass spectrometry. Nature Methods
   {[}Internet{]}. 2007 Oct {[}cited 2017 Feb 9{]};4(10):787--97. Available
   from:
   \url{http://www.nature.com/nmeth/journal/v4/n10/abs/nmeth1088.html}
   
+  \hypertarget{ref-medema_computational_2015}{}
+  44. Medema MH, Fischbach MA. Computational approaches to natural product
+  discovery. Nature Chemical Biology {[}Internet{]}. 2015 Sep {[}cited
+  2017 Jan 24{]};11(9):639--48. Available from:
+  \url{http://www.nature.com/nchembio/journal/v11/n9/full/nchembio.1884.html}
+  
   \hypertarget{ref-campbell_biophysical_2012}{}
-  55. Campbell I. Biophysical Techniques - Paperback - Iain D. Campbell -
+  45. Campbell I. Biophysical Techniques - Paperback - Iain D. Campbell -
   Oxford University Press {[}Internet{]}. 2012 {[}cited 2017 Feb 8{]}.
   Available from:
   \url{https://global.oup.com/ushe/product/biophysical-techniques-9780199642144?cc=mx\&lang=en\&}
   
   \hypertarget{ref-yang_molecular_2013}{}
-  56. Yang JY, Sanchez LM, Rath CM, Liu X, Boudreau PD, Bruns N, et al.
+  46. Yang JY, Sanchez LM, Rath CM, Liu X, Boudreau PD, Bruns N, et al.
   Molecular Networking as a Dereplication Strategy. Journal of Natural
   Products {[}Internet{]}. 2013 Sep {[}cited 2017 Feb 9{]};76(9):1686--99.
   Available from: \url{http://dx.doi.org/10.1021/np400413s}
   
   \hypertarget{ref-kocher_mass_2007}{}
-  57. Köcher T, Superti-Furga G. Mass spectrometry--based functional
+  47. Köcher T, Superti-Furga G. Mass spectrometry--based functional
   proteomics: From molecular machines to protein networks. Nature Methods
   {[}Internet{]}. 2007 Oct {[}cited 2017 Feb 10{]};4(10):807--15.
   Available from:
   \url{http://www.nature.com/nmeth/journal/v4/n10/full/nmeth1093.html}
   
   \hypertarget{ref-james_conformational_2003}{}
-  58. James LC, Tawfik DS. Conformational diversity and protein evolution
+  48. James LC, Tawfik DS. Conformational diversity and protein evolution
   -- a 60-year-old hypothesis revisited. Trends in Biochemical Sciences
   {[}Internet{]}. 2003 Jul {[}cited 2017 Feb 8{]};28(7):361--8. Available
   from:
   \url{https://www.sciencedirect.com/science/article/pii/S096800040300135X}
   
   \hypertarget{ref-parisi_conformational_2015}{}
-  59. Parisi G, Zea DJ, Monzon AM, Marino-Buslje C. Conformational
+  49. Parisi G, Zea DJ, Monzon AM, Marino-Buslje C. Conformational
   diversity and the emergence of sequence signatures during evolution.
   Current Opinion in Structural Biology {[}Internet{]}. 2015 Jun {[}cited
   2017 Feb 9{]};32:58--65. Available from:
   \url{https://www.sciencedirect.com/science/article/pii/S0959440X15000147}
   
   \hypertarget{ref-javier_zea_protein_2013}{}
-  60. Javier Zea D, Miguel Monzon A, Fornasari MS, Marino-Buslje C, Parisi
+  50. Javier Zea D, Miguel Monzon A, Fornasari MS, Marino-Buslje C, Parisi
   G. Protein Conformational Diversity Correlates with Evolutionary Rate.
   Molecular Biology and Evolution {[}Internet{]}. 2013 Jul {[}cited 2017
   Feb 8{]};30(7):1500--3. Available from:
   \url{https://academic.oup.com/mbe/article/30/7/1500/972515/Protein-Conformational-Diversity-Correlates-with}
   
   \hypertarget{ref-gatti-lafranconi_flexibility_2013}{}
-  61. Gatti-Lafranconi P, Hollfelder F. Flexibility and Reactivity in
+  51. Gatti-Lafranconi P, Hollfelder F. Flexibility and Reactivity in
   Promiscuous Enzymes. ChemBioChem {[}Internet{]}. 2013 Feb {[}cited 2017
   Feb 8{]};14(3):285--92. Available from:
   \url{http://onlinelibrary.wiley.com/doi/10.1002/cbic.201200628/abstract}
   
   \hypertarget{ref-cruz-morales_phylogenomic_2016}{}
-  62. Cruz-Morales P, Kopp JF, Martínez-Guerrero C, Yáñez-Guerra LA,
+  52. Cruz-Morales P, Kopp JF, Martínez-Guerrero C, Yáñez-Guerra LA,
   Selem-Mojica N, Ramos-Aboites H, et al. Phylogenomic Analysis of Natural
   Products Biosynthetic Gene Clusters Allows Discovery of Arseno-Organic
   Metabolites in Model Streptomycetes. Genome Biology and Evolution
@@ -4103,27 +4048,27 @@ starts here.
   Available from: \url{http://gbe.oxfordjournals.org/content/8/6/1906}
   
   \hypertarget{ref-li_orthomcl_2003}{}
-  63. Li L, Stoeckert CJ, Roos DS. OrthoMCL: Identification of Ortholog
+  53. Li L, Stoeckert CJ, Roos DS. OrthoMCL: Identification of Ortholog
   Groups for Eukaryotic Genomes. Genome Research {[}Internet{]}. 2003 Sep
   {[}cited 2017 Feb 8{]};13(9):2178--89. Available from:
   \url{http://genome.cshlp.org/content/13/9/2178}
   
   \hypertarget{ref-waterhouse_orthodb_2013}{}
-  64. Waterhouse RM, Tegenfeldt F, Li J, Zdobnov EM, Kriventseva EV.
+  54. Waterhouse RM, Tegenfeldt F, Li J, Zdobnov EM, Kriventseva EV.
   OrthoDB: A hierarchical catalog of animal, fungal and bacterial
   orthologs. Nucleic Acids Research {[}Internet{]}. 2013 Jan {[}cited 2017
   Feb 9{]};41(D1):D358--65. Available from:
   \url{https://academic.oup.com/nar/article/41/D1/D358/1060216/OrthoDB-a-hierarchical-catalog-of-animal-fungal}
   
   \hypertarget{ref-gao_phylogenetic_2012}{}
-  65. Gao B, Gupta RS. Phylogenetic Framework and Molecular Signatures for
+  55. Gao B, Gupta RS. Phylogenetic Framework and Molecular Signatures for
   the Main Clades of the Phylum Actinobacteria. Microbiology and Molecular
   Biology Reviews : MMBR {[}Internet{]}. 2012 Mar {[}cited 2017 Feb
   8{]};76(1):66--112. Available from:
   \url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3294427/}
   
   \hypertarget{ref-sen_phylogeny_2014}{}
-  66. Sen A, Daubin V, Abrouk D, Gifford I, Berry AM, Normand P. Phylogeny
+  56. Sen A, Daubin V, Abrouk D, Gifford I, Berry AM, Normand P. Phylogeny
   of the class Actinobacteria revisited in the light of complete genomes.
   The orders ``Frankiales'' and Micrococcales should be split into
   coherent entities: Proposal of Frankiales ord. nov., Geodermatophilales
@@ -4134,120 +4079,203 @@ starts here.
   \url{http://ijs.microbiologyresearch.org/content/journal/ijsem/10.1099/ijs.0.063966-0}
   
   \hypertarget{ref-zhou_genome_2012}{}
-  67. Zhou Z, Gu J, Li Y-Q, Wang Y. Genome plasticity and systems
+  57. Zhou Z, Gu J, Li Y-Q, Wang Y. Genome plasticity and systems
   evolution in Streptomyces. BMC Bioinformatics {[}Internet{]}. 2012
   {[}cited 2017 Feb 9{]};13(10):S8. Available from:
   \url{http://dx.doi.org/10.1186/1471-2105-13-S10-S8}
   
   \hypertarget{ref-kim_comparative_2015}{}
-  68. Kim J-N, Kim Y, Jeong Y, Roe J-H, Kim B-G, Cho B-K. Comparative
+  58. Kim J-N, Kim Y, Jeong Y, Roe J-H, Kim B-G, Cho B-K. Comparative
   Genomics Reveals the Core and Accessory Genomes of Streptomyces Species.
   Journal of Microbiology and Biotechnology. 2015 Oct;25(10):1599--605.
   
   \hypertarget{ref-nam_network_2012}{}
-  69. Nam H, Lewis NE, Lerman JA, Lee D-H, Chang RL, Kim D, et al. Network
+  59. Nam H, Lewis NE, Lerman JA, Lee D-H, Chang RL, Kim D, et al. Network
   Context and Selection in the Evolution to Enzyme Specificity. Science
   {[}Internet{]}. 2012 Aug {[}cited 2017 Feb 9{]};337(6098):1101--4.
   Available from:
   \url{http://science.sciencemag.org/content/337/6098/1101}
   
   \hypertarget{ref-copley_evolutionary_2015}{}
-  70. Copley SD. An Evolutionary Biochemist's Perspective on Promiscuity.
+  60. Copley SD. An Evolutionary Biochemist's Perspective on Promiscuity.
   Trends in biochemical sciences {[}Internet{]}. 2015 Feb {[}cited 2017
   Feb 8{]};40(2):72--8. Available from:
   \url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4836852/}
   
+  \hypertarget{ref-zhao_discovery_2013}{}
+  61. Zhao S, Kumar R, Sakai A, Vetting MW, Wood BM, Brown S, et al.
+  Discovery of new enzymes and metabolic pathways by using structure and
+  genome context. Nature {[}Internet{]}. 2013 Oct {[}cited 2017 Feb
+  9{]};502(7473):698--702. Available from:
+  \url{http://www.nature.com/nature/journal/v502/n7473/full/nature12576.html}
+  
+  \hypertarget{ref-zhao_prediction_2014}{}
+  62. Zhao S, Sakai A, Zhang X, Vetting MW, Kumar R, Hillerich B, et al.
+  Prediction and characterization of enzymatic activities guided by
+  sequence similarity and genome neighborhood networks. eLife
+  {[}Internet{]}. 2014 Jun {[}cited 2017 Feb 9{]};3:e03275. Available
+  from: \url{https://elifesciences.org/content/3/e03275v2}
+  
+  \hypertarget{ref-hughes_evolution_1994}{}
+  63. Hughes AL. The Evolution of Functionally Novel Proteins after Gene
+  Duplication. Proceedings of the Royal Society of London B: Biological
+  Sciences {[}Internet{]}. 1994 May {[}cited 2017 Feb
+  8{]};256(1346):119--24. Available from:
+  \url{http://rspb.royalsocietypublishing.org/content/256/1346/119}
+  
   \hypertarget{ref-gerlt_divergent_2001}{}
-  71. Divergent Evolution of Enzymatic Function: Mechanistically Diverse
+  64. Divergent Evolution of Enzymatic Function: Mechanistically Diverse
   Superfamilies and Functionally Distinct Suprafamilies. Annual Review of
   Biochemistry {[}Internet{]}. 2001 {[}cited 2017 Feb 8{]};70(1):209--46.
   Available from: \url{http://dx.doi.org/10.1146/annurev.biochem.70.1.209}
   
   \hypertarget{ref-huang_enzyme_2012}{}
-  72. Huang R, Hippauf F, Rohrbeck D, Haustein M, Wenke K, Feike J, et al.
+  65. Huang R, Hippauf F, Rohrbeck D, Haustein M, Wenke K, Feike J, et al.
   Enzyme functional evolution through improved catalysis of ancestrally
   nonpreferred substrates. Proceedings of the National Academy of Sciences
   {[}Internet{]}. 2012 Feb {[}cited 2017 Feb 8{]};109(8):2966--71.
   Available from: \url{http://www.pnas.org/content/109/8/2966}
   
   \hypertarget{ref-fondi_evolution_2009}{}
-  73. Fondi M, Emiliani G, Liò P, Gribaldo S, Fani R. The evolution of
+  66. Fondi M, Emiliani G, Liò P, Gribaldo S, Fani R. The evolution of
   histidine biosynthesis in archaea: Insights into the his genes structure
   and organization in LUCA. Journal of Molecular Evolution. 2009
   Nov;69(5):512--26.
   
   \hypertarget{ref-merino_evolution_2008}{}
-  74. Merino E, Jensen RA, Yanofsky C. Evolution of bacterial trp operons
+  67. Merino E, Jensen RA, Yanofsky C. Evolution of bacterial trp operons
   and their regulation. Current opinion in microbiology {[}Internet{]}.
   2008 Apr {[}cited 2017 Feb 10{]};11(2):78--86. Available from:
   \url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2387123/}
   
   \hypertarget{ref-verduzco-castro_co-occurrence_2016}{}
-  75. Verduzco-Castro EA, Michalska K, Endres M, Juárez-Vazquez AL,
+  68. Verduzco-Castro EA, Michalska K, Endres M, Juárez-Vazquez AL,
   Noda-García L, Chang C, et al. Co-occurrence of analogous enzymes
   determines evolution of a novel \(\beta\alpha_8\)-isomerase sub-family
   after non-conserved mutations in flexible loop. Biochemical Journal
   {[}Internet{]}. 2016 May {[}cited 2017 Jan 31{]};473(9):1141--52.
   Available from: \url{http://www.biochemj.org/content/473/9/1141}
   
+  \hypertarget{ref-van_der_veen_metaphor_2014}{}
+  69. Veen BE van der, Harris HM, O´Toole PW, Claesson MJ. Metaphor:
+  Finding Bi-directional Best Hit homology relationships in (meta)genomic
+  datasets. Genomics {[}Internet{]}. 2014 Dec {[}cited 2018 Jul
+  3{]};104(6, Part B):459--63. Available from:
+  \url{http://www.sciencedirect.com/science/article/pii/S0888754314002092}
+  
+  \hypertarget{ref-pearson_prehistoric_2012}{}
+  70. Pearson H. Prehistoric proteins: Raising the dead. Nature News
+  {[}Internet{]}. 2012 Mar {[}cited 2017 Feb 9{]};483(7390):390. Available
+  from:
+  \url{http://www.nature.com/news/prehistoric-proteins-raising-the-dead-1.10261}
+  
+  \hypertarget{ref-treangen_horizontal_2011}{}
+  71. Treangen TJ, Rocha EPC. Horizontal Transfer, Not Duplication, Drives
+  the Expansion of Protein Families in Prokaryotes. PLOS Genetics
+  {[}Internet{]}. 2011 Jan {[}cited 2017 Feb 9{]};7(1):e1001284. Available
+  from:
+  \url{http://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1001284}
+  
+  \hypertarget{ref-overbeek_use_1999}{}
+  72. Overbeek R, Fonstein M, D'Souza M, Pusch GD, Maltsev N. The use of
+  gene clusters to infer functional coupling. Proceedings of the National
+  Academy of Sciences {[}Internet{]}. 1999 Mar {[}cited 2017 Feb
+  9{]};96(6):2896--901. Available from:
+  \url{http://www.pnas.org/content/96/6/2896}
+  
+  \hypertarget{ref-szklarczyk_string_2015}{}
+  73. Szklarczyk D, Franceschini A, Wyder S, Forslund K, Heller D,
+  Huerta-Cepas J, et al. STRING v10: Protein--protein interaction
+  networks, integrated over the tree of life. Nucleic Acids Research
+  {[}Internet{]}. 2015 Jan {[}cited 2017 Feb 9{]};43(D1):D447--52.
+  Available from:
+  \url{https://academic.oup.com/nar/article/43/D1/D447/2435295/STRING-v10-protein-protein-interaction-networks}
+  
+  \hypertarget{ref-snel_string:_2000}{}
+  74. Snel B, Lehmann G, Bork P, Huynen MA. STRING: A web-server to
+  retrieve and display the repeatedly occurring neighbourhood of a gene.
+  Nucleic Acids Research {[}Internet{]}. 2000 Sep {[}cited 2017 Feb
+  9{]};28(18):3442--4. Available from:
+  \url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC110752/}
+  
+  \hypertarget{ref-aziz_rast_2008}{}
+  75. Aziz RK, Bartels D, Best AA, DeJongh M, Disz T, Edwards RA, et al.
+  The RAST Server: Rapid Annotations using Subsystems Technology. BMC
+  Genomics {[}Internet{]}. 2008 Feb {[}cited 2017 Feb 7{]};9:75. Available
+  from: \url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2265698/}
+  
+  \hypertarget{ref-overbeek_seed_2014}{}
+  76. Overbeek R, Olson R, Pusch GD, Olsen GJ, Davis JJ, Disz T, et al.
+  The SEED and the Rapid Annotation of microbial genomes using Subsystems
+  Technology (RAST). Nucleic Acids Research {[}Internet{]}. 2014 Jan
+  {[}cited 2017 Feb 7{]};42(Database issue):D206--14. Available from:
+  \url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3965101/}
+  
   \hypertarget{ref-noda_estudio_2012}{}
-  76. Noda-Garcia L. Estudio de la evolución molecular de la función
+  77. Noda-Garcia L. Estudio de la evolución molecular de la función
   enzimática susando como modelo una enzima con características
   ancestrales {[}PhD thesis{]}. {[}Irapuato, GTO{]}: Langebio, CINVESTAV;
   2012.
   
+  \hypertarget{ref-harvey_re-emergence_2015}{}
+  78. Harvey AL, Edrada-Ebel R, Quinn RJ. The re-emergence of natural
+  products for drug discovery in the genomics era. Nature Reviews Drug
+  Discovery {[}Internet{]}. 2015 Feb {[}cited 2016 Sep
+  16{]};14(2):111--29. Available from:
+  \url{http://www.nature.com/nrd/journal/v14/n2/full/nrd4510.html}
+  
   \hypertarget{ref-petrenko_molecular_2001}{}
-  77. Petrenko R, Meller J. Molecular Dynamics. In: eLS {[}Internet{]}.
+  79. Petrenko R, Meller J. Molecular Dynamics. In: eLS {[}Internet{]}.
   John Wiley \& Sons, Ltd; 2001 {[}cited 2017 Feb 8{]}. Available from:
   \url{http://onlinelibrary.wiley.com/doi/10.1002/9780470015902.a0003048.pub2/abstract}
   
   \hypertarget{ref-kukol_molecular_2008}{}
-  78. Molecular Modeling of Proteins Andreas Kukol Springer
+  80. Molecular Modeling of Proteins Andreas Kukol Springer
   {[}Internet{]}. {[}cited 2017 Feb 8{]}. Available from:
   \url{http://www.springer.com/us/book/9781588298645}
   
   \hypertarget{ref-sikosek_biophysics_2014}{}
-  79. Sikosek T, Chan HS. Biophysics of protein evolution and evolutionary
+  81. Sikosek T, Chan HS. Biophysics of protein evolution and evolutionary
   protein biophysics. Journal of The Royal Society Interface
   {[}Internet{]}. 2014 Nov {[}cited 2017 Feb 9{]};11(100):20140419.
   Available from:
   \url{http://rsif.royalsocietypublishing.org/content/11/100/20140419}
   
   \hypertarget{ref-bai_replica_2006}{}
-  80. Zhou R. Replica Exchange Molecular Dynamics Method for Protein
+  82. Zhou R. Replica Exchange Molecular Dynamics Method for Protein
   Folding Simulation. In: Bai Y, Nussinov R, editors. Protein Folding
   Protocols {[}Internet{]}. Humana Press; 2006 {[}cited 2017 Feb 9{]}. pp.
   205--23. (Methods in Molecular Biology™). Available from:
   \url{http://dx.doi.org/10.1385/1-59745-189-4\%3A205}
   
   \hypertarget{ref-bisswanger_general_2011}{}
-  81. Bisswanger H. General Aspects of Enzyme Analysis. In: Practical
+  83. Bisswanger H. General Aspects of Enzyme Analysis. In: Practical
   Enzymology {[}Internet{]}. Wiley-VCH Verlag GmbH \& Co. KGaA; 2011
   {[}cited 2017 Feb 8{]}. pp. 5--91. Available from:
   \url{http://onlinelibrary.wiley.com/doi/10.1002/9783527659227.ch2/summary}
   
   \hypertarget{ref-hommel_phosphoribosyl_1995}{}
-  82. Hommel U, Eberhard M, Kirschner K. Phosphoribosyl Anthranilate
+  84. Hommel U, Eberhard M, Kirschner K. Phosphoribosyl Anthranilate
   Isomerase Catalyzes a Reversible Amadori Reaction. Biochemistry
   {[}Internet{]}. 1995 Apr {[}cited 2017 Feb 8{]};34(16):5429--39.
   Available from: \url{http://dx.doi.org/10.1021/bi00016a014}
   
   \hypertarget{ref-scheer_brenda_2011}{}
-  83. Scheer M, Grote A, Chang A, Schomburg I, Munaretto C, Rother M, et
+  85. Scheer M, Grote A, Chang A, Schomburg I, Munaretto C, Rother M, et
   al. BRENDA, the enzyme information system in 2011. Nucleic Acids
   Research {[}Internet{]}. 2011 Jan {[}cited 2017 Feb
   9{]};39(suppl\_1):D670--6. Available from:
   \url{https://academic.oup.com/nar/article/39/suppl_1/D670/2506543/BRENDA-the-enzyme-information-system-in-2011}
   
   \hypertarget{ref-van_der_spoel_gromacs_2005}{}
-  84. Van Der Spoel D, Lindahl E, Hess B, Groenhof G, Mark AE, Berendsen
+  86. Van Der Spoel D, Lindahl E, Hess B, Groenhof G, Mark AE, Berendsen
   HJC. GROMACS: Fast, flexible, and free. Journal of Computational
   Chemistry {[}Internet{]}. 2005 Dec {[}cited 2017 Feb
   9{]};26(16):1701--18. Available from:
   \url{http://onlinelibrary.wiley.com/doi/10.1002/jcc.20291/abstract}
   
   \hypertarget{ref-odokonyero_loss_2014}{}
-  85. Odokonyero D, Sakai A, Patskovsky Y, Malashkevich VN, Fedorov AA,
+  87. Odokonyero D, Sakai A, Patskovsky Y, Malashkevich VN, Fedorov AA,
   Bonanno JB, et al. Loss of quaternary structure is associated with rapid
   sequence divergence in the OSBS family. Proceedings of the National
   Academy of Sciences of the United States of America {[}Internet{]}. 2014
@@ -4255,28 +4283,21 @@ starts here.
   \url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4060685/}
   
   \hypertarget{ref-osbourn_gene_2010}{}
-  86. Osbourn A. Gene Clusters for Secondary Metabolic Pathways: An
+  88. Osbourn A. Gene Clusters for Secondary Metabolic Pathways: An
   Emerging Theme in Plant Biology. Plant Physiology {[}Internet{]}. 2010
   Oct {[}cited 2016 Sep 13{]};154(2):531--5. Available from:
   \url{http://www.plantphysiol.org/content/154/2/531}
   
   \hypertarget{ref-makarova_comparative_1999}{}
-  87. Makarova KS, Aravind L, Galperin MY, Grishin NV, Tatusov RL, Wolf
+  89. Makarova KS, Aravind L, Galperin MY, Grishin NV, Tatusov RL, Wolf
   YI, et al. Comparative Genomics of the Archaea (Euryarchaeota):
   Evolution of Conserved Protein Families, the Stable Core, and the
   Variable Shell. Genome Research {[}Internet{]}. 1999 Jul {[}cited 2017
   Feb 12{]};9(7):608--28. Available from:
   \url{http://genome.cshlp.org/content/9/7/608}
   
-  \hypertarget{ref-harvey_re-emergence_2015}{}
-  88. Harvey AL, Edrada-Ebel R, Quinn RJ. The re-emergence of natural
-  products for drug discovery in the genomics era. Nature Reviews Drug
-  Discovery {[}Internet{]}. 2015 Feb {[}cited 2016 Sep
-  16{]};14(2):111--29. Available from:
-  \url{http://www.nature.com/nrd/journal/v14/n2/full/nrd4510.html}
-  
   \hypertarget{ref-benedict_genome-scale_2012}{}
-  89. Benedict MN, Gonnerman MC, Metcalf WW, Price ND. Genome-Scale
+  90. Benedict MN, Gonnerman MC, Metcalf WW, Price ND. Genome-Scale
   Metabolic Reconstruction and Hypothesis Testing in the Methanogenic
   Archaeon Methanosarcina acetivorans C2A. Journal of Bacteriology
   {[}Internet{]}. 2012 Feb {[}cited 2016 Sep 16{]};194(4):855--65.
@@ -4284,7 +4305,7 @@ starts here.
   \url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3272958/}
   
   \hypertarget{ref-seitz_genomic_2016}{}
-  90. Seitz KW, Lazar CS, Hinrichs K-U, Teske AP, Baker BJ. Genomic
+  91. Seitz KW, Lazar CS, Hinrichs K-U, Teske AP, Baker BJ. Genomic
   reconstruction of a novel, deeply branched sediment archaeal phylum with
   pathways for acetogenesis and sulfur reduction. The ISME Journal
   {[}Internet{]}. 2016 Jul {[}cited 2016 Sep 16{]};10(7):1696--705.
@@ -4292,64 +4313,64 @@ starts here.
   \url{http://www.nature.com/ismej/journal/v10/n7/full/ismej2015233a.html}
   
   \hypertarget{ref-moustafa_origin_2009}{}
-  91. Moustafa A, Loram JE, Hackett JD, Anderson DM, Plumley FG,
+  92. Moustafa A, Loram JE, Hackett JD, Anderson DM, Plumley FG,
   Bhattacharya D. Origin of Saxitoxin Biosynthetic Genes in Cyanobacteria.
   PLOS ONE {[}Internet{]}. 2009 Jun {[}cited 2016 Sep 16{]};4(6):e5758.
   Available from:
   \url{http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0005758}
   
   \hypertarget{ref-medema_computational_2016}{}
-  92. Medema MH, Osbourn A. Computational genomic identification and
+  93. Medema MH, Osbourn A. Computational genomic identification and
   functional reconstitution of plant natural product biosynthetic
   pathways. Natural Product Reports. 2016 Aug;33(8):951--62.
   
   \hypertarget{ref-medema_minimum_2015}{}
-  93. Medema MH, Kottmann R, Yilmaz P, Cummings M, Biggins JB, Blin K, et
+  94. Medema MH, Kottmann R, Yilmaz P, Cummings M, Biggins JB, Blin K, et
   al. Minimum Information about a Biosynthetic Gene cluster. Nature
   Chemical Biology {[}Internet{]}. 2015 Sep {[}cited 2017 Feb
   12{]};11(9):625--31. Available from:
   \url{http://www.nature.com/nchembio/journal/v11/n9/full/nchembio.1890.html}
   
   \hypertarget{ref-iqbal_natural_2016}{}
-  94. Iqbal HA, Low-Beinart L, Obiajulu JU, Brady SF. Natural Product
+  95. Iqbal HA, Low-Beinart L, Obiajulu JU, Brady SF. Natural Product
   Discovery through Improved Functional Metagenomics in Streptomyces.
   Journal of the American Chemical Society {[}Internet{]}. 2016 Aug
   {[}cited 2017 Feb 12{]};138(30):9341--4. Available from:
   \url{http://dx.doi.org/10.1021/jacs.6b02921}
   
   \hypertarget{ref-ulas_genome-scale_2012}{}
-  95. Ulas T, Riemer SA, Zaparty M, Siebers B, Schomburg D. Genome-Scale
+  96. Ulas T, Riemer SA, Zaparty M, Siebers B, Schomburg D. Genome-Scale
   Reconstruction and Analysis of the Metabolic Network in the
   Hyperthermophilic Archaeon Sulfolobus Solfataricus. PLoS ONE
   {[}Internet{]}. 2012 Aug {[}cited 2016 Sep 22{]};7(8). Available from:
   \url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3432047/}
   
   \hypertarget{ref-charlesworth_untapped_2015}{}
-  96. Charlesworth JC, Burns BP. Untapped Resources: Biotechnological
+  97. Charlesworth JC, Burns BP. Untapped Resources: Biotechnological
   Potential of Peptides and Secondary Metabolites in Archaea. Archaea
   {[}Internet{]}. 2015 Oct {[}cited 2016 Sep 27{]};2015:e282035. Available
   from: \url{http://www.hindawi.com/journals/archaea/2015/282035/abs/}
   
   \hypertarget{ref-computational_pan-genomics_consortium_computational_2016}{}
-  97. Computational Pan-Genomics Consortium. Computational pan-genomics:
+  98. Computational Pan-Genomics Consortium. Computational pan-genomics:
   Status, promises and challenges. Briefings in Bioinformatics. 2016 Oct;
   
   \hypertarget{ref-chan_remodelling_2015}{}
-  98. Chan C, Jayasekera S, Kao B, Páramo M, Grotthuss M von, Ranz JM.
+  99. Chan C, Jayasekera S, Kao B, Páramo M, Grotthuss M von, Ranz JM.
   Remodelling of a homeobox gene cluster by multiple independent gene
   reunions in Drosophila. Nature Communications {[}Internet{]}. 2015 Mar
   {[}cited 2016 Dec 7{]};6:6509. Available from:
   \url{http://www.nature.com/ncomms/2015/150305/ncomms7509/full/ncomms7509.html}
   
   \hypertarget{ref-rinke_insights_2013}{}
-  99. Rinke C, Schwientek P, Sczyrba A, Ivanova NN, Anderson IJ, Cheng
+  100. Rinke C, Schwientek P, Sczyrba A, Ivanova NN, Anderson IJ, Cheng
   J-F, et al. Insights into the phylogeny and coding potential of
   microbial dark matter. Nature {[}Internet{]}. 2013 Jul {[}cited 2016 Dec
   7{]};499(7459):431--7. Available from:
   \url{http://www.nature.com/nature/journal/v499/n7459/full/nature12352.html?cookies=accepted}
   
   \hypertarget{ref-castelle_genomic_2015}{}
-  100. Castelle CJ, Wrighton KC, Thomas BC, Hug LA, Brown CT, Wilkins MJ,
+  101. Castelle CJ, Wrighton KC, Thomas BC, Hug LA, Brown CT, Wilkins MJ,
   et al. Genomic Expansion of Domain Archaea Highlights Roles for
   Organisms from New Phyla in Anaerobic Carbon Cycling. Current Biology
   {[}Internet{]}. 2015 Mar {[}cited 2016 Dec 7{]};25(6):690--701.
@@ -4357,26 +4378,26 @@ starts here.
   \url{http://www.sciencedirect.com/science/article/pii/S0960982215000160}
   
   \hypertarget{ref-spang_complex_2015}{}
-  101. Spang A, Saw JH, Jørgensen SL, Zaremba-Niedzwiedzka K, Martijn J,
+  102. Spang A, Saw JH, Jørgensen SL, Zaremba-Niedzwiedzka K, Martijn J,
   Lind AE, et al. Complex archaea that bridge the gap between prokaryotes
   and eukaryotes. Nature {[}Internet{]}. 2015 May {[}cited 2016 Dec
   7{]};521(7551):173--9. Available from:
   \url{http://www.nature.com/nature/journal/v521/n7551/full/nature14447.html}
   
   \hypertarget{ref-koonin_archaeal_2015}{}
-  102. Koonin EV. Archaeal ancestors of eukaryotes: Not so elusive any
+  103. Koonin EV. Archaeal ancestors of eukaryotes: Not so elusive any
   more. BMC Biology {[}Internet{]}. 2015 Oct {[}cited 2016 Dec 7{]};13.
   Available from:
   \url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4594999/}
   
   \hypertarget{ref-chaudhari_bpga-_2016}{}
-  103. Chaudhari NM, Gupta VK, Dutta C. BPGA- an ultra-fast pan-genome
+  104. Chaudhari NM, Gupta VK, Dutta C. BPGA- an ultra-fast pan-genome
   analysis pipeline. Scientific Reports {[}Internet{]}. 2016 Apr {[}cited
   2016 Dec 7{]};6:24373. Available from:
   \url{http://www.nature.com/srep/2016/160413/srep24373/full/srep24373.html}
   
   \hypertarget{ref-glass_essential_2006}{}
-  104. Glass JI, Assad-Garcia N, Alperovich N, Yooseph S, Lewis MR, Maruf
+  105. Glass JI, Assad-Garcia N, Alperovich N, Yooseph S, Lewis MR, Maruf
   M, et al. Essential genes of a minimal bacterium. Proceedings of the
   National Academy of Sciences of the United States of America
   {[}Internet{]}. 2006 Jan {[}cited 2016 Dec 7{]};103(2):425--30.
@@ -4384,7 +4405,7 @@ starts here.
   \url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC1324956/}
   
   \hypertarget{ref-narechania_random_2012}{}
-  105. Narechania A, Baker RH, Sit R, Kolokotronis S-O, DeSalle R, Planet
+  106. Narechania A, Baker RH, Sit R, Kolokotronis S-O, DeSalle R, Planet
   PJ. Random Addition Concatenation Analysis: A Novel Approach to the
   Exploration of Phylogenomic Signal Reveals Strong Agreement between Core
   and Shell Genomic Partitions in the Cyanobacteria. Genome Biology and
@@ -4392,72 +4413,72 @@ starts here.
   Available from: \url{http://gbe.oxfordjournals.org/content/4/1/30}
   
   \hypertarget{ref-stamatakis_raxml_2014}{}
-  106. Stamatakis A. RAxML version 8: A tool for phylogenetic analysis and
+  107. Stamatakis A. RAxML version 8: A tool for phylogenetic analysis and
   post-analysis of large phylogenies. Bioinformatics {[}Internet{]}. 2014
   May {[}cited 2016 Dec 22{]};30(9):1312--3. Available from:
   \url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3998144/}
   
   \hypertarget{ref-phyloseq_powerful_2016}{}
-  107. Powerful tree graphics with ggplot2 {[}Internet{]}. {[}cited 2017
+  108. Powerful tree graphics with ggplot2 {[}Internet{]}. {[}cited 2017
   Jan 28{]}. Available from:
   \url{http://joey711.github.io/phyloseq/plot_tree-examples.html}
   
   \hypertarget{ref-zacharia_exploring_2017}{}
-  108. Zacharia VM, Traxler MF. Exploring new horizons. eLife
+  109. Zacharia VM, Traxler MF. Exploring new horizons. eLife
   {[}Internet{]}. 2017 Jan {[}cited 2017 Jan 23{]};6:e23624. Available
   from: \url{https://elifesciences.org/content/6/e23624v1}
   
   \hypertarget{ref-woese_universal_1998}{}
-  109. Woese C. The universal ancestor. Proceedings of the National
+  110. Woese C. The universal ancestor. Proceedings of the National
   Academy of Sciences {[}Internet{]}. 1998 Jun {[}cited 2017 Feb
   13{]};95(12):6854--9. Available from:
   \url{http://www.pnas.org/content/95/12/6854}
   
   \hypertarget{ref-woese_are_1981}{}
-  110. Woese CR, Gupta R. Are archaebacteria merely derived
+  111. Woese CR, Gupta R. Are archaebacteria merely derived
   ``prokaryotes''? Nature {[}Internet{]}. 1981 Jan {[}cited 2017 Feb
   13{]};289(5793):95--6. Available from:
   \url{http://www.nature.com/nature/journal/v289/n5793/abs/289095a0.html}
   
   \hypertarget{ref-woese_towards_1990}{}
-  111. Woese CR, Kandler O, Wheelis ML. Towards a natural system of
+  112. Woese CR, Kandler O, Wheelis ML. Towards a natural system of
   organisms: Proposal for the domains Archaea, Bacteria, and Eucarya.
   Proceedings of the National Academy of Sciences of the United States of
   America. 1990 Jun;87(12):4576--9.
   
   \hypertarget{ref-woese_phylogenetic_1977}{}
-  112. Woese CR, Fox GE. Phylogenetic structure of the prokaryotic domain:
+  113. Woese CR, Fox GE. Phylogenetic structure of the prokaryotic domain:
   The primary kingdoms. Proceedings of the National Academy of Sciences of
   the United States of America {[}Internet{]}. 1977 Nov {[}cited 2017 Jan
   23{]};74(11):5088--90. Available from:
   \url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC432104/}
   
   \hypertarget{ref-woese_there_1994}{}
-  113. Woese CR. There must be a prokaryote somewhere: Microbiology's
+  114. Woese CR. There must be a prokaryote somewhere: Microbiology's
   search for itself. Microbiological Reviews {[}Internet{]}. 1994 Mar
   {[}cited 2017 Jan 23{]};58(1):1--9. Available from:
   \url{http://mmbr.asm.org/content/58/1/1}
   
   \hypertarget{ref-graham_archaeal_2000}{}
-  114. Graham DE, Overbeek R, Olsen GJ, Woese CR. An archaeal genomic
+  115. Graham DE, Overbeek R, Olsen GJ, Woese CR. An archaeal genomic
   signature. Proceedings of the National Academy of Sciences
   {[}Internet{]}. 2000 Mar {[}cited 2017 Feb 13{]};97(7):3304--8.
   Available from: \url{http://www.pnas.org/content/97/7/3304}
   
   \hypertarget{ref-howland_surprising_2000}{}
-  115. Howland JL. The surprising archaea: Discovering another domain of
+  116. Howland JL. The surprising archaea: Discovering another domain of
   life. New York: Oxford University; 2000.
   
   \hypertarget{ref-xu_computational_2008}{}
-  116. Xu Y, Gogarten JP. Computational Methods for Understanding
+  117. Xu Y, Gogarten JP. Computational Methods for Understanding
   Bacterial and Archaeal Genomes. World Scientific; 2008.
   
   \hypertarget{ref-garrett_archaea_2008}{}
-  117. Garrett RA, Klenk H-P. Archaea: Evolution, Physiology, and
+  118. Garrett RA, Klenk H-P. Archaea: Evolution, Physiology, and
   Molecular Biology. John Wiley \& Sons; 2008.
   
   \hypertarget{ref-koonin_comparison_1997}{}
-  118. Koonin EV, Mushegian AR, Galperin MY, Walker DR. Comparison of
+  119. Koonin EV, Mushegian AR, Galperin MY, Walker DR. Comparison of
   archaeal and bacterial genomes: Computer analysis of protein sequences
   predicts novel functions and suggests a chimeric origin for the archaea.
   Molecular Microbiology {[}Internet{]}. 1997 {[}cited 2017 Jan
@@ -4465,87 +4486,87 @@ starts here.
   \url{http://onlinelibrary.wiley.com/doi/10.1046/j.1365-2958.1997.4821861.x/abstract}
   
   \hypertarget{ref-koonin_genomics_2008}{}
-  119. Koonin EV, Wolf YI. Genomics of bacteria and archaea: The emerging
+  120. Koonin EV, Wolf YI. Genomics of bacteria and archaea: The emerging
   dynamic view of the prokaryotic world. Nucleic Acids Research
   {[}Internet{]}. 2008 Dec {[}cited 2017 Jan 26{]};36(21):6688--719.
   Available from:
   \url{https://academic.oup.com/nar/article/36/21/6688/2410005/Genomics-of-bacteria-and-archaea-the-emerging}
   
   \hypertarget{ref-koonin_turbulent_2015}{}
-  120. Koonin EV. The Turbulent Network Dynamics of Microbial Evolution
+  121. Koonin EV. The Turbulent Network Dynamics of Microbial Evolution
   and the Statistical Tree of Life. Journal of Molecular Evolution
   {[}Internet{]}. 2015 {[}cited 2017 Jan 28{]};80(5-6):244--50. Available
   from: \url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4472940/}
   
   \hypertarget{ref-land_insights_2015}{}
-  121. Land M, Hauser L, Jun S-R, Nookaew I, Leuze MR, Ahn T-H, et al.
+  122. Land M, Hauser L, Jun S-R, Nookaew I, Leuze MR, Ahn T-H, et al.
   Insights from 20~years of bacterial genome sequencing. Functional \&
   Integrative Genomics {[}Internet{]}. 2015 {[}cited 2017 Jan
   28{]};15(2):141--61. Available from:
   \url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4361730/}
   
   \hypertarget{ref-nishida_evolution_2012}{}
-  122. Nishida H. Evolution of genome base composition and genome size in
+  123. Nishida H. Evolution of genome base composition and genome size in
   bacteria. Frontiers in Microbiology {[}Internet{]}. 2012 Dec {[}cited
   2017 Jan 28{]};3. Available from:
   \url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3515811/}
   
   \hypertarget{ref-coyle_mysteries_2016}{}
-  123. Coyle M, Hu J, Gartner Z. Mysteries in a Minimal Genome. ACS
+  124. Coyle M, Hu J, Gartner Z. Mysteries in a Minimal Genome. ACS
   Central Science {[}Internet{]}. 2016 May {[}cited 2017 Feb
   13{]};2(5):274--7. Available from:
   \url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4882734/}
   
   \hypertarget{ref-omeara_cran_2016}{}
-  124. O'Meara B. CRAN Task View: Phylogenetics, Especially Comparative
+  125. O'Meara B. CRAN Task View: Phylogenetics, Especially Comparative
   Methods. 2016 Dec {[}cited 2017 Jan 28{]}; Available from:
   \url{https://CRAN.R-project.org/view=Phylogenetics}
   
   \hypertarget{ref-larsson_genome_2011}{}
-  125. Larsson J, Nylander JA, Bergman B. Genome fluctuations in
+  126. Larsson J, Nylander JA, Bergman B. Genome fluctuations in
   cyanobacteria reflect evolutionary, developmental and adaptive traits.
   BMC Evolutionary Biology {[}Internet{]}. 2011 {[}cited 2017 Feb
   2{]};11:187. Available from:
   \url{http://dx.doi.org/10.1186/1471-2148-11-187}
   
   \hypertarget{ref-whitton_ecology_2012}{}
-  126. Whitton BA. Ecology of Cyanobacteria II: Their Diversity in Space
+  127. Whitton BA. Ecology of Cyanobacteria II: Their Diversity in Space
   and Time. Springer Science \& Business Media; 2012.
   
   \hypertarget{ref-cohen_biosynthesis_2004}{}
-  127. Cohen GN. The biosynthesis of histidine and its regulation. In:
+  128. Cohen GN. The biosynthesis of histidine and its regulation. In:
   Microbial Biochemistry {[}Internet{]}. Springer Netherlands; 2004
   {[}cited 2017 Jan 31{]}. pp. 225--30. Available from:
   \url{http://link.springer.com/chapter/10.1007/978-1-4020-2237-1_29}
   
   \hypertarget{ref-plach_long-term_2016}{}
-  128. Plach MG, Reisinger B, Sterner R, Merkl R. Long-Term Persistence of
+  129. Plach MG, Reisinger B, Sterner R, Merkl R. Long-Term Persistence of
   Bi-functionality Contributes to the Robustness of Microbial Life through
   Exaptation. PLOS Genetics {[}Internet{]}. 2016 Jan {[}cited 2017 Feb
   13{]};12(1):e1005836. Available from:
   \url{http://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1005836}
   
   \hypertarget{ref-battistuzzi_genomic_2004}{}
-  129. Battistuzzi FU, Feijao A, Hedges SB. A genomic timescale of
+  130. Battistuzzi FU, Feijao A, Hedges SB. A genomic timescale of
   prokaryote evolution: Insights into the origin of methanogenesis,
   phototrophy, and the colonization of land. BMC Evolutionary Biology
   {[}Internet{]}. 2004 {[}cited 2017 Feb 2{]};4:44. Available from:
   \url{http://dx.doi.org/10.1186/1471-2148-4-44}
   
   \hypertarget{ref-lapierre_estimating_2009}{}
-  130. Lapierre P, Gogarten JP. Estimating the size of the bacterial
+  131. Lapierre P, Gogarten JP. Estimating the size of the bacterial
   pan-genome. Trends in Genetics {[}Internet{]}. 2009 Mar {[}cited 2017
   Feb 3{]};25(3):107--10. Available from:
   \url{http://www.cell.com/trends/genetics/abstract/S0168-9525(09)00005-5}
   
   \hypertarget{ref-vetrovsky_variability_2013}{}
-  131. Větrovský T, Baldrian P. The Variability of the 16S rRNA Gene in
+  132. Větrovský T, Baldrian P. The Variability of the 16S rRNA Gene in
   Bacterial Genomes and Its Consequences for Bacterial Community Analyses.
   PLoS ONE {[}Internet{]}. 2013 Feb {[}cited 2017 Feb 8{]};8(2). Available
   from: \url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3583900/}
   
   \hypertarget{ref-brettin_rasttk:_2015}{}
-  132. Brettin T, Davis JJ, Disz T, Edwards RA, Gerdes S, Olsen GJ, et al.
+  133. Brettin T, Davis JJ, Disz T, Edwards RA, Gerdes S, Olsen GJ, et al.
   RASTtk: A modular and extensible implementation of the RAST algorithm
   for building custom annotation pipelines and annotating batches of
   genomes. Scientific Reports {[}Internet{]}. 2015 Feb {[}cited 2017 Feb
@@ -4553,26 +4574,26 @@ starts here.
   \url{http://www.nature.com/srep/2015/150210/srep08365/full/srep08365.html}
   
   \hypertarget{ref-chesterismay_updated_2016}{}
-  133. chesterismay. Updated R Markdown thesis template {[}Internet{]}.
+  134. chesterismay. Updated R Markdown thesis template {[}Internet{]}.
   Chester's R blog. 2016 {[}cited 2017 Feb 7{]}. Available from:
   \url{https://chesterismay.wordpress.com/2016/09/01/updated-r-markdown-thesis-template/}
   
   \hypertarget{ref-barona-gomez_what_2012}{}
-  134. Barona-Gómez F, Cruz-Morales P, Noda-García L. What can
+  135. Barona-Gómez F, Cruz-Morales P, Noda-García L. What can
   genome-scale metabolic network reconstructions do for prokaryotic
   systematics? Antonie van Leeuwenhoek {[}Internet{]}. 2012 Jan {[}cited
   2017 Jan 24{]};101(1):35--43. Available from:
   \url{http://link.springer.com/article/10.1007/s10482-011-9655-1}
   
   \hypertarget{ref-weber_antismash_2015}{}
-  135. Weber T, Blin K, Duddela S, Krug D, Kim HU, Bruccoleri R, et al.
+  136. Weber T, Blin K, Duddela S, Krug D, Kim HU, Bruccoleri R, et al.
   antiSMASH 3.0---a comprehensive resource for the genome mining of
   biosynthetic gene clusters. Nucleic Acids Research {[}Internet{]}. 2015
   Jul {[}cited 2017 Feb 7{]};43(W1):W237--43. Available from:
   \url{https://academic.oup.com/nar/article/43/W1/W237/2467910/antiSMASH-3-0-a-comprehensive-resource-for-the}
   
   \hypertarget{ref-medema_antismash:_2011}{}
-  136. Medema MH, Blin K, Cimermancic P, Jager V de, Zakrzewski P,
+  137. Medema MH, Blin K, Cimermancic P, Jager V de, Zakrzewski P,
   Fischbach MA, et al. antiSMASH: Rapid identification, annotation and
   analysis of secondary metabolite biosynthesis gene clusters in bacterial
   and fungal genome sequences. Nucleic Acids Research {[}Internet{]}. 2011
@@ -4580,29 +4601,29 @@ starts here.
   from: \url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3125804/}
   
   \hypertarget{ref-chertkov_complete_2011}{}
-  137. Chertkov O, Sikorski J, Nolan M, Lapidus A, Lucas S, Del Rio TG, et
+  138. Chertkov O, Sikorski J, Nolan M, Lapidus A, Lucas S, Del Rio TG, et
   al. Complete genome sequence of Thermomonospora curvata type strain
   (B9T). Standards in Genomic Sciences {[}Internet{]}. 2011 Feb {[}cited
   2017 Mar 3{]};4(1):13--22. Available from:
   \url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3072092/}
   
   \hypertarget{ref-pukall_complete_2009}{}
-  138. Pukall R, Gehrich-Schröter G, Lapidus A, Nolan M, Glavina Del Rio
+  139. Pukall R, Gehrich-Schröter G, Lapidus A, Nolan M, Glavina Del Rio
   T, Lucas S, et al. Complete genome sequence of Jonesia denitrificans
   type strain (Prevot 55134T). Standards in Genomic Sciences
   {[}Internet{]}. 2009 Nov {[}cited 2017 Mar 3{]};1(3):262--9. Available
   from: \url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3035236/}
   
   \hypertarget{ref-angel2000}{}
-  139. Angel E. Interactive computer graphics : A top-down approach with
+  140. Angel E. Interactive computer graphics : A top-down approach with
   opengl. Boston, MA: Addison Wesley Longman; 2000.
   
   \hypertarget{ref-angel2001}{}
-  140. Angel E. Batch-file computer graphics : A bottom-up approach with
+  141. Angel E. Batch-file computer graphics : A bottom-up approach with
   quicktime. Boston, MA: Wesley Addison Longman; 2001.
   
   \hypertarget{ref-angel2002a}{}
-  141. Angel E. Test second book by angel. Boston, MA: Wesley Addison
+  142. Angel E. Test second book by angel. Boston, MA: Wesley Addison
   Longman; 2001.
 
 
