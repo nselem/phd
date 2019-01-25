@@ -287,7 +287,7 @@ Preliminar activity essays were performed on an active PriA from _Streptomyces c
 Enzymes were cloned on coli V68 strains, overexpression were induced and protein were purified.  
 
 ```{r mutControl, results = "asis",message=FALSE,echo=FALSE}
-label(path = "chapter4/MutantControl.png", caption = "Scoe and non functional Scoe PriA acting on dGTP",scale=.6,label = "PriARutas", type = "figure")
+label(path = "chapter4/MutantControl.png", caption = "Scoe and non functional Scoe PriA acting on dGTP",scale=.6,label = "PriARutas2", type = "figure")
 ```
   
 \clearpage  

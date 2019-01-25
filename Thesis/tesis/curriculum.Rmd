@@ -1,16 +1,11 @@
 ---
 title: "Nelly Sélem"
-date: "Febrero, 2018"
-#geometry: "left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1cm,bottom=1"
-output:
-  pdf_document: default
-  #pandoc_args: [    "-V", "classoption=twocolumn"]
-  word_document: default
-   - \definecolor{VividPurple}{HTML}{3E0097}
-   - \colorlet{heading}{VividPurple}
-   - \colorlet{accent}{VividPurple}
 fontsize: 11pt
-#geometry: "left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1cm,bottom=1cm"
+date: "Febrero, 2018"
+output:
+  word_document: default - \definecolor{VividPurple}{HTML}{3E0097} - \colorlet{heading}{VividPurple}
+    - \colorlet{accent}{VividPurple}
+  pdf_document: default
 ---
 
 
