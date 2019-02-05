@@ -5,7 +5,7 @@ advisor: 'Francisco Barona Gomez'
 #altadvisor: 'Your Other Advisor'
 # Delete line 6 if you only have one advisor
 department: 'Evolución de la diversidad metabólica'
-title: 'La occurrencia y variación de la promiscuidad en rutas del metabolismo especializado son reveladas por herramientas bioinformáticas evolutivas.'
+title: 'La ocurrencia y variación de la promiscuidad en rutas del metabolismo especializado son reveladas por herramientas bioinformáticas evolutivas.'
 abstract: >
   `r paste(readLines('abstract.Rmd'), collapse = ' ')`
 # If you'd rather include the preliminary content in files instead of inline
