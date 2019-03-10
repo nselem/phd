@@ -43,36 +43,35 @@ Caracterizar cambios de promiscuidad enzimatica in vivo mediante perfiles metabo
 \clearpage  
   
 # Estrategias   {.unnumbered}
-### La promiscuidad en familias enzimaticas.  
-  
-Mejorar Evomining mediante la  identificacion de cambios de vecindad genomica en familias selectas de metabolismo central convirtiendola en una plataforma de codigo libre disponible para otros investigadores.  
-
 #### Obtener informacion genomica del phylum Actinobacteria.  
-  
 Colectar genomas de Actinobacteria de NCBI y de colecciones privadas.  
-   
+
 ### Anotar consistentemente las secuencias codificantes de estos genomas.    
-  
 Utilizar un anotador automatizado y desarrollar los scripts necesarios para anotar los genomas.  
 
 #### Establecer las relaciones filogeneticas de los genomas colectados.  
-
 Mediante el uso del core genome construir un arbol filogenomico que permita establecer un marco sobre el cual hablar de cambio y que facilite reclasificar los genomas mal nombrados.  
+
+
+### La promiscuidad en familias enzimaticas.  
+Mejorar Evomining mediante la  identificacion de cambios de vecindad genomica en familias selectas de metabolismo central convirtiendola en una plataforma de codigo libre disponible para otros investigadores.  
 
 ##### Identificar cambios en la vecindad genomica en familias selectas de enzimas de metabolismo central.
 Clasificar sistematicamente las secuencias de familias codificantes segun su similitud en familias enzimaticas.   
 Desarrollar las herramientas bioinformaticas necesarias para separar clusters de vecindades genomicas.  
+
+#### Promiscuidad in vitro dentro de miembros de una familia promiscua de enzimas. 
+Dados los sustratos conocidos de PriA investigar las posibles correlaciones entre mediciones de constantes cataliticas, contexto genomico, vecindad genomica, numero de conformeros e indice de flexibilidad. 
 
 #### Sistematizar Evomining para convertirla una plataforma descargable y utilizable en cualquier set de datos bacterianos relacionados taxonomicamente proporcionados por el usuario.  
 Ampliar el contenido de Evomining al integrar los genomas colectados de Actinobacteria.
 Sistematizar la base de datos de metabolismo central.  
 Desarrollar la visualizacion e integrar la clasificacion de vecindades genomicas como una herramienta adicional en la busqueda de promiscuidad.  
 
-#### Promiscuidad in vitro dentro de miembros de una familia promiscua de enzimas. 
-Dados los sustratos conocidos de PriA investigar las posibles correlaciones entre mediciones de constantes cataliticas, contexto genomico, vecindad genomica, numero de conformeros e indice de flexibilidad.  
-
+ 
 #### Seleccionar miembros homologos de la familia de enzimas.   
 Se escogieron 41 Streptomyces repartidos en un arbol de rpoB de 400 Streptomyces con genoma disponible. Esta seleccion incluye los seis Streptomyces de los que se cuenta con cinetica enzimatica de PriA, tres de ellos con estructura cristalografica.  
+
 #### Medir cineticas enzimaticas, contexto genomico, vecindad genomica, flexibilidad y numero de conformeros.  
 Determinar la pertenencia a uno de cuatro posibles contextos genomicos respecto al gen trpF. Estudiar la existencia de distintas vecindades genomicas. Determinar la cinetica enzimatica de 9 enzimas mas buscando variabilidad en contexto genomico (sugeridas en la tabla 4). Obtener mediante una colaboracion 37 modelos estructurales por homologia y modelar dinamica molecular.  
    
@@ -89,32 +88,27 @@ Analizar las vecindades genomicas e indice de promiscuidad I.
 ### Desarrollar una metodologia para la deteccion in vivo de promiscuidad enzimatica.  
 Debido a cambios en flexibilidad o cambios de contexto genomico, se puede sospechar de diferencias en la funcion quimica de dos miembros de una familia de enzimas, sin conocer las diferencias a nivel de sustratos. Para investigar estos cambio in vivo  se propone estudiar diferencias en perfiles metabolomicos de una coleccion de cepas en condiciones diversas.  
 
-####Crear cepas geneticamente modificadas con variantes funcionales no nativas de PriA y enzimas asociadas.  
-Dado un organismo modelo sustituir su homologo nativo de priA por una variante no nativa ya sea de priA o trpF de Actinobacterias selectas de las que se sospecha cambio en promiscuidad.  
-####Separar posibles productos y minimizar los falsos positivos debidos a perturbaciones metabolicas no relacionadas a PriA.    
-Separar los metabolitos mediante cromatografia dirigida por tamaño. Obtener un espectro de masas antes y despues de  la sustitucion de la variante y sobre las diferencias en el espectro realizar espectrometria de masas en tandem (MS/MS) es decir refragmentar  y analizar que los fragmentos contengan partes parecidas a los sustratos conocidos.
-   
 \clearpage  
   
 #Metodologia  {.unnumbered}
-A continuacion describire la metodologia para cada una de las estrategias expuestas previamente. Todos los scripts desarrollados fueron escritos en perl y estan disponibles en github https://github.com/nselem/perlas.
+A continuacion describiré la metodologia para cada una de las estrategias expuestas previamente. Todos los scripts desarrollados fueron escritos en perl y estan disponibles en github https://github.com/nselem/perlas.
   
 ###La promiscuidad en familias enzimaticas.  
 
-####Actinobacteria genomic  
+#### Actinobacteria genomica  
 Para obtener informacion genomica del phylum Actinobacteria mediante la coleccion de genomas de NCBI se revisaron todas las familias de Actinobacteria de la base genoma de NCBI y se seleccionaron los genomas con minimo 5 genes por contig. Se crearon scripts para utilizar la interfaz e-utils de NCBI y descargar estos genomas desde la terminal a partir de una lista de identificadores.
    
-####Annotation  
+#### Annotation  
 Para anotar consistentemente las secuencias codificantes de estos genomas se utilizo el anotador automatizado RAST y se desarrollaron los scripts necesarios para anotar los genomas desde la terminal, conectado asi NCBI y RAST.
 
-####Genomic DB phylogeny  
+#### Genomic DB phylogeny  
 Establecer las relaciones filogeneticas de los genomas colectados.
 Mediante el uso del core genome para construir un arbol filogenomico, para reclasificar los genomas mal nombrados.   
 Para obtener el core genome y en base a el reclasificar los genomas se diseño el algoritmo estrellas basado en Best Bidirectional Hits (blast all vs all). 
     
 Estrellas. Se realiza un blast all vs all de genomas deseados. Para cada secuencia, centrado en cada genoma se realiza una lista (estrella) de sus mejores hits bidireccionales. Si las listas de todos los genomas coinciden es un BBH multiple y se agrega la lista al core genome. (Fig 9) Una vez con el core genome completo se puede reconstruir la filogenia. Este metodo fue exitoso en la deteccion de una familia marcadora de Clavibacter michiganensis (2014 Rodriguez-Orduña in prep). 
    
-###Identificar cambios en la vecindad genomica en familias selectas de enzimas de metabolismo central.  
+### Identificar cambios en la vecindad genomica en familias selectas de enzimas de metabolismo central.  
 Clasificar sistematicamente las secuencias de familias codificantes segun su similitud en familias enzimaticas.  
 
 Como se menciono en los antecedentes, se han separado 888 genomas de Actinobacteria en 3 grupos taxonomicos utilizando para la anotacion la tecnologia de subsistemas de RAST. Para la separacion en familias iso funcionales (ortologos, paralogos y expansiones) n se utilizo RAST, especificamente el script What Changed (WC) que asigna un numero a cada familia, esta herramienta esta basada en k-mers,  su codigo esta disponible en github: (https://github.com/kbase/kbseed/blob/master/service-scripts/svr_CS.pl). Ademas de en los tres grupos ya mencionados, tambien se realizara una clasificacion para trescientos genomas de Actinobacteria distribuidos en todas sus familias taxonomicas.

@@ -1,0 +1,3685 @@
+#NEXUS
+[saved by seaview on Tue Feb 21 14:01:30 2017]
+BEGIN DATA;
+  DIMENSIONS NTAX=525 NCHAR=315;
+  FORMAT DATATYPE=PROTEIN
+  GAP=-
+  ;
+MATRIX
+[1] BGC0000824_ACC79987
+-------------------------------------------------------DTALE
+VTLDNNNIRLFTEEEELIVVDTPNETA---------------------------------
+---------DAKKVEGGEYLDA-----------FLSHEEQETIES---------------
+------SS---------------------------------------IKILPCVALIDYE
+DSFSRIFVTSDDNVI----------MGIHQTLPHP------ESIKN---VVRA-------
+---------------
+[2] BGC0000668_AHI58834
+------------------------------------------------------GIEHIE
+IDQNEQQISFFSEEEELFIIDTPAQSS---------------------------------
+---------DAQQVCGGEYLDA-----------FLTHSDPQAEHK---------------
+------SD---------------SD-----ID--------------INNFIKSQALIDYE
+DSFSRVCVTEHQTLPI---------IGVQ---FHP------AGGIG---CTNKKY-----
+---------------
+[3] BGC0001126_AHB62778
+------------------------------------------------------QILLRE
+IDQDDQHISFFSEEEELFIIDTPAQSS---------------------------------
+---------DAQQVCGGEYLDA-----------FLTHSDPQAEQK---------------
+------TD---------------SN-----ID--------------INNFIKSQALIDYE
+DSFRISVIDEHQTLPI---------IGVQ---FHP------AGGVG---CTTKKY-----
+---------------
+[4] BGC0000922_AAG04390
+------VPE-----------ALI-------------ECWG--------------------
+------------------------------------------------------------
+--------RDVVALLA--PLSD--EWRFSFD------LAEPAEPAGVRA---GE--LYP-
+----IARDMLKVELDALACLNMGTLVGAP-----------------RAMQLEAEETRN--
+KATAVAARDAHHA-----------------------------------------------
+---------------
+[5] BGC0000081_AFV52123
+------------------------------------------------------------
+------------------------------------------------------------
+-----------------------------------RVLRGPAS-------------VASR
+RDT----AAGAAL---------------------------------EVMGLFPAAVLD--
+RNPSPYELFLRGRVTMKPDPDRDLAA---D-VIRA------AGPVELALCISAVHRRASA
+GETFHKL--------
+[6] BGC0000965_AAL06664
+------------------------------------------------------------
+------------------------------------------------------------
+--------------------------------------FGPDE-------------VYPA
+RDR----RHGALL---------------------------------EDAEGSASGGYD--
+TAGDIYQVQEDGEVTTV-GADGGIAAGVRA-ALFP------AGYTNLALCIRTLFHRASA
+GETLAKM--------
+[7] BGC0001088_CAE52330
+-------------------------KDRGGG-----------------------------
+--------------------------------FQGLAHVV--------------------
+------------PFHQQSLPPGSEQAG---------------------------------
+--KRY----SFM---EVW-------LLALDPL-------------MLERFL---------
+------EVDGHGTIQTKP-DPQLDRNL-DGLENADPQDE--FDEVAI---LKPPLHY--E
+SEMPAR---------
+[8] BGC0000953_AEF16052
+------------------------------IVVKNQ------------------------
+----------------------------LIGSVHGA---PAPR-----------------
+------------IMHAPLEVIRSEAPRQG-------------------------------
+--VDCIGQARFVYLLFAA-------KILKCFS-------------VLSRFM---------
+------TI-GDRTVRVDEALKRELAAL-EQE---A-----SFGVGGA---ITLLSDE--Y
+AETKAAAPK------
+[9] BGC0000024_CAE02603
+--------------------------AEVYGFCQEV------------------------
+----------------------------LDRWHQAIAHHEPLP-----------------
+------------EEHPESIASKLASAG---------------------------------
+----C----------EKT-------YVVKDPL-------------G-YRFL---------
+---------RIGVVESRP-DPAADEAL-DRLEQEDPDEE--FDEVKG---HALV------
+---------------
+[10] BGC0000110_CAO85894
+--------------------------ARVYGFCRQV------------------------
+----------------------------LERWHQAIAHHPEVL-----------------
+------------RAEPARWAPGPELRG---------------------------------
+--DDS----------YVL-------ALTRDPL-------------A-FRFL---------
+---------RIGTVESKP-DPAADEEL-DRLEPDDPDDE--FDEVAL---VRALATT--G
+---PSRV--------
+[11] BGC0000034_AAQ82560
+----NDDPAR-------VGRAPEPRHDGTGLFANFR------------------------
+----------------------------DLDAE---------------------------
+--------------VAFDWLDSSENDL---------------------------------
+---------AEA---PVC-------TVSPAP---------------FERFL---------
+------RIDRHGRMESKP-TPQEDAAL-TMQIIDLR-----YGVGGA---VIALSDP--A
+DEKAAPLL-------
+[12] BGC0000061_AAQ82560
+----NDDPAR-------VGRAPEPRHDGTGLFANFR------------------------
+----------------------------DLDAE---------------------------
+--------------VAFDWLDSSENDL---------------------------------
+---------AEA---PVC-------TVSPAP---------------FERFL---------
+------RIDRHGRMESKP-TPQEDAAL-TMQIIDLR-----YGVGGA---VIALSDP--A
+DEKAAPLL-------
+[13] BGC0000893_CCA54207
+---------------------------------PN-------------------------
+----------------------------DADGHQGI---LAPE-----------------
+------------PMHATDLPDAADSPYEA-------------------------------
+--E----EVRV--ADYLL-------ALDPLYS-------------ALERFL---------
+------TG-ADGGVESKP-TAEEDERL-DRL---A-----EFGVGGA---IVSLSDE--F
+TETLDGSAV------
+[14] BGC0000952_CBW45755
+----LAPGDA-------VVHAPEPFHDGQGLFDGQL------------------------
+----------------------------MARPP---HTEPAPA-----------------
+------------PADAPAWLLALSI-----------------------------------
+-----------D---PLT-------AS----------------------SP---------
+------ERGADGWAESKP-GPAQDAAV-TMQFIDDP-----DDEVRE---MKAQTTR--Q
+AH-AA----------
+[15] BGC0000433_CAE02620
+------------------------------------------------------------
+------------------------------------------------------------
+-------------LT---YQGG--SDLHLYDRVVIPNPNTDA----------GTVVILG-
+SEHDEIADVVGMDGTPLSKEKAGT---------------------------EQNEID---
+---APAAKEDGNI-----------------------------------------------
+---------------
+[16] BGC0000163_ACR50754
+------------------------------------------------------------
+------------------------------------------T-----------------
+------------DLHI----------LQA-------------------------------
+--VDPSGAAGLM--------------MLEGWD-------------VVNQEI---------
+------TI----------PLEQYPQAI-ERK---A-----GQG-----------------
+---------------
+[17] BGC0001147_AIS24861
+----------------------LQWHGTGHEFTGQCERVGADVVGTDAALLSALEVCAVG
+SHAPLSEA----------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------
+--AEGFRLDAGEA-----------------------------------------------
+---------------
+[18] BGC0000269_ADE34507
+------------------------------------------------------------
+------------------------------------------------------------
+--------------------------------TKIALTEEPDYM------------VYEA
+RLRHTEAKEASAV---------------------------------RDRGNSP-------
+AGFSPEQVDDQGRVTSQPTQDPAENLG----AVFP------AEQGGAMDAALVLRARAGA
+GETCEKL--------
+[19] BGC0001055_CAJ87585
+-----------------------------PTISG---------------AVDSIADCAVK
+GRRVY-------------------------------------------------------
+------------------------------------------------------------
+---------VTVYADNGEAYKQGRQASVVVEDKNAALNAIMQIE-----EL--TETREKL
+ASIAP-------------------------------------------------------
+---------------
+[20] BGC0000466_ADZ13547
+---------------------PAAWLNFPPPQDAEDDVLL--------------------
+------------------------------------------------------------
+--------PRPTRLT---RGAG--QWGRAVLE-LIHQTV-DVLV----------------
+-----AGSNLVGLMGPFLGLR---LIGAE-----------------DAVAYERAAIEE--
+--ARAARRVSGHGLEAFPV-----------------------------------------
+---------------
+[21] BGC0000430_AHJ31213
+------------------------------------------------------------
+------------------------------------------------------------
+--ILETGGIVITDVHL----L------------HVVEL----------------------
+-DVHAKDDNVVVQIETDNPGADVTTG-VPAMT--------------RNGGRTLKEINQA-
+-------LDVEHGL----------------------------------------------
+---------------
+[22] BGC0000397_AAO23329
+------------------------------------------------------------
+------------------------------------------------------------
+--VLEKGGIILTDVHL----L------------HVVEL----------------------
+-DVHAKDDVVVVQDDPRQHGADVTTG-IPNMT--------------RNGGRTLQQINQA-
+-------LDVEQGL----------------------------------------------
+---------------
+[23] BGC0001028_AAF17283
+------------------------------------------------------------
+------------------------------------------------------------
+----QLPDPILEKLYG----R------------VVEFL----------------------
+-DVHAKDDVVVVQDDPRQHGADVTTG-IPNMT--------------RNGGRTLKEINQA-
+-------LAEQGSVAV--------------------------------------------
+---------------
+[24] BGC0000315_CAB38585
+-----TDPQG-------HRAAAAALHDVVPLHAGFL------------------------
+----------------------------LEDPL---TALRGLP-----------------
+------------PFA----ADDLEAQF---------------------------------
+---------TES---PEL-------LVHPDPA-------------RLEREL---------
+------RE--H------------------VMLVDLGGALVHVQAGAG---IVADSDP--A
+AEHKSRAM-------
+[25] BGC0000075_AFV30243
+-------PE-----------DVRPPIGQD--VVAAFVALG--------------------
+------------------------------------------------------------
+--------VTVFRLERACSLAG--QITLALED-VQEAFYTAS------------------
+------G-----------------------------------------------------
+------------------------------------------------------------
+---------------
+[26] BGC0001119_CCP20039
+-------PG-----------EVLPW------ICCLACALG--------------------
+------------------------------------------------------------
+--------ATVFRLDRARALAG--QLTRPRLGAVVSDRYPDVRAA-------------D-
+----APGKV---------------------------------------------------
+------------------------------------------------------------
+---------------
+[27] BGC0001065_AEZ64549
+-----------------------------------VVVHG--------------------
+------------------------------------------------------------
+--------PDPVRIA---ATG------DAPLKAVLVNRD-DVELAGAPA---ADALLAD-
+----RAGEALAVAADPASGLR---LGGA--------------------------------
+------------------------------------------------------------
+---------------
+[28] 6666666.210046.585
+ANRY--------------------------------------------------------
+--------------------------------------------------KFVDADTDE-
+-------IIDMAQLHDYLLLDNSKNITQAIDLSGAGQH---------------EVYSVSM
+-------DKDEIDIELAKIDYAGFVFNYD---LAKQMD--------YLLLDNSKNITQAI
+GEFKPDLSSG----------KDENKI----------------------------------
+---------------
+[29] 6666666.209989.1580
+ANRY--------------------------------------------------------
+--------------------------------------------------KFVDADTDE-
+-------IIDMAQLHDYLLLDNSKNITQAIDLSGAGQH---------------EVYSVSM
+-------DKDEIDIELAKIDYAGFVFNYD---LAKQMD--------YLLLDNSKNITQAI
+GEFKPDLSSG----------KDENKI----------------------------------
+---------------
+[30] 6666666.210350.736
+ANRY--------------------------------------------------------
+--------------------------------------------------KFVDAGTDE-
+-------IIDVAQLHDYLLLDNSKNITQAIDLSGAGQH---------------EVYSVSM
+-------DKDEIDIELAKIDYAGFVFNYD---LAKQMD--------YLLLDNSKNITQAI
+GEFKPDLSSG----------KDENKI----------------------------------
+---------------
+[31] 6666666.210185.277
+ANRY--------------------------------------------------------
+--------------------------------------------------KFVDAGTDE-
+-------IIDVAQLHDYLLLDNSKNITQAIDLSGAGQH---------------EVYSVSM
+-------DKDEIDIELAKIDYAGFVFNYV---LAKQMD--------YLLLDNSKNITQAI
+GEFKPDLSSG----------KDENKI----------------------------------
+---------------
+[32] 6666666.210580.513
+ANRY--------------------------------------------------------
+--------------------------------------------------KFVDAGTDE-
+-------IIDVAQLHDYLLLDNSKNITQAIDLSGAGQH---------------EVYSVSM
+-------DKDEIDIELAKIDYAGFVFNYV---LAKQMD--------YLLLDNSKNITQAI
+GEFKPDLSSG----------KDENKI----------------------------------
+---------------
+[33] 6666666.210065.514
+ANRY--------------------------------------------------------
+--------------------------------------------------KFVDAGTDE-
+-------IIDVAQLHDYLLLDNSKNITQAIDLSGAGQH---------------EVYSVSM
+-------DKDEIDIELAKIDYAGFVFNYV---LAKQMD--------YLLLDNSKNITQAI
+GEFKPDLSSG----------KDENKI----------------------------------
+---------------
+[34] 6666666.210148.996
+ANRY--------------------------------------------------------
+--------------------------------------------------KFVDAGTDE-
+-------IIDVAQLHDYLLLDNSKNITQAIDLSGAGQH---------------EVYSVSM
+-------DKDEIDIELAKIDYAGFVFNYV---LAKQMD--------YLLLDNSKNITQAI
+GEFKPDLSSG----------KDENKI----------------------------------
+---------------
+[35] 6666666.210275.546
+ANRY--------------------------------------------------------
+--------------------------------------------------KFVDAGTDE-
+-------IIDVAQLHDYLLLDNSKNITQAIDLSGAGQH---------------EVYSVSM
+-------DKDEIDIELAKIDYAGFVFNYV---LAKQMD--------YLLLDNSKNITQAI
+GEFKPDLSSG----------KDENKI----------------------------------
+---------------
+[36] 6666666.210329.401
+ANRY--------------------------------------------------------
+--------------------------------------------------KFVDAGTDE-
+-------IIDVAQLHDYLLLDNSKNITQAIDLSGAGQH---------------EVYSVSM
+-------DKDEIDIELAKIDYAGFVFNYV---LAKQMD--------YLLLDNSKNITQAI
+GEFKPDLSSG----------KDENKI----------------------------------
+---------------
+[37] 6666666.210148.82
+ANRY--------------------------------------------------------
+--------------------------------------------------KFVDAGTDE-
+-------IIDVAQLHDYLLLDNSKNITQAIDLSGAGQH---------------EVYSVSM
+-------DKDEIDIELAKIDYAGFVFNYV---LAKQMD--------YLLLDNSKNITQAI
+GEFKPDLSSG----------KDENKI----------------------------------
+---------------
+[38] 6666666.210513.507
+ANRY--------------------------------------------------------
+--------------------------------------------------KFVDAGTDE-
+-------IIDVAQLHDYLLLDNSKNITQAIDLSGAGQH---------------EVYSVSM
+-------DKDEIDIELAKIDYAGFVFNYV---LAKQMD--------YLLLDNSKNITQAI
+GEFKPDLSSG----------KDENKI----------------------------------
+---------------
+[39] 6666666.210460.854
+ANRY--------------------------------------------------------
+--------------------------------------------------KFVDAGTDE-
+-------IIDVAQLHDYLLLDNSKNITQAIDLSGAGQH---------------EVYSVSM
+-------DKDEIDIELAKIDYAGFVFNYD---LAKQMD--------YLLLDNSKNITQAI
+GEFKPDLSSG----------KDENKI----------------------------------
+---------------
+[40] 6666666.211675.1141
+ANRY--------------------------------------------------------
+--------------------------------------------------KFVDAGTDE-
+-------IIDVAQLHDYLLLDNSKNITQAIDLSGAGQH---------------EVYSVSM
+-------DKDEIDIELAKIDYAGFVFNYD---LAKQMD--------YLLLDNSKNITQAI
+GEFKPDLSSG----------KDENKI----------------------------------
+---------------
+[41] 6666666.210099.636
+ANRY--------------------------------------------------------
+--------------------------------------------------KFVDADISE-
+-------IIDIAQLHDYLLLDNSENITQAIDLSGAGQH---------------EVYSVSM
+-------DKDEIDIEFAKPDYVGFVFDHN---LAKQMD--------YLLLDNSENITQAI
+GEVRPDLSSG----------KDEYKI----------------------------------
+---------------
+[42] 6666666.209993.643
+ANRY--------------------------------------------------------
+--------------------------------------------------KFVDADISE-
+-------IIDIAQLHDYLLLDNSENITQAIDLSGAGQH---------------EVYSVSM
+-------DKDEIDIEFAKPDYVGFVFDHN---LAKQMD--------YLLLDNSENITQAI
+GEVRPDLSSG----------KDEYKI----------------------------------
+---------------
+[43] 6666666.210582.677
+ANRY--------------------------------------------------------
+--------------------------------------------------KFVDADISE-
+-------IIDIAQLHDYLLLDNSENITQAIDLSGAGQH---------------EVYSVSM
+-------DKDEIDIEFAKPDYVGFVFDHN---LAKQMD--------YLLLDNSENITQAI
+GEVRPDLSSG----------KDEYKI----------------------------------
+---------------
+[44] 6666666.210219.557
+ANRY--------------------------------------------------------
+--------------------------------------------------KFVDADISE-
+-------IIDIAQLHDYLLLDNSENITQAIDLSGAGQH---------------EVYSVSM
+-------DKDEIDIEFAKPDYVGFVFDHN---LAKQMD--------YLLLDNSENITQAI
+GEVRPDLSSG----------KDEYKI----------------------------------
+---------------
+[45] 6666666.210507.713
+ANRY--------------------------------------------------------
+--------------------------------------------------KFVDADISE-
+-------IIDIAQLHDYLLLDNSENITQAIDLSGAGQH---------------EVYSVSM
+-------DKDEIDIEFAKPDYVGFVFDHN---LAKQMD--------YLLLDNSENITQAI
+GEVRPDLSSG----------KDEYKI----------------------------------
+---------------
+[46] 6666666.210339.639
+ANRY--------------------------------------------------------
+--------------------------------------------------KFVDADISE-
+-------IIDIAQLHDYLLLDNSENITQAIDLSGAGQH---------------EVYSVSM
+-------DKDEIDIEFAKPDYVGFVFDHN---LAKQMD--------YLLLDNSENITQAI
+GEVRPDLSSG----------KDEYKI----------------------------------
+---------------
+[47] 6666666.210311.607
+ANRY--------------------------------------------------------
+--------------------------------------------------KFVDADISE-
+-------IIDIAQLHDYLLLDNSENITQAIDLSGAGQH---------------EVYSVSM
+-------DKDEIDIEFAKPDYVGFVFDHN---LAKQMD--------YLLLDNSENITQAI
+GEVRPDLSSG----------KDEYKI----------------------------------
+---------------
+[48] 6666666.210072.545
+ANRY--------------------------------------------------------
+--------------------------------------------------KFVDADISE-
+-------IIDIAQLHDYLLLDNSENITQAIDLSGAGQH---------------EVYSVSM
+-------DKDEIDIEFAKPDYVGFVFDHN---LAKQMD--------YLLLDNSENITQAI
+GEVRPDLSSG----------KDEYKI----------------------------------
+---------------
+[49] 6666666.210167.678
+ANRY--------------------------------------------------------
+--------------------------------------------------KFVDADISE-
+-------IIDIAQLHDYLLLDNSENITQAIDLSGAGQH---------------EVYSVSM
+-------DKDEIDIEFAKPDYVGFVFDHN---LAKQMD--------YLLLDNSENITQAI
+GEVRPDLSSG----------KDEYKI----------------------------------
+---------------
+[50] 6666666.210316.619
+ANRY--------------------------------------------------------
+--------------------------------------------------KFVDADISE-
+-------IIDIAQLHDYLLLDNSENITQAIDLSGAGQH---------------EVYSVSM
+-------DKDEIDIEFAKPDYVGFVFDHN---LAKQMD--------YLLLDNSENITQAI
+GEVRPDLSSG----------KDEYKI----------------------------------
+---------------
+[51] 6666666.210467.635
+ANRY--------------------------------------------------------
+--------------------------------------------------KFVDADISE-
+-------IIDIAQLHDYLLLDNSENITQAIDLSGAGQH---------------EVYSVSM
+-------DKDEIDIEFAKPDYVGFVFDHN---LAKQMD--------YLLLDNSENITQAI
+GEVRPDLSSG----------KDEYKI----------------------------------
+---------------
+[52] 6666666.212749.729
+ANRY--------------------------------------------------------
+--------------------------------------------------KFVDADISE-
+-------IIDIAQLHDYLLLDNSENITQAIDLSGAGQH---------------EVYSVSM
+-------DKDEIDIEFAKPDYVGFVFDHN---LAKQMD--------YLLLDNSENITQAI
+GEVRPDLSSG----------KDEYKI----------------------------------
+---------------
+[53] 6666666.210032.705
+ANRY--------------------------------------------------------
+--------------------------------------------------KFVDADISE-
+-------IIDIAQLHDYLLLDNSENITQAIDLSGAGQH---------------EVYSVSM
+-------DKDEIDIEFAKPDYVGFVFDHN---LAKQMD--------YLLLDNSENITQAI
+GEVRPDLSSG----------KDEYKI----------------------------------
+---------------
+[54] BGC0000824_ACC79983
+-------FGRFGELQNLLRDYPSPLYFA--LAKRMG------------------------
+----------------------------KIAETGGI---HDMR-----------------
+------------DFHAIDILLAGSN-----------------------------------
+-------AIGLFY-EFLH-------SYLK-----------------DETA----------
+---------------------HAIAYL-ETL-----------------------------
+--CPEGSPRKDVQTV
+[55] BGC0000668_AHI58831
+NTQYNYVPETLMSAQALLRDKP----------DGTG------------------------
+----------------------------PREDLNGA---GQHR-----------------
+------------DFHAIDILLAGSN-----------------------------------
+-------AIGLFH-EF-H-------SYLK-----------------QETA----------
+---------------------HAIAYL-DTL-----------------------------
+--CPTASPRKDVQTA
+[56] BGC0001126_AHB62781
+-------------------SALSELETA--LAKRMG------------------------
+----------------------------K--ETGGI---HDM------------------
+-----------------DILLACDK-----------------------------------
+-------HAATSY-VLQG-------QIVEAHS-------------ISAGL----------
+---------------------DYIAYL-ESP---R------------------------I
+VINCSGRGDKDVQTA
+[57] 6666666.210650.1066
+VGSS--------------------------------------------------------
+--------------------------------------------------GMCEPTVEE-
+-------VPYAVQLVDAFIIDTRDNVCSGIDLCGENDI---------------EYVLVPL
+-------DPRWLDARLVGADYCGILVNMSSLEQARKVD--------AFIIDTRDNVCSAL
+TTVRPDLCSS----------KDRDKI----------------------------------
+---------------
+[58] BGC0000727_ACK77750
+------------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------
+---------------------EAALLADDISEATEIID--------MFITDSPENVADAI
+RFVKPDAHSL----------KDRAKV----------------------------------
+---------------
+[59] 6666666.210688.603
+ASIE--------------------------------------------------------
+--------------------------------------------------GVHEMQPGR-
+-------LPFAVQFLDVVVLDKPENVREGIDLCGADYI---------------DVVVLDK
+-------SQAKLDAKLAGADYIGVVIEVSTVERAEPID--------VVVLDKPENVREAV
+ESVRPDLCSG----------KSQAKL----------------------------------
+---------------
+[60] 6666666.210110.4652
+AINY--------------------------------------------------------
+--------------------------------------------------GTSKQDTQS-
+-------IVNTIQICDALLLDNPENVREGVDVCGASAV---------------DALLLDL
+-------DENKLEAWMAGASAVGLVSDMPPEELIAEID--------ALLLDNPENVREAI
+SQVAPDVCSG----------LDENKL----------------------------------
+---------------
+[61] 6666666.210421.3274
+AISY--------------------------------------------------------
+--------------------------------------------------GTSKQDAKS-
+-------IVNTIQIVDGLLLDTPDNIQEGVDVCGASAV---------------DGLLLDL
+-------DENKLEAWMAGASAVGLVSDMPPEKLIADID--------GLLLDTPDNIQEAI
+SQVGPDVCSG----------LDENKL----------------------------------
+---------------
+[62] 6666666.211609.644
+VEKY--------------------------------------------------------
+---------------------------------------------------STA-SFEV-
+-------WPEFIQIHDLILLDNPQNVGYGVDVS-ADFT---------------DLILLDK
+-------DKSLIELDLV-ADFTGVIVKSQSLEKAGELD--------LILLDNPQNVGYVV
+SFVNPDVSSG----------KDKSLI----------------------------------
+---------------
+[63] 6666666.211651.348
+IEKY--------------------------------------------------------
+--------------------------------------------------GSTTTEVLA-
+-------WTNYLQMHDRILLDNTDNVSEGVDVS-GDFT---------------DRILLDK
+-------DEGLIELKII-GDFTGVILECVGVESAKNLD--------RILLDNTDNVSEII
+KKVKPDVSSG----------KDEGLI----------------------------------
+---------------
+[64] 6666666.211711.257
+VESY--------------------------------------------------------
+--------------------------------------------------GSTTSEVLV-
+-------WTNYLQMHDRILLDDPDNVFDGVDVS-GNAT---------------DRILLDK
+-------DEELIELEIV-GNATGVILECAGLETAKNLD--------RILLDDPDNVFDIV
+KNVKPDVSSG----------KDEELI----------------------------------
+---------------
+[65] 6666666.211958.601
+VENY--------------------------------------------------------
+--------------------------------------------------GSTTSDVSV-
+-------WTNYLQMHDRILLDDPDNVLKGVDVS-GNAT---------------DRILLDK
+-------DEELIELEIV-GNATGVILECVGFETAKNLD--------RILLDDPDNVLKIV
+KTVKPDVSSG----------KDEELI----------------------------------
+---------------
+[66] 6666666.211537.1162
+VENY--------------------------------------------------------
+--------------------------------------------------GSTTSEVSV-
+-------WTNYLQMHDRILVDDPGNVLNGVDVS-GNAT---------------DRILVDK
+-------DEELIELRIV-GNATGVILECSGLETAKNLD--------RILVDDPGNVLNIV
+KNVKPDVSSG----------KDEELI----------------------------------
+---------------
+[67] 6666666.211608.1033
+VENY--------------------------------------------------------
+--------------------------------------------------GSTASDVSV-
+-------WTNYLQMHDRILLDDPDNVLNGIDVS-GNAT---------------DRILLDK
+-------DEELIELRIV-GNATGVILECAGFETAKNLD--------RILLDDPDNVLNIV
+KYVKPDVSSG----------KDEELI----------------------------------
+---------------
+[68] 6666666.210278.930
+VEKY--------------------------------------------------------
+---------------------------------------------------STLSDFEG-
+-------WTKYIQIHDRVLLDNPENVMEGVDVS-ADAT---------------DRVLLDK
+-------DEDLIELKIV-ADATGVIVEDL--DKAKELD--------RVLLDNPENVMEIT
+EYVQPDVSSG----------KDEDLI----------------------------------
+---------------
+[69] 6666666.211528.1174
+VEKY--------------------------------------------------------
+---------------------------------------------------STVNTYDD-
+-------WTKYIQIHDKILLDNPYNVKEGVDLS-ADAT---------------DKILLDK
+-------DEELIELKIV-ADATGVILKSF--EKAKELD--------KILLDNPYNVKEIV
+EIIKPDLSSG----------KDEELI----------------------------------
+---------------
+[70] 6666666.211957.1116
+VEKY--------------------------------------------------------
+---------------------------------------------------STVNNYNE-
+-------WTKYIQIHDNILLDNPDNIKEGVDLS-ANAT---------------DNILLDK
+-------DESLIELKVV-ANATGVIVKSL--EKAKELD--------NILLDNPDNIKEIV
+KYVQPDLSSG----------KDESLI----------------------------------
+---------------
+[71] 6666666.211587.1809
+VERY--------------------------------------------------------
+---------------------------------------------------STASSYAE-
+-------WCSFAQVHHLILLDNLDNVREGVDVS-ADFT---------------HLILLDK
+-------DEMLVELDAV-ADFTGVVVKE--LDVAKELH--------LILLDNLDNVREAI
+RFVRPDVSSG----------KDEMLV----------------------------------
+---------------
+[72] 6666666.210383.1359
+VERY--------------------------------------------------------
+---------------------------------------------------STASSYAE-
+-------WCSFAQVHHLILLDNLDNVREGVDVS-ADFT---------------HLILLDK
+-------DEMLVELDAV-ADFTGVVVKE--LDVAKELH--------LILLDNLDNVREAI
+RFVRPDVSSG----------KDEMLV----------------------------------
+---------------
+[73] 6666666.211594.1642
+------------------------------------------------------------
+---------------------------------------------------VERYSYAE-
+-------WCSFAQVHHLILLDNLDNVREGVDVS-ADFT---------------HLILLDK
+-------DEMLVELDAV-ADFTGVVVKE--LDVAKELH--------LILLDNLDNVREAI
+RFVRPDVSSG----------KDEMLV----------------------------------
+---------------
+[74] 6666666.210049.1872
+VERY--------------------------------------------------------
+---------------------------------------------------STASSYAE-
+-------WCSFAQVHHLILLDNLDNVREGVDVS-ADFT---------------HLILLDK
+-------DEMLVELDAV-ADFTGVVVKE--LDVAKELH--------LILLDNLDNVREAI
+RFVRPDVSSG----------KDEMLV----------------------------------
+---------------
+[75] 6666666.209992.648
+VERY--------------------------------------------------------
+---------------------------------------------------STARSYEE-
+-------WCNMVQVHHLILLDNVENVVDGVDVS-ADAT---------------HLILLDK
+-------DEELVELEIV-ADATGVVVKSNDLDKAKEIH--------LILLDNVENVVDAI
+NIVKPDVSSG----------KDEELV----------------------------------
+---------------
+[76] 6666666.211926.208
+VEKY--------------------------------------------------------
+---------------------------------------------------STLTDLNA-
+-------WAEYIQIHDLILLDNPQNVAKGVDVS-ANAT---------------DLILLDK
+-------DEKLVELEIV-ANATGVVVETL--EKAREID--------LILLDNPQNVAKIV
+EFVKPDVSSG----------KDEKLV----------------------------------
+---------------
+[77] 6666666.211602.2001
+VEKY--------------------------------------------------------
+---------------------------------------------------STSTSFDE-
+-------WAEFVQVHDYILLDTPENVSRGVDVS-ADFC---------------DYILLDK
+-------DELLVELEIV-ADFCGVVL-SV--ERAKEID--------YILLDTPENVSRVV
+NFVKPDVSSG----------KDELLV----------------------------------
+---------------
+[78] 6666666.211575.999
+VERY--------------------------------------------------------
+-------------------------------------------------------TFPE-
+-------WAEYVQVHDKILLDTPENVGEGVDVS-ADAT---------------DKILLDK
+-------DRDLIELRLV-ADATGVVVNPL--KTAAELD--------KILLDTPENVGEAI
+RWVKPDVSSG----------KDRDLI----------------------------------
+---------------
+[79] 6666666.211691.1511
+VERY--------------------------------------------------------
+-------------------------------------------------------TFPE-
+-------WAEYIQVHDKILLDTPENVGEEVDVS-ADAT---------------DKILLDK
+-------DRVLIELRLV-ADATGVVVNPL--KTAAELD--------KILLDTPENVGEAI
+KWVKPDVSSG----------KDRVLI----------------------------------
+---------------
+[80] 6666666.211595.255
+VERY--------------------------------------------------------
+-------------------------------------------------------TFPE-
+-------WAEYIQVHDKILLDTPENVGEGVDVS-ADAT---------------DKILLDK
+-------DRVLIELRLV-ADATGVVVNPL--KTAAELD--------KILLDTPENVGEAI
+RWVKPDVSSG----------KDRVLI----------------------------------
+---------------
+[81] 6666666.211912.487
+VEKY--------------------------------------------------------
+-------------------------------------------------------NRED-
+-------WARYIQIHDLILLDKPENVEMGVDVS-ADAT---------------DLILLDK
+-------DEELVELEIV-ADATGVVVNPL--DAAREID--------LILLDKPENVEMVI
+KLVKPDVSSG----------KDEELV----------------------------------
+---------------
+[82] 6666666.211611.306
+VEKY--------------------------------------------------------
+---------------------------------------------------STMTSYEE-
+-------WAKYVQVHDRVLLDNPENVRRGVDVS-ADAT---------------DRVLLDK
+-------DESLIELRIV-ADATGVVVKPI--DTAKEID--------RVLLDNPENVRRVI
+EFVRPDVSSG----------KDESLI----------------------------------
+---------------
+[83] 6666666.211555.1990
+VEKY--------------------------------------------------------
+-------------------------------------------------------GFSE-
+-------WAEYIQVHDRILLDRPENVEEGVDVS-ADAT---------------DRILLDK
+-------DESLVELRIV-ADATGVVVNSLSINEARTID--------RILLDRPENVEEVV
+RIVKPDVSSG----------KDESLV----------------------------------
+---------------
+[84] 6666666.211564.2039
+VEKH--------------------------------------------------------
+-------------------------------------------------------GFSE-
+-------WAQYIQVHDMVLLDNAENVEEGVDVS-ADAT---------------DMVLLDK
+-------DPKLVELEIV-ADATGVVVNPL--EKAREID--------MVLLDNAENVEEVI
+KVVKPDVSSG----------KDPKLV----------------------------------
+---------------
+[85] 6666666.211572.1776
+VEKH--------------------------------------------------------
+-------------------------------------------------------GFSE-
+-------WAQYIQVHDMVLLDNAENVEEGVDVS-ADAT---------------DMVLLDK
+-------DPKLVELEIV-ADATGVVVNPL--EKAREID--------MVLLDNAENVEEVI
+KVVKPDVSSG----------KDPKLV----------------------------------
+---------------
+[86] 6666666.211637.1658
+VEKY--------------------------------------------------------
+-------------------------------------------------------GFSE-
+-------WAKYIQIHDRVLLDNPQNVEEGVDVS-ADAT---------------DRVLLDK
+-------DESLVELKIV-ADATGVVVNDL--EKAKKID--------RVLLDNPQNVEEVI
+RKVKPDVSSG----------KDESLV----------------------------------
+---------------
+[87] 6666666.211687.1848
+VNKY--------------------------------------------------------
+--------------------------------------------------NFVNEDLKF-
+-------IIEIAQLHDYFILDNSENIGLAVDLSNIDYI---------------DYFILDK
+-------DEEKIDIDIVNIDYIGFVFSFN---QAKELD--------YFILDNSENIGLAI
+KEFNPDLSSG----------KDEEKI----------------------------------
+---------------
+[88] 6666666.212754.1150
+CNRL--------------------------------------------------------
+--------------------------------------------------HFRNQSLSE-
+-------VIRMIQLHDHIMYDDAGNVEEAVDVSHPDYA---------------DHIMYDK
+-------DPAKMDITVCHPDYAGFVFWSVN--TARALD--------HIMYDDAGNVEEAI
+KELHPDVSSG----------KDPAKM----------------------------------
+---------------
+[89] 6666666.211523.1375
+CNRY--------------------------------------------------------
+--------------------------------------------------GFVDEDVRV-
+-------IIRMVQLHDYSMFDSAENVPDAVDVSGADYA---------------DYSMFDK
+-------DPEKIDAEYCGADYAGFVFWKGSPAAAKDVD--------YSMFDSAENVPDAI
+RTLRPDVSTG----------KDPEKI----------------------------------
+---------------
+[90] 6666666.211682.47
+ANSV--------------------------------------------------------
+--------------------------------------------------LFVNEDAEK-
+-------VIDMVQLHDYLLFDNSSNVWECMDVSLPDYI---------------DYLLFDK
+-------DPAKIDIEAALPDYIGFVFDEK---KAKSLD--------YLLFDNSSNVWEAV
+RTLSPDVSGG----------KDPAKI----------------------------------
+---------------
+[91] 6666666.211557.2462
+AAYC--------------------------------------------------------
+--------------------------------------------------GTHLDDPEK-
+-------IFTAIQLHDAFILDTPENVADGVDANGADAI---------------DAFILDK
+-------DNTKMDVFMAGADAIGLLMGQKNIDLAQKID--------AFILDTPENVADAI
+KIVKPDANTG----------KDNTKM----------------------------------
+---------------
+[92] 6666666.211573.239
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSIQLHDAFILDTPENVGEGVDASGADAV---------------DAFILDK
+-------DKTKVDAIMAGADAVGLVVGQKDKHLAQKID--------AFILDTPENVGEAI
+WFVKPDASSG----------KDKTKV----------------------------------
+---------------
+[93] 6666666.209995.2156
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSIQLHDAFILDTPENVGEGVDASGADAV---------------DAFILDK
+-------DKTKVDAIMAGADAVGLVVGQKDKHLAQKID--------AFILDTPENVGEAI
+WFVKPDASSG----------KDKTKV----------------------------------
+---------------
+[94] 6666666.211713.1679
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSIQLHDAFILDTPENVGEGVDASGADAV---------------DAFILDK
+-------DKTKVDAIMAGADAVGLVVGQKDKHLAQKID--------AFILDTPENVGEAI
+WFVKPDASSG----------KDKTKV----------------------------------
+---------------
+[95] 6666666.211628.2162
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSIQLHDAFILDTPENVGEGVDASGADAV---------------DAFILDK
+-------DKTKVDAIMAGADAVGLVVGQKDKHLAQKID--------AFILDTPENVGEAI
+WFVKPDASSG----------KDKTKV----------------------------------
+---------------
+[96] 6666666.210142.277
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSIQLHDAFILDTPENVREGVDASGADAV---------------DAFILDK
+-------DKMKVDAIMAGADAVGLVVGQKDKHLAQKID--------AFILDTPENVREAI
+RFVKPDASSG----------KDKMKV----------------------------------
+---------------
+[97] 6666666.211654.3432
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSVQLHDAFILDTPENVGEGVDASGADAI---------------DAFILDK
+-------NEMKVDAVMAGADAIGLVVGRKDKHLAQKID--------AFILDTPENVGEAI
+RVVNPDASSG----------KNEMKV----------------------------------
+---------------
+[98] 6666666.210478.3731
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSVQLHDAFILDTPENVGEGVDASGADAI---------------DAFILDK
+-------NEMKVDAVMAGADAIGLVVGRKDKHLAQKID--------AFILDTPENVGEAI
+RVVNPDASSG----------KNEMKV----------------------------------
+---------------
+[99] 6666666.210097.3126
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSVQLHDAFILDTPENVGEGVDASGADAI---------------DAFILDK
+-------NEMKVDAVMAGADAIGLVVGRKDKHLAQKID--------AFILDTPENVGEAI
+RVVNPDASSG----------KNEMKV----------------------------------
+---------------
+[100] 6666666.209965.3525
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSVQLHDAFILDTPENVGEGVDASGADAI---------------DAFILDK
+-------NEMKVDAVMAGADAIGLVVGRKDKHLAQKID--------AFILDTPENVGEAI
+RVVNPDASSG----------KNEMKV----------------------------------
+---------------
+[101] 6666666.210010.2013
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSVQLHDAFILDTPENVGEGVDASGADAI---------------DAFILDK
+-------NEMKVDAVMAGADAIGLVVGRKDKHLAQKID--------AFILDTPENVGEAI
+RVVNPDASSG----------KNEMKV----------------------------------
+---------------
+[102] 6666666.210465.17
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSVQLHDAFILDTPENVGEGVDASGADAI---------------DAFILDK
+-------NEMKVDAVMAGADAIGLVVGRKDKHLAQKID--------AFILDTPENVGEAI
+RVVNPDASSG----------KNEMKV----------------------------------
+---------------
+[103] 6666666.210179.1446
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSVQLHDAFILDTPENVGEGVDASGADAI---------------DAFILDK
+-------NEMKVDAVMAGADAIGLVVGRKDKHLAQKID--------AFILDTPENVGEAI
+RVVNPDASSG----------KNEMKV----------------------------------
+---------------
+[104] 6666666.210000.653
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSVQLHDAFILDTPENVGEGVDASGADAI---------------DAFILDK
+-------NEMKVDAVMAGADAIGLVVGRKDKHLAQKID--------AFILDTPENVGEAI
+RVVNPDASSG----------KNEMKV----------------------------------
+---------------
+[105] 6666666.211638.1508
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSVQLHDAFILDTPENVGEGVDASGADAI---------------DAFILDK
+-------DEMKVDAVMAGADAIGLVVGPKDKHLAQKID--------AFILDTPENVGEAI
+RVVNPDASSG----------KDEMKV----------------------------------
+---------------
+[106] 6666666.210194.2913
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSVQLHDAFILDTPENVGEGVDASGADAI---------------DAFILDK
+-------DEMKVDAVMAGADAIGLVVGRKDKHLAQKID--------AFILDTPENVGEAI
+RVVNPDASSG----------KDEMKV----------------------------------
+---------------
+[107] 6666666.210351.814
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSVQLHDAFILDTPENVGEGVDASGADAI---------------DAFILDK
+-------DEMKVDAVMAGADAIGLVVGRKDKHLAQKID--------AFILDTPENVGEAI
+RVVNPDASSG----------KDEMKV----------------------------------
+---------------
+[108] 6666666.211548.2213
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSVQLHDAFILDTPENVGEGVDASGADAI---------------DAFILDK
+-------DEMKVDAVMAGADAIGLVVGRKDKHLAQKID--------AFILDTPENVGEAI
+RVVNPDASSG----------KDEMKV----------------------------------
+---------------
+[109] 6666666.210028.2412
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSVQLHDAFILDTPENVGEGVDASGADAI---------------DAFILDK
+-------DEMKVDAVMAGADAIGLVVGRKDKHLAQKID--------AFILDTPENVGEAI
+RVVNPDASSG----------KDEMKV----------------------------------
+---------------
+[110] 6666666.210096.1880
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSVQLHDAFILDTPENVGEGVDASGADAI---------------DAFILDK
+-------DEMKVDAVMAGADAIGLVVGRKDKHLAQKID--------AFILDTPENVGEAI
+RVVNPDASSG----------KDEMKV----------------------------------
+---------------
+[111] 6666666.210203.1990
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSVQLHDAFILDTPENVGEGVDASGADAI---------------DAFILDK
+-------DEMKVDAVMAGADAIGLVVGRKDKHLAQKID--------AFILDTPENVGEAI
+RVVNPDASSG----------KDEMKV----------------------------------
+---------------
+[112] 6666666.210039.2726
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSVQLHDAFILDTPENVGEGVDASGADAI---------------DAFILDK
+-------DEMKVDAVMAGADAIGLVVGRKDKHLAQKID--------AFILDTPENVGEAI
+RVVNPDASSG----------KDEMKV----------------------------------
+---------------
+[113] 6666666.209976.3680
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSVQLHDAFILDTPENVGEGVDASGADAI---------------DAFILDK
+-------DEMKVDAVMAGADAIGLVVGRKDKHLAQKID--------AFILDTPENVGEAI
+RVVNPDASSG----------KDEMKV----------------------------------
+---------------
+[114] 6666666.210605.3588
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSVQLHDAFILDTPENVGEGVDASGADAI---------------DAFILDK
+-------DEMKVDAVMAGADAIGLVVGRKDKHLAQKID--------AFILDTPENVGEAI
+RVVNPDASSG----------KDEMKV----------------------------------
+---------------
+[115] 6666666.211522.3221
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSVQLHDAFILDTPENVGEGVDASGADAI---------------DAFILDK
+-------DEMKVDAVMAGADAIGLVVGRKDKHLAQKID--------AFILDTPENVGEAI
+RVVNPDASSG----------KDEMKV----------------------------------
+---------------
+[116] 6666666.210443.1641
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSVQLHDAFILDTPENVGEGVDASGADAI---------------DAFILDK
+-------DEMKVDAVMAGADAIGLVVGRKDKHLAQKID--------AFILDTPENVGEAI
+RVVNPDASSG----------KDEMKV----------------------------------
+---------------
+[117] 6666666.210565.2290
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSVQLHDAFILDTPENVGEGVDASGADAI---------------DAFILDK
+-------DEMKVDAVMAGADAIGLVVGRKDKHLAQKID--------AFILDTPENVGEAI
+RVVNPDASSG----------KDEMKV----------------------------------
+---------------
+[118] 6666666.210542.967
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSVQLHDAFILDTPENVGEGVDASGADAI---------------DAFILDK
+-------DEMKVDAVMAGADAIGLVVGRKDKHLAQKID--------AFILDTPENVGEAI
+RVVNPDASSG----------KDEMKV----------------------------------
+---------------
+[119] 6666666.210075.2389
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSVQLHDAFILDTPENVGEGVDASGADAI---------------DAFILDK
+-------DEMKVDAVMAGADAIGLVVGRKDKHLAQKID--------AFILDTPENVGEAI
+RVVNPDASSG----------KDEMKV----------------------------------
+---------------
+[120] 6666666.209928.2294
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSVQLHDAFILDTPENVGEGVDASGADAI---------------DAFILDK
+-------DEMKVDAVMAGADAIGLVVGRKDKHLAQKID--------AFILDTPENVGEAI
+RVVNPDASSG----------KDEMKV----------------------------------
+---------------
+[121] 6666666.212746.1144
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSVQLHDAFILDTPENVGEGVDASGADAI---------------DAFILDK
+-------DEMKVDAVMAGADAIGLVVGRKDKHLAQKID--------AFILDTPENVGEAI
+RVVNPDASSG----------KDEMKV----------------------------------
+---------------
+[122] 6666666.210305.797
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSVQLHDAFILDTPENVGEGVDASGADAI---------------DAFILDK
+-------DEMKVDAVMAGADAIGLVVGRKDKHLAQKID--------AFILDTPENVGEAI
+RVVNPDASSG----------KDEMKV----------------------------------
+---------------
+[123] 6666666.210263.236
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSVQLHDAFILDTPENVGEGVDASGADAI---------------DAFILDK
+-------DEMKVDAVMAGADAIGLVVGRKDKHLAQKID--------AFILDTPENVGEAI
+RVVNPDASSG----------KDEMKV----------------------------------
+---------------
+[124] 6666666.210144.2232
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSVQLHDAFILDTPENVGEGVDASGADAI---------------DAFILDK
+-------DEMKVDAVMAGADAIGLVVGRKDKHLAQKID--------AFILDTPENVGEAI
+RVVNPDASSG----------KDEMKV----------------------------------
+---------------
+[125] 6666666.209984.1233
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSVQLHDAFILDTPENVGEGVDASGADAI---------------DAFILDK
+-------DEMKVDAVMAGADAIGLVVGRKDKHLAQKID--------AFILDTPENVGEAI
+RVVNPDASSG----------KDEMKV----------------------------------
+---------------
+[126] 6666666.209957.2484
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSVQLHDAFILDTPENVGEGVDASGADAI---------------DAFILDK
+-------DEMKVDAVMAGADAIGLVVGRKDKHLAQKID--------AFILDTPENVGEAI
+RVVNPDASSG----------KDEMKV----------------------------------
+---------------
+[127] 6666666.210530.3601
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSVQLHDAFILDTPENVGEGVDASGADAI---------------DAFILDK
+-------DEMKVDAVMAGADAIGLVVGRKDKHLAQKID--------AFILDTPENVGEAI
+RVVNPDASSG----------KDEMKV----------------------------------
+---------------
+[128] 6666666.210286.652
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSVQLHDAFILDTPENVGEGVDASGADAI---------------DAFILDK
+-------DEMKVDAVMAGADAIGLVVGRKDKHLAQKID--------AFILDTPENVGEAI
+RVVNPDASSG----------KDEMKV----------------------------------
+---------------
+[129] 6666666.211695.1604
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSVQLHDAFILDTPENVGEGVDASGADAI---------------DAFILDK
+-------DEMKVDAVMAGADAIGLVVGRKDKHLAQKID--------AFILDTPENVGEAI
+RVVNPDASSG----------KDEMKV----------------------------------
+---------------
+[130] 6666666.210192.2833
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSVQLHDAFILDTPENVGEGVDASGADAI---------------DAFILDK
+-------DEMKVDAVMAGADAIGLVVGRKDKHLAQKID--------AFILDTPENVGEAI
+RVVNPDASSG----------KDEMKV----------------------------------
+---------------
+[131] 6666666.210268.2189
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSVQLHDAFILDTPENVGEGVDASGADAI---------------DAFILDK
+-------DEMKVDAVMAGADAIGLVVGRKDKHLAQKID--------AFILDTPENVGEAI
+RVVNPDASSG----------KDEMKV----------------------------------
+---------------
+[132] 6666666.210296.1047
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSVQLHDAFILDTPENVGEGVDASGADAI---------------DAFILDK
+-------DEMKVDAVMAGADAIGLVVGRKDKHLAQKID--------AFILDTPENVGEAI
+RVVNPDASSG----------KDEMKV----------------------------------
+---------------
+[133] 6666666.210254.1327
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSVQLHDAFILDTPENVGEGVDASGADAI---------------DAFILDK
+-------DEMKVDAVMAGADAIGLVVGRKDKHLAQKID--------AFILDTPENVGEAI
+RVVNPDASSG----------KDEMKV----------------------------------
+---------------
+[134] 6666666.210178.5489
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSVQLHDAFILDTPENVGEGVDASGADAI---------------DAFILDK
+-------DEMKVDAVMAGADAIGLVVGRKDKHLAQKID--------AFILDTPENVGEAI
+RVVNPDASSG----------KDEMKV----------------------------------
+---------------
+[135] 6666666.210365.3468
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSVQLHDAFILDTPENVGEGVDASGADAI---------------DAFILDK
+-------DEMKVDAVMAGADAIGLVVGRKDKHLAQKID--------AFILDTPENVGEAI
+RVVNPDASSG----------KDEMKV----------------------------------
+---------------
+[136] 6666666.210242.2937
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSVQLHDAFILDTPENVGEGVDASGADAI---------------DAFILDK
+-------DEMKVDAVMAGADAIGLVVGRKDKHLAQKID--------AFILDTPENVGEAI
+RVVNPDASSG----------KDEMKV----------------------------------
+---------------
+[137] 6666666.210086.728
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSVQLHDAFILDTPENVGEGVDASGADAI---------------DAFILDK
+-------DEMKVDAVMAGADAIGLVVGRKDKHLAQKID--------AFILDTPENVGEAI
+RVVNPDASSG----------KDEMKV----------------------------------
+---------------
+[138] 6666666.209946.1603
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSVQLHDAFILDTPENVGEGVDASGADAI---------------DAFILDK
+-------DEMKVDAVMAGADAIGLVVGRKDKHLAQKID--------AFILDTPENVGEAI
+RVVNPDASSG----------KDEMKV----------------------------------
+---------------
+[139] 6666666.211665.1604
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSVQLHDAFILDTPENVGEGVDASGADAI---------------DAFILDK
+-------DEMKVDAVMAGADAIGLVVGRKDKHLAQKID--------AFILDTPENVGEAI
+RVVNPDASSG----------KDEMKV----------------------------------
+---------------
+[140] 6666666.210481.3553
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSVQLHDAFILDTPENVGEGVDASGADAI---------------DAFILDK
+-------DEMKVDAVMAGADAIGLVVGRKDKHLAQKID--------AFILDTPENVGEAI
+RVVNPDASSG----------KDEMKV----------------------------------
+---------------
+[141] 6666666.210078.1196
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSVQLHDAFILDTPENVGEGVDASGADAI---------------DAFILDK
+-------DEMKVDAVMAGADAIGLVVGRKDKHLAQKID--------AFILDTPENVGEAI
+RVVNPDASSG----------KDEMKV----------------------------------
+---------------
+[142] 6666666.210080.3637
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSVQLHDAFILDTPENVGEGVDASGADAI---------------DAFILDK
+-------DEMKVDAVMAGADAIGLVVGRKDKHLAQKID--------AFILDTPENVGEAI
+RVVNPDASSG----------KDEMKV----------------------------------
+---------------
+[143] 6666666.210617.2026
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSVQLHDAFILDTPENVGEGVDASGADAI---------------DAFILDK
+-------DEMKVDAVMAGADAIGLVVGRKDKHLAQKID--------AFILDTPENVGEAI
+RVVNPDASSG----------KDEMKV----------------------------------
+---------------
+[144] 6666666.210020.3345
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSVQLHDAFILDTPENVGEGVDASGADAI---------------DAFILDK
+-------DEMKVDAVMAGADAIGLVVGRKDKHLAQKID--------AFILDTPENVGEAI
+RVVNPDASSG----------KDEMKV----------------------------------
+---------------
+[145] 6666666.210491.2780
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSVQLHDAFILDTPENVGEGVDASGADAI---------------DAFILDK
+-------DEMKVDAVMAGADAIGLVVGRKDKHLAQKID--------AFILDTPENVGEAI
+RVVNPDASSG----------KDEMKV----------------------------------
+---------------
+[146] 6666666.210307.1246
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSVQLHDAFILDTPENVGEGVDASGADAI---------------DAFILDK
+-------DEMKVDAVMAGADAIGLVVGRKDKHLAQKID--------AFILDTPENVGEAI
+RVVNPDASSG----------KDEMKV----------------------------------
+---------------
+[147] 6666666.210615.1381
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSVQLHDAFILDTPENVGEGVDASGADAI---------------DAFILDK
+-------DEMKVDAVMAGADAIGLVVGRKDKHLAQKID--------AFILDTPENVGEAI
+RVVNPDASSG----------KDEMKV----------------------------------
+---------------
+[148] 6666666.210026.2234
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSVQLHDAFILDTPENVGEGVDASGADAI---------------DAFILDK
+-------DEMKVDAVMAGADAIGLVVGRKDKHLAQKID--------AFILDTPENVGEAI
+RVVNPDASSG----------KDEMKV----------------------------------
+---------------
+[149] 6666666.209968.1384
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSVQLHDAFILDTPENVGEGVDASGADAI---------------DAFILDK
+-------DEMKVDAVMAGADAIGLVVGRKDKHLAQKID--------AFILDTPENVGEAI
+RVVNPDASSG----------KDEMKV----------------------------------
+---------------
+[150] 6666666.210517.1564
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSVQLHDAFILDTPENVGEGVDASGADAI---------------DAFILDK
+-------DEMKVDAVMAGADAIGLVVGRKDKHLAQKID--------AFILDTPENVGEAI
+RVVNPDASSG----------KDEMKV----------------------------------
+---------------
+[151] 6666666.210308.241
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSVQLHDAFILDTPENVGEGVDASGADAI---------------DAFILDK
+-------DEMKVDAVMAGADAIGLVVGRKDKHLAQKID--------AFILDTPENVGEAI
+RVVNPDASSG----------KDEMKV----------------------------------
+---------------
+[152] 6666666.210343.2396
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSVQLHDAFILDTPENVGEGVDASGADAI---------------DAFILDK
+-------DEMKVDAVMAGADAIGLVVGRKDKHLAQKID--------AFILDTPENVGEAI
+RVVNPDASSG----------KDEMKV----------------------------------
+---------------
+[153] 6666666.211631.3824
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSVQLHDAFILDTPENVGEGVDASGADAI---------------DAFILDK
+-------DEMKVDAVMAGADAIGLVVGRKDKHLAQKID--------AFILDTPENVGEAI
+RVVNPDASSG----------KDEMKV----------------------------------
+---------------
+[154] 6666666.210034.2754
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSVQLHDAFILDTPENVGEGVDASGADAI---------------DAFILDK
+-------DEMKVDAVMAGADAIGLVVGRKDKHLAQKID--------AFILDTPENVGEAI
+RVVNPDASSG----------KDEMKV----------------------------------
+---------------
+[155] 6666666.210006.1060
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSVQLHDAFILDTPENVGEGVDASGADAI---------------DAFILDK
+-------DEMKVDAVMAGADAIGLVVGRKDKHLAQKID--------AFILDTPENVGEAI
+RVVNPDASSG----------KDEMKV----------------------------------
+---------------
+[156] 6666666.210257.1467
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSVQLHDAFILDTPENVGEGVDASGADAI---------------DAFILDK
+-------DEMKVDAVMAGADAIGLVVGRKDKHLAQKID--------AFILDTPENVGEAI
+RVVNPDASSG----------KDEMKV----------------------------------
+---------------
+[157] 6666666.210054.2043
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSVQLHDAFILDTPENVGEGVDASGADAI---------------DAFILDK
+-------DEMKVDAVMAGADAIGLVVGRKDKHLAQKID--------AFILDTPENVGEAI
+RVVNPDASSG----------KDEMKV----------------------------------
+---------------
+[158] 6666666.210597.3268
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSVQLHDAFILDTPENVGEGVDASGADAI---------------DAFILDK
+-------DEMKVDAVMAGADAIGLVVGRKDKHLAQKID--------AFILDTPENVGEAI
+RVVNPDASSG----------KDEMKV----------------------------------
+---------------
+[159] 6666666.210499.62
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSVQLHDAFILDTPENVGEGVDASGADAI---------------DAFILDK
+-------DEMKVDAVMAGADAIGLVVGRKDKHLAQKID--------AFILDTPENVGEAI
+RVVNPDASSG----------KDEMKV----------------------------------
+---------------
+[160] 6666666.210077.2261
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSVQLHDAFILDTPENVGEGVDASGADAI---------------DAFILDK
+-------DEMKVDAVMAGADAIGLVVGRKDKHLAQKID--------AFILDTPENVGEAI
+RVVNPDASSG----------KDEMKV----------------------------------
+---------------
+[161] 6666666.209936.2331
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSVQLHDAFILDTPENVGEGVDASGADAI---------------DAFILDK
+-------DEMKVDAVMAGADAIGLVVGRKDKHLAQKID--------AFILDTPENVGEAI
+RVVNPDASSG----------KDEMKV----------------------------------
+---------------
+[162] 6666666.210465.3769
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSIQLHDAFILDTPENVGEGVDASGVDAI---------------DAFILDK
+-------DEKKVDAIMAGVDAIGLVVGQKDKHLAQKID--------AFILDTPENVGEAI
+RFVKPDASSG----------KDEKKV----------------------------------
+---------------
+[163] 6666666.210478.1656
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDDAEE-
+-------IVTSIQLHDAFILDTPENVGEGVDASGVDAI---------------DAFILDK
+-------DEKKVDAIMAGVDAIGLVVGQKDKHLAQKID--------AFILDTPENVGEAI
+RFVKPDASSG----------KDEKKV----------------------------------
+---------------
+[164] 6666666.211623.146
+AAYC--------------------------------------------------------
+--------------------------------------------------GTELDNAKE-
+-------IATSIQLHDAFILDTPENVGEGVDASGADAI---------------DAFILDK
+-------DETKVDAIMAGADAIGLVVGQKDKHLAQKID--------AFILDTPENVGEAI
+RFVKPDASSG----------KDETKV----------------------------------
+---------------
+[165] 6666666.210260.1309
+AVDA--------------------------------------------------------
+--------------------------------------------------GTHLQETQD-
+-------LCTTLQVQDALLLDTPENVGAGVDVHGCDAV---------------DALLLDR
+-------NPDRTDMECAGCDAVGFIMGVTTAAEAAKMD--------ALLLDTPENVGAAI
+RKVRPDVHTG----------RNPDRT----------------------------------
+---------------
+[166] 6666666.210176.1935
+AVDA--------------------------------------------------------
+--------------------------------------------------GTHLQETKD-
+-------LCTTLQVQDALLLDTPENVGTGVDVHGCDAV---------------DALLLDR
+-------NRERTDMECAGCDAVGFIMGVTTPAEAARMD--------ALLLDTPENVGTAI
+RKVRPDVHTG----------RNRERT----------------------------------
+---------------
+[167] 6666666.210058.4169
+AVDA--------------------------------------------------------
+--------------------------------------------------GTHLQETDD-
+-------LCTTLQVQDALLLDTPENVREGVDVHGCDAV---------------DALLLDR
+-------NPERTDMRCAGCDAVGFIMGVTTAAEAARMD--------ALLLDTPENVREAI
+RKVRPDVHTG----------RNPERT----------------------------------
+---------------
+[168] 6666666.210544.2501
+AIDA--------------------------------------------------------
+--------------------------------------------------GTHLQETQD-
+-------LCTTLQVQDALLLDTPENVREGVDVHGCDAV---------------DALLLDR
+-------NPERTDMRCAGCDAVGFIMGVTTAAEAAKMD--------ALLLDTPENVREAI
+RKVRPDVHTG----------RNPERT----------------------------------
+---------------
+[169] 6666666.211612.2018
+AIDA--------------------------------------------------------
+--------------------------------------------------GTHLQETQD-
+-------LCTTLQVQDALLLDTPENVREGVDVHGCDAV---------------DALLLDR
+-------NPERTDMRCAGCDAVGFIMGVTTAAEAAKMD--------ALLLDTPENVREAI
+RKVRPDVHTG----------RNPERT----------------------------------
+---------------
+[170] 6666666.210104.129
+------------------------------------------------------------
+---------------------------------------------------THLQDTED-
+-------LCTTLQIQDALILDTPENVAEGVDVH----M---------------DALILDR
+-------NPERT---------MGFIMGVTTPAETARMD--------ALILDTPENVAEAI
+RKVRPDVHTG----------RNPERT----------------------------------
+---------------
+[171] 6666666.210125.1439
+AIDA--------------------------------------------------------
+--------------------------------------------------GTHLQDTED-
+-------LCTTLQIQDALILDTPENVAEGVDVHGCDAM---------------DALILDR
+-------NPERT-MQCAGCDAMGFIMGVTTPAETARMD--------ALILDTPENVAEAI
+RKVRPDVHTG----------RNPERT----------------------------------
+---------------
+[172] 6666666.210480.2007
+AVDA--------------------------------------------------------
+--------------------------------------------------GTHLQETED-
+-------LCTTLQIQDALILDTPENVREGVDVHGCDAL---------------DALILDR
+-------NLERTDMQCAGCDALGFIMGVTTPAEAAKMD--------ALILDTPENVREAI
+RKVRPDVHTG----------RNLERT----------------------------------
+---------------
+[173] 6666666.211568.269
+AVDA--------------------------------------------------------
+--------------------------------------------------GTHLQETED-
+-------LCTTLQIQNALILDTPENVREGVDVHGCDAL---------------NALILDR
+-------NPERTDMQCAGCDALGFIMGVTTPKEAAKMN--------ALILDTPENVREAI
+RKVRPDVHTG----------RNPERT----------------------------------
+---------------
+[174] 6666666.211600.257
+AIDA--------------------------------------------------------
+--------------------------------------------------GTHLQETED-
+-------LCTTLQIQNALILDTPENVREGVDVHGCDAL---------------NALILDR
+-------NPERTDMQCAGCDALGFIMGVTTPKEAAKMN--------ALILDTPENVREAI
+RKVRPDVHTG----------RNPERT----------------------------------
+---------------
+[175] 6666666.211620.1755
+AVDA--------------------------------------------------------
+--------------------------------------------------GTHLQDASS-
+-------ICTTVQIQDAIILDTPENVGAAVDVHGTDAV---------------DAIILDR
+-------DAEKTDLKCAGTDAVGFLMGITTPEEAAAMD--------AIILDTPENVGAAI
+ERVHPDVHTG----------RDAEKT----------------------------------
+---------------
+[176] 6666666.210355.101
+AVDA--------------------------------------------------------
+--------------------------------------------------GTHLQDARS-
+-------ICTALQIQDAIILDTPENVASAVDVHGTDAV---------------DAIILDR
+-------DALKTDLKCAGTDAVGFLMGITSPEEAAAMD--------AIILDTPENVASAI
+RQVRPDVHTG----------RDALKT----------------------------------
+---------------
+[177] 6666666.210525.1389
+SSGT--------------------------------------------------------
+--------------------------------------------------NF--RDASM-
+-------LPEVLQISDAVMLDDSDNVEYAVDVSGADYN---------------DAVMLDK
+-------DPERVDVEM-GADYNGFVVNAGTVEKARDLD--------AVMLDDSDNVEYAV
+RAVGPDVSSG----------KDPERV----------------------------------
+---------------
+[178] 6666666.210710.673
+AAKL--------------------------------------------------------
+--------------------------------------------------GTTSENIHE-
+-------VIRTIQTIKAIVIDNEKNVVEGVDVSGAHAL---------------KAIVIDK
+-------DPVKMDMHIAGAHALGFIFNIPTFEEAKNLK--------AIVIDNEKNVVEAI
+TKVEPDVSSG----------KDPVKM----------------------------------
+---------------
+[179] 6666666.210655.569
+AAKL--------------------------------------------------------
+--------------------------------------------------GTTLENIHE-
+-------VIRTIQTIKAIVIDNEKNVVEGVDVSGAHAL---------------KAIVIDK
+-------DSVKMDMHIAGAHALGFIFNIPTFEEAKNLK--------AIVIDNEKNVVEAI
+TKVEPDVSSG----------KDSVKM----------------------------------
+---------------
+[180] 6666666.210640.277
+AIIS--------------------------------------------------------
+--------------------------------------------------GIVSSSAKE-
+-------VTSAVQIHDLLLLDTPQNVEQAVDVSGADAI---------------DLLLLDK
+-------DEVLIDVYSAGADAIGCIVGVPSLNRTKELD--------LLLLDTPQNVEQAV
+REVRPDVSSG----------KDEVLI----------------------------------
+---------------
+[181] 6666666.209959.961
+AEEL--------------------------------------------------------
+--------------------------------------------------GTD-TRSES-
+-------DPDAIQLHNMVLVDNPENVEDAVDVSGADAI---------------NMVLVDK
+-------DPKRVDALTAGADAIGVVV--CPVKRAKEIN--------MVLVDNPENVEDAI
+RTISPDVSSG----------KDPKRV----------------------------------
+---------------
+[182] 6666666.211692.949
+AEEL--------------------------------------------------------
+--------------------------------------------------GTD-TRSES-
+-------DPDAIQLHNMVLVDNPENVEDAVDVSGADAI---------------NMVLVDK
+-------DPKRVDALTAGADAIGVVV--CPVKRAKEIN--------MVLVDNPENVEDAI
+RTISPDVSSG----------KDPKRV----------------------------------
+---------------
+[183] 6666666.210033.1030
+IESC--------------------------------------------------------
+--------------------------------------------------GTSPEELER-
+-------IPTAIQISDAVILDNPSNVAAAVDVCGADAL---------------DAVILDK
+-------DKQKVDAKFIGADALGVVISTF--ERAGEID--------AVILDNPSNVAAAI
+DEVHPDVCSG----------KDKQKV----------------------------------
+---------------
+[184] 6666666.210092.3311
+AETS--------------------------------------------------------
+--------------------------------------------------GTHTESEDE-
+-------MPSAIQVSDAIIIDNPENVGEAVDVCGADAV---------------DAIIIDK
+-------DRFLVDALFAGADAVGVVISTA--GEAKEID--------AIIIDNPENVGEAI
+RKLSPDVCSG----------KDRFLV----------------------------------
+---------------
+[185] 6666666.211692.1377
+AERS--------------------------------------------------------
+--------------------------------------------------GTH-TNSQD-
+-------LPSAIQVSDAIIIDNMSNVPAAVDVCGADAI---------------DAIIIDK
+-------DPMKVDALFAGADAIGVVI--SSTEDAKEID--------AIIIDNMSNVPAAI
+SRLQPDVCSG----------KDPMKV----------------------------------
+---------------
+[186] 6666666.209959.2519
+AERS--------------------------------------------------------
+--------------------------------------------------GTH-TNSQD-
+-------LPSAIQVSDAVIIDNPSNVQAAVDVCGADAI---------------DAVIIDK
+-------DPMMVDALFAGADAIGVVI--SSTEDAKEID--------AVIIDNPSNVQAAI
+SRLQPDVCSG----------KDPMMV----------------------------------
+---------------
+[187] 6666666.211612.77
+AVAA--------------------------------------------------------
+--------------------------------------------------GTSTDRPED-
+-------LPDVVQVADAVIVDTPGNVAEAVDVCGADAI---------------DAVIVDK
+-------DERLVDALLAGADAIGVVLASPTPEAASEID--------AVIVDTPGNVAEAI
+LAVRPDVCSG----------KDERLV----------------------------------
+---------------
+[188] 6666666.210260.1845
+AVAA--------------------------------------------------------
+--------------------------------------------------GTSTDRPED-
+-------VPDAVQVPDAVIVDTPHNVADGVDVCGADAI---------------DAVIVDK
+-------DERLVDALLAGADAIGVVLASPTPEAAREID--------AVIVDTPHNVADAI
+LAVRPDVCSG----------KDERLV----------------------------------
+---------------
+[189] 6666666.210544.1094
+AVAA--------------------------------------------------------
+--------------------------------------------------GTSTDRPED-
+-------IPDAVQVPDAVIVDTPGNVAEAVDVCGADAI---------------DAVIVDK
+-------DECLVDALLAGADAIGVVLASPSPEVAREID--------AVIVDTPGNVAEAI
+LAVRPDVCSG----------KDECLV----------------------------------
+---------------
+[190] 6666666.210176.502
+AVAA--------------------------------------------------------
+--------------------------------------------------GTSTDRPED-
+-------IPDVVQVPDAVIVDTPGNVADAVDVCGADAI---------------DAVIVDK
+-------DERLMDALLAGADAIGVVLASPSPEVARGID--------AVIVDTPGNVADAI
+LAVRPDVCSG----------KDERLM----------------------------------
+---------------
+[191] 6666666.210381.58
+AAAA--------------------------------------------------------
+--------------------------------------------------GTSTDREED-
+-------LPDAVQVADAVVVDSPGNVAAAVDVAGADAI---------------DAVVVDK
+-------DERLMDARAAGADAIGVVLASPTPELAREID--------AVVVDSPGNVAAAI
+RAVRPDVASG----------KDERLM----------------------------------
+---------------
+[192] 6666666.209958.601
+AVAA--------------------------------------------------------
+--------------------------------------------------GTSTDRPED-
+-------LPDAVQVGDAVVIDAPGNVGEAVDVAGADAI---------------DAVVIDK
+-------DERLMDALLAGADAIGVVLASPTPDLAREID--------AVVIDAPGNVGEAI
+RAVRPDVASG----------KDERLM----------------------------------
+---------------
+[193] 6666666.210288.550
+AVAA--------------------------------------------------------
+--------------------------------------------------GTSTDRPED-
+-------LPDAVQVGDAVVIDAPGNVGEAVDVAGADAI---------------DAVVIDK
+-------DERLMDALLAGADAIGVVLASPTPDLAREID--------AVVIDAPGNVGEAI
+RAVRPDVASG----------KDERLM----------------------------------
+---------------
+[194] 6666666.211600.1546
+AADF--------------------------------------------------------
+--------------------------------------------------GTATTSAAG-
+-------IPGVVQVPDAVVVDTPENVRNGVDVAGADAI---------------DAVVVDK
+-------DPRRVDALMAGADAIGVVLESPSPERAAAID--------AVVVDTPENVRNAI
+DALRPDVASG----------KDPRRV----------------------------------
+---------------
+[195] 6666666.210480.1950
+VADC--------------------------------------------------------
+--------------------------------------------------GTAT-TADA-
+-------EPGAIQVPDAVVVDTPENVGEAVDVAGADAI---------------DAVVVDK
+-------DPGRVDAIMVGADAIGVVLATPTPERAAAID--------AVVVDTPENVGEAI
+DTFHPDVASG----------KDPGRV----------------------------------
+---------------
+[196] 6666666.209937.870
+AEAA--------------------------------------------------------
+--------------------------------------------------GTHTERESD-
+-------LPDAVQISDAVILDTPDNVADAVDVCGTDAI---------------DAVILDK
+-------DHRRIDARAAGTDAIGVVVCSDPLEYAGEID--------AVILDTPDNVADAI
+AAVGPDVCSG----------KDHRRI----------------------------------
+---------------
+[197] 6666666.211584.244
+AEKA--------------------------------------------------------
+--------------------------------------------------GTHTESESD-
+-------LPDAIQISDAVIVDTPENVGLAVDVAGADAI---------------DAVIVDK
+-------DHTKIDVLFAGADAIGVVMYSPPDAKAREID--------AVIVDTPENVGLAI
+REIRPDVASG----------KDHTKI----------------------------------
+---------------
+[198] 6666666.211699.2919
+AEEA--------------------------------------------------------
+--------------------------------------------------GSHTTSEDE-
+-------LPDAIQISDAIIVDTPENVGAAVDVAGADAI---------------DAIIVDK
+-------DHKKIDARFAGADAIGVVVCSGPLEQAKKID--------AIIVDTPENVGAAI
+REVRPDVASG----------KDHKKI----------------------------------
+---------------
+[199] 6666666.210112.283
+ACEL--------------------------------------------------------
+--------------------------------------------------GIMPKDLDE-
+-------VPDYLQIHDYVLLDNPSNVGQGVDVAGVDMV---------------DYVLLDK
+-------DAGLMDVKVAGVDMVGAIMVPRTARQARPID--------YVLLDNPSNVGQAI
+KIVRPDVATG----------KDAGLM----------------------------------
+---------------
+[200] 6666666.210261.1305
+ACQL--------------------------------------------------------
+--------------------------------------------------GFAPHRPED-
+-------IPDYLQFHDFLLIDNPSNVGQGVDVAGVDLV---------------DFLLIDK
+-------DPKLMDAKQAGVDLVGVILVPESIDAARDID--------FLLIDNPSNVGQAI
+KMVRPDVATG----------KDPKLM----------------------------------
+---------------
+[201] 6666666.210686.194
+AYEA--------------------------------------------------------
+--------------------------------------------------GGMPGDLSE-
+-------GPDYLQMHDFILLDNPSNVREGVDVAGADMI---------------DFILLDK
+-------DPEKVDVKTAGADMIGVIVNAKDYDEARKID--------FILLDNPSNVREAI
+EKVQPDVASG----------KDPEKV----------------------------------
+---------------
+[202] 6666666.210713.168
+VCES--------------------------------------------------------
+--------------------------------------------------GGMPENLSE-
+-------GPDYLQLHDYLLLDNPSNVREGVDAAGADMV---------------DYLLLDK
+-------DQEKVDVEMVGADMVGVIVNAKDYRKARRVD--------YLLLDNPSNVREAI
+KKVEPDAASG----------KDQEKV----------------------------------
+---------------
+[203] 6666666.210642.567
+ADEL--------------------------------------------------------
+--------------------------------------------------GTMPESFED-
+-------GVDYLQIHDLLLLDNPFNVGEGVDVAGADMI---------------DLLLLDK
+-------DPELVDARLAGADMIGIIVGVSSLVQARRID--------LLLLDNPFNVGEAI
+REVEPDVASG----------KDPELV----------------------------------
+---------------
+[204] 6666666.210653.433
+ADEL--------------------------------------------------------
+--------------------------------------------------GTMPESFED-
+-------GVDYLQIHDLLLLDNPFNVGEGVDVAGADMI---------------DLLLLDK
+-------DPELVDARLAGADMIGIIVGVSSLVQARRID--------LLLLDNPFNVGEAI
+REVEPDVASG----------KDPELV----------------------------------
+---------------
+[205] 6666666.210664.63
+ARDL--------------------------------------------------------
+--------------------------------------------------GTMPETLEE-
+-------VPDYLQIHDFVLLDNPSNVQRGVDVSGADLV---------------DFVLLDK
+-------DPDLLDAKMAGADLVGVIVNVTSSGKAEDID--------FVLLDNPSNVQRAL
+EKVNPDVSSG----------KDPDLL----------------------------------
+---------------
+[206] 6666666.210706.562
+VCNN--------------------------------------------------------
+--------------------------------------------------GTMPENVQE-
+-------VSDYLQIHDLLLIDNPSNVGLAVDAAGADFV---------------DLLLIDK
+-------DSRLVDAQMVGADFVGAIVDVKSPTKARKID--------LLLIDNPSNVGLAI
+EKVKPDAASG----------KDSRLV----------------------------------
+---------------
+[207] 6666666.210692.274
+VCNN--------------------------------------------------------
+--------------------------------------------------GTMPENVQE-
+-------VSDYLQIHDLLLLDNPSNVGA-------DFV---------------DLLLLD-
+------------DAQKVGADFVGVIVDVKSPTKARKID--------LLLLDNPSNVGG--
+------------------------------------------------------------
+---------------
+[208] 6666666.210088.1126
+AVEA--------------------------------------------------------
+--------------------------------------------------GTMAD-SDA-
+-------ISDVVQVHDACSSTSPRRCGRTSPPAGADAL---------------DAC----
+-------SSTAMDVETAGADALGFIVDVPDPETAAALD--------ACSSTSPRRCGRSS
+RSPPPAWS----------------------------------------------------
+---------------
+[209] 6666666.210458.60
+AAEA--------------------------------------------------------
+--------------------------------------------------GVDGSDSRF-
+-------LPYGVQLYDAVLLDSPENVEEGVDASGADAF---------------DAVLLDK
+-------DHRKVDVLVAGADAFGLVVGFPSLREARRLD--------AVLLDSPENVEEVV
+RRVRPDASSG----------KDHRKV----------------------------------
+---------------
+[210] 6666666.210508.636
+AAEA--------------------------------------------------------
+--------------------------------------------------GVDGSDSRF-
+-------LPYGVQLYDAVLLDSPENVEEGVDASGADAF---------------DAVLLDK
+-------DHRKVDVLVAGADAFGLVVGFPSLREARRLD--------AVLLDSPENVEEVV
+RRVRPDASSG----------KDHRKV----------------------------------
+---------------
+[211] 6666666.210147.27
+AAEA--------------------------------------------------------
+--------------------------------------------------GIDGSDSRF-
+-------LPHGVQLYDAVLLDNPENVEEGVDASGADAF---------------DAVLLDK
+-------DHRKVDVLVAGADAFGLVVGFPSLREARRLD--------AVLLDNPENVEEAV
+RRVRPDASSG----------KDHRKV----------------------------------
+---------------
+[212] 6666666.210338.588
+AAEA--------------------------------------------------------
+--------------------------------------------------GIDGSDSRF-
+-------LPHGVQLYDAVLLDNPENVEEGVDASGADAF---------------DAVLLDK
+-------DHRKVDVLVAGADAFGLVVGFPSLREARRLD--------AVLLDNPENVEEAV
+RRVRPDASSG----------KDHRKV----------------------------------
+---------------
+[213] 6666666.211607.2074
+CAVS--------------------------------------------------------
+--------------------------------------------------GMQPSTPGE-
+-------VPTAVQLHDAILLDSPKNVAEAVDVCGADAI---------------DAILLDK
+-------DLRLVDALACGADAIGMLVDVRTADQARLID--------AILLDSPKNVAEAI
+EAARPDVCSG----------KDLRLV----------------------------------
+---------------
+[214] 6666666.211635.388
+CVEC--------------------------------------------------------
+--------------------------------------------------GLMPATVEE-
+-------APDAIQLQDAILLDRPENVAEAVDVAGADAV---------------DAILLDK
+-------DVELMDALKCGADAVGMLLA-PPIERARDID--------AILLDRPENVAEAV
+RMVRPDVASG----------KDVELM----------------------------------
+---------------
+[215] 6666666.211614.2980
+CVEA--------------------------------------------------------
+--------------------------------------------------GMMPSTVDE-
+-------APGAIQLQDAILLDNPDNVAAAVDVAGADAV---------------DAILLDK
+-------DLELVDALKCGADAVGMLLA-RTIEQAKAID--------AILLDNPDNVAAAV
+REVGPDVASG----------KDLELV----------------------------------
+---------------
+[216] 6666666.210608.1535
+AVAA--------------------------------------------------------
+--------------------------------------------------GVEPQSAAE-
+-------AADVIQINDALLIDDPENVAEAVDVSGADAV---------------DALLIDK
+-------DPEKIARDVAGADAVGFVVEISDRGEARGLD--------ALLIDDPENVAEAI
+EKVRPDVSSG----------KDPEKI----------------------------------
+---------------
+[217] 6666666.210168.811
+AVAA--------------------------------------------------------
+--------------------------------------------------GVEPQSAAE-
+-------AADVIQINDALLIDDPENVAEAVDVSGADAV---------------DALLIDK
+-------DPEKIARDVAGADAVGFVVEISDRGEARGLD--------ALLIDDPENVAEAI
+EKVRPDVSSG----------KDPEKI----------------------------------
+---------------
+[218] 6666666.211936.2199
+AVAS--------------------------------------------------------
+--------------------------------------------------GVEPKSAAE-
+-------AAEVLQVNDALLVDSPENVAEAVDVSGADAV---------------DALLVDK
+-------DPAKIARDAAGADAVGFVVEISGRKEAKSLD--------ALLVDSPENVAEAI
+RAVGPDVSSG----------KDPAKI----------------------------------
+---------------
+[219] 6666666.210471.1194
+AVAS--------------------------------------------------------
+--------------------------------------------------GMEPKSAAE-
+-------AADVLQVNDALLVDSPENVAEAVDVSGADAV---------------DALLVDK
+-------DPAKIARDAAGADAVGFVVEIPGREEAKSLD--------ALLVDSPENVAEAI
+RAVGPDVSTG----------KDPAKI----------------------------------
+---------------
+[220] 6666666.211963.1201
+ALQA--------------------------------------------------------
+--------------------------------------------------GIHPCDLDD-
+-------AADVLQLHDAILLDDPDNVLLAVDVSGADAV---------------DAILLDK
+-------DPFKVDLALAGADAVGFVVEIKSAEEAADLD--------AILLDDPDNVLLAI
+ERVRPDVSSG----------KDPFKV----------------------------------
+---------------
+[221] 6666666.210368.950
+ALQA--------------------------------------------------------
+--------------------------------------------------GIHPCDLDD-
+-------AADVLQLHDAILLDDPDNVLLAVDVSGADAV---------------DAILLDK
+-------DPFKVDLALAGADAVGFVVEIKSAEEAADLD--------AILLDDPDNVLLAI
+ERVRPDVSSG----------KDPFKV----------------------------------
+---------------
+[222] 6666666.211563.1653
+ALKA--------------------------------------------------------
+--------------------------------------------------GVEPAGVDD-
+-------ASDALQIHDAVLVDRPENVMDAVDVSGADAL---------------DAVLVDK
+-------DPVKAELECAGADALGFVVEIESLDEARNLD--------AVLVDRPENVMDAI
+NVVKPDVSSG----------KDPVKA----------------------------------
+---------------
+[223] 6666666.210130.820
+AVDA--------------------------------------------------------
+--------------------------------------------------GCTPSTLSD-
+-------VPDLVQVHDCILLDTPHNVARAVDVSGVDAL---------------DCILLDK
+-------DARLMDVKAAGVDALGFVVGTNTPERASCLD--------CILLDTPHNVARAA
+QLVRPDVSTG----------KDARLM----------------------------------
+---------------
+[224] 6666666.210585.702
+AVDA--------------------------------------------------------
+--------------------------------------------------GCTPSTLSD-
+-------VPDLVQVHDCILLDTPHNVARAVDVSGVDAL---------------DCILLDK
+-------DARLMDVKAAGVDALGFVVGTNTPERASCLD--------CILLDTPHNVARAA
+QLVRPDVSTG----------KDARLM----------------------------------
+---------------
+[225] 6666666.210156.1061
+AVDA--------------------------------------------------------
+--------------------------------------------------GCTPSTLSD-
+-------VPDLVQVHDCILLDTPHNVARAVDVSGVDAL---------------DCILLDK
+-------DARLMDVKAAGVDALGFVVGTNTPERASCLD--------CILLDTPHNVARAA
+QLVRPDVSTG----------KDARLM----------------------------------
+---------------
+[226] 6666666.211562.537
+ADEA--------------------------------------------------------
+--------------------------------------------------GLMD------
+-------NATAVQLHDAVLLDNPENVREAVDTSGTDAV---------------DAVLLDK
+-------DPEAIDAATAGTDAVGCVVEVPSAEHANEVD--------AVLLDNPENVREAV
+EKVRPDTSSG----------KDPEAI----------------------------------
+---------------
+[227] 6666666.210673.2293
+AAAA--------------------------------------------------------
+--------------------------------------------------GTMPDEPED-
+-------AADHVQVHDGLLVDTPENVGRGVDVAGADTV---------------DGLLVDV
+-------DPERVDVRAAGADTVGIIAGVAAADRAGALD--------GLLVDTPENVGRAV
+GAVGPDVASG----------VDPERV----------------------------------
+---------------
+[228] 6666666.211610.1811
+SVAA--------------------------------------------------------
+--------------------------------------------------GTMPATVGD-
+-------APDAIQVHDALLVDDPANVADGVDVAGADAV---------------DALLVDK
+-------NHEAVDLAASGADAVGVVADVDTVRHAADLD--------ALLVDDPANVADGI
+ETVRPDVASG----------KNHEAV----------------------------------
+---------------
+[229] 6666666.211644.2093
+AVAA--------------------------------------------------------
+--------------------------------------------------GTMATDPDR-
+-------LPDAMQLHDALVVDTPENVADAVDVSGADAV---------------DALVVDK
+-------DHDAIDVDAAGADAVGFVSDVPDGERAAALD--------ALVVDTPENVADAV
+RVANPDVSTG----------KDHDAI----------------------------------
+---------------
+[230] 6666666.210113.406
+AVAA--------------------------------------------------------
+--------------------------------------------------GTMATDLDR-
+-------LPDAMQLHDALVVDTPENVADAVDVSGADAV---------------DALVVDK
+-------DHDAIDVDAAGADAVGFVCDVPDAERAAALD--------ALVVDTPENVADAV
+RIANPDVSTG----------KDHDAI----------------------------------
+---------------
+[231] 6666666.210123.449
+AIAA--------------------------------------------------------
+--------------------------------------------------GTMPASVNA-
+-------AADAVQIHDLVLVDTPENVSAAVDTAGADAI---------------DLVLVDK
+-------DHDAVDRDVAGADAIGVISSVPKASKAARLD--------LVLVDTPENVSAAI
+TEVEPDTASG----------KDHDAV----------------------------------
+---------------
+[232] 6666666.210212.144
+--MA--------------------------------------------------------
+--------------------------------------------------GTMPSGPER-
+-------APDVLQLHAAFVVDTPANVQEAVDVSGADAV---------------AAFVVDK
+-------DHDAISRTTTGADAVGIVADVPTTAQASHLA--------AFVVDTPANVQEAI
+ETVEPDVSSG----------KDHDAI----------------------------------
+---------------
+[233] 6666666.210344.943
+------------------------------------------------------------
+---------------------------------------------------TMPSGPER-
+-------APDVLQLHAAFVVDTPANVQEAVDVSGADAV---------------AAFVVDK
+-------DHDAISRTTTGADAVGIVADVPTTAQASHLA--------AFVVDTPANVQEAI
+ETVEPDVSSG----------KDHDAI----------------------------------
+---------------
+[234] 6666666.209985.459
+AVEA--------------------------------------------------------
+--------------------------------------------------GTMPKGPGR-
+-------APDVLQLHDALVVDTPENVCSAVDVAGADAV---------------DALVVDK
+-------DHRRVDVRAAGADAVGIVCDVPTMENAASLD--------ALVVDTPENVCSAI
+DTVSPDVASG----------KDHRRV----------------------------------
+---------------
+[235] 6666666.212753.1397
+AAAA--------------------------------------------------------
+--------------------------------------------------GTMPDSVED-
+-------APDGIQIHDALLVDTPDNVAEGVDVSGADAV---------------DALLVDK
+-------DDEAIAMRVAGADAVGFICDVDNPSWAAALD--------ALLVDTPDNVAEAI
+DTARPDVSSG----------KDDEAI----------------------------------
+---------------
+[236] 6666666.211924.1692
+VVDA--------------------------------------------------------
+--------------------------------------------------GTMPETVAD-
+-------APDALQIHDAILADTPDIVGTAVDVAGLDAI---------------DAILADK
+-------DPDAVDVATVGLDAIGAIVDVPEPERASRLD--------AILADTPDIVGTAI
+ERVEPDVASG----------KDPDAV----------------------------------
+---------------
+[237] 6666666.211935.1695
+VVDA--------------------------------------------------------
+--------------------------------------------------GTMPETVAD-
+-------APDALQIHDAILADTPDIVGTAVDVAGVDAI---------------DAILADK
+-------DPDAVDVATVGVDAIGAIVDVPEPERASRLD--------AILADTPDIVGTAI
+ERVEPDVASG----------KDPDAV----------------------------------
+---------------
+[238] 6666666.210548.1884
+VVAA--------------------------------------------------------
+--------------------------------------------------GTMPDSVVD-
+-------ASDVIQIHDAVLIDTPSNVKSGIDVAGADAV---------------DAVLIDK
+-------DHNAVDLAAVGADAVGIIADVSSVKRATQLD--------AVLIDTPSNVKSAV
+QTVTPDVASG----------KDHNAV----------------------------------
+---------------
+[239] 6666666.209954.334
+VATA--------------------------------------------------------
+--------------------------------------------------GTMPDSVAA-
+-------APDVIQIHDAVLIDTPSNVRSGVDVAGADAV---------------DAVLIDK
+-------DHDAVDLAAVGADAVGIISDVTTIERATQLD--------AVLIDTPSNVRSAV
+QTVAPDVASG----------KDHDAV----------------------------------
+---------------
+[240] 6666666.211940.2437
+VSAA--------------------------------------------------------
+--------------------------------------------------GTMPNCVAD-
+-------APDVIQIHDAILIDTPSNVKSGVDVAGADAA---------------DAILIDK
+-------DHDAVDLAAVGADAAGIITDVTTVERATQLD--------AILIDTPSNVKSAV
+QTVAPDVASG----------KDHDAV----------------------------------
+---------------
+[241] 6666666.211931.2645
+VSAA--------------------------------------------------------
+--------------------------------------------------GTMPNCVAD-
+-------APDVIQIHDAILIDTPSNVKSGVDVAGADAA---------------DAILIDK
+-------DHDAVDLAAVGADAAGIITDVTTVERATQLD--------AILIDTPSNVKSAV
+QTVAPDVASG----------KDHDAV----------------------------------
+---------------
+[242] 6666666.210269.2001
+AVDA--------------------------------------------------------
+--------------------------------------------------GTMPDSPAA-
+-------GADAIQVHDAIVLDTPENVASGVDVSGADMV---------------DAIVLDK
+-------DHDALDLHAAGADMVGFVTGVPDPEAAADLD--------AIVLDTPENVASAV
+RTAEPDVSSG----------KDHDAL----------------------------------
+---------------
+[243] 6666666.210451.341
+AVDA--------------------------------------------------------
+--------------------------------------------------GTMPDSPAA-
+-------GADAIQVHDAIVLDTPENVASGVDVSGADMV---------------DAIVLDK
+-------DHDALDLHAAGADMVGFVTGVPDPEAAADLD--------AIVLDTPENVASAV
+RTAEPDVSSG----------KDHDAL----------------------------------
+---------------
+[244] 6666666.210568.684
+AIEA--------------------------------------------------------
+--------------------------------------------------GTMPETPGA-
+-------GPDAIQVHDALVLDTPENVADGVDVSGADMV---------------DALVLDK
+-------DHTAIDLDAAGADMVGFVCGVPAPARTAGLD--------ALVLDTPENVADAV
+RTVDPDVSSG----------KDHTAI----------------------------------
+---------------
+[245] 6666666.210238.24
+AIDA--------------------------------------------------------
+--------------------------------------------------GTMPETPAE-
+-------GPDAIQVHDALVLDTPENVTEGVDVSGADMV---------------DALVLDK
+-------DHTAVDLDAAGADMVGFVCGVPAPDRAAALD--------ALVLDTPENVTEAV
+RTVDSDVSSG----------KDHTAV----------------------------------
+---------------
+[246] 6666666.210348.976
+AVAA--------------------------------------------------------
+--------------------------------------------------GTMPETPEA-
+-------GPDAIQVHDALVLDTPENVAEGVDVSGADMV---------------DALVLDK
+-------DHAAIDLDAAGADMVGFVCGVPAPDRAATLD--------ALVLDTPENVAEAV
+RTVEPDVSSG----------KDHAAI----------------------------------
+---------------
+[247] 6666666.210475.2255
+AIDA--------------------------------------------------------
+--------------------------------------------------GTMPETPEA-
+-------GSDAIQVHDALVLDTPANVANGVDVSGTDLV---------------DALVLDK
+-------DHAKLDLDAAGTDLVGFVSGVPAPARAAALD--------ALVLDTPANVANAV
+EAVGPDVSSG----------KDHAKL----------------------------------
+---------------
+[248] 6666666.209962.114
+AIDA--------------------------------------------------------
+--------------------------------------------------GTMPDTPDE-
+-------GPDAIQVHDALVLDTPENVASGVDVSGADMV---------------DALVLDK
+-------DHAKLDLDAAGADMVGVVSRVPAPDRAAALD--------ALVLDTPENVASAV
+ETVAPDVSSG----------KDHAKL----------------------------------
+---------------
+[249] 6666666.210386.1023
+AIDA--------------------------------------------------------
+--------------------------------------------------GTMPETPDE-
+-------GPDAIQVHDALVLDTPENVASGVDVSGADMV---------------DALVLDK
+-------DHAKLDLDAAGADMVGVVSRVPAPDRAAALD--------ALVLDTPENVASAV
+ETVAPDVSSG----------KDHAKL----------------------------------
+---------------
+[250] 6666666.210658.1695
+AVSA--------------------------------------------------------
+--------------------------------------------------GTGPDSVQE-
+-------AADVVQVHDALLLDTPANVGAAVDVSGADAL---------------DALLLDK
+-------DHDAVDRDAAGADALGFISGVPGAREAAGLD--------ALLLDTPANVGAAV
+ETVAPDVSSG----------KDHDAV----------------------------------
+---------------
+[251] 6666666.210503.420
+AVAA--------------------------------------------------------
+--------------------------------------------------DTMPESESE-
+-------APDAIQLHDALLVDTPENVERAVDVADADAI---------------DALLVDK
+-------DHDAVDRDVADADAIGLIAGVTDLETAADLD--------ALLVDTPENVERAV
+ETVGPDVASG----------KDHDAV----------------------------------
+---------------
+[252] 6666666.210422.3251
+SVAT--------------------------------------------------------
+--------------------------------------------------GTMPETPNE-
+-------APDVLQIHDALLIDTPKNIAEGVDVAGADAI---------------DALLIDK
+-------DHDAVDIAASGADAIGVISGVPDSERAADLD--------ALLIDTPKNIAEAV
+EIAEPDVASG----------KDHDAV----------------------------------
+---------------
+[253] 6666666.211942.751
+SVAT--------------------------------------------------------
+--------------------------------------------------GTMPETPNE-
+-------APDVLQIHDALLIDTPKNIAEGVDVAGADAI---------------DALLIDK
+-------DHDAVDIAASGADAIGVISGVPDSERAADLD--------ALLIDTPKNIAEAV
+EIAEPDVASG----------KDHDAV----------------------------------
+---------------
+[254] 6666666.210304.786
+SVAT--------------------------------------------------------
+--------------------------------------------------GTMPETPNE-
+-------APDVLQIHDALLIDTPKNIAEGVDVAGADAI---------------DALLIDK
+-------DHDAVDIAASGADAIGVISGVPDSERAADLD--------ALLIDTPKNIAEAV
+EIAEPDVASG----------KDHDAV----------------------------------
+---------------
+[255] 6666666.209973.2161
+SVER--------------------------------------------------------
+--------------------------------------------------GTMPETPGE-
+-------APDVLQIHDALLVDTPENVAEGVDVAGADAI---------------DALLVDK
+-------DHERVDVAASGADAIGVISGVPDAKRAADLD--------ALLVDTPENVAEAV
+EVAEPDVASG----------KDHERV----------------------------------
+---------------
+[256] 6666666.210363.1611
+AVDA--------------------------------------------------------
+--------------------------------------------------GTMPETVEE-
+-------APDALQVHDALLVDEPGNVLEAVDVAGADAV---------------DALLVDK
+-------DHDAVDIEVAGADAVGVVSEVPSRERAGDLD--------ALLVDEPGNVLEAI
+RTVDPDVASG----------KDHDAV----------------------------------
+---------------
+[257] 6666666.210486.294
+SVDA--------------------------------------------------------
+--------------------------------------------------GTMSETVEA-
+-------APDAVQIHDGLVVDTPENVAEGVDTAGVDAI---------------DGLVVDK
+-------DHDAVDVRASGVDAIGVISDVPSRERATELD--------GLVVDTPENVAEAV
+ETIQPDTASG----------KDHDAV----------------------------------
+---------------
+[258] 6666666.211941.1167
+SVDA--------------------------------------------------------
+--------------------------------------------------GTMSETVEA-
+-------APDAVQIHDGLVVDTPENVAEGVDTAGVDAI---------------DGLVVDK
+-------DHDAVDVRASGVDAIGVISDVPSRERATELD--------GLVVDTPENVAEAV
+ETIQPDTASG----------KDHDAV----------------------------------
+---------------
+[259] 6666666.211525.1273
+SVAA--------------------------------------------------------
+--------------------------------------------------GTMPETVEE-
+-------APDAVQVHDGLVVDTPENVAEGVDTAGADAV---------------DGLVVDK
+-------DHDAVDVRASGADAVGVISGVPAPERAADLD--------GLVVDTPENVAEAV
+ETVRPDTASG----------KDHDAV----------------------------------
+---------------
+[260] 6666666.210601.898
+VVTA--------------------------------------------------------
+--------------------------------------------------GTMPSTVEE-
+-------APDAVQVHDALLVDTPDNVAAGVDVAGADAV---------------DALLVDK
+-------DPETVDREAVGADAVGVISDVPGADTAADLD--------ALLVDTPDNVAAAV
+ETVRPDVATG----------KDPETV----------------------------------
+---------------
+[261] 6666666.211915.1717
+VVAA--------------------------------------------------------
+--------------------------------------------------GTMPEAVQS-
+-------VPDVVQVHDALLVDTPKNVGDGVDVAGADAI---------------DALLVDK
+-------DHDAVDREAVGADAIGVINGVSDDETAAALD--------ALLVDTPKNVGDAV
+GTVRPDVASG----------KDHDAV----------------------------------
+---------------
+[262] 6666666.210177.1158
+VVAA--------------------------------------------------------
+--------------------------------------------------GTMPEAVQS-
+-------VPDVVQVHDALLVDTPENVADGVDVAGADAI---------------DALLVDK
+-------DHDAVDREAVGADAIGVINGVSDDETAAALD--------ALLVDTPENVADAV
+GTVRPDVASG----------KDHDAV----------------------------------
+---------------
+[263] 6666666.210502.647
+VVTA--------------------------------------------------------
+--------------------------------------------------GTMPTTVQE-
+-------APDAVQVHDALLVDTPENVAEAVDVAGADAV---------------DALLVDK
+-------DHDAVDRNAVGADAVGVIHGVPDEETAMRLD--------ALLVDTPENVAEAV
+ETVGPDVASG----------KDHDAV----------------------------------
+---------------
+[264] 6666666.210527.588
+VVAA--------------------------------------------------------
+--------------------------------------------------GTMPTTVQE-
+-------APDAVQVHDALLVDTPENVAEAVDVAGTDAV---------------DALLVDK
+-------DHDAIDRDAVGTDAVGVIHGVPDEDTAETLD--------ALLVDTPENVAEGV
+ETVEPDVASG----------KDHDAI----------------------------------
+---------------
+[265] 6666666.210462.1885
+VVTA--------------------------------------------------------
+--------------------------------------------------GMMPTTVQE-
+-------APDAVQVHDALLIDTPENVAEAVDVAGADAV---------------DALLIDK
+-------DHDGVDRDAVGADAVGIIHGVPDEGTAETID--------ALLIDTPENVAEAV
+ETVEPDVASG----------KDHDGV----------------------------------
+---------------
+[266] 6666666.211908.1385
+VVTA--------------------------------------------------------
+--------------------------------------------------GMMPTTVQE-
+-------APDAVQVHDALLVDTPENVTEAVDVAGADAV---------------DALLVDK
+-------DHDAVDRDAVGADAVGIIHGVPDEGTAETID--------ALLVDTPENVTEAV
+ETVEPDVASG----------KDHDAV----------------------------------
+---------------
+[267] 6666666.209970.4219
+VVTA--------------------------------------------------------
+--------------------------------------------------GMMPTTVQE-
+-------APDAVQVHDALLVDTPENVTEAVDVAGADAV---------------DALLVDK
+-------DHDAVDRDAVGADAVGIIHGVPDEGTAETID--------ALLVDTPENVTEAV
+ETVEPDVASG----------KDHDAV----------------------------------
+---------------
+[268] 6666666.210564.101
+VVTA--------------------------------------------------------
+--------------------------------------------------GMMPTTVQE-
+-------APDAVQVHDALLVDTPENVTEAVDVAGADAV---------------DALLVDK
+-------DHDAVDRDAVGADAVGIIHGVPDEGTAETID--------ALLVDTPENVTEAV
+ETVEPDVASG----------KDHDAV----------------------------------
+---------------
+[269] 6666666.209956.256
+VVTA--------------------------------------------------------
+--------------------------------------------------GTMPTTVQE-
+-------APDAVQVHDALLVDTPENVAEAIDVAGADAV---------------DALLVDK
+-------DHDAVDRDAVGADAVGVIHGVPDEATAERLD--------ALLVDTPENVAEAV
+ETVEPDVASG----------KDHDAV----------------------------------
+---------------
+[270] 6666666.210030.2896
+VVAA--------------------------------------------------------
+--------------------------------------------------GTMPTTVQE-
+-------APDAVQVHDALLVDTPENVAEAVDVAGADAV---------------DALLVDK
+-------DHDAVDRDAVGADAVGVIHGVPNEATAERLD--------ALLVDTPENVAEAV
+EAVEPDVASG----------KDHDAV----------------------------------
+---------------
+[271] 6666666.210312.995
+VVAA--------------------------------------------------------
+--------------------------------------------------GTMPTTVQE-
+-------APDAVQVHDALLVDTPENVAEAVDVAGADAV---------------DALLVDK
+-------DHDAVDRDAVGADAVGVIHGVPDEETAETLD--------ALLVDTPENVAEAV
+EAVDPDVASG----------KDHDAV----------------------------------
+---------------
+[272] 6666666.210152.3110
+VIAA--------------------------------------------------------
+--------------------------------------------------GTMPTTVQE-
+-------APDAVQVHDALLVDTPENVAEAVDVAGADAV---------------DALLVDK
+-------DHDAVDRDAVGADAVGVIHGVPDEKTATTLD--------ALLVDTPENVAEAV
+ETVKPDVASG----------KDHDAV----------------------------------
+---------------
+[273] 6666666.211934.2061
+VIAA--------------------------------------------------------
+--------------------------------------------------GTMPTTVQE-
+-------APDAVQVHDALLVDTPENVAEAVDVAGADAV---------------DALLVDK
+-------DHDAVDRDAVGADAVGVIHGVPDEKTATTLD--------ALLVDTPENVAEAV
+EAVDPDVASG----------KDHDAV----------------------------------
+---------------
+[274] 6666666.211944.2072
+VIAA--------------------------------------------------------
+--------------------------------------------------GTMPTTVQE-
+-------APDAVQVHDALLVDTPENVAEAVDVAGADAV---------------DALLVDK
+-------DHDAVDRDAVGADAVGVIHGVPDEKTATTLD--------ALLVDTPENVAEAV
+EAVDPDVASG----------KDHDAV----------------------------------
+---------------
+[275] 6666666.211907.569
+VIAA--------------------------------------------------------
+--------------------------------------------------GTMPTTVQE-
+-------APDAVQVHDALLVDTPENVAEAVDVAGADAV---------------DALLVDK
+-------DHDAVDRDAVGADAVGVIHGVPDEKTATTLD--------ALLVDTPENVAEAV
+ETVKPDVASG----------KDHDAV----------------------------------
+---------------
+[276] 6666666.210202.2285
+VIAA--------------------------------------------------------
+--------------------------------------------------GTMPTTVQE-
+-------APDAVQVHDALLVDTPENVAEAVDVAGADAV---------------DALLVDK
+-------DHDAVDRDAVGADAVGVIHGVPDEKTATTLD--------ALLVDTPENVAEAV
+ETVKPDVASG----------KDHDAV----------------------------------
+---------------
+[277] 6666666.210519.411
+AVDA--------------------------------------------------------
+--------------------------------------------------GTIPESVDA-
+-------APDALQIHDALLVDTPANVREAVDVAGADAV---------------DALLVDK
+-------NHDALDVRAAGADAVGFVTDVDPTERAAELD--------ALLVDTPANVREAV
+ERVDPDVASG----------KNHDAL----------------------------------
+---------------
+[278] 6666666.210196.1308
+AVDA--------------------------------------------------------
+--------------------------------------------------GTIPESVGG-
+-------APDALQIHDALLVDTPKNVAAAVDVAGADAL---------------DALLVDK
+-------AHDALDVRAAGADALGFITDVGIPERAATLD--------ALLVDTPKNVAAAV
+ETVDPDVASG----------KAHDAL----------------------------------
+---------------
+[279] 6666666.209998.2406
+AVDA--------------------------------------------------------
+--------------------------------------------------GTIPDSVDA-
+-------APDALQIHDALLVDTPENVGAAVDVAGADAL---------------DALLVDK
+-------DHDALDVRAAGADALGFITDVDAPERAADLD--------ALLVDTPENVGAAV
+ETVDPDVASG----------KDHDAL----------------------------------
+---------------
+[280] 6666666.211909.1664
+AVDA--------------------------------------------------------
+--------------------------------------------------GTMADVPDA-
+-------APDAVQVHDAVLVDTPENVADAVDVAGVDAV---------------DAVLVDK
+-------DADAVDLDTAGVDAVGLIVDVDSPQQAAELD--------AVLVDTPENVADAV
+EAAAPDVASG----------KDADAV----------------------------------
+---------------
+[281] 6666666.209943.317
+AVEA--------------------------------------------------------
+--------------------------------------------------GTMPETPAE-
+-------APDAVQLHDGLLVDTPENVADAVDVAGADAV---------------DGLLVDT
+-------DPGAVDLEAAGADAVGLIAEVPSPKRARSLD--------GLLVDTPENVADAV
+RAVEPDVASG----------TDPGAV----------------------------------
+---------------
+[282] 6666666.209950.4254
+AVAA--------------------------------------------------------
+--------------------------------------------------GTMPETPTA-
+-------APDAVQLHDGLLVDSPANVADAVDVAGADAV---------------DGLLVDT
+-------DADAADLETAGADAVGLISEVPSRVRATELD--------GLLVDSPANVADAV
+RTVEPDVASG----------TDADAA----------------------------------
+---------------
+[283] 6666666.211938.3736
+AVAA--------------------------------------------------------
+--------------------------------------------------GTMPETPAA-
+-------APDAVQLHDGLLVDAPENVADAVDVAGADAV---------------DGLLVDT
+-------DADAADLEAAGADAVGLISAVPAPARAAELD--------GLLVDAPENVADAV
+RTVEPDVASG----------TDADAA----------------------------------
+---------------
+[284] 6666666.210044.541
+AIDA--------------------------------------------------------
+--------------------------------------------------GTMPAGPEE-
+-------APDAIQIHDALIVDTPNNVGEVRRSRGAATV---------------SNPIAGR
+-------KPNRRDLEAAGADAVGIICDVSSIDRAAALD--------ALIVDTPNNVGEAV
+RTVE-LRRER----------RRRPIVR---------------------------------
+---------------
+[285] 6666666.210581.2358
+AVDA--------------------------------------------------------
+--------------------------------------------------GTMPETPAA-
+-------APDAVQVHDALIVDTPENVADAVDVAGADAV---------------DALIVDK
+-------DTDAVDIETAGADAVGVICDVPAVDRARELD--------ALIVDTPENVADAV
+RAVDPDVASG----------KDTDAV----------------------------------
+---------------
+[286] 6666666.209969.2077
+AVDA--------------------------------------------------------
+--------------------------------------------------GTMPETPAA-
+-------APDAVQVHDALIVDTPENVADAVDVAGTDAI---------------DALIVDK
+-------DTDAVDIETAGTDAIGVICDVPAADRARELD--------ALIVDTPENVADAV
+RAVDPDVASG----------KDTDAV----------------------------------
+---------------
+[287] 6666666.210613.1096
+AIDA--------------------------------------------------------
+--------------------------------------------------GTMPETPAA-
+-------APDAVQVHDALIVDTPENVADAVDVAGTDAV---------------DALIVDK
+-------DTDAVDIETAGTDAVGVICDVPAADRARELD--------ALIVDTPENVADAV
+RAVDPDVASG----------KDTDAV----------------------------------
+---------------
+[288] 6666666.211927.64
+AVDA--------------------------------------------------------
+--------------------------------------------------GTMPETPAA-
+-------APDALQIHDALLVDTPANVTEAVDVAGADAV---------------DALLVDK
+-------DTDAVDLQTAGADAVGVICDVPAVQEARDLD--------ALLVDTPANVTEAV
+QTVEPDVASG----------KDTDAV----------------------------------
+---------------
+[289] 6666666.210326.4138
+AVDA--------------------------------------------------------
+--------------------------------------------------GTMPETPAA-
+-------APDALQIHDALLVDTPANVTEAVDVAGADAV---------------DALLVDK
+-------DTDAVDLQTAGADAVGVICDVPAVQEARDLD--------ALLVDTPANVTEAV
+QTVEPDVASG----------KDTDAV----------------------------------
+---------------
+[290] 6666666.210218.1339
+AVDA--------------------------------------------------------
+--------------------------------------------------GTMPETPAA-
+-------APDALQIHDALLVDTPANVVEAVDVAGAAAV---------------DALLVDK
+-------DTDAVDLQTAGAAAVGVICDVPSVQEARELD--------ALLVDTPANVVEAV
+QTVEPDVASG----------KDTDAV----------------------------------
+---------------
+[291] 6666666.210091.3814
+AVDA--------------------------------------------------------
+--------------------------------------------------GTMPETPAA-
+-------APDALQIHDALLVDTPENVAEAVDVAGASAV---------------DALLVDK
+-------DTDAVDLQTAGASAVGVICDVPSVQQARDLD--------ALLVDTPENVAEAV
+QTVEPDVASG----------KDTDAV----------------------------------
+---------------
+[292] 6666666.209945.1109
+VVDA--------------------------------------------------------
+--------------------------------------------------GTMATDPGR-
+-------TPDAIQLHDGLVVDDPDNVGDAVDVSGADAV---------------DGLVVDK
+-------DPDAVGLETVGADAVGILCDVTSLERASDLD--------GLVVDDPDNVGDAI
+QAVDPDVSSG----------KDPDAV----------------------------------
+---------------
+[293] 6666666.210419.2001
+AVEA--------------------------------------------------------
+--------------------------------------------------GTMPDDLEA-
+-------TPDAVQLHDAFVVDTPENVPDAVDVAGVDAV---------------DAFVVDK
+-------DADAVDLETAGVDAVGIICDVSSVDRASELD--------AFVVDTPENVPDAI
+RTVEPDVASG----------KDADAV----------------------------------
+---------------
+[294] 6666666.210246.2998
+AVDA--------------------------------------------------------
+--------------------------------------------------GTMGEDPTK-
+-------VPDAIQHHDGVLVDTPENVANAVDVAGADAV---------------DGVLVDK
+-------DHDAVDLEAAGADAVGIICDVPSIDRARELD--------GVLVDTPENVANAV
+RTVDPDVASG----------KDHDAV----------------------------------
+---------------
+[295] 6666666.210417.186
+AVDA--------------------------------------------------------
+--------------------------------------------------GTMGEDPTK-
+-------VPDAIQHHDGVLVDTPENVANAVDVAGADAV---------------DGVLVDK
+-------DHDAVDLEAAGADAVGIICDVPSIDRARELD--------GVLVDTPENVANAV
+RTVDPDVASG----------KDHDAV----------------------------------
+---------------
+[296] 6666666.211521.3802
+VVDA--------------------------------------------------------
+--------------------------------------------------GTMPDDIAH-
+-------APDAVQIHDALVIDTPDNVANAVDVAGADAV---------------DALVIDK
+-------DESAVDLETVGADAVGIVCDVPAVERATELD--------ALVIDTPDNVANAV
+ETVDPDVASG----------KDESAV----------------------------------
+---------------
+[297] 6666666.210501.3413
+VVDA--------------------------------------------------------
+--------------------------------------------------GTMPDDIAH-
+-------APDAVQIHDALVIDTPDNVANAVDVAGADAV---------------DALVIDK
+-------DESAVDLETVGADAVGIVCDVPAVERATELD--------ALVIDTPDNVANAV
+ETVDPDVASG----------KDESAV----------------------------------
+---------------
+[298] 6666666.211937.1878
+AVDA--------------------------------------------------------
+--------------------------------------------------GMMPSDYAR-
+-------APDAIQLHDGFVVDTPDNVAEAVDVAGADAI---------------DGFVVDK
+-------DPDAVDLQTAGADAIGIIADVPSPERAADLD--------GFVVDTPDNVAEAV
+RTAEPDVASG----------KDPDAV----------------------------------
+---------------
+[299] 6666666.210031.1333
+AVDA--------------------------------------------------------
+--------------------------------------------------GTMPSDYAR-
+-------APDAIQLHDGFVVDTPDNVVEAVDVAGADAI---------------DGFVVDK
+-------DPAAVDLQTAGADAIGIITDVPSPERAADLD--------GFVVDTPDNVVEAV
+QTAEPDVASG----------KDPAAV----------------------------------
+---------------
+[300] 6666666.210127.747
+AVDA--------------------------------------------------------
+--------------------------------------------------GTMASDLER-
+-------TPDAVQLHDGFVVDTPENVAEAVDVAGADAV---------------DGFVVDK
+-------DADAVDLESAGADAVGYICDVSSPERAESLD--------GFVVDTPENVAEAV
+RTVEPDVASG----------KDADAV----------------------------------
+---------------
+[301] 6666666.210189.236
+VVDA--------------------------------------------------------
+--------------------------------------------------GTMPSDPDH-
+-------APDVLQIHDALLVDTPDNVADAVDAAGVDAV---------------DALLVDK
+-------DPTAVDLETVGVDAVGIICDVTAVDQARALD--------ALLVDTPDNVADAV
+RTVEPDAASG----------KDPTAV----------------------------------
+---------------
+[302] 6666666.210442.544
+VVDA--------------------------------------------------------
+--------------------------------------------------GTMPSDPDH-
+-------APDVLQIHDALLVDTPDNVADAVDAAGVDAV---------------DALLVDK
+-------DPTAVDLETVGVDAVGLICDVPSVDQARALD--------ALLVDTPDNVADAV
+RAVEPDAASG----------KDPTAV----------------------------------
+---------------
+[303] 6666666.210160.371
+AVEA--------------------------------------------------------
+--------------------------------------------------GTMPDDPGA-
+-------APDAVQLHDALVVDEPDNVAAAVDVAGADAV---------------DALVVDK
+-------DADAVDLETAGADAVGVVCDVPSVERAKRLD--------ALVVDEPDNVAAAV
+RTVDPDVASG----------KDADAV----------------------------------
+---------------
+[304] 6666666.210362.68
+AVEA--------------------------------------------------------
+--------------------------------------------------GTMPDDPGA-
+-------APDAVQLHDALVVDEPDNVAAAVDVAGADAV---------------DALVVDK
+-------DADAVDLETAGADAVGVVCDVPSVERAKRLD--------ALVVDEPDNVAAAV
+RTVDPDVASG----------KDADAV----------------------------------
+---------------
+[305] 6666666.209988.3594
+AVDA--------------------------------------------------------
+--------------------------------------------------GTMPDDPGA-
+-------APDAVQLHDGFVVDEPDNVAAAVDVAGADAV---------------DGFVVDK
+-------DPTAVDLETAGADAVGIVCDVPSVERAAALD--------GFVVDEPDNVAAAV
+KTVEPDVASG----------KDPTAV----------------------------------
+---------------
+[306] 6666666.210224.656
+AVDA--------------------------------------------------------
+--------------------------------------------------GTMADDPAD-
+-------APDALQLHDGLIVDTPANVTDAVDVAGADAV---------------DGLIVDK
+-------DVDAVDLETAGADAVGFICDVPSLEQATKLD--------GLIVDTPANVTDAV
+RTVEPDVASG----------KDVDAV----------------------------------
+---------------
+[307] 6666666.210291.1464
+AVDA--------------------------------------------------------
+--------------------------------------------------GTMPDDPAN-
+-------APDAIQIHDGFVVDTPDNVAEAVDVAGADAV---------------DGFVVDK
+-------DAEAVDLETAGADAVGIICDVPSVERAASLD--------GFVVDTPDNVAEAV
+RTVEPDVASG----------KDAEAV----------------------------------
+---------------
+[308] 6666666.210062.178
+AADA--------------------------------------------------------
+--------------------------------------------------GTMPSDLER-
+-------APDAVQFHDGLVVDTPANVADAVDVAGADAV---------------DGLVVDK
+-------DAAAVDLETAGADAVGIICDVSALERAASLD--------GLVVDTPANVADAV
+RTVDPDVASG----------KDAAAV----------------------------------
+---------------
+[309] 6666666.210068.3437
+AIDA--------------------------------------------------------
+--------------------------------------------------GTMPDGPAD-
+-------APDAIQIHDGLLVDTPENVGDAVDVAGADAV---------------DGLLVDK
+-------DREAVDLEAAGADAVGIICEVSSIERARALD--------GLLVDTPENVGDAV
+RTVAPDVASG----------KDREAV----------------------------------
+---------------
+[310] 6666666.210197.1367
+AIDA--------------------------------------------------------
+--------------------------------------------------GTMPDGPAD-
+-------APDAIQIHDGLLVDTPENVGDAVDVAGADAV---------------DGLLVDK
+-------DHEAVDLEAAGADAVGIICDVSSIERATALD--------GLLVDTPENVGDAV
+RTVAPDVASG----------KDHEAV----------------------------------
+---------------
+[311] 6666666.210095.2277
+AIDA--------------------------------------------------------
+--------------------------------------------------GTMPDGPAD-
+-------APDAIQIHDGLLVDTPENVGDAVDVAGADAV---------------DGLLVDK
+-------DHEAVDLEAAGADAVGIICDVSSIERATALD--------GLLVDTPENVGDAV
+RTVAPDVASG----------KDHEAV----------------------------------
+---------------
+[312] 6666666.211960.1138
+AIDA--------------------------------------------------------
+--------------------------------------------------GTMPDGPAD-
+-------APDAIQIHDGLLVDTPENVGDAVDVAGADAV---------------DGLLVDK
+-------DHEAVDLEAAGADAVGIICDVSSIERATALD--------GLLVDTPENVGDAV
+RTVAPDVASG----------KDHEAV----------------------------------
+---------------
+[313] 6666666.210249.1933
+AIDA--------------------------------------------------------
+--------------------------------------------------GTMPESPEA-
+-------APDALQIHDALIVDTPDNVGDAVDVAGADAV---------------DALIVDK
+-------DADAVDLEAAGADAVGIICDVSSVERAATLD--------ALIVDTPDNVGDAV
+RTVDPDVASG----------KDADAV----------------------------------
+---------------
+[314] 6666666.211917.1389
+AIEA--------------------------------------------------------
+--------------------------------------------------GTMPAGPEE-
+-------APDAIQIHDGLIVDTPDNVGDAVDVAGADAV---------------DGLIVDK
+-------DAEAVDLEVAGADAVGIICDVSSIGRAAALD--------GLIVDTPDNVGDAV
+RTVDPDVANG----------KDAEAV----------------------------------
+---------------
+[315] 6666666.210002.2427
+AIEA--------------------------------------------------------
+--------------------------------------------------GTMPAGPEE-
+-------APDAIQIHDGLIVDTPDNVGDAVDVAGADAV---------------DGLIVDK
+-------DAEAVDLEVAGADAVGIICDVSSIGRAAALD--------GLIVDTPDNVGDAV
+RTVDPDVANG----------KDAEAV----------------------------------
+---------------
+[316] 6666666.210042.3030
+AIEA--------------------------------------------------------
+--------------------------------------------------GTMPAGPEE-
+-------APDAIQIHDGLIVDTPDNVDDAVDVAGADAV---------------DGLIVDK
+-------DAEAVDLEAAGADAVGIICDVSSIERAAALD--------GLIVDTPDNVDDAV
+RTVDPDVASG----------KDAEAV----------------------------------
+---------------
+[317] 6666666.210432.2227
+AIDA--------------------------------------------------------
+--------------------------------------------------GTMPAGPEE-
+-------APDAIQIHDALIVDTPNNVGEGVDVAGADAV---------------DALIVDK
+-------DADAVDLEAAGADAVGIICDVSSIDRAAALD--------ALIVDTPNNVGEAV
+RTVEPDVASG----------KDADAV----------------------------------
+---------------
+[318] 6666666.210165.2222
+AIDA--------------------------------------------------------
+--------------------------------------------------GTMPAGPEE-
+-------APDAIQIHDALIVDTPNNVGEGVDVAGADAV---------------DALIVDK
+-------DADAVDLEAAGADAVGIICDVSSIDRAAALD--------ALIVDTPNNVGEAV
+RTVEPDVASG----------KDADAV----------------------------------
+---------------
+[319] 6666666.210310.1300
+AIDA--------------------------------------------------------
+--------------------------------------------------GTMPAGPEE-
+-------APDAIQIHDGLIVDTPDNVGDAVDVAGADAI---------------DGLIVDK
+-------DADAVDLEAAGADAIGLICDVSSIERAAALD--------GLIVDTPDNVGDAV
+RTVDPDVASG----------KDADAV----------------------------------
+---------------
+[320] 6666666.210115.1513
+AVEA--------------------------------------------------------
+--------------------------------------------------GTMPSGPNR-
+-------APDAVQYHDGLIVDTPDNVGDAVDVAGADAL---------------DGLIVDK
+-------DPDAVDLETAGADALGIICDVSSIERAKALD--------GLIVDTPDNVGDAV
+RTVEPDVASG----------KDPDAV----------------------------------
+---------------
+[321] 6666666.209972.4293
+AVEA--------------------------------------------------------
+--------------------------------------------------GTMPSGPNR-
+-------APDAVQYHDGLIVDTPDNVGDAVDVAGADAL---------------DGLIVDK
+-------DPDAVDLETAGADALGIICDVSSIERAKALD--------GLIVDTPDNVGDAV
+RTVEPDVASG----------KDPDAV----------------------------------
+---------------
+[322] 6666666.210027.1983
+AVAA--------------------------------------------------------
+--------------------------------------------------GTMPSGPER-
+-------APDAIQFHDGLLVDTPDNVADAVDVAGADAL---------------DGLLVDK
+-------DPTAVDLETAGADALGIICDVAAVERARELD--------GLLVDTPDNVADAV
+RTVEPDVASG----------KDPTAV----------------------------------
+---------------
+[323] 6666666.211932.2166
+AVAA--------------------------------------------------------
+--------------------------------------------------GTMPSGPER-
+-------APDAIQYHDGLLVDTPDNVADAVDVAGADAL---------------DGLLVDK
+-------DPDAVDLETAGADALGVICDVSAVERARELD--------GLLVDTPDNVADAV
+RTVEPDVASG----------KDPDAV----------------------------------
+---------------
+[324] 6666666.210313.3366
+TIAA--------------------------------------------------------
+--------------------------------------------------GTMASDAER-
+-------VPDAVQLHDALLVDTPDNVADAVDVAGADAV---------------DALLVDK
+-------DADAVDLETTGADAVGFICDVPSRQEATALD--------ALLVDTPDNVADAV
+RTVEPDVASG----------KDADAV----------------------------------
+---------------
+[325] 6666666.211939.394
+AVDA--------------------------------------------------------
+--------------------------------------------------GTMASDPDR-
+-------APDAIQLHDGLLVDTPENVAEAVDVAGADAV---------------DGLLVDK
+-------DPEAVDLETAGADAVGVICDVPSVERARDLD--------GLLVDTPENVAEAV
+RTVEPDVASG----------KDPEAV----------------------------------
+---------------
+[326] 6666666.211541.1019
+VVEA--------------------------------------------------------
+--------------------------------------------------GTMPDPPAS-
+-------AADVVQLHDALLVDTPENVAKAVDVAGADAI---------------DALLVDK
+-------DPAALDLGAVGADAIGVTVDVPDAERAADID--------ALLVDTPENVAKAV
+ETVDPDVASG----------KDPAAL----------------------------------
+---------------
+[327] 6666666.210226.3865
+AISA--------------------------------------------------------
+--------------------------------------------------GTMPETPEQ-
+-------TPDAVQVHDALLLDSPDNVGDAVDVAGADAI---------------DALLLDK
+-------DHSAVDLHAAGADAIGLLVDVPGPLRAAELD--------ALLLDSPDNVGDAV
+EAVEPDVASG----------KDHSAV----------------------------------
+---------------
+[328] 6666666.210175.4199
+AIDA--------------------------------------------------------
+--------------------------------------------------GTMPERIER-
+-------TPDIVQVHDGLLLDTPENVADAVDVAGADAI---------------DGLLLDK
+-------DHDAVDLAAAGADAIGLLVDVPSSDRAAELD--------GLLLDTPENVADAV
+ETVEPDVASG----------KDHDAV----------------------------------
+---------------
+[329] 6666666.210524.2741
+AVDA--------------------------------------------------------
+--------------------------------------------------GTMPETTER-
+-------TPDIVQVHDALLLDTPENVADAVDVAGADAI---------------DALLLDK
+-------DPDAVDLAAAGADAIGLLVDVPPPTRAAELD--------ALLLDTPENVADAV
+RAVEPDVASG----------KDPDAV----------------------------------
+---------------
+[330] 6666666.210521.148
+AVDA--------------------------------------------------------
+--------------------------------------------------GTMPETTER-
+-------TPDIVQVHDALLLDTPENVADAVDVAGADAI---------------DALLLDK
+-------DPDAVDLAAAGADAIGLLVDVPPPTRAAELD--------ALLLDTPENVADAV
+RAVEPDVASG----------KDPDAV----------------------------------
+---------------
+[331] 6666666.210482.2589
+VERA--------------------------------------------------------
+--------------------------------------------------GTMPETVAE-
+-------APDALQLHDAVLVDTPDNVAEAVDVAGADAV---------------DAVLVDK
+-------DHEAVDLRAVGADAVGAIAEVPSLDDAAALD--------AVLVDTPDNVAEAV
+ETVRPDVASG----------KDHEAV----------------------------------
+---------------
+[332] 6666666.211925.1057
+VERA--------------------------------------------------------
+--------------------------------------------------GTMPETVSE-
+-------APDVVQIHDAIVVDTPENVTEAVDVAGADAV---------------DAIVVDK
+-------DHDAVDLRAVGADAVGFIADVPSLDRAAELD--------AIVVDTPENVTEAV
+ETVNPDVASG----------KDHDAV----------------------------------
+---------------
+[333] 6666666.210520.3048
+VERA--------------------------------------------------------
+--------------------------------------------------GTMPETVSE-
+-------APDVVQIHDAIVVDTPENVTEAVDVAGADAV---------------DAIVVDK
+-------DHDAVDLRAVGADAVGFIADVPSLDRAAELD--------AIVVDTPENVTEAV
+ETVNPDVASG----------KDHDAV----------------------------------
+---------------
+[334] 6666666.210488.3356
+VDEA--------------------------------------------------------
+--------------------------------------------------GTMPETASE-
+-------APDVLQIHDGIVVDTPDNVAEAVDVAGADAV---------------DGIVVDK
+-------DRDAVDLRAVGADAVGFIAGVPSLVRAAELD--------GIVVDTPDNVAEAV
+ETVDPDVASG----------KDRDAV----------------------------------
+---------------
+[335] 6666666.209961.625
+VESA--------------------------------------------------------
+--------------------------------------------------GTMPESVTR-
+-------APDVLQLHDAILVDTPENVAEGVDVAGADAV---------------DAILVDK
+-------DHDAVDLEAVGADAVGVIADVSSVARARDLD--------AILVDTPENVAEAV
+QTVQPDVASG----------KDHDAV----------------------------------
+---------------
+[336] 6666666.210163.1349
+VESA--------------------------------------------------------
+--------------------------------------------------GTMPESVTR-
+-------APDVLQLHDAILVDTPANVAEGVDVAGADAV---------------DAILVDK
+-------DHDAVDLEAVGADAVGVIADVSSVARARDLD--------AILVDTPANVAEAV
+QTVQPDVASG----------KDHDAV----------------------------------
+---------------
+[337] 6666666.209919.1464
+VDAA--------------------------------------------------------
+--------------------------------------------------GTMPDSIDH-
+-------APDVLQLHDAILVDTPDNVVEGVDVAGADAV---------------DAILVDK
+-------DHDAVDLAAVGADAVGAICDVPSRERARELD--------AILVDTPDNVVEAV
+RTVEPDVASG----------KDHDAV----------------------------------
+---------------
+[338] 6666666.209952.476
+VDAA--------------------------------------------------------
+--------------------------------------------------GTMPDSIDH-
+-------APDVLQLHDAILVDTPDNVVEGVDVAGADAV---------------DAILVDK
+-------DHDAVDLAAVGADAVGAICDVPSRERARELD--------AILVDTPDNVVEAV
+RTVEPDVASG----------KDHDAV----------------------------------
+---------------
+[339] 6666666.210090.3191
+VDAA--------------------------------------------------------
+--------------------------------------------------GTMPDSIDH-
+-------APDVLQLHDAILVDTPDNVVEGVDVAGADAV---------------DAILVDK
+-------DHDAVDLAAVGADAVGAICDVPSRERARELD--------AILVDTPDNVVEAV
+RTVEPDVASG----------KDHDAV----------------------------------
+---------------
+[340] 6666666.210552.2476
+VDAA--------------------------------------------------------
+--------------------------------------------------GTMPDSVDH-
+-------APDVLQLHDAILVDTPDNVVEGVDVAGADAV---------------DAILVDK
+-------DHDAVDLAAVGADAVGAICDVPPRERARELD--------AILVDTPDNVVEAV
+RTVEPDVASG----------KDHDAV----------------------------------
+---------------
+[341] 6666666.211913.2394
+VDAA--------------------------------------------------------
+--------------------------------------------------GTMPDSVDH-
+-------APDVLQLHDAILVDTPDNVVEGVDVAGADAV---------------DAILVDK
+-------DHDAVDLAAVGADAVGAICDVPPRERARELD--------AILVDTPDNVVEAV
+RTVEPDVASG----------KDHDAV----------------------------------
+---------------
+[342] 6666666.210485.2681
+VDAA--------------------------------------------------------
+--------------------------------------------------GTMPDSIDH-
+-------APDVLQLHDAILVDTPDNVVEGVDVAGADAV---------------DAILVDK
+-------DHDAVDLAAVGADAVGAICDVPPRERARELD--------AILVDTPDNVVEAV
+RTVEPDVASG----------KDHDAV----------------------------------
+---------------
+[343] 6666666.209963.620
+VDAA--------------------------------------------------------
+--------------------------------------------------GTMPDSIDH-
+-------APDVLQLHDAILVDTPDNVVEGVDVAGADAV---------------DAILVDK
+-------DHDAVDLAAVGADAVGAICDVPPRERARELD--------AILVDTPDNVVEAV
+RTVEPDVASG----------KDHDAV----------------------------------
+---------------
+[344] 6666666.210463.3018
+------------------------------------------------------------
+------------------------------------------------------------
+----------MLQLHDAILVDTPDNVVEGVDVA--------------------DAILVDK
+-------DHDAVG-----------------------AD--------AILVDTPDNVVEAV
+RTVEPDVASG----------KDHDAV----------------------------------
+---------------
+[345] 6666666.210327.2309
+VEAA--------------------------------------------------------
+--------------------------------------------------GTMPDSIDH-
+-------APDVLQLHDAVLVDTPDNVAEGVDVAGTDAV---------------DAVLVDK
+-------DHDAVDLAAVGTDAVGAICDVPPRERARELD--------AVLVDTPDNVAEAV
+RTVEPDVASG----------KDHDAV----------------------------------
+---------------
+[346] 6666666.210214.1339
+VDAA--------------------------------------------------------
+--------------------------------------------------GTMPDSIDH-
+-------APDVLQLHDAVLVDTPDNVAEGVDVAGADAV---------------DAVLVDK
+-------DHDAVDLAAVGADAVGAICDVPPRERARELD--------AVLVDTPDNVAEAV
+RTVEPDVASG----------KDHDAV----------------------------------
+---------------
+[347] 6666666.210259.1615
+VDAA--------------------------------------------------------
+--------------------------------------------------GTMPDSIDH-
+-------APDVLQLHDAILVDTPDNVAEGVDVAGADAV---------------DAILVDK
+-------DHDAVDLEAVGADAVGAICDVPPRERARELD--------AILVDTPDNVAEAV
+RTVDPDVASG----------KDHDAV----------------------------------
+---------------
+[348] 6666666.210584.2539
+VDAA--------------------------------------------------------
+--------------------------------------------------GTMPDSIDH-
+-------APDVLQLHDAILVDTPDNVAEGVDVAGADAV---------------DAILVDK
+-------DHDAVDLAAVGADAVGAICDVPPRERARELD--------AILVDTPDNVAEAV
+RTVEPDVASG----------KDHDAV----------------------------------
+---------------
+[349] 6666666.210387.1471
+VDAA--------------------------------------------------------
+--------------------------------------------------GTMPDSIDH-
+-------APDVLQLHDAILVDTPDNVAEGVDVAGADAV---------------DAILVDK
+-------DHDAVDLEAVGADAVGAICDVPPRERARELD--------AILVDTPDNVAEAV
+RTVEPDVASG----------KDHDAV----------------------------------
+---------------
+[350] 6666666.210372.2190
+VDAA--------------------------------------------------------
+--------------------------------------------------GTMPDSIDH-
+-------APDVLQLHDAILVDTPDNVAEGVDVAGADAV---------------DAILVDK
+-------DHDAVDLEAVGADAVGAICDVPPRERARELD--------AILVDTPDNVAEAV
+RTVEPDVASG----------KDHDAV----------------------------------
+---------------
+[351] 6666666.211923.2465
+VDAA--------------------------------------------------------
+--------------------------------------------------GTMPDSIDH-
+-------APDVLQLHDAILVDTPDNVAEGVDVAGADAV---------------DAILVDK
+-------DHDAVDLEAVGADAVGAICDVPPRERARELD--------AILVDTPDNVAEAV
+RTVEPDVASG----------KDHDAV----------------------------------
+---------------
+[352] 6666666.210248.1866
+VDAA--------------------------------------------------------
+--------------------------------------------------GTMPDSIDH-
+-------APDVLQLHDAILVDTPDNVAEGVDVAGADAV---------------DAILVDK
+-------DHDAVDLGAVGADAVGAICDVPPRERARELD--------AILVDTPDNVAEAV
+RTVEPDVASG----------KDHDAV----------------------------------
+---------------
+[353] 6666666.210384.2244
+VASA--------------------------------------------------------
+--------------------------------------------------GTMPDSVAH-
+-------APDVLQLHDAILVDTPNNVADSVDVAGADAV---------------DAILVDK
+-------DHDAVDLDVVGADAVGAISDVPTPTRARELD--------AILVDTPNNVADAV
+RTVSPDVASG----------KDHDAV----------------------------------
+---------------
+[354] 6666666.209948.2535
+VAAA--------------------------------------------------------
+--------------------------------------------------GTMPTSVEQ-
+-------APDVLQLHDAILVDTPANVAAGVDVAGADAI---------------DAILVDK
+-------DHDAVDLEAVGADAIGAICDVPTPDRARELD--------AILVDTPANVAAAV
+RTVEPDVASG----------KDHDAV----------------------------------
+---------------
+[355] 6666666.211949.1505
+VAAT--------------------------------------------------------
+--------------------------------------------------GTMPESVEH-
+-------APDVLQLHDAILVDTPRERRRRRRRCGADAV---------------DAILVDR
+-------QRPRCDLEAVGADAVGAICDVPDAARARELD--------AILVDTPRERRRRG
+ADGRPKRRRG----------RQRPRC----------------------------------
+---------------
+[356] 6666666.210367.1275
+VAAT--------------------------------------------------------
+--------------------------------------------------GTMPESVEH-
+-------APDVLQLHDAILVDTPENVADGVDVAGADAV---------------DAILVDK
+-------DHGAVDLEAVGADAVGAICDVPDAARARELD--------AILVDTPENVADAV
+RTVAPDVASG----------KDHGAV----------------------------------
+---------------
+[357] 6666666.211950.2274
+VAAT--------------------------------------------------------
+--------------------------------------------------GTMPESVEH-
+-------APDVLQLHDAILVDTPENVADGVDVAGADAV---------------DAILVDK
+-------DHGAVDLEAVGADAVGAICDVPDAARARELD--------AILVDTPENVADAV
+RTVAPDVASG----------KDHGAV----------------------------------
+---------------
+[358] 6666666.209925.603
+VADA--------------------------------------------------------
+--------------------------------------------------GSMPDTATR-
+-------APDAVQLHDAILLDTPENVADAVDVSGADAV---------------DAILLDK
+-------DHDAVDLRAVGADAVGIITEVSPPEHAADLD--------AILLDTPENVADAV
+RTVDPDVSSG----------KDHDAV----------------------------------
+---------------
+[359] 6666666.210201.1589
+AADA--------------------------------------------------------
+--------------------------------------------------GLMPETPER-
+-------APDVLQLYDAVLLDTPENVVEGVDAAGVDAV---------------DAVLLDK
+-------DEDAVDIRTAGVDAVGVITELPTPASAADLD--------AVLLDTPENVVEAI
+ETVDPDAASG----------KDEDAV----------------------------------
+---------------
+[360] 6666666.211955.1242
+AVAA--------------------------------------------------------
+--------------------------------------------------GTMPATPEH-
+-------APDAVQLHDALLVDTPANVADAVDVAGADAV---------------DALLVDK
+-------DHAAVDHAAAGADAVGIIADVPSVETATALD--------ALLVDTPANVADAV
+DTVDPDVASG----------KDHAAV----------------------------------
+---------------
+[361] 6666666.211961.1241
+AVAA--------------------------------------------------------
+--------------------------------------------------GTMPATPEH-
+-------APDAVQLHDALLVDTPANVADAVDVAGADAV---------------DALLVDK
+-------DHAAVDHAAAGADAVGIIADVPSVETATALD--------ALLVDTPANVADAV
+DTVDPDVASG----------KDHAAV----------------------------------
+---------------
+[362] 6666666.211928.2208
+AAAA--------------------------------------------------------
+--------------------------------------------------GTMPDAPEH-
+-------APDVVQLHDALLVDTPENVADAVDVAGADAV---------------DALLVDK
+-------DHDAVDLRAAGADAVGIIADVPAVEQAADLD--------ALLVDTPENVADAV
+EAADPDVASG----------KDHDAV----------------------------------
+---------------
+[363] 6666666.211916.1869
+AVDA--------------------------------------------------------
+--------------------------------------------------GTMPEAPER-
+-------APDAVQLHDALLVDTPENVAEAVDVAGADAV---------------DALLVDK
+-------DHDAVDLRAAGADAVGFIADVPSIEQAADLD--------ALLVDTPENVAEAV
+ATVEPDVASG----------KDHDAV----------------------------------
+---------------
+[364] 6666666.209930.2279
+AVDA--------------------------------------------------------
+--------------------------------------------------GTMPDTPER-
+-------APDAVQLHDALLVDTPENVAEAVDVAGADAL---------------DALLVDK
+-------DHDAVDRRVAGADALGFIVDVPSVERAADLD--------ALLVDTPENVAEAV
+ATVDPDVASG----------KDHDAV----------------------------------
+---------------
+[365] 6666666.209929.1661
+AVDA--------------------------------------------------------
+--------------------------------------------------GLMPDSAAR-
+-------APDVVQLHDALLVDTPENVAEAVDVAGADAI---------------DALLVDK
+-------DHGAVDLRAAGADAIGLICDVPDPSVAADLD--------ALLVDTPENVAEAV
+STVDPDVASG----------KDHGAV----------------------------------
+---------------
+[366] 6666666.210217.1502
+VADA--------------------------------------------------------
+--------------------------------------------------GTMPETPAE-
+-------APDVLQVHDAVVVDTPENVADAVDVAGADAV---------------DAVVVDK
+-------DHTAVDLRAVGADAVGVISEVPDPATAADLD--------AVVVDTPENVADAI
+SAVEPDVASG----------KDHTAV----------------------------------
+---------------
+[367] 6666666.210645.387
+VVET--------------------------------------------------------
+--------------------------------------------------GTMPETPED-
+-------APDVVQMHDAVLVDTPDNVAEAVDVAGADAV---------------DAVLVDK
+-------DHTAVDLRAVGADAVGLITDVGDRSTAADLD--------AVLVDTPDNVAEAV
+RVAEPDVASG----------KDHTAV----------------------------------
+---------------
+[368] 6666666.210697.1655
+AIEA--------------------------------------------------------
+--------------------------------------------------GTMPDSPER-
+-------APDALQLHDALVVDTPENVAEAVDVAGADAV---------------DALVVDK
+-------DHNALDVRAAGADAVGAITEVPDPATAADLD--------ALVVDTPENVAEAV
+ETADPDVASG----------KDHNAL----------------------------------
+---------------
+[369] 6666666.210453.1378
+AVEA--------------------------------------------------------
+--------------------------------------------------GTMPDSPER-
+-------APDAIQLHDALVVDTPDNVAEAVDVAGADAV---------------DALVVDK
+-------DHNAVDLRAAGADAVGVIAEVPDPATAAELD--------ALVVDTPDNVAEAV
+ATADPDVASG----------KDHNAV----------------------------------
+---------------
+[370] 6666666.210053.2835
+AVEA--------------------------------------------------------
+--------------------------------------------------GTMPTSAER-
+-------APDALQLHDALVVDTAENVAEAVDVAGSDAV---------------DALVVDK
+-------DHNAVDLRAAGSDAVGVITEVPDPARAADLD--------ALVVDTAENVAEAV
+RVADPDVASG----------KDHNAV----------------------------------
+---------------
+[371] 6666666.210699.2134
+TVEA--------------------------------------------------------
+--------------------------------------------------GTMPASPER-
+-------APDAVQLHDALVVDTAENVGEAVDVSGADAV---------------DALVVDK
+-------DHNAVDLKATGADAVGVISEVPDPAKAAELD--------ALVVDTAENVGEAV
+RAADPDVSSG----------KDHNAV----------------------------------
+---------------
+[372] 6666666.210575.1592
+AVDA--------------------------------------------------------
+--------------------------------------------------GTMPDSAEH-
+-------APDAIQLHDAFVVDTANNVAEAVDVAGADAI---------------DAFVVDK
+-------DHNAVDLRAAGADAIGVISEVPDPAEAAALD--------AFVVDTANNVAEAV
+RVADPDVASG----------KDHNAV----------------------------------
+---------------
+[373] 6666666.210265.470
+AVDA--------------------------------------------------------
+--------------------------------------------------GTMPDSAER-
+-------APDAIQLHDAMVVDTADNVAEAVDVAGADAV---------------DAMVVDK
+-------DHNAVDRRAAGADAVGVITEVPDPATAAELD--------AMVVDTADNVAEAV
+RVADPDVASG----------KDHNAV----------------------------------
+---------------
+[374] 6666666.210102.1143
+AVDA--------------------------------------------------------
+--------------------------------------------------GTMPDSAER-
+-------APDAIQLHDALVVDTADNVAEAVDVAGADAV---------------DALVVDK
+-------DHNAVDLRAAGADAVGVITEVPDPATAAELD--------ALVVDTADNVAEAV
+RVADPDVASG----------KDHNAV----------------------------------
+---------------
+[375] 6666666.210103.2345
+AVEA--------------------------------------------------------
+--------------------------------------------------GTMPESAER-
+-------APDAIQLHDALVVDTADNVAEAVDVAGADAV---------------DALVVDK
+-------DHNAVDLRAAGADAVGVIAETPDPAKAAELD--------ALVVDTADNVAEAV
+RVADPDVASG----------KDHNAV----------------------------------
+---------------
+[376] 6666666.210119.265
+AVEA--------------------------------------------------------
+--------------------------------------------------GTMPESAER-
+-------APDAIQLHDALVVDTADTVAEAVDVAGADAV---------------DALVVDK
+-------DHNAVDLRAAGADAVGVITETPDPATAAELD--------ALVVDTADTVAEAV
+RVADPDVASG----------KDHNAV----------------------------------
+---------------
+[377] 6666666.210021.3182
+AVDA--------------------------------------------------------
+--------------------------------------------------GTMPESAER-
+-------APDAIQLHDAFVVDTADTVAEAVDVAGADAV---------------DAFVVDK
+-------DHNAVDLRAAGADAVGVITEVPDPAEAAELD--------AFVVDTADTVAEAV
+RVADPDVASG----------KDHNAV----------------------------------
+---------------
+[378] 6666666.210100.2000
+AVDA--------------------------------------------------------
+--------------------------------------------------GTMPDSAER-
+-------APDAIQLHDAFVVDTADNVAEAVDVAGADAV---------------DAFVVDK
+-------DHNAVDLRAAGADAVGVITEVPDPAEAAELD--------AFVVDTADNVAEAV
+RVADPDVASG----------KDHNAV----------------------------------
+---------------
+[379] 6666666.209971.2413
+AVDA--------------------------------------------------------
+--------------------------------------------------GTMPDSAER-
+-------APDAIQLHDALVVDTADNVAEAVDVAGADAV---------------DALVVDK
+-------DHNAVDLRAAGADAVGVITEVPDPAEAAELD--------ALVVDTADNVAEAV
+RVADPDVASG----------KDHNAV----------------------------------
+---------------
+[380] 6666666.210340.2838
+AVDA--------------------------------------------------------
+--------------------------------------------------GTMPDSAER-
+-------APDAIQLHDALVVDTADNVAEAVDVAGADAV---------------DALVVDK
+-------DHNAVDLRAAGADAVGVITEVPDPAEAAELD--------ALVVDTADNVAEAV
+RVADPDVASG----------KDHNAV----------------------------------
+---------------
+[381] 6666666.210353.2351
+AVDA--------------------------------------------------------
+--------------------------------------------------GTMPDSAER-
+-------APDAIQLHDALVVDTADNVAEAVDVAGADAV---------------DALVVDK
+-------DHNAVDLRAAGADAVGVITEVPDPAEAAELD--------ALVVDTADNVAEAV
+RVADPDVASG----------KDHNAV----------------------------------
+---------------
+[382] 6666666.210555.2475
+AVDA--------------------------------------------------------
+--------------------------------------------------GTMPDSAER-
+-------APDAIQLHDALVVDTADNVAEAVDVAGADAV---------------DALVVDK
+-------DHNAVDLRAAGADAVGVITEVPDPAEAAELD--------ALVVDTADNVAEAV
+RVADPDVASG----------KDHNAV----------------------------------
+---------------
+[383] 6666666.210320.1183
+AVDA--------------------------------------------------------
+--------------------------------------------------GTMPDSAER-
+-------APDAIQLHDALVVDTADNVAEAVDVAGADAV---------------DALVVDK
+-------DHNAVDLRAAGADAVGVITEVPDPAEAAELD--------ALVVDTADNVAEAV
+RVADPDVASG----------KDHNAV----------------------------------
+---------------
+[384] 6666666.210587.1933
+AVDA--------------------------------------------------------
+--------------------------------------------------GTMPDSAER-
+-------VPDAVQIHDALVLDTPDTVAEAVDVAGADAV---------------DALVLDK
+-------DHNAVDLRAAGADAVGVITEVPEPATAADLD--------ALVLDTPDTVAEAI
+RAADPDVASG----------KDHNAV----------------------------------
+---------------
+[385] 6666666.210199.455
+AIDA--------------------------------------------------------
+--------------------------------------------------GTMPESAER-
+-------APDAIQLHDALVVDTADTVAEAVDVAGADAV---------------DALVVDK
+-------DHNAVDLRAAGADAVGVITEVPDPAKAADLD--------ALVVDTADTVAEAV
+RLANPDVASG----------KDHNAV----------------------------------
+---------------
+[386] 6666666.210255.453
+AIDA--------------------------------------------------------
+--------------------------------------------------GTMPESAER-
+-------APDAIQLHDALVVDTADTVAEAVDVAGADAV---------------DALVVDK
+-------DHNAVDLRAAGADAVGVITEVPDPAKAADLD--------ALVVDTADTVAEAV
+RLANPDVASG----------KDHNAV----------------------------------
+---------------
+[387] 6666666.210444.1107
+AIDA--------------------------------------------------------
+--------------------------------------------------GTMPESAER-
+-------APDALQLHDALVLDTADTVAEAVDVAGADAV---------------DALVLDK
+-------DHNAIDLRAAGADAVGVISEVPDPAAAAELD--------ALVLDTADTVAEAV
+RVADPDVASG----------KDHNAI----------------------------------
+---------------
+[388] 6666666.210479.476
+AVDA--------------------------------------------------------
+--------------------------------------------------GTMPDSAER-
+-------APDAVQLHDALVIDTADNVDEAVDVAGADAV---------------DALVIDK
+-------DHNAVDLRAAGADAVGVISEVPDPATAAELD--------ALVIDTADNVDEAV
+RAADPDVASG----------KDHNAV----------------------------------
+---------------
+[389] 6666666.211922.1942
+AIDA--------------------------------------------------------
+--------------------------------------------------GTMPDSAER-
+-------APDAIQLHDALVIDTADNVAEAVDVAGADAV---------------DALVIDK
+-------DHNAVDLRAAGADAVGVISEVPDPATAAELD--------ALVIDTADNVAEAV
+RAADPDVASG----------KDHNAV----------------------------------
+---------------
+[390] 6666666.210154.942
+AVDA--------------------------------------------------------
+--------------------------------------------------GTMPDSAER-
+-------APDAVQLHDALVIDTPETVAEAVDVAGADAV---------------DALVIDK
+-------DHNAVDLRAAGADAVGVISEVPDPAAAAELD--------ALVIDTPETVAEAV
+RTADPDVASG----------KDHNAV----------------------------------
+---------------
+[391] 6666666.210612.2478
+AVDA--------------------------------------------------------
+--------------------------------------------------GTMPESAER-
+-------APDAVQLHDALVIDTADNVAEAVDVAGADAV---------------DALVIDK
+-------DHNAVDLRAAGADAVGVISEVPDPATAAELD--------ALVIDTADNVAEAV
+RAADPDVASG----------KDHNAV----------------------------------
+---------------
+[392] 6666666.209951.2111
+AVDA--------------------------------------------------------
+--------------------------------------------------GTMPESAER-
+-------APDAVQLHDALVIDTADTVAEAVDVAGADAV---------------DALVIDK
+-------DHNAVDLRAAGADAVGVISEIPDPATAAELD--------ALVIDTADTVAEAV
+RAADPDVASG----------KDHNAV----------------------------------
+---------------
+[393] 6666666.210270.262
+AVEA--------------------------------------------------------
+--------------------------------------------------GTMAETPEE-
+-------APDALQLHDALLIDTPDNVAEGVDVAGTDAV---------------DALLIDK
+-------DHTAVDLRAAGTDAVGFISEVPDRSQAAALD--------ALLIDTPDNVAEAV
+SIAAPDVASG----------KDHTAV----------------------------------
+---------------
+[394] 6666666.210173.2426
+AVEA--------------------------------------------------------
+--------------------------------------------------GAMPDDTDH-
+-------APDALQLHDALLVDTPDNVAAGVDVAGTDAV---------------DALLVDK
+-------NHTAVDLQAAGTDAVGIISAVDDRGTAAELD--------ALLVDTPDNVAAAI
+RAAAPDVASG----------KNHTAV----------------------------------
+---------------
+[395] 6666666.210193.949
+AVEA--------------------------------------------------------
+--------------------------------------------------GSMPDDTEH-
+-------APDALQLHDALLVDTPDNVGEAVDVAGADAI---------------DALLVDK
+-------DHTAVDLQAAGADAIGVISSVNDRSTAAELD--------ALLVDTPDNVGEAV
+RVAAPDVASG----------KDHTAV----------------------------------
+---------------
+[396] 6666666.210663.676
+AVEA--------------------------------------------------------
+--------------------------------------------------GSMPDDAEH-
+-------APDALQLHDALLVDTPDNVGEGVDVAGTDAI---------------DALLVDK
+-------DHTAVDLQAAGTDAIGVISSVDDRGTAAELD--------ALLVDTPDNVGEAV
+RVAAPDVASG----------KDHTAV----------------------------------
+---------------
+[397] 6666666.210550.2162
+AIEA--------------------------------------------------------
+--------------------------------------------------GTMPEDANH-
+-------APDAIQLHDAILVDAPDNVAEAVDVAGADAI---------------DAILVDK
+-------DHTALDLRAAGADAIGVISSVSDRRTAAELD--------AILVDAPDNVAEAV
+RVAAPDVASG----------KDHTAL----------------------------------
+---------------
+[398] 6666666.210366.317
+AIEA--------------------------------------------------------
+--------------------------------------------------GSMPEHAEH-
+-------APDALQLHDAILVDTPNNVAEAVDVAGADAV---------------DAILVDK
+-------DHTALDLQAAGADAVGIICDVPGRSTAAELD--------AILVDTPNNVAEAV
+RVAAPDVASG----------KDHTAL----------------------------------
+---------------
+[399] 6666666.211633.1025
+ISKK--------------------------------------------------------
+---------------------------------------------------IMPESLEE-
+-------APDYLQLHDLFLFDNKDNVVQGVDVS-ADAV---------------DLFLFDK
+-------NLNMVDISYI-ADAVGLIIDVPSLERAIELD--------LFLFDNKDNVVQAL
+NYLNPDVSSS----------KNLNMV----------------------------------
+---------------
+[400] 6666666.210534.1687
+ISQK--------------------------------------------------------
+---------------------------------------------------IMPKDIEE-
+-------VPNAIQLHDALLVDNKDNVKNAIDVS-VHAV---------------DALLVDK
+-------DFKKVDMAYI-VHAVGMIIDVPTLKKAVELD--------ALLVDNKDNVKNAI
+EVVKPDVSSS----------KDFKKV----------------------------------
+---------------
+[401] 6666666.211547.1739
+ISQK--------------------------------------------------------
+---------------------------------------------------MMPESIEE-
+-------VPNAIQLHDALLVDNKDNVKKAIDVS-VHAV---------------DALLVDK
+-------DFKKVDMAYI-VHAVGMIIDVPSLSKAVELD--------ALLVDNKDNVKKAI
+EIVKPDVSSS----------KDFKKV----------------------------------
+---------------
+[402] 6666666.210251.185
+IANK--------------------------------------------------------
+---------------------------------------------------IMPESLEE-
+-------VPHAIQLHDAILVDNKDNVIEAIDVS-VHAV---------------DAILVDK
+-------DFKKVDLVYI-VHAVGFIIDVPTLDKAIELD--------AILVDNKDNVIEAI
+KKVKPDVSSS----------KDFKKV----------------------------------
+---------------
+[403] 6666666.210538.288
+IANK--------------------------------------------------------
+---------------------------------------------------IMPESLEE-
+-------VPHAIQLHDAILVDNKDNVIEAIDVS-VHAV---------------DAILVDK
+-------DFKKVDLVYI-VHAVGFIIDVPTLDKAIELD--------AILVDNKDNVIEAI
+KKVKPDVSSS----------KDFKKV----------------------------------
+---------------
+[404] 6666666.211918.1748
+ISKR--------------------------------------------------------
+---------------------------------------------------IMPEQISD-
+-------VPNAIQLHDAILVDNKDNVVEAIDVS-VHAV---------------DAILVDK
+-------DLKKVDMAYI-VHAVGVIVDVPTLDKAIELD--------AILVDNKDNVVEAI
+KTVRPDVSSS----------KDLKKV----------------------------------
+---------------
+[405] 6666666.211921.1743
+ISKR--------------------------------------------------------
+---------------------------------------------------LMPNSIKE-
+-------VPNAIQLHDAILVDNRDNVLEAIDVS-VHAV---------------DAILVDK
+-------DFKKVDMAYI-VHAVGVIVDVPSLDKATELD--------AILVDNRDNVLEAI
+KTVKPDVSSS----------KDFKKV----------------------------------
+---------------
+[406] 6666666.211954.1220
+ISKK--------------------------------------------------------
+---------------------------------------------------LMPNSIDE-
+-------VPNAIQLHDAILVDNKDNVLEAIDVS-VHAV---------------DAILVDK
+-------NLKKVDMLYI-VHAVGVIIDVPSLDKALELD--------AILVDNKDNVLEAV
+NTVKPDVSSS----------KNLKKV----------------------------------
+---------------
+[407] 6666666.212751.479
+ISKK--------------------------------------------------------
+---------------------------------------------------LMPNSIEE-
+-------VPNAIQLHEAILVDNKDNVLEAIDVS-VHAV---------------EAILVDK
+-------DLKKVDIAYI-VHAVGVIVDVPSLDKAIELE--------AILVDNKDNVLEAI
+KTVKPDVSSS----------KDLKKV----------------------------------
+---------------
+[408] 6666666.211583.1399
+ISKR--------------------------------------------------------
+---------------------------------------------------LMPNSIEE-
+-------VPSAIQLHDAILVDNKDNVLEAIDVS-VHAV---------------DAILVDK
+-------DLKKVDMAYI-VHAVGVIIDVPSLDRAIELD--------AILVDNKDNVLEAI
+KTVKPDVSSS----------KDLKKV----------------------------------
+---------------
+[409] 6666666.210017.297
+ACRI--------------------------------------------------------
+--------------------------------------------------GTVPKSLEE-
+-------VPNIIQLHDGILVDNPSNVCEAVDVSGADFI---------------DGILVDK
+-------DPFKMDLKAAGADFIGFVVGVPKLEEAEHLD--------GILVDNPSNVCEAV
+KTVKPDVSTG----------KDPFKM----------------------------------
+---------------
+[410] 6666666.210637.506
+AINA--------------------------------------------------------
+--------------------------------------------------GTVSENFEN-
+-------IPNAIQIHDAILIDTPENVENAVDVSGADAV---------------DAILIDK
+-------DELKIDLQSAGADAVGFILGVKKIKEAKELD--------AILIDTPENVENAI
+GFVRPDVSSG----------KDELKI----------------------------------
+---------------
+[411] 6666666.210670.286
+ASAR--------------------------------------------------------
+--------------------------------------------------GMRPTSLEE-
+-------IPDALQLHDAVLIDTPENVGDAVDVSGADAV---------------DAVLIDK
+-------DPDAVDVRMAGADAVGFVVGIPSLKKAETLD--------AVLIDTPENVGDAI
+RKVAPDVSTG----------KDPDAV----------------------------------
+---------------
+[412] 6666666.210654.66
+AVEA--------------------------------------------------------
+--------------------------------------------------GTVPRSIDD-
+-------FPSVIQIHDAVLLDNPENVAEAVDVSGADAV---------------DAVLLDK
+-------SHQKIDLDAAGADAVGFVVGVASLNEAERLD--------AVLLDNPENVAEAV
+RTVEPDVSSG----------KSHQKI----------------------------------
+---------------
+[413] 6666666.210018.1383
+AVEA--------------------------------------------------------
+--------------------------------------------------GTVPDSINS-
+-------LPTAIQIHDAILLDKPENVKEAVDVAGADAV---------------DAILLDK
+-------DPKKVDLAVAGADAVGFLVGVPTLERAERLD--------AILLDKPENVKEAI
+LTVQPDVASG----------KDPKKV----------------------------------
+---------------
+[414] 6666666.210083.1383
+AVNC--------------------------------------------------------
+--------------------------------------------------GIMPESITH-
+-------APDMVQVHDAIILDNPQNVGKGVDVSGADAV---------------DAIILDK
+-------NLNRVDIVIAGADAVGFITEVPDMELSIELD--------AIILDNPQNVGKCV
+DIVSPDVSSG----------KNLNRV----------------------------------
+---------------
+[415] 6666666.211545.1545
+AVKC--------------------------------------------------------
+--------------------------------------------------GIMPESIAH-
+-------APDMVQVHDSAILDNPQNVGKGVDVAGADAV---------------DSAILDK
+-------DLNHVDIDIAGADAVGFITEVADMEFSTELD--------SAILDNPQNVGKCV
+DIVSPDVASG----------KDLNHV----------------------------------
+---------------
+[416] 6666666.211945.2082
+ASIC--------------------------------------------------------
+--------------------------------------------------GIMPDSGVQ-
+-------APDIVQIHDAILLDNPDNVKEAVDVAGADAV---------------DAILLDK
+-------DIDKIDIKKAGADAVGFIVDVPNIQKAAELD--------AILLDNPDNVKEAV
+QTVFPDVASG----------KDIDKI----------------------------------
+---------------
+[417] 6666666.211690.187
+AASF--------------------------------------------------------
+--------------------------------------------------GIMPENAEH-
+-------APDVIQLHDGVLLDDPSNISEGVDTAGADAV---------------DGVLLDK
+-------DREKIEIETAGADAVGIITEVPDLQTAAALD--------GVLLDDPSNISEAV
+RCVAPDTASG----------KDREKI----------------------------------
+---------------
+[418] 6666666.211546.1832
+AERA--------------------------------------------------------
+--------------------------------------------------GIMPENANQ-
+-------APDIVQVHDSVLLDKPENVREAVDTAGADAV---------------DSVLLDK
+-------DALKIDIEVAGADAVGFITEVPEAGTAASLD--------SVLLDKPENVREAI
+RTVSPDTASG----------KDALKI----------------------------------
+---------------
+[419] 6666666.210142.2880
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSDT-
+-------APDIVQIHDSILLDKPENVQEAVDTAGADAV---------------DSILLDK
+-------DAIKIEIELAGADAVGFITEVPDSDTAAYLD--------SILLDKPENVQEAI
+RAVSPDTASG----------KDAIKI----------------------------------
+---------------
+[420] 6666666.211713.617
+ADLY--------------------------------------------------------
+--------------------------------------------------GIMPENSDT-
+-------APDIVQIHDSILLDKPENVQEAVDTAGADAV---------------DSILLDK
+-------DAMKIEIELAGADAVGFITEVPDSSTAAYLD--------SILLDKPENVQEAI
+RAVSPDTASG----------KDAMKI----------------------------------
+---------------
+[421] 6666666.211628.247
+ADLY--------------------------------------------------------
+--------------------------------------------------GIMPENSDT-
+-------APDIVQIHDSILLDKPENVQEAVDTAGADAV---------------DSILLDK
+-------DAMKIEIELAGADAVGFITEVPDSSTAAYLD--------SILLDKPENVQEAI
+RAVSPDTASG----------KDAMKI----------------------------------
+---------------
+[422] 6666666.211573.2475
+ADLY--------------------------------------------------------
+--------------------------------------------------GIMPENSDT-
+-------APDIVQIHDSILLDKPENVQEAVDTAGADAV---------------DSILLDK
+-------DAMKIEIELAGADAVGFITEVPDSSTAAYLD--------SILLDKPENVQEAI
+RAVSPDTASG----------KDAMKI----------------------------------
+---------------
+[423] 6666666.209995.2343
+ADLY--------------------------------------------------------
+--------------------------------------------------GIMPENSDT-
+-------APDIVQIHDSILLDKPENVQEAVDTAGADAV---------------DSILLDK
+-------DAMKIEIELAGADAVGFITEVPDSSTAAYLD--------SILLDKPENVQEAI
+RAVSPDTASG----------KDAMKI----------------------------------
+---------------
+[424] 6666666.211623.613
+AAFY--------------------------------------------------------
+--------------------------------------------------GIMPENANT-
+-------APDIVQIHDSILLDKPENVREAVDTAGADAV---------------DSILLDK
+-------DAVKIEIELAGADAVGFITEVPDSDTAAYLD--------SILLDKPENVREAV
+RAVSPDTASG----------KDAVKI----------------------------------
+---------------
+[425] 6666666.211919.2418
+AAFY--------------------------------------------------------
+--------------------------------------------------GIMPENADT-
+-------APDIVQIHDSILLDKPENVREAVDTAGADAV---------------DSILLDK
+-------DAVKIEIELAGADAVGFITEVPDSDTAAYLD--------SILLDKPENVREAI
+RAVSPDTASG----------KDAVKI----------------------------------
+---------------
+[426] 6666666.211943.2439
+AAFY--------------------------------------------------------
+--------------------------------------------------GIMPENADT-
+-------APDIVQIHDSILLDKPENVREAVDTAGADAV---------------DSILLDK
+-------DAVKIEIELAGADAVGFITEVPDSDTAAYLD--------SILLDKPENVREAI
+RAVSPDTASG----------KDAVKI----------------------------------
+---------------
+[427] 6666666.210589.2293
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENADT-
+-------APDIVQIHDSILLDKPENVREAVDTAGADAV---------------DSILLDK
+-------RCCKNEIEIAGADAVGFLTEVPDSDTAAYLD--------SILLDKPENVREAI
+RAVSPDTASG----------KRCCKN----------------------------------
+---------------
+[428] 6666666.211914.4284
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENADT-
+-------APDIVQIHDSILLDKPENVRGAVDTAGADAV---------------DSILLDK
+-------DAVKIEIEIAGADAVGFITEVPDSDTAAYLD--------SILLDKPENVRGAI
+RAVSPDTASG----------KDAVKI----------------------------------
+---------------
+[429] 6666666.211946.1276
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENADT-
+-------APDIVQIHDSILLDKPENVRGAVDTAGADAV---------------DSILLDK
+-------DAVKIEIEIAGADAVGFITEVPDSDTAAYLD--------SILLDKPENVRGAI
+RAVSPDTASG----------KDAVKI----------------------------------
+---------------
+[430] 6666666.211544.509
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENADT-
+-------APDIVQIHDSILLDKPENVREAVDTAGADAV---------------DSILLDK
+-------DAVKIEIEIAGADAVGFLTEVPDSDTAAYLD--------SILLDKPENVREAI
+RAVSPDTASG----------KDAVKI----------------------------------
+---------------
+[431] 6666666.211920.2312
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENADT-
+-------APDIVQIHDSILLDKPENVREAVDTAGADAV---------------DSILLDK
+-------DAVKIEIEIAGADAVGFLTEVPDSDTAAYLD--------SILLDKPENVREAI
+RAVSPDTASG----------KDAVKI----------------------------------
+---------------
+[432] 6666666.211948.522
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENADT-
+-------APDIVQIHDSILLDKPENVREAVDTAGADAV---------------DSILLDK
+-------DAVKIEIEIAGADAVGFLTEVPDSDTAAYLD--------SILLDKPENVREAI
+RAVSPDTASG----------KDAVKI----------------------------------
+---------------
+[433] 6666666.210276.838
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSSR-
+-------APDIVQIHDSILLDKPENVQEAVDTAGADAV---------------DSILLDK
+-------DAVKIDIELAGADAVGFITEVPDSATAASLD--------SILLDKPENVQESI
+RAVSPDTASG----------KDAVKI----------------------------------
+---------------
+[434] 6666666.211678.1715
+AGLY--------------------------------------------------------
+--------------------------------------------------GIMPETSAC-
+-------APDIVQIHDSVLLDKPENVQEAVDTAGADAV---------------DSVLLDK
+-------DAVKIDMELAGADAVGFITEVPDSDTAAALD--------SVLLDKPENVQEAI
+RAVSPDTASG----------KDAVKI----------------------------------
+---------------
+[435] 6666666.211661.2252
+AGLY--------------------------------------------------------
+--------------------------------------------------GIMPETSAC-
+-------APDIVQIHDSVLLDKPENVQEAVDTAGADAV---------------DSVLLDK
+-------DAVKIDMELAGADAVGFITEVPDSDTAAALD--------SVLLDKPENVQEAI
+RAVSPDTASG----------KDAVKI----------------------------------
+---------------
+[436] 6666666.211655.2137
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSTS-
+-------APDIVQIHDSVLLDKPENVQDAVDTAGADAV---------------DSVLLDK
+-------DAVKIDIELAGADAVGFITEVPDSDTTAALD--------SVLLDKPENVQDAI
+RAVSPDTASG----------KDAVKI----------------------------------
+---------------
+[437] 6666666.210318.441
+AAFY--------------------------------------------------------
+--------------------------------------------------GIMPENSTC-
+-------APDIVQIHDSVLLDKPENVQEAVDTAGADAV---------------DSVLLDK
+-------DAVKIDIELAGADAVGFITEVPDSDTAAALD--------SVLLDKPENVQEAI
+RAVSPDTASG----------KDAVKI----------------------------------
+---------------
+[438] 6666666.210243.3288
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSTC-
+-------APDIVQIHDSVLLDKPENVQEAVDTAGADAV---------------DSVLLDK
+-------DAVKIDMELAGADAVGFITEVPDSDTAAALD--------SVLLDKPENVQEAI
+RAVSPDTASG----------KDAVKI----------------------------------
+---------------
+[439] 6666666.210041.1576
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSTC-
+-------APDIVQIHDSVLLDKPENVQEAVDTAGADAV---------------DSVLLDK
+-------DAVKIDMELAGADAVGFITEVPDSDTAAALD--------SVLLDKPENVQEAI
+RAVSPDTASG----------KDAVKI----------------------------------
+---------------
+[440] 6666666.210200.3755
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSTC-
+-------APDIVQIHDSVLLDKPENVQEAVDTAGADAV---------------DSVLLDK
+-------DAVKIDMELAGADAVGFITEVPDSDTAAALD--------SVLLDKPENVQEAI
+RAVSPDTASG----------KDAVKI----------------------------------
+---------------
+[441] 6666666.210117.2461
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSTC-
+-------APDIVQIHDSVLLDKPENVQEAVDTAGADAV---------------DSVLLDK
+-------DAVKIDMELAGADAVGFITEVPDSDTAAALD--------SVLLDKPENVQEAI
+RAVSPDTASG----------KDAVKI----------------------------------
+---------------
+[442] 6666666.210132.3177
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSTC-
+-------APDIVQIHDSVLLDKPENVQEAVDTAGADAV---------------DSVLLDK
+-------DAVKIDMELAGADAVGFITEVPDSDTAAALD--------SVLLDKPENVQEAI
+RAVSPDTASG----------KDAVKI----------------------------------
+---------------
+[443] 6666666.210035.2207
+AAFY--------------------------------------------------------
+--------------------------------------------------GIMPENSTC-
+-------APDIVQIHDSVLLDKPENVQEAVDTAGADAV---------------DSVLLDK
+-------DAVKIDIKLAGADAVGFITEVPDSDTAAALD--------SVLLDKPENVQEAI
+RAVSPDTASG----------KDAVKI----------------------------------
+---------------
+[444] 6666666.211599.3552
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPETSTS-
+-------APNIVQIHDSVLLDKPENVQEAVDTAGADAV---------------DSVLLDK
+-------DSVKVDIEFAGADAVGFITEVPDSDTAAALD--------SVLLDKPENVQEAI
+RSVSPDTASG----------KDSVKV----------------------------------
+---------------
+[445] 6666666.211698.1907
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPETSAC-
+-------APNIVQVHDSVLLDKPENVQEAVDTAGADAV---------------DSVLLDK
+-------DAAKIDIELAGADAVGFITEVPDSDAAAALD--------SVLLDKPENVQEAV
+RAVSPDTASG----------KDAAKI----------------------------------
+---------------
+[446] 6666666.211634.1919
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPETSAC-
+-------APNIVQVHDSVLLDKPENVQEAVDTAGADAV---------------DSVLLDK
+-------DAAKIDIELAGADAVGFITEVPDSDAAAALD--------SVLLDKPENVQEAV
+RAVSPDTASG----------KDAAKI----------------------------------
+---------------
+[447] 6666666.211571.1565
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPETSAC-
+-------APNIVQVHDSVLLDKPENVQEAVDTAGADAV---------------DSVLLDK
+-------DAAKIDIELAGADAVGFITEVPDSDAAAALD--------SVLLDKPENVQEAV
+RAVSPDTASG----------KDAAKI----------------------------------
+---------------
+[448] 6666666.210178.4934
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSSR-
+-------APDIVQIHSPE---------------GAD------------------------
+----------AVDMEMAGADAVGFITEVPDSDTAASLC--------TCRNQSPEPC----
+------------------------------------------------------------
+---------------
+[449] 6666666.211557.2176
+AALY--------------------------------------------------------
+--------------------------------------------------GMMPENSSR-
+-------APDIVQIHDSVLLDKPENVQEAVDTAGADAV---------------DSVLLDK
+-------DAVKIDIELAGADAVGFITEVPDSDTAAILD--------SVLLDKPENVQEAI
+RVVSPDTASG----------KDAVKI----------------------------------
+---------------
+[450] 6666666.210495.3632
+AALY--------------------------------------------------------
+--------------------------------------------------GMMPENSSR-
+-------APDIVQIHR-----------------GAD------------------------
+----------AVDIELAGADAVGFITEVPDSDTAAILK--------RTFP----------
+------------------------------------------------------------
+---------------
+[451] 6666666.210097.2982
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSSR-
+-------APDIVQIHDSILLDKPENVQEAVDTAGADAV---------------DSILLDK
+-------DAVKIDMEMAGADAVGFITEVPDSDTAASLD--------SILLDKPENVQEAI
+RIVSPDTASG----------KDAVKI----------------------------------
+---------------
+[452] 6666666.211654.2909
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSSR-
+-------APDIVQIHDSILLDKPENVQEAVDTAGADAV---------------DSILLDK
+-------DAVKIDMEMAGADAVGFITEVPDSDTAASLD--------SILLDKPENVQEAI
+RIVSPDTASG----------KDAVKI----------------------------------
+---------------
+[453] 6666666.210343.1082
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSSR-
+-------APDIVQIHDSILLDKPENVQEAVDTAGADAV---------------DSILLDK
+-------DAVKIDMEMAGADAVGFITEVPDSDTAASLD--------SILLDKPENVQEAI
+RIVSPDTASG----------KDAVKI----------------------------------
+---------------
+[454] 6666666.210034.642
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSSR-
+-------APDIVQIHDSILLDKPENVQEAVDTAGADAV---------------DSILLDK
+-------DAVKIDMEMAGADAVGFITEVPDSDTAASLD--------SILLDKPENVQEAI
+RIVSPDTASG----------KDAVKI----------------------------------
+---------------
+[455] 6666666.209984.1711
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSSR-
+-------APDIVQIHDSILLDKPENVQEAVDTAGADAV---------------DSILLDK
+-------DAVKIDMEMAGADAVGFITEVPDSDTAASLD--------SILLDKPENVQEAI
+RIVSPDTASG----------KDAVKI----------------------------------
+---------------
+[456] 6666666.210254.1659
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSSR-
+-------APDIVQIHDSILLDKPENVQEAVDTAGADAV---------------DSILLDK
+-------DAVKIDMEMAGADAVGFITEVPDSDTAASLD--------SILLDKPENVQEAI
+RIVSPDTASG----------KDAVKI----------------------------------
+---------------
+[457] 6666666.210010.753
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSSR-
+-------APDIVQIHDSILLDKPENVQEAVDTAGADAV---------------DSILLDK
+-------DAVKIDMEMAGADAVGFITEVPDSDTAASLD--------SILLDKPENVQEAI
+RIVSPDTASG----------KDAVKI----------------------------------
+---------------
+[458] 6666666.210078.1543
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSSR-
+-------APDIVQIHDSILLDKPENVQEAVDTAGADAV---------------DSILLDK
+-------DAVKIDMEMAGADAVGFITEVPDSDTAASLD--------SILLDKPENVQEAI
+RIVSPDTASG----------KDAVKI----------------------------------
+---------------
+[459] 6666666.209968.1580
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSSR-
+-------APDIVQIHDSILLDKPENVQEAVDTAGADAV---------------DSILLDK
+-------DAVKIDMEMAGADAVGFITEVPDSDTAASLD--------SILLDKPENVQEAI
+RIVSPDTASG----------KDAVKI----------------------------------
+---------------
+[460] 6666666.210481.2072
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSSR-
+-------APDIVQIHDSILLDKPENVQEAVDTAGADAV---------------DSILLDK
+-------DAVKIDMEMAGADAVGFITEVPDSDTAASLD--------SILLDKPENVQEAI
+RIVSPDTASG----------KDAVKI----------------------------------
+---------------
+[461] 6666666.211665.2171
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSSR-
+-------APDIVQIHDSILLDKPENVQEAVDTAGADAV---------------DSILLDK
+-------DAVKIDMEMAGADAVGFITEVPDSDTAASLD--------SILLDKPENVQEAI
+RIVSPDTASG----------KDAVKI----------------------------------
+---------------
+[462] 6666666.210028.332
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSSR-
+-------APDIVQIHDSILLDKPENVQEAVDTAGADAV---------------DSILLDK
+-------DAVKIDMEMAGADAVGFITEVPDSDTAASLD--------SILLDKPENVQEAI
+RIVSPDTASG----------KDAVKI----------------------------------
+---------------
+[463] 6666666.210075.3371
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSSR-
+-------APDIVQIHDSILLDKPENVQEAVDTAGADAV---------------DSILLDK
+-------DAVKIDMEMAGADAVGFITEVPDSDTAASLD--------SILLDKPENVQEAI
+RIVSPDTASG----------KDAVKI----------------------------------
+---------------
+[464] 6666666.210517.327
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSSR-
+-------APDIVQIHDSILLDKPENVQEAVDTAGADAV---------------DSILLDK
+-------DAVKIDMEMAGADAVGFITEVPDSDTAASLD--------SILLDKPENVQEAI
+RIVSPDTASG----------KDAVKI----------------------------------
+---------------
+[465] 6666666.212746.3346
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSSR-
+-------APDIVQIHDSILLDKPENVQEAVDTAGADAV---------------DSILLDK
+-------DAVKIDMEMAGADAVGFITEVPDSDTAASLD--------SILLDKPENVQEAI
+RIVSPDTASG----------KDAVKI----------------------------------
+---------------
+[466] 6666666.210192.2864
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSSR-
+-------APDIVQIHDSILLDKPENVQEAVDTAGADAV---------------DSILLDK
+-------DAVKIDMEMAGADAVGFITEVPDSDTAASLD--------SILLDKPENVQEAI
+RIVSPDTASG----------KDAVKI----------------------------------
+---------------
+[467] 6666666.210478.2015
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSSR-
+-------APDIVQIHDSILLDKPENVQEAVDTAGADAV---------------DSILLDK
+-------DAVKIDMEMAGADAVGFITEVPDSDTAASLD--------SILLDKPENVQEAI
+RIVSPDTASG----------KDAVKI----------------------------------
+---------------
+[468] 6666666.209965.1895
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSSR-
+-------APDIVQIHDSILLDKPENVQEAVDTAGADAV---------------DSILLDK
+-------DAVKIDMEMAGADAVGFITEVPDSDTAASLD--------SILLDKPENVQEAI
+RIVSPDTASG----------KDAVKI----------------------------------
+---------------
+[469] 6666666.210465.3613
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSSR-
+-------APDIVQIHDSILLDKPENVQEAVDTAGADAV---------------DSILLDK
+-------DAVKIDMEMAGADAVGFITEVPDSDTAASLD--------SILLDKPENVQEAI
+RIVSPDTASG----------KDAVKI----------------------------------
+---------------
+[470] 6666666.210000.3382
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSSR-
+-------APDIVQIHDSILLDKPENVQEAVDTAGADAV---------------DSILLDK
+-------DAVKIDMEMAGADAVGFITEVPDSDTAASLD--------SILLDKPENVQEAI
+RIVSPDTASG----------KDAVKI----------------------------------
+---------------
+[471] 6666666.209957.739
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSSR-
+-------APDIVQIHDSILLDKPENVQEAVDTAGADAV---------------DSILLDK
+-------DAVKIDMEMAGADAVGFITEVPDSDTAASLD--------SILLDKPENVQEAI
+RIVSPDTASG----------KDAVKI----------------------------------
+---------------
+[472] 6666666.210096.1319
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSSR-
+-------APDIVQIHDSILLDKPENVQEAVDTAGADAV---------------DSILLDK
+-------DAVKIDMEMAGADAVGFITEVPDSDTAASLD--------SILLDKPENVQEAI
+RIVSPDTASG----------KDAVKI----------------------------------
+---------------
+[473] 6666666.211548.2276
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSSR-
+-------APDIVQIHDSILLDKPENVQEAVDAAGADAV---------------DSILLDK
+-------DAVKIDMEMAGADAVGFITEVPDSDTAASLD--------SILLDKPENVQEAI
+RIVSPDAASG----------KDAVKI----------------------------------
+---------------
+[474] 6666666.211638.2132
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSSR-
+-------APDIVQIHDSILLDKPENVQEAVDAAGADAV---------------DSILLDK
+-------DAVKIDMEMAGADAVGFITEVPDSDTAASLD--------SILLDKPENVQEAI
+RIVSPDAASG----------KDAVKI----------------------------------
+---------------
+[475] 6666666.211631.3231
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSSR-
+-------APDIVQIHDSILLDKPENVQEAVDAAGADAV---------------DSILLDK
+-------DAVKIDMEMAGADAVGFITEVPDSDTAASLD--------SILLDKPENVQEAI
+RIVSPDAASG----------KDAVKI----------------------------------
+---------------
+[476] 6666666.211695.2256
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSSR-
+-------APDIVQIHDSILLDKPENVQEAVDAAGADAV---------------DSILLDK
+-------DAVKIDMEMAGADAVGFITEVPDSDTAASLD--------SILLDKPENVQEAI
+RIVSPDAASG----------KDAVKI----------------------------------
+---------------
+[477] 6666666.210020.1281
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSSR-
+-------APDIVQIHDSILLDKPENVQEAVDAAGADAV---------------DSILLDK
+-------DAVKIDMEMAGADAVGFITEVPDSDTAASLD--------SILLDKPENVQEAI
+RIVSPDAASG----------KDAVKI----------------------------------
+---------------
+[478] 6666666.210268.544
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSSR-
+-------APDIVQIHDSILLDKPENVQEAVDAAGADAV---------------DSILLDK
+-------DAVKIDMEMAGADAVGFITEVPDSDTAASLD--------SILLDKPENVQEAI
+RIVSPDAASG----------KDAVKI----------------------------------
+---------------
+[479] 6666666.210308.139
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSSR-
+-------APDIVQIHDSILLDKPENVQEAVDAAGADAV---------------DSILLDK
+-------DAVKIDMEMAGADAVGFITEVPDSDTAASLD--------SILLDKPENVQEAI
+RIVSPDAASG----------KDAVKI----------------------------------
+---------------
+[480] 6666666.210026.1741
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSSR-
+-------APDIVQIHDSILLDKPENVQEAVDAAGADAV---------------DSILLDK
+-------DAVKIDMEMAGADAVGFITEVPDSDTAASLD--------SILLDKPENVQEAI
+RIVSPDAASG----------KDAVKI----------------------------------
+---------------
+[481] 6666666.210286.701
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSSR-
+-------APDIVQIHDSILLDKPENVQEAVDAAGADAV---------------DSILLDK
+-------DAVKIDMEMAGADAVGFITEVPDSDTAASLD--------SILLDKPENVQEAI
+RIVSPDAASG----------KDAVKI----------------------------------
+---------------
+[482] 6666666.210617.2579
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSSR-
+-------APDIVQIHDSILLDKPENVQEAVDAAGADAV---------------DSILLDK
+-------DAVKIDMEMAGADAVGFITEVPDSDTAASLD--------SILLDKPENVQEAI
+RIVSPDAASG----------KDAVKI----------------------------------
+---------------
+[483] 6666666.210443.1606
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSSR-
+-------APDIVQIHDSILLDKPENVQEAVDAAGADAV---------------DSILLDK
+-------DAVKIDMEMAGADAVGFITEVPDSDTAASLD--------SILLDKPENVQEAI
+RIVSPDAASG----------KDAVKI----------------------------------
+---------------
+[484] 6666666.209946.3710
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSSR-
+-------APDIVQIHDSILLDKPENVQEAVDAAGADAV---------------DSILLDK
+-------DAVKIDMEMAGADAVGFITEVPDSDTAASLD--------SILLDKPENVQEAI
+RIVSPDAASG----------KDAVKI----------------------------------
+---------------
+[485] 6666666.210080.1033
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSSR-
+-------APDIVQIHDSILLDKPENVQEAVDAAGADAV---------------DSILLDK
+-------DAVKIDMEMAGADAVGFITEVPDSDTAASLD--------SILLDKPENVQEAI
+RIVSPDAASG----------KDAVKI----------------------------------
+---------------
+[486] 6666666.210006.3396
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSSR-
+-------APDIVQIHDSILLDKPENVQEAVDAAGADAV---------------DSILLDK
+-------DAVKIDMEMAGADAVGFITEVPDSDTAASLD--------SILLDKPENVQEAI
+RIVSPDAASG----------KDAVKI----------------------------------
+---------------
+[487] 6666666.210530.3532
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSSR-
+-------APDIVQIHDSILLDKPENVQEAVDAAGADAV---------------DSILLDK
+-------DAVKIDMEMAGADAVGFITEVPDSDTAASLD--------SILLDKPENVQEAI
+RIVSPDAASG----------KDAVKI----------------------------------
+---------------
+[488] 6666666.211522.1440
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSSR-
+-------APDIVQIHDSILLDKPENVQEAVDAAGADAV---------------DSILLDK
+-------DAVKIDMEMAGADAVGFITEVPDSDTAASLD--------SILLDKPENVQEAI
+RIVSPDAASG----------KDAVKI----------------------------------
+---------------
+[489] 6666666.210565.493
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSSR-
+-------APDIVQIHDSILLDKPENVQEAVDAAGADAV---------------DSILLDK
+-------DAVKIDMEMAGADAVGFITEVPDSDTAASLD--------SILLDKPENVQEAI
+RIVSPDAASG----------KDAVKI----------------------------------
+---------------
+[490] 6666666.210296.1683
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSSR-
+-------APDIVQIHDSILLDKPENVQEAVDAAGADAV---------------DSILLDK
+-------DAVKIDMEMAGADAVGFITEVPDSDTAASLD--------SILLDKPENVQEAI
+RIVSPDAASG----------KDAVKI----------------------------------
+---------------
+[491] 6666666.210242.1854
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSSR-
+-------APDIVQIHDSILLDKPENVQEAVDAAGADAV---------------DSILLDK
+-------DAVKIDMEMAGADAVGFITEVPDSDTAASLD--------SILLDKPENVQEAI
+RIVSPDAASG----------KDAVKI----------------------------------
+---------------
+[492] 6666666.209936.1192
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSSR-
+-------APDIVQIHDSILLDKPENVQEAVDAAGADAV---------------DSILLDK
+-------DAVKIDMEMAGADAVGFITEVPDSDTAASLD--------SILLDKPENVQEAI
+RIVSPDAASG----------KDAVKI----------------------------------
+---------------
+[493] 6666666.209976.1854
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSSR-
+-------APDIVQIHDSILLDKPENVQEAVDAAGADAV---------------DSILLDK
+-------DAVKIDMEMAGADAVGFITEVPDSDTAASLD--------SILLDKPENVQEAI
+RIVSPDAASG----------KDAVKI----------------------------------
+---------------
+[494] 6666666.210257.1113
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSSR-
+-------APDIVQIHDSILLDKPENVQEAVDAAGADAV---------------DSILLDK
+-------DAVKIDMEMAGADAVGFITEVPDSDTAASLD--------SILLDKPENVQEAI
+RIVSPDAASG----------KDAVKI----------------------------------
+---------------
+[495] 6666666.210203.1736
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSSR-
+-------APDIVQIHDSILLDKPENVQEAVDAAGADAV---------------DSILLDK
+-------DAVKIDMEMAGADAVGFITEVPDSDTAASLD--------SILLDKPENVQEAI
+RIVSPDAASG----------KDAVKI----------------------------------
+---------------
+[496] 6666666.210542.2988
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSSR-
+-------APDIVQIHDSILLDKPENVQEAVDAAGADAV---------------DSILLDK
+-------DAVKIDMEMAGADAVGFITEVPDSDTAASLD--------SILLDKPENVQEAI
+RIVSPDAASG----------KDAVKI----------------------------------
+---------------
+[497] 6666666.210307.1340
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSSR-
+-------APDIVQIHDSILLDKPENVQEAVDAAGADAV---------------DSILLDK
+-------DAVKIDMEMAGADAVGFITEVPDSDTAASLD--------SILLDKPENVQEAI
+RIVSPDAASG----------KDAVKI----------------------------------
+---------------
+[498] 6666666.210605.1553
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSSR-
+-------APDIVQIHDSILLDKPENVQEAVDAAGADAV---------------DSILLDK
+-------DAVKIDMEMAGADAVGFITEVPDSDTAASLD--------SILLDKPENVQEAI
+RIVSPDAASG----------KDAVKI----------------------------------
+---------------
+[499] 6666666.210179.1364
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSSR-
+-------APDIVQIHDSILLDKPENVQEAVDAAGADAV---------------DSILLDK
+-------DAVKIDMEMAGADAVGFITEVPDSDTAASLD--------SILLDKPENVQEAI
+RIVSPDAASG----------KDAVKI----------------------------------
+---------------
+[500] 6666666.210086.2895
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSSR-
+-------APDIVQIHDSILLDKPENVQEAVDAAGADAV---------------DSILLDK
+-------DAVKIDMEMAGADAVGFITEVPDSDTAASLD--------SILLDKPENVQEAI
+RIVSPDAASG----------KDAVKI----------------------------------
+---------------
+[501] 6666666.210305.1366
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSSR-
+-------APDIVQIHDSILLDKPENVQEAVDAAGADAV---------------DSILLDK
+-------DAVKIDMEMAGADAVGFITEVPDSDTAASLD--------SILLDKPENVQEAI
+RIVSPDAASG----------KDAVKI----------------------------------
+---------------
+[502] 6666666.210615.1831
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSSR-
+-------APDIVQIHDSILLDKPENVQEAVDAAGADAV---------------DSILLDK
+-------DAVKIDMEMAGADAVGFITEVPDSDTAASLD--------SILLDKPENVQEAI
+RIVSPDAASG----------KDAVKI----------------------------------
+---------------
+[503] 6666666.210263.730
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSSR-
+-------APDIVQIHDSILLDKPENVQEAVDAAGADAV---------------DSILLDK
+-------DAVKIDMEMAGADAVGFITEVPDSDTAASLD--------SILLDKPENVQEAI
+RIVSPDAASG----------KDAVKI----------------------------------
+---------------
+[504] 6666666.210499.364
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSSR-
+-------APDIVQIHDSILLDKPENVQEAVDAAGADAV---------------DSILLDK
+-------DAVKIDMEMAGADAVGFITEVPDSDTAASLD--------SILLDKPENVQEAI
+RIVSPDAASG----------KDAVKI----------------------------------
+---------------
+[505] 6666666.210144.3195
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSSR-
+-------APDIVQIHDSILLDKPENVQEAVDAAGADAV---------------DSILLDK
+-------DAVKIDMEMAGADAVGFITEVPDSDTAASLD--------SILLDKPENVQEAI
+RIVSPDAASG----------KDAVKI----------------------------------
+---------------
+[506] 6666666.210054.1635
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSSR-
+-------APDIVQIHDSILLDKPENVQEAVDAAGADAV---------------DSILLDK
+-------DAVKIDMEMAGADAVGFITEVPDSDTAASLD--------SILLDKPENVQEAI
+RIVSPDAASG----------KDAVKI----------------------------------
+---------------
+[507] 6666666.209928.265
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSSR-
+-------APDIVQIHDSILLDKPENVQEAVDAAGADAV---------------DSILLDK
+-------DAVKIDMEMAGADAVGFITEVPDSDTAASLD--------SILLDKPENVQEAI
+RIVSPDAASG----------KDAVKI----------------------------------
+---------------
+[508] 6666666.210194.2352
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSSR-
+-------APDIVQIHDSILLDKPENVQEAVDAAGADAV---------------DSILLDK
+-------DAVKIDMEMAGADAVGFITEVPDSDTAASLD--------SILLDKPENVQEAI
+RIVSPDAASG----------KDAVKI----------------------------------
+---------------
+[509] 6666666.210039.810
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSSR-
+-------APDIVQIHDSILLDKPENVQEAVDAAGADAV---------------DSILLDK
+-------DAVKIDMEMAGADAVGFITEVPDSDTAASLD--------SILLDKPENVQEAI
+RIVSPDAASG----------KDAVKI----------------------------------
+---------------
+[510] 6666666.210351.2162
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSSR-
+-------APDIVQIHDSILLDKPENVQEAVDAAGADAV---------------DSILLDK
+-------DAVKIDMEMAGADAVGFITEVPDSDTAASLD--------SILLDKPENVQEAI
+RIVSPDAASG----------KDAVKI----------------------------------
+---------------
+[511] 6666666.210597.510
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSSR-
+-------APDIVQIHDSILLDKPENVQEAVDAAGADAV---------------DSILLDK
+-------DAVKIDMEMAGADAVGFITEVPDSDTAASLD--------SILLDKPENVQEAI
+RIVSPDAASG----------KDAVKI----------------------------------
+---------------
+[512] 6666666.210491.3632
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSSR-
+-------APDIVQIHDSILLDKPENVQEAVDAAGADAV---------------DSILLDK
+-------DAVKIDMEMAGADAVGFITEVPDSDTAASLD--------SILLDKPENVQEAI
+RIVSPDAASG----------KDAVKI----------------------------------
+---------------
+[513] 6666666.210077.262
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSSR-
+-------APDIVQIHDSILLDKPENVQEAVDAAGADAV---------------DSILLDK
+-------DAVKIDMEMAGADAVGFITEVPDSDTAASLD--------SILLDKPENVQEAI
+RIVSPDAASG----------KDAVKI----------------------------------
+---------------
+[514] 6666666.210365.3355
+AALY--------------------------------------------------------
+--------------------------------------------------GIMPENSSR-
+-------APDIVQIHDSILLDKPENVQEAVDAAGADAV---------------DSILLDK
+-------DAVKIDMEMAGADAVGFITEVPDSDTAASLD--------SILLDKPENVQEAI
+RIVSPDAASG----------KDAVKI----------------------------------
+---------------
+[515] 6666666.210188.4297
+AINA--------------------------------------------------------
+--------------------------------------------------GIMPESADE-
+-------APTAVQIHGA-------------------------------------------
+---------DAVDLAVAGADAVGFITEVPTLSEASGL-----------------------
+------------------------------------------------------------
+---------------
+[516] 6666666.209920.1626
+AIDS--------------------------------------------------------
+--------------------------------------------------GIMPENAER-
+-------APTAVQVHDAVLLDNPENVGDAVDTAGADAV---------------DAVLLDK
+-------DQKKVDLVTAGADAVGFITEVPSLVEASRLD--------AVLLDNPENVGDAV
+MSVRPDTASG----------KDQKKV----------------------------------
+---------------
+[517] 6666666.211538.2558
+SVRS--------------------------------------------------------
+--------------------------------------------------GIMPGSAQE-
+-------APDVVQIHDGVLLDNPDNVKAAVDTAGVDAV---------------DGVLLDK
+-------DVDKVDVDLSGVDAVGFITDVPDLQKAKELD--------GVLLDNPDNVKACV
+NEVIPDTASG----------KDVDKV----------------------------------
+---------------
+[518] 6666666.209953.2037
+AVSS--------------------------------------------------------
+--------------------------------------------------GIMPKSATE-
+-------APDVVQIHDGILLDNAENVAEAVDTAGADAV---------------DGILLDK
+-------DAEKIDVDLAGADAVGFITDVPDLKKAEELD--------GILLDNAENVAECL
+KQVSPDTASG----------KDAEKI----------------------------------
+---------------
+[519] 6666666.211693.545
+AVIS--------------------------------------------------------
+--------------------------------------------------GIMPESATE-
+-------APDVVQIHDGILLDNADNVAEAVDTAGADAV---------------DGILLDK
+-------DAEKIDIDLAGADAVGFITDVPDLKKARELD--------GILLDNADNVAECV
+KQVSPDTASG----------KDAEKI----------------------------------
+---------------
+[520] 6666666.211962.2208
+AVKF--------------------------------------------------------
+--------------------------------------------------GIMPENGEE-
+-------APDIVQLHDGVLLDDPENVRQAVDVAGADAV---------------DGVLLDK
+-------DPDKV--GMAGADAVGFVTEVPDAASASALD--------GVLLDDPENVRQAV
+EEVRPDVASG----------KDPDKV----------------------------------
+---------------
+[521] 6666666.211618.1934
+AVRC--------------------------------------------------------
+--------------------------------------------------GMMPYNTDQ-
+-------APDSIQLHDGVLLDKPENVRDAVDTAGADAV---------------DGVLLDK
+-------DPAKVDIDMAGADAVGFITDVPDPDTACGLD--------GVLLDKPENVRDAV
+EQVRPDTASG----------KDPAKV----------------------------------
+---------------
+[522] 6666666.210164.2362
+AVNC--------------------------------------------------------
+--------------------------------------------------GIMPKDGDE-
+-------APDIVQFHDAILLDKPENVRDAVDTAGADAV---------------DAILLDK
+-------DPARVDVDIAGADAVGFITDVPDAQTASELD--------AILLDKPENVRDAV
+EQVRPDTASG----------KDPARV----------------------------------
+---------------
+[523] 6666666.210162.1152
+AVSC--------------------------------------------------------
+--------------------------------------------------GIMPENGQE-
+-------APDVVQIHDGILLDKADNVRDAVDTAGADAV---------------DGILLDK
+-------DPAKVDIELAGADAVGFITEVPDAQTASELD--------GILLDKADNVRDAV
+NKVMPDTASG----------KDPAKV----------------------------------
+---------------
+[524] Natrop
+--------------------------------------------------MTRVKVCGIT
+NRSDLDTAVDAGVDAVGLIVDVDVQTPREISPQQAAELAAATPPFVTAVLVTMADVPDAA
+TELVEAVRPDAVQVHGESTPDALASLGAAVEADVIKATD-------------------PG
+TAATYDGHADAVLVDSLDESGAGGTGTVHDWDRTGELVESLQSPVVLAGGLTPENVADAV
+EAAAPFAVDVASGVEAESGQKDADAV--SA-FVDA------AG--G---CQ---------
+---------------
+[525] Metha
+-----------------------------------------MKTRPKTRIKTRVKICGIR
+SPKDIEFAALYGADAVGFITEVPVESPRKLDSDTAAALISKVPKCLDSVMVIMPETSTSA
+LELIEKVKPNIVQIHSDLPLSELKAVREKADIPIIKTLSVPAEQEAPKLHNIVTRLLEEV
+RELEESGIVDSVLLDSGIAGKTGGTGCVHDWDLSRRIAEETELPLILAGGLKPENVQEAI
+RSVSPYAVDTASGVETQGK-KDSVKV--RK-FIEE------VR------CTYAFL-----
+---------------
+;
+END;
