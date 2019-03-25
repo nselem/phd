@@ -1,7 +1,12 @@
 ---
-output: pdf_document
+header-includes:
+- \usepackage{graphicx,latexsym}
+- \usepackage{amssymb,amsthm,amsmath}
+- \usepackage{longtable,booktabs,setspace}
+output:
+  pdf_document: default
 ---
-```{r load_pkgs, message = FALSE}
+```{r load_pkgs,message=FALSE,echo=FALSE}
 # List of packages required for this analysis
 pkg <- c("dplyr", "ggplot2", "knitr", "devtools")
 # Check if packages are not installed and assign the
@@ -15,17 +20,13 @@ if (length(new.pkg))
 library(dplyr)
 library(ggplot2)
 library(knitr)
+if(!require(reedtemplates)){
+  library(devtools)
+  devtools::install_github("ismayc/reedtemplates")
+  }
+library(reedtemplates)
 ```
 
-# Orthocores   
-
-Las primeras relaciones filogenéticas establecidas que fueron basadas en variación molecular se realizaron con la secuencia de 16s. 
-
-Dos secuencias son homólogas si tienen un ancestro común. No existe “grado de homología”, o son homólogas o no son. Ortólogos y parálogos constituyen los dos principales tipos de homólogos. Los ortólogos de un ancestro común por especiación. Los parálogos evolucionan por eventos de duplicación.
-
-Estos estudios condujeron al descubrimiento de la existencia del dominio Archaea. Esta diferenciación entre Archaea, Bacteria y Eucarya fue posible debido 1) A la presencia conservada de la secuencia de 16s en los tres dominios mencionados, y a la vez ii) a la gran divergencia de secuencia entre ellos. Así pues se pudo establecer un balance entre secuencia conservada en el sentido de estar presente en todos los organismos, pero divergente en el sentido de tener suficiente diversidad nucleotídica entre ellos. Sin embargo, establecer una filogenia, entre organismos más cercanos no separados a nivel de dominio como Archaea y Bacteria sino a nivel de especies del mismo género o inclusive cepas de la misma especie bacteriana presenta sus propios retos. La secuencia de 16s por sí sola no resuelve por ejemplo la filogenia del género Streptomyces, y no podía resolver el orden _Actinomycetales_  Para poder comparar una buena filogenia se necesita obtener el core.
-
-Cómo el contexto genómico puede ser una marca para sugerir cambio funcional en una proteína. Se deseaba predecir si PriA estaba teniendo un cambio de promiscuidad debido a los patrones de pérdida y ganancia de genes en Actinomyces. Para poder obsrva patrones de pérdida y ganancia primero se necesitaba un árbol de especies. Este árbol de especies fue hecho con Orthocores. 
 <!---
   La comparación.-, ....-., 
   El método all vs all 
@@ -35,27 +36,61 @@ Cómo el contexto genómico puede ser una marca para sugerir cambio funcional en
   Clavisual Clavibacter 
   Enrique Salmonella  
   --->
+# Orthocore: encontrando el core conservado en un linaje taxonómico.      
+Orthocore es un desarrollo bioinformático que realicé para calcular las familias enzimáticas más conservadas pertenecientes al core genome de un conjunto de genomas. Orthocore obtiene el core conservado es decir familias de ortólogos presentes en todos los genomas del grupo, libres de parálogos e independientes de un genoma de referencia. 
+
+Los cambios en los perfiles de promiscuidad aparece en copias extras de familias de ortólogos y debido a la pérdida y ganancia de genes en organismos cercanos, se necesita un algoritmo para poder organizar filogenéticamente un organismo.
+
+## El core genome permite la obtención de filogenias complicadas
+Dos secuencias son homólogas si poseen un ancestro común. Ortólogos y parálogos constituyen los dos principales tipos de homólogos. Los ortólogos provienen de eventos de especiación de un ancestro común  mientras que los parálogos evolucionan por eventos de duplicación. La comparación de la variación molecular entre ortólogos ha sido utilizada para establecer relaciones filogenéticas entre organismos. Por ejemplo comparar la secuencia de 16s de RNA ribosomal condujo al descubrimiento del dominio Archaea en 1977 [@woese_phylogenetic_1977]. 
+
+Los dos factores importantes para establecer las relaciones filogenéticas diferenciando entre Archaea, Bacteria y Eucarya son los siguientes: 1) la presencia conservada de la unidad de 16s en los tres dominios mencionados, y 2) la suficiente divergencia entre estas secuencias en organismos de estos dominios. Ahora bien, establecer relaciones filogenéticas entre Archaea y Bacteria es más sencillo que establecerlas entre organismos pertenecientes al mismo género o inclusive a la misma especie. En ocasiones como en el caso del género _Streptomyces_ la secuencia de 16s por sí sola no posee la suficiente variación para resolver la filogenia [@labeda_phylogenetic_2017] ya que la variación entre estas secuencias suele ser menor al 1%. 
+
+Para resolver el problema de escasa variación en secuencias de 16s se puede concatenar la información de otros ortólogos, siempre que estos aparezcan en todos los organismos que se estén estudiando, es decir siempre que sean parte del core genómico. Los ortólogos suelen buscarse por similitud de secuencia, pero estos métodos suelen también capturar parálogos, que pueden confundir la elucidación de eventos de especiación.  
+
+Tres aplicaciones de Orthocore serán presentadas en las siguientes secciones de este capítulo. En la primera aplicación el core conservado en _Actinomycetales_ permitió organizar filogenéticamente este orden facilitando el entendimiento en cambios de promiscuidad en la enzima PriA mediante la distinción de patrones de pérdida y ganancia de genes en las rutas en las que esta enzima participa: histidina y triptofano. En la segunda aplicación  y cepas cepas de _Salmonella Tifi_. Finalmente, en organismos del microbioma del tomate orthocore de utilizó para identificar genes marcadores que permitieran distinguir cepas de _Clavibacter Michiganensis_ de otras especies.  Para poder obtener una cantidad de secuencias conservadas con suficiente variación para una buena filogenia se necesita obtener el core.
+
+Cómo el contexto genómico puede ser una marca para sugerir cambio funcional en una proteína. Se deseaba predecir si PriA estaba teniendo un cambio de promiscuidad debido a los patrones de pérdida y ganancia de genes en Actinomyces. Para poder obsrva patrones de pérdida y ganancia primero se necesitaba un 
+árbol de especies. Este árbol de especies fue hecho con Orthocores. 
   
 ## Best Bidireccional Hits vs all vs all  
-Así pues, se necesitaba obtener los genes conservados 
-Existe el core, y el core conservado, uno es lo que hay en común en grupos de genomas, y otros lo que está listo para realizar la filogenia.  En grupos muy grandes, de más de 100 genomas fragmentados puede quedar vacío.  
-Para eliminar el sesgo de hacer Best Bidireccional Hits con un organismo, se diseñó en 2014 el método de las estrellas. 
+Así pues, se necesitaba obtener los genes conservados del orden _Actinomycetales_ para poder entender la promiscuidad enzimática de PriA.
+Existe el core, y el core conservado, uno es lo que hay en común en grupos de genomas, y otros lo que está listo para realizar la filogenia.  En grupos muy grandes, de más de 100 genomas fragmentados puede quedar vacío. Para eliminar el sesgo de hacer Best Bidireccional Hits con un organismo, se diseñó en 2014 el método de las estrellas. 
 
+```{r Best-n-directional, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter1/Best-n-directional.png", caption = "Best-n-directional",label = "Best-n-directional", type = "figure")
+```
+
+```{r Marcadores-Clavibacter, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter1/Marcadores-Clavibacter.png", caption = "Marcadores-Clavibacter",label = "Marcadores-Clavibacter", type = "figure")
+```
+
+```{r Metabolismo-Pangenoma, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter1/Metabolismo-Pangenoma.png", caption = "Metabolismo-Pangenoma",label = "Metabolismo-Pangenoma", type = "figure")
+```
+
+
+
+## Otras aplicaciones de Orthocore  
 ## Orthocores resolvió la filogenia de Actinomyces, ayudando a encontrar perfiles de promiscuidad en PriA
 Orthocores fue diseñado para resolver el problema de ________ La promiscuidad coocurre con variaciones en el contexto genómico. Orthocres ayudó a establecer la filogenia de actinomyces.
 
-## Otras aplicaciones de Orthocore  
-### Identificación de genes marcadores de _Clavibacter michiganensis_  
-Micrococcales es un orden de Actinobacteria que contiene a _Clavibacter_, _Micrococcus_ y _Microbacterium_, entre otros. Clavibacter es un género que puede causar enfermedades en plantas. En particular la especie Clavibacter michiganensis es una bacteria causante de la enfermedad del cancer del tomate. Clavibacter ha sido frecuentemente aislada en compañía de otros microccocales morfológicamente parecidos, por lo que una prueba de diagnóstico se hacía necesaria.  de  y TomA /clvF─
+## Identificación de genes marcadores de _Clavibacter michiganensis_  
+Micrococcales es un orden de Actinobacteria que contiene a _Clavibacter_, _Micrococcus_ y _Microbacterium_, entre otros. Clavibacter es un género que puede causar enfermedades en plantas. En particular la especie Clavibacter michiganensis es una bacteria causante de la enfermedad del cancer del tomate. Clavibacter ha sido frecuentemente aislada en compañía de otros microccocales morfológicamente parecidos, por lo que una prueba de diagnóstico se hacía necesaria.  de  y TomA clvF [@yasuhara-bell_genes_2014]
 
-## Clavisual: Identificación de genes marcadores a un cierto porcentaje de grupos seleccionados  
+
+### Clavisual: Identificación de genes marcadores a un cierto porcentaje de grupos seleccionados  
 La idea de que orthocores puede ser usado para obtener los genes marcadores de un grupo taxonómico frente a otro fue generalizada en el backend del software Clavisual. Ya se ha explicado previamente que el core puede salir vacío por diversas razones, entre ellas baja calidad de los genomas, genomas provenientes de organismos muy divergentes o bien razones biológicas un core no convergente. Así pues, es posible que si sólo se utiliza el core no se obtengan marcadores. Pero el core puede relajarse de varias maneras una de ellas es el Pseudocore, como el core pero con un genoma de referencia, y a otra es establecer un porcentaje de presencia /ausencia de interés. El pseudocore consiste en ________ y la metodología está depositada en github en el repositorio_________. Los porcentajes de genomas son diferentes porque al no bastar los best bidireccional hits conservados, todo el pangenoma es decir todos los genes contenidos en los genomas del grupo de interés necesitan ser clasificados por familias, para de ahi obtener las familias que tienen presencia en un porcentaje %p y ausencia en un porcentaje a% del grupo externo. Estos perfiles fueron desarrollados para Clavisual utilizando FasthOrtho para clasificar las familias y de ahi obtener los grupos. Con ellos se consiguieron marcadores para Kutobacterium.  Porque qué pasa  
 
-El blast del orthocore fue optimizado cambiando hacer un blast todos contra todos por archivos genómicos individuales genomai_vs_genomaj.blast y luego concatenando estos blasts
+El blast del orthocore fue optimizado cambiando hacer un blast todos contra todos por archivos genómicos individuales genomai_vs_genomaj.blast y luego concatenando estos blasts  
+  
 ## _Salmonella_  
 
 Orthocores fue usado aqui para reconstruir filogenias de genomas de _Salmonella_ y como parte del CORASON el algoritmo que sirve para organizar filogenéticamente variantes de clusters ya sea biosintéticos, islas de patogenicidad, operones o cualquier región paricalmente sinténica de un genoma bacteriano centrada en un gen.
 
-## Relación entre genes marcadores, Orthocore y la promiscuidad enzimática.  
-Finalmente, al aplicar Orthocore para detectar genes marcadores se vuelve  indirectamente reclutamientos al metabolismo especializado, cómo, pues porque dentro de los marcadores hay productos naturales como la clavidicina. Hay vemos que clvABCDEF participan en metabolismo secundario, las enzimas de metabolismo central de este cluster pueden presenta promiscuidad. 
+## Relación entre genes marcadores, Orthocores y la promiscuidad enzimática.  
+Finalmente, al aplicar Orthocore para detectar genes marcadores se vuelve indirectamente reclutamientos al metabolismo especializado, cómo, pues porque dentro de los marcadores hay productos naturales como la clavidicina. Hay vemos que clvABCDEF participan en metabolismo secundario, las enzimas de metabolismo central de este cluster pueden presentar cierta promiscuidad. 
+
+Lo relevante para la promiscuidad son los procesos de divergencia, por ello en el siguiente capítulo analizamos encontrar el origin y destino metabolico, de copias extras de familias enzimáticas.
+Orthocore está disponible https://github.com/nselem/orthocore/wiki  
   

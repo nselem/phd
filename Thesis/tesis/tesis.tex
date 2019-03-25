@@ -1532,56 +1532,39 @@ starts here.
   variabilidad del 16s
   {[}\protect\hyperlink{ref-vetrovsky_variability_2013}{139}{]}
   
-  \begin{Shaded}
-  \begin{Highlighting}[]
-  \CommentTok{# List of packages required for this analysis}
-  \NormalTok{pkg <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\StringTok{"dplyr"}\NormalTok{, }\StringTok{"ggplot2"}\NormalTok{, }\StringTok{"knitr"}\NormalTok{, }\StringTok{"devtools"}\NormalTok{)}
-  \CommentTok{# Check if packages are not installed and assign the}
-  \CommentTok{# names of the packages not installed to the variable new.pkg}
-  \NormalTok{new.pkg <-}\StringTok{ }\NormalTok{pkg[}\OperatorTok{!}\NormalTok{(pkg }\OperatorTok{%in%}\StringTok{ }\KeywordTok{installed.packages}\NormalTok{())]}
-  \CommentTok{# If there are any packages in the list that aren't installed,}
-  \CommentTok{# install them}
-  \ControlFlowTok{if}\NormalTok{ (}\KeywordTok{length}\NormalTok{(new.pkg))}
-    \KeywordTok{install.packages}\NormalTok{(new.pkg, }\DataTypeTok{repos =} \StringTok{"http://cran.rstudio.com"}\NormalTok{)}
-  \CommentTok{# Load packages}
-  \KeywordTok{library}\NormalTok{(dplyr)}
-  \KeywordTok{library}\NormalTok{(ggplot2)}
-  \KeywordTok{library}\NormalTok{(knitr)}
-  \end{Highlighting}
-  \end{Shaded}
-  
   \chapter{Orthocores}\label{orthocores}
   
   Las primeras relaciones filogenéticas establecidas que fueron basadas en
-  variación molecular se realizaron con la secuencia de 16s.
+  variación molecular se realizaron con la secuencia de 16s. Estos
+  estudios condujeron al descubrimiento de la existencia del dominio
+  Archaea. La diferenciación entre Archaea, Bacteria y Eucarya fue posible
+  debido 1) a la presencia conservada de la unidad de 16s en los tres
+  dominios mencionados, y a la vez ii) a la gran divergencia de secuencia
+  entre ellos. Se pudo establecer un balance entre secuencia conservada en
+  el sentido de estar presente en todos los organismos, pero divergente en
+  el sentido de tener suficiente diversidad nucleotídica entre ellos.
   
-  Dos secuencias son homólogas si tienen un ancestro común. No existe
-  ``grado de homología'', o son homólogas o no son. Ortólogos y parálogos
-  constituyen los dos principales tipos de homólogos. Los ortólogos de un
-  ancestro común por especiación. Los parálogos evolucionan por eventos de
-  duplicación.
-  
-  Estos estudios condujeron al descubrimiento de la existencia del dominio
-  Archaea. Esta diferenciación entre Archaea, Bacteria y Eucarya fue
-  posible debido 1) A la presencia conservada de la secuencia de 16s en
-  los tres dominios mencionados, y a la vez ii) a la gran divergencia de
-  secuencia entre ellos. Así pues se pudo establecer un balance entre
-  secuencia conservada en el sentido de estar presente en todos los
-  organismos, pero divergente en el sentido de tener suficiente diversidad
-  nucleotídica entre ellos. Sin embargo, establecer una filogenia, entre
-  organismos más cercanos no separados a nivel de dominio como Archaea y
-  Bacteria sino a nivel de especies del mismo género o inclusive cepas de
-  la misma especie bacteriana presenta sus propios retos. La secuencia de
-  16s por sí sola no resuelve por ejemplo la filogenia del género
-  Streptomyces, y no podía resolver el orden \emph{Actinomycetales} Para
-  poder comparar una buena filogenia se necesita obtener el core.
+  Sin embargo, establecer una filogenia, entre organismos cercanos, ya no
+  separados a nivel de dominio como Archaea y Bacteria sino a nivel de
+  especies pertenecientes al mismo género o inclusive a nivel de cepas de
+  la misma especie bacteriana presenta el reto de la secuencia de 16s por
+  sí sola no posee la suficiente variación para resolverlas. Por ejemplo
+  con 16s no se puede resolver la filogenia del género
+  \emph{Streptomyces}, y no se podía resolver el orden
+  \emph{Actinomycetales}. Para poder obtener una cantidad de secuencias
+  conservadas con suficiente variación para una buena filogenia se
+  necesita obtener el core.
   
   Cómo el contexto genómico puede ser una marca para sugerir cambio
   funcional en una proteína. Se deseaba predecir si PriA estaba teniendo
   un cambio de promiscuidad debido a los patrones de pérdida y ganancia de
   genes en Actinomyces. Para poder obsrva patrones de pérdida y ganancia
   primero se necesitaba un árbol de especies. Este árbol de especies fue
-  hecho con Orthocores.
+  hecho con Orthocores. Dos secuencias son homólogas si tienen un ancestro
+  común. No existe ``grado de homología'', o son homólogas o no son.
+  Ortólogos y parálogos constituyen los dos principales tipos de
+  homólogos. Los ortólogos de un ancestro común por especiación. Los
+  parálogos evolucionan por eventos de duplicación.
   
   \section{Best Bidireccional Hits vs all vs
   all}\label{best-bidireccional-hits-vs-all-vs-all}
@@ -1615,7 +1598,7 @@ starts here.
   bacteria causante de la enfermedad del cancer del tomate. Clavibacter ha
   sido frecuentemente aislada en compañía de otros microccocales
   morfológicamente parecidos, por lo que una prueba de diagnóstico se
-  hacía necesaria. de y TomA /clvF─
+  hacía necesaria. de y TomA clvF
   
   \section{Clavisual: Identificación de genes marcadores a un cierto
   porcentaje de grupos
@@ -1661,7 +1644,7 @@ starts here.
   pues porque dentro de los marcadores hay productos naturales como la
   clavidicina. Hay vemos que clvABCDEF participan en metabolismo
   secundario, las enzimas de metabolismo central de este cluster pueden
-  presenta promiscuidad.
+  presentar cierta promiscuidad.
   
   \texttt{\{r\ chapter2,\ child\ =\ \textquotesingle{}chap2.Rmd\textquotesingle{}\}}
   
