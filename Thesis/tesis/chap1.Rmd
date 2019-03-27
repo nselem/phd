@@ -85,9 +85,30 @@ Orthocores fue diseñado para resolver el problema de ________ La promiscuidad c
 ## Identificación de genes marcadores de _Clavibacter michiganensis_  
 Micrococcales es un orden de Actinobacteria que contiene a _Clavibacter_, _Micrococcus_ y _Microbacterium_, entre otros. Clavibacter es un género que puede causar enfermedades en plantas. En particular la especie Clavibacter michiganensis es una bacteria causante de la enfermedad del cancer del tomate. Clavibacter ha sido frecuentemente aislada en compañía de otros microccocales morfológicamente parecidos, por lo que una prueba de diagnóstico se hacía necesaria.  de  y TomA clvF [@yasuhara-bell_genes_2014]  
 
+
+```{r ArbolOrthocore, results = "asis",message=FALSE,echo=FALSE}
+# Arbol de orthocore
+label(path = "chapter1/ArbolOrthocore.png", caption = "ArbolOrthocore",label = "ArbolOrthocore", type = "figure")
+```
+
+<!---
+Tabla de orthocore 
+--->
+```{r EjemploMicrobioma, results = "asis"}
+table <- read.csv("chapter1/MicrobiomaMetadata.csv", row.names = 1,sep="\t")
+kable(table,  caption = "Ejemplo de Microbioma \\label{tab:Ejemplo de Microbioma}",caption.short = "Microbioma de tomate ")
+```
+	
+
 Había que estandarizar la anotación genpomica, para ello se utilizó la plataforma myRAST  
 https://github.com/nselem/myrast  
 ### Clavisual: Identificación de genes marcadores a un cierto porcentaje de grupos seleccionados  
+
+```{r ArbolClavisual, results = "asis",message=FALSE,echo=FALSE}
+#Arbol de clavisual
+label(path = "chapter1/ArbolClavisual.png", caption = "ArbolClavisual",label = "ArbolClavisual", type = "figure")
+```
+
 
 La idea de que orthocore puede ser usado para obtener los genes marcadores de un grupo taxonómico frente a otro fue generalizada en el backend del software Clavisual. Ya se ha explicado previamente que el core puede salir vacío por diversas razones, entre ellas baja calidad de los genomas, genomas provenientes de organismos muy divergentes o bien razones biológicas un core no convergente. Así pues, es posible que si sólo se utiliza el core no se obtengan marcadores. Pero el core puede relajarse de varias maneras una de ellas es el Pseudocore, como el core pero con un genoma de referencia, y a otra es establecer un porcentaje de presencia /ausencia de interés. El pseudocore consiste en ________ y la metodología está depositada en github en el repositorio_________. Los porcentajes de genomas son diferentes porque al no bastar los best bidireccional hits conservados, todo el pangenoma es decir todos los genes contenidos en los genomas del grupo de interés necesitan ser clasificados por familias, para de ahi obtener las familias que tienen presencia en un porcentaje %p y ausencia en un porcentaje a% del grupo externo. Estos perfiles fueron desarrollados para Clavisual utilizando FasthOrtho para clasificar las familias y de ahi obtener los grupos. Con ellos se consiguieron marcadores para Kutobacterium.  Porque qué pasa  
 
@@ -102,6 +123,14 @@ Finalmente, al aplicar Orthocore para detectar genes marcadores se vuelve indire
 ```{r CoreMarcadores, results = "asis",message=FALSE,echo=FALSE}
 label(path = "chapter1/CoreMarcadores.png", caption = "CoreMarcadores",label = "CoreMarcadores", type = "figure")
 ```
+```{r}
+# Example 1
+# make a very simple plot
+x <- c(2,3,4,5,6,7,8,9,10)
+y <- c(2684,2504,2161,1867,1613,1217,745,432,320)
+ plot(x,y, xlab="Número de genomas ", ylab="Número de Genes en el Core genome", main="Core Genome de organismos del Microbioma del tomate", ylim=c(0,4000), xlim=c(0,12), pch=15, col="blue") 
+```
+
 
 
 Lo relevante para la promiscuidad son los procesos de divergencia, por ello en el siguiente capítulo analizamos encontrar el origin y destino metabolico, de copias extras de familias enzimáticas.

@@ -1,0 +1,269 @@
+LOCUS       Unknown                    7 bp    dna     linear   UNK 
+ACCESSION   unknown
+SOURCE      645144
+  ORGANISM  645144
+            .
+FEATURES             Location/Qualifiers
+     CDS             complement(986094..985195)
+                     /contig="NODE_1_length_3283759_cov_222.559181"
+                     /organism="homo sapiens"
+                     /product="Phosphonate ABC transporter ATP-binding protein
+                     PhnC (TC 3.A.1.9.1)"
+                     /protein_id="645144_941"
+                     /translation="MTGTTTSPLVSVSGVTKDFGGTRALHDVDLTVERGEVVVLLGLS
+                     GSGKSTLLRHLDGLELPTAGSVRVFDQDVASLGQQDLRALRGRVAMIFQQFELVPSLT
+                     VLENVLTGALGRLRGPRLGIWTYPRAARTEALGHLDRVGLLEKAYERADRLSGGQQQR
+                     VAIARALMQRPEILLADEPVASLDPESSEQVMRLIREIAADDGLTVVCSLHQVDLALG
+                     WGDRIVGLRHGEVVLDTPTRGIGKAEVMEIYGRVASTTSALAAIATELGDVLPLDEPV
+                     GVRSAGALGDQGLARGRRADGTR"
+     CDS             complement(987087..986116)
+                     /contig="NODE_1_length_3283759_cov_222.559181"
+                     /organism="homo sapiens"
+                     /product="Phosphonate ABC transporter substrate-binding
+                     protein PhnD (TC 3.A.1.9.1)"
+                     /protein_id="645144_942"
+                     /translation="MSLSPRTRIGALAASALVAALALTGCSAGGSDASAASADSSGTW
+                     AKSEGTLVFGATPDQAGSDSNSKPLEDYIAKETGLKVEYYPTADYTALIAAAVAGKID
+                     LMSSGALQYVMASNKGAEIEPVAAMLTSKDVTDPGYYSEAIVPKGSTITDLAGAKGKT
+                     VCFVDPNSTSGFLFGLYQLQKAGIDVTSTGSDANGNPQFADFTPYFAGAHDKSAQAVA
+                     SGQCDVGFAEDSIVEPAVAAGQLTSIGKEYVPGGPLSISSALPADVKAKLTTTLQGAS
+                     LDAITASGVPLTDGFTKGYFGAQPEDTTYYKGIADLCDSIAAAKCAK"
+     CDS             complement(985198..983450)
+                     /contig="NODE_1_length_3283759_cov_222.559181"
+                     /organism="homo sapiens"
+                     /product="ABC transporter, permease protein (cluster 12,
+                     methionine/phosphonates) / ABC transporter, permease
+                     protein (cluster 12, methionine/phosphonates)"
+                     /protein_id="645144_940"
+                     /translation="MTAVAERPGEAPPGVRPDVDERAPRRRPDRQKALALVVVLAMVA
+                     FAVHALTTLDFTWSNVLRSVGNAAKVFSRMDPISFPAPGDLAYLIGLTLGIVVLGTLA
+                     AALVSVPVAYASARNTTPAPWLRGLGRTIGVVTRAVPDVVLALAFALAFALGSPLPGI
+                     LAIGIHSIGMISKLFADAIEQVDEGPQRAIRTTGGTRAQEFWAGVFPQVLPSWIATVL
+                     HRFDINLRGSAILGYAGVGGLGYAMKVAFGQFPEGYGRGIGIAIVIFALCVLLEVVSS
+                     SIRRSALGVRPAGRGLGDRIVRRLTRGRALPERAGSAGTARAVTVESMQRRPWTPDRV
+                     RTVAWSALAVVVVVGGYLMADIDLGQITWEYVGPTFQSFWPPSTGSHTFGEFAEALLV
+                     TIQVAFAAALLSVVLALVVGSLAARNVAPSPAVRNAARTVLVVFRGVPELVLAILLIM
+                     VTGLGNQAGVVALAFGGVGLLGKLIADSFEEVGAGPERALTAVGATRGQRFLAATWPQ
+                     GLPSLVGNSLYLVDTNIRAATILGIVGGSGIGFHLTNASSVMTLHGQVTTLVAMVFVS
+                     VLAVEALAAWLRRVFR"
+     CDS             complement(988043..987243)
+                     /contig="NODE_1_length_3283759_cov_222.559181"
+                     /organism="homo sapiens"
+                     /product="UDP-glucose 4-epimerase (EC 5.1.3.2)"
+                     /protein_id="645144_943"
+                     /translation="MATITITGGSGRIATSIRPLLLAAGHELRLLDVVAPPTPLAPGE
+                     TSAIVDTTDVDACTEAFRGSDLVVHLAAHAAERPWEAIQAVNNDGAHAVHEAVVRAGV
+                     PRILAASSIHAVGFLPATEAAREDVPAPRPDTFYGLSKVLLEGLGSLYADRHGHVVVS
+                     VRIMTAEPEPSQARSVSTWLSPGDAARLVEAVLRWDEPGHRIVWGVSRNTRRWVSLAA
+                     GEAIGYHPEDDAEVFAHRFPELGEDTSPPAGVLLGSIFTEVELGSDMG"
+     CDS             complement(983453..982560)
+                     /contig="NODE_1_length_3283759_cov_222.559181"
+                     /organism="homo sapiens"
+                     /product="2-dehydropantoate 2-reductase (EC 1.1.1.169)"
+                     /protein_id="645144_939"
+                     /translation="MTPALPAVAVVGPGAIGTSVAAALHEAGVPVLLCGRTARDRLVL
+                     VADDATVVVPGPVRTDPAGISAPVDLVLLAVKATQVEAAAPWLRALCHAGTVVVVLQN
+                     GIEQVGDVAPHVPGCPVVPAVVWFPAEARADGSVLLRGDPRITLPDMPTSRVAVDALA
+                     GGRCRVELAADFRTVAWRKLVQNAVAGIMAATGRRAGVFRRDDVAGLARGYARECLAV
+                     ARAEGAVLDDGVADRIVDDFRAAPADQGTSILADRDAGRPLEWEARNGVILRRARAHG
+                     LPTPIGDVLVPLLAAASDGPG"
+     CDS             complement(988888..988118)
+                     /contig="NODE_1_length_3283759_cov_222.559181"
+                     /organism="homo sapiens"
+                     /product="Cobalt ABC transporter, ATP-binding protein
+                     CbtL"
+                     /protein_id="645144_944"
+                     /translation="MTLEARGVSWSRGGRIVVDDVTLEPAPGSTVGLLGPNGSGKSSL
+                     LKLLQGAASPDSGRVTLDGADLAGLRRRDVARRVATVTQHGETEVDIAVRDVVRLGRT
+                     PYRTLLGGDTAEDAAAIDRAIAHVGLEAKADRAWRTLSGGERQRAHIARALAQEPREL
+                     LLDEPTNHLDIRHQLELLALVRDLPVTTVVALHDLNLAAMFCDSVLVLREGRVVAGGH
+                     PREVLTPELIADVYGVRAVVTHDAAVGCSRVLFDAAPL"
+     CDS             981926..982543
+                     /contig="NODE_1_length_3283759_cov_222.559181"
+                     /organism="homo sapiens"
+                     /product="Phosphonate utilization associated
+                     acetyltransferase"
+                     /protein_id="645144_938"
+                     /translation="MTTKLTEEPLIAPDVVMSGSDLGRWTQIGASTRVLDTVIGDYSY
+                     CDRLCDFAHTDVGRFSNIASAVRIGATDHPLDRATLHHFMYRSTMYWDDVEDDAEFFE
+                     HRRSRRTSIGHDTWIGHGAMIKPGVRVGDGAVVASGAVVTRDVPDYAIVAGVPATVIR
+                     FRQPPEIAERLRRLAWWDWDHATLRARLDDFRALPTEAFLERYEG"
+     CDS             complement(989991..988885)
+                     /contig="NODE_1_length_3283759_cov_222.559181"
+                     /organism="homo sapiens"
+                     /product="Cobalt ABC transporter, permease protein CbtK"
+                     /protein_id="645144_945"
+                     /translation="MGRARGGALSAAAPRAPFATAAARVRALPHALRVALLVVLGIVA
+                     LALSVGVAVTLGPADVSLVNVRDILLNHAGLARIPVRVSEDAIVWQERLPRALVAAAC
+                     GAGLGLCGVVLQSLLRNPLADPFVLGVSSGASTGAVLIGVLGLGGGAIGMSGGAFIGA
+                     LVAFGFVLLLARFSSAGTAGVILAGVASTQLFSALTSLVVFVFAFADSDETRGITFWL
+                     LGSLEGMRWDEVGLSVSVVAVGAVVCLAYARSLDAFAFGEEVASSLGIHVGRTRMILL
+                     VVTALLTATLVSIAGAIGFVGLVLPHAARLLFGQRHARVVPATLVLGAVFMVWVDAFS
+                     RLAFAPTPLPVGVGTALVGVPVFMLLLMRDRGRA"
+     CDS             981219..981929
+                     /contig="NODE_1_length_3283759_cov_222.559181"
+                     /organism="homo sapiens"
+                     /product="Ribose 1,5-bisphosphate phosphokinase PhnN (EC
+                     2.7.4.23)"
+                     /protein_id="645144_937"
+                     /translation="MSDAVSAGTAPAAPAPAPAPAPAPAPVPLGPGPFVAVVGASGVG
+                     KDALLAAARARSGPNAHFPRRAITRPPGPGEDFDAVGDEEFAAAAARGDYAVTWRAHG
+                     LSYGIPATADDAVRAGAAVVANVSRSMLDVLQARYARLVVVRIMVSEDVRAARLRERG
+                     REAADDIARRLARQDPAPDRVADHEVRNHGTVAEGGEALLRAIRAARASALAASAPAA
+                     SPLPHPIDPAPRGRTETP"
+     CDS             complement(991019..989964)
+                     /contig="NODE_1_length_3283759_cov_222.559181"
+                     /organism="homo sapiens"
+                     /product="Cobalt ABC transporter, substrate-binding
+                     protein CbtJ"
+                     /protein_id="645144_946"
+                     /translation="MPRARALARLTATAVTGLVLVALTGCGASEEVPAASVAEAGEGS
+                     TTYPLTLSNCGHDVTVDQAPSRVVSLDQDSTEILLSLGLQDRMVGTASWTDPVLDSLA
+                     DANAQVPRLADNAPTYEVLLGADPDFVTASFGRHYATGGVVTRDRLAETGIPSYLSPT
+                     DCDSDISINGGGQRTTALTVDALYQEIREMAEVFDVKDRGEALVSSLQQRAAAATDGM
+                     DLGGAKVMYWFADTKTPYMGGGFGATSLLSRQVGATDAFPEVRDDFIATGWETVVDRD
+                     PDILVLGDLQRDRFPGDRLQDKIDFLKSDPLTRDLTAVKEDRMVALHGAELNPSIRFV
+                     DGLEKIRAWWDARGAEL"
+     CDS             980041..981222
+                     /contig="NODE_1_length_3283759_cov_222.559181"
+                     /organism="homo sapiens"
+                     /product="Alpha-D-ribose 1-methylphosphonate
+                     5-triphosphate diphosphatase (EC 3.6.1.63)"
+                     /protein_id="645144_936"
+                     /translation="MSRETVLRNARIVLDDEVLHGSVLIRDGLVADISPGTAGEVGGT
+                     GDDLDGDLLIPGIVELHTDHLESHAQPRPGTRWDPIPAVLAHDAQLSGAGVTTVFDAI
+                     RIGTLEGRDDATTLSLSLAEAIEHAVAAGLLRAEHLIHLRCEVAAPGTVAEFREFDRI
+                     ASVRLASLMDHTPGQRQYADVEAFSRYMVGRGRVSQAGIGALMEELQDVAAEHSTPNR
+                     IAIAELATARGVTLAAHDDATVAHVEESAALGVRISEFPTTEVAARAAREHGQLIVMG
+                     APNIVRGGSQSGNVAAAELLALGLLDVLSSDYVPASPLQAIVQLDADGILPITRGVRL
+                     VSGDPARAVGLDDRGSIRVGARADLVRVHRHVVPASERHPGGRTVPVVRGVHLRGARV
+                     S"
+     CDS             complement(993181..991133)
+                     /contig="NODE_1_length_3283759_cov_222.559181"
+                     /organism="homo sapiens"
+                     /product="alpha-xylosidase (EC 3.2.1.177)"
+                     /protein_id="645144_947"
+                     /translation="MIDDDQHFTTDGTRLVWRGDGETLVVEPWGPDSLRVRSRIMAPV
+                     ADADWALLPQPEERPRIEVNGATARITNGGITAVLVSESSYGYQTGYEENRCHVTYLD
+                     RHGEVLLEEIGTGGALHLRAREQRPHLGGDFRITASFATGPDERLYGMGLYQQDILDL
+                     AGSTFELAHRNSQASVPFVMSSRGYGFLWHDPAIGRATFAANRVEWTAETSEQLDYWI
+                     TAGDTPADISRAYARATGSAPMMPEHGLGFWQCRLRYWNQEQLLEVAREHTRRGLPMD
+                     VIVADFFHWPKMGDLRFEEEFWPDPTAMVEELRSMGIELMVSIWPQVSLESENYARMK
+                     KENLLVRSERGIDVQMQFEGPSAFVDVTNPDARRHLWETAQRGYGAHGIRLFWLDEAE
+                     PEYGVYDYDNYRYHAGPNVRVGNVYPQMFSRAMHEGRIQAGQEPGVDLVRAAWAGSQR
+                     YGALVWSGDIHSTFEALARQVTAGIHMGVAGIPWFTTDIGGFAGARTDDPAFHELLVR
+                     WFQFGAFSPVMRLHGDRGPSVEVRAADGSRRAPSGSGNELWSFGEEVYGILAGYVHLR
+                     ERLRPYLRDVMREAHEDGQPVMRGMFHVFPDDAASWTLGDQYMLGADVLVAPVLEAGA
+                     RSRSVHLPAGTSWIEASTGARHEGGQRVVADAPLHVIPIFVRAGAAVEVRLPEGDPVA
+                     "
+     CDS             979298..980044
+                     /contig="NODE_1_length_3283759_cov_222.559181"
+                     /organism="homo sapiens"
+                     /product="Uncharacterized protein Atu0170, clustered with
+                     phosphonate utilization"
+                     /protein_id="645144_935"
+                     /translation="MTRVAVYAIPGVGSDGPVGILLRERAEAWLGRSVVGGSAAPAPG
+                     APAGWTRAEVDAVTVDARRYGFHGTLKAPFRLADGHDLDGLEAAVADLAGSRDPVALS
+                     GLRVASLGGFLALVPTGPVPALDALAADVVMRLDGFRAPPTDAETARRDPASLSPRQR
+                     ELLATWGYPHVLDRFRFHLTLTDRIPAAARPRAEAALVAWFADATDRPVAVDALALVV
+                     EDAPGAPFRLRSVHPLHPRATPAPDPEGPR"
+     CDS             complement(994091..993261)
+                     /contig="NODE_1_length_3283759_cov_222.559181"
+                     /organism="homo sapiens"
+                     /product="ABC transporter, permease protein 2 (cluster 1,
+                     maltose/g3p/polyamine/iron)"
+                     /protein_id="645144_948"
+                     /translation="MNTIDTPVRRWTNAVIGLVICAVLLFPLYWMLNVSLTKPQDLIS
+                     STPSLFPADPTLDGYAQAISTQLPNLVTSLVISIGCVILTLLISLPAAYAMAKFRVRG
+                     TGAVMFVFLLAQMIPGIVLVTALFAIYDALGLLNTYPGLILADATASVPFAVIVLRAF
+                     MLGISDELLEAARIDGASSWRAFVSIVVPLSRNAIVTAALFSFLFAWADFLNANSLTS
+                     GNSIVPFTLGLYRYIGSTTTNWNGIMATAVIASIPAAVLLVVAQRFVAAGVTAGAVKD
+                     "
+     CDS             978543..979301
+                     /contig="NODE_1_length_3283759_cov_222.559181"
+                     /organism="homo sapiens"
+                     /product="Alpha-D-ribose 1-methylphosphonate
+                     5-triphosphate synthase subunit PhnL (EC 2.7.8.37)"
+                     /protein_id="645144_934"
+                     /translation="MIRPMTGSTPGPVPATAPILTVDDVAKTFTMHLQGGQRLAVLDG
+                     LSFVVGRAEAVVLGGASGAGKSTVLKLVYGNYLADRGRIVAHAPGGDVDMATAPPRAV
+                     LAARRDAVGYVSQFLRCVPRVGTLDVVAEPLVARGVDAEDARDRAARILTRLSIPERL
+                     WSLPPATFSGGEQQRVNVARGFLPELPLLLLDEPTASLDARNRDVVVELIAEKRAAGV
+                     GMLGIFHDAEVRAAVADRAVDVEAFVPAGAVAAR"
+     CDS             complement(995035..994088)
+                     /contig="NODE_1_length_3283759_cov_222.559181"
+                     /organism="homo sapiens"
+                     /product="Possible alpha-xyloside ABC transporter,
+                     permease component"
+                     /protein_id="645144_949"
+                     /translation="MIDRPLAPSRGAGTAGPAEGRPPRRRPYRTVSVVAAIGFMAPVV
+                     AFLAIFFVYPIIRGFLLSLQEYGPRAFVTGEAPYVGFQNYVTILGDSLFATIAWHTVV
+                     FTVVSLAGQFAIGLALAVFFTRRFPLSTTFRSLILLPWLLPLIVSATAWRWMFDQQFG
+                     IINSVLGTPIGWLSDPSVSLWSVIIANIWLGIPFNMILLYGGLQGIPENLYEAAALDG
+                     AGRWRTFRSITWPLLRPVTAVTLLLGLVYTIKVFDVIWILTKGGPANSSHTLSTWAYE
+                     KSFTDLDFGVGAAAGEILVVVALVFGLIYVRAQRKEAQS"
+     CDS             977767..978546
+                     /contig="NODE_1_length_3283759_cov_222.559181"
+                     /organism="homo sapiens"
+                     /product="Phosphonates utilization ATP-binding protein
+                     PhnK"
+                     /protein_id="645144_933"
+                     /translation="MSDDRPLLEVRGAAHRYGDRYGCRDVDLDLHPGEVLAVVGESGS
+                     GKSTLLGTLSQRLALSDGSIRYRLADGEVVELADLSESAVRRLWRSEWGFVHQDPADG
+                     LRMHVSAGGNVGEPLMTNGWRHYGRIRETAAEWLRHVEIPVDRIDDHPTTFSGGMRQR
+                     LQIARNLVVSPRLVFMDEPTSGLDVSVQARLLDLIRGLVAELGLAVVIVTHDLAVARL
+                     ISHRTLVMKDGRVIESGLTDRVLDDPQAAYTQLLVSSILQG"
+     CDS             complement(996258..995044)
+                     /contig="NODE_1_length_3283759_cov_222.559181"
+                     /organism="homo sapiens"
+                     /product="ABC transporter, substrate-binding protein
+                     (cluster 1, maltose/g3p/polyamine/iron)"
+                     /protein_id="645144_950"
+                     /translation="MINTRTRAALAATVVVTAGLALTGCSTGGGGSSDPDSLTLWDSF
+                     TQYDASSPYGKLISGCETSTGITIDRTQNPDNETKFLQAASSKTTPNLIVLDNPAIAR
+                     FADTGLLVANDESGLDTSKVLPNVLAAGQLDGKTYGSSIGANTLALFYDKAKLAAAGV
+                     QPPTDWASLEDAAAKTTQGDVQGLGFSAIGTEEGTFQFLPFFWGAGADLSDISSPAAV
+                     RALTLWTDMVKDGQASSANVNANQQDIRDQFLAGKLAMMVNGTWQLSALDEAGIDYGV
+                     VPLPAEDGGAAPSPLGGEFVEVVVSDEAKQDAAARFAQCMIDPANLADWTAGQSYISP
+                     YADAAAQQVSADPELVPWVDAVSVAQGRTADLGIAYPDTSKALYQAIQEALTGSKTPQ
+                     AALDDAAATLKK"
+     CDS             976901..977770
+                     /contig="NODE_1_length_3283759_cov_222.559181"
+                     /organism="homo sapiens"
+                     /product="Alpha-D-ribose 1-methylphosphonate 5-phosphate
+                     C-P lyase (EC 4.7.1.1)"
+                     /protein_id="645144_932"
+                     /translation="MSASLIGYNLGYLDEQTKRMIRRALLKAVAIPGFQVPFASREVP
+                     MPRGWGTGGVQVTAAVIGEDDVLKVIDQGADDTTNAVSIRQFFASVAGVATTTRTDEA
+                     TVIQTRHRIPETPLAEGQVIVYQVPMPEPLRFLEPRETETRRLHALEEYGLMYVKLYE
+                     DIARFGHVAKTYDYPVMVAGRYLMAPSPVPSFDNPKMHMSPALQLFGAGREKRIYAVP
+                     PYTSVESLGFEDHPFEPQSFEDPCAICGSTGVYLDEVITDDRGASMHVCSDTDHCERT
+                     VEAARAHDEEARA"
+     CDS             complement(997501..996452)
+                     /contig="NODE_1_length_3283759_cov_222.559181"
+                     /organism="homo sapiens"
+                     /product="Transcriptional regulator, LacI family"
+                     /protein_id="645144_951"
+                     /translation="MVTIRDVAADAGVARSTVSYVLSGKKKLPDATRERVLTSVSKLG
+                     YRPDPAARALALRRTNILGFLASIDPASRESDIEVFMRFVRAGMYEANTRGFDLLIMG
+                     KGEDELRGDVLADALVVMDIRDDDPRIPVLQAIGLPTVLVGHPGRSSAFSAVDLDFEE
+                     AGRVAVDHLVALGHREIALLGSGAPAARTEMGFAVRFRRGFTERCAHHGIQGAVVPSV
+                     GGGDDAAERWLDAAREALPAASAIVAHTPGELEPIAAALRARGIRIPEDCSLITVAPE
+                     VVMRTAALPLTVIDLPGDEMVRRATGLAVDELAGAAEPGVLELLPAVLVELGSTGRHV
+                     PGESGSAFRSVSASA"
+     CDS             975789..976904
+                     /contig="NODE_1_length_3283759_cov_222.559181"
+                     /organism="homo sapiens"
+                     /product="Alpha-D-ribose 1-methylphosphonate
+                     5-triphosphate synthase subunit PhnI (EC 2.7.8.37)"
+                     /protein_id="645144_931"
+                     /translation="MYVAVKGGEKAIAAAHALLAAEGRGAPGSARIEAGQVAGQLGVL
+                     VSRVMTEGSLHDPELAARALIQAQGDVLEAVTLLRSYRTTLPRFGYTLPVDTAGLPPQ
+                     RRVSATFKDLPGGQQLGATFDYTHRLFTDAEPAAVTSRAADAGATMPRVADLLGQSAL
+                     IEPDSHPGQDDEEPADITREPTVHPMTRAERLQALARGDEGFLLGLGYSTQRGFGTTH
+                     PFAGEIRVGEVEVELDAPELGFAVPLGRIEVTECQMVNQFTGSADRPAQFTRGYGLAF
+                     GRSERKAMSMALVDRALRADELGERVTAPAQDEEFVISHCDNVQATGFVEHLKLPHYV
+                     DFQAELVLVRRLAREWRERQEAPEASSDAPAGAGARA"
+ORIGIN      
+        1 aaaaaaa
+//

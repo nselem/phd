@@ -1,0 +1,238 @@
+LOCUS       Unknown                    7 bp    dna     linear   UNK 
+ACCESSION   unknown
+SOURCE      645144
+  ORGANISM  645144
+            .
+FEATURES             Location/Qualifiers
+     CDS             2151955..2152992
+                     /contig="NODE_1_length_3283759_cov_222.559181"
+                     /organism="homo sapiens"
+                     /product="Methionine ABC transporter ATP-binding protein"
+                     /protein_id="645144_2117"
+                     /translation="MTDSPHVSLRGVGKQYPPRAKGEAGLHALADVDLDIRRGEVFGI
+                     IGYSGAGKSTLVRLVNALERPTAGTVSVDGREIQALPERELRKLRLGIGMVFQQFNLF
+                     TSKTVWGNVAYPLTVAGMPKDQQQRRISDLLHFVGLADKAHARPDELSGGQKQRVGIA
+                     RALATSPAILLADEATSALDPETTSEVLALLRRVNEELGVTIVVITHEMEVIKSIADR
+                     VAVMDSGRVIEHGEVFDVFSRPTSDAARRFVSTVVAGIPEPQEVQRLRRRHPGRLVTL
+                     SFADGGATQAEVFQALAAAGIAFEVVHGGITDIQGRTFGNLTLALGGDPARIDEVLAA
+                     DRAGVTVTEVV"
+     CDS             2152994..2153653
+                     /contig="NODE_1_length_3283759_cov_222.559181"
+                     /organism="homo sapiens"
+                     /product="Methionine ABC transporter permease protein"
+                     /protein_id="645144_2118"
+                     /translation="MDALTPLLPLLGRSTVETLVMVLLTLLFGGLGGLIMGLGLYLTR
+                     ASSLLPNRAVFAVLNLVVNTFRPIPFVIFLVAAQPLARLVTGNGIGQPAIIFTLSLGA
+                     SFAISRIVEQNLLTVQPGVIEAARSVGASPVRIIFTLLIPEALGPLILGYTFIFVGIV
+                     DMTAVAGAIGAGGLGNFAIVYGYRQFEPVVTWAAVLIIIVLVQVVQFAGNRMARAALR
+                     R"
+     CDS             2151026..2151958
+                     /contig="NODE_1_length_3283759_cov_222.559181"
+                     /organism="homo sapiens"
+                     /product="Methionine ABC transporter substrate-binding
+                     protein"
+                     /protein_id="645144_2116"
+                     /translation="MTTQAPLIDAPKRRNRLGLIIGAVVVVLAIVAAVLFATGAFAGG
+                     GKAVKIGVVGASDPQWPLFVEAAKEEGIDVQIVDFTEYPQVNPALSEGEIDLDQFQHL
+                     VYLAQYNEGAGEDLTPIGATAIYPLGLYSSKHTSVADIPQGGTVILPNDESNLARGLL
+                     LLQREGLLTLKGGGSSVSTLDDVDQAASKVSVTTVDAALTATSLPDADAVIINNDFVT
+                     DAGLTAGDAIAQDDPSDPKALAYVNVFAARAADAQNETYLKLAQIFRDTPAVVDAVVE
+                     NSGGTAIPLQTPADELQSLLTTTEKAVAEKKAAR"
+     CDS             complement(2154584..2153691)
+                     /contig="NODE_1_length_3283759_cov_222.559181"
+                     /organism="homo sapiens"
+                     /product="Transcriptional regulator ArgP, LysR family"
+                     /protein_id="645144_2119"
+                     /translation="MDIRTEHLRTLAAVIDTGTLDAAARALRLTPSAVSQRITALERS
+                     AGRVLLRRTRPATTTEAGDAVLRHARQVLLLERDLDGLLGVGDGEQPRAGTAAVPVVV
+                     NGDSLASWLLPAFAALAAETGQAVEVLREDEHHSLDLLRDGSAMAAVTSVKDPVQGCT
+                     SERLGRMRYRALATPAYVAAHLPDGPTPSALAVAPLVMFDRKDAMQDRWLRGRRAPAG
+                     QPRHYVPSSAEFVTAVTLGMGWGMLPDLQSEELVASGALVPLDAGSHVDVALHWQRWS
+                     VDSPVLADLTRHVRAAAASLR"
+     CDS             complement(2150680..2149769)
+                     /contig="NODE_1_length_3283759_cov_222.559181"
+                     /organism="homo sapiens"
+                     /product="Egg case silk protein-1"
+                     /protein_id="645144_2115"
+                     /translation="MNEDDDAVSALPVEELRRRVYAQGADETDERWIRAAAELTRRER
+                     ASRPAAGDAVLAAGAGAGADGRADAADAADAAAPASADATADDGSAEDDADTAASAAP
+                     PRGSRRVLVGIAAAALAAGLAAGGAVGATLGSGSAATTSADGTPSPGADAPPIAAGST
+                     PAAAASPDGTTLLGPDSTSDQRSRPVGAIFDGPQEDGDRPPKAVRADVDATTIRAVQT
+                     SVGLYAGLSVSGDLCLLVFPSGGAGVVTCASPDRIASDGLRIAWTTEFPSRNRDGSTG
+                     MITGDVTATWSGDDLITLTTPDRILAY"
+     CDS             2154657..2155457
+                     /contig="NODE_1_length_3283759_cov_222.559181"
+                     /organism="homo sapiens"
+                     /product="Arginine exporter protein ArgO"
+                     /protein_id="645144_2120"
+                     /translation="MHPLAHALSGFGLGFSLIAAIGAQNAFILRQGTRREHVLVVVLI
+                     CAVSDVILIGLGVAGIGAVIEAAPVAIVVIRILGACFLAGYAALSLLRAVAPRGLAVA
+                     VSAPRALGTVVAACLALTWLNPHVYLDTVLLVGSVAAGHGDGRWAFGVGAMVASCVWF
+                     TLLATAARVFAPVLARPSAWRVLDTVIAGVMLVLAVQILLPLVPEGPGEGARITVATA
+                     ICAALAGAVAAWSVARRRRADAALGDATTDTAPAADGLGTPEASALLR"
+     CDS             2147939..2149756
+                     /contig="NODE_1_length_3283759_cov_222.559181"
+                     /organism="homo sapiens"
+                     /product="Bis-ABC ATPase Uup"
+                     /protein_id="645144_2114"
+                     /translation="MAHLLGAEALHLEFPTRVIFDDVTIGVNEGDRIGIVGRNGDGKS
+                     TLLSLLAGRLEPDRGRVTRRRGITIGVLDQSDTLPDGQTVGEAIVGGIDEHEWAGNPL
+                     VRDVIDGLASDVPWDADVANLSGGQRRRVALAKLLIGDHDILFLDEPTNHLDVEGIAW
+                     LAGHLRRRWAPNSGGLIVVTHDRWFLDEVANATWEVHDRLIEPFEGGYAAYILQRVER
+                     DRSAAVSEAKRQNLMKKELAWLRRGAPARTAKPKFRIEAANALIADEPPARDTVSLAS
+                     MAMQRLGKDVVDLLDVSVSYGEKQILKDVEWRIAPGERTGILGVNGAGKSTLLSLVAG
+                     SLQPTTGKVKRGKTIKVAVLTQQLDELKDVLEDRVSTVIGRQRTTYVAGGKEMTPGQL
+                     LERLGFTSAQLSTPVKDLSGGQKRRLQLLLIVLDEPNVLILDEPTNDLDTDMLAAMED
+                     LLDSFPGTLLVVSHDRYLIERVTDQQYAVMNGNLRHLPGGVEQYLKLRSQPGNAEKAT
+                     VARPDEVGGQATATLGGSGGSQLQGAELRNAQKELASITRKLEKADTRRRQALDAMAE
+                     HDPNDYDGLGKLNEGVRAIEAEVEAFESRWMELSELLEG"
+     CDS             2155460..2156467
+                     /contig="NODE_1_length_3283759_cov_222.559181"
+                     /organism="homo sapiens"
+                     /product="Luciferase-like monooxygenase YhbW"
+                     /protein_id="645144_2121"
+                     /translation="MTVPLSILDLAPIAPGETARDSFAASVALAQQAERSGYRRVWYA
+                     EHHNITSIASSATSVLIAHVASQTSTIRLGSGGVMLPNHSPLTIAEQFGTLETLHPGR
+                     IDLGLGRAPGSDQATFRALRRDPGSSDRFPEDVVELQAFLSGESQVPGVSATPGAGTR
+                     VPLYILGSSTFGAQLAAALGLPFAFASHFAPDMLLDAIAIYRRDFRPSEQLEAPYAIA
+                     GINAIAADDRADAERQFAGVRRARLMMLLRQSGQIPATQTFTDEELDRLLEAPVGAHV
+                     ASMMTYTAVGTGAEVSDYANRFAEQAGVDEVIVGHASQRTPERLRSVELMADAHALVA
+                     A"
+     CDS             complement(2147788..2146484)
+                     /contig="NODE_1_length_3283759_cov_222.559181"
+                     /organism="homo sapiens"
+                     /product="Uncharacterized MFS-type transporter"
+                     /protein_id="645144_2113"
+                     /translation="MTTSRTETASIPVTGPGAASDANAASPARRESAAGLLVYALTLL
+                     VLVASGAAPSPLYPVYQEEWTLPPVVLTLVFAVYVAGLLATLLTAGRLSDHIGRRPVI
+                     LGALVVSVAAMLVFAFAHDGLALVVARILQGLAIGLATGALGAGMIDHQPSRRSGLAA
+                     FLNGVVPPVALTVGALGSGFLVAYGPAPEETVFVVLAALMVAAGVAVAFVPERQPRRA
+                     GALRSLVPSVAVPRAARSVFTAVVGGMIASWALGGMFLAFIGSVLGTTFGLHSAALTG
+                     TAIALFTGTGAITGIVIRTRDARRSLIVGVVALVLGPIGLVAAIWTASLPLFAIAAVI
+                     GGVGFGAGFQAGLRLVLAEAPVDQRASLLSSVYVASYLAFGVPSIVAGVFVEADGLPI
+                     VLTVYGAFVAASALVALVLQLTGRRTRRAERIADALDAASAS"
+     CDS             2156478..2156834
+                     /contig="NODE_1_length_3283759_cov_222.559181"
+                     /organism="homo sapiens"
+                     /product="DnaK suppressor protein"
+                     /protein_id="645144_2122"
+                     /translation="MADDAAPAPADARAALEAVRADTLALIRGLDRDVAAIVESRQDA
+                     NSDDEHDPEGATLAFERSQSDAMIREARVRLADVDAAVARLDAGTYGRCEVCGEAIPA
+                     GRLEIRPAARRCVAHA"
+     CDS             complement(2146280..2146110)
+                     /contig="NODE_1_length_3283759_cov_222.559181"
+                     /organism="homo sapiens"
+                     /product="hypothetical protein"
+                     /protein_id="645144_2112"
+                     /translation="MAFIVVLLVLWLILTVVGFAIKGLIWLGIIGIILILGTIVLGSL
+                     RRRYNAAKTPKA"
+     CDS             2157496..2157570
+                     /contig="NODE_1_length_3283759_cov_222.559181"
+                     /organism="homo sapiens"
+                     /product="tRNA-Gln-TTG"
+                     /protein_id="645144_2123"
+                     /translation=""
+     CDS             complement(2145972..2144239)
+                     /contig="NODE_1_length_3283759_cov_222.559181"
+                     /organism="homo sapiens"
+                     /product="putative large integral membrane protein"
+                     /protein_id="645144_2111"
+                     /translation="MMRTPPHARAPRTDGRPGRASLLVFLAALIGIGVLSALWAVTTP
+                     LGASPDEPAHMNKAASVVRGQFLGDVTDDPQVRVVQVPAGVAYSDPSACARHDGDRTA
+                     DCAPGFPAGDAADRIVSTETSAGLYDPVYYVLVGWPTLIWGGGTMAVFGMRLVSALLC
+                     TLLAAGALAYLARLPRPVLPVLATFAALTPMTHSLFGSVNPNAFEIAATAAFAAAYIT
+                     GLVRGGPVSWRTAAFLAVTGGLLVHARGLSPMWLGVVVVAGACLVGWSRFWTYLRRPQ
+                     VLTAVGVVAVSTVLAIVWILRTGSLAAVGVYERAGTSFAEGLVIMLERTFDYARDMVG
+                     NFGWLDTAIPSYAVFPYFVGWGVIVAAALMIPSAKGGRRAVAVALVGFLLLPALVQAS
+                     SVTVSGFVWQGRYNLPAYLLLIMVAAVVAAPAFDRVPAVVRRRILVLVAVVHAAAAFV
+                     GLMTFLRRNSVGLSASWSDLLLRPRWSPPVVGVEPWILAIAAGSVVAGAALLLAVLAA
+                     RRDAPTEATLDAGPRGLAGVGMPAAAGTGRGTVAASAEAHADGDPEPTPIPHSPADAT
+                     ATATADGSRGA"
+     CDS             2157619..2159163
+                     /contig="NODE_1_length_3283759_cov_222.559181"
+                     /organism="homo sapiens"
+                     /product="N-acetylglucosamine-1-phosphate
+                     uridyltransferase (EC 2.7.7.23) / Glucosamine-1-phosphate
+                     N-acetyltransferase (EC 2.3.1.157)"
+                     /protein_id="645144_2124"
+                     /translation="MTDSDITPTTREIPIVTGELDVDGEPRSPSIAVVILAAGQGTRM
+                     RSRLPKVLHPLAGLPLVGHVLATAEELGARHIVTVVRHDRDQVVEVVRALSPQALVVD
+                     QDEIPGTGRAVEVGITALPDGFTGQVVVLSGDVPLLDAATLRSLVSAHRQARNDLTLL
+                     TARLDDPTGNGRIIRGQDGAFEAIVEQKDATGEQLRIDEVNAGVYVFDAEALRQTLGA
+                     IGTDNAQREKYLTDAADVIRRAGGAIEGLPVRDSWLVAGINDRVQLTAAATELNARII
+                     RRWQLAGVTIQDPRTTWIDVKATLAADVTVLPGTQILGASTVAAGATVGPDTTLRDTE
+                     VGEDATVRRTDAELAVIGARATVGPFSFLRPGTRLGDDGKIGAYVETKNVEIGVGSKV
+                     PHLSYVGDATIGEHTNIGAGAVFANYDGHTKHRTEVGDHVHLGSRNVLVAPVRIGTGS
+                     YTGAGAVIRKDVPPGALGISVAPQRNMVGWTEAKRPGTPEARAAVEAAEGHQDDPSGT
+                     EHTEQH"
+     CDS             2143356..2143856
+                     /contig="NODE_1_length_3283759_cov_222.559181"
+                     /organism="homo sapiens"
+                     /product="Integral membrane protein"
+                     /protein_id="645144_2110"
+                     /translation="MNPTSYVFTLVAALLAVGVVIERLRRRRLRERHAVWWLVAGLVA
+                     LVISVFPPLLSGAARFLGVQEPLNLAFFASIVVIFLVCVQYSAELTDLEDKVRRLAEE
+                     SAMTDLRLRDLEQEARAGAAPASPASSGSPAERDQPAAGSDGRGSSASSSPTGTADRS
+                     ANTQNL"
+     CDS             2159178..2160155
+                     /contig="NODE_1_length_3283759_cov_222.559181"
+                     /organism="homo sapiens"
+                     /product="Ribose-phosphate pyrophosphokinase (EC
+                     2.7.6.1)"
+                     /protein_id="645144_2125"
+                     /translation="MSAIKTAGEKRLVIVTGRAHPELAEQIAEELETTLVHTDARTFA
+                     NGELYIRYDESVRGSDAFVIQSHTAPINEWLMEQLIMVDAMKRASAKRITVVAPFYPY
+                     ARQDKKGRGREPISARLVADLFKAAGADRIMSVDLHAAQIQGFFDGPVDHLFAMPVLL
+                     EHMRSVLDSKTLTVVSPDMGRVRVADIWSDKLGAPLAIIHKRRDPKVHNQVTVHEIVG
+                     DVAGRVCLLVDDLIDTGRTIVSAAEALKKNGATGVVVAATHAVFSDPATQILDSPHID
+                     SVVVTDTLPIPEDKRWDKLTVLPIAPLLARAIHEVFDDGSVTSMFDGAA"
+     CDS             complement(2143257..2142430)
+                     /contig="NODE_1_length_3283759_cov_222.559181"
+                     /organism="homo sapiens"
+                     /product="hypothetical protein"
+                     /protein_id="645144_2109"
+                     /translation="MRRDAAGAGPHRHGHLLDGEAVAGRDDKGLDRVAEVLGGVVLRE
+                     QRDGAGAGSAVAGCRVGERRPCDAAEREAQEPHRPLARAGHLVVALAREPRADDDVLA
+                     LEGGEQLRHALRVVLAVRVDLDDVVEAVALRVAEPRAHRAADAEVERQLEHAGTRGLG
+                     DLDRAVLRSVADDQARDAGERVEDLPHDLAHRLLLVVRGHDDEGRAQAGGHAERVARR
+                     RRAPARDRRVRPTRRPTRSCRRRRPAASRSGRAASPRRRGDRTRRTRPRGARRRRRR"
+     CDS             complement(2160575..2160201)
+                     /contig="NODE_1_length_3283759_cov_222.559181"
+                     /organism="homo sapiens"
+                     /product="hypothetical protein"
+                     /protein_id="645144_2126"
+                     /translation="MDEDEHPELAGYEPHRPRSLRSKRTLVVMRVVVVVGIVSLLLPG
+                     VVTMVRVGASTADMACADFVAYERPDSPSYEVRFQLFGPGVVGYECYTKYAFGGDEHI
+                     VSLGLIPSGRVAREVVERNSRD"
+     CDS             2142049..2142264
+                     /contig="NODE_1_length_3283759_cov_222.559181"
+                     /organism="homo sapiens"
+                     /product="hypothetical protein"
+                     /protein_id="645144_2108"
+                     /translation="MPTSGKEAKLRYKIAGIVVLGLGVVLLIQYFTFERTGVIRVVGS
+                     IAFGVTIVISGLAINAVVRHDGQKSSE"
+     CDS             complement(2162099..2160645)
+                     /contig="NODE_1_length_3283759_cov_222.559181"
+                     /organism="homo sapiens"
+                     /product="6-phosphogluconate dehydrogenase,
+                     decarboxylating (EC 1.1.1.44)"
+                     /protein_id="645144_2127"
+                     /translation="MSDDQQATANIGVVGLAVMGSNLARNLASREGNTVAVYNRTTQK
+                     TTDLVEEHPEAGFVAATSIEEFAASLQRPRTAIIMVKAGRGTDAVIEQLTEAFEEGDI
+                     IVDGGNALFTDTIRREKEVRAKGLHFVGAGISGGEEGALKGPSIMPGGTAEAYETLGP
+                     ILESIAAVAEGKPCVTHIGTDGAGHFVKMIHNGIEYADMQLIAESFDLLRRVGGHEPD
+                     AIADVFEEWNGGDLESYLIEITAEVLRQEDAATGKPLVDVIVDQAGSKGTGVWTVQNS
+                     VGLGVPVGGIAEAVFARAVSSKPEQRKAVQATITSRPEIQSGGDTFEDDVRAALYASK
+                     VVAYAQGFDAIIAGAKEYGWDIDKGKVAEIWRGGCIIRAQFLNRIVEAYEKDSGLATL
+                     LEDPYFAKAVADGEQAWRRVVSVASLSGIPVPGFASALSYYDSLASERLPAALVQGQR
+                     DFFGAHTYHRTDKEGTFHTLWSGDRSEVEAEDTH"
+     CDS             complement(2141936..2141781)
+                     /contig="NODE_1_length_3283759_cov_222.559181"
+                     /organism="homo sapiens"
+                     /product="hypothetical protein"
+                     /protein_id="645144_2107"
+                     /translation="MTIVRTLPIIAEVLLRGREDTGSDDTGLGECAARGDSYKEAAAV
+                     DDCILIE"
+ORIGIN      
+        1 aaaaaaa
+//

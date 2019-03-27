@@ -1,0 +1,285 @@
+LOCUS       Unknown                    7 bp    dna     linear   UNK 
+ACCESSION   unknown
+SOURCE      594139
+  ORGANISM  594139
+            .
+FEATURES             Location/Qualifiers
+     CDS             58446..59396
+                     /contig="NODE_13_length_114052_cov_143.866"
+                     /organism="homo sapiens"
+                     /product="Oligopeptide transport ATP-binding protein OppF
+                     (TC 3.A.1.5.1)"
+                     /protein_id="594139_459"
+                     /translation="MTTAEQTLLSVRGLTQIFRLGRNHSVTAIGGVSFDIHRGETFGL
+                     VGESGSGKSTIGRSIIRLLDPTSGEVTLSGDRISGRLDPKSRSHLRSSIQMIFQNPMS
+                     SLNPRKKVFDIVAQGLMTQHRYATTAERDEKVYAILEKVGLAREYADRYPHQFSGGQR
+                     QRIGIARALVMQPDLVIADECVSALDVSIQAQVVNLMRALQKELGTAYLFIAHDLAMV
+                     KYISDRIGVMHRGYLVETGTTAEIFGSAVHPYTQSLLRAVLSADPRAMRRRTASTPYD
+                     PVALGIDYAEGGEHTLSDTHRVLATDAQFAEWTAARSSPA"
+     CDS             complement(61087..60230)
+                     /contig="NODE_13_length_114052_cov_143.866"
+                     /organism="homo sapiens"
+                     /product="Cof-like hydrolase"
+                     /protein_id="594139_460"
+                     /translation="MTRIAFLDVDGTILEHGSLIAPSTVTAVRTARENGHLVWLCTGR
+                     SAGDIHPDVLAIGFDGAITNGGAYATRGEEPGDDALIVEHPMPRADVEAVERYFEAHG
+                     IHYFLQTHGGVYASAGMGPVMTAYRRERHAQRAAELEAQGLPAEEPLWREPRPVTEVD
+                     RDAVAKAVFVSPSIDTVTHAAEELGDAFHVIPGSIPLPGGSNGEIGQAGVTKGSAITE
+                     VLALLGIDAADAIGIGDSWNDVEMFEVVGTPVAMGNAVPELQQLAGRVTTAVLEDGVH
+                     NAFAELGLL"
+     CDS             57340..58449
+                     /contig="NODE_13_length_114052_cov_143.866"
+                     /organism="homo sapiens"
+                     /product="Oligopeptide transport system permease protein
+                     OppB (TC 3.A.1.5.1)"
+                     /protein_id="594139_458"
+                     /translation="MTANETPADGRTRRRVLSVRDLAIEFEGDTTIKAIRGASFDLYE
+                     GEVVAIVGESGSGKSVTARAILGLMASNQRITAGSIEITRYGDDGTPLTRDIAQMSEK
+                     QIRREICGRRVAMVFQDALTCLDPTMTVGKQVMEGMQEHFGLDRRAARARAIELLAEV
+                     GIDQPERRFKQYPHQLSGGMCQRVNIAIALSCNPDILICDEPTTALDVTIQLRILELL
+                     TRLQAERGLSVIFITHDLGVVATVADYVNVMYAGRIIEQGSAEQVFYDPRHPYTWGLL
+                     SAMPDLATDASELFAIPGSPASLANLPEGDPFAPRNPFALEIDLVREPPLFDVGEGHQ
+                     VASWLAHPDAPNVDMPAPLRHKIDTMLALHEGSNR"
+     CDS             complement(62565..61150)
+                     /contig="NODE_13_length_114052_cov_143.866"
+                     /organism="homo sapiens"
+                     /product="6-phospho-beta-glucosidase (EC 3.2.1.86)"
+                     /protein_id="594139_461"
+                     /translation="MTTIPFPDGFLWGGATAANQIEGAYDADGKGLSVQDVMPRGISG
+                     PRSETPTPDNLKLVGIDHYHRYAEDIALFAEMGFGVYRFSIAWSRIFPKGDETEPNEA
+                     GLAFYERILDELEKHGIEPLVTISHYETPLHLAEQYGGWTNRELIGFYERYARTLFER
+                     FGSRVKYWLTFNEINSLLHAPFMSGGIPIPEGGVPEQQLYQAMHHELVASARATRIAR
+                     EVAPEAKVGCMVLSMPIYPLTPSPDDAVAVMEADHGNLVYGDVHTRGAYPGYFLRTLR
+                     EKGIELDITDQDRDDLTHTVDFVSFSYYMSIAETADPAKKVAGEGNIMGGVSNPTLEA
+                     SEWGWQIDPVGLRLVLNQFWDRWQKPLFIVENGLGARDQLVEVDGEKTVVDDYRIAYL
+                     NDHLVQVGEAIEDGVEVLGYTSWGCIDIVSASTAQLSKRYGFIYVDRNDDGTGSLDRY
+                     RKKSFGWYADVIRSNGASLTR"
+     CDS             56270..57337
+                     /contig="NODE_13_length_114052_cov_143.866"
+                     /organism="homo sapiens"
+                     /product="Oligopeptide transport system permease protein
+                     OppC (TC 3.A.1.5.1)"
+                     /protein_id="594139_457"
+                     /translation="MTDPNVQPDRVAPTTALDPGVAPEGLRLVSDANRPATSVIAAGR
+                     SGRGGLHDIVRRFRRNWPAMVGLGVLAVIVLLAVVVPFFPTAGDTANVAYRFLPPKVP
+                     GLEALGILNGTRDGVDQYAKANVPAGTSFLFGTDDLGRDLFERVWSGTRVSLLVAVIA
+                     FAIDVVIGMTYGLVSGYFGGRIDGGMQRVVEVLSGIPQLVIVTLFVVAVGPGIGAIVF
+                     GLLLSNWLAMSRVARAQALRQKGEEYVLASRTLGARNGHIVFVEILPNILGPIVTMSM
+                     FSIPAAIFTESYLSFVGLGVQAPMASLGSLVSIGYKSFLSYPSLVIIPVVVLGLLMVA
+                     FTLVADGLKEATDPRLISRRG"
+     CDS             complement(64444..62585)
+                     /contig="NODE_13_length_114052_cov_143.866"
+                     /organism="homo sapiens"
+                     /product="PTS system, beta-glucoside-specific IIB
+                     component (EC 2.7.1.69) / PTS system,
+                     beta-glucoside-specific IIC component / PTS system,
+                     beta-glucoside-specific IIA component"
+                     /protein_id="594139_462"
+                     /translation="MTDHAKTAAGVLAGVGGESNVQSLVHCATRLRFVLKDEGKADAA
+                     AIRATPGVITTAQAGGQYQVVIGNDVPDVYAAIQSQTKLGGAGSEAAESGPKGNLFNR
+                     FIKMISAIFTPILWALAGTGLLKAFVAAAVTFGWLDATSTTYTILNALSDALINFLPL
+                     ALAITAARYFKASEFTSFAIAGALVYPTITALNGQPDITFFGIPVTMVSYVSSVIPVI
+                     IIVWLQSYAERFLLKVLPGAVRRFLTPMVVVLVAVPLVFLVIGPLSSLVGGGLAAGIG
+                     WVFQTLPWLGGAIMGGLWQVFVIFGLHWGLVPLFQLEYQTTGQILLIGPVFAAVLAQA
+                     AAVAGVLVRTRNKNLRSLAAPATLSGFLAGITEPAIYGINLPLKRPFAFGIVGGALGG
+                     ALIAMGGVFSKAFVVPSGLALPALLGNGNMVMLAIGLGVAILVPFLLVVLLGFKDPVD
+                     ATAPATPAVATDTVVRNPVDGTVVALSEVPDAAFADGSLGKGVAIRPTSGAVYAPFDG
+                     TVVAAFPTGHAVGLRGVDGVELLIHVGLDTVKLGGAHFTLKVQSGIEVKAGDLLVEFD
+                     GDAIEKAGYDLITPVIVTNGDLYPDIADAASGPLSHGESLFRAVSVDSLTSAR"
+     CDS             55323..56273
+                     /contig="NODE_13_length_114052_cov_143.866"
+                     /organism="homo sapiens"
+                     /product="Oligopeptide transport system permease protein
+                     OppB (TC 3.A.1.5.1)"
+                     /protein_id="594139_456"
+                     /translation="MGRGAVTKFVLTRLLTSVFTILAIAIVMFALLQLLPGSPFNNEK
+                     LDEVQRALLTQKYGLDEPVMLRLGTYLLNLVRGDFGVSYNLIPDFPVSQMLGSRLPVT
+                     IRIGLQALVLGVVLGLLIGIVSAIKKRGWFDNLSTFVSVIAFSVPSFVIALLLVYFVG
+                     FEWKLLPIRYSEDDPFVSSILPTISLAAYVMAVTARYARSEMLDCLDSDYILLAKAKG
+                     LSPAKVIGRHALRNTMVSIITVLSPLLIGLITGSVVIEQIFGAPGLGQLLLTAIQNVD
+                     YNIVIAISLVYSVIYIIVMLAVDVLYGLIDPRIRLAGQTR"
+     CDS             64367..64621
+                     /contig="NODE_13_length_114052_cov_143.866"
+                     /organism="homo sapiens"
+                     /product="hypothetical protein"
+                     /protein_id="594139_463"
+                     /translation="MHEGLDVALSTDTGEDPRRRLRVIRHRNRLPFAASMRPVRDVLW
+                     RRCRVFRAIKKTRIRSSLVSDVDSGLARSRGNNPEIVGRV"
+     CDS             54718..55341
+                     /contig="NODE_13_length_114052_cov_143.866"
+                     /organism="homo sapiens"
+                     /product="3-polyprenyl-4-hydroxybenzoate carboxy-lyase
+                     UbiX (EC 4.1.1.-)"
+                     /protein_id="594139_455"
+                     /translation="MIVAITGASGVGIGVRILELLRMDPGLRSDVVISKAGAMTLQQE
+                     CGLSQKEVEALADVAHRASHIGASIASGSTPTTAMIVAPCTVKTLSGIAYGLADNLVT
+                     RAADVCLKEGVPTLLMVRESPLHRGHIAAMDAVARAGGIIAPPVPAFYTRPQSVDEII
+                     DSLARRALVRVGLTQFHARSWEGIPRDAESADAASLLGETSGWDGAP"
+     CDS             complement(65545..64637)
+                     /contig="NODE_13_length_114052_cov_143.866"
+                     /organism="homo sapiens"
+                     /product="Beta-glucoside bgl operon antiterminator, BglG
+                     family"
+                     /protein_id="594139_464"
+                     /translation="MPGAGDVSLPPGGVQKLLNNNVVVAIDGDGRERVLMGRGIGFQL
+                     KHEGRVDPTKVEKTFVLEQGSDTAHAQKLLTDAPYALVEAVLHAVDQAERDLGRDLGR
+                     RLPLAVIDHITYVIERLDQGIRIPGTSMPELRILHPDESRAAERMATSIAASLDRELP
+                     PEEGVFLTMHLLNATRDEPNGTAALLFRRVQHVVRTVETGLGVALDTESPDYARFILH
+                     VRFLLQRLVNRAMLSSGDSSFFEFAKHRYPRAFGIAEAVKDYVHAATGSTLTDEEVLY
+                     LTVHVERLATSLGRADDSGGPDAPVL"
+     CDS             53438..54688
+                     /contig="NODE_13_length_114052_cov_143.866"
+                     /organism="homo sapiens"
+                     /product="N-carbamoyl-L-amino acid hydrolase (EC
+                     3.5.1.87)"
+                     /protein_id="594139_454"
+                     /translation="MKTDIGLPDAARLSADLEEISRLVDTSRPGWSRVALSEVETDSR
+                     HHVAALMRAAGLDVRVDNIGNVIGTLSGTGSDRRAIVIGSHTDTVDGGGRYDGIVGVL
+                     GAIEVARMLRESGIRLSHDLRVVDFYNEEANRFELSCLGSRALAGSLTTTHLSATDET
+                     GRTLGAALAAAGYDDPLSGTRWGDDEVLGFLELHIEQGPVLERAGLPLGIVTSIAGIS
+                     RFRTLFTGRRDHAGTMPMSLRHDAGCAAAGVVLAVEQIAGSADQAVGTVGSVTFTPDA
+                     TSVVTEAALLTAEFRSPDLGWFSLARDQIAEIAAKEAEKRGLTHEVTWLPWERPTAVD
+                     PRLSSAIERSVSALGHPAAHLYSGAGHDGVQMAKLGPIGMIFIPSRDGRSHCPEEFTE
+                     LDDIVVGVHALARSVITLDQEGLS"
+     CDS             65800..67701
+                     /contig="NODE_13_length_114052_cov_143.866"
+                     /organism="homo sapiens"
+                     /product="PTS system, beta-glucoside-specific IIB
+                     component (EC 2.7.1.69) / PTS system,
+                     beta-glucoside-specific IIC component / PTS system,
+                     beta-glucoside-specific IIA component"
+                     /protein_id="594139_465"
+                     /translation="MTTQDSARAILEHVGGAANVASLHHCSTRLRFTLADDTQADEAA
+                     LKATPGVIGVVLGTQTQVIVGSGVANYFREIEKLRTGGGTRAEARVDAAKPKLTLKRA
+                     GSVFMDFVVGVFTPIIPAVAGAGIFKSFLILAVALGWLQTTDQTYQVLTAIPDAVFFF
+                     LPLLVTYTAAKKLDTNIPLALGIVGLLVFPTFAGLLTQEGGVALFGLTVPAIAYSAQV
+                     FPPILAVLLLAVVERGARRISPSVISTFLVPLICFVVVAPATIFLLGPLGFFLGTLLT
+                     GAMLWLYGTLGWIAVALMAAALPFIVSVGMHKAFIPPTVATMASAGKESFYLVASLAH
+                     NLAEAGSSLAIAVRTKNKTLRGTAISSGISAFFGITEPALYGVTLQNRRAVISVVIGA
+                     FVGGSYLGIAAISAFALVSPGAASISMFIDMANPWNLLHAVIGALVAMVTSFIVSLVI
+                     WKDSDSATVRLLEQQAGTSTPVGEPVAGGIVAPMTGEVIALAEVDDPVFSGGILGPGV
+                     AIRPTDGEVRAPISGTVSSLLPSRHALGILGDDGLEVLVHVGLDTVRLEGAPFTAHVA
+                     QGDRVEAGQHVLTADLAAIEAAGLDITTPVVVLNGDAYDVAPLVTGRVAAGAALLSTD
+                     AKETANGIA"
+     CDS             52017..53441
+                     /contig="NODE_13_length_114052_cov_143.866"
+                     /organism="homo sapiens"
+                     /product="3-polyprenyl-4-hydroxybenzoate carboxy-lyase
+                     (EC 4.1.1.-)"
+                     /protein_id="594139_453"
+                     /translation="MADQSMRTYLGDLARAGELIEVAGSVGARFELAGVLALLDRGPA
+                     VRMNTVDGSPYPVVGNVLNSRERLAHAIGADVADLLPRLADAVADRQPVEIVADAPVQ
+                     AVALPAASVWAEVVTPTFFEKDSGGYITAGMIVAHDPVTGHRNASYARIKPLEETTGF
+                     VGIAPNHHLTAMARSAGAVGGLPVAVVLGAHPAIQLAACCYLGLGDDELEHAAALLGE
+                     PVRVARALTSEVMVPAEAEIVIEGLIHADRPVHEGLVNEYHGMYEDYGDGFTFEVTAV
+                     TRRSDPSVHVILPGLSSEHSYIAALPIAAGIRHALRNIGCDIVDVAVTHSGGGRVDVV
+                     VSIANARPGGAKRVIFGAFAAVSMVKQVTVVDADVDVWDEEHVHWARTSRMRWDRDLV
+                     LVDGVATDRNVPMQRDGMVTKVGMDATVTPGDRAVGPELAVPPANVVRAMRDLLVEEG
+                     WADRLRPAIVVHSALVDDGERIRA"
+     CDS             67688..69139
+                     /contig="NODE_13_length_114052_cov_143.866"
+                     /organism="homo sapiens"
+                     /product="6-phospho-beta-glucosidase (EC 3.2.1.86)"
+                     /protein_id="594139_466"
+                     /translation="MGLPDGFLWGGALAANQAEGAWNEGGRGPAVSDVAKYRPNVDPR
+                     EYAVHHQHTLESIAAAMADDDIAFYPKRRGIDFYHRYREDLALFAEMGFSVLRLSIAW
+                     SRLYPTGEELEPNEEGIAFYLDLFTEMRRLGIRPLVTLSHYDPPLALALKSNAWVDRG
+                     TIALFERFSRTCFERFGHLVDLWLSFNEIDGIIRHPFTSGGIIDETVEGSLEQACYTA
+                     LHHQFVASASVTKMLHEMWPASEMGCMLTMLTTYPNTCHPDDVAATQAKERLLYLCTD
+                     VQAGGAYPRLALKALESKGITIPFAEGDVELLRDHPVDYISFSYYMTLTESVRSDAER
+                     TPGNTVLGVKNPFLPSSEWGWQIDPVGLRISLIDLYDRYGKPLFIVENGLGMRDELTE
+                     DGRIHDPYRIDYFRSHFAEMIRAVDEGVELRGYTSWAPIDIISASSSQISKRYGFIHV
+                     DQDDLGNGTGERRRKDSFFWYQKVIASNGADLA"
+     CDS             50638..52017
+                     /contig="NODE_13_length_114052_cov_143.866"
+                     /organism="homo sapiens"
+                     /product="Allantoinase (EC 3.5.2.5)"
+                     /protein_id="594139_452"
+                     /translation="MTRGTGGSGVVRGRIVTPDRVIDDGAVVIEDGRISAVLEGDAAA
+                     AAVAGTTRVLGGPGLLVLPGAVDAHVHAFSEPTETFDGATAAAAAGGVTTIIDMPYDA
+                     GNPINTAAAVAGKRERIQAEARVDVALHGTVRPRDGVRDIDGMIDEGVSGFKVSLFET
+                     DPVRFPRIPSDELLEAFTVMAARGVRVGVHAEDGEIISALVAAAKAAGRTAPLDHNRT
+                     RPPVSETTSVALGLEVAAAADVRFHIFHASLPDTVTLVTEKAKHGLDATLETCPHYLV
+                     LTEDDMDRLGPFGKINPPLRTADHAAGMWAALADGRIDMVTSDHAPWPVAKKGFPEIF
+                     DNASGAPGVQTLVPIVVGAGYFEGRLSLLRTAAVLATNPARAFGIDHRKGAIAVGLDA
+                     DFVVIDPAGTTEIDEMRMYSTATWSPYSGMSFPGLIHSTIVRGEEAYTDAAGLIAEPG
+                     DGVFIGRGR"
+     CDS             69184..70014
+                     /contig="NODE_13_length_114052_cov_143.866"
+                     /organism="homo sapiens"
+                     /product="Beta-glucoside bgl operon antiterminator, BglG
+                     family"
+                     /protein_id="594139_467"
+                     /translation="MQIIKKVLNSSVVLVEDERGVERVLLGKGIGFAARPGDTVAPGS
+                     TDRVFVALDDADQRNLVELLAQIPGGFVELTRAIVMDAEKAGIELDAHIYLTLTDHLH
+                     FAVERQRRGLQVTNRLAWEVRTVYPREHEVGLRALGLLRERTGVSLPDEEAANIAFHL
+                     VNSEVGRPAVDSMRVVGLVSDITTIVTHAGGVTLDADDLHTRRFLTHLQFFAERLFSD
+                     RLAGHDEDLLFATMTAKHPRAVATAERIRAFVLKEHEVAISDEEVGYLALHIARAQSS
+                     "
+     CDS             48983..50641
+                     /contig="NODE_13_length_114052_cov_143.866"
+                     /organism="homo sapiens"
+                     /product="Histidine ammonia-lyase (EC 4.3.1.3)"
+                     /protein_id="594139_451"
+                     /translation="MTELAAPTLAATTTVDIDGFSLDIATIALVARGLPDGSFPTVVL
+                     TDEARRVTNEARAYVEANFLAEDAPAIYGINTGLGRLMDVRVPAEDQARFQRLVINSH
+                     SAGVGEPLPLDETRALLLLRANAIAKGMSGVRIECIDRLIEMLNADVLPVIPGQGSVG
+                     ASGDLAPLAHLVSVMVGHEKAEAYHRGVRMPAVEALTAAGLSLDFELKQKDVLALING
+                     STISLATACLALTDAWSLTRQADVALALSLEAVRGELDAFDERIHTARNAPGQVSVAA
+                     NVRALTQGSERTVEEAREIQLPDEQRPGGYKRRVQDAYSLRCAPQVHGTTRESLLFAE
+                     TLLVREANAATDNPLVLSDGNGGYDVLSGGNFHGEPIGVAADLIAIAVAEIGAISERR
+                     SFRLTDPNLSYGLPLNLVGGQLGLNTGFSIVHCAAAAIASENKVLCFPSVVDSIPTKA
+                     NQEDHVSMCTFSSRKARSIIKNTQIILGIEFILATQGIDLGAPHLDGRRLGVGSQAAY
+                     DAVREIVPMTREDIYQSEQMVNAQAMVVLGSVLDRVEEVVGGVR"
+     CDS             70034..70300
+                     /contig="NODE_13_length_114052_cov_143.866"
+                     /organism="homo sapiens"
+                     /product="Phosphotransferase system, phosphocarrier
+                     protein HPr"
+                     /protein_id="594139_468"
+                     /translation="MAQRTAVFGSSSGLHSRPAATLARAAAASKHTVTLAAGDASVDA
+                     RSILALLQLGVKTGDEVALEVDGPEADRVADELQALLEQDLDAA"
+     CDS             47787..48698
+                     /contig="NODE_13_length_114052_cov_143.866"
+                     /organism="homo sapiens"
+                     /product="Methylisocitrate lyase (EC 4.1.3.30)"
+                     /protein_id="594139_450"
+                     /translation="MTAKKTLREVMEAGSVLAPCVFDCSSARAVELAGFEAMLLSGSE
+                     VSMSMKGIPDLGLLSLEELLWAVERIVDMSPLPLAVDIEDGFGSSPLQVYETCRRMAK
+                     AGAMAVLMEDEFEPGYARDVSIDHMIPREEYYAKVRAAVKAVEGTDCMVIARSNYGSA
+                     NLEEGIQRMIDCVELGAHATVVVNVTTLADAAEVARRVPGPKMFADINAKRGLEQMSF
+                     AQLSELGYDLITMHFTMKAAMAGMLEAGRANLAEMGNTYSNEMMPDEYPGHSGMAFFA
+                     AQELLDLETEFTGRAQTFNDPRAIHTA"
+     CDS             70445..71710
+                     /contig="NODE_13_length_114052_cov_143.866"
+                     /organism="homo sapiens"
+                     /product="Ribosomal RNA large subunit methyltransferase N
+                     (EC 2.1.1.-)"
+                     /protein_id="594139_469"
+                     /translation="MRTTTPRQVRPAGAPADTGIRQVRPKTEGWQQAKDETGRPLLQF
+                     ASPKRGKPPVHLADLTHDERVAKLKELGLPGFRAKQLEKHYFTHYTSDAADMTDLPAS
+                     GREELVAGMLPPLLTEVRRLETDRGDTIKFLWKLHDGALVESVLMRYPGRITLCVSSQ
+                     AGCGMNCPFCATGQAGLTRNMSAGEIIEQIVRANALIAAGGLGGKKRDDHSLDRVSNI
+                     VFMGMGEPLANYARVMQAVRVMVDKDHGLGMSARGITVSTVGLVPAIKKLADEDIPVT
+                     FALSLHAPDDHLRDELIPVNSRWKVDEALDAARAYFDKTGRRVSIEYALIKDMNDHAW
+                     RADLLAEKLNARGRGWVHVNPIPLNPTPGSIWTASEVPVQNEFVRRLNDAGIPTTLRD
+                     TRGKEIDGACGQLVATEEDEAAAAVTPVG"
+     CDS             46113..47753
+                     /contig="NODE_13_length_114052_cov_143.866"
+                     /organism="homo sapiens"
+                     /product="Oligopeptide ABC transporter, periplasmic
+                     oligopeptide-binding protein OppA (TC 3.A.1.5.1)"
+                     /protein_id="594139_449"
+                     /translation="MKRFSKVFTAAVALTAALGLLAGCSDGGTDPTASGGSAHVLTVG
+                     KLLPLQAVDPHKVNDGMSNEVLTAVFDGLYSLDENHELEPLMAESFDKSDDGLTYTFH
+                     LRDAKWSNGDPVTAADFEFSWKRLVNPATAAPNSNEAVAAGIKNANEIVNQGMDYNQL
+                     GVKAVDDKTLQVELAADVPYFQALLVRPAFLPVNEKYLDQVGDKYGQTPETTIYNGPF
+                     VWDSWDFANNFSAKKNPDYWNAADTNIDEIKWQVVKDSQTAALLQESGDLDFTEISGS
+                     LIDRYADSPELTTALEVHMWYMYPNMQNPALANKDIRTALATSYDKSALANDVLKNGA
+                     EPADYFVGKNLAVGPDGKQFRDTGDTYLAYDVDSAKKSWEKGLAALGTDSVTLRLSYW
+                     DDESSIAQAEYIASQWEANLPGLKIELTSQPKATANEQALAGDFDLYLFRWGPDYKDP
+                     MAFLELLSSSSQRDFGKYSNPQYDAIIAAARTPEMLSQPQERWDSLHDAEDILLGDVA
+                     VFPTVQNGIAMLINPKVHNMDVRNVSLTWNYRIVTKDN"
+ORIGIN      
+        1 aaaaaaa
+//

@@ -1,0 +1,245 @@
+LOCUS       Unknown                    7 bp    dna     linear   UNK 
+ACCESSION   unknown
+SOURCE      151744
+  ORGANISM  151744
+            .
+FEATURES             Location/Qualifiers
+     CDS             1419798..1420757
+                     /contig="AER1"
+                     /organism="homo sapiens"
+                     /product="ABC transporter"
+                     /protein_id="151744_383"
+                     /translation="MAVPLPPADRHAGSMTTAAVEEHVSVRDLEKTYGTTTALRGVTF
+                     DIHRGETFALLGPNGAGKSTTIEILEGYRLRTGGSATVLGVDPATGGRSWRARIGMVL
+                     QSSSESGAMTVREQVAHFAAMYPRPRDVDATIEAVGLTEKAGTLLRALSGGQRRRVDV
+                     ALGIIGRPELLFLDEPTTGFDPEARHRFWDLIRELKAEGTTILLTTHYLDEAAQLGDR
+                     AAVIAGGSLVAIGRLDEIGGEEARIPRVLWRDDDGSHDERTRTPGAFVASLSAATPGG
+                     EPRDLRIVRPSLEDVYLGLLAEAGATDAPTPSAAPATTEGVAA"
+     CDS             1420754..1421617
+                     /contig="AER1"
+                     /organism="homo sapiens"
+                     /product="ABC-type multidrug transport system, permease
+                     component"
+                     /protein_id="151744_384"
+                     /translation="MTALSPARPVADRALALPGVLPLGIHRVRYEVRRYFRQTDTIIF
+                     TFLFPVIMLSIFSVAFGSSGNLGTAPDGSGGVSAAAYYLPGMIAAGILLSGVQNLAVD
+                     IAMERSDGTLKRLAGSPLPVLSYFIGKGGQVIVTSLLQMVVLLLVARFAFGVELPTDA
+                     GRWATFAWVYALGITSSAVLGIALSRIPRSGASATAVITPIVLVLQFISGVYLTFTML
+                     PTWLQDVAAFLPLKWMAQGMRAVFLPDALAAVERGGTWDLAGVAVVLAIWLVGGTIAA
+                     VATFRWIRRDS"
+     CDS             complement(1419711..1418473)
+                     /contig="AER1"
+                     /organism="homo sapiens"
+                     /product="FIG00512077: hypothetical protein"
+                     /protein_id="151744_382"
+                     /translation="MTPLPGSPAPVAHAGPTPAAERSLAPDLLRGIALLGIALANSVY
+                     FIAGRMTGPLGRPTDGTALDHVVDVLVGTLVDNRAFPLFTMLFAYGFAVILRRQAAAG
+                     VDGPRARGLLLRRSLWLMVFGALHVVLLFEGDILLSYGILGLGLAALYRASDRAFRVL
+                     VWAPAIVFLVVAGADGLAGDDGSGSLLGGDGTFIGDLASRAVALAALLVATPVTVGAL
+                     VPLAAIGILLGRRRVLEDPAAHVPLLRQLALVGLPLSVLGALPLVLAAVGAIDADPVA
+                     LYLLGVLHGATGVGGALGLLGLVGWAVAARARRGDAAPGPVLRALVAVGRRSMTCYLL
+                     QSVLFAILLEPWSLGLGVGAGTARIALIAIGVWLVTVAVAVALERVGRAGPAEWAIRR
+                     LAYGRPAAGPAGPAQPVSAG"
+     CDS             1421621..1422931
+                     /contig="AER1"
+                     /organism="homo sapiens"
+                     /product="FIG00511282: hypothetical protein"
+                     /protein_id="151744_385"
+                     /translation="MRDHGAGWQAQGMIPTRTVHAGYAVTMALLVLLALGSGGDVGWG
+                     AWGAIAAMSALYLLLGRRALEASAAAAATEARLPPEPTALVFLALVIPAATWGVASLS
+                     SFAVVQCVLCPLVWLLLDRVRDAVIGTLVLTGSIAVGFVVGFGDLPGALPTMALSQGL
+                     SLVGTIALGLWITRIADLSRERRERLELLEGLRAAQAQVEELGREAGTARERERLSAD
+                     IHDTVAQDLTGLVMLAQRGRRELRGGDADATGATLAELEEGARDALTQTRAIVAATAP
+                     MELTDGLGQALARLGERLSREAGIPVEVRADPGVGSVDRDAEVVLLRCAQEGLANVRR
+                     HADASAVELVLDRDGGDVVLVIRDDGGGFDPARASGGYGLDGMRRRLAAAGGRLDVAS
+                     GPDGTRLTARIPAHAPPAPARVEPHDAATTPDPAPAPTPARARA"
+     CDS             1417905..1418486
+                     /contig="AER1"
+                     /organism="homo sapiens"
+                     /product="Nucleoside-diphosphate-sugar epimerases"
+                     /protein_id="151744_381"
+                     /translation="MVGAPLPHRHRARGRQPDEHGADARGLRIHLPRPRPAVRLPGQR
+                     DPVGRPHRRDRRDRARRPDDLGVHDRAGRDEAFNVVNGDVFRWRWMWPRLAAYFGVEP
+                     VGFQDAPRPLEQQMAGYEDEWARIAREAGLAESDVNRIASWWHTDADLGRDIEVVTDI
+                     SKSRLAGFHTHHRTLDSFLGLFERYRAEGLIPR"
+     CDS             1422928..1423602
+                     /contig="AER1"
+                     /organism="homo sapiens"
+                     /product="Two-component system, regulatory protein"
+                     /protein_id="151744_386"
+                     /translation="MTPAPIRVAVVDDHPVVRGGLAALLASADDIDVVGQAADGEAAV
+                     ELALAERPDVVLMDLRMPVLDGVGATARIREEAPDVRVLVLTTYETDASILTAIEAGA
+                     SGYLLKAAPEEEILAGVRAVARGEVALAPAIAAALVRQVGRPAAGPATPTPTLSPRET
+                     EVLALVAAGRTNARIARELHVTPATVKTHLLHVFEKLGVGDRTRAVTLAMELGLLPAA
+                     ARPTRG"
+     CDS             complement(1417917..1416475)
+                     /contig="AER1"
+                     /organism="homo sapiens"
+                     /product="hypothetical protein"
+                     /protein_id="151744_380"
+                     /translation="MHRPREALALRRREELVLLRVVEVRGLEALLLLVEGGVGHVALP
+                     VRLERAEVVLEAGDERGVLDGRAVEGREEVAHHAAVDVDVLLLGGLARPRREEHVRGL
+                     LAGERAAEVVGGAEVGADPADARAVGAGAAAEGEHVPALGGELVDQRGSADAGRADHQ
+                     GRAAGSVGAGGRGGGGRAGGGHSVLGHPLPQRRGAARAFRAAPRGRVGGSGGVRPVHL
+                     GVGLAVDAVAAGGCGLRRRRVGGLLGEAGVPGAAVEVGGHGLGSAVPVVVGDLLREPG
+                     ALLVRGGLAGAVHDRLVLLVGAHGPTVRRPTGVRIRAALVGSPGACHAPGTPPREGAD
+                     MTDSGFSKDERDAMKQRARELREEAKLQKAADKQAAALQGVLDAFAAMPPEERAIAEW
+                     LHGIVLEHAPDLAPKTWYGFPAYADADGKPVVFFQPGSKFGTRYSTLGFQDPAQLDEG
+                     TMWPTSYALTAVDPANEERVAELVRRAVGG"
+     CDS             1423903..1425852
+                     /contig="AER1"
+                     /organism="homo sapiens"
+                     /product="L-arabinose-binding periplasmic protein
+                     precursor AraF (TC 3.A.1.2.2)"
+                     /protein_id="151744_387"
+                     /translation="MASGRNARKISSLLLLAGVAVGMTACAPQGATNTGSGDGGDAAT
+                     GTECNVGISMPTRSLERWINDGEGLKTKLEGDDCSVDLQYADNKTDAQISQIQNQVAG
+                     GAKILVVAAVDGKTLGPALEDAKSQGVTVIAYDRLINGTEAVDYYATFDNYKVGQLQG
+                     EFIKDQLELDTATGPITMEPFAGSPDDNNAGFFFGGAWDVLQPYVESGKLTVPSGKSP
+                     ATSADWQAIGILGWGSDDAQAEMDNRLQSFYTGGQKVQVVLSPNDSLALGIEASLASA
+                     GYAPGADWPVITGQDADKANVQAILDDKQSMTVWKDTRALGDQVQKMIGEIVAGDEVT
+                     VNDTKSYDNGKKVVPSFLLDPQVVVKDDVQSVLIDSGFLKASDVGRASVSTRRAPIRR
+                     APPTRTGTRSSNGRRHPADDRHRQGVHGRARPRRRGRHRPPRRGARHLRRERRGQVDA
+                     DEGAQRRVPARLLRGHDHHRRPRGPLWIHQRQRARRRGHHPPGARAQPLPLHRGEHLP
+                     RQRDVARRRHRLEQDEPRGRQAAEARGARREPGDARARARRRQAAARGDREGALQGGE
+                     AADPRRADRRAQRRRLRAPARPHPPAARRRHHEHHHQPQAQRDPGRRGRRHRHPRRQD
+                     DRDVPRHRLRRDRDPHHPRDGRPAA"
+     CDS             1416138..1416392
+                     /contig="AER1"
+                     /organism="homo sapiens"
+                     /product="hypothetical protein"
+                     /protein_id="151744_379"
+                     /translation="MNLRWLSAPDDEVTTAMRNVRTSACPPWLPSRREVLAHVDDSLL
+                     LLGPLLILIYRGVVTDGAGDGTVTPTAADGLAGAAVVLDV"
+     CDS             1425917..1426657
+                     /contig="AER1"
+                     /organism="homo sapiens"
+                     /product="L-arabinose transport ATP-binding protein AraG
+                     (TC 3.A.1.2.2)"
+                     /protein_id="151744_388"
+                     /translation="MHHPVDVDRIVVDDASFTVRAGEVVGFAGLMGAGRTELAMSIFG
+                     RSYGTGITGRIFKDGKEIRTRTVSEAIKNGIAYATEDRKRYGLNLIGSITVNVSAAAL
+                     SKLVRLGVIDRHREYAVADDYRKRMNIKTPDVSGVVGKLSGGNQQKVVLSKWIYSGPD
+                     VLILDEPTRGIDVGAKYEIYSIINQLAAEGKAVIVISSELPELIGLSDRIYTIAEGRL
+                     TAEVSRADATQEELMRHMTASRKSGVDQ"
+     CDS             complement(1413483..1412359)
+                     /contig="AER1"
+                     /organism="homo sapiens"
+                     /product="hypothetical protein"
+                     /protein_id="151744_378"
+                     /translation="MPVRSHLGLGGPAAMLVQRDDAQGQLQVLLHPDGQRGEDRILRR
+                     VEEGPLAKDAESAGEQVPSRGDLSDEDKPLGAVEVLDGHVAAPLGLGPAGDLAVADGT
+                     AAMTRAYLEAMSGDLEPWDLSEPTQDAVQSGAFALVQILAPLVPGLGVPVAAAAVIRE
+                     GANTRRHRKMLTALAAELQQASALLREREGQVENLSAILEDEDSRLIPLIESTFAQMR
+                     ETAEGHKMNRLRRSLATALLDPESEESDAFVRLVVRYDDLAIYVLRQLEDRHTFPAQE
+                     VEKAPERIWQSIEVDWPGHYNPGQIRATATALEADGLLVSKPEHEMVAPADRPGVLQR
+                     NESPSVALTITARGQRFLDFLRAGDSRHPETDSATDTRES"
+     CDS             1426654..1427862
+                     /contig="AER1"
+                     /organism="homo sapiens"
+                     /product="L-arabinose transport system permease protein
+                     (TC 3.A.1.2.2)"
+                     /protein_id="151744_389"
+                     /translation="MTVMPEQATAPNVPTPDAVKKRPRRRIDLRQYGILAALAVIILL
+                     FQILTEGRLLYPGNVANLIQQNAYVLILAMGMVIVIIAGHIDLSVGSVVATVGAVAAL
+                     SMNEWGLPWGTAVLLSLVVGALIGAWQGFWVAFVGIPAFIVTLAGMLVFRGVALVLLT
+                     GGTISGLPAEFNSIGSGNLPTTGAPDLLTLGIGALVSVALVVQQLRTRATLRKLELPR
+                     ERGVSFWIRTAIAVFAIMYLCYLLAYNRGTPIILIILATLVLLYSFLLTRTVFGRHVY
+                     AMGGNLFAAMMSGVKTRWVNFFIFVNMGLLAGLAGVVSTARAGSAVASAGQSFELDAI
+                     AAVFIGGAAVQGGVGTVVGAVIGGLVMGVLNQGLSILSVDAAWQQVIKGLVLLLAVAF
+                     DVDSKRRSGR"
+     CDS             complement(1412141..1411164)
+                     /contig="AER1"
+                     /organism="homo sapiens"
+                     /product="Glyoxalase family protein"
+                     /protein_id="151744_377"
+                     /translation="MTASTQGLHHVTAIGGDPQRNVDFYVRAMGLRLVKRTVNFDSPG
+                     SYHLYYGDTEGRPGSLLTFFPWKGVPAGRVGAGQSTTTAFSVPAGSLGWWAAHLREVG
+                     VASSISSTGSEEERLSLRDPDGLQIDLVASSVVDPRAPWDSTDVPAEHAIRGQHSSVL
+                     TVRDPAGTASVLTDDLGLRLVDERDGRFRFAAGDGGPGAIVDLVADPGAQQGLTAGGT
+                     VHHVAFRVPGRVEQQAWRDELVDRGHQVTQILDRQYFTSIYFREPGGVLFEIATDTPG
+                     FDIDEPLLELGRSLRLPPWLEPSRADIEAAVPPLRLPDEEPVPAGGSAA"
+     CDS             1427983..1428267
+                     /contig="AER1"
+                     /organism="homo sapiens"
+                     /product="hypothetical protein"
+                     /protein_id="151744_390"
+                     /translation="MGHGPYDALSRDEVAARLDEGCAWRISWCSGARIPESRGAGRTL
+                     PDGVLERVPSPAKLRRGILPSGRNWMLVVEREETGRPVLLFDEGPEHRHV"
+     CDS             complement(1411167..1410544)
+                     /contig="AER1"
+                     /organism="homo sapiens"
+                     /product="Carboxylesterase (EC 3.1.1.1)"
+                     /protein_id="151744_376"
+                     /translation="MSALLDATPHEFQPGAGTGPVILGLHGTGADERQGLELARLLAP
+                     GQPVLAPRGSVREGSAARWFRRNAEGVFDVDDVVARAADLAGLVSEARAAYALGDREI
+                     LAVGFSNGANMALATTLQHPSALPSTIAFSARWPLGDREPAADLSGARITLLDGDADA
+                     MAPLVDVERTAREADARGADVSSHVRPGGHGLDARDVDAARARIRTH"
+     CDS             complement(1429077..1428277)
+                     /contig="AER1"
+                     /organism="homo sapiens"
+                     /product="Signal peptidase I (EC 3.4.21.89)"
+                     /protein_id="151744_391"
+                     /translation="MPRLLPRLRARHADALARPADDLAPVELEAGTRPRGGVTQLARS
+                     AAVGLSVGILLLVIALAAVLLVVPKVSGSVPLTILTQSMEPTLPPGTLIVVRPVDPDA
+                     LEIGDVATYQIRSGDPAVITHRITAIASASDGTRSFTFKGDNNASPDSLPVTPGQIQG
+                     EVWYSVPLVGWANQAVNGQARSWIIPAAAVALLAYAAVTIITGAVQTRKRRTASAAAD
+                     VVAEGDHVHSDAMAAGVAEAARVDPSHPGVDATEPAPAAVRLRGRQRG"
+     CDS             complement(1410383..1410174)
+                     /contig="AER1"
+                     /organism="homo sapiens"
+                     /product="hypothetical protein"
+                     /protein_id="151744_375"
+                     /translation="MSVSPTVARASAPTPAAAAPLPGDPVCVAFAGSADGFRHAGTRS
+                     LAVDLAPLLAAASATAPVADAPLAA"
+     CDS             complement(1430006..1429104)
+                     /contig="AER1"
+                     /organism="homo sapiens"
+                     /product="hypothetical protein"
+                     /protein_id="151744_392"
+                     /translation="MSRTRRPWGRAHAALLVGLTVLLVGLGATAGHALWASSTSTSAN
+                     VASATVAVTESGFDRLAGELTSQSPSRTATVLVTNTGSTRDSWTGTMAAPTSSTNDQY
+                     FARNVRVVAWAASGSSCTASTPVGSGASTANWVVPPTLSGTLSPGASATWCVRTTATA
+                     FPQDAASVTARLTTVLGSGSWTGRDTATAKQTTPAPAVTGGFRCEPTDGNWYVFVAWD
+                     TSVASSDSNYGVMVNGTRIATSQGSYGKAAITRDQVPSTLAADGTVPVSVDLLDGNGA
+                     KVRQVANGTVVAFQQSGARGFRCS"
+     CDS             complement(1410035..1408014)
+                     /contig="AER1"
+                     /organism="homo sapiens"
+                     /product="hypothetical protein"
+                     /protein_id="151744_374"
+                     /translation="MSSTPPPVSPTSVTPSSDEPGWFGDGEGNQRFWDGARWTSLVSS
+                     RRVFPGRASSTPEPKLISESPLPEDYAPGAAPLAPPAGSAVDASVDAGPAGAPLAPPT
+                     GAAASGHERRVRPHAPRRRDRAGPPRPQHLAVGRARGRRGARGRRSGHRRDPRPPHRA
+                     RRRRPGRGAHPPDPQRRRMDPRRPHARRRRRRGRPRPRPHRGRCGRLHPPNADRRGRG
+                     PRHHRDLRLASRAGRDGSRQPAPDLRGRPGRDGRRDPHDRRRRRRHARRVRLRHRVRG
+                     RGRRRVRAPGRRHRGEPGPGGRHARRARHGRDPHARHRSSRAHRAPGRAEGAEHPVAS
+                     RHAAGHGDVHPGHRRRQQRWRRHESRNAVEPRHRWRLALEPGPDDAGGPRSPARADDG
+                     PAHGADARPDHARARGSRAVARAPGREPGADDDAARPAGAGDAGRARARDAARRGLAL
+                     RRVVSRVRLVRGGSDPRRPQVRALPVAVEDRQDLDHAAVRADGVRHHGRELGGVARLH
+                     EDRPLAQLEPRGAREHREPVAAGVHAELVHRHGPRRRHAHLRDERAGAAGSAARQDPH
+                     RAPRLRVRLGADHDVGVVARLDERVERRLEGLRDGHELVEGDAPVTGLDAAERRRAEE
+                     APGRERVERPAAGLAEAPDALADEGVEIGLLRHGQDRMRLRQECASLDA"
+     CDS             complement(1430605..1430003)
+                     /contig="AER1"
+                     /organism="homo sapiens"
+                     /product="hypothetical protein"
+                     /protein_id="151744_393"
+                     /translation="MRRNEAPAPRPAHGRRSARPARRSPLRAAWLTTGLLAAVVVASL
+                     AATGGSYALWNGAASTKPASVTSGTSGLVVTQQSALDSSKLLPGQSTLGTFTAKNTGT
+                     IALDVAISTRGTSSNSAFPGELSLRLGPVATTADCVHGATTFSGRPGQLHTPSGFVRI
+                     QPGASSVVCTEVLLDTDAPQSVQGSTAQLTFAIVGTQVQP"
+     CDS             complement(1408008..1407154)
+                     /contig="AER1"
+                     /organism="homo sapiens"
+                     /product="CrtT-methyltransferase-like protein"
+                     /protein_id="151744_373"
+                     /translation="MHHAHAHGPADPSLARMLDLDARILHGHQRELTAWVRRLARDTA
+                     GRVVVDLGAGTGTGTVALAWRFDRAEVHAVDASAAMLDRVTERAVVDGLADRIRTVHA
+                     DLDADWPALPPADLVWASLVLHEVADPAGLLARVHDGLAPGGLLAVVEMDGPPRFLPD
+                     RLDPALGRPGLADRLDDAVTHGGTGGPSHPDWAPWLRDAGLVDVATRAFPIDPDPADP
+                     IAAAATLPYARAWLARVRDRAADRLDADDRAALDALLDDGGPHALARIPGLGLRGTRT
+                     AYIGRRPR"
+ORIGIN      
+        1 aaaaaaa
+//

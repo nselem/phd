@@ -1,0 +1,260 @@
+LOCUS       Unknown                    7 bp    dna     linear   UNK 
+ACCESSION   unknown
+SOURCE      614133
+  ORGANISM  614133
+            .
+FEATURES             Location/Qualifiers
+     CDS             25362..26285
+                     /contig="NODE_268_length_42497_cov_88.117889"
+                     /organism="homo sapiens"
+                     /product="Branched-chain amino acid transport ATP-binding
+                     protein LivG (TC 3.A.1.4.1)"
+                     /protein_id="614133_1073"
+                     /translation="MPDKTPVSAILDGDAAPGCAKKDPIIVAHGVSRQFGGLKAVDVD
+                     HLEIPRGSITALIGPNGAGKTTFFNLLTGFDKPNTGTWEFSGKDLAGMSAFRVARLGM
+                     VRTFQLTKALGGMTVLENMRLGATGQGGENFFSALIRPLWRKKEDEITERARGLLKKF
+                     KLDAKEEDYADSLSGGQRKLLEMARALMTKPDLVMLDEPMAGVNPALTQSLLHHILDL
+                     KTEGMSVLFVEHDMHMVNEIADWVVVMAEGRIVAEGPPSTVMSDPAVIDAYLGAHHDT
+                     DLGTLTGQREVAKDMDSDLVKSEIEKEAADK"
+     CDS             26282..27040
+                     /contig="NODE_268_length_42497_cov_88.117889"
+                     /organism="homo sapiens"
+                     /product="Branched-chain amino acid transport ATP-binding
+                     protein LivF (TC 3.A.1.4.1)"
+                     /protein_id="614133_1074"
+                     /translation="MTAERVLQTTDLHAGYLPGVNILNGCNVHVDKGELVGIIGPNGA
+                     GKSTMLKAIFGQVNVRGGSIELNGQDITGLKADKLVSRGVGMVPQNNNVFPTLTIDEN
+                     LQMGAYQKPKMYKERLAFVTDLFPELGKRLKQRAGSLSGGERQMVAMSRALMMDPTVL
+                     LLDEPSAGLSPVRQDETFINVAQINRAGVSVMIVEQNARRALQICDRGYVLDQGKDAY
+                     EGRGRELMNDPKVIELYLGTLAADQEKAKAAPQP"
+     CDS             24398..25369
+                     /contig="NODE_268_length_42497_cov_88.117889"
+                     /organism="homo sapiens"
+                     /product="Branched-chain amino acid transport system
+                     permease protein LivM (TC 3.A.1.4.1)"
+                     /protein_id="614133_1072"
+                     /translation="MNSNFIFLAIGEIFSPTTAAYALATVGLVIHFGFTGLLNFGQAG
+                     FMAIGGYAFAITAVMYDWPVWASLLAAIVASTVFALILGIPTLRLRADYLSIVTIAAA
+                     EIIRLSVKTPEFSDVTGGSEGINGAAAGFNDLNPLPEGRFGFGVLTYSADQWWIRIVG
+                     WGLVGIACLLVFLLMRSPWGRVLKGVREDEDAVRALGKNVYSYKMQALVLGGVFGGLA
+                     GVVFILPRSLQPDNYGTQLTFFLYTIMLLGGAATIFGPVIGSIIFWVTLSLSDGLLSL
+                     AVSNDWLPISSTQQGPIRFIIVGVALMLLVIFRPQGIFGKKKETHFA"
+     CDS             complement(28661..27378)
+                     /contig="NODE_268_length_42497_cov_88.117889"
+                     /organism="homo sapiens"
+                     /product="Branched-chain amino acid ABC transporter,
+                     amino acid-binding protein (TC 3.A.1.4.1)"
+                     /protein_id="614133_1075"
+                     /translation="MSAFGRVSTSRSRSARTALSAVTIAVAGALVLAGCSGGGGGEGG
+                     TTADGGLNLKIGTILPQTGSLAVLGPPEFAGVDLAVKDINDAKAGITVTNTAKDSGDT
+                     TTDIASQSATSLIADGNTAIIGAASSGVSKTFIDQVTQAGVVQLSPANTSPDFTTYAD
+                     DGYYWRTAPSDVLQGRILGNKILQDGKTNVSILYMNDAYGTGLEENIKKTLEAGGATI
+                     AAEQVFEPSATDFNSAITSVLAPNPDALVVISFDEIKTIADQLASKGFDFSKFYGTDG
+                     NYGVIKETDTNVDIAGAQFTNPGVEAKEDFQTRLQDMVKAEGEPALTVFSYSAESYDG
+                     TVLLALAALQGKATDGATLKENLQSVSEGGEKCTTFADCAKLIEAGTDIDYDGLSGPI
+                     TFDENGDPTEAYVSVYKYGTGNTTTFEEQVYGKLD"
+     CDS             23102..24391
+                     /contig="NODE_268_length_42497_cov_88.117889"
+                     /organism="homo sapiens"
+                     /product="High-affinity branched-chain amino acid
+                     transport system permease protein LivH (TC 3.A.1.4.1)"
+                     /protein_id="614133_1071"
+                     /translation="MWVRADADKTGIAGVTVKVSGGGVEATGTTGTDGKAEVGLSAPG
+                     SFTVEVDESTIPEGAGVPRAGSSPREVDVAAGNKNVPAFFFISPDGAAAGAAGSTPAP
+                     SASAGAGTSTGGETAAPDTETGAVSGTAEPVTQNNFWKIFWPKVVTGLIFGLLLALAA
+                     IGLSLIYGTTGLNNFAHGELVTFGALMAYLFSNVLGLNPVIAIIITVVLGGAFGFVQD
+                     AALWKPLRKRRLGLVPLMIVTIGLSLALRYVFQFIFGADRLTLPNSPAPFLVVGPVSL
+                     KFTDVAGAIVSIVLLLAVAYVLLYTKIGKATRAVSDNRSLAAASGIDVEGLIRVVWIG
+                     GAALAALSGVFIAYYQSLRWDTGASILLLVFSAVVLGGLGTAFGALIGSIVIGVFINV
+                     STMVLPENMKYVAALVVMIVILLVRPQGILGRKDRIG"
+     CDS             complement(29793..28840)
+                     /contig="NODE_268_length_42497_cov_88.117889"
+                     /organism="homo sapiens"
+                     /product="Protein rarD"
+                     /protein_id="614133_1076"
+                     /translation="MTRPAPESSTRTGLLAAVGAYGLWGVLPVFFLLLVPAGAFEIVG
+                     WRILFSLVVCAVVITAARRWGRVVAIVRRPRILLGLGLAGHLILVNWTVYVYGTLSGH
+                     VVETALGYFINPIVTVLLGVLLLRERLRPLQWTAVGLSAVAVAVIAVGYGQRPWVSLA
+                     LAGSFGLYGLGKNRVSGGADALSGLALETAWLVPAATTMLVITGAGAGLTIGTVSLGH
+                     TLLLVSTGVVTAGPLLLFGFAAGRLPLSVIGLTQYLAPLLQFAFGVFVMHEAMPPERW
+                     AGFAIVWAALVLLTVDMIRASRRPLSAARAAQTVPAVVDGS"
+     CDS             complement(23041..22928)
+                     /contig="NODE_268_length_42497_cov_88.117889"
+                     /organism="homo sapiens"
+                     /product="hypothetical protein"
+                     /protein_id="614133_1070"
+                     /translation="MGSRWGREEKCGAGERHRENQGPDAPRACSGRTSGYH"
+     CDS             complement(30250..29954)
+                     /contig="NODE_268_length_42497_cov_88.117889"
+                     /organism="homo sapiens"
+                     /product="Heat shock protein 60 family co-chaperone
+                     GroES"
+                     /protein_id="614133_1077"
+                     /translation="MSVSIKPLEDRIVIQQVEAEQTTASGLVIPDTAKEKPQEGEVVA
+                     VGPGRIDDNGNRVPLDVAVGDKVIYSKYGGTEVKYDGQDLLVLSARDVLAVIER"
+     CDS             complement(22693..21191)
+                     /contig="NODE_268_length_42497_cov_88.117889"
+                     /organism="homo sapiens"
+                     /product="Inosine-5'-monophosphate dehydrogenase (EC
+                     1.1.1.205) / CBS domain"
+                     /protein_id="614133_1069"
+                     /translation="MDQSDPFGVIGLTYDDVMLLPGHTDVIPSEADTTSRLTRNISVA
+                     APLLSSAMDTVTEARMAIAMARQGGLGVIHRNLSIEDQAAFVDKVKRSESGMITNPVT
+                     TRPDATVAEVDALCGQFRVSGGPVVESDGTLVGIITNRDMRFVSPVQAATTLVRDVMT
+                     RTPLITGQVGIDPDHAIASFAEHKIEKLPLVDDQGKLRGLITVKDFDKSEQYPDATKD
+                     AEGRLRVGAAIGFSGDAWQRALALVEAGVDVLVVDTANGDSKGVLDIIRRLKSDPATS
+                     HVDVIGGNVATRSGAQALIEAGADAIKVGVGPGSICTTRVVAGVGVPQVTAVYEASLA
+                     ARAAGVPVIADGGLQYSGDIAKALVAGADTVMLGSLLAGCDESPGDLMFVGGKQFKSY
+                     RGMGSLGALQTRGSKTSYSKDRYFQSDVPNDDKLIPEGIEGQVPYRGSLANVVYQLTG
+                     GLRQSMFYVGARTVGELKDRGRFVRITAAGLKESHPHDVQMVVEAPNYRR"
+     CDS             30395..31597
+                     /contig="NODE_268_length_42497_cov_88.117889"
+                     /organism="homo sapiens"
+                     /product="FIG00511135: hypothetical protein"
+                     /protein_id="614133_1078"
+                     /translation="MDQTDLREVLSLEGLRLLDSLPAPAPGDDMVRMVSALRGEGHSP
+                     ALVSAVLTQSRLRARARTKFGEFAARMLFTEAGLEQATRLPVAAQHAGRFQQAGVAHV
+                     ADLGCGIGGDAMAMAAIGIRVTAVERDEVTAAVAGWNLAPFPEAEVVQGTAEAFDAGG
+                     VDGVYLDPARRTDGHSSTRRISDPDAYSPTLSAAFELAAGRAAGIKLGPGLDRDLIPA
+                     EAEAQWVSVDGQAVEMGLWFGPTRRDGVRRAALVISGGSQAELTAEADSEDAELGELG
+                     THLYEPDGAVIRARLIGDLARSLDGRMVGEGIAWITSEREQATPFARGFRVREVLPLD
+                     EQRLKRELRARGIGTLEIKKRGVDVDPARLRTRLQLKGDGSATLIATRVGGRRVAILA
+                     DRHGVDAG"
+     CDS             complement(20104..19955)
+                     /contig="NODE_268_length_42497_cov_88.117889"
+                     /organism="homo sapiens"
+                     /product="FIG00511378: hypothetical protein"
+                     /protein_id="614133_1068"
+                     /translation="MLAAGRLRALLLHAGLEPERRPSRPAGSARADPGHGRSRRSPPL
+                     GCASE"
+     CDS             complement(32108..31683)
+                     /contig="NODE_268_length_42497_cov_88.117889"
+                     /organism="homo sapiens"
+                     /product="Integral membrane protein"
+                     /protein_id="614133_1079"
+                     /translation="MTDPQNPDRSNDGFPPAPSQPAYPAAPAAGSHSPYAAPYQPGQG
+                     GAPASKGLSITSMVLGIVSVVTVLFWFLSVPLGIAALVTGILGGKRNAGAKGFWLTGI
+                     ITGVIGIILSIILVVIAIAFVNTVVQNGEIDGTPFPTAP"
+     CDS             complement(19920..18844)
+                     /contig="NODE_268_length_42497_cov_88.117889"
+                     /organism="homo sapiens"
+                     /product="Inosine-5'-monophosphate dehydrogenase (EC
+                     1.1.1.205)"
+                     /protein_id="614133_1067"
+                     /translation="MYAFDDIAIVPSRRTRDPQDVSVTWSIYAYQFEIPFLAAPMDSV
+                     VSPATAIAMGRCGGLGVLDLEGLWTRYEHPERLLEEIRSLPPESATARMQQIFPEPIK
+                     PELISARIAEIRAAGVVVAAALSPQRTADHYETVVAAGVDLFVIRGTTVSAEHVSKGA
+                     APLNLKKFIYELDVPVIVGGAATYTAALHLMRTGAAGVLVGFGGGAASTTRSTLGIHA
+                     PMATALSDVAGARRDYMDESGGRYVHVIADGGLGSSGAIVKAIAVGADAVMLGSTLAR
+                     ATDAPGQGFHWGAEAHHSELPRGHRVRVDQVAPLEQILYGPSTTADGSANLVGALRRA
+                     LATTGYSDLKEFQRVEVVVAPYGK"
+     CDS             complement(33831..32317)
+                     /contig="NODE_268_length_42497_cov_88.117889"
+                     /organism="homo sapiens"
+                     /product="TsaD/Kae1/Qri7 protein, required for
+                     threonylcarbamoyladenosine t(6)A37 formation in tRNA"
+                     /protein_id="614133_1080"
+                     /translation="MSVLFRAAEVADLPALMRLETSTFVSDAWSADAMRGELTARHGW
+                     YVVAVDADGGGILGYAGLSCPRGAHAADVQTIAVADGSRGRGIGRALLTRLVAEANVR
+                     GAREVLLEVRADNPVAQALYSSLGFEAIAVRPHYYQPDDVDSVVMRVALAATPPEVDE
+                     PRDAPAERPASAASDAEAHADETAGADAGPLVLGIETSCDETGIGIVRGQTLLANVIS
+                     SSMDEHARYGGVVPEVAARAHVEALTPAIDAALAEAGVTLRELDAIAVTAGPGLSGAL
+                     MVGVGAAKALAVALDIPLHGVNHLVGHVGADLLSVDGGPGVPLETPSIALLVSGGHTS
+                     LLLVRDLVDDVELVGETIDDAAGEAFDKVARVLGLPYPGGPHIDRVAADGDPKAIRFP
+                     RGLSLPKDMERHRYDFSFSGLKTAVARWVEKRQDAGEPVPVADVAASFREAVVDVLLT
+                     KAVAACVDHGIPRLLLGGGVVANARVGSWRRSGAGPRASSCGSRPCRSAPTTAP"
+     CDS             complement(18204..16684)
+                     /contig="NODE_268_length_42497_cov_88.117889"
+                     /organism="homo sapiens"
+                     /product="sodium/hydrogen exchanger family protein"
+                     /protein_id="614133_1066"
+                     /translation="MHQGLDLIVLGLLFVLAYAFGQLGKRIGLPAIPIYMLVGLLASP
+                     NVDWFPLDFASGDIELIAVFGLILLLFNLGLEFDQDEFFGNAGKLIISGGSYVLINMG
+                     VGFAFGFALGWGTREALIIAGMTATSSSAIVTKLLIELNRLANDETPMILGVTVVEDI
+                     FIAVYLAIVSVVLSGQTEPWAVVGQLAVSFAFLVVMFTVARRGGAFLSRFMRTRDVEL
+                     FTVLFFGLAILFGGIGEVLGVTDAIGAFLIGLVLGATRVRNRIEQIAIPLRDVFGAFF
+                     FLNFGLALDPGEFPTVVVPVLLAVLMTVVLNIIAGQFVAWLNGHGAQAGINTAFILQN
+                     RGEFALILATLSLSAGLDERIQPFAGLYVLVMAIMGPLLAANSVRIGTAVLPTKYRSA
+                     SKRAAEQAGRDAERAGALALFEAAERGEQVPADAFDDGLAVAGPRPGAVARGVTPGTG
+                     PEADGARPVRPGADDERDAGSAEGPRPAPDRRAEQAGQQSDHDTWTPPTREREPDY"
+     CDS             complement(34445..33828)
+                     /contig="NODE_268_length_42497_cov_88.117889"
+                     /organism="homo sapiens"
+                     /product="TsaB protein, required for
+                     threonylcarbamoyladenosine (t(6)A) formation in tRNA"
+                     /protein_id="614133_1081"
+                     /translation="MLLAIDTSAGTGVAVIDPDGRVLAERQEADTMRHAEVIGTLLDE
+                     CLTASGIERCDVRAVVAGMGPGPFTGLRVGIAAARVLATGLDVRVIPVVSHDAVAHDH
+                     YAAGGTGSLVVVTDARRRELYWSVYREPVAGGVAERTAGPGLSRPDDVPAADHRIDAA
+                     GVRAASLAQVARRMDELGLPFAADEALYLRSPDVTVSAGPKRVTS"
+     CDS             complement(16684..15686)
+                     /contig="NODE_268_length_42497_cov_88.117889"
+                     /organism="homo sapiens"
+                     /product="Cytochrome oxidase biogenesis protein Surf1,
+                     facilitates heme A insertion"
+                     /protein_id="614133_1065"
+                     /translation="MTHASDPRSDAPARPDAEPAGSGPGGSGAPDAPGPTVGQVARRP
+                     RSLALLALALVIAAGFAALGQWQLARAVESGVVIERDTETALPLGTLAVPQGYVTDRS
+                     AGHMVTVQGSLVPGDFVVVSDRLNSGRTGAWVVGHLSITDHGSSADPAPDALPASVPV
+                     ALGWTATDAEAAAVAAQLNAGDGSPTGVQEVVGRFLPSEQPEPAGEGQDPQRMTRLST
+                     AALVNLWPGDVGDVYNGFIVASTPAAGLATIDSPPPSEAVQLNWLNIFYAAEWAVFAI
+                     FAIVIWYRTVRDTWTREQPGYREDEDDEDDEDPLPEGDRDDPVGAPGRGSRADADR"
+     CDS             complement(36155..34455)
+                     /contig="NODE_268_length_42497_cov_88.117889"
+                     /organism="homo sapiens"
+                     /product="Alanine racemase (EC 5.1.1.1) / TsaE protein,
+                     required for threonylcarbamoyladenosine t(6)A37 formation
+                     in tRNA"
+                     /protein_id="614133_1082"
+                     /translation="MTEHASAPAAPVAPGRRAVVDLDAIRHNVRTLAALAAPARTMVA
+                     VKADAYGHGALQVARAALEAGAESLAVLDVASAVELRRAGITARLLAWLHGVDTDFRV
+                     AVENGIDLGVWALWELERIAAAGRATGIRARVHLKADTGLSRNGATPELWPDLVRAAV
+                     AADAAGELTLHALWSHLAAASPEADDAALARCHEAVRVAEELGARPVEKHLAASSAGI
+                     RLPAARFEMVRFGIAVYGISPFDDRSGRDLGLIPALPLEADVVSVKRVEAGHGVSYGL
+                     DHRTAGTSTLVLVPLGYADGIPRIAAPRASVLLNGRRFPVAGRIAMDQLVLDVGDLPV
+                     EVGDTAVILGPGDRGEPTAEEWAGWAETIGDEIVTRVGPRVDRVHLHEHPEPEGAAAD
+                     VLSDELVPVATTDDMEELGRAVARELGAGDLVVLSGPLGAGKTTFTRGLGAGLGVRGP
+                     VTSPTFVLARTHPSLVDGPPLVHVDAYRLADARELDDLDIDFARSVVVVEWGEGKLDG
+                     VAEEWWDLRIARPTGAGDADPDAADRADADPAADADPDAAPEERRTVRIRRLRARPRA
+                     "
+     CDS             complement(15676..15134)
+                     /contig="NODE_268_length_42497_cov_88.117889"
+                     /organism="homo sapiens"
+                     /product="membrane protein, putative"
+                     /protein_id="614133_1064"
+                     /translation="MAYGLKRSDVPQIRRVLGFYRVMAFITGAFLLLLVVEMGIKYLP
+                     GFQLVDGSLQYLAGAGYELELNGPSGFLALSPADTLTGTNLSLLIQIVHGNIYVVYLI
+                     SDFLLWQKMRWSFTRFILIAAGGVVPFLSFIVEARIARRVRETIAELEAPRRKAHAAD
+                     DRDDADPRPIDPTTTTEATT"
+     CDS             complement(37036..36152)
+                     /contig="NODE_268_length_42497_cov_88.117889"
+                     /organism="homo sapiens"
+                     /product="Alanine racemase (EC 5.1.1.1)"
+                     /protein_id="614133_1083"
+                     /translation="MHAPGADFATAIEADVDLGLNSLRQVREVAEAARRVGRTAEVHL
+                     KVDTGLGRNGVTPAEWPGVVAELQALVAEGRIHLGGVFSHLANAGREEDRAQVRAFHR
+                     AVDVVRAAGLEPGIRHVAATAGALRVPEARLDMVRLGIGIYGISPLDGVTSADLGLVP
+                     AMTLVGSVVAVKRVPADTGVSYGYTYRTSSATTLALVSLGFADGVPRLASNRAPVAIH
+                     GARFRVSGRIAMDQFVVDVGDGVVDGIPVAVGDDAVLFGDPATGAPSVEEWAKATGTI
+                     GYEIVARVAGRVTRRFGS"
+     CDS             complement(15137..13557)
+                     /contig="NODE_268_length_42497_cov_88.117889"
+                     /organism="homo sapiens"
+                     /product="GMP synthase [glutamine-hydrolyzing],
+                     amidotransferase subunit (EC 6.3.5.2) / GMP synthase
+                     [glutamine-hydrolyzing], ATP pyrophosphatase subunit (EC
+                     6.3.5.2)"
+                     /protein_id="614133_1063"
+                     /translation="MSVDNPTNQRPVLVVDFGAQYAQLIARRVREANVYSEIVPSTIT
+                     AEEIRAKDPSGIVLSGGPSSVYEEGSPGLDEGMLELGVPVLGICYGFQVMARALGGEV
+                     AHTGAREYGSTAVTLTPGSTLLDGQPDDQTVWMSHGDSVSKAPEGFEVLASSASTPVA
+                     AFASDERRLYGVQWHAEVKHSAHGQAVLENFLHRAAGIPGDWNSGNVIAEQVERIRAQ
+                     VGDAKVICGLSGGVDSAVAAAIVHRAVGDQLTCVFVDHGLLRHDERRQVEEDYVAATG
+                     VRLVTVDAADQFLDGLTGVTDPEAKRKIIGREFIRSFEGAAEALVLEAKADGAPIRFL
+                     VQGTLYPDVVESGGGTGTANIKRHHNVGGLPEDLKFELVEPLRTLFKDEVRAIGRELG
+                     LPEVIVGRQPFPGPGLGIRIVGEVTAERLELLRKADAIARAELTAAGLDGEIWQCPVV
+                     LLADVRSVGVQGDGRTYGHPIVLRPVSSEDARTADWTRLPYDVLARISNRITNEVDGV
+                     NRVVLDVTSKPPGTIEWE"
+ORIGIN      
+        1 aaaaaaa
+//

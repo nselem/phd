@@ -1,0 +1,252 @@
+LOCUS       Unknown                    7 bp    dna     linear   UNK 
+ACCESSION   unknown
+SOURCE      594139
+  ORGANISM  594139
+            .
+FEATURES             Location/Qualifiers
+     CDS             123715..125361
+                     /contig="NODE_3_length_241209_cov_150.143"
+                     /organism="homo sapiens"
+                     /product="Dipeptide transport ATP-binding protein DppD
+                     (TC 3.A.1.5.2)"
+                     /protein_id="594139_2339"
+                     /translation="MTLSLPVRPDLVTRTALLRVEDLSVAYGRTPVVHDVSFSIPRGG
+                     SLALIGESGSGKSTIARSVLRLLPRATGRAHGRVELDGTDVLGLSERAFRPLRGRRIG
+                     FVPQDPAHALNPVRTIGSQAHEAAALAGVADERAAILEAFDRVGLPDPRRVYDSYPHQ
+                     LSGGMLQRVLIALAVLPGPQLLVADEPTSALDVTIQKRILDLLGELRDDLGIGLLLIT
+                     HDLAIAAERTDEIVVLKDGRIQEAGATRAVFAASASAYTRQLQADAPALNPDRYRRDL
+                     DDRGVDAWTTDTASTRIEVREVSKSFVIDGAARPAVSGVSFRVPPGTTHALVGESGSG
+                     KTTTVRLLLGLDTSDAGEIRVDGEPVIGRTPAQLRGIRRHLQLVYQNPFTSLDPTWSV
+                     GRIVREPLDRYRVGTRAERVTAVAEALDAVGLSTHLARRRPDALSGGQRQRVAIARAL
+                     VLEPDVIVLDEPTSALDVTVQAGVFDVLRRLQRERGLTYLFVSHDLALVRQIADTVSV
+                     LKDGRVVEAGRVADVLSHPREAYTRALIDAIPFRDPRSSR"
+     CDS             125358..126545
+                     /contig="NODE_3_length_241209_cov_150.143"
+                     /organism="homo sapiens"
+                     /product="Transcriptional regulator, GntR family domain"
+                     /protein_id="594139_2340"
+                     /translation="MTLLSPSSRPTLVQAFTAPKGFGDQTLRDRRPDAIELLGGIPDA
+                     TVLPTAELAEATARVLSRPGAASLQYSRTEGIPALREWIAAREGVAVDRVLITNGGFH
+                     GLALAVQTVLERGDLVAVDNPVFPLFLRGLELVDARVLPIRVGSAGLDIDELEQRLRE
+                     GARPAAVYTVPEFHNPSQSSLPTAKRRELVALAERYGFTVFADDPYRELRFHGEAESV
+                     APFHDSDHVIHVNTFTKTLGPGLRLGWVVLPERLIPDAVALRSRQDSHSSTFVQGVVA
+                     ELLTTDESLFDRVLGRARDLYRSRAHALAAELSASGFFDVAVPDGGLFLWPRLTDDHI
+                     DADRLAADASAEGVEYQRGAFFASGPGTDADRHLRLAYGDTSEELLREAAARLSRAVA
+                     RQR"
+     CDS             122870..123718
+                     /contig="NODE_3_length_241209_cov_150.143"
+                     /organism="homo sapiens"
+                     /product="Dipeptide transport system permease protein
+                     DppC (TC 3.A.1.5.2)"
+                     /protein_id="594139_2338"
+                     /translation="MSAAPALAPSATVARARGIRFALPLDVIASFVVVAVVLAWSLAP
+                     TLFTSQNPAQGVPADKLQAPSAAHLLGTDHLGRDLFARIVFGAQPSVTSALVAVTIGV
+                     VVGGLIGLLAGFLGSWTDVVLARFVDVLLAIPAFLLAVVIVSSLGFQTINAAIATGVS
+                     AVAVFARVMRAEVLRVRSSVFVEAARLQGGSSLHVLFRHVLPNASRSLVPLAVLQFGL
+                     SILVIAGLAFLGYGDPPPASDWGLLISAGKDYPRAPWLVVWPAVVTVATVLSINRISR
+                     FLRRTS"
+     CDS             complement(127594..126581)
+                     /contig="NODE_3_length_241209_cov_150.143"
+                     /organism="homo sapiens"
+                     /product="monooxygenase"
+                     /protein_id="594139_2341"
+                     /translation="MTRPLRSLGFLTIGLFDRDDPRAGHETTLSIIERGESLGFDSAW
+                     LRDRHLQYGISSPVAVLAAATQRTSRIRLGTAVIPLGWENPLRLAEDLATVDVLSGGR
+                     LEPGFSVGPPRRLDEVAPALYPDTADREDFGYERLVRLRRFLAGEQASPFAGTEGIEE
+                     YSERVEPHAAGLADRLWYGAGSPGSTTWAAENGFHLLTSSVIQAVESTDFDAEQYAQI
+                     RRYRDAHRDGEAARVSQGLVVVPTDSATPEQRRRYEAYADSRRGRVGVPQGPRGMLFA
+                     EDLVGTSEQIAERLLSSRAFPEVDEVAFALPFALAPDDYVQILEDIAGRLGPLLGWAP
+                     TAP"
+     CDS             121860..122873
+                     /contig="NODE_3_length_241209_cov_150.143"
+                     /organism="homo sapiens"
+                     /product="ABC transporter, permease protein"
+                     /protein_id="594139_2337"
+                     /translation="MLRTYGPFALRRTGQAIIVVLLAYLFTFAVISVLPGDPITTTLR
+                     NPDNGFTEDDIARIVAFYGLDQPWWVQLGSSLGRFVVGDLGVSLRSNLPVATLVLDAL
+                     GSTLALAAAALAVAVVLAVAIAYGTQFVPARFGQGVLRSLPSLFLSVPNFVIGLLLIH
+                     VFAFGLGLFSMIDTETPWGTFFAAVALGIPVSAQLAEVLISSLDHESRQEYVAVARSR
+                     GLRSGALFLRHLAKPSALPSVTVLALIVGELLGGALITEAIFGRVGVGTLVQSAVAGQ
+                     DLPVLQAVVSLAAVVFVVVNLIADLAYPLLDPRVSIASRGRTRATPPVGPASPLREEV
+                     SVV"
+     CDS             127707..127970
+                     /contig="NODE_3_length_241209_cov_150.143"
+                     /organism="homo sapiens"
+                     /product="hypothetical protein"
+                     /protein_id="594139_2342"
+                     /translation="MASEESINGVPVSDEQIGAWADEAEAGFDVEALKRRGRGRPGRG
+                     AEPSQIIALRLTAEELAALDAQAARAHQSRSELIRAAIAAYAA"
+     CDS             120175..121830
+                     /contig="NODE_3_length_241209_cov_150.143"
+                     /organism="homo sapiens"
+                     /product="Dipeptide-binding ABC transporter, periplasmic
+                     substrate-binding component (TC 3.A.1.5.2)"
+                     /protein_id="594139_2336"
+                     /translation="MTTQPRPFRRLIGVASALTVGAVLLSGCGAGSTDAPAEGSAPRT
+                     GGDLVFLIDSLGATWIPNNSSISSYQGQIWGNLTDKLVYVDAEGNLSPWIAQSWDENA
+                     DKTQFTLHLKEGVTFSDGTPLDAAAVVANIDLWAKGRPDEGINRIGLFPSANYVGAEA
+                     VDATTVTVSFSAPTLSFIPTLAYHGSILLSPASLALPADQQADLTKDIGSGPFVVDKV
+                     AEGDSVVLKKRDDYDWGPEAVGHDGAAYLDTITYKQVAEPTLRTASVESGQAQVAYNA
+                     SPQDLEALKGEGLTVETPRYLGFVNGYALNTSVAPFDDVNVRQAVQHGIDRDQILSTV
+                     YTPDWHAAESFFQSTVPEATDHADAFAYDPDEAARLLDEAGWTKGADGVREKNGQKLS
+                     FTLYPNPYLQASQSVDELVDQQLTSLGFEVNLESYDVPTYGQKVIGNAAVPATEITRS
+                     FVDVGTVAGVLTAQKKGDEDWFKVGTSDATLNDLANALATATDRDARAKVADELQGYV
+                     LDQGYFVPLTQIVQRVYVQSPELTGVTYNGLAYAYYLDASLND"
+     CDS             128045..128206
+                     /contig="NODE_3_length_241209_cov_150.143"
+                     /organism="homo sapiens"
+                     /product="hypothetical protein"
+                     /protein_id="594139_2343"
+                     /translation="MEDLDDDSPARQLRLGFDREGRLIETVVLTFDSGNELVIHAMKA
+                     RPQMLDLLP"
+     CDS             118729..120141
+                     /contig="NODE_3_length_241209_cov_150.143"
+                     /organism="homo sapiens"
+                     /product="Glycolate dehydrogenase (EC 1.1.99.14), subunit
+                     GlcD"
+                     /protein_id="594139_2335"
+                     /translation="MSATPVIAPTTGLDALLDDVRADASHIEVLRPSVETAAFAFDAG
+                     TAPRRASAGDGPAVAFPASPAEVQQLVRLAARHGVSIVPRGAGTGLSGGATASADQLV
+                     ISTARLDRIVEVSPADEVAVVEPGVLNAALNERLEPLGLFYAPDPASWRISTIGGNIA
+                     TNAGGLRCAKYGVTRESVLALDVVLADGSLVSVGHRSIKGVTGLDLVSLFVGSEGVLG
+                     IVVGATVRIRPLPVARRTVTAFFSSTGAGAAAIGAITASRVRPSVIEFLDQPTLEGID
+                     AAQGSGLRDRGTALLLIELDGFGIDEQTAELTAALTAAGATVRVENDADAETLWELRR
+                     SGRRFDDDHWFAGGDVAVPKSRIAEIFAGFPAIADRHGVSVSAVAHAGDGNLHPVITL
+                     RVPPGADPSLPPAAVHDAADDVVRAALAVGGTVSGEHGIGTVKRDLAAEELAVRVREA
+                     QLALKNALDPAGLFNPGKAL"
+     CDS             complement(128932..128216)
+                     /contig="NODE_3_length_241209_cov_150.143"
+                     /organism="homo sapiens"
+                     /product="acetyltransferase"
+                     /protein_id="594139_2344"
+                     /translation="MTSPSTLDIPHADATVLDNAAWHSLAGPHASFAIGGDLVRRYPS
+                     DVAPFVAVRTWDEPGVWDALRDLVGPGADVGLSGYEGAIPEGWEYVGGGEGVQLVETP
+                     ALQTRPDDEAIELGADDAAEMIAIVERNQPGPFRPRTYELGRYIGIRREGRLVAMAGE
+                     RLHPTGWTEISAVAVDADHRRQGLASRLVLDVAFHIQQRGDRALLHAAAANVNAIAAY
+                     EKLGFALRRRNRFAAVRTPA"
+     CDS             complement(118599..118480)
+                     /contig="NODE_3_length_241209_cov_150.143"
+                     /organism="homo sapiens"
+                     /product="hypothetical protein"
+                     /protein_id="594139_2334"
+                     /translation="MRRTASRRPRRGAHDEPPRYGPPPLGRSRRFKALRYGRP"
+     CDS             129069..129572
+                     /contig="NODE_3_length_241209_cov_150.143"
+                     /organism="homo sapiens"
+                     /product="Histone acetyltransferase HPA2 and related
+                     acetyltransferases"
+                     /protein_id="594139_2345"
+                     /translation="MTAAQTTWTIENVDWNDASAVALREAMDAEISPRYAEIFAAFDE
+                     ATADRLARDFAVDPATIVEVVLVRAVDGEAVGHAALRALGAELEVKRVYVSPGARGRG
+                     ASRALMAELERLAAARGASRLILQTGDRQPEAIALYERIGYAPIEVFEPYIRFVGSRC
+                     FAKDLRP"
+     CDS             complement(118412..117222)
+                     /contig="NODE_3_length_241209_cov_150.143"
+                     /organism="homo sapiens"
+                     /product="FMNH2-utilizing oxygenase"
+                     /protein_id="594139_2333"
+                     /translation="MPHRIPLAVALDGAGWHPAAWREPTARPTELTSAAYWRDLARTA
+                     DDAGIVFVTIEDALSLGGRSSEADAETRRDRVRGRLDAVLLASFLAPHTRRLGLVPTV
+                     TTTHPEPFHLATGLQTLDHVSRGRGGVRIVAGSTAQERANFGRRADGPTGLPASGRVE
+                     DDPALLAAFREAGEVTEAIRRLADSWEDDAIVRDLESGRFLDRERVHNVEIAGEFFSI
+                     TGASIVPRSPQGQPLITALAHQSVPVRFAAEHADLVFITPTDAAAVAGIVDELTAPER
+                     EEPLRVFADLLVLVEETRAEAQAVWDRLQERAPLTTDARVVVGDADDVVAEIRALVEA
+                     GVDGVRLRPARLPADLDRIARLVAPRAADAGILAPDTGEPTLRERLGLPRPTSRYVRQ
+                     EVGA"
+     CDS             129569..130663
+                     /contig="NODE_3_length_241209_cov_150.143"
+                     /organism="homo sapiens"
+                     /product="Sarcosine oxidase( EC:1.5.3.1 )"
+                     /protein_id="594139_2346"
+                     /translation="MSAERIDVAVVGAGAMGAATAWHLARAGREVSVFEQFEPGHVRG
+                     ASHGASRNFNVAYVEPEYLAWLRDAEVLWRELEAEAGQPLLTTTGIVTHGPGVDPVAT
+                     AAAISAAGLAAEVLDASEASHRWPGLRFAGPVLHNAGAGRLHADESVAAFLAGAARAG
+                     ARIHWNTAVTDIEVRGDDDVRFTVTDAEGTRRLHARRLVCTAGAWTAKTLAGVPGVSL
+                     PALRVTQEQPAHFRARDETAHWPGFNHHPSADDPATAWFAAPVYGMLTPGQGVKAGWH
+                     AAGPVIDPDHRSFVPDRDLTAALARYAAEWLPGVDAADFTEITCTYTSTVDARFVLER
+                     TGPIVVGAGFSGHGFKFTPVVGRTLAALAG"
+     CDS             complement(117225..115873)
+                     /contig="NODE_3_length_241209_cov_150.143"
+                     /organism="homo sapiens"
+                     /product="FIG00995007: hypothetical protein"
+                     /protein_id="594139_2332"
+                     /translation="MSRRRIHLAAHFPGVNNTTVWTDPTAGSQIDFSSFEHFARTAER
+                     GFFDYLFLAEGLRLREHRGRLHDLDVAGRPNTLAILTALAAVTEHIGLVGTLNTTFNE
+                     PYELARQLGTLDLLSNGRAGWNAVTSSDAFHGANFRRGGYLDHADRYVRAAEFAALSK
+                     ALWSSWRDDAIVADAETGAFLRDDAIARVRHESRLFDVDAVFDVPRSPQGRPVIVQAG
+                     DSPDGRDFATQHADVIFSLHTEFADAQQFYRDVKGRLAAHGRDEDSLKILPAATFVLG
+                     DTAAEASERSREIALAQVRPQTAITYLEQIWNRDFSGYDADGPLPDVEPDTGVETAQG
+                     FAGRHAAIRARVDQLRAQAAAEKLSIRELVIRLTAKHTFVGTPEHVASEIDRYVQERA
+                     TDGFTVVGHVTPHGLDEFADRVVPLLQERGSYRRSYDEGATLHDLLGLPPVAQEAAAR
+                     "
+     CDS             complement(131275..130763)
+                     /contig="NODE_3_length_241209_cov_150.143"
+                     /organism="homo sapiens"
+                     /product="putative acetyltransferase"
+                     /protein_id="594139_2347"
+                     /translation="MDAMTTTLTVRLVAPQEYAEAGRITAEAYRVSYDGLSEAYLASL
+                     ADVAGRVEYGEVWVALDGDEIVGTVWTPRPGERLSPLAREGELDFRQLAVAPSARGRG
+                     VGELLTRHVLGLARDRGATRVVMNSGPEILGAHALYLKMGFRRLTEREDPIEVEPGRW
+                     LDLRAFGYDL"
+     CDS             complement(115876..113966)
+                     /contig="NODE_3_length_241209_cov_150.143"
+                     /organism="homo sapiens"
+                     /product="Nitrogen regulatory protein PII"
+                     /protein_id="594139_2331"
+                     /translation="MTDVVIVGAGPRAVMLVERLLARRTRDAHPPLRITLIDPFPPGG
+                     GRIWRHEQSALLKLNSMARDVTVFTDDSCLIAGPVRSGPSLIEWAERVRDGRLPDVSI
+                     DDPALADEVRELRGDGFPTRRLQSAYLDWFWRRTVAIAPPGVEVQWHQGSAEWVDDTA
+                     EGWEVALSDGTRLPADLVVYALGHTGRAPENTTLDVIATAAAAGFTYLEPSFTADADL
+                     SRLAPGADVIVRGMGLAAVDAVVLLTQGRGGRFSRTSAGHLIYTPSGAEPRLHLGSRR
+                     GVPYRSKVASQLQGDAPAREVLTPAAVAALLDRPGTVDFTDDVWPLIARELVWGHYRE
+                     LFTGHPERVTTTWEAFRETLRQVDGDTDALRRAVREVVHDPLDRFDVPRLDRPLGDET
+                     FVDADAVHDRVRRHVADDLLLRTSQDHSASQALFLTILGAFLALADIPPERWSARSRA
+                     VDLPITWHAFFSYVASGPPAHRLEELLALADAGVVRFLGPDLSVRLDEQRGFVATTSR
+                     APGEVVADALVDAWLPAAGAAASDNPALRELATRHGREVHVADDAYTGSPGRIEVDPD
+                     GRVIGRDGAAHATMFALGPFTAGPEAGAFTRPQSNALSLRHTDRVAEAVTAAASAVAS
+                     ARSAARVRVASR"
+     CDS             complement(132316..131336)
+                     /contig="NODE_3_length_241209_cov_150.143"
+                     /organism="homo sapiens"
+                     /product="Periplasmic binding protein"
+                     /protein_id="594139_2348"
+                     /translation="MALSKKQGIALGVIAAALVAVVGVGVTIGLTRPTEAVAAPERSA
+                     SATNAPAEWVHTDAVPDAVAALKASGFTPIKPGKLTVAVGAFTPPLSYVPEGETLPSG
+                     TEPNIGSLIAEGLGLEYNPVVVAWADWPLGIQSGKYDLITANVTVTEERKELYDFASY
+                     RQDLLGFAVRADSSIAKIKTADDISGLKIVVGSGTNQEKVLLSWNQELSAAGKAPADL
+                     QYYDDNAAATLALLSGRVDATFGPNATAAWAARDTGETKVVGVVPGGYPLQADIAAGT
+                     KKGNGLVEPVQIVLNDLIANGKYAEVLKAWNLDFEGISTSQINPPGLPKS"
+     CDS             112808..113830
+                     /contig="NODE_3_length_241209_cov_150.143"
+                     /organism="homo sapiens"
+                     /product="5,10-methylenetetrahydrofolate reductase (EC
+                     1.5.1.20)"
+                     /protein_id="594139_2330"
+                     /translation="MTSLPLIDACPKRMEYGPCGGVGFDGSCEIDAAHRCAFLHRPTV
+                     PWTGVDRTVAVMPGSRSAAAAATLAALGTRPWVVADLPARALSVASIDSCAAILAGEV
+                     DAVLAGDAGSARVQFPPAYRAHLLQSRGLRVWTGLNMRDRNRVAIEGELAALAVEGVA
+                     GVHCVTGDHTRTGDRPDAAPVFDLDSTEAAALARAAGHVVSVAASPAAPPIERRAARL
+                     REKQRAGTDVCFVNHAGGAAPVRRFIEAAGDGIRYIPCVPVVVDAASADLLASFTTLV
+                     LPDGFLSRVRSARDPRAEGIALAVALAEEMLALPGVVGVNLSGGREGAEESFAEALAE
+                     IARRLR"
+     CDS             complement(132935..132453)
+                     /contig="NODE_3_length_241209_cov_150.143"
+                     /organism="homo sapiens"
+                     /product="Methionine ABC transporter ATP-binding protein"
+                     /protein_id="594139_2349"
+                     /translation="MFQNFHLFPHLTALENITEAPLALKRLGKSEARELALALLDRVG
+                     LAEKADAYPRQLSGGQQQRVAIARALALQPKVLLFDEPTSALDPELVGEVLDVIRDLA
+                     KLGTTLVIVTHEIGFAREVADRVVFLDEGRIVEQGTPDEVLTRPRHARTRDFVAKVLG
+                     "
+     CDS             complement(112695..112081)
+                     /contig="NODE_3_length_241209_cov_150.143"
+                     /organism="homo sapiens"
+                     /product="Pyridoxamine 5'-phosphate oxidase (EC 1.4.3.5)"
+                     /protein_id="594139_2329"
+                     /translation="MITAGTTFGFDVDDVDALTDDPLALLARWVPPHDNELRPLAALA
+                     TVGLDGLPSLRHVLASECDTEGLTFHTDAQSAKAAELAQNPVAAMSIAWPEIGRQLVV
+                     RGTVEQVSAADAAKVYSERSRYLQLLAWTNTRENAHLPVDERHRLWAEFDDAHPQLDP
+                     PARWVGFRLRPRTLTFWRGDPAGQSTRQHYTLVDGRWSGEILAG"
+ORIGIN      
+        1 aaaaaaa
+//

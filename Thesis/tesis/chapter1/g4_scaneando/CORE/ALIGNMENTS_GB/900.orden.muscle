@@ -1,0 +1,16 @@
+>fig|6666666.68540.peg.2150|151744
+------------------------------------------------------------
+------------------------------------------------------------
+--------------MVAETFETAGLAGDLRIRELVVEIMNVASAAANPARGDE
+>fig|2.1418.peg.4|594099
+------------------------------------------------------------
+------------------------------------------------------------
+--------------MVAETFETAGLAGDLRIRELVVEIMNVASAAANPARGDE
+>fig|33013.175.peg.1407|614133
+------------------------------------------------------------
+------------------------------------------------------------
+--------------MVAETFETAGLAGDLRIRELVVEIMNVASAAANPARGDE
+>fig|6666666.374469.peg.3223|645144
+MLDSLTGSDKDSTPDTDEDTQLVIDVYGAYETARSAARHAIEHQQPADAAADEMAPATEW
+DVMNASWIGLFPVQGALCGAVETLQERGVTSDAVTPAPASGAGRWTDAARDHATAVRWVA
+EALERNSDARDIDLMVAETLETAGLNGDLRIRELVVEIIDVASAAASSARGDQ
