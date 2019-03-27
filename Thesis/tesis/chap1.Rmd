@@ -36,8 +36,15 @@ library(reedtemplates)
   Clavisual Clavibacter 
   Enrique Salmonella  
   --->
-# Orthocore: encontrando el core conservado en un linaje taxonómico.      
-Orthocore es un desarrollo bioinformático que realicé para calcular las familias enzimáticas más conservadas pertenecientes al core genome de un conjunto de genomas. Orthocore obtiene el core conservado es decir familias de ortólogos presentes en todos los genomas del grupo, libres de parálogos e independientes de un genoma de referencia. 
+# Orthocore: herramienta para encontrar el core conservado en un linaje genómico.  
+
+```{r coreWiki, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter1/coreWiki.png", caption = "coreWiki",label = "coreWiki", type = "figure")
+```
+
+El pangenoma es el contenido génico total de un linaje taxonómico. Las familias génicas del pangenoma pueden clasificarse según sus patrones de presencia y ausencia en cada genoma del linaje. De acuerdo a esta clasificación los principales grupos de familias génicas en un pangenoma son el _core_, el _shell_ y el _cloud (dispensable) genome_. El _core genome_ es el conjunto de familias con presencia en todos los genomas del linaje. El _shell genome_ es el grupo de familias presentes en la mayoría de los genomas, mientras que el _cloud genome_ o _dispensable genome_ es aquel grupo de familias que sólo ocurre en unos cuantos genomas.   
+
+Orthocore es un desarrollo bioinformático que realicé para calcular las familias génicas más conservadas del core genome. Orthocore obtiene el core conservado es decir familias de ortólogos presentes en todos los genomas del grupo, libres de parálogos e independientes de un genoma de referencia. 
 
 Los cambios en los perfiles de promiscuidad aparece en copias extras de familias de ortólogos y debido a la pérdida y ganancia de genes en organismos cercanos, se necesita un algoritmo para poder organizar filogenéticamente un organismo.
 
@@ -76,20 +83,26 @@ label(path = "chapter1/Metabolismo-Pangenoma.png", caption = "Metabolismo-Pangen
 Orthocores fue diseñado para resolver el problema de ________ La promiscuidad coocurre con variaciones en el contexto genómico. Orthocres ayudó a establecer la filogenia de actinomyces.
 
 ## Identificación de genes marcadores de _Clavibacter michiganensis_  
-Micrococcales es un orden de Actinobacteria que contiene a _Clavibacter_, _Micrococcus_ y _Microbacterium_, entre otros. Clavibacter es un género que puede causar enfermedades en plantas. En particular la especie Clavibacter michiganensis es una bacteria causante de la enfermedad del cancer del tomate. Clavibacter ha sido frecuentemente aislada en compañía de otros microccocales morfológicamente parecidos, por lo que una prueba de diagnóstico se hacía necesaria.  de  y TomA clvF [@yasuhara-bell_genes_2014]
+Micrococcales es un orden de Actinobacteria que contiene a _Clavibacter_, _Micrococcus_ y _Microbacterium_, entre otros. Clavibacter es un género que puede causar enfermedades en plantas. En particular la especie Clavibacter michiganensis es una bacteria causante de la enfermedad del cancer del tomate. Clavibacter ha sido frecuentemente aislada en compañía de otros microccocales morfológicamente parecidos, por lo que una prueba de diagnóstico se hacía necesaria.  de  y TomA clvF [@yasuhara-bell_genes_2014]  
 
-
+Había que estandarizar la anotación genpomica, para ello se utilizó la plataforma myRAST  
+https://github.com/nselem/myrast  
 ### Clavisual: Identificación de genes marcadores a un cierto porcentaje de grupos seleccionados  
-La idea de que orthocores puede ser usado para obtener los genes marcadores de un grupo taxonómico frente a otro fue generalizada en el backend del software Clavisual. Ya se ha explicado previamente que el core puede salir vacío por diversas razones, entre ellas baja calidad de los genomas, genomas provenientes de organismos muy divergentes o bien razones biológicas un core no convergente. Así pues, es posible que si sólo se utiliza el core no se obtengan marcadores. Pero el core puede relajarse de varias maneras una de ellas es el Pseudocore, como el core pero con un genoma de referencia, y a otra es establecer un porcentaje de presencia /ausencia de interés. El pseudocore consiste en ________ y la metodología está depositada en github en el repositorio_________. Los porcentajes de genomas son diferentes porque al no bastar los best bidireccional hits conservados, todo el pangenoma es decir todos los genes contenidos en los genomas del grupo de interés necesitan ser clasificados por familias, para de ahi obtener las familias que tienen presencia en un porcentaje %p y ausencia en un porcentaje a% del grupo externo. Estos perfiles fueron desarrollados para Clavisual utilizando FasthOrtho para clasificar las familias y de ahi obtener los grupos. Con ellos se consiguieron marcadores para Kutobacterium.  Porque qué pasa  
+
+La idea de que orthocore puede ser usado para obtener los genes marcadores de un grupo taxonómico frente a otro fue generalizada en el backend del software Clavisual. Ya se ha explicado previamente que el core puede salir vacío por diversas razones, entre ellas baja calidad de los genomas, genomas provenientes de organismos muy divergentes o bien razones biológicas un core no convergente. Así pues, es posible que si sólo se utiliza el core no se obtengan marcadores. Pero el core puede relajarse de varias maneras una de ellas es el Pseudocore, como el core pero con un genoma de referencia, y a otra es establecer un porcentaje de presencia /ausencia de interés. El pseudocore consiste en ________ y la metodología está depositada en github en el repositorio_________. Los porcentajes de genomas son diferentes porque al no bastar los best bidireccional hits conservados, todo el pangenoma es decir todos los genes contenidos en los genomas del grupo de interés necesitan ser clasificados por familias, para de ahi obtener las familias que tienen presencia en un porcentaje %p y ausencia en un porcentaje a% del grupo externo. Estos perfiles fueron desarrollados para Clavisual utilizando FasthOrtho para clasificar las familias y de ahi obtener los grupos. Con ellos se consiguieron marcadores para Kutobacterium.  Porque qué pasa  
 
 El blast del orthocore fue optimizado cambiando hacer un blast todos contra todos por archivos genómicos individuales genomai_vs_genomaj.blast y luego concatenando estos blasts  
   
-## _Salmonella_  
-
+## _Salmonella_   
 Orthocores fue usado aqui para reconstruir filogenias de genomas de _Salmonella_ y como parte del CORASON el algoritmo que sirve para organizar filogenéticamente variantes de clusters ya sea biosintéticos, islas de patogenicidad, operones o cualquier región paricalmente sinténica de un genoma bacteriano centrada en un gen.
 
 ## Relación entre genes marcadores, Orthocores y la promiscuidad enzimática.  
 Finalmente, al aplicar Orthocore para detectar genes marcadores se vuelve indirectamente reclutamientos al metabolismo especializado, cómo, pues porque dentro de los marcadores hay productos naturales como la clavidicina. Hay vemos que clvABCDEF participan en metabolismo secundario, las enzimas de metabolismo central de este cluster pueden presentar cierta promiscuidad. 
+
+```{r CoreMarcadores, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter1/CoreMarcadores.png", caption = "CoreMarcadores",label = "CoreMarcadores", type = "figure")
+```
+
 
 Lo relevante para la promiscuidad son los procesos de divergencia, por ello en el siguiente capítulo analizamos encontrar el origin y destino metabolico, de copias extras de familias enzimáticas.
 Orthocore está disponible https://github.com/nselem/orthocore/wiki  
