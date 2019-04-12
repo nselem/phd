@@ -94,11 +94,7 @@ label(path = "chapter1/ArbolOrthocore.png", caption = "ArbolOrthocore",label = "
 <!---
 Tabla de orthocore 
 --->
-```{r EjemploMicrobioma, results = "asis"}
-table <- read.csv("chapter1/MicrobiomaMetadata.csv", row.names = 1,sep="\t")
-kable(table,  caption = "Ejemplo de Microbioma \\label{tab:Ejemplo de Microbioma}",caption.short = "Microbioma de tomate ")
-```
-	
+
 
 Había que estandarizar la anotación genpomica, para ello se utilizó la plataforma myRAST  
 https://github.com/nselem/myrast  
