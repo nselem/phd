@@ -45,26 +45,74 @@ library(scales) #
 library(xlsx) # For save data on excel
 ```
 
-# PriA Family {#ref_labels}
-Actinobacterial PriA is a promiscuous homologue of enterobacteria HisA enzymatic family. HisA converts ProFAR into PRFAR on histidine pathway, most actinobacteria has lost trpF gene on triptophane pathway, PriA among isomerizing PROFAR also converts PRA into CdRP acting as TrpF on triptophane pathway.  
+# La familia PriA {#ref_labels}
+PriA es una familia de enzimas de Actinobacteria homóloga a la familia HisA en Enterobacteria. PriA es una familia promiscua según las definiciones de este trabajo ya que se han caracterizado experimentalmente varios de sus miembros con la capacidad de realizar las funciones tanto de HisA como de TrpF. Es decir PriA participa en las rutas de síntesis de Histidina y Triptofano, en varias Actinobacterias, como por ejemplo _Streptomyces coelicolor_. Dentro de la ruta de histidina HisA convierte ProFAR en PRFAR como parte de la ruta de la histidina. PriA además de la isomerización de PROFAR también convierte PRA en CdRP actuando análogamente a la función TrpF en la ruta del triptófano. La mayoría de las actinobacterias han perdido el gen trpF en la ruta del triptofano,
 
-PriA has shown a functional gradient on Actinobacteria that split this family into several enzymatic subfamilies. Among PriA subfamilies there is PriB on Streptomyces that shows little trpF activity and an out of context TrpF gene, there is subHisA on Corynebacteria and Actinomyces that has lost trpF activity, and finally there is subTrpF on Actinomyces that has lost HisA activity.   
+PriA ha mostrado un gradiente funcional en Actinobacteria que divide esta familia en varias subfamilias según su funcionalidad. Entre las subfamilias PriA están PriB en _Streptomyces_ que muestra poca actividad trpF y un gen TrpF fuera de contexto. Otra subfamilia es subHisA en _Corynebacteria_ y _Actinomyces_ que ha perdido actividad trpF, y finalmente hay subTrpF en Actinomyces que ha perdido su actividad A.
 
-Some of this enzymes were selected on search of new promiscuous functions, candidate catalized reactions where investigating by exploring substrates chemically similar to native ones.   
+Algunas de estas enzimas se seleccionaron en busca de nuevas funciones promiscuas, las reacciones catalizadas por el candidato se investigaron mediante la exploración de sustratos químicamente similares a los nativos.
 
-EvoMining has detected one PriA paralogue on Actinobacteria and an expanssion conserved on a saxitoxin cluster on Cyanobacteria [@moustafa_origin_2009].  
+EvoMining ha detectado un parálogo de PriA en Actinobacteria y una expansión conservada en un grupo de saxitoxinas en Cianobacteria [@ moustafa_origin_2009].
 PriA    
 PriB  
 SubHisA  
 subTrpF  
 \clearpage   
   
-## PRIA
-PriA CORASON
-All streptomyces have a partially conserved PriA cluster. CT34 has a secondary copy whose best hit on NCBI is Lentzea’s PriA with 50% identity 98% coverage
+## PriA como modelo de familia enzimática donde las expansiones no son condición necesaria para la promiscuidad.  
+#### PriA en EvoMining  
+
+Se investigaron las expansiones de la familia PriA en los linajes Actinobacteria, Cyanobacteria, Pseudomonas y Archaea. En Actinobacteria, donde se sabe que PriA es promiscua no se detectaron copias extra. 
+
+```{r PriA_Expansiones, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter4/PriAExpansiones.png", caption = "Expansiones de PriA en Actinobacteria, Cyanobacteria, Pseudomonas y Archaea",scale=1,label = "Expansiones de PriA en Actinobacteria, Cyanobacteria, Pseudomonas y Archaea", type = "figure")
+```
+
+
+ Los reclutamientos que tuvieron estas expansiones son los siguientes  
+   
+|  Compuesto	| Actinobacteria 	| Cyanobacteria 	| Pseudomonas 	|  Archaea	| BGC origen|  Clase	|   
+|----   	    |---	            |---	            |---	          |---	      |---	      |---	    |   
+|[saxitoxin](http://mibig.secondarymetabolites.org/repository/BGC0000188/index.html#cluster-1) 	|  x	|x  	| x 	|x  	| Cyanobacteria 	|  Alkaloid	|
+|[lipopoly saccharide](http://mibig.secondarymetabolites.org/repository/BGC0000775/index.html#cluster-1)	|x  	|x  	|  x	|  x	|  Proteobacteria	| Saccharide 	|  
+| [toxin](http://mibig.secondarymetabolites.org/repository/BGC0000928/index.html#cluster-1)	| x 	|  x	| x 	|  x	| Cyanobacteria 	|  Other T3	|  
+| [2'-chloro pentostatin ](http://mibig.secondarymetabolites.org/repository/BGC0001484/index.html#cluster-1)|  x	|-  	| -x	|  -	| Actinobacteria 	| Other  	|  
+2'-amino-2'- deoxy adenosine|  	|  	| 	|  	|  	|  	|  
+  
+Table: Reclutamientos de expansiones de PriA en MIBiG \label{tab:inher}   
+
+
+Finalmente, los árboles que se produjeron por EvoMining son:  
+  
+|  Linaje	| Link al árbol de EvoMining en Microreat  	|  
+|---	|---	|  
+|  Actinobacteria	|  [7g2IGfkv9](https://microreact.org/project/7g2IGfkv9)	|  
+|  Cyanobacteria	|[qF6jWRMox](https://microreact.org/project/qF6jWRMox) 	|  
+|  	PriA_Pseudomonas| [ydff6DWqs](https://microreact.org/project/ydff6DWqs)	|  
+|  Archaea	|  [Ig-m9Cm6f](https://microreact.org/project/Ig-m9Cm6f)|  
+  
+Table: Árboles EvoMining de PriA en MicroReact \label{tab:inher}  
+
+```{r PriA_EvoMining, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter4/PriAEvoMining.pdf", caption = "Árboles de destino metabólico de PriA en Actinobacteria, Cyanobacteria, Pseudomonas y Archaea según EvoMining",scale=1,label = "Árboles de destino metabólico de PriA en Actinobacteria, Cyanobacteria, Pseudomonas y Archaea según EvoMining", type = "figure")
+```
+
+
+```{r PriAEvoMiningCopies, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter4/PriAEvoMiningCopies.pdf", caption = "Copias extras de PriA en Actinobacteria, Cyanobacteria, Pseudomonas y Archaea",scale=1,label = "Expansiones de PriA en Actinobacteria, Cyanobacteria, Pseudomonas y Archaea", type = "figure")
+```
+ 
+ 
+```{r PriACouplinsMutations, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter4/Couplings/PriAMutations.pdf", caption = "Tendencia de mutaciones observada en secuencias de PriA", label="Tendencia de mutaciones observada en secuencias de PriA",type = "figure")
+```
+ 
+ 
+#### PriA CORASON
+Todos los Streptomyces tienen el cluster de PriA parcialmente conservado respecto a _Streptomyces coelicolor_. Además _Streptomyces_CT34 has a secondary copy whose best hit on NCBI is Lentzea’s PriA with 50% identity 98% coverage
 
 TrpF1
-TrpF1 queries gave hits with TrpC enzyme present on every Streptomyces, additionally  S rimosus, S coelicolor, S venezuelae and S. NRRL S-1813 had an extra copy. S rimosus TrpC vicinity has PKS and siderophore genes.
+TrpF1 queries gave hits with TrpC enzyme present on every Streptomyces, additionally  _S. rimosus_, _S. coelicolor_, _S. venezuelae_ and _S. NRRL S-1813_ had an extra copy. _S rimosus_ TrpC vicinity has PKS and siderophore genes.
 
 TrpF2
 Conserved cluster with NRPS sequences flanking TrpF2
@@ -77,9 +125,9 @@ purpeofuscus and S bikiniensis
  \clearpage  
  
 ## Selected enzymes to investigate affinity of substrates similar to PRA and PROFAR  
-Since on _Streptomyces_ has been found representatives from PriA and PriB families, 39 homologue sequences were selected to perform docking enzyme-substrate analysis. This PriA/Prib selected sequences belong to _Streptomyces_ evenly ditributed on an RpoB species tree wiht different conditions about TrpF presence/absence. Other chemically characterized PriA Actinobacterial homologues were included on this studio, and finally HisA from _Escherichia coli_, _Arthrobacter Aurescens_, _Salmonella enterica_ and _Acidimicrobium ferrooxidans_ and Actinobacterial TrpF were added as controls.  
+Dado que en _Streptomyces_ se han encontrado representantes de las familias PriA y PriB, se seleccionaron 39 secuencias homólogas para realizar el análisis del sustrato de la enzima de acoplamiento. Estas secuencias seleccionadas de PriA / Prib pertenecen a _Streptomyces_ uniformemente distribuidas en un árbol de especies RpoB con diferentes condiciones sobre la presencia / ausencia de TrpF. En este estudio se incluyeron otros homólogos de PriA Actinobacterial caracterizados químicamente, y finalmente se agregaron HisA de _Escherichia coli_, _Arthrobacter Aurescens_, _Salmonella enterica_ y _Acidimicrobium ferrooxidans_ y Actinobacterial TrpF como controles.
 
-When exists cristal structures were used otherwise homologues structures were generated using as template the closest enzyme with cristal structure available.  
+Cuando existían estructuras de cristal, de lo contrario, se generaban estructuras homólogas utilizando como plantilla la enzima más cercana disponible con estructura de cristal.
 
 Controls  
 HisA Enterobacteria enzymes from _Salmonella enterica_ (PDB:5AHE), _Escherichia coli K12_ 
@@ -90,7 +138,7 @@ TrpF Actinobacteria Jonesia denitrificans and Streptomyces sp Mg1 sequences.
 Chemically characterized Actinobacterial enzymes  
 PriA  
 _Mycobacterium tuberculosis_ (Mtub PDB:2Y88,2Y89,2Y85,3ZS4)
-_Streptomyces coelicolor_ (Scoe PDB:2VEP,2X30,1VZW),_Streptomyces globisporus_,
+_Streptomyces coelicolor_ (Scoe PDB:2VEP,2X30,1VZW), _Streptomyces globisporus_,
 _Actynomyces urogenitalis_ 4X2R
 _Corynebacterium jeikeum_ 
 
@@ -119,7 +167,7 @@ kable(table,  caption = "Enzyme PDB \\label{tab:Enzyme PDB}",caption.short = "En
 ## Similar substrates to PRA and PROFAR suggested by Tanimoto distance or previously tested   
 S1,S2,...S20 substrates were collected from literature and chemioinformatics predictions. S3 PRA and S7 PROFAR are native substrates, S13-S16  are light activated substrates,  S17 PRAP, S18 Compound V, were found on literature, S6 GMP, S11 GTP and other were suggested by chemioinformatics.  
 ```{r Substrates_table_out, results = "asis"}
-ztable <- read.csv("chapter4/Substrate.data", row.names = 1,sep="\t")
+table <- read.csv("chapter4/Substrate.data", row.names = 1,sep="\t")
 kable(table,  caption = "Substrates \\label{tab:substrates}",caption.short = "Substrates ")
 ```
 
