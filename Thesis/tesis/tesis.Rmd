@@ -12,7 +12,7 @@ abstract: >
 # like below, use a command like that for the abstract above.  Note that a tab is 
 # needed on the line after the >.
 acknowledgements: >
-  Quiero agradecer por todas las enseñanzas a mis compañeros de trabajo Hilda, Cristian, César, Karina Verdel, Lianet, Adriana Espinosa y Abraham Avelar.
+  Quiero agradecer por todas las enseñanzas a mis compañeros de trabajo Hilda, Ernesto, Cristian, César, Karina Verdel, Lianet, Adriana Espinosa y Abraham Avelar.
   A manu y Vero por su interés en emprender proyectos. A Dany mi veranito , a Ernesto de keri, secretaria inovacion, DNABits.
 dedication: >
   You can have a dedication here if you wish. 
@@ -74,26 +74,20 @@ This is an R chunk and chap0.Rmd refers to the Introductory chapter.  Feel free 
 
 ```{r Objetivos, child = 'Objetivos.Rmd'}
 ```
-
-<!--
-This is for including Chapter 1.  Notice that it's also good practice to name your chunk.  This will help you debug potential issues as you knit.  The chunk above is called intro and the one below is called chapter1.  Feel free to change the name of the Rmd file as you wish, but don't forget to change it here from chap1.Rmd.
--->
 <!--- Genome Mining-->
 ```{r capitulo1, child = 'chap1.Rmd'}
 ```
-
 <!--
 Immediately below is the chunk for Chapter 2.
 --> 
-
-<!--- PriA family-->
-```{r chapter2, child = 'chap2.Rmd'}```
-
 <!--- EvoMining -->
+```{r chapter2, child = 'chap2.Rmd'}```
+<!--- CORASON -->
 ```{r chapter3, child = 'chap3.Rmd'}
 ```
 
-<!--- CORASON -->
+<!--- PriA family-->
+
 ```{r chapter4, child = 'chap4.Rmd'}
 ```
 

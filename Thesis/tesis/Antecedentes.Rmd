@@ -36,7 +36,7 @@ library(reedtemplates)
 
 ```{r Niveles_promiscuidad_imagen, results = "asis",message=FALSE, echo=FALSE}
       label(path = "chapter0/NivelesPromiscuidad.png", caption = "Antecedentes Conceptuales", 
-      scale = 1.1,
+      scale = .6,
       label = "La promiscuidad puede entenderse a distintos niveles metabólicos: enzima, familia enzimática y ruta biosintética", type = "figure")
 ```
 \nocite{}
@@ -85,7 +85,7 @@ En este trabajo se buscará encontrar marcas de promiscuidad a nivel familia, en
 
 ```{r Antecedentes_conceptuales_imagen, results = "asis",message=FALSE, echo=FALSE}
       label(path = "chapter0/AntecedentesConceptuales.png", caption = "Antecedentes Conceptuales", 
-      scale = .9,
+      scale = .5,
       label = "Antecedentes conceptuales de promiscuidad", type = "figure")
 ```
 

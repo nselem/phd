@@ -282,20 +282,20 @@
 
 \renewcommand{\maketitle}{%
   {\pagestyle{empty}
-  \fontsize{12}{14}\selectfont
+  \fontsize{14}{16}\selectfont
   \begin{titlepage}
   \newpage
   \let\footnotesize\small
   \let\footnoterule\relax
   \let \footnote \thanks
 
-  \baselineskip = 1.4\baselineskip
+  \baselineskip = 2.5\baselineskip
   \setbox0=\hbox{de los requerimientos para el grado}
 
   \begin{center}
     \setcounter{page}{1}
     \null\vfil
-    {\fontsize{12}{14}\selectfont \@title}
+    {\fontsize{14}{16}\selectfont \@title}
     \vfil
     \centerline{\hbox to \wd0 {\hbox{}\hrulefill\hbox{}}}
     \vfil

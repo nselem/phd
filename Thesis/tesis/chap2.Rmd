@@ -6,12 +6,12 @@ header-includes:
 output: pdf_document
 ---
 <!--- Archaeas-->
-
+# EvoMining
 <!--
 You can delete the header-includes (lines 3-6 above) if you like and also the chunk below since it is loaded in the skeleton.Rmd file.  They are included so that chap3.Rmd will compile by itself when you hit Knit PDF.
 -->
 
-```{r include_packages_2, include = FALSE}
+```{r include_packages_chap2, include = FALSE}
 # This chunk ensures that the reedtemplates package is
 # installed and loaded. This reedtemplates package includes
 # the template files for the thesis and also two functions
@@ -659,7 +659,7 @@ Table: Families on Archaeabacteria \label{tab:inher}
 \clearpage
 
 ```{r ArchealResults, results = "asis",message=FALSE,echo=FALSE}
-label(path = "chapter2/Archaeas/PosterArcheas.pdf", caption = "EvoMining Archaeas",scale=.9,label = "EvoMining Archaeas", type = "figure")
+#label(path = "chapter2/Archaeas/PosterArcheas.pdf", caption = "EvoMining Archaeas",scale=.9,label = "EvoMining Archaeas", type = "figure")
 ```
 
 <!--  EvoMining Expansions
