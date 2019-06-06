@@ -40,12 +40,17 @@ library(reedtemplates)
 # Desarrollo de Orthocore e implementación de otras herramientas computacionales para entender el pangenoma de un linaje genómico.  
 
 ```{r coreWiki, results = "asis",message=FALSE,echo=FALSE}
-label(path = "chapter1/coreWiki.png", caption = "Orthocore obtiene familias de genes conservados en un linaje genómico", label = "Orthocore calcula las familias génicas comunes de un linaje genómico. Después de un proceso de filtrado, alineamiento y curación concatena estas familias y entrega una reconstrucción filogenética." , scale=".42", type = "figure")
+label(path = "chapter1/coreWiki.png", 
+      label = "Orthocore", 
+      caption = "Orthocore calcula el core de un linaje genómico para proveer una filogenia",
+      alt.cap = "Orthocore calcula las familias génicas comunes de un linaje genómico. Después de un proceso de filtrado, alineamiento y curación concatena estas familias y entrega una reconstrucción filogenética.",
+      cap.size = "footnotesize",
+      scale=".42", type = "figure")
 ```
 
 El pangenoma es el contenido génico total de un linaje taxonómico. Las familias génicas de un pangenoma pueden clasificarse según sus patrones de presencia-ausencia en cada genoma del linaje. De acuerdo a esta clasificación los principales grupos de familias génicas en un pangenoma son el _core_, el _shell_ y el _cloud_ (dispensable) genome. El _core genome_ es el conjunto de familias con presencia en todos los genomas del linaje. Por ejemplo, la secuencia de la subunidad 16s del gene rRNA, así como diversos genes ribosomales que suelen estar en el core de la gran mayoría de los linajes bacterianos. El _shell genome_ es el grupo de familias presentes en la mayoría de los genomas pero no en todos. En el _shell_ se ubican por ejemplo familias que estaban en el _core genome_ pero que algunas bacterias del linaje sufrieron una dinámica de pérdida (o ganancia) génica. Mientras que el _cloud genome_ o dispensable genome es aquel grupo de familias que sólo ocurre en unos cuantos genomas del linaje.  
 
-La organización filogenética de un linaje genómico permite la observación de pérdida y ganancia de familias génicas en organismos cercanos. Si los organismos están desordenados es difícil apreciar la dinámica genómica de aparición-desaparición de copias extra en una familia génica. Ordenar los genomas de un linaje facilita apreciar cambios en el número de copias de una familia. Esto es relevante en el marco de esta tesis ya que cambios en los perfiles de promiscuidad podrían estar relacionados a copias extras de organismos cercanos. Orthocore es un algoritmo facilitador de la organización filogenética de organismo de un linaje.  
+La organización filogenética de un linaje genómico permite la observación de pérdida y ganancia de familias génicas en organismos cercanos. Si los organismos están desordenados es difícil apreciar la dinámica genómica de aparición-desaparición de miembros de una familia génica. Ordenar los genomas de un linaje facilita apreciar cambios en el número de copias de una familia. Esto es relevante en el marco de esta tesis ya que cambios en los perfiles de promiscuidad podrían estar relacionados a copias extras de organismos cercanos. Orthocore es un algoritmo que utiliza el core conservado de un linaje genómico para facilitar la organización filogenética de sus organismos  `r ref(label = "Orthocore", type = "figure")`      
 
 ## La distribución de la función metabólica de las familias del pangenoma depende de la variabilidad del linaje seleccionado.  
 El número de familias génicas presentes en el pangenoma, así como su distribución en el _core_, _shell_ y _dispensable genome_ depende de la elección de los genomas y del linaje genómico. Para entender esto se puede pensar en un ejemplo extremo, consideremos una bacteria de 1000 familias de genes de la cual se obtienen secuencias de diez genomas de la misma cepa. Estas secuenciaciones deberían ser prácticamente idénticas y en ese caso el _core genome_ sería 1000 familias, el _shell_ y el _dispensable genome_ serían cero. En este caso, todo el metabolismo, tanto el central como el especializado estarían conservados dentro del _core genome_, ya que el _shell_ y el _dispensable genome_ se encuentran vacíos. Sin embargo, si variamos el linaje taxonómico, y ahora estudiamos el pangenoma de 10 especies distintas del género _Streptomyces_ ahora el core genome estará compuesto por aproximadamente un tercio de su tamaño promedio, y dentro del _core genome_ es donde se encontrarán muchos de las familias dedicadas al metabolismo central o conservado (por ejemplo, familias de la glicólisis o síntesis de aminoácidos). En cambio muchas de las familias dedicadas al metabolismo especializado y pertenecientes a clústers biosintéticos de productos naturales (BGCs) estarán en el _dispensable genome_ pues _Streptomyces_ es productor de una gran variedad de metabolitos especializados y cada especie suele tener su producto característico.
@@ -114,7 +119,7 @@ Orthocore fue usado aquí para reconstruir filogenias de _Salmonella_ y además 
 ### Nostoc provenientes del metagenoma de cícadas se agrupan Cyanobacteria  
 ```{r ArbolNostoc, results = "asis",message=FALSE,echo=FALSE}
 #Arbol de Nostoc
-label(path = "chapter1/Nostoc.png", label = "Reconstrucción de 76 taxa provenientes de 7 órdenes de Cyanobacteria. La matriz final incluyó 45,475 aminoácidos curados de 198 familias de proteínas pertenecientes al core conservado. A la derecha se muestra un zoom del orden Nostocales que incluye bacterias simbiontes de cícadas. Metadatos como el tamaño de genoma, contenido de GC y hábitat de origen muestran una posible tendencia de incremento de tamaño en los genomas provenientes del microbioma de plantas.",caption = "Arbol de Nostoc derivado de la selección  de genes del core conservado",scale=".5", type = "figure")
+label(path = "chapter1/Nostoc.png", label = "Reconstrucción de 76 taxa provenientes de 7 órdenes de Cyanobacteria. La matriz final incluyó 45,475 aminoácidos curados de 198 familias de proteínas pertenecientes al core conservado. A la derecha se muestra un zoom del orden Nostocales que incluye bacterias simbiontes de cícadas. Metadatos como el tamaño de genoma, contenido de GC y hábitat de origen muestran una posible tendencia de incremento de tamaño en los genomas provenientes del microbioma de plantas.",caption = "Arbol de Nostoc derivado de la selección  de genes del core conservado",scale=".45", type = "figure")
 ```
 Las Cyanobacterias son un phylum de bacterias que se han adaptado a diversos ambientes. Aunque muchas de ellas son marinas algunas Cyanobacterias viven como simbiontes de plantas. En particular las cícadas han desarrollado un tipo especial de raíz donde se sabe que vive como simbionte el género _Nostoc_. La presencia de _Nostoc_ en la raíz coraloide de las cícadas es fácilmente distinguible por la formación de un anillo verde conocido como anillo cyanobacterial. En la figura se muestra la filogenia de 76 Cyanobacterias de 7 órdenes distintos construida con 198 proteínas del core conservado obtenidas por Orthocore. En esta reconstrucción se puede observar que los _Nostoc_ asociados a plantas tienden a agruparse en la filogenia.  
 
@@ -130,7 +135,7 @@ Al analizar en RAST genomas de _Microbacterium_ y _Micrococcus_ aislados de toma
 
  
 ```{r clv, results = "asis",message=FALSE,echo=FALSE}
-label(path = "chapter1/clv.png", caption = " XXX",scale=".7",label = "Marcadores-Clavibacter", type = "figure")
+label(path = "chapter1/clv.png", caption = " clv BGC",scale=".6",label = "Marcadores-Clavibacter", type = "figure")
 ```
 
 Esta observación se corroboró con más genomas, en este caso se muestran como ejemplo 10 genomas de bacterias del microbioma del tomate, entre ellas siete _Clavibacter_, seis de tomates de invernadero y uno _Clavibacter_ proveniente de tomate silvestre, _Clavibacter_ RA1B que fue reportado en la tesis de maestría de Yanez. Con Orthocore vemos que el tamaño del core decrece al ir agregando genomas de _Clavibacter_ y decrece aún más rápido al agregar los genomas de _Micrococcus_ y _Microbacterium_ La reconstrucción filogenetica de este microbioma, ubica a _Clavibacter_ RA1B cerca de los otros _Cmm_ pero no en un clado junto con ellos. Una búsqueda por blast revela que los genes marcadores de _Cmm_: _clvF_, _clvR_ son también marcadores de _Clavibacter_ RA1B pero no así _clvA_ y _clvG_ que solamente están presentes en el core de _Cmm_. Sin embargo _clvF_ y _clvR_ no están en el contexto del cluster de michiganina en RA1B y su similitud de secuencia es menor que la que se observa entre los otros _Cmm_.
@@ -141,7 +146,7 @@ De hecho al considerar más genomas dentro del microbioma del tomate, la familia
 Con Orthocore además de obtener los genes marcadores podemos obtener también la matriz del core conservado para realizar la reconstrucción filogenética de especies cercanas de _Clavibacter_. Debido a que es importante para los agricultores conocer de dónde provienen las bacterias que infectan al tomate, una de las líneas de investigación del laboratorio de evolución de la diversidad metabólica, es la organización taxonómica de cepas de _Cmm_ y de otras bacterias del microbioma de tomate. Por este motivo se tienen unos doscientos genomas privados y se esperan más a futuro. Orthocore colabora con esta investigación proporcionando matrices multilocus que pueden diferenciar entre _Clavibacter_ de la misma o de diferente especie.
 
 ```{r core, results = "asis",message=FALSE,echo=FALSE}
-label(path = "chapter1/CoreGenomeMicrobioma.png",scale=".6", caption = " X X",label = "Marcadores-Clavibacter", type = "figure")
+label(path = "chapter1/CoreGenomeMicrobioma.png",scale=".5", caption = " X X Evomining",label = "Marcadores-Clavibacter EvoMining", type = "figure")
 ```
   
 Debido al intercambio génico por transferencia horizontal en las bacterias, es posible que los genes marcadores actuales alguna vez aparezcan en otros organismos. También las bacterias pierden continuamente genes, por lo que es posible que algún gen marcador de Cmm se pierda en una cierta cepa. Esto hace que la definición de estar presentes en el core del grupo de interés y ausentes totalmente de cada uno de los genomas de otro linaje ya no funcione completamente. Sin embargo, en estas dos situaciones presentadas, ganancia de genes marcadores de organismos externos al linaje original o pérdida de genes marcadores en algunas cepas, se sigue cumpliendo que los ex genes marcadores, estarán presentes en la mayoría de los organismos del linaje de interés y ausentes de la mayoría de los organismos del linaje externo. Por ello, se pensó que está definición de genes marcadores se podía generalizar clasificando a grupos de genes ortólogos acorde a sus porcentajes de ocurrencia. Esta idea se desarrolló en la herramienta clavisual, explicada en la siguiente sección.  
@@ -165,6 +170,11 @@ Después de desarrollar métodos de identificación de genes marcadores y genera
 
 ```{r bpga-pangenoma, results = "asis",message=FALSE,echo=FALSE}
 label(path = "chapter1/bpga-pangenoma.png",scale=".5", caption = " X X",label = "bpga-pangenoma", type = "figure")
+```
+
+Tomando otros siete clavibacters, utilizando OrthoVenn tenemos la misma observación, el número de familias de genes agregadas al adicionar genomas, es después de siete genomas casi tan grande como su core. 
+```{r Venn-pangenoma, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter1/Venn_chart.pdf",scale=".5", caption = " X X",label = "Venn Chart", type = "figure")
 ```
 
 ## Relación entre genes marcadores, Orthocores y la promiscuidad enzimática.  
@@ -206,7 +216,7 @@ Formatos de RAST para descargar archivos
 Puedes cambiar el formato table_txt por el que tú necesites.  
 
 Pie de tabla  
-  
+   
 |Atributo        |Descripción                                             |  
 |genbank         |GenBank (con funciones y enriquecimiento de SEED)       |  
 |genbank_stripped|Genbank con EC-numbers removidos de las funciones|  
@@ -219,7 +229,7 @@ Pie de tabla
 |rast_tarball | Archivo comprimido (gzipped) con todo el directorio de las anotaciones de RAST sobre el genoma|  
 |nucleic_acid|  Fasta de DNA de genes|  
 |amino_acid  |Fasta de DNA de aminoácidos|  
-|table_txt||  
+|table_txt|Gene data in tab-separated format|   
 |table_xls||  
 	  
 ## ORthocore  
