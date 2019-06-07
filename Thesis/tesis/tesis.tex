@@ -2245,6 +2245,1222 @@ starts here.
   
   \chapter{EvoMining}\label{evomining}
   
+  \section{Introduction}\label{introduction}
+  
+  La promiscuidad enzimática puede buscarse en familias envueltas en
+  procesos de divergencia funcional. Uno de dichos procesos es la
+  expansión y posterior reclutamiento de familias pertenecientes a rutas
+  metabólicas conservadas hacia el metabolismo especializado. Los
+  productos naturales o metabolitos especializados son sintetizados
+  generalmente por clusters de genes distribuidos en un pequeño porcentaje
+  de un linaje taxonómico. Estos clusters, conocidos como BGCs
+  (Biosynthetical Gene Clusters), contienen reclutamientos de las copias
+  extras de familias pertenecientes al metabolismo conservado. La
+  similitud de secuencia de los genes que pertenecen a los BGCs así como
+  su relativa sintenia en diversos organismos de un linaje hacen que
+  genómica copmarativa sea de utilidad para intentar localizarlos.
+  Finalmente, el auge en la cantidad de genomas disponibles públicamente
+  así como la facilidad por sequenciar nuevos hace posible que los métodos
+  bioinformáticos ayuden a encontrar nuevos BGCs. EvoMining es un método
+  de para sugerir la formación de nuevos BGCs y en consecuencia encontrar
+  zonas donde puede estar ocurriendo la capcidad de adquirir un nuevo
+  sustrato cambio en promiscuidad enzimátcica.
+  
+  En este capítulo se explica el desarrollo de EvoMining como plataforma
+  bioinformática dedicada a presentar una visualización del origen y
+  destino de todas las copias de familia enzimátocas provenientes del
+  emtabolismo conservado. Se discutirán también cuatro linajes genómicos
+  Actinobacteria Cyanobacteria, Pseudomonas y Archaea y finalmente se
+  analizará un BGCs scytonemin.
+  
+  \section{EvoMining es un método para encontrar BGCs no
+  tradicionales}\label{evomining-es-un-metodo-para-encontrar-bgcs-no-tradicionales}
+  
+  \section{Consideraciones evolutivas en minería genómica permiten
+  identificar clusters no clasificados y dentro de ellos sugerir enzimas
+  con cambios en
+  promiscuidad.}\label{consideraciones-evolutivas-en-mineria-genomica-permiten-identificar-clusters-no-clasificados-y-dentro-de-ellos-sugerir-enzimas-con-cambios-en-promiscuidad.}
+  
+  En antiSMASH 2.0 existen estos clusters y \_\_\_ son no conocidos
+  
+  \subsection{Los clusters biosintéticos no clasificados son difíciles de
+  identificar.}\label{los-clusters-biosinteticos-no-clasificados-son-dificiles-de-identificar.}
+  
+  Los no clasificados suelen pasar desapercibidos, porque no hay
+  conocimiento previo
+  
+  \subsection{Localizar alguna enzima de un cluster no clasificado es un
+  camino para identificar el
+  BGC.}\label{localizar-alguna-enzima-de-un-cluster-no-clasificado-es-un-camino-para-identificar-el-bgc.}
+  
+  Como ya se mostró en EvoMining 1.0 encontramos una enzima que
+  
+  \subsection{Copias extra de familias enzimáticas que son reclutadas para
+  una nueva función están relacionadas con la
+  promiscuidad.}\label{copias-extra-de-familias-enzimaticas-que-son-reclutadas-para-una-nueva-funcion-estan-relacionadas-con-la-promiscuidad.}
+  
+  \subsection{EvoMining es un paradigma que permite ubicar copias extra de
+  familias enzimáticas y organizarlas visualmente acorde a eventos
+  evolutivos.}\label{evomining-es-un-paradigma-que-permite-ubicar-copias-extra-de-familias-enzimaticas-y-organizarlas-visualmente-acorde-a-eventos-evolutivos.}
+  
+  Introducción de como funciona Texto \autoref{fig:EvoMiningAlgorithms}
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = .5]{chapter2/FigurasPaper/Figure1.pdf}
+  \caption[EvoMining Algorithm]{\footnotesize{}}
+  \label{fig:EvoMiningAlgorithms}
+  \end{figure}
+  
+  \section{Algoritmos y bases de datos de EvoMining
+  2.0}\label{algoritmos-y-bases-de-datos-de-evomining-2.0}
+  
+  EvoMining está compuesto de dos algoritmos, el de búsqueda de patrones
+  de expansión - reclutamiento y el de visualización de todas las copias
+  de una familia expandida clasificadas según sus posibles destinos
+  metabólicos. Además de los algortimos EvoMining necesita tres bases de
+  datos: i) la genómica, ii) las semillas enzimáticas, y iii) la de
+  productos naturales.
+  
+  \subsection{Algoritmo de expansión y
+  reclutamiento}\label{algoritmo-de-expansion-y-reclutamiento}
+  
+  La primera parte de la minería genómica evolutiva de EvoMining consiste
+  en detectar las expansiones y los reclutamientos de las familias
+  enzimáticas semilla. Una familia expandida consiste en todas las copias
+  detectadas mediante una búsqueda con BLASTp, e-value de 0.001 y bitscore
+  de 100, usando como query las secuencias de aminoácidos de las enzimas
+  semilla (Enzyme DB) y como base de datos de búsqueda las secuencias de
+  genomas de un linaje taxonómico (Genome DB). Un reclutamiento es una
+  copia extra de una familia de metabolismo conservado que ahora participa
+  en metabolismo especializado. Ejemplos de reclutamientos conocidos han
+  sido observados en BGCs reportados en MIBiG. Ejemplos de reclutamientos
+  predichos se encuentran en enzimas pertenecientes a BGCs reconocidos por
+  antiSMASH que tienen un origen en metabolismo conservado.
+  
+  En la primera versión de nuestro trabajo definimos que un organismo
+  poseía una expansión si el número de copias de una familia estaba por
+  encima del promedio mas dos desviaciones estándar. Siguiendo esta
+  definición EvoMining colorea en un heat plot las expansiones de las
+  familias enzimáticas respecto a un linaje taxonómico, señalando
+  explícitamente el número de copias de cada familia.
+  
+  En este sentido, no todas ls copias son expansiones, pero aún así pueden
+  ser predicciones de EvoMining, por ello para futuros trabajos es posible
+  que estar una unidad arriba de la moda, sea suficiente para ser un
+  reclutamiento.
+  
+  Los patrones de reclutamiento sólo pueden ser apreciados tras ordenar
+  los organismos filogenéticamente, por ejemplo Streptomyces tiene dos
+  enolasas. Se recomienda al usuario reordenar los organismos del heatplot
+  de acuerdo a un árbol de especies, mismo que puede ser calculado
+  utilizando Orthocore.
+  
+  En este paso, en cada familia expandida los ortólogos más parecidos a
+  las enzimas semilla de la enzyme DB son identificados por BBH. Estos
+  ortólogos serán considerados parte del metabolismo conservado y serán
+  posteriormente identificados con color rojo en la visualización. Las
+  copias extra parte de la familia expandida son enzimas de las que no se
+  conoce el destino metabólico, es posible que en los pasos subsequentes
+  de EvoMining sean reconocidas por antiSMASH o EvoMining como posibles
+  reclutamientos a metabolismo especializado. En otro caso permanecerán
+  como copias extra con destino metabólico desconocido.
+  
+  Una vez obtenidas las FEs expandidas e identificado los ortólogos del
+  metabolismo central, se conduce una nueva búsqueda con BLASTp, E-value
+  0.001, utilizando las EFs como queries contra la base de datos NP DB, la
+  de enzimas biosintéticas presentes en BGCs. Otras bases de datos que
+  contengan enzimas con un destino metabólico conocido podrían utilizarse
+  en lugar de NP DB. Los reclutamientos son la
+  
+  En conclusión el algoritmo de expansión - reclutamiento trabaja para
+  identificar tres clases de copias en las familias enzimáticas expandidas
+  (i) copias altamente conservadas con algún miembro en el metabolismo
+  conservado; (ii) reclutamientos conocidos en BGCs de productos
+  naturales; y (iii) copias extra que no son reclutamientos conocidos ni
+  parte obvia del metabolismo conservado, quedando por definir su destino
+  metabólico. Reconstrucciones filogenéticas de las familias enzimáticas
+  serán utilizadas en la siguiente sección para asignar a estas copias
+  extra obtenidas por el algoritmo de expansión y reclutamiento un origen
+  y destino metabólico
+  
+  \subsection{Algoritmo de reconstrucción filogenética y
+  visualización}\label{algoritmo-de-reconstruccion-filogenetica-y-visualizacion}
+  
+  Las secuencias de las familias enzimáticas expandidas fueron alineadas
+  con muscle v3.2 y curadas con Gblocks v0.91b. Los parámetro de Gblocks
+  fueron fijados en incluir 5 posiciones como el mínimo tamaño de un
+  bloque y diez posiciones como el máximo de posiciones contiguas no
+  conservadas. Posiciones ausentes de más del 50\% de las secuencias
+  fueron filtradas y removidas del alineameinto final. Para recontruis
+  filogenéticamente la historia de las enzimas se utilizó FastTree 2.1 que
+  es un método muy rápido pensado para miles de secuencias que utiliza un
+  algoritmo definido como ``aproximadamente máxima verosimilitud''.
+  
+  La minería genómica tradicional realizada por antiSMASH no es parte de
+  la tubería de EvoMining, pero puede las predicciones de antiSMASH pueden
+  ser calculadas previamente por el usuario y utilizadas por EvoMining. En
+  este trabajo antiSMASH 3.0 {[} 7 {]} fue utilizado en los secuencias de
+  los genomas de la Genome DB ( Fig. 1(b) ).
+  
+  La selección de color de las hojas del árbol fue automatizada utilizando
+  Newick Utilities una serie de programas llamados desde la terminal para
+  manipular árboles en formato Newick {[} 35{]}. La anotación funcional de
+  RAST en su versión clásica {[} 36 {]} fue agregada al SVG. Otros
+  metadatos como el número de copias por organismo y fueron escritos de
+  manera que los árboles producidos por EvoMining sean compatible con la
+  visualización de Microreact {[} 37 {]}.
+  
+  Los árboles de EvoMining diferencian entre la función metabólica de cada
+  miembro de una familia génica mediante un código de color ( Fig. 1b, c)
+  . Las secuencias más conservadas se identifican mediante BBH contra la
+  Enzyme DB, los hits de este proceso son considerados copias de
+  metabolismo central, y son marcadas en rojo. En el otro extremo están
+  los reclutamientos conocidos con alguna evidencia experimental que
+  fueron reportados en MIBiG {[} 2 {]}. Estos reclutamientos son marcados
+  en azul. Una vez definidos estos dos grupos, una predicción de EvoMining
+  es definida como aquellas hojas más cerca de una hoja azul que de una
+  hoja roja. Estas predicciones consideradas con más posibilidades de
+  pertenecer al metabolismo especializado que al conservado, son
+  coloreadas en verde ( Fig. 1c). Además de los tres destinos metabólicos
+  descritos marcados respectivamente en rojo, azul y verde, se puede
+  opcionalmente agregar información predicha por antiSMASH. Cuando el
+  usuario provee resultados de antiSMASH sobre qué genes pertenecen a un
+  BGC que contiene una enzima típica de metabolismo especializado, estos
+  se colorean en cyan y son llamados predicciones antiSMASH. Si una
+  secuencia es al mismo tiempo predicción EvoMining y predicción antiSMASH
+  se colorea cyan y se ignora el verde para enfatizar en los verdes las
+  posibles novedades químicas. Cuando una secuencia está en la
+  intersección de las reconocidas como metabolismo conservado marcada como
+  roja y predicción de antiSMASH es decir color cyan entonces es coloreada
+  de púrpura. Estas enzimas de intersección entre metabolismo conservado y
+  metabolismo especializado son definidas como enzimas de intersección.
+  Finalmente para todas las copias extra que no fueron marcadas como
+  rojas, azules, verdes, cyanes o púrpuras existe el color girs. Así pues
+  gris son aquellas hojas del árbol de las que no se tiene un clave sobre
+  su destino metabólico, estas secuencias son llamadas de destino
+  metabólico desconocido.
+  
+  \subsection{Las tres bases de datos de
+  EvoMining}\label{las-tres-bases-de-datos-de-evomining}
+  
+  EvoMining DBs Tres bases de datos son requeridas como variables de
+  inicio de EvoMining, la primera es el conjunto de secuencias de genomas
+  de un linaje, esta base fue llamada Genome DB. La segunda es un grupo de
+  secuencias de enzimas de metabolismo conservado llamada Enzyme DB. La
+  base de datos se secuencias de genes que pertenecen a un cluster
+  biosintético de metabolismo especializado es abreviada como base de
+  datos de productos naturales o por sus siglas en inglés NP DB. Las
+  transformaciones que sufrieron estas bases de datos desde la primera
+  versión de EvoMining hasta este trabajo están resumidas en la tabla uno
+  y serán descritas a continuación( Table 1 ). Genome DB La primera
+  versión de Genome DB comprendió 230 genomas de Actinobacteria,
+  incluyendo 50 géneros diferentes. Gracias a la explosión de datos
+  genómicos disponibles, en EvoMining 2.0 fue posible expandir el número
+  de genomas de Actinobacteria de Genome DB hasta 1245 genomes, incluyendo
+  193 géneros diferentes. Cuatro diferentes bases Genome DB fueron
+  utilizadas en este trabajo, Actinobacteria, Cyanobacteria, Pseudomonas y
+  Archaea. Estas bases están disponibles en el repositorio de datos
+  público Zenodo con identificador DOI: 10.5281/zenodo.1219709 {[}Data
+  3{]}. Así pues, adicionalmente a Actinobacteria donde fue la primera vez
+  que una prueba de concepto de EvoMining fue probada, tres nuevas bases
+  de datos Genome DBs fueron integradas, incluyendo Cyanobacteria (416
+  genomas), Pseudomonas (219 genomas) y Archaea (876 genomas). Estos taxa
+  fueron elegidos por su diversidad de exploración respecto a BGCs, por
+  ejemplo Actinobacteria posee 602 MIBiG BGCs, Cyanobacteria cuenta con 60
+  MIBiG BGCs y Pseudomonas 53 MIBiG BGCs. Estos tres taxa han sido
+  ampliamente explorados experimentalmente y su riqueza metabólica está
+  fuera de duda; en contraste Archaea sólo posee 1 BGC en la nueva versión
+  MIBiG (v.1.4), y ninguno al tiempo de la realización de este trabajo
+  (v.1.3). Por esta razón, incluir el dominio Archaea en los análisis
+  permitía explorar espacios metabólicos previamente ignorados en la
+  minería genómica. Las predicciones de EvoMining se basan en identificar
+  expansiones de familias de enzimas en lugar de buscar BGCs completos,
+  por esta razón los borradores de genomas con un promedio de al menos 5
+  genes por contig también pudieron ser incluidos en la base de datos
+  Genome DB. Los genomas elegidos fueron recopilados de la base de datos
+  pública NCBI tal y como estaba disponible en Enero de 2017. Las
+  secuencias de DNA de estos genomas fueron anotadas como aminoácidos por
+  la plataforma RAST que a la vez realiza anotaciones funcionales {[} 36
+  {]}. Estos genomas, previo al análisis de EvoMining fueron minados por
+  antiSMASH {[} 7 {]} con un parámetro cf\_threshold de 0.7. Estos
+  resultados fueron suministrados como una base de datos interna, la
+  antiSMASH DB para finalmente esta información ser incorporada a los
+  árboles de EvoMining. Enzyme DB La versión previa de la base de datos de
+  EvoMining Enzyme DB comprendía 106 FEs, de metabolismo central de
+  acuerdo a reconstrucciones metabólicas de los organismos Streptomyces
+  coelicolor , Mycobacterium tuberculosis y Corynebacterium glutamicum {[}
+  15 {]}. Estos 106 EFs comprenden 339 secuencias de aminoácidos de
+  Actinobacteria, que fueron usadas como secuencias semilla. En la versión
+  actual, las 106 familias fueron filtradas hasta quedar sólo 42 que están
+  presentes en Cyanobacteria , Pseudomonas and Archaea. Durante el proceso
+  de selección, para evitar excluir familias debido a huecos debidos a
+  problemas técnicos relacionados a la secuenciación o al ensamble de los
+  genomas, se escogieron genomas semilla que estuvieran contenidos en un
+  sólo contig. Los genomas semillas son los proveedores de las secuencias
+  semilla que conforman la base de datos Enzyme DB. Para Cyanobacteria,
+  los genomas seleccionados son Cyanothece sp. ATCC 51142 , Synechococcus
+  sp. PCC 7002 y Synechocystis sp. PCC 6803; para el género Pseudomonas,
+  se escogieron Pseudomonas fluorescens pf0-1,Pseudomonas protegens Pf5,
+  Pseudomonas syringae y Pseudomonas fulva 12-X; y para el dominio
+  Archaea, los elegidos son Natronomonas pharaonis , Methanosarcina
+  acetivorans , Sulfolobus solfataricus y `Nanoarchaeum equitans' Kin4-M.
+  Las enzimas semilla que conforman la base Enzyme DB, fueron determinadas
+  en los genomas semilla de cada linaje mediante BBH contra la base de
+  datos de secuencias de metabolismo conservado original de EvoMining, la
+  Actinobacteria Enzyme DB {[} 15 {]}. La herramienta Metaphor {[} 38 {]}
+  fue la técnica implementada para obtener los BBH, se fitraron aquellas
+  secuencias con menos del 30 \% de identidad en un alineamiento del 80 \%
+  de la secuencia de las dos proteínas. Como resultado, las 106 familias
+  de Actinobacteria quedaron reducidas a 42 FEs, compartidas por los
+  genomas semilla de Actinobacteria, Cyanobacteria, Pseudomonas y Archaea.
+  Las bases de datos Enzyme DBs de todos los linajes están disponibles en
+  Zenodo con número de identificación DOI: 10.5281/zenodo.1219709 {[}Data
+  3{]} NP DB Los primeros análisis realizados con EvoMining incluían un
+  base de datos de productos naturales NP DB de 226 BGCs reunidos de la
+  literatura y curados manualmente {[} 15 {]}. En este trabajo la base NP
+  DB que se utilizó para los análisis es MIBiG v1.3{[} 2 {]}. La base que
+  viene incluida con el contenedor de EvoMining fue actualizada a la
+  siguiente versión MIBiG v.1.4 liberada en Agosto de 2018. Esta nueva
+  versión comprende 1813 NP BGCs y un total de 31 023 secuencias de
+  proteínas.
+  
+  \section{Observaciones genómicas de
+  EvoMining}\label{observaciones-genomicas-de-evomining}
+  
+  \subsection{Los perfiles de expansión de las proteínas dependen del
+  linaje.}\label{los-perfiles-de-expansion-de-las-proteinas-dependen-del-linaje.}
+  
+  Para entender la evolución de las enzimas y rutas metabólicas se
+  seleccionaron cuatro linajes de diversas características los phyla
+  Actinobacteria y Cyanobacteria , el género Pseudomonas y el dominio
+  Archaea. Todos los resultados en las figuras son presentados en este
+  orden. Estos taxa fueron seleccionados para tener un espectro de
+  análisis que abarcara tanto microorganismos ampliamente reconocidos como
+  productores de NP, es decir Actinobacteria (602 MIBiG BGCs),
+  Cyanobacteria (60 MIBiG BGCs) y Pseudomonas (53 MIBiG BGCs); como
+  también Archaea (0 BGCs en MIBiG versión 1.3), que representa un dominio
+  poco explorado en lo que respecta a los genes que forman parte de
+  metabolismo especializado{[} 40 {]}. Basándonos en estas bases de datos
+  del tipo Genome DBs, como es explicado en la Fig. 2(a), un conjunto de
+  familias enzimáticas comunes fue identificado. Notablemente, de las
+  originales 106 familias actinobacteriales menos del 50\% estaba
+  conservada en los nuevos taxa incorporados. Cada base de datos, una para
+  cada taxon, contiene sólo 42 FEs (Table S1). Esta observación, que 64
+  FEs no están conservadas en los cuatro taxa refleja lo específico del
+  metabolismo en cada linaje{[} 17 {]}
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = .5]{chapter2/FigurasPaper/Figure2.pdf}
+  \caption[Seed genomes]{\footnotesize{}}
+  \label{fig:SeedGenomes}
+  \end{figure}
+  
+  \section{Algoritmos y bases de datos de EvoMining
+  2.0}\label{algoritmos-y-bases-de-datos-de-evomining-2.0-1}
+  
+  EvoMining está compuesto de dos algoritmos, el de búsqueda de patrones
+  de expansión - reclutamiento y el de visualización de todas las copias
+  de una familia expandida clasificadas según sus posibles destinos
+  metabólicos. Además de los algortimos EvoMining necesita tres bases de
+  datos: i) la genómica, ii) las semillas enzimáticas, y iii) la de
+  productos naturales.
+  
+  \subsection{Algoritmo de expansión y
+  reclutamiento}\label{algoritmo-de-expansion-y-reclutamiento-1}
+  
+  La primera parte de la minería genómica evolutiva de EvoMining consiste
+  en detectar las expansiones y los reclutamientos de las familias
+  enzimáticas semilla. Una familia expandida consiste en todas las copias
+  detectadas mediante una búsqueda con BLASTp, e-value de 0.001 y bitscore
+  de 100, usando como query las secuencias de aminoácidos de las enzimas
+  semilla (Enzyme DB) y como base de datos de búsqueda las secuencias de
+  genomas de un linaje taxonómico (Genome DB). Un reclutamiento es una
+  copia extra de una familia de metabolismo conservado que ahora participa
+  en metabolismo especializado. Ejemplos de reclutamientos conocidos han
+  sido observados en BGCs reportados en MIBiG. Ejemplos de reclutamientos
+  predichos se encuentran en enzimas pertenecientes a BGCs reconocidos por
+  antiSMASH que tienen un origen en metabolismo conservado.
+  
+  En la primera versión de nuestro trabajo definimos que un organismo
+  poseía una expansión si el número de copias de una familia estaba por
+  encima del promedio mas dos desviaciones estándar. Siguiendo esta
+  definición EvoMining colorea en un heat plot las expansiones de las
+  familias enzimáticas respecto a un linaje taxonómico, señalando
+  explícitamente el número de copias de cada familia.
+  
+  En este sentido, no todas ls copias son expansiones, pero aún así pueden
+  ser predicciones de EvoMining, por ello para futuros trabajos es posible
+  que estar una unidad arriba de la moda, sea suficiente para ser un
+  reclutamiento.
+  
+  Los patrones de reclutamiento sólo pueden ser apreciados tras ordenar
+  los organismos filogenéticamente, por ejemplo Streptomyces tiene dos
+  enolasas. Se recomienda al usuario reordenar los organismos del heatplot
+  de acuerdo a un árbol de especies, mismo que puede ser calculado
+  utilizando Orthocore.
+  
+  En este paso, en cada familia expandida los ortólogos más parecidos a
+  las enzimas semilla de la enzyme DB son identificados por BBH. Estos
+  ortólogos serán considerados parte del metabolismo conservado y serán
+  posteriormente identificados con color rojo en la visualización. Las
+  copias extra parte de la familia expandida son enzimas de las que no se
+  conoce el destino metabólico, es posible que en los pasos subsequentes
+  de EvoMining sean reconocidas por antiSMASH o EvoMining como posibles
+  reclutamientos a metabolismo especializado. En otro caso permanecerán
+  como copias extra con destino metabólico desconocido.
+  
+  Una vez obtenidas las FEs expandidas e identificado los ortólogos del
+  metabolismo central, se conduce una nueva búsqueda con BLASTp, E-value
+  0.001, utilizando las EFs como queries contra la base de datos NP DB, la
+  de enzimas biosintéticas presentes en BGCs. Otras bases de datos que
+  contengan enzimas con un destino metabólico conocido podrían utilizarse
+  en lugar de NP DB. Los reclutamientos son la
+  
+  En conclusión el algoritmo de expansión - reclutamiento trabaja para
+  identificar tres clases de copias en las familias enzimáticas expandidas
+  (i) copias altamente conservadas con algún miembro en el metabolismo
+  conservado; (ii) reclutamientos conocidos en BGCs de productos
+  naturales; y (iii) copias extra que no son reclutamientos conocidos ni
+  parte obvia del metabolismo conservado, quedando por definir su destino
+  metabólico. Reconstrucciones filogenéticas de las familias enzimáticas
+  serán utilizadas en la siguiente sección para asignar a estas copias
+  extra obtenidas por el algoritmo de expansión y reclutamiento un origen
+  y destino metabólico
+  
+  \subsection{Algoritmo de reconstrucción filogenética y
+  visualización}\label{algoritmo-de-reconstruccion-filogenetica-y-visualizacion-1}
+  
+  Las secuencias de las familias enzimáticas expandidas fueron alineadas
+  con muscle v3.2 y curadas con Gblocks v0.91b. Los parámetro de Gblocks
+  fueron fijados en incluir 5 posiciones como el mínimo tamaño de un
+  bloque y diez posiciones como el máximo de posiciones contiguas no
+  conservadas. Posiciones ausentes de más del 50\% de las secuencias
+  fueron filtradas y removidas del alineameinto final. Para recontruis
+  filogenéticamente la historia de las enzimas se utilizó FastTree 2.1 que
+  es un método muy rápido pensado para miles de secuencias que utiliza un
+  algoritmo definido como ``aproximadamente máxima verosimilitud''.
+  
+  La minería genómica tradicional realizada por antiSMASH no es parte de
+  la tubería de EvoMining, pero puede las predicciones de antiSMASH pueden
+  ser calculadas previamente por el usuario y utilizadas por EvoMining. En
+  este trabajo antiSMASH 3.0 {[} 7 {]} fue utilizado en los secuencias de
+  los genomas de la Genome DB ( Fig. 1(b) ).
+  
+  La selección de color de las hojas del árbol fue automatizada utilizando
+  Newick Utilities una serie de programas llamados desde la terminal para
+  manipular árboles en formato Newick {[} 35{]}. La anotación funcional de
+  RAST en su versión clásica {[} 36 {]} fue agregada al SVG. Otros
+  metadatos como el número de copias por organismo y fueron escritos de
+  manera que los árboles producidos por EvoMining sean compatible con la
+  visualización de Microreact {[} 37 {]}.
+  
+  Los árboles de EvoMining diferencian entre la función metabólica de cada
+  miembro de una familia génica mediante un código de color ( Fig. 1b, c)
+  . Las secuencias más conservadas se identifican mediante BBH contra la
+  Enzyme DB, los hits de este proceso son considerados copias de
+  metabolismo central, y son marcadas en rojo. En el otro extremo están
+  los reclutamientos conocidos con alguna evidencia experimental que
+  fueron reportados en MIBiG {[} 2 {]}. Estos reclutamientos son marcados
+  en azul. Una vez definidos estos dos grupos, una predicción de EvoMining
+  es definida como aquellas hojas más cerca de una hoja azul que de una
+  hoja roja. Estas predicciones consideradas con más posibilidades de
+  pertenecer al metabolismo especializado que al conservado, son
+  coloreadas en verde ( Fig. 1c). Además de los tres destinos metabólicos
+  descritos marcados respectivamente en rojo, azul y verde, se puede
+  opcionalmente agregar información predicha por antiSMASH. Cuando el
+  usuario provee resultados de antiSMASH sobre qué genes pertenecen a un
+  BGC que contiene una enzima típica de metabolismo especializado, estos
+  se colorean en cyan y son llamados predicciones antiSMASH. Si una
+  secuencia es al mismo tiempo predicción EvoMining y predicción antiSMASH
+  se colorea cyan y se ignora el verde para enfatizar en los verdes las
+  posibles novedades químicas. Cuando una secuencia está en la
+  intersección de las reconocidas como metabolismo conservado marcada como
+  roja y predicción de antiSMASH es decir color cyan entonces es coloreada
+  de púrpura. Estas enzimas de intersección entre metabolismo conservado y
+  metabolismo especializado son definidas como enzimas de intersección.
+  Finalmente para todas las copias extra que no fueron marcadas como
+  rojas, azules, verdes, cyanes o púrpuras existe el color girs. Así pues
+  gris son aquellas hojas del árbol de las que no se tiene un clave sobre
+  su destino metabólico, estas secuencias son llamadas de destino
+  metabólico desconocido.
+  
+  \subsection{Las tres bases de datos de
+  EvoMining}\label{las-tres-bases-de-datos-de-evomining-1}
+  
+  EvoMining DBs Tres bases de datos son requeridas como variables de
+  inicio de EvoMining, la primera es el conjunto de secuencias de genomas
+  de un linaje, esta base fue llamada Genome DB. La segunda es un grupo de
+  secuencias de enzimas de metabolismo conservado llamada Enzyme DB. La
+  base de datos se secuencias de genes que pertenecen a un cluster
+  biosintético de metabolismo especializado es abreviada como base de
+  datos de productos naturales o por sus siglas en inglés NP DB. Las
+  transformaciones que sufrieron estas bases de datos desde la primera
+  versión de EvoMining hasta este trabajo están resumidas en la tabla uno
+  y serán descritas a continuación( Table 1 ). Genome DB La primera
+  versión de Genome DB comprendió 230 genomas de Actinobacteria,
+  incluyendo 50 géneros diferentes. Gracias a la explosión de datos
+  genómicos disponibles, en EvoMining 2.0 fue posible expandir el número
+  de genomas de Actinobacteria de Genome DB hasta 1245 genomes, incluyendo
+  193 géneros diferentes. Cuatro diferentes bases Genome DB fueron
+  utilizadas en este trabajo, Actinobacteria, Cyanobacteria, Pseudomonas y
+  Archaea. Estas bases están disponibles en el repositorio de datos
+  público Zenodo con identificador DOI: 10.5281/zenodo.1219709 {[}Data
+  3{]}. Así pues, adicionalmente a Actinobacteria donde fue la primera vez
+  que una prueba de concepto de EvoMining fue probada, tres nuevas bases
+  de datos Genome DBs fueron integradas, incluyendo Cyanobacteria (416
+  genomas), Pseudomonas (219 genomas) y Archaea (876 genomas). Estos taxa
+  fueron elegidos por su diversidad de exploración respecto a BGCs, por
+  ejemplo Actinobacteria posee 602 MIBiG BGCs, Cyanobacteria cuenta con 60
+  MIBiG BGCs y Pseudomonas 53 MIBiG BGCs. Estos tres taxa han sido
+  ampliamente explorados experimentalmente y su riqueza metabólica está
+  fuera de duda; en contraste Archaea sólo posee 1 BGC en la nueva versión
+  MIBiG (v.1.4), y ninguno al tiempo de la realización de este trabajo
+  (v.1.3). Por esta razón, incluir el dominio Archaea en los análisis
+  permitía explorar espacios metabólicos previamente ignorados en la
+  minería genómica. Las predicciones de EvoMining se basan en identificar
+  expansiones de familias de enzimas en lugar de buscar BGCs completos,
+  por esta razón los borradores de genomas con un promedio de al menos 5
+  genes por contig también pudieron ser incluidos en la base de datos
+  Genome DB. Los genomas elegidos fueron recopilados de la base de datos
+  pública NCBI tal y como estaba disponible en Enero de 2017. Las
+  secuencias de DNA de estos genomas fueron anotadas como aminoácidos por
+  la plataforma RAST que a la vez realiza anotaciones funcionales {[} 36
+  {]}. Estos genomas, previo al análisis de EvoMining fueron minados por
+  antiSMASH {[} 7 {]} con un parámetro cf\_threshold de 0.7. Estos
+  resultados fueron suministrados como una base de datos interna, la
+  antiSMASH DB para finalmente esta información ser incorporada a los
+  árboles de EvoMining. Enzyme DB La versión previa de la base de datos de
+  EvoMining Enzyme DB comprendía 106 FEs, de metabolismo central de
+  acuerdo a reconstrucciones metabólicas de los organismos Streptomyces
+  coelicolor , Mycobacterium tuberculosis y Corynebacterium glutamicum {[}
+  15 {]}. Estos 106 EFs comprenden 339 secuencias de aminoácidos de
+  Actinobacteria, que fueron usadas como secuencias semilla. En la versión
+  actual, las 106 familias fueron filtradas hasta quedar sólo 42 que están
+  presentes en Cyanobacteria , Pseudomonas and Archaea. Durante el proceso
+  de selección, para evitar excluir familias debido a huecos debidos a
+  problemas técnicos relacionados a la secuenciación o al ensamble de los
+  genomas, se escogieron genomas semilla que estuvieran contenidos en un
+  sólo contig. Los genomas semillas son los proveedores de las secuencias
+  semilla que conforman la base de datos Enzyme DB. Para Cyanobacteria,
+  los genomas seleccionados son Cyanothece sp. ATCC 51142 , Synechococcus
+  sp. PCC 7002 y Synechocystis sp. PCC 6803; para el género Pseudomonas,
+  se escogieron Pseudomonas fluorescens pf0-1,Pseudomonas protegens Pf5,
+  Pseudomonas syringae y Pseudomonas fulva 12-X; y para el dominio
+  Archaea, los elegidos son Natronomonas pharaonis , Methanosarcina
+  acetivorans , Sulfolobus solfataricus y `Nanoarchaeum equitans' Kin4-M.
+  Las enzimas semilla que conforman la base Enzyme DB, fueron determinadas
+  en los genomas semilla de cada linaje mediante BBH contra la base de
+  datos de secuencias de metabolismo conservado original de EvoMining, la
+  Actinobacteria Enzyme DB {[} 15 {]}. La herramienta Metaphor {[} 38 {]}
+  fue la técnica implementada para obtener los BBH, se fitraron aquellas
+  secuencias con menos del 30 \% de identidad en un alineamiento del 80 \%
+  de la secuencia de las dos proteínas. Como resultado, las 106 familias
+  de Actinobacteria quedaron reducidas a 42 FEs, compartidas por los
+  genomas semilla de Actinobacteria, Cyanobacteria, Pseudomonas y Archaea.
+  Las bases de datos Enzyme DBs de todos los linajes están disponibles en
+  Zenodo con número de identificación DOI: 10.5281/zenodo.1219709 {[}Data
+  3{]} NP DB Los primeros análisis realizados con EvoMining incluían un
+  base de datos de productos naturales NP DB de 226 BGCs reunidos de la
+  literatura y curados manualmente {[} 15 {]}. En este trabajo la base NP
+  DB que se utilizó para los análisis es MIBiG v1.3{[} 2 {]}. La base que
+  viene incluida con el contenedor de EvoMining fue actualizada a la
+  siguiente versión MIBiG v.1.4 liberada en Agosto de 2018. Esta nueva
+  versión comprende 1813 NP BGCs y un total de 31 023 secuencias de
+  proteínas.
+  
+  \section{Observaciones genómicas de
+  EvoMining}\label{observaciones-genomicas-de-evomining-1}
+  
+  \subsection{Los perfiles de expansión de las proteínas dependen del
+  linaje.}\label{los-perfiles-de-expansion-de-las-proteinas-dependen-del-linaje.-1}
+  
+  Para entender la evolución de las enzimas y rutas metabólicas se
+  seleccionaron cuatro linajes de diversas características los phyla
+  Actinobacteria y Cyanobacteria , el género Pseudomonas y el dominio
+  Archaea. Todos los resultados en las figuras son presentados en este
+  orden. Estos taxa fueron seleccionados para tener un espectro de
+  análisis que abarcara tanto microorganismos ampliamente reconocidos como
+  productores de NP, es decir Actinobacteria (602 MIBiG BGCs),
+  Cyanobacteria (60 MIBiG BGCs) y Pseudomonas (53 MIBiG BGCs); como
+  también Archaea (0 BGCs en MIBiG versión 1.3), que representa un dominio
+  poco explorado en lo que respecta a los genes que forman parte de
+  metabolismo especializado{[} 40 {]}. Basándonos en estas bases de datos
+  del tipo Genome DBs, como es explicado en la Fig. 2(a), un conjunto de
+  familias enzimáticas comunes fue identificado. Notablemente, de las
+  originales 106 familias actinobacteriales menos del 50\% estaba
+  conservada en los nuevos taxa incorporados. Cada base de datos, una para
+  cada taxon, contiene sólo 42 FEs (Table S1). Esta observación, que 64
+  FEs no están conservadas en los cuatro taxa refleja lo específico del
+  metabolismo en cada linaje{[} 17 {]}
+  
+  Texto \autoref{fig:SeedGenomes}
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = .5]{chapter2/FigurasPaper/Figure3.pdf}
+  \caption[Expansion patterns in 42 conserved families]{\footnotesize{}}
+  \label{fig:ExpansionPatterns}
+  \end{figure}
+  
+  Todos los linajes tienen patrones de expansión similares en las 42 FEs
+  analizadas hasta un tamaño de genoma 5 Mbp. En genomas más grandes, el
+  número total de secuencias crece más en Pseudomonas que en el phylum
+  Actinobacteria, que es más grande que el phylum Cyanobacteria y que el
+  dominio Archaea (Fig. 2b). Este resultado puede deberse a que no se han
+  descubierto tamaños de genoma Archaea de tamaño comparable a los de
+  Streptomyces o Pseudomonas (\textgreater{}5 Mbp). Cyanobacteria a pesar
+  de tener genomas grandes no tiene tantas expansiones. Esta observación,
+  es posible que sea generalizable a todas las EFs de metabolismo
+  conservado o bien que se deba a un sesgo en la selección de las familias
+  que componen a la EFs. Los órdenes con mayor número de copias fueron en
+  las expansiones de las familias de la Enzyme DB fueron Streptomycetales
+  y Nostocales , en Actinobacteria y Cyanobacteria respectivamente. Esta
+  observación es congruente con que estos órdenes tienen un tamaño de
+  genoma grande en sus linajes correspondientes, y además están
+  ampliamente representados en MIBiG como sintetizadores de productos
+  naturales. Interesantemente la clase Halobacteria es la que muestra
+  mayor número de expansiones en Archaea, aunque no es la clase con mayor
+  tamaño de genoma en promedio (Fig. S10). {[}FIGURA tamaño de genoma{]}
+  Texto \autoref{fig:ExpansionPatterns}
+  
+  Esta observación es congruente con que las archaeocinas,
+  dicetopiperazinas, carotenoides y otros productos naturales de Archaea
+  fueron aislados de especies de Halobacteria, los NP BGCs sintetizadores
+  de estos metabolitos no han sido caracterizados {[} 40 {]}. Por ello
+  EvoMining una herramienta de minería genómica que puede ayudar a
+  explorar linajes poco minados con el potencial de descubrir nuevas rutas
+  metabólicas. La figura muestra que aunque en las familias conservadas
+  seleccionadas el número de copias extra correlaciona con el tamaño de
+  genoma los perfiles de expansiones son diferentes en cada grupo
+  taxonómico. Este incremento parece cambiar su patrón en todos los
+  linajes a partir de 5Mbp ( Fig. 2b). Acorde a estos resultados se
+  concluye que para ensamblar una base de datos genómica para EvoMining se
+  debe considerar que las expansiones dependen tanto de los distintos
+  linajes taxonómicos como de la diversidad del tamaño de genoma. \#\#\#
+  El shell genome posee expansiones en sus familias enzimáticas\\
+  La figura muestra que Pseudomonas posee en promedio más copias por
+  genoma que los otros taxa. De las 42 familias analizadas el 54.8 \%
+  tiene su máximo número promedio de copias por genoma en este linaje.
+  (Fig. S11). En contraste, Actinobacteria es el máximo en 26.2 \% de las
+  FEs, mientras que Archaea and Cyanobacteria empatan en ser el linaje con
+  más expansiones sólo en el 9.5 \% de los casos (Table S1). Aunque
+  existen familias como la acetylornitino aminotransferasa o la
+  acetolactato sintasa (ALS) que están expandidas en todos los linajes
+  (coordenadas A1 y E1, Fig. S11), muchas otras familias exhiben
+  expansiones sólo en ciertos linajes. Tal es el caso de la fumarato
+  reductasa subunidad de hierro-azufre (coordinate C3, Fig. S11), muy
+  expandida en Actinobacteria pero con menos de una copia por genoma en
+  promedio en Cyanobacteria .
+  
+  No todas las FEs están expandidas, aunque las 42 familias conservadas
+  están presentes en alguno de los genomas semilla de cada linaje, varias
+  de ellas no se encuentran en la mayoría de los genomas del resto de su
+  base de datos. Este es el caso de AroB en Archaea, donde tiene muy poca
+  representación. Sin embargo, un gran porcentaje de familias muestra
+  perfiles de expansión acordes a la tendencia del número total de copias
+  extra, mostrada en la figura XX. Es decir, por familia Pseudomonas suele
+  ser el linaje con el mayor número de expansiones mientras que Archaea
+  suele ser el linaje menos expandido. Entre las excepciones a esta
+  tendencia está GDH una familia incluida dentro de los ocho casos
+  seleccionados para ilustrar esta diversidad que son mostrados en la
+  figura Fig. 3(a). En esta figura los máximos están marcados con un
+  círculo mientras que los mínimos con un triángulo, los colores de estas
+  formas geométricas representan los mismos linajes que los mostrados en
+  la figura 2. Del total de las 42 familias, GDH es una de las cuatro FEs
+  en las que el mayor número de expansiones se encuentra en Archaea. De
+  hecho, GDH tiene menos de una copia por genoma en promedio en los otros
+  taxa, probando que no se encuentra dentro del core genómico de estos
+  linajes. Esto contrasta con AroB, que muestra una tendencia opuesta, no
+  es parte del core de Archaea pero muestra copias extra y una presencia
+  mayor que uno en promedio en los otros tres taxa analizados ( Fig. 3b).
+  Los ocho casos mostrados en la figura son todos parte de un cluster
+  biosintético de Cyanobacteria, descrito en las secciones posteriores de
+  este trabajo.
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = .5]{chapter2/FigurasPaper/Figure4.pdf}
+  \caption[EvoMining en cuatro linajes genómicos]{\footnotesize{}}
+  \label{fig:GenomicLinajes}
+  \end{figure}
+  
+  Con estas observaciones sospechamos que GDH es miembro del shell genome
+  {[} 29 {]} en los taxa Actinobacteria , Cyanobacteria y Pseudomonas, ya
+  que en promedio está cerca de tener una copia promedio por genoma. El
+  promedio no es suficiente para decir que una familia pertenece al shell,
+  podrían suceder casos sobre todo cuando hay mucha variación n un taxon
+  como en el caso de un domino o un phylum en contraposición con taxones
+  coservados como géneros en los que para una cierta familia la mitad de
+  los genomas de un linaje tuviera dos copias y la otra mitad cero. Sin
+  embargo en el caso de la GDH si es consistente en que está presente en
+  más del 50 \% de los genomas de cada linaje (Fig. 3a). Las modas de
+  número de copias también son informativas por ello son mostradas en la
+  figura XXX. Una sóla copia extra puede ser la que sea reclutada en
+  metabolismo especializado. En la figura XXX se muestra un ejemplo donde
+  AroB es una enzima core en oposición a GDH que es una enzima shell. En
+  este esquema conceptual, en algunos de los genomas que contienen a AroB
+  existen copias que se dedican al metabolismo especializado marcadas en
+  color cyan, otras copias no tienen un destino metabólico conocido por lo
+  que están marcadas en gris, y otras más marcadas en púrpura son enzimas
+  de transición que están llevando a cabo simultáneamente una función en
+  metabolismo central y otra en metabolismo especializado. En contraste a
+  AroB se muestra GDH, que a pesar de no tener copias en algunos genomas y
+  con un promedio de copias por genoma menor a uno y una moda de uno en
+  esta muestra, GDH existe por duplicado en dos genomas. En uno de esos
+  genomas donde GDH tiene una copia extra, más allá de la moda, esa copia
+  se muestra como un reclutamiento al metabolismo especializado en cyan.
+  Fig. 3(b) . Las expansiones encontradas por EvoMining en la familia GDH
+  incluían predicciones de antiSMASH para Actinobacteria, Cyanobacteria y
+  Archaea, no así para Pseudomonas. La secuencia del reclutamiento de GDH
+  por los clusters biosintéticos scytonemin y el policétido pactamycin {[}
+  41 {]}, es suficientemente parecida como para que EvoMining la detecte
+  como expansión en Actinobacteria, Cyanobacteria y Archaea, pero es tan
+  divergente respecto a la familia GDH en Pseudomonas que EvoMining lo
+  deja fuera de la familia expandida en este linaje. Los árboles donde
+  puede apreciarse esta observación pueden consultarse más adelante en la
+  Fig. 4 de la siguiente sección. Los resultados anteriores sugieren que
+  la evolución del metabolismo especializado es linaje dependiente, y más
+  aún que tal y como ya se conocía en las FEs del core genome las enzimas
+  del shell como GDH también poseen el potencial de ser reclutadas en NP
+  BGCs. A partir de estos resultados ( Fig. 3a, b ), se realizó un esquema
+  conceptual para explicar cómo en linajes genómicos diversos las familias
+  de enzimas con origen en el metabolismo central que forman parte del
+  core genome o bien las familias en el metabolismo conservado que incluye
+  tanto al core como al shell genome, evolucionan al metabolismo
+  especializado que tiene una mayor representación en el cloud genome (
+  Fig. 3c) . Este modelo es relevante porque establece el papel de las
+  familias del shell genome, que no fue considerado en la primera
+  iteración que explotó las capacidades de EvoMining como herramienta de
+  minería genómica para encontrar BGCs novedosos {[} 21 {]}.
+  
+  Texto \autoref{fig:GenomicLinajes}
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = .5]{chapter2/FigurasPaper/Figure5.pdf}
+  \caption[EvoMining aplicado a la rama de scytonemina]{\footnotesize{}}
+  \label{fig:Scytonemin}
+  \end{figure}
+  
+  Texto \autoref{fig:Scytonemin}\\
+  En la siguiente sección se analizarán los patrones de expansión
+  reclutamiento de GDH provistas por EvoMining for GDH y se describirán
+  los árboles filogenéticos de cada linaje mostrados en la Figs 4 , así
+  como un árbol que incluye conjuntamente secuencias de todos los linajes
+  (Data 4 and Figs S12 and S13). En Archaea, GDH tiene en promedio 1.23
+  copias por genoma, mientras en Actinobacteria, Cyanobacteria y
+  Pseudomonas esta media es de 0.74, 0.56 y 0.65, respectivamente. En
+  estos tres taxa GDH es parte del shell genome (Table S2). Además de GDH
+  se estudiaron las expansiones y los árboles filogenéticos de TrpA, TrpB,
+  TrpC, TrpD, TrpEG, AroB y ALS, todas ellas parte de las 42 FEs
+  conservadas entre los cuatro linajes y a la vez reclutadas en scytonemin
+  {[}11, 12 {]} un cluster biosintético de Cyanobacteria.
+  
+  \subsection{GDH y ALS en el cluster scytonemin ejemplifican como
+  familias pertenecientes a un mismo BGC pueden tener distintos patrones
+  de
+  expansión.}\label{gdh-y-als-en-el-cluster-scytonemin-ejemplifican-como-familias-pertenecientes-a-un-mismo-bgc-pueden-tener-distintos-patrones-de-expansion.}
+  
+  La enzima GDH, se encuentra presente en muchos linajes debido tanto a su
+  origen ancestral como a la transferencia horizontal {[} 28, 42 {]} (Fig.
+  S12). GDH cataliza la reacción reversible de desaminación oxidativa de
+  glutamato en α-cetoglutarato y amonio. De acuerdo al uso de cofactores
+  GDH puede dividirse en tres clases, la primera usa NAD+ y es nombrada
+  como GDH(NAD+). La segunda clase utiliza NADP+ y es conocida como
+  GDH(NADP+). La tercera clase utiliza ambos cofactores NAD+ y NADP+; por
+  lo que se le conoce como GDH(NAD+ y NADP+) {[} 13 {]}. Aunque existen
+  otras clasificaciones de la diversidad de enzimas GDH esta fue
+  seleccionada porque se relaciona con la historia evolutiva de la enzima.
+  GDH(NAD+) is utilizada para la oxidación del glutamato mientras que
+  GDH(NADP+) para fijar amonio, algunas enzimas de Archaea funcionan bien
+  con ambos cofactores, es decir tienen promiscuidad de cofactores {[} 13
+  {]}. La especificidad por NAD o NADP probablemente emergió en repetidas
+  ocasiones, una evidencia a favor de esta hipótesis es que se ha mostrado
+  que algunas mutaciones pueden revertir la especificidad {[} 42 {]}. Esto
+  sugiere que en los cofactores análogamente al caso de promiscuidad por
+  sustrato, la similitud de secuencia no siempre es suficiente para
+  evidenciar la especificidad. En ocasiones la divergencia o cercanía
+  filogenética de los organismos productores de la enzima es una
+  información adicional a la similitud de secuencia, esta consideración es
+  importante al analizar enzimas en linajes muy divergentes. La familia
+  GDH muestra expansiones aunque no muy abundantes en Actinobacteria
+  {[}Data 5{]} ( Fig. 4a) ,y en Cyanobacteria {[}Data 6{]} ( Fig. 4b). Las
+  expansiones están prácticamente ausentes en Pseudomonas {[}Data 7{]} (
+  Fig. 4c) . En contraste, un número significativo de expansiones es
+  encontrado en Archaea {[}Data 8{]} ( Fig. 4d) . El árbol de EvoMining de
+  la familia GDH en Archaea fue enraizado con la secuencia semilla de
+  Sulfolobus , predicha por RAST como una enzima dual en el uso de
+  cofactores NAD(P)+ {[} 43 {]}. En Archaea las tres clases de GDH
+  alternan en las ramas del árbol (Fig. S13, Data 5-8). Muchas de las
+  secuencias clasificadas como de metabolismo conservado se concentran
+  volviendo rojas las ramas basales del árbol. Se observa otro clado más
+  grande y diverso compuesto casi exclusivamente por enzimas específicas
+  para NAD(P) {[} 44 {]}, incluyendo muchas predicciones de antiSMASH, y
+  sólo dos marcadas como metabolsimo conservado. Estas dos marcas pueden
+  deberse a la pérdida real de una enzima d metabolismo central en las
+  ramas centrales o bien a huecos debidos a la calidad del ensamblado y la
+  secuenciación de los genomas. La anotación funcional de estos ortólogos
+  de GDH apunta hacia reclutamientos en el metabolismo especializado.
+  Estos reclutamientos fueron identificados en organismos de los genera
+  Haladaptatus ,Haloterrigena , Natrialba , Natrinema , Natrialbaceae y
+  Natronococcus. Los genes codificante se encuentran un contexto de
+  posible síntesis de terpenos. Este contexto incluye enzimas relacionadas
+  al geranyl pyrofosfato, un precursor de todos los terpenos y terpenoides
+  {[} 45 {]}. Este árbol tiene también casos de divergencia reciente, hay
+  una pequeña rama indistinguible en la figura pero explorable en la
+  plataforma microreact donde los parálogos aparecen junto a las
+  secuencias de metabolismo central. Finalmente a pesar de la divergencia
+  las últimas ramas corresponden a enzimas de metabolismo conservado, es
+  decir son las copias más parecidas en esos organismos a las semillas
+  provistas en la Enzyme DB( Fig. 4d) . En contraste con la amplia
+  expansión de GDH relacionada a las adaptaciones metabólicas en Archaea,
+  el árbol de Cyanobacteria tiene copias extra sólo en el 4.5 \% de sus
+  genomas ( Fig. 4b , Table S2). En esta rama expandida se encontraron
+  cuatro predicciones de antiSMASH y cuatro predicciones de EvoMining en
+  la rama que contiene a ScyB el homólogo de GDH que fue reclutado por el
+  BGC scytonemin. ScyB es pues parte de la síntesis de scytonemin, un
+  pigmento amarillo producido por muchas Cyanobacterias como protección
+  contra la radiación UV-A solar {[} 11 {]}. `Nostoc punctiforme' PCC
+  73102 es el organismo productor de scytonemin cuyo BGC fue caracterizado
+  y anotado en MIBiG. EvoMining sólo unas pocas secuencias GDH copias
+  extra de especies de Nostoc aún cuando se conoce que homólogos de scyB
+  pueden encontrarse en estos genomas. Esta observación puede deberse a la
+  gran divergencia de secuencia entre copias de metabolismo central y de
+  metabolismo especializado en estos organismos. En la vecindad genómica
+  de algunas expansiones de GDH se observó la secuencia de ALS, un gen
+  identificado en la literatura como homólogo de scyA. además, en los BGC
+  conocidos de scytonemin se observó que scyB se conserva cerca del gene
+  scyA ( Fig. 5a). ScyA es homólogo de la subunidad larga de ALS. Esta
+  familia tiene un número promedio de copias de 1.87 \% en la base de
+  datos Genome DB de Cyanobacteria. La media es de hecho de 2.1 copias en
+  organismos que contienen al menos una copia ALS, pero la moda del número
+  de copias es 1 (Table S2). Estos datos indican que muchos organismos
+  tienen más de dos copias de ALS lo que puede correlacionar con que esta
+  familia es más dispersa alrededor de la moda (Fig. S4, blue line). Al
+  generar el árbol de EvoMining de ALS en Cyanobacteria (Fig. S11 and Data
+  9), se observó que scyA es un reclutamiento que se localiza en una rama
+  repleta de secuencias de ALS provenientes de Nostoc spp., que fueron
+  etiquetadas como predicciones de EvoMining ( Fig. 5c ). Estas
+  predicciones incluyen más de veinte organismos conocidos como
+  productores de scytonemin {[} 10, 12 {]}. Además ramas cercanas muestran
+  secuencias de ALS que son predicciones de antiSMASH hits, reforzando la
+  sugerencia de que esta seción del árbol se dedica al metabolismo
+  especializado. Una rama más contiene a los mismos organismos encontrados
+  en el árbol de EvoMining de la familia GDH, estos organismos son
+  mostrados en el zoom de la rama de ScyB ( Fig. 5b ).
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = .5]{chapter2/FigurasPaper/Figure6.pdf}
+  \caption[EvoMining Algorithm]{\footnotesize{}}
+  \label{fig:Ruta}
+  \end{figure}
+  
+  Texto \autoref{fig:Ruta}\\
+  Esta observación sugiere co-diversificación, vía un evento de expansión
+  reclutamiento de ScyA y ScyB a partir de su origen en ALS y GDH,
+  respectivamente. Los perfiles de expansin de estas familias difieren ya
+  que a diferencia de la muy poblada rama de scyA en el árbol de ALS, la
+  similitud entre homólogos de GDH EF y homólogos de ScyB no fue
+  suficiente para reconstruir una rama de ScyB con todas las expansiones
+  sugeridas por la ocurrencia del cluster de scytonemin. Estas
+  observaciones son una lección a usar EvoMining como herramienta de
+  minería genómica, que enzimas cercanas pueden co-diversificarse en
+  ocasiones formando parte de un mismo BGC pero a la vez estar sujetas a
+  distintas restricciones evolutivas.
+  
+  \subsection{El cluster de scytonemin es un cluster
+  promiscuo.}\label{el-cluster-de-scytonemin-es-un-cluster-promiscuo.}
+  
+  El primer cluster caracterizado de scytonemin, mostrado en la figura
+  shown in Figs 5(a) and 6 , comprende 18 genes {[}12 {]}. Además de genes
+  reguladores, este BGC incluye genes biosintéticos scyABC; otros genes
+  conservados cuya función queda por dilucidar, scyDEF; y proveedores de
+  precursores: tyrA, dsbA, aroB, trpE/G,trpC, trpA, tyrP, trpB, trpD,
+  aroG. Las familias enzimáticas TrpABCDEG y AroB son parte de las rutas
+  de los aminoácidos aromáticos y el ácido shikímico, parecen haber sido
+  reclutadas para proveer de los precursores L-triptofano y prefrenato
+  necesarios para la síntesis de scytonemin. En oposición a los genes del
+  operon trp y a AroB que siguen realizando su función de metabolismo
+  conservado aún al ser parte de una ruta de metabolismo especializado
+  están ScyA y ScyB. Estas dos familias también tienen un origen en el
+  metabolismo conservado, ya se ha explicado que tienen su origen en las
+  familias ALS y GDH, pero en este caso sí ha cambiado la especificidad
+  por sustrato al momento de la incorporación al metabolismo especializado
+  ( Fig. 6 ). ALS une dos piruvatos, transformándolos en S-2-acetolactato
+  {[} 14 {]}, mientras que ScyB cataliza la unión de indol-3-piruvato con
+  p-hydroxy-fenil-ácido pirúvico. Análogamente GDH convierte L-glutamate
+  en 2-oxoglutarato {[} 13 {]}, mientras que ScyA cataliza una
+  desaminación oxidativa de triptofano. El producto de estas dos enzimas
+  actuando secuencialmente e un dipéptido, el cual es ciclizado por ScyC.
+  La ruta metabólica culmina con una serie de oxidaciones y dimerizaciones
+  hasta llegar al producto scytonemin, aún no es claro como estos útimos
+  pasos se llevan a cabo {[} 11 {]}.
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = .5]{chapter2/FigurasPaper/Figure7.pdf}
+  \caption[EvoMining Algorithm]{\footnotesize{}}
+  \label{fig:CorasonScytonemina}
+  \end{figure}
+  
+  Texto \autoref{fig:CorasonScytonemina}\\
+  Además de GDH y ALS el BGC de scytonemin tiene seis familias que son
+  parte de las 42 FEs analizadas aquí, es decir 8 de los genes que
+  participan en la síntesis de scytonemin tienen un origen en metabolismo
+  central y fueron reclutados en el cluster de scytonemin ( Fig. 3 a,
+  Table S3). ( Figs 5 and S3--S9). De estas familias, seis de los siete
+  árboles de EvoMining contienen copias extras identificadas como
+  predicciones de EvoMining predictions, debido a que en su rama de
+  expansión se encuentra el correspondiente gen de scytonemin del cluster
+  reportado en MIBiG. Estas familias incluyen AroB y todos los genes de la
+  ruta del L-triptofano excepto trpF. Además los árboles de EvoMining de
+  estas familias incluyen predicciones en ramas que con enzimas
+  provenientes de las rutas de síntesis de otros pigmentos protectores
+  solares como la shinorina y los aminoácidos de tipo mycosporina {[} 46
+  {]} (Fig. S8), además de otros productos no relacionados como la
+  welwitindolinona {[} 47 {]}, ambiguina {[} 48 {]} y la fischerindolina
+  {[} 49 {]} (Figs S3--S7). Estos resultados ilustran como EvoMining puede
+  complementar a antiSMASH mediante la identificación de secuencias de NP
+  BGCs no tradicionales. Para investigar la coocurrencia de ScyA y ScyB,
+  que son necesarias juntas para producir scytonemin, reconstruimos su
+  historia evolutiva conjunta. Para ello se obtuvieron las secuencias de
+  lo genomas donde ambas tenían presencia, se concatenaron sus secuencias
+  y se realizó una filogenia con ellas. Las variantes de la vecindad
+  genómica del BGC de scytonemin fueron visualizadas mediante el uso de
+  corason {[} 21 {]}. En el siguiente capítulo este software de
+  visualización y organización de vecindades genómicas será explicado con
+  más detalle. Los análisis filogenómicos resultaron en 34 cyanobacterias
+  con diversidad química en el BGC de scytonemin. Es decir en concusión
+  scytonemin es un ejemplo de cluster promiscuo, ya que parece haber un
+  core conservado, pero diversidad en enzimas accesorias y por tanto en
+  sus productos finales.\\
+  Se pudieron predecir cinco estructuras putativas que son variantes de
+  scytonemin y correlacionan con episodios de pérdida y ganancia de genes
+  en este locus ( Fig. 7 ). Al core de genes scyABCD se incorporan genes
+  que realizan ornamentos como hidrolasas, prenil-transferasas ,
+  fosfodiesterasas y monooxigenasas , para formar congéneres de scytonemin
+  como los compuestos 1 y 2. La pérdida de los genes scyDEF y la aparición
+  de otras enzimas como la tyrosinase y o la amidasa pueden derivar en la
+  síntesis de los compuestos 3 and 4. Además encontramos que homólogos de
+  scyA y scyB son parte de otro BGC que contiene un híbrido NRPS-PKS.
+  Siguiendo las reglas biosintéticas de estas enzimas se propuso el
+  compuesto 5. La diversidad química sugerida en estas predicciones sólo
+  puede ser validado mediante el trabajo experimental. Las variantes
+  producidas por la dinámica evolutiva del metabolismo especializado
+  fueron sugeridas mediante el sólo uso de ScyA y ScyB como anzuelos de
+  búsqueda. Estos resultados sugieren el poder predictivo de EvoMining
+  para abrir la exploración de espacios metabólicos típicamente
+  inexplorados por métodos de búsqueda tradicionales de NP BGCs que no
+  consideran la evolución dentro de sus algoritmos de minería genómica.
+  
+  \subsection{Consideraciones para el uso de
+  EvoMining}\label{consideraciones-para-el-uso-de-evomining}
+  
+  EvoMining fue desarrollado como una herramienta descargable de minería
+  genómica que puede ser aplicada a bases de datos de secuencias de
+  metabolismo conservado (Enzyme DB) provenientes de FEs de distintos
+  phyla. Nuestros análisis llevaron a la conclusión de que los patrones de
+  expansión reclutamiento dependen tanto de la familia enzimática como del
+  linaje genómico en el que se analiza. Una consideración importante al
+  usar EvoMining es que el tamaño de genoma correlaciona con el número de
+  copias extra de familias expandidas. Aunque el tamaño de genoma es
+  importante, también encontramos expeciones donde EvoMining pudo predecir
+  enzimas de BGCs no tradicionales en genomas relativamente pequeños,
+  sugiriendo que hacen falta más análisis para estudiar esta relación.
+  Along these lines, we opted to compare genomic lineages that are not
+  only highly divergent, and in some cases poorly understood with regards
+  to NP biosynthesis, but also disproportionate in terms of their
+  taxonomic resolution and distances. Thus, it is possible that these
+  factors could have imposed a bias when establishing relationships
+  between genome size, the rate of gene expansions and metabolic
+  diversity. After comprehensively analysing GDH, an EF notably expanded
+  in Archaea but not in other taxa, we provide an example of a recruitment
+  of a central metabolic enzyme by a NP BGC, as well as by other metabolic
+  pathways. It is interesting to note that the most expanded EF in
+  previous EvoMining proof-of-concept analyses {[} 15 {]} were asparagine
+  synthase, 2-dehydro-3-deoxyphosphoheptanoate aldolase and
+  3-phosphoshikimate-1-carboxivinyl transferase, which lead to the
+  discovery of unprecedented arsenolípidos biosynthetic enzymes. Notably,
+  none of these enzymes were part of the 42 EFs analysed herein,
+  reinforcing the notion that not only conserved enzymes, but also shell
+  enzymes with extra copies, can serve as beacons for the discovery of
+  novel NP BGCs. These observations emphasize the predictive nature of
+  EvoMining, which became apparent only after the origin and fate of
+  enzymes could be traced back to evolutionary events at different levels,
+  from genome dynamics involving large loci, to different mutations rates
+  at the protein sequence level. EvoMining users, therefore, should define
+  beforehand the most appropriate EF to be used for a certain taxonomic
+  group. The selected Enzyme DB should contain a set of EFs where
+  expansion patterns could be detected. In turn, EFs with a distribution
+  restricted to a small percentage of genomes are not suitable for
+  EvoMining analysis. It is also important to determine which EFs are
+  shared by most of the genomes within the genomic lineages of interest,
+  and whether this is important for the type of EvoMining analyses to be
+  performed. The original EvoMining DB included manually curated EFs only
+  involving central metabolic enzymes, but, as it was demonstrated here,
+  these did not necessarily represent the core enzymatic repertoire of
+  Actinobacteria . This relates to the difficulty of defining what is
+  central metabolism; thus, we prefer to use the term core enzymes at
+  different thresholds of conservation. In our case, we used 50 \% to
+  define shell enzymes. This notion implies the possibility of
+  automatizing Enzyme DB integration by selecting for EFs in any given
+  genomic lineage, avoiding the need to arbitrarily define what is central
+  metabolism. Otro punto clave para el mejoramiento de EvoMining fue la
+  disponibilidad de la base de datos MIBiG {[}2{]} que permite incrementar
+  consistentemente y sin esfuerzo de curación manual a los BGCS reportados
+  por investigadores de todo el mundo. La versión previa de EvoMining no
+  incluía por ejemplo NP BGC de Cyanobacteria o de Archaea, y fue por esta
+  actualización que la nueva versión de EvoMining pudo identificar
+  correctamente secuencias cercanas a ScyA y ScyB. Sin la presencia de la
+  señal de los BGC de Cyanobacteria en MIBiG estas hojas habrían sido
+  catalogadas como de destino metabólico desconocido. This maybe the case
+  in Archaea, where some sequences in the GDH tree are labelled as such,
+  possibly related to terpenes as well as to other metabolic fates
+  yet-to-be discovered. The presence of only one Archaea BGC at MIBiG is
+  clearly due to the limited research available of the potential of
+  Archaea to synthesize NPs, as our results suggest that current methods
+  based on previous knowledge from unrelated taxa impose biases that
+  hamper our ability to unlock the metabolic diversity of this domain of
+  life. We anticipate that this situation will be overcome by EvoMining,
+  as it is a less-biased and rule-independent approach.
+  
+  \section{OTros ejemplos de EvoMining en Actinobateria y
+  Pseudomonas}\label{otros-ejemplos-de-evomining-en-actinobateria-y-pseudomonas}
+  
+  \subsection{EvoMining en Rna
+  transferasas}\label{evomining-en-rna-transferasas}
+  
+  Azoxy
+  
+  \subsection{\texorpdfstring{La familia \emph{tauD} tiene expansión y
+  reclutamiento tanto en Actinobacteria como en
+  Pseudomonas}{La familia tauD tiene expansión y reclutamiento tanto en Actinobacteria como en Pseudomonas}}\label{la-familia-taud-tiene-expansion-y-reclutamiento-tanto-en-actinobacteria-como-en-pseudomonas}
+  
+  TauD en una enzima dedicada al metabolismo de taurina, proviene del
+  operon de \emph{E. coli}. En Pseudomonas también tiene muchas
+  expansiones. Es parte de los clusters rimosamide y detoxin, así como de
+  15 BGCs más. Tiene en Actinobacteria una gran rama dedicada al
+  metabolismo especializado, es de una ruta biosintética promiscua. La
+  ruta biosintética será tratado en el siguiente capítulo.
+  
+  AQUI ARBOL EVOMINING TAUD y GRAFICA CON tauD
+  
+  \section{Rimosamide y Detoxin tienen en común la enzima
+  TauD,}\label{rimosamide-y-detoxin-tienen-en-comun-la-enzima-taud}
+  
+  Un análisis de EvoMining8 de las expansiones de la familia TauD
+  dioxygenasa mostró que existe una rama dedicada al metabolismo
+  especializado. Dentro de esta rama existen paralogos dentro de géneros
+  como \emph{Streptomyces}, \emph{Rhodo-coccus}, \emph{Frankia} y
+  \emph{Amycolatopsis} (Fig S13). Dentro de las expansiones de la familia
+  existe un clado,que contiene quince homólogos de \emph{tauD} que
+  pertenecen a clusters biosintéticos experimentalmente caracterizados y
+  depositados en MIBiG, incluyendo los BGCs de detoxin y rimosamides
+  (Table S6). La variedad de BGCs mostrada en este clado abre la
+  posibilidad de encontrar variantes moleculares de estas familias.
+  
+  En Actinobateria se han reportado dos clusters biosintéticos
+  Streptomyces, Rhodococcus, Frankia and Amycolatopsis\\
+  Table {[}MIBiGTauD{]}. Occurrences of \emph{tauD} homologues in
+  secondary metabolism BGCs as reported in MIBiG.
+  
+  \begin{longtable}[]{@{}lllll@{}}
+  \toprule
+  \begin{minipage}[b]{0.05\columnwidth}\raggedright\strut
+  No\strut
+  \end{minipage} & \begin{minipage}[b]{0.24\columnwidth}\raggedright\strut
+  MIBiG\strut
+  \end{minipage} & \begin{minipage}[b]{0.20\columnwidth}\raggedright\strut
+  Compound\strut
+  \end{minipage} & \begin{minipage}[b]{0.08\columnwidth}\raggedright\strut
+  Class\strut
+  \end{minipage} & \begin{minipage}[b]{0.25\columnwidth}\raggedright\strut
+  Producer Organism\strut
+  \end{minipage}\tabularnewline
+  \midrule
+  \endhead
+  \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  1\strut
+  \end{minipage} & \begin{minipage}[t]{0.24\columnwidth}\raggedright\strut
+  BGC0000653\_ADO85576\strut
+  \end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright\strut
+  pentalenolactone\strut
+  \end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright\strut
+  Terpene\strut
+  \end{minipage} & \begin{minipage}[t]{0.25\columnwidth}\raggedright\strut
+  Streptomyces arenae\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  2\strut
+  \end{minipage} & \begin{minipage}[t]{0.24\columnwidth}\raggedright\strut
+  BGC0000678\_BAC70706\strut
+  \end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright\strut
+  pentalenolactone\strut
+  \end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright\strut
+  Terpene\strut
+  \end{minipage} & \begin{minipage}[t]{0.25\columnwidth}\raggedright\strut
+  Streptomyces avermitilis NBRC 14893\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  3\strut
+  \end{minipage} & \begin{minipage}[t]{0.24\columnwidth}\raggedright\strut
+  BGC0000163\_ACR50790\strut
+  \end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright\strut
+  tetronasin\strut
+  \end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright\strut
+  Polyketide\strut
+  \end{minipage} & \begin{minipage}[t]{0.25\columnwidth}\raggedright\strut
+  Streptomyces longisporoflavus\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  4\strut
+  \end{minipage} & \begin{minipage}[t]{0.24\columnwidth}\raggedright\strut
+  GC0000961\_ABC36162\strut
+  \end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright\strut
+  bactobolin\strut
+  \end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright\strut
+  NRP / Polyketide\strut
+  \end{minipage} & \begin{minipage}[t]{0.25\columnwidth}\raggedright\strut
+  Burkholderia thailandensis E264\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  5\strut
+  \end{minipage} & \begin{minipage}[t]{0.24\columnwidth}\raggedright\strut
+  BGC0000287\_AAG05698\strut
+  \end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright\strut
+  2-amino-4-methoxy-trans-3-butenoic acid\strut
+  \end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright\strut
+  NRP\strut
+  \end{minipage} & \begin{minipage}[t]{0.25\columnwidth}\raggedright\strut
+  Pseudomonas aeruginosa PAO1\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  6\strut
+  \end{minipage} & \begin{minipage}[t]{0.24\columnwidth}\raggedright\strut
+  BGC0000846\_ctg1\_orf9\strut
+  \end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright\strut
+  tabtoxin\strut
+  \end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright\strut
+  Other\strut
+  \end{minipage} & \begin{minipage}[t]{0.25\columnwidth}\raggedright\strut
+  Pseudomonas syringae\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  7\strut
+  \end{minipage} & \begin{minipage}[t]{0.24\columnwidth}\raggedright\strut
+  BGC0001183\_AGC09526\strut
+  \end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright\strut
+  lobophorin\strut
+  \end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright\strut
+  Polyketide\strut
+  \end{minipage} & \begin{minipage}[t]{0.25\columnwidth}\raggedright\strut
+  Streptomyces sp. FXJ7.023\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  8\strut
+  \end{minipage} & \begin{minipage}[t]{0.24\columnwidth}\raggedright\strut
+  BGC0001156\_ADD83004\strut
+  \end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright\strut
+  platencin\strut
+  \end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright\strut
+  Terpene\strut
+  \end{minipage} & \begin{minipage}[t]{0.25\columnwidth}\raggedright\strut
+  Streptomyces platensis\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  9\strut
+  \end{minipage} & \begin{minipage}[t]{0.24\columnwidth}\raggedright\strut
+  BGC0001140\_ACO31277\strut
+  \end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright\strut
+  platensimycin/ platencin\strut
+  \end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright\strut
+  Terpene\strut
+  \end{minipage} & \begin{minipage}[t]{0.25\columnwidth}\raggedright\strut
+  Streptomyces platensis\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  10\strut
+  \end{minipage} & \begin{minipage}[t]{0.24\columnwidth}\raggedright\strut
+  BGC0001140\_ACO31282\strut
+  \end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright\strut
+  platensimycin/ platencin\strut
+  \end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright\strut
+  Terpene\strut
+  \end{minipage} & \begin{minipage}[t]{0.25\columnwidth}\raggedright\strut
+  Streptomyces platensis\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  11\strut
+  \end{minipage} & \begin{minipage}[t]{0.24\columnwidth}\raggedright\strut
+  BGC0000715\_ABW87795\strut
+  \end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright\strut
+  spectinomycin\strut
+  \end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright\strut
+  Saccharide\strut
+  \end{minipage} & \begin{minipage}[t]{0.25\columnwidth}\raggedright\strut
+  Streptomyces spectabilis\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  12\strut
+  \end{minipage} & \begin{minipage}[t]{0.24\columnwidth}\raggedright\strut
+  BGC0001205\_KGO40485\strut
+  \end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright\strut
+  communesin\strut
+  \end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright\strut
+  Polyketide\strut
+  \end{minipage} & \begin{minipage}[t]{0.25\columnwidth}\raggedright\strut
+  Penicillium expansum\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  13\strut
+  \end{minipage} & \begin{minipage}[t]{0.24\columnwidth}\raggedright\strut
+  BGC0001205\_KGO40482\strut
+  \end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright\strut
+  communesin\strut
+  \end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright\strut
+  Polyketide\strut
+  \end{minipage} & \begin{minipage}[t]{0.25\columnwidth}\raggedright\strut
+  Penicillium expansum\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  14\strut
+  \end{minipage} & \begin{minipage}[t]{0.24\columnwidth}\raggedright\strut
+  BGC0001183\_AGC09525\strut
+  \end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright\strut
+  lobophorin\strut
+  \end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright\strut
+  Polyketide\strut
+  \end{minipage} & \begin{minipage}[t]{0.25\columnwidth}\raggedright\strut
+  Streptomyces sp. FXJ7.023\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  15\strut
+  \end{minipage} & \begin{minipage}[t]{0.24\columnwidth}\raggedright\strut
+  BGC0000654\_ABB69741\strut
+  \end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright\strut
+  phenalinolactone\strut
+  \end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright\strut
+  Saccharide /Terpene\strut
+  \end{minipage} & \begin{minipage}[t]{0.25\columnwidth}\raggedright\strut
+  Streptomyces sp. Tu6071\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  16\strut
+  \end{minipage} & \begin{minipage}[t]{0.24\columnwidth}\raggedright\strut
+  BGC0001070\_CAN89617\strut
+  \end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright\strut
+  kirromycin\strut
+  \end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright\strut
+  NRP / Polyketide\strut
+  \end{minipage} & \begin{minipage}[t]{0.25\columnwidth}\raggedright\strut
+  Streptomyces collinus Tu 365\strut
+  \end{minipage}\tabularnewline
+  \bottomrule
+  \end{longtable}
+  
   \begin{center}\includegraphics{tesis_files/figure-latex/coloring_test_set-1} \end{center}
   
   \begin{Shaded}
@@ -2440,88 +3656,6 @@ starts here.
   \NormalTok{####################################################################}
   \end{Highlighting}
   \end{Shaded}
-  
-  \chapter{EvoMining}\label{rmd-basics}
-  
-  \section{Introduction}\label{introduction}
-  
-  La promiscuidad enzimática puede buscarse en familias envueltas en
-  procesos de divergencia funcional. Uno de dichos procesos es la
-  expansión y posterior reclutamiento de familias pertenecientes a rutas
-  metabólicas conservadas hacia el metabolismo especializado. Los
-  productos naturales o metabolitos especializados son sintetizados
-  generalmente por clusters de genes distribuidos en un pequeño porcentaje
-  de un linaje taxonómico. Estos clusters, conocidos como BGCs
-  (Biosynthetical Gene Clusters), contienen reclutamientos de las copias
-  extras de familias pertenecientes al metabolismo conservado. La
-  similitud de secuencia de los genes que pertenecen a los BGCs así como
-  su relativa sintenia en diversos organismos de un linaje hacen que
-  genómica copmarativa sea de utilidad para intentar localizarlos.
-  Finalmente, el auge en la cantidad de genomas disponibles públicamente
-  así como la facilidad por sequenciar nuevos hace posible que los métodos
-  bioinformáticos ayuden a encontrar nuevos BGCs. EvoMining es un método
-  de para sugerir la formación de nuevos BGCs y en consecuencia encontrar
-  zonas donde puede estar ocurriendo la capcidad de adquirir un nuevo
-  sustrato cambio en promiscuidad enzimátcica.
-  
-  En este capítulo se explica el desarrollo de EvoMining como plataforma
-  bioinformática dedicada a presentar una visualización del origen y
-  destino de todas las copias de familia enzimátocas provenientes del
-  emtabolismo conservado. Se discutirán también cuatro linajes genómicos
-  Actinobacteria Cyanobacteria, Pseudomonas y Archaea y finalmente se
-  analizará un BGCs scytonemin.
-  
-  \section{EvoMining es un método para encontrar BGCs no
-  tradicionales}\label{evomining-es-un-metodo-para-encontrar-bgcs-no-tradicionales}
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 0,scale = 1]{chapter2/FigurasPaper/Figure1.pdf}
-  \caption[EvoMining Algorithm]{\normalsize{EvoMining Algorithm}}
-  \label{fig:EvoMining Algorithms}
-  \end{figure}
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 0,scale = 1]{chapter2/FigurasPaper/Figure2.pdf}
-  \caption[Seed genomes]{\normalsize{Seed genomes}}
-  \label{fig:Seed genomes}
-  \end{figure}
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 0,scale = 1]{chapter2/FigurasPaper/Figure3.pdf}
-  \caption[Expansion patterns in 42 conserved families]{\normalsize{Expansion patterns in 42 conserved families}}
-  \label{fig:Expansion patterns in 42 conserved families}
-  \end{figure}
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 0,scale = 1]{chapter2/FigurasPaper/Figure4.pdf}
-  \caption[EvoMining Algorithm]{\normalsize{EvoMining Algorithm}}
-  \label{fig:EvoMining Algorithms}
-  \end{figure}
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 0,scale = 1]{chapter2/FigurasPaper/Figure5.pdf}
-  \caption[EvoMining Algorithm]{\normalsize{EvoMining Algorithm}}
-  \label{fig:EvoMining Algorithms}
-  \end{figure}
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 0,scale = 1]{chapter2/FigurasPaper/Figure6.pdf}
-  \caption[EvoMining Algorithm]{\normalsize{EvoMining Algorithm}}
-  \label{fig:EvoMining Algorithms}
-  \end{figure}
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 0,scale = 1]{chapter2/FigurasPaper/Figure7.pdf}
-  \caption[EvoMining Algorithm]{\normalsize{EvoMining Algorithm}}
-  \label{fig:EvoMining Algorithms}
-  \end{figure}
   
   \section{Gen families expansions on
   genomes}\label{gen-families-expansions-on-genomes}
@@ -3175,9 +4309,9 @@ starts here.
   computing the optimal tree. Many current tools use a combination of
   methods}
   
-  \hypertarget{ref_labels}{\chapter{EvoMining Results}\label{ref_labels}}
+  \hypertarget{ref_labels}{\section{EvoMining Results}\label{ref_labels}}
   
-  \section{Archaea}\label{archaea}
+  \subsection{Archaea}\label{archaea}
   
   During the decade between 1970 and 1980, Archaea was recognized as new
   life domain, a kingdom different from Bacteria and Eucarya in an
@@ -4490,6 +5624,78 @@ starts here.
   biosintéticos y otras vecindades genómicas
   conservadas.}\label{desarrollo-de-corason-como-herramienta-para-organizar-clusters-biosinteticos-y-otras-vecindades-genomicas-conservadas.}
   
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = .6]{chapter3/Corason-pipe.pdf}
+  \caption[La herramienta corason localiza familias de clusters biosintéticos en un linaje genómico partiendo de un cluster y un gen de referencia.]{\footnotesize{La herramienta corason localiza familias de clusters biosintéticos en un linaje genómico partiendo de un cluster y un gen de referencia. Todos los contextos genómicos que contengan ese gen y algún otro gen del cluster de referencia serán encontrados en el linaje seleccionado por el usuario. CORASON identifica el core génico de la familia. La información del core se utiliza para organizar filogenéticamente todos los miembros de la familia del BGC, es decir todas las variantes del BGC serán organizadas. El core génico está relacionado con el core de la molécula, la parte variable del BGC codifica enzimas accesorias que producen ornamentos i.e. variantes moleculares. Al cambiar de gen de referencia CORASON permite explorar otras familias de BGC que contengan las mismas modificaciones. Los resultados se presentan en una visualización que permite al mismo tiempo apreciar variación a nivel de presencia-ausencia de genes entre miembros de una familia de BGCs, como también apreciar variación a nivel de secuencia a través de un gradiente de color entre genes conservados entre una variante y el BGC de referencia.}}
+  \label{fig:Corason-pipe}
+  \end{figure}
+  
+  Texto \autoref{fig:Corason-pipe}
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = .4]{chapter3/ISBATalk.png}
+  \caption[ CORASON es una herramienta en línea de comandos para organizar filogenéticamente la variación de una familia de clusters. ]{\footnotesize{CORASON es una herramienta en línea de comandos para organizar filogenéticamente la variación de una familia de clusters. Dada la existencia de variantes de BGCs en bases de datos  de linajes genómicos se diseñó CORASON. Corason se ejecuta en línea de comandos, su función es identificar el core génico de un BGC y utilizarlo para presentar una visualización de las variantes de la familia organizadas filogenéticamente}}
+  \label{fig:ISBATalk}
+  \end{figure}
+  
+  Texto \autoref{fig:ISBATalk}
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = .4]{chapter3/des.png}
+  \caption[EvoMining Algorithm]{\footnotesize{Variantes del cluster biosintético de desferroxiamina fueron identificadas por CORASON en Actinobacterias de cuatro ciénegas. Una variante del BGC de desferroxiamina fue identificada. Esta variante se diferencia del cluster reportado por la ganancia de una penicilin amidasa. A este gen extra se le llamó $desG$. Fue verificado que la variación génica está ligada con la variación molecular}}
+  \label{fig:des}
+  \end{figure}
+  
+  Texto \autoref{fig:des}
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = .4]{chapter3/Coelicolor.pdf}
+  \caption[EvoMining Algorithm]{\footnotesize{Contexto genómico conservado en las expansiones de AroA. La arsenoenol piruvato sintasa fue descubierta en un árbol de EvoMining como parte de una rama de expansiones de AroA en Actinobacteria. El contexto genómico de la arsenoenol piruvato sintasa de $S.~coelicolor$ tiene un core conservado en Actinobacteria. Este BGC está dedicado a la síntesis de metabolitos secundarios de tipo arsenolípidos. Primero se identificaron en otras secuencias genómicas contextos que contengan el homólogo de AroA y algún otro gen de su vecindad en $S.~coelicolor$. A continuación, se ordenaron manualmente los contextos obtenidos y se pudo identificar al menos cuatro diferentes clases de BGCs. La primera clase mostrada en un rectángulo morado no contiene PKS o NRPS, la segunda enmarcada en verde contiene una PKS-NRPS híbrida. La tercera clase incluye una PKS a la izquierda y a más de cinco genes de distancia de la Arsenoenol piruvato sintasa y finalmente la última clase contiene una PKS a la derecha y a sólo un gen de distancia de esta enzima. Esta figura muestra que existen variantes de un BGC }}
+  \label{fig:Coelicolor}
+  \end{figure}
+  
+  Texto \autoref{fig:Coelicolor}
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = .4]{chapter3/azoxy.png}
+  \caption[EvoMining Algorithm]{\footnotesize{Azoxy BGC}}
+  \label{fig:azoxy}
+  \end{figure}
+  
+  Texto \autoref{fig:azoxy}
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = .9]{chapter3/PseudomonasTauD.pdf}
+  \caption[EvoMining Algorithm]{\footnotesize{En Pseudomonas el gen $tauD$ tiene un contexto que incluye genes de metabolismo especializado. Variantes de este contexto están distribuidas en varios organismos. En particular  }}
+  \label{fig:PseudomonasTauD}
+  \end{figure}
+  
+  Texto \autoref{fig:PseudomonasTauD}
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = .3]{chapter3/corason_fig1.png}
+  \caption[EvoMining Algorithm]{\footnotesize{}}
+  \label{fig:CORASONAlgorithm}
+  \end{figure}
+  
+  Texto \autoref{fig:CORASONAlgorithm}
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = .8]{chapter3/figura5.pdf}
+  \caption[EvoMining Algorithm]{\footnotesize{n}}
+  \label{fig:Rimosamide}
+  \end{figure}
+  
+  Texto \autoref{fig:Rimosamide}
+  
   Figura {[}CorasonCaracteristicas{]} CORASON es una herramienta en línea
   de comandos para organizar filogenéticamente la variación de una familia
   de clusters. Dada la existencia de variantes de BGCs en bases de datos
@@ -4806,7 +6012,7 @@ starts here.
   organismos como \emph{Streptomyces humi}, \emph{Streptomyces
   Spectabilis} y \emph{Amycolatopsis Vancoresmycina}{]}
   
-  \chapter{CORASON sugiere que las familias detoxin y rimosamide
+  \section{CORASON sugiere que las familias detoxin y rimosamide
   pertenecen a un amplio clan de familias dedicadas a la síntesis de
   péptidos.}\label{corason-sugiere-que-las-familias-detoxin-y-rimosamide-pertenecen-a-un-amplio-clan-de-familias-dedicadas-a-la-sintesis-de-peptidos.}
   
@@ -4951,28 +6157,1472 @@ starts here.
   El cluster des está muy conservado, no así los de arsenolípidos, ni los
   de rimosamide
   
+  \hypertarget{ref_labels}{\chapter{La familia PriA}\label{ref_labels}}
+  
+  PriA es una familia de enzimas de Actinobacteria homóloga a la familia
+  HisA en Enterobacteria. PriA es una familia promiscua según las
+  definiciones de este trabajo ya que se han caracterizado
+  experimentalmente varios de sus miembros con la capacidad de realizar
+  las funciones tanto de HisA como de TrpF. Es decir PriA participa en las
+  rutas de síntesis de Histidina y Triptofano, en varias Actinobacterias,
+  como por ejemplo \emph{Streptomyces coelicolor}. Dentro de la ruta de
+  histidina HisA convierte ProFAR en PRFAR como parte de la ruta de la
+  histidina. PriA además de la isomerización de PROFAR también convierte
+  PRA en CdRP actuando análogamente a la función TrpF en la ruta del
+  triptófano. La mayoría de las actinobacterias han perdido el gen trpF en
+  la ruta del triptofano,
+  
+  PriA ha mostrado un gradiente funcional en Actinobacteria que divide
+  esta familia en varias subfamilias según su funcionalidad. Entre las
+  subfamilias PriA están PriB en \emph{Streptomyces} que muestra poca
+  actividad trpF y un gen TrpF fuera de contexto. Otra subfamilia es
+  subHisA en \emph{Corynebacteria} y \emph{Actinomyces} que ha perdido
+  actividad trpF, y finalmente hay subTrpF en Actinomyces que ha perdido
+  su actividad A.
+  
+  Algunas de estas enzimas se seleccionaron en busca de nuevas funciones
+  promiscuas, las reacciones catalizadas por el candidato se investigaron
+  mediante la exploración de sustratos químicamente similares a los
+  nativos.
+  
+  EvoMining ha detectado un parálogo de PriA en Actinobacteria y una
+  expansión conservada en un grupo de saxitoxinas en Cianobacteria {[}@
+  moustafa\_origin\_2009{]}. PriA\\
+  PriB\\
+  SubHisA\\
+  subTrpF\\
+  \clearpage   
+  
+  \section{PriA como modelo de familia enzimática donde las expansiones no
+  son condición necesaria para la
+  promiscuidad.}\label{pria-como-modelo-de-familia-enzimatica-donde-las-expansiones-no-son-condicion-necesaria-para-la-promiscuidad.}
+  
+  \subsubsection{PriA en EvoMining}\label{pria-en-evomining}
+  
+  Se investigaron las expansiones de la familia PriA en los linajes
+  Actinobacteria, Cyanobacteria, Pseudomonas y Archaea. En Actinobacteria,
+  donde se sabe que PriA es promiscua no se detectaron copias extra.
+  
   \begin{figure}[h!tbp]
   \centering
-  \includegraphics[angle = 0,scale = 1]{chapter3/corason_fig1.png}
-  \caption[EvoMining Algorithm]{\normalsize{EvoMining Algorithm}}
-  \label{fig:EvoMining Algorithms}
+  \includegraphics[angle = 0,scale = 1]{chapter4/PriAExpansiones.png}
+  \caption[Expansiones de PriA en Actinobacteria, Cyanobacteria, Pseudomonas y Archaea]{\normalsize{Expansiones de PriA en Actinobacteria, Cyanobacteria, Pseudomonas y Archaea}}
+  \label{fig:Expansiones de PriA en Actinobacteria, Cyanobacteria, Pseudomonas y Archaea}
+  \end{figure}
+  
+  Los reclutamientos que tuvieron estas expansiones son los siguientes
+  
+  \begin{longtable}[]{@{}lllllll@{}}
+  \caption{Reclutamientos de expansiones de PriA en MIBiG
+  \label{tab:inher}}\tabularnewline
+  \toprule
+  Compuesto & Actinobacteria & Cyanobacteria & Pseudomonas & Archaea & BGC
+  origen & Clase\tabularnewline
+  \midrule
+  \endfirsthead
+  \toprule
+  Compuesto & Actinobacteria & Cyanobacteria & Pseudomonas & Archaea & BGC
+  origen & Clase\tabularnewline
+  \midrule
+  \endhead
+  \href{http://mibig.secondarymetabolites.org/repository/BGC0000188/index.html\#cluster-1}{saxitoxin}
+  & x & x & x & x & Cyanobacteria & Alkaloid\tabularnewline
+  \href{http://mibig.secondarymetabolites.org/repository/BGC0000775/index.html\#cluster-1}{lipopoly
+  saccharide} & x & x & x & x & Proteobacteria & Saccharide\tabularnewline
+  \href{http://mibig.secondarymetabolites.org/repository/BGC0000928/index.html\#cluster-1}{toxin}
+  & x & x & x & x & Cyanobacteria & Other T3\tabularnewline
+  \href{http://mibig.secondarymetabolites.org/repository/BGC0001484/index.html\#cluster-1}{2'-chloro
+  pentostatin} & x & - & -x & - & Actinobacteria & Other\tabularnewline
+  2'-amino-2'- deoxy adenosine & & & & & &\tabularnewline
+  \bottomrule
+  \end{longtable}
+  
+  Finalmente, los árboles que se produjeron por EvoMining son:
+  
+  \begin{longtable}[]{@{}ll@{}}
+  \caption{Árboles EvoMining de PriA en MicroReact
+  \label{tab:inher}}\tabularnewline
+  \toprule
+  Linaje & Link al árbol de EvoMining en Microreat\tabularnewline
+  \midrule
+  \endfirsthead
+  \toprule
+  Linaje & Link al árbol de EvoMining en Microreat\tabularnewline
+  \midrule
+  \endhead
+  Actinobacteria &
+  \href{https://microreact.org/project/7g2IGfkv9}{7g2IGfkv9}\tabularnewline
+  Cyanobacteria &
+  \href{https://microreact.org/project/qF6jWRMox}{qF6jWRMox}\tabularnewline
+  PriA\_Pseudomonas &
+  \href{https://microreact.org/project/ydff6DWqs}{ydff6DWqs}\tabularnewline
+  Archaea &
+  \href{https://microreact.org/project/Ig-m9Cm6f}{Ig-m9Cm6f}\tabularnewline
+  \bottomrule
+  \end{longtable}
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 1]{chapter4/PriAEvoMining.pdf}
+  \caption[Árboles de destino metabólico de PriA en Actinobacteria, Cyanobacteria, Pseudomonas y Archaea según EvoMining]{\normalsize{Árboles de destino metabólico de PriA en Actinobacteria, Cyanobacteria, Pseudomonas y Archaea según EvoMining}}
+  \label{fig:Árboles de destino metabólico de PriA en Actinobacteria, Cyanobacteria, Pseudomonas y Archaea según EvoMining}
   \end{figure}
   
   \begin{figure}[h!tbp]
   \centering
-  \includegraphics[angle = 0,scale = 1]{chapter3/figura5.pdf}
-  \caption[EvoMining Algorithm]{\normalsize{EvoMining Algorithm}}
-  \label{fig:EvoMining Algorithms}
+  \includegraphics[angle = 0,scale = 1]{chapter4/PriAEvoMiningCopies.pdf}
+  \caption[Copias extras de PriA en Actinobacteria, Cyanobacteria, Pseudomonas y Archaea]{\normalsize{Copias extras de PriA en Actinobacteria, Cyanobacteria, Pseudomonas y Archaea}}
+  \label{fig:Expansiones de PriA en Actinobacteria, Cyanobacteria, Pseudomonas y Archaea}
   \end{figure}
   
   \begin{figure}[h!tbp]
   \centering
-  \includegraphics[angle = 0,scale = 1]{chapter3/Coelicolor.png}
-  \caption[EvoMining Algorithm]{\normalsize{EvoMining Algorithm}}
-  \label{fig:EvoMining Algorithms}
+  \includegraphics[angle = 0,scale = 1]{chapter4/Couplings/PriAMutations.pdf}
+  \caption[Tendencia de mutaciones observada en secuencias de PriA]{\normalsize{Tendencia de mutaciones observada en secuencias de PriA}}
+  \label{fig:Tendencia de mutaciones observada en secuencias de PriA}
   \end{figure}
   
-  \texttt{\{r\ chapter4,\ child\ =\ \textquotesingle{}chap4.Rmd\textquotesingle{}\}}
+  \subsubsection{PriA CORASON}\label{pria-corason}
+  
+  Todos los Streptomyces tienen el cluster de PriA parcialmente conservado
+  respecto a \emph{Streptomyces coelicolor}. Además \_Streptomyces\_CT34
+  has a secondary copy whose best hit on NCBI is Lentzea's PriA with 50\%
+  identity 98\% coverage
+  
+  TrpF1 TrpF1 queries gave hits with TrpC enzyme present on every
+  Streptomyces, additionally \emph{S. rimosus}, \emph{S. coelicolor},
+  \emph{S. venezuelae} and \emph{S. NRRL S-1813} had an extra copy.
+  \emph{S rimosus} TrpC vicinity has PKS and siderophore genes.
+  
+  TrpF2 Conserved cluster with NRPS sequences flanking TrpF2
+  
+  TrpF3 Non conserved cluster
+  
+  TrpF4 purpeofuscus and S bikiniensis \clearpage  
+  
+  \section{Selected enzymes to investigate affinity of substrates similar
+  to PRA and
+  PROFAR}\label{selected-enzymes-to-investigate-affinity-of-substrates-similar-to-pra-and-profar}
+  
+  Dado que en \emph{Streptomyces} se han encontrado representantes de las
+  familias PriA y PriB, se seleccionaron 39 secuencias homólogas para
+  realizar el análisis del sustrato de la enzima de acoplamiento. Estas
+  secuencias seleccionadas de PriA / Prib pertenecen a \emph{Streptomyces}
+  uniformemente distribuidas en un árbol de especies RpoB con diferentes
+  condiciones sobre la presencia / ausencia de TrpF. En este estudio se
+  incluyeron otros homólogos de PriA Actinobacterial caracterizados
+  químicamente, y finalmente se agregaron HisA de \emph{Escherichia coli},
+  \emph{Arthrobacter Aurescens}, \emph{Salmonella enterica} y
+  \emph{Acidimicrobium ferrooxidans} y Actinobacterial TrpF como
+  controles.
+  
+  Cuando existían estructuras de cristal, de lo contrario, se generaban
+  estructuras homólogas utilizando como plantilla la enzima más cercana
+  disponible con estructura de cristal.
+  
+  Controls\\
+  HisA Enterobacteria enzymes from \emph{Salmonella enterica} (PDB:5AHE),
+  \emph{Escherichia coli K12} \emph{Acidimicrobium ferrooxydans}
+  (PDB:4WD0)
+  
+  TrpF Actinobacteria Jonesia denitrificans and Streptomyces sp Mg1
+  sequences.
+  
+  Chemically characterized Actinobacterial enzymes\\
+  PriA\\
+  \emph{Mycobacterium tuberculosis} (Mtub PDB:2Y88,2Y89,2Y85,3ZS4)
+  \emph{Streptomyces coelicolor} (Scoe PDB:2VEP,2X30,1VZW),
+  \emph{Streptomyces globisporus}, \emph{Actynomyces urogenitalis} 4X2R
+  \emph{Corynebacterium jeikeum}
+  
+  subHisA\\
+  \emph{Corynebacterium diphteriae} \emph{Actinomyces car} (PDB:4X2R)
+  
+  subTrpF\\
+  \emph{Arthrobacter aurescens} (PDB:4WD0)
+  
+  PriB\\
+  \emph{Streptomyces ipomoeae}, \emph{Streptomyces sviceus}
+  (PDB:4U28,4TX9)\\
+  TrpF controls \emph{Jonesia denitrificans} (PDB:4WUI) \emph{Chlamidya
+  thrachomatis}, \emph{Streptomyces sp. Mg1} TrpF and \emph{Actinomyces
+  odontolyticus} were included
+  
+  \clearpage  
+  
+  \section{PriA cristal structures on
+  PDB}\label{pria-cristal-structures-on-pdb}
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \NormalTok{table <-}\StringTok{ }\KeywordTok{read.csv}\NormalTok{(}\StringTok{"chapter4/EstructurasPDB"}\NormalTok{, }\DataTypeTok{row.names =} \DecValTok{1}\NormalTok{,}\DataTypeTok{sep=}\StringTok{"}\CharTok{\textbackslash{}t}\StringTok{"}\NormalTok{)}
+  \KeywordTok{kable}\NormalTok{(table,  }\DataTypeTok{caption =} \StringTok{"Enzyme PDB }\CharTok{\textbackslash{}\textbackslash{}}\StringTok{label\{tab:Enzyme PDB\}"}\NormalTok{,}\DataTypeTok{caption.short =} \StringTok{"Enzyme PDB "}\NormalTok{)}
+  \end{Highlighting}
+  \end{Shaded}
+  
+  \begin{longtable}[]{@{}llllrr@{}}
+  \caption{Enzyme PDB \label{tab:Enzyme PDB}}\tabularnewline
+  \toprule
+  & Organismo & Family & Observations & Resolution & Year\tabularnewline
+  \midrule
+  \endfirsthead
+  \toprule
+  & Organismo & Family & Observations & Resolution & Year\tabularnewline
+  \midrule
+  \endhead
+  4WUI & Jonesia denitrificans & TrpF & & 1.09 & 2014\tabularnewline
+  4X9S & Streptomyces sp. MG1 & PriB & & 1.60 & 2014\tabularnewline
+  5DN1 & Streptomyces coelicolor & PriA & & 1.95 & 2015\tabularnewline
+  1DL3 & Thermotoga maritima & TrpF & & 2.70 & 1999\tabularnewline
+  1LBM & Thermotoga maritima & TrpF & RCDRP & 2.80 & 2002\tabularnewline
+  1NSJ & Thermotoga maritima & TrpF & & 2.00 & 1996\tabularnewline
+  1V5X & Thermus thermophilus & TrpF & & 2.00 & 2003\tabularnewline
+  1VZW & Streptomyces coelicolor & PriA & & 1.80 & 2004\tabularnewline
+  2VEP & Streptomyces coelicolor & PriA & & 1.80 & 2007\tabularnewline
+  2X30 & Streptomyces coelicolor & PriA & R139N & 1.95 &
+  2010\tabularnewline
+  2Y85 & Mycobacterium tuberculosis & PriA & RCDRP & 2.40 &
+  2011\tabularnewline
+  2Y88 & Mycobacterium tuberculosis & PriA & D11N PRFAR & 1.33 &
+  2011\tabularnewline
+  2Y89 & Mycobacterium tuberculosis & PriA & D11N & 2.50 &
+  2011\tabularnewline
+  3ZS4 & Mycobacterium tuberculosis & PriA & PRFAR & 1.90 &
+  2012\tabularnewline
+  4AAJ & Pyrococcus furiosus & TrpF & & 1.75 & 2012\tabularnewline
+  4TX9 & Streptomyces sviceus & PriB & ProFAR & 1.60 & 2014\tabularnewline
+  4U28 & Streptomyces sviceus & PriB & & 1.33 & 2014\tabularnewline
+  4W9T & Streptomyces sp. Mg1 & PriB & & 1.57 & 2014\tabularnewline
+  4WD0 & Arthrobacter aurescens & PriB & & 1.50 & 2014\tabularnewline
+  4X2R & Actinomyces urogenitalis & & & 1.05 & 2014\tabularnewline
+  4AXK & Corynebacterium efficiens & SubHisA & & 2.25 &
+  2013\tabularnewline
+  5AHE & Salmonella enterica & HisA & & 1.70 & 2015\tabularnewline
+  5AB3 & Salmonella enterica & HisA & D7N, D10G, dup13-15, Q24L, G102A &
+  1.80 & 2016\tabularnewline
+  5ABT & Salmonella enterica & HisA & D7N, G102A, V106M, D176A & 1.65 &
+  2016\tabularnewline
+  5AC7 & Salmonella enterica & HisA & D7N, D10G, dup13-15 & 1.90 &
+  2016\tabularnewline
+  5AC8 & Salmonella enterica & HisA & D10G, dup13-15, G102A & 1.70 &
+  2016\tabularnewline
+  5AC6 & Salmonella enterica & HisA & D7N, D10G, dup13-15, Q24L, G102A &
+  1.99 & 2016\tabularnewline
+  5A5W & Salmonella enterica & HisA & HisA D7N D176A with ProFAR & NA &
+  2015\tabularnewline
+  5AHF & Salmonella enterica & HisA & HisA D7N with ProFAR & NA &
+  NA\tabularnewline
+  4GJ1 & Campylobacter jejuni & HisA & & 2.15 & 2012\tabularnewline
+  2W79 & Thermotoga maritima & HisA & & 1.85 & 2008\tabularnewline
+  1QO2 & Thermotoga maritima & HisA & & 1.85 & 2000\tabularnewline
+  5LHE & Thermococcus kodakaraensis & TrpF & & 1.85 & 2016\tabularnewline
+  5LHF & Thermococcus kodakaraensis & TrpF & & 1.75 & 2016\tabularnewline
+  \bottomrule
+  \end{longtable}
+  
+  \clearpage  
+  
+  \section{Similar substrates to PRA and PROFAR suggested by Tanimoto
+  distance or previously
+  tested}\label{similar-substrates-to-pra-and-profar-suggested-by-tanimoto-distance-or-previously-tested}
+  
+  S1,S2,\ldots{}S20 substrates were collected from literature and
+  chemioinformatics predictions. S3 PRA and S7 PROFAR are native
+  substrates, S13-S16 are light activated substrates, S17 PRAP, S18
+  Compound V, were found on literature, S6 GMP, S11 GTP and other were
+  suggested by chemioinformatics.
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \NormalTok{table <-}\StringTok{ }\KeywordTok{read.csv}\NormalTok{(}\StringTok{"chapter4/Substrate.data"}\NormalTok{, }\DataTypeTok{row.names =} \DecValTok{1}\NormalTok{,}\DataTypeTok{sep=}\StringTok{"}\CharTok{\textbackslash{}t}\StringTok{"}\NormalTok{)}
+  \KeywordTok{kable}\NormalTok{(table,  }\DataTypeTok{caption =} \StringTok{"Substrates }\CharTok{\textbackslash{}\textbackslash{}}\StringTok{label\{tab:substrates\}"}\NormalTok{,}\DataTypeTok{caption.short =} \StringTok{"Substrates "}\NormalTok{)}
+  \end{Highlighting}
+  \end{Shaded}
+  
+  \begin{longtable}[]{@{}lllllll@{}}
+  \caption{Substrates \label{tab:substrates}}\tabularnewline
+  \toprule
+  & id & Number & Kind & Reference & Names & Observations\tabularnewline
+  \midrule
+  \endfirsthead
+  \toprule
+  & id & Number & Kind & Reference & Names & Observations\tabularnewline
+  \midrule
+  \endhead
+  S13 & dte6\_open & LUZ & & & & NA\tabularnewline
+  S15 & dte13\_open & LUZ & & & & NA\tabularnewline
+  S14 & dte6\_closed & LUZ & & & & NA\tabularnewline
+  S16 & dte13\_closed & LUZ & & & & NA\tabularnewline
+  S10 & C04376 & & James & & 5'-Phosphoribosyl-N-formylglycinamide &
+  NA\tabularnewline
+  S12 & C03838 & & James & & 5'-Phosphoribosylglycinamide &
+  NA\tabularnewline
+  S9 & C04640 & & James & &
+  2-(Formamido)-N1-(5'-phosphoribosyl)acetamidine & NA\tabularnewline
+  S18 & CompoundV & & Adams & CompundV & This compound is an intermediary
+  between GTP and H2NMP & NA\tabularnewline
+  S5 & C05923 & & James & & 2,5-Diaminopyrimidine nucleoside triphosphate
+  & NA\tabularnewline
+  S4 & C05922 & & James & & Formamidopyrimidine nucleoside triphosphate &
+  NA\tabularnewline
+  S8 & C01268 & & James & & 5-Amino-6-(5'-phosphoribosylamino)uracil &
+  NA\tabularnewline
+  S17 & PraP & & Verduzco & PraP & & NA\tabularnewline
+  S7 & C04302 & & James & & PRA & NA\tabularnewline
+  S6 & C00144 & & James & & GMP & NA\tabularnewline
+  S11 & C00044 & & James & & GTP & NA\tabularnewline
+  S1 & C01253 & & James & & ADP-D-ribosyl-{[}dinitrogen reductase{]} &
+  NA\tabularnewline
+  S2 & C01201 & & James & & N(omega)-(ADP-D-ribosyl)-L-arginine &
+  NA\tabularnewline
+  S3 & C04896 & & & & ProFAR & NA\tabularnewline
+  S19 & S\_17146 & & Due et al & 17146 &
+  2,5-dimethyl-N-(4-oxocyclohexa-2,5-dienylidene)benzenesulfonamide
+  \#17146, 4456-2380, Chem-Div & NA\tabularnewline
+  S20 & S\_16827 & & Due et al & 16827 &
+  (E)-N-(3-chloro-5-methyl-4-oxocyclohexa-2,5-dienylidene)
+  benzenesulfonamide, \#16827, 3993-4586, Chem-Div & NA\tabularnewline
+  \bottomrule
+  \end{longtable}
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.6]{chapter4/SubstratesClustering.png}
+  \caption[Substrates clustering according to Tanimoto distance]{\normalsize{Substrates clustering according to Tanimoto distance}}
+  \label{fig:Substrates Tanimoto distance}
+  \end{figure}
+  
+  On next figure we can see their chemical structures.
+  
+  \clearpage   
+  
+  \begin{figure}[h!tbp]
+   \centering
+   \includegraphics[angle = 0,scale = 1]{chapter4/esquema_quimico-1-1.pdf}
+   \caption[Substrates 1]{\normalsize{Substrates 1}}
+   \label{fig:Substrates chemical 1}
+   \end{figure}
+  
+  \begin{figure}[h!tbp]
+   \centering
+   \includegraphics[angle = 0,scale = 1]{chapter4/esquema_quimico-2-2.pdf}
+   \caption[Substrates 2]{\normalsize{Substrates 2}}
+   \label{fig:Substrates chemical 2}
+   \end{figure}
+  
+  \begin{figure}[h!tbp]
+   \centering
+   \includegraphics[angle = 0,scale = 1]{chapter4/esquema_quimico-3-3.pdf}
+   \caption[Substrates 3]{\normalsize{Substrates 3}}
+   \label{fig:Substrates chemical 3}
+   \end{figure}
+  
+  \begin{figure}[h!tbp]
+   \centering
+   \includegraphics[angle = 0,scale = 1]{chapter4/esquema_quimico-4-4.pdf}
+   \caption[Substrates 4]{\normalsize{Substrates 4}}
+   \label{fig:Substrates chemical 4}
+   \end{figure}
+  
+  \section{Docking between PriA enzymes and selected
+  substrates}\label{docking-between-pria-enzymes-and-selected-substrates}
+  
+  Docking simulation were calculated for PriA \emph{Streptomyces} enzymes.
+  TrpF enzymes from \emph{Streptomyces Mg1, Jonesia denitrificans, were
+  added as controls}
+  
+  Procedures can be found at
+  \href{https://github.com/tripplab/Docking/wiki}{Docking Protocols}
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \NormalTok{docking <-}\StringTok{ }\KeywordTok{read.csv}\NormalTok{(}\StringTok{"chapter4/SmallHeat.data"}\NormalTok{, }\DataTypeTok{header=}\OtherTok{TRUE}\NormalTok{, }\DataTypeTok{sep=}\StringTok{"}\CharTok{\textbackslash{}t}\StringTok{"}\NormalTok{)}
+  
+  \ControlFlowTok{for}\NormalTok{ (i }\ControlFlowTok{in} \DecValTok{2}\OperatorTok{:}\DecValTok{21}\NormalTok{)}
+  \NormalTok{\{}\KeywordTok{plot}\NormalTok{(}\KeywordTok{density}\NormalTok{(docking[,i],}\DataTypeTok{na.rm=}\NormalTok{T)); }\KeywordTok{rug}\NormalTok{(docking[,i]);}\KeywordTok{browser}\NormalTok{()\}}
+  \end{Highlighting}
+  \end{Shaded}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/johan-1} \end{center}
+  
+  \begin{verbatim}
+  Called from: eval(expr, envir, enclos)
+  debug en <text>#4: plot(density(docking[, i], na.rm = T))
+  \end{verbatim}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/johan-2} \end{center}
+  
+  \begin{verbatim}
+  debug en <text>#4: rug(docking[, i])
+  debug en <text>#4: browser()
+  debug en <text>#4: plot(density(docking[, i], na.rm = T))
+  \end{verbatim}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/johan-3} \end{center}
+  
+  \begin{verbatim}
+  debug en <text>#4: rug(docking[, i])
+  debug en <text>#4: browser()
+  debug en <text>#4: plot(density(docking[, i], na.rm = T))
+  \end{verbatim}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/johan-4} \end{center}
+  
+  \begin{verbatim}
+  debug en <text>#4: rug(docking[, i])
+  debug en <text>#4: browser()
+  debug en <text>#4: plot(density(docking[, i], na.rm = T))
+  \end{verbatim}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/johan-5} \end{center}
+  
+  \begin{verbatim}
+  debug en <text>#4: rug(docking[, i])
+  debug en <text>#4: browser()
+  debug en <text>#4: plot(density(docking[, i], na.rm = T))
+  \end{verbatim}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/johan-6} \end{center}
+  
+  \begin{verbatim}
+  debug en <text>#4: rug(docking[, i])
+  debug en <text>#4: browser()
+  debug en <text>#4: plot(density(docking[, i], na.rm = T))
+  \end{verbatim}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/johan-7} \end{center}
+  
+  \begin{verbatim}
+  debug en <text>#4: rug(docking[, i])
+  debug en <text>#4: browser()
+  debug en <text>#4: plot(density(docking[, i], na.rm = T))
+  \end{verbatim}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/johan-8} \end{center}
+  
+  \begin{verbatim}
+  debug en <text>#4: rug(docking[, i])
+  debug en <text>#4: browser()
+  debug en <text>#4: plot(density(docking[, i], na.rm = T))
+  \end{verbatim}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/johan-9} \end{center}
+  
+  \begin{verbatim}
+  debug en <text>#4: rug(docking[, i])
+  debug en <text>#4: browser()
+  debug en <text>#4: plot(density(docking[, i], na.rm = T))
+  \end{verbatim}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/johan-10} \end{center}
+  
+  \begin{verbatim}
+  debug en <text>#4: rug(docking[, i])
+  debug en <text>#4: browser()
+  debug en <text>#4: plot(density(docking[, i], na.rm = T))
+  \end{verbatim}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/johan-11} \end{center}
+  
+  \begin{verbatim}
+  debug en <text>#4: rug(docking[, i])
+  debug en <text>#4: browser()
+  debug en <text>#4: plot(density(docking[, i], na.rm = T))
+  \end{verbatim}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/johan-12} \end{center}
+  
+  \begin{verbatim}
+  debug en <text>#4: rug(docking[, i])
+  debug en <text>#4: browser()
+  debug en <text>#4: plot(density(docking[, i], na.rm = T))
+  \end{verbatim}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/johan-13} \end{center}
+  
+  \begin{verbatim}
+  debug en <text>#4: rug(docking[, i])
+  debug en <text>#4: browser()
+  debug en <text>#4: plot(density(docking[, i], na.rm = T))
+  \end{verbatim}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/johan-14} \end{center}
+  
+  \begin{verbatim}
+  debug en <text>#4: rug(docking[, i])
+  debug en <text>#4: browser()
+  debug en <text>#4: plot(density(docking[, i], na.rm = T))
+  \end{verbatim}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/johan-15} \end{center}
+  
+  \begin{verbatim}
+  debug en <text>#4: rug(docking[, i])
+  debug en <text>#4: browser()
+  debug en <text>#4: plot(density(docking[, i], na.rm = T))
+  \end{verbatim}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/johan-16} \end{center}
+  
+  \begin{verbatim}
+  debug en <text>#4: rug(docking[, i])
+  debug en <text>#4: browser()
+  debug en <text>#4: plot(density(docking[, i], na.rm = T))
+  \end{verbatim}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/johan-17} \end{center}
+  
+  \begin{verbatim}
+  debug en <text>#4: rug(docking[, i])
+  debug en <text>#4: browser()
+  debug en <text>#4: plot(density(docking[, i], na.rm = T))
+  \end{verbatim}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/johan-18} \end{center}
+  
+  \begin{verbatim}
+  debug en <text>#4: rug(docking[, i])
+  debug en <text>#4: browser()
+  debug en <text>#4: plot(density(docking[, i], na.rm = T))
+  \end{verbatim}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/johan-19} \end{center}
+  
+  \begin{verbatim}
+  debug en <text>#4: rug(docking[, i])
+  debug en <text>#4: browser()
+  debug en <text>#4: plot(density(docking[, i], na.rm = T))
+  \end{verbatim}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/johan-20} \end{center}
+  
+  \begin{verbatim}
+  debug en <text>#4: rug(docking[, i])
+  debug en <text>#4: browser()
+  \end{verbatim}
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \KeywordTok{plot}\NormalTok{(}\KeywordTok{cor}\NormalTok{(docking[}\OperatorTok{-}\KeywordTok{c}\NormalTok{(}\DecValTok{5}\NormalTok{,}\DecValTok{12}\NormalTok{,}\DecValTok{13}\NormalTok{,}\DecValTok{38}\NormalTok{,}\DecValTok{51}\NormalTok{),}\OperatorTok{-}\DecValTok{1}\NormalTok{]))}
+  \end{Highlighting}
+  \end{Shaded}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/johan-21} \end{center}
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \NormalTok{## Leer sobre la incertidumbre del 2 y explicarla  }
+  \NormalTok{## Y leer el paper de Julian y el de mauricio sobre reportes de docking}
+  \end{Highlighting}
+  \end{Shaded}
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \KeywordTok{ggplot}\NormalTok{(docking.m, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{variable, }\DataTypeTok{y=}\NormalTok{Enzima)) }\OperatorTok{+}\StringTok{ }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"Substrates"}\NormalTok{, }\DataTypeTok{y =} \StringTok{"Enzymes"}\NormalTok{,}\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size=}\DecValTok{12}\NormalTok{))}\OperatorTok{+}\StringTok{ }\KeywordTok{scale_fill_gradientn}\NormalTok{(}\DataTypeTok{colours =} \KeywordTok{hm.palette}\NormalTok{(}\DecValTok{100}\NormalTok{),}\DataTypeTok{na.value =} \StringTok{"gray"}\NormalTok{)}\OperatorTok{+}\KeywordTok{theme_bw}\NormalTok{()}\OperatorTok{+}\KeywordTok{theme}\NormalTok{(}\DataTypeTok{plot.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{14}\NormalTok{, }\DataTypeTok{face =} \StringTok{"bold"}\NormalTok{), }\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{12}\NormalTok{), }\DataTypeTok{axis.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{face=}\StringTok{"bold"}\NormalTok{), }\DataTypeTok{axis.text.x=}\KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{90}\NormalTok{,}\DataTypeTok{size =} \DecValTok{6}\NormalTok{))}
+  \end{Highlighting}
+  \end{Shaded}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/heatonPDF-1} \end{center}
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 1]{chapter4/Figura1_4.pdf}
+  \caption[Heatplot docking PriA enzyme Family vs substrates]{\normalsize{Heatplot docking PriA enzyme Family vs substrates}}
+  \label{fig:Heatplod PriA docking}
+  \end{figure}
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.6]{chapter4/PriAHeatPot.png}
+  \caption[Heat Plot PriA Streptomyces vs other subtrates]{\normalsize{Heat Plot PriA Streptomyces vs other subtrates}}
+  \label{fig:PriADocking}
+  \end{figure}
+  
+  \section{GTP is the substrate with best PriA
+  affinity}\label{gtp-is-the-substrate-with-best-pria-affinity}
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \NormalTok{## boxplot de los sustratos}
+  \KeywordTok{ggplot}\NormalTok{(docking.m, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{variable, }\DataTypeTok{y=}\NormalTok{value)) }\OperatorTok{+}\StringTok{ }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"Substrates"}\NormalTok{, }\DataTypeTok{y =} \StringTok{"Affinity"}\NormalTok{,}\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size=}\DecValTok{12}\NormalTok{)) }\OperatorTok{+}\StringTok{ }\KeywordTok{geom_boxplot}\NormalTok{()}\OperatorTok{+}\KeywordTok{theme_bw}\NormalTok{()}\OperatorTok{+}\KeywordTok{theme}\NormalTok{(}\DataTypeTok{plot.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{14}\NormalTok{, }\DataTypeTok{face =} \StringTok{"bold"}\NormalTok{), }\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{12}\NormalTok{), }\DataTypeTok{axis.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{face=}\StringTok{"bold"}\NormalTok{), }\DataTypeTok{axis.text.x=}\KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{90}\NormalTok{,}\DataTypeTok{size =} \DecValTok{6}\NormalTok{), }\DataTypeTok{legend.position =} \StringTok{"bottom"}\NormalTok{)}
+  \end{Highlighting}
+  \end{Shaded}
+  
+  \begin{verbatim}
+  Warning: Removed 100 rows containing non-finite values (stat_boxplot).
+  \end{verbatim}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/substrateBox-1} \end{center}
+  
+  \clearpage  
+  
+  \section{PriA Activity on GTP}\label{pria-activity-on-gtp}
+  
+  Activity was measured fluorometrically in 96-well plates (Nuc 96-Well
+  Optical Botto Plates) in a TECAN infinite M1000 plate reader (excitation
+  at 286 nm and emission at 386 nm)
+  
+  Preliminar activity essays were performed on an active PriA from
+  \emph{Streptomyces coelicolor} and an inactive mutant D11A.
+  
+  Enzymes were cloned on coli V68 strains, overexpression were induced and
+  protein were purified.
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.6]{chapter4/MutantControl.png}
+  \caption[Scoe and non functional Scoe PriA acting on dGTP]{\normalsize{Scoe and non functional Scoe PriA acting on dGTP}}
+  \label{fig:PriARutas2}
+  \end{figure}
+  
+  \clearpage  
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \NormalTok{GTP <-}\StringTok{ }\KeywordTok{read.table}\NormalTok{(}\StringTok{"chapter4/GTP.activity"}\NormalTok{, }\DataTypeTok{header=}\OtherTok{TRUE}\NormalTok{, }\DataTypeTok{sep=}\StringTok{"}\CharTok{\textbackslash{}t}\StringTok{"}\NormalTok{)}
+  \NormalTok{dGTP <-}\StringTok{ }\KeywordTok{read.table}\NormalTok{(}\StringTok{"chapter4/dGTP.activity"}\NormalTok{, }\DataTypeTok{header=}\OtherTok{TRUE}\NormalTok{, }\DataTypeTok{sep=}\StringTok{"}\CharTok{\textbackslash{}t}\StringTok{"}\NormalTok{)}
+  \NormalTok{GTP.m <-}\StringTok{ }\KeywordTok{melt}\NormalTok{(GTP,}\DataTypeTok{id=}\StringTok{"Time"}\NormalTok{)}
+  
+  \KeywordTok{plot}\NormalTok{(GTP.m}\OperatorTok{$}\NormalTok{Time, GTP.m}\OperatorTok{$}\NormalTok{value, }\DataTypeTok{col=}\NormalTok{GTP.m}\OperatorTok{$}\NormalTok{variable, }\DataTypeTok{pch=}\DecValTok{19}\NormalTok{)}
+  \end{Highlighting}
+  \end{Shaded}
+  
+  \begin{verbatim}
+  Warning in xy.coords(x, y, xlabel, ylabel, log): NAs introducidos por
+  coerción
+  \end{verbatim}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/activity-1} \end{center}
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \KeywordTok{plot.new}\NormalTok{()}
+  \KeywordTok{legend}\NormalTok{(}\StringTok{"center"}\NormalTok{, }\DataTypeTok{legend =} \KeywordTok{unique}\NormalTok{(GTP.m}\OperatorTok{$}\NormalTok{variable), }\DataTypeTok{col =} \KeywordTok{unique}\NormalTok{(GTP.m}\OperatorTok{$}\NormalTok{variable), }\DataTypeTok{pch=}\DecValTok{19}\NormalTok{)}
+  \end{Highlighting}
+  \end{Shaded}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/activity-2} \end{center}
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \KeywordTok{ggplot}\NormalTok{(GTP.m, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{Time, }\DataTypeTok{y=}\NormalTok{value,}\DataTypeTok{color=}\NormalTok{variable)) }\OperatorTok{+}\StringTok{ }\KeywordTok{geom_point}\NormalTok{()}\OperatorTok{+}\StringTok{ }\KeywordTok{facet_wrap}\NormalTok{(}\OperatorTok{~}\StringTok{ }\NormalTok{variable)}\OperatorTok{+}\StringTok{ }\KeywordTok{geom_smooth}\NormalTok{()}\OperatorTok{+}\KeywordTok{theme_bw}\NormalTok{()}\OperatorTok{+}\KeywordTok{theme}\NormalTok{(}\DataTypeTok{plot.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{8}\NormalTok{, }\DataTypeTok{face =} \StringTok{"bold"}\NormalTok{), }\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{12}\NormalTok{), }\DataTypeTok{axis.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{face=}\StringTok{"bold"}\NormalTok{), }\DataTypeTok{axis.text.y=}\KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{30}\NormalTok{,}\DataTypeTok{size =} \DecValTok{1}\NormalTok{), }\DataTypeTok{legend.position =} \StringTok{"bottom"}\NormalTok{)}\OperatorTok{+}\StringTok{ }\KeywordTok{scale_size_area}\NormalTok{()}
+  \end{Highlighting}
+  \end{Shaded}
+  
+  \begin{verbatim}
+  `geom_smooth()` using method = 'loess'
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : span too small. fewer data values than degrees of freedom.
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : at 227.79
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : radius 64.12
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : all data on boundary of neighborhood. make span bigger
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : pseudoinverse used at 227.79
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : neighborhood radius 8.0075
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : reciprocal condition number 1
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : at 1845.3
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : radius 64.12
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : all data on boundary of neighborhood. make span bigger
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : There are other near singularities as well. 64.12
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : zero-width neighborhood. make span bigger
+  
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : zero-width neighborhood. make span bigger
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning: Computation failed in `stat_smooth()`:
+  NA/NaN/Inf en llamada a una función externa (arg 5)
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : span too small. fewer data values than degrees of freedom.
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : at 474.62
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : radius 15.07
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : all data on boundary of neighborhood. make span bigger
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : pseudoinverse used at 474.62
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : neighborhood radius 3.882
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : reciprocal condition number 1
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : at 1258.8
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : radius 15.07
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : all data on boundary of neighborhood. make span bigger
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : There are other near singularities as well. 15.07
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : zero-width neighborhood. make span bigger
+  
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : zero-width neighborhood. make span bigger
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning: Computation failed in `stat_smooth()`:
+  NA/NaN/Inf en llamada a una función externa (arg 5)
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : span too small. fewer data values than degrees of freedom.
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : at 859.79
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : radius 47.817
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : all data on boundary of neighborhood. make span bigger
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : pseudoinverse used at 859.79
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : neighborhood radius 6.915
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : reciprocal condition number 1
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : at 2256.6
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : radius 47.817
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : all data on boundary of neighborhood. make span bigger
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : There are other near singularities as well. 47.817
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : zero-width neighborhood. make span bigger
+  
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : zero-width neighborhood. make span bigger
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning: Computation failed in `stat_smooth()`:
+  NA/NaN/Inf en llamada a una función externa (arg 5)
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : span too small. fewer data values than degrees of freedom.
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : at 1084.3
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : radius 0.7208
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : all data on boundary of neighborhood. make span bigger
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : pseudoinverse used at 1084.3
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : neighborhood radius 0.849
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : reciprocal condition number 1
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : at 1255.7
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : radius 0.7208
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : all data on boundary of neighborhood. make span bigger
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : There are other near singularities as well. 0.7208
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : zero-width neighborhood. make span bigger
+  
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : zero-width neighborhood. make span bigger
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning: Computation failed in `stat_smooth()`:
+  NA/NaN/Inf en llamada a una función externa (arg 5)
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : span too small. fewer data values than degrees of freedom.
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : at 1470.5
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : radius 7.7869
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : all data on boundary of neighborhood. make span bigger
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : pseudoinverse used at 1470.5
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : neighborhood radius 2.7905
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : reciprocal condition number 1
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : at 2034.2
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : radius 7.7869
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : all data on boundary of neighborhood. make span bigger
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : There are other near singularities as well. 7.7869
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : zero-width neighborhood. make span bigger
+  
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : zero-width neighborhood. make span bigger
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning: Computation failed in `stat_smooth()`:
+  NA/NaN/Inf en llamada a una función externa (arg 5)
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : span too small. fewer data values than degrees of freedom.
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : at 2612.2
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : radius 2.1199
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : all data on boundary of neighborhood. make span bigger
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : pseudoinverse used at 2612.2
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : neighborhood radius 1.456
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : reciprocal condition number 1
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : at 2906.4
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : radius 2.1199
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : all data on boundary of neighborhood. make span bigger
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : There are other near singularities as well. 2.1199
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : zero-width neighborhood. make span bigger
+  
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : zero-width neighborhood. make span bigger
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning: Computation failed in `stat_smooth()`:
+  NA/NaN/Inf en llamada a una función externa (arg 5)
+  \end{verbatim}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/activity-3} \end{center}
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \KeywordTok{ggplot}\NormalTok{(GTP.m, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{Time, }\DataTypeTok{y=}\NormalTok{value,}\DataTypeTok{color=}\NormalTok{variable)) }\OperatorTok{+}\StringTok{ }\KeywordTok{geom_point}\NormalTok{()}\OperatorTok{+}\StringTok{ }\KeywordTok{geom_smooth}\NormalTok{()}\OperatorTok{+}\KeywordTok{theme_bw}\NormalTok{()}\OperatorTok{+}\KeywordTok{theme}\NormalTok{(}\DataTypeTok{plot.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{8}\NormalTok{, }\DataTypeTok{face =} \StringTok{"bold"}\NormalTok{), }\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{12}\NormalTok{), }\DataTypeTok{axis.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{face=}\StringTok{"bold"}\NormalTok{), }\DataTypeTok{axis.text.y=}\KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{30}\NormalTok{,}\DataTypeTok{size =} \DecValTok{1}\NormalTok{), }\DataTypeTok{legend.position =} \StringTok{"bottom"}\NormalTok{)}\OperatorTok{+}\StringTok{ }\KeywordTok{scale_size_area}\NormalTok{()}
+  \end{Highlighting}
+  \end{Shaded}
+  
+  \begin{verbatim}
+  `geom_smooth()` using method = 'loess'
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : span too small. fewer data values than degrees of freedom.
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : at 1470.5
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : radius 7.7869
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : all data on boundary of neighborhood. make span bigger
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : pseudoinverse used at 1470.5
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : neighborhood radius 2.7905
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : reciprocal condition number 1
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : at 2034.2
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : radius 7.7869
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : all data on boundary of neighborhood. make span bigger
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : There are other near singularities as well. 7.7869
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : zero-width neighborhood. make span bigger
+  
+  Warning in simpleLoess(y, x, w, span, degree = degree, parametric =
+  parametric, : zero-width neighborhood. make span bigger
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning: Computation failed in `stat_smooth()`:
+  NA/NaN/Inf en llamada a una función externa (arg 5)
+  \end{verbatim}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/activity-4} \end{center}
+  
+  the two enzymes with activity\\
+  \emph{Thermomonospora curvata} thermophilic Actinobacteria from
+  Thermomonosporaceae genus, it can be found in compost and participate in
+  the active degradation of cellulose
+  {[}\protect\hyperlink{ref-chertkov_complete_2011}{148}{]}.
+  
+  Jonesia trpF shows no activity \emph{Jonesia denitrificans} is
+  classified as a pathogenic organism for animals, reported genome was
+  originally isolated from cooked ox blood
+  {[}\protect\hyperlink{ref-pukall_complete_2009}{149}{]}.
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \NormalTok{docking <-}\StringTok{ }\KeywordTok{read.csv}\NormalTok{(}\StringTok{"chapter4/SmallHeat.data"}\NormalTok{, }\DataTypeTok{header=}\OtherTok{TRUE}\NormalTok{, }\DataTypeTok{sep=}\StringTok{"}\CharTok{\textbackslash{}t}\StringTok{"}\NormalTok{)}
+  \KeywordTok{kable}\NormalTok{(docking,  }\DataTypeTok{caption =} \StringTok{"Enzymes docking }\CharTok{\textbackslash{}\textbackslash{}}\StringTok{label\{tab:docking\}"}\NormalTok{,}\DataTypeTok{caption.short =} \StringTok{"Enzymes docking "}\NormalTok{)}
+  \end{Highlighting}
+  \end{Shaded}
+  
+  \begin{longtable}[]{@{}lrrrrrrrrrrrrrrrrrrrr@{}}
+  \caption{Enzymes docking \label{tab:docking}}\tabularnewline
+  \toprule
+  Enzima & S13 & S15 & S14 & S16 & S10 & S12 & S9 & S18 & S5 & S4 & S8 &
+  S17 & S7 & S6 & S11 & S1 & S2 & S3 & S19 & S20\tabularnewline
+  \midrule
+  \endfirsthead
+  \toprule
+  Enzima & S13 & S15 & S14 & S16 & S10 & S12 & S9 & S18 & S5 & S4 & S8 &
+  S17 & S7 & S6 & S11 & S1 & S2 & S3 & S19 & S20\tabularnewline
+  \midrule
+  \endhead
+  Srub\_2VEP & -7.4 & -7.3 & -7.5 & -7.1 & -6.5 & -6.2 & -6.5 & -7.7 &
+  -9.4 & -9.3 & -7.9 & -7.2 & -8.3 & -8.6 & -8.9 & -9.0 & -7.1 & -8.9 &
+  -7.8 & -7.7\tabularnewline
+  Saver\_2VEP & -7.4 & -7.2 & -7.0 & -6.5 & -7.3 & -6.4 & -7.0 & -7.5 &
+  -9.6 & -8.5 & -7.9 & -7.6 & -8.4 & -8.7 & -9.8 & -8.3 & -7.9 & -8.6 &
+  -7.7 & -7.6\tabularnewline
+  Scoe\_2VEP & -7.5 & -7.5 & -7.9 & -7.0 & -7.0 & -6.2 & -6.5 & -7.8 &
+  -8.8 & -9.2 & -7.8 & -7.9 & -8.0 & -8.9 & -10.3 & -9.2 & -9.3 & -8.4 &
+  -8.1 & -8.2\tabularnewline
+  Scoe\_2X30 & -8.1 & -7.4 & -7.6 & -6.9 & -6.7 & -6.8 & -7.1 & -7.9 &
+  -9.1 & -9.0 & -8.3 & -8.6 & -8.5 & -9.0 & -10.6 & -10.0 & -10.3 & -10.2
+  & -8.1 & -7.9\tabularnewline
+  Scoe\_1VZW & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA &
+  NA & NA & NA & NA & NA & NA & NA & NA\tabularnewline
+  Sfla\_2VEP & -7.1 & -7.6 & -7.2 & -7.3 & -7.2 & -6.8 & -6.9 & -8.1 &
+  -8.2 & -7.2 & -8.2 & -7.2 & -8.4 & -8.3 & -8.5 & -7.9 & -7.8 & -6.0 &
+  -7.5 & -7.3\tabularnewline
+  Sgha\_2VEP & -9.2 & -8.7 & -6.7 & -6.7 & -7.4 & -7.7 & -7.2 & -7.5 &
+  -9.8 & -8.9 & -8.2 & -7.8 & -8.8 & -8.7 & -10.1 & -9.1 & -9.0 & -9.5 &
+  -8.0 & -7.5\tabularnewline
+  Siak\_2VEP & -6.6 & -7.3 & -7.0 & -7.1 & -7.1 & -7.1 & -6.8 & -8.0 &
+  -9.2 & -8.7 & -7.8 & -7.6 & -8.3 & -8.4 & -9.1 & -5.8 & -5.3 & -8.5 &
+  -7.3 & -7.4\tabularnewline
+  Sbic\_2VEP & -7.2 & -6.7 & -6.8 & -6.5 & -6.2 & -6.6 & -5.9 & -7.8 &
+  -8.5 & -7.8 & -7.8 & -7.2 & -8.2 & -8.0 & -9.6 & -8.2 & -8.0 & -9.4 &
+  -7.7 & -7.5\tabularnewline
+  Sbot\_2VEP & -9.6 & -10.9 & -8.9 & -7.1 & -6.0 & -6.2 & -6.7 & -8.1 &
+  -9.1 & -8.8 & -8.3 & -7.9 & -8.9 & -9.3 & -9.4 & -9.8 & -10.0 & -8.9 &
+  -8.2 & -8.0\tabularnewline
+  Sipo\_2VEP & -6.6 & -6.6 & -7.3 & -6.9 & -6.5 & -6.3 & -6.5 & -8.1 &
+  -8.6 & -9.1 & -8.0 & -7.9 & -8.0 & -8.4 & -8.5 & -7.2 & -8.4 & -8.2 &
+  -7.9 & -7.6\tabularnewline
+  Ssvi & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA &
+  NA & NA & NA & NA & NA & NA & NA\tabularnewline
+  Ssvi\_4U28 & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA &
+  NA & NA & NA & NA & NA & NA & NA & NA\tabularnewline
+  Ssvi\_4TX9 & -5.9 & -8.2 & -7.1 & -6.6 & -6.8 & -7.0 & -7.6 & -7.9 &
+  -8.4 & -8.3 & -8.2 & -8.1 & -8.4 & -8.7 & -7.7 & -8.2 & -8.2 & -6.7 &
+  -8.0 & -7.5\tabularnewline
+  Salb\_2VEP & -6.3 & -7.1 & -7.4 & -6.8 & -7.7 & -6.9 & -6.6 & -8.0 &
+  -9.6 & -8.9 & -8.6 & -7.9 & -8.6 & -8.4 & -9.1 & -7.4 & -7.2 & -8.8 &
+  -8.1 & -7.8\tabularnewline
+  Sbik\_2VEP & -7.4 & -6.7 & -7.4 & -7.3 & -7.7 & -6.5 & -6.8 & -8.5 &
+  -9.9 & -9.8 & -8.3 & -7.8 & -8.2 & -8.4 & -10.5 & -7.1 & -6.3 & -8.3 &
+  -8.1 & -7.9\tabularnewline
+  Stsu\_2VEP & -6.9 & -7.5 & -7.9 & -7.8 & -7.5 & -7.3 & -7.7 & -8.1 &
+  -10.0 & -9.7 & -8.7 & -7.8 & -8.8 & -8.8 & -10.6 & -7.8 & -8.7 & -9.2 &
+  -7.9 & -7.8\tabularnewline
+  Sven\_2VEP & -8.3 & -7.6 & -7.5 & -6.8 & -6.4 & -7.0 & -6.2 & -8.2 &
+  -9.6 & -9.0 & -7.9 & -7.4 & -8.3 & -8.6 & -10.0 & -8.2 & -8.2 & -8.1 &
+  -7.6 & -7.4\tabularnewline
+  Scal\_2VEP & -7.3 & -8.8 & -7.5 & -6.7 & -7.0 & -6.5 & -6.5 & -8.7 &
+  -10.0 & -9.7 & -8.8 & -7.7 & -8.2 & -8.6 & -10.5 & -8.1 & -9.2 & -8.9 &
+  -7.6 & -7.6\tabularnewline
+  Sbaa\_2VEP & -8.9 & -6.6 & -6.7 & -6.8 & -7.2 & -7.2 & -6.2 & -7.7 &
+  -9.6 & -9.5 & -8.4 & -7.4 & -8.5 & -8.2 & -9.7 & -8.5 & -8.4 & -9.3 &
+  -7.4 & -7.7\tabularnewline
+  Sglo\_2VEP & -6.1 & -6.8 & -6.9 & -6.5 & -6.7 & -6.3 & -6.7 & -7.5 &
+  -9.6 & -9.6 & -8.6 & -7.8 & -8.7 & -8.7 & -9.9 & -6.2 & -5.1 & -9.2 &
+  -7.8 & -7.7\tabularnewline
+  Sful\_2VEP & -9.0 & -6.9 & -7.1 & -6.8 & -6.3 & -7.2 & -6.6 & -8.1 &
+  -9.8 & -9.3 & -7.7 & -8.0 & -8.7 & -8.8 & -10.5 & -7.6 & -9.1 & -10.5 &
+  -7.1 & -7.4\tabularnewline
+  Sgri\_2VEP & -6.6 & -8.2 & -7.1 & -6.4 & -7.1 & -7.4 & -7.1 & -7.4 &
+  -9.4 & -8.5 & -8.6 & -7.5 & -8.8 & -8.4 & -9.6 & -8.8 & -8.8 & -8.7 &
+  -7.7 & -7.5\tabularnewline
+  S34\_2VEP & -7.8 & -7.2 & -7.6 & -7.3 & -6.2 & -6.5 & -6.9 & -8.0 & -8.8
+  & -8.6 & -7.7 & -7.1 & -7.7 & -7.9 & -7.2 & -7.1 & -6.7 & -7.1 & -7.7 &
+  -7.7\tabularnewline
+  Srim\_2VEP & -7.4 & -6.8 & -7.1 & -7.2 & -7.2 & -7.4 & -7.8 & -8.6 &
+  -9.7 & -9.3 & -8.8 & -7.7 & -8.9 & -8.7 & -10.2 & -6.8 & -8.2 & -9.0 &
+  -7.5 & -7.8\tabularnewline
+  Satr\_2VEP & -7.6 & -7.1 & -7.5 & -7.4 & -6.2 & -6.5 & -6.9 & -8.0 &
+  -8.9 & -8.7 & -7.7 & -7.4 & -7.7 & -7.8 & -6.5 & -7.0 & -6.3 & -7.7 &
+  -7.7 & -7.7\tabularnewline
+  S1813\_2VEP & -7.5 & -6.7 & -6.8 & -6.6 & -6.8 & -7.0 & -6.7 & -7.9 &
+  -9.9 & -9.7 & -8.3 & -7.7 & -8.5 & -8.6 & -10.0 & -7.6 & -7.5 & -8.6 &
+  -7.3 & -7.5\tabularnewline
+  Svar\_2VEP & -6.3 & -6.8 & -7.0 & -6.3 & -6.9 & -6.9 & -6.6 & -7.8 &
+  -9.3 & -7.4 & -8.5 & -7.3 & -8.0 & -8.7 & -8.5 & -7.4 & -6.3 & -6.0 &
+  -7.9 & -7.5\tabularnewline
+  Sfra\_2VEP & -7.3 & -7.0 & -6.8 & -6.6 & -6.5 & -7.3 & -6.6 & -8.6 &
+  -9.1 & -8.7 & -8.9 & -7.7 & -8.9 & -9.0 & -8.7 & -6.0 & -6.3 & -7.9 &
+  -8.2 & -7.8\tabularnewline
+  Smeg\_2VEP & -8.0 & -7.3 & -6.9 & -6.6 & -7.2 & -6.7 & -6.1 & -7.6 &
+  -9.2 & -9.1 & -7.8 & -7.4 & -8.2 & -8.5 & -9.6 & -9.2 & -9.2 & -8.6 &
+  -7.7 & -7.5\tabularnewline
+  Ssul\_2VEP & -7.5 & -7.0 & -6.9 & -6.6 & -6.6 & -6.7 & -6.9 & -7.7 &
+  -8.4 & -8.2 & -8.2 & -7.5 & -8.1 & -7.7 & -8.2 & -6.7 & -7.1 & -7.7 &
+  -7.6 & -7.4\tabularnewline
+  Slav\_4X9S & -8.0 & -7.1 & -6.7 & -6.9 & -6.6 & -6.8 & -6.7 & -8.2 &
+  -9.5 & -9.1 & -8.6 & -8.0 & -8.4 & -8.7 & -9.1 & -9.5 & -9.3 & -8.1 &
+  -8.1 & -7.6\tabularnewline
+  Sery\_4X9S & -7.8 & -7.2 & -7.6 & -7.2 & -7.4 & -6.9 & -7.4 & -8.5 &
+  -9.4 & -9.4 & -8.6 & -7.6 & -8.4 & -8.6 & -9.1 & -10.0 & -10.1 & -9.0 &
+  -7.8 & -8.2\tabularnewline
+  SspC\_4X9S & -7.4 & -6.9 & -7.3 & -6.8 & -7.3 & -6.6 & -7.5 & -8.0 &
+  -9.8 & -9.3 & -8.7 & -7.6 & -8.5 & -8.4 & -10.6 & -9.1 & -8.9 & -8.5 &
+  -8.1 & -8.0\tabularnewline
+  Sxan\_4X9S & -7.5 & -6.9 & -6.8 & -6.8 & -6.5 & -6.6 & -6.5 & -8.3 &
+  -8.0 & -8.1 & -7.6 & -7.4 & -8.7 & -8.1 & -8.1 & -8.5 & -8.0 & -7.6 &
+  -7.7 & -7.4\tabularnewline
+  Skat\_4X9S & -6.4 & -7.0 & -7.1 & -6.7 & -7.7 & -6.3 & -6.2 & -8.1 &
+  -8.5 & -9.2 & -8.3 & -7.6 & -9.0 & -8.5 & -9.7 & -9.5 & -9.9 & -9.2 &
+  -7.4 & -7.5\tabularnewline
+  SMg1\_4X9S & -6.5 & -6.9 & -7.2 & -7.1 & -6.5 & -6.9 & -6.4 & -7.3 &
+  -7.8 & -7.7 & -8.3 & -7.5 & -7.9 & -8.4 & -9.5 & -7.6 & -5.2 & -7.5 &
+  -7.6 & -7.7\tabularnewline
+  SMg1\_W9T & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA &
+  NA & NA & NA & NA & NA & NA & NA & NA\tabularnewline
+  Sniv\_2VEP & -6.2 & -6.8 & -7.4 & -6.5 & -7.8 & -6.8 & -6.7 & -9.5 &
+  -9.6 & -9.4 & -8.7 & -8.2 & -8.6 & -9.1 & -9.9 & -5.4 & -5.5 & -9.2 &
+  -8.0 & -7.5\tabularnewline
+  Scla\_2VEP & -6.4 & -7.7 & -7.4 & -7.2 & -7.6 & -7.5 & -7.2 & -8.5 &
+  -10.1 & -10.0 & -8.7 & -7.9 & -8.8 & -9.1 & -10.2 & -6.9 & -8.1 & -8.5 &
+  -7.7 & -7.7\tabularnewline
+  Save\_2VEP & -7.6 & -6.7 & -7.1 & -7.2 & -7.1 & -6.5 & -6.6 & -7.8 &
+  -8.6 & -10.0 & -8.6 & -7.5 & -8.3 & -8.5 & -8.8 & -5.3 & -5.2 & -5.8 &
+  -7.7 & -7.4\tabularnewline
+  Spur\_2vEP & -6.8 & -7.3 & -6.9 & -6.7 & -8.0 & -7.9 & -7.7 & -8.5 &
+  -9.5 & -9.8 & -8.1 & -7.8 & -8.7 & -9.7 & -10.0 & -5.3 & -6.2 & -8.2 &
+  -7.6 & -7.4\tabularnewline
+  Scar\_2Y89 & -6.9 & -6.8 & -7.5 & -7.1 & -7.8 & -7.3 & -7.2 & -8.3 &
+  -9.2 & -8.3 & -8.9 & -8.4 & -8.9 & -9.3 & -9.4 & -5.3 & -5.2 & -7.1 &
+  -8.5 & -8.6\tabularnewline
+  Mtub\_2Y88 & -10.0 & -7.8 & -8.9 & -5.4 & -8.6 & -7.3 & -7.8 & -9.5 &
+  -10.9 & -10.3 & -9.5 & -9.0 & -9.8 & -9.8 & -11.3 & -10.1 & -10.2 &
+  -11.3 & -9.5 & -8.8\tabularnewline
+  Mtub\_2Y89 & -8.7 & -8.6 & -9.6 & -9.4 & -6.4 & -5.9 & -5.6 & -7.1 &
+  -7.0 & -7.5 & -7.3 & -6.8 & -7.4 & -8.4 & -7.5 & -8.1 & -8.6 & -7.5 &
+  -7.7 & -7.3\tabularnewline
+  Mtub\_2Y85 & -8.2 & -7.9 & -9.2 & -7.4 & -7.6 & -7.5 & -7.6 & -8.4 &
+  -9.7 & -9.5 & -9.3 & -7.8 & -8.6 & -8.6 & -10.2 & -9.8 & -9.9 & -10.1 &
+  -7.3 & -7.4\tabularnewline
+  Mtub\_3ZS4 & -10.0 & -10.5 & -11.4 & -6.4 & -8.2 & -7.2 & -7.0 & -9.6 &
+  -10.2 & -10.2 & -9.9 & -8.5 & -9.3 & -9.6 & -10.9 & -10.0 & -10.7 & -9.9
+  & -8.8 & -8.9\tabularnewline
+  S34\_3ZS4 & -7.4 & -8.0 & -7.6 & -6.4 & -5.2 & -5.4 & -5.2 & -6.1 & -6.8
+  & -6.4 & -5.7 & -6.4 & -6.3 & -6.3 & -7.1 & -7.4 & -7.1 & -6.4 & -7.1 &
+  -6.6\tabularnewline
+  Cdip\_4AXK & -9.2 & -7.8 & -10.9 & -7.2 & -7.5 & -7.6 & -7.7 & -8.9 &
+  -9.0 & -9.8 & -9.0 & -8.3 & -8.8 & -9.2 & -10.1 & -9.5 & -9.9 & -9.2 &
+  -8.0 & -7.9\tabularnewline
+  Cjei\_4AXK & -7.5 & -6.9 & -7.2 & -6.5 & -8.4 & -8.0 & -8.5 & -8.7 &
+  -9.5 & -9.6 & -9.4 & -8.8 & -9.0 & -9.5 & -9.3 & -8.1 & -9.3 & -8.5 &
+  -7.9 & -7.7\tabularnewline
+  Aaur & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA &
+  NA & NA & NA & NA & NA & NA & NA\tabularnewline
+  Aaur\_4WD0 & -8.2 & -8.5 & -8.1 & -7.9 & -5.7 & -5.5 & -5.9 & -7.0 &
+  -7.5 & -7.2 & -7.1 & -6.7 & -7.1 & -7.4 & -8.4 & -7.2 & -7.3 & -7.4 &
+  -7.0 & -6.7\tabularnewline
+  Acar\_4X2R & -10.6 & -9.3 & -9.3 & -7.2 & -7.2 & -6.8 & -7.3 & -7.5 &
+  -9.5 & -9.8 & -8.0 & -7.8 & -9.3 & -8.9 & -10.3 & -9.6 & -9.4 & -9.4 &
+  -8.1 & -8.0\tabularnewline
+  Auro\_4X2R & -9.9 & -9.1 & -9.8 & -8.1 & -7.4 & -7.1 & -7.4 & -7.8 &
+  -9.2 & -9.8 & -8.3 & -7.8 & -9.3 & -9.0 & -9.9 & -9.0 & -8.6 & -9.2 &
+  -8.5 & -8.2\tabularnewline
+  Afer\_4WD0 & -5.7 & -5.8 & -6.0 & -5.7 & -6.7 & -6.2 & -5.8 & -7.6 &
+  -9.2 & -8.8 & -7.8 & -7.4 & -8.3 & -8.4 & -9.3 & -6.7 & -4.5 & -9.1 &
+  -8.3 & -8.1\tabularnewline
+  Sent\_5AHE & -9.1 & -5.4 & -6.4 & -5.2 & -8.0 & -7.3 & -7.4 & -8.8 &
+  -10.7 & -10.2 & -8.7 & -8.7 & -9.6 & -9.9 & -10.9 & -7.8 & -9.1 & -10.3
+  & -9.0 & -8.4\tabularnewline
+  Ecoli\_K12 & -9.7 & -9.7 & -9.2 & -6.1 & -7.2 & -6.6 & -6.8 & -8.6 &
+  -9.5 & -9.1 & -8.6 & -8.2 & -9.0 & -8.6 & -10.2 & -9.9 & -10.2 & -9.9 &
+  -8.2 & -7.9\tabularnewline
+  Jden\_4WUI & -8.3 & -8.8 & -8.2 & -6.8 & -6.2 & -6.1 & -6.0 & -6.8 &
+  -7.4 & -7.6 & -7.5 & -6.9 & -7.6 & -7.5 & -7.7 & -7.5 & -7.6 & -7.2 &
+  -7.3 & -7.2\tabularnewline
+  Ctra & -8.2 & -8.0 & -7.4 & -7.2 & -6.1 & -5.5 & -5.4 & -6.5 & -7.1 &
+  -7.1 & -7.0 & -6.2 & -6.8 & -6.8 & -6.9 & -7.2 & -7.4 & -6.5 & -6.7 &
+  -6.6\tabularnewline
+  SMg1\_trpF & -7.2 & -8.8 & -8.2 & -7.3 & -6.2 & -5.7 & -5.7 & -6.9 &
+  -6.6 & -6.7 & -7.3 & -6.7 & -7.6 & -6.9 & -7.5 & -7.1 & -7.1 & -6.9 &
+  -6.7 & -6.5\tabularnewline
+  Aodo\_4X2R & -8.5 & -8.6 & -8.8 & -7.3 & -7.1 & -7.1 & -7.1 & -7.5 &
+  -9.7 & -9.4 & -7.8 & -7.6 & -9.6 & -8.8 & -10.1 & -8.4 & -8.9 & -9.4 &
+  -8.0 & -8.1\tabularnewline
+  \clearpage & & & & & & & & & & & & & & & & & & & &\tabularnewline
+  \bottomrule
+  \end{longtable}
+  
+  \section{Molecular dynamics vs experimental
+  data}\label{molecular-dynamics-vs-experimental-data}
+  
+  PriA activity on S3 (PRA)
+  
+  \[ 
+  \begin{tabular}{ l c r l l l l l}
+  \hline \\ [-1.5ex]
+  organism  &Family & $K_M    $     & $k_{cat}$        & $\frac{k_{cat}}{K_M}$ &Pre MD & Pos MD & Reference  \\ [1ex]
+  \hline \\ [-1.5ex]
+  Afer        &HisA   & $1.1\pm0.2$   &$  0.05\pm0.001    $& 0.045                  &-10.1    &-12.3       &Noda-García L et al 2015\\ [1ex]
+  Ecoli       &HisA   &$  1.6         $&$         4.9       $&3.1                   &-9.9   &-16       &Henn-Sax et al. (2002)\\ [1ex]
+  Sent        &HisA   &$  17.0 \pm0.1 $&$ 7.8 \pm 2.4   $&$4.5 × 10^5          $&-10.3  &-20.1     &Söderholm A et al (2015)\\ [1ex]
+  Aaur        &PriB   &$  2.1 \pm 0.5 $& $    1.8 \pm 0.2     $&0.9                   &-7.4   &              &verduzco-castro 2016\\ [1ex]
+  Sipo        &PriB   &$  3.8\pm0.2     $&$0.82\pm0.02        $&0.21                  &-8.2     &-14.7       &verduzco-castro 2016\\ [1ex]
+  SspC        &PriB   &$  11.4\pm3.4  $&$2.53\pm0.74      $&0.22                  &   -8.5    &-12.7     &verduzco-castro 2016\\ [1ex]
+  SMg1        &PriB   &$  13.2\pm3.4  $&$0.92\pm0.19      $&0.069                 &-8     &-15.2     &verduzco-castro 2016\\ [1ex]
+  Ssvi        &PriB   &$  3.9\pm0.89  $&$0.69\pm0.04      $&0.18                  &-8.2     &-16.7     &verduzco-castro 2016\\ [1ex]
+  Scoe        &PriA   &$  3.6\pm0.7     $&$ 1.3\pm0.2     $  &0.4                   &-8.4   &-15       &Noda-García et al (2010)\\ [1ex]
+  Sglob       &PriA   & $4.2\pm0.8     $ & $0.74\pm0.03    $   &0.18                  &-9.2     &-16.7       &verduzco-castro\\ [1ex]
+  Mtub 2Y85   &priA   &$  19  0.23      $&$0.012  -9.7          $&                      &       &          &Due et al 2011\\ [1ex]
+  Mtub 3ZS4   &priA   &$  ?                 $&$-9.9               $&                      &       &          &Due et al 2011 (To be published)\\ [1ex]
+  Auro        &priA   &$  4.0 \pm 0.9 $&$0.2 \pm 0.03   $&0.04                    &-9.2       &          &Vazquez-Juarez (2016)\\ [1ex]
+  Cjei        &PriA   &$  2.3 \pm 0.2 $&$0.9 \pm 0.08   $&0.39                    &-8.5       &          &Noda-García et al (2013)\\ [1ex]
+  Cdip        &subHisA&$  4.4 \pm 0.5 $&$2.6 \pm 0.3      $&0.59                  &-9.2       &          &Noda-García et al (2013)\\ [1ex]
+  SMg1 TrpF   &TrpF3  &   -                &-                &-                       &-6.9     &-9.6      &verduzco-castro 2016\\ [1ex]
+  Jden        &TrpF3  &   -                &-                &-          -7.2         &-9.4     &$16.8\pm3.3$&    Verduzco-Castro E et al  2016\\ [1ex]
+  Acar      &SubHisA& 0.02                     &                 &                        &       &          &            \\ [1ex]
+  Aodo        &SubTrpF&       -              &-                  &-                     &       &          &\\ [1ex]
+  \hline
+  \end{tabular}
+  \label{table:name}
+  \]
+  
+  PriA activity on S7 (PROFAR) \$\$ \centering 
+  
+  \begin{tabular}{ l c r l l l l l}
+  \hline \\ [-1.5ex]
+  organism  &Family  &  $K_M$ & $k_{cat}$& $\frac{k{cat}}{K_M}$ &Pre MD &Pos MD &Reference  \\ [1ex]
+  \hline \\ [-1.5ex]
+  Afer      &HisA    &-            &-                &-          &-9.2    &-9        &Noda-García L et al. (2015)   \\ [1ex]
+  Ecoli     &HisA    &-            &-                &-          &-9      &-11.1     &Henn-Sax et al. (2002)\\ [1ex]
+  Sent      &HisA    &-            & -               &-          &-9.6    &-10.2     &Söderholm A et al (2015)\\ [1ex]
+  Aaur      &PriB    &$26.3\pm6.3$ & $0.37\pm 0.09$  & 0.014     &-7.1    &-         &verduzco-castro 2016\\ [1ex]
+  Sipo      &PriB    &$60.8\pm1.1$ &$8.25\pm0.4 $    &0.14       &-8      &-8.5      &verduzco-castro 2016 \\ [1ex]
+  SspC      &PriB    &$149.9\pm29$ &$1.4\pm0.12 $    &0.009      &-8.5    &-10.8     &verduzco-castro 2016\\ [1ex]
+  SMg1      &PriB    &$129.6\pm34$ &$0.29\pm0.04$    &0.0022     &-7.5    &-11       &verduzco-castro 2016\\ [1ex]
+  Ssvi      &PriB    &$24.5\pm4.0$ &$1.6\pm0.29 $    &0.067      &-8      &-9.7      &verduzco-castro 2016 \\ [1ex]
+  Scoe      &PriA    &$5.0\pm0.08$ &$3.4\pm0.09  $   &0.7        &-8      &-9.4      &Noda-García et al (2010)   \\ [1ex]
+  Sglob     &PriA    &$11\pm1.0$  &$3.8\pm0.2  $     &0.34       &-8.7    &-9.4      &verduzco-castro 2016  \\ [1ex]
+  Mtub2Y85  &priA    &21         &3.6         &0.17       &-8.6    &          &Due et al 2011                        \\ [1ex] 
+  Mtub3ZS4  &priA    &           &            &           &-9.3    &          &Due et al 2011 (To be published)      \\ [1ex] 
+  Auro      &priA    &$23 \pm 6.5 $  &$0.5\pm0.05 $&0.02       &-9.3    &          &Vazquez-Juarez (2016)                 \\ [1ex] 
+  Cjei      &PriA    &$5.1 \pm1.0$  &$1.6 \pm 0.16 $&0.31       &-9      &          &Noda-García et al (2013)              \\ [1ex]
+  Cdip      &subHisA &-          &-           &-          &-8.8    &          &Noda-García et al (2013)              \\ [1ex]
+  SMg1 TrpF &TrpF3   &$8.4\pm1.7$    &$10.5\pm2.4$    &1.25       &-7.6    &-9        &verduzco-castro     \\ [1ex] 
+  Jden      &TrpF3   &$16.8\pm3.3$   &$27\pm1.6$      &1.6        &-7.6    &-7.7      &verduzco-castro     \\ [1ex] 
+  Acar      &SubHisA &Na         &Na          &0.02       &Na      &Na        &Na                                    \\ [1ex] 
+  Aodo      &SubTrpF &-          &-           &-          &-       &Na        &Na                                    \\ [1ex]
+  
+  \hline
+  \end{tabular}
+  
+  \label{table:mi table}\$\$
+  
+  Con actividad de FolE i.e activa para el compuesto V Adams et al (2014)
+  Genome size vs Total antismash cluster coloured by order
+  
+  \clearpage  
+  
+  \section{Non darwinian trayectories}\label{non-darwinian-trayectories}
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.6]{conclusion/Solocirculos.png}
+  \caption[Non darwinian trayectories]{\normalsize{Non darwinian trayectories}}
+  \label{fig:PriARutas}
+  \end{figure}
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.6]{conclusion/SolocirculosPRA.png}
+  \caption[Positive increments on PRA]{\normalsize{Positive increments on PRA}}
+  \label{fig:PRARutas}
+  \end{figure}
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.6]{conclusion/SolocirculosPRO.png}
+  \caption[Positive increments on ProFAR]{\normalsize{Positive increments on ProFAR}}
+  \label{fig:ProFARRutas}
+  \end{figure}
+  
+  HisF Arabinosa TrpC TrpD acido antranilico PRPP gliceroles de Ana checar
+  resistencias
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.6]{chapter4/Geles/PriAAbril30.png}
+  \caption[gel]{\normalsize{gel}}
+  \label{fig:gel}
+  \end{figure}
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \CommentTok{#sessionInfo()}
+  \end{Highlighting}
+  \end{Shaded}
   
   \chapter*{Conclusion}\label{conclusion}
   \addcontentsline{toc}{chapter}{Conclusion}
@@ -6146,16 +8796,30 @@ starts here.
   147. Noble SG. Turning images into simple line-art {[}Undergraduate
   thesis{]}. Reed College; 2002.
   
+  \hypertarget{ref-chertkov_complete_2011}{}
+  148. Chertkov O, Sikorski J, Nolan M, Lapidus A, Lucas S, Del Rio TG, et
+  al. Complete genome sequence of Thermomonospora curvata type strain
+  (B9T). Standards in Genomic Sciences {[}Internet{]}. 2011 Feb {[}cited
+  2017 Mar 3{]};4(1):13--22. Available from:
+  \url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3072092/}
+  
+  \hypertarget{ref-pukall_complete_2009}{}
+  149. Pukall R, Gehrich-Schröter G, Lapidus A, Nolan M, Glavina Del Rio
+  T, Lucas S, et al. Complete genome sequence of Jonesia denitrificans
+  type strain (Prevot 55134T). Standards in Genomic Sciences
+  {[}Internet{]}. 2009 Nov {[}cited 2017 Mar 3{]};1(3):262--9. Available
+  from: \url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3035236/}
+  
   \hypertarget{ref-angel2000}{}
-  148. Angel E. Interactive computer graphics : A top-down approach with
+  150. Angel E. Interactive computer graphics : A top-down approach with
   opengl. Boston, MA: Addison Wesley Longman; 2000.
   
   \hypertarget{ref-angel2001}{}
-  149. Angel E. Batch-file computer graphics : A bottom-up approach with
+  151. Angel E. Batch-file computer graphics : A bottom-up approach with
   quicktime. Boston, MA: Wesley Addison Longman; 2001.
   
   \hypertarget{ref-angel2002a}{}
-  150. Angel E. Test second book by angel. Boston, MA: Wesley Addison
+  152. Angel E. Test second book by angel. Boston, MA: Wesley Addison
   Longman; 2001.
 
 

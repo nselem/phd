@@ -33,8 +33,96 @@ library(reedtemplates)
   1) Introducción  
   2) Métodos de clasificación de BGCs
   3) Cyanobacterias 
---->
+--->  
 #Desarrollo de CORASON como herramienta para organizar clusters biosintéticos y otras vecindades genómicas conservadas.  
+
+
+```{r Corason-pipe, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter3/Corason-pipe.pdf", 
+      caption = "La herramienta corason localiza familias de clusters biosintéticos en un linaje genómico partiendo de un cluster y un gen de referencia.",
+      label = "Corason-pipe", 
+      cap.size = "footnotesize",
+      alt.cap="La herramienta corason localiza familias de clusters biosintéticos en un linaje genómico partiendo de un cluster y un gen de referencia. Todos los contextos genómicos que contengan ese gen y algún otro gen del cluster de referencia serán encontrados en el linaje seleccionado por el usuario. CORASON identifica el core génico de la familia. La información del core se utiliza para organizar filogenéticamente todos los miembros de la familia del BGC, es decir todas las variantes del BGC serán organizadas. El core génico está relacionado con el core de la molécula, la parte variable del BGC codifica enzimas accesorias que producen ornamentos i.e. variantes moleculares. Al cambiar de gen de referencia CORASON permite explorar otras familias de BGC que contengan las mismas modificaciones. Los resultados se presentan en una visualización que permite al mismo tiempo apreciar variación a nivel de presencia-ausencia de genes entre miembros de una familia de BGCs, como también apreciar variación a nivel de secuencia a través de un gradiente de color entre genes conservados entre una variante y el BGC de referencia.",
+    scale=".6",  type = "figure")
+```
+
+Texto `r ref(label = "Corason-pipe", type = "figure")`       
+ 
+```{r ISBATalk, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter3/ISBATalk.png", 
+      caption = " CORASON es una herramienta en línea de comandos para organizar filogenéticamente la variación de una familia de clusters. ",     
+      cap.size = "footnotesize",
+      alt.cap="CORASON es una herramienta en línea de comandos para organizar filogenéticamente la variación de una familia de clusters. Dada la existencia de variantes de BGCs en bases de datos  de linajes genómicos se diseñó CORASON. Corason se ejecuta en línea de comandos, su función es identificar el core génico de un BGC y utilizarlo para presentar una visualización de las variantes de la familia organizadas filogenéticamente",
+      label = "ISBATalk", scale=".4",
+      type = "figure")
+```
+ Texto `r ref(label = "ISBATalk", type = "figure")`      
+
+
+```{r des, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter3/des.png", 
+      caption = "EvoMining Algorithm",
+      label = "des",      
+      cap.size = "footnotesize",
+      alt.cap="Variantes del cluster biosintético de desferroxiamina fueron identificadas por CORASON en Actinobacterias de cuatro ciénegas. Una variante del BGC de desferroxiamina fue identificada. Esta variante se diferencia del cluster reportado por la ganancia de una penicilin amidasa. A este gen extra se le llamó $desG$. Fue verificado que la variación génica está ligada con la variación molecular", scale=".4",
+      type = "figure")
+```
+  Texto `r ref(label = "des", type = "figure")`      
+
+
+```{r Coelicolor, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter3/Coelicolor.pdf", 
+      caption = "EvoMining Algorithm",
+      label = "Coelicolor",      
+      cap.size = "footnotesize",
+      alt.cap="Contexto genómico conservado en las expansiones de AroA. La arsenoenol piruvato sintasa fue descubierta en un árbol de EvoMining como parte de una rama de expansiones de AroA en Actinobacteria. El contexto genómico de la arsenoenol piruvato sintasa de $S.~coelicolor$ tiene un core conservado en Actinobacteria. Este BGC está dedicado a la síntesis de metabolitos secundarios de tipo arsenolípidos. Primero se identificaron en otras secuencias genómicas contextos que contengan el homólogo de AroA y algún otro gen de su vecindad en $S.~coelicolor$. A continuación, se ordenaron manualmente los contextos obtenidos y se pudo identificar al menos cuatro diferentes clases de BGCs. La primera clase mostrada en un rectángulo morado no contiene PKS o NRPS, la segunda enmarcada en verde contiene una PKS-NRPS híbrida. La tercera clase incluye una PKS a la izquierda y a más de cinco genes de distancia de la Arsenoenol piruvato sintasa y finalmente la última clase contiene una PKS a la derecha y a sólo un gen de distancia de esta enzima. Esta figura muestra que existen variantes de un BGC ", scale=".4",
+      type = "figure")
+```
+ Texto `r ref(label = "Coelicolor", type = "figure")`      
+
+
+```{r azoxy, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter3/azoxy.png", 
+      caption = "EvoMining Algorithm",
+      cap.size = "footnotesize",
+      alt.cap="Azoxy BGC", 
+      label = "azoxy",  scale=".4",
+      type = "figure")
+```
+ Texto `r ref(label = "azoxy", type = "figure")`      
+
+
+```{r PseudomonasTauD, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter3/PseudomonasTauD.pdf", 
+      caption = "EvoMining Algorithm",
+      label = "PseudomonasTauD",     
+      cap.size = "footnotesize",
+      alt.cap="En Pseudomonas el gen $tauD$ tiene un contexto que incluye genes de metabolismo especializado. Variantes de este contexto están distribuidas en varios organismos. En particular  ",  scale=".9",
+      type = "figure")
+```
+ Texto `r ref(label = "PseudomonasTauD", type = "figure")`      
+
+
+```{r CORASONAlgorithm, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter3/corason_fig1.png", 
+      caption = "EvoMining Algorithm",
+      label = "CORASONAlgorithm",     
+      cap.size = "footnotesize",
+      alt.cap="", scale=".3",
+      type = "figure")
+```
+ Texto `r ref(label = "CORASONAlgorithm", type = "figure")`      
+
+```{r Rimosamide, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter3/figura5.pdf", 
+      caption = "EvoMining Algorithm",
+      label = "Rimosamide",      
+      cap.size = "footnotesize",
+      alt.cap="n", scale=".8",
+      type = "figure")
+```
+ Texto `r ref(label = "Rimosamide", type = "figure")`  
+ 
 
 Figura [CorasonCaracteristicas] CORASON es una herramienta en línea de comandos para organizar filogenéticamente la variación de una familia de clusters. Dada la existencia de variantes de BGCs en bases de datos  de linajes genómicos se diseñó CORASON. Corason se ejecuta en línea de comandos, su función es identificar el core génico de un BGC y utilizarlo para presentar una visualización de las variantes de la familia organizadas filogenéticamente  
 
@@ -123,7 +211,7 @@ El hecho de que el gen _tauD_ estuviera presente en todos los miembros de la fam
   
 Para identificar variantes de los BGCs relacionados a detoxin y rimosamide dentro de la rama de metabolismo especializado los 1175 BGCs del dataset que contenían un homólogo de tauD se pasaron por un análisis combinado de BiG-SCAPE/CORASON. Los BGCs fueron procesados con CORASON usando tauD como query gene. Teniendo como resultado que es el único miembro del ‘BGC core’. Es importante notar que el core del BGC puede contener entre 1 y 3 genes, [La NRPS, y la NRPS-PKS híbrida quedan en este ejemplo fuera del core debido a gaps en la secuencia del genoma de organismos como _Streptomyces humi_, _Streptomyces Spectabilis_ y _Amycolatopsis Vancoresmycina_]
 
-# CORASON sugiere que las familias detoxin y rimosamide pertenecen a un amplio clan de familias dedicadas a la síntesis de péptidos.  
+## CORASON sugiere que las familias detoxin y rimosamide pertenecen a un amplio clan de familias dedicadas a la síntesis de péptidos.  
 El análisis de CORASON reveló que las familias de los BGCs detoxin y rimosamide GCFs identificados en BiG-SCAPE eran parte de todo un clan de biosintesis de péptidos que incluía clados inexplorados [MM10] del phylum Actinobacteria [Fig TauDActinobacteria]. La organización filogenética de los BGCs provista por CORASON, reveló familias de BGCs que fueron omitidas debido al umbral utilizado por el algoritmo de clustering de BiG-SCAPE. Esto debido a la cercanía de genes biosintéticos detectados por antiSMASH como suficientemente diferentes como para ser clasificados en otras familias (ver Fig. S10).
 
 Hipotetizamos que las detoxins codificadas por los BGCs en los clados inexplorados contendrán cierta novedad química relacionada con las variaciones genéticas. Afortunadamente, 40 de las 152  cepas identificadas como portadoras de un BGCs estaban representadas en nuestros datos metabolómicos de 363–cepas por LC-MS/MS. Análisis de redes moleculares de estos datos indicaron la presencia de tres detoxin conocidas, cuatro rimosamide conocidas y otras 103 variantes de detoxin o rimosamide (Fig. 3c), el basto universo químico sugerido por el análisis BiG-SCAPE/CORASON.
@@ -146,17 +234,3 @@ El tercer clado que se estudió del super clan al que pertenecen las familias ri
 # Discusión
 El cluster des está muy conservado, no así los de arsenolípidos, ni los de rimosamide
 
-
-```{r CORASONAlgorithm, results = "asis",message=FALSE,echo=FALSE}
-label(path = "chapter3/corason_fig1.png", caption = "EvoMining Algorithm",label = "EvoMining Algorithms", type = "figure")
-```
-
-
-```{r EvoMiningAlgorithm2, results = "asis",message=FALSE,echo=FALSE}
-label(path = "chapter3/figura5.pdf", caption = "EvoMining Algorithm",label = "EvoMining Algorithms", type = "figure")
-```
-
-
-```{r EvoMiningAlgorithm3, results = "asis",message=FALSE,echo=FALSE}
-label(path = "chapter3/Coelicolor.png", caption = "EvoMining Algorithm",label = "EvoMining Algorithms", type = "figure")
-```
