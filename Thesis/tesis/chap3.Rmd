@@ -3,10 +3,32 @@ header-includes:
 - \usepackage{graphicx,latexsym}
 - \usepackage{amssymb,amsthm,amsmath}
 - \usepackage{longtable,booktabs,setspace}
-output: pdf_document
+output:
+  pdf_document: default
+  word_document: default
 ---
+```{r load_pkgs3,message=FALSE,echo=FALSE}
+# List of packages required for this analysis
+pkg <- c("dplyr", "ggplot2", "knitr", "devtools")
+# Check if packages are not installed and assign the
+# names of the packages not installed to the variable new.pkg
+new.pkg <- pkg[!(pkg %in% installed.packages())]
+# If there are any packages in the list that aren't installed,
+# install them
+if (length(new.pkg))
+  install.packages(new.pkg, repos = "http://cran.rstudio.com")
+# Load packages
+library(dplyr)
+library(ggplot2)
+library(knitr)
+if(!require(reedtemplates)){
+  library(devtools)
+  devtools::install_github("ismayc/reedtemplates")
+  }
+library(reedtemplates)
+```
 
-# CORASON {#ref_labels}   
+#CORASON {#ref_labels}   
 <!--- 
   1) Introducción  
   2) Métodos de clasificación de BGCs
@@ -29,8 +51,6 @@ Figura [CorasonPipeline] La herramienta corason localiza familias de clusters bi
 
 
 CORASON permite la rápida identificación de variantes de BGCs y organiza los resultados utilizando una aproximación filogenética. En la figura [CorasonPipeline] se muestra esquemáticamente como dado un cluster de referencia y un gen localizado en el cluster, así como las secuencias genómicas de un linaje de referencia corason buscará todas las variantes del cluster de referencia que existen en el linaje genómico seleccionado. 
-
-
 
 ## Las familias de BGCs están formadas por variantes del BGC de referencia.
 Así como existen familias génicas, un gen y todos sus homólogos, incluidos parálogos, ortólogos y xenólogos, también existen familias de BGCs. No es tan claro definir un BGC porque no tiene un codón de inicio y un codón de paro como un gen. En algunas ocasiones como en el caso de scytonemin todos los genes del BGC se expresan al recibir un estímulo, como los rayos UV en este caso. Otras veces en la producción del metabolito participan genes que no son necesariamente contiguos, y por ello al cambiar el BGC de organismo y realizar expresión heteróloga no se obtiene el mismo metabolito. Las fronteras es decir los genes de la orilla del BGC no siempre son claras. 
@@ -99,8 +119,7 @@ En esta sección utilizamos CORASON y BIG-SCAPE para analizar una base de datos 
 
 Figura [TauDActinobacteria]texto
 
- 
-El hecho de que el gen _tauD_ estuviera presente en todos los miembros de la familia captó nuestra atención. El producto del gen tauD pertenece a la super familia de enzimas Fe(II)/α-ketoglutarato-dependientes hidroxilasas. En particular tauD codifica una α-ketoglutarato-dependendiente taurina dioxigenasa involucrada en la asimilacion de sulfito por la liberación oxigenolítica del aminoácido taurina41. Interesantemente, esta familia también incluye enzimas en linajes como hongos, bacterias y plantas. Dichas enzimas catalizan hydroxylations, desaturations, ring expansions and ring formations, among other chemical transformations. A la fecha, el rol de TauD en la biosíntesis de los metabolitos detoxin y rimosamide aún es desconocido, se ha sugerido que es responsable de la oxidación de la prolina observada en algunos análogos39.
+El hecho de que el gen _tauD_ estuviera presente en todos los miembros de la familia captó nuestra atención. El producto del gen tauD pertenece a la super familia de enzimas Fe(II)/$\alpha$-ketoglutarato-dependientes hidroxilasas. En particular tauD codifica una $\alpha$-ketoglutarato-dependendiente taurina dioxigenasa involucrada en la asimilacion de sulfito por la liberación oxigenolítica del aminoácido taurina41. Interesantemente, esta familia también incluye enzimas en linajes como hongos, bacterias y plantas. Dichas enzimas catalizan hydroxylations, desaturations, ring expansions and ring formations, among other chemical transformations. A la fecha, el rol de TauD en la biosíntesis de los metabolitos detoxin y rimosamide aún es desconocido, se ha sugerido que es responsable de la oxidación de la prolina observada en algunos análogos39.
   
 Para identificar variantes de los BGCs relacionados a detoxin y rimosamide dentro de la rama de metabolismo especializado los 1175 BGCs del dataset que contenían un homólogo de tauD se pasaron por un análisis combinado de BiG-SCAPE/CORASON. Los BGCs fueron procesados con CORASON usando tauD como query gene. Teniendo como resultado que es el único miembro del ‘BGC core’. Es importante notar que el core del BGC puede contener entre 1 y 3 genes, [La NRPS, y la NRPS-PKS híbrida quedan en este ejemplo fuera del core debido a gaps en la secuencia del genoma de organismos como _Streptomyces humi_, _Streptomyces Spectabilis_ y _Amycolatopsis Vancoresmycina_]
 
@@ -113,7 +132,8 @@ Hipotetizamos que las detoxins codificadas por los BGCs en los clados inexplorad
 Tres de los clados que codifican para detoxin BGC fueron identificados por BiG-SCAPE dentro del árbol de CORASON capturaron nuestro interés ([Fig TauDActinobacteria], in colored boxes). En esta sección se describe el trabajo experimental realizado por Michael Mulloney del grupo de colaboradores de West Chicago, de los tres clados y específicamente de los organismos que seleccioné como candidatos a presentar diversidad química. 
 ### El clado P450/enoyl agrega una heptanamida al core molecular detoxin/rimosamide
 El primer clado es el ‘P450/enoyl clade’ contiene genes como el citocromo P450 y un enoyl-CoA hydratasa/isomerasa dentro de cada uno de sus BGCs. Este clado está marcado en rojo [Fig TauDActinobacteria]. Análisis de datos por tandem MS de extractos de _Streptomyces_ sp. NRRL S-325, que se encuentra dentro de este clado, llevó al descubrimiento de la detoxin S1 (1; Fig TauDActinobacteria, S16–17). Este nuevo análogo contiene una cadena lateral de heptanamide, una extrucutra única entre las detoxins y rimosamides cuya instalación posiblemente depende de la enzima enoyl-CoA hydratase/isomerase.
- ### El superclado spectinomycin/ detoxin-rimosamide-clan produce cinco variantes de detoxin. 
+
+### El superclado spectinomycin/ detoxin-rimosamide-clan produce cinco variantes de detoxin. 
 El segundo clado de interés,fue nombrado el ‘supercluster clade’ (Fig. 5, en verde claro), comprende los BGCs con genes de detoxin adjacentes al cluster que produce spectinomycin42 [Fig TauDActinobacteria]. El cluster de spectinomycin (MIBiG BGC0000715) contiene en su periferia al gen tauD como se muestra en la línea gris punteada de la [Fig TauDActinobacteria]. La secuencia del cluster de spectinomycin depositada en MIBiG es la única secuencia dsponible de  _Streptomyces spectabilis_ NRRL 2792. Como no se sabe que tauD participe en la síntesis de spectinomycin se hipotetizó que pueden existir los genes del cluster de detoxin al lado de los genes del BGC de spectinomycin en _S. spectabilis_ NRRL 2792. Adquirimos esta cepa para determinar si el análisis de CORASON podía ayudar a la predicción de detoxin basado solamente en la presencia del query gen pero en ausencia completa de la secuencia del BGC de detoxin. Análisis en tandem de espectrometría de masas de extracto _S. spectabilis_ NRRL 2792 reveló la producción de cinco compuestos tipo detoxin, incluyendo detoxin N1 (2; Fig TauDActinobacteria, S15), detoxin N2 (3; Fig. S15) y su análogo acetoxylated, detoxin N3 (4; Fig. S15). 
 
 Los tiempos de retención de ionies y los patrones de fragmentación de los últimos dos compuestos también fueron observados en extractos de _Streptomyces_ sp. NRRL B-1347 parte del clado del supercluster, confirmando la habilidad de CORASON para guiar un descubrimiento, mediante la utilización de la filogenia a pesar de lo limitado de los datos en la cepa NRRL-2792. Análisis de LC-MS de cultivos de NRRL-2792 suplementados con isotopos estables etiquedatos de amino acidos corroboraron las predicciones estructurales basadas en los análisis de la cepa cercana _Streptomyces_ sp. NRRL B-1347 (Fig TauDActinobacteria, S26–31). Los tres nuevos análogos incorporan copletamente el 13C6-isoleucine, pero d7-proline solo es incorporado en el compuesto 3. La pérdida de un deuterio de d7-proline en 2 y 4 soporta la asignación de acetoxylation del anillo de pyrrolidine común en detoxins y rimosamides39,43–45. Características especiales únicas a la serie de N-detoxins incluyen la incorporación de una tirosina N-formylated en 3 y 4 en lugar de fenilalanina, el residuo típico de detoxin/rimosamide,  lo que es soportado por la incorporación del anillo d4-tyrosine. El compuesto 2 la incorporación única de un residuo derivado del triptofano en esta posición, haciendo evidente la retención de cuatro deuterios cuando en experimentos de alimentación de indole-d5-tryptophan (Fig. S27). Aunque los datos de MS fueron insuficientes para desenmascarar esta estructura, el compuesto 2 fue producido por _S. spectabilis_ NRRL 2792 en suficiente abundancia para el aislamiento y la elucidación estructural por NMR. Varios experimentos 1D y 2D confirmaron las asignaciones por datos de MS y establecieron una N-acetylated kynurenine como la estructura derivada de triptófano en 2 (Figs. S18-S27).
@@ -128,15 +148,15 @@ El cluster des está muy conservado, no así los de arsenolípidos, ni los de ri
 
 
 ```{r CORASONAlgorithm, results = "asis",message=FALSE,echo=FALSE}
-label(path = "chapter3/FigurasPaper/Figure1.pdf", caption = "EvoMining Algorithm",label = "EvoMining Algorithms", type = "figure")
+label(path = "chapter3/corason_fig1.png", caption = "EvoMining Algorithm",label = "EvoMining Algorithms", type = "figure")
 ```
 
 
 ```{r EvoMiningAlgorithm2, results = "asis",message=FALSE,echo=FALSE}
-label(path = "chapter2/FigurasPaper/Figure4.pdf", caption = "EvoMining Algorithm",label = "EvoMining Algorithms", type = "figure")
+label(path = "chapter3/figura5.pdf", caption = "EvoMining Algorithm",label = "EvoMining Algorithms", type = "figure")
 ```
 
 
 ```{r EvoMiningAlgorithm3, results = "asis",message=FALSE,echo=FALSE}
-label(path = "chapter2/FigurasPaper/Figure5.pdf", caption = "EvoMining Algorithm",label = "EvoMining Algorithms", type = "figure")
+label(path = "chapter3/Coelicolor.png", caption = "EvoMining Algorithm",label = "EvoMining Algorithms", type = "figure")
 ```

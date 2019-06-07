@@ -1604,28 +1604,29 @@ starts here.
   estarán en el \emph{dispensable genome} pues \emph{Streptomyces} es
   productor de una gran variedad de metabolitos especializados y cada
   especie suele tener su producto característico.
+  \autoref{fig:MetabolismoPangenoma}
   
   \begin{figure}[h!tbp]
   \centering
   \includegraphics[angle = 0,scale = .75]{chapter1/Metabolismo-Pangenoma.png}
-  \caption[El metabolismo en el Pangenoma]{\normalsize{El metabolismo en el Pangenoma}}
-  \label{fig:El pangenoma de un conjunto de genomas de un linaje puede ser clasificado en varios grupos. En este ejemplo, en el lado izquierdo de la figura se observa en gris el genoma dispensable compuesto por familias génicas presentes sólo en un genoma. En dos tonos de morado observamos el shell genome, familias que están presentes en la mayoría de los genomas del linaje, en este en caso dos o tres genomas. Finalmente en rojo se muestra el core, aquellas familias presentes en todos los genomas del linaje. El core contiene tanto familias muy conservadas con una sola copia por genoma ( C ), como familias expandidas. Las familias marcadoras (M) pueden ser parte del core conservado o de las familias expandidas. Del lado derecho se muestra una representación del pangenoma para cualquier número de genomas. Familias de metabolismo conservado tenderán a estar concentradas entre el core y el shell genome, mientras que el metabolismo especializado tendrá más representantes en el dispensable que en el core genome. Sin embargo tanto el tipo de metabolismo como el tamaño del core, shell y dispensable pueden variar según la diversidad de los organismos seleccionados. }
+  \caption[El metabolismo en el Pangenoma]{\footnotesize{El pangenoma de un conjunto de genomas de un linaje puede ser clasificado en varios grupos. En este ejemplo, en el lado izquierdo de la figura se observa en gris el $genoma~dispensable$ compuesto por familias génicas presentes sólo en un genoma. En dos tonos de morado observamos el $shell genome$, familias que están presentes en la mayoría de los genomas del linaje, en este en caso dos o tres genomas. Finalmente en rojo se muestra el $core$, aquellas familias presentes en todos los genomas del linaje. El $core$ contiene tanto familias muy conservadas con una sola copia por genoma ( C ), como familias expandidas. Las familias marcadoras (M) pueden ser parte del $core$ conservado o de las familias expandidas. Del lado derecho se muestra una representación del pangenoma para cualquier número de genomas. Familias de metabolismo conservado tenderán a estar concentradas entre el $core$ y el $shell~genome$, mientras que el metabolismo especializado tendrá más representantes en el dispensable que en el $core genome$. Sin embargo tanto el tipo de metabolismo como el tamaño del $core$, $shell$ y $genoma~dispensable$ pueden variar según la diversidad de los organismos seleccionados. }}
+  \label{fig:MetabolismoPangenoma}
   \end{figure}
   
   El \emph{core genome} de un linaje, además de tener familias conservadas
   y prácticamente presentes en todo el dominio Bacteria también puede
-  contener familias marcadoras. Estos genes marcadores permiten realizar
-  pruebas de diagnóstico para colonizaciones bacterianas. A las familias
-  que están presentes en el \emph{core genome} de un linaje A, pero que
-  están completamente ausentes de un linaje B se les llama marcadoras. Por
-  ejemplo genes conservados en la especie \emph{Streptomyces coelicolor}
-  pero no conservados en \emph{Streptomyces rimosus} son genes marcadores
-  de \emph{Streptomyces coelicolor} respecto de \emph{Streptomyces
-  rimosus}. Estos mismos marcadores tal vez no sean marcadores respecto de
-  \emph{Streptomyces lividans}, a pesar de la cercanía taxonómica entre
-  estos organismos. La presencia de genes marcadores en el core depende de
-  ambos linajes, por lo que es importante contar con algoritmos que
-  permitan automatizar su cálculo.
+  contener familias marcadoras \autoref{fig:CoreMarcadores} . Estos genes
+  marcadores permiten realizar pruebas de diagnóstico para colonizaciones
+  bacterianas. A las familias que están presentes en el \emph{core genome}
+  de un linaje A, pero que están completamente ausentes de un linaje B se
+  les llama marcadoras. Por ejemplo genes conservados en la especie
+  \emph{Streptomyces coelicolor} pero no conservados en \emph{Streptomyces
+  rimosus} son genes marcadores de \emph{Streptomyces coelicolor} respecto
+  de \emph{Streptomyces rimosus}. Estos mismos marcadores tal vez no sean
+  marcadores respecto de \emph{Streptomyces lividans}, a pesar de la
+  cercanía taxonómica entre estos organismos. La presencia de genes
+  marcadores en el core depende de ambos linajes, por lo que es importante
+  contar con algoritmos que permitan automatizar su cálculo.
   
   El número de familias en el pangenoma, ya sea en el \emph{core, shell o
   dispensable} genome no sólo depende de la divergencia o proximidad
@@ -1651,8 +1652,8 @@ starts here.
   \begin{figure}[h!tbp]
   \centering
   \includegraphics[angle = 0,scale = .8]{chapter1/CoreMarcadores.png}
-  \caption[Core y genes Marcadores]{\normalsize{Core y genes Marcadores}}
-  \label{fig:El core genome puede contener familias con funciones en distintos grupos metabólicos así como diversidad en el número de copias. Arriba se muestra que en el core pueden coexistir familias tanto de copia única como con expansiones. Las familias con funciones en el metabolismo conservado suelen concentrarse en el core genome (rojas), pero también dependiendo de los organismos seleccionados pueden encontrarse ya sea familias enteras o algunas copias dedicadas al metabolismo especializado (azul). No de todas las copias se conocerá su función, algunas pueden tener un destino metabólico desconocido (gris) o bien ser predichas por algún algoritmo como parte del metabolismo especializado (cyan).  Abajo a la izquierda se comparan familias del core conservado con exactamente una copia por genoma contra familias del core expandido. Ambas pertenecen al core, pero en el core expandido hay dos genomas que tienen una copia extra en esta familia, unoa cyan y una gris, que podría dificultar la elección de los verdaderos ortólogos. A la derecha se ejemplifican familias de genes marcadores, útiles para identificar un linaje genómico. Tanto familias del core conservado como del core expandido pueden ser familias marcadores, siempre que exista al menos una copia de cada familia en el linaje 1 y ninguna copia en el linaje 2. Las familias dejan de ser marcadoras cuando el linaje dos contiene al menos una copia en algún genoma.}
+  \caption[Core y genes Marcadores]{\footnotesize{El core genome puede contener familias con funciones en distintos grupos metabólicos así como diversidad en el número de copias. Arriba se muestra que en el core pueden coexistir familias tanto de copia única como con expansiones. Las familias con funciones en el metabolismo conservado suelen concentrarse en el $core~genome$ (rojas), pero también dependiendo de los organismos seleccionados pueden encontrarse ya sea familias enteras o algunas copias dedicadas al metabolismo especializado (azul). No de todas las copias se conocerá su función, algunas pueden tener un destino metabólico desconocido (gris) o bien ser predichas por algún algoritmo como parte del metabolismo especializado (cyan).  Abajo a la izquierda se comparan familias del $core~conservado$ con exactamente una copia por genoma contra familias del $core~expandido$. Ambas pertenecen al $core$, pero en el $core~expandido$ hay dos genomas que tienen una copia extra en esta familia, unoa cyan y una gris, que podría dificultar la elección de los verdaderos ortólogos. A la derecha se ejemplifican familias de genes marcadores, útiles para identificar un linaje genómico. Tanto familias del $core~conservado$ como del $core~expandido$ pueden ser familias marcadores, siempre que exista al menos una copia de cada familia en el linaje 1 y ninguna copia en el linaje 2. Las familias dejan de ser marcadoras cuando el linaje dos contiene al menos una copia en algún genoma.}}
+  \label{fig:CoreMarcadores}
   \end{figure}
   
   Finalmente la distribución de las funciones metabólicas encontrada en
@@ -1729,8 +1730,8 @@ starts here.
   \begin{figure}[h!tbp]
   \centering
   \includegraphics[angle = 0,scale = .55]{chapter1/Best-n-directional.png}
-  \caption[Best-n-directional hits]{\normalsize{Best-n-directional hits}}
-  \label{fig:Orthocore utiliza los mejores hits n-direccionales para obtener grupos de ortólogos. Un hit es el mejor resultado de una secuencia en otro genoma. Un Bidireccional Best Hit es el mejor hit bidireccional, La secuencia 2 es el mejor hit de la secuencia 1 en el genoma 2 y recíprocamente, la secuencia 1 es el mejor hit de la secuencia 2 en el genoma 1. La existencia de una copia extra muy parecida a la secuencia 2 puede romper el BBH. Un mejor hit n-direccional debe ser BBH todos contra todos garantizando que estas secuencias están muy conservadas entre sí.}
+  \caption[Los mejores hits n-direccionales generalizan a los $Bidirectional~Best~Hits$]{\footnotesize{Orthocore utiliza los mejores hits n-direccionales para obtener grupos de ortólogos. Un hit es el mejor resultado de una secuencia en otro genoma. Un Bidireccional Best Hit es el mejor hit bidireccional. La secuencia 2 es el mejor hit de la secuencia 1 en el genoma 2 y recíprocamente, la secuencia 1 es el mejor hit de la secuencia 2 en el genoma 1. La existencia de una copia extra muy parecida a la secuencia 2 puede romper el BBH. Un mejor hit n-direccional debe ser BBH todos contra todos garantizando que estas secuencias están muy conservadas entre sí.}}
+  \label{fig:Best-n-directional}
   \end{figure}
   
   Los ortólogos suelen identificarse por similitud de secuencia, pero si
@@ -1738,14 +1739,14 @@ starts here.
   parálogos que pueden confundir la elucidación de eventos de especiación.
   Orthocore automatizó la búsqueda de ortólogos y el filtrado de parálogos
   en genomas procariontes mediante la generalización de la definición del
-  mejor hit bidireccional (BBH por sus siglas en inglés). Dos secuencias
-  son BBH si cada una es el mejor hit de un algoritmo de distancia (BLAST
-  usualmente) en el genoma de origen de la otra. Una primera
-  generalización para obtener el set de ortólogos de una familia del core
-  es definir un genoma de referencia y tomar los BBH respecto a ese
-  genoma. En la práctica, esta definición da como resultado distintos
-  resultados según el genoma de referencia, haciendo que algunos parálogos
-  no sea filtrados.
+  mejor hit bidireccional (BBH por sus siglas en inglés)
+  \autoref{fig:Best-n-directional} . Dos secuencias son BBH si cada una es
+  el mejor hit de un algoritmo de distancia (BLAST usualmente) en el
+  genoma de origen de la otra. Una primera generalización para obtener el
+  set de ortólogos de una familia del core es definir un genoma de
+  referencia y tomar los BBH respecto a ese genoma. En la práctica, esta
+  definición da como resultado distintos resultados según el genoma de
+  referencia, haciendo que algunos parálogos no sea filtrados.
   
   Para solventar esta dificultad se definió en Orthocore el concepto de
   mejores hits multidireccionales. Un conjunto de genes son mejores hits
@@ -1841,9 +1842,9 @@ starts here.
   Para estudiar la diversidad de \emph{Salmonella} presente en alimentos
   en México, primero se ensamblaron y anotaron genomas secuenciados para
   el trabajo ``distribución de los genes de la toxina VirB/D4 en plásmidos
-  de bovino asociados a Salmonella no tifoidal''. Los genomas fueron
-  ensamblados en Patrick y se desarrolló myRAST, una tubería previa a
-  Orthocore para la anotación automática de genomas ensamblados en RAST.
+  de bovino asociados a \emph{Salmonella} no tifoidal''. Los genomas
+  fueron ensamblados en Patrick y se desarrolló myRAST, una tubería previa
+  a Orthocore para la anotación automática de genomas ensamblados en RAST.
   El protocolo de myRAST puede encontrarse al final de este capítulo.
   
   Orthocore fue usado aquí para reconstruir filogenias de
@@ -1853,7 +1854,7 @@ starts here.
   genes pueden ser biosintéticos, islas de patogenicidad, operones o
   cualquier región parcialmente sinténica de un genoma bacteriano centrada
   en un gen. En este caso se observó una alta conservación de toxinas
-  tifoidales en islas de patogenicidad de Salmonella. Éstas fueron
+  tifoidales en islas de patogenicidad de \emph{Salmonella}. Éstas fueron
   identificadas en 76\% de las cepas analizadas y posteriormente
   visualizadas mediante CORASON.
   
@@ -1863,8 +1864,8 @@ starts here.
   \begin{figure}[h!tbp]
   \centering
   \includegraphics[angle = 0,scale = .45]{chapter1/Nostoc.png}
-  \caption[Arbol de Nostoc derivado de la selección  de genes del core conservado]{\normalsize{Arbol de Nostoc derivado de la selección  de genes del core conservado}}
-  \label{fig:Reconstrucción de 76 taxa provenientes de 7 órdenes de Cyanobacteria. La matriz final incluyó 45,475 aminoácidos curados de 198 familias de proteínas pertenecientes al core conservado. A la derecha se muestra un zoom del orden Nostocales que incluye bacterias simbiontes de cícadas. Metadatos como el tamaño de genoma, contenido de GC y hábitat de origen muestran una posible tendencia de incremento de tamaño en los genomas provenientes del microbioma de plantas.}
+  \caption[Arbol filogenético de $Nostoc$ construido utilizando  la selección de genes del $core~conservado$]{\footnotesize{Reconstrucción de 76 taxa provenientes de 7 órdenes de Cyanobacteria. La matriz final incluyó 45,475 aminoácidos curados de 198 familias de proteínas pertenecientes al $core~conservado$. A la derecha se muestra un zoom sobre el orden $Nostocales$. En este orden se incluyen algunas bacterias simbiontes de cícadas. Metadatos como el tamaño de genoma, contenido de GC y hábitat de origen muestran una posible tendencia de incremento de tamaño en los genomas provenientes del microbioma de plantas.}}
+  \label{fig:ArbolNostoc}
   \end{figure}
   
   Las Cyanobacterias son un phylum de bacterias que se han adaptado a
@@ -1874,10 +1875,11 @@ starts here.
   como simbionte el género \emph{Nostoc}. La presencia de \emph{Nostoc} en
   la raíz coraloide de las cícadas es fácilmente distinguible por la
   formación de un anillo verde conocido como anillo cyanobacterial. En la
-  figura se muestra la filogenia de 76 Cyanobacterias de 7 órdenes
-  distintos construida con 198 proteínas del core conservado obtenidas por
-  Orthocore. En esta reconstrucción se puede observar que los
-  \emph{Nostoc} asociados a plantas tienden a agruparse en la filogenia.
+  \autoref{fig:ArbolNostoc} se muestra la filogenia de 76 Cyanobacterias
+  de 7 órdenes distintos construida con 198 proteínas del core conservado
+  obtenidas por Orthocore. En esta reconstrucción se puede observar que
+  los \emph{Nostoc} asociados a plantas tienden a agruparse en la
+  filogenia.
   
   \subsection{Identificación de genes marcadores de Clavibacter
   michiganensis}\label{identificacion-de-genes-marcadores-de-clavibacter-michiganensis}
@@ -1901,8 +1903,8 @@ starts here.
   \begin{figure}[h!tbp]
   \centering
   \includegraphics[angle = 0,scale = .5]{chapter1/Marcadores-Clavibacter.png}
-  \caption[Marcadores-Clavibacter]{\normalsize{Marcadores-Clavibacter}}
-  \label{fig: Los marcadores moleculares previos a este trabajo no permitían diferenciar correctamente a Clavibacter michiganensis respecto al microbioma del tomate en invernaderos mexicanos. Arriba a la izquierda se muestran los antiguos marcadores tomA, ppaC, ppaH, pelA1, celA. Abajo organismos pertenecientes al microbioma del tomate. Orthocore obtuvo el core conservado de siete cepas de Cmm patógenas, y este core se utilizó para definir nuevos marcadores. Aunque tomA pertenecía al core conservado de Cmm, estaba también incluido en el pangenoma del microbioma del tomate. Después de calcular la intersección core conservado de Cmm y pangenoma del microbioma se obtuvieron entre las familias marcadoras genes clv parte del cluster biosintético de clavidicina (michiganina).}
+  \caption[Los genes del cluster biosintético clv son marcadores de $Clavibacter$]{\footnotesize{Los marcadores moleculares previos a este trabajo no permitían diferenciar correctamente a $Clavibacter~michiganensis$ respecto al microbioma del tomate en invernaderos mexicanos. Arriba a la izquierda se muestran los antiguos marcadores $tomA, ppaC, ppaH, pelA1, celA$. Abajo organismos pertenecientes al microbioma del tomate. Orthocore obtuvo el core conservado de siete cepas de $Cmm$ patógenas, y este core se utilizó para definir nuevos marcadores. Aunque $tomA$ pertenecía al core conservado de $Cmm$, estaba también incluido en el pangenoma del microbioma del tomate. Después de calcular la intersección core conservado de $Cmm$ y pangenoma del microbioma se obtuvieron entre las familias marcadoras genes $clv$ parte del cluster biosintético de clavidicina (michiganina).}}
+  \label{fig:Marcadores}
   \end{figure}
   
   Al analizar en RAST genomas de \emph{Microbacterium} y
@@ -1915,19 +1917,20 @@ starts here.
   conservado, pero que al agregar los genomas no Cmm del resto del
   microbioma del tomate los genes \emph{clv} se pierden. El descubrimiento
   de que \emph{clv} pertenecía al core de \emph{Cmm} se realizó con
-  secuencias de genomas muy fragmentados, en la figura se muestran las
-  cepas originales que fueron analizadas.
+  secuencias de genomas muy fragmentados, en la\autoref{fig:Marcadores} se
+  muestran las cepas originales que fueron analizadas.
   
   \begin{figure}[h!tbp]
   \centering
   \includegraphics[angle = 0,scale = .6]{chapter1/clv.png}
-  \caption[ clv BGC]{\normalsize{ clv BGC}}
-  \label{fig:Marcadores-Clavibacter}
+  \caption[ clv BGC]{\footnotesize{clavibacter}}
+  \label{fig:clv-Marcadores}
   \end{figure}
   
-  Esta observación se corroboró con más genomas, en este caso se muestran
-  como ejemplo 10 genomas de bacterias del microbioma del tomate, entre
-  ellas siete \emph{Clavibacter}, seis de tomates de invernadero y uno
+  Esta observación se corroboró con más genomas,
+  \autoref{fig:clv-Marcadores} en este caso se muestran como ejemplo 10
+  genomas de bacterias del microbioma del tomate, entre ellas siete
+  \emph{Clavibacter}, seis de tomates de invernadero y uno
   \emph{Clavibacter} proveniente de tomate silvestre, \emph{Clavibacter}
   RA1B que fue reportado en la tesis de maestría de Yanez. Con Orthocore
   vemos que el tamaño del core decrece al ir agregando genomas de
@@ -1974,26 +1977,27 @@ starts here.
   \begin{figure}[h!tbp]
   \centering
   \includegraphics[angle = 0,scale = .5]{chapter1/CoreGenomeMicrobioma.png}
-  \caption[ X X Evomining]{\normalsize{ X X Evomining}}
-  \label{fig:Marcadores-Clavibacter EvoMining}
+  \caption[ X X Evomining]{\footnotesize{Aqui vemos los marcadores de EEvomining}}
+  \label{fig:Clavibacter-EvoMining}
   \end{figure}
   
   Debido al intercambio génico por transferencia horizontal en las
   bacterias, es posible que los genes marcadores actuales alguna vez
   aparezcan en otros organismos. También las bacterias pierden
   continuamente genes, por lo que es posible que algún gen marcador de Cmm
-  se pierda en una cierta cepa. Esto hace que la definición de estar
-  presentes en el core del grupo de interés y ausentes totalmente de cada
-  uno de los genomas de otro linaje ya no funcione completamente. Sin
-  embargo, en estas dos situaciones presentadas, ganancia de genes
-  marcadores de organismos externos al linaje original o pérdida de genes
-  marcadores en algunas cepas, se sigue cumpliendo que los ex genes
-  marcadores, estarán presentes en la mayoría de los organismos del linaje
-  de interés y ausentes de la mayoría de los organismos del linaje
-  externo. Por ello, se pensó que está definición de genes marcadores se
-  podía generalizar clasificando a grupos de genes ortólogos acorde a sus
-  porcentajes de ocurrencia. Esta idea se desarrolló en la herramienta
-  clavisual, explicada en la siguiente sección.
+  se pierda en una cierta cepa \autoref{fig:Clavibacter-EvoMining} . Esto
+  hace que la definición de estar presentes en el core del grupo de
+  interés y ausentes totalmente de cada uno de los genomas de otro linaje
+  ya no funcione completamente. Sin embargo, en estas dos situaciones
+  presentadas, ganancia de genes marcadores de organismos externos al
+  linaje original o pérdida de genes marcadores en algunas cepas, se sigue
+  cumpliendo que los ex genes marcadores, estarán presentes en la mayoría
+  de los organismos del linaje de interés y ausentes de la mayoría de los
+  organismos del linaje externo. Por ello, se pensó que está definición de
+  genes marcadores se podía generalizar clasificando a grupos de genes
+  ortólogos acorde a sus porcentajes de ocurrencia. Esta idea se
+  desarrolló en la herramienta clavisual, explicada en la siguiente
+  sección.
   
   \section{Clavisual: Identificación de genes marcadores a un cierto
   porcentaje de grupos
@@ -2022,9 +2026,10 @@ starts here.
   genes contenidos en los genomas del grupo de interés necesitan ser
   clasificados por familias, para de ahi obtener las familias que tienen
   presencia en un porcentaje \%p y ausencia en un porcentaje a\% del grupo
-  externo. Estos perfiles fueron desarrollados para Clavisual utilizando
-  FasthOrtho para clasificar las familias y de ahi obtener los grupos. Con
-  ellos se consiguieron marcadores para Kurtobacterium.
+  externo. Estos perfiles fueron desarrollados para Clavisual
+  \autoref{fig:Clavisual} utilizando FasthOrtho para clasificar las
+  familias y de ahi obtener los grupos. Con ellos se consiguieron
+  marcadores para Kurtobacterium.
   
   Finalmente Clavisual despliega un árbol realizado con el Pseudocore
   respecto a un conjunto de genes de Cmm NCPP previamente seleccionados.
@@ -2035,7 +2040,7 @@ starts here.
   \begin{figure}[h!tbp]
   \centering
   \includegraphics[angle = 0,scale = .4]{chapter1/Clavisual.png}
-  \caption[ X X]{\normalsize{ X X}}
+  \caption[ X X XXXX]{\footnotesize{Aqui vemos un arbol}}
   \label{fig:Clavisual}
   \end{figure}
   
@@ -2056,24 +2061,25 @@ starts here.
   docker que se describe más tarde en este capítulo en la sección de las
   descripciones técnicas. Como ejemplo de su funcionamiento, se analizó el
   pangenoma de los mismos diez genomas del pangenoma del tomate utilizados
-  en la visualización de clavisual.
+  en la visualización de clavisual \autoref{fig:bpga-pangenoma} .
   
   \begin{figure}[h!tbp]
   \centering
   \includegraphics[angle = 0,scale = .5]{chapter1/bpga-pangenoma.png}
-  \caption[ X X]{\normalsize{ X X}}
+  \caption[ X X]{\footnotesize{adihipihfd }}
   \label{fig:bpga-pangenoma}
   \end{figure}
   
   Tomando otros siete clavibacters, utilizando OrthoVenn tenemos la misma
   observación, el número de familias de genes agregadas al adicionar
-  genomas, es después de siete genomas casi tan grande como su core.
+  genomas, es después de siete genomas casi tan grande como su core
+  \autoref{fig:Venn-Chart}.
   
   \begin{figure}[h!tbp]
   \centering
-  \includegraphics[angle = 0,scale = .5]{chapter1/Venn_chart.pdf}
-  \caption[ X X]{\normalsize{ X X}}
-  \label{fig:Venn Chart}
+  \includegraphics[angle = 0,scale = .6]{chapter1/Venn_chart.pdf}
+  \caption[ X X]{\footnotesize{Diagrama de Venn del pangenoma de Clavibacter Selectos}}
+  \label{fig:Venn-Chart}
   \end{figure}
   
   \section{Relación entre genes marcadores, Orthocores y la promiscuidad
@@ -2137,28 +2143,95 @@ starts here.
   
   Pie de tabla
   
-  \textbar{}Atributo \textbar{}Descripción \textbar{}\\
-  \textbar{}genbank \textbar{}GenBank (con funciones y enriquecimiento de
-  SEED) \textbar{}\\
-  \textbar{}genbank\_stripped\textbar{}Genbank con EC-numbers removidos de
-  las funciones\textbar{}\\
-  \textbar{}embl \textbar{}EMBL (con funciones y enriquecimiento de SEED)
-  \textbar{}\\
-  \textbar{}embl\_stripped \textbar{}EMBL con EC-numbers removidos de las
-  funciones\textbar{}\\
-  \textbar{}gff3 \textbar{}GFF3\textbar{}\\
-  \textbar{}gff3\_stripped \textbar{}GFF3 con EC-numbers removidos de las
-  funciones\textbar{}\\
-  \textbar{}gtf \textbar{}GTF\textbar{}\\
-  \textbar{}gtf\_stripped\textbar{} GTF con EC-numbers removidos de las
-  funciones\textbar{}\\
-  \textbar{}rast\_tarball \textbar{} Archivo comprimido (gzipped) con todo
-  el directorio de las anotaciones de RAST sobre el genoma\textbar{}\\
-  \textbar{}nucleic\_acid\textbar{} Fasta de DNA de genes\textbar{}\\
-  \textbar{}amino\_acid \textbar{}Fasta de DNA de aminoácidos\textbar{}\\
-  \textbar{}table\_txt\textbar{}Gene data in tab-separated
-  format\textbar{}\\
-  \textbar{}table\_xls\textbar{}\textbar{}
+  \begin{longtable}[]{@{}ll@{}}
+  \caption{Correlation of Inheritance Factors for Parents and Child
+  \label{tab:inher}}\tabularnewline
+  \toprule
+  \begin{minipage}[b]{0.22\columnwidth}\raggedright\strut
+  Atributo\strut
+  \end{minipage} & \begin{minipage}[b]{0.72\columnwidth}\raggedright\strut
+  Descripción\strut
+  \end{minipage}\tabularnewline
+  \midrule
+  \endfirsthead
+  \toprule
+  \begin{minipage}[b]{0.22\columnwidth}\raggedright\strut
+  Atributo\strut
+  \end{minipage} & \begin{minipage}[b]{0.72\columnwidth}\raggedright\strut
+  Descripción\strut
+  \end{minipage}\tabularnewline
+  \midrule
+  \endhead
+  \begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
+  genbank\strut
+  \end{minipage} & \begin{minipage}[t]{0.72\columnwidth}\raggedright\strut
+  GenBank (con funciones y enriquecimiento de SEED)\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
+  genbank\_stripped\strut
+  \end{minipage} & \begin{minipage}[t]{0.72\columnwidth}\raggedright\strut
+  Genbank con EC-numbers removidos de las funciones\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
+  embl\strut
+  \end{minipage} & \begin{minipage}[t]{0.72\columnwidth}\raggedright\strut
+  EMBL (con funciones y enriquecimiento de SEED)\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
+  embl\_stripped\strut
+  \end{minipage} & \begin{minipage}[t]{0.72\columnwidth}\raggedright\strut
+  EMBL con EC-numbers removidos de las funciones\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
+  gff3\strut
+  \end{minipage} & \begin{minipage}[t]{0.72\columnwidth}\raggedright\strut
+  GFF3\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
+  gff3\_stripped\strut
+  \end{minipage} & \begin{minipage}[t]{0.72\columnwidth}\raggedright\strut
+  GFF3 con EC-numbers removidos de las funciones\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
+  gtf\strut
+  \end{minipage} & \begin{minipage}[t]{0.72\columnwidth}\raggedright\strut
+  GTF\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
+  gtf\_stripped\strut
+  \end{minipage} & \begin{minipage}[t]{0.72\columnwidth}\raggedright\strut
+  GTF con EC-numbers removidos de las funciones\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
+  rast\_tarball\strut
+  \end{minipage} & \begin{minipage}[t]{0.72\columnwidth}\raggedright\strut
+  Archivo comprimido (gzipped) con todo el directorio de las anotaciones
+  de RAST sobre el genoma\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
+  nucleic\_acid\strut
+  \end{minipage} & \begin{minipage}[t]{0.72\columnwidth}\raggedright\strut
+  Fasta de DNA de genes\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
+  amino\_acid\strut
+  \end{minipage} & \begin{minipage}[t]{0.72\columnwidth}\raggedright\strut
+  Fasta de DNA de aminoácidos\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
+  table\_txt\strut
+  \end{minipage} & \begin{minipage}[t]{0.72\columnwidth}\raggedright\strut
+  Gene data in tab-separated format\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
+  table\_xls\strut
+  \end{minipage} & \begin{minipage}[t]{0.72\columnwidth}\raggedright\strut
+  Preserve the original gene calls and use RAST\strut
+  \end{minipage}\tabularnewline
+  \bottomrule
+  \end{longtable}
+  
+  Referencia \autoref{tab:inher}.
   
   \section{ORthocore}\label{orthocore}
   
@@ -2169,8 +2242,2735 @@ starts here.
   conservadas y sólo considerando posiciones con gaps menores que el 50\%
   de las secuencias en el alineamiento final. Después de esta curación las
   secuencias son concatenadas en una matriz final.
-  \texttt{\{r\ chapter2,\ child\ =\ \textquotesingle{}chap2.Rmd\textquotesingle{}\}}
-  \texttt{\{r\ chapter3,\ child\ =\ \textquotesingle{}chap3.Rmd\textquotesingle{}\}}
+  
+  \chapter{EvoMining}\label{evomining}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/coloring_test_set-1} \end{center}
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \NormalTok{########################################################}
+  \NormalTok{## Trying to sort the heatplot }
+  \NormalTok{## Reading heatplot table and taxa information and saving it on data.frame data structure}
+  \NormalTok{ArchaeasHeatPlot <-}\StringTok{ }\KeywordTok{read.table}\NormalTok{(}\StringTok{"chapter2/Archaeas/ArchaeasHeatPlot"}\NormalTok{, }\DataTypeTok{header=}\OtherTok{TRUE}\NormalTok{, }\DataTypeTok{sep=}\StringTok{"}\CharTok{\textbackslash{}t}\StringTok{"}\NormalTok{)}
+  \NormalTok{ArchaeasTaxa <-}\StringTok{ }\KeywordTok{read.table}\NormalTok{(}\StringTok{"chapter2/Archaeas/ArchaeasTaxa"}\NormalTok{, }\DataTypeTok{header=}\OtherTok{TRUE}\NormalTok{, }\DataTypeTok{sep=}\StringTok{"}\CharTok{\textbackslash{}t}\StringTok{"}\NormalTok{)}
+  \NormalTok{hm.palette <-}\StringTok{ }\KeywordTok{colorRampPalette}\NormalTok{(}\KeywordTok{rev}\NormalTok{(}\KeywordTok{brewer.pal}\NormalTok{(}\DecValTok{11}\NormalTok{, }\StringTok{'Spectral'}\NormalTok{)), }\DataTypeTok{space=}\StringTok{'Lab'}\NormalTok{)  }
+  \NormalTok{## Adding order variable }
+  \NormalTok{ArchaeasHeatPlot}\OperatorTok{$}\NormalTok{order<-}\KeywordTok{c}\NormalTok{(}\DecValTok{1}\OperatorTok{:}\KeywordTok{nrow}\NormalTok{(ArchaeasHeatPlot))}
+  \CommentTok{#sorting RastId it accordig to order variable}
+  \NormalTok{ArchaeasHeatPlot}\OperatorTok{$}\NormalTok{RastId <-}\StringTok{ }\KeywordTok{with}\NormalTok{(ArchaeasHeatPlot,}\KeywordTok{reorder}\NormalTok{(ArchaeasHeatPlot}\OperatorTok{$}\NormalTok{RastId, ArchaeasHeatPlot}\OperatorTok{$}\NormalTok{order))}
+  \CommentTok{# Merging heatplot and taxonomy table into one table}
+  \NormalTok{HP_Archaeas_Taxa<-}\KeywordTok{merge}\NormalTok{(ArchaeasHeatPlot,ArchaeasTaxa,}\DataTypeTok{by.x =} \StringTok{"RastId"}\NormalTok{,}\DataTypeTok{by.y =} \StringTok{"RastId"}\NormalTok{)}
+  \CommentTok{# Melting information leting as variables just enzymatic families and copy number}
+  \NormalTok{HP_Archaeas_Taxa.m<-}\StringTok{ }\KeywordTok{melt}\NormalTok{(HP_Archaeas_Taxa)}
+  \end{Highlighting}
+  \end{Shaded}
+  
+  \begin{verbatim}
+  Using RastId, Name, SuperPhylum, Phylum, Class, Order, Family as id variables
+  \end{verbatim}
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \CommentTok{# Cleaning data}
+  \NormalTok{HP_Archaeas_Taxa.m<-}\StringTok{ }\KeywordTok{ddply}\NormalTok{(HP_Archaeas_Taxa.m, .(variable), transform,value)  ## }
+  \NormalTok{HP_Archaeas_Taxa.m<-}\StringTok{ }\KeywordTok{ddply}\NormalTok{(HP_Archaeas_Taxa.m, .(variable), transform,}\DataTypeTok{rescale=}\KeywordTok{scale}\NormalTok{(value))  ## }
+  
+  \NormalTok{HP_Archeas.calcs<-}\StringTok{ }\KeywordTok{ddply}\NormalTok{(HP_Archaeas_Taxa.m, .(variable),summarize, }\DataTypeTok{mean =} \KeywordTok{round}\NormalTok{(}\KeywordTok{mean}\NormalTok{(value), }\DecValTok{2}\NormalTok{),}\DataTypeTok{sd =} \KeywordTok{round}\NormalTok{(}\KeywordTok{sd}\NormalTok{(value), }\DecValTok{2}\NormalTok{),}\DataTypeTok{expansion=}\NormalTok{mean}\OperatorTok{+}\NormalTok{sd, }\DataTypeTok{reduction=}\NormalTok{mean}\OperatorTok{-}\NormalTok{sd)  ## }
+  
+  \KeywordTok{rownames}\NormalTok{(HP_Archeas.calcs)<-HP_Archeas.calcs}\OperatorTok{$}\NormalTok{variable}
+  \NormalTok{#########################################################3}
+  \NormalTok{color_exp<-}\ControlFlowTok{function}\NormalTok{(x)\{}
+    \CommentTok{# Pendiente pasarle un dataframe en lugar de tener fijo small.m como variable global}
+  \NormalTok{  result=}\DecValTok{0}
+  \NormalTok{  expansion<-}\OtherTok{NULL}
+  \NormalTok{  reduction<-}\OtherTok{NULL}
+  \NormalTok{  local_value=x[}\DecValTok{1}\NormalTok{,}\StringTok{"value"}\NormalTok{]}
+  \NormalTok{  met_family<-x[}\DecValTok{1}\NormalTok{,}\StringTok{"variable"}\NormalTok{]}
+  \NormalTok{  Rast=x[}\DecValTok{1}\NormalTok{,}\DecValTok{1}\NormalTok{]}
+    \CommentTok{#print ("rast",Rast)}
+    \CommentTok{# print(paste(x,"family",met_family,"value",local_value,"Rast",Rast))}
+  \NormalTok{  expansion<-HP_Archeas.calcs}\OperatorTok{$}\NormalTok{expansion [}\KeywordTok{which}\NormalTok{(small.m}\OperatorTok{$}\NormalTok{variable}\OperatorTok{==}\NormalTok{met_family)] }
+  \NormalTok{  reduction<-HP_Archeas.calcs}\OperatorTok{$}\NormalTok{reduction [}\KeywordTok{which}\NormalTok{(small.m}\OperatorTok{$}\NormalTok{variable}\OperatorTok{==}\NormalTok{met_family)] }
+    \ControlFlowTok{if}\NormalTok{ (local_value}\OperatorTok{>=}\NormalTok{expansion)\{result=}\StringTok{ }\DecValTok{1}\NormalTok{\}}
+    \ControlFlowTok{else} \ControlFlowTok{if}\NormalTok{ (local_value}\OperatorTok{<=}\NormalTok{reduction)\{result=}\StringTok{ }\OperatorTok{-}\DecValTok{1}\NormalTok{\}}
+    \KeywordTok{return}\NormalTok{ (result)}
+  \NormalTok{\}}
+  \NormalTok{small[ }\OperatorTok{!}\NormalTok{small}\OperatorTok{$}\NormalTok{variable }\OperatorTok{%in%}\StringTok{ }\KeywordTok{c}\NormalTok{(}\StringTok{"Contigs"}\NormalTok{, }\StringTok{"Size"}\NormalTok{,}\StringTok{"TOTAL"}\NormalTok{), ] }
+  \end{Highlighting}
+  \end{Shaded}
+  
+  \begin{verbatim}
+        RastId                                                   Name
+  1     388199           Haloferax sp ATCC BAA-644ATCC BAA-644 AOLF01
+  2     388200 Candidatus Methanoperedens nitroreducensANME-2d JMIY01
+  3     388201 Marine group II euryarchaeote REDSEA-S40_B11N13 LURX01
+  551   388991                     Uncultured Acidilobus sp MG AYMA01
+  552   388992 Candidate divison MSBL1 archaeon SCGC-AAA259O05 LHXV01
+  567   389007                   Uncultured Acidilobus sp OSP8 AYMC01
+  690   390212    Archaeoglobus fulgidus DSM 8774 DSM 8774 CP006577.1
+  14017 388199           Haloferax sp ATCC BAA-644ATCC BAA-644 AOLF01
+  14018 388200 Candidatus Methanoperedens nitroreducensANME-2d JMIY01
+  14019 388201 Marine group II euryarchaeote REDSEA-S40_B11N13 LURX01
+  14567 388991                     Uncultured Acidilobus sp MG AYMA01
+  14568 388992 Candidate divison MSBL1 archaeon SCGC-AAA259O05 LHXV01
+  14583 389007                   Uncultured Acidilobus sp OSP8 AYMC01
+  14706 390212    Archaeoglobus fulgidus DSM 8774 DSM 8774 CP006577.1
+  63073 388199           Haloferax sp ATCC BAA-644ATCC BAA-644 AOLF01
+  63074 388200 Candidatus Methanoperedens nitroreducensANME-2d JMIY01
+  63075 388201 Marine group II euryarchaeote REDSEA-S40_B11N13 LURX01
+  63623 388991                     Uncultured Acidilobus sp MG AYMA01
+  63624 388992 Candidate divison MSBL1 archaeon SCGC-AAA259O05 LHXV01
+  63639 389007                   Uncultured Acidilobus sp OSP8 AYMC01
+  63762 390212    Archaeoglobus fulgidus DSM 8774 DSM 8774 CP006577.1
+  68329 388199           Haloferax sp ATCC BAA-644ATCC BAA-644 AOLF01
+  68330 388200 Candidatus Methanoperedens nitroreducensANME-2d JMIY01
+  68331 388201 Marine group II euryarchaeote REDSEA-S40_B11N13 LURX01
+  68879 388991                     Uncultured Acidilobus sp MG AYMA01
+  68880 388992 Candidate divison MSBL1 archaeon SCGC-AAA259O05 LHXV01
+  68895 389007                   Uncultured Acidilobus sp OSP8 AYMC01
+  69018 390212    Archaeoglobus fulgidus DSM 8774 DSM 8774 CP006577.1
+          SuperPhylum        Phylum           Class             Order
+  1     Euryarchaeota Euryarchaeota    Halobacteria     Haloferacales
+  2     Euryarchaeota Euryarchaeota Methanomicrobia Methanosarcinales
+  3     Euryarchaeota Euryarchaeota    unclassified      unclassified
+  551      TACK group Crenarchaeota    Thermoprotei      Acidilobales
+  552   Euryarchaeota Euryarchaeota    unclassified      unclassified
+  567      TACK group Crenarchaeota    Thermoprotei      Acidilobales
+  690   Euryarchaeota Euryarchaeota    Archaeoglobi   Archaeoglobales
+  14017 Euryarchaeota Euryarchaeota    Halobacteria     Haloferacales
+  14018 Euryarchaeota Euryarchaeota Methanomicrobia Methanosarcinales
+  14019 Euryarchaeota Euryarchaeota    unclassified      unclassified
+  14567    TACK group Crenarchaeota    Thermoprotei      Acidilobales
+  14568 Euryarchaeota Euryarchaeota    unclassified      unclassified
+  14583    TACK group Crenarchaeota    Thermoprotei      Acidilobales
+  14706 Euryarchaeota Euryarchaeota    Archaeoglobi   Archaeoglobales
+  63073 Euryarchaeota Euryarchaeota    Halobacteria     Haloferacales
+  63074 Euryarchaeota Euryarchaeota Methanomicrobia Methanosarcinales
+  63075 Euryarchaeota Euryarchaeota    unclassified      unclassified
+  63623    TACK group Crenarchaeota    Thermoprotei      Acidilobales
+  63624 Euryarchaeota Euryarchaeota    unclassified      unclassified
+  63639    TACK group Crenarchaeota    Thermoprotei      Acidilobales
+  63762 Euryarchaeota Euryarchaeota    Archaeoglobi   Archaeoglobales
+  68329 Euryarchaeota Euryarchaeota    Halobacteria     Haloferacales
+  68330 Euryarchaeota Euryarchaeota Methanomicrobia Methanosarcinales
+  68331 Euryarchaeota Euryarchaeota    unclassified      unclassified
+  68879    TACK group Crenarchaeota    Thermoprotei      Acidilobales
+  68880 Euryarchaeota Euryarchaeota    unclassified      unclassified
+  68895    TACK group Crenarchaeota    Thermoprotei      Acidilobales
+  69018 Euryarchaeota Euryarchaeota    Archaeoglobi   Archaeoglobales
+                     Family                       variable value     rescale
+  1          Haloferacaceae Phosphoglycerate_dehydrogenase     5  1.72610114
+  2     Methanoperedenaceae Phosphoglycerate_dehydrogenase     1 -0.60015209
+  3            unclassified Phosphoglycerate_dehydrogenase     1 -0.60015209
+  551         Acidilobaceae Phosphoglycerate_dehydrogenase     1 -0.60015209
+  552          unclassified Phosphoglycerate_dehydrogenase     1 -0.60015209
+  567         Acidilobaceae Phosphoglycerate_dehydrogenase     1 -0.60015209
+  690      Archaeoglobaceae Phosphoglycerate_dehydrogenase     2 -0.01858878
+  14017      Haloferacaceae            Asparagine_synthase     2  0.08780760
+  14018 Methanoperedenaceae            Asparagine_synthase     3  0.89748609
+  14019        unclassified            Asparagine_synthase     0 -1.53154939
+  14567       Acidilobaceae            Asparagine_synthase     1 -0.72187090
+  14568        unclassified            Asparagine_synthase     1 -0.72187090
+  14583       Acidilobaceae            Asparagine_synthase     1 -0.72187090
+  14706    Archaeoglobaceae            Asparagine_synthase     1 -0.72187090
+  63073      Haloferacaceae          Alanine_dehydrogenase     5  1.53589524
+  63074 Methanoperedenaceae          Alanine_dehydrogenase     1 -0.26825391
+  63075        unclassified          Alanine_dehydrogenase     0 -0.71929120
+  63623       Acidilobaceae          Alanine_dehydrogenase     0 -0.71929120
+  63624        unclassified          Alanine_dehydrogenase     1 -0.26825391
+  63639       Acidilobaceae          Alanine_dehydrogenase     0 -0.71929120
+  63762    Archaeoglobaceae          Alanine_dehydrogenase     0 -0.71929120
+  68329      Haloferacaceae      Isopropyl_malate_synthase     3  0.49494473
+  68330 Methanoperedenaceae      Isopropyl_malate_synthase     4  1.23231138
+  68331        unclassified      Isopropyl_malate_synthase     1 -0.97978855
+  68879       Acidilobaceae      Isopropyl_malate_synthase     0 -1.71715520
+  68880        unclassified      Isopropyl_malate_synthase     2 -0.24242191
+  68895       Acidilobaceae      Isopropyl_malate_synthase     0 -1.71715520
+  69018    Archaeoglobaceae      Isopropyl_malate_synthase     2 -0.24242191
+  \end{verbatim}
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \NormalTok{##Bueno aqui voy}
+  \NormalTok{##Heat.expansion<-adply(HP_Archaeas_Taxa.m[!HP_Archaeas_Taxa.m$variable %in% c("Contigs", "Size","TOTAL","order","RastNo"), ],1,color_exp)}
+  
+  
+  \NormalTok{#####################################333}
+  \NormalTok{#############################################}
+  
+  
+  \NormalTok{## geom tile with rescale rescala por column}
+          \CommentTok{# Graph! with rescale}
+  \KeywordTok{ggplot}\NormalTok{(small, }\KeywordTok{aes}\NormalTok{(small}\OperatorTok{$}\NormalTok{variable, small}\OperatorTok{$}\NormalTok{RastId,}\DataTypeTok{label=}\KeywordTok{round}\NormalTok{(small}\OperatorTok{$}\NormalTok{rescale,}\DataTypeTok{digits=}\DecValTok{1}\NormalTok{)))}\OperatorTok{+}\StringTok{ }\KeywordTok{geom_tile}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{fill =}\NormalTok{ small}\OperatorTok{$}\NormalTok{rescale), }\DataTypeTok{colour =} \StringTok{"white"}\NormalTok{) }\OperatorTok{+}\StringTok{ }\KeywordTok{scale_fill_gradientn}\NormalTok{(}\DataTypeTok{colours =} \KeywordTok{hm.palette}\NormalTok{(}\DecValTok{100}\NormalTok{),}\DataTypeTok{na.value =} \StringTok{"gray"}\NormalTok{)}\OperatorTok{+}\StringTok{ }\KeywordTok{theme}\NormalTok{(}\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size=}\DecValTok{8}\NormalTok{), }\DataTypeTok{axis.text.x =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{90}\NormalTok{, }\DataTypeTok{hjust =} \DecValTok{1}\NormalTok{, }\DataTypeTok{vjust =} \FloatTok{0.5}\NormalTok{) ,}\DataTypeTok{axis.text.y =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{0}\NormalTok{, }\DataTypeTok{hjust =} \DecValTok{1}\NormalTok{, }\DataTypeTok{vjust =} \FloatTok{0.5}\NormalTok{))}\OperatorTok{+}\KeywordTok{geom_text}\NormalTok{(}\DataTypeTok{size=}\DecValTok{4}\NormalTok{,}\DataTypeTok{check_overlap =} \OtherTok{TRUE}\NormalTok{)}
+  \end{Highlighting}
+  \end{Shaded}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/learningHeatPlots-1} \end{center}
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \NormalTok{## Graph scaled according to whole matrix }
+  \KeywordTok{ggplot}\NormalTok{(small, }\KeywordTok{aes}\NormalTok{(small}\OperatorTok{$}\NormalTok{variable, small}\OperatorTok{$}\NormalTok{RastId,}\DataTypeTok{label=}\KeywordTok{round}\NormalTok{(small}\OperatorTok{$}\NormalTok{value,}\DataTypeTok{digits=}\DecValTok{1}\NormalTok{)))}\OperatorTok{+}\StringTok{ }\KeywordTok{geom_tile}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{fill =}\NormalTok{ small}\OperatorTok{$}\NormalTok{value), }\DataTypeTok{colour =} \StringTok{"white"}\NormalTok{) }\OperatorTok{+}\StringTok{ }\KeywordTok{scale_fill_gradientn}\NormalTok{(}\DataTypeTok{colours =} \KeywordTok{hm.palette}\NormalTok{(}\DecValTok{100}\NormalTok{),}\DataTypeTok{na.value =} \StringTok{"gray"}\NormalTok{)}\OperatorTok{+}\StringTok{ }\KeywordTok{theme}\NormalTok{(}\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size=}\DecValTok{8}\NormalTok{), }\DataTypeTok{axis.text.x =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{90}\NormalTok{, }\DataTypeTok{hjust =} \DecValTok{1}\NormalTok{, }\DataTypeTok{vjust =} \FloatTok{0.5}\NormalTok{) ,}\DataTypeTok{axis.text.y =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{0}\NormalTok{, }\DataTypeTok{hjust =} \DecValTok{1}\NormalTok{, }\DataTypeTok{vjust =} \FloatTok{0.5}\NormalTok{))}\OperatorTok{+}\KeywordTok{geom_text}\NormalTok{(}\DataTypeTok{size=}\DecValTok{4}\NormalTok{,}\DataTypeTok{check_overlap =} \OtherTok{TRUE}\NormalTok{)}
+  \end{Highlighting}
+  \end{Shaded}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/learningHeatPlots-2} \end{center}
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \NormalTok{## Graph coloured by columns, showing true values, not scaled}
+  \KeywordTok{ggplot}\NormalTok{(small, }\KeywordTok{aes}\NormalTok{(small}\OperatorTok{$}\NormalTok{variable, small}\OperatorTok{$}\NormalTok{RastId,}\DataTypeTok{label=}\KeywordTok{round}\NormalTok{(small}\OperatorTok{$}\NormalTok{value,}\DataTypeTok{digits=}\DecValTok{1}\NormalTok{)))}\OperatorTok{+}\StringTok{ }\KeywordTok{geom_tile}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{fill =}\NormalTok{ small}\OperatorTok{$}\NormalTok{rescale), }\DataTypeTok{colour =} \StringTok{"white"}\NormalTok{) }\OperatorTok{+}\StringTok{ }\KeywordTok{scale_fill_gradientn}\NormalTok{(}\DataTypeTok{colours =} \KeywordTok{hm.palette}\NormalTok{(}\DecValTok{100}\NormalTok{),}\DataTypeTok{na.value =} \StringTok{"gray"}\NormalTok{)}\OperatorTok{+}\StringTok{ }\KeywordTok{theme}\NormalTok{(}\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size=}\DecValTok{8}\NormalTok{), }\DataTypeTok{axis.text.x =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{90}\NormalTok{, }\DataTypeTok{hjust =} \DecValTok{1}\NormalTok{, }\DataTypeTok{vjust =} \FloatTok{0.5}\NormalTok{) ,}\DataTypeTok{axis.text.y =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{0}\NormalTok{, }\DataTypeTok{hjust =} \DecValTok{1}\NormalTok{, }\DataTypeTok{vjust =} \FloatTok{0.5}\NormalTok{))}\OperatorTok{+}\KeywordTok{geom_text}\NormalTok{(}\DataTypeTok{size=}\DecValTok{4}\NormalTok{,}\DataTypeTok{check_overlap =} \OtherTok{TRUE}\NormalTok{)}
+  \end{Highlighting}
+  \end{Shaded}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/learningHeatPlots-3} \end{center}
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \NormalTok{####################################################}
+  \NormalTok{### Color according to mean plus standar deviation}
+  \NormalTok{####}
+  
+  \NormalTok{################# trying to make heatplot colors on dataframe}
+  
+  \NormalTok{small.m<-}\StringTok{ }\KeywordTok{ddply}\NormalTok{(small, .(variable),summarize, }\DataTypeTok{mean =} \KeywordTok{round}\NormalTok{(}\KeywordTok{mean}\NormalTok{(value), }\DecValTok{2}\NormalTok{),}\DataTypeTok{sd =} \KeywordTok{round}\NormalTok{(}\KeywordTok{sd}\NormalTok{(value), }\DecValTok{2}\NormalTok{),}\DataTypeTok{expansion=}\NormalTok{mean}\OperatorTok{+}\NormalTok{sd, }\DataTypeTok{reduction=}\NormalTok{mean}\OperatorTok{-}\NormalTok{sd)  ## }
+  \KeywordTok{rownames}\NormalTok{(small.m)<-small.m}\OperatorTok{$}\NormalTok{variable}
+  
+  \NormalTok{####################################################################}
+  \end{Highlighting}
+  \end{Shaded}
+  
+  \chapter{EvoMining}\label{rmd-basics}
+  
+  \section{Introduction}\label{introduction}
+  
+  La promiscuidad enzimática puede buscarse en familias envueltas en
+  procesos de divergencia funcional. Uno de dichos procesos es la
+  expansión y posterior reclutamiento de familias pertenecientes a rutas
+  metabólicas conservadas hacia el metabolismo especializado. Los
+  productos naturales o metabolitos especializados son sintetizados
+  generalmente por clusters de genes distribuidos en un pequeño porcentaje
+  de un linaje taxonómico. Estos clusters, conocidos como BGCs
+  (Biosynthetical Gene Clusters), contienen reclutamientos de las copias
+  extras de familias pertenecientes al metabolismo conservado. La
+  similitud de secuencia de los genes que pertenecen a los BGCs así como
+  su relativa sintenia en diversos organismos de un linaje hacen que
+  genómica copmarativa sea de utilidad para intentar localizarlos.
+  Finalmente, el auge en la cantidad de genomas disponibles públicamente
+  así como la facilidad por sequenciar nuevos hace posible que los métodos
+  bioinformáticos ayuden a encontrar nuevos BGCs. EvoMining es un método
+  de para sugerir la formación de nuevos BGCs y en consecuencia encontrar
+  zonas donde puede estar ocurriendo la capcidad de adquirir un nuevo
+  sustrato cambio en promiscuidad enzimátcica.
+  
+  En este capítulo se explica el desarrollo de EvoMining como plataforma
+  bioinformática dedicada a presentar una visualización del origen y
+  destino de todas las copias de familia enzimátocas provenientes del
+  emtabolismo conservado. Se discutirán también cuatro linajes genómicos
+  Actinobacteria Cyanobacteria, Pseudomonas y Archaea y finalmente se
+  analizará un BGCs scytonemin.
+  
+  \section{EvoMining es un método para encontrar BGCs no
+  tradicionales}\label{evomining-es-un-metodo-para-encontrar-bgcs-no-tradicionales}
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 1]{chapter2/FigurasPaper/Figure1.pdf}
+  \caption[EvoMining Algorithm]{\normalsize{EvoMining Algorithm}}
+  \label{fig:EvoMining Algorithms}
+  \end{figure}
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 1]{chapter2/FigurasPaper/Figure2.pdf}
+  \caption[Seed genomes]{\normalsize{Seed genomes}}
+  \label{fig:Seed genomes}
+  \end{figure}
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 1]{chapter2/FigurasPaper/Figure3.pdf}
+  \caption[Expansion patterns in 42 conserved families]{\normalsize{Expansion patterns in 42 conserved families}}
+  \label{fig:Expansion patterns in 42 conserved families}
+  \end{figure}
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 1]{chapter2/FigurasPaper/Figure4.pdf}
+  \caption[EvoMining Algorithm]{\normalsize{EvoMining Algorithm}}
+  \label{fig:EvoMining Algorithms}
+  \end{figure}
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 1]{chapter2/FigurasPaper/Figure5.pdf}
+  \caption[EvoMining Algorithm]{\normalsize{EvoMining Algorithm}}
+  \label{fig:EvoMining Algorithms}
+  \end{figure}
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 1]{chapter2/FigurasPaper/Figure6.pdf}
+  \caption[EvoMining Algorithm]{\normalsize{EvoMining Algorithm}}
+  \label{fig:EvoMining Algorithms}
+  \end{figure}
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 1]{chapter2/FigurasPaper/Figure7.pdf}
+  \caption[EvoMining Algorithm]{\normalsize{EvoMining Algorithm}}
+  \label{fig:EvoMining Algorithms}
+  \end{figure}
+  
+  \section{Gen families expansions on
+  genomes}\label{gen-families-expansions-on-genomes}
+  
+  \subsection{Pangenomes}\label{pangenomes}
+  
+  Las expansions están localizadas en el pangenoma, ya que si estuvieran
+  en todo el genoma, Tools to analyse pangenome BPgA
+  
+  \section{EvoMining}\label{evomining-1}
+  
+  EvoMining looks expansions on prokariotic pangenome.\\
+  Biological idea.
+  
+  EvoMining was available as a consult website with 230 members of the
+  Actinobacteria phylum as genomic data base, 226 unclassified nBGCs, and
+  not interchangable central database 339 queries for nine pathways,
+  including amino acid biosynthesis, glycolysis, pentose phosphate
+  pathway, and tricarboxylic acids cycle.
+  {[}\protect\hyperlink{ref-cruz-morales_phylogenomic_2016}{52}{]}
+  EvoMining was proved on Actinobacteria Arseno-lipids
+  
+  \section{Pangenome}\label{pangenome}
+  
+  The sequenced genome of an individull in some species is just a partil
+  print of the species geneticll repertoire Individualls can gain and loss
+  genes.\\
+  {[}\protect\hyperlink{ref-koonin_turbulent_2015}{76}{]} Pangenome is the
+  total sequenced gene pool in a taxonomically related group. Supergenome
+  all the possible extant genes. About 10 times genomes. there are open,
+  closed pangenomes.Most genomes has a core a shell and a unique genes.\\
+  Gene history its a tree history
+  
+  HGT doubles mutation rate on prokarites.\\
+  Maybe HGT is an selected feature, if is the case, so could be np
+  production.\\
+  Some archaeas has open pangenome.
+  {[}\protect\hyperlink{ref-halachev_calculating_2011}{34}{]}
+  
+  HGT doubles mutation rate on prokarites.
+  {[}\protect\hyperlink{ref-koonin_turbulent_2015}{76}{]} Maybe HGT is an
+  selected feature, if is the case, so could be np production.\\
+  Some archaeas has open pangenome.
+  {[}\protect\hyperlink{ref-halachev_calculating_2011}{34}{]} Shell trees
+  converge to core trees
+  {[}\protect\hyperlink{ref-narechania_random_2012}{117}{]}
+  
+  \section{EvoMining Implementation}\label{evomining-implementation}
+  
+  \textbf{EvoMining} was expanded from a website
+  (\url{http://evodivmet.langebio.cinvestav.mx/EvoMining/index.html}) with
+  limited datasets to an easy to install distribution that allows
+  flexiblibilty on genomic, central and natural product databases.
+  Evomining user distribution was developed on perl on Ubuntu-14.04 but
+  wraped on \href{https://www.docker.com/}{Docker}. Docker is a software
+  containerization platform that allows repetibilty regardless of the
+  environment. Docker engine is avilable for Linux, Cloud, macOS 10.10.3
+  Yosemite or newer and even 64bit Windows 10.
+  
+  Dependencies that were packaged at EvoMining docker app are Apache2,
+  muscle3.8.31, newick-utils-1.6,quicktree, blast-2.2.30,
+  Gblocks\_Linux64\_0.91b perl and from cpan CGI, SVG and
+  Statistics::Basic modules.
+  
+  Github defines itself as an online project hosting using Git. Its free
+  for open source-code hosting and facilitates team work. Includes
+  source-code browser, in-line editing, and wikis.
+  
+  Dockerhub is an apps project hosting.
+  
+  \href{https://hub.docker.com/u/nselem/}{Dockerhub nselem}
+  
+  EvoMining code is open source and it is available at a github repository
+  \href{https://github.com/nselem/EvoMining}{github/EvoMining}
+  
+  Github and Dockerhub can be coneccted by the use of repositories
+  automatically built. Among the advantages of automated builds are that
+  the DockerHub repository is automatically kept up-to-date with code
+  changes on GitHub and that its Dockerfile is available to anyone with
+  access to the Docker Hub repository. EvoMining is stored on a DockerHub
+  automated build repository linked to github EvoMining repository so that
+  code is always actualized.
+  
+  To download EvoMining image from docker Hub once Docker engine is
+  installed its necessary to run the following command at a terminal:\\
+  \texttt{docker\ pull\ nselem/newevomining}
+  
+  To run EvoMining container\\
+  \texttt{docker\ run-i\ -t\ \ -v\ /home/nelly/docker-evomining:/var/www/html\ -p\ 80:80\ evomining\ /bin/bash}
+  
+  To start evoMining app \texttt{perl\ startEvomining}\\
+  `` Detailed tutorial, EvoMining description, pipeline and user guide are
+  available at a wiki on github at
+  \href{https://github.com/nselem/EvoMining/wiki}{EvoMining wiki}.
+  
+  Other genomic apps were containerized to docker images during this
+  work.\\
+  - \emph{myRAST} docker- \url{https://github.com/nselem/myrast}\\
+  RAST is a bacterial and Archaeal genome annotator
+  {[}\protect\hyperlink{ref-aziz_rast_2008}{86}{]} This app allows myRAST
+  functionality to upload\\
+  It allows EvoMining genome database annotation.\\
+  -\emph{Orthocores} docker-\url{https://github.com/nselem/orthocore}\\
+  Helps to obtain genomic core paralog free and construct genomic trees\\
+  -\emph{CORASON} docker-\url{https://github.com/nselem/EvoDivMet/wiki}\\
+  -PseudoCore github- \textless{}\textgreater{}\\
+  Genomic Core with a reference genome has the advantage of more genomes,
+  but it is not paralog free
+  
+  -RadiCal docker image\\
+  To detect core diferrences on a set of genomes\\
+  -BPGA to analize pangenome
+  
+  EvoMining Dockerization was chosen to avoid future compatibilty
+  problems, for example dependencies unavailabilty, or incompatibility
+  between future versions of its software components. As much as
+  reproducible research was a concerned while developing EvoMining app,
+  reproducibilty is also important on data analysis, for that reason this
+  document was writen using R-markdown and latex template from Reed
+  College {[}\protect\hyperlink{ref-chesterismay_updated_2016}{143}{]}.
+  While R-markdown allows to write and run R code and interpolate text
+  paragraph to explain scripts and analysis.
+  
+  \section{EvoMining Databases}\label{evomining-databases}
+  
+  Evomining containerized app is a user-interactive genomic tool dedicated
+  to the study of protein function\protect\hyperlink{section}{}.
+  
+  \begin{enumerate}
+  \def\labelenumi{\arabic{enumi}.}
+  \tightlist
+  \item
+    Genomes DB
+  \item
+    Natural Products DB
+  \item
+    Central Pathways DB
+  \end{enumerate}
+  
+  \emph{Archaea}, \emph{Actinobacteria}, \emph{Cyanobacteria} were used as
+  genome DB, \href{http://mibig.secondarymetabolites.org/}{MIBiG} was used
+  as Natural Product DB and different Central Pathways were used.
+  
+  \subsubsection{Genome DB}\label{genome-db}
+  
+  RAST annotation of genomes was done.
+  
+  \subsubsection{Phylogeny}\label{phylogeny}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/testingPhylogeny-1} \end{center}
+  
+  To capture differences on genomes we sort them phylogenetically.
+  Phylogenies can be constructed using different paradigms as Parsimony,
+  Maximum Likelihood, and Bayesian inference. Short descriptions of the
+  main phylogeny methods are included below.
+  
+  Why is a tree useful \{Book reference\} why trees are useful for?\\
+  * Distance methods\\
+  * Parsimony * Maximum Likelihood * Mr bayes
+  
+  General Trees\\
+  Actinobacteria Tree, ArchaeaTree, CyanobacteriaTree.
+  
+  It's easy to create a list. It can be unordered like
+  
+  To create a sublist, just indent the values a bit (at least four spaces
+  or a tab). (Here's one case where indentation is key!)
+  
+  \begin{enumerate}
+  \def\labelenumi{\arabic{enumi}.}
+  \tightlist
+  \item
+    Item 1
+  \item
+    Item 2
+  \item
+    Item 3
+  
+    \begin{itemize}
+    \tightlist
+    \item
+      Item 3a
+    \item
+      Item 3b
+    \end{itemize}
+  \end{enumerate}
+  
+  \subsubsection{Central DB}\label{central-db}
+  
+  We chose central pathways from
+  {[}\protect\hyperlink{ref-barona-gomez_what_2012}{144}{]}\\
+  * BBH Best Bidirectional Hits with studied enzymes from Central
+  Actinobacterial pathways were selected.
+  
+  \begin{itemize}
+  \item
+    By abundance
+  \item
+    By expansions on genomes
+  \end{itemize}
+  
+  {[}largefiles,\url{https://help.github.com/articles/installing-git-large-file-storage/}{]}
+  
+  \section{Data Bases}\label{data-bases}
+  
+  \subsection{Central pathways}\label{central-pathways}
+  
+  Central database were chosen by BBH from
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \NormalTok{table <-}\StringTok{ }\KeywordTok{read.csv}\NormalTok{(}\StringTok{"chapter2/WC_Central/BBH_Organisms.txt"}\NormalTok{, }\DataTypeTok{row.names =} \DecValTok{1}\NormalTok{,}\DataTypeTok{sep=}\StringTok{"}\CharTok{\textbackslash{}t}\StringTok{"}\NormalTok{)}
+  \KeywordTok{kable}\NormalTok{(table,  }\DataTypeTok{caption =} \StringTok{"BBH_Organisms }\CharTok{\textbackslash{}\textbackslash{}}\StringTok{label\{tab:BBH_Organisms\}"}\NormalTok{,}\DataTypeTok{caption.short =} \StringTok{"BBH_Organisms "}\NormalTok{)}
+  \end{Highlighting}
+  \end{Shaded}
+  
+  \begin{longtable}[]{@{}lllll@{}}
+  \caption{BBH\_Organisms \label{tab:BBH_Organisms}}\tabularnewline
+  \toprule
+  & RastId & Database & Taxa1 & Taxa2\tabularnewline
+  \midrule
+  \endfirsthead
+  \toprule
+  & RastId & Database & Taxa1 & Taxa2\tabularnewline
+  \midrule
+  \endhead
+  Corynebacterium glutamicum & 6666666.112876 & Actinobacteria &
+  &\tabularnewline
+  Streptomyces coelicolor A3(2) NC\_003888.3 & & Actinobacteria &
+  &\tabularnewline
+  Mycobacterium tuberculosis H37Rv NC\_000962.3 & 6666666.146923 &
+  Actinobacteria & &\tabularnewline
+  Methanosarcina acetivorans C2A AE010299.1 & 6666666.211599 & Archaea &
+  Euryarchaeota & Methanomicrobia\tabularnewline
+  Nanoarchaeum equitans Kin4-M - AE017199.1 & 6666666.211718 & Archaea &
+  DPANN group & Nanoarchaeota\tabularnewline
+  Natronomonas pharaonis DSM 2160 & CR936257.1 & 6666666.211909 & Archaea
+  & Euryarchaeota\tabularnewline
+  Halobacteria & & & &\tabularnewline
+  Sulfolobus solfataricus P2 AE006641.1 & 6666666.211567 & Archaea & TACK
+  group & Crenarchaeota\tabularnewline
+  Cyanothece sp. ATCC 51142 CP000806.1 & 6666666.212444 & Cyanobacteria &
+  Oscillatoriales &\tabularnewline
+  Synechococcus sp. PCC 7002 CP000951.1 & 6666666.212477 & Cyanobacteria &
+  Synechococcales &\tabularnewline
+  Arthrospira platensis C1 & 6666666.189647 & Cyanobacteria &
+  Cyanobacteria &\tabularnewline
+  \bottomrule
+  \end{longtable}
+  
+  \subsection{Genome Dynamics}\label{genome-dynamics}
+  
+  Among BBH central databases, genomic dynamics was included.\\
+  Whats change
+  site:\href{http://pubseed.theseed.org/wc.cgi?request=show_otus\&base=/homes/nselem/Data/CS}{WC
+  Data}
+  
+  groups were formed with 100Cyanos, 100Archaea , 118 Actinos Closed,
+  43StreptosClosed\\
+  Selected organims were
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \NormalTok{table <-}\StringTok{ }\KeywordTok{read.csv}\NormalTok{(}\StringTok{"chapter2/WC_Central/WC_Organisms.txt"}\NormalTok{, }\DataTypeTok{row.names =} \DecValTok{1}\NormalTok{,}\DataTypeTok{sep=}\StringTok{"}\CharTok{\textbackslash{}t}\StringTok{"}\NormalTok{)}
+  \KeywordTok{kable}\NormalTok{(table,  }\DataTypeTok{caption =} \StringTok{"WC_Organisms }\CharTok{\textbackslash{}\textbackslash{}}\StringTok{label\{tab:WC_Organisms\}"}\NormalTok{,}\DataTypeTok{caption.short =} \StringTok{"WC_Organisms "}\NormalTok{)}
+  \end{Highlighting}
+  \end{Shaded}
+  
+  \begin{longtable}[]{@{}lrl@{}}
+  \caption{WC\_Organisms \label{tab:WC_Organisms}}\tabularnewline
+  \toprule
+  & Rast.Id & Database\tabularnewline
+  \midrule
+  \endfirsthead
+  \toprule
+  & Rast.Id & Database\tabularnewline
+  \midrule
+  \endhead
+  Arthrospira platensis NIES-39 AP011615.1 & 6666666.21 &
+  Cyanos\tabularnewline
+  Synechococcus sp. PCC 7002 & 6666666.21 & Cyanos\tabularnewline
+  Cyanothece sp. ATCC 51142 & 6666666.21 & Cyanos\tabularnewline
+  Methanosarcina acetivorans & 6666666.21 & Archaea\tabularnewline
+  Nanoarchaeum equitans Kin4-M & 6666666.21 & Archaea\tabularnewline
+  Natronomonas pharaonis DSM 2160 & 6666666.21 & Archaea\tabularnewline
+  Sulfolobus solfataricus P2 & 6666666.21 & Archaea\tabularnewline
+  Mycobacterium tuberculosis H37Rv & 83332.23 & Actinos\tabularnewline
+  Corynebacterium glutamicum ATCC 13032 & 196627.31 &
+  Actinos\tabularnewline
+  Streptomyces coelicolor A3(2) NC\_003888.3 & 6666666.11 & Actinos and
+  Streptomyces\tabularnewline
+  Streptomyces sp. Mg1 NZ\_CP011664.1 & 6666666.15 &
+  Streptomyces\tabularnewline
+  \bottomrule
+  \end{longtable}
+  
+  Those families present on at least as much as genomes on the group\\
+  Cyanos 100 647\\
+  Abundant.Families.100Cyanos\\
+  Actinos 118 132\\
+  Abundant.Families.43Strepto\\
+  Archaea 100 35\\
+  Abundant.Families.Actinos\\
+  Streptomyces 43 1263\\
+  Abundant.Families.Archaeas
+  
+  Those families expanded on at least two groups\\
+  \texttt{cat\ *Abun*\ \textbar{}\ cut\ -f3\textbar{}\ sort\ \textbar{}\ uniq\ -c\ \textbar{}\ sort\ \textgreater{}Abundance.all}\\
+  
+  Those Families expanded on Archaea and not expanded on Actino\\
+  \texttt{comm\ -23\ f3Archaeas\ f3Actinos\ \textgreater{}ArchaeasNoActinos}\\
+  Those Families expanded on Actino and not on Archaea\\
+  \texttt{comm\ -13\ f3Archaeas\ f3Actinos\ \textgreater{}ActinosNoArchaea}
+  
+  Those families expanded on Streptomyces but not in ActinoBacteria\\
+  \texttt{comm\ -13\ f343Strepto\ f3Actinos\ \textgreater{}ActinosNoStrepto}\\
+  Those Families expanded on Actinobacteria and not in Streptomyces\\
+  \texttt{comm\ -23\ f343Strepto\ f3Actinos\ \textgreater{}StreptoNoActinos}
+  
+  Those Families expanded on Cyano and not in Actino\\
+  \texttt{comm\ -23\ f3Cyanos\ f3Actinos\ \textgreater{}CyanosNoActinos}
+  
+  \subsubsection{Natural Products DB}\label{natural-products-db}
+  
+  Natural products was improved from previous version
+  
+  \subsection{AntisMASH optional DB}\label{antismash-optional-db}
+  
+  AntiSMASH is {[}{\textbf{???}},\textbf{???}{]}\\
+  \#\#\# Archaeas Results Archaea is a kingdom of recent discovery were
+  not many natural products has been known. On Actinobacteria, evoMining
+  has proved its value to find new kinds of natural products. The clue to
+  this discovery was that Actinobacteria has genomic expanssions. Now
+  Archaea has genomic expansions, even more has central pathways genomic
+  expansions. Are this expansions derived from a genomic duplication?\\
+  Has Archaea natural products detected by antismash, and if not, where
+  are this NP's or may Archaea doesn't have NP's.
+  
+  applying EvoMining to Archaea
+  
+  \subsection{Otras estrategias para los clusters Argon context
+  Idea}\label{otras-estrategias-para-los-clusters-argon-context-idea}
+  
+  \section{Argonne}\label{argonne}
+  
+  ssh
+  \href{mailto:nselem@login.mcs.anl.gov}{\nolinkurl{nselem@login.mcs.anl.gov}}\\
+  phrase\\
+  ssh \href{mailto:nselem@maple}{\nolinkurl{nselem@maple}}\\
+  password
+  
+  cs close strain\\
+  wc whats chain
+  
+  we source (edit bashrc)\\
+  link ln (create a link to ross directory)\\
+  run out of power:\\
+  screen
+  
+  in Seqs (not mine)\\
+  cat\\
+  6666666.103569 6666666.112815 6666666.112823 6666666.112833
+  6666666.112841 6666666.112849 6666666.112857 \textgreater{}
+  /home/nse/Concat\_Full\\
+  to find paralogous sets\\
+  svr\_representative\_sequences -b -f Id\_Clust -s 0.5 \textless{}
+  Concat\_Full \textgreater{} TempFull\&\\
+  perl -p -i -e `s/\r//' readable.tree to clean the tree\\
+  To find contexts o pegs of paralogous sets
+  
+  Context midle point 5000 bp (using text tables)\\
+  scp 6666666.112839.txt
+  \href{mailto:nselem@maple}{\nolinkurl{nselem@maple}}:/homes/nselem/Strepto\_01/.
+  
+  fig\textbar{}6666666.112839.peg.26
+  
+  copy families.all file\\
+  on the file we have column1 family name column 5 peg id
+  
+  cluster\_objects \textless{} elements\_to\_cluster \textgreater{}
+  ClusteFile
+  
+  write a file with pegs\\
+  1 peg1 adjacent1, adjacent2 \ldots{}.\\
+  1 peg2\\
+  2\\
+  2
+  
+  write a file similiar but with the family number
+  
+  1 peg1 fn1, fn2 \ldots{}.\\
+  1 peg2\\
+  2\\
+  2
+  
+  compare each peg on this file from the same family
+  
+  Write the conextions file\\
+  peg1 peg2\\
+  peg1 peg3\\
+  peg2 peg3
+  
+  cluster this file and score the cluster
+  
+  Define
+  
+  \begin{verbatim}
+  1.  a "function set" is generated by the what's changed directory  
+  \end{verbatim}
+  
+  as a ``family''
+  
+  \begin{verbatim}
+  2.  a "paralog set" is a set of function sets in which paralogous  
+  \end{verbatim}
+  
+  members span the sets
+  
+  \begin{verbatim}
+  3.  a PEG is in a paralog set if it is in one ofthe function sets  
+  \end{verbatim}
+  
+  that make up the
+  
+  \begin{verbatim}
+  4.  a "context" of a PEG is the set of close pegs  
+  4.1 First cluster operation would give us: context sets  (CS)  
+  
+  5.  a "context set" is a set of PEGs with "similar contexts"  
+  5.1 second clustering operation would give us:cluster  (Cl)  
+  
+  6.  a "cluster" is a set of context sets (each context set is a different   
+  \end{verbatim}
+  
+  compute:\\
+  Compute the context sets that are made from PEGs that occur in PS.\\
+  Compute the contexts of PEGs in PS.
+  
+  cluster these context using the ``similar contexts'' relation
+  
+  This gives a set of clusters, and the members of the clusters are
+  context sets\\
+  That is, a cluster is a set of context sets
+  
+  \begin{verbatim}
+    a. the number of contexts sets i  
+  \end{verbatim}
+  
+  score the clusters\\
+  Take a paralog set PS.\\
+  Be the context sets: CS\_1, CS\_2,\ldots{}, CS\_k members of the
+  paralogous set\\
+  k the number of contexts sets on the paralogous set\\
+  n\_i the cardinality of CS\_i
+  
+  \begin{verbatim}
+  PS={CS1,CS2,...,CS3}  
+  Cl={[CS_1,n_1],[CS_2,n_2],...,[CS_k,n_k]}  
+  
+  let be M=max(n_i)   i=1,2,..k (Maximum cardinality of Context sets)  
+      m=max(n_i)   i=1,2,..k, i!=M (second greatest cardinality of context sets)  
+      (We are intersted that a second copy is distributed)  
+  
+  We are interested on k,M,n to form a scoring function for the cluster set  
+  S=f(k,m,M)=c_1*k+c_2*m+c_3*M  
+  \end{verbatim}
+  
+  history
+  
+  Para hacer un nuevo set de datos
+  
+  591 cd Data/CS\\
+  592 mkdir Directorio\\
+  593 vi Directorio/rep.genomes\\
+  594 cd Directorio/\\
+  600 nohup svr\_CS -d Directorio\&
+  
+  Contenido de rep.genomes\\
+  rast\textbar{}390693 nselem35 q8Vf6ib\\
+  rast\textbar{}390675 nselem35 q8Vf6ib\\
+  rast\textbar{}388811 nselem35 q8Vf6ib
+  
+  When you click the \textbf{Knit} button above a document will be
+  generated that includes both content as well as the output of any
+  embedded \textbf{R} code chunks within the document. You can embed an
+  \textbf{R} code chunk like this (\texttt{cars} is a built-in \textbf{R}
+  dataset):
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \KeywordTok{summary}\NormalTok{(cars)}
+  \end{Highlighting}
+  \end{Shaded}
+  
+  \begin{verbatim}
+       speed           dist       
+   Min.   : 4.0   Min.   :  2.00  
+   1st Qu.:12.0   1st Qu.: 26.00  
+   Median :15.0   Median : 36.00  
+   Mean   :15.4   Mean   : 42.98  
+   3rd Qu.:19.0   3rd Qu.: 56.00  
+   Max.   :25.0   Max.   :120.00  
+  \end{verbatim}
+  
+  \subsection{Inline code}\label{inline-code}
+  
+  If you'd like to put the results of your analysis directly into your
+  discussion, add inline code like this:
+  
+  \begin{quote}
+  The \texttt{cos} of \(2 \pi\) is 1.
+  \end{quote}
+  
+  Another example would be the direct calculation of the standard
+  deviation:
+  
+  \begin{quote}
+  The standard deviation of \texttt{speed} in \texttt{cars} is 5.2876444.
+  \end{quote}
+  
+  One last neat feature is the use of the \texttt{ifelse} conditional
+  statement which can be used to output text depending on the result of an
+  \textbf{R} calculation:
+  
+  \begin{quote}
+  The standard deviation is less than 6.
+  \end{quote}
+  
+  Note the use of \texttt{\textgreater{}} here, which signifies a
+  quotation environment that will be indented.
+  
+  As you see with \texttt{\$2\ \textbackslash{}pi\$} above, mathematics
+  can be added by surrounding the mathematical text with dollar signs.
+  More examples of this are in {[}Mathematics and Science{]} if you
+  uncomment the code in {[}Math{]}.
+  
+  \section{Recomendaciones de Luis}\label{recomendaciones-de-luis}
+  
+  Para evoMining\\
+  Probar distintos métodos de filogenia y después hacer la coloración.\\
+  maximum likelihood, Protest phyml\\
+  Atracción de ramas largas.\\
+  raxml\\
+  trim all vs Gblocs (Tony Galvadon)
+  
+  Comparar dos árboles\\
+  Para ver si la evolución de los genes concatenados ha sido simultánea\\
+  Robinson and foulds\\
+  Joe Felsestein\\
+  Phylip
+  
+  \begin{enumerate}
+  \def\labelenumi{\arabic{enumi}.}
+  \setcounter{enumi}{1}
+  \tightlist
+  \item
+    dist tree\\
+    quarter descomposition\\
+    peter gogarten fendou Mao
+  \end{enumerate}
+  
+  Sets de experimentos.\\
+  Para el experimento de los streptomyces con ruta centrales el core,
+  analizar el problema de dominios múltiples.\\
+  Dominios\\
+  Nan Song, Dannie durand\\
+  Después del blast
+  
+  Para obtener\\
+  Pablo Vinuesa: Get Homologues
+  
+  Burkhordelias y su toxina (Preguntar a Beto)\\
+  Cianobacterias y la ruta de fijación de nitrógeno.
+  
+  Servidor Viernes a las 12:00
+  
+  \section{CORASON: Other genome Mining tools
+  context-based}\label{corason-other-genome-mining-tools-context-based}
+  
+  \section{CORe Analysis of Syntenic Orthologs to prioritize Natural
+  Product-Biosynthetic Gene
+  Cluster}\label{core-analysis-of-syntenic-orthologs-to-prioritize-natural-product-biosynthetic-gene-cluster}
+  
+  Bacterial biosynthetic gene clusters (BGCs) known are always increasing,
+  almost all bacterial genome sequenced contributes with new genes and
+  gene clusters to the known Bacterial Pangenome. In consequence of gene
+  diversity and sequence technology advances researchers often have a
+  large set of genomes to analize in search of a particular gene cluster
+  variation. Answering BGCs analysis needs, CORASON allows users to find
+  and visualice variations of a given gene cluster sorting them according
+  to the conserved core cluster phylogeny.
+  
+  The core genome on a taxonomical group is the set of coding sequences
+  that are shared between all group members, this definition may be
+  adapted to the cluster core by exploring a set of gene clusters instead
+  of a set of genomes. The cluster core attempts to identify a set of
+  functions conserved on a particular BGC variations. A report about gene
+  function using RAST technology will be provided whenever a cluster core
+  exists and core sequences will be concatenated to construct a
+  phylogenetic tree and sort variation clusters accordingly.
+  
+  To find cluster variations, given a query protein sequence that belongs
+  to a reference cluster, CORASON will search on a Bacterial genome
+  database all gene clusters that contains orthologues of the
+  query-protein and at least another sequence from the reference cluster.
+  Orthologues on variation clusters are coloured within a gradient
+  according to its identity percentage with the reference cluster
+  sequences.
+  
+  Finally, in order to provide an easy to install distribution, CORASON
+  was packaged on docker containerization platform. Software dependencies
+  such as BLAST 2.2.30, muscle3.8.3, GBlocksLinux64\_0.91b, quicktree,
+  newick-utils-1.6, and CORASON code were wrapped together on CORASON
+  docker container.
+  \href{https://github.com/nselem/EvoDivMet/wiki}{Tutorial} and software
+  are available at nselem/github.
+  
+  CORASON inputs are a genomic database, a reference cluster and an enzyme
+  inside this cluster, outputs are newick trees, core functional report
+  and a cluster variation SVG file. SVG format among being high quality
+  scalable graphics, also allow to display metadata such as gene function
+  and genome coordinates just by mouse over figures on a browser
+  facilitating genomic analysis.
+  
+  In conclusion CORASON is an easy to install comparative genomic visual
+  tool on a customizable genome database that allows users to visualice
+  variations of a reference gene cluster identifing its core functions and
+  finally sorting variations according to their evolutionary history
+  helping to prioritize clusters that may be involved on chemical novelty.
+  
+  \section{Tree methods (from antiSMASH textual
+  quotation)}\label{tree-methods-from-antismash-textual-quotation}
+  
+  \emph{Multiple methods exist to construct phylogenetic trees based on
+  multiple sequence alignments. Depending on the desired output tree
+  characteristics, the number of input sequences, and other constraints,
+  the most appropriate method should be chosen. A popular algorithm among
+  the distance-matrix based methods is the Neighbour-Joining algorithm
+  that uses bottom-up clustering to create the tree. Neighbour-Joining is
+  comparatively fast method, but the correctness of the tree depends on
+  the accuracy and additivity of the underlying distance matrix. Maximum
+  parsimony methods try to identify the tree that uses the smallest number
+  of evolution events to explain the observed sequence data. While maximum
+  parsimony algorithms build very accurate trees, their computation tends
+  to be relatively slow compared to distance-matrix based methods. Maximum
+  likelihood methods use probability distributions to assess the
+  likelihood of a given 5
+  \url{http://mc.manuscriptcentral.com/bibManuscripts} submitted to
+  Briefings in Bioinformatics phylogenetic tree according to a
+  substitution model. This method unfortunately has a high complexity for
+  computing the optimal tree. Many current tools use a combination of
+  methods}
+  
+  \hypertarget{ref_labels}{\chapter{EvoMining Results}\label{ref_labels}}
+  
+  \section{Archaea}\label{archaea}
+  
+  During the decade between 1970 and 1980, Archaea was recognized as new
+  life domain, a kingdom different from Bacteria and Eucarya in an
+  exciting first great application of 16S
+  phylogeny{[}\protect\hyperlink{ref-woese_phylogenetic_1977}{124}{]} .
+  Main differences between this kingdoms are that Archaeal DNA is not
+  arranged in a nucleus as in Eucarya and Archaeal celular walls are not
+  composed from peptidoglycans as in Bacteria. Archaeal proteins may be
+  higlhy valuable to biotechnology industry for their great stability due
+  to extreme temperature, PH and salt content conditions on Archeal
+  habitats. Despite no Archaeal Natural products biosynthetic gene
+  clusters (BGC's) has been reported on MiBIG, Archaea do have BGC's, some
+  of them seems to be acquired by horizontal gene transfer (HGT) like
+  methano nrps \{search reference\}. Other Archeal natural products known
+  are archaeosins, Diketopiperazines, Acyl Homoserine Lactones,
+  Exopolysaccharides, Carotenoids, Biosurfactants, Phenazines and Organic
+  Solutes but this knowledge is not comparable to Bacterial BGC's
+  knowledge{[}\protect\hyperlink{ref-charlesworth_untapped_2015}{108}{]}.
+  
+  Natural products biosynthetic gene clusters search is actually performed
+  using either \emph{high-confidence/low-novelty or
+  low-confidence/high-novelty} bioinformatic approaches
+  {[}\protect\hyperlink{ref-medema_computational_2015}{44}{]}. High
+  confidence methods compares query sequences with previously known BGC's
+  such as nrps or PKS, examples of this algorithms are antiSMASH and
+  clusterfinder {[}{\textbf{???}}?{]}. EvoMining searches on expansions
+  from central metabolic pathways enzyme families, it has been classified
+  as low confidence/high novelty method. EvoMining has proved useful on
+  Actinobacteria phylum where its use lead to Arseno-compounds discovery
+  {[}\protect\hyperlink{ref-cruz-morales_phylogenomic_2016}{52}{]}. Also
+  on Actinobacteria antiSMASH analysis on 1245 genomes found 774 different
+  classes of natural products, the same analysis on 876 Archaeal genomes,
+  a full kingdom, identifies only 35 BGC's classes. So either Archaea does
+  not have natural products BGC's or this are not yet known. Next
+  paragraph deals with a possible approach about how natural products
+  BGC's can be find.
+  
+  Archaea resembled Bacteria in that Archaea uses horizontal gene transfer
+  as a genic interchange mecanism, Archaeal genomes contains operons
+  {[}\protect\hyperlink{ref-howland_surprising_2000}{127}{]} and in
+  general there is introns absence\{Reference to Computational Methods for
+  Understanding Bacterial and Archaeal Genomes\}. Archaeas do have
+  introns, but they are mainly located on genes that encodes ribosomal and
+  transfer RNA {[}\protect\hyperlink{ref-howland_surprising_2000}{127}{]}.
+  General lack of introns allows automatic genome annotation, operons gene
+  organization permits functional inference to a certain degree and HGT
+  contribute to expansions on Archaeal genomes. Some phylum on Archaea has
+  an open pangenome, and as we will show on this chapter some Archaea has
+  central pathway expansions. Enzyme families from central pathways
+  expansions, open pangenome and operon organization made EvoMining
+  succesful on Actinobacteria, this lead us to think that evoMining is
+  suitable to analize Archaeal genomes, even more since EvoMining is a
+  method oriented to use evolution and its not entirelyy based on previous
+  knowledge of BGC's sequences if evolutionary logic behave on Archaea as
+  on bacteria, new BGC's classes may be be found on Archaea.
+  
+  EvoMining is a trade off between conserved known central metabolic
+  function and enough expansions divergence on sequence and on clusters to
+  divergence
+  
+  \section{Tables}\label{tables}
+  
+  \begin{longtable}[]{@{}cc@{}}
+  \caption{Families on Archaeabacteria \label{tab:inher}}\tabularnewline
+  \toprule
+  Factors & Correlation between Parents \& Child\tabularnewline
+  \midrule
+  \endfirsthead
+  \toprule
+  Factors & Correlation between Parents \& Child\tabularnewline
+  \midrule
+  \endhead
+  GenomeDB & 876\tabularnewline
+  Phylum & 12\tabularnewline
+  Order & 23\tabularnewline
+  \bottomrule
+  \end{longtable}
+  
+  \clearpage
+  
+  First lets investigate if Archaea has expansions on families within
+  central metabolic routes. Since main metabolic pathways are shared
+  between Bacteria and Archaea makes sense to assemble Archeal EvoMining
+  central database by using orthologous from Actinobacteria evoMining
+  central pathways.
+  
+  \subsection{Expansions BoxPlot by metabolic
+  family}\label{expansions-boxplot-by-metabolic-family}
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \KeywordTok{label}\NormalTok{(}\DataTypeTok{path =} \StringTok{"chapter2/Archaeas/expansion_plotArchaeas.pdf"}\NormalTok{, }\DataTypeTok{caption =} \StringTok{"Expansions Boxplot"}\NormalTok{,}\DataTypeTok{label =} \StringTok{"Archaea_expansion_boxplot"}\NormalTok{, }\DataTypeTok{type =} \StringTok{"figure"}\NormalTok{,}\DataTypeTok{scale=}\StringTok{".7"}\NormalTok{)}
+  \end{Highlighting}
+  \end{Shaded}
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = .7]{chapter2/Archaeas/expansion_plotArchaeas.pdf}
+  \caption[Expansions Boxplot]{\normalsize{Expansions Boxplot}}
+  \label{fig:Archaea_expansion_boxplot}
+  \end{figure}
+  
+  Here is a reference to the expansion boxplot:
+  \autoref{fig:Archaea_expansion_boxplot}.\\
+  \clearpage 
+  
+  \subsection{Expansions BoxPlot by metabolic family by
+  phylum}\label{expansions-boxplot-by-metabolic-family-by-phylum}
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \CommentTok{#+ geom_jitter()}
+  \CommentTok{#aes(fill = factor(vs))}
+  
+  \NormalTok{ArchaeasTotalBP.m<-}\KeywordTok{merge}\NormalTok{(ArchaeasHeatPlot,ArchaeasTaxa,}\DataTypeTok{by.x=}\StringTok{"RastId"}\NormalTok{,}\DataTypeTok{by.y=}\StringTok{"RastId"}\NormalTok{) ## works as expected}
+  \NormalTok{##melt in r}
+  \NormalTok{ArchaeasHeatPlotBP.m <-}\StringTok{ }\KeywordTok{melt}\NormalTok{(ArchaeasTotalBP.m,}\DataTypeTok{id =}\KeywordTok{c}\NormalTok{(}\StringTok{"RastId"}\NormalTok{,}\StringTok{"Name"}\NormalTok{,}\StringTok{"SuperPhylum"}\NormalTok{,}\StringTok{"Phylum"}\NormalTok{,}\StringTok{"Class"}\NormalTok{,}\StringTok{"Order"}\NormalTok{,}\StringTok{"Family"}\NormalTok{,}\StringTok{"RastNo"}\NormalTok{,}\StringTok{"Size"}\NormalTok{,}\StringTok{"Contigs"}\NormalTok{))}
+  \NormalTok{ArchaeasHeatPlotBP.m<-}\KeywordTok{subset}\NormalTok{(ArchaeasHeatPlotBP.m,variable}\OperatorTok{!=}\StringTok{"TOTAL"}\NormalTok{) ## works as expected}
+  \NormalTok{ArchaeasHeatPlotBP.m<-}\KeywordTok{subset}\NormalTok{(ArchaeasHeatPlotBP.m,variable}\OperatorTok{!=}\StringTok{"TOTAL"}\NormalTok{) ## works as expected}
+  
+  \NormalTok{## Each metabolic pathway se parte por phylum coloreado por order}
+  
+  \CommentTok{#3PGA_AMINOACIDS}
+  \CommentTok{#Glycolysis}
+  \CommentTok{#OXALACETATE_AMINOACIDS}
+  \CommentTok{#R5P_AMINOACIDS}
+  \CommentTok{#TCA}
+  \CommentTok{#E4P_AMINO_ACIDS}
+  \CommentTok{#PYR_THR_AA}
+  
+  \NormalTok{## Genome size}
+  \KeywordTok{ggplot}\NormalTok{(ArchaeasHeatPlotBP.m, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{ArchaeasHeatPlotBP.m}\OperatorTok{$}\NormalTok{Phylum, }\DataTypeTok{y=}\NormalTok{ArchaeasHeatPlotBP.m}\OperatorTok{$}\NormalTok{Size))}\OperatorTok{+}\StringTok{ }\KeywordTok{geom_boxplot}\NormalTok{() }\OperatorTok{+}\KeywordTok{theme}\NormalTok{(}\DataTypeTok{plot.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{14}\NormalTok{, }\DataTypeTok{face =} \StringTok{"bold"}\NormalTok{), }\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{12}\NormalTok{), }\DataTypeTok{axis.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{face=}\StringTok{"bold"}\NormalTok{), }\DataTypeTok{axis.text.x=}\KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{90}\NormalTok{,}\DataTypeTok{size =} \DecValTok{6}\NormalTok{), }\DataTypeTok{legend.position =} \StringTok{"bottom"}\NormalTok{)}\OperatorTok{+}\StringTok{ }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"Copies on Archaeabacteria taxonomic groups"}\NormalTok{, }\DataTypeTok{y =} \StringTok{"Genome size"}\NormalTok{,}\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size=}\DecValTok{12}\NormalTok{))}\OperatorTok{+}\KeywordTok{theme_bw}\NormalTok{()}
+  \end{Highlighting}
+  \end{Shaded}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/ArcheaeBoxPlotByPhylum-1} \end{center}
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \CommentTok{#+ geom_jitter(aes(color=ArchaeasHeatPlotBP.m$Phylum))}
+  
+  
+  \NormalTok{## Halobacteria}
+  \NormalTok{MetFam_BP.m=}\KeywordTok{subset}\NormalTok{(ArchaeasHeatPlotBP.m,Phylum}\OperatorTok{==}\StringTok{"Euryarchaeota"}\NormalTok{)}
+  \KeywordTok{ggplot}\NormalTok{(MetFam_BP.m, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{MetFam_BP.m}\OperatorTok{$}\NormalTok{Order, }\DataTypeTok{y=}\NormalTok{MetFam_BP.m}\OperatorTok{$}\NormalTok{Size))}\OperatorTok{+}\StringTok{ }\KeywordTok{geom_boxplot}\NormalTok{() }\OperatorTok{+}\KeywordTok{theme}\NormalTok{(}\DataTypeTok{plot.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{14}\NormalTok{, }\DataTypeTok{face =} \StringTok{"bold"}\NormalTok{), }\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{12}\NormalTok{), }\DataTypeTok{axis.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{face=}\StringTok{"bold"}\NormalTok{), }\DataTypeTok{axis.text.x=}\KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{90}\NormalTok{,}\DataTypeTok{size =} \DecValTok{10}\NormalTok{), }\DataTypeTok{legend.position =} \StringTok{"bottom"}\NormalTok{)}\OperatorTok{+}\StringTok{ }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"Halobacteria orders size taxonomic groups"}\NormalTok{, }\DataTypeTok{y =} \StringTok{"Genome size"}\NormalTok{,}\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size=}\DecValTok{12}\NormalTok{)) }\OperatorTok{+}\StringTok{ }\KeywordTok{geom_jitter}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{color=}\NormalTok{Family))}
+  \end{Highlighting}
+  \end{Shaded}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/ArcheaeBoxPlotByPhylum-2} \end{center}
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \CommentTok{#MetFam_BP.m=subset(ArchaeasHeatPlotBP.m,Family=="Methanosarcinaceae")}
+  \CommentTok{#ggplot(MetFam_BP.m, aes(x=MetFam_BP.m$Size, y=MetFam_BP.m$value))}
+  \CommentTok{#+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")+ labs(x = "Copies on Archaeabacteria taxonomic groups", y = "Genome size",text = element_text(size=12)) }
+  
+  
+    \CommentTok{#geom_jitter(aes(color=ArchaeasHeatPlotBP.m$Phylum))# + facet_grid(. ~ Phylum)+theme_bw()}
+  
+  
+  \NormalTok{## Metabolic Pathways}
+  \NormalTok{MetFam=}\KeywordTok{subset}\NormalTok{(ArchaeasCentral,Pathway}\OperatorTok{==}\StringTok{"PPP"}\NormalTok{)}
+  \NormalTok{MetFam_BP.m=ArchaeasHeatPlotBP.m[ArchaeasHeatPlotBP.m}\OperatorTok{$}\NormalTok{variable }\OperatorTok{%in%}\StringTok{ }\NormalTok{MetFam}\OperatorTok{$}\NormalTok{Enzyme,]}
+  \KeywordTok{ggplot}\NormalTok{(MetFam_BP.m, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{MetFam_BP.m}\OperatorTok{$}\NormalTok{variable, }\DataTypeTok{y=}\NormalTok{MetFam_BP.m}\OperatorTok{$}\NormalTok{value, }\DataTypeTok{fill=}\NormalTok{Order))}\OperatorTok{+}\StringTok{ }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"Metabolic PPP Families"}\NormalTok{, }\DataTypeTok{y =} \StringTok{"Copies on Archaeabacteria Genomes"}\NormalTok{,}\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size=}\DecValTok{12}\NormalTok{)) }\OperatorTok{+}\StringTok{ }\KeywordTok{geom_boxplot}\NormalTok{() }\OperatorTok{+}\StringTok{ }\KeywordTok{facet_grid}\NormalTok{(. }\OperatorTok{~}\StringTok{ }\NormalTok{Phylum)}\OperatorTok{+}\KeywordTok{theme_bw}\NormalTok{() }\OperatorTok{+}\KeywordTok{theme}\NormalTok{(}\DataTypeTok{plot.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{14}\NormalTok{, }\DataTypeTok{face =} \StringTok{"bold"}\NormalTok{), }\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{12}\NormalTok{), }\DataTypeTok{axis.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{face=}\StringTok{"bold"}\NormalTok{), }\DataTypeTok{axis.text.x=}\KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{90}\NormalTok{,}\DataTypeTok{size =} \DecValTok{6}\NormalTok{), }\DataTypeTok{legend.position =} \StringTok{"bottom"}\NormalTok{)}
+  \end{Highlighting}
+  \end{Shaded}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/ArcheaeBoxPlotByPhylum-3} \end{center}
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \CommentTok{#+ geom_jitter(aes(color=MetFam_BP.m$Phylum))       }
+  
+  \NormalTok{MetFam=}\KeywordTok{subset}\NormalTok{(ArchaeasCentral,Pathway}\OperatorTok{==}\StringTok{"3PGA_AMINOACIDS"}\NormalTok{)}
+  \NormalTok{MetFam_BP.m=ArchaeasHeatPlotBP.m[ArchaeasHeatPlotBP.m}\OperatorTok{$}\NormalTok{variable }\OperatorTok{%in%}\StringTok{ }\NormalTok{MetFam}\OperatorTok{$}\NormalTok{Enzyme,]}
+  \KeywordTok{ggplot}\NormalTok{(MetFam_BP.m, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{MetFam_BP.m}\OperatorTok{$}\NormalTok{variable, }\DataTypeTok{y=}\NormalTok{MetFam_BP.m}\OperatorTok{$}\NormalTok{value, }\DataTypeTok{fill=}\NormalTok{Order))}\OperatorTok{+}\StringTok{ }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"Metabolic PGA_AMINOACIDS Families"}\NormalTok{, }\DataTypeTok{y =} \StringTok{"Copies on Archaeabacteria Genomes"}\NormalTok{,}\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size=}\DecValTok{12}\NormalTok{)) }\OperatorTok{+}\StringTok{ }\KeywordTok{geom_boxplot}\NormalTok{() }\OperatorTok{+}\StringTok{ }\KeywordTok{facet_grid}\NormalTok{(. }\OperatorTok{~}\StringTok{ }\NormalTok{Phylum)}\OperatorTok{+}\KeywordTok{theme_bw}\NormalTok{()}\OperatorTok{+}\KeywordTok{theme}\NormalTok{(}\DataTypeTok{plot.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{14}\NormalTok{, }\DataTypeTok{face =} \StringTok{"bold"}\NormalTok{), }\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{12}\NormalTok{), }\DataTypeTok{axis.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{face=}\StringTok{"bold"}\NormalTok{), }\DataTypeTok{axis.text.x=}\KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{90}\NormalTok{,}\DataTypeTok{size =} \DecValTok{6}\NormalTok{), }\DataTypeTok{legend.position =} \StringTok{"bottom"}\NormalTok{)}
+  \end{Highlighting}
+  \end{Shaded}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/ArcheaeBoxPlotByPhylum-4} \end{center}
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \CommentTok{#+ geom_jitter(aes(color=MetFam_BP.m$Phylum))}
+  
+  \NormalTok{MetFam=}\KeywordTok{subset}\NormalTok{(ArchaeasCentral,Pathway}\OperatorTok{==}\StringTok{"Glycolysis"}\NormalTok{)}
+  \NormalTok{MetFam_BP.m=ArchaeasHeatPlotBP.m[ArchaeasHeatPlotBP.m}\OperatorTok{$}\NormalTok{variable }\OperatorTok{%in%}\StringTok{ }\NormalTok{MetFam}\OperatorTok{$}\NormalTok{Enzyme,]}
+  \KeywordTok{ggplot}\NormalTok{(MetFam_BP.m, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{MetFam_BP.m}\OperatorTok{$}\NormalTok{variable, }\DataTypeTok{y=}\NormalTok{MetFam_BP.m}\OperatorTok{$}\NormalTok{value, }\DataTypeTok{fill=}\NormalTok{Order))}\OperatorTok{+}\StringTok{ }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"Metabolic Glycolysis Families"}\NormalTok{, }\DataTypeTok{y =} \StringTok{"Copies on Archaeabacteria Genomes"}\NormalTok{,}\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size=}\DecValTok{12}\NormalTok{)) }\OperatorTok{+}\StringTok{ }\KeywordTok{geom_boxplot}\NormalTok{() }\OperatorTok{+}\StringTok{ }\KeywordTok{facet_grid}\NormalTok{(. }\OperatorTok{~}\StringTok{ }\NormalTok{Phylum)}\OperatorTok{+}\KeywordTok{theme_bw}\NormalTok{()}\OperatorTok{+}\KeywordTok{theme}\NormalTok{(}\DataTypeTok{plot.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{14}\NormalTok{, }\DataTypeTok{face =} \StringTok{"bold"}\NormalTok{), }\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{12}\NormalTok{), }\DataTypeTok{axis.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{face=}\StringTok{"bold"}\NormalTok{), }\DataTypeTok{axis.text.x=}\KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{90}\NormalTok{,}\DataTypeTok{size =} \DecValTok{6}\NormalTok{), }\DataTypeTok{legend.position =} \StringTok{"bottom"}\NormalTok{)}
+  \end{Highlighting}
+  \end{Shaded}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/ArcheaeBoxPlotByPhylum-5} \end{center}
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \CommentTok{#+ geom_jitter(aes(color=MetFam_BP.m$Phylum))}
+  
+  \NormalTok{MetFam=}\KeywordTok{subset}\NormalTok{(ArchaeasCentral,Pathway}\OperatorTok{==}\StringTok{"OXALACETATE_AMINOACIDS"}\NormalTok{)}
+  \NormalTok{MetFam_BP.m=ArchaeasHeatPlotBP.m[ArchaeasHeatPlotBP.m}\OperatorTok{$}\NormalTok{variable }\OperatorTok{%in%}\StringTok{ }\NormalTok{MetFam}\OperatorTok{$}\NormalTok{Enzyme,]}
+  \KeywordTok{ggplot}\NormalTok{(MetFam_BP.m, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{MetFam_BP.m}\OperatorTok{$}\NormalTok{variable, }\DataTypeTok{y=}\NormalTok{MetFam_BP.m}\OperatorTok{$}\NormalTok{value, }\DataTypeTok{fill=}\NormalTok{Order))}\OperatorTok{+}\StringTok{ }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"Metabolic OXALACETATE_AMINOACIDS Families"}\NormalTok{, }\DataTypeTok{y =} \StringTok{"Copies on Archaeabacteria Genomes"}\NormalTok{,}\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size=}\DecValTok{12}\NormalTok{)) }\OperatorTok{+}\StringTok{ }\KeywordTok{geom_boxplot}\NormalTok{() }\OperatorTok{+}\StringTok{ }\KeywordTok{facet_grid}\NormalTok{(. }\OperatorTok{~}\StringTok{ }\NormalTok{Phylum)}\OperatorTok{+}\KeywordTok{theme_bw}\NormalTok{()}\OperatorTok{+}\KeywordTok{theme}\NormalTok{(}\DataTypeTok{plot.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{14}\NormalTok{, }\DataTypeTok{face =} \StringTok{"bold"}\NormalTok{), }\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{12}\NormalTok{), }\DataTypeTok{axis.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{face=}\StringTok{"bold"}\NormalTok{), }\DataTypeTok{axis.text.x=}\KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{90}\NormalTok{,}\DataTypeTok{size =} \DecValTok{6}\NormalTok{), }\DataTypeTok{legend.position =} \StringTok{"bottom"}\NormalTok{)}
+  \end{Highlighting}
+  \end{Shaded}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/ArcheaeBoxPlotByPhylum-6} \end{center}
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \CommentTok{#+ geom_jitter(aes(color=MetFam_BP.m$Phylum))}
+  
+  \NormalTok{MetFam=}\KeywordTok{subset}\NormalTok{(ArchaeasCentral,Pathway}\OperatorTok{==}\StringTok{"R5P_AMINOACIDS"}\NormalTok{)}
+  \NormalTok{MetFam_BP.m=ArchaeasHeatPlotBP.m[ArchaeasHeatPlotBP.m}\OperatorTok{$}\NormalTok{variable }\OperatorTok{%in%}\StringTok{ }\NormalTok{MetFam}\OperatorTok{$}\NormalTok{Enzyme,]}
+  \KeywordTok{ggplot}\NormalTok{(MetFam_BP.m, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{MetFam_BP.m}\OperatorTok{$}\NormalTok{variable, }\DataTypeTok{y=}\NormalTok{MetFam_BP.m}\OperatorTok{$}\NormalTok{value, }\DataTypeTok{fill=}\NormalTok{Order))}\OperatorTok{+}\StringTok{ }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"Metabolic R5P_AMINOACIDS Families"}\NormalTok{, }\DataTypeTok{y =} \StringTok{"Copies on Archaeabacteria Genomes"}\NormalTok{,}\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size=}\DecValTok{12}\NormalTok{)) }\OperatorTok{+}\StringTok{ }\KeywordTok{geom_boxplot}\NormalTok{() }\OperatorTok{+}\StringTok{ }\KeywordTok{facet_grid}\NormalTok{(. }\OperatorTok{~}\StringTok{ }\NormalTok{Phylum)}\OperatorTok{+}\KeywordTok{theme_bw}\NormalTok{()}\OperatorTok{+}\KeywordTok{theme}\NormalTok{(}\DataTypeTok{plot.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{14}\NormalTok{, }\DataTypeTok{face =} \StringTok{"bold"}\NormalTok{), }\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{12}\NormalTok{), }\DataTypeTok{axis.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{face=}\StringTok{"bold"}\NormalTok{), }\DataTypeTok{axis.text.x=}\KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{90}\NormalTok{,}\DataTypeTok{size =} \DecValTok{6}\NormalTok{), }\DataTypeTok{legend.position =} \StringTok{"bottom"}\NormalTok{)}
+  \end{Highlighting}
+  \end{Shaded}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/ArcheaeBoxPlotByPhylum-7} \end{center}
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+   \CommentTok{#+ geom_jitter(aes(color=MetFam_BP.m$Phylum))}
+  
+  \CommentTok{#}
+  \NormalTok{MetFam=}\KeywordTok{subset}\NormalTok{(ArchaeasCentral,Pathway}\OperatorTok{==}\StringTok{"TCA"}\NormalTok{)}
+  \NormalTok{MetFam_BP.m=ArchaeasHeatPlotBP.m[ArchaeasHeatPlotBP.m}\OperatorTok{$}\NormalTok{variable }\OperatorTok{%in%}\StringTok{ }\NormalTok{MetFam}\OperatorTok{$}\NormalTok{Enzyme,]}
+  \KeywordTok{ggplot}\NormalTok{(MetFam_BP.m, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{MetFam_BP.m}\OperatorTok{$}\NormalTok{variable, }\DataTypeTok{y=}\NormalTok{MetFam_BP.m}\OperatorTok{$}\NormalTok{value, }\DataTypeTok{fill=}\NormalTok{Order))}\OperatorTok{+}\StringTok{ }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"Metabolic TCA Families"}\NormalTok{, }\DataTypeTok{y =} \StringTok{"Copies on Archaeabacteria Genomes"}\NormalTok{,}\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size=}\DecValTok{12}\NormalTok{)) }\OperatorTok{+}\StringTok{ }\KeywordTok{geom_boxplot}\NormalTok{() }\OperatorTok{+}\StringTok{ }\KeywordTok{facet_grid}\NormalTok{(. }\OperatorTok{~}\StringTok{ }\NormalTok{Phylum)}\OperatorTok{+}\KeywordTok{theme_bw}\NormalTok{() }\OperatorTok{+}\KeywordTok{theme}\NormalTok{(}\DataTypeTok{plot.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{14}\NormalTok{, }\DataTypeTok{face =} \StringTok{"bold"}\NormalTok{), }\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{12}\NormalTok{), }\DataTypeTok{axis.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{face=}\StringTok{"bold"}\NormalTok{), }\DataTypeTok{axis.text.x=}\KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{90}\NormalTok{,}\DataTypeTok{size =} \DecValTok{6}\NormalTok{), }\DataTypeTok{legend.position =} \StringTok{"bottom"}\NormalTok{)}
+  \end{Highlighting}
+  \end{Shaded}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/ArcheaeBoxPlotByPhylum-8} \end{center}
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \CommentTok{#+ geom_jitter(aes(color=MetFam_BP.m$Phylum))}
+  
+  \NormalTok{MetFam=}\KeywordTok{subset}\NormalTok{(ArchaeasCentral,Pathway}\OperatorTok{==}\StringTok{"E4P_AMINO_ACIDS"}\NormalTok{)}
+  \NormalTok{MetFam_BP.m=ArchaeasHeatPlotBP.m[ArchaeasHeatPlotBP.m}\OperatorTok{$}\NormalTok{variable }\OperatorTok{%in%}\StringTok{ }\NormalTok{MetFam}\OperatorTok{$}\NormalTok{Enzyme,]}
+  \KeywordTok{ggplot}\NormalTok{(MetFam_BP.m, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{MetFam_BP.m}\OperatorTok{$}\NormalTok{variable, }\DataTypeTok{y=}\NormalTok{MetFam_BP.m}\OperatorTok{$}\NormalTok{value, }\DataTypeTok{fill=}\NormalTok{Order))}\OperatorTok{+}\StringTok{ }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"Metabolic E4P_AMINO_ACIDS Families"}\NormalTok{, }\DataTypeTok{y =} \StringTok{"Copies on Archaeabacteria Genomes"}\NormalTok{,}\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size=}\DecValTok{12}\NormalTok{)) }\OperatorTok{+}\StringTok{ }\KeywordTok{geom_boxplot}\NormalTok{() }\OperatorTok{+}\StringTok{ }\KeywordTok{facet_grid}\NormalTok{(. }\OperatorTok{~}\StringTok{ }\NormalTok{Phylum)}\OperatorTok{+}\KeywordTok{theme_bw}\NormalTok{() }\OperatorTok{+}\KeywordTok{theme}\NormalTok{(}\DataTypeTok{plot.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{14}\NormalTok{, }\DataTypeTok{face =} \StringTok{"bold"}\NormalTok{), }\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{12}\NormalTok{), }\DataTypeTok{axis.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{face=}\StringTok{"bold"}\NormalTok{), }\DataTypeTok{axis.text.x=}\KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{90}\NormalTok{,}\DataTypeTok{size =} \DecValTok{6}\NormalTok{), }\DataTypeTok{legend.position =} \StringTok{"bottom"}\NormalTok{)}
+  \end{Highlighting}
+  \end{Shaded}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/ArcheaeBoxPlotByPhylum-9} \end{center}
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \CommentTok{#+ geom_jitter(aes(color=MetFam_BP.m$Phylum))}
+  
+  
+  \NormalTok{MetFam=}\KeywordTok{subset}\NormalTok{(ArchaeasCentral,Pathway}\OperatorTok{==}\StringTok{"PYR_THR_AA"}\NormalTok{)}
+  \NormalTok{MetFam_BP.m=ArchaeasHeatPlotBP.m[ArchaeasHeatPlotBP.m}\OperatorTok{$}\NormalTok{variable }\OperatorTok{%in%}\StringTok{ }\NormalTok{MetFam}\OperatorTok{$}\NormalTok{Enzyme,]}
+  \KeywordTok{ggplot}\NormalTok{(MetFam_BP.m, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{MetFam_BP.m}\OperatorTok{$}\NormalTok{variable, }\DataTypeTok{y=}\NormalTok{MetFam_BP.m}\OperatorTok{$}\NormalTok{value, }\DataTypeTok{fill=}\NormalTok{Order))}\OperatorTok{+}\StringTok{ }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"Metabolic Families on PYR_THR_AA pathway "}\NormalTok{, }\DataTypeTok{y =} \StringTok{"Copies on Archaeabacteria Genomes"}\NormalTok{,}\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size=}\DecValTok{12}\NormalTok{)) }\OperatorTok{+}\StringTok{ }\KeywordTok{geom_boxplot}\NormalTok{() }\OperatorTok{+}\StringTok{ }\KeywordTok{facet_grid}\NormalTok{(. }\OperatorTok{~}\StringTok{ }\NormalTok{Phylum)}\OperatorTok{+}\KeywordTok{theme_bw}\NormalTok{() }\OperatorTok{+}\KeywordTok{theme}\NormalTok{(}\DataTypeTok{plot.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{14}\NormalTok{, }\DataTypeTok{face =} \StringTok{"bold"}\NormalTok{), }\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{12}\NormalTok{), }\DataTypeTok{axis.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{face=}\StringTok{"bold"}\NormalTok{), }\DataTypeTok{axis.text.x=}\KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{90}\NormalTok{,}\DataTypeTok{size =} \DecValTok{6}\NormalTok{), }\DataTypeTok{legend.position =} \StringTok{"bottom"}\NormalTok{)}
+  \end{Highlighting}
+  \end{Shaded}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/ArcheaeBoxPlotByPhylum-10} \end{center}
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \CommentTok{#+ geom_jitter(aes(color=MetFam_BP.m$Phylum))}
+  
+  \CommentTok{#ggsave("chapter2/Archaeas/expansion_plotArchaeas.pdf", plot = expansion_plotArchaea,height = 8, width = 7)}
+  \end{Highlighting}
+  \end{Shaded}
+  
+  \clearpage 
+  
+  \section{Central pathway expansions}\label{central-pathway-expansions}
+  
+  Heat plot of central pathways expansions, Needs to be phylogenetically
+  sorted.
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/ArchaeaHeatPlots-1} \end{center}
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.6]{chapter2/Archaeas/ArchaeasHeatPlot.pdf}
+  \caption[Archaeas Heatplot]{\normalsize{Archaeas Heatplot}}
+  \label{fig:ArchaeaPlot}
+  \end{figure}
+  
+  Here is a reference to the HeatPlot: \autoref{fig:ArchaeaPlot}.
+  \clearpage 
+  
+  \section{Genome Size correlations}\label{genome-size-correlations}
+  
+  \subsection{Correlation between genome size and AntiSMASH
+  products}\label{correlation-between-genome-size-and-antismash-products}
+  
+  Genome size vs Total antismash cluster coloured by order
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.6]{chapter2/Archaeas/ArchaeasSMASHvsSizebyOrder.pdf}
+  \caption[Correlation between Archaeas genome size and antismash Natural products detection colored by Order]{\normalsize{Correlation between Archaeas genome size and antismash Natural products detection colored by Order}}
+  \label{fig:ArchaeasSMASHvsSizebyOrder}
+  \end{figure}
+  
+  Here is a reference to Genome size vs Total antismash cluster:
+  \autoref{fig:ArchaeasSMASHvsSizebyOrder}. \clearpage
+  
+  Genome size vs Total antismash cluster detected splitted by order
+  
+  Here is a reference to Correlation between genome size and antismash
+  Natural products detection grided by Order plot:
+  \autoref{fig:ArchaeasSMASHvsSizeGridOrder}. \clearpage 
+  
+  \subsection{Correlation between genome size and Central pathway
+  expansions}\label{correlation-between-genome-size-and-central-pathway-expansions}
+  
+  Genome size vs Total central pathway expansion coloured by order
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 1]{chapter2/Archaeas/ArchaeasSizevsExpansionsbyOrder.pdf}
+  \caption[Correlation between Archaeas genome size and central pathway expansions ]{\normalsize{Correlation between Archaeas genome size and central pathway expansions }}
+  \label{fig:ArchaeasSizevsExpansionsbyOrder}
+  \end{figure}
+  
+  Here is a reference to the size vs Total central pathway expansion plot:
+  \autoref{fig:ArchaeasSizevsExpansionsbyOrder}. \clearpage 
+  
+  Genome size vs Total central pathway expansion grided by order
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 1]{chapter2/Archaeas/ArchaeasSizevsExpansionsGridbyOrder.pdf}
+  \caption[Correlation between Archaeas genome size and central pathway expansions grided by order]{\normalsize{Correlation between Archaeas genome size and central pathway expansions grided by order}}
+  \label{fig:ArchaeasSizevsExpansionsGridbyOrder}
+  \end{figure}
+  
+  Here is a reference to the Genome size vs Total central pathway
+  expansion grided by order plot:
+  \autoref{fig:ArchaeasSizevsExpansionsGridbyOrder}. \clearpage 
+  
+  Correlation between genome size and each of the central pathway
+  families. Data are coloured by metabolic family instead of coloured by
+  taxonomical order. This treatment allows to answer how differente
+  metabolic families grows when genome size grow.\\
+  Also I want to add form given by taxonomical order.
+  
+  \begin{verbatim}
+  Warning: The shape palette can deal with a maximum of 6 discrete values
+  because more than 6 becomes difficult to discriminate; you have
+  24. Consider specifying shapes manually if you must have them.
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning: Removed 65604 rows containing missing values (geom_point).
+  \end{verbatim}
+  
+  Genome size vs Total central pathway expansion coloured by metabolic
+  Family
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.6]{chapter2/Archaeas/ArchaeasSizevsExpansionsbyMetabolicFamily.pdf}
+  \caption[Correlation between Archaeas Genome size vs Total central pathway expansion coloured by metabolic Family]{\normalsize{Correlation between Archaeas Genome size vs Total central pathway expansion coloured by metabolic Family}}
+  \label{fig:ArchaeasSizevsExpansionsbyMetabolicFamily}
+  \end{figure}
+  
+  Here is a reference to the Genome size vs Total central pathway
+  expansion coloured by metabolic Family plot:
+  \autoref{fig:ArchaeasSizevsExpansionsbyMetabolicFamily}. \clearpage 
+  
+  Future Work: Genome size vs Total central pathway expansion grided by
+  metabolic Family For clarity I need to also grid and group by Metabolic
+  Pathway
+  
+  Here is a reference to Genome size vs Total central pathway expansion
+  grided by metabolic Family plot:
+  \autoref{fig:ArchaeasExpansionsbyMetabolicFamilyGrid}. \clearpage 
+  
+  \section{Natural products}\label{natural-products}
+  
+  \subsection{Natural products recruitments from EvoMining
+  heatplot}\label{natural-products-recruitments-from-evomining-heatplot}
+  
+  We can see natural products recruitment after central pathways
+  expansions colored by their kingdom.\\
+  Natural products recruited by metabolic family, colored by phylogenetic
+  origin.
+  
+  Recruitments after central pathways expansions coloured by Kingdom
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.6]{chapter2/Archaeas/ArchaeasRecruitmentsbyKingdom.pdf}
+  \caption[Archaeas Recruitmens on central families coloured by kingdom]{\normalsize{Archaeas Recruitmens on central families coloured by kingdom}}
+  \label{fig:ArchaeasRecruitmentsbyKingdom}
+  \end{figure}
+  
+  Here is a reference to Recruitments after central pathways expansions
+  colourd by Kingdom plot: \autoref{fig:ArchaeasRecruitmentsbyKingdom}.
+  
+  \clearpage  Recruitments after central pathways expansions colourd by
+  taxonomy
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.5]{chapter2/Archaeas/ArchaeasRecruitmentsbyTaxa.pdf}
+  \caption[Archaeas Recruitmens on central families coloured by taxonomy]{\normalsize{Archaeas Recruitmens on central families coloured by taxonomy}}
+  \label{fig:ArchaeasRecruitmentsbyTaxa}
+  \end{figure}
+  
+  Here is a reference to Recruitments after central pathways expansions
+  colourd by taxa plot: \autoref{fig:ArchaeasRecruitmentsbyTaxa}.
+  \clearpage 
+  
+  \section{Archaeas AntiSMASH}\label{archaeas-antismash}
+  
+  Taxonomical diversity on Archaeasbacteria Data
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.6]{chapter2/Archaeas/ArchaeasDiversity.pdf}
+  \caption[Archaeas Diversity]{\normalsize{Archaeas Diversity}}
+  \label{fig:ArchaeasDiversity}
+  \end{figure}
+  
+  Here is a reference to Recruitments after central pathways expansions
+  colourd by taxa plot: \autoref{fig:ArchaeasDiversity}. \clearpage
+  
+  Smash diversity
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.5]{chapter2/Archaeas/ArchaeasSmash.pdf}
+  \caption[Archaeas Smash Taxonomical Diversity]{\normalsize{Archaeas Smash Taxonomical Diversity}}
+  \label{fig:ArchaeasSmash}
+  \end{figure}
+  
+  Here is a reference to Recruitments after central pathways expansions
+  colourd by taxa plot: \autoref{fig:ArchaeasSmash}. \clearpage
+  
+  \subsection{AntisSMASH vs Central
+  Expansions}\label{antissmash-vs-central-expansions}
+  
+  Is it a correlation between pangenome grow and central pathways
+  expansions?
+  
+  Total central pathway expansions by genome vs Total antismash cluster
+  detected coloured by order
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.5]{chapter2/Archaeas/ArchaeasSMASHvsExpansionsbyOrder.pdf}
+  \caption[Correlation between Archaeas central pathway expansions and antismash Natural products detection]{\normalsize{Correlation between Archaeas central pathway expansions and antismash Natural products detection}}
+  \label{fig:ArchaeasSMASHvsExpansionsbyOrder}
+  \end{figure}
+  
+  Here is a reference to the expansions vs antismash NP's clusters plot:
+  \autoref{fig:ArchaeasSMASHvsExpansionsbyOrder}. \clearpage 
+  
+  Total central pathway expansions by genome vs Total antismash cluster
+  detected splitted by order
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.5]{chapter2/Archaeas/ArchaeasSMASHvsExpansionsbyOrderGRID.pdf}
+  \caption[Correlation between Archaeas central pathway expnasions and antismash Natural products detection]{\normalsize{Correlation between Archaeas central pathway expnasions and antismash Natural products detection}}
+  \label{fig:ArchaeasSMASHvsExpansionsbyOrderGRID}
+  \end{figure}
+  
+  Here is a reference to the expansions vs antismash NP's clusters
+  splitted by order plot
+  \autoref{fig:ArchaeasSMASHvsExpansionsbyOrderGRID}. \clearpage 
+  
+  AntisMAsh vs Expansions by taxonomic Family
+  
+  Natural products colured by family
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.6]{chapter2/Archaeas/Archaeasnpf.pdf}
+  \caption[Archaeas Natural products by family]{\normalsize{Archaeas Natural products by family}}
+  \label{fig:Archaeasnpf}
+  \end{figure}
+  
+  Here is a reference to the Natural products colured by family plot
+  \autoref{fig:Archaeasnpf}. \clearpage 
+  
+  \section{Selected trees from
+  EvoMining}\label{selected-trees-from-evomining}
+  
+  Phosphoribosyl\_isomerase\_3 family\\
+  Figure from EvoMining
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 180,scale = 0.25]{chapter2/Archaeas/tree41.png}
+  \caption[Phosphoribosyl isomerase A EvoMiningtree]{\normalsize{Phosphoribosyl isomerase A EvoMiningtree}}
+  \label{fig:Phosphoribosyl_isomerase_A_evo_tree}
+  \end{figure}\begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 180,scale = 0.25]{chapter2/Archaeas/tree42.png}
+  \caption[Phosphoribosyl isomerase other EvoMiningtree]{\normalsize{Phosphoribosyl isomerase other EvoMiningtree}}
+  \label{fig:Phosphoribosyl_isomerase_other_evo_tree}
+  \end{figure}\begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 180,scale = 0.25]{chapter2/Archaeas/tree65.png}
+  \caption[Phosphoribosyl anthranilate isomerase EvoMiningtree]{\normalsize{Phosphoribosyl anthranilate isomerase EvoMiningtree}}
+  \label{fig:Phosphoribosylanthranilate_isomerase_evo_tree}
+  \end{figure}
+  
+  \clearpage 
+  
+  \hypertarget{section}{\section{}\label{section}}
+  
+  Other possible databases Archaeal signatures \emph{set of
+  protein-encoding genes that function uniquely within the Archaea; most
+  signature proteins have no recognizable bacterial or eukaryal homologs}
+  {[}\protect\hyperlink{ref-graham_archaeal_2000}{126}{]} \#\# Footnotes
+  and Endnotes
+  
+  You might want to footnote something.\footnote{footnote text} The
+  footnote will be in a smaller font and placed appropriately. Endnotes
+  work in much the same way. More information can be found about both on
+  the CUS site or feel free to reach out to
+  \href{mailto:data@reed.edu}{\nolinkurl{data@reed.edu}}.
+  
+  \section{Bibliographies}\label{bibliographies}
+  
+  Of course you will need to cite things, and you will probably accumulate
+  an armful of sources. There are a variety of tools available for
+  creating a bibliography database (stored with the .bib extension). In
+  addition to BibTeX suggested below, you may want to consider using the
+  free and easy-to-use tool called Zotero. The Reed librarians have
+  created Zotero documentation at
+  \url{http://libguides.reed.edu/citation/zotero}. In addition, a tutorial
+  is available from Middlebury College at
+  \url{http://sites.middlebury.edu/zoteromiddlebury/}.
+  
+  \emph{R Markdown} uses \emph{pandoc} (\url{http://pandoc.org/}) to build
+  its bibliographies. One nice caveat of this is that you won't have to do
+  a second compile to load in references as standard \LaTeX~requires. To
+  cite references in your thesis (after creating your bibliography
+  database), place the reference name inside square brackets and precede
+  it by the ``at'' symbol. For example, here's a reference to a book about
+  worrying: {[}\protect\hyperlink{ref-Molina1994}{145}{]}. This
+  \texttt{Molina1994} entry appears in a file called \texttt{thesis.bib}
+  in the \texttt{bib} folder. This bibliography database file was created
+  by a program called BibTeX. You can call this file something else if you
+  like (look at the YAML header in the main .Rmd file) and, by default, is
+  to placed in the \texttt{bib} folder.
+  
+  For more information about BibTeX and bibliographies, see our CUS site
+  (\url{http://web.reed.edu/cis/help/latex/index.html})\footnote{{[}\protect\hyperlink{ref-reedweb2007}{146}{]}}.
+  There are three pages on this topic: \emph{bibtex} (which talks about
+  using BibTeX, at \url{http://web.reed.edu/cis/help/latex/bibtex.html}),
+  \emph{bibtexstyles} (about how to find and use the bibliography style
+  that best suits your needs, at
+  \url{http://web.reed.edu/cis/help/latex/bibtexstyles.html}) and
+  \emph{bibman} (which covers how to make and maintain a bibliography by
+  hand, without BibTeX, at
+  \url{http://web.reed.edu/cis/help/latex/bibman.html}). The last page
+  will not be useful unless you have only a few sources.
+  
+  If you look at the YAML header at the top of the main .Rmd file you can
+  see that we can specify the style of the bibliography by referencing the
+  appropriate csl file. You can download a variety of different style
+  files at \url{https://www.zotero.org/styles}. Make sure to download the
+  file into the csl folder.
+  
+  \paragraph{Tips for Bibliographies}\label{tips-for-bibliographies}
+  
+  \begin{itemize}
+  \tightlist
+  \item
+    Like with thesis formatting, the sooner you start compiling your
+    bibliography for something as large as thesis, the better. Typing in
+    source after source is mind-numbing enough; do you really want to do
+    it for hours on end in late April? Think of it as procrastination.
+  \item
+    The cite key (a citation's label) needs to be unique from the other
+    entries.
+  \item
+    When you have more than one author or editor, you need to separate
+    each author's name by the word ``and'' e.g.
+    \texttt{Author\ =\ \{Noble,\ Sam\ and\ Youngberg,\ Jessica\},}.
+  \item
+    Bibliographies made using BibTeX (whether manually or using a manager)
+    accept \LaTeX~markup, so you can italicize and add symbols as
+    necessary.
+  \item
+    To force capitalization in an article title or where all lowercase is
+    generally used, bracket the capital letter in curly braces.
+  \item
+    You can add a Reed Thesis citation\footnote{{[}\protect\hyperlink{ref-noble2002}{147}{]}}
+    option. The best way to do this is to use the phdthesis type of
+    citation, and use the optional ``type'' field to enter ``Reed thesis''
+    or ``Undergraduate thesis.''
+  \end{itemize}
+  
+  \section{Anything else?}\label{anything-else}
+  
+  If you'd like to see examples of other things in this template, please
+  contact the Data @ Reed team (email
+  \href{mailto:data@reed.edu}{\nolinkurl{data@reed.edu}}) with your
+  suggestions. We love to see people using \emph{R Markdown} for their
+  theses, and are happy to help.
+  
+  \section{Actinobacteria}\label{actinobacteria}
+  
+  Actinobacteria is an ancient phylum \{Referencia de luis\}
+  
+  \section{Tables}\label{tables-1}
+  
+  \begin{longtable}[]{@{}ccl@{}}
+  \caption{Correlation of Inheritance Factors for Parents and Child
+  \label{tab:inher}}\tabularnewline
+  \toprule
+  \begin{minipage}[b]{0.29\columnwidth}\centering\strut
+  Factors\strut
+  \end{minipage} & \begin{minipage}[b]{0.47\columnwidth}\centering\strut
+  Correlation between Parents \& Child\strut
+  \end{minipage} & \begin{minipage}[b]{0.16\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage}\tabularnewline
+  \midrule
+  \endfirsthead
+  \toprule
+  \begin{minipage}[b]{0.29\columnwidth}\centering\strut
+  Factors\strut
+  \end{minipage} & \begin{minipage}[b]{0.47\columnwidth}\centering\strut
+  Correlation between Parents \& Child\strut
+  \end{minipage} & \begin{minipage}[b]{0.16\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage}\tabularnewline
+  \midrule
+  \endhead
+  \begin{minipage}[t]{0.29\columnwidth}\centering\strut
+  GenomeDB\strut
+  \end{minipage} & \begin{minipage}[t]{0.47\columnwidth}\centering\strut
+  1245\strut
+  \end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.29\columnwidth}\centering\strut
+  Families\strut
+  \end{minipage} & \begin{minipage}[t]{0.47\columnwidth}\centering\strut
+  65\strut
+  \end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage}\tabularnewline
+  \bottomrule
+  \end{longtable}
+  
+  \clearpage
+  <!-- clearpage ends the page, and also dumps out all floats.Floats are things like tables and figures. 
+  -->
+  
+  \subsection{Expansions BoxPlot by metabolic
+  family}\label{expansions-boxplot-by-metabolic-family-1}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/boxplot_ActinoHP-1} \end{center}
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \KeywordTok{label}\NormalTok{(}\DataTypeTok{path =} \StringTok{"chapter2/Actinobacteria/expansion_plotActinos.pdf"}\NormalTok{, }\DataTypeTok{caption =} \StringTok{"Expansions Boxplot"}\NormalTok{,}\DataTypeTok{label =} \StringTok{"Actino_expansion_boxplot"}\NormalTok{, }\DataTypeTok{type =} \StringTok{"figure"}\NormalTok{)}
+  \end{Highlighting}
+  \end{Shaded}
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 1]{chapter2/Actinobacteria/expansion_plotActinos.pdf}
+  \caption[Expansions Boxplot]{\normalsize{Expansions Boxplot}}
+  \label{fig:Actino_expansion_boxplot}
+  \end{figure}
+  
+  Here is a reference to the expansion boxplot:
+  \autoref{fig:Actino_expansion_boxplot}.\\
+  \clearpage 
+  
+  \section{Central pathway expansions}\label{central-pathway-expansions-1}
+  
+  Heat plot of central pathways expansions, Needs to be phylogenetically
+  sorted.
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.7]{chapter2/Actinobacteria/HeatPlotActinos.pdf}
+  \caption[Actinobacterial Heatplot]{\normalsize{Actinobacterial Heatplot}}
+  \label{fig:ActinoPlot}
+  \end{figure}
+  
+  Here is a reference to the HeatPlot: \autoref{fig:ActinoPlot}.
+  \clearpage 
+  
+  PPP pahtway expansions restricted to \emph{Streptomycetaceae} family
+  HeatPlot: \autoref{fig:ActinoPlot}.
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.7]{chapter2/Actinobacteria/HeatPlotStreptoPGA.pdf}
+  \caption[Streptomyces Genomes expansions on PGA Aminoacids HeatPlot]{\normalsize{Streptomyces Genomes expansions on PGA Aminoacids HeatPlot}}
+  \label{fig:StreptoPGAPlot}
+  \end{figure}
+  
+  Here is a reference to the HeatPlot: \autoref{fig:StreptoPGAPlot}.
+  \clearpage 
+  
+  \section{Genome Size correlations}\label{genome-size-correlations-1}
+  
+  \subsection{Correlation between genome size and AntiSMASH
+  products}\label{correlation-between-genome-size-and-antismash-products-1}
+  
+  \begin{verbatim}
+  Warning: Removed 1 rows containing missing values (geom_point).
+  
+  Warning: Removed 1 rows containing missing values (geom_point).
+  \end{verbatim}
+  
+  Genome size vs Total antismash cluster coloured by order
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.6]{chapter2/Actinobacteria/ActinosSMASHvsSizebyOrder.pdf}
+  \caption[Correlation between Actinos genome size and antismash Natural products detection colored by Order]{\normalsize{Correlation between Actinos genome size and antismash Natural products detection colored by Order}}
+  \label{fig:ActinosSMASHvsSizebyOrder}
+  \end{figure}
+  
+  Here is a reference to Genome size vs Total antismash cluster:
+  \autoref{fig:ActinosSMASHvsSizebyOrder}. \clearpage
+  
+  Genome size vs Total antismash cluster detected splitted by order
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.6]{chapter2/Actinobacteria/ActinosSMASHvsSizeGridOrder.pdf}
+  \caption[Correlation between Actinos genome size and antismash Natural products detection grided by Order]{\normalsize{Correlation between Actinos genome size and antismash Natural products detection grided by Order}}
+  \label{fig:ActinosSMASHvsSizeGridOrder}
+  \end{figure}
+  
+  Here is a reference to Correlation between genome size and antismash
+  Natural products detection grided by Order plot:
+  \autoref{fig:ActinosSMASHvsSizeGridOrder}. \clearpage 
+  
+  \subsection{Correlation between genome size and Central pathway
+  expansions}\label{correlation-between-genome-size-and-central-pathway-expansions-1}
+  
+  \begin{verbatim}
+  Warning: Removed 1 rows containing missing values (geom_point).
+  
+  Warning: Removed 1 rows containing missing values (geom_point).
+  \end{verbatim}
+  
+  Genome size vs Total central pathway expansion coloured by order
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 1]{chapter2/Actinobacteria/ActinosSizevsExpansionsbyOrder.pdf}
+  \caption[Correlation between Actinos genome size and central pathway expansions ]{\normalsize{Correlation between Actinos genome size and central pathway expansions }}
+  \label{fig:ActinosSizevsExpansionsbyOrder}
+  \end{figure}
+  
+  Here is a reference to the size vs Total central pathway expansion plot:
+  \autoref{fig:ActinosSizevsExpansionsbyOrder}. \clearpage 
+  
+  Genome size vs Total central pathway expansion grided by order
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 1]{chapter2/Actinobacteria/ActinosSizevsExpansionsGridbyOrder.pdf}
+  \caption[Correlation between Actinos genome size and central pathway expansions grided by order]{\normalsize{Correlation between Actinos genome size and central pathway expansions grided by order}}
+  \label{fig:ActinosSizevsExpansionsGridbyOrder}
+  \end{figure}
+  
+  Here is a reference to the Genome size vs Total central pathway
+  expansion grided by order plot:
+  \autoref{fig:ActinosSizevsExpansionsGridbyOrder}. \clearpage 
+  
+  Correlation between genome size and each of the central pathway
+  families. Data are coloured by metabolic family instead of coloured by
+  taxonomical order. This treatment allows to answer how differente
+  metabolic families grows when genome size grow.\\
+  Also I want to add form given by taxonomical order.
+  
+  \begin{verbatim}
+  Warning: The shape palette can deal with a maximum of 6 discrete values
+  because more than 6 becomes difficult to discriminate; you have
+  32. Consider specifying shapes manually if you must have them.
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning: Removed 103306 rows containing missing values (geom_point).
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning: Removed 94 rows containing missing values (geom_point).
+  \end{verbatim}
+  
+  Genome size vs Total central pathway expansion coloured by metabolic
+  Family
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.6]{chapter2/Actinobacteria/ActinosSizevsExpansionsbyMetabolicFamily.pdf}
+  \caption[Correlation between Actinos Genome size vs Total central pathway expansion coloured by metabolic Family]{\normalsize{Correlation between Actinos Genome size vs Total central pathway expansion coloured by metabolic Family}}
+  \label{fig:ActinosSizevsExpansionsbyMetabolicFamily}
+  \end{figure}
+  
+  Here is a reference to the Genome size vs Total central pathway
+  expansion coloured by metabolic Family plot:
+  \autoref{fig:ActinosSizevsExpansionsbyMetabolicFamily}. \clearpage 
+  
+  Future Work: Genome size vs Total central pathway expansion grided by
+  metabolic Family For clarity I need to also grid and group by Metabolic
+  Pathway
+  
+  Here is a reference to Genome size vs Total central pathway expansion
+  grided by metabolic Family plot:
+  \autoref{fig:ActinosExpansionsbyMetabolicFamilyGrid}. \clearpage 
+  
+  \section{Natural products}\label{natural-products-1}
+  
+  \subsection{Natural products recruitments from EvoMining
+  heatplot}\label{natural-products-recruitments-from-evomining-heatplot-1}
+  
+  We can see natural products recruitment after central pathways
+  expansions colored by their kingdom.\\
+  Natural products recruited by metabolic family, colored by phylogenetic
+  origin.
+  
+  Recruitments after central pathways expansions coloured by Kingdom
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.6]{chapter2/Actinobacteria/ActinosRecruitmentsbyKingdom.pdf}
+  \caption[Actinos Recruitmens on central families coloured by kingdom]{\normalsize{Actinos Recruitmens on central families coloured by kingdom}}
+  \label{fig:ActinosRecruitmentsbyKingdom}
+  \end{figure}
+  
+  Here is a reference to Recruitments after central pathways expansions
+  colourd by Kingdom plot: \autoref{fig:ActinosRecruitmentsbyKingdom}.
+  
+  \clearpage  Recruitments after central pathways expansions colourd by
+  taxonomy
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.5]{chapter2/Actinobacteria/ActinosRecruitmentsbyTaxa.pdf}
+  \caption[Actinos Recruitmens on central families coloured by taxonomy]{\normalsize{Actinos Recruitmens on central families coloured by taxonomy}}
+  \label{fig:ActinosRecruitmentsbyTaxa}
+  \end{figure}
+  
+  Here is a reference to Recruitments after central pathways expansions
+  colourd by taxa plot: \autoref{fig:ActinosRecruitmentsbyTaxa}.
+  \clearpage 
+  
+  \section{Actinos AntiSMASH}\label{actinos-antismash}
+  
+  Taxonomical diversity on Actinosbacteria Data
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.6]{chapter2/Actinobacteria/ActinosDiversity.pdf}
+  \caption[Actinos Diversity]{\normalsize{Actinos Diversity}}
+  \label{fig:ActinosDiversity}
+  \end{figure}
+  
+  Here is a reference to Recruitments after central pathways expansions
+  colourd by taxa plot: \autoref{fig:ActinosDiversity}. \clearpage
+  
+  Smash diversity
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.5]{chapter2/Actinobacteria/ActinosSmash.pdf}
+  \caption[Actinos Smash Taxonomical Diversity]{\normalsize{Actinos Smash Taxonomical Diversity}}
+  \label{fig:ActinosSmash}
+  \end{figure}
+  
+  Here is a reference to Recruitments after central pathways expansions
+  colourd by taxa plot: \autoref{fig:ActinosSmash}. \clearpage
+  
+  \subsection{AntisSMASH vs Central
+  Expansions}\label{antissmash-vs-central-expansions-1}
+  
+  Is it a correlation between pangenome grow and central pathways
+  expansions?
+  
+  Total central pathway expansions by genome vs Total antismash cluster
+  detected coloured by order
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.5]{chapter2/Actinobacteria/ActinosSMASHvsExpansionsbyOrder.pdf}
+  \caption[Correlation between Actinos central pathway expansions and antismash Natural products detection]{\normalsize{Correlation between Actinos central pathway expansions and antismash Natural products detection}}
+  \label{fig:ActinosSMASHvsExpansionsbyOrder}
+  \end{figure}
+  
+  Here is a reference to the expansions vs antismash NP's clusters plot:
+  \autoref{fig:ActinosSMASHvsExpansionsbyOrder}. \clearpage 
+  
+  Total central pathway expansions by genome vs Total antismash cluster
+  detected splitted by order
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.5]{chapter2/Actinobacteria/ActinosSMASHvsExpansionsbyOrderGRID.pdf}
+  \caption[Correlation between Actinos central pathway expnasions and antismash Natural products detection]{\normalsize{Correlation between Actinos central pathway expnasions and antismash Natural products detection}}
+  \label{fig:ActinosSMASHvsExpansionsbyOrderGRID}
+  \end{figure}
+  
+  Here is a reference to the expansions vs antismash NP's clusters
+  splitted by order plot
+  \autoref{fig:ActinosSMASHvsExpansionsbyOrderGRID}. \clearpage 
+  
+  AntisMAsh vs Expansions by taxonomic Family
+  
+  Natural products colured by family
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.6]{chapter2/Actinobacteria/Actinosnpf.pdf}
+  \caption[Actinos Natural products by family]{\normalsize{Actinos Natural products by family}}
+  \label{fig:Actinosnpf}
+  \end{figure}
+  
+  Here is a reference to the Natural products colured by family plot
+  \autoref{fig:Actinosnpf}. \clearpage 
+  
+  \section{Selected trees from
+  EvoMining}\label{selected-trees-from-evomining-1}
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 180,scale = 0.3]{chapter2/Actinobacteria/tree15.png}
+  \caption[Enolase EvoMiningtree]{\normalsize{Enolase EvoMiningtree}}
+  \label{fig:enolase_evo_tree}
+  \end{figure}\begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 180,scale = 0.3]{chapter2/Actinobacteria/tree73.png}
+  \caption[Phosphoribosyl isomerase EvoMiningtree]{\normalsize{Phosphoribosyl isomerase EvoMiningtree}}
+  \label{fig:Phosphoribosyl_isomerase_evo_tree}
+  \end{figure}\begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 180,scale = 0.3]{chapter2/Actinobacteria/tree47.png}
+  \caption[Phosphoribosyl isomerase A EvoMiningtree]{\normalsize{Phosphoribosyl isomerase A EvoMiningtree}}
+  \label{fig:Phosphoribosyl_isomerase_A_evo_tree}
+  \end{figure}\begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 180,scale = 0.3]{chapter2/Actinobacteria/tree69.png}
+  \caption[phosphoshikimate carboxyvinyltransferase EvoMiningtree]{\normalsize{phosphoshikimate carboxyvinyltransferase EvoMiningtree}}
+  \label{fig:phosphoshikimate_c_evo_tree}
+  \end{figure}
+  
+  \clearpage 
+  
+  \section{Cyanobacteria}\label{cyanobacteria}
+  
+  Cyanobacteria phylum \{Referencia\}\\
+  Cyanobacteria is a photosynthetic phylum that inhabits a broad range of
+  habitats. The broad adaptive potential is on part driven by gene-family
+  enlargment {[}\protect\hyperlink{ref-larsson_genome_2011}{133}{]} by the
+  analysis of 58 Cyanobacterial genomes concludes ancestor of
+  cyanobacteria had a genome size of approx. 4.5 Mbp. Cyanobacteria
+  produces natural products as pigments and toxins
+  {[}\protect\hyperlink{ref-whitton_ecology_2012}{134}{]} Example of a
+  PriA cluster
+  toxins{[}\protect\hyperlink{ref-moustafa_origin_2009}{103}{]}
+  
+  Fossil record situates Cyanobacteria
+  {[}\protect\hyperlink{ref-whitton_ecology_2012}{134}{]} Molecular record
+  and metabolic propoerties at
+  {[}\protect\hyperlink{ref-battistuzzi_genomic_2004}{137}{]}
+  
+  \section{Tables}\label{tables-2}
+  
+  \begin{longtable}[]{@{}cc@{}}
+  \caption{Families on Cyanobacteria \label{tab:inher}}\tabularnewline
+  \toprule
+  Factors & Correlation between Parents \& Child\tabularnewline
+  \midrule
+  \endfirsthead
+  \toprule
+  Factors & Correlation between Parents \& Child\tabularnewline
+  \midrule
+  \endhead
+  GenomeDB & 1245\tabularnewline
+  Families & 65\tabularnewline
+  \bottomrule
+  \end{longtable}
+  
+  \clearpage
+  <!-- clearpage ends the page, and also dumps out all floats.Floats are things like tables and figures. 
+  -->
+  
+  \subsection{Expansions BoxPlot by metabolic
+  family}\label{expansions-boxplot-by-metabolic-family-2}
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \KeywordTok{label}\NormalTok{(}\DataTypeTok{path =} \StringTok{"chapter2/Cyanobacteria/expansion_plotCyanos.pdf"}\NormalTok{, }\DataTypeTok{caption =} \StringTok{"Expansions Boxplot"}\NormalTok{,}\DataTypeTok{label =} \StringTok{"Cyano_expansion_boxplot"}\NormalTok{, }\DataTypeTok{type =} \StringTok{"figure"}\NormalTok{)}
+  \end{Highlighting}
+  \end{Shaded}
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 1]{chapter2/Cyanobacteria/expansion_plotCyanos.pdf}
+  \caption[Expansions Boxplot]{\normalsize{Expansions Boxplot}}
+  \label{fig:Cyano_expansion_boxplot}
+  \end{figure}
+  
+  Here is a reference to the expansion boxplot:
+  \autoref{fig:Cyano_expansion_boxplot}.\\
+  \clearpage 
+  
+  \section{Central pathway expansions}\label{central-pathway-expansions-2}
+  
+  Heat plot of central pathways expansions, Needs to be phylogenetically
+  sorted.
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.6]{chapter2/Cyanobacteria/HeatPlot.pdf}
+  \caption[Cyanobacterial Heatplot]{\normalsize{Cyanobacterial Heatplot}}
+  \label{fig:CyanoPlot}
+  \end{figure}
+  
+  Here is a reference to the HeatPlot: \autoref{fig:CyanoPlot}.
+  \clearpage 
+  
+  \section{Genome Size correlations}\label{genome-size-correlations-2}
+  
+  \subsection{Correlation between genome size and AntiSMASH
+  products}\label{correlation-between-genome-size-and-antismash-products-2}
+  
+  Genome size vs Total antismash cluster coloured by order
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.6]{chapter2/Cyanobacteria/SMASHvsSizebyOrder.pdf}
+  \caption[Correlation between genome size and antismash Natural products detection colored by Order]{\normalsize{Correlation between genome size and antismash Natural products detection colored by Order}}
+  \label{fig:SMASHvsSizebyOrder}
+  \end{figure}
+  
+  Here is a reference to Genome size vs Total antismash cluster:
+  \autoref{fig:SMASHvsSizebyOrder}. \clearpage
+  
+  Genome size vs Total antismash cluster detected splitted by order
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.6]{chapter2/Cyanobacteria/SMASHvsSizeGridOrder.pdf}
+  \caption[Correlation between genome size and antismash Natural products detection grided by Order]{\normalsize{Correlation between genome size and antismash Natural products detection grided by Order}}
+  \label{fig:SMASHvsSizeGridOrder}
+  \end{figure}
+  
+  Here is a reference to Correlation between genome size and antismash
+  Natural products detection grided by Order plot:
+  \autoref{fig:SMASHvsSizeGridOrder}. \clearpage 
+  
+  \subsection{Correlation between genome size and Central pathway
+  expansions}\label{correlation-between-genome-size-and-central-pathway-expansions-2}
+  
+  Genome size vs Total central pathway expansion coloured by order
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 1]{chapter2/Cyanobacteria/SizevsExpansionsbyOrder.pdf}
+  \caption[Correlation between genome size and central pathway expansions ]{\normalsize{Correlation between genome size and central pathway expansions }}
+  \label{fig:SizevsExpansionsbyOrder}
+  \end{figure}
+  
+  Here is a reference to the size vs Total central pathway expansion plot:
+  \autoref{fig:SizevsExpansionsbyOrder}. \clearpage 
+  
+  Genome size vs Total central pathway expansion grided by order
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 1]{chapter2/Cyanobacteria/SizevsExpansionsGridbyOrder.pdf}
+  \caption[Correlation between genome size and central pathway expansions grided by order]{\normalsize{Correlation between genome size and central pathway expansions grided by order}}
+  \label{fig:SizevsExpansionsGridbyOrder}
+  \end{figure}
+  
+  Here is a reference to the Genome size vs Total central pathway
+  expansion grided by order plot:
+  \autoref{fig:SizevsExpansionsGridbyOrder}. \clearpage 
+  
+  Correlation between genome size and each of the central pathway
+  families. Data are coloured by metabolic family instead of coloured by
+  taxonomical order. This treatment allows to answer how differente
+  metabolic families grows when genome size grow.\\
+  Also I want to add form given by taxonomical order.
+  
+  \begin{verbatim}
+  Warning: The shape palette can deal with a maximum of 6 discrete values
+  because more than 6 becomes difficult to discriminate; you have
+  10. Consider specifying shapes manually if you must have them.
+  \end{verbatim}
+  
+  \begin{verbatim}
+  Warning: Removed 20418 rows containing missing values (geom_point).
+  \end{verbatim}
+  
+  Genome size vs Total central pathway expansion coloured by metabolic
+  Family
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.6]{chapter2/Cyanobacteria/SizevsExpansionsbyMetabolicFamily.pdf}
+  \caption[Correlation between Genome size vs Total central pathway expansion coloured by metabolic Family]{\normalsize{Correlation between Genome size vs Total central pathway expansion coloured by metabolic Family}}
+  \label{fig:SizevsExpansionsbyMetabolicFamily}
+  \end{figure}
+  
+  Here is a reference to the Genome size vs Total central pathway
+  expansion coloured by metabolic Family plot:
+  \autoref{fig:SizevsExpansionsbyMetabolicFamily}. \clearpage 
+  
+  Future Work: Genome size vs Total central pathway expansion grided by
+  metabolic Family For clarity I need to also grid and group by Metabolic
+  Pathway
+  
+  Here is a reference to Genome size vs Total central pathway expansion
+  grided by metabolic Family plot:
+  \autoref{fig:ExpansionsbyMetabolicFamilyGrid}. \clearpage 
+  
+  \section{Natural products}\label{natural-products-2}
+  
+  \subsection{Natural products recruitments from EvoMining
+  heatplot}\label{natural-products-recruitments-from-evomining-heatplot-2}
+  
+  We can see natural products recruitment after central pathways
+  expansions colored by their kingdom.\\
+  Natural products recruited by metabolic family, colored by phylogenetic
+  origin.
+  
+  Recruitments after central pathways expansions coloured by Kingdom
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.6]{chapter2/Cyanobacteria/RecruitmentsbyKingdom.pdf}
+  \caption[Recruitmens on central families coloured by kingdom]{\normalsize{Recruitmens on central families coloured by kingdom}}
+  \label{fig:RecruitmentsbyKingdom}
+  \end{figure}
+  
+  Here is a reference to Recruitments after central pathways expansions
+  colourd by Kingdom plot: \autoref{fig:RecruitmentsbyKingdom}.
+  
+  \clearpage  Recruitments after central pathways expansions colourd by
+  taxonomy
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.5]{chapter2/Cyanobacteria/RecruitmentsbyTaxa.pdf}
+  \caption[Recruitmens on central families coloured by taxonomy]{\normalsize{Recruitmens on central families coloured by taxonomy}}
+  \label{fig:RecruitmentsbyTaxa}
+  \end{figure}
+  
+  Here is a reference to Recruitments after central pathways expansions
+  colourd by taxa plot: \autoref{fig:RecruitmentsbyTaxa}. \clearpage 
+  
+  \section{Cyanobacterias AntiSMASH}\label{cyanobacterias-antismash}
+  
+  Taxonomical diversity on Cyanobacteria Data
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.6]{chapter2/Cyanobacteria/Diversity.pdf}
+  \caption[Diversity]{\normalsize{Diversity}}
+  \label{fig:Diversity}
+  \end{figure}
+  
+  Here is a reference to Recruitments after central pathways expansions
+  colourd by taxa plot: \autoref{fig:Diversity}. \clearpage
+  
+  Smash diversity
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.5]{chapter2/Cyanobacteria/Smash.pdf}
+  \caption[Smash]{\normalsize{Smash}}
+  \label{fig:Smash Taxonomical Diversity}
+  \end{figure}
+  
+  Here is a reference to Recruitments after central pathways expansions
+  colourd by taxa plot: \autoref{fig:Smash}. \clearpage
+  
+  \subsection{AntisSMASH vs Central
+  Expansions}\label{antissmash-vs-central-expansions-2}
+  
+  Is it a correlation between pangenome grow and central pathways
+  expansions?
+  
+  Total central pathway expansions by genome vs Total antismash cluster
+  detected coloured by order
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.5]{chapter2/Cyanobacteria/SMASHvsExpansionsbyOrder.pdf}
+  \caption[Correlation between central pathway axpnasions and antismash Natural products detection]{\normalsize{Correlation between central pathway axpnasions and antismash Natural products detection}}
+  \label{fig:SMASHvsExpansionsbyOrder}
+  \end{figure}
+  
+  Here is a reference to the expansions vs antismash NP's clusters plot:
+  \autoref{fig:SMASHvsExpansionsbyOrder}. \clearpage 
+  
+  Total central pathway expansions by genome vs Total antismash cluster
+  detected splitted by order
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.5]{chapter2/Cyanobacteria/SMASHvsExpansionsbyOrderGRID.pdf}
+  \caption[Correlation between central pathway axpnasions and antismash Natural products detection]{\normalsize{Correlation between central pathway axpnasions and antismash Natural products detection}}
+  \label{fig:SMASHvsExpansionsbyOrderGRID}
+  \end{figure}
+  
+  Here is a reference to the expansions vs antismash NP's clusters
+  splitted by order plot \autoref{fig:SSMASHvsExpansionsbyOrderGRID}.
+  \clearpage 
+  
+  AntisMAsh vs Expansions by taxonomic Family
+  
+  Natural products colured by family
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.6]{chapter2/Cyanobacteria/npf.pdf}
+  \caption[Natural products by family]{\normalsize{Natural products by family}}
+  \label{fig:npf}
+  \end{figure}
+  
+  Here is a reference to the Natural products colured by family plot
+  \autoref{fig:npf}. \clearpage 
+  
+  \section{Selected trees from
+  EvoMining}\label{selected-trees-from-evomining-2}
+  
+  Phosphoribosyl\_isomerase\_3 family\\
+  Figure from EvoMining
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 180,scale = 0.25]{chapter2/Cyanobacteria/tree64.png}
+  \caption[Phosphoribosyl isomerase EvoMiningtree]{\normalsize{Phosphoribosyl isomerase EvoMiningtree}}
+  \label{fig:Phosphoribosyl_isomerase_evo_tree}
+  \end{figure}\begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 180,scale = 0.25]{chapter2/Cyanobacteria/tree1.png}
+  \caption[Phosphoglycerate dehydrogenase EvoMiningtree]{\normalsize{Phosphoglycerate dehydrogenase EvoMiningtree}}
+  \label{fig:Phosphoglycerate_dehydrogenase_evo_tree}
+  \end{figure}\begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 180,scale = 0.25]{chapter2/Cyanobacteria/tree2.png}
+  \caption[Phosphoserine aminotransferase EvoMiningtree]{\normalsize{Phosphoserine aminotransferase EvoMiningtree}}
+  \label{fig:Phosphoserine_aminotransferase_evo_tree}
+  \end{figure}\begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 180,scale = 0.25]{chapter2/Cyanobacteria/tree10.png}
+  \caption[Triosephosphate isomerase EvoMiningtree]{\normalsize{Triosephosphate isomerase EvoMiningtree}}
+  \label{fig:Triosephosphate_isomerase_evo_tree}
+  \end{figure}\begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 180,scale = 0.25]{chapter2/Cyanobacteria/tree11.png}
+  \caption[glyceraldehyde3phosphate dehydrogenase EvoMiningtree]{\normalsize{glyceraldehyde3phosphate dehydrogenase EvoMiningtree}}
+  \label{fig:glyceraldehyde3phosphate_dehydrogenase_evo_tree}
+  \end{figure}\begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 180,scale = 0.25]{chapter2/Cyanobacteria/tree12.png}
+  \caption[phosphoglycerate kinase EvoMiningtree]{\normalsize{phosphoglycerate kinase EvoMiningtree}}
+  \label{fig:phosphoglycerate_kinase_evo_tree}
+  \end{figure}\begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 180,scale = 0.25]{chapter2/Cyanobacteria/tree13.png}
+  \caption[phosphoglycerate mutaseEvoMiningtree]{\normalsize{phosphoglycerate mutaseEvoMiningtree}}
+  \label{fig:phosphoglycerate_mutase_evo_tree}
+  \end{figure}\begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 180,scale = 0.25]{chapter2/Cyanobacteria/tree14.png}
+  \caption[enolase EvoMiningtree]{\normalsize{enolase EvoMiningtree}}
+  \label{fig:enolase_evo_tree}
+  \end{figure}\begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 180,scale = 0.25]{chapter2/Cyanobacteria/tree15.png}
+  \caption[Pyruvate kinase EvoMiningtree]{\normalsize{Pyruvate kinase EvoMiningtree}}
+  \label{fig:Pyruvate_kinase_evo_tree}
+  \end{figure}\begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 180,scale = 0.25]{chapter2/Cyanobacteria/tree16.png}
+  \caption[Aspartate transaminase EvoMiningtree]{\normalsize{Aspartate transaminase EvoMiningtree}}
+  \label{fig:Aspartate_transaminase_evo_tree}
+  \end{figure}\begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 180,scale = 0.25]{chapter2/Cyanobacteria/tree17.png}
+  \caption[Asparagine synthase EvoMiningtree]{\normalsize{Asparagine synthase EvoMiningtree}}
+  \label{fig:Asparagine_synthase_evo_tree}
+  \end{figure}\begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 180,scale = 0.25]{chapter2/Cyanobacteria/tree18.png}
+  \caption[Aspartate kinase EvoMiningtree]{\normalsize{Aspartate kinase EvoMiningtree}}
+  \label{fig:Aspartate_kinase_evo_tree}
+  \end{figure}\begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 180,scale = 0.25]{chapter2/Cyanobacteria/tree19.png}
+  \caption[Aspartate semialdehyde dehydrogenase EvoMiningtree]{\normalsize{Aspartate semialdehyde dehydrogenase EvoMiningtree}}
+  \label{fig:Aspartate_semialdehyde_dehydrogenase_evo_tree}
+  \end{figure}\begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 180,scale = 0.25]{chapter2/Cyanobacteria/tree20.png}
+  \caption[Homoserine dehydrogenase EvoMiningtree]{\normalsize{Homoserine dehydrogenase EvoMiningtree}}
+  \label{fig:Homoserine_dehydrogenase_evo_tree}
+  \end{figure}
+  
+  \clearpage 
+  
+  \hypertarget{ref_labels}{\chapter{CORASON}\label{ref_labels}}
+  
+  \chapter{Desarrollo de CORASON como herramienta para organizar clusters
+  biosintéticos y otras vecindades genómicas
+  conservadas.}\label{desarrollo-de-corason-como-herramienta-para-organizar-clusters-biosinteticos-y-otras-vecindades-genomicas-conservadas.}
+  
+  Figura {[}CorasonCaracteristicas{]} CORASON es una herramienta en línea
+  de comandos para organizar filogenéticamente la variación de una familia
+  de clusters. Dada la existencia de variantes de BGCs en bases de datos
+  de linajes genómicos se diseñó CORASON. Corason se ejecuta en línea de
+  comandos, su función es identificar el core génico de un BGC y
+  utilizarlo para presentar una visualización de las variantes de la
+  familia organizadas filogenéticamente
+  
+  Los métodos de minado de genomas han acelerado el descubrimiento de
+  nuevos clusters biosintéticos (BGCs). Casi cada nueva bacteria que es
+  secuenciada aporta alguna novedad al pangenoma bacteriano conocido. Una
+  fracción de estos genes novedosos formará parte de variantes de BGCs
+  previamente conocidos aportando diversidad a las familias de clusters
+  biosintéticos. La diversidad genética que existe en las familias de BGCs
+  está directamente relacionada con cambios moleculares, incluso pequeñas
+  variantes en un metabolito pueden ocasionar diferencias en su función
+  biológica.
+  
+  CORASON fue diseñado con las siguientes características: (i) una
+  interfaz de línea de comando simple (ii) identificación del core génico
+  del BGC (iii) la reconstrucción filogenética de la familia de BGCs
+  utilizando la información del core (iv) salida visual en formato SVG,
+  que muestra tanto la anotación funcional de los genes como como la
+  distancia respecto a sus ortólogos del cluster de referencia.
+  
+  En este capítulo presento CORASON, CORe Analysis of Syntenic Orthologs
+  to prioritize Natural products biosynthetic gene clusters, una
+  herramienta para explorar la diversidad en el contenido de los BGCs así
+  como su distribución en un linaje genómico proporcionado por el usuario.
+  
+  \section{Algoritmo y características de
+  CORASON}\label{algoritmo-y-caracteristicas-de-corason}
+  
+  Figura {[}CorasonPipeline{]} La herramienta corason localiza familias de
+  clusters biosintéticos en un linaje genómico partiendo de un cluster y
+  un gen de referencia. Todos los contextos genómicos que contengan ese
+  gen y algún otro gen del cluster de referencia serán encontrados en el
+  linaje seleccionado por el usuario. CORASON identifica el core génico de
+  la familia. La información del core se utiliza para organizar
+  filogenéticamente todos los miembros de la familia del BGC, es decir
+  todas las variantes del BGC serán organizadas. El core génico está
+  relacionado con el core de la molécula, la parte variable del BGC
+  codifica enzimas accesorias que producen ornamentos i.e.~variantes
+  moleculares. Al cambiar de gen de referencia CORASON permite explorar
+  otras familias de BGC que contengan las mismas modificaciones. Los
+  resultados se presentan en una visualización que permite al mismo tiempo
+  apreciar variación a nivel de presencia-ausencia de genes entre miembros
+  de una familia de BGCs, como también apreciar variación a nivel de
+  secuencia a través de un gradiente de color entre genes conservados
+  entre una variante y el BGC de referencia.
+  
+  CORASON permite la rápida identificación de variantes de BGCs y organiza
+  los resultados utilizando una aproximación filogenética. En la figura
+  {[}CorasonPipeline{]} se muestra esquemáticamente como dado un cluster
+  de referencia y un gen localizado en el cluster, así como las secuencias
+  genómicas de un linaje de referencia corason buscará todas las variantes
+  del cluster de referencia que existen en el linaje genómico
+  seleccionado.
+  
+  \section{Las familias de BGCs están formadas por variantes del BGC de
+  referencia.}\label{las-familias-de-bgcs-estan-formadas-por-variantes-del-bgc-de-referencia.}
+  
+  Así como existen familias génicas, un gen y todos sus homólogos,
+  incluidos parálogos, ortólogos y xenólogos, también existen familias de
+  BGCs. No es tan claro definir un BGC porque no tiene un codón de inicio
+  y un codón de paro como un gen. En algunas ocasiones como en el caso de
+  scytonemin todos los genes del BGC se expresan al recibir un estímulo,
+  como los rayos UV en este caso. Otras veces en la producción del
+  metabolito participan genes que no son necesariamente contiguos, y por
+  ello al cambiar el BGC de organismo y realizar expresión heteróloga no
+  se obtiene el mismo metabolito. Las fronteras es decir los genes de la
+  orilla del BGC no siempre son claras.
+  
+  Así pues, cuando se habla de un BGC no se debe pensar que este es igual
+  en todos los organismos del linaje, es decir que tiene el mismo
+  contenido génico. Hay variación tanto a nivel de contenido génico como a
+  nivel de secuencia entre los genes en común. Esta variación produce la
+  promiscuidad de producto, una familia de BGCs produce distintos
+  productos a partir de los mismos precursores. En este trabajo vamos a
+  tomar como BGC de referencia a los anotados en MIBiG, que son de los que
+  se tienen datos experimentales respecto al producto reportado. Todas sus
+  variantes que contengan al menos dos genes en común, uno de referencia
+  seleccionado por el usuario y otro cualquiera pero común con el BGC de
+  referencia son considerados parte de la familia del BGC.
+  
+  Como ejemplo de familias de BGCs podemos pensar a los operones. Un
+  operón es el conjunto de genes dedicados a la síntesis de algún
+  metabolito del metabolismo central, estos genes suelen encontrarse
+  juntos en el cromosoma y transcribirse simultáneamente. Ejemplos de
+  estos operones son los que producen los aminoácidos histidina y
+  triptófano. Estos ``BGCs'' hace millones de años fueron posiblemente
+  parte del metabolismo especializado y debido a su éxito se fijaron en lo
+  que ahora vemos como BGCs conservados en ciertos linajes genómicos. En
+  estos casos las fronteras son claras y la variación génica es poca. Aún
+  así existen otros ejemplos donde puede constatarse variación en las
+  rutas de síntesis de mecanismos centrales de metabolismo procariota. En
+  el caso de histidina y triptófano, como hablaremos en el siguiente
+  capítulo, es la variación a nivel de secuencia y no a nivel de
+  composición génica la que produce diversidad de producto.
+  
+  En oposición a los BGCs u operones de metabolismo conservado, están los
+  BGCs del actual metabolismo especializado, así como se encuentran
+  familias con mucha variación génica pueden encontrarse otras muy
+  conservadas. En este capítulo presentaremos varios ejemplos de familias
+  de BGCs.
+  
+  \section{Aplicaciones de CORASON en Actinobacteria y
+  Pseudomonas}\label{aplicaciones-de-corason-en-actinobacteria-y-pseudomonas}
+  
+  En el capítulo anterior las variantes del BGC scytonemin en
+  Cyanobacteria fueron encontradas al aplicar CORASON a dicho linaje. En
+  este capítulo presento ejemplos del uso de CORASON para investigar los
+  patrones de conservación/variación en familias de BGCs en los linajes
+  Actinobacteria y \emph{Pseudomonas}. Primero, versiones iniciales de
+  CORASON fueron usadas junto con cromatografía y espectrometría de masas
+  (LC-MS) para estudiar la ecología y evolución de los sideróforos del
+  tipo desferroxiaminas en Actinobacteria. Este estudio permitió la
+  identificación de desG, un miembro de la familia penicilin amidasa
+  responsable de la arilación de desferroxiaminas en actinomicetos
+  acuáticos {[}REF{]}.
+  
+  En un segundo ejemplo, CORASON fue utilizado para investigar la
+  existencia de variantes en Actinobacteria del cluster productor de
+  arsenolípidos que se encuentra en \emph{Streptomyces lividans}. En la
+  tercera aplicación, se investigó la distribución en Actinobacteria de un
+  BGC de \emph{Streptomyces lividans} que es novedoso porque involucra una
+  enzima que utiliza tRNA de la familia FemXAB. La predicción de producto
+  de este BGC es un metabolito que contiene un grupo azoxy. Esta
+  predicción ha sido confirmada utilizando LC-MS {[}Aguilar in prep{]} .
+  
+  Finalmente, un cuarto ejemplo es presentado: el de los contextos
+  genómicos de \emph{tauD} que codifica una dioxigenasa involucrada en el
+  metabolismo de taurina en su papel de enzima del metabolismo conservado.
+  En Actinobacteria \emph{tauD} es parte de 15 BGCs reportados en MIBiG,
+  aunque en \emph{Pseudomonas} no existen BGCs reportados EvoMining
+  predice expansiones en este linaje genómico y CORASON predice
+  conservación en los contextos genómicos de estas copias extra que
+  guardan cierta similitud con variantes de los BGCs conocidos en
+  Actinobacteria.
+  
+  Estos cuatro ejemplo ilustran como CORASON puede ser utilizado tanto
+  para priorizar nuevos BGCs como para ligar la variación génica de
+  familias de BGCs con diversidad estructural. CORASON es una expansión de
+  las habilidades de EvoMining {[}cruz-morales{]} de encontrar enzimas en
+  el proceso de diversificación funcional. CORASON encuentra familias de
+  BGCs, y presenta una rápida visualización de sus variantes. Ambas
+  herramientas fueron desarrolladas para expandir nuestro conocimiento
+  sobre nueva química mediante la genómica comparativa. CORASON está
+  disponibles en su contenedor de docker en github
+  \url{https://github.com/nselem/corason}.
+  
+  \section{Estas familias pueden
+  clasificarse}\label{estas-familias-pueden-clasificarse}
+  
+  Figura {[}CorasonSideróforos{]} Variantes del cluster biosintético de
+  desferroxiamina fueron identificadas por CORASON en Actinobacterias de
+  cuatro ciénegas. Una variante del BGC de desferroxiamina fue
+  identificada. Esta variante se diferencia del cluster reportado por la
+  ganancia de una penicilin amidasa. A este gen extra se le llamó
+  \emph{desG}. Fue verificado que la variación génica está ligada con la
+  variación molecular
+  
+  El hierro es necesario en el metabolismo de muchos seres vivos. Para
+  poder utilizarlo las bacterias han desarrollados moléculas captadoras de
+  hierro llamadas sideróforos. Un ejemplo de sideróforo es la molécula de
+  desferroxiamina sintetizada por los genes \emph{des} en Actinobacteria
+  
+  \section{Un BGC reportado puede tener muchas variantes que conforman una
+  familia de
+  BGCs}\label{un-bgc-reportado-puede-tener-muchas-variantes-que-conforman-una-familia-de-bgcs}
+  
+  En el linaje de \emph{Streptomyces} EvoMining obtuvo como predicción una
+  arsenoenol piruvato sintasa en una rama del árbol de expansiones de la
+  familia 3-fosfoshikimato-1-carboxivinyl transferasa (AroA). Estudios de
+  mutagénesis y de expresión diferencial génica en presencia de arsénico
+  confirmaron que en \emph{Streptomyces coelicolor} y en
+  \emph{Streptomyces lividans} esta enzima pertenece a un BGC que
+  sintetiza arsenolípidos {[}Pablo tesis{]}. El contexto genómico de AroA
+  en estos organismos incluye una enzima PKS localizada a seis genes de
+  distancia. AntiSMASH predice los BGCs tipo PKS de estas enzimas pero no
+  incluye en ellos a la arsenoenol piruvato sintasa. El valor de EvoMining
+  fue descubrir que esta copia extra de AroA estaba dedicada al
+  metabolismo especializado y por tanto bien podía tener su propiio BGC o
+  dada la cercanía con las PKS podía ser parte de estos PKS-BGCs. Esta
+  ruta de síntesis de arseno compuestos, fue descubierta a partir de una
+  rama de copias extra de AroA donde se apreciaba diversidad en las
+  secuencias de aminoácidos. Una pregunta posible es si esta diversidad de
+  secuencia a nivel de enzima ascendía a un siguiente nivel. Es decir si
+  también existe diversidad a nivel del BGC, si se encuentran variantes
+  con distintos patrones de presencia/ausencia en los genes que coponen al
+  BGC de \emph{S coelicolor}. O más aun, quedaba por investigar si el BGC
+  tenía cierto grado de conservación o era exclusivo de estos dos
+  organismos \emph{S. coelicolor y S. lividans}
+  
+  Una versión preliminar de CORASON, permitió visualizar las variantes de
+  los contextos genómicos de las arsenol piruvato sintasas. Los genomas
+  donde se buscaron estas variantes fueron seleccionados por una búsqueda
+  de blast en NCBI en la base de datos no redundante como aparecía en
+  2016. Después de organizar manualmente los BGCs como se muestran a la
+  izquierda de la {[}Fig Arseno-BGC{]}, la visualización permitió
+  distinguir 4 grupos de contextos conservados. El primero independiente
+  de PKS y NRPS mostrado en morado, el segundo con una NRPS-PKS híbrida
+  mostrado en un rectángulo verde y finalmente en rosa y naranja se
+  muestran los grupos tercero y cuarto que contienen una PKS, los primeros
+  del lado izquierdo y los segundos del lado derecho. Presumiblemente
+  estos BGCs aunque contienen un core común producen distintos arseno
+  compuestos.
+  
+  {[}Fig Arseno-BGC{]} Contexto genómico conservado en las expansiones de
+  AroA. La arsenoenol piruvato sintasa fue descubierta en un árbol de
+  EvoMining como parte de una rama de expansiones de AroA en
+  Actinobacteria. El contexto genómico de la arsenoenol piruvato sintasa
+  de \_S. coelicolor \_tiene un core conservado en Actinobacteria. Este
+  BGC está dedicado a la síntesis de metabolitos secundarios de tipo
+  arsenolípidos. Primero se identificaron en otras secuencias genómicas
+  contextos que contengan el homólogo de AroA y algún otro gen de su
+  vecindad en \emph{S. coelicolor}. A continuación, se ordenaron
+  manualmente los contextos obtenidos y se pudo identificar al menos
+  cuatro diferentes clases de BGCs. La primera clase mostrada en un
+  rectángulo morado no contiene PKS o NRPS, la segunda enmarcada en verde
+  contiene una PKS-NRPS híbrida. La tercera clase incluye una PKS a la
+  izquierda y a más de cinco genes de distancia de la Arsenoenol piruvato
+  sintasa y finalmente la última clase contiene una PKS a la derecha y a
+  sólo un gen de distancia de esta enzima. Esta figura muestra que existen
+  variantes de un BGC
+  
+  La visualización realizada para los arsenolípidos no incluía ningún tipo
+  de orden y era difícil distinguir grupos de BGCs. Por esta razón se
+  pensó que el orden filogenético ya no de una enzima sino de el core del
+  BGC ordenaría las variantes del BGC. Este orden mostraría en un continuo
+  la dinámica genómica del BGC establecida por los procesos evolutivos. En
+  el caso de los arsenolípidos se utilizó Orthocore para la identificación
+  del core del BGC. En las siguientes versiones de CORASON esta
+  característica fue implementada como parte del algoritmo.
+  
+  \section{CORASON analiza la conservación del contexto genómico de los
+  EvoMining
+  hits}\label{corason-analiza-la-conservacion-del-contexto-genomico-de-los-evomining-hits}
+  
+  La predicción de un BGC para la síntesis de un compuesto tipo azoxy es
+  otro ejemplo de CORASON como complemento de EvoMining para la
+  identificación de los dos niveles de promiscuidad, tanto a nivel familia
+  enzimática como familia de BGCs. Este trabajo se encuentra en
+  preparación para su publicación por Aguilar-Martínez.
+  
+  Figura {[}CorasonAzoxy{]} Azoxy BGC
+  
+  \section{\texorpdfstring{El contexto de una rama divergente de
+  \emph{tauD} está conservado en
+  Pseudomonas}{El contexto de una rama divergente de tauD está conservado en Pseudomonas}}\label{el-contexto-de-una-rama-divergente-de-taud-esta-conservado-en-pseudomonas}
+  
+  Figura{[}CorasonTauD{]} En Pseudomonas el gen \emph{tauD} tiene un
+  contexto que incluye genes de metabolismo especializado. Variantes de
+  este contexto están distribuidas en varios organismos. En particular
+  
+  \section{CORASON se adaptó a la herramienta BiG-SCAPE de clasificación
+  de familias de
+  BGCs}\label{corason-se-adapto-a-la-herramienta-big-scape-de-clasificacion-de-familias-de-bgcs}
+  
+  BIG-SCAPE es una herramienta bioinformática para separar un conjunto de
+  BGCs en familias de acuerdo al contenido, conservación y distribución de
+  sus dominios. Un dominio es un conjunto de secuencia conservado de un
+  gen, es considerado una unidad de las proteinas. Existe una base de
+  datos de dominios llamada pFAM.
+  
+  {[}CorasonBiGSCAPE{]} texto texto
+  
+  CORASON complemento BIG-SCAPE al proporcionar un algoritmo para ordenar
+  la diversidad dentro de la familia. A la vez CORASON permite conectar
+  mediante la evolución a familias aparentemente separadas por BiGSCAPE.
+  
+  \section{BiG SCAPE y CORASON identificaron nuevos productos variantes de
+  la familia de BGCs Rimosamide - Detoxin en
+  Actinobacteria}\label{big-scape-y-corason-identificaron-nuevos-productos-variantes-de-la-familia-de-bgcs-rimosamide---detoxin-en-actinobacteria}
+  
+  En esta sección utilizamos CORASON y BIG-SCAPE para analizar una base de
+  datos de miles de genomas de ACtinobacteria. Con estas herramientas se
+  organizó la diversidad biosintética de las familias de BGC detoxin y
+  rimosamide {[}REF{]}. El análisis reveló diversidad tanto en los géneros
+  de los organismos que contienen a esta familia, y en la composición
+  génica del BGC. Entre los géneros con alguna variante del BGC están
+  Amycolatopsis, Streptomyces. El core conservado de los BGCs detoxin y
+  rimosamide está compuesto por una NRPS, una NRPS/PKS híbrida, y un
+  homólogo de tauD. Este homólogo fue sugerido por un análisis de
+  EvoMining8, En E.coli tauD se encuentra en el operón tauABCD {[}MM1{]}
+  La ruta de síntesis de rimosamide difiere de la de detoxins porque tiene
+  una NRPS adicionoal, que codifica para una modificación del core de
+  molecula detoxin/rimosamide con isobutyrate y glycine39.
+  
+  Figura {[}TauDActinobacteria{]}texto
+  
+  El hecho de que el gen \emph{tauD} estuviera presente en todos los
+  miembros de la familia captó nuestra atención. El producto del gen tauD
+  pertenece a la super familia de enzimas
+  Fe(II)/\(\alpha\)-ketoglutarato-dependientes hidroxilasas. En particular
+  tauD codifica una \(\alpha\)-ketoglutarato-dependendiente taurina
+  dioxigenasa involucrada en la asimilacion de sulfito por la liberación
+  oxigenolítica del aminoácido taurina41. Interesantemente, esta familia
+  también incluye enzimas en linajes como hongos, bacterias y plantas.
+  Dichas enzimas catalizan hydroxylations, desaturations, ring expansions
+  and ring formations, among other chemical transformations. A la fecha,
+  el rol de TauD en la biosíntesis de los metabolitos detoxin y rimosamide
+  aún es desconocido, se ha sugerido que es responsable de la oxidación de
+  la prolina observada en algunos análogos39.
+  
+  Para identificar variantes de los BGCs relacionados a detoxin y
+  rimosamide dentro de la rama de metabolismo especializado los 1175 BGCs
+  del dataset que contenían un homólogo de tauD se pasaron por un análisis
+  combinado de BiG-SCAPE/CORASON. Los BGCs fueron procesados con CORASON
+  usando tauD como query gene. Teniendo como resultado que es el único
+  miembro del `BGC core'. Es importante notar que el core del BGC puede
+  contener entre 1 y 3 genes, {[}La NRPS, y la NRPS-PKS híbrida quedan en
+  este ejemplo fuera del core debido a gaps en la secuencia del genoma de
+  organismos como \emph{Streptomyces humi}, \emph{Streptomyces
+  Spectabilis} y \emph{Amycolatopsis Vancoresmycina}{]}
+  
+  \chapter{CORASON sugiere que las familias detoxin y rimosamide
+  pertenecen a un amplio clan de familias dedicadas a la síntesis de
+  péptidos.}\label{corason-sugiere-que-las-familias-detoxin-y-rimosamide-pertenecen-a-un-amplio-clan-de-familias-dedicadas-a-la-sintesis-de-peptidos.}
+  
+  El análisis de CORASON reveló que las familias de los BGCs detoxin y
+  rimosamide GCFs identificados en BiG-SCAPE eran parte de todo un clan de
+  biosintesis de péptidos que incluía clados inexplorados {[}MM10{]} del
+  phylum Actinobacteria {[}Fig TauDActinobacteria{]}. La organización
+  filogenética de los BGCs provista por CORASON, reveló familias de BGCs
+  que fueron omitidas debido al umbral utilizado por el algoritmo de
+  clustering de BiG-SCAPE. Esto debido a la cercanía de genes
+  biosintéticos detectados por antiSMASH como suficientemente diferentes
+  como para ser clasificados en otras familias (ver Fig. S10).
+  
+  Hipotetizamos que las detoxins codificadas por los BGCs en los clados
+  inexplorados contendrán cierta novedad química relacionada con las
+  variaciones genéticas. Afortunadamente, 40 de las 152 cepas
+  identificadas como portadoras de un BGCs estaban representadas en
+  nuestros datos metabolómicos de 363--cepas por LC-MS/MS. Análisis de
+  redes moleculares de estos datos indicaron la presencia de tres detoxin
+  conocidas, cuatro rimosamide conocidas y otras 103 variantes de detoxin
+  o rimosamide (Fig. 3c), el basto universo químico sugerido por el
+  análisis BiG-SCAPE/CORASON.
+  
+  \section{Clados selectos del árbol de CORASON que contiene a las
+  familias rimosamide/detoxin contienen diversidad génica que correlaciona
+  con novedad
+  química.}\label{clados-selectos-del-arbol-de-corason-que-contiene-a-las-familias-rimosamidedetoxin-contienen-diversidad-genica-que-correlaciona-con-novedad-quimica.}
+  
+  Tres de los clados que codifican para detoxin BGC fueron identificados
+  por BiG-SCAPE dentro del árbol de CORASON capturaron nuestro interés
+  ({[}Fig TauDActinobacteria{]}, in colored boxes). En esta sección se
+  describe el trabajo experimental realizado por Michael Mulloney del
+  grupo de colaboradores de West Chicago, de los tres clados y
+  específicamente de los organismos que seleccioné como candidatos a
+  presentar diversidad química. \#\#\# El clado P450/enoyl agrega una
+  heptanamida al core molecular detoxin/rimosamide El primer clado es el
+  `P450/enoyl clade' contiene genes como el citocromo P450 y un enoyl-CoA
+  hydratasa/isomerasa dentro de cada uno de sus BGCs. Este clado está
+  marcado en rojo {[}Fig TauDActinobacteria{]}. Análisis de datos por
+  tandem MS de extractos de \emph{Streptomyces} sp. NRRL S-325, que se
+  encuentra dentro de este clado, llevó al descubrimiento de la detoxin S1
+  (1; Fig TauDActinobacteria, S16--17). Este nuevo análogo contiene una
+  cadena lateral de heptanamide, una extrucutra única entre las detoxins y
+  rimosamides cuya instalación posiblemente depende de la enzima enoyl-CoA
+  hydratase/isomerase.
+  
+  \subsection{El superclado spectinomycin/ detoxin-rimosamide-clan produce
+  cinco variantes de
+  detoxin.}\label{el-superclado-spectinomycin-detoxin-rimosamide-clan-produce-cinco-variantes-de-detoxin.}
+  
+  El segundo clado de interés,fue nombrado el `supercluster clade' (Fig.
+  5, en verde claro), comprende los BGCs con genes de detoxin adjacentes
+  al cluster que produce spectinomycin42 {[}Fig TauDActinobacteria{]}. El
+  cluster de spectinomycin (MIBiG BGC0000715) contiene en su periferia al
+  gen tauD como se muestra en la línea gris punteada de la {[}Fig
+  TauDActinobacteria{]}. La secuencia del cluster de spectinomycin
+  depositada en MIBiG es la única secuencia dsponible de
+  \emph{Streptomyces spectabilis} NRRL 2792. Como no se sabe que tauD
+  participe en la síntesis de spectinomycin se hipotetizó que pueden
+  existir los genes del cluster de detoxin al lado de los genes del BGC de
+  spectinomycin en \emph{S. spectabilis} NRRL 2792. Adquirimos esta cepa
+  para determinar si el análisis de CORASON podía ayudar a la predicción
+  de detoxin basado solamente en la presencia del query gen pero en
+  ausencia completa de la secuencia del BGC de detoxin. Análisis en tandem
+  de espectrometría de masas de extracto \emph{S. spectabilis} NRRL 2792
+  reveló la producción de cinco compuestos tipo detoxin, incluyendo
+  detoxin N1 (2; Fig TauDActinobacteria, S15), detoxin N2 (3; Fig. S15) y
+  su análogo acetoxylated, detoxin N3 (4; Fig. S15).
+  
+  Los tiempos de retención de ionies y los patrones de fragmentación de
+  los últimos dos compuestos también fueron observados en extractos de
+  \emph{Streptomyces} sp. NRRL B-1347 parte del clado del supercluster,
+  confirmando la habilidad de CORASON para guiar un descubrimiento,
+  mediante la utilización de la filogenia a pesar de lo limitado de los
+  datos en la cepa NRRL-2792. Análisis de LC-MS de cultivos de NRRL-2792
+  suplementados con isotopos estables etiquedatos de amino acidos
+  corroboraron las predicciones estructurales basadas en los análisis de
+  la cepa cercana \emph{Streptomyces} sp. NRRL B-1347 (Fig
+  TauDActinobacteria, S26--31). Los tres nuevos análogos incorporan
+  copletamente el 13C6-isoleucine, pero d7-proline solo es incorporado en
+  el compuesto 3. La pérdida de un deuterio de d7-proline en 2 y 4 soporta
+  la asignación de acetoxylation del anillo de pyrrolidine común en
+  detoxins y rimosamides39,43--45. Características especiales únicas a la
+  serie de N-detoxins incluyen la incorporación de una tirosina
+  N-formylated en 3 y 4 en lugar de fenilalanina, el residuo típico de
+  detoxin/rimosamide, lo que es soportado por la incorporación del anillo
+  d4-tyrosine. El compuesto 2 la incorporación única de un residuo
+  derivado del triptofano en esta posición, haciendo evidente la retención
+  de cuatro deuterios cuando en experimentos de alimentación de
+  indole-d5-tryptophan (Fig. S27). Aunque los datos de MS fueron
+  insuficientes para desenmascarar esta estructura, el compuesto 2 fue
+  producido por \emph{S. spectabilis} NRRL 2792 en suficiente abundancia
+  para el aislamiento y la elucidación estructural por NMR. Varios
+  experimentos 1D y 2D confirmaron las asignaciones por datos de MS y
+  establecieron una N-acetylated kynurenine como la estructura derivada de
+  triptófano en 2 (Figs. S18-S27).
+  
+  \subsection{\texorpdfstring{El clado \emph{Amycolatopsis P450} produce
+  cinco variantes de
+  detoxin.}{El clado Amycolatopsis P450 produce cinco variantes de detoxin.}}\label{el-clado-amycolatopsis-p450-produce-cinco-variantes-de-detoxin.}
+  
+  El tercer clado que se estudió del super clan al que pertenecen las
+  familias rimosamide-detoxin, contiene BGCs casi enteramente provenientes
+  del género Amycolatopsis. Este clado está marcado en morado en la {[}Fig
+  TauDActinobacteria{]}. Este clado de BGCs también contienen un gen P450
+  único entre los BGCs del árbol, así que fue llamado el clado
+  `Amycolatopsis/P450 clade'. Aunque no se contaba con datos metabolómicos
+  de las cepas del clado de BGCs definidos por BiG-SCAPE como una gen
+  cluster family (GCF), la visualización filogenética de CORASON permitió
+  la selección de una cepa de Amycolatopsis de la que se tenían datos
+  metabolómicos con un BGC muy similar, y que también contiene el gen P450
+  ({[}Fig TauDActinobacteria{]}, línea gris cerca del clado
+  \emph{Amycolatopsis}/P450 ). Análisis de datos de tandem MS de extracto
+  fermetado de \emph{Amycolatopsis jejuensis} NRRL B-24427 reveló isómeros
+  de detoxins P1 (5; {[}Fig TauDActinobacteria{]}, S15) que contienen
+  tirosina, P2 (6; {[}Fig TauDActinobacteria{]}, S15) mostrando
+  fenilalanina y una valina hidroxilada, así como la detoxin P3, un
+  análogo cercano libre de hidroxilación (7; {[}Fig TauDActinobacteria{]},
+  S15). Una validación de la asignación de aminoácidos observados en los
+  patrones de fragmentación de MS/MS se consiguió mediante el uso de
+  experimentos de incorporación de isótopos estables etiquetados de
+  aminoácidos (Figs. S33--S36, S38--S41, and S43--S44). \#\# CORASON
+  permitió expandir las capacidades de EvoMining y explorar la
+  promiscuidad de familias de BGCs de enzimas divergentes de metabolismo
+  central. Nuestros resultados ilustran como BiG-SCAPE puede identificar
+  conjuntos de BGCs relacionados, en un gran número de secuencias de
+  genomas. Además al usar CORASON para reconstruir las filogenias de BGC
+  para ordenar visualmente la evolución de un cluster biosintético y su
+  diversidad proveen herramientas poderosas para el descubrimiento de
+  nuevos clados de BGC que codifican en consecuencia para nueva quimica.
+  Respecto a los BGCs detoxin/rimosamide, CORASON mostró habilidad para
+  ayudar a minar bases de datos genómicas y descubrir siete nuevas
+  detoxins. Específicamente, la organización de de las variantes de los
+  BGC facilitó la identificación de los correspondientes variaciones en la
+  estructura química -la presencia de un enoyl-CoA hidratasa/isomerasa
+  corresponde a la familia de amida ácido graso detoxin S1 y la presencia
+  de un gen P450 corresponde a la presencia de hidroxilaciones en detoxins
+  P1--P3.
+  
+  \chapter{Discusión}\label{discusion}
+  
+  El cluster des está muy conservado, no así los de arsenolípidos, ni los
+  de rimosamide
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 1]{chapter3/corason_fig1.png}
+  \caption[EvoMining Algorithm]{\normalsize{EvoMining Algorithm}}
+  \label{fig:EvoMining Algorithms}
+  \end{figure}
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 1]{chapter3/figura5.pdf}
+  \caption[EvoMining Algorithm]{\normalsize{EvoMining Algorithm}}
+  \label{fig:EvoMining Algorithms}
+  \end{figure}
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 1]{chapter3/Coelicolor.png}
+  \caption[EvoMining Algorithm]{\normalsize{EvoMining Algorithm}}
+  \label{fig:EvoMining Algorithms}
+  \end{figure}
   
   \texttt{\{r\ chapter4,\ child\ =\ \textquotesingle{}chap4.Rmd\textquotesingle{}\}}
   
@@ -2184,7 +4984,7 @@ starts here.
   -A donde se iria el resultado de abrir el GMP\\
   -Otra vez, que Actinos tienen FolE
   
-  \section{Discusion}\label{discusion}
+  \section{Discusion}\label{discusion-1}
   
   Finalmente, una pregunta abierta es aún dada una enzima promiscua es la
   población promiscua, y son sólo unos confórmeros o todas y cada una de
@@ -2220,11 +5020,11 @@ starts here.
   \CommentTok{# installed and loaded. This reedtemplates package includes}
   \CommentTok{# the template files for the thesis and also two functions}
   \CommentTok{# used for labeling and referencing}
-  \NormalTok{if(!}\KeywordTok{require}\NormalTok{(devtools))}
+  \ControlFlowTok{if}\NormalTok{(}\OperatorTok{!}\KeywordTok{require}\NormalTok{(devtools))}
     \KeywordTok{install.packages}\NormalTok{(}\StringTok{"devtools"}\NormalTok{, }\DataTypeTok{repos =} \StringTok{"http://cran.rstudio.com"}\NormalTok{)}
-  \NormalTok{if(!}\KeywordTok{require}\NormalTok{(reedtemplates))\{}
+  \ControlFlowTok{if}\NormalTok{(}\OperatorTok{!}\KeywordTok{require}\NormalTok{(reedtemplates))\{}
     \KeywordTok{library}\NormalTok{(devtools)}
-    \NormalTok{devtools::}\KeywordTok{install_github}\NormalTok{(}\StringTok{"ismayc/reedtemplates"}\NormalTok{)}
+  \NormalTok{  devtools}\OperatorTok{::}\KeywordTok{install_github}\NormalTok{(}\StringTok{"ismayc/reedtemplates"}\NormalTok{)}
   \NormalTok{\}}
   \KeywordTok{library}\NormalTok{(reedtemplates)}
   \end{Highlighting}
@@ -2239,18 +5039,18 @@ starts here.
   \CommentTok{# installed and loaded. This reedtemplates package includes}
   \CommentTok{# the template files for the thesis and also two functions}
   \CommentTok{# used for labeling and referencing}
-  \NormalTok{if(!}\KeywordTok{require}\NormalTok{(devtools))}
+  \ControlFlowTok{if}\NormalTok{(}\OperatorTok{!}\KeywordTok{require}\NormalTok{(devtools))}
     \KeywordTok{install.packages}\NormalTok{(}\StringTok{"devtools"}\NormalTok{, }\DataTypeTok{repos =} \StringTok{"http://cran.rstudio.com"}\NormalTok{)}
-  \NormalTok{if(!}\KeywordTok{require}\NormalTok{(plyr))}
+  \ControlFlowTok{if}\NormalTok{(}\OperatorTok{!}\KeywordTok{require}\NormalTok{(plyr))}
       \KeywordTok{install.packages}\NormalTok{(}\StringTok{"plyr"}\NormalTok{, }\DataTypeTok{repos =} \StringTok{"http://cran.rstudio.com"}\NormalTok{) ## this shoul always go before dplyr}
-  \NormalTok{if(!}\KeywordTok{require}\NormalTok{(dplyr))}
+  \ControlFlowTok{if}\NormalTok{(}\OperatorTok{!}\KeywordTok{require}\NormalTok{(dplyr))}
       \KeywordTok{install.packages}\NormalTok{(}\StringTok{"dplyr"}\NormalTok{, }\DataTypeTok{repos =} \StringTok{"http://cran.rstudio.com"}\NormalTok{)}
-  \NormalTok{if(!}\KeywordTok{require}\NormalTok{(ggplot2))}
+  \ControlFlowTok{if}\NormalTok{(}\OperatorTok{!}\KeywordTok{require}\NormalTok{(ggplot2))}
       \KeywordTok{install.packages}\NormalTok{(}\StringTok{"ggplot2"}\NormalTok{, }\DataTypeTok{repos =} \StringTok{"http://cran.rstudio.com"}\NormalTok{)}
-  \NormalTok{if(!}\KeywordTok{require}\NormalTok{(reedtemplates))\{}
+  \ControlFlowTok{if}\NormalTok{(}\OperatorTok{!}\KeywordTok{require}\NormalTok{(reedtemplates))\{}
     \KeywordTok{library}\NormalTok{(devtools)}
-    \NormalTok{devtools::}\KeywordTok{install_github}\NormalTok{(}\StringTok{"ismayc/reedtemplates"}\NormalTok{)}
-    \NormalTok{\}}
+  \NormalTok{  devtools}\OperatorTok{::}\KeywordTok{install_github}\NormalTok{(}\StringTok{"ismayc/reedtemplates"}\NormalTok{)}
+  \NormalTok{  \}}
   \KeywordTok{library}\NormalTok{(reedtemplates)}
   \end{Highlighting}
   \end{Shaded}
@@ -3312,16 +6112,50 @@ starts here.
   {[}cited 2019 Mar 13{]};140(4):655--64. Available from:
   \url{https://doi.org/10.1007/s10658-014-0495-5}
   
+  \hypertarget{ref-brettin_rasttk:_2015}{}
+  142. Brettin T, Davis JJ, Disz T, Edwards RA, Gerdes S, Olsen GJ, et al.
+  RASTtk: A modular and extensible implementation of the RAST algorithm
+  for building custom annotation pipelines and annotating batches of
+  genomes. Scientific Reports {[}Internet{]}. 2015 Feb {[}cited 2017 Feb
+  7{]};5:8365. Available from:
+  \url{http://www.nature.com/srep/2015/150210/srep08365/full/srep08365.html}
+  
+  \hypertarget{ref-chesterismay_updated_2016}{}
+  143. chesterismay. Updated R Markdown thesis template {[}Internet{]}.
+  Chester's R blog. 2016 {[}cited 2017 Feb 7{]}. Available from:
+  \url{https://chesterismay.wordpress.com/2016/09/01/updated-r-markdown-thesis-template/}
+  
+  \hypertarget{ref-barona-gomez_what_2012}{}
+  144. Barona-Gómez F, Cruz-Morales P, Noda-García L. What can
+  genome-scale metabolic network reconstructions do for prokaryotic
+  systematics? Antonie van Leeuwenhoek {[}Internet{]}. 2012 Jan {[}cited
+  2017 Jan 24{]};101(1):35--43. Available from:
+  \url{http://link.springer.com/article/10.1007/s10482-011-9655-1}
+  
+  \hypertarget{ref-Molina1994}{}
+  145. Molina ST, Borkovec TD. The Penn State worry questionnaire:
+  Psychometric properties and associated characteristics. In: Davey GCL,
+  Tallis F, editors. Worrying: Perspectives on theory, assessment and
+  treatment. New York: Wiley; 1994. pp. 265--83.
+  
+  \hypertarget{ref-reedweb2007}{}
+  146. Reed~College. LaTeX your document {[}Internet{]}. 2007. Available
+  from: \url{http://web.reed.edu/cis/help/LaTeX/index.html}
+  
+  \hypertarget{ref-noble2002}{}
+  147. Noble SG. Turning images into simple line-art {[}Undergraduate
+  thesis{]}. Reed College; 2002.
+  
   \hypertarget{ref-angel2000}{}
-  142. Angel E. Interactive computer graphics : A top-down approach with
+  148. Angel E. Interactive computer graphics : A top-down approach with
   opengl. Boston, MA: Addison Wesley Longman; 2000.
   
   \hypertarget{ref-angel2001}{}
-  143. Angel E. Batch-file computer graphics : A bottom-up approach with
+  149. Angel E. Batch-file computer graphics : A bottom-up approach with
   quicktime. Boston, MA: Wesley Addison Longman; 2001.
   
   \hypertarget{ref-angel2002a}{}
-  144. Angel E. Test second book by angel. Boston, MA: Wesley Addison
+  150. Angel E. Test second book by angel. Boston, MA: Wesley Addison
   Longman; 2001.
 
 

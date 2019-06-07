@@ -81,9 +81,11 @@ This is an R chunk and chap0.Rmd refers to the Introductory chapter.  Feel free 
 Immediately below is the chunk for Chapter 2.
 --> 
 <!--- EvoMining -->
-```{r chapter2, child = 'chap2.Rmd'}```
+```{r chapter2, child = 'chap2.Rmd'}
+```
 <!--- CORASON -->
-```{r chapter3, child = 'chap3.Rmd'}```
+```{r chapter3, child = 'chap3.Rmd'}
+```
 
 <!--- PriA family-->
 ```{r chapter4, child = 'chap4.Rmd'}```

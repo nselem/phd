@@ -51,32 +51,115 @@
 \contentsline {subsection}{\numberline {0.9.8}Consideraciones}{31}{subsection.0.9.8}
 \contentsline {chapter}{Chapter 1: Desarrollo de Orthocore e implementaci\IeC {\'o}n de otras herramientas computacionales para entender el pangenoma de un linaje gen\IeC {\'o}mico.}{35}{chapter.1}
 \contentsline {section}{\numberline {1.1}La distribuci\IeC {\'o}n de la funci\IeC {\'o}n metab\IeC {\'o}lica de las familias del pangenoma depende de la variabilidad del linaje seleccionado.}{36}{section.1.1}
-\contentsline {section}{\numberline {1.2}El core conservado permite la reconstrucci\IeC {\'o}n de filogenias complicadas}{39}{section.1.2}
+\contentsline {section}{\numberline {1.2}El core conservado permite la reconstrucci\IeC {\'o}n de filogenias complicadas}{40}{section.1.2}
 \contentsline {section}{\numberline {1.3}El algoritmo de Orthocore}{40}{section.1.3}
 \contentsline {subsection}{\numberline {1.3.1}Componentes t\IeC {\'e}cnicos de Orthocore}{41}{subsection.1.3.1}
-\contentsline {subsection}{\numberline {1.3.2}Aplicaciones de Orthocore, identificaci\IeC {\'o}n del core conservado y de familias de genes marcadores.}{41}{subsection.1.3.2}
-\contentsline {subsection}{\numberline {1.3.3}Genes de islas de patogenicidad de \emph {Salmonella} en M\IeC {\'e}xico est\IeC {\'a}n conservados en la mayor\IeC {\'\i }a de los genomas.}{42}{subsection.1.3.3}
-\contentsline {subsection}{\numberline {1.3.4}Nostoc provenientes del metagenoma de c\IeC {\'\i }cadas se agrupan Cyanobacteria}{42}{subsection.1.3.4}
-\contentsline {subsection}{\numberline {1.3.5}Identificaci\IeC {\'o}n de genes marcadores de Clavibacter michiganensis}{44}{subsection.1.3.5}
-\contentsline {section}{\numberline {1.4}Clavisual: Identificaci\IeC {\'o}n de genes marcadores a un cierto porcentaje de grupos seleccionados}{46}{section.1.4}
-\contentsline {subsection}{\numberline {1.4.1}El pangenoma de Clavibacter Michiganensis es abierto}{48}{subsection.1.4.1}
-\contentsline {section}{\numberline {1.5}Relaci\IeC {\'o}n entre genes marcadores, Orthocores y la promiscuidad enzim\IeC {\'a}tica.}{49}{section.1.5}
-\contentsline {section}{\numberline {1.6}Protocolos para usar Orthocore, myRAST, fastOrtho, Clavigenomics, y BPGA}{49}{section.1.6}
-\contentsline {section}{\numberline {1.7}ORthocore}{52}{section.1.7}
-\contentsline {chapter}{Conclusion}{53}{chapter*.41}
-\contentsline {section}{\numberline {4.1}Discusion}{53}{section.4.1}
-\contentsline {subsubsection}{More info}{53}{section*.42}
-\contentsline {chapter}{Appendix A: The First Appendix}{55}{appendix.A}
-\contentsline {subsubsection}{In the main Rmd file:}{55}{section*.43}
-\contentsline {subsubsection}{In \hyperlink {ref_labels}{}:}{55}{section*.44}
-\contentsline {chapter}{Appendix B: The Second Appendix, Open source code on this document}{57}{appendix.B}
-\contentsline {section}{\numberline {B.1}R markdown}{57}{section.B.1}
-\contentsline {section}{\numberline {B.2}Docker}{57}{section.B.2}
-\contentsline {section}{\numberline {B.3}Git}{58}{section.B.3}
-\contentsline {section}{\numberline {B.4}Connect GitHub and DockerHub}{58}{section.B.4}
-\contentsline {section}{\numberline {B.5}Additional resources}{58}{section.B.5}
-\contentsline {chapter}{Appendix C: The third Appendix, Other contributions during my phd}{61}{appendix.C}
-\contentsline {section}{\numberline {C.1}Accepted}{61}{section.C.1}
-\contentsline {section}{\numberline {C.2}Submitted}{61}{section.C.2}
-\contentsline {section}{\numberline {C.3}On preparation}{61}{section.C.3}
-\contentsline {chapter}{References}{63}{appendix*.45}
+\contentsline {subsection}{\numberline {1.3.2}Aplicaciones de Orthocore, identificaci\IeC {\'o}n del core conservado y de familias de genes marcadores.}{42}{subsection.1.3.2}
+\contentsline {subsection}{\numberline {1.3.3}Genes de islas de patogenicidad de \emph {Salmonella} en M\IeC {\'e}xico est\IeC {\'a}n conservados en la mayor\IeC {\'\i }a de los genomas.}{43}{subsection.1.3.3}
+\contentsline {subsection}{\numberline {1.3.4}Nostoc provenientes del metagenoma de c\IeC {\'\i }cadas se agrupan Cyanobacteria}{43}{subsection.1.3.4}
+\contentsline {subsection}{\numberline {1.3.5}Identificaci\IeC {\'o}n de genes marcadores de Clavibacter michiganensis}{45}{subsection.1.3.5}
+\contentsline {section}{\numberline {1.4}Clavisual: Identificaci\IeC {\'o}n de genes marcadores a un cierto porcentaje de grupos seleccionados}{47}{section.1.4}
+\contentsline {subsection}{\numberline {1.4.1}El pangenoma de Clavibacter Michiganensis es abierto}{49}{subsection.1.4.1}
+\contentsline {section}{\numberline {1.5}Relaci\IeC {\'o}n entre genes marcadores, Orthocores y la promiscuidad enzim\IeC {\'a}tica.}{50}{section.1.5}
+\contentsline {section}{\numberline {1.6}Protocolos para usar Orthocore, myRAST, fastOrtho, Clavigenomics, y BPGA}{50}{section.1.6}
+\contentsline {section}{\numberline {1.7}ORthocore}{53}{section.1.7}
+\contentsline {chapter}{Chapter 2: EvoMining}{55}{chapter.2}
+\contentsline {chapter}{Chapter 3: EvoMining}{63}{chapter.3}
+\contentsline {section}{\numberline {3.1}Introduction}{63}{section.3.1}
+\contentsline {section}{\numberline {3.2}EvoMining es un m\IeC {\'e}todo para encontrar BGCs no tradicionales}{71}{section.3.2}
+\contentsline {section}{\numberline {3.3}Gen families expansions on genomes}{71}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Pangenomes}{71}{subsection.3.3.1}
+\contentsline {section}{\numberline {3.4}EvoMining}{71}{section.3.4}
+\contentsline {section}{\numberline {3.5}Pangenome}{71}{section.3.5}
+\contentsline {section}{\numberline {3.6}EvoMining Implementation}{72}{section.3.6}
+\contentsline {section}{\numberline {3.7}EvoMining Databases}{73}{section.3.7}
+\contentsline {subsubsection}{Genome DB}{73}{section*.48}
+\contentsline {subsubsection}{Phylogeny}{74}{section*.49}
+\contentsline {subsubsection}{Central DB}{74}{section*.50}
+\contentsline {section}{\numberline {3.8}Data Bases}{75}{section.3.8}
+\contentsline {subsection}{\numberline {3.8.1}Central pathways}{75}{subsection.3.8.1}
+\contentsline {subsection}{\numberline {3.8.2}Genome Dynamics}{75}{subsection.3.8.2}
+\contentsline {subsubsection}{Natural Products DB}{76}{section*.51}
+\contentsline {subsection}{\numberline {3.8.3}AntisMASH optional DB}{77}{subsection.3.8.3}
+\contentsline {subsection}{\numberline {3.8.4}Otras estrategias para los clusters Argon context Idea}{77}{subsection.3.8.4}
+\contentsline {section}{\numberline {3.9}Argonne}{77}{section.3.9}
+\contentsline {subsection}{\numberline {3.9.1}Inline code}{80}{subsection.3.9.1}
+\contentsline {section}{\numberline {3.10}Recomendaciones de Luis}{80}{section.3.10}
+\contentsline {section}{\numberline {3.11}CORASON: Other genome Mining tools context-based}{81}{section.3.11}
+\contentsline {section}{\numberline {3.12}CORe Analysis of Syntenic Orthologs to prioritize Natural Product-Biosynthetic Gene Cluster}{81}{section.3.12}
+\contentsline {section}{\numberline {3.13}Tree methods (from antiSMASH textual quotation)}{82}{section.3.13}
+\contentsline {chapter}{Chapter 4: EvoMining Results}{83}{chapter.4}
+\contentsline {section}{\numberline {4.1}Archaea}{83}{section.4.1}
+\contentsline {section}{\numberline {4.2}Tables}{84}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Expansions BoxPlot by metabolic family}{85}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Expansions BoxPlot by metabolic family by phylum}{86}{subsection.4.2.2}
+\contentsline {section}{\numberline {4.3}Central pathway expansions}{97}{section.4.3}
+\contentsline {section}{\numberline {4.4}Genome Size correlations}{99}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Correlation between genome size and AntiSMASH products}{99}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Correlation between genome size and Central pathway expansions}{101}{subsection.4.4.2}
+\contentsline {section}{\numberline {4.5}Natural products}{105}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}Natural products recruitments from EvoMining heatplot}{105}{subsection.4.5.1}
+\contentsline {section}{\numberline {4.6}Archaeas AntiSMASH}{107}{section.4.6}
+\contentsline {subsection}{\numberline {4.6.1}AntisSMASH vs Central Expansions}{109}{subsection.4.6.1}
+\contentsline {section}{\numberline {4.7}Selected trees from EvoMining}{112}{section.4.7}
+\contentsline {section}{\numberline {4.8}}{113}{section.4.8}
+\contentsline {section}{\numberline {4.9}Bibliographies}{113}{section.4.9}
+\contentsline {paragraph}{Tips for Bibliographies}{114}{section*.68}
+\contentsline {section}{\numberline {4.10}Anything else?}{114}{section.4.10}
+\contentsline {section}{\numberline {4.11}Actinobacteria}{114}{section.4.11}
+\contentsline {section}{\numberline {4.12}Tables}{114}{section.4.12}
+\contentsline {subsection}{\numberline {4.12.1}Expansions BoxPlot by metabolic family}{116}{subsection.4.12.1}
+\contentsline {section}{\numberline {4.13}Central pathway expansions}{118}{section.4.13}
+\contentsline {section}{\numberline {4.14}Genome Size correlations}{122}{section.4.14}
+\contentsline {subsection}{\numberline {4.14.1}Correlation between genome size and AntiSMASH products}{122}{subsection.4.14.1}
+\contentsline {subsection}{\numberline {4.14.2}Correlation between genome size and Central pathway expansions}{124}{subsection.4.14.2}
+\contentsline {section}{\numberline {4.15}Natural products}{128}{section.4.15}
+\contentsline {subsection}{\numberline {4.15.1}Natural products recruitments from EvoMining heatplot}{128}{subsection.4.15.1}
+\contentsline {section}{\numberline {4.16}Actinos AntiSMASH}{130}{section.4.16}
+\contentsline {subsection}{\numberline {4.16.1}AntisSMASH vs Central Expansions}{132}{subsection.4.16.1}
+\contentsline {section}{\numberline {4.17}Selected trees from EvoMining}{135}{section.4.17}
+\contentsline {section}{\numberline {4.18}Cyanobacteria}{137}{section.4.18}
+\contentsline {section}{\numberline {4.19}Tables}{137}{section.4.19}
+\contentsline {subsection}{\numberline {4.19.1}Expansions BoxPlot by metabolic family}{138}{subsection.4.19.1}
+\contentsline {section}{\numberline {4.20}Central pathway expansions}{140}{section.4.20}
+\contentsline {section}{\numberline {4.21}Genome Size correlations}{141}{section.4.21}
+\contentsline {subsection}{\numberline {4.21.1}Correlation between genome size and AntiSMASH products}{141}{subsection.4.21.1}
+\contentsline {subsection}{\numberline {4.21.2}Correlation between genome size and Central pathway expansions}{143}{subsection.4.21.2}
+\contentsline {section}{\numberline {4.22}Natural products}{147}{section.4.22}
+\contentsline {subsection}{\numberline {4.22.1}Natural products recruitments from EvoMining heatplot}{147}{subsection.4.22.1}
+\contentsline {section}{\numberline {4.23}Cyanobacterias AntiSMASH}{149}{section.4.23}
+\contentsline {subsection}{\numberline {4.23.1}AntisSMASH vs Central Expansions}{151}{subsection.4.23.1}
+\contentsline {section}{\numberline {4.24}Selected trees from EvoMining}{154}{section.4.24}
+\contentsline {chapter}{Chapter 5: CORASON}{159}{chapter.5}
+\contentsline {chapter}{Chapter 6: Desarrollo de CORASON como herramienta para organizar clusters biosint\IeC {\'e}ticos y otras vecindades gen\IeC {\'o}micas conservadas.}{161}{chapter.6}
+\contentsline {section}{\numberline {6.1}Algoritmo y caracter\IeC {\'\i }sticas de CORASON}{162}{section.6.1}
+\contentsline {section}{\numberline {6.2}Las familias de BGCs est\IeC {\'a}n formadas por variantes del BGC de referencia.}{162}{section.6.2}
+\contentsline {section}{\numberline {6.3}Aplicaciones de CORASON en Actinobacteria y Pseudomonas}{163}{section.6.3}
+\contentsline {section}{\numberline {6.4}Estas familias pueden clasificarse}{164}{section.6.4}
+\contentsline {section}{\numberline {6.5}Un BGC reportado puede tener muchas variantes que conforman una familia de BGCs}{164}{section.6.5}
+\contentsline {section}{\numberline {6.6}CORASON analiza la conservaci\IeC {\'o}n del contexto gen\IeC {\'o}mico de los EvoMining hits}{166}{section.6.6}
+\contentsline {section}{\numberline {6.7}El contexto de una rama divergente de \emph {tauD} est\IeC {\'a} conservado en Pseudomonas}{166}{section.6.7}
+\contentsline {section}{\numberline {6.8}CORASON se adapt\IeC {\'o} a la herramienta BiG-SCAPE de clasificaci\IeC {\'o}n de familias de BGCs}{166}{section.6.8}
+\contentsline {section}{\numberline {6.9}BiG SCAPE y CORASON identificaron nuevos productos variantes de la familia de BGCs Rimosamide - Detoxin en Actinobacteria}{167}{section.6.9}
+\contentsline {chapter}{Chapter 7: CORASON sugiere que las familias detoxin y rimosamide pertenecen a un amplio clan de familias dedicadas a la s\IeC {\'\i }ntesis de p\IeC {\'e}ptidos.}{169}{chapter.7}
+\contentsline {section}{\numberline {7.1}Clados selectos del \IeC {\'a}rbol de CORASON que contiene a las familias rimosamide/detoxin contienen diversidad g\IeC {\'e}nica que correlaciona con novedad qu\IeC {\'\i }mica.}{170}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}El superclado spectinomycin/ detoxin-rimosamide-clan produce cinco variantes de detoxin.}{170}{subsection.7.1.1}
+\contentsline {subsection}{\numberline {7.1.2}El clado \emph {Amycolatopsis P450} produce cinco variantes de detoxin.}{171}{subsection.7.1.2}
+\contentsline {chapter}{Chapter 8: Discusi\IeC {\'o}n}{173}{chapter.8}
+\contentsline {chapter}{Conclusion}{177}{chapter*.119}
+\contentsline {section}{\numberline {4.1}Discusion}{177}{section.4.1}
+\contentsline {subsubsection}{More info}{177}{section*.120}
+\contentsline {chapter}{Appendix A: The First Appendix}{179}{appendix.A}
+\contentsline {subsubsection}{In the main Rmd file:}{179}{section*.121}
+\contentsline {subsubsection}{In \hyperlink {ref_labels}{}:}{179}{section*.122}
+\contentsline {chapter}{Appendix B: The Second Appendix, Open source code on this document}{181}{appendix.B}
+\contentsline {section}{\numberline {B.1}R markdown}{181}{section.B.1}
+\contentsline {section}{\numberline {B.2}Docker}{181}{section.B.2}
+\contentsline {section}{\numberline {B.3}Git}{182}{section.B.3}
+\contentsline {section}{\numberline {B.4}Connect GitHub and DockerHub}{182}{section.B.4}
+\contentsline {section}{\numberline {B.5}Additional resources}{182}{section.B.5}
+\contentsline {chapter}{Appendix C: The third Appendix, Other contributions during my phd}{185}{appendix.C}
+\contentsline {section}{\numberline {C.1}Accepted}{185}{section.C.1}
+\contentsline {section}{\numberline {C.2}Submitted}{185}{section.C.2}
+\contentsline {section}{\numberline {C.3}On preparation}{185}{section.C.3}
+\contentsline {chapter}{References}{187}{appendix*.123}
