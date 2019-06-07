@@ -1,0 +1,1984 @@
+
+
+############
+```{r include_packages_chap2, include = FALSE}
+# This chunk ensures that the reedtemplates package is
+# installed and loaded. This reedtemplates package includes
+# the template files for the thesis and also two functions
+# used for labeling and referencing
+if(!require(devtools))
+  install.packages("devtools", repos = "http://cran.rstudio.com")
+if(!require(plyr))
+    install.packages("plyr", repos = "http://cran.rstudio.com") ## this shoul always go before dplyr
+if(!require(dplyr))
+    install.packages("dplyr", repos = "http://cran.rstudio.com")
+if(!require(ggplot2))
+    install.packages("ggplot2", repos = "http://cran.rstudio.com")
+if(!require(reedtemplates)){
+  library(devtools)
+  devtools::install_github("ismayc/reedtemplates")
+  }
+library(reedtemplates)
+# Load packages
+library(dplyr)
+library(ggplot2)
+library(knitr)
+
+```
+
+
+```{r loading_tables_Archaea,echo=FALSE,message=FALSE}
+library( reshape )
+library(RColorBrewer)
+library(scales)
+library(RColorBrewer)
+library(ggplot2)
+tropical=c('darkorange','dodgerblue','hotpink')
+palette(tropical)
+
+hm.palette <- colorRampPalette(rev(brewer.pal(11, 'Spectral')), space='Lab')  
+
+ArchaeasCentral <- read.table("chapter2/Archaeas/ArchaeasCentral", header=TRUE, sep="\t")
+ArchaeasHeatPlot <- read.table("chapter2/Archaeas/ArchaeasHeatPlot", header=TRUE, sep="\t")
+ArchaeasNp <- read.table("chapter2/Archaeas/ArchaeasNp", header=TRUE, sep="\t")
+ArchaeasSMASH <- read.table("chapter2/Archaeas/ArchaeasSMASH", header=TRUE, sep="\t")
+ArchaeasTaxa <- read.table("chapter2/Archaeas/ArchaeasTaxa", header=TRUE, sep="\t")
+```
+```{r creating_practiceSet, echo=FALSE,message=FALSE}
+ArchaeasHeatPlot <- read.table("chapter2/Archaeas/ArchaeasHeatPlot", header=TRUE, sep="\t")
+ArchaeasTaxa <- read.table("chapter2/Archaeas/ArchaeasTaxa", header=TRUE, sep="\t")
+
+## Adding order variable 
+ArchaeasHeatPlot$order<-c(1:nrow(ArchaeasHeatPlot))
+
+#sorting RastId it accordig to order variable
+ArchaeasHeatPlot$RastId <- with(ArchaeasHeatPlot,reorder(ArchaeasHeatPlot$RastId, ArchaeasHeatPlot$order))
+
+# Merging heatplot and taxonomy table into one table
+HP_Archaeas_Taxa<-merge(ArchaeasHeatPlot,ArchaeasTaxa,by.x = "RastId",by.y = "RastId")
+HP_Archaeas_Taxa.m<- melt(HP_Archaeas_Taxa)
+
+HP_Archaeas_Taxa.m<- ddply(HP_Archaeas_Taxa.m, .(variable), transform,rescale=scale(value))  ## 
+
+small<-HP_Archaeas_Taxa.m[which(HP_Archaeas_Taxa.m$RastId=='389007' | HP_Archaeas_Taxa.m$RastId=='390212' | HP_Archaeas_Taxa.m$RastId=='388991' | HP_Archaeas_Taxa.m$RastId=='388992' | HP_Archaeas_Taxa.m$RastId=='388199'| HP_Archaeas_Taxa.m$RastId=='388200'|  HP_Archaeas_Taxa.m$RastId=='388201'),]
+
+#Este Escogiendo que variables quiero
+small<-small[small$variable %in% c("Phosphoglycerate_dehydrogenase", "Isopropyl_malate_synthase","Alanine_dehydrogenase","Asparagine_synthase"), ] 
+## use http://colorbrewer2.org/ to find optimal divergent color palette (or set own)
+ 
+small.m<- ddply(small, .(variable),summarize, mean = round(mean(value), 2),sd = round(sd(value), 2),expansion=mean+sd, reduction=mean-sd)  ## 
+rownames(small.m)<-small.m$variable
+```
+```{r coloring_test_set, echo=FALSE,message=FALSE}
+color_exp<-function(x){
+  # Pendiente pasarle un dataframe en lugar de tener fijo small.m como variable global
+  result=0
+  expansion<-NULL
+  reduction<-NULL
+  local_value=x[1,"value"]
+  met_family<-x[1,"variable"]
+  Rast=x[1,1]
+  #print ("rast",Rast)
+  # print(paste(x,"family",met_family,"value",local_value,"Rast",Rast))
+  expansion<-small.m$expansion [which(small.m$variable==met_family)] 
+  reduction<-small.m$reduction [which(small.m$variable==met_family)] 
+  if (local_value>=expansion){result= 1}
+  else if (local_value<=reduction){result= -1}
+  return (result)
+}
+
+small.expansion<-adply(small,1,color_exp)
+
+#small.expansion$V1
+#color_palette <- colorRampPalette(c("#3794bf", "#FFFFFF","#df8640"))
+
+ggplot(small.expansion, aes(small.expansion$variable, small.expansion$RastId,label=round(small.expansion$value)))+ geom_tile(aes(fill = small.expansion$V1), colour = "white") + scale_fill_gradientn(colours = hm.palette(100),na.value = "gray")+ theme(text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5))+geom_text(size=4,check_overlap = TRUE)
+
+```
+```{r learningHeatPlots}
+########################################################
+## Trying to sort the heatplot 
+## Reading heatplot table and taxa information and saving it on data.frame data structure
+ArchaeasHeatPlot <- read.table("chapter2/Archaeas/ArchaeasHeatPlot", header=TRUE, sep="\t")
+ArchaeasTaxa <- read.table("chapter2/Archaeas/ArchaeasTaxa", header=TRUE, sep="\t")
+hm.palette <- colorRampPalette(rev(brewer.pal(11, 'Spectral')), space='Lab')  
+## Adding order variable 
+ArchaeasHeatPlot$order<-c(1:nrow(ArchaeasHeatPlot))
+#sorting RastId it accordig to order variable
+ArchaeasHeatPlot$RastId <- with(ArchaeasHeatPlot,reorder(ArchaeasHeatPlot$RastId, ArchaeasHeatPlot$order))
+# Merging heatplot and taxonomy table into one table
+HP_Archaeas_Taxa<-merge(ArchaeasHeatPlot,ArchaeasTaxa,by.x = "RastId",by.y = "RastId")
+# Melting information leting as variables just enzymatic families and copy number
+HP_Archaeas_Taxa.m<- melt(HP_Archaeas_Taxa)
+
+# Cleaning data
+HP_Archaeas_Taxa.m<- ddply(HP_Archaeas_Taxa.m, .(variable), transform,value)  ## 
+HP_Archaeas_Taxa.m<- ddply(HP_Archaeas_Taxa.m, .(variable), transform,rescale=scale(value))  ## 
+
+HP_Archeas.calcs<- ddply(HP_Archaeas_Taxa.m, .(variable),summarize, mean = round(mean(value), 2),sd = round(sd(value), 2),expansion=mean+sd, reduction=mean-sd)  ## 
+
+rownames(HP_Archeas.calcs)<-HP_Archeas.calcs$variable
+#########################################################3
+color_exp<-function(x){
+  # Pendiente pasarle un dataframe en lugar de tener fijo small.m como variable global
+  result=0
+  expansion<-NULL
+  reduction<-NULL
+  local_value=x[1,"value"]
+  met_family<-x[1,"variable"]
+  Rast=x[1,1]
+  #print ("rast",Rast)
+  # print(paste(x,"family",met_family,"value",local_value,"Rast",Rast))
+  expansion<-HP_Archeas.calcs$expansion [which(small.m$variable==met_family)] 
+  reduction<-HP_Archeas.calcs$reduction [which(small.m$variable==met_family)] 
+  if (local_value>=expansion){result= 1}
+  else if (local_value<=reduction){result= -1}
+  return (result)
+}
+small[ !small$variable %in% c("Contigs", "Size","TOTAL"), ] 
+##Bueno aqui voy
+##Heat.expansion<-adply(HP_Archaeas_Taxa.m[!HP_Archaeas_Taxa.m$variable %in% c("Contigs", "Size","TOTAL","order","RastNo"), ],1,color_exp)
+
+
+#####################################333
+#############################################
+
+
+## geom tile with rescale rescala por column
+        # Graph! with rescale
+ggplot(small, aes(small$variable, small$RastId,label=round(small$rescale,digits=1)))+ geom_tile(aes(fill = small$rescale), colour = "white") + scale_fill_gradientn(colours = hm.palette(100),na.value = "gray")+ theme(text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5))+geom_text(size=4,check_overlap = TRUE)
+
+## Graph scaled according to whole matrix 
+ggplot(small, aes(small$variable, small$RastId,label=round(small$value,digits=1)))+ geom_tile(aes(fill = small$value), colour = "white") + scale_fill_gradientn(colours = hm.palette(100),na.value = "gray")+ theme(text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5))+geom_text(size=4,check_overlap = TRUE)
+
+## Graph coloured by columns, showing true values, not scaled
+ggplot(small, aes(small$variable, small$RastId,label=round(small$value,digits=1)))+ geom_tile(aes(fill = small$rescale), colour = "white") + scale_fill_gradientn(colours = hm.palette(100),na.value = "gray")+ theme(text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5))+geom_text(size=4,check_overlap = TRUE)
+
+####################################################
+### Color according to mean plus standar deviation
+####
+
+################# trying to make heatplot colors on dataframe
+
+small.m<- ddply(small, .(variable),summarize, mean = round(mean(value), 2),sd = round(sd(value), 2),expansion=mean+sd, reduction=mean-sd)  ## 
+rownames(small.m)<-small.m$variable
+
+####################################################################
+```
+
+## Gen families expansions on genomes
+### Pangenomes
+Las expansions están localizadas en el pangenoma, ya que si estuvieran en todo el genoma, Tools to analyse pangenome BPgA  
+
+## EvoMining
+EvoMining looks expansions on prokariotic pangenome.  
+Biological idea.   
+
+EvoMining was available as a consult website with 230 members of the Actinobacteria phylum as genomic data base, 226 unclassified nBGCs, and not interchangable central database 339 queries for nine pathways, including amino acid biosynthesis, glycolysis, pentose phosphate pathway, and tricarboxylic acids cycle. [@cruz-morales_phylogenomic_2016] EvoMining was proved on Actinobacteria Arseno-lipids  
+
+## Pangenome
+The sequenced genome of an individull in some species is just a partil print of the species geneticll repertoire  Individualls can gain and loss genes.  
+[@koonin_turbulent_2015] Pangenome is the total sequenced gene pool in a taxonomically related group.  Supergenome all the possible extant genes. About 10 times genomes. there are open, closed pangenomes.Most genomes has a core a shell and a unique genes.  
+Gene history its a tree history  
+
+HGT doubles mutation rate on prokarites.  
+Maybe HGT is an selected feature, if is the case, so could be np production.  
+Some archaeas has open pangenome.  [@halachev_calculating_2011]
+
+HGT doubles mutation rate on prokarites.  [@koonin_turbulent_2015]
+Maybe HGT is an selected feature, if is the case, so could be np production.  
+Some archaeas has open pangenome.  [@halachev_calculating_2011]
+Shell trees converge to core trees [@narechania_random_2012]
+
+## EvoMining Implementation  
+**EvoMining** was expanded from a website ([http://evodivmet.langebio.cinvestav.mx/EvoMining/index.html](http://evodivmet.langebio.cinvestav.mx/EvoMining/index.html)) with limited datasets to an easy to install distribution that allows flexiblibilty on genomic, central and natural product databases. Evomining user distribution was developed on perl on Ubuntu-14.04 but wraped on [Docker](https://www.docker.com/). Docker is a software containerization platform that allows repetibilty regardless of the environment. Docker engine is avilable for Linux, Cloud, macOS 10.10.3 Yosemite or newer and even 64bit Windows 10.
+
+Dependencies that were packaged at EvoMining docker app are Apache2, muscle3.8.31, newick-utils-1.6,quicktree, blast-2.2.30, Gblocks_Linux64_0.91b perl and from cpan CGI, SVG and Statistics::Basic modules.  
+
+Github defines itself as an online project hosting using Git. Its free for open source-code hosting and facilitates team work. Includes source-code browser, in-line editing, and wikis. 
+
+Dockerhub is an apps project hosting. 
+
+[Dockerhub nselem](https://hub.docker.com/u/nselem/)
+
+EvoMining code is open source and it is available at a github repository [github/EvoMining](https://github.com/nselem/EvoMining)
+
+Github and Dockerhub can be coneccted by the use of repositories automatically built. Among the advantages of automated builds are that the DockerHub repository is automatically kept up-to-date with code changes on GitHub and that its Dockerfile is available to anyone with access to the Docker Hub repository. EvoMining is stored on a DockerHub automated build repository linked to github EvoMining repository so that code is always actualized.
+
+To download EvoMining image from docker Hub once Docker engine is installed its necessary to run the following command at a terminal:  
+`docker pull nselem/newevomining`  
+
+To run EvoMining container  
+`docker run-i -t  -v /home/nelly/docker-evomining:/var/www/html -p 80:80 evomining /bin/bash`  
+
+To start evoMining app
+`perl startEvomining`  
+``
+Detailed tutorial, EvoMining description, pipeline and user guide are available at a wiki on github at [EvoMining wiki](https://github.com/nselem/EvoMining/wiki).
+
+Other genomic apps were containerized to docker images during this work.  
+- _myRAST_ docker- <https://github.com/nselem/myrast>  
+RAST is a bacterial and Archaeal genome annotator [@aziz_rast_2008, @overbeek_seed_2014 , @brettin_rasttk:_2015]
+This app allows myRAST functionality to upload  
+It allows EvoMining genome database annotation.   
+-_Orthocores_ docker-<https://github.com/nselem/orthocore>    
+Helps to obtain genomic core paralog free and construct genomic trees  
+-_CORASON_ docker-<https://github.com/nselem/EvoDivMet/wiki>    
+-PseudoCore github- <>  
+Genomic Core with a reference genome has the advantage of more genomes, but it is not paralog free    
+
+-RadiCal docker image  
+To detect core diferrences on a set of genomes  
+-BPGA to analize pangenome  
+
+EvoMining Dockerization was chosen to avoid future compatibilty problems, for example dependencies unavailabilty, or incompatibility between future versions of its software components. As much as reproducible research was a concerned while developing EvoMining app, reproducibilty is also important on data analysis, for that reason this document was writen using R-markdown and latex template from Reed College [@chesterismay_updated_2016]. While R-markdown allows to write and run R code and interpolate text paragraph to explain scripts and analysis.   
+
+## EvoMining Databases  
+Evomining containerized app is a user-interactive genomic tool dedicated to the study of protein function[].  
+
+1. Genomes DB
+2. Natural Products DB 
+3. Central Pathways DB 
+
+_Archaea_, _Actinobacteria_, _Cyanobacteria_ were used as genome DB, [MIBiG](http://mibig.secondarymetabolites.org/) was used as Natural Product DB and different Central Pathways were used.
+
+#### Genome DB  
+RAST annotation of genomes was done.  
+
+#### Phylogeny  
+```{r testingPhylogeny, echo=FALSE}
+## I'm deciding if use ape or phyloseq, learning about two libraries
+library(ape)
+MyTree <- read.tree("chapter2/TREES/100Cyanos")
+plot(MyTree, edge.width = 2,font = 0.1, edge.color = "blue",tip.color = "gray", adj=0)
+```
+
+To capture differences on genomes we sort them phylogenetically. Phylogenies can be constructed using different paradigms as Parsimony, Maximum Likelihood, and Bayesian inference. Short descriptions of the main phylogeny methods are included below.
+
+Why is a tree useful {Book reference}
+ why trees are useful for?  
+* Distance methods  
+* Parsimony
+* Maximum Likelihood
+* Mr bayes
+
+General Trees  
+Actinobacteria Tree, ArchaeaTree, CyanobacteriaTree.  
+
+It's easy to create a list.  It can be unordered like
+
+To create a sublist, just indent the values a bit (at least four spaces or a tab).  (Here's one case where indentation is key!)
+
+1. Item 1
+1. Item 2
+1. Item 3
+    - Item 3a
+    - Item 3b  
+    
+#### Central DB  
+We chose central pathways from [@barona-gomez_what_2012]  
+* BBH 
+Best Bidirectional Hits with studied enzymes from Central Actinobacterial pathways were selected.
+
+* By abundance    
+
+* By expansions on genomes
+
+[largefiles,https://help.github.com/articles/installing-git-large-file-storage/]
+
+##Data Bases
+###Central pathways  
+Central database were chosen by BBH from 
+```{r BBH_organisms, results = "asis"}
+table <- read.csv("chapter2/WC_Central/BBH_Organisms.txt", row.names = 1,sep="\t")
+kable(table,  caption = "BBH_Organisms \\label{tab:BBH_Organisms}",caption.short = "BBH_Organisms ")
+```
+  
+### Genome Dynamics  
+Among BBH central databases, genomic dynamics was included.  
+Whats change site:[WC Data](http://pubseed.theseed.org/wc.cgi?request=show_otus&base=/homes/nselem/Data/CS)  
+
+groups were formed with 100Cyanos, 100Archaea , 118 Actinos Closed, 43StreptosClosed    
+Selected organims were  
+
+```{r WC_organisms, results = "asis"}
+table <- read.csv("chapter2/WC_Central/WC_Organisms.txt", row.names = 1,sep="\t")
+kable(table,  caption = "WC_Organisms \\label{tab:WC_Organisms}",caption.short = "WC_Organisms ")
+```
+
+
+
+Those families present on at least as much as genomes on the group    
+Cyanos  100 647  
+Abundant.Families.100Cyanos  
+Actinos  118  132  
+Abundant.Families.43Strepto  
+Archaea  100  35  
+Abundant.Families.Actinos  
+Streptomyces  43  1263  
+Abundant.Families.Archaeas  
+
+Those families expanded on at least two groups  
+`cat *Abun* | cut -f3| sort | uniq -c | sort >Abundance.all`  
+<!--cut -f3 Abundant.Families.100Cyanos |sort >f3Cyanos-->
+<!--Excel sorted-->
+  
+Those Families expanded on Archaea  and not expanded on Actino  
+`comm -23 f3Archaeas f3Actinos >ArchaeasNoActinos`  
+Those Families expanded on Actino and not on Archaea   
+`comm -13 f3Archaeas f3Actinos >ActinosNoArchaea`  
+  
+Those families expanded on Streptomyces but not in ActinoBacteria   
+`comm -13 f343Strepto f3Actinos >ActinosNoStrepto`  
+Those Families expanded on Actinobacteria and not in Streptomyces   
+` comm -23 f343Strepto f3Actinos >StreptoNoActinos `  
+
+Those Families expanded on Cyano and not in Actino  
+`comm -23 f3Cyanos f3Actinos >CyanosNoActinos`  
+  
+
+
+
+
+
+#### Natural Products DB  
+Natural products was improved from previous version
+
+### AntisMASH optional DB  
+AntiSMASH is [@weber_antismash_2015,@medema_antismash:_2011]  
+### Archaeas Results
+Archaea is a kingdom of recent discovery were not many natural products has been known. On Actinobacteria, evoMining has proved its value to find new kinds of natural products. The clue to this discovery was that Actinobacteria has genomic expanssions. Now Archaea has genomic expansions, even more has central pathways genomic expansions. Are this expansions derived from  a genomic duplication?  
+Has Archaea natural products detected by antismash, and if not, where are this NP's or may Archaea doesn't have NP's.
+
+applying EvoMining to Archaea  
+
+### Otras estrategias para los clusters Argon context Idea
+##Argonne  
+ssh nselem@login.mcs.anl.gov  
+phrase  
+ssh nselem@maple  
+password  
+
+cs close strain  
+wc whats chain  
+  
+we source (edit bashrc)  
+link ln (create a link to ross directory)  
+run out of power:  
+screen  
+  
+in Seqs (not mine)  
+cat   
+6666666.103569  6666666.112815  6666666.112823  6666666.112833  6666666.112841  6666666.112849  6666666.112857  > /home/nse/Concat_Full  
+to find paralogous sets  
+ svr_representative_sequences -b -f Id_Clust -s 0.5 < Concat_Full > TempFull&   
+ perl -p -i -e 's/\r//' readable.tree to clean the tree  
+To find contexts o pegs of paralogous sets  
+  
+Context midle point 5000 bp (using text tables)  
+scp 6666666.112839.txt nselem@maple:/homes/nselem/Strepto_01/.  
+  
+fig|6666666.112839.peg.26  
+  
+copy families.all file  
+on the file we have column1 family name column 5 peg id  
+  
+cluster_objects < elements_to_cluster > ClusteFile  
+  
+write a file with pegs  
+1	peg1	adjacent1,	adjacent2 ....  
+1	peg2  
+2  
+2  
+   
+write a file similiar but with the family number  
+  
+1	peg1	fn1,	fn2 ....  
+1	peg2  
+2  
+2  
+  
+compare each peg on this file from the same family  
+  
+Write the conextions file  
+peg1	peg2  
+peg1 	peg3  
+peg2	peg3  
+  
+cluster this file and score the cluster  
+  
+Define  
+  
+	1.  a "function set" is generated by the what's changed directory  
+ as a "family"  
+  
+	2.  a "paralog set" is a set of function sets in which paralogous  
+ members span the sets  
+  
+	3.  a PEG is in a paralog set if it is in one ofthe function sets  
+ that make up the  
+  
+	4.  a "context" of a PEG is the set of close pegs  
+	4.1 First cluster operation would give us: context sets  (CS)  
+  
+	5.  a "context set" is a set of PEGs with "similar contexts"  
+	5.1 second clustering operation would give us:cluster  (Cl)  
+  
+	6.  a "cluster" is a set of context sets (each context set is a different   
+	
+  
+compute:  
+	Compute the context sets that are made from PEGs that occur in PS.  
+	Compute the contexts of PEGs in PS.   
+  
+cluster these context using the "similar contexts" relation  
+  
+This gives a set of clusters, and the members of the clusters are context sets  
+That is, a cluster is a set of context sets  
+  
+        
+      a. the number of contexts sets i  
+  
+score the clusters  
+	Take a paralog set PS.   
+	Be the context sets: CS_1, CS_2,..., CS_k members of the paralogous set   
+	k the number of contexts sets on the paralogous set  
+	n_i the cardinality of CS_i  
+  
+	PS={CS1,CS2,...,CS3}  
+	Cl={[CS_1,n_1],[CS_2,n_2],...,[CS_k,n_k]}  
+
+	let be M=max(n_i)   i=1,2,..k (Maximum cardinality of Context sets)  
+       	m=max(n_i)   i=1,2,..k, i!=M (second greatest cardinality of context sets)  
+       	(We are intersted that a second copy is distributed)  
+
+	We are interested on k,M,n to form a scoring function for the cluster set  
+	S=f(k,m,M)=c_1*k+c_2*m+c_3*M  
+  
+  
+############## history
+Para hacer un nuevo set de datos	  
+
+ 591  cd Data/CS  
+  592  mkdir Directorio  
+  593  vi Directorio/rep.genomes  
+  594  cd Directorio/  
+  600  nohup svr_CS -d Directorio&  
+
+Contenido de rep.genomes  
+rast|390693     nselem35        q8Vf6ib  
+rast|390675     nselem35        q8Vf6ib  
+rast|388811     nselem35        q8Vf6ib  
+  
+
+
+When you click the **Knit** button above a document will be generated that includes both content as well as the output of any embedded **R** code chunks within the document. You can embed an **R** code chunk like this (`cars` is a built-in **R** dataset):
+
+```{r cars}
+summary(cars)
+```
+
+### Inline code
+
+If you'd like to put the results of your analysis directly into your discussion, add inline code like this:
+
+> The `cos` of $2 \pi$ is `r cos(2*pi)`. 
+
+Another example would be the direct calculation of the standard deviation:
+
+> The standard deviation of `speed` in `cars` is `r sd(cars$speed)`.
+
+One last neat feature is the use of the `ifelse` conditional statement which can be used to output text depending on the result of an **R** calculation:
+
+> `r ifelse(sd(cars$speed) < 6, "The standard deviation is less than 6.", "The standard deviation is equal to or greater than 6.")`
+
+Note the use of `>` here, which signifies a quotation environment that will be indented.
+
+As you see with `$2 \pi$` above, mathematics can be added by surrounding the mathematical text with dollar signs.  More examples of this are in [Mathematics and Science] if you uncomment the code in [Math].  
+
+## Recomendaciones de Luis
+Para evoMining   
+Probar distintos métodos de filogenia y después hacer la coloración.   
+maximum likelihood, Protest phyml  
+Atracción de ramas largas.  
+raxml  
+trim all vs Gblocs (Tony Galvadon)  
+
+Comparar dos árboles  
+Para ver si la evolución de los genes concatenados ha sido simultánea   
+Robinson and foulds   
+Joe Felsestein  
+Phylip  
+
+2. dist tree  
+quarter descomposition  
+peter gogarten fendou Mao  
+
+Sets de experimentos.  
+Para el experimento de los streptomyces con ruta centrales el core, analizar el problema de dominios   múltiples.  
+Dominios  
+Nan Song, Dannie durand  
+Después del blast  
+
+
+Para obtener   
+Pablo Vinuesa: Get Homologues  
+
+Burkhordelias y su toxina (Preguntar a Beto)  
+Cianobacterias y la ruta de fijación de nitrógeno.  
+
+Servidor Viernes a las 12:00   
+
+## CORASON: Other genome Mining tools context-based
+ 
+##CORe Analysis of Syntenic Orthologs to prioritize Natural Product-Biosynthetic Gene Cluster  
+Bacterial biosynthetic gene clusters (BGCs) known are always increasing, almost all bacterial genome sequenced contributes with new genes and gene clusters to the known Bacterial Pangenome. In consequence of gene diversity and sequence technology advances researchers often have a large set of genomes to analize in search of a particular gene cluster variation. Answering BGCs analysis needs, CORASON allows users to find and visualice variations of a given gene cluster sorting them according to the conserved core cluster phylogeny.   
+     
+The core genome on a taxonomical group is the set of coding sequences that are shared between all group members, this definition may be adapted to the cluster core by exploring a set of gene clusters instead of a set of genomes. The cluster core attempts to identify a set of functions conserved on a particular BGC variations.  A report about gene function using RAST technology will be provided whenever a cluster core exists and core sequences will be concatenated to construct a phylogenetic tree and sort variation clusters accordingly.     
+
+To find cluster variations, given a query protein sequence that belongs to a reference cluster, CORASON will search on a Bacterial genome database all gene clusters that contains orthologues of the query-protein and at least another sequence from the reference cluster. Orthologues on variation clusters are coloured within a gradient according to its identity percentage with the reference cluster sequences.   
+     
+Finally, in order to provide an easy to install distribution, CORASON was packaged on docker containerization platform. Software dependencies such as BLAST 2.2.30, muscle3.8.3, GBlocksLinux64_0.91b, quicktree, newick-utils-1.6, and CORASON code were wrapped together on CORASON docker container. [Tutorial](https://github.com/nselem/EvoDivMet/wiki) and software are available at nselem/github. 
+
+CORASON inputs are a genomic database, a reference cluster and an enzyme inside this cluster, outputs are newick trees, core functional report and a cluster variation SVG file. SVG format among being high quality scalable graphics, also allow to display metadata such as gene function and genome coordinates just by mouse over figures on a browser facilitating genomic analysis.  
+
+In conclusion CORASON is an easy to install comparative genomic visual tool on a customizable genome database that allows users to visualice variations of a reference gene cluster identifing its core functions and finally sorting variations according to their evolutionary history helping to prioritize clusters that may be involved on chemical novelty. 
+
+## Tree methods (from antiSMASH textual quotation)
+_Multiple methods exist to construct phylogenetic trees based on multiple sequence
+alignments. Depending on the desired output tree characteristics, the number of input
+sequences, and other constraints, the most appropriate method should be chosen. A
+popular algorithm among the distance-matrix based methods is the Neighbour-Joining
+algorithm that uses bottom-up clustering to create the tree. Neighbour-Joining is
+comparatively fast method, but the correctness of the tree depends on the accuracy and
+additivity of the underlying distance matrix. Maximum parsimony methods try to identify
+the tree that uses the smallest number of evolution events to explain the observed
+sequence data. While maximum parsimony algorithms build very accurate trees, their
+computation tends to be relatively slow compared to distance-matrix based methods.
+Maximum likelihood methods use probability distributions to assess the likelihood of a given
+5
+http://mc.manuscriptcentral.com/bibManuscripts submitted to Briefings in Bioinformatics
+phylogenetic tree according to a substitution model. This method unfortunately has a high
+complexity for computing the optimal tree. Many current tools use a combination of
+methods_
+
+
+## EvoMining Results {#ref_labels}   
+###Archaea
+During the decade between 1970 and 1980, Archaea was recognized as new life domain, a kingdom different from Bacteria and Eucarya in an exciting first great application of 16S phylogeny[@woese_phylogenetic_1977,@woese_are_1981] . Main differences between this kingdoms are that Archaeal DNA is not arranged in a nucleus as in Eucarya and Archaeal celular walls are not composed from peptidoglycans as in Bacteria. Archaeal proteins may be higlhy valuable to biotechnology industry for their great stability due to extreme temperature, PH and salt content conditions on Archeal habitats. Despite no Archaeal Natural products biosynthetic gene clusters (BGC's) has been reported on MiBIG, Archaea do have BGC's, some of them seems to be acquired by horizontal gene transfer (HGT) like methano nrps {search reference}. Other Archeal natural products known are archaeosins, Diketopiperazines, Acyl Homoserine Lactones, Exopolysaccharides, Carotenoids, Biosurfactants, Phenazines and Organic Solutes but this knowledge is not comparable to Bacterial BGC's knowledge[@charlesworth_untapped_2015].  
+  
+Natural products biosynthetic gene clusters search is actually performed using either *high-confidence/low-novelty or low-confidence/high-novelty* bioinformatic approaches [@medema_computational_2015]. High confidence methods compares query sequences with previously known BGC's such as nrps or PKS, examples of this algorithms are antiSMASH and clusterfinder [@_antismash_????]. EvoMining searches on expansions from central metabolic pathways enzyme families, it has been classified as low confidence/high novelty method. EvoMining has proved useful on Actinobacteria phylum where its use lead to Arseno-compounds discovery [@cruz-morales_phylogenomic_2016]. Also on Actinobacteria antiSMASH analysis on 1245 genomes found 774 different classes of natural products, the same analysis on 876 Archaeal genomes, a full kingdom, identifies only 35 BGC's classes. So either Archaea does not have natural products BGC's or this are not yet known. Next paragraph deals with a possible approach about how natural products BGC's can be find.  
+  
+Archaea resembled Bacteria in that Archaea uses horizontal gene transfer as a genic interchange mecanism, Archaeal genomes contains operons [@howland_surprising_2000] and in general there is introns absence{Reference to Computational Methods for Understanding Bacterial and Archaeal Genomes}. Archaeas do have introns, but they are mainly located on genes that encodes ribosomal and transfer RNA [@howland_surprising_2000]. General lack of introns allows automatic genome annotation, operons gene organization permits functional inference to a certain degree and HGT contribute to expansions on Archaeal genomes. Some phylum on Archaea has an open pangenome, and as we will show on this chapter some Archaea has central pathway expansions. 
+Enzyme families from central pathways expansions, open pangenome and operon organization made EvoMining succesful on Actinobacteria, this lead us to think that evoMining is suitable to analize Archaeal genomes, even more since EvoMining is a method oriented to use evolution and its not entirelyy based on previous knowledge of BGC's sequences if evolutionary logic behave on Archaea as on bacteria, new BGC's classes may be be found on Archaea.
+  
+EvoMining is a trade off between conserved known central metabolic function and enough expansions divergence on sequence and on clusters to divergence 
+
+```{r ArchaeasSumary,echo=FALSE}
+#summary(ArchaeasTaxa)
+#table(ArchaeasTaxa$Order)
+```
+
+  
+Tables
+-------------------------------------------------------------------
+  Factors                    Correlation between Parents & Child     
+------------------------- ----------------------------------------- 
+  GenomeDB                                  876                         
+  Phylum                                    12   
+  Order                                     23 
+------------------------- -----------------------------------------
+Table: Families on Archaeabacteria \label{tab:inher}
+
+\clearpage
+
+```{r ArchealResults, results = "asis",message=FALSE,echo=FALSE}
+#label(path = "chapter2/Archaeas/PosterArcheas.pdf", caption = "EvoMining Archaeas",scale=.9,label = "EvoMining Archaeas", type = "figure")
+```
+
+<!--  EvoMining Expansions
+-->
+
+
+<!--- Expansions Box plot ------------------------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------->
+First lets investigate if Archaea has expansions on families within central metabolic routes. Since main metabolic pathways are shared between Bacteria and Archaea makes sense to assemble Archeal EvoMining central database by using orthologous from Actinobacteria evoMining central pathways.
+
+### Expansions BoxPlot by metabolic family
+```{r boxplot_ArchaeaHP,warnings = FALSE, message = FALSE,echo=FALSE}
+#ArchaeasHeatPlot$RastId <- with(ArchaeasHeatPlot,reorder(ArchaeasHeatPlot$RastId, ArchaeasHeatPlot$RastId))
+ArchaeasTotalBP.m<-merge(ArchaeasHeatPlot,ArchaeasTaxa,by.x="RastId",by.y="RastId") ## works as expected
+ArchaeasHeatPlotBP.m <- melt(ArchaeasTotalBP.m,id =c("RastId","Name","SuperPhylum","Phylum","Class","Order","Family","RastNo","Size","Contigs"))
+ArchaeasHeatPlotBP.m<-subset(ArchaeasHeatPlotBP.m,variable!="TOTAL") ## works as expected
+
+expansion_plotArchaea<-ggplot(ArchaeasHeatPlotBP.m, aes(x=ArchaeasHeatPlotBP.m$variable, y=ArchaeasHeatPlotBP.m$value),color="Family") + labs(x = "Metabolic Families", y = "Copies on Archaeabacteria Genomes",text = element_text(size=12)) + geom_boxplot()+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6), legend.position = "bottom")
+
+ggsave("chapter2/Archaeas/expansion_plotArchaeas.pdf", plot = expansion_plotArchaea,height = 8, width = 7)
+```
+
+```{r boxplot_ArchaeaHP_Archaea_label, results = "asis",message=FALSE}
+label(path = "chapter2/Archaeas/expansion_plotArchaeas.pdf", caption = "Expansions Boxplot",label = "Archaea_expansion_boxplot", type = "figure",scale=".7")
+```
+Here is a reference to the expansion boxplot: `r ref("Archaea_expansion_boxplot")`.   
+\clearpage 
+
+
+### Expansions BoxPlot by metabolic family by phylum
+```{r ArcheaeBoxPlotByPhylum}
+#+ geom_jitter()
+#aes(fill = factor(vs))
+
+ArchaeasTotalBP.m<-merge(ArchaeasHeatPlot,ArchaeasTaxa,by.x="RastId",by.y="RastId") ## works as expected
+##melt in r
+ArchaeasHeatPlotBP.m <- melt(ArchaeasTotalBP.m,id =c("RastId","Name","SuperPhylum","Phylum","Class","Order","Family","RastNo","Size","Contigs"))
+ArchaeasHeatPlotBP.m<-subset(ArchaeasHeatPlotBP.m,variable!="TOTAL") ## works as expected
+ArchaeasHeatPlotBP.m<-subset(ArchaeasHeatPlotBP.m,variable!="TOTAL") ## works as expected
+
+## Each metabolic pathway se parte por phylum coloreado por order
+
+#3PGA_AMINOACIDS
+#Glycolysis
+#OXALACETATE_AMINOACIDS
+#R5P_AMINOACIDS
+#TCA
+#E4P_AMINO_ACIDS
+#PYR_THR_AA
+
+## Genome size
+ggplot(ArchaeasHeatPlotBP.m, aes(x=ArchaeasHeatPlotBP.m$Phylum, y=ArchaeasHeatPlotBP.m$Size))+ geom_boxplot() +theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6), legend.position = "bottom")+ labs(x = "Copies on Archaeabacteria taxonomic groups", y = "Genome size",text = element_text(size=12))+theme_bw()
+#+ geom_jitter(aes(color=ArchaeasHeatPlotBP.m$Phylum))
+
+
+## Halobacteria
+MetFam_BP.m=subset(ArchaeasHeatPlotBP.m,Phylum=="Euryarchaeota")
+ggplot(MetFam_BP.m, aes(x=MetFam_BP.m$Order, y=MetFam_BP.m$Size))+ geom_boxplot() +theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")+ labs(x = "Halobacteria orders size taxonomic groups", y = "Genome size",text = element_text(size=12)) + geom_jitter(aes(color=Family))
+
+
+#MetFam_BP.m=subset(ArchaeasHeatPlotBP.m,Family=="Methanosarcinaceae")
+#ggplot(MetFam_BP.m, aes(x=MetFam_BP.m$Size, y=MetFam_BP.m$value))
+#+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 10), legend.position = "bottom")+ labs(x = "Copies on Archaeabacteria taxonomic groups", y = "Genome size",text = element_text(size=12)) 
+
+
+  #geom_jitter(aes(color=ArchaeasHeatPlotBP.m$Phylum))# + facet_grid(. ~ Phylum)+theme_bw()
+
+
+## Metabolic Pathways
+MetFam=subset(ArchaeasCentral,Pathway=="PPP")
+MetFam_BP.m=ArchaeasHeatPlotBP.m[ArchaeasHeatPlotBP.m$variable %in% MetFam$Enzyme,]
+ggplot(MetFam_BP.m, aes(x=MetFam_BP.m$variable, y=MetFam_BP.m$value, fill=Order))+ labs(x = "Metabolic PPP Families", y = "Copies on Archaeabacteria Genomes",text = element_text(size=12)) + geom_boxplot() + facet_grid(. ~ Phylum)+theme_bw() +theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6), legend.position = "bottom")
+#+ geom_jitter(aes(color=MetFam_BP.m$Phylum))       
+
+MetFam=subset(ArchaeasCentral,Pathway=="3PGA_AMINOACIDS")
+MetFam_BP.m=ArchaeasHeatPlotBP.m[ArchaeasHeatPlotBP.m$variable %in% MetFam$Enzyme,]
+ggplot(MetFam_BP.m, aes(x=MetFam_BP.m$variable, y=MetFam_BP.m$value, fill=Order))+ labs(x = "Metabolic PGA_AMINOACIDS Families", y = "Copies on Archaeabacteria Genomes",text = element_text(size=12)) + geom_boxplot() + facet_grid(. ~ Phylum)+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6), legend.position = "bottom")
+#+ geom_jitter(aes(color=MetFam_BP.m$Phylum))
+
+MetFam=subset(ArchaeasCentral,Pathway=="Glycolysis")
+MetFam_BP.m=ArchaeasHeatPlotBP.m[ArchaeasHeatPlotBP.m$variable %in% MetFam$Enzyme,]
+ggplot(MetFam_BP.m, aes(x=MetFam_BP.m$variable, y=MetFam_BP.m$value, fill=Order))+ labs(x = "Metabolic Glycolysis Families", y = "Copies on Archaeabacteria Genomes",text = element_text(size=12)) + geom_boxplot() + facet_grid(. ~ Phylum)+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6), legend.position = "bottom")
+#+ geom_jitter(aes(color=MetFam_BP.m$Phylum))
+
+MetFam=subset(ArchaeasCentral,Pathway=="OXALACETATE_AMINOACIDS")
+MetFam_BP.m=ArchaeasHeatPlotBP.m[ArchaeasHeatPlotBP.m$variable %in% MetFam$Enzyme,]
+ggplot(MetFam_BP.m, aes(x=MetFam_BP.m$variable, y=MetFam_BP.m$value, fill=Order))+ labs(x = "Metabolic OXALACETATE_AMINOACIDS Families", y = "Copies on Archaeabacteria Genomes",text = element_text(size=12)) + geom_boxplot() + facet_grid(. ~ Phylum)+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6), legend.position = "bottom")
+#+ geom_jitter(aes(color=MetFam_BP.m$Phylum))
+
+MetFam=subset(ArchaeasCentral,Pathway=="R5P_AMINOACIDS")
+MetFam_BP.m=ArchaeasHeatPlotBP.m[ArchaeasHeatPlotBP.m$variable %in% MetFam$Enzyme,]
+ggplot(MetFam_BP.m, aes(x=MetFam_BP.m$variable, y=MetFam_BP.m$value, fill=Order))+ labs(x = "Metabolic R5P_AMINOACIDS Families", y = "Copies on Archaeabacteria Genomes",text = element_text(size=12)) + geom_boxplot() + facet_grid(. ~ Phylum)+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6), legend.position = "bottom")
+ #+ geom_jitter(aes(color=MetFam_BP.m$Phylum))
+
+#
+MetFam=subset(ArchaeasCentral,Pathway=="TCA")
+MetFam_BP.m=ArchaeasHeatPlotBP.m[ArchaeasHeatPlotBP.m$variable %in% MetFam$Enzyme,]
+ggplot(MetFam_BP.m, aes(x=MetFam_BP.m$variable, y=MetFam_BP.m$value, fill=Order))+ labs(x = "Metabolic TCA Families", y = "Copies on Archaeabacteria Genomes",text = element_text(size=12)) + geom_boxplot() + facet_grid(. ~ Phylum)+theme_bw() +theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6), legend.position = "bottom")
+#+ geom_jitter(aes(color=MetFam_BP.m$Phylum))
+
+MetFam=subset(ArchaeasCentral,Pathway=="E4P_AMINO_ACIDS")
+MetFam_BP.m=ArchaeasHeatPlotBP.m[ArchaeasHeatPlotBP.m$variable %in% MetFam$Enzyme,]
+ggplot(MetFam_BP.m, aes(x=MetFam_BP.m$variable, y=MetFam_BP.m$value, fill=Order))+ labs(x = "Metabolic E4P_AMINO_ACIDS Families", y = "Copies on Archaeabacteria Genomes",text = element_text(size=12)) + geom_boxplot() + facet_grid(. ~ Phylum)+theme_bw() +theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6), legend.position = "bottom")
+#+ geom_jitter(aes(color=MetFam_BP.m$Phylum))
+
+
+MetFam=subset(ArchaeasCentral,Pathway=="PYR_THR_AA")
+MetFam_BP.m=ArchaeasHeatPlotBP.m[ArchaeasHeatPlotBP.m$variable %in% MetFam$Enzyme,]
+ggplot(MetFam_BP.m, aes(x=MetFam_BP.m$variable, y=MetFam_BP.m$value, fill=Order))+ labs(x = "Metabolic Families on PYR_THR_AA pathway ", y = "Copies on Archaeabacteria Genomes",text = element_text(size=12)) + geom_boxplot() + facet_grid(. ~ Phylum)+theme_bw() +theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6), legend.position = "bottom")
+#+ geom_jitter(aes(color=MetFam_BP.m$Phylum))
+
+#ggsave("chapter2/Archaeas/expansion_plotArchaeas.pdf", plot = expansion_plotArchaea,height = 8, width = 7)
+
+```
+
+\clearpage 
+
+
+<!----------------------Expansions Box plot END-------------------------------------------------------------------->
+<!------------------------------------------------------------------------------------------------s--------------->
+
+
+
+
+## Central pathway expansions  
+Heat plot of central pathways expansions, Needs to be phylogenetically sorted.  
+```{r ArchaeaHeatPlots, warnings = FALSE, message = FALSE, echo=FALSE,CACHE=TRUE}
+### ME falta ordernarlos filogeneticamente
+ArchaeasHeatPlot <- read.table("chapter2/Archaeas/ArchaeasHeatPlot", header=TRUE, sep="\t")
+ArchaeasHeatPlot$order<-c(1:nrow(ArchaeasHeatPlot))
+ArchaeasHeatPlot$RastId <- with(ArchaeasHeatPlot,reorder(ArchaeasHeatPlot$RastId, ArchaeasHeatPlot$order))
+ArchaeasHeatPlot.m <- melt(ArchaeasHeatPlot)
+ArchaeasHeatPlot.m<- ddply(ArchaeasHeatPlot.m, .(variable), transform,rescale=scale(value))  ## rescale escala toda la matriz, scale por columnas
+HP_Archaeas_Taxa<-merge(ArchaeasHeatPlot,ArchaeasTaxa,by.x = "RastId",by.y = "RastId")
+HP_Archaeas_Taxa2<-subset(HP_Archaeas_Taxa,Order='Chroococcales')
+
+HP_Archaeas_Taxa<-HP_Archaeas_Taxa[order(HP_Archaeas_Taxa$Order,HP_Archaeas_Taxa$Family),]
+HP_Archaeas_Taxa.m<- melt(HP_Archaeas_Taxa)
+HP_Archaeas_Taxa.m<- ddply(HP_Archaeas_Taxa.m, .(variable), transform,rescale=scale(value))  ## rescale escala toda la matriz, scale por columnas
+
+Archaeas_heatplot <- ggplot(HP_Archaeas_Taxa.m, aes(HP_Archaeas_Taxa.m$variable, HP_Archaeas_Taxa.m$RastId))+ geom_tile(aes(fill = HP_Archaeas_Taxa.m$rescale), colour = "white") + scale_fill_gradientn(colours = hm.palette(100),na.value = "gray")+ theme(text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
+
+ggplot(HP_Archaeas_Taxa.m, aes(HP_Archaeas_Taxa.m$variable, HP_Archaeas_Taxa.m$RastId))+ geom_tile(aes(fill = HP_Archaeas_Taxa.m$rescale), colour = "white") + scale_fill_gradientn(colours = hm.palette(100),na.value = "gray")+ theme(text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
+
+ggsave("chapter2/Archaeas/ArchaeasHeatPlot.pdf", plot = Archaeas_heatplot,height = 12, width = 6)
+
+```
+
+```{r ArchaeaHeatPlots_label, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter2/Archaeas/ArchaeasHeatPlot.pdf", caption = "Archaeas Heatplot",scale=.6,label = "ArchaeaPlot", type = "figure")
+```
+Here is a reference to the HeatPlot: `r ref("ArchaeaPlot")`. 
+\clearpage 
+
+```{r ArchaeaHeaplot_summary,echo=FALSE}
+#summary(ArchaeasHeatPlot.m)
+#table(ArchaeasHeatPlot.m$scale >=0,Deltas$DeltaPRO>=0)
+
+```
+
+<!---------------END EvoMining heatmap----------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------->
+
+
+
+
+
+## Genome Size correlations
+### Correlation between genome size and AntiSMASH products  
+```{r ANTISMASH_GenomeSize_Correlation_by_ORG_Archaeas,echo=FALSE}
+ArchaeasEXP_SMASH<-merge(ArchaeasHeatPlot,ArchaeasSMASH,by.x="RastId",by.y="RastId")
+ArchaeasEXP_SMASH2<-merge(ArchaeasTaxa, ArchaeasEXP_SMASH, by.x="RastId",by.y="RastId") 
+Archaeassn1<-qplot(Size, TOTAL.y, data = ArchaeasEXP_SMASH2,colour=Order)+theme_bw()+ theme(legend.position	="bottom",plot.title = element_text(size = 14, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 12),axis.text.y=element_text(size = 7))
+ggsave("chapter2/Archaeas/ArchaeasSMASHvsSizebyOrder.pdf", plot = Archaeassn1,height = 8, width = 6)
+
+Archaeassn2<-qplot(Size, TOTAL.y, data = ArchaeasEXP_SMASH2,colour=Order)+theme_bw()+facet_grid(ArchaeasEXP_SMASH2$Order~.,scales="free")+ theme(legend.position	="bottom",plot.title = element_text(size = 14, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 12),axis.text.y=element_text(size = 7))
+ggsave("chapter2/Archaeas/ArchaeasSMASHvsSizeGridOrder.pdf", plot = Archaeassn2,height = 8, width = 6)
+
+```
+
+Genome size vs Total antismash cluster coloured by order  
+```{r ArchaeasSMASHvsSizebyOrder_label, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter2/Archaeas/ArchaeasSMASHvsSizebyOrder.pdf", caption = "Correlation between Archaeas genome size and antismash Natural products detection colored by Order",scale=.6,label = "ArchaeasSMASHvsSizebyOrder", type = "figure")
+```
+Here is a reference to Genome size vs Total antismash cluster: `r ref("ArchaeasSMASHvsSizebyOrder")`. 
+\clearpage
+
+Genome size vs Total antismash cluster detected splitted by order  
+```{r ArchaeasSMASHvsSizeGridOrder_label, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter2/Archaeas/ArchaeasSMASHvsSizeGridOrder.pdf", caption = "Correlation between Archaeas genome size and antismash Natural products detection grided by Order",scale=.6,label = "ArchaeasSMASHvsSizeGridOrder", type = "")
+```
+
+Here is a reference to Correlation between genome size and antismash Natural products detection grided by Order plot: `r ref("ArchaeasSMASHvsSizeGridOrder")`. 
+\clearpage 
+
+<!--------------------------------END size vs AntiSMASH correlation--------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------->
+
+
+
+
+
+
+<!-------------------------------- size vs Expansions correlation--------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------->
+### Correlation between genome size and Central pathway expansions  
+```{r ArchaeasANTISMASH_GenomeSize_Correlation_by_ORG,echo=FALSE}
+
+ArchaeasEXP_TAXA<-merge(ArchaeasHeatPlot,ArchaeasTaxa,by.x="RastId",by.y="RastId")
+
+Archaeassn4<-qplot(Size, TOTAL, data = ArchaeasEXP_TAXA,colour=Order)+theme_bw()+ theme(legend.position	="bottom",plot.title = element_text(size = 14, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 12),axis.text.y=element_text(size = 7))
+ggsave("chapter2/Archaeas/ArchaeasSizevsExpansionsbyOrder.pdf", plot = Archaeassn4,height = 6, width = 6)
+
+Archaeassn5<-qplot(Size, TOTAL, data = ArchaeasEXP_TAXA,colour=Order)+theme_bw()+facet_grid(ArchaeasEXP_TAXA$Order~.,scales="free")+ theme(legend.position	="bottom",plot.title = element_text(size = 14, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 12),axis.text.y=element_text(size = 7))
+ggsave("chapter2/Archaeas/ArchaeasSizevsExpansionsGridbyOrder.pdf", plot = Archaeassn5,height = 6, width = 6)
+
+## Looking for color modifications
+#sn + scale_color_brewer(palette="Dark2(100)")
+#n + scale_color_brewer(palette=hm.palette(10))
+## sn+ scale_color_hue(l=40, c=35)
+```
+Genome size vs Total central pathway expansion coloured by order  
+```{r ArchaeasSizevsExpansionsbyOrder_label2, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter2/Archaeas/ArchaeasSizevsExpansionsbyOrder.pdf", caption = "Correlation between Archaeas genome size and central pathway expansions ",label = "ArchaeasSizevsExpansionsbyOrder", type = "figure")
+```
+Here is a reference to the size vs Total central pathway expansion plot: `r ref("ArchaeasSizevsExpansionsbyOrder")`. 
+\clearpage 
+
+
+Genome size vs Total central pathway expansion grided by order  
+```{r ArchaeasSizevsExpansionsGridbyOrder_label2, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter2/Archaeas/ArchaeasSizevsExpansionsGridbyOrder.pdf", caption = "Correlation between Archaeas genome size and central pathway expansions grided by order",label = "ArchaeasSizevsExpansionsGridbyOrder", type = "figure")
+```
+Here is a reference to the Genome size vs Total central pathway expansion grided by order plot: `r ref("ArchaeasSizevsExpansionsGridbyOrder")`. 
+\clearpage 
+
+<!--------------------------------------------------------------------------------------------------------------------->
+
+
+<!---muy bien para el suplemenario-->
+Correlation between genome size and each of the central pathway families.
+Data are coloured by metabolic family instead of coloured by taxonomical order. This treatment allows to answer how differente metabolic families grows when genome size grow.  
+Also I want to add form given by taxonomical order.
+
+```{r ArchaeaANTISMASH_GenomeSize_Correlation_by_ORG,message=FALSE, echo=FALSE}
+ArchaeasHeatPlot$RastId <- with(ArchaeasHeatPlot, reorder(ArchaeasHeatPlot$RastId, ArchaeasHeatPlot$TOTAL))
+ArchaeasHeatPlot.m <- melt(ArchaeasHeatPlot)
+ArchaeasEXP_TAXA<-merge(ArchaeasHeatPlot.m,ArchaeasTaxa,by.x="RastId",by.y="RastId")
+
+Archaeasn6<-qplot(Size, value, data = ArchaeasEXP_TAXA,colour=variable,shape=Order)+theme_bw()+ theme(legend.position	="none",legend.text=element_text(size=6),plot.title = element_text(size = 14, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 12),axis.text.y=element_text(size = 7))
+ggsave("chapter2/Archaeas/ArchaeasSizevsExpansionsbyMetabolicFamily.pdf", plot = Archaeasn6,height = 6, width = 8)
+
+Archaeasn7<-qplot(Size, value, data = ArchaeasEXP_TAXA,colour=variable)+theme_bw()+facet_grid(ArchaeasEXP_TAXA$variable~.,scales="free")+ theme(legend.position	="none",plot.title = element_text(size = 14, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 12),axis.text.y=element_text(size = 7))
+ggsave("chapter2/Archaeas/ArchaeasExpansionsbyMetabolicFamilyGrid.pdf", plot = Archaeasn7,height = 6, width = 12)
+
+## Looking for color modifications
+#sn + scale_color_brewer(palette="Dark2(100)")
+#n + scale_color_brewer(palette=hm.palette(10))
+## sn+ scale_color_hue(l=40, c=35)
+```
+
+Genome size vs Total central pathway expansion coloured by metabolic Family 
+```{r ArchaeasSizevsExpansionsbyMetabolicFamily_label2, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter2/Archaeas/ArchaeasSizevsExpansionsbyMetabolicFamily.pdf", caption = "Correlation between Archaeas Genome size vs Total central pathway expansion coloured by metabolic Family",scale=.6,label = "ArchaeasSizevsExpansionsbyMetabolicFamily", type = "figure")
+```
+Here is a reference to the Genome size vs Total central pathway expansion coloured by metabolic Family plot: `r ref("ArchaeasSizevsExpansionsbyMetabolicFamily")`. 
+\clearpage 
+
+Future Work: Genome size vs Total central pathway expansion grided by metabolic Family 
+For clarity I need to also grid and group by Metabolic Pathway
+```{r ArchaeasExpansionsbyMetabolicFamilyGrid_label2, results = "asis",message=FALSE,echo=FALSE}
+#label(path = "chapter2/Archaeas/ArchaeasExpansionsbyMetabolicFamilyGrid.pdf", caption = "Correlation between Archaeas Genome size vs Total central pathway expansion grided by metabolic Family ",label = "ArchaeasExpansionsbyMetabolicFamilyGrid", type = "figure")
+```
+Here is a reference to Genome size vs Total central pathway expansion grided by metabolic Family  plot: `r ref("ArchaeasExpansionsbyMetabolicFamilyGrid")`. 
+\clearpage 
+
+
+<!----------------------------END - size vs Expansions correlation--------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------->
+
+
+
+
+
+
+<!----------------------------Natural Products vs Expansions correlation--------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------->
+
+## Natural products  
+
+### Natural products recruitments from EvoMining heatplot
+We can see natural products recruitment after central pathways expansions colored by their kingdom.  
+Natural products recruited by metabolic family, colored by phylogenetic origin.
+```{r ArchaeasNP_recruitment_taxa,echo=FALSE,message=FALSE,warning=FALSE}
+ArchaeasRecbyKing<-qplot(x=Central, data=ArchaeasNp, geom="bar", fill=kingdom, position="stack")+theme_bw()+ theme(legend.position	="bottom",text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
+ggsave("chapter2/Archaeas/ArchaeasRecruitmentsbyKingdom.pdf", plot = ArchaeasRecbyKing,height = 6, width = 12)
+
+ArchaeasRecbytaxa<-qplot(x=Central, data=ArchaeasNp, geom="bar", fill=taxa, position="stack")+theme_bw()+ theme(legend.position	="bottom",text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
+ggsave("chapter2/Archaeas/ArchaeasRecruitmentsbyTaxa.pdf", plot = ArchaeasRecbytaxa,height = 6, width = 12)
+
+```
+
+
+Recruitments after central pathways expansions coloured by Kingdom
+```{r ArchaeasRecruitmentsbyKingdom_label2, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter2/Archaeas/ArchaeasRecruitmentsbyKingdom.pdf", caption = "Archaeas Recruitmens on central families coloured by kingdom",scale=.6,label = "ArchaeasRecruitmentsbyKingdom", type = "figure")
+```
+Here is a reference to Recruitments after central pathways expansions colourd by Kingdom plot: `r ref("ArchaeasRecruitmentsbyKingdom")`. 
+
+\clearpage 
+Recruitments after central pathways expansions colourd by taxonomy
+```{r ArchaeasRecruitmentsbyTaxa_label2, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter2/Archaeas/ArchaeasRecruitmentsbyTaxa.pdf", caption = "Archaeas Recruitmens on central families coloured by taxonomy",scale=.5,label = "ArchaeasRecruitmentsbyTaxa", type = "figure")
+```
+Here is a reference to Recruitments after central pathways expansions colourd by taxa plot: `r ref("ArchaeasRecruitmentsbyTaxa")`. 
+\clearpage 
+
+
+
+
+## Archaeas AntiSMASH 
+```{r ArchaeasDiversity,echo=FALSE,message=FALSE,warning=FALSE}
+## merge tables
+Archaeasm1 <- merge(ArchaeasTaxa, ArchaeasSMASH, by.x = "RastId", by.y = "RastId")
+Archaeasm1.m <- melt(Archaeasm1, id = c("RastId","Name","SuperPhylum","Phylum","Class","Order","Family","Contigs","Size","RastNo"))
+Archaeasm2.m<-subset(Archaeasm1.m,value>0)
+
+ArchaeasDiversity<-qplot(x=Order, data=Archaeasm1.m, geom="bar", fill=Family, position="stack")+theme_bw()+ theme(text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
+#table(m1.m$Order>0,m1.m$Family>0)
+#qplot(x=clarity, data=diamonds, geom="bar", fill=cut, position="stack")
+ggsave("chapter2/Archaeas/ArchaeasDiversity.pdf", plot =ArchaeasDiversity,height = 6, width = 14)
+
+ArchaeasSmash<-qplot(x=Order, data=Archaeasm2.m, geom="bar", fill=variable, position="stack",colours = hm.palette(100000))+theme_bw()+ theme(legend.position="none",text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
+#table(m1.m$Order>0,m1.m$Family>0)
+ggsave("chapter2/Archaeas/ArchaeasSmash.pdf", plot = ArchaeasSmash,height = 6, width = 14)
+```
+ 
+Taxonomical diversity on Archaeasbacteria Data
+```{r ArchaeasDiversity_label2, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter2/Archaeas/ArchaeasDiversity.pdf", caption = "Archaeas Diversity",scale=.6,label = "ArchaeasDiversity", type = "figure")
+```
+Here is a reference to Recruitments after central pathways expansions colourd by taxa plot: `r ref("ArchaeasDiversity")`. 
+\clearpage
+
+Smash diversity
+```{r ArchaeasSmash_label2, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter2/Archaeas/ArchaeasSmash.pdf", caption = "Archaeas Smash Taxonomical Diversity",scale=.5,label = "ArchaeasSmash", type = "figure")
+```
+Here is a reference to Recruitments after central pathways expansions colourd by taxa plot: `r ref("ArchaeasSmash")`. 
+\clearpage
+
+
+
+### AntisSMASH vs Central Expansions  
+Is it a correlation between pangenome grow and central pathways expansions?  
+```{r ArchaeasANTISMASH_Expansion_Correlation_by_ORG,message=FALSE, echo =FALSE}
+ArchaeasEXP_SMASH<-merge(ArchaeasHeatPlot,ArchaeasSMASH,by.x="RastId",by.y="RastId")
+ArchaeasEXP_SMASH2<-merge(ArchaeasTaxa, ArchaeasEXP_SMASH, by.x="RastId",by.y="RastId") 
+#qplot(Total.x, Total.y, data = EXP_SMASH, colour=Order)+theme_bw()+
+Archaeassn8<-qplot(TOTAL.x, TOTAL.y, data = ArchaeasEXP_SMASH2,colour=Order)+theme_bw()+ theme(legend.position	="bottom",legend.text=element_text(size=10),plot.title = element_text(size = 14, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 10),axis.text.y=element_text(size = 7))
+ggsave("chapter2/Archaeas/ArchaeasSMASHvsExpansionsbyOrder.pdf", plot = Archaeassn8,height = 12, width = 6)
+
+Archaeassn9<-qplot(TOTAL.x, TOTAL.y, data = ArchaeasEXP_SMASH2,colour=Order)+theme_bw()+facet_grid(ArchaeasEXP_SMASH2$Order~.,scales="free")+ theme(legend.position	="bottom",legend.text=element_text(size=10),plot.title = element_text(size = 14, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 12),axis.text.y=element_text(size = 7))
+ggsave("chapter2/Archaeas/ArchaeasSMASHvsExpansionsbyOrderGRID.pdf", plot = Archaeassn9,height = 10, width = 6)
+
+## Looking for color modifications
+#sn + scale_color_brewer(palette="Dark2(100)")
+#n + scale_color_brewer(palette=hm.palette(10))
+## sn+ scale_color_hue(l=40, c=35)
+```
+Total central pathway expansions by genome vs Total antismash cluster detected coloured by order  
+```{r ArchaeasSMASHvsExpansionsbyOrder_label, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter2/Archaeas/ArchaeasSMASHvsExpansionsbyOrder.pdf", caption = "Correlation between Archaeas central pathway expansions and antismash Natural products detection",scale=.5,label = "ArchaeasSMASHvsExpansionsbyOrder", type = "figure")
+```
+Here is a reference to the expansions vs antismash NP's clusters plot: `r ref("ArchaeasSMASHvsExpansionsbyOrder")`. 
+\clearpage 
+
+Total central pathway expansions by genome vs Total antismash cluster detected splitted by order  
+```{r ArchaeasSMASHvsExpansionsbyOrderGRID_label, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter2/Archaeas/ArchaeasSMASHvsExpansionsbyOrderGRID.pdf", caption = "Correlation between Archaeas central pathway expnasions and antismash Natural products detection",scale=.5,label = "ArchaeasSMASHvsExpansionsbyOrderGRID", type = "figure")
+```
+Here is a reference to the expansions vs antismash NP's clusters splitted by order plot `r ref("ArchaeasSMASHvsExpansionsbyOrderGRID")`. 
+\clearpage 
+
+<!------------------------------------------------------------------------------------------------------------->
+
+
+
+
+AntisMAsh vs Expansions by taxonomic Family
+```{r ArchaeasANTISMASH_Expansion_Correlation_by_Family,echo=FALSE,warning=FALSE}
+ArchaeasEXP_SMASH<-merge(ArchaeasHeatPlot,ArchaeasSMASH,by.x="RastId",by.y="RastId")
+ArchaeasEXP_SMASH2<-merge(ArchaeasTaxa, ArchaeasEXP_SMASH, by.x="RastId",by.y="RastId") 
+
+Archaeasnpf<-qplot(TOTAL.x, TOTAL.y, data = ArchaeasEXP_SMASH2,colour=Family)+theme_bw()+facet_grid(ArchaeasEXP_SMASH2$Order~.,scales="free")+
+        theme( plot.title = element_text(size = 14, face = "bold"),
+              text = element_text(size = 12),
+              axis.title = element_text(face="bold"),
+              axis.text.x=element_text(size = 12),
+              axis.text.y=element_text(size = 7))
+ggsave("chapter2/Archaeas/Archaeasnpf.pdf", plot = Archaeasnpf,height = 12, width = 6)
+
+#facet_grid(EXP_SMASH$Order~.,scales="free")+
+```
+
+Natural products colured by family
+```{r Archaeasnpf_label, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter2/Archaeas/Archaeasnpf.pdf", caption = "Archaeas Natural products by family",scale=.6,label = "Archaeasnpf", type = "figure")
+```
+Here is a reference to the Natural products colured by family
+ plot `r ref("Archaeasnpf")`. 
+\clearpage 
+
+<!------------------------------------------------------------------------------------------------------------->
+
+##Selected trees from EvoMining
+Phosphoribosyl_isomerase_3 family  
+Figure from EvoMining
+
+```{r ArchaeasPhosphoribosyl_isomerase_evo_tree, results = "asis",message=FALSE, echo=FALSE}
+label(path = "chapter2/Archaeas/tree41.png", caption = "Phosphoribosyl isomerase A EvoMiningtree", 
+      scale = .25,
+      angle = 180,
+      label = "Phosphoribosyl_isomerase_A_evo_tree", type = "figure")
+
+label(path = "chapter2/Archaeas/tree42.png", caption = "Phosphoribosyl isomerase other EvoMiningtree", 
+      scale = .25,
+      angle = 180,
+      label = "Phosphoribosyl_isomerase_other_evo_tree", type = "figure")
+
+label(path = "chapter2/Archaeas/tree65.png", caption = "Phosphoribosyl anthranilate isomerase EvoMiningtree", 
+      scale = .25,
+      angle = 180,
+      label = "Phosphoribosylanthranilate_isomerase_evo_tree", type = "figure")
+
+```
+\clearpage 
+
+## 
+Other possible databases Archaeal signatures *set of protein-encoding genes that function uniquely within the Archaea; most signature proteins
+have  no  recognizable  bacterial  or  eukaryal  homologs*  [@graham_archaeal_2000]
+
+<!--- Actinos-->
+<!--
+You can delete the header-includes (lines 3-6 above) if you like and also the chunk below since it is loaded in the skeleton.Rmd file.  They are included so that chap3.Rmd will compile by itself when you hit Knit PDF.
+-->
+
+```{r include_packages_4, include = FALSE}
+# This chunk ensures that the reedtemplates package is
+# installed and loaded. This reedtemplates package includes
+# the template files for the thesis and also two functions
+# used for labeling and referencing
+if(!require(devtools))
+  install.packages("devtools", repos = "http://cran.rstudio.com")
+if(!require(dplyr))
+    install.packages("dplyr", repos = "http://cran.rstudio.com")   ##Split data frame, apply function, and return results in a data frame.
+if(!require(ggplot2))
+    install.packages("ggplot2", repos = "http://cran.rstudio.com")
+if(!require(reedtemplates)){
+  library(devtools)
+  devtools::install_github("ismayc/reedtemplates")
+  }
+library(reedtemplates)
+flights <- read.csv("data/flights.csv")
+```
+
+
+
+## Actinobacteria
+Actinobacteria is an ancient phylum {Referencia de luis}  
+
+## Tables
+
+----------------------------------------------------------------------------------
+  Factors                    Correlation between Parents & Child     
+------------------------- ----------------------------------------- --------------
+  GenomeDB                                  1245                         
+  
+  Families                                  65                          
+------------------------- ----------------------------------------- --------------
+Table: Correlation of Inheritance Factors for Parents and Child \label{tab:inher}
+
+
+```{r loading_tables_Actino,message=FALSE,echo=FALSE}
+library(ggplot2)
+library( reshape )
+library(plyr ) 
+library(RColorBrewer)
+library(scales)
+library(RColorBrewer)
+hm.palette <- colorRampPalette(rev(brewer.pal(11, 'Spectral')), space='Lab')  
+
+ActinosCentral <- read.table("chapter2/Actinobacteria/ActinoCentral", header=TRUE, sep="\t")
+ActinosHeatPlot <- read.table("chapter2/Actinobacteria/ActinoHeatPlot", header=TRUE, sep="\t")
+ActinosNp <- read.table("chapter2/Actinobacteria/ActinoNp", header=TRUE, sep="\t")
+ActinosSMASH <- read.table("chapter2/Actinobacteria/ActinosSMASH", header=TRUE, sep="\t")
+ActinosTaxa <- read.table("chapter2/Actinobacteria/ActinoTaxa", header=TRUE, sep="\t")
+```
+
+
+```{r Actinosumary,echo=FALSE}
+#summary(ActinosTaxa)
+#table(ActinosTaxa$Order)
+```
+
+
+
+\clearpage
+<!-- clearpage ends the page, and also dumps out all floats.Floats are things like tables and figures. 
+-->
+<!--
+Plan general 
+2. De Np's Quiero ver cantidad y diversidad de reclutamientos, a cada familia metabolica
+   cuantos tiene y de donde provienen 
+   Correlacion total np's recruitment vs total antismash NP's
+2. De antismash 
+   Familia taxonomica vs clusters
+   cluster interesante por familia taxonomica
+   Voy a usar Actinos Taxa tambien para ver esos reclutamientos de donde provienen
+3. De HeatPlot quiero ordenarlo por filogenia 
+Heat plot Familia taxonomica, 
+boxplot reclutamientos para cada familia metabolica
+y hacer heatplots separados por ruta metabolica
+4. Inlcuir algunos arboles
+-->
+
+<!--   Correlacion total np's recruitment vs total antismash NP's
+-->
+
+
+<!--- Expansions Box plot ------------------------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------->
+### Expansions BoxPlot by metabolic family
+```{r boxplot_ActinoHP,warnings = FALSE, message = FALSE,echo=FALSE}
+#ActinosHeatPlot$RastId <- with(ActinosHeatPlot,reorder(ActinosHeatPlot$RastId, ActinosHeatPlot$RastId))
+ActinosTotalBP.m<-merge(ActinosHeatPlot,ActinosTaxa,by.x="RastId",by.y="RastId") ## works as expected
+ActinosHeatPlotBP.m <- melt(ActinosTotalBP.m,id =c("RastId","Name","Phylum","Class","Order","Family","RastNo","Size","Contigs"))
+ActinosHeatPlotBP.m<-subset(ActinosHeatPlotBP.m,variable!="TOTAL") ## works as expected
+
+ggplot(ActinosHeatPlotBP.m, aes(x=ActinosHeatPlotBP.m$variable, y=ActinosHeatPlotBP.m$value),color="Family") + labs(x = "Metabolic Families", y = "Copies on Actinobacteria Genomes",text = element_text(size=12)) + geom_boxplot()+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6), legend.position = "bottom")
+
+
+expansion_plotActino<-ggplot(ActinosHeatPlotBP.m, aes(x=ActinosHeatPlotBP.m$variable, y=ActinosHeatPlotBP.m$value),color="Family") + labs(x = "Metabolic Families", y = "Copies on Actinobacteria Genomes",text = element_text(size=12)) + geom_boxplot()+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6), legend.position = "bottom")
+
+ggsave("chapter2/Actinobacteria/expansion_plotActinos.pdf", plot = expansion_plotActino,height = 8, width = 7)
+```
+```{r boxplot_ActinoHP_Actino_label, results = "asis",message=FALSE}
+label(path = "chapter2/Actinobacteria/expansion_plotActinos.pdf", caption = "Expansions Boxplot",label = "Actino_expansion_boxplot", type = "figure")
+```
+Here is a reference to the expansion boxplot: `r ref("Actino_expansion_boxplot")`.   
+\clearpage 
+
+
+
+
+## Central pathway expansions  
+Heat plot of central pathways expansions, Needs to be phylogenetically sorted.  
+```{r HeatPlotsActino, warning = FALSE, message = FALSE, echo=FALSE,CACHE=TRUE}
+### ME falta ordernarlos filogeneticamente
+ActinosHeatPlot$RastId <- with(ActinosHeatPlot,reorder(ActinosHeatPlot$RastId, ActinosHeatPlot$RastId))
+ActinosHeatPlot.m <- melt(ActinosHeatPlot)
+ActinosHeatPlot.m<- ddply(ActinosHeatPlot.m, .(variable), transform,rescale=scale(value))  ## rescale escala toda la matriz, scale por columnas
+
+HP_TaxaActino<-merge(ActinosHeatPlot,ActinosTaxa,by.x = "RastId",by.y = "RastId")
+HP_TaxaActino<-HP_TaxaActino[order(HP_TaxaActino$Order,HP_TaxaActino$Family),]
+HP_TaxaActino.m<- melt(HP_TaxaActino)
+HP_TaxaActino.m<- ddply(HP_TaxaActino.m, .(variable), transform,rescale=scale(value))  ## rescale escala toda la matriz, scale por columnas
+
+heatplotActinos<-ggplot(HP_TaxaActino.m, aes(HP_TaxaActino.m$variable, HP_TaxaActino.m$RastId))+ labs(x = "Metabolic Families", y = "Genomes",text = element_text(size=12))+geom_tile(aes(fill = HP_TaxaActino.m$rescale ), colour = "white") +scale_fill_gradientn(colours = hm.palette(100),na.value = "gray")+ theme(legend.text=element_text(size=12), legend.position = "bottom",text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5,size=2) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
+#+ facet_wrap(~Family, ncol=2)
+ggsave("chapter2/Actinobacteria/HeatPlotActinos.pdf", plot = heatplotActinos,height = 36, width = 24)
+
+## Only some metabolic Family
+PGA_AMINOACIDS=subset(ActinosCentral,Pathway=="PPP")
+HP_PGA_AMINOACIDS=ActinosHeatPlot.m[ActinosHeatPlot.m$variable %in% PGA_AMINOACIDS$Enzyme,]
+
+## That metabolic pathway now restricted to some Taxonomic family
+Strepto<-subset(ActinosTaxa,Family=="Streptomycetaceae")
+HP_Strepto<-merge(HP_PGA_AMINOACIDS,Strepto,by.x = "RastId",by.y = "RastId")
+HP_Strepto.m<- melt(HP_Strepto)
+HP_Strepto.m<- ddply(HP_Strepto.m, .(variable), transform,rescale=scale(value))  ## rescale escala toda la matriz, scale por columnas
+
+heatplot_StreptoPGA<-ggplot(HP_Strepto.m, aes(HP_Strepto.m$variable, HP_Strepto.m$RastId))+ labs(x = "Metabolic Families", y = "Streptomyces Genomes expansions on PGA Aminoacids",text = element_text(size=12))+geom_tile(aes(fill = HP_Strepto.m$rescale ), colour = "white")+ scale_fill_gradientn(colours = hm.palette(100),na.value = "gray")+ theme(legend.text=element_text(size=20), text = element_text(size=8), axis.text.x = element_text(angle = 330, hjust = 0, vjust = 1,size=20) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust =1) )
+
+ggsave("chapter2/Actinobacteria/HeatPlotStreptoPGA.pdf", plot = heatplot_StreptoPGA,height = 36, width = 24)
+
+```
+
+```{r HeatPlots_Actino_label, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter2/Actinobacteria/HeatPlotActinos.pdf", caption = "Actinobacterial Heatplot",scale=.7,label = "ActinoPlot", type = "figure")
+```
+Here is a reference to the HeatPlot: `r ref("ActinoPlot")`. 
+\clearpage 
+
+```{r Heaplot_summary_Actino,echo=FALSE}
+#summary(ActinosHeatPlot.m)
+#table(ActinosHeatPlot.m$scale >=0,Deltas$DeltaPRO>=0)
+
+```
+PPP pahtway expansions restricted to *Streptomycetaceae* family HeatPlot: `r ref("ActinoPlot")`. 
+
+```{r HeatPlots_Strepto_PGA_label, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter2/Actinobacteria/HeatPlotStreptoPGA.pdf", caption = "Streptomyces Genomes expansions on PGA Aminoacids HeatPlot",scale=.7,label = "StreptoPGAPlot", type = "figure")
+```
+Here is a reference to the HeatPlot: `r ref("StreptoPGAPlot")`. 
+\clearpage 
+
+<!---------------END EvoMining heatmap----------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------->
+
+## Genome Size correlations
+### Correlation between genome size and AntiSMASH products  
+```{r ANTISMASH_GenomeSize_Correlation_by_ORG_Actinos,echo=FALSE}
+ActinosEXP_SMASH<-merge(ActinosHeatPlot,ActinosSMASH,by.x="RastId",by.y="RastId")
+
+
+ActinosEXP_SMASH2<-merge(ActinosTaxa, ActinosEXP_SMASH, by.x="RastId",by.y="RastId") 
+Actinossn1<-qplot(Size, TOTAL.y, data = ActinosEXP_SMASH2,colour=Order)+theme_bw()+ theme(legend.position	="bottom",plot.title = element_text(size = 14, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 12),axis.text.y=element_text(size = 7))
+ggsave("chapter2/Actinobacteria/ActinosSMASHvsSizebyOrder.pdf", plot = Actinossn1,height = 8, width = 6)
+
+Actinossn2<-qplot(Size, TOTAL.y, data = ActinosEXP_SMASH2,colour=Order)+theme_bw()+facet_grid(ActinosEXP_SMASH2$Order~.,scales="free")+ theme(legend.position	="bottom",plot.title = element_text(size = 14, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 12),axis.text.y=element_text(size = 7))
+ggsave("chapter2/Actinobacteria/ActinosSMASHvsSizeGridOrder.pdf", plot = Actinossn2,height = 8, width = 6)
+
+```
+
+Genome size vs Total antismash cluster coloured by order  
+```{r ActinosSMASHvsSizebyOrder_label, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter2/Actinobacteria/ActinosSMASHvsSizebyOrder.pdf", caption = "Correlation between Actinos genome size and antismash Natural products detection colored by Order",scale=.6,label = "ActinosSMASHvsSizebyOrder", type = "figure")
+```
+Here is a reference to Genome size vs Total antismash cluster: `r ref("ActinosSMASHvsSizebyOrder")`. 
+\clearpage
+
+Genome size vs Total antismash cluster detected splitted by order  
+```{r ActinosSMASHvsSizeGridOrder_label, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter2/Actinobacteria/ActinosSMASHvsSizeGridOrder.pdf", caption = "Correlation between Actinos genome size and antismash Natural products detection grided by Order",scale=.6,label = "ActinosSMASHvsSizeGridOrder", type = "figure")
+```
+
+Here is a reference to Correlation between genome size and antismash Natural products detection grided by Order plot: `r ref("ActinosSMASHvsSizeGridOrder")`. 
+\clearpage 
+
+<!--------------------------------END size vs AntiSMASH correlation--------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------->
+
+
+<!-------------------------------- size vs Expansions correlation--------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------->
+### Correlation between genome size and Central pathway expansions  
+```{r ActinosANTISMASH_GenomeSize_Correlation_by_ORG,echo=FALSE}
+
+ActinosEXP_TAXA<-merge(ActinosHeatPlot,ActinosTaxa,by.x="RastId",by.y="RastId")
+
+Actinossn4<-qplot(Size, TOTAL, data = ActinosEXP_TAXA,colour=Order)+theme_bw()+ theme(legend.position	="bottom",plot.title = element_text(size = 14, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 12),axis.text.y=element_text(size = 7))
+ggsave("chapter2/Actinobacteria/ActinosSizevsExpansionsbyOrder.pdf", plot = Actinossn4,height = 6, width = 6)
+
+Actinossn5<-qplot(Size, TOTAL, data = ActinosEXP_TAXA,colour=Order)+theme_bw()+facet_grid(ActinosEXP_TAXA$Order~.,scales="free")+ theme(legend.position	="bottom",plot.title = element_text(size = 14, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 12),axis.text.y=element_text(size = 7))
+ggsave("chapter2/Actinobacteria/ActinosSizevsExpansionsGridbyOrder.pdf", plot = Actinossn5,height = 6, width = 6)
+
+## Looking for color modifications
+#sn + scale_color_brewer(palette="Dark2(100)")
+#n + scale_color_brewer(palette=hm.palette(10))
+## sn+ scale_color_hue(l=40, c=35)
+```
+Genome size vs Total central pathway expansion coloured by order  
+```{r ActinosSizevsExpansionsbyOrder_label2, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter2/Actinobacteria/ActinosSizevsExpansionsbyOrder.pdf", caption = "Correlation between Actinos genome size and central pathway expansions ",label = "ActinosSizevsExpansionsbyOrder", type = "figure")
+```
+Here is a reference to the size vs Total central pathway expansion plot: `r ref("ActinosSizevsExpansionsbyOrder")`. 
+\clearpage 
+
+Genome size vs Total central pathway expansion grided by order  
+```{r ActinosSizevsExpansionsGridbyOrder_label2, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter2/Actinobacteria/ActinosSizevsExpansionsGridbyOrder.pdf", caption = "Correlation between Actinos genome size and central pathway expansions grided by order",label = "ActinosSizevsExpansionsGridbyOrder", type = "figure")
+```
+Here is a reference to the Genome size vs Total central pathway expansion grided by order plot: `r ref("ActinosSizevsExpansionsGridbyOrder")`. 
+\clearpage 
+
+<!--------------------------------------------------------------------------------------------------------------------->
+
+
+
+Correlation between genome size and each of the central pathway families.
+Data are coloured by metabolic family instead of coloured by taxonomical order. This treatment allows to answer how differente metabolic families grows when genome size grow.  
+Also I want to add form given by taxonomical order.
+
+```{r ActinoANTISMASH_GenomeSize_Correlation_by_ORG,message=FALSE, echo=FALSE}
+ActinosHeatPlot$RastId <- with(ActinosHeatPlot, reorder(ActinosHeatPlot$RastId, ActinosHeatPlot$TOTAL))
+ActinosHeatPlot.m <- melt(ActinosHeatPlot)
+ActinosEXP_TAXA<-merge(ActinosHeatPlot.m,ActinosTaxa,by.x="RastId",by.y="RastId")
+
+Actinosn6<-qplot(Size, value, data = ActinosEXP_TAXA,colour=variable,shape=Order)+theme_bw()+ theme(legend.position	="none",legend.text=element_text(size=6),plot.title = element_text(size = 14, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 12),axis.text.y=element_text(size = 7))
+ggsave("chapter2/Actinobacteria/ActinosSizevsExpansionsbyMetabolicFamily.pdf", plot = Actinosn6,height = 6, width = 8)
+
+Actinosn7<-qplot(Size, value, data = ActinosEXP_TAXA,colour=variable)+theme_bw()+facet_grid(ActinosEXP_TAXA$variable~.,scales="free")+ theme(legend.position	="none",plot.title = element_text(size = 14, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 12),axis.text.y=element_text(size = 7))
+ggsave("chapter2/Actinobacteria/ActinosExpansionsbyMetabolicFamilyGrid.pdf", plot = Actinosn7,height = 6, width = 12)
+
+## Looking for color modifications
+#sn + scale_color_brewer(palette="Dark2(100)")
+#n + scale_color_brewer(palette=hm.palette(10))
+## sn+ scale_color_hue(l=40, c=35)
+```
+
+Genome size vs Total central pathway expansion coloured by metabolic Family 
+```{r ActinosSizevsExpansionsbyMetabolicFamily_label2, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter2/Actinobacteria/ActinosSizevsExpansionsbyMetabolicFamily.pdf", caption = "Correlation between Actinos Genome size vs Total central pathway expansion coloured by metabolic Family",scale=.6,label = "ActinosSizevsExpansionsbyMetabolicFamily", type = "figure")
+```
+Here is a reference to the Genome size vs Total central pathway expansion coloured by metabolic Family plot: `r ref("ActinosSizevsExpansionsbyMetabolicFamily")`. 
+\clearpage 
+
+Future Work: Genome size vs Total central pathway expansion grided by metabolic Family 
+For clarity I need to also grid and group by Metabolic Pathway
+```{r ActinosExpansionsbyMetabolicFamilyGrid_label2, results = "asis",message=FALSE,echo=FALSE}
+#label(path = "chapter2/Actinobacteria/ActinosExpansionsbyMetabolicFamilyGrid.pdf", caption = "Correlation between Actinos Genome size vs Total central pathway expansion grided by metabolic Family ",label = "ActinosExpansionsbyMetabolicFamilyGrid", type = "figure")
+```
+Here is a reference to Genome size vs Total central pathway expansion grided by metabolic Family  plot: `r ref("ActinosExpansionsbyMetabolicFamilyGrid")`. 
+\clearpage 
+
+
+<!----------------------------END - size vs Expansions correlation--------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------->
+
+
+
+
+
+<!----------------------------Natural Products vs Expansions correlation--------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------->
+
+## Natural products  
+
+### Natural products recruitments from EvoMining heatplot
+We can see natural products recruitment after central pathways expansions colored by their kingdom.  
+Natural products recruited by metabolic family, colored by phylogenetic origin.
+```{r ActinosNP_recruitment_taxa,echo=FALSE,message=FALSE,warning=FALSE}
+ActinosRecbyKing<-qplot(x=Central, data=ActinosNp, geom="bar", fill=kingdom, position="stack")+theme_bw()+ theme(legend.position	="bottom",text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
+ggsave("chapter2/Actinobacteria/ActinosRecruitmentsbyKingdom.pdf", plot = ActinosRecbyKing,height = 6, width = 12)
+
+ActinosRecbytaxa<-qplot(x=Central, data=ActinosNp, geom="bar", fill=taxa, position="stack")+theme_bw()+ theme(legend.position	="bottom",text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
+ggsave("chapter2/Actinobacteria/ActinosRecruitmentsbyTaxa.pdf", plot = ActinosRecbytaxa,height = 6, width = 12)
+
+```
+
+
+Recruitments after central pathways expansions coloured by Kingdom
+```{r ActinosRecruitmentsbyKingdom_label2, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter2/Actinobacteria/ActinosRecruitmentsbyKingdom.pdf", caption = "Actinos Recruitmens on central families coloured by kingdom",scale=.6,label = "ActinosRecruitmentsbyKingdom", type = "figure")
+```
+Here is a reference to Recruitments after central pathways expansions colourd by Kingdom plot: `r ref("ActinosRecruitmentsbyKingdom")`. 
+
+\clearpage 
+Recruitments after central pathways expansions colourd by taxonomy
+```{r ActinosRecruitmentsbyTaxa_label2, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter2/Actinobacteria/ActinosRecruitmentsbyTaxa.pdf", caption = "Actinos Recruitmens on central families coloured by taxonomy",scale=.5,label = "ActinosRecruitmentsbyTaxa", type = "figure")
+```
+Here is a reference to Recruitments after central pathways expansions colourd by taxa plot: `r ref("ActinosRecruitmentsbyTaxa")`. 
+\clearpage 
+
+
+
+
+## Actinos AntiSMASH 
+```{r ActinosDiversity,echo=FALSE,message=FALSE,warning=FALSE}
+## merge tables
+Actinosm1 <- merge(ActinosTaxa, ActinosSMASH, by.x = "RastId", by.y = "RastId")
+Actinosm1.m <- melt(Actinosm1, id = c("RastId","Name","Phylum","Class","Order","Family","Contigs","Size","RastNo"))
+Actinosm2.m<-subset(Actinosm1.m,value>0)
+
+ActinosDiversity<-qplot(x=Order, data=Actinosm1.m, geom="bar", fill=Family, position="stack")+theme_bw()+ theme(text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
+#table(m1.m$Order>0,m1.m$Family>0)
+#qplot(x=clarity, data=diamonds, geom="bar", fill=cut, position="stack")
+ggsave("chapter2/Actinobacteria/ActinosDiversity.pdf", plot =ActinosDiversity,height = 6, width = 14)
+
+ActinosSmash<-qplot(x=Order, data=Actinosm2.m, geom="bar", fill=variable, position="stack",colours = hm.palette(100000))+theme_bw()+ theme(legend.position="none",text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
+#table(m1.m$Order>0,m1.m$Family>0)
+ggsave("chapter2/Actinobacteria/ActinosSmash.pdf", plot = ActinosSmash,height = 6, width = 14)
+```
+ 
+Taxonomical diversity on Actinosbacteria Data
+```{r ActinosDiversity_label2, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter2/Actinobacteria/ActinosDiversity.pdf", caption = "Actinos Diversity",scale=.6,label = "ActinosDiversity", type = "figure")
+```
+Here is a reference to Recruitments after central pathways expansions colourd by taxa plot: `r ref("ActinosDiversity")`. 
+\clearpage
+
+Smash diversity
+```{r ActinosSmash_label2, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter2/Actinobacteria/ActinosSmash.pdf", caption = "Actinos Smash Taxonomical Diversity",scale=.5,label = "ActinosSmash", type = "figure")
+```
+Here is a reference to Recruitments after central pathways expansions colourd by taxa plot: `r ref("ActinosSmash")`. 
+\clearpage
+
+
+
+
+### AntisSMASH vs Central Expansions  
+Is it a correlation between pangenome grow and central pathways expansions?  
+```{r ActinosANTISMASH_Expansion_Correlation_by_ORG,message=FALSE, echo =FALSE}
+ActinosEXP_SMASH<-merge(ActinosHeatPlot,ActinosSMASH,by.x="RastId",by.y="RastId")
+ActinosEXP_SMASH2<-merge(ActinosTaxa, ActinosEXP_SMASH, by.x="RastId",by.y="RastId") 
+#qplot(Total.x, Total.y, data = EXP_SMASH, colour=Order)+theme_bw()+
+Actinossn8<-qplot(TOTAL.x, TOTAL.y, data = ActinosEXP_SMASH2,colour=Order)+theme_bw()+ theme(legend.position	="bottom",legend.text=element_text(size=10),plot.title = element_text(size = 14, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 10),axis.text.y=element_text(size = 7))
+ggsave("chapter2/Actinobacteria/ActinosSMASHvsExpansionsbyOrder.pdf", plot = Actinossn8,height = 12, width = 6)
+
+Actinossn9<-qplot(TOTAL.x, TOTAL.y, data = ActinosEXP_SMASH2,colour=Order)+theme_bw()+facet_grid(ActinosEXP_SMASH2$Order~.,scales="free")+ theme(legend.position	="bottom",legend.text=element_text(size=10),plot.title = element_text(size = 14, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 12),axis.text.y=element_text(size = 7))
+ggsave("chapter2/Actinobacteria/ActinosSMASHvsExpansionsbyOrderGRID.pdf", plot = Actinossn9,height = 10, width = 6)
+
+## Looking for color modifications
+#sn + scale_color_brewer(palette="Dark2(100)")
+#n + scale_color_brewer(palette=hm.palette(10))
+## sn+ scale_color_hue(l=40, c=35)
+```
+Total central pathway expansions by genome vs Total antismash cluster detected coloured by order  
+```{r ActinosSMASHvsExpansionsbyOrder_label, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter2/Actinobacteria/ActinosSMASHvsExpansionsbyOrder.pdf", caption = "Correlation between Actinos central pathway expansions and antismash Natural products detection",scale=.5,label = "ActinosSMASHvsExpansionsbyOrder", type = "figure")
+```
+Here is a reference to the expansions vs antismash NP's clusters plot: `r ref("ActinosSMASHvsExpansionsbyOrder")`. 
+\clearpage 
+
+Total central pathway expansions by genome vs Total antismash cluster detected splitted by order  
+```{r ActinosSMASHvsExpansionsbyOrderGRID_label, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter2/Actinobacteria/ActinosSMASHvsExpansionsbyOrderGRID.pdf", caption = "Correlation between Actinos central pathway expnasions and antismash Natural products detection",scale=.5,label = "ActinosSMASHvsExpansionsbyOrderGRID", type = "figure")
+```
+Here is a reference to the expansions vs antismash NP's clusters splitted by order plot `r ref("ActinosSMASHvsExpansionsbyOrderGRID")`. 
+\clearpage 
+
+<!------------------------------------------------------------------------------------------------------------->
+
+
+
+
+
+
+AntisMAsh vs Expansions by taxonomic Family
+```{r ActinosANTISMASH_Expansion_Correlation_by_Family,echo=FALSE,warning=FALSE}
+ActinosEXP_SMASH<-merge(ActinosHeatPlot,ActinosSMASH,by.x="RastId",by.y="RastId")
+ActinosEXP_SMASH2<-merge(ActinosTaxa, ActinosEXP_SMASH, by.x="RastId",by.y="RastId") 
+
+Actinosnpf<-qplot(TOTAL.x, TOTAL.y, data = ActinosEXP_SMASH2,colour=Family)+theme_bw()+facet_grid(ActinosEXP_SMASH2$Order~.,scales="free")+
+        theme( plot.title = element_text(size = 14, face = "bold"),
+              text = element_text(size = 12),
+              axis.title = element_text(face="bold"),
+              axis.text.x=element_text(size = 12),
+              axis.text.y=element_text(size = 7))
+ggsave("chapter2/Actinobacteria/Actinosnpf.pdf", plot = Actinosnpf,height = 12, width = 6)
+
+#facet_grid(EXP_SMASH$Order~.,scales="free")+
+```
+
+Natural products colured by family
+```{r Actinosnpf_label, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter2/Actinobacteria/Actinosnpf.pdf", caption = "Actinos Natural products by family",scale=.6,label = "Actinosnpf", type = "figure")
+```
+Here is a reference to the Natural products colured by family
+ plot `r ref("Actinosnpf")`. 
+\clearpage 
+
+<!------------------------------------------------------------------------------------------------------------->
+
+
+
+##Selected trees from EvoMining
+
+```{r Actinos_evo_tree, results = "asis",message=FALSE, echo=FALSE}
+label(path = "chapter2/Actinobacteria/tree15.png", caption = "Enolase EvoMiningtree", 
+      scale = .3,
+      angle = 180,
+      label = "enolase_evo_tree", type = "figure")
+
+label(path = "chapter2/Actinobacteria/tree73.png", caption = "Phosphoribosyl isomerase EvoMiningtree", 
+      scale = .3,
+      angle = 180,
+      label = "Phosphoribosyl_isomerase_evo_tree", type = "figure")
+
+label(path = "chapter2/Actinobacteria/tree47.png", caption = "Phosphoribosyl isomerase A EvoMiningtree", 
+      scale = .3,
+      angle = 180,
+      label = "Phosphoribosyl_isomerase_A_evo_tree", type = "figure")
+
+label(path = "chapter2/Actinobacteria/tree69.png", caption = "phosphoshikimate carboxyvinyltransferase EvoMiningtree", 
+      scale = .3, angle = 180,label = "phosphoshikimate_c_evo_tree", type = "figure")
+
+
+```
+\clearpage 
+
+
+
+<!--- Cyanobacteria-->
+
+```{r include_packages_5, include = FALSE,echo=FALSE}
+# This chunk ensures that the reedtemplates package is
+# installed and loaded. This reedtemplates package includes
+# the template files for the thesis and also two functions
+# used for labeling and referencing
+if(!require(devtools))
+  install.packages("devtools", repos = "http://cran.rstudio.com")
+if(!require(dplyr))
+    install.packages("dplyr", repos = "http://cran.rstudio.com")
+if(!require(ggplot2))
+    install.packages("ggplot2", repos = "http://cran.rstudio.com")
+if(!require(reedtemplates)){
+  library(devtools)
+  devtools::install_github("ismayc/reedtemplates")
+  }
+library(reedtemplates)
+flights <- read.csv("data/flights.csv")
+```
+
+<!-- Loading data
+-->
+
+```{r loading_tables_5,message=FALSE,echo=FALSE}
+library(ggplot2)
+library( reshape )
+library(plyr )
+library(RColorBrewer)
+library(scales)
+library(plyr)
+library(RColorBrewer)
+hm.palette <- colorRampPalette(rev(brewer.pal(11, 'Spectral')), space='Lab')  
+
+#setwd("/home/nelly/GIT/phd/Thesis/tesis/chap5_files")
+CyanosCentral <- read.table("chapter2/Cyanobacteria/CyanosCentral", header=TRUE, sep="\t")
+CyanosHeatPlot <- read.table("chapter2/Cyanobacteria/CyanosHeatPlot", header=TRUE, sep="\t")
+CyanosNp <- read.table("chapter2/Cyanobacteria/CyanosNp", header=TRUE, sep="\t")
+CyanosSMASH <- read.table("chapter2/Cyanobacteria/CyanosSMASH", header=TRUE, sep="\t")
+CyanosTaxa <- read.table("chapter2/Cyanobacteria/CyanosTaxa", header=TRUE, sep="\t")
+```
+
+
+```{r CyanoSumary,echo=FALSE}
+#summary(CyanosTaxa)
+#table(CyanosTaxa$Order)
+```
+
+
+## Cyanobacteria 
+Cyanobacteria phylum {Referencia}   
+Cyanobacteria is a photosynthetic phylum that inhabits a broad range of habitats. The broad adaptive potential is on part driven by gene-family enlargment [@larsson_genome_2011] by the analysis of 58 Cyanobacterial genomes concludes ancestor of cyanobacteria had a genome size of approx. 4.5 Mbp.
+Cyanobacteria produces natural products as pigments and toxins [@whitton_ecology_2012]   Example of a PriA cluster toxins[@moustafa_origin_2009]
+
+Fossil record situates Cyanobacteria [@whitton_ecology_2012]
+Molecular record and metabolic propoerties at [@battistuzzi_genomic_2004]
+
+Tables
+-------------------------------------------------------------------
+  Factors                    Correlation between Parents & Child     
+------------------------- ----------------------------------------- 
+  GenomeDB                                  1245                         
+  Families                                  65                          
+------------------------- -----------------------------------------
+Table: Families on Cyanobacteria \label{tab:inher}
+
+\clearpage
+<!-- clearpage ends the page, and also dumps out all floats.Floats are things like tables and figures. 
+-->
+<!--
+Plan general 
+2. De Np's Quiero ver cantidad y diversidad de reclutamientos, a cada familia metabolica
+   cuantos tiene y de donde provienen 
+   Correlacion total np's recruitment vs total antismash NP's
+2. De antismash 
+   Familia taxonomica vs clusters
+   cluster interesante por familia taxonomica
+   Voy a usar Cyanos Taxa tambien para ver esos reclutamientos de donde provienen
+3. De HeatPlot quiero ordenarlo por filogenia 
+Heat plot Familia taxonomica, 
+boxplot reclutamientos para cada familia metabolica
+y hacer heatplots separados por ruta metabolica
+4. Inlcuir algunos arboles
+-->
+
+<!--  EvoMining Expansions
+-->
+
+
+<!--- Expansions Box plot ------------------------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------->
+### Expansions BoxPlot by metabolic family
+```{r boxplot_CyanoHP,warnings = FALSE, message = FALSE,echo=FALSE}
+#CyanosHeatPlot$RastId <- with(CyanosHeatPlot,reorder(CyanosHeatPlot$RastId, CyanosHeatPlot$RastId))
+CyanosTotalBP.m<-merge(CyanosHeatPlot,CyanosTaxa,by.x="RastId",by.y="RastId") ## works as expected
+CyanosHeatPlotBP.m <- melt(CyanosTotalBP.m,id =c("RastId","Name","Phylum","Class","Order","Family","RastNo","Size","Contigs"))
+CyanosHeatPlotBP.m<-subset(CyanosHeatPlotBP.m,variable!="TOTAL") ## works as expected
+
+expansion_plotCyano<-ggplot(CyanosHeatPlotBP.m, aes(x=CyanosHeatPlotBP.m$variable, y=CyanosHeatPlotBP.m$value),color="Family") + labs(x = "Metabolic Families", y = "Copies on Cyanobacteria Genomes",text = element_text(size=12)) + geom_boxplot()+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6), legend.position = "bottom")
+
+ggsave("chapter2/Cyanobacteria/expansion_plotCyanos.pdf", plot = expansion_plotCyano,height = 8, width = 7)
+```
+```{r boxplot_CyanoHP_Cyano_label, results = "asis",message=FALSE}
+label(path = "chapter2/Cyanobacteria/expansion_plotCyanos.pdf", caption = "Expansions Boxplot",label = "Cyano_expansion_boxplot", type = "figure")
+```
+Here is a reference to the expansion boxplot: `r ref("Cyano_expansion_boxplot")`.   
+\clearpage 
+
+<!----------------------Expansions Box plot END-------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------->
+
+
+
+
+
+
+## Central pathway expansions  
+Heat plot of central pathways expansions, Needs to be phylogenetically sorted.  
+```{r HeatPlots, warnings = FALSE, message = FALSE, echo=FALSE,CACHE=TRUE}
+### ME falta ordernarlos filogeneticamente
+CyanosHeatPlot$RastId <- with(CyanosHeatPlot, reorder(CyanosHeatPlot$RastId, CyanosHeatPlot$TOTAL))
+CyanosHeatPlot.m <- melt(CyanosHeatPlot)
+CyanosHeatPlot.m<- ddply(CyanosHeatPlot.m, .(variable), transform,rescale=scale(value))  ## rescale escala toda la matriz, scale por columnas
+HP_Taxa<-merge(CyanosHeatPlot,CyanosTaxa,by.x = "RastId",by.y = "RastId")
+HP_Taxa2<-subset(HP_Taxa,Order='Chroococcales')
+
+HP_Taxa<-HP_Taxa[order(HP_Taxa$Order,HP_Taxa$Family),]
+HP_Taxa.m<- melt(HP_Taxa)
+HP_Taxa.m<- ddply(HP_Taxa.m, .(variable), transform,rescale=scale(value))  ## rescale escala toda la matriz, scale por columnas
+
+heatplot <- ggplot(HP_Taxa.m, aes(HP_Taxa.m$variable, HP_Taxa.m$RastId))+ geom_tile(aes(fill = HP_Taxa.m$rescale), colour = "white") + scale_fill_gradientn(colours = hm.palette(100),na.value = "gray")+ theme(text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
+
+
+#heatplot <- ggplot(CyanosHeatPlot.m, aes(CyanosHeatPlot.m$variable, CyanosHeatPlot.m$RastId))+ geom_tile(aes(fill = CyanosHeatPlot.m$rescale), colour = "white") + scale_fill_gradient(low = "white", high = "steelblue")+ theme(text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
+
+## este funciona pero lo esty tratando cambiar a ordenado
+###heatplot <- ggplot(CyanosHeatPlot.m, aes(CyanosHeatPlot.m$variable, CyanosHeatPlot.m$RastId))+ geom_tile(aes(fill = CyanosHeatPlot.m$rescale), colour = "white") + scale_fill_gradientn(colours = hm.palette(100),na.value = "gray")+ theme(text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
+
+
+#+ scale_fill_gradientn(colours = hm.palette(100),na.value = "gray")
+#+geom_text(aes(label=CyanosHeatPlot.m$rescale)) 
+ggsave("chapter2/Cyanobacteria/HeatPlot.pdf", plot = heatplot,height = 12, width = 6)
+
+```
+
+```{r HeatPlots_label, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter2/Cyanobacteria/HeatPlot.pdf", caption = "Cyanobacterial Heatplot",scale=.6,label = "CyanoPlot", type = "figure")
+```
+Here is a reference to the HeatPlot: `r ref("CyanoPlot")`. 
+\clearpage 
+
+```{r Heaplot_summary,echo=FALSE}
+#summary(CyanosHeatPlot.m)
+#table(CyanosHeatPlot.m$scale >=0,Deltas$DeltaPRO>=0)
+
+```
+
+<!---------------END EvoMining heatmap----------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------->
+
+
+
+
+
+
+
+## Genome Size correlations
+### Correlation between genome size and AntiSMASH products  
+```{r ANTISMASH_GenomeSize_Correlation_by_ORG_Cyanos2,echo=FALSE}
+EXP_SMASH<-merge(CyanosHeatPlot,CyanosSMASH,by.x="RastId",by.y="RastId")
+EXP_SMASH2<-merge(CyanosTaxa, EXP_SMASH, by.x="RastId",by.y="RastId") 
+#qplot(Total.x, Total.y, data = EXP_SMASH, colour=Order)+theme_bw()+
+sn1<-qplot(Size, TOTAL.y, data = EXP_SMASH2,colour=Order)+theme_bw()+ theme(legend.position	="bottom",plot.title = element_text(size = 14, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 12),axis.text.y=element_text(size = 7))
+ggsave("chapter2/Cyanobacteria/SMASHvsSizebyOrder.pdf", plot = sn1,height = 8, width = 6)
+
+sn2<-qplot(Size, TOTAL.y, data = EXP_SMASH2,colour=Order)+theme_bw()+facet_grid(EXP_SMASH2$Order~.,scales="free")+ theme(legend.position	="bottom",plot.title = element_text(size = 14, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 12),axis.text.y=element_text(size = 7))
+ggsave("chapter2/Cyanobacteria/SMASHvsSizeGridOrder.pdf", plot = sn2,height = 8, width = 6)
+
+## Looking for color modifications
+#sn + scale_color_brewer(palette="Dark2(100)")
+#n + scale_color_brewer(palette=hm.palette(10))
+## sn+ scale_color_hue(l=40, c=35)
+```
+
+Genome size vs Total antismash cluster coloured by order  
+```{r SMASHvsSizebyOrder_label, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter2/Cyanobacteria/SMASHvsSizebyOrder.pdf", caption = "Correlation between genome size and antismash Natural products detection colored by Order",scale=.6,label = "SMASHvsSizebyOrder", type = "figure")
+```
+Here is a reference to Genome size vs Total antismash cluster: `r ref("SMASHvsSizebyOrder")`. 
+\clearpage
+
+Genome size vs Total antismash cluster detected splitted by order  
+```{r SMASHvsSizeGridOrder_label, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter2/Cyanobacteria/SMASHvsSizeGridOrder.pdf", caption = "Correlation between genome size and antismash Natural products detection grided by Order",scale=.6,label = "SMASHvsSizeGridOrder", type = "figure")
+```
+
+Here is a reference to Correlation between genome size and antismash Natural products detection grided by Order plot: `r ref("SMASHvsSizeGridOrder")`. 
+\clearpage 
+
+<!--------------------------------END size vs AntiSMASH correlation--------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------->
+
+
+
+
+
+<!-------------------------------- size vs Expansions correlation--------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------->
+### Correlation between genome size and Central pathway expansions  
+```{r ANTISMASH_GenomeSize_Correlation_by_ORG_Cyanos,echo=FALSE}
+#CyanosHeatPlot$RastId <- with(CyanosHeatPlot, reorder(CyanosHeatPlot$RastId, CyanosHeatPlot$TOTAL))
+#CyanosHeatPlot.m <- melt(CyanosHeatPlot)
+
+EXP_TAXA<-merge(CyanosHeatPlot,CyanosTaxa,by.x="RastId",by.y="RastId")
+
+sn4<-qplot(Size, TOTAL, data = EXP_TAXA,colour=Order)+theme_bw()+ theme(legend.position	="bottom",plot.title = element_text(size = 14, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 12),axis.text.y=element_text(size = 7))
+ggsave("chapter2/Cyanobacteria/SizevsExpansionsbyOrder.pdf", plot = sn4,height = 6, width = 6)
+
+sn5<-qplot(Size, TOTAL, data = EXP_TAXA,colour=Order)+theme_bw()+facet_grid(EXP_TAXA$Order~.,scales="free")+ theme(legend.position	="bottom",plot.title = element_text(size = 14, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 12),axis.text.y=element_text(size = 7))
+ggsave("chapter2/Cyanobacteria/SizevsExpansionsGridbyOrder.pdf", plot = sn5,height = 6, width = 6)
+
+## Looking for color modifications
+#sn + scale_color_brewer(palette="Dark2(100)")
+#n + scale_color_brewer(palette=hm.palette(10))
+## sn+ scale_color_hue(l=40, c=35)
+```
+Genome size vs Total central pathway expansion coloured by order  
+```{r SizevsExpansionsbyOrder_label2, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter2/Cyanobacteria/SizevsExpansionsbyOrder.pdf", caption = "Correlation between genome size and central pathway expansions ",label = "SizevsExpansionsbyOrder", type = "figure")
+```
+Here is a reference to the size vs Total central pathway expansion plot: `r ref("SizevsExpansionsbyOrder")`. 
+\clearpage 
+
+
+Genome size vs Total central pathway expansion grided by order  
+```{r SizevsExpansionsGridbyOrder_label2, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter2/Cyanobacteria/SizevsExpansionsGridbyOrder.pdf", caption = "Correlation between genome size and central pathway expansions grided by order",label = "SizevsExpansionsGridbyOrder", type = "figure")
+```
+Here is a reference to the Genome size vs Total central pathway expansion grided by order plot: `r ref("SizevsExpansionsGridbyOrder")`. 
+\clearpage 
+
+<!--------------------------------------------------------------------------------------------------------------------->
+
+
+
+Correlation between genome size and each of the central pathway families.
+Data are coloured by metabolic family instead of coloured by taxonomical order. This treatment allows to answer how differente metabolic families grows when genome size grow.  
+Also I want to add form given by taxonomical order.
+
+```{r ANTISMASH_GenomeSize_Correlation_by_ORG_Cyanos3,message=FALSE, echo=FALSE}
+CyanosHeatPlot$RastId <- with(CyanosHeatPlot, reorder(CyanosHeatPlot$RastId, CyanosHeatPlot$TOTAL))
+CyanosHeatPlot.m <- melt(CyanosHeatPlot)
+EXP_TAXA<-merge(CyanosHeatPlot.m,CyanosTaxa,by.x="RastId",by.y="RastId")
+
+sn6<-qplot(Size, value, data = EXP_TAXA,colour=variable,shape=Order)+theme_bw()+ theme(legend.position	="none",legend.text=element_text(size=6),plot.title = element_text(size = 14, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 12),axis.text.y=element_text(size = 7))
+ggsave("chapter2/Cyanobacteria/SizevsExpansionsbyMetabolicFamily.pdf", plot = sn6,height = 6, width = 8)
+
+sn7<-qplot(Size, value, data = EXP_TAXA,colour=variable)+theme_bw()+facet_grid(EXP_TAXA$variable~.,scales="free")+ theme(legend.position	="none",plot.title = element_text(size = 14, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 12),axis.text.y=element_text(size = 7))
+ggsave("chapter2/Cyanobacteria/ExpansionsbyMetabolicFamilyGrid.pdf", plot = sn7,height = 6, width = 12)
+
+## Looking for color modifications
+#sn + scale_color_brewer(palette="Dark2(100)")
+#n + scale_color_brewer(palette=hm.palette(10))
+## sn+ scale_color_hue(l=40, c=35)
+```
+
+Genome size vs Total central pathway expansion coloured by metabolic Family 
+```{r SizevsExpansionsbyMetabolicFamily_label2, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter2/Cyanobacteria/SizevsExpansionsbyMetabolicFamily.pdf", caption = "Correlation between Genome size vs Total central pathway expansion coloured by metabolic Family",scale=.6,label = "SizevsExpansionsbyMetabolicFamily", type = "figure")
+```
+Here is a reference to the Genome size vs Total central pathway expansion coloured by metabolic Family plot: `r ref("SizevsExpansionsbyMetabolicFamily")`. 
+\clearpage 
+
+Future Work: Genome size vs Total central pathway expansion grided by metabolic Family 
+For clarity I need to also grid and group by Metabolic Pathway
+```{r ExpansionsbyMetabolicFamilyGrid_label2, results = "asis",message=FALSE,echo=FALSE}
+#label(path = "chapter2/Cyanobacteria/ExpansionsbyMetabolicFamilyGrid.pdf", caption = "Correlation between Genome size vs Total central pathway expansion grided by metabolic Family ",label = "ExpansionsbyMetabolicFamilyGrid", type = "figure")
+```
+Here is a reference to Genome size vs Total central pathway expansion grided by metabolic Family  plot: `r ref("ExpansionsbyMetabolicFamilyGrid")`. 
+\clearpage 
+
+
+<!----------------------------END - size vs Expansions correlation--------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------->
+
+
+
+
+
+<!----------------------------Natural Products vs Expansions correlation--------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------->
+
+## Natural products  
+
+### Natural products recruitments from EvoMining heatplot
+We can see natural products recruitment after central pathways expansions colored by their kingdom.  
+Natural products recruited by metabolic family, colored by phylogenetic origin.
+```{r NP_recruitment_taxa_cyano,echo=FALSE,message=FALSE,warning=FALSE}
+RecbyKing<-qplot(x=Central, data=CyanosNp, geom="bar", fill=kingdom, position="stack")+theme_bw()+ theme(legend.position	="bottom",text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
+ggsave("chapter2/Cyanobacteria/RecruitmentsbyKingdom.pdf", plot = RecbyKing,height = 6, width = 12)
+
+Recbytaxa<-qplot(x=Central, data=CyanosNp, geom="bar", fill=taxa, position="stack")+theme_bw()+ theme(legend.position	="bottom",text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
+ggsave("chapter2/Cyanobacteria/RecruitmentsbyTaxa.pdf", plot = Recbytaxa,height = 6, width = 12)
+
+```
+
+
+Recruitments after central pathways expansions coloured by Kingdom
+```{r RecruitmentsbyKingdom_label2, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter2/Cyanobacteria/RecruitmentsbyKingdom.pdf", caption = "Recruitmens on central families coloured by kingdom",scale=.6,label = "RecruitmentsbyKingdom", type = "figure")
+```
+Here is a reference to Recruitments after central pathways expansions colourd by Kingdom plot: `r ref("RecruitmentsbyKingdom")`. 
+
+\clearpage 
+Recruitments after central pathways expansions colourd by taxonomy
+```{r RecruitmentsbyTaxa_label2, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter2/Cyanobacteria/RecruitmentsbyTaxa.pdf", caption = "Recruitmens on central families coloured by taxonomy",scale=.5,label = "RecruitmentsbyTaxa", type = "figure")
+```
+Here is a reference to Recruitments after central pathways expansions colourd by taxa plot: `r ref("RecruitmentsbyTaxa")`. 
+\clearpage 
+
+
+
+
+
+
+## Cyanobacterias AntiSMASH 
+```{r CyanoDiversity,echo=FALSE,message=FALSE,warning=FALSE}
+## merge tables
+m1 <- merge(CyanosTaxa, CyanosSMASH, by.x = "RastId", by.y = "RastId")
+m1.m <- melt(m1, id = c("RastId", "Name","Phylum","Class","Order","Family","Contigs","Size","RastNo"))
+m2.m<-subset(m1.m,value>0)
+
+Diversity<-qplot(x=Order, data=m1.m, geom="bar", fill=Family, position="stack")+theme_bw()+ theme(text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
+#table(m1.m$Order>0,m1.m$Family>0)
+#qplot(x=clarity, data=diamonds, geom="bar", fill=cut, position="stack")
+ggsave("chapter2/Cyanobacteria/Diversity.pdf", plot =Diversity,height = 6, width = 14)
+
+Smash<-qplot(x=Order, data=m2.m, geom="bar", fill=variable, position="stack",colours = hm.palette(100000))+theme_bw()+ theme(legend.position="none",text = element_text(size=8), axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5) ,axis.text.y = element_text(angle = 0, hjust = 1, vjust = 0.5) )
+#table(m1.m$Order>0,m1.m$Family>0)
+ggsave("chapter2/Cyanobacteria/Smash.pdf", plot = Smash,height = 6, width = 14)
+```
+ 
+Taxonomical diversity on Cyanobacteria Data
+```{r Diversity_label2, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter2/Cyanobacteria/Diversity.pdf", caption = "Diversity",scale=.6,label = "Diversity", type = "figure")
+```
+Here is a reference to Recruitments after central pathways expansions colourd by taxa plot: `r ref("Diversity")`. 
+\clearpage
+
+Smash diversity
+```{r Smash_label2, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter2/Cyanobacteria/Smash.pdf", caption = "Smash",scale=.5,label = "Smash Taxonomical Diversity", type = "figure")
+```
+Here is a reference to Recruitments after central pathways expansions colourd by taxa plot: `r ref("Smash")`. 
+\clearpage
+
+
+
+
+
+### AntisSMASH vs Central Expansions  
+Is it a correlation between pangenome grow and central pathways expansions?  
+```{r ANTISMASH_Expansion_Correlation_by_ORG_Cyanos,message=FALSE, echo =FALSE}
+EXP_SMASH<-merge(CyanosHeatPlot,CyanosSMASH,by.x="RastId",by.y="RastId")
+EXP_SMASH2<-merge(CyanosTaxa, EXP_SMASH, by.x="RastId",by.y="RastId") 
+#qplot(Total.x, Total.y, data = EXP_SMASH, colour=Order)+theme_bw()+
+sn8<-qplot(TOTAL.x, TOTAL.y, data = EXP_SMASH2,colour=Order)+theme_bw()+ theme(legend.position	="bottom",legend.text=element_text(size=10),plot.title = element_text(size = 14, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 10),axis.text.y=element_text(size = 7))
+ggsave("chapter2/Cyanobacteria/SMASHvsExpansionsbyOrder.pdf", plot = sn8,height = 12, width = 6)
+
+sn9<-qplot(TOTAL.x, TOTAL.y, data = EXP_SMASH2,colour=Order)+theme_bw()+facet_grid(EXP_SMASH2$Order~.,scales="free")+ theme(legend.position	="bottom",legend.text=element_text(size=10),plot.title = element_text(size = 14, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 12),axis.text.y=element_text(size = 7))
+ggsave("chapter2/Cyanobacteria/SMASHvsExpansionsbyOrderGRID.pdf", plot = sn9,height = 10, width = 6)
+
+## Looking for color modifications
+#sn + scale_color_brewer(palette="Dark2(100)")
+#n + scale_color_brewer(palette=hm.palette(10))
+## sn+ scale_color_hue(l=40, c=35)
+```
+Total central pathway expansions by genome vs Total antismash cluster detected coloured by order  
+```{r SMASHvsExpansionsbyOrder_label, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter2/Cyanobacteria/SMASHvsExpansionsbyOrder.pdf", caption = "Correlation between central pathway axpnasions and antismash Natural products detection",scale=.5,label = "SMASHvsExpansionsbyOrder", type = "figure")
+```
+Here is a reference to the expansions vs antismash NP's clusters plot: `r ref("SMASHvsExpansionsbyOrder")`. 
+\clearpage 
+
+Total central pathway expansions by genome vs Total antismash cluster detected splitted by order  
+```{r SMASHvsExpansionsbyOrderGRID_label, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter2/Cyanobacteria/SMASHvsExpansionsbyOrderGRID.pdf", caption = "Correlation between central pathway axpnasions and antismash Natural products detection",scale=.5,label = "SMASHvsExpansionsbyOrderGRID", type = "figure")
+```
+Here is a reference to the expansions vs antismash NP's clusters splitted by order plot `r ref("SSMASHvsExpansionsbyOrderGRID")`. 
+\clearpage 
+
+<!------------------------------------------------------------------------------------------------------------->
+
+
+
+
+AntisMAsh vs Expansions by taxonomic Family
+```{r ANTISMASH_Expansion_Correlation_by_Family_Cyanos,echo=FALSE,warning=FALSE}
+EXP_SMASH<-merge(CyanosHeatPlot,CyanosSMASH,by.x="RastId",by.y="RastId")
+EXP_SMASH2<-merge(CyanosTaxa, EXP_SMASH, by.x="RastId",by.y="RastId") 
+
+npf<-qplot(TOTAL.x, TOTAL.y, data = EXP_SMASH2,colour=Family)+theme_bw()+facet_grid(EXP_SMASH2$Order~.,scales="free")+
+        theme( plot.title = element_text(size = 14, face = "bold"),
+              text = element_text(size = 12),
+              axis.title = element_text(face="bold"),
+              axis.text.x=element_text(size = 12),
+              axis.text.y=element_text(size = 7))
+ggsave("chapter2/Cyanobacteria/npf.pdf", plot = npf,height = 12, width = 6)
+
+#facet_grid(EXP_SMASH$Order~.,scales="free")+
+```
+
+Natural products colured by family
+```{r npf_label, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter2/Cyanobacteria/npf.pdf", caption = "Natural products by family",scale=.6,label = "npf", type = "figure")
+```
+Here is a reference to the Natural products colured by family
+ plot `r ref("npf")`. 
+\clearpage 
+
+<!------------------------------------------------------------------------------------------------------------->
+
+##Selected trees from EvoMining
+Phosphoribosyl_isomerase_3 family  
+Figure from EvoMining
+
+```{r Phosphoribosyl_isomerase_evo_tree, results = "asis",message=FALSE, echo=FALSE}
+
+label(path = "chapter2/Cyanobacteria/tree64.png", caption = "Phosphoribosyl isomerase EvoMiningtree", 
+      scale = .25,
+      angle = 180,
+      label = "Phosphoribosyl_isomerase_evo_tree", type = "figure")
+
+label(path = "chapter2/Cyanobacteria/tree1.png", caption = "Phosphoglycerate dehydrogenase EvoMiningtree",scale = .25,
+      angle = 180,
+      label = "Phosphoglycerate_dehydrogenase_evo_tree", type = "figure")
+
+label(path = "chapter2/Cyanobacteria/tree2.png", caption = "Phosphoserine aminotransferase EvoMiningtree", 
+      scale = .25,
+      angle = 180,
+      label = "Phosphoserine_aminotransferase_evo_tree", type = "figure")
+
+label(path = "chapter2/Cyanobacteria/tree10.png", caption = "Triosephosphate isomerase EvoMiningtree", 
+      scale = .25,
+      angle = 180,
+      label = "Triosephosphate_isomerase_evo_tree", type = "figure")
+
+label(path = "chapter2/Cyanobacteria/tree11.png", caption = "glyceraldehyde3phosphate dehydrogenase EvoMiningtree", 
+      scale = .25,
+      angle = 180,
+      label = "glyceraldehyde3phosphate_dehydrogenase_evo_tree", type = "figure")
+
+label(path = "chapter2/Cyanobacteria/tree12.png", caption = "phosphoglycerate kinase EvoMiningtree", 
+      scale = .25,
+      angle = 180,
+      label = "phosphoglycerate_kinase_evo_tree", type = "figure")
+
+label(path = "chapter2/Cyanobacteria/tree13.png", caption = "phosphoglycerate mutaseEvoMiningtree", 
+      scale = .25,
+      angle = 180,
+      label = "phosphoglycerate_mutase_evo_tree", type = "figure")
+
+label(path = "chapter2/Cyanobacteria/tree14.png", caption = "enolase EvoMiningtree", 
+      scale = .25,
+      angle = 180,
+      label = "enolase_evo_tree", type = "figure")
+
+label(path = "chapter2/Cyanobacteria/tree15.png", caption = "Pyruvate kinase EvoMiningtree", 
+      scale = .25,
+      angle = 180,
+      label = "Pyruvate_kinase_evo_tree", type = "figure")
+
+label(path = "chapter2/Cyanobacteria/tree16.png", caption = "Aspartate transaminase EvoMiningtree", 
+      scale = .25,
+      angle = 180,
+      label = "Aspartate_transaminase_evo_tree", type = "figure")
+
+label(path = "chapter2/Cyanobacteria/tree17.png", caption = "Asparagine synthase EvoMiningtree", 
+      scale = .25,
+      angle = 180,
+      label = "Asparagine_synthase_evo_tree", type = "figure")
+
+label(path = "chapter2/Cyanobacteria/tree18.png", caption = "Aspartate kinase EvoMiningtree", 
+      scale = .25,
+      angle = 180,
+      label = "Aspartate_kinase_evo_tree", type = "figure")
+
+label(path = "chapter2/Cyanobacteria/tree19.png", caption = "Aspartate semialdehyde dehydrogenase EvoMiningtree", 
+      scale = .25,
+      angle = 180,
+      label = "Aspartate_semialdehyde_dehydrogenase_evo_tree", type = "figure")
+
+
+label(path = "chapter2/Cyanobacteria/tree20.png", caption = "Homoserine dehydrogenase EvoMiningtree", 
+      scale = .25,
+      angle = 180,
+      label = "Homoserine_dehydrogenase_evo_tree", type = "figure")
+#label(path = "chapter2/Cyanobacteria/tree64.png", caption = "Tree 64", 
+
+```
+\clearpage 

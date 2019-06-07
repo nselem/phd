@@ -28,12 +28,6 @@ if(!require(reedtemplates)){
 library(reedtemplates)
 ```
 
-#CORASON {#ref_labels}   
-<!--- 
-  1) Introducción  
-  2) Métodos de clasificación de BGCs
-  3) Cyanobacterias 
---->  
 #Desarrollo de CORASON como herramienta para organizar clusters biosintéticos y otras vecindades genómicas conservadas.  
 
 
@@ -231,6 +225,6 @@ El tercer clado que se estudió del super clan al que pertenecen las familias ri
 ## CORASON permitió expandir las capacidades de EvoMining y explorar la promiscuidad de familias de BGCs de enzimas divergentes de metabolismo central. 
  Nuestros resultados ilustran como BiG-SCAPE puede identificar conjuntos de BGCs relacionados, en un gran número de secuencias de genomas. Además al usar CORASON para reconstruir las filogenias de BGC para ordenar visualmente la evolución de un cluster biosintético y su diversidad proveen herramientas poderosas para el descubrimiento de nuevos clados de BGC que codifican en consecuencia para nueva quimica. Respecto a los BGCs detoxin/rimosamide, CORASON mostró habilidad para ayudar a minar bases de datos genómicas y descubrir siete nuevas detoxins. Específicamente, la organización de de las variantes de los BGC facilitó la identificación de los correspondientes variaciones en la estructura química -la presencia de un enoyl-CoA hidratasa/isomerasa corresponde a la familia de amida ácido graso detoxin S1 y la presencia de un gen P450 corresponde a la presencia de hidroxilaciones en detoxins P1–P3.
 
-# Discusión
+#### Discusión
 El cluster des está muy conservado, no así los de arsenolípidos, ni los de rimosamide
 
