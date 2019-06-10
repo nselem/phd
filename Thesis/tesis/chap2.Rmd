@@ -86,7 +86,7 @@ En conclusión el algoritmo de expansión - reclutamiento trabaja para identific
 label(path = "chapter2/FigurasPaper/Figure2.pdf", 
       caption = "Seed genomes",
       label = "SeedGenomes", 
-    scale=".5",
+    scale=".6",
       cap.size = "footnotesize",
       alt.cap="",
       type = "figure")
@@ -135,7 +135,7 @@ Basándonos en estas bases de datos del tipo Genome DBs, como es explicado en la
 label(path = "chapter2/FigurasPaper/Figure3.pdf", 
       caption = "Expansion patterns in 42 conserved families",
       label = "ExpansionPatterns", 
-        scale=".5",
+        scale=".6",
       cap.size = "footnotesize",
       alt.cap="EvoMining perfiles de enzimas conservadas seleccionadas. (a) Patrones de expansión de las ocho familias conservadas cuyas copias adicionales participan en la biosíntesis de scytonemin. El conjunto completo de 42 EF se muestra en la Fig. S11. La codificación de colores es la siguiente: rojo para el metabolismo conservado, azul para los reclutamientos anotados en MIBiG, cian para las predicciones antiSMASH de metabolismo especializado, púrpura para la intersección entre el metabolismo conservado y las predicciones antiSMASH, y gris para las expansiones sin destino metabólico conocido. El orden en el eje x es Actinobacteria, Cianobacteria, Pseudomonas y Archaea. Los triángulos indican el linaje con el mayor número de copias por genoma en promedio, y los círculos representan el linaje menos expandido. Aunque Archaea tiende a ser los taxones menos expandidos, esta tendencia se revierte en la familia GDH. (b) Se proporciona un ejemplo de un núcleo frente a un shell EF. AroB es un EF básico porque tiene al menos una copia por genoma, mientras que GDH es un EF de shell debido a su ausencia en tres genomas. A pesar de ser un shell EF, GDH tiene copias adicionales que pueden ser reclutadas en un metabolismo especializado. (c) Modelo para la $nube$ o genoma variable compuesto parcialmente por enzimas que pertenecen a BGC NP. En este modelo, el metabolismo conservado se compone de EF tanto de shell como de núcleo. Estos EF pueden sufrir eventos de expansión, y algunas de las copias adicionales son reclutadas para realizar nuevas funciones en el metabolismo especializado.",
       type = "figure")
@@ -160,16 +160,18 @@ No todas las FEs están expandidas, aunque las 42 familias conservadas están pr
 label(path = "chapter2/FigurasPaper/Figure4.pdf", 
       caption = "EvoMining en cuatro linajes genómicos",
       label = "GenomicLinajes", 
-        scale=".5",
+      scale=".8",
       cap.size = "footnotesize",
-      alt.cap="",
+      alt.cap="n",
       type = "figure")
 ```
+
+
 Con estas observaciones sospechamos que GDH es miembro del shell genome [@koonin_genomics_2008] en los taxa Actinobacteria , Cyanobacteria y Pseudomonas, ya que en promedio está cerca de tener una copia promedio por genoma. El promedio no es suficiente para decir que una familia pertenece al shell, podrían suceder casos sobre todo cuando hay mucha variación n un taxon como en el caso de un domino o un phylum en contraposición con taxones coservados como géneros en los que para una cierta familia la mitad de los genomas de un linaje tuviera dos copias y la otra mitad cero.  Sin embargo en el caso de la GDH si es consistente en que está presente en más del $50\%$ de los genomas de cada linaje  `r ref(label = "ExpansionPatterns", type = "figure")`  panel (a). Las modas de número de copias también son informativas por ello son mostradas en la figura XXX. Una sóla copia extra puede ser la que sea reclutada en metabolismo especializado. 
   
 En la figura XXX se muestra un ejemplo donde AroB es una enzima core en oposición a GDH que es una enzima shell. En este esquema conceptual, en algunos de los genomas que contienen a AroB existen copias que se dedican al metabolismo especializado marcadas en color cyan, otras copias no tienen un destino metabólico conocido por lo que están marcadas en gris, y otras más marcadas en púrpura son enzimas de transición que están llevando a cabo simultáneamente una función en metabolismo central y otra en metabolismo especializado. En contraste a AroB se muestra GDH, que a pesar de no tener copias en algunos genomas y con un promedio de copias por genoma menor a uno y una moda de uno en esta muestra, GDH existe por duplicado en dos genomas. En uno de esos genomas donde GDH tiene una copia extra, más allá de la moda, esa copia se muestra como un reclutamiento al metabolismo especializado en cyan. `r ref(label = "ExpansionPatterns", type = "figure")`  panel (b) .  
 
-Las expansiones encontradas por EvoMining en la familia GDH incluían predicciones de antiSMASH para Actinobacteria, Cyanobacteria y Archaea, no así para Pseudomonas. La secuencia del reclutamiento de GDH por los clusters biosintéticos scytonemin y el policétido pactamycin [@kudo_cloning_2007], es suficientemente parecida como para que EvoMining la detecte como expansión en Actinobacteria, Cyanobacteria y Archaea, pero es tan divergente respecto a la familia GDH en Pseudomonas que EvoMining lo deja fuera de la familia expandida en este linaje. Los árboles donde puede apreciarse esta observación pueden consultarse más adelante  en la `r ref(label = "GenomicLinajes, type = "figure")` de la siguiente sección.  
+Las expansiones encontradas por EvoMining en la familia GDH incluían predicciones de antiSMASH para Actinobacteria, Cyanobacteria y Archaea, no así para Pseudomonas. La secuencia del reclutamiento de GDH por los clusters biosintéticos scytonemin y el policétido pactamycin [@kudo_cloning_2007], es suficientemente parecida como para que EvoMining la detecte como expansión en Actinobacteria, Cyanobacteria y Archaea, pero es tan divergente respecto a la familia GDH en Pseudomonas que EvoMining lo deja fuera de la familia expandida en este linaje. Los árboles donde puede apreciarse esta observación pueden consultarse más adelante  en la `r ref(label = "GenomicLinajes", type = "figure")` de la siguiente sección.  
 
 Los resultados anteriores sugieren que la evolución del metabolismo especializado es linaje dependiente, y más aún que tal y como ya se conocía en las FEs del core genome las enzimas del shell como GDH también poseen el potencial de ser reclutadas en NP BGCs. A partir de estos resultados `r ref(label = "ExpansionPatterns", type = "figure")`  paneles (a,b), se realizó un esquema conceptual para explicar cómo en linajes genómicos diversos las familias de enzimas con origen en el metabolismo central que forman parte del core genome o bien las familias en el metabolismo conservado que incluye tanto al core como al shell genome, evolucionan al metabolismo especializado que tiene una mayor representación en el cloud genome `r ref(label = "ExpansionPatterns", type = "figure")` panel (c) . Este modelo es relevante porque establece el papel de las familias del shell genome, que no fue considerado en la primera iteración que explotó las capacidades de EvoMining como herramienta de minería genómica para encontrar BGCs novedosos[@navarro-munoz_computational_2018].
   
@@ -179,13 +181,13 @@ Los resultados anteriores sugieren que la evolución del metabolismo especializa
 label(path = "chapter2/FigurasPaper/Figure5.pdf", 
       caption = "EvoMining aplicado a la rama de scytonemina",
       label = "Scytonemin", 
-        scale=".5",
+        scale=".6",
       cap.size = "footnotesize",
       alt.cap="",
       type = "figure")
 ```
 
-En la siguiente sección se analizarán los patrones de expansión reclutamiento de GDH provistas por EvoMining for GDH y se describirán los árboles filogenéticos de cada linaje mostrados en la `r ref(label = "GenomicLinajes, type = "figure")` , así como un árbol que incluye conjuntamente secuencias de todos los linajes (Data 4 and Figs S12 and S13). En Archaea, GDH tiene en promedio 1.23 copias por genoma, mientras en Actinobacteria, Cyanobacteria y Pseudomonas esta media es de 0.74, 0.56 y 0.65, respectivamente. En estos tres taxa GDH es parte del shell genome (Table S2).  
+En la siguiente sección se analizarán los patrones de expansión reclutamiento de GDH provistas por EvoMining for GDH y se describirán los árboles filogenéticos de cada linaje mostrados en la `r ref(label = "GenomicLinajes", type = "figure")` , así como un árbol que incluye conjuntamente secuencias de todos los linajes (Figs S12 and S13). En Archaea, GDH tiene en promedio 1.23 copias por genoma, mientras en Actinobacteria, Cyanobacteria y Pseudomonas esta media es de 0.74, 0.56 y 0.65, respectivamente. En estos tres taxa GDH es parte del shell genome (Table S2).  
   
 Además de GDH se estudiaron las expansiones y los árboles filogenéticos de TrpA, TrpB, TrpC, TrpD, TrpEG, AroB y ALS, todas ellas parte de las 42 FEs conservadas entre los cuatro linajes y a la vez reclutadas en scytonemin[@balskus_investigating_2008,@soule_comparative_2009] un cluster biosintético de Cyanobacteria
 
@@ -194,17 +196,17 @@ La enzima GDH, se encuentra presente en muchos linajes debido tanto a su origen 
 
 Aunque existen otras clasificaciones de la diversidad de enzimas GDH esta fue seleccionada porque se relaciona con la historia evolutiva de la enzima. GDH(NAD+) is utilizada para la oxidación del glutamato mientras que GDH(NADP+) para fijar amonio, algunas enzimas de Archaea funcionan bien con ambos cofactores, es decir tienen promiscuidad de cofactores[@engel_glutamate_2014]. La especificidad por NAD o NADP probablemente emergió en repetidas ocasiones, una evidencia a favor de esta hipótesis es que se ha mostrado que algunas mutaciones pueden revertir la especificidad[@lilley_partial_1991]. Esto sugiere que en los cofactores análogamente al caso de promiscuidad por sustrato, la similitud de secuencia no siempre es suficiente para evidenciar la especificidad. En ocasiones la divergencia o cercanía filogenética de los organismos productores de la enzima es una información adicional a la similitud de secuencia, esta consideración es importante al analizar enzimas en linajes muy divergentes.  
 
-La familia GDH muestra expansiones aunque no muy abundantes en Actinobacteria [Data 5] `r ref(label = "GenomicLinajes, type = "figure")` panel (a) ,y en Cyanobacteria [Data 6] `r ref(label = "GenomicLinajes, type = "figure")` panel(b). Las expansiones están prácticamente ausentes en Pseudomonas [Data 7] `r ref(label = "GenomicLinajes, type = "figure")` panel (c). En contraste, un número significativo de expansiones es encontrado en Archaea [Data 8] `r ref(label = "GenomicLinajes, type = "figure")` panel(d) . El árbol de EvoMining de la familia GDH en Archaea fue enraizado con la secuencia semilla de _Sulfolobus, que fue predicha por RAST como una enzima dual en el uso de cofactores NAD(P)+[@consalvi_glutamate_1991]. En Archaea las tres clases de GDH alternan en las ramas del árbol (Fig. S13, Data 5-8).  
+La familia GDH muestra expansiones aunque no muy abundantes en [Actinobacteria](https://microreact.org/project/r1IhjVm6X?tt=cr)  `r ref(label = "GenomicLinajes", type = "figure")` panel (a) ,y en [Cyanobacteria](https://microreact.org/project/HyjYUN7pQ?tt=cr) `r ref(label = "GenomicLinajes", type = "figure")` panel(b). Las expansiones están prácticamente ausentes en [_Pseudomonas_](https://microreact.org/project/HyjYUN7pQ?tt=cr) `r ref(label = "GenomicLinajes", type = "figure")` panel (c). En contraste, un número significativo de expansiones es encontrado en [Archaea](https://microreact.org/project/ByUcvNmaX?tt=cr) `r ref(label = "GenomicLinajes", type = "figure")` panel(d) . El árbol de EvoMining de la familia GDH en Archaea fue enraizado con la secuencia semilla de _Sulfolobus_, que fue predicha por RAST como una enzima dual en el uso de cofactores NAD(P)+[@consalvi_glutamate_1991]. En Archaea las tres clases de GDH alternan en las ramas del [árbol]( https://microreact.org/project/ByUcvNmaX?tt=cr) (Fig. S13,).  
   
 Muchas de las secuencias clasificadas como de metabolismo conservado se concentran volviendo rojas las ramas basales del árbol. Se observa otro clado más grande y diverso compuesto casi exclusivamente por enzimas específicas para NAD(P)[@ferrer_nadp-glutamate_1996], incluyendo muchas predicciones de antiSMASH, y sólo dos marcadas como metabolsimo conservado. Estas dos marcas pueden deberse a la pérdida real de una enzima d metabolismo central en las ramas centrales o bien a huecos debidos a la calidad del ensamblado y la secuenciación de los genomas.
  
-La anotación funcional de estos ortólogos de GDH apunta hacia reclutamientos en el metabolismo especializado. Estos reclutamientos fueron identificados en organismos de los genera _Haladaptatus_, _Haloterrigena_ , _Natrialba_ , _Natrinema_ , _Natrialbaceae_ y _Natronococcus_. Los genes codificante se encuentran un contexto de posible síntesis de terpenos. Este contexto incluye enzimas relacionadas al geranyl pyrofosfato, un precursor de todos los terpenos y terpenoides[@tholl_terpene_2006]. Este árbol tiene también casos de divergencia reciente, hay una pequeña rama indistinguible en la figura pero explorable en la plataforma microreact donde los parálogos aparecen junto a las secuencias de metabolismo central. Finalmente a pesar de la divergencia las últimas ramas corresponden a enzimas de metabolismo conservado, es decir son las copias más parecidas en esos organismos a las semillas provistas en la Enzyme DB `r ref(label = "GenomicLinajes, type = "figure")` panel(d).  
+La anotación funcional de estos ortólogos de GDH apunta hacia reclutamientos en el metabolismo especializado. Estos reclutamientos fueron identificados en organismos de los genera _Haladaptatus_, _Haloterrigena_ , _Natrialba_ , _Natrinema_ , _Natrialbaceae_ y _Natronococcus_. Los genes codificante se encuentran un contexto de posible síntesis de terpenos. Este contexto incluye enzimas relacionadas al geranyl pyrofosfato, un precursor de todos los terpenos y terpenoides[@tholl_terpene_2006]. Este árbol tiene también casos de divergencia reciente, hay una pequeña rama indistinguible en la figura pero explorable en la plataforma microreact donde los parálogos aparecen junto a las secuencias de metabolismo central. Finalmente a pesar de la divergencia las últimas ramas corresponden a enzimas de metabolismo conservado, es decir son las copias más parecidas en esos organismos a las semillas provistas en la Enzyme DB `r ref(label = "GenomicLinajes", type = "figure")` panel(d).  
   
-En contraste con la amplia expansión de GDH relacionada a las adaptaciones metabólicas en Archaea, el árbol de Cyanobacteria tiene copias extra sólo en el  $4.5\%$ de sus genomas ( `r ref(label = "GenomicLinajes, type = "figure")` panel(b) , Table S2). En esta rama expandida se encontraron cuatro predicciones de antiSMASH y cuatro predicciones de EvoMining en la rama que contiene a ScyB el homólogo de GDH que fue reclutado por el BGC scytonemin. ScyB es pues parte de la síntesis de scytonemin, un pigmento amarillo producido por muchas Cyanobacterias como protección contra la radiación UV-A solar[@balskus_genetic_2010]. _Nostoc punctiforme_ PCC 73102 es el organismo productor de scytonemin cuyo BGC fue caracterizado y anotado en MIBiG. EvoMining sólo unas pocas secuencias GDH copias extra de especies de Nostoc  aún cuando se conoce que homólogos de scyB  pueden encontrarse en estos genomas. Esta observación puede deberse a la gran divergencia de secuencia entre copias de metabolismo central y de metabolismo especializado en estos organismos.  
+En contraste con la amplia expansión de GDH relacionada a las adaptaciones metabólicas en Archaea, el árbol de Cyanobacteria tiene copias extra sólo en el  $4.5\%$ de sus genomas ( `r ref(label = "GenomicLinajes", type = "figure")` panel(b) , Table S2). En esta rama expandida se encontraron cuatro predicciones de antiSMASH y cuatro predicciones de EvoMining en la rama que contiene a ScyB el homólogo de GDH que fue reclutado por el BGC scytonemin. ScyB es pues parte de la síntesis de scytonemin, un pigmento amarillo producido por muchas Cyanobacterias como protección contra la radiación UV-A solar[@balskus_genetic_2010]. _Nostoc punctiforme_ PCC 73102 es el organismo productor de scytonemin cuyo BGC fue caracterizado y anotado en MIBiG. EvoMining sólo unas pocas secuencias GDH copias extra de especies de Nostoc  aún cuando se conoce que homólogos de scyB  pueden encontrarse en estos genomas. Esta observación puede deberse a la gran divergencia de secuencia entre copias de metabolismo central y de metabolismo especializado en estos organismos.  
 
 En la vecindad genómica de algunas expansiones de GDH se observó la secuencia de ALS, un gen identificado en la literatura como homólogo de _scyA_. además, en los BGC conocidos de scytonemin se observó que _scyB_ se conserva cerca del gene _scyA_  `r ref(label = "Scytonemin", type = "figure")` panel (a). _scyA_ es homólogo de la subunidad larga de ALS. Esta familia tiene un número promedio de copias de $1.87\%$ en la base de datos Genome DB de Cyanobacteria. La media es de hecho de $2.1$ copias en organismos que contienen al menos una copia ALS, pero la moda del número de copias es 1 (Table S2). Estos datos indican que muchos organismos tienen más de dos copias de ALS lo que puede correlacionar con que esta familia es más dispersa alrededor de la moda (Fig. S4, blue line).   
   
-Al generar el árbol de EvoMining de ALS en Cyanobacteria (Fig. S11 and Data 9), se observó que _scyA_ es un reclutamiento que se localiza en una rama repleta de secuencias de ALS provenientes de _Nostoc spp._, que fueron etiquetadas como predicciones de EvoMining   `r ref(label = "Scytonemin", type = "figure")`      (c). Estas predicciones incluyen más de veinte organismos conocidos como productores de scytonemin [@balskus_investigating_2008]
+Al generar el [árbol de EvoMining de ALS en Cyanobacteria]( https://microreact.org/project/B11HkUtdm?tt=cr.) , Fig. S11, se observó que _scyA_ es un reclutamiento que se localiza en una rama repleta de secuencias de ALS provenientes de _Nostoc spp._, que fueron etiquetadas como predicciones de EvoMining   `r ref(label = "Scytonemin", type = "figure")`      (c). Estas predicciones incluyen más de veinte organismos conocidos como productores de scytonemin [@balskus_investigating_2008]
 
 Además, ramas cercanas muestran secuencias de ALS queson p redicciones de antiSMASH, reforzando la sugerencia de que esta seción del árbol se dedica al metabolismo especializado. Una última rama contiene a los mismos organismos encontrados en el árbol de EvoMining de la familia GDH. Estos organismos son mostrados en el zoom de la rama de _scyB_ `r ref(label = "Scytonemin", type = "figure")` panel(b).    
 
@@ -215,7 +217,7 @@ Además, ramas cercanas muestran secuencias de ALS queson p redicciones de antiS
 label(path = "chapter2/FigurasPaper/Figure6.pdf", 
       caption = "EvoMining Algorithm",
       label = "Ruta",
-        scale=".5",
+        scale=".8",
       cap.size = "footnotesize",
       alt.cap="",
       type = "figure")
@@ -233,15 +235,28 @@ El primer cluster caracterizado de scytonemin, mostrado en la figura `r ref(labe
 label(path = "chapter2/FigurasPaper/Figure7.pdf", 
       caption = "EvoMining Algorithm",
       label = "CorasonScytonemina", 
-        scale=".5",
+        scale=".8",
       cap.size = "footnotesize",
+           angle = 90,
       alt.cap="",
       type = "figure")
 ```
 
 
 
-Además de GDH y ALS el BGC de scytonemin tiene seis familias que son parte de las 42 FEs analizadas aquí, es decir 8 de los genes que participan en la síntesis de scytonemin tienen un origen en metabolismo central y fueron reclutados en el cluster de scytonemin (  `r ref(label = "ExpansionPatterns", type = "figure")`  panel 1, Table S3). (   `r ref(label = "Scytonemin", type = "figure")` and S3–S9). De estas familias, seis de los siete árboles de EvoMining contienen copias extras identificadas como predicciones de EvoMining predictions, debido a que en su rama de expansión se encuentra el correspondiente gen de scytonemin del cluster reportado en MIBiG. Estas familias incluyen AroB y todos los genes de la ruta del L-triptofano excepto trpF. Además los árboles de EvoMining de estas familias incluyen predicciones en ramas que con enzimas provenientes de las rutas de síntesis de otros pigmentos protectores solares como la shinorina y los aminoácidos de tipo mycosporina [@balskus_genetic_2010] (Fig. S8), además de otros productos no relacionados como la welwitindolinona [@hillwig_identification_2014], ambiguina [@li_hapalindole_ambiguine_2015] y la fischerindolina [@li_decoding_2017] (Figs S3–S7). Estos resultados ilustran como EvoMining puede complementar a antiSMASH mediante la identificación de secuencias de NP BGCs no tradicionales.   
+Además de GDH y ALS el BGC de scytonemin tiene seis familias que son parte de las 42 FEs analizadas aquí, es decir 8 de los genes que participan en la síntesis de scytonemin tienen un origen en metabolismo central y fueron reclutados en el cluster de scytonemin (  `r ref(label = "ExpansionPatterns", type = "figure")`  panel 1, Table S3). (   `r ref(label = "Scytonemin", type = "figure")` and S3–S9). De estas familias, seis de los siete árboles de EvoMining contienen copias extras identificadas como predicciones de EvoMining predictions, debido a que en su rama de expansión se encuentra el correspondiente gen de scytonemin del cluster reportado en MIBiG. Estas familias incluyen AroB y todos los genes de la ruta del L-triptofano excepto trpF. Además los árboles de EvoMining de estas familias incluyen predicciones en ramas que con enzimas provenientes de las rutas de síntesis de otros pigmentos protectores solares como la shinorina y los aminoácidos de tipo mycosporina `r ref(label = "AroB", type = "figure")` [@balskus_genetic_2010] , además de otros productos no relacionados como la welwitindolinona [@hillwig_identification_2014], ambiguina [@li_hapalindole_ambiguine_2015] y la fischerindolina [@li_decoding_2017] (Figs S3–S7). Estos resultados ilustran como EvoMining puede complementar a antiSMASH mediante la identificación de secuencias de NP BGCs no tradicionales.   
+
+
+```{r AroB, results = "asis",message=FALSE,echo=FALSE}
+label(path = "EvoMining/supplementary/AroB.png", 
+      caption = "AroB en Cyanobacteria",
+      label = "AroB", 
+        scale=".48",
+      cap.size = "footnotesize",
+      alt.cap="",
+      type = "figure")
+```
+
 
 Para investigar la coocurrencia de ScyA y ScyB, que son necesarias juntas para producir scytonemin, reconstruimos su historia evolutiva conjunta. Para ello se obtuvieron las secuencias de lo genomas donde ambas tenían presencia, se concatenaron sus secuencias y se realizó una filogenia con ellas. Las variantes de la vecindad genómica del BGC de scytonemin fueron visualizadas mediante el uso de corason [@navarro-munoz_computational_2018]. En el siguiente capítulo este software de visualización y organización de vecindades genómicas será explicado con más detalle. Los análisis filogenómicos resultaron en 34 cyanobacterias con diversidad química en el BGC de scytonemin. Es decir en concusión scytonemin es un ejemplo de cluster promiscuo, ya que parece haber un core conservado, pero diversidad en enzimas accesorias y por tanto en sus productos finales.  
   
@@ -281,29 +296,29 @@ Un análisis de EvoMining8 de las expansiones de la familia TauD dioxygenasa mos
 
 En Actinobateria se han reportado dos clusters biosintéticos 
 	 Streptomyces, Rhodococcus, Frankia and Amycolatopsis 	
-	 
-Table [MIBiGTauD]. Occurrences of _tauD_ homologues in secondary metabolism BGCs as reported in MIBiG.
-  
-|No |MIBiG    BGC  |Compound        |Class |Producer Organism   |  
-|---|--------------|----------------|------|--------------------|  
-|1  |653_ADO85576|pentalenolactone|Terpene| _Streptomyces arenae_ |  
-|2  |678_BAC70706|pentalenolactone|Terpene| _Streptomyces avermitilis_ NBRC 14893|  
-|3  |163_ACR50790|tetronasin      |Polyketide| _Streptomyces longisporoflavus_|  
-|4  |961_ABC36162 |bactobolin      |NRP-Polyketide| _Burkholderia thailandensis_ E264 |   
-|5  |287_AAG05698|2-amino-4-methoxy-trans-3-butenoic acid|NRP| _Pseudomonas aeruginosa_ PAO1|  
-|6  |846_ctg1_orf9|tabtoxin|      Other| _Pseudomonas syringae_|  
-|7  |1183_AGC09526|lobophorin|Polyketide| _Streptomyces sp. FXJ7.023_|  
-|8  |1156_ADD83004|platencin|Terpene| _Streptomyces platensis_|  
-|9  |1140_ACO31277|platensimycin- platencin|Terpene| _Streptomyces platensis_ |  
-|10 |1140_ACO31282|platensimycin- platencin|Terpene| _Streptomyces platensis_ |  
-|11 |715_ABW87795|spectinomycin|Saccharide| _Streptomyces spectabilis_ |  
-|12 |1205_KGO40485|communesin|Polyketide| _Penicillium expansum_ |  
-|13 |1205_KGO40482|communesin|Polyketide| _Penicillium expansum_ |  
-|14 |1183_AGC09525|lobophorin|Polyketide| _Streptomyces_ sp. FXJ7.023 |  	
-|15 |654_ABB69741|phenalinolactone|Saccharide-Terpene| _Streptomyces_ sp. Tu6071 |  
-|16 |1070_CAN89617|kirromycin|NRP - Polyketide| _Streptomyces collinus_ Tu 365|  
 
-  
+Table: Homólogos de _tauD_ en BGCs reportados en MIBiG.\label{tab:tauD}
+
+|MIBiG    BGC     |Compound            |Class          |Producer Organism                 |  
+|-------------------|--------------------|---------------|----------------------------------|  
+|653_ADO85576 |pentalenolactone|Terpene| _Streptomyces arenae_  |  
+|678_BAC70706 |pentalenolactone|Terpene| _Streptomyces avermitilis_ NBRC 14893  |  
+|163_ACR50790 |tetronasin      |Polyketide| _Streptomyces longisporoflavus_  |  
+|961_ABC36162 |bactobolin      |NRP-Polyketide| _Burkholderia thailandensis_ E264  |   
+|287_AAG05698 |2-amino-4-methoxy-  trans-3-  butenoic acid|NRP| _Pseudomonas aeruginosa_ PAO1  |  
+|846_ctg1_orf9 |tabtoxin|      Other| _Pseudomonas syringae_  |  
+|1183_AGC09526 |lobophorin|Polyketide| _Streptomyces_ sp. FXJ7.023  |  
+|1156_ADD83004 |platencin|Terpene| _Streptomyces platensis_  |  
+|1140_ACO31277 |platensimycin- platencin|Terpene| _Streptomyces platensis_  |  
+|1140_ACO31282 |platensimycin- platencin|Terpene| _Streptomyces platensis_  |  
+|715_ABW87795 |spectinomycin|Saccharide| _Streptomyces spectabilis_  |  
+|1205_KGO40485 |communesin|Polyketide| _Penicillium expansum_  |  
+|1205_KGO40482 |communesin|Polyketide| _Penicillium expansum_  |  
+|1183_AGC09525 |lobophorin|Polyketide| _Streptomyces_ sp. FXJ7.023  |  	
+|654_ABB69741 |phenalinolactone|Saccharide-Terpene| _Streptomyces_ sp. Tu6071  |  
+|1070_CAN89617 |kirromycin|NRP - Polyketide| _Streptomyces collinus_ Tu 365  |  
+
+La tabla `r ref("tauD", type = "table")` muestra los reclutamientos de _tauD_.    
 
 
   
