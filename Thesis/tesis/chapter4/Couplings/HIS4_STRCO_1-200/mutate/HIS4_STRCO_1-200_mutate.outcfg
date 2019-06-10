@@ -1,0 +1,9 @@
+mutation_matrix_file: output/run1/HIS4_STRCO_1-200/mutate/HIS4_STRCO_1-200_single_mutant_matrix.csv
+mutation_matrix_plot_files:
+- output/run1/HIS4_STRCO_1-200/mutate/HIS4_STRCO_1-200_epistatic_model.html
+- output/run1/HIS4_STRCO_1-200/mutate/HIS4_STRCO_1-200_epistatic_model.pdf
+- output/run1/HIS4_STRCO_1-200/mutate/HIS4_STRCO_1-200_independent_model.html
+- output/run1/HIS4_STRCO_1-200/mutate/HIS4_STRCO_1-200_independent_model.pdf
+mutations_epistatic_pml_files:
+- output/run1/HIS4_STRCO_1-200/mutate/HIS4_STRCO_1-200_epistatic_model.pml
+- output/run1/HIS4_STRCO_1-200/mutate/HIS4_STRCO_1-200_independent_model.pml

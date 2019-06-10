@@ -1,0 +1,326 @@
+alignment_file: output/run1/HIS4_STRCO_1-200/align/HIS4_STRCO_1-200.a2m
+annotation_file: output/run1/HIS4_STRCO_1-200/align/HIS4_STRCO_1-200_annotation.csv
+cns: /opt/cns_solve_1.21/bin/cns
+contact_map_files:
+- output/run1/HIS4_STRCO_1-200/compare/HIS4_STRCO_1-200_significant_ECs_0.9.pdf
+- output/run1/HIS4_STRCO_1-200/compare/HIS4_STRCO_1-200_significant_ECs_0.99.pdf
+- output/run1/HIS4_STRCO_1-200/compare/HIS4_STRCO_1-200_12_ECs.pdf
+- output/run1/HIS4_STRCO_1-200/compare/HIS4_STRCO_1-200_24_ECs.pdf
+- output/run1/HIS4_STRCO_1-200/compare/HIS4_STRCO_1-200_36_ECs.pdf
+- output/run1/HIS4_STRCO_1-200/compare/HIS4_STRCO_1-200_48_ECs.pdf
+- output/run1/HIS4_STRCO_1-200/compare/HIS4_STRCO_1-200_60_ECs.pdf
+- output/run1/HIS4_STRCO_1-200/compare/HIS4_STRCO_1-200_72_ECs.pdf
+- output/run1/HIS4_STRCO_1-200/compare/HIS4_STRCO_1-200_84_ECs.pdf
+- output/run1/HIS4_STRCO_1-200/compare/HIS4_STRCO_1-200_96_ECs.pdf
+- output/run1/HIS4_STRCO_1-200/compare/HIS4_STRCO_1-200_108_ECs.pdf
+- output/run1/HIS4_STRCO_1-200/compare/HIS4_STRCO_1-200_120_ECs.pdf
+- output/run1/HIS4_STRCO_1-200/compare/HIS4_STRCO_1-200_132_ECs.pdf
+- output/run1/HIS4_STRCO_1-200/compare/HIS4_STRCO_1-200_144_ECs.pdf
+- output/run1/HIS4_STRCO_1-200/compare/HIS4_STRCO_1-200_156_ECs.pdf
+- output/run1/HIS4_STRCO_1-200/compare/HIS4_STRCO_1-200_168_ECs.pdf
+- output/run1/HIS4_STRCO_1-200/compare/HIS4_STRCO_1-200_180_ECs.pdf
+- output/run1/HIS4_STRCO_1-200/compare/HIS4_STRCO_1-200_192_ECs.pdf
+- output/run1/HIS4_STRCO_1-200/compare/HIS4_STRCO_1-200_204_ECs.pdf
+- output/run1/HIS4_STRCO_1-200/compare/HIS4_STRCO_1-200_216_ECs.pdf
+- output/run1/HIS4_STRCO_1-200/compare/HIS4_STRCO_1-200_228_ECs.pdf
+cpu: 6
+distmap_monomer: output/run1/HIS4_STRCO_1-200/compare/HIS4_STRCO_1-200_distance_map_monomer
+distmap_multimer: null
+ec_compared_all_file: output/run1/HIS4_STRCO_1-200/compare/HIS4_STRCO_1-200_CouplingScoresCompared_all.csv
+ec_compared_longrange_file: output/run1/HIS4_STRCO_1-200/compare/HIS4_STRCO_1-200_CouplingScoresCompared_longrange.csv
+ec_file: output/run1/HIS4_STRCO_1-200/couplings/HIS4_STRCO_1-200_CouplingScores.csv
+ec_lines_compared_pml_file: output/run1/HIS4_STRCO_1-200/compare/HIS4_STRCO_1-200_draw_ec_lines_compared.pml
+ec_lines_pml_file: output/run1/HIS4_STRCO_1-200/couplings/HIS4_STRCO_1-200_draw_ec_lines.pml
+ec_longrange_file: output/run1/HIS4_STRCO_1-200/couplings/HIS4_STRCO_1-200_CouplingScores_longrange.csv
+effective_sequences: 8020.7
+enrichment_file: output/run1/HIS4_STRCO_1-200/couplings/HIS4_STRCO_1-200_enrichment.csv
+enrichment_pml_files:
+- output/run1/HIS4_STRCO_1-200/couplings/HIS4_STRCO_1-200_enrichment_spheres.pml
+- output/run1/HIS4_STRCO_1-200/couplings/HIS4_STRCO_1-200_enrichment_sausage.pml
+evzoom_file: output/run1/HIS4_STRCO_1-200/couplings/HIS4_STRCO_1-200_evzoom.json
+first_index: 1
+focus_mode: true
+focus_sequence: HIS4_STRCO/1-240
+frequencies_file: output/run1/HIS4_STRCO_1-200/align/HIS4_STRCO_1-200_frequencies.csv
+hhfilter: /opt/hhsuite-3.0-beta.3-Linux/bin/hhfilter
+hittable_file: output/run1/HIS4_STRCO_1-200/align/HIS4_STRCO_1-200.domtblout
+hmmbuild: /opt/hmmer-3.2.1/src/hmmbuild
+hmmsearch: /opt/hmmer-3.2.1/src/hmmsearch
+identities_file: output/run1/HIS4_STRCO_1-200/align/HIS4_STRCO_1-200_identities.csv
+jackhmmer: /opt/hmmer-3.2.1/src/jackhmmer
+maxcluster: /opt/maxcluster64bit
+model_file: output/run1/HIS4_STRCO_1-200/couplings/HIS4_STRCO_1-200.model
+monomer_contacts_file: output/run1/HIS4_STRCO_1-200/compare/HIS4_STRCO_1-200_contacts_monomer.csv
+mutation_dataset_file: null
+num_sequences: 52408
+num_sites: 229
+num_valid_sequences: 51768
+pdb_mmtf_dir: null
+pdb_structure_hits_file: output/run1/HIS4_STRCO_1-200/compare/HIS4_STRCO_1-200_structure_hits.csv
+pdb_structure_hits_unfiltered_file: output/run1/HIS4_STRCO_1-200/compare/HIS4_STRCO_1-200_structure_hits_unfiltered.csv
+plmc: /opt/plmc/bin/plmc
+prefix: output/run1/HIS4_STRCO_1-200/mutate/HIS4_STRCO_1-200
+protocol: standard
+psipred: /opt/psipred/runpsipred_single
+raw_alignment_file: output/run1/HIS4_STRCO_1-200/align/HIS4_STRCO_1-200.sto
+raw_ec_file: output/run1/HIS4_STRCO_1-200/couplings/HIS4_STRCO_1-200_ECs.txt
+raw_focus_alignment_file: output/run1/HIS4_STRCO_1-200/align/HIS4_STRCO_1-200_raw_focus.fasta
+region: null
+region_start: 1
+remapped_pdb_files:
+  output/run1/HIS4_STRCO_1-200/compare/aux/HIS4_STRCO_1-200_1vzw_A_1.pdb: 1
+  output/run1/HIS4_STRCO_1-200/compare/aux/HIS4_STRCO_1-200_2vep_A_2.pdb: 2
+  output/run1/HIS4_STRCO_1-200/compare/aux/HIS4_STRCO_1-200_2x30_A_3.pdb: 3
+  output/run1/HIS4_STRCO_1-200/compare/aux/HIS4_STRCO_1-200_3zs4_A_11.pdb: 11
+  output/run1/HIS4_STRCO_1-200/compare/aux/HIS4_STRCO_1-200_4tx9_A_16.pdb: 16
+  output/run1/HIS4_STRCO_1-200/compare/aux/HIS4_STRCO_1-200_4u28_A_17.pdb: 17
+  output/run1/HIS4_STRCO_1-200/compare/aux/HIS4_STRCO_1-200_4w9t_A_14.pdb: 14
+  output/run1/HIS4_STRCO_1-200/compare/aux/HIS4_STRCO_1-200_4wd0_A_0.pdb: 0
+  output/run1/HIS4_STRCO_1-200/compare/aux/HIS4_STRCO_1-200_4x9s_A_15.pdb: 15
+  output/run1/HIS4_STRCO_1-200/compare/aux/HIS4_STRCO_1-200_5dn1_A_4.pdb: 4
+segments:
+- - A
+  - aa
+  - HIS4_STRCO
+  - 1
+  - 240
+  - - 4
+    - 5
+    - 6
+    - 7
+    - 8
+    - 9
+    - 10
+    - 11
+    - 12
+    - 13
+    - 14
+    - 15
+    - 16
+    - 17
+    - 18
+    - 19
+    - 20
+    - 21
+    - 22
+    - 25
+    - 26
+    - 27
+    - 28
+    - 29
+    - 30
+    - 31
+    - 32
+    - 33
+    - 34
+    - 35
+    - 36
+    - 37
+    - 38
+    - 39
+    - 40
+    - 41
+    - 42
+    - 43
+    - 44
+    - 45
+    - 46
+    - 47
+    - 48
+    - 49
+    - 50
+    - 51
+    - 52
+    - 53
+    - 54
+    - 55
+    - 56
+    - 57
+    - 58
+    - 59
+    - 60
+    - 61
+    - 62
+    - 63
+    - 64
+    - 65
+    - 66
+    - 67
+    - 68
+    - 69
+    - 70
+    - 71
+    - 72
+    - 73
+    - 74
+    - 75
+    - 76
+    - 77
+    - 78
+    - 79
+    - 80
+    - 81
+    - 82
+    - 83
+    - 84
+    - 85
+    - 86
+    - 87
+    - 88
+    - 89
+    - 90
+    - 91
+    - 92
+    - 93
+    - 94
+    - 95
+    - 96
+    - 97
+    - 98
+    - 99
+    - 100
+    - 101
+    - 102
+    - 103
+    - 104
+    - 105
+    - 106
+    - 107
+    - 108
+    - 109
+    - 110
+    - 111
+    - 112
+    - 113
+    - 114
+    - 115
+    - 116
+    - 117
+    - 118
+    - 119
+    - 120
+    - 121
+    - 122
+    - 123
+    - 124
+    - 125
+    - 126
+    - 127
+    - 128
+    - 129
+    - 130
+    - 131
+    - 132
+    - 133
+    - 134
+    - 135
+    - 136
+    - 137
+    - 138
+    - 139
+    - 140
+    - 141
+    - 142
+    - 143
+    - 144
+    - 145
+    - 146
+    - 147
+    - 148
+    - 149
+    - 150
+    - 151
+    - 152
+    - 153
+    - 154
+    - 155
+    - 156
+    - 157
+    - 158
+    - 159
+    - 160
+    - 161
+    - 162
+    - 163
+    - 164
+    - 165
+    - 166
+    - 167
+    - 168
+    - 169
+    - 170
+    - 171
+    - 172
+    - 173
+    - 174
+    - 175
+    - 176
+    - 177
+    - 178
+    - 179
+    - 180
+    - 181
+    - 182
+    - 183
+    - 184
+    - 185
+    - 186
+    - 187
+    - 188
+    - 189
+    - 190
+    - 191
+    - 192
+    - 193
+    - 194
+    - 195
+    - 196
+    - 197
+    - 198
+    - 199
+    - 200
+    - 201
+    - 202
+    - 203
+    - 204
+    - 205
+    - 206
+    - 207
+    - 208
+    - 209
+    - 210
+    - 214
+    - 215
+    - 216
+    - 217
+    - 218
+    - 219
+    - 220
+    - 221
+    - 222
+    - 223
+    - 224
+    - 225
+    - 226
+    - 227
+    - 228
+    - 229
+    - 230
+    - 231
+    - 232
+    - 233
+    - 234
+    - 235
+    - 236
+    - 237
+sequence_download_url: http://www.uniprot.org/uniprot/{}.fasta
+sequence_file: output/run1/HIS4_STRCO_1-200/align/HIS4_STRCO_1-200_full.fa
+sequence_id: HIS4_STRCO
+sifts_mapping_table: /groups/marks/databases/SIFTS/pdb_chain_uniprot_plus_2018_12_4.csv
+sifts_sequence_db: /groups/marks/databases/SIFTS/pdb_chain_uniprot_plus_2018_12_4.fasta
+statistics_file: output/run1/HIS4_STRCO_1-200/align/HIS4_STRCO_1-200_alignment_statistics.csv
+target_sequence_file: output/run1/HIS4_STRCO_1-200/align/HIS4_STRCO_1-200.fa
+theta: 0.8
+uniprot: /groups/marks/databases/jackhmmer/uniprot/uniprot_2018_12.fasta
+uniref100: /groups/marks/databases/jackhmmer/uniref100/uniref100_2018_12.fasta
+uniref90: /groups/marks/databases/jackhmmer/uniref90/uniref90_2018_12.fasta
