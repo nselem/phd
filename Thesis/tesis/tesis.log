@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.17)  11 JUN 2019 00:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.17)  11 JUN 2019 10:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -865,35 +865,39 @@ Package: ltcaption 2013/06/09 v1.4-94 longtable captions (AR)
 Package caption Info: rotating package is loaded.
 ) (/usr/share/texlive/texmf-dist/tex/latex/parskip/parskip.sty
 Package: parskip 2001/04/09 non-zero parskip adjustments
-) (./tesis.aux)
+) (./tesis.aux
+
+LaTeX Warning: Label `fig:PriARutas2' multiply defined.
+
+)
 \openout1 = `tesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 145.
-LaTeX Font Info:    ... okay on input line 145.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 145.
-LaTeX Font Info:    ... okay on input line 145.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 145.
-LaTeX Font Info:    ... okay on input line 145.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 145.
-LaTeX Font Info:    ... okay on input line 145.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 145.
-LaTeX Font Info:    ... okay on input line 145.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 145.
-LaTeX Font Info:    ... okay on input line 145.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 145.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 145.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 146.
+LaTeX Font Info:    ... okay on input line 146.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 146.
+LaTeX Font Info:    ... okay on input line 146.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 146.
+LaTeX Font Info:    ... okay on input line 146.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 146.
+LaTeX Font Info:    ... okay on input line 146.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 146.
+LaTeX Font Info:    ... okay on input line 146.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 146.
+LaTeX Font Info:    ... okay on input line 146.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 146.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 146.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 145.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 145.
-LaTeX Font Info:    ... okay on input line 145.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 145.
+LaTeX Font Info:    ... okay on input line 146.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 146.
+LaTeX Font Info:    ... okay on input line 146.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 146.
 (/usr/share/texmf/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Info: Redefining \microtypecontext on input line 145.
+LaTeX Info: Redefining \microtypecontext on input line 146.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using protrusion set `basicmath'.
@@ -933,7 +937,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box35
-Package hyperref Info: Link coloring OFF on input line 145.
+Package hyperref Info: Link coloring OFF on input line 146.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
@@ -941,52 +945,52 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count133
 )
-LaTeX Info: Redefining \ref on input line 145.
-LaTeX Info: Redefining \pageref on input line 145.
-LaTeX Info: Redefining \nameref on input line 145.
+LaTeX Info: Redefining \ref on input line 146.
+LaTeX Info: Redefining \pageref on input line 146.
+LaTeX Info: Redefining \nameref on input line 146.
 (./tesis.out) (./tesis.out)
 \@outlinefile=\write4
 \openout4 = `tesis.out'.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 149.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 150.
 
 (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 149.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 150.
 
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 149
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 150
 .
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 149
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 150
 .
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 149.
+(Font)              <12> on input line 150.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 149.
+(Font)              <8> on input line 150.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 149.
-LaTeX Font Info:    Try loading font information for U+lasy on input line 149.
+(Font)              <6> on input line 150.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 150.
 (/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 149.
+LaTeX Font Info:    Try loading font information for U+msa on input line 150.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 149.
+LaTeX Font Info:    Try loading font information for U+msb on input line 150.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg
@@ -1009,14 +1013,11 @@ Non-PDF special ignored!
 ] [3] [4
 
 
-] (./tesis.toc [5] [6] [7]
+] (./tesis.toc [5] [6] [7] [8]
 
-Package hyperref Warning: Suppressing empty link on input line 116.
+Package hyperref Warning: Suppressing empty link on input line 121.
 
-
-Underfull \vbox (badness 2426) has occurred while \output is active []
-
-[8])
+)
 \tf@toc=\write5
 \openout5 = `tesis.toc'.
 
@@ -1047,13 +1048,13 @@ Underfull \vbox (badness 1067) has occurred while \output is active []
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.248 
+l.250 
        [1
 
 ]
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 291.
+(hyperref)                than one, level fixed on input line 293.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1065,19 +1066,19 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.315 
+l.317 
        [2]pdfTeX warning (ext4): destination with the same identifier (name{pag
 e.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.376 
+l.378 
        [3]pdfTeX warning (ext4): destination with the same identifier (name{pag
 e.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.429   \subsection
+l.431   \subsection
                    {El papel de la dinamica molecular en la [4] [5]
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 554.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 556.
 
 (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -1087,94 +1088,94 @@ Underfull \vbox (badness 3148) has occurred while \output is active []
 [6] [7] [8
 
 
-] <chapter0/NivelesPromiscuidad.png, id=1026, 792.0676pt x 560.01994pt>
+] <chapter0/NivelesPromiscuidad.png, id=1073, 792.0676pt x 560.01994pt>
 File: chapter0/NivelesPromiscuidad.png Graphic file (type png)
 <use chapter0/NivelesPromiscuidad.png>
 Package pdftex.def Info: chapter0/NivelesPromiscuidad.png used on input line 60
-4.
+6.
 (pdftex.def)             Requested size: 792.06566pt x 560.01857pt.
 
-Overfull \hbox (41.62422pt too wide) in paragraph at lines 604--605
+Overfull \hbox (41.62422pt too wide) in paragraph at lines 606--607
  [][] 
  []
 
 
-LaTeX Warning: Citation `@nobeli_protein_2009' undefined on input line 610.
+LaTeX Warning: Citation `@nobeli_protein_2009' undefined on input line 612.
 
 
 LaTeX Warning: Citation `@lamble_archaea_promiscuou_pathways_2003' undefined on
- input line 610.
+ input line 612.
 
 
 LaTeX Warning: Citation `@weng_promiscuity_specialized_pathways_2012' undefined
- on input line 610.
+ on input line 612.
 
 
 LaTeX Warning: Citation `@baronagomez_occurrence_2003' undefined on input line 
-610.
+612.
 
 
 LaTeX Warning: Citation `@juarez-vazquez_evolution_2017' undefined on input lin
-e 610.
+e 612.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [9 <./chapter0/NivelesPromiscuidad.png>] <chapter0/AntecedentesConceptuales.png
-, id=1038, 963.6pt x 542.025pt>
+, id=1085, 963.6pt x 542.025pt>
 File: chapter0/AntecedentesConceptuales.png Graphic file (type png)
 <use chapter0/AntecedentesConceptuales.png>
 Package pdftex.def Info: chapter0/AntecedentesConceptuales.png used on input li
-ne 651.
+ne 653.
 (pdftex.def)             Requested size: 963.59766pt x 542.02367pt.
 
-Overfull \hbox (48.17883pt too wide) in paragraph at lines 651--652
+Overfull \hbox (48.17883pt too wide) in paragraph at lines 653--654
  [][] 
  []
 
 
-LaTeX Warning: Citation `@carbonell_molecular_2010' undefined on input line 656
+LaTeX Warning: Citation `@carbonell_molecular_2010' undefined on input line 658
 .
 
 
 LaTeX Warning: Citation `@juarez-vazquez_evolution_2017' undefined on input lin
-e 656.
+e 658.
 
 
-LaTeX Warning: Citation `@noda_tesis_2012' undefined on input line 656.
+LaTeX Warning: Citation `@noda_tesis_2012' undefined on input line 658.
 
 
-LaTeX Warning: Citation `@soskine_mutational_2010' undefined on input line 656.
+LaTeX Warning: Citation `@soskine_mutational_2010' undefined on input line 658.
 
 
 
 LaTeX Warning: Citation `@aharoni_evolvability_2005' undefined on input line 65
-6.
+8.
 
 
-LaTeX Warning: Citation `@bloom_neutral_2007' undefined on input line 656.
+LaTeX Warning: Citation `@bloom_neutral_2007' undefined on input line 658.
 
 
 LaTeX Warning: Citation `@zhao__function_prediction_neighbourhood_2014' undefin
-ed on input line 656.
+ed on input line 658.
 
 
 LaTeX Warning: Citation `@juarez-vazquez_evolution_2017' undefined on input lin
-e 656.
+e 658.
 
 
 LaTeX Warning: Citation `@martinez-nunez_lifestyle_2015' undefined on input lin
-e 656.
+e 658.
 
 
-LaTeX Warning: Citation `@zou_evolution_2015' undefined on input line 656.
+LaTeX Warning: Citation `@zou_evolution_2015' undefined on input line 658.
 
 
 LaTeX Warning: Citation `@gatti-lafranconi_flexibility_2013' undefined on input
- line 656.
+ line 658.
 
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 703--707
+Underfull \hbox (badness 10000) in paragraph at lines 705--709
 
  []
 
@@ -1209,7 +1210,7 @@ Underfull \vbox (badness 1325) has occurred while \output is active []
 ]
 
 Package hyperref Warning: Difference (3) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 1090.
+(hyperref)                than one, level fixed on input line 1092.
 
 [23] [24] [25] [26
 
@@ -1217,17 +1218,17 @@ Package hyperref Warning: Difference (3) between bookmark levels is greater
 ]
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 1196.
+(hyperref)                than one, level fixed on input line 1198.
 
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 1198.
+(hyperref)                than one, level fixed on input line 1200.
 
 [27] [28]
 
 Package amsmath Warning: Foreign command \over;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 1300.
+(amsmath)                 on input line 1302.
 
 [29]
 Underfull \vbox (badness 1072) has occurred while \output is active []
@@ -1236,42 +1237,42 @@ Underfull \vbox (badness 1072) has occurred while \output is active []
 
 ]
 Chapter 1.
-<chapter1/coreWiki.png, id=1330, 1038.88126pt x 359.3425pt>
+<chapter1/coreWiki.png, id=1378, 1038.88126pt x 359.3425pt>
 File: chapter1/coreWiki.png Graphic file (type png)
 <use chapter1/coreWiki.png>
-Package pdftex.def Info: chapter1/coreWiki.png used on input line 1547.
+Package pdftex.def Info: chapter1/coreWiki.png used on input line 1549.
 (pdftex.def)             Requested size: 1038.87872pt x 359.34161pt.
 
-Overfull \hbox (2.70715pt too wide) in paragraph at lines 1547--1548
+Overfull \hbox (2.70715pt too wide) in paragraph at lines 1549--1550
  [][] 
  []
 
-[35 <./chapter1/coreWiki.png>] <chapter1/Metabolismo-Pangenoma.png, id=1338, 60
+[35 <./chapter1/coreWiki.png>] <chapter1/Metabolismo-Pangenoma.png, id=1386, 60
 1.24625pt x 261.97874pt>
 File: chapter1/Metabolismo-Pangenoma.png Graphic file (type png)
 <use chapter1/Metabolismo-Pangenoma.png>
 Package pdftex.def Info: chapter1/Metabolismo-Pangenoma.png used on input line 
-1611.
+1613.
 (pdftex.def)             Requested size: 601.24477pt x 261.9781pt.
 
-Overfull \hbox (17.31357pt too wide) in paragraph at lines 1611--1612
+Overfull \hbox (17.31357pt too wide) in paragraph at lines 1613--1614
  [][] 
  []
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 1612.
+(Font)              <10> on input line 1614.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 1612.
+(Font)              <7> on input line 1614.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 1612.
+(Font)              <5> on input line 1614.
 [36] [37 <./chapter1/Metabolismo-Pangenoma.png>] <chapter1/CoreMarcadores.png, 
-id=1349, 578.66776pt x 456.97658pt>
+id=1397, 578.66776pt x 456.97658pt>
 File: chapter1/CoreMarcadores.png Graphic file (type png)
 <use chapter1/CoreMarcadores.png>
-Package pdftex.def Info: chapter1/CoreMarcadores.png used on input line 1654.
+Package pdftex.def Info: chapter1/CoreMarcadores.png used on input line 1656.
 (pdftex.def)             Requested size: 578.66634pt x 456.97545pt.
 
-Overfull \hbox (29.31483pt too wide) in paragraph at lines 1654--1655
+Overfull \hbox (29.31483pt too wide) in paragraph at lines 1656--1657
  [][] 
  []
 
@@ -1279,87 +1280,87 @@ Overfull \hbox (29.31483pt too wide) in paragraph at lines 1654--1655
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [38] [39 <./chapter1/CoreMarcadores.png>] <chapter1/Best-n-directional.png, id=
-1363, 691.58376pt x 210.7875pt>
+1410, 691.58376pt x 210.7875pt>
 File: chapter1/Best-n-directional.png Graphic file (type png)
 <use chapter1/Best-n-directional.png>
 Package pdftex.def Info: chapter1/Best-n-directional.png used on input line 173
-2.
+4.
 (pdftex.def)             Requested size: 691.58206pt x 210.78699pt.
-[40] [41 <./chapter1/Best-n-directional.png>] [42] <chapter1/Nostoc.png, id=137
-9, 1060.96375pt x 795.97375pt>
+[40] [41 <./chapter1/Best-n-directional.png>] [42] <chapter1/Nostoc.png, id=142
+6, 1060.96375pt x 795.97375pt>
 File: chapter1/Nostoc.png Graphic file (type png)
 <use chapter1/Nostoc.png>
-Package pdftex.def Info: chapter1/Nostoc.png used on input line 1866.
+Package pdftex.def Info: chapter1/Nostoc.png used on input line 1868.
 (pdftex.def)             Requested size: 1060.96115pt x 795.97182pt.
 
-Overfull \hbox (43.80928pt too wide) in paragraph at lines 1866--1867
+Overfull \hbox (43.80928pt too wide) in paragraph at lines 1868--1869
  [][] 
  []
 
 
-Underfull \hbox (badness 1072) in paragraph at lines 1885--1885
+Underfull \hbox (badness 1072) in paragraph at lines 1887--1887
 []\T1/lmr/bx/n/14.4 Identificación de genes mar-cadores de Clav-ibac-ter
  []
 
-[43] [44 <./chapter1/Nostoc.png>] <chapter1/Marcadores-Clavibacter.png, id=1391
+[43] [44 <./chapter1/Nostoc.png>] <chapter1/Marcadores-Clavibacter.png, id=1438
 , 963.6pt x 542.025pt>
 File: chapter1/Marcadores-Clavibacter.png Graphic file (type png)
 <use chapter1/Marcadores-Clavibacter.png>
 Package pdftex.def Info: chapter1/Marcadores-Clavibacter.png used on input line
- 1905.
+ 1907.
 (pdftex.def)             Requested size: 963.59766pt x 542.02367pt.
 
-Overfull \hbox (48.17883pt too wide) in paragraph at lines 1905--1906
+Overfull \hbox (48.17883pt too wide) in paragraph at lines 1907--1908
  [][] 
  []
 
 [45 <./chapter1/Marcadores-Clavibacter.png (PNG copy)>] <chapter1/clv.png, id=1
-399, 758.20982pt x 363.35056pt>
+446, 758.20982pt x 363.35056pt>
 File: chapter1/clv.png Graphic file (type png)
 <use chapter1/clv.png>
-Package pdftex.def Info: chapter1/clv.png used on input line 1925.
+Package pdftex.def Info: chapter1/clv.png used on input line 1927.
 (pdftex.def)             Requested size: 758.20798pt x 363.34967pt.
 
-Overfull \hbox (21.30942pt too wide) in paragraph at lines 1925--1926
+Overfull \hbox (21.30942pt too wide) in paragraph at lines 1927--1928
  [][] 
  []
 
-[46 <./chapter1/clv.png>] <chapter1/CoreGenomeMicrobioma.png, id=1407, 867.24pt
+[46 <./chapter1/clv.png>] <chapter1/CoreGenomeMicrobioma.png, id=1454, 867.24pt
  x 1011.78pt>
 File: chapter1/CoreGenomeMicrobioma.png Graphic file (type png)
 <use chapter1/CoreGenomeMicrobioma.png>
 Package pdftex.def Info: chapter1/CoreGenomeMicrobioma.png used on input line 1
-979.
+981.
 (pdftex.def)             Requested size: 867.2379pt x 1011.77753pt.
-[47] [48 <./chapter1/CoreGenomeMicrobioma.png>] <chapter1/Clavisual.png, id=141
-9, 982.67125pt x 401.5pt>
+[47] [48 <./chapter1/CoreGenomeMicrobioma.png>] <chapter1/Clavisual.png, id=146
+6, 982.67125pt x 401.5pt>
 File: chapter1/Clavisual.png Graphic file (type png)
 <use chapter1/Clavisual.png>
-Package pdftex.def Info: chapter1/Clavisual.png used on input line 2042.
+Package pdftex.def Info: chapter1/Clavisual.png used on input line 2044.
 (pdftex.def)             Requested size: 982.66885pt x 401.49901pt.
 
-Underfull \hbox (badness 5756) in paragraph at lines 2048--2048
+Underfull \hbox (badness 5756) in paragraph at lines 2050--2050
 []\T1/lmr/bx/n/14.4 El pangenoma de Clav-ibac-ter Michi-ga-nen-sis es
  []
 
-[49 <./chapter1/Clavisual.png>] <chapter1/bpga-pangenoma.png, id=1426, 986.6862
+[49 <./chapter1/Clavisual.png>] <chapter1/bpga-pangenoma.png, id=1473, 986.6862
 5pt x 379.4175pt>
 File: chapter1/bpga-pangenoma.png Graphic file (type png)
 <use chapter1/bpga-pangenoma.png>
-Package pdftex.def Info: chapter1/bpga-pangenoma.png used on input line 2068.
+Package pdftex.def Info: chapter1/bpga-pangenoma.png used on input line 2070.
 (pdftex.def)             Requested size: 986.68384pt x 379.41656pt.
 
-Overfull \hbox (59.72192pt too wide) in paragraph at lines 2068--2069
+Overfull \hbox (59.72192pt too wide) in paragraph at lines 2070--2071
  [][] 
  []
 
-<chapter1/Venn_chart.pdf, id=1428, 803.0pt x 638.385pt>
+<chapter1/Venn_chart.pdf, id=1475, 803.0pt x 638.385pt>
 File: chapter1/Venn_chart.pdf Graphic file (type pdf)
 <use chapter1/Venn_chart.pdf>
-Package pdftex.def Info: chapter1/Venn_chart.pdf used on input line 2080.
+Package pdftex.def Info: chapter1/Venn_chart.pdf used on input line 2082.
 (pdftex.def)             Requested size: 802.99805pt x 638.38342pt.
 
-Overfull \hbox (48.18373pt too wide) in paragraph at lines 2080--2081
+Overfull \hbox (48.18373pt too wide) in paragraph at lines 2082--2083
  [][] 
  []
 
@@ -1369,31 +1370,31 @@ Overfull \hbox (48.18373pt too wide) in paragraph at lines 2080--2081
 ]
 Chapter 2.
 
-Underfull \hbox (badness 1975) in paragraph at lines 2275--2275
+Underfull \hbox (badness 1975) in paragraph at lines 2277--2277
 []\T1/lmr/bx/n/17.28 EvoMining es un método para en-con-trar
  []
 
 
-Overfull \hbox (10.02635pt too wide) in paragraph at lines 2280--2280
+Overfull \hbox (10.02635pt too wide) in paragraph at lines 2282--2282
 []\T1/lmr/bx/n/17.28 Consideraciones evo-lu-ti-vas en min-ería genómica
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[55] <chapter2/FigurasPaper/Figure1.pdf, id=1500, 642.4pt x 481.8pt>
+[55] <chapter2/FigurasPaper/Figure1.pdf, id=1547, 642.4pt x 481.8pt>
 File: chapter2/FigurasPaper/Figure1.pdf Graphic file (type pdf)
 <use chapter2/FigurasPaper/Figure1.pdf>
 Package pdftex.def Info: chapter2/FigurasPaper/Figure1.pdf used on input line 2
-302.
+304.
 (pdftex.def)             Requested size: 642.39844pt x 481.79881pt.
 
-Overfull \hbox (16.05695pt too wide) in paragraph at lines 2302--2303
+Overfull \hbox (16.05695pt too wide) in paragraph at lines 2304--2305
  [][] 
  []
 
 
-Underfull \hbox (badness 1997) in paragraph at lines 2311--2311
+Underfull \hbox (badness 1997) in paragraph at lines 2313--2313
 []\T1/lmr/bx/n/14.4 EvoMining es un paradigma que per-mite ubicar
  []
 
@@ -1401,118 +1402,118 @@ Underfull \hbox (badness 1997) in paragraph at lines 2311--2311
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [56] [57 <./chapter2/FigurasPaper/Figure1.pdf>] [58] <chapter2/FigurasPaper/Fig
-ure2.pdf, id=1881, 845.04686pt x 597.50786pt>
+ure2.pdf, id=1928, 845.04686pt x 597.50786pt>
 File: chapter2/FigurasPaper/Figure2.pdf Graphic file (type pdf)
 <use chapter2/FigurasPaper/Figure2.pdf>
 Package pdftex.def Info: chapter2/FigurasPaper/Figure2.pdf used on input line 2
-387.
+389.
 (pdftex.def)             Requested size: 845.0448pt x 597.5064pt.
 
-Overfull \hbox (73.41203pt too wide) in paragraph at lines 2387--2388
+Overfull \hbox (73.41203pt too wide) in paragraph at lines 2389--2390
  [][] 
  []
 
 
-Underfull \hbox (badness 1331) in paragraph at lines 2393--2393
+Underfull \hbox (badness 1331) in paragraph at lines 2395--2395
 []\T1/lmr/bx/n/14.4 Algoritmo de re-con-struc-ción filo-genética y vi-su-al-
  []
 
 [59] [60 <./chapter2/FigurasPaper/Figure2.pdf>] <chapter2/zenodo_1219709.png, i
-d=10398, 149.41635pt x 16.00443pt>
+d=10445, 149.41635pt x 16.00443pt>
 File: chapter2/zenodo_1219709.png Graphic file (type png)
 <use chapter2/zenodo_1219709.png>
-Package pdftex.def Info: chapter2/zenodo_1219709.png used on input line 2484.
+Package pdftex.def Info: chapter2/zenodo_1219709.png used on input line 2486.
 (pdftex.def)             Requested size: 149.41597pt x 16.00436pt.
 [61]
 File: chapter2/zenodo_1219709.png Graphic file (type png)
 <use chapter2/zenodo_1219709.png>
-Package pdftex.def Info: chapter2/zenodo_1219709.png used on input line 2551.
+Package pdftex.def Info: chapter2/zenodo_1219709.png used on input line 2553.
 (pdftex.def)             Requested size: 149.41597pt x 16.00436pt.
 [62 <./chapter2/zenodo_1219709.png>] <chapter2/FigurasPaper/Figure3.pdf, id=104
-21, 845.04686pt x 597.50786pt>
+69, 845.04686pt x 597.50786pt>
 File: chapter2/FigurasPaper/Figure3.pdf Graphic file (type pdf)
 <use chapter2/FigurasPaper/Figure3.pdf>
 Package pdftex.def Info: chapter2/FigurasPaper/Figure3.pdf used on input line 2
-595.
+597.
 (pdftex.def)             Requested size: 845.0448pt x 597.5064pt.
 
-Overfull \hbox (73.41203pt too wide) in paragraph at lines 2595--2596
+Overfull \hbox (73.41203pt too wide) in paragraph at lines 2597--2598
  [][] 
  []
 
 [63] [64 <./chapter2/FigurasPaper/Figure3.pdf>]
-Underfull \hbox (badness 1490) in paragraph at lines 2622--2630
+Underfull \hbox (badness 1490) in paragraph at lines 2624--2632
 []\T1/lmr/m/n/12 (+20) Esta ob-ser-vación es con-gru-ente con que las ar-chaeoc
 i-nas, dice-topiper-az-i-nas,
  []
 
-[65] <chapter2/FigurasPaper/Figure4.pdf, id=11313, 597.50786pt x 845.04686pt>
+[65] <chapter2/FigurasPaper/Figure4.pdf, id=11360, 597.50786pt x 845.04686pt>
 File: chapter2/FigurasPaper/Figure4.pdf Graphic file (type pdf)
 <use chapter2/FigurasPaper/Figure4.pdf>
 Package pdftex.def Info: chapter2/FigurasPaper/Figure4.pdf used on input line 2
-685.
+687.
 (pdftex.def)             Requested size: 597.5064pt x 845.0448pt.
 
-Overfull \hbox (44.38693pt too wide) in paragraph at lines 2685--2686
+Overfull \hbox (44.38693pt too wide) in paragraph at lines 2687--2688
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 49.3584pt on input line 2688.
+LaTeX Warning: Float too large for page by 49.3584pt on input line 2690.
 
 [66] [67 <./chapter2/FigurasPaper/Figure4.pdf>] <chapter2/FigurasPaper/Figure5.
-pdf, id=11370, 845.04686pt x 597.50786pt>
+pdf, id=11417, 845.04686pt x 597.50786pt>
 File: chapter2/FigurasPaper/Figure5.pdf Graphic file (type pdf)
 <use chapter2/FigurasPaper/Figure5.pdf>
 Package pdftex.def Info: chapter2/FigurasPaper/Figure5.pdf used on input line 2
-752.
+754.
 (pdftex.def)             Requested size: 845.0448pt x 597.5064pt.
 
-Overfull \hbox (73.41203pt too wide) in paragraph at lines 2752--2753
+Overfull \hbox (73.41203pt too wide) in paragraph at lines 2754--2755
  [][] 
  []
 
 [68] [69 <./chapter2/FigurasPaper/Figure5.pdf>] [70] <chapter2/FigurasPaper/Fig
-ure6.pdf, id=11469, 597.50786pt x 845.04686pt>
+ure6.pdf, id=11516, 597.50786pt x 845.04686pt>
 File: chapter2/FigurasPaper/Figure6.pdf Graphic file (type pdf)
 <use chapter2/FigurasPaper/Figure6.pdf>
 Package pdftex.def Info: chapter2/FigurasPaper/Figure6.pdf used on input line 2
-902.
+904.
 (pdftex.def)             Requested size: 597.5064pt x 845.0448pt.
 
-Overfull \hbox (44.38693pt too wide) in paragraph at lines 2902--2903
+Overfull \hbox (44.38693pt too wide) in paragraph at lines 2904--2905
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 49.3584pt on input line 2905.
+LaTeX Warning: Float too large for page by 49.3584pt on input line 2907.
 
 
 Underfull \vbox (badness 4967) has occurred while \output is active []
 
 [71] [72 <./chapter2/FigurasPaper/Figure6.pdf>] <chapter2/FigurasPaper/Figure7.
-pdf, id=11696, 792.23143pt x 560.16362pt>
+pdf, id=11743, 792.23143pt x 560.16362pt>
 File: chapter2/FigurasPaper/Figure7.pdf Graphic file (type pdf)
 <use chapter2/FigurasPaper/Figure7.pdf>
 Package pdftex.def Info: chapter2/FigurasPaper/Figure7.pdf used on input line 2
-954.
+956.
 (pdftex.def)             Requested size: 792.22949pt x 560.16225pt.
 
-Overfull \hbox (14.5115pt too wide) in paragraph at lines 2954--2955
+Overfull \hbox (14.5115pt too wide) in paragraph at lines 2956--2957
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 7.106pt on input line 2957.
+LaTeX Warning: Float too large for page by 7.106pt on input line 2959.
 
-<EvoMining/supplementary/AroB.png, id=11704, 1136.245pt x 604.2575pt>
+<EvoMining/supplementary/AroB.png, id=11751, 1136.245pt x 604.2575pt>
 File: EvoMining/supplementary/AroB.png Graphic file (type png)
 <use EvoMining/supplementary/AroB.png>
 Package pdftex.def Info: EvoMining/supplementary/AroB.png used on input line 29
-86.
+88.
 (pdftex.def)             Requested size: 1136.24222pt x 604.25603pt.
 
-Overfull \hbox (111.77141pt too wide) in paragraph at lines 2986--2987
+Overfull \hbox (111.77141pt too wide) in paragraph at lines 2988--2989
  [][] 
  []
 
@@ -1520,47 +1521,47 @@ Overfull \hbox (111.77141pt too wide) in paragraph at lines 2986--2987
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [75 <./EvoMining/supplementary/AroB.png>] [76] [77]
-Overfull \hbox (3.7167pt too wide) in paragraph at lines 3229--3231
+Overfull \hbox (3.7167pt too wide) in paragraph at lines 3231--3233
 []|\T1/lmr/m/n/12 (-20) 1183_AGC09526|  
  []
 
 
-Overfull \hbox (4.2813pt too wide) in paragraph at lines 3238--3240
+Overfull \hbox (4.2813pt too wide) in paragraph at lines 3240--3242
 []|\T1/lmr/m/n/12 (-20) 1156_ADD83004|  
  []
 
 
-Overfull \hbox (3.63832pt too wide) in paragraph at lines 3247--3249
+Overfull \hbox (3.63832pt too wide) in paragraph at lines 3249--3251
 []|\T1/lmr/m/n/12 (-20) 1140_ACO31277|  
  []
 
 
-Overfull \hbox (3.63832pt too wide) in paragraph at lines 3256--3258
+Overfull \hbox (3.63832pt too wide) in paragraph at lines 3258--3260
 []|\T1/lmr/m/n/12 (-20) 1140_ACO31282|  
  []
 
 
-Overfull \hbox (0.9199pt too wide) in paragraph at lines 3265--3267
+Overfull \hbox (0.9199pt too wide) in paragraph at lines 3267--3269
 []|\T1/lmr/m/n/12 (-20) 715_ABW87795|  
  []
 
 
-Overfull \hbox (4.67714pt too wide) in paragraph at lines 3274--3276
+Overfull \hbox (4.67714pt too wide) in paragraph at lines 3276--3278
 []|\T1/lmr/m/n/12 (-20) 1205_KGO40485|  
  []
 
 
-Overfull \hbox (4.67714pt too wide) in paragraph at lines 3283--3285
+Overfull \hbox (4.67714pt too wide) in paragraph at lines 3285--3287
 []|\T1/lmr/m/n/12 (-20) 1205_KGO40482|  
  []
 
 
-Overfull \hbox (3.7167pt too wide) in paragraph at lines 3292--3294
+Overfull \hbox (3.7167pt too wide) in paragraph at lines 3294--3296
 []|\T1/lmr/m/n/12 (-20) 1183_AGC09525|  
  []
 
 
-Overfull \hbox (3.64034pt too wide) in paragraph at lines 3310--3312
+Overfull \hbox (3.64034pt too wide) in paragraph at lines 3312--3314
 []|\T1/lmr/m/n/12 (-20) 1070_CAN89617|  
  []
 
@@ -1571,86 +1572,86 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 ]
 Chapter 3.
-<chapter3/Corason-pipe.pdf, id=12239, 768.22438pt x 475.16103pt>
+<chapter3/Corason-pipe.pdf, id=12286, 768.22438pt x 475.16103pt>
 File: chapter3/Corason-pipe.pdf Graphic file (type pdf)
 <use chapter3/Corason-pipe.pdf>
-Package pdftex.def Info: chapter3/Corason-pipe.pdf used on input line 3330.
+Package pdftex.def Info: chapter3/Corason-pipe.pdf used on input line 3332.
 (pdftex.def)             Requested size: 768.22252pt x 475.15987pt.
 
-Overfull \hbox (27.31819pt too wide) in paragraph at lines 3330--3331
+Overfull \hbox (27.31819pt too wide) in paragraph at lines 3332--3333
  [][] 
  []
 
-<chapter3/ISBATalk.png, id=12241, 963.6pt x 542.025pt>
+<chapter3/ISBATalk.png, id=12288, 963.6pt x 542.025pt>
 File: chapter3/ISBATalk.png Graphic file (type png)
 <use chapter3/ISBATalk.png>
-Package pdftex.def Info: chapter3/ISBATalk.png used on input line 3370.
+Package pdftex.def Info: chapter3/ISBATalk.png used on input line 3372.
 (pdftex.def)             Requested size: 963.59766pt x 542.02367pt.
 [81] [82 <./chapter3/Corason-pipe.pdf>] [83 <./chapter3/ISBATalk.png (PNG copy)
->] <chapter3/des.png, id=12269, 670.505pt x 609.27625pt>
+>] <chapter3/des.png, id=12316, 670.505pt x 609.27625pt>
 File: chapter3/des.png Graphic file (type png)
 <use chapter3/des.png>
-Package pdftex.def Info: chapter3/des.png used on input line 3450.
+Package pdftex.def Info: chapter3/des.png used on input line 3452.
 (pdftex.def)             Requested size: 670.50337pt x 609.27475pt.
-<chapter3/Coelicolor.pdf, id=12271, 1053.9375pt x 677.53125pt>
+<chapter3/Coelicolor.pdf, id=12318, 1053.9375pt x 677.53125pt>
 File: chapter3/Coelicolor.pdf Graphic file (type pdf)
 <use chapter3/Coelicolor.pdf>
-Package pdftex.def Info: chapter3/Coelicolor.pdf used on input line 3459.
+Package pdftex.def Info: chapter3/Coelicolor.pdf used on input line 3461.
 (pdftex.def)             Requested size: 1053.93494pt x 677.52959pt.
-<chapter3/azoxy.png, id=12273, 1120.185pt x 343.2825pt>
+<chapter3/azoxy.png, id=12320, 1120.185pt x 343.2825pt>
 File: chapter3/azoxy.png Graphic file (type png)
 <use chapter3/azoxy.png>
-Package pdftex.def Info: chapter3/azoxy.png used on input line 3468.
+Package pdftex.def Info: chapter3/azoxy.png used on input line 3470.
 (pdftex.def)             Requested size: 1120.18227pt x 343.28165pt.
 
-Overfull \hbox (14.44606pt too wide) in paragraph at lines 3468--3469
+Overfull \hbox (14.44606pt too wide) in paragraph at lines 3470--3471
  [][] 
  []
 
-<chapter3/PseudomonasTauD.pdf, id=12275, 597.50786pt x 626.34pt>
+<chapter3/PseudomonasTauD.pdf, id=12322, 597.50786pt x 626.34pt>
 File: chapter3/PseudomonasTauD.pdf Graphic file (type pdf)
 <use chapter3/PseudomonasTauD.pdf>
-Package pdftex.def Info: chapter3/PseudomonasTauD.pdf used on input line 3477.
+Package pdftex.def Info: chapter3/PseudomonasTauD.pdf used on input line 3479.
 (pdftex.def)             Requested size: 597.5064pt x 626.33846pt.
 
-Overfull \hbox (104.13211pt too wide) in paragraph at lines 3477--3478
+Overfull \hbox (104.13211pt too wide) in paragraph at lines 3479--3480
  [][] 
  []
 
-<chapter3/corason_fig1.png, id=12277, 1604.99625pt x 879.285pt>
+<chapter3/corason_fig1.png, id=12324, 1604.99625pt x 879.285pt>
 File: chapter3/corason_fig1.png Graphic file (type png)
 <use chapter3/corason_fig1.png>
-Package pdftex.def Info: chapter3/corason_fig1.png used on input line 3486.
+Package pdftex.def Info: chapter3/corason_fig1.png used on input line 3488.
 (pdftex.def)             Requested size: 1604.99234pt x 879.28287pt.
 
-Overfull \hbox (47.8826pt too wide) in paragraph at lines 3486--3487
+Overfull \hbox (47.8826pt too wide) in paragraph at lines 3488--3489
  [][] 
  []
 
-[84] <chapter3/figura5.pdf, id=12283, 614.295pt x 794.97pt>
+[84] <chapter3/figura5.pdf, id=12330, 614.295pt x 794.97pt>
 File: chapter3/figura5.pdf Graphic file (type pdf)
 <use chapter3/figura5.pdf>
-Package pdftex.def Info: chapter3/figura5.pdf used on input line 3495.
+Package pdftex.def Info: chapter3/figura5.pdf used on input line 3497.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 
-Overfull \hbox (57.81667pt too wide) in paragraph at lines 3495--3496
+Overfull \hbox (57.81667pt too wide) in paragraph at lines 3497--3498
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 9.29686pt on input line 3498.
+LaTeX Warning: Float too large for page by 9.29686pt on input line 3500.
 
 [85 <./chapter3/des.png>] [86 <./chapter3/Coelicolor.pdf> <./chapter3/azoxy.png
 >] [87 <./chapter3/PseudomonasTauD.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [88 <./chapter3/corason_fig1.png>] [89 <./chapter3/figura5.pdf>] [90] [91]
-Underfull \hbox (badness 4391) in paragraph at lines 3653--3653
+Underfull \hbox (badness 4391) in paragraph at lines 3655--3655
 []\T1/lmr/bx/n/17.28 CORASON se adaptó a la her-ramienta
  []
 
 
-Underfull \hbox (badness 5417) in paragraph at lines 3669--3669
+Underfull \hbox (badness 5417) in paragraph at lines 3671--3671
 []\T1/lmr/bx/n/17.28 BiG SCAPE y CORA-SON iden-ti-fi-caron
  []
 
@@ -1667,35 +1668,25 @@ Package Fancyhdr Warning: \headheight is too small (27.11652pt):
 [95] [96]
 Chapter 4.
 
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 3894.
-
-
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 3895.
-
-
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 3895.
-
-
 LaTeX Font Warning: Command \tiny invalid in math mode on input line 3896.
 
 
-Overfull \hbox (15.56046pt too wide) in paragraph at lines 3904--3906
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 3897.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 3897.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 3898.
+
+
+Overfull \hbox (15.56046pt too wide) in paragraph at lines 3906--3908
 []|\T1/lmr/m/n/12 (-20) Familia|  
  []
 
 
-Overfull \hbox (7.22774pt too wide) in paragraph at lines 3906--3908
+Overfull \hbox (7.22774pt too wide) in paragraph at lines 3908--3910
 []|\T1/lmr/m/n/12 (-20) HisA 
- []
-
-
-Overfull \hbox (18.40479pt too wide) in paragraph at lines 3906--3908
-\OML/lmm/m/it/12 in vivo$|  
- []
-
-
-Overfull \hbox (7.99748pt too wide) in paragraph at lines 3908--3910
-[]|\T1/lmr/m/n/12 (-20) TrpF 
  []
 
 
@@ -1704,19 +1695,13 @@ Overfull \hbox (18.40479pt too wide) in paragraph at lines 3908--3910
  []
 
 
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 3911.
-
-
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 3911.
-
-
-Overfull \hbox (19.46986pt too wide) in paragraph at lines 3910--3912
-[]|$\OML/lmm/m/it/12 K[]$ 
+Overfull \hbox (7.99748pt too wide) in paragraph at lines 3910--3912
+[]|\T1/lmr/m/n/12 (-20) TrpF 
  []
 
 
-Overfull \hbox (21.45905pt too wide) in paragraph at lines 3910--3912
-[]$|  
+Overfull \hbox (18.40479pt too wide) in paragraph at lines 3910--3912
+\OML/lmm/m/it/12 in vivo$|  
  []
 
 
@@ -1731,19 +1716,19 @@ Overfull \hbox (19.46986pt too wide) in paragraph at lines 3912--3914
  []
 
 
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 3917.
-
-
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 3917.
-
-
-Overfull \hbox (9.06367pt too wide) in paragraph at lines 3916--3918
-[]|$\OML/lmm/m/it/12 K[]$ 
+Overfull \hbox (21.45905pt too wide) in paragraph at lines 3912--3914
+[]$|  
  []
 
 
-Overfull \hbox (25.79286pt too wide) in paragraph at lines 3916--3918
-[]$|  
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 3915.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 3915.
+
+
+Overfull \hbox (19.46986pt too wide) in paragraph at lines 3914--3916
+[]|$\OML/lmm/m/it/12 K[]$ 
  []
 
 
@@ -1758,556 +1743,564 @@ Overfull \hbox (9.06367pt too wide) in paragraph at lines 3918--3920
  []
 
 
-Overfull \hbox (4.60515pt too wide) in paragraph at lines 3918--3920
+Overfull \hbox (25.79286pt too wide) in paragraph at lines 3918--3920
 []$|  
  []
 
 
-Overfull \hbox (12.33131pt too wide) in paragraph at lines 3920--3922
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 3921.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 3921.
+
+
+Overfull \hbox (9.06367pt too wide) in paragraph at lines 3920--3922
+[]|$\OML/lmm/m/it/12 K[]$ 
+ []
+
+
+Overfull \hbox (4.60515pt too wide) in paragraph at lines 3920--3922
+[]$|  
+ []
+
+
+Overfull \hbox (12.33131pt too wide) in paragraph at lines 3922--3924
 []|\T1/lmr/m/n/12 (-20) TrpF 
  []
 
 
-Overfull \hbox (8.39127pt too wide) in paragraph at lines 3920--3922
+Overfull \hbox (8.39127pt too wide) in paragraph at lines 3922--3924
 []$|  
  []
 
 
-Overfull \hbox (4.59578pt too wide) in paragraph at lines 3922--3924
+Overfull \hbox (4.59578pt too wide) in paragraph at lines 3924--3926
 []|\T1/lmr/m/n/12 (-20) Referencia|  
  []
 
 
-Overfull \hbox (3.32205pt too wide) in paragraph at lines 3929--3931
+Overfull \hbox (3.32205pt too wide) in paragraph at lines 3931--3933
 []|\T1/lmr/m/n/12 (-20) HisA|  
  []
 
 
-Overfull \hbox (4.0448pt too wide) in paragraph at lines 3952--3954
+Overfull \hbox (4.0448pt too wide) in paragraph at lines 3954--3956
 []|\T1/lmr/m/n/12 (-20) TrpF|  
  []
 
 
-Overfull \hbox (7.46313pt too wide) in paragraph at lines 3968--3970
+Overfull \hbox (7.46313pt too wide) in paragraph at lines 3970--3972
 []|\T1/lmr/m/n/12 (-20) 2.82|  
  []
 
 
-Overfull \hbox (10.36812pt too wide) in paragraph at lines 3973--3975
+Overfull \hbox (10.36812pt too wide) in paragraph at lines 3975--3977
 []|\T1/lmr/m/it/12 (-20) Mycobacterium 
  []
 
 
-Overfull \hbox (2.4608pt too wide) in paragraph at lines 3975--3977
+Overfull \hbox (2.4608pt too wide) in paragraph at lines 3977--3979
 []|\T1/lmr/m/n/12 (-20) PriA|  
  []
 
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 3982
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 3984
 .
 (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Overfull \hbox (7.46313pt too wide) in paragraph at lines 3991--3993
+Overfull \hbox (7.46313pt too wide) in paragraph at lines 3993--3995
 []|\T1/lmr/m/n/12 (-20) 0.39|  
  []
 
 
-Overfull \hbox (10.36812pt too wide) in paragraph at lines 3997--3999
+Overfull \hbox (10.36812pt too wide) in paragraph at lines 3999--4001
 []|\T1/lmr/m/it/12 (-20) Mycobacterium 
  []
 
 
-Overfull \hbox (2.4608pt too wide) in paragraph at lines 3999--4001
+Overfull \hbox (2.4608pt too wide) in paragraph at lines 4001--4003
 []|\T1/lmr/m/n/12 (-20) PriA|  
  []
 
 
-Overfull \hbox (7.46313pt too wide) in paragraph at lines 4015--4017
+Overfull \hbox (7.46313pt too wide) in paragraph at lines 4017--4019
 []|\T1/lmr/m/n/12 (-20) 0.17|  
  []
 
 
-Overfull \hbox (2.4608pt too wide) in paragraph at lines 4022--4024
+Overfull \hbox (2.4608pt too wide) in paragraph at lines 4024--4026
 []|\T1/lmr/m/n/12 (-20) PriA|  
  []
 
 
-Overfull \hbox (7.46313pt too wide) in paragraph at lines 4038--4040
+Overfull \hbox (7.46313pt too wide) in paragraph at lines 4040--4042
 []|\T1/lmr/m/n/12 (-20) 0.34|  
  []
 
 
-Overfull \hbox (2.4608pt too wide) in paragraph at lines 4046--4048
+Overfull \hbox (2.4608pt too wide) in paragraph at lines 4048--4050
 []|\T1/lmr/m/n/12 (-20) PriA|  
  []
 
 
-Overfull \hbox (1.70564pt too wide) in paragraph at lines 4062--4064
+Overfull \hbox (1.70564pt too wide) in paragraph at lines 4064--4066
 []|\T1/lmr/m/n/12 (-20) 0.7|  
  []
 
 
-Overfull \hbox (2.4608pt too wide) in paragraph at lines 4070--4072
+Overfull \hbox (2.4608pt too wide) in paragraph at lines 4072--4074
 []|\T1/lmr/m/n/12 (-20) PriA|  
  []
 
 
-Overfull \hbox (1.70564pt too wide) in paragraph at lines 4086--4088
+Overfull \hbox (1.70564pt too wide) in paragraph at lines 4088--4090
 []|\T1/lmr/m/n/12 (-20) 0.7|  
  []
 
 
-Overfull \hbox (1.98355pt too wide) in paragraph at lines 4094--4096
+Overfull \hbox (1.98355pt too wide) in paragraph at lines 4096--4098
 []|\T1/lmr/m/n/12 (-20) PriB|  
  []
 
 
-Overfull \hbox (7.46313pt too wide) in paragraph at lines 4110--4112
+Overfull \hbox (7.46313pt too wide) in paragraph at lines 4112--4114
 []|\T1/lmr/m/n/12 (-20) 0.14|  
  []
 
 
-Overfull \hbox (1.98355pt too wide) in paragraph at lines 4118--4120
+Overfull \hbox (1.98355pt too wide) in paragraph at lines 4120--4122
 []|\T1/lmr/m/n/12 (-20) PriB|  
  []
 
 
-Overfull \hbox (4.25262pt too wide) in paragraph at lines 4130--4132
+Overfull \hbox (4.25262pt too wide) in paragraph at lines 4132--4134
 []|\T1/lmr/m/n/12 (-20) 129.6 
  []
 
 
-Overfull \hbox (18.97812pt too wide) in paragraph at lines 4134--4136
+Overfull \hbox (18.97812pt too wide) in paragraph at lines 4136--4138
 []|\T1/lmr/m/n/12 (-20) 0.0022|  
  []
 
 
-Overfull \hbox (1.98355pt too wide) in paragraph at lines 4142--4144
+Overfull \hbox (1.98355pt too wide) in paragraph at lines 4144--4146
 []|\T1/lmr/m/n/12 (-20) PriB|  
  []
 
 
-Overfull \hbox (1.98355pt too wide) in paragraph at lines 4166--4168
+Overfull \hbox (1.98355pt too wide) in paragraph at lines 4168--4170
 []|\T1/lmr/m/n/12 (-20) PriB|  
  []
 
 
-Overfull \hbox (20.20752pt too wide) in paragraph at lines 4188--4190
+Overfull \hbox (20.20752pt too wide) in paragraph at lines 4190--4192
 []|\T1/lmr/m/it/12 (-20) Corynebacterium 
  []
 
 
-Overfull \hbox (20.65889pt too wide) in paragraph at lines 4190--4192
+Overfull \hbox (20.65889pt too wide) in paragraph at lines 4192--4194
 []|\T1/lmr/m/n/12 (-20) subHisA|  
  []
 
 
-Overfull \hbox (20.20752pt too wide) in paragraph at lines 4211--4213
+Overfull \hbox (20.20752pt too wide) in paragraph at lines 4213--4215
 []|\T1/lmr/m/it/12 (-20) Corynebacterium 
  []
 
 
-Overfull \hbox (2.4608pt too wide) in paragraph at lines 4213--4215
+Overfull \hbox (2.4608pt too wide) in paragraph at lines 4215--4217
 []|\T1/lmr/m/n/12 (-20) PriA|  
  []
 
 
-Overfull \hbox (7.46313pt too wide) in paragraph at lines 4229--4231
+Overfull \hbox (7.46313pt too wide) in paragraph at lines 4231--4233
 []|\T1/lmr/m/n/12 (-20) 0.31|  
  []
 
 
-Overfull \hbox (20.20752pt too wide) in paragraph at lines 4234--4236
+Overfull \hbox (20.20752pt too wide) in paragraph at lines 4236--4238
 []|\T1/lmr/m/it/12 (-20) Corynebacterium 
  []
 
 
-Overfull \hbox (20.65889pt too wide) in paragraph at lines 4236--4238
+Overfull \hbox (20.65889pt too wide) in paragraph at lines 4238--4240
 []|\T1/lmr/m/n/12 (-20) subHisA|  
  []
 
 
-Overfull \hbox (20.20752pt too wide) in paragraph at lines 4257--4259
+Overfull \hbox (20.20752pt too wide) in paragraph at lines 4259--4261
 []|\T1/lmr/m/it/12 (-20) Corynebacterium 
  []
 
 
-Overfull \hbox (20.65889pt too wide) in paragraph at lines 4259--4261
+Overfull \hbox (20.65889pt too wide) in paragraph at lines 4261--4263
 []|\T1/lmr/m/n/12 (-20) subHisA|  
  []
 
 
-Overfull \hbox (18.97812pt too wide) in paragraph at lines 4275--4277
+Overfull \hbox (18.97812pt too wide) in paragraph at lines 4277--4279
 []|\T1/lmr/m/n/12 (-20) 0.0004|  
  []
 
 
-Overfull \hbox (1.98355pt too wide) in paragraph at lines 4282--4284
+Overfull \hbox (1.98355pt too wide) in paragraph at lines 4284--4286
 []|\T1/lmr/m/n/12 (-20) PriB|  
  []
 
 
-Overfull \hbox (21.38164pt too wide) in paragraph at lines 4306--4308
+Overfull \hbox (21.38164pt too wide) in paragraph at lines 4308--4310
 []|\T1/lmr/m/n/12 (-20) subTrpF|  
  []
 
 
-Overfull \hbox (7.46313pt too wide) in paragraph at lines 4322--4324
+Overfull \hbox (7.46313pt too wide) in paragraph at lines 4324--4326
 []|\T1/lmr/m/n/12 (-20) 0.02|  
  []
 
 
-Overfull \hbox (2.4608pt too wide) in paragraph at lines 4330--4332
+Overfull \hbox (2.4608pt too wide) in paragraph at lines 4332--4334
 []|\T1/lmr/m/n/12 (-20) PriA|  
  []
 
 
-Overfull \hbox (7.46313pt too wide) in paragraph at lines 4346--4348
+Overfull \hbox (7.46313pt too wide) in paragraph at lines 4348--4350
 []|\T1/lmr/m/n/12 (-20) 0.01|  
  []
 
 
-Overfull \hbox (2.4608pt too wide) in paragraph at lines 4354--4356
+Overfull \hbox (2.4608pt too wide) in paragraph at lines 4356--4358
 []|\T1/lmr/m/n/12 (-20) PriA|  
  []
 
 
-Overfull \hbox (21.38164pt too wide) in paragraph at lines 4378--4380
+Overfull \hbox (21.38164pt too wide) in paragraph at lines 4380--4382
 []|\T1/lmr/m/n/12 (-20) subTrpF|  
  []
 
 
-Overfull \hbox (18.97812pt too wide) in paragraph at lines 4394--4396
+Overfull \hbox (18.97812pt too wide) in paragraph at lines 4396--4398
 []|\T1/lmr/m/n/12 (-20) 0.0001|  
  []
 
 [97
 
 ]
-Overfull \hbox (2.4608pt too wide) in paragraph at lines 4402--4404
+Overfull \hbox (2.4608pt too wide) in paragraph at lines 4404--4406
 []|\T1/lmr/m/n/12 (-20) PriA|  
  []
 
 
-Overfull \hbox (7.46313pt too wide) in paragraph at lines 4418--4420
+Overfull \hbox (7.46313pt too wide) in paragraph at lines 4420--4422
 []|\T1/lmr/m/n/12 (-20) 0.02|  
  []
 
 
-Overfull \hbox (13.75032pt too wide) in paragraph at lines 4424--4426
+Overfull \hbox (13.75032pt too wide) in paragraph at lines 4426--4428
 []|\T1/lmr/m/it/12 (-20) Bifidobacterium 
  []
 
 
-Overfull \hbox (2.4608pt too wide) in paragraph at lines 4426--4428
+Overfull \hbox (2.4608pt too wide) in paragraph at lines 4428--4430
 []|\T1/lmr/m/n/12 (-20) PriA|  
  []
 
 
-Overfull \hbox (1.70564pt too wide) in paragraph at lines 4442--4444
+Overfull \hbox (1.70564pt too wide) in paragraph at lines 4444--4446
 []|\T1/lmr/m/n/12 (-20) 0.1|  
  []
 
 
-Overfull \hbox (13.75032pt too wide) in paragraph at lines 4448--4450
+Overfull \hbox (13.75032pt too wide) in paragraph at lines 4450--4452
 []|\T1/lmr/m/it/12 (-20) Bifidobacterium 
  []
 
 
-Overfull \hbox (2.4608pt too wide) in paragraph at lines 4450--4452
+Overfull \hbox (2.4608pt too wide) in paragraph at lines 4452--4454
 []|\T1/lmr/m/n/12 (-20) PriA|  
  []
 
 
-Overfull \hbox (7.46313pt too wide) in paragraph at lines 4466--4468
+Overfull \hbox (7.46313pt too wide) in paragraph at lines 4468--4470
 []|\T1/lmr/m/n/12 (-20) 0.04|  
  []
 
 
-Overfull \hbox (13.75032pt too wide) in paragraph at lines 4472--4474
+Overfull \hbox (13.75032pt too wide) in paragraph at lines 4474--4476
 []|\T1/lmr/m/it/12 (-20) Bifidobacterium 
  []
 
 
-Overfull \hbox (2.4608pt too wide) in paragraph at lines 4474--4476
+Overfull \hbox (2.4608pt too wide) in paragraph at lines 4476--4478
 []|\T1/lmr/m/n/12 (-20) PriA|  
  []
 
 
-Overfull \hbox (1.70564pt too wide) in paragraph at lines 4490--4492
+Overfull \hbox (1.70564pt too wide) in paragraph at lines 4492--4494
 []|\T1/lmr/m/n/12 (-20) 0.3|  
  []
 
 
-Overfull \hbox (42.60593pt too wide) in paragraph at lines 4498--4500
+Overfull \hbox (42.60593pt too wide) in paragraph at lines 4500--4502
 []|\T1/lmr/m/n/12 (-20) Metagenoma|  
  []
 
 
-Overfull \hbox (7.46313pt too wide) in paragraph at lines 4514--4516
+Overfull \hbox (7.46313pt too wide) in paragraph at lines 4516--4518
 []|\T1/lmr/m/n/12 (-20) 0.09|  
  []
 
 
-Overfull \hbox (6.03015pt too wide) in paragraph at lines 4519--4521
+Overfull \hbox (6.03015pt too wide) in paragraph at lines 4521--4523
 []|\T1/lmr/m/n/12 (-20) CAM1_A81G|  
  []
 
 
-Overfull \hbox (42.60593pt too wide) in paragraph at lines 4521--4523
+Overfull \hbox (42.60593pt too wide) in paragraph at lines 4523--4525
 []|\T1/lmr/m/n/12 (-20) Metagenoma|  
  []
 
 
-Overfull \hbox (7.46313pt too wide) in paragraph at lines 4537--4539
+Overfull \hbox (7.46313pt too wide) in paragraph at lines 4539--4541
 []|\T1/lmr/m/n/12 (-20) 0.06|  
  []
 
 
-Overfull \hbox (3.39297pt too wide) in paragraph at lines 4542--4544
+Overfull \hbox (3.39297pt too wide) in paragraph at lines 4544--4546
 []|\T1/lmr/m/n/12 (-20) CAM1_A81S|  
  []
 
 
-Overfull \hbox (42.60593pt too wide) in paragraph at lines 4544--4546
+Overfull \hbox (42.60593pt too wide) in paragraph at lines 4546--4548
 []|\T1/lmr/m/n/12 (-20) Metagenoma|  
  []
 
 
-Overfull \hbox (7.46313pt too wide) in paragraph at lines 4560--4562
+Overfull \hbox (7.46313pt too wide) in paragraph at lines 4562--4564
 []|\T1/lmr/m/n/12 (-20) 0.02|  
  []
 
 
-Overfull \hbox (42.60593pt too wide) in paragraph at lines 4567--4569
+Overfull \hbox (42.60593pt too wide) in paragraph at lines 4569--4571
 []|\T1/lmr/m/n/12 (-20) Metagenoma|  
  []
 
 
-Overfull \hbox (15.45303pt too wide) in paragraph at lines 4588--4590
+Overfull \hbox (15.45303pt too wide) in paragraph at lines 4590--4592
 []|\T1/lmr/m/n/12 (-20) PriA_Ancestral|  
  []
 
 
-Overfull \hbox (26.03612pt too wide) in paragraph at lines 4590--4592
+Overfull \hbox (26.03612pt too wide) in paragraph at lines 4592--4594
 []|\T1/lmr/m/n/12 (-20) Ancestral|  
  []
 
 
-Overfull \hbox (12.55028pt too wide) in paragraph at lines 4596--4598
+Overfull \hbox (12.55028pt too wide) in paragraph at lines 4598--4600
 []|\T1/lmr/m/n/12 (-20) 9.4\TS1/lmr/m/n/12 ±\T1/lmr/m/n/12 (-20) 1.6|  
  []
 
 
-Overfull \hbox (24.06526pt too wide) in paragraph at lines 4598--4600
+Overfull \hbox (24.06526pt too wide) in paragraph at lines 4600--4602
 []|\T1/lmr/m/n/12 (-20) 0.3\TS1/lmr/m/n/12 ±\T1/lmr/m/n/12 (-20) 0.009|  
  []
 
 
-Overfull \hbox (16.8841pt too wide) in paragraph at lines 4602--4604
+Overfull \hbox (16.8841pt too wide) in paragraph at lines 4604--4606
 []|\T1/lmr/m/n/12 (-20) 4.3\TS1/lmr/m/n/12 ±\T1/lmr/m/n/12 (-20) 0.4|  
  []
 
 
-Overfull \hbox (22.64159pt too wide) in paragraph at lines 4604--4606
+Overfull \hbox (22.64159pt too wide) in paragraph at lines 4606--4608
 []|\T1/lmr/m/n/12 (-20) 0.6\TS1/lmr/m/n/12 ±\T1/lmr/m/n/12 (-20) 0.02|  
  []
 
 
-Overfull \hbox (7.46313pt too wide) in paragraph at lines 4606--4608
+Overfull \hbox (7.46313pt too wide) in paragraph at lines 4608--4610
 []|\T1/lmr/m/n/12 (-20) 0.13|  
  []
 
 
-Overfull \hbox (11.93126pt too wide) in paragraph at lines 4611--4613
+Overfull \hbox (11.93126pt too wide) in paragraph at lines 4613--4615
 []|\T1/lmr/m/n/12 (-20) PriA_SubHisA|  
  []
 
 
-Overfull \hbox (26.03612pt too wide) in paragraph at lines 4613--4615
+Overfull \hbox (26.03612pt too wide) in paragraph at lines 4615--4617
 []|\T1/lmr/m/n/12 (-20) Ancestral|  
- []
-
-
-Overfull \hbox (18.30777pt too wide) in paragraph at lines 4619--4621
-[]|\T1/lmr/m/n/12 (-20) 3.7\TS1/lmr/m/n/12 ±\T1/lmr/m/n/12 (-20) 1.01|  
  []
 
 
 Overfull \hbox (18.30777pt too wide) in paragraph at lines 4621--4623
+[]|\T1/lmr/m/n/12 (-20) 3.7\TS1/lmr/m/n/12 ±\T1/lmr/m/n/12 (-20) 1.01|  
+ []
+
+
+Overfull \hbox (18.30777pt too wide) in paragraph at lines 4623--4625
 []|\T1/lmr/m/n/12 (-20) 0.5\TS1/lmr/m/n/12 ±\T1/lmr/m/n/12 (-20) 0.03|  
  []
 
 
-Overfull \hbox (35.50658pt too wide) in paragraph at lines 4634--4636
+Overfull \hbox (35.50658pt too wide) in paragraph at lines 4636--4638
 []|\T1/lmr/m/n/12 (-20) SubHisA_Ancestral|  
  []
 
 
-Overfull \hbox (26.03612pt too wide) in paragraph at lines 4636--4638
+Overfull \hbox (26.03612pt too wide) in paragraph at lines 4638--4640
 []|\T1/lmr/m/n/12 (-20) Ancestral|  
  []
 
 
-Overfull \hbox (12.55028pt too wide) in paragraph at lines 4642--4644
+Overfull \hbox (12.55028pt too wide) in paragraph at lines 4644--4646
 []|\T1/lmr/m/n/12 (-20) 6.3\TS1/lmr/m/n/12 ±\T1/lmr/m/n/12 (-20) 0.7|  
  []
 
 
-Overfull \hbox (24.06526pt too wide) in paragraph at lines 4644--4646
+Overfull \hbox (24.06526pt too wide) in paragraph at lines 4646--4648
 []|\T1/lmr/m/n/12 (-20) 0.15\TS1/lmr/m/n/12 ±\T1/lmr/m/n/12 (-20) 0.03|  
  []
 
 
-Overfull \hbox (11.93126pt too wide) in paragraph at lines 4657--4659
+Overfull \hbox (11.93126pt too wide) in paragraph at lines 4659--4661
 []|\T1/lmr/m/n/12 (-20) SubHisA_PriA|  
  []
 
 
-Overfull \hbox (26.03612pt too wide) in paragraph at lines 4659--4661
+Overfull \hbox (26.03612pt too wide) in paragraph at lines 4661--4663
 []|\T1/lmr/m/n/12 (-20) Ancestral|  
  []
 
 
-Overfull \hbox (121.94263pt too wide) in paragraph at lines 4665--4667
+Overfull \hbox (121.94263pt too wide) in paragraph at lines 4667--4669
 []|\T1/lmr/m/n/12 (-20) 27.7784793333\TS1/lmr/m/n/12 ±\T1/lmr/m/n/12 (-20) 3.45
 28417221|  
  []
 
 
-Overfull \hbox (29.82275pt too wide) in paragraph at lines 4667--4669
+Overfull \hbox (29.82275pt too wide) in paragraph at lines 4669--4671
 []|\T1/lmr/m/n/12 (-20) 0.05\TS1/lmr/m/n/12 ±\T1/lmr/m/n/12 (-20) 0.005|  
  []
 
 
-Overfull \hbox (10.30386pt too wide) in paragraph at lines 4671--4673
+Overfull \hbox (10.30386pt too wide) in paragraph at lines 4673--4675
 []|\T1/lmr/m/n/12 (-20) 167.82|  
  []
 
 
-Overfull \hbox (34.15657pt too wide) in paragraph at lines 4673--4675
+Overfull \hbox (34.15657pt too wide) in paragraph at lines 4675--4677
 []|\T1/lmr/m/n/12 (-20) 0.03\TS1/lmr/m/n/12 ±\T1/lmr/m/n/12 (-20) 0.002|  
  []
 
 
-Overfull \hbox (18.97812pt too wide) in paragraph at lines 4675--4677
+Overfull \hbox (18.97812pt too wide) in paragraph at lines 4677--4679
 []|\T1/lmr/m/n/12 (-20) 0.0001|  
  []
 
 [98] [99] [100]
-Underfull \hbox (badness 1838) in paragraph at lines 4741--4741
+Underfull \hbox (badness 1838) in paragraph at lines 4743--4743
 []\T1/lmr/bx/n/17.28 PriA como mod-elo de fa-milia en-z-imática
  []
 
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 4743.
+(hyperref)                than one, level fixed on input line 4745.
 
-<chapter4/PriAExpansiones.png, id=12492, 569.1575pt x 165.04567pt>
+<chapter4/PriAExpansiones.png, id=12539, 569.1575pt x 165.04567pt>
 File: chapter4/PriAExpansiones.png Graphic file (type png)
 <use chapter4/PriAExpansiones.png>
-Package pdftex.def Info: chapter4/PriAExpansiones.png used on input line 4754.
+Package pdftex.def Info: chapter4/PriAExpansiones.png used on input line 4756.
 (pdftex.def)             Requested size: 569.15611pt x 165.04524pt.
 
-Overfull \hbox (21.70662pt too wide) in paragraph at lines 4754--4755
+Overfull \hbox (21.70662pt too wide) in paragraph at lines 4756--4757
  [][] 
  []
 
 
-Overfull \hbox (176.77762pt too wide) in alignment at lines 4761--4768
+Overfull \hbox (176.77762pt too wide) in alignment at lines 4763--4770
  [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (176.77762pt too wide) in alignment at lines 4768--4773
+Overfull \hbox (176.77762pt too wide) in alignment at lines 4770--4775
  [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (176.77762pt too wide) in alignment at lines 4773--4784
+Overfull \hbox (176.77762pt too wide) in alignment at lines 4775--4786
  [] [] [] [] [] [] [] 
  []
 
 [101
 
- <./chapter4/PriAExpansiones.png>] <chapter4/PriAEvoMining.pdf, id=12506, 597.2
+ <./chapter4/PriAExpansiones.png>] <chapter4/PriAEvoMining.pdf, id=12553, 597.2
 3125pt x 511.9125pt>
 File: chapter4/PriAEvoMining.pdf Graphic file (type pdf)
 <use chapter4/PriAEvoMining.pdf>
-Package pdftex.def Info: chapter4/PriAEvoMining.pdf used on input line 4812.
+Package pdftex.def Info: chapter4/PriAEvoMining.pdf used on input line 4814.
 (pdftex.def)             Requested size: 597.22978pt x 511.91125pt.
 
-Overfull \hbox (163.60979pt too wide) in paragraph at lines 4812--4813
+Overfull \hbox (44.16565pt too wide) in paragraph at lines 4814--4815
  [][] 
  []
 
-<chapter4/PriAEvoMiningCopies.pdf, id=12507, 597.23125pt x 511.9125pt>
+<chapter4/PriAEvoMiningCopies.pdf, id=12554, 597.23125pt x 511.9125pt>
 File: chapter4/PriAEvoMiningCopies.pdf Graphic file (type pdf)
 <use chapter4/PriAEvoMiningCopies.pdf>
 Package pdftex.def Info: chapter4/PriAEvoMiningCopies.pdf used on input line 48
-19.
+21.
 (pdftex.def)             Requested size: 597.22978pt x 511.91125pt.
 
-Overfull \hbox (44.16565pt too wide) in paragraph at lines 4819--4820
+Overfull \hbox (44.16565pt too wide) in paragraph at lines 4821--4822
  [][] 
  []
 
-[102] [103 <./chapter4/PriAEvoMining.pdf>] [104 <./chapter4/PriAEvoMiningCopies
-.pdf>] <conclusion/Solocirculos.png, id=12571, 574.145pt x 504.88625pt>
+[102 <./chapter4/PriAEvoMining.pdf>] [103 <./chapter4/PriAEvoMiningCopies.pdf>]
+[104] <conclusion/Solocirculos.png, id=12618, 574.145pt x 504.88625pt>
 File: conclusion/Solocirculos.png Graphic file (type png)
 <use conclusion/Solocirculos.png>
-Package pdftex.def Info: conclusion/Solocirculos.png used on input line 4849.
+Package pdftex.def Info: conclusion/Solocirculos.png used on input line 4851.
 (pdftex.def)             Requested size: 574.1436pt x 504.885pt.
-<conclusion/SolocirculosPRA.png, id=12572, 530.98375pt x 508.90125pt>
+<conclusion/SolocirculosPRA.png, id=12619, 530.98375pt x 508.90125pt>
 File: conclusion/SolocirculosPRA.png Graphic file (type png)
 <use conclusion/SolocirculosPRA.png>
-Package pdftex.def Info: conclusion/SolocirculosPRA.png used on input line 4856
+Package pdftex.def Info: conclusion/SolocirculosPRA.png used on input line 4858
 .
 (pdftex.def)             Requested size: 530.98244pt x 508.90001pt.
-<conclusion/SolocirculosPRO.png, id=12573, 551.05875pt x 482.80376pt>
+<conclusion/SolocirculosPRO.png, id=12620, 551.05875pt x 482.80376pt>
 File: conclusion/SolocirculosPRO.png Graphic file (type png)
 <use conclusion/SolocirculosPRO.png>
-Package pdftex.def Info: conclusion/SolocirculosPRO.png used on input line 4863
+Package pdftex.def Info: conclusion/SolocirculosPRO.png used on input line 4865
 .
 (pdftex.def)             Requested size: 551.05739pt x 482.80258pt.
-<chapter4/Couplings/PriAMutations.pdf, id=12574, 597.23125pt x 795.97375pt>
+<chapter4/Couplings/PriAMutations.pdf, id=12621, 597.23125pt x 795.97375pt>
 File: chapter4/Couplings/PriAMutations.pdf Graphic file (type pdf)
 <use chapter4/Couplings/PriAMutations.pdf>
 Package pdftex.def Info: chapter4/Couplings/PriAMutations.pdf used on input lin
-e 4873.
+e 4875.
 (pdftex.def)             Requested size: 597.22978pt x 795.97182pt.
 
-Overfull \hbox (163.60979pt too wide) in paragraph at lines 4873--4874
+Overfull \hbox (44.16565pt too wide) in paragraph at lines 4875--4876
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 169.29181pt on input line 4876.
+LaTeX Warning: Float too large for page by 10.09987pt on input line 4878.
 
 
-<chapter4/Couplings/PriACouplingFoldings.png, id=12575, 795.97375pt x 681.54625
+<chapter4/Couplings/PriACouplingFoldings.png, id=12622, 795.97375pt x 681.54625
 pt>
 File: chapter4/Couplings/PriACouplingFoldings.png Graphic file (type png)
 <use chapter4/Couplings/PriACouplingFoldings.png>
 Package pdftex.def Info: chapter4/Couplings/PriACouplingFoldings.png used on in
-put line 4883.
+put line 4885.
 (pdftex.def)             Requested size: 795.97182pt x 681.54459pt.
-
-Overfull \hbox (362.35182pt too wide) in paragraph at lines 4883--4884
- [][] 
- []
-
-
-LaTeX Warning: Float too large for page by 54.86458pt on input line 4886.
-
-<chapter4/Geles/PriAAbril30.png, id=12576, 600.2425pt x 442.65375pt>
+<chapter4/Geles/PriAAbril30.png, id=12623, 600.2425pt x 442.65375pt>
 File: chapter4/Geles/PriAAbril30.png Graphic file (type png)
 <use chapter4/Geles/PriAAbril30.png>
-Package pdftex.def Info: chapter4/Geles/PriAAbril30.png used on input line 4894
+Package pdftex.def Info: chapter4/Geles/PriAAbril30.png used on input line 4896
 .
 (pdftex.def)             Requested size: 600.24103pt x 442.65265pt.
 
-Underfull \hbox (badness 2809) in paragraph at lines 4901--4901
+Underfull \hbox (badness 2809) in paragraph at lines 4903--4903
 \T1/lmr/bx/n/17.28 quími-ca-mente pare-ci-dos a PRA y PRO-
  []
 
@@ -2319,315 +2312,345 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  <./conclusion/Solocirculos.png>] [106 <./conclusion/SolocirculosPRA.png>] [107
  <./conclusion/SolocirculosPRO.png>] [108 <./chapter4/Couplings/PriAMutations.p
 df>] [109 <./chapter4/Couplings/PriACouplingFoldings.png (PNG copy)>] [110 <./c
-hapter4/Geles/PriAAbril30.png>] <chapter4/MutantControl.png, id=12616, 391.4625
+hapter4/Geles/PriAAbril30.png>] <chapter4/MutantControl.png, id=12664, 391.4625
 pt x 234.8775pt>
 File: chapter4/MutantControl.png Graphic file (type png)
 <use chapter4/MutantControl.png>
-Package pdftex.def Info: chapter4/MutantControl.png used on input line 4964.
+Package pdftex.def Info: chapter4/MutantControl.png used on input line 4966.
 (pdftex.def)             Requested size: 391.46153pt x 234.87692pt.
+<chapter4/GTPCinetica.pdf, id=12665, 732.18042pt x 342.12921pt>
+File: chapter4/GTPCinetica.pdf Graphic file (type pdf)
+<use chapter4/GTPCinetica.pdf>
+Package pdftex.def Info: chapter4/GTPCinetica.pdf used on input line 4973.
+(pdftex.def)             Requested size: 732.17862pt x 342.12837pt.
+
+Overfull \hbox (5.69164pt too wide) in paragraph at lines 4973--4974
+ [][] 
+ []
+
 [111
 
- <./chapter4/MutantControl.png>] [112
+ <./chapter4/MutantControl.png> <./chapter4/GTPCinetica.pdf>]
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <12> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 4993.
+
+Overfull \hbox (307.37578pt too wide) in alignment at lines 5000--5006
+ [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (307.37578pt too wide) in alignment at lines 5006--5011
+ [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (307.37578pt too wide) in alignment at lines 5011--5069
+ [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (307.37578pt too wide) in alignment at lines 5069--5128
+ [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (307.37578pt too wide) in alignment at lines 5128--5187
+ [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] 
+ []
+
+[112
+
+]
+Overfull \hbox (307.37578pt too wide) in alignment at lines 5187--5192
+ [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] 
+ []
+
+[113]
+Overfull \hbox (125.55522pt too wide) in alignment at lines 5205--5210
+ [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (125.55522pt too wide) in alignment at lines 5210--5214
+ [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (125.55522pt too wide) in alignment at lines 5214--5240
+ [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (125.55522pt too wide) in alignment at lines 5240--5263
+ [] [] [] [] [] [] 
+ []
+
+[114
+
+] [115] <chapter4/SubstratesClustering.png, id=49209, 666.49pt x 602.25pt>
+File: chapter4/SubstratesClustering.png Graphic file (type png)
+<use chapter4/SubstratesClustering.png>
+Package pdftex.def Info: chapter4/SubstratesClustering.png used on input line 5
+279.
+(pdftex.def)             Requested size: 666.48837pt x 602.24852pt.
+[116
+
+ <./chapter4/SubstratesClustering.png>] <chapter4/esquema_quimico-1-1.pdf, id=4
+9214, 614.295pt x 794.97pt>
+File: chapter4/esquema_quimico-1-1.pdf Graphic file (type pdf)
+<use chapter4/esquema_quimico-1-1.pdf>
+Package pdftex.def Info: chapter4/esquema_quimico-1-1.pdf used on input line 52
+90.
+(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
+
+Overfull \hbox (180.6735pt too wide) in paragraph at lines 5290--5291
+ [][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 169.03806pt on input line 5293.
+
+<chapter4/esquema_quimico-2-2.pdf, id=49215, 614.295pt x 794.97pt>
+File: chapter4/esquema_quimico-2-2.pdf Graphic file (type pdf)
+<use chapter4/esquema_quimico-2-2.pdf>
+Package pdftex.def Info: chapter4/esquema_quimico-2-2.pdf used on input line 52
+97.
+(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
+
+Overfull \hbox (180.6735pt too wide) in paragraph at lines 5297--5298
+ [][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 169.03806pt on input line 5300.
+
+<chapter4/esquema_quimico-3-3.pdf, id=49216, 614.295pt x 794.97pt>
+File: chapter4/esquema_quimico-3-3.pdf Graphic file (type pdf)
+<use chapter4/esquema_quimico-3-3.pdf>
+Package pdftex.def Info: chapter4/esquema_quimico-3-3.pdf used on input line 53
+04.
+(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
+
+Overfull \hbox (180.6735pt too wide) in paragraph at lines 5304--5305
+ [][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 169.03806pt on input line 5307.
+
+<chapter4/esquema_quimico-4-4.pdf, id=49217, 614.295pt x 794.97pt>
+File: chapter4/esquema_quimico-4-4.pdf Graphic file (type pdf)
+<use chapter4/esquema_quimico-4-4.pdf>
+Package pdftex.def Info: chapter4/esquema_quimico-4-4.pdf used on input line 53
+11.
+(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
+
+Overfull \hbox (180.6735pt too wide) in paragraph at lines 5311--5312
+ [][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 169.03806pt on input line 5314.
+
+
+<tesis_files/figure-latex/heatonPDF-1.pdf, id=49219, 459.7175pt x 316.18124pt>
+File: tesis_files/figure-latex/heatonPDF-1.pdf Graphic file (type pdf)
+<use tesis_files/figure-latex/heatonPDF-1.pdf>
+Package pdftex.def Info: tesis_files/figure-latex/heatonPDF-1.pdf used on input
+ line 5332.
+(pdftex.def)             Requested size: 459.71637pt x 316.18047pt.
+
+Overfull \hbox (26.09637pt too wide) in paragraph at lines 5332--5332
+ [] 
+ []
+
+<chapter4/Figura1_4.pdf, id=49220, 597.50786pt x 845.04686pt>
+File: chapter4/Figura1_4.pdf Graphic file (type pdf)
+<use chapter4/Figura1_4.pdf>
+Package pdftex.def Info: chapter4/Figura1_4.pdf used on input line 5336.
+(pdftex.def)             Requested size: 597.5064pt x 845.0448pt.
+
+Overfull \hbox (163.8864pt too wide) in paragraph at lines 5336--5337
+ [][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 218.36479pt on input line 5339.
+
+<chapter4/PriAHeatPot.png, id=49221, 601.24625pt x 692.5875pt>
+File: chapter4/PriAHeatPot.png Graphic file (type png)
+<use chapter4/PriAHeatPot.png>
+Package pdftex.def Info: chapter4/PriAHeatPot.png used on input line 5343.
+(pdftex.def)             Requested size: 601.24477pt x 692.5858pt.
+
+<tesis_files/figure-latex/substrateBox-1.pdf, id=49222, 459.7175pt x 315.1775pt
+>
+File: tesis_files/figure-latex/substrateBox-1.pdf Graphic file (type pdf)
+<use tesis_files/figure-latex/substrateBox-1.pdf>
+Package pdftex.def Info: tesis_files/figure-latex/substrateBox-1.pdf used on in
+put line 5362.
+(pdftex.def)             Requested size: 459.71637pt x 315.17673pt.
+
+Overfull \hbox (26.09637pt too wide) in paragraph at lines 5362--5362
+ [] 
+ []
+
+[117
+
+ <./tesis_files/figure-latex/heatonPDF-1.pdf>] [118 <./chapter4/esquema_quimico
+-1-1.pdf>] [119 <./chapter4/esquema_quimico-2-2.pdf>] [120 <./chapter4/esquema_
+quimico-3-3.pdf>] [121 <./chapter4/esquema_quimico-4-4.pdf>] [122 <./chapter4/F
+igura1_4.pdf>] [123 <./chapter4/PriAHeatPot.png>] [124 <./tesis_files/figure-la
+tex/substrateBox-1.pdf>]
+
+LaTeX Warning: Command \texttimes invalid in math mode on input line 5378.
+
+
+LaTeX Warning: Command \texttimes invalid in math mode on input line 5378.
+
+
+Overfull \hbox (183.29912pt too wide) detected at line 5398
+[][]
+ []
+
+
+Overfull \hbox (163.2875pt too wide) in paragraph at lines 5402--5428
+ [][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[125
+
+] [126] [127
+
+] [128
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{section.4.1}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.4991   \section{Discusion}
+l.5452   \section{Discusion}
                             \label{discusion-1}
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 5003.
+(hyperref)                than one, level fixed on input line 5464.
 
-[113
-
-] [114
+[129] [130
 
 ]
 Appendix A.
 
 Package hyperref Warning: Difference (3) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 5019.
+(hyperref)                than one, level fixed on input line 5480.
 
-LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <12> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 5027.
 
-Package hyperref Warning: Suppressing empty link on input line 5038.
+Package hyperref Warning: Suppressing empty link on input line 5499.
 
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 5038.
+(hyperref)                than one, level fixed on input line 5499.
 
-[115] [116]
+[131] [132]
 Appendix B.
-
-Underfull \hbox (badness 10000) in paragraph at lines 5081--5084
-\T1/lmtt/m/n/12 sudo docker exec -i -t romantic_brahmagupta /bin/bash docker ex
-ec -it
- []
-
-[117
+[133
 
 ]
-Overfull \hbox (54.20525pt too wide) in paragraph at lines 5100--5102
-\T1/lmtt/m/n/12 docker run -i -t -v /home/nelly/GIT/EvoMining/:/var/www/html/Ev
-oMining/exchange
+Overfull \hbox (295.02336pt too wide) in paragraph at lines 5568--5570
+ []\T1/lmtt/m/n/12 http://10.10.100.234/EvoMining/cgi-bin/color_tree.pl?9&&/var
+/www/html/EvoMining/exchange/CyanosBBH_MiBIG_DB.faa_CYANOS 
  []
 
-
-Overfull \hbox (295.02336pt too wide) in paragraph at lines 5106--5109
-\T1/lmtt/m/n/12 http://10.10.100.234/EvoMining/cgi-bin/color_tree.pl?9&&/var/ww
-w/html/EvoMining/exchange/CyanosBBH_MiBIG_DB.faa_CYANOS
- []
-
-LaTeX Font Info:    Try loading font information for TS1+lmtt on input line 511
-1.
+LaTeX Font Info:    Try loading font information for TS1+lmtt on input line 557
+2.
 (/usr/share/texmf/tex/latex/lm/ts1lmtt.fd
 File: ts1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-Underfull \hbox (badness 10000) in paragraph at lines 5110--5114
-\T1/lmtt/m/n/12 perl -MList::Util -e\TS1/lmtt/m/n/12 '\T1/lmtt/m/n/12 print $_ 
-. " => " . $INC{$_} . "\n" for keys
- []
-
-[118] [119] [120
+) [134] [135] [136
 
 ]
 Appendix C.
+[137] [138
 
-Underfull \hbox (badness 10000) in paragraph at lines 5161--5163
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5163--5166
-
- []
-
-[121] [122
+] [139
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 5201--5205
- \T1/lmr/m/n/12 (+20) Avail-able from: []$\T1/lmtt/m/n/12 https : / / www . sci
-encedirect . com / science / article / pii /
- []
-
-[123
-
-]
-Underfull \hbox (badness 2384) in paragraph at lines 5267--5273
- \T1/lmr/m/n/12 (+20) of Con-for-ma-tional Dy-nam-ics De-ter-mines the Con-ver-
-sion of a Promis-cu-
- []
-
-
-Underfull \hbox (badness 1117) in paragraph at lines 5267--5273
- \T1/lmr/m/n/12 (+20) ous Gen-er-al-ist into a Spe-cial-ist En-zyme. Molec-u-la
-r Bi-ol-ogy and Evo-lu-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5267--5273
- []$\T1/lmtt/m/n/12 https : / / academic . oup . com / mbe / article / 32 / 1 /
- 132 / 2925568 / Evolution -[] of -[]
- []
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[124]
-Underfull \hbox (badness 10000) in paragraph at lines 5360--5365
- []$\T1/lmtt/m/n/12 https : / / academic . oup . com / mbe / article / 24 / 12 
-/ 2716 / 978039 / Multicopy -[]
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[125]
-Underfull \hbox (badness 10000) in paragraph at lines 5380--5386
- []$\T1/lmtt/m/n/12 https : / / academic . oup . com / mbe / article / 32 / 1 /
- 100 / 2925554 / Differential -[]
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[126]
-Underfull \hbox (badness 10000) in paragraph at lines 5433--5438
- []$\T1/lmtt/m/n/12 http : / / journals . plos . org / plosone / article ? id =
- 10 . 1371 / journal . pone .
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5457--5463
- []$\T1/lmtt/m/n/12 https : / / academic . oup . com / mbe / article / 30 / 9 /
- 2024 / 1000280 / Evolution -[]
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[127]
-Underfull \hbox (badness 2717) in paragraph at lines 5516--5521
- \T1/lmr/m/n/12 (+20) G. Pro-tein Con-for-ma-tional Di-ver-sity Cor-re-lates wi
-th Evo-lu-tion-ary Rate.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5543--5548
- []$\T1/lmtt/m/n/12 https : / / academic . oup . com / nar / article / 41 / D1 
-/ D358 / 1060216 / OrthoDB -[] a -[]
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[128]
-Underfull \hbox (badness 10000) in paragraph at lines 5592--5597
- []$\T1/lmtt/m/n/12 http : / / www . nature . com / nature / journal / v502 / n
-7473 / full / nature12576 .
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[129]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[130]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[131]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[132]
-Underfull \hbox (badness 1496) in paragraph at lines 5820--5825
- \T1/lmr/m/n/12 (+20) from: []$\T1/lmtt/m/n/12 https : / / academic . oup . com
- / nar / article / 39 / suppl _ 1 / D670 / 2506543 /
- []
-
-
-Underfull \hbox (badness 3792) in paragraph at lines 5856--5862
- \T1/lmr/m/n/12 (+20) Metabolic Re-con-struc-tion and Hy-poth-e-sis Test-ing in
- the Methanogenic
- []
-
-
-Underfull \hbox (badness 3179) in paragraph at lines 5856--5862
- \T1/lmr/m/n/12 (+20) Ar-chaeon Methanosarcina ace-tivo-rans C2A. Jour-nal of B
-ac-te-ri-ol-ogy [In-
- []
-
-
-Underfull \hbox (badness 2150) in paragraph at lines 5856--5862
- \T1/lmr/m/n/12 (+20) ter-net]. 2012 Feb [cited 2016 Sep 16];194(4):855--65. Av
-ail-able from:
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[133]
-Underfull \hbox (badness 1478) in paragraph at lines 5922--5927
- \T1/lmr/m/n/12 (+20) Avail-able from: []$\T1/lmtt/m/n/12 http : / / www . natu
-re . com / ncomms / 2015 / 150305 / ncomms7509 /
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[134]
-Underfull \hbox (badness 10000) in paragraph at lines 5929--5934
- []$\T1/lmtt/m/n/12 http : / / www . nature . com / nature / journal / v499 / n
-7459 / full / nature12352 .
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5944--5949
- []$\T1/lmtt/m/n/12 http : / / www . nature . com / nature / journal / v521 / n
-7551 / full / nature14447 .
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[135]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[136]
-Underfull \hbox (badness 1478) in paragraph at lines 6078--6083
- \T1/lmr/m/n/12 (+20) Avail-able from: []$\T1/lmtt/m/n/12 http : / / journals .
- plos . org / plosgenetics / article ? id = 10 .
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[137]
-Underfull \hbox (badness 1097) in paragraph at lines 6168--6173
- \T1/lmr/m/n/12 (+20) ter-net]. 2008 Dec [cited 2017 Jan 26];36(21):6688--719. 
-Avail-able from:
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 6168--6173
- []$\T1/lmtt/m/n/12 https : / / academic . oup . com / nar / article / 36 / 21 
-/ 6688 / 2410005 / Genomics -[]
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[138]
-Overfull \hbox (1.5208pt too wide) in paragraph at lines 6230--6234
- \T1/lmr/m/n/12 (-20) terpene metabolism. Current Opinion in Plant Biology [Int
-ernet]. 2006 Jun;9(3):297--
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[139]
-Underfull \hbox (badness 3068) in paragraph at lines 6256--6261
- \T1/lmr/m/n/12 (+20) palin-dole/Ambiguine Bio-gen-e-sis Is Me-di-ated by a Cop
-e Re-ar-range-ment,
- []
-
-
-Underfull \hbox (badness 3271) in paragraph at lines 6256--6261
- \T1/lmr/m/n/12 (+20) C--C Bond-Forming Cas-cade. Jour-nal of the Amer-i-can Ch
-em-i-cal So-
- []
-
-
-Underfull \hbox (badness 3168) in paragraph at lines 6256--6261
- \T1/lmr/m/n/12 (+20) ci-ety [In-ter-net]. 2015 Dec;137(49):15366--9. Avail-abl
-e from: []$\T1/lmtt/m/n/12 https :
- []
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 6294.
 [140]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 6294.
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[141]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[142]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[143]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[144]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[145]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[146]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[147]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[148]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[149]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[150]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[151]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[152]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[153]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[154]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[155]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[156]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 6769.
+[157]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 6769.
 (./tesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 6294.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 6294.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 6769.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 6769.
 
 Package rerunfilecheck Info: File `tesis.out' has not changed.
-(rerunfilecheck)             Checksum: 5EDB6F8494CDCC6EF87C2EFE682CD0C9;13115.
+(rerunfilecheck)             Checksum: 550CF89D104479863C5E493F3C5CFE2B;13680.
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 6294.
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 6769.
  ) 
 Here is how much of TeX's memory you used:
- 12070 strings out of 493029
- 190578 string characters out of 6136233
- 356064 words of memory out of 5000000
- 14555 multiletter control sequences out of 15000+600000
+ 12179 strings out of 493029
+ 193279 string characters out of 6136233
+ 361899 words of memory out of 5000000
+ 14619 multiletter control sequences out of 15000+600000
  95265 words of font info for 195 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,12n,49p,1715b,460s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,12n,49p,1715b,462s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/d
 vips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/shar
 e/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ma
@@ -2643,10 +2666,10 @@ f/fonts/type1/public/lm/lmro12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy
 10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/font
 s/type1/public/lm/lmtk10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb
 ></usr/share/texmf/fonts/type1/public/lm/lmtti10.pfb>
-Output written on tesis.pdf (162 pages, 17658398 bytes).
+Output written on tesis.pdf (179 pages, 27919813 bytes).
 PDF statistics:
- 13240 PDF objects out of 15390 (max. 8388607)
- 9189 compressed objects within 92 object streams
- 513 named destinations out of 1000 (max. 500000)
- 15545 words of extra memory for PDF output out of 17280 (max. 10000000)
+ 50004 PDF objects out of 55141 (max. 8388607)
+ 33469 compressed objects within 335 object streams
+ 547 named destinations out of 1000 (max. 500000)
+ 15635 words of extra memory for PDF output out of 17280 (max. 10000000)
 

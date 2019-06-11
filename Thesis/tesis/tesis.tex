@@ -117,9 +117,10 @@ especializado son reveladas por herramientas bioinformáticas evolutivas.}
 
 \Acknowledgements{
 Quiero agradecer por todas las enseñanzas a mis compañeros de trabajo
-Hilda, Ernesto, Cristian, César, Karina Verdel, Lianet, Adriana Espinosa
-y Abraham Avelar. A manu y Vero por su interés en emprender proyectos. A
-Dany mi veranito , a Ernesto de keri, secretaria inovacion, DNABits.
+Pablo, Hilda, Ernesto, Cristian, César, Karina Verdel, Lianet, Adriana
+Espinosa y Abraham Avelar. A manu y Vero por su interés en emprender
+proyectos. A Dany mi veranito , a Ernesto de keri, secretaria inovacion,
+DNABits y Strain.
 }
 
 \Dedication{
@@ -152,9 +153,10 @@ starts here.
 
       \begin{acknowledgements}
       Quiero agradecer por todas las enseñanzas a mis compañeros de trabajo
-      Hilda, Ernesto, Cristian, César, Karina Verdel, Lianet, Adriana Espinosa
-      y Abraham Avelar. A manu y Vero por su interés en emprender proyectos. A
-      Dany mi veranito , a Ernesto de keri, secretaria inovacion, DNABits.
+      Pablo, Hilda, Ernesto, Cristian, César, Karina Verdel, Lianet, Adriana
+      Espinosa y Abraham Avelar. A manu y Vero por su interés en emprender
+      proyectos. A Dany mi veranito , a Ernesto de keri, secretaria inovacion,
+      DNABits y Strain.
     \end{acknowledgements}
   
       \begin{preface}
@@ -4809,7 +4811,7 @@ starts here.
   
   \begin{figure}[h!tbp]
   \centering
-  \includegraphics[angle = 0,scale = 1]{chapter4/PriAEvoMining.pdf}
+  \includegraphics[angle = 0,scale = 0.8]{chapter4/PriAEvoMining.pdf}
   \caption[Árboles de destino metabólico de PriA en Actinobacteria, Cyanobacteria, Pseudomonas y Archaea según EvoMining]{\footnotesize{}}
   \label{fig:PriAExpansions}
   \end{figure}
@@ -4870,7 +4872,7 @@ starts here.
   
   \begin{figure}[h!tbp]
   \centering
-  \includegraphics[angle = 0,scale = 1]{chapter4/Couplings/PriAMutations.pdf}
+  \includegraphics[angle = 0,scale = .8]{chapter4/Couplings/PriAMutations.pdf}
   \caption[Tendencia de mutaciones observada en secuencias de PriA]{\footnotesize{}}
   \label{fig:CouplingsMutationsPriA}
   \end{figure}
@@ -4880,7 +4882,7 @@ starts here.
   
   \begin{figure}[h!tbp]
   \centering
-  \includegraphics[angle = 0,scale = 1]{chapter4/Couplings/PriACouplingFoldings.png}
+  \includegraphics[angle = 0,scale = .5]{chapter4/Couplings/PriACouplingFoldings.png}
   \caption[Superposición de estructura de PriA generado por Folding con la estructura cristalográfica]{\footnotesize{}}
   \label{fig:CouplingsFoldingPriA}
   \end{figure}
@@ -4961,22 +4963,481 @@ starts here.
   
   \begin{figure}[h!tbp]
   \centering
-  \includegraphics[angle = 0,scale = 0.6]{chapter4/MutantControl.png}
+  \includegraphics[angle = 0,scale = 0.8]{chapter4/MutantControl.png}
+  \caption[Scoe and non functional Scoe PriA acting on dGTP]{\footnotesize{}}
+  \label{fig:PriARutas2}
+  \end{figure}
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.6]{chapter4/GTPCinetica.pdf}
   \caption[Scoe and non functional Scoe PriA acting on dGTP]{\footnotesize{}}
   \label{fig:PriARutas2}
   \end{figure}
   
   \clearpage  
   
-  \begin{verbatim}
+  the two enzymes with activity\\
+  \emph{Thermomonospora curvata} thermophilic Actinobacteria from
+  Thermomonosporaceae genus, it can be found in compost and participate in
+  the active degradation of cellulose
+  {[}\protect\hyperlink{ref-chertkov_complete_2011}{166}{]}.
+  
+  Jonesia trpF shows no activity \emph{Jonesia denitrificans} is
+  classified as a pathogenic organism for animals, reported genome was
+  originally isolated from cooked ox blood
+  {[}\protect\hyperlink{ref-pukall_complete_2009}{167}{]}.
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \NormalTok{docking <-}\StringTok{ }\KeywordTok{read.csv}\NormalTok{(}\StringTok{"chapter4/SmallHeat.data"}\NormalTok{, }\DataTypeTok{header=}\OtherTok{TRUE}\NormalTok{, }\DataTypeTok{sep=}\StringTok{"}\CharTok{\textbackslash{}t}\StringTok{"}\NormalTok{)}
+  \KeywordTok{kable}\NormalTok{(docking,  }
+        \DataTypeTok{caption =} \StringTok{"Enzymes docking }\CharTok{\textbackslash{}\textbackslash{}}\StringTok{label\{tab:docking\}"}\NormalTok{,}
+        \DataTypeTok{caption.short =} \StringTok{"Enzymes docking "}\NormalTok{)}
+  \end{Highlighting}
+  \end{Shaded}
+  
+  \begin{longtable}[]{@{}lrrrrrrrrrrrrrrrrrrrr@{}}
+  \caption{Enzymes docking \label{tab:docking}}\tabularnewline
+  \toprule
+  Enzima & S13 & S15 & S14 & S16 & S10 & S12 & S9 & S18 & S5 & S4 & S8 &
+  S17 & S7 & S6 & S11 & S1 & S2 & S3 & S19 & S20\tabularnewline
+  \midrule
+  \endfirsthead
+  \toprule
+  Enzima & S13 & S15 & S14 & S16 & S10 & S12 & S9 & S18 & S5 & S4 & S8 &
+  S17 & S7 & S6 & S11 & S1 & S2 & S3 & S19 & S20\tabularnewline
+  \midrule
+  \endhead
+  Srub\_2VEP & -7.4 & -7.3 & -7.5 & -7.1 & -6.5 & -6.2 & -6.5 & -7.7 &
+  -9.4 & -9.3 & -7.9 & -7.2 & -8.3 & -8.6 & -8.9 & -9.0 & -7.1 & -8.9 &
+  -7.8 & -7.7\tabularnewline
+  Saver\_2VEP & -7.4 & -7.2 & -7.0 & -6.5 & -7.3 & -6.4 & -7.0 & -7.5 &
+  -9.6 & -8.5 & -7.9 & -7.6 & -8.4 & -8.7 & -9.8 & -8.3 & -7.9 & -8.6 &
+  -7.7 & -7.6\tabularnewline
+  Scoe\_2VEP & -7.5 & -7.5 & -7.9 & -7.0 & -7.0 & -6.2 & -6.5 & -7.8 &
+  -8.8 & -9.2 & -7.8 & -7.9 & -8.0 & -8.9 & -10.3 & -9.2 & -9.3 & -8.4 &
+  -8.1 & -8.2\tabularnewline
+  Scoe\_2X30 & -8.1 & -7.4 & -7.6 & -6.9 & -6.7 & -6.8 & -7.1 & -7.9 &
+  -9.1 & -9.0 & -8.3 & -8.6 & -8.5 & -9.0 & -10.6 & -10.0 & -10.3 & -10.2
+  & -8.1 & -7.9\tabularnewline
+  Scoe\_1VZW & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA &
+  NA & NA & NA & NA & NA & NA & NA & NA\tabularnewline
+  Sfla\_2VEP & -7.1 & -7.6 & -7.2 & -7.3 & -7.2 & -6.8 & -6.9 & -8.1 &
+  -8.2 & -7.2 & -8.2 & -7.2 & -8.4 & -8.3 & -8.5 & -7.9 & -7.8 & -6.0 &
+  -7.5 & -7.3\tabularnewline
+  Sgha\_2VEP & -9.2 & -8.7 & -6.7 & -6.7 & -7.4 & -7.7 & -7.2 & -7.5 &
+  -9.8 & -8.9 & -8.2 & -7.8 & -8.8 & -8.7 & -10.1 & -9.1 & -9.0 & -9.5 &
+  -8.0 & -7.5\tabularnewline
+  Siak\_2VEP & -6.6 & -7.3 & -7.0 & -7.1 & -7.1 & -7.1 & -6.8 & -8.0 &
+  -9.2 & -8.7 & -7.8 & -7.6 & -8.3 & -8.4 & -9.1 & -5.8 & -5.3 & -8.5 &
+  -7.3 & -7.4\tabularnewline
+  Sbic\_2VEP & -7.2 & -6.7 & -6.8 & -6.5 & -6.2 & -6.6 & -5.9 & -7.8 &
+  -8.5 & -7.8 & -7.8 & -7.2 & -8.2 & -8.0 & -9.6 & -8.2 & -8.0 & -9.4 &
+  -7.7 & -7.5\tabularnewline
+  Sbot\_2VEP & -9.6 & -10.9 & -8.9 & -7.1 & -6.0 & -6.2 & -6.7 & -8.1 &
+  -9.1 & -8.8 & -8.3 & -7.9 & -8.9 & -9.3 & -9.4 & -9.8 & -10.0 & -8.9 &
+  -8.2 & -8.0\tabularnewline
+  Sipo\_2VEP & -6.6 & -6.6 & -7.3 & -6.9 & -6.5 & -6.3 & -6.5 & -8.1 &
+  -8.6 & -9.1 & -8.0 & -7.9 & -8.0 & -8.4 & -8.5 & -7.2 & -8.4 & -8.2 &
+  -7.9 & -7.6\tabularnewline
+  Ssvi & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA &
+  NA & NA & NA & NA & NA & NA & NA\tabularnewline
+  Ssvi\_4U28 & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA &
+  NA & NA & NA & NA & NA & NA & NA & NA\tabularnewline
+  Ssvi\_4TX9 & -5.9 & -8.2 & -7.1 & -6.6 & -6.8 & -7.0 & -7.6 & -7.9 &
+  -8.4 & -8.3 & -8.2 & -8.1 & -8.4 & -8.7 & -7.7 & -8.2 & -8.2 & -6.7 &
+  -8.0 & -7.5\tabularnewline
+  Salb\_2VEP & -6.3 & -7.1 & -7.4 & -6.8 & -7.7 & -6.9 & -6.6 & -8.0 &
+  -9.6 & -8.9 & -8.6 & -7.9 & -8.6 & -8.4 & -9.1 & -7.4 & -7.2 & -8.8 &
+  -8.1 & -7.8\tabularnewline
+  Sbik\_2VEP & -7.4 & -6.7 & -7.4 & -7.3 & -7.7 & -6.5 & -6.8 & -8.5 &
+  -9.9 & -9.8 & -8.3 & -7.8 & -8.2 & -8.4 & -10.5 & -7.1 & -6.3 & -8.3 &
+  -8.1 & -7.9\tabularnewline
+  Stsu\_2VEP & -6.9 & -7.5 & -7.9 & -7.8 & -7.5 & -7.3 & -7.7 & -8.1 &
+  -10.0 & -9.7 & -8.7 & -7.8 & -8.8 & -8.8 & -10.6 & -7.8 & -8.7 & -9.2 &
+  -7.9 & -7.8\tabularnewline
+  Sven\_2VEP & -8.3 & -7.6 & -7.5 & -6.8 & -6.4 & -7.0 & -6.2 & -8.2 &
+  -9.6 & -9.0 & -7.9 & -7.4 & -8.3 & -8.6 & -10.0 & -8.2 & -8.2 & -8.1 &
+  -7.6 & -7.4\tabularnewline
+  Scal\_2VEP & -7.3 & -8.8 & -7.5 & -6.7 & -7.0 & -6.5 & -6.5 & -8.7 &
+  -10.0 & -9.7 & -8.8 & -7.7 & -8.2 & -8.6 & -10.5 & -8.1 & -9.2 & -8.9 &
+  -7.6 & -7.6\tabularnewline
+  Sbaa\_2VEP & -8.9 & -6.6 & -6.7 & -6.8 & -7.2 & -7.2 & -6.2 & -7.7 &
+  -9.6 & -9.5 & -8.4 & -7.4 & -8.5 & -8.2 & -9.7 & -8.5 & -8.4 & -9.3 &
+  -7.4 & -7.7\tabularnewline
+  Sglo\_2VEP & -6.1 & -6.8 & -6.9 & -6.5 & -6.7 & -6.3 & -6.7 & -7.5 &
+  -9.6 & -9.6 & -8.6 & -7.8 & -8.7 & -8.7 & -9.9 & -6.2 & -5.1 & -9.2 &
+  -7.8 & -7.7\tabularnewline
+  Sful\_2VEP & -9.0 & -6.9 & -7.1 & -6.8 & -6.3 & -7.2 & -6.6 & -8.1 &
+  -9.8 & -9.3 & -7.7 & -8.0 & -8.7 & -8.8 & -10.5 & -7.6 & -9.1 & -10.5 &
+  -7.1 & -7.4\tabularnewline
+  Sgri\_2VEP & -6.6 & -8.2 & -7.1 & -6.4 & -7.1 & -7.4 & -7.1 & -7.4 &
+  -9.4 & -8.5 & -8.6 & -7.5 & -8.8 & -8.4 & -9.6 & -8.8 & -8.8 & -8.7 &
+  -7.7 & -7.5\tabularnewline
+  S34\_2VEP & -7.8 & -7.2 & -7.6 & -7.3 & -6.2 & -6.5 & -6.9 & -8.0 & -8.8
+  & -8.6 & -7.7 & -7.1 & -7.7 & -7.9 & -7.2 & -7.1 & -6.7 & -7.1 & -7.7 &
+  -7.7\tabularnewline
+  Srim\_2VEP & -7.4 & -6.8 & -7.1 & -7.2 & -7.2 & -7.4 & -7.8 & -8.6 &
+  -9.7 & -9.3 & -8.8 & -7.7 & -8.9 & -8.7 & -10.2 & -6.8 & -8.2 & -9.0 &
+  -7.5 & -7.8\tabularnewline
+  Satr\_2VEP & -7.6 & -7.1 & -7.5 & -7.4 & -6.2 & -6.5 & -6.9 & -8.0 &
+  -8.9 & -8.7 & -7.7 & -7.4 & -7.7 & -7.8 & -6.5 & -7.0 & -6.3 & -7.7 &
+  -7.7 & -7.7\tabularnewline
+  S1813\_2VEP & -7.5 & -6.7 & -6.8 & -6.6 & -6.8 & -7.0 & -6.7 & -7.9 &
+  -9.9 & -9.7 & -8.3 & -7.7 & -8.5 & -8.6 & -10.0 & -7.6 & -7.5 & -8.6 &
+  -7.3 & -7.5\tabularnewline
+  Svar\_2VEP & -6.3 & -6.8 & -7.0 & -6.3 & -6.9 & -6.9 & -6.6 & -7.8 &
+  -9.3 & -7.4 & -8.5 & -7.3 & -8.0 & -8.7 & -8.5 & -7.4 & -6.3 & -6.0 &
+  -7.9 & -7.5\tabularnewline
+  Sfra\_2VEP & -7.3 & -7.0 & -6.8 & -6.6 & -6.5 & -7.3 & -6.6 & -8.6 &
+  -9.1 & -8.7 & -8.9 & -7.7 & -8.9 & -9.0 & -8.7 & -6.0 & -6.3 & -7.9 &
+  -8.2 & -7.8\tabularnewline
+  Smeg\_2VEP & -8.0 & -7.3 & -6.9 & -6.6 & -7.2 & -6.7 & -6.1 & -7.6 &
+  -9.2 & -9.1 & -7.8 & -7.4 & -8.2 & -8.5 & -9.6 & -9.2 & -9.2 & -8.6 &
+  -7.7 & -7.5\tabularnewline
+  Ssul\_2VEP & -7.5 & -7.0 & -6.9 & -6.6 & -6.6 & -6.7 & -6.9 & -7.7 &
+  -8.4 & -8.2 & -8.2 & -7.5 & -8.1 & -7.7 & -8.2 & -6.7 & -7.1 & -7.7 &
+  -7.6 & -7.4\tabularnewline
+  Slav\_4X9S & -8.0 & -7.1 & -6.7 & -6.9 & -6.6 & -6.8 & -6.7 & -8.2 &
+  -9.5 & -9.1 & -8.6 & -8.0 & -8.4 & -8.7 & -9.1 & -9.5 & -9.3 & -8.1 &
+  -8.1 & -7.6\tabularnewline
+  Sery\_4X9S & -7.8 & -7.2 & -7.6 & -7.2 & -7.4 & -6.9 & -7.4 & -8.5 &
+  -9.4 & -9.4 & -8.6 & -7.6 & -8.4 & -8.6 & -9.1 & -10.0 & -10.1 & -9.0 &
+  -7.8 & -8.2\tabularnewline
+  SspC\_4X9S & -7.4 & -6.9 & -7.3 & -6.8 & -7.3 & -6.6 & -7.5 & -8.0 &
+  -9.8 & -9.3 & -8.7 & -7.6 & -8.5 & -8.4 & -10.6 & -9.1 & -8.9 & -8.5 &
+  -8.1 & -8.0\tabularnewline
+  Sxan\_4X9S & -7.5 & -6.9 & -6.8 & -6.8 & -6.5 & -6.6 & -6.5 & -8.3 &
+  -8.0 & -8.1 & -7.6 & -7.4 & -8.7 & -8.1 & -8.1 & -8.5 & -8.0 & -7.6 &
+  -7.7 & -7.4\tabularnewline
+  Skat\_4X9S & -6.4 & -7.0 & -7.1 & -6.7 & -7.7 & -6.3 & -6.2 & -8.1 &
+  -8.5 & -9.2 & -8.3 & -7.6 & -9.0 & -8.5 & -9.7 & -9.5 & -9.9 & -9.2 &
+  -7.4 & -7.5\tabularnewline
+  SMg1\_4X9S & -6.5 & -6.9 & -7.2 & -7.1 & -6.5 & -6.9 & -6.4 & -7.3 &
+  -7.8 & -7.7 & -8.3 & -7.5 & -7.9 & -8.4 & -9.5 & -7.6 & -5.2 & -7.5 &
+  -7.6 & -7.7\tabularnewline
+  SMg1\_W9T & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA &
+  NA & NA & NA & NA & NA & NA & NA & NA\tabularnewline
+  Sniv\_2VEP & -6.2 & -6.8 & -7.4 & -6.5 & -7.8 & -6.8 & -6.7 & -9.5 &
+  -9.6 & -9.4 & -8.7 & -8.2 & -8.6 & -9.1 & -9.9 & -5.4 & -5.5 & -9.2 &
+  -8.0 & -7.5\tabularnewline
+  Scla\_2VEP & -6.4 & -7.7 & -7.4 & -7.2 & -7.6 & -7.5 & -7.2 & -8.5 &
+  -10.1 & -10.0 & -8.7 & -7.9 & -8.8 & -9.1 & -10.2 & -6.9 & -8.1 & -8.5 &
+  -7.7 & -7.7\tabularnewline
+  Save\_2VEP & -7.6 & -6.7 & -7.1 & -7.2 & -7.1 & -6.5 & -6.6 & -7.8 &
+  -8.6 & -10.0 & -8.6 & -7.5 & -8.3 & -8.5 & -8.8 & -5.3 & -5.2 & -5.8 &
+  -7.7 & -7.4\tabularnewline
+  Spur\_2vEP & -6.8 & -7.3 & -6.9 & -6.7 & -8.0 & -7.9 & -7.7 & -8.5 &
+  -9.5 & -9.8 & -8.1 & -7.8 & -8.7 & -9.7 & -10.0 & -5.3 & -6.2 & -8.2 &
+  -7.6 & -7.4\tabularnewline
+  Scar\_2Y89 & -6.9 & -6.8 & -7.5 & -7.1 & -7.8 & -7.3 & -7.2 & -8.3 &
+  -9.2 & -8.3 & -8.9 & -8.4 & -8.9 & -9.3 & -9.4 & -5.3 & -5.2 & -7.1 &
+  -8.5 & -8.6\tabularnewline
+  Mtub\_2Y88 & -10.0 & -7.8 & -8.9 & -5.4 & -8.6 & -7.3 & -7.8 & -9.5 &
+  -10.9 & -10.3 & -9.5 & -9.0 & -9.8 & -9.8 & -11.3 & -10.1 & -10.2 &
+  -11.3 & -9.5 & -8.8\tabularnewline
+  Mtub\_2Y89 & -8.7 & -8.6 & -9.6 & -9.4 & -6.4 & -5.9 & -5.6 & -7.1 &
+  -7.0 & -7.5 & -7.3 & -6.8 & -7.4 & -8.4 & -7.5 & -8.1 & -8.6 & -7.5 &
+  -7.7 & -7.3\tabularnewline
+  Mtub\_2Y85 & -8.2 & -7.9 & -9.2 & -7.4 & -7.6 & -7.5 & -7.6 & -8.4 &
+  -9.7 & -9.5 & -9.3 & -7.8 & -8.6 & -8.6 & -10.2 & -9.8 & -9.9 & -10.1 &
+  -7.3 & -7.4\tabularnewline
+  Mtub\_3ZS4 & -10.0 & -10.5 & -11.4 & -6.4 & -8.2 & -7.2 & -7.0 & -9.6 &
+  -10.2 & -10.2 & -9.9 & -8.5 & -9.3 & -9.6 & -10.9 & -10.0 & -10.7 & -9.9
+  & -8.8 & -8.9\tabularnewline
+  S34\_3ZS4 & -7.4 & -8.0 & -7.6 & -6.4 & -5.2 & -5.4 & -5.2 & -6.1 & -6.8
+  & -6.4 & -5.7 & -6.4 & -6.3 & -6.3 & -7.1 & -7.4 & -7.1 & -6.4 & -7.1 &
+  -6.6\tabularnewline
+  Cdip\_4AXK & -9.2 & -7.8 & -10.9 & -7.2 & -7.5 & -7.6 & -7.7 & -8.9 &
+  -9.0 & -9.8 & -9.0 & -8.3 & -8.8 & -9.2 & -10.1 & -9.5 & -9.9 & -9.2 &
+  -8.0 & -7.9\tabularnewline
+  Cjei\_4AXK & -7.5 & -6.9 & -7.2 & -6.5 & -8.4 & -8.0 & -8.5 & -8.7 &
+  -9.5 & -9.6 & -9.4 & -8.8 & -9.0 & -9.5 & -9.3 & -8.1 & -9.3 & -8.5 &
+  -7.9 & -7.7\tabularnewline
+  Aaur & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA &
+  NA & NA & NA & NA & NA & NA & NA\tabularnewline
+  Aaur\_4WD0 & -8.2 & -8.5 & -8.1 & -7.9 & -5.7 & -5.5 & -5.9 & -7.0 &
+  -7.5 & -7.2 & -7.1 & -6.7 & -7.1 & -7.4 & -8.4 & -7.2 & -7.3 & -7.4 &
+  -7.0 & -6.7\tabularnewline
+  Acar\_4X2R & -10.6 & -9.3 & -9.3 & -7.2 & -7.2 & -6.8 & -7.3 & -7.5 &
+  -9.5 & -9.8 & -8.0 & -7.8 & -9.3 & -8.9 & -10.3 & -9.6 & -9.4 & -9.4 &
+  -8.1 & -8.0\tabularnewline
+  Auro\_4X2R & -9.9 & -9.1 & -9.8 & -8.1 & -7.4 & -7.1 & -7.4 & -7.8 &
+  -9.2 & -9.8 & -8.3 & -7.8 & -9.3 & -9.0 & -9.9 & -9.0 & -8.6 & -9.2 &
+  -8.5 & -8.2\tabularnewline
+  Afer\_4WD0 & -5.7 & -5.8 & -6.0 & -5.7 & -6.7 & -6.2 & -5.8 & -7.6 &
+  -9.2 & -8.8 & -7.8 & -7.4 & -8.3 & -8.4 & -9.3 & -6.7 & -4.5 & -9.1 &
+  -8.3 & -8.1\tabularnewline
+  Sent\_5AHE & -9.1 & -5.4 & -6.4 & -5.2 & -8.0 & -7.3 & -7.4 & -8.8 &
+  -10.7 & -10.2 & -8.7 & -8.7 & -9.6 & -9.9 & -10.9 & -7.8 & -9.1 & -10.3
+  & -9.0 & -8.4\tabularnewline
+  Ecoli\_K12 & -9.7 & -9.7 & -9.2 & -6.1 & -7.2 & -6.6 & -6.8 & -8.6 &
+  -9.5 & -9.1 & -8.6 & -8.2 & -9.0 & -8.6 & -10.2 & -9.9 & -10.2 & -9.9 &
+  -8.2 & -7.9\tabularnewline
+  Jden\_4WUI & -8.3 & -8.8 & -8.2 & -6.8 & -6.2 & -6.1 & -6.0 & -6.8 &
+  -7.4 & -7.6 & -7.5 & -6.9 & -7.6 & -7.5 & -7.7 & -7.5 & -7.6 & -7.2 &
+  -7.3 & -7.2\tabularnewline
+  Ctra & -8.2 & -8.0 & -7.4 & -7.2 & -6.1 & -5.5 & -5.4 & -6.5 & -7.1 &
+  -7.1 & -7.0 & -6.2 & -6.8 & -6.8 & -6.9 & -7.2 & -7.4 & -6.5 & -6.7 &
+  -6.6\tabularnewline
+  SMg1\_trpF & -7.2 & -8.8 & -8.2 & -7.3 & -6.2 & -5.7 & -5.7 & -6.9 &
+  -6.6 & -6.7 & -7.3 & -6.7 & -7.6 & -6.9 & -7.5 & -7.1 & -7.1 & -6.9 &
+  -6.7 & -6.5\tabularnewline
+  Aodo\_4X2R & -8.5 & -8.6 & -8.8 & -7.3 & -7.1 & -7.1 & -7.1 & -7.5 &
+  -9.7 & -9.4 & -7.8 & -7.6 & -9.6 & -8.8 & -10.1 & -8.4 & -8.9 & -9.4 &
+  -8.0 & -8.1\tabularnewline
+  \clearpage & & & & & & & & & & & & & & & & & & & &\tabularnewline
+  \bottomrule
+  \end{longtable}
+  
+  \section{El análisis de PriA a nivel estructural sugiere que GTP es el
+  sustrato más
+  afín}\label{el-analisis-de-pria-a-nivel-estructural-sugiere-que-gtp-es-el-sustrato-mas-afin}
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \NormalTok{table <-}\StringTok{ }\KeywordTok{read.csv}\NormalTok{(}\StringTok{"chapter4/EstructurasPDB"}\NormalTok{, }\DataTypeTok{row.names =} \DecValTok{1}\NormalTok{,}\DataTypeTok{sep=}\StringTok{"}\CharTok{\textbackslash{}t}\StringTok{"}\NormalTok{)}
+  \KeywordTok{kable}\NormalTok{(table,  }\DataTypeTok{caption =} \StringTok{"Enzyme PDB }\CharTok{\textbackslash{}\textbackslash{}}\StringTok{label\{tab:Enzyme PDB\}"}\NormalTok{,}\DataTypeTok{caption.short =} \StringTok{"Enzyme PDB "}\NormalTok{)}
+  \end{Highlighting}
+  \end{Shaded}
+  
+  \begin{longtable}[]{@{}llllrr@{}}
+  \caption{Enzyme PDB \label{tab:Enzyme PDB}}\tabularnewline
+  \toprule
+  & Organismo & Family & Observations & Resolution & Year\tabularnewline
+  \midrule
+  \endfirsthead
+  \toprule
+  & Organismo & Family & Observations & Resolution & Year\tabularnewline
+  \midrule
+  \endhead
+  4WUI & Jonesia denitrificans & TrpF & & 1.09 & 2014\tabularnewline
+  4X9S & Streptomyces sp. MG1 & PriB & & 1.60 & 2014\tabularnewline
+  5DN1 & Streptomyces coelicolor & PriA & & 1.95 & 2015\tabularnewline
+  1DL3 & Thermotoga maritima & TrpF & & 2.70 & 1999\tabularnewline
+  1LBM & Thermotoga maritima & TrpF & RCDRP & 2.80 & 2002\tabularnewline
+  1NSJ & Thermotoga maritima & TrpF & & 2.00 & 1996\tabularnewline
+  1V5X & Thermus thermophilus & TrpF & & 2.00 & 2003\tabularnewline
+  1VZW & Streptomyces coelicolor & PriA & & 1.80 & 2004\tabularnewline
+  2VEP & Streptomyces coelicolor & PriA & & 1.80 & 2007\tabularnewline
+  2X30 & Streptomyces coelicolor & PriA & R139N & 1.95 &
+  2010\tabularnewline
+  2Y85 & Mycobacterium tuberculosis & PriA & RCDRP & 2.40 &
+  2011\tabularnewline
+  2Y88 & Mycobacterium tuberculosis & PriA & D11N PRFAR & 1.33 &
+  2011\tabularnewline
+  2Y89 & Mycobacterium tuberculosis & PriA & D11N & 2.50 &
+  2011\tabularnewline
+  3ZS4 & Mycobacterium tuberculosis & PriA & PRFAR & 1.90 &
+  2012\tabularnewline
+  4AAJ & Pyrococcus furiosus & TrpF & & 1.75 & 2012\tabularnewline
+  4TX9 & Streptomyces sviceus & PriB & ProFAR & 1.60 & 2014\tabularnewline
+  4U28 & Streptomyces sviceus & PriB & & 1.33 & 2014\tabularnewline
+  4W9T & Streptomyces sp. Mg1 & PriB & & 1.57 & 2014\tabularnewline
+  4WD0 & Arthrobacter aurescens & PriB & & 1.50 & 2014\tabularnewline
+  4X2R & Actinomyces urogenitalis & & & 1.05 & 2014\tabularnewline
+  4AXK & Corynebacterium efficiens & SubHisA & & 2.25 &
+  2013\tabularnewline
+  5AHE & Salmonella enterica & HisA & & 1.70 & 2015\tabularnewline
+  5AB3 & Salmonella enterica & HisA & D7N, D10G, dup13-15, Q24L, G102A &
+  1.80 & 2016\tabularnewline
+  5ABT & Salmonella enterica & HisA & D7N, G102A, V106M, D176A & 1.65 &
+  2016\tabularnewline
+  5AC7 & Salmonella enterica & HisA & D7N, D10G, dup13-15 & 1.90 &
+  2016\tabularnewline
+  5AC8 & Salmonella enterica & HisA & D10G, dup13-15, G102A & 1.70 &
+  2016\tabularnewline
+  5AC6 & Salmonella enterica & HisA & D7N, D10G, dup13-15, Q24L, G102A &
+  1.99 & 2016\tabularnewline
+  5A5W & Salmonella enterica & HisA & HisA D7N D176A with ProFAR & NA &
+  2015\tabularnewline
+  5AHF & Salmonella enterica & HisA & HisA D7N with ProFAR & NA &
+  NA\tabularnewline
+  4GJ1 & Campylobacter jejuni & HisA & & 2.15 & 2012\tabularnewline
+  2W79 & Thermotoga maritima & HisA & & 1.85 & 2008\tabularnewline
+  1QO2 & Thermotoga maritima & HisA & & 1.85 & 2000\tabularnewline
+  5LHE & Thermococcus kodakaraensis & TrpF & & 1.85 & 2016\tabularnewline
+  5LHF & Thermococcus kodakaraensis & TrpF & & 1.75 & 2016\tabularnewline
+  \bottomrule
+  \end{longtable}
+  
+  \clearpage  
+  
+  \subsection{Similar substrates to PRA and PROFAR suggested by Tanimoto
+  distance or previously
+  tested}\label{similar-substrates-to-pra-and-profar-suggested-by-tanimoto-distance-or-previously-tested}
+  
+  S1,S2,\ldots{}S20 substrates were collected from literature and
+  chemioinformatics predictions. S3 PRA and S7 PROFAR are native
+  substrates, S13-S16 are light activated substrates, S17 PRAP, S18
+  Compound V, were found on literature, S6 GMP, S11 GTP and other were
+  suggested by chemioinformatics.
   
   \begin{figure}[h!tbp]
   \centering
-  \includegraphics[angle = 0,scale = 0.8]{chapter4/GTPCinetica.svg}
-  \caption[GTPCinetica.svg]{\footnotesize{}}
-  \label{fig:GTPCinetica}
+  \includegraphics[angle = 0,scale = 0.6]{chapter4/SubstratesClustering.png}
+  \caption[Substrates clustering according to Tanimoto distance]{\footnotesize{}}
+  \label{fig:tanimoto}
   \end{figure}
+  
+  On next figure we can see their chemical structures.
+  
+  \clearpage   
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 1]{chapter4/esquema_quimico-1-1.pdf}
+  \caption[Substrates 1]{\normalsize{Substrates 1}}
+  \label{fig:Substrates chemical 1}
+  \end{figure}
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 1]{chapter4/esquema_quimico-2-2.pdf}
+  \caption[Substrates 2]{\normalsize{Substrates 2}}
+  \label{fig:Substrates chemical 2}
+  \end{figure}
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 1]{chapter4/esquema_quimico-3-3.pdf}
+  \caption[Substrates 3]{\normalsize{Substrates 3}}
+  \label{fig:Substrates chemical 3}
+  \end{figure}
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 1]{chapter4/esquema_quimico-4-4.pdf}
+  \caption[Substrates 4]{\normalsize{Substrates 4}}
+  \label{fig:Substrates chemical 4}
+  \end{figure}
+  
+  \subsection{Docking between PriA enzymes and selected
+  substrates}\label{docking-between-pria-enzymes-and-selected-substrates}
+  
+  Docking simulation were calculated for PriA \emph{Streptomyces} enzymes.
+  TrpF enzymes from \emph{Streptomyces Mg1, Jonesia denitrificans, were
+  added as controls}
+  
+  Procedures can be found at
+  \href{https://github.com/tripplab/Docking/wiki}{Docking Protocols}
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \KeywordTok{ggplot}\NormalTok{(docking.m, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{variable, }\DataTypeTok{y=}\NormalTok{Enzima)) }\OperatorTok{+}\StringTok{ }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"Substrates"}\NormalTok{, }\DataTypeTok{y =} \StringTok{"Enzymes"}\NormalTok{,}\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size=}\DecValTok{12}\NormalTok{))}\OperatorTok{+}\StringTok{ }\KeywordTok{scale_fill_gradientn}\NormalTok{(}\DataTypeTok{colours =} \KeywordTok{hm.palette}\NormalTok{(}\DecValTok{100}\NormalTok{),}\DataTypeTok{na.value =} \StringTok{"gray"}\NormalTok{)}\OperatorTok{+}\KeywordTok{theme_bw}\NormalTok{()}\OperatorTok{+}\KeywordTok{theme}\NormalTok{(}\DataTypeTok{plot.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{14}\NormalTok{, }\DataTypeTok{face =} \StringTok{"bold"}\NormalTok{), }\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{12}\NormalTok{), }\DataTypeTok{axis.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{face=}\StringTok{"bold"}\NormalTok{), }\DataTypeTok{axis.text.x=}\KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{90}\NormalTok{,}\DataTypeTok{size =} \DecValTok{6}\NormalTok{))}
+  \end{Highlighting}
+  \end{Shaded}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/heatonPDF-1} \end{center}
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 1]{chapter4/Figura1_4.pdf}
+  \caption[Heatplot docking PriA enzyme Family vs substrates]{\footnotesize{}}
+  \label{fig:Heatplod PriA docking}
+  \end{figure}
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.6]{chapter4/PriAHeatPot.png}
+  \caption[Heat Plot PriA Streptomyces vs other subtrates]{\footnotesize{}}
+  \label{fig:PriADocking}
+  \end{figure}
+  
+  \section{GTP is the substrate with best PriA
+  affinity}\label{gtp-is-the-substrate-with-best-pria-affinity}
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \NormalTok{## boxplot de los sustratos}
+  \KeywordTok{ggplot}\NormalTok{(docking.m, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{variable, }\DataTypeTok{y=}\NormalTok{value)) }\OperatorTok{+}\StringTok{ }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"Substrates"}\NormalTok{, }\DataTypeTok{y =} \StringTok{"Affinity"}\NormalTok{,}\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size=}\DecValTok{12}\NormalTok{)) }\OperatorTok{+}\StringTok{ }\KeywordTok{geom_boxplot}\NormalTok{()}\OperatorTok{+}\KeywordTok{theme_bw}\NormalTok{()}\OperatorTok{+}\KeywordTok{theme}\NormalTok{(}\DataTypeTok{plot.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{14}\NormalTok{, }\DataTypeTok{face =} \StringTok{"bold"}\NormalTok{), }\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{12}\NormalTok{), }\DataTypeTok{axis.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{face=}\StringTok{"bold"}\NormalTok{), }\DataTypeTok{axis.text.x=}\KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{90}\NormalTok{,}\DataTypeTok{size =} \DecValTok{6}\NormalTok{), }\DataTypeTok{legend.position =} \StringTok{"bottom"}\NormalTok{)}
+  \end{Highlighting}
+  \end{Shaded}
+  
+  \begin{verbatim}
+  Warning: Removed 100 rows containing non-finite values (stat_boxplot).
   \end{verbatim}
+  
+  \begin{center}\includegraphics{tesis_files/figure-latex/substrateBox-1} \end{center}
+  
+  \clearpage  
+  
+  \section{Molecular dynamics vs experimental
+  data}\label{molecular-dynamics-vs-experimental-data}
+  
+  PriA activity on S3 (PRA)
+  
+  \[ 
+    \begin{tabular}{ l c r l l l l l}
+  \hline \\ [-1.5ex]
+  organism  &Family & $K_M    $     & $k_{cat}$        & $\frac{k_{cat}}{K_M}$ &Pre MD & Pos MD & Reference  \\ [1ex]
+  \hline \\ [-1.5ex]
+  Afer        &HisA   & $1.1\pm0.2$   &$  0.05\pm0.001    $& 0.045                  &-10.1    &-12.3       &Noda-García L et al 2015\\ [1ex]
+  Ecoli       &HisA   &$  1.6         $&$         4.9       $&3.1                   &-9.9   &-16       &Henn-Sax et al. (2002)\\ [1ex]
+  Sent        &HisA   &$  17.0 \pm0.1 $&$ 7.8 \pm 2.4   $&$4.5 × 10^5          $&-10.3  &-20.1     &Söderholm A et al (2015)\\ [1ex]
+  Aaur        &PriB   &$  2.1 \pm 0.5 $& $    1.8 \pm 0.2     $&0.9                   &-7.4   &              &verduzco-castro 2016\\ [1ex]
+  Sipo        &PriB   &$  3.8\pm0.2     $&$0.82\pm0.02        $&0.21                  &-8.2     &-14.7       &verduzco-castro 2016\\ [1ex]
+  SspC        &PriB   &$  11.4\pm3.4  $&$2.53\pm0.74      $&0.22                  &   -8.5    &-12.7     &verduzco-castro 2016\\ [1ex]
+  SMg1        &PriB   &$  13.2\pm3.4  $&$0.92\pm0.19      $&0.069                 &-8     &-15.2     &verduzco-castro 2016\\ [1ex]
+  Ssvi        &PriB   &$  3.9\pm0.89  $&$0.69\pm0.04      $&0.18                  &-8.2     &-16.7     &verduzco-castro 2016\\ [1ex]
+  Scoe        &PriA   &$  3.6\pm0.7     $&$ 1.3\pm0.2     $  &0.4                   &-8.4   &-15       &Noda-García et al (2010)\\ [1ex]
+  Sglob       &PriA   & $4.2\pm0.8     $ & $0.74\pm0.03    $   &0.18                  &-9.2     &-16.7       &verduzco-castro\\ [1ex]
+  Mtub 2Y85   &priA   &$  19  0.23      $&$0.012  -9.7          $&                      &       &          &Due et al 2011\\ [1ex]
+  Mtub 3ZS4   &priA   &$  ?                 $&$-9.9               $&                      &       &          &Due et al 2011 (To be published)\\ [1ex]
+  Auro        &priA   &$  4.0 \pm 0.9 $&$0.2 \pm 0.03   $&0.04                    &-9.2       &          &Vazquez-Juarez (2016)\\ [1ex]
+  Cjei        &PriA   &$  2.3 \pm 0.2 $&$0.9 \pm 0.08   $&0.39                    &-8.5       &          &Noda-García et al (2013)\\ [1ex]
+  Cdip        &subHisA&$  4.4 \pm 0.5 $&$2.6 \pm 0.3      $&0.59                  &-9.2       &          &Noda-García et al (2013)\\ [1ex]
+  SMg1 TrpF   &TrpF3  &   -                &-                &-                       &-6.9     &-9.6      &verduzco-castro 2016\\ [1ex]
+  Jden        &TrpF3  &   -                &-                &-          -7.2         &-9.4     &$16.8\pm3.3$&    Verduzco-Castro E et al  2016\\ [1ex]
+  Acar      &SubHisA& 0.02                     &                 &                        &       &          &            \\ [1ex]
+  Aodo        &SubTrpF&       -              &-                  &-                     &       &          &\\ [1ex]
+  \hline
+  \end{tabular}
+  \label{table:name}
+  \]
+  
+  PriA activity on S7 (PROFAR) \$\$ \centering 
+  
+  \begin{tabular}{ l c r l l l l l}
+  \hline \\ [-1.5ex]
+  organism  &Family  &  $K_M$ & $k_{cat}$& $\frac{k{cat}}{K_M}$ &Pre MD &Pos MD &Reference  \\ [1ex]
+  \hline \\ [-1.5ex]
+  Afer      &HisA    &-            &-                &-          &-9.2    &-9        &Noda-García L et al. (2015)   \\ [1ex]
+  Ecoli     &HisA    &-            &-                &-          &-9      &-11.1     &Henn-Sax et al. (2002)\\ [1ex]
+  Sent      &HisA    &-            & -               &-          &-9.6    &-10.2     &Söderholm A et al (2015)\\ [1ex]
+  Aaur      &PriB    &$26.3\pm6.3$ & $0.37\pm 0.09$  & 0.014     &-7.1    &-         &verduzco-castro 2016\\ [1ex]
+  Sipo      &PriB    &$60.8\pm1.1$ &$8.25\pm0.4 $    &0.14       &-8      &-8.5      &verduzco-castro 2016 \\ [1ex]
+  SspC      &PriB    &$149.9\pm29$ &$1.4\pm0.12 $    &0.009      &-8.5    &-10.8     &verduzco-castro 2016\\ [1ex]
+  SMg1      &PriB    &$129.6\pm34$ &$0.29\pm0.04$    &0.0022     &-7.5    &-11       &verduzco-castro 2016\\ [1ex]
+  Ssvi      &PriB    &$24.5\pm4.0$ &$1.6\pm0.29 $    &0.067      &-8      &-9.7      &verduzco-castro 2016 \\ [1ex]
+  Scoe      &PriA    &$5.0\pm0.08$ &$3.4\pm0.09  $   &0.7        &-8      &-9.4      &Noda-García et al (2010)   \\ [1ex]
+  Sglob     &PriA    &$11\pm1.0$  &$3.8\pm0.2  $     &0.34       &-8.7    &-9.4      &verduzco-castro 2016  \\ [1ex]
+  Mtub2Y85  &priA    &21         &3.6         &0.17       &-8.6    &          &Due et al 2011                        \\ [1ex] 
+  Mtub3ZS4  &priA    &           &            &           &-9.3    &          &Due et al 2011 (To be published)      \\ [1ex] 
+  Auro      &priA    &$23 \pm 6.5 $  &$0.5\pm0.05 $&0.02       &-9.3    &          &Vazquez-Juarez (2016)                 \\ [1ex] 
+  Cjei      &PriA    &$5.1 \pm1.0$  &$1.6 \pm 0.16 $&0.31       &-9      &          &Noda-García et al (2013)              \\ [1ex]
+  Cdip      &subHisA &-          &-           &-          &-8.8    &          &Noda-García et al (2013)              \\ [1ex]
+  SMg1 TrpF &TrpF3   &$8.4\pm1.7$    &$10.5\pm2.4$    &1.25       &-7.6    &-9        &verduzco-castro     \\ [1ex] 
+  Jden      &TrpF3   &$16.8\pm3.3$   &$27\pm1.6$      &1.6        &-7.6    &-7.7      &verduzco-castro     \\ [1ex] 
+  Acar      &SubHisA &Na         &Na          &0.02       &Na      &Na        &Na                                    \\ [1ex] 
+  Aodo      &SubTrpF &-          &-           &-          &-       &Na        &Na                                    \\ [1ex]
+  
+  \hline
+  \end{tabular}
+  
+  \label{table:mi table}\$\$
+  
+  Con actividad de FolE i.e activa para el compuesto V Adams et al (2014)
+  Genome size vs Total antismash cluster coloured by order
+  
+  \clearpage  
+  
+  \begin{Shaded}
+  \begin{Highlighting}[]
+  \CommentTok{#sessionInfo()}
+  \end{Highlighting}
+  \end{Shaded}
   
   \chapter*{Conclusion}\label{conclusion}
   \addcontentsline{toc}{chapter}{Conclusion}
@@ -6276,16 +6737,30 @@ starts here.
   2017 Jan 31{]};19(3):535--43. Available from:
   \url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2866278/}
   
+  \hypertarget{ref-chertkov_complete_2011}{}
+  166. Chertkov O, Sikorski J, Nolan M, Lapidus A, Lucas S, Del Rio TG, et
+  al. Complete genome sequence of Thermomonospora curvata type strain
+  (B9T). Standards in Genomic Sciences {[}Internet{]}. 2011 Feb {[}cited
+  2017 Mar 3{]};4(1):13--22. Available from:
+  \url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3072092/}
+  
+  \hypertarget{ref-pukall_complete_2009}{}
+  167. Pukall R, Gehrich-Schröter G, Lapidus A, Nolan M, Glavina Del Rio
+  T, Lucas S, et al. Complete genome sequence of Jonesia denitrificans
+  type strain (Prevot 55134T). Standards in Genomic Sciences
+  {[}Internet{]}. 2009 Nov {[}cited 2017 Mar 3{]};1(3):262--9. Available
+  from: \url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3035236/}
+  
   \hypertarget{ref-angel2000}{}
-  166. Angel E. Interactive computer graphics : A top-down approach with
+  168. Angel E. Interactive computer graphics : A top-down approach with
   opengl. Boston, MA: Addison Wesley Longman; 2000.
   
   \hypertarget{ref-angel2001}{}
-  167. Angel E. Batch-file computer graphics : A bottom-up approach with
+  169. Angel E. Batch-file computer graphics : A bottom-up approach with
   quicktime. Boston, MA: Wesley Addison Longman; 2001.
   
   \hypertarget{ref-angel2002a}{}
-  168. Angel E. Test second book by angel. Boston, MA: Wesley Addison
+  170. Angel E. Test second book by angel. Boston, MA: Wesley Addison
   Longman; 2001.
 
 

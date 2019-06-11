@@ -51,15 +51,15 @@ library(xlsx) # For save data on excel
 # La familia PriA {#ref_labels}
 PriA es una familia de enzimas de Actinobacteria homóloga a la familia HisA en Enterobacteria. Según las definiciones de este trabajo PriA es una familia promiscua. Se han caracterizado experimentalmente varios miembros de PriA con la capacidad de catalizar tanto la reacción correspondiente a HisA como la de TrpF. Es decir PriA participa a la vez en las rutas de síntesis de Histidina y Triptofano, al menos en varias Actinobacterias. Algunos de los primerios miembros caracterizados como promiscuos son _Streptomyces coelicolor_ y XXXX. Dentro de la ruta de histidina HisA convierte ProFAR en PRFAR. Además de la isomerización de PROFAR también convierte PRA en CdRP actuando análogamente a la función TrpF en la ruta del triptófano. La mayoría de las actinobacterias han perdido el gen trpF en la ruta del triptofano, por lo que se cree que la promiscuidad de proFAR está extendida en un gran subconjuntno de Actinobacteria.  
 
-Además, en Actinobacteria PriA ha mostrado un gradiente funcional. Esta variación divide esta familia en varias subfamilias según su funcionalidad. Por ejemplo, entre las subfamilias de PriA se enceuntra PriB con presencia en el género _Streptomyces_. Esta familia muestra poca actividad _trpF_ y un gen _trpF_ fuera de contexto. Otra subfamilia es subHisA en _Corynebacteria_ y _Actinomyces_ que ha perdido actividad _trpF_, y finalmente hay _subTrpF_ en Actinomyces que ha perdido su actividad de HisA.
+Además, en Actinobacteria PriA ha mostrado un gradiente funcional. Esta variación divide a la familia en varias subfamilias según su funcionalidad. En la tabla `r ref("cineticos", type = "table")` se muestra la capacidad de catálisis PriA en diferentes organismos para sus dos sustratos conocidos. Estos datos ejemplifican las subfamilias de PriA, en la tabla se encuentran por ejemplo miembros de PriB, una subfamilia con presencia en el género _Streptomyces_. PriB muestra poca actividad _trpF_ . Varios _Streptomyces_ con un elmento de PriB, contienen en su genoma un gen _trpF_ localizado fuera del contexto genómico cerccano operón de histidina. Otra subfamilia es subHisA con miembros en _Corynebacteria_ y _Actinomyces_. SubHisA ha perdido totalmente la actividad _trpF_. Finalmente en Actinomyces encontramos hay _subTrpF_ que ha perdido su actividad de HisA.
 
-En este capítulo se hace una exploración de PriA utilizando EvoMining y CORASON en diversos linajes genómicos. Como resultado se encuentran variantes en el número de copias según el linaje. En Actinobacteria PriA es promiscua a pesar de no tener copias extra con marcas de reclutamiento al metabolismo especializado. Otro resultado es el descubrimiento de que al análizar datos de cinéticas enzimaticas de PriA, no existe una trayectoria Darwiniana para ambos susttratos que lleve a la adquisición de promiscuidad. Es decir que al menos en este ejemplo, las mutaciones puntuales que llevan a una enzima monofuncional en la ruta para adquirir promiscuidad nunca incrementan la capacidad catalítica sobre ambas reacciones. Finalmente    
-||||$\tiny[M^{-1}s^{-1}]$ |$\tiny[\mu M]$| |$\tiny[M^{-1}s^{-1}]$ |$\tiny[\mu M]$|||  
+En este capítulo se explora la distribución de PriA en diversos linajes genómicos utilizando EvoMining y CORASON. Como resultado se encuentran variantes en el número de copias según el linaje. En Actinobacteria PriA es promiscua a pesar de no tener copias extra con marcas de reclutamiento al metabolismo especializado. Otro resultado es el descubrimiento de que al análizar datos de cinéticas enzimaticas de PriA, no existe una trayectoria Darwiniana para ambos susttratos que lleve a la adquisición de promiscuidad. Es decir que al menos en este ejemplo, las mutaciones puntuales que llevan a una enzima monofuncional en la ruta para adquirir promiscuidad nunca incrementan la capacidad catalítica sobre ambas reacciones. 
+
   
 Tabla Datos Cinéticos de subfamilias de PriA \label{tab:cineticos}   
   
 |Fuente|Familia|HisA $in\hspace{.1cm}vivo$|TrpF $in\hspace{.1cm}vivo$|$K_{cat}^{\tiny{ProFAR}}$  $\tiny{[M^{-1}s^{-1}]}$|$K_m^{\tiny{ProFAR}}$  $\tiny{[\mu M]}$|HisA  $\frac{K_{cat}}{K_m}$ |$K_{cat}^{\tiny{PRA}}$   $\tiny{[M^{-1}s^{-1}]}$ |$K_m^{\tiny{PRA}}$ $\tiny{[\mu M]}$|TrpF $\frac{Kcat}{Km}$ |Referencia|  
-|-----------------------|-------|------|------|---------|--------|--------|-------|-------|---|-----------------|  
+|-----------------------|--------|--------|--------|------------|-----------|---------|----------|----------|------|-----------------|  
 | _Escherichia  coli_  |HisA|-|-|1.6|4.9|3.1|-|-|0|Henn-Sax et al 2002|  
 | _Escherichia  coli_  |TrpF|-|-|-|-|0|12.2|34.5|2.82|Sterner et al 1996|  
 | _Mycobacterium  smegmatis_  |PriA|*|*|2.6 ± 0.5 |0.85 ± 0.04 |0.33|7.9 ± 2.4| 3.1 ± 0.43 |0.39|Verduzco [@verduzco-castro_co-occurrence_2016]| 
@@ -91,14 +91,9 @@ Tabla Datos Cinéticos de subfamilias de PriA \label{tab:cineticos}
 |PriA_Ancestral|Ancestral|||9.4±1.6|0.3±0.009|0.03|4.3±0.4|0.6±0.02|0.13|Verduzco-Castro Noda-García|  
 |PriA_SubHisA|Ancestral|||3.7±1.01|0.5±0.03|0.1|-|-|0|Verduzco-Castro Noda-García|  
 |SubHisA_Ancestral|Ancestral|||6.3±0.7|0.15±0.03|0.02|-|-|0|Verduzco-Castro Noda-García|  
-|SubHisA_PriA|Ancestral|||27.7784793333±3.4528417221|0.05±0.005|2|167.82|0.03±0.002|0.0001|Verduzco-Castro Noda-García|  
+|SubHisA_PriA|Ancestral|||27.7±3.4|0.05±0.005|2|167.82|0.03±0.002|0.0001|Verduzco-Castro Noda-García|  
 | _scabies_||0|0|163.6|0.1|||||Ernesto|  
 | _Avisco_|||46|1.37|36|3.4||||Ana|  
-En la tabla `r ref("cineticos", type = "table")` se muestran los diferentes valores de PriA.  
-
-
-  
-Algunas de estas enzimas se seleccionaron en busca de nuevas funciones promiscuas, las reacciones catalizadas por el candidato se investigaron mediante la exploración de sustratos químicamente similares a los nativos.
 
 \clearpage   
   
@@ -141,12 +136,12 @@ Finalmente, los árboles que se produjeron por EvoMining son:
 |  	PriA_Pseudomonas| [ydff6DWqs](https://microreact.org/project/ydff6DWqs)	|  
 |  Archaea	|  [Ig-m9Cm6f](https://microreact.org/project/Ig-m9Cm6f)|  
   
-Table: Árboles EvoMining de PriA en MicroReact \label{tab:arboles}  
+Tabla: Árboles EvoMining de PriA en MicroReact \label{tab:arboles}  
 
 ```{r PriA_EvoMining, results = "asis",message=FALSE,echo=FALSE}
 label(path = "chapter4/PriAEvoMining.pdf", 
       caption = "Árboles de destino metabólico de PriA en Actinobacteria, Cyanobacteria, Pseudomonas y Archaea según EvoMining",
-      scale=1,
+      scale=.8,
       cap.size = "footnotesize",
       alt.cap="",
       label = "PriAExpansions", type = "figure")
@@ -164,7 +159,9 @@ label(path = "chapter4/PriAEvoMiningCopies.pdf",
 ```
  
 ### PriA CORASON
-Todos los Streptomyces tienen el cluster de PriA parcialmente conservado con respecto al BGC de _Streptomyces coelicolor_. El único _Streptomyces_ con una copia extra es _Streptomyces_ CT34 cuyo mejor hit en NCBI proviene NCBI de una _Lentzea_ con 50% de identidad y 98% de cobertura. No es el caso de Cyanobacteria. 
+En Actinobacteria, se observó que todos los Streptomyces tienen el cluster de PriA parcialmente conservado con respecto al BGC de _Streptomyces coelicolor_. El único organismo de este género con una copia extra es _Streptomyces_ CT34. La copia parece deberse a transferencia horizontal pues su hit en NCBI proviene de una _Lentzea_. Este fue sin embargo un homólogo lejano ya que tuvo 50% de identidad y 98% de cobertura. Otro caso interesante en Actinobacteria es XXXX
+
+No es el caso de Cyanobacteria. 
 
 TrpF1
 TrpF1 queries gave hits with TrpC enzyme present on every Streptomyces, additionally  _S. rimosus_, _S. coelicolor_, _S. venezuelae_ and _S. NRRL S-1813_ had an extra copy. _S rimosus_ TrpC vicinity has PKS and siderophore genes.
@@ -180,7 +177,8 @@ purpeofuscus and S bikiniensis
  \clearpage  
  
 ## Non darwinian trayectories  
-Resultado No existieron rutas darwininanas
+En esta sección analizamos cómo cambia la capacidad catalitica de un sustrato mientras se transforma la del otro. Para ello se utilizaron datos de la TESIS de LIA  de mutantes puntuales. Se obtuvieron todas las trayectorias empezando con mutantes simples hasta la mutante con 11 cambios. Como resultado No existieron rutas darwininanas. Finalmente, estos aminoácidos fueron comparados con los provistos por EVCouplings, de covariación.  
+
 ```{r PriARutas, results = "asis",message=FALSE,echo=FALSE}
 label(path = "conclusion/Solocirculos.png", 
       caption = "Non darwinian trayectories",
@@ -217,6 +215,7 @@ label(path = "chapter4/Couplings/PriAMutations.pdf",
       label="CouplingsMutationsPriA",
       cap.size = "footnotesize",
       alt.cap="",
+      scale=".8",
       type = "figure")
 ```
  
@@ -227,10 +226,12 @@ label(path = "chapter4/Couplings/PriACouplingFoldings.png",
       label="CouplingsFoldingPriA",
       cap.size = "footnotesize",
       alt.cap="",
+      scale=".5",
       type = "figure")
 ```
  
 ## Estandarizacion de protocolos experimentales de PriA en sus sustratos tradicionales
+Además de la exploración gen
 ```{r gel, results = "asis",message=FALSE,echo=FALSE}
 label(path = "chapter4/Geles/PriAAbril30.png", 
       caption = "gel",
@@ -239,7 +240,10 @@ label(path = "chapter4/Geles/PriAAbril30.png",
       alt.cap="",
        type = "figure")
 ``` 
-## Afinidad de enzimas selectas por sustratos químicamente parecidos a PRA y PROFAR  
+## Afinidad de enzimas selectas por sustratos químicamente parecidos a PRA y PROFAR 
+
+Algunas de estas enzimas se seleccionaron en busca de nuevas funciones promiscuas, las reacciones catalizadas por los candidatos se investigaron mediante la exploración de sustratos químicamente similares a los nativos.
+ 
 Dado que en _Streptomyces_ se han encontrado representantes de las familias PriA y PriB, se seleccionaron 39 secuencias homólogas para realizar el análisis del sustrato de la enzima de acoplamiento. Estas secuencias seleccionadas de PriA / Prib pertenecen a _Streptomyces_ uniformemente distribuidas en un árbol de especies RpoB con diferentes condiciones sobre la presencia / ausencia de TrpF. En este estudio se incluyeron otros homólogos de PriA Actinobacterial caracterizados químicamente, y finalmente se agregaron HisA de _Escherichia coli_, _Arthrobacter Aurescens_, _Salmonella enterica_ y _Acidimicrobium ferrooxidans_ y Actinobacterial TrpF como controles.
 
 Cuando existían estructuras de cristal, de lo contrario, se generaban estructuras homólogas utilizando como plantilla la enzima más cercana disponible con estructura de cristal.
@@ -280,6 +284,16 @@ Enzymes were cloned on coli V68 strains, overexpression were induced and protein
 ```{r mutControl, results = "asis",message=FALSE,echo=FALSE}
 label(path = "chapter4/MutantControl.png", 
       caption = "Scoe and non functional Scoe PriA acting on dGTP",
+      scale=.8,
+      label = "PriARutas2", 
+      cap.size = "footnotesize",
+      alt.cap="",
+      type = "figure")
+```
+
+```{r GTPCinetica, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter4/GTPCinetica.pdf", 
+      caption = "Scoe and non functional Scoe PriA acting on dGTP",
       scale=.6,
       label = "PriARutas2", 
       cap.size = "footnotesize",
@@ -289,7 +303,8 @@ label(path = "chapter4/MutantControl.png",
 
 \clearpage  
 
-```{r activity ,message=FALSE,echo=FALSE,warning=FALSE}
+
+```{r activity ,eval=FALSE,message=FALSE,echo=FALSE,warning=FALSE}
 #library(reshape)
 #library(ggplot2)
 
@@ -297,22 +312,294 @@ GTP <- read.table("chapter4/GTP.activity", header=TRUE, sep="\t")
 dGTP <- read.table("chapter4/dGTP.activity", header=TRUE, sep="\t")
 GTP.m <- melt(GTP,id="Time")
   #plot(GTP.m$Time, GTP.m$value, col=GTP.m$variable, pch=19)
-#plot.new()
-#legend("center", legend = unique(GTP.m$variable), col = unique(GTP.m$variable), pch=19)
-GTPCinetica<-ggplot(GTP.m, aes(Time, value,colour=variable))+ geom_point()+ facet_wrap(~ variable)+ geom_smooth()+theme_bw()+theme(plot.title = element_text(size = 8, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.y=element_text(angle = 30,size = 1), legend.position = "bottom")+ scale_size_area()
+plot.new()
+legend("center", legend = unique(GTP.m$variable), col = unique(GTP.m$variable), pch=19)
+ggplot(GTP.m, aes(Time, value,colour=variable))+ geom_point()+ facet_wrap(~ variable)+ geom_smooth()+theme_bw()+theme(plot.title = element_text(size = 8, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.y=element_text(angle = 30,size = 1), legend.position = "bottom")+ scale_size_area()
+
 ggsave(file="chapter4/GTPCinetica.pdf", plot=GTPCinetica, width=30, height=8)
 
 
 ```
 
 
-```{r GTPCinetica}
-label(path = "chapter4/GTPCinetica.pdf", 
-      caption = "GTPCinetica.svg",
-      scale=.8,
-      label = "GTPCinetica", 
+the two enzymes with activity  
+_Thermomonospora curvata_ thermophilic Actinobacteria from Thermomonosporaceae genus, it can be found in compost and participate in the active degradation of cellulose [@chertkov_complete_2011]. 
+
+
+Jonesia trpF shows no activity
+_Jonesia denitrificans_ is classified as a pathogenic organism for animals, reported genome was originally isolated from cooked ox blood [@pukall_complete_2009].  
+
+```{r docking_table_out, results = "asis"}
+docking <- read.csv("chapter4/SmallHeat.data", header=TRUE, sep="\t")
+kable(docking,  
+      caption = "Enzymes docking \\label{tab:docking}",
+      caption.short = "Enzymes docking ")
+```
+\clearpage 
+
+
+
+## El análisis de PriA a nivel estructural sugiere que GTP es el sustrato más afín  
+```{r Enzymes_PDB_out, results = "asis"}
+table <- read.csv("chapter4/EstructurasPDB", row.names = 1,sep="\t")
+kable(table,  caption = "Enzyme PDB \\label{tab:Enzyme PDB}",caption.short = "Enzyme PDB ")
+```
+
+\clearpage  
+
+### Similar substrates to PRA and PROFAR suggested by Tanimoto distance or previously tested   
+S1,S2,...S20 substrates were collected from literature and chemioinformatics predictions. S3 PRA and S7 PROFAR are native substrates, S13-S16  are light activated substrates,  S17 PRAP, S18 Compound V, were found on literature, S6 GMP, S11 GTP and other were suggested by chemioinformatics.  
+
+
+
+```{r Tanimoto, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter4/SubstratesClustering.png", 
+      caption = "Substrates clustering according to Tanimoto distance",
+      scale=.6,
+      label = "tanimoto", 
       cap.size = "footnotesize",
       alt.cap="",
       type = "figure")
+```
+
+On next figure we can see their chemical structures.
+
+\clearpage   
+
+```{r Eschema1, results = "asis",message=FALSE,echo=FALSE,warning=FALSE}
+label(path = "chapter4/esquema_quimico-1-1.pdf", caption = "Substrates 1",label = "Substrates chemical 1", type = "figure")
+```
+```{r Eschema2, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter4/esquema_quimico-2-2.pdf", caption = "Substrates 2",label = "Substrates chemical 2", type = "figure")
+```
+```{r Eschema3, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter4/esquema_quimico-3-3.pdf", caption = "Substrates 3",label = "Substrates chemical 3", type = "figure")
+```
+```{r Eschema4, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter4/esquema_quimico-4-4.pdf", caption = "Substrates 4",label = "Substrates chemical 4", type = "figure")
+```
+### Docking between PriA enzymes and selected substrates     
+Docking simulation were calculated for PriA _Streptomyces_ enzymes. TrpF enzymes from _Streptomyces Mg1, Jonesia denitrificans, were added as controls_
+
+Procedures can be found at [Docking Protocols](https://github.com/tripplab/Docking/wiki)  
+
+```{r sessionInfo,echo=FALSE}
+
+#vignette(package="genstats")
+#vignette("01_06_three-tables")
+
+# phenoData:
+tmp <- read.csv("chapter4/ProteinData", row.names = 1,header=TRUE,sep="\t")
+pdata <- AnnotatedDataFrame(tmp)
+
+# featureData:
+tmp <- read.csv("chapter4/Substrate.data", row.names = 1,sep="\t")
+fdata <- AnnotatedDataFrame(tmp)
+
+# expression data:
+tmp <- read.table("chapter4/EnsymeVsSubstrate.data",row.names = 1,header=TRUE,sep="\t")
+m <- as.matrix(tmp)
+#dim(m)
+#class(m)
+#colnames(m)
+#rownames(m)
+## Names should not start on numbers never
+## create ExpressionSet object:
+eset <- new("ExpressionSet", exprs = m, phenoData = pdata, featureData = fdata)
+```
+<!-- to change R colors to my wn perl heatplot
+mrBayes PriAjulian.nxs on mazorca goes to PriAjulian.con.tre
+PriAjulian.con.tre was open with figtree and saved as SVG
+To get coordinates: `coordtree.pl PriAjulian.SVG`  
+Heatplot color are from ggplot R
+mydata.xls lo guardoen mydata.cvs
+perl read_mydata.pl mydata.cvs >Heat.colors
+manually edit Heat.colors by adding headers enzymas y substrates
+perl heatFromRGB.pl HeatColor YPriAJulian
+Hice el heatplot en SVG con el script   
+-->
+  
+  <!--
+  Observaciones Mauricio  
+Figura/tabla de funcionalidad de familias  
+Separar datos experimentales por funcion y poner  pie de tabla  
+en la figura colorear por funcion, solo 3 grupos  
+
+Poner Figura suplementaria PRA PROFAR presencia ausencia trpF
+
+
+- falta el pie de figura
+Substrate docking over enzymes from extended PriA families. Substrates 1-20  
+
+- poner unidades en la escala  
+
+- intenta aumentar el contraste de color entre el valor mínimo y máximo de la escala  
+invertir colores 
+
+- repite las etiquetas de los sutratos abajo del heatmap  
+Pendiende  
+
+JOHAN /MAURICIo
+Poner que No es todo el univrso de sustratos sino solo el de KEGG
+
+Hacer mejor curvas con los valores, en lugar del heatplot
+
+Hacer docking con otras plantillas (2VEP vs 2X30)
+
+Analisis cuantitativo de los datos.  
+
+PACO
+Tipo de seleccion en todo PriA  
+
+-->
+  <!---
+  ```{r johan}
+docking <- read.csv("chapter4/SmallHeat.data", header=TRUE, sep="\t")
+
+for (i in 2:21)
+{plot(density(docking[,i],na.rm=T)); rug(docking[,i]);browser()}
+plot(cor(docking[-c(5,12,13,38,51),-1]))
+## Leer sobre la incertidumbre del 2 y explicarla  
+## Y leer el paper de Julian y el de mauricio sobre reportes de docking
+
+```
+--->
+  
+  
+  
+  ```{r load_data_docking, echo=FALSE}
+docking <- read.csv("chapter4/SmallHeat.data", header=TRUE, sep="\t")
+EnzymeOrder=factor(docking$Enzima,levels=unique(docking$Enzima))
+docking.m <- melt(docking,id = "Enzima")
+docking.m <- ddply(docking.m, .(variable), transform,rescale = rescale(value))
+docking.m$Enzima <- factor(docking.m$Enzima, levels = rev(docking.m$Enzima[order(EnzymeOrder)]))
+
+##on colors
+colorHeatPlot<-ggplot(docking.m, aes(x=variable, y=Enzima)) + labs(x = "Substrates", y = "Enzymes",text = element_text(size=12))+ geom_raster(aes(fill=value))+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6))+ scale_fill_gradientn(colours = hm.palette(100),na.value = "gray")
+ggsave("chapter4/colorHeatPlot.pdf", plot = colorHeatPlot,height = 36, width = 24)
+
+gcolor <- ggplot_build(colorHeatPlot)
+#gcolor$data[[1]]["fill"]
+#gcolor$data[[1]]
+write.xlsx(gcolor$data[[1]], "chapter4/mydataColor.xlsx")
+
+
+
+
+```
+
+
+```{r heatonPDF}
+ggplot(docking.m, aes(x=variable, y=Enzima)) + labs(x = "Substrates", y = "Enzymes",text = element_text(size=12))+ scale_fill_gradientn(colours = hm.palette(100),na.value = "gray")+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6))
+```
+
+
+```{r Figure_Heatplot, results = "asis",message=FALSE,echo=FALSE,warning=FALSE}
+label(path = "chapter4/Figura1_4.pdf", 
+      caption = "Heatplot docking PriA enzyme Family vs substrates",
+      label = "Heatplod PriA docking",
+      cap.size = "footnotesize",
+      alt.cap="",
+      type = "figure")
+```
+
+```{r PriADocking, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter4/PriAHeatPot.png", 
+      caption = "Heat Plot PriA Streptomyces vs other subtrates",
+      scale=.6,
+      label = "PriADocking",
+      cap.size = "footnotesize",
+      alt.cap="",
+      type = "figure")
+```
+
+## GTP is the substrate with best PriA affinity
+```{r substrateBox}
+## boxplot de los sustratos
+ggplot(docking.m, aes(x=variable, y=value)) + labs(x = "Substrates", y = "Affinity",text = element_text(size=12)) + geom_boxplot()+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6), legend.position = "bottom")
+
+```
+
+\clearpage  
+
+## Molecular dynamics vs experimental data  
+
+PriA activity on S3  (PRA)
+
+$$ 
+  \begin{tabular}{ l c r l l l l l}
+\hline \\ [-1.5ex]
+organism  &Family & $K_M    $     & $k_{cat}$        & $\frac{k_{cat}}{K_M}$ &Pre MD & Pos MD & Reference  \\ [1ex]
+\hline \\ [-1.5ex]
+Afer	    &HisA   & $1.1\pm0.2$   &$	0.05\pm0.001	$& 0.045	              &-10.1	&-12.3   	 &Noda-García L et al 2015\\ [1ex]
+Ecoli	    &HisA   &$	1.6	        $&$ 	  	4.9       $&3.1                   &-9.9   &-16	     &Henn-Sax et al. (2002)\\ [1ex]
+Sent	    &HisA   &$	17.0 \pm0.1 $&$	7.8 \pm 2.4	  $&$4.5 × 10^5          $&-10.3  &-20.1     &Söderholm A et al (2015)\\ [1ex]
+Aaur	    &PriB   &$	2.1 \pm 0.5 $& $	1.8 \pm 0.2 	$&0.9                   &-7.4   &   		   &verduzco-castro 2016\\ [1ex]
+Sipo	    &PriB   &$	3.8\pm0.2	  $&$0.82\pm0.02	    $&0.21	                &-8.2	  &-14.7	   &verduzco-castro 2016\\ [1ex]
+SspC	    &PriB   &$	11.4\pm3.4	$&$2.53\pm0.74	    $&0.22                  &	-8.5	&-12.7	   &verduzco-castro 2016\\ [1ex]
+SMg1	    &PriB   &$	13.2\pm3.4	$&$0.92\pm0.19	    $&0.069	                &-8	    &-15.2     &verduzco-castro 2016\\ [1ex]
+Ssvi	    &PriB   &$	3.9\pm0.89	$&$0.69\pm0.04	    $&0.18	                &-8.2	  &-16.7     &verduzco-castro 2016\\ [1ex]
+Scoe	    &PriA   &$	3.6\pm0.7	  $&$ 1.3\pm0.2	    $  &0.4	                  &-8.4	  &-15	     &Noda-García et al (2010)\\ [1ex]
+Sglob	    &PriA   & $4.2\pm0.8	 $ & $0.74\pm0.03	 $   &0.18	                &-9.2	  &-16.7	   &verduzco-castro\\ [1ex]
+Mtub 2Y85	&priA   &$	19	0.23	  $&$0.012	-9.7		  $&                      &       &          &Due et al 2011\\ [1ex]
+Mtub 3ZS4	&priA   &$	?			      $&$-9.9		        $&                      &       &          &Due et al 2011 (To be published)\\ [1ex]
+Auro	    &priA   &$	4.0 \pm 0.9	$&$0.2 \pm 0.03	  $&0.04	                &-9.2		&          &Vazquez-Juarez (2016)\\ [1ex]
+Cjei	    &PriA   &$	2.3 \pm 0.2	$&$0.9 \pm 0.08	  $&0.39	                &-8.5		&          &Noda-García et al (2013)\\ [1ex]
+Cdip	    &subHisA&$	4.4 \pm 0.5	$&$2.6 \pm 0.3	    $&0.59	                &-9.2		&          &Noda-García et al (2013)\\ [1ex]
+SMg1 TrpF	&TrpF3  &	-	             &-	               &-	                    &-6.9	  &-9.6	     &verduzco-castro 2016\\ [1ex]
+Jden	    &TrpF3  &	-	             &-	               &-	       -7.2	        &-9.4	  &$16.8\pm3.3$&	Verduzco-Castro E et al  2016\\ [1ex]
+Acar      &SubHisA&	0.02					 &                 &	                    &       &          &			\\ [1ex]
+Aodo	    &SubTrpF&		-	           &-	               &-                     &       &          &\\ [1ex]
+\hline
+\end{tabular}
+\label{table:name}
+$$ 
+  
+  PriA activity on S7  (PROFAR)
+$$ \centering 
+\begin{tabular}{ l c r l l l l l}
+\hline \\ [-1.5ex]
+organism  &Family  &  $K_M$ & $k_{cat}$& $\frac{k{cat}}{K_M}$ &Pre MD &Pos MD &Reference  \\ [1ex]
+\hline \\ [-1.5ex]
+Afer      &HisA    &-            &-                &-          &-9.2    &-9        &Noda-García L et al. (2015)   \\ [1ex]
+Ecoli     &HisA    &-            &-                &-          &-9      &-11.1     &Henn-Sax et al. (2002)\\ [1ex]
+Sent      &HisA    &-            & -               &-          &-9.6    &-10.2     &Söderholm A et al (2015)\\ [1ex]
+Aaur      &PriB    &$26.3\pm6.3$ & $0.37\pm 0.09$  & 0.014     &-7.1    &-         &verduzco-castro 2016\\ [1ex]
+Sipo      &PriB    &$60.8\pm1.1$ &$8.25\pm0.4 $    &0.14       &-8      &-8.5      &verduzco-castro 2016 \\ [1ex]
+SspC      &PriB    &$149.9\pm29$ &$1.4\pm0.12 $    &0.009      &-8.5    &-10.8     &verduzco-castro 2016\\ [1ex]
+SMg1      &PriB    &$129.6\pm34$ &$0.29\pm0.04$    &0.0022     &-7.5    &-11       &verduzco-castro 2016\\ [1ex]
+Ssvi      &PriB    &$24.5\pm4.0$ &$1.6\pm0.29 $    &0.067      &-8      &-9.7      &verduzco-castro 2016 \\ [1ex]
+Scoe      &PriA    &$5.0\pm0.08$ &$3.4\pm0.09  $   &0.7        &-8      &-9.4      &Noda-García et al (2010)   \\ [1ex]
+Sglob     &PriA    &$11\pm1.0$  &$3.8\pm0.2  $     &0.34       &-8.7    &-9.4      &verduzco-castro 2016  \\ [1ex]
+Mtub2Y85  &priA    &21         &3.6         &0.17       &-8.6    &          &Due et al 2011                        \\ [1ex] 
+Mtub3ZS4  &priA    &           &            &           &-9.3    &          &Due et al 2011 (To be published)      \\ [1ex] 
+Auro      &priA    &$23 \pm 6.5 $  &$0.5\pm0.05 $&0.02       &-9.3    &          &Vazquez-Juarez (2016)                 \\ [1ex] 
+Cjei      &PriA    &$5.1 \pm1.0$  &$1.6 \pm 0.16 $&0.31       &-9      &          &Noda-García et al (2013)              \\ [1ex]
+Cdip      &subHisA &-          &-           &-          &-8.8    &          &Noda-García et al (2013)              \\ [1ex]
+SMg1 TrpF &TrpF3   &$8.4\pm1.7$    &$10.5\pm2.4$    &1.25       &-7.6    &-9        &verduzco-castro     \\ [1ex] 
+Jden      &TrpF3   &$16.8\pm3.3$   &$27\pm1.6$      &1.6        &-7.6    &-7.7      &verduzco-castro     \\ [1ex] 
+Acar      &SubHisA &Na         &Na          &0.02       &Na      &Na        &Na                                    \\ [1ex] 
+Aodo      &SubTrpF &-          &-           &-          &-       &Na        &Na                                    \\ [1ex]
+
+\hline
+\end{tabular}
+\label{table:mi table}$$
+  <!--
+  \caption[Table caption text]{Table taken from \cite[p.10]{verduzco-castro_co-occurrence_2016} }
+
+\label{table:name}
+
+-->
+  
+  Con actividad de FolE i.e activa para el compuesto V										Adams et al (2014)
+Genome size vs Total antismash cluster coloured by order  
+
+\clearpage  
+
+
+
+```{r endsession}
+#sessionInfo()
+
 ```
 
