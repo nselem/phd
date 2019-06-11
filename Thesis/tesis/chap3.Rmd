@@ -28,9 +28,7 @@ if(!require(reedtemplates)){
 library(reedtemplates)
 ```
 
-#Desarrollo de CORASON como herramienta para organizar clusters biosintéticos y otras vecindades genómicas conservadas.  
-
-
+#Desarrollo de CORASON como herramienta para organizar clusters biosintéticos y otras vecindades genómicas conservadas.   
 ```{r Corason-pipe, results = "asis",message=FALSE,echo=FALSE}
 label(path = "chapter3/Corason-pipe.pdf", 
       caption = "La herramienta corason localiza familias de clusters biosintéticos en un linaje genómico partiendo de un cluster y un gen de referencia.",
@@ -39,9 +37,18 @@ label(path = "chapter3/Corason-pipe.pdf",
       alt.cap="La herramienta corason localiza familias de clusters biosintéticos en un linaje genómico partiendo de un cluster y un gen de referencia. Todos los contextos genómicos que contengan ese gen y algún otro gen del cluster de referencia serán encontrados en el linaje seleccionado por el usuario. CORASON identifica el core génico de la familia. La información del core se utiliza para organizar filogenéticamente todos los miembros de la familia del BGC, es decir todas las variantes del BGC serán organizadas. El core génico está relacionado con el core de la molécula, la parte variable del BGC codifica enzimas accesorias que producen ornamentos i.e. variantes moleculares. Al cambiar de gen de referencia CORASON permite explorar otras familias de BGC que contengan las mismas modificaciones. Los resultados se presentan en una visualización que permite al mismo tiempo apreciar variación a nivel de presencia-ausencia de genes entre miembros de una familia de BGCs, como también apreciar variación a nivel de secuencia a través de un gradiente de color entre genes conservados entre una variante y el BGC de referencia.",
     scale=".6",  type = "figure")
 ```
+  
+CORASON es una herramienta en línea de comandos para organizar filogenéticamente la variación de una familia de clusters, Figura `r ref(label = "Corason-pipe", type = "figure")`. Dada la existencia de variantes de BGCs en bases de datos  de linajes genómicos se diseñó CORASON. Corason se ejecuta en línea de comandos, su función es identificar el core génico de un BGC y utilizarlo para presentar una visualización de las variantes de la familia organizadas filogenéticamente  
 
-Texto `r ref(label = "Corason-pipe", type = "figure")`       
- 
+Los métodos de minado de genomas han acelerado el descubrimiento de nuevos clusters biosintéticos (BGCs). Casi cada nueva bacteria que es secuenciada aporta alguna novedad al pangenoma bacteriano conocido. Una fracción de estos genes novedosos formará parte de variantes de BGCs previamente conocidos aportando diversidad a las familias de clusters biosintéticos. La diversidad genética que existe en las familias de BGCs está directamente relacionada con cambios moleculares, incluso pequeñas variantes en un metabolito pueden ocasionar diferencias en su función biológica.
+
+
+ CORASON fue diseñado con las siguientes características: (i) una interfaz de línea de comando simple (ii) identificación del core génico del BGC (iii) la reconstrucción filogenética de la familia de BGCs utilizando la información del core (iv) salida visual en formato SVG, que muestra tanto la anotación funcional de los genes como como la distancia respecto a sus ortólogos del cluster de referencia.  
+
+En este capítulo presento CORASON, CORe Analysis of Syntenic Orthologs to prioritize Natural products biosynthetic gene clusters, una herramienta para explorar la diversidad en el contenido de los BGCs así como su distribución en un linaje genómico proporcionado por el usuario. 
+
+## Algoritmo y características de CORASON  
+
 ```{r ISBATalk, results = "asis",message=FALSE,echo=FALSE}
 label(path = "chapter3/ISBATalk.png", 
       caption = " CORASON es una herramienta en línea de comandos para organizar filogenéticamente la variación de una familia de clusters. ",     
@@ -50,7 +57,21 @@ label(path = "chapter3/ISBATalk.png",
       label = "ISBATalk", scale=".4",
       type = "figure")
 ```
- Texto `r ref(label = "ISBATalk", type = "figure")`      
+
+La herramienta corason, como se muestra en la `r ref(label = "ISBATalk", type = "figure")` localiza familias de clusters biosintéticos en un linaje genómico partiendo de un cluster y un gen de referencia. Todos los contextos genómicos que contengan ese gen y algún otro gen del cluster de referencia serán encontrados en el linaje seleccionado por el usuario. CORASON identifica el core génico de la familia. La información del core se utiliza para organizar filogenéticamente todos los miembros de la familia del BGC, es decir todas las variantes del BGC serán organizadas. El core génico está relacionado con el core de la molécula, la parte variable del BGC codifica enzimas accesorias que producen ornamentos i.e. variantes moleculares. Al cambiar de gen de referencia CORASON permite explorar otras familias de BGC que contengan las mismas modificaciones. Los resultados se presentan en una visualización que permite al mismo tiempo apreciar variación a nivel de presencia-ausencia de genes entre miembros de una familia de BGCs, como también apreciar variación a nivel de secuencia a través de un gradiente de color entre genes conservados entre una variante y el BGC de referencia.
+
+
+CORASON permite la rápida identificación de variantes de BGCs y organiza los resultados utilizando una aproximación filogenética. En la figura [CorasonPipeline] se muestra esquemáticamente como dado un cluster de referencia y un gen localizado en el cluster, así como las secuencias genómicas de un linaje de referencia corason buscará todas las variantes del cluster de referencia que existen en el linaje genómico seleccionado. 
+
+## Las familias de BGCs están formadas por variantes del BGC de referencia.
+Así como existen familias génicas, un gen y todos sus homólogos, incluidos parálogos, ortólogos y xenólogos, también existen familias de BGCs. No es tan claro definir un BGC porque no tiene un codón de inicio y un codón de paro como un gen. En algunas ocasiones como en el caso de scytonemin todos los genes del BGC se expresan al recibir un estímulo, como los rayos UV en este caso. Otras veces en la producción del metabolito participan genes que no son necesariamente contiguos, y por ello al cambiar el BGC de organismo y realizar expresión heteróloga no se obtiene el mismo metabolito. Las fronteras es decir los genes de la orilla del BGC no siempre son claras. 
+
+Así pues, cuando se habla de un BGC no se debe pensar que este es igual en todos los organismos del linaje, es decir que tiene el mismo contenido génico. Hay variación tanto a nivel de contenido génico como a nivel de secuencia entre los genes en común. Esta variación produce la promiscuidad de producto, una familia de BGCs produce distintos productos a partir de los mismos precursores. En este trabajo vamos a tomar como BGC de referencia a los anotados en MIBiG, que son de los que se tienen datos experimentales respecto al producto reportado. Todas sus variantes que contengan al menos dos genes en común, uno de referencia seleccionado por el usuario y otro cualquiera pero común con el BGC de referencia son considerados parte de la familia del BGC. 
+
+Como ejemplo de familias de BGCs podemos pensar a los operones. Un operón es el conjunto de genes dedicados a la síntesis de algún metabolito del metabolismo central, estos genes suelen encontrarse juntos en el cromosoma y transcribirse simultáneamente. Ejemplos de estos operones son los que producen los aminoácidos histidina y triptófano. Estos “BGCs” hace millones de años fueron posiblemente parte del metabolismo especializado y debido a su éxito se fijaron en lo que ahora vemos como BGCs conservados en ciertos linajes genómicos. En estos casos las fronteras son claras y la variación génica es poca. Aún así existen otros ejemplos donde puede constatarse variación en las rutas de síntesis de mecanismos centrales de metabolismo procariota. En el caso de histidina y triptófano, como hablaremos en el siguiente capítulo, es la variación a nivel de secuencia y no a nivel de composición génica la que produce diversidad de producto. 
+
+En oposición a los BGCs u operones de metabolismo conservado, están los BGCs del actual metabolismo especializado, así como se encuentran familias con mucha variación génica pueden encontrarse otras muy conservadas. En este capítulo presentaremos varios ejemplos de familias de BGCs.
+
 
 
 ```{r des, results = "asis",message=FALSE,echo=FALSE}
@@ -117,34 +138,6 @@ label(path = "chapter3/figura5.pdf",
 ```
  Texto `r ref(label = "Rimosamide", type = "figure")`  
  
-
-Figura [CorasonCaracteristicas] CORASON es una herramienta en línea de comandos para organizar filogenéticamente la variación de una familia de clusters. Dada la existencia de variantes de BGCs en bases de datos  de linajes genómicos se diseñó CORASON. Corason se ejecuta en línea de comandos, su función es identificar el core génico de un BGC y utilizarlo para presentar una visualización de las variantes de la familia organizadas filogenéticamente  
-
-Los métodos de minado de genomas han acelerado el descubrimiento de nuevos clusters biosintéticos (BGCs). Casi cada nueva bacteria que es secuenciada aporta alguna novedad al pangenoma bacteriano conocido. Una fracción de estos genes novedosos formará parte de variantes de BGCs previamente conocidos aportando diversidad a las familias de clusters biosintéticos. La diversidad genética que existe en las familias de BGCs está directamente relacionada con cambios moleculares, incluso pequeñas variantes en un metabolito pueden ocasionar diferencias en su función biológica.
-
-
- CORASON fue diseñado con las siguientes características: (i) una interfaz de línea de comando simple (ii) identificación del core génico del BGC (iii) la reconstrucción filogenética de la familia de BGCs utilizando la información del core (iv) salida visual en formato SVG, que muestra tanto la anotación funcional de los genes como como la distancia respecto a sus ortólogos del cluster de referencia.  
-
-En este capítulo presento CORASON, CORe Analysis of Syntenic Orthologs to prioritize Natural products biosynthetic gene clusters, una herramienta para explorar la diversidad en el contenido de los BGCs así como su distribución en un linaje genómico proporcionado por el usuario. 
-
-## Algoritmo y características de CORASON  
-
-Figura [CorasonPipeline] La herramienta corason localiza familias de clusters biosintéticos en un linaje genómico partiendo de un cluster y un gen de referencia. Todos los contextos genómicos que contengan ese gen y algún otro gen del cluster de referencia serán encontrados en el linaje seleccionado por el usuario. CORASON identifica el core génico de la familia. La información del core se utiliza para organizar filogenéticamente todos los miembros de la familia del BGC, es decir todas las variantes del BGC serán organizadas. El core génico está relacionado con el core de la molécula, la parte variable del BGC codifica enzimas accesorias que producen ornamentos i.e. variantes moleculares. Al cambiar de gen de referencia CORASON permite explorar otras familias de BGC que contengan las mismas modificaciones. Los resultados se presentan en una visualización que permite al mismo tiempo apreciar variación a nivel de presencia-ausencia de genes entre miembros de una familia de BGCs, como también apreciar variación a nivel de secuencia a través de un gradiente de color entre genes conservados entre una variante y el BGC de referencia.
-
-
-CORASON permite la rápida identificación de variantes de BGCs y organiza los resultados utilizando una aproximación filogenética. En la figura [CorasonPipeline] se muestra esquemáticamente como dado un cluster de referencia y un gen localizado en el cluster, así como las secuencias genómicas de un linaje de referencia corason buscará todas las variantes del cluster de referencia que existen en el linaje genómico seleccionado. 
-
-## Las familias de BGCs están formadas por variantes del BGC de referencia.
-Así como existen familias génicas, un gen y todos sus homólogos, incluidos parálogos, ortólogos y xenólogos, también existen familias de BGCs. No es tan claro definir un BGC porque no tiene un codón de inicio y un codón de paro como un gen. En algunas ocasiones como en el caso de scytonemin todos los genes del BGC se expresan al recibir un estímulo, como los rayos UV en este caso. Otras veces en la producción del metabolito participan genes que no son necesariamente contiguos, y por ello al cambiar el BGC de organismo y realizar expresión heteróloga no se obtiene el mismo metabolito. Las fronteras es decir los genes de la orilla del BGC no siempre son claras. 
-
-Así pues, cuando se habla de un BGC no se debe pensar que este es igual en todos los organismos del linaje, es decir que tiene el mismo contenido génico. Hay variación tanto a nivel de contenido génico como a nivel de secuencia entre los genes en común. Esta variación produce la promiscuidad de producto, una familia de BGCs produce distintos productos a partir de los mismos precursores. En este trabajo vamos a tomar como BGC de referencia a los anotados en MIBiG, que son de los que se tienen datos experimentales respecto al producto reportado. Todas sus variantes que contengan al menos dos genes en común, uno de referencia seleccionado por el usuario y otro cualquiera pero común con el BGC de referencia son considerados parte de la familia del BGC. 
-
-Como ejemplo de familias de BGCs podemos pensar a los operones. Un operón es el conjunto de genes dedicados a la síntesis de algún metabolito del metabolismo central, estos genes suelen encontrarse juntos en el cromosoma y transcribirse simultáneamente. Ejemplos de estos operones son los que producen los aminoácidos histidina y triptófano. Estos “BGCs” hace millones de años fueron posiblemente parte del metabolismo especializado y debido a su éxito se fijaron en lo que ahora vemos como BGCs conservados en ciertos linajes genómicos. En estos casos las fronteras son claras y la variación génica es poca. Aún así existen otros ejemplos donde puede constatarse variación en las rutas de síntesis de mecanismos centrales de metabolismo procariota. En el caso de histidina y triptófano, como hablaremos en el siguiente capítulo, es la variación a nivel de secuencia y no a nivel de composición génica la que produce diversidad de producto. 
-
-En oposición a los BGCs u operones de metabolismo conservado, están los BGCs del actual metabolismo especializado, así como se encuentran familias con mucha variación génica pueden encontrarse otras muy conservadas. En este capítulo presentaremos varios ejemplos de familias de BGCs.
-
-
-
 ## Aplicaciones de CORASON en Actinobacteria y Pseudomonas
 En el capítulo anterior las variantes del BGC scytonemin en Cyanobacteria fueron encontradas al aplicar CORASON a dicho linaje. En este capítulo presento ejemplos del uso de CORASON  para investigar los patrones de conservación/variación en familias de BGCs en los linajes Actinobacteria y _Pseudomonas_. Primero, versiones iniciales de CORASON fueron usadas junto con cromatografía y espectrometría de masas (LC-MS) para estudiar la ecología y evolución de los sideróforos del tipo desferroxiaminas en Actinobacteria. Este estudio permitió la identificación de desG, un miembro de la familia penicilin amidasa responsable de la arilación de desferroxiaminas en actinomicetos acuáticos [REF]. 
 

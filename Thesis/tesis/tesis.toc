@@ -62,7 +62,7 @@
 \contentsline {subsection}{\numberline {1.4.1}El pangenoma de Clavibacter Michiganensis es abierto}{49}{subsection.1.4.1}
 \contentsline {section}{\numberline {1.5}Relaci\IeC {\'o}n entre genes marcadores, Orthocores y la promiscuidad enzim\IeC {\'a}tica.}{50}{section.1.5}
 \contentsline {section}{\numberline {1.6}Protocolos para usar Orthocore, myRAST, fastOrtho, Clavigenomics, y BPGA}{50}{section.1.6}
-\contentsline {section}{\numberline {1.7}ORthocore}{53}{section.1.7}
+\contentsline {section}{\numberline {1.7}Orthocore}{53}{section.1.7}
 \contentsline {chapter}{Chapter 2: EvoMining}{55}{chapter.2}
 \contentsline {section}{\numberline {2.1}Introduction}{55}{section.2.1}
 \contentsline {section}{\numberline {2.2}EvoMining es un m\IeC {\'e}todo para encontrar BGCs no tradicionales}{56}{section.2.2}
@@ -86,13 +86,13 @@
 \contentsline {subsection}{\numberline {2.6.2}La familia \emph {tauD} tiene expansi\IeC {\'o}n y reclutamiento tanto en Actinobacteria como en Pseudomonas}{77}{subsection.2.6.2}
 \contentsline {section}{\numberline {2.7}Rimosamide y Detoxin tienen en com\IeC {\'u}n la enzima TauD,}{78}{section.2.7}
 \contentsline {chapter}{Chapter 3: Desarrollo de CORASON como herramienta para organizar clusters biosint\IeC {\'e}ticos y otras vecindades gen\IeC {\'o}micas conservadas.}{81}{chapter.3}
-\contentsline {section}{\numberline {3.1}Algoritmo y caracter\IeC {\'\i }sticas de CORASON}{86}{section.3.1}
-\contentsline {section}{\numberline {3.2}Las familias de BGCs est\IeC {\'a}n formadas por variantes del BGC de referencia.}{88}{section.3.2}
-\contentsline {section}{\numberline {3.3}Aplicaciones de CORASON en Actinobacteria y Pseudomonas}{89}{section.3.3}
+\contentsline {section}{\numberline {3.1}Algoritmo y caracter\IeC {\'\i }sticas de CORASON}{83}{section.3.1}
+\contentsline {section}{\numberline {3.2}Las familias de BGCs est\IeC {\'a}n formadas por variantes del BGC de referencia.}{84}{section.3.2}
+\contentsline {section}{\numberline {3.3}Aplicaciones de CORASON en Actinobacteria y Pseudomonas}{85}{section.3.3}
 \contentsline {section}{\numberline {3.4}Estas familias pueden clasificarse}{90}{section.3.4}
 \contentsline {section}{\numberline {3.5}Un BGC reportado puede tener muchas variantes que conforman una familia de BGCs}{90}{section.3.5}
 \contentsline {section}{\numberline {3.6}CORASON analiza la conservaci\IeC {\'o}n del contexto gen\IeC {\'o}mico de los EvoMining hits}{91}{section.3.6}
-\contentsline {section}{\numberline {3.7}El contexto de una rama divergente de \emph {tauD} est\IeC {\'a} conservado en Pseudomonas}{92}{section.3.7}
+\contentsline {section}{\numberline {3.7}El contexto de una rama divergente de \emph {tauD} est\IeC {\'a} conservado en Pseudomonas}{91}{section.3.7}
 \contentsline {section}{\numberline {3.8}CORASON se adapt\IeC {\'o} a la herramienta BiG-SCAPE de clasificaci\IeC {\'o}n de familias de BGCs}{92}{section.3.8}
 \contentsline {section}{\numberline {3.9}BiG SCAPE y CORASON identificaron nuevos productos variantes de la familia de BGCs Rimosamide - Detoxin en Actinobacteria}{92}{section.3.9}
 \contentsline {section}{\numberline {3.10}CORASON sugiere que las familias detoxin y rimosamide pertenecen a un amplio clan de familias dedicadas a la s\IeC {\'\i }ntesis de p\IeC {\'e}ptidos.}{93}{section.3.10}
@@ -101,31 +101,27 @@
 \contentsline {subsection}{\numberline {3.11.2}El clado \emph {Amycolatopsis P450} produce cinco variantes de detoxin.}{95}{subsection.3.11.2}
 \contentsline {subsubsection}{Discusi\IeC {\'o}n}{96}{section*.57}
 \contentsline {chapter}{Chapter 4: La familia PriA}{97}{chapter.4}
-\contentsline {section}{\numberline {4.1}PriA como modelo de familia enzim\IeC {\'a}tica donde las expansiones no son condici\IeC {\'o}n necesaria para la promiscuidad.}{98}{section.4.1}
-\contentsline {subsubsection}{PriA en EvoMining}{98}{section*.58}
-\contentsline {subsubsection}{PriA CORASON}{99}{section*.63}
-\contentsline {section}{\numberline {4.2}Selected enzymes to investigate affinity of substrates similar to PRA and PROFAR}{103}{section.4.2}
-\contentsline {section}{\numberline {4.3}PriA cristal structures on PDB}{104}{section.4.3}
-\contentsline {section}{\numberline {4.4}Similar substrates to PRA and PROFAR suggested by Tanimoto distance or previously tested}{105}{section.4.4}
-\contentsline {section}{\numberline {4.5}Docking between PriA enzymes and selected substrates}{107}{section.4.5}
-\contentsline {section}{\numberline {4.6}GTP is the substrate with best PriA affinity}{125}{section.4.6}
-\contentsline {section}{\numberline {4.7}PriA Activity on GTP}{129}{section.4.7}
-\contentsline {section}{\numberline {4.8}Molecular dynamics vs experimental data}{140}{section.4.8}
-\contentsline {section}{\numberline {4.9}Non darwinian trayectories}{142}{section.4.9}
-\contentsline {chapter}{Conclusion}{145}{chapter*.76}
-\contentsline {section}{\numberline {4.1}Discusion}{145}{section.4.1}
-\contentsline {subsubsection}{More info}{145}{section*.77}
-\contentsline {chapter}{Appendix A: The First Appendix}{147}{appendix.A}
-\contentsline {subsubsection}{In the main Rmd file:}{147}{section*.78}
-\contentsline {subsubsection}{In \hyperlink {ref_labels}{}:}{147}{section*.79}
-\contentsline {chapter}{Appendix B: The Second Appendix, Open source code on this document}{149}{appendix.B}
-\contentsline {section}{\numberline {B.1}R markdown}{149}{section.B.1}
-\contentsline {section}{\numberline {B.2}Docker}{149}{section.B.2}
-\contentsline {section}{\numberline {B.3}Git}{150}{section.B.3}
-\contentsline {section}{\numberline {B.4}Connect GitHub and DockerHub}{150}{section.B.4}
-\contentsline {section}{\numberline {B.5}Additional resources}{150}{section.B.5}
-\contentsline {chapter}{Appendix C: The third Appendix, Other contributions during my phd}{153}{appendix.C}
-\contentsline {section}{\numberline {C.1}Accepted}{153}{section.C.1}
-\contentsline {section}{\numberline {C.2}Submitted}{153}{section.C.2}
-\contentsline {section}{\numberline {C.3}On preparation}{153}{section.C.3}
-\contentsline {chapter}{References}{155}{appendix*.80}
+\contentsline {section}{\numberline {4.1}PriA como modelo de familia enzim\IeC {\'a}tica donde las expansiones no son condici\IeC {\'o}n necesaria para la promiscuidad.}{101}{section.4.1}
+\contentsline {subsubsection}{PriA en EvoMining}{101}{section*.58}
+\contentsline {subsection}{\numberline {4.1.1}PriA CORASON}{102}{subsection.4.1.1}
+\contentsline {section}{\numberline {4.2}Non darwinian trayectories}{105}{section.4.2}
+\contentsline {section}{\numberline {4.3}Estandarizacion de protocolos experimentales de PriA en sus sustratos tradicionales}{107}{section.4.3}
+\contentsline {section}{\numberline {4.4}Afinidad de enzimas selectas por sustratos qu\IeC {\'\i }micamente parecidos a PRA y PROFAR}{107}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Es posible que PriA tenga actividad en GTP}{111}{subsection.4.4.1}
+\contentsline {chapter}{Conclusion}{113}{chapter*.69}
+\contentsline {section}{\numberline {4.1}Discusion}{113}{section.4.1}
+\contentsline {subsubsection}{More info}{113}{section*.70}
+\contentsline {chapter}{Appendix A: The First Appendix}{115}{appendix.A}
+\contentsline {subsubsection}{In the main Rmd file:}{115}{section*.71}
+\contentsline {subsubsection}{In \hyperlink {ref_labels}{}:}{115}{section*.72}
+\contentsline {chapter}{Appendix B: The Second Appendix, Open source code on this document}{117}{appendix.B}
+\contentsline {section}{\numberline {B.1}R markdown}{117}{section.B.1}
+\contentsline {section}{\numberline {B.2}Docker}{117}{section.B.2}
+\contentsline {section}{\numberline {B.3}Git}{118}{section.B.3}
+\contentsline {section}{\numberline {B.4}Connect GitHub and DockerHub}{118}{section.B.4}
+\contentsline {section}{\numberline {B.5}Additional resources}{118}{section.B.5}
+\contentsline {chapter}{Appendix C: The third Appendix, Other contributions during my phd}{121}{appendix.C}
+\contentsline {section}{\numberline {C.1}Accepted}{121}{section.C.1}
+\contentsline {section}{\numberline {C.2}Submitted}{121}{section.C.2}
+\contentsline {section}{\numberline {C.3}On preparation}{121}{section.C.3}
+\contentsline {chapter}{References}{123}{appendix*.73}

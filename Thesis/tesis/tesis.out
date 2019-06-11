@@ -61,7 +61,7 @@
 \BOOKMARK [2][-]{subsection.1.4.1}{El pangenoma de Clavibacter Michiganensis es abierto}{section.1.4}% 61
 \BOOKMARK [1][-]{section.1.5}{Relaci\363n entre genes marcadores, Orthocores y la promiscuidad enzim\341tica.}{chapter.1}% 62
 \BOOKMARK [1][-]{section.1.6}{Protocolos para usar Orthocore, myRAST, fastOrtho, Clavigenomics, y BPGA}{chapter.1}% 63
-\BOOKMARK [1][-]{section.1.7}{ORthocore}{chapter.1}% 64
+\BOOKMARK [1][-]{section.1.7}{Orthocore}{chapter.1}% 64
 \BOOKMARK [0][-]{chapter.2}{Chapter 2: EvoMining}{}% 65
 \BOOKMARK [1][-]{section.2.1}{Introduction}{chapter.2}% 66
 \BOOKMARK [1][-]{section.2.2}{EvoMining es un m\351todo para encontrar BGCs no tradicionales}{chapter.2}% 67
@@ -102,29 +102,25 @@
 \BOOKMARK [0][-]{chapter.4}{Chapter 4: La familia PriA}{}% 102
 \BOOKMARK [1][-]{section.4.1}{PriA como modelo de familia enzim\341tica donde las expansiones no son condici\363n necesaria para la promiscuidad.}{chapter.4}% 103
 \BOOKMARK [2][-]{section*.58}{PriA en EvoMining}{section.4.1}% 104
-\BOOKMARK [3][-]{section*.63}{PriA CORASON}{section*.58}% 105
-\BOOKMARK [1][-]{section.4.2}{Selected enzymes to investigate affinity of substrates similar to PRA and PROFAR}{chapter.4}% 106
-\BOOKMARK [1][-]{section.4.3}{PriA cristal structures on PDB}{chapter.4}% 107
-\BOOKMARK [1][-]{section.4.4}{Similar substrates to PRA and PROFAR suggested by Tanimoto distance or previously tested}{chapter.4}% 108
-\BOOKMARK [1][-]{section.4.5}{Docking between PriA enzymes and selected substrates}{chapter.4}% 109
-\BOOKMARK [1][-]{section.4.6}{GTP is the substrate with best PriA affinity}{chapter.4}% 110
-\BOOKMARK [1][-]{section.4.7}{PriA Activity on GTP}{chapter.4}% 111
-\BOOKMARK [1][-]{section.4.8}{Molecular dynamics vs experimental data}{chapter.4}% 112
-\BOOKMARK [1][-]{section.4.9}{Non darwinian trayectories}{chapter.4}% 113
-\BOOKMARK [0][-]{chapter*.76}{Conclusion}{}% 114
-\BOOKMARK [1][-]{section.4.1}{Discusion}{chapter*.76}% 115
-\BOOKMARK [2][-]{section*.77}{More info}{section.4.1}% 116
-\BOOKMARK [0][-]{appendix.A}{Appendix A: The First Appendix}{}% 117
-\BOOKMARK [1][-]{section*.78}{In the main Rmd file:}{appendix.A}% 118
-\BOOKMARK [2][-]{section*.79}{In :}{section*.78}% 119
-\BOOKMARK [0][-]{appendix.B}{Appendix B: The Second Appendix, Open source code on this document}{}% 120
-\BOOKMARK [1][-]{section.B.1}{R markdown}{appendix.B}% 121
-\BOOKMARK [1][-]{section.B.2}{Docker}{appendix.B}% 122
-\BOOKMARK [1][-]{section.B.3}{Git}{appendix.B}% 123
-\BOOKMARK [1][-]{section.B.4}{Connect GitHub and DockerHub}{appendix.B}% 124
-\BOOKMARK [1][-]{section.B.5}{Additional resources}{appendix.B}% 125
-\BOOKMARK [0][-]{appendix.C}{Appendix C: The third Appendix, Other contributions during my phd}{}% 126
-\BOOKMARK [1][-]{section.C.1}{Accepted}{appendix.C}% 127
-\BOOKMARK [1][-]{section.C.2}{Submitted}{appendix.C}% 128
-\BOOKMARK [1][-]{section.C.3}{On preparation}{appendix.C}% 129
-\BOOKMARK [0][-]{appendix*.80}{References}{}% 130
+\BOOKMARK [2][-]{subsection.4.1.1}{PriA CORASON}{section.4.1}% 105
+\BOOKMARK [1][-]{section.4.2}{Non darwinian trayectories}{chapter.4}% 106
+\BOOKMARK [1][-]{section.4.3}{Estandarizacion de protocolos experimentales de PriA en sus sustratos tradicionales}{chapter.4}% 107
+\BOOKMARK [1][-]{section.4.4}{Afinidad de enzimas selectas por sustratos qu\355micamente parecidos a PRA y PROFAR}{chapter.4}% 108
+\BOOKMARK [2][-]{subsection.4.4.1}{Es posible que PriA tenga actividad en GTP}{section.4.4}% 109
+\BOOKMARK [0][-]{chapter*.69}{Conclusion}{}% 110
+\BOOKMARK [1][-]{section.4.1}{Discusion}{chapter*.69}% 111
+\BOOKMARK [2][-]{section*.70}{More info}{section.4.1}% 112
+\BOOKMARK [0][-]{appendix.A}{Appendix A: The First Appendix}{}% 113
+\BOOKMARK [1][-]{section*.71}{In the main Rmd file:}{appendix.A}% 114
+\BOOKMARK [2][-]{section*.72}{In :}{section*.71}% 115
+\BOOKMARK [0][-]{appendix.B}{Appendix B: The Second Appendix, Open source code on this document}{}% 116
+\BOOKMARK [1][-]{section.B.1}{R markdown}{appendix.B}% 117
+\BOOKMARK [1][-]{section.B.2}{Docker}{appendix.B}% 118
+\BOOKMARK [1][-]{section.B.3}{Git}{appendix.B}% 119
+\BOOKMARK [1][-]{section.B.4}{Connect GitHub and DockerHub}{appendix.B}% 120
+\BOOKMARK [1][-]{section.B.5}{Additional resources}{appendix.B}% 121
+\BOOKMARK [0][-]{appendix.C}{Appendix C: The third Appendix, Other contributions during my phd}{}% 122
+\BOOKMARK [1][-]{section.C.1}{Accepted}{appendix.C}% 123
+\BOOKMARK [1][-]{section.C.2}{Submitted}{appendix.C}% 124
+\BOOKMARK [1][-]{section.C.3}{On preparation}{appendix.C}% 125
+\BOOKMARK [0][-]{appendix*.73}{References}{}% 126

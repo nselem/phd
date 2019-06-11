@@ -260,8 +260,8 @@ Formatos de RAST para descargar archivos
 
 Puedes cambiar el formato table_txt por el que tú necesites.  
 
-Pie de tabla  
-   
+Table: Formatos de descarga disponibles en myRAST \label{tab:myrast}
+  
 |Atributo        |Descripción                                             |  
 |----------------|--------------------------------------------------------|  
 |genbank         |GenBank (con funciones y enriquecimiento de SEED)       |  
@@ -278,9 +278,8 @@ Pie de tabla
 |table_txt|Gene data in tab-separated format|   
 |table_xls|Preserve the original gene calls and use RAST|  
 
-Table: Variantes de formatos genpomicos Orthochore \label{tab:inher}
-  Referencia `r ref("inher", type = "table")`.  
+  Referencia `r ref("myrast", type = "table")`.  
   
-## ORthocore  
+## Orthocore  
 
 El umbral de e-value de Orthocore es por default 1e-6. Todas las secuencias son alineadas usando MUSCLE v3.8.31 con los parámetros default y curadas utilizando Gblocks con 5 posiciones como longitud mínima del  bloque, 10 como máximo número de posiciones contiguas no conservadas y sólo considerando posiciones con gaps menores que el 50% de las secuencias en el alineamiento final. Después de esta curación las secuencias son concatenadas en una matriz final.
