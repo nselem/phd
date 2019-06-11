@@ -59,7 +59,7 @@ En este capítulo se explora la distribución de PriA en diversos linajes genóm
 Tabla Datos Cinéticos de subfamilias de PriA \label{tab:cineticos}   
   
 |Fuente|Familia|HisA $in\hspace{.1cm}vivo$|TrpF $in\hspace{.1cm}vivo$|$K_{cat}^{\tiny{ProFAR}}$  $\tiny{[M^{-1}s^{-1}]}$|$K_m^{\tiny{ProFAR}}$  $\tiny{[\mu M]}$|HisA  $\frac{K_{cat}}{K_m}$ |$K_{cat}^{\tiny{PRA}}$   $\tiny{[M^{-1}s^{-1}]}$ |$K_m^{\tiny{PRA}}$ $\tiny{[\mu M]}$|TrpF $\frac{Kcat}{Km}$ |Referencia|  
-|-----------------------|--------|--------|--------|------------|-----------|---------|----------|----------|------|-----------------|  
+|----------------------------|--------|--------|--------|------------|-----------|---------|----------|----------|------|---------------------|  
 | _Escherichia  coli_  |HisA|-|-|1.6|4.9|3.1|-|-|0|Henn-Sax et al 2002|  
 | _Escherichia  coli_  |TrpF|-|-|-|-|0|12.2|34.5|2.82|Sterner et al 1996|  
 | _Mycobacterium  smegmatis_  |PriA|*|*|2.6 ± 0.5 |0.85 ± 0.04 |0.33|7.9 ± 2.4| 3.1 ± 0.43 |0.39|Verduzco [@verduzco-castro_co-occurrence_2016]| 
@@ -114,7 +114,7 @@ label(path = "chapter4/PriAExpansiones.png", caption = "Expansiones de PriA en A
 ```
 
 
- Los reclutamientos que tuvieron estas expansiones son los siguientes  
+ Los reclutamientos que tuvieron estas expansiones están listados en la tabla `r ref("reclutamientos", type = "table")`
    
 |  Compuesto	| Actinobacteria 	| Cyanobacteria 	| Pseudomonas 	|  Archaea	| BGC origen|  Clase	|   
 |----   	    |---	            |---	            |---	          |---	      |---	      |---	    |   
@@ -161,8 +161,27 @@ label(path = "chapter4/PriAEvoMiningCopies.pdf",
 ### PriA CORASON
 En Actinobacteria, se observó que todos los Streptomyces tienen el cluster de PriA parcialmente conservado con respecto al BGC de _Streptomyces coelicolor_. El único organismo de este género con una copia extra es _Streptomyces_ CT34. La copia parece deberse a transferencia horizontal pues su hit en NCBI proviene de una _Lentzea_. Este fue sin embargo un homólogo lejano ya que tuvo 50% de identidad y 98% de cobertura. Otro caso interesante en Actinobacteria es XXXX
 
-No es el caso de Cyanobacteria. 
+No es el caso de Cyanobacteria. Copia doble Oscillatoriales cyanobacterium MTP1
 
+```{r PriAcorason, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter4/CORASON/saxitoxin.pdf", 
+      caption = "HisA en saxitoxin, un cluster de Cyanobacteria ",
+      scale=.7,
+      label = "saxitoxin", 
+      cap.size = "footnotesize",
+      alt.cap="HisA en saxitoxin, un cluster de Cyanobacteria ",
+      type = "figure")
+```
+
+```{r PriAcorasonCyanos, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter4/CORASON/CORASON.pdf", 
+      caption = "Contextos de PriA en Actinobacteria y Archaea",
+      scale=.7,
+      label = "PriACORASON", 
+      cap.size = "footnotesize",
+      alt.cap="Contextos de PriA en Actinobacteria y Archaea",
+      type = "figure")
+``` 
 TrpF1
 TrpF1 queries gave hits with TrpC enzyme present on every Streptomyces, additionally  _S. rimosus_, _S. coelicolor_, _S. venezuelae_ and _S. NRRL S-1813_ had an extra copy. _S rimosus_ TrpC vicinity has PKS and siderophore genes.
 
@@ -176,8 +195,21 @@ TrpF4
 purpeofuscus and S bikiniensis 
  \clearpage  
  
-## Non darwinian trayectories  
-En esta sección analizamos cómo cambia la capacidad catalitica de un sustrato mientras se transforma la del otro. Para ello se utilizaron datos de la TESIS de LIA  de mutantes puntuales. Se obtuvieron todas las trayectorias empezando con mutantes simples hasta la mutante con 11 cambios. Como resultado No existieron rutas darwininanas. Finalmente, estos aminoácidos fueron comparados con los provistos por EVCouplings, de covariación.  
+## Trayectorias no darwininanas
+En esta sección analizamos cómo cambia la capacidad catalitica de un sustrato mientras se transforma la del otro. Para ello se utilizaron datos de la [@noda_tesis_2012] de mutantes puntuales. La secuencia original es una subHisA de _Corynebacterium diphteriae_ Se obtuvieron todas las trayectorias empezando con mutantes simples hasta la mutante con 11 cambios. Como resultado No existieron rutas darwininanas. Finalmente, estos aminoácidos fueron comparados con los provistos por EVCouplings, de covariación. 
+Cory  | Strepto|
+|-----|-------|
+|D20V	|18S|  
+|L48I	|46F |  
+|F50L	|48V|  
+|M66I	|L69|  
+|T80S	|G83|  
+|A97C	|L95|  
+|D127A	|125A|  
+|A129D	|128Y|  
+|T139L	|138V|  
+|Y214L	|214I|  
+|E230A	|D232|  
 
 ```{r PriARutas, results = "asis",message=FALSE,echo=FALSE}
 label(path = "conclusion/Solocirculos.png", 
