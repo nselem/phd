@@ -60,8 +60,8 @@ Tabla Datos Cinéticos de subfamilias de PriA \label{tab:cineticos}
   
 |Fuente|Familia|HisA $in\hspace{.1cm}vivo$|TrpF $in\hspace{.1cm}vivo$|$K_{cat}^{\tiny{ProFAR}}$  $\tiny{[M^{-1}s^{-1}]}$|$K_m^{\tiny{ProFAR}}$  $\tiny{[\mu M]}$|HisA  $\frac{K_{cat}}{K_m}$ |$K_{cat}^{\tiny{PRA}}$   $\tiny{[M^{-1}s^{-1}]}$ |$K_m^{\tiny{PRA}}$ $\tiny{[\mu M]}$|TrpF $\frac{Kcat}{Km}$ |Referencia|  
 |----------------------------|--------|--------|--------|------------|-----------|---------|----------|----------|------|---------------------|  
-| _Escherichia  coli_  |HisA|-|-|1.6|4.9|3.1|-|-|0|Henn-Sax et al 2002|  
-| _Escherichia  coli_  |TrpF|-|-|-|-|0|12.2|34.5|2.82|Sterner et al 1996|  
+| _Escherichia  coli_  |HisA|-|-|1.6|4.9|3.1|-|-|0|[@henn-sax_two_2002]|  
+| _Escherichia  coli_  |TrpF|-|-|-|-|0|12.2|34.5|2.82|[@sterner_phosphoribosyl_1996]|  
 | _Mycobacterium  smegmatis_  |PriA|*|*|2.6 ± 0.5 |0.85 ± 0.04 |0.33|7.9 ± 2.4| 3.1 ± 0.43 |0.39|Verduzco [@verduzco-castro_co-occurrence_2016]| 
 | _Mycobacterium tuberculosis_  |PriA|-|-|19|0.23|12|21|3.6|0.17| Due et al. (2011)|  
 | _Streptomyces globisporus_  |PriA|*|*|4.2 ± 0.8| 0.74 ± 0.03 |0.18|11 ± 1.0 |3.8 ± 0.2 |0.34|Verduzco [@verduzco-castro_co-occurrence_2016]|  
@@ -195,9 +195,13 @@ TrpF4
 purpeofuscus and S bikiniensis 
  \clearpage  
  
-## Trayectorias no darwininanas
-En esta sección analizamos cómo cambia la capacidad catalitica de un sustrato mientras se transforma la del otro. Para ello se utilizaron datos de la [@noda_tesis_2012] de mutantes puntuales. La secuencia original es una subHisA de _Corynebacterium diphteriae_ Se obtuvieron todas las trayectorias empezando con mutantes simples hasta la mutante con 11 cambios. Como resultado No existieron rutas darwininanas. Finalmente, estos aminoácidos fueron comparados con los provistos por EVCouplings, de covariación. 
-Cory  | Strepto|
+## PriA a nivel de aminoácidos  
+### Al transformar una subHisA en una PRiA mediante mutaciones no se observó ninguna trayectoria creciente para ambos sustratos (darwininana)  
+En esta sección analizamos cómo cambia la capacidad catalítica de un sustrato mientras se transforma la del otro. Para ello se utilizaron datos de capacidad catalítica de mutantes de subHisA de _Corynebacterium diphteriae_. Estos datos fueron obtenidos de la tesis de Lianet Noda [@noda_tesis_2012]. A partir de la secuencia original que se mostró es una subHisA se obtuvieron mutantes con el objetivo de alcanzar la promiscuidad, es decir de convertir la enzima en una PriA. Con esos datos, quedaba pendiente la exploración de las rutas, ¿cuántas son? ¿Existe alguna tendencia en ciertos momentos de la ruta sobre el incremento/decremento de alguna  de las dos funciones? 
+
+Adicionando una mutación cada vez hasta la mutante con 11 cambios. Como resultado No existieron rutas darwininanas. Finalmente, estos aminoácidos fueron comparados con los provistos por EVCouplings, de covariación.   
+  
+| _Corynebacterium_  | _Streptomyces_ |
 |-----|-------|
 |D20V	|21V|  
 |L48I	|49L |  
@@ -240,6 +244,7 @@ label(path = "conclusion/SolocirculosPRO.png",
       type = "figure")
 ```
 
+### Los residuos que covarían en el registro evolutivo de PriA permiten una reconstrucción aproximada de su estructura tridimensional  
 Resultado se modelo PriA con evcouplings y los aminoácidos encontrados coinciden con los encontrados experimentalmente. 
 ```{r PriACouplinsMutations, results = "asis",message=FALSE,echo=FALSE}
 label(path = "chapter4/Couplings/PriAMutations.pdf", 
@@ -275,6 +280,20 @@ label(path = "chapter4/Geles/PriAAbril30.png",
 ## Afinidad de enzimas selectas por sustratos químicamente parecidos a PRA y PROFAR 
 
 Algunas de estas enzimas se seleccionaron en busca de nuevas funciones promiscuas, las reacciones catalizadas por los candidatos se investigaron mediante la exploración de sustratos químicamente similares a los nativos.
+
+
+```{r Eschema1, results = "asis",message=FALSE,echo=FALSE,warning=FALSE}
+label(path = "chapter4/esquema_quimico-1-1.pdf", caption = "Substrates 1",label = "Substrates chemical 1", type = "figure")
+```
+```{r Eschema2, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter4/esquema_quimico-2-2.pdf", caption = "Substrates 2",label = "Substrates chemical 2", type = "figure")
+```
+```{r Eschema3, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter4/esquema_quimico-3-3.pdf", caption = "Substrates 3",label = "Substrates chemical 3", type = "figure")
+```
+```{r Eschema4, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter4/esquema_quimico-4-4.pdf", caption = "Substrates 4",label = "Substrates chemical 4", type = "figure")
+```
  
 Dado que en _Streptomyces_ se han encontrado representantes de las familias PriA y PriB, se seleccionaron 39 secuencias homólogas para realizar el análisis del sustrato de la enzima de acoplamiento. Estas secuencias seleccionadas de PriA / Prib pertenecen a _Streptomyces_ uniformemente distribuidas en un árbol de especies RpoB con diferentes condiciones sobre la presencia / ausencia de TrpF. En este estudio se incluyeron otros homólogos de PriA Actinobacterial caracterizados químicamente, y finalmente se agregaron HisA de _Escherichia coli_, _Arthrobacter Aurescens_, _Salmonella enterica_ y _Acidimicrobium ferrooxidans_ y Actinobacterial TrpF como controles.
 
@@ -354,12 +373,12 @@ ggsave(file="chapter4/GTPCinetica.pdf", plot=GTPCinetica, width=30, height=8)
 ```
 
 
-the two enzymes with activity  
-_Thermomonospora curvata_ thermophilic Actinobacteria from Thermomonosporaceae genus, it can be found in compost and participate in the active degradation of cellulose [@chertkov_complete_2011]. 
+las dos enzimas con actividad
+_Thermomonospora curvata_  es una Actinobacteria termofílica de la familia _Thermomonosporaceae_ , puede ser encontrada encompostas ya que participa en la degradación de celulosa [@chertkov_complete_2011]. 
 
 
-Jonesia trpF shows no activity
-_Jonesia denitrificans_ is classified as a pathogenic organism for animals, reported genome was originally isolated from cooked ox blood [@pukall_complete_2009].  
+Jonesia trpF no mostró actividad
+_Jonesia denitrificans_ está clasificada como un organismo patogénico para animales, su genoma fue originalmente aislado de from cooked ox blood [@pukall_complete_2009].  
 
 ```{r docking_table_out, results = "asis"}
 docking <- read.csv("chapter4/SmallHeat.data", header=TRUE, sep="\t")
@@ -397,19 +416,6 @@ label(path = "chapter4/SubstratesClustering.png",
 On next figure we can see their chemical structures.
 
 \clearpage   
-
-```{r Eschema1, results = "asis",message=FALSE,echo=FALSE,warning=FALSE}
-label(path = "chapter4/esquema_quimico-1-1.pdf", caption = "Substrates 1",label = "Substrates chemical 1", type = "figure")
-```
-```{r Eschema2, results = "asis",message=FALSE,echo=FALSE}
-label(path = "chapter4/esquema_quimico-2-2.pdf", caption = "Substrates 2",label = "Substrates chemical 2", type = "figure")
-```
-```{r Eschema3, results = "asis",message=FALSE,echo=FALSE}
-label(path = "chapter4/esquema_quimico-3-3.pdf", caption = "Substrates 3",label = "Substrates chemical 3", type = "figure")
-```
-```{r Eschema4, results = "asis",message=FALSE,echo=FALSE}
-label(path = "chapter4/esquema_quimico-4-4.pdf", caption = "Substrates 4",label = "Substrates chemical 4", type = "figure")
-```
 ### Docking between PriA enzymes and selected substrates     
 Docking simulation were calculated for PriA _Streptomyces_ enzymes. TrpF enzymes from _Streptomyces Mg1, Jonesia denitrificans, were added as controls_
 
