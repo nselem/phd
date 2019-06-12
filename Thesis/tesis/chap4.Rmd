@@ -199,17 +199,17 @@ purpeofuscus and S bikiniensis
 En esta sección analizamos cómo cambia la capacidad catalitica de un sustrato mientras se transforma la del otro. Para ello se utilizaron datos de la [@noda_tesis_2012] de mutantes puntuales. La secuencia original es una subHisA de _Corynebacterium diphteriae_ Se obtuvieron todas las trayectorias empezando con mutantes simples hasta la mutante con 11 cambios. Como resultado No existieron rutas darwininanas. Finalmente, estos aminoácidos fueron comparados con los provistos por EVCouplings, de covariación. 
 Cory  | Strepto|
 |-----|-------|
-|D20V	|18S|  
-|L48I	|46F |  
-|F50L	|48V|  
-|M66I	|L69|  
-|T80S	|G83|  
-|A97C	|L95|  
-|D127A	|125A|  
-|A129D	|128Y|  
-|T139L	|138V|  
-|Y214L	|214I|  
-|E230A	|D232|  
+|D20V	|21V|  
+|L48I	|49L |  
+|F50L	|51L|  
+|M66I	|67I|  
+|T80S	|81S|   
+|A97C	|98C|  
+|D127A	|128G|   
+|A129D	|130D|  
+|T139L	|136L|  
+|Y214L	|211Y|  
+|E230A	|227A|  
 
 ```{r PriARutas, results = "asis",message=FALSE,echo=FALSE}
 label(path = "conclusion/Solocirculos.png", 
