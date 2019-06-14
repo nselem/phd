@@ -48,7 +48,7 @@ library(Biobase)
 library(scales) # 
 library(xlsx) # For save data on excel
 library(knitr)
-library(drc) # for fitting Michaelis Menten model
+#library(drc) # for fitting Michaelis Menten model
 library(ggplot2) # for drawing
 ```
 
@@ -154,7 +154,7 @@ slopes
 concentration
 ```
 
-```{r interpolar michaelis-menden}
+```{r interpolar michaelis-menden, eval=FALSE}
 ## interpolar michaelis-menden
 
 #https://rpubs.com/RomanL/6752

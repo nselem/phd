@@ -21,8 +21,6 @@ library(reedtemplates)
 
 ```
 
-
-
 ```{r load_pkgs_chapter4, message = FALSE,echo=FALSE}
 # List of packages required for this analysis
 pkg <- c("dplyr", "ggplot2", "knitr", "devtools","RColorBrewer")
@@ -49,7 +47,7 @@ library(xlsx) # For save data on excel
 ```
 
 # La familia PriA {#ref_labels}
-PriA es una familia de enzimas de Actinobacteria homóloga a la familia HisA en Enterobacteria. Según las definiciones de este trabajo PriA es una familia promiscua. Se han caracterizado experimentalmente varios miembros de PriA con la capacidad de catalizar tanto la reacción correspondiente a HisA como la de TrpF. Es decir PriA participa a la vez en las rutas de síntesis de Histidina y Triptofano, al menos en varias Actinobacterias. Algunos de los primerios miembros caracterizados como promiscuos son _Streptomyces coelicolor_ y XXXX. Dentro de la ruta de histidina HisA convierte ProFAR en PRFAR. Además de la isomerización de PROFAR también convierte PRA en CdRP actuando análogamente a la función TrpF en la ruta del triptófano. La mayoría de las actinobacterias han perdido el gen trpF en la ruta del triptofano, por lo que se cree que la promiscuidad de proFAR está extendida en un gran subconjuntno de Actinobacteria.  
+PriA es una familia de enzimas de Actinobacteria homóloga a la familia HisA en Enterobacteria. Según las definiciones de este trabajo PriA es una familia promiscua. Se han caracterizado experimentalmente varios miembros de PriA con la capacidad de catalizar tanto la reacción correspondiente a HisA como la de TrpF. Es decir PriA participa a la vez en las rutas de síntesis de Histidina y Triptofano, al menos en varias Actinobacterias. Los primeros miembros caracterizados como promiscuos en esta familia en el 2003 fueron _Streptomyces coelicolor_ y _Mycobacterium tuberculosis_ [@baronagomez_occurrence_2003]. PriA en la ruta de histidina isomeriza el sustrato ProFAR en PRFAR, realizando la función HisA. En la ruta de triptofano lleva a cabo la isomerización de PRA en CdRP actuando análogamente a la función TrpF en la ruta del triptófano. La mayoría de las actinobacterias han perdido el gen trpF en la ruta del triptofano, por lo que se cree que la promiscuidad de PriA está extendida en un gran subconjuntno de Actinobacteria.  
 
 Además, en Actinobacteria PriA ha mostrado un gradiente funcional. Esta variación divide a la familia en varias subfamilias según su funcionalidad. En la tabla `r ref("cineticos", type = "table")` se muestra la capacidad de catálisis PriA en diferentes organismos para sus dos sustratos conocidos. Estos datos ejemplifican las subfamilias de PriA, en la tabla se encuentran por ejemplo miembros de PriB, una subfamilia con presencia en el género _Streptomyces_. PriB muestra poca actividad _trpF_ . Varios _Streptomyces_ con un elmento de PriB, contienen en su genoma un gen _trpF_ localizado fuera del contexto genómico cerccano operón de histidina. Otra subfamilia es subHisA con miembros en _Corynebacteria_ y _Actinomyces_. SubHisA ha perdido totalmente la actividad _trpF_. Finalmente en Actinomyces encontramos hay _subTrpF_ que ha perdido su actividad de HisA.
 
@@ -60,10 +58,10 @@ Tabla Datos Cinéticos de subfamilias de PriA \label{tab:cineticos}
   
 |Fuente|Familia|HisA $in\hspace{.1cm}vivo$|TrpF $in\hspace{.1cm}vivo$|$K_{cat}^{\tiny{ProFAR}}$  $\tiny{[M^{-1}s^{-1}]}$|$K_m^{\tiny{ProFAR}}$  $\tiny{[\mu M]}$|HisA  $\frac{K_{cat}}{K_m}$ |$K_{cat}^{\tiny{PRA}}$   $\tiny{[M^{-1}s^{-1}]}$ |$K_m^{\tiny{PRA}}$ $\tiny{[\mu M]}$|TrpF $\frac{Kcat}{Km}$ |Referencia|  
 |----------------------------|--------|--------|--------|------------|-----------|---------|----------|----------|------|---------------------|  
-| _Escherichia  coli_  |HisA|-|-|1.6|4.9|3.1|-|-|0|[@henn-sax_two_2002]|  
-| _Escherichia  coli_  |TrpF|-|-|-|-|0|12.2|34.5|2.82|[@sterner_phosphoribosyl_1996]|  
+| _Escherichia  coli_  |HisA|-|-|1.6|4.9|3.1|-|-|0|Henn [@henn-sax_two_2002]|  
+| _Escherichia  coli_  |TrpF|-|-|-|-|0|12.2|34.5|2.82|[Sterner @sterner_phosphoribosyl_1996]|  
 | _Mycobacterium  smegmatis_  |PriA|*|*|2.6 ± 0.5 |0.85 ± 0.04 |0.33|7.9 ± 2.4| 3.1 ± 0.43 |0.39|Verduzco [@verduzco-castro_co-occurrence_2016]| 
-| _Mycobacterium tuberculosis_  |PriA|-|-|19|0.23|12|21|3.6|0.17| Due et al. (2011)|  
+| _Mycobacterium tuberculosis_  |PriA|-|-|19|0.23|12|21|3.6|0.17| Due [@due_bisubstrate_2011]|  
 | _Streptomyces globisporus_  |PriA|*|*|4.2 ± 0.8| 0.74 ± 0.03 |0.18|11 ± 1.0 |3.8 ± 0.2 |0.34|Verduzco [@verduzco-castro_co-occurrence_2016]|  
 | _Streptomyces coelicolor_ |PriA|-|-|3.6 ± 0.7 |1.3 ± 0.2 |0.4|5.0 ± 0.08 |3.4 ± 0.09 |0.7|Noda [@noda-garcia_identification_2010]|  
 | _Streptomyces coelicolor_ |PriA|-|-|3.6 ± 0.7 |1.3 ± 0.2 |0.4|5.0 ± 0.08 |3.4 ± 0.09 |0.7|Noda [@noda-garcia_identification_2010]|  
@@ -88,12 +86,13 @@ Tabla Datos Cinéticos de subfamilias de PriA \label{tab:cineticos}
 |CAM1_A81G|Metagenoma|||1.7 ± 0.2|0.1 ± 0.01|0.06|32.2 ± 1.7|1.9 ± 0.1|0.06|Noda [@noda-garcia_insights_2015]|  
 |CAM1_A81S|Metagenoma|||4.0 ± 0.9|0.2 ± 0.03|0.04|23.5 ± 6.5|0.5 ± 0.1|0.02|Noda [@noda-garcia_insights_2015]|  
 |CAM2|Metagenoma|||n.d.|n.d.|0|n.d.|n.d.|0|Noda [@noda-garcia_insights_2015]|  
-|PriA_Ancestral|Ancestral|||9.4±1.6|0.3±0.009|0.03|4.3±0.4|0.6±0.02|0.13|Verduzco-Castro Noda-García|  
-|PriA_SubHisA|Ancestral|||3.7±1.01|0.5±0.03|0.1|-|-|0|Verduzco-Castro Noda-García|  
-|SubHisA_Ancestral|Ancestral|||6.3±0.7|0.15±0.03|0.02|-|-|0|Verduzco-Castro Noda-García|  
-|SubHisA_PriA|Ancestral|||27.7±3.4|0.05±0.005|2|167.82|0.03±0.002|0.0001|Verduzco-Castro Noda-García|  
-| _scabies_||0|0|163.6|0.1|||||Ernesto|  
-| _Avisco_|||46|1.37|36|3.4||||Ana|  
+|PriA_Ancestral|Ancestral|||9.4±1.6|0.3±0.009|0.03|4.3±0.4|0.6±0.02|0.13|Verduzco, Noda*|  
+|PriA_SubHisA|Ancestral|||3.7±1.01|0.5±0.03|0.1|-|-|0|Verduzco, Noda*|  
+|SubHisA_Ancestral|Ancestral|||6.3±0.7|0.15±0.03|0.02|-|-|0|Verduzco, Noda*|  
+|SubHisA_PriA|Ancestral|||27.7±3.4|0.05±0.005|2|167.82|0.03±0.002|0.0001|Verduzco, Noda*|  
+| _scabies_||0|0|163.6|0.1|||||Verduzco*|  
+| _Avisco_|||46|1.37|36|3.4||||Juárez*|    
+* Datos no publicados del Laboratorio de Evolución de la diversidad metabólica.  
 
 \clearpage   
   
@@ -267,8 +266,10 @@ label(path = "chapter4/Couplings/PriACouplingFoldings.png",
       type = "figure")
 ```
  
-## Estandarizacion de protocolos experimentales de PriA en sus sustratos tradicionales
-Además de la exploración gen
+## PriA en cinéticas enzimáticas no tradicionales.
+Además de la exploración genómica de PriA se realizaron caracterizaciones experimentales. _i)_ Se realizaron cinéticas de PriA en GTP . _ii)_ Se avanzó en medir simultáneamente la actividad de PriA sobre ProFAR y PRA.  
+
+
 ```{r gel, results = "asis",message=FALSE,echo=FALSE}
 label(path = "chapter4/Geles/PriAAbril30.png", 
       caption = "gel",
@@ -277,6 +278,12 @@ label(path = "chapter4/Geles/PriAAbril30.png",
       alt.cap="",
        type = "figure")
 ``` 
+
+Cinéticas simultáneas
+
+```{r simultáneas, child = 'chapter4/TrpF_PriA_joint_kinetics.Rmd'}
+```
+
 ## Afinidad de enzimas selectas por sustratos químicamente parecidos a PRA y PROFAR 
 
 Algunas de estas enzimas se seleccionaron en busca de nuevas funciones promiscuas, las reacciones catalizadas por los candidatos se investigaron mediante la exploración de sustratos químicamente similares a los nativos.
