@@ -198,7 +198,8 @@ purpeofuscus and S bikiniensis
 ### Al transformar una subHisA en una PRiA mediante mutaciones no se observó ninguna trayectoria creciente para ambos sustratos (darwininana)  
 En esta sección analizamos cómo cambia la capacidad catalítica de un sustrato mientras se transforma la del otro. Para ello se utilizaron datos de capacidad catalítica de mutantes de subHisA de _Corynebacterium diphteriae_. Estos datos fueron obtenidos de la tesis de Lianet Noda [@noda_tesis_2012]. A partir de la secuencia original que se mostró es una subHisA se obtuvieron mutantes con el objetivo de alcanzar la promiscuidad, es decir de convertir la enzima en una PriA. Con esos datos, quedaba pendiente la exploración de las rutas, ¿cuántas son? ¿Existe alguna tendencia en ciertos momentos de la ruta sobre el incremento/decremento de alguna  de las dos funciones? 
 
-Adicionando una mutación cada vez hasta la mutante con 11 cambios. Como resultado No existieron rutas darwininanas. Finalmente, estos aminoácidos fueron comparados con los provistos por EVCouplings, de covariación.   
+Adicionando una mutación cada vez hasta la mutante con 11 mutaciones.
+Asi pues se desarrolló un script utilizando recursividad que permitiera reconstruir todas las rutas posibles. Como resultado No existieron rutas darwininanas. Finalmente, estos aminoácidos fueron comparados con los provistos por EVCouplings, de covariación.   
   
 | _Corynebacterium_  | _Streptomyces_ |
 |-----|-------|
