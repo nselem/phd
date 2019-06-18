@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.17)  12 JUN 2019 15:14
+=======
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2018.10.12)  17 JUN 2019 17:17
+>>>>>>> 8e7a4f4ba167fb1b9e631959f228454fcf2fc162
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1480,35 +1484,55 @@ multiple pdfs with page group included in a single page
 >] <conclusion/Solocirculos.png, id=231, 574.145pt x 504.88625pt>
 File: conclusion/Solocirculos.png Graphic file (type png)
 <use conclusion/Solocirculos.png>
+<<<<<<< HEAD
 Package pdftex.def Info: conclusion/Solocirculos.png used on input line 1164.
+=======
+Package pdftex.def Info: conclusion/Solocirculos.png used on input line 1157.
+>>>>>>> 8e7a4f4ba167fb1b9e631959f228454fcf2fc162
 (pdftex.def)             Requested size: 469.76819pt x 413.10033pt.
 <conclusion/SolocirculosPRA.png, id=232, 530.98375pt x 508.90125pt>
 File: conclusion/SolocirculosPRA.png Graphic file (type png)
 <use conclusion/SolocirculosPRA.png>
+<<<<<<< HEAD
 Package pdftex.def Info: conclusion/SolocirculosPRA.png used on input line 1171
+=======
+Package pdftex.def Info: conclusion/SolocirculosPRA.png used on input line 1164
+>>>>>>> 8e7a4f4ba167fb1b9e631959f228454fcf2fc162
 .
 (pdftex.def)             Requested size: 469.76259pt x 450.22617pt.
 <conclusion/SolocirculosPRO.png, id=233, 551.05875pt x 482.80376pt>
 File: conclusion/SolocirculosPRO.png Graphic file (type png)
 <use conclusion/SolocirculosPRO.png>
+<<<<<<< HEAD
 Package pdftex.def Info: conclusion/SolocirculosPRO.png used on input line 1178
+=======
+Package pdftex.def Info: conclusion/SolocirculosPRO.png used on input line 1171
+>>>>>>> 8e7a4f4ba167fb1b9e631959f228454fcf2fc162
 .
 (pdftex.def)             Requested size: 469.77272pt x 411.58595pt.
 <chapter4/Couplings/PriAMutations.pdf, id=234, 597.23125pt x 795.97375pt>
 File: chapter4/Couplings/PriAMutations.pdf Graphic file (type pdf)
 <use chapter4/Couplings/PriAMutations.pdf>
 Package pdftex.def Info: chapter4/Couplings/PriAMutations.pdf used on input lin
+<<<<<<< HEAD
 e 1192.
+=======
+e 1185.
+>>>>>>> 8e7a4f4ba167fb1b9e631959f228454fcf2fc162
 (pdftex.def)             Requested size: 469.75708pt x 626.07964pt.
-[8
 
+<<<<<<< HEAD
  <./conclusion/Solocirculos.png>] [9 <./conclusion/SolocirculosPRA.png> <./conc
 lusion/SolocirculosPRO.png>]
 <chapter4/Couplings/PriACouplingFoldings.png, id=247, 795.97375pt x 681.54625pt
+=======
+<chapter4/Couplings/PriACouplingFoldings.png, id=231, 795.97375pt x 681.54625pt
+>>>>>>> 8e7a4f4ba167fb1b9e631959f228454fcf2fc162
 >
 File: chapter4/Couplings/PriACouplingFoldings.png Graphic file (type png)
 <use chapter4/Couplings/PriACouplingFoldings.png>
 Package pdftex.def Info: chapter4/Couplings/PriACouplingFoldings.png used on in
+<<<<<<< HEAD
 put line 1202.
 (pdftex.def)             Requested size: 469.75404pt x 402.22319pt.
 [10 <./chapter4/Couplings/PriAMutations.pdf>] <chapter4/Geles/PriAAbril30.png, 
@@ -1617,11 +1641,50 @@ Package pdftex.def Info: chapter4/esquema_quimico-4-4.pdf used on input line 15
 (pdftex.def)             Requested size: 469.75604pt x 607.9196pt.
 
 Overfull \hbox (38.3408pt too wide) in paragraph at lines 1564--1570
+=======
+put line 1195.
+(pdftex.def)             Requested size: 469.75404pt x 402.22319pt.
+<chapter4/Geles/PriAAbril30.png, id=232, 600.2425pt x 442.65375pt>
+File: chapter4/Geles/PriAAbril30.png Graphic file (type png)
+<use chapter4/Geles/PriAAbril30.png>
+Package pdftex.def Info: chapter4/Geles/PriAAbril30.png used on input line 1208
+.
+(pdftex.def)             Requested size: 469.77176pt x 346.43703pt.
+<chapter4/esquema_quimico-1-1.pdf, id=233, 614.295pt x 794.97pt>
+File: chapter4/esquema_quimico-1-1.pdf Graphic file (type pdf)
+<use chapter4/esquema_quimico-1-1.pdf>
+Package pdftex.def Info: chapter4/esquema_quimico-1-1.pdf used on input line 12
+24.
+(pdftex.def)             Requested size: 469.75604pt x 607.9196pt.
+<chapter4/esquema_quimico-2-2.pdf, id=234, 614.295pt x 794.97pt>
+File: chapter4/esquema_quimico-2-2.pdf Graphic file (type pdf)
+<use chapter4/esquema_quimico-2-2.pdf>
+Package pdftex.def Info: chapter4/esquema_quimico-2-2.pdf used on input line 12
+31.
+(pdftex.def)             Requested size: 469.75604pt x 607.9196pt.
+<chapter4/esquema_quimico-3-3.pdf, id=235, 614.295pt x 794.97pt>
+File: chapter4/esquema_quimico-3-3.pdf Graphic file (type pdf)
+<use chapter4/esquema_quimico-3-3.pdf>
+Package pdftex.def Info: chapter4/esquema_quimico-3-3.pdf used on input line 12
+38.
+(pdftex.def)             Requested size: 469.75604pt x 607.9196pt.
+<chapter4/esquema_quimico-4-4.pdf, id=236, 614.295pt x 794.97pt>
+File: chapter4/esquema_quimico-4-4.pdf Graphic file (type pdf)
+<use chapter4/esquema_quimico-4-4.pdf>
+Package pdftex.def Info: chapter4/esquema_quimico-4-4.pdf used on input line 12
+45.
+(pdftex.def)             Requested size: 469.75604pt x 607.9196pt.
+[8
+
+] [9 <./conclusion/Solocirculos.png> <./conclusion/SolocirculosPRA.png>]
+Overfull \hbox (38.3408pt too wide) in paragraph at lines 1274--1280
+>>>>>>> 8e7a4f4ba167fb1b9e631959f228454fcf2fc162
 \T1/lmr/m/it/10 (-20) Mycobacterium tu-ber-cu-lo-sis \T1/lmr/m/n/10 (-20) (Mtub
  PDB:2Y88,2Y89,2Y85,3ZS4) \T1/lmr/m/it/10 (-20) Strep-to-myces coeli-color \T1/
 lmr/m/n/10 (-20) (Scoe PDB:2VEP,2X30,1VZW),
  []
 
+<<<<<<< HEAD
 [19] [20 <./chapter4/esquema_quimico-1-1.pdf>] [21 <./chapter4/esquema_quimico-
 2-2.pdf>] [22 <./chapter4/esquema_quimico-3-3.pdf>] [23 <./chapter4/esquema_qui
 mico-4-4.pdf>] [24] <chapter4/MutantControl.png, id=553, 391.4625pt x 234.8775p
@@ -1629,63 +1692,127 @@ t>
 File: chapter4/MutantControl.png Graphic file (type png)
 <use chapter4/MutantControl.png>
 Package pdftex.def Info: chapter4/MutantControl.png used on input line 1601.
+=======
+[10 <./conclusion/SolocirculosPRO.png>] [11 <./chapter4/Couplings/PriAMutations
+.pdf>] [12 <./chapter4/Couplings/PriACouplingFoldings.png (PNG copy)> <./chapte
+r4/Geles/PriAAbril30.png>] [13 <./chapter4/esquema_quimico-1-1.pdf>] [14 <./cha
+pter4/esquema_quimico-2-2.pdf>] [15 <./chapter4/esquema_quimico-3-3.pdf>] [16 <
+./chapter4/esquema_quimico-4-4.pdf>] <chapter4/MutantControl.png, id=452, 391.4
+625pt x 234.8775pt>
+File: chapter4/MutantControl.png Graphic file (type png)
+<use chapter4/MutantControl.png>
+Package pdftex.def Info: chapter4/MutantControl.png used on input line 1311.
+>>>>>>> 8e7a4f4ba167fb1b9e631959f228454fcf2fc162
 (pdftex.def)             Requested size: 391.46153pt x 234.87692pt.
 <chapter4/GTPCinetica.pdf, id=554, 732.18042pt x 342.12921pt>
 File: chapter4/GTPCinetica.pdf Graphic file (type pdf)
 <use chapter4/GTPCinetica.pdf>
+<<<<<<< HEAD
 Package pdftex.def Info: chapter4/GTPCinetica.pdf used on input line 1608.
+=======
+Package pdftex.def Info: chapter4/GTPCinetica.pdf used on input line 1318.
+>>>>>>> 8e7a4f4ba167fb1b9e631959f228454fcf2fc162
 (pdftex.def)             Requested size: 469.76694pt x 219.51009pt.
 [25
 
  <./chapter4/MutantControl.png> <./chapter4/GTPCinetica.pdf>]
+<<<<<<< HEAD
 Overfull \hbox (196.63347pt too wide) in alignment at lines 1634--1640
+=======
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 1336
+.
+(/usr/share/texmf/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 1337.
+
+Overfull \hbox (196.63347pt too wide) in alignment at lines 1344--1350
+>>>>>>> 8e7a4f4ba167fb1b9e631959f228454fcf2fc162
  [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] 
  []
 
 
+<<<<<<< HEAD
 Overfull \hbox (196.63347pt too wide) in alignment at lines 1640--1645
+=======
+Overfull \hbox (196.63347pt too wide) in alignment at lines 1350--1355
+>>>>>>> 8e7a4f4ba167fb1b9e631959f228454fcf2fc162
  [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] 
  []
 
 
+<<<<<<< HEAD
 Overfull \hbox (196.63347pt too wide) in alignment at lines 1645--1703
+=======
+Overfull \hbox (196.63347pt too wide) in alignment at lines 1355--1413
+>>>>>>> 8e7a4f4ba167fb1b9e631959f228454fcf2fc162
  [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] 
  []
 
 
+<<<<<<< HEAD
 Overfull \hbox (196.63347pt too wide) in alignment at lines 1703--1762
+=======
+Overfull \hbox (196.63347pt too wide) in alignment at lines 1413--1472
+>>>>>>> 8e7a4f4ba167fb1b9e631959f228454fcf2fc162
  [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] 
  []
 
 
+<<<<<<< HEAD
 Overfull \hbox (196.63347pt too wide) in alignment at lines 1762--1821
+=======
+Overfull \hbox (196.63347pt too wide) in alignment at lines 1472--1531
+>>>>>>> 8e7a4f4ba167fb1b9e631959f228454fcf2fc162
  [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] 
  []
 
 
+<<<<<<< HEAD
 Overfull \hbox (196.63347pt too wide) in alignment at lines 1821--1826
+=======
+Overfull \hbox (196.63347pt too wide) in alignment at lines 1531--1536
+>>>>>>> 8e7a4f4ba167fb1b9e631959f228454fcf2fc162
  [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] 
  []
 
 [26
 
+<<<<<<< HEAD
 ] [27]
 Overfull \hbox (15.1892pt too wide) in alignment at lines 1839--1844
+=======
+] [19]
+Overfull \hbox (15.1892pt too wide) in alignment at lines 1549--1554
+>>>>>>> 8e7a4f4ba167fb1b9e631959f228454fcf2fc162
  [] [] [] [] [] [] 
  []
 
 
+<<<<<<< HEAD
 Overfull \hbox (15.1892pt too wide) in alignment at lines 1844--1848
+=======
+Overfull \hbox (15.1892pt too wide) in alignment at lines 1554--1558
+>>>>>>> 8e7a4f4ba167fb1b9e631959f228454fcf2fc162
  [] [] [] [] [] [] 
  []
 
 
+<<<<<<< HEAD
 Overfull \hbox (15.1892pt too wide) in alignment at lines 1848--1874
+=======
+Overfull \hbox (15.1892pt too wide) in alignment at lines 1558--1584
+>>>>>>> 8e7a4f4ba167fb1b9e631959f228454fcf2fc162
  [] [] [] [] [] [] 
  []
 
 
+<<<<<<< HEAD
 Overfull \hbox (15.1892pt too wide) in alignment at lines 1874--1897
+=======
+Overfull \hbox (15.1892pt too wide) in alignment at lines 1584--1607
+>>>>>>> 8e7a4f4ba167fb1b9e631959f228454fcf2fc162
  [] [] [] [] [] [] 
  []
 
@@ -1695,12 +1822,20 @@ Overfull \hbox (15.1892pt too wide) in alignment at lines 1874--1897
 File: chapter4/SubstratesClustering.png Graphic file (type png)
 <use chapter4/SubstratesClustering.png>
 Package pdftex.def Info: chapter4/SubstratesClustering.png used on input line 1
+<<<<<<< HEAD
 913.
+=======
+623.
+>>>>>>> 8e7a4f4ba167fb1b9e631959f228454fcf2fc162
 (pdftex.def)             Requested size: 469.76364pt x 424.48521pt.
 [29
 
  <./chapter4/SubstratesClustering.png>]
+<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 1929--1930
+=======
+Underfull \hbox (badness 10000) in paragraph at lines 1639--1640
+>>>>>>> 8e7a4f4ba167fb1b9e631959f228454fcf2fc162
 []\T1/lmtt/m/n/10 ## Called from: eval(expr, envir, enclos)   ## debug en <text
 >#4: plot(density(docking[,
  []
@@ -1709,10 +1844,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 1929--1930
 File: chap4_files/figure-latex/johan-2.pdf Graphic file (type pdf)
 <use chap4_files/figure-latex/johan-2.pdf>
 Package pdftex.def Info: chap4_files/figure-latex/johan-2.pdf used on input lin
+<<<<<<< HEAD
 e 1931.
 (pdftex.def)             Requested size: 436.63019pt x 286.06805pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 1933--1934
+=======
+e 1641.
+(pdftex.def)             Requested size: 436.63019pt x 286.06805pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1643--1644
+>>>>>>> 8e7a4f4ba167fb1b9e631959f228454fcf2fc162
 []\T1/lmtt/m/n/10 ## debug en <text>#4: rug(docking[, i])   ## debug en <text>#
 4: browser()   ## debug en
  []
@@ -1721,12 +1863,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 1933--1934
 File: chap4_files/figure-latex/johan-3.pdf Graphic file (type pdf)
 <use chap4_files/figure-latex/johan-3.pdf>
 Package pdftex.def Info: chap4_files/figure-latex/johan-3.pdf used on input lin
+<<<<<<< HEAD
 e 1935.
+=======
+e 1645.
+>>>>>>> 8e7a4f4ba167fb1b9e631959f228454fcf2fc162
 (pdftex.def)             Requested size: 437.6406pt x 286.07242pt.
 [30
 
  <./chap4_files/figure-latex/johan-2.pdf>]
+<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 1937--1938
+=======
+Underfull \hbox (badness 10000) in paragraph at lines 1647--1648
+>>>>>>> 8e7a4f4ba167fb1b9e631959f228454fcf2fc162
 []\T1/lmtt/m/n/10 ## debug en <text>#4: rug(docking[, i])   ## debug en <text>#
 4: browser()   ## debug en
  []
@@ -1735,10 +1885,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 1937--1938
 File: chap4_files/figure-latex/johan-4.pdf Graphic file (type pdf)
 <use chap4_files/figure-latex/johan-4.pdf>
 Package pdftex.def Info: chap4_files/figure-latex/johan-4.pdf used on input lin
+<<<<<<< HEAD
 e 1939.
 (pdftex.def)             Requested size: 436.63019pt x 286.06805pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 1941--1942
+=======
+e 1649.
+(pdftex.def)             Requested size: 436.63019pt x 286.06805pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1651--1652
+>>>>>>> 8e7a4f4ba167fb1b9e631959f228454fcf2fc162
 []\T1/lmtt/m/n/10 ## debug en <text>#4: rug(docking[, i])   ## debug en <text>#
 4: browser()   ## debug en
  []
@@ -1747,11 +1904,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 1941--1942
 File: chap4_files/figure-latex/johan-5.pdf Graphic file (type pdf)
 <use chap4_files/figure-latex/johan-5.pdf>
 Package pdftex.def Info: chap4_files/figure-latex/johan-5.pdf used on input lin
+<<<<<<< HEAD
 e 1943.
+=======
+e 1653.
+>>>>>>> 8e7a4f4ba167fb1b9e631959f228454fcf2fc162
 (pdftex.def)             Requested size: 436.63019pt x 286.06805pt.
 [31 <./chap4_files/figure-latex/johan-3.pdf> <./chap4_files/figure-latex/johan-
 4.pdf>]
+<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 1945--1946
+=======
+Underfull \hbox (badness 10000) in paragraph at lines 1655--1656
+>>>>>>> 8e7a4f4ba167fb1b9e631959f228454fcf2fc162
 []\T1/lmtt/m/n/10 ## debug en <text>#4: rug(docking[, i])   ## debug en <text>#
 4: browser()   ## debug en
  []
@@ -1760,10 +1925,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 1945--1946
 File: chap4_files/figure-latex/johan-6.pdf Graphic file (type pdf)
 <use chap4_files/figure-latex/johan-6.pdf>
 Package pdftex.def Info: chap4_files/figure-latex/johan-6.pdf used on input lin
+<<<<<<< HEAD
 e 1947.
 (pdftex.def)             Requested size: 436.63019pt x 286.06805pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 1949--1950
+=======
+e 1657.
+(pdftex.def)             Requested size: 436.63019pt x 286.06805pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1659--1660
+>>>>>>> 8e7a4f4ba167fb1b9e631959f228454fcf2fc162
 []\T1/lmtt/m/n/10 ## debug en <text>#4: rug(docking[, i])   ## debug en <text>#
 4: browser()   ## debug en
  []
@@ -1772,11 +1944,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 1949--1950
 File: chap4_files/figure-latex/johan-7.pdf Graphic file (type pdf)
 <use chap4_files/figure-latex/johan-7.pdf>
 Package pdftex.def Info: chap4_files/figure-latex/johan-7.pdf used on input lin
+<<<<<<< HEAD
 e 1951.
+=======
+e 1661.
+>>>>>>> 8e7a4f4ba167fb1b9e631959f228454fcf2fc162
 (pdftex.def)             Requested size: 436.63019pt x 286.06805pt.
 [32 <./chap4_files/figure-latex/johan-5.pdf> <./chap4_files/figure-latex/johan-
 6.pdf>]
+<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 1953--1954
+=======
+Underfull \hbox (badness 10000) in paragraph at lines 1663--1664
+>>>>>>> 8e7a4f4ba167fb1b9e631959f228454fcf2fc162
 []\T1/lmtt/m/n/10 ## debug en <text>#4: rug(docking[, i])   ## debug en <text>#
 4: browser()   ## debug en
  []
@@ -1785,10 +1965,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 1953--1954
 File: chap4_files/figure-latex/johan-8.pdf Graphic file (type pdf)
 <use chap4_files/figure-latex/johan-8.pdf>
 Package pdftex.def Info: chap4_files/figure-latex/johan-8.pdf used on input lin
+<<<<<<< HEAD
 e 1955.
 (pdftex.def)             Requested size: 436.63019pt x 286.06805pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 1957--1958
+=======
+e 1665.
+(pdftex.def)             Requested size: 436.63019pt x 286.06805pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1667--1668
+>>>>>>> 8e7a4f4ba167fb1b9e631959f228454fcf2fc162
 []\T1/lmtt/m/n/10 ## debug en <text>#4: rug(docking[, i])   ## debug en <text>#
 4: browser()   ## debug en
  []
@@ -1797,11 +1984,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 1957--1958
 File: chap4_files/figure-latex/johan-9.pdf Graphic file (type pdf)
 <use chap4_files/figure-latex/johan-9.pdf>
 Package pdftex.def Info: chap4_files/figure-latex/johan-9.pdf used on input lin
+<<<<<<< HEAD
 e 1959.
+=======
+e 1669.
+>>>>>>> 8e7a4f4ba167fb1b9e631959f228454fcf2fc162
 (pdftex.def)             Requested size: 436.63019pt x 286.06805pt.
 [33 <./chap4_files/figure-latex/johan-7.pdf> <./chap4_files/figure-latex/johan-
 8.pdf>]
+<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 1961--1962
+=======
+Underfull \hbox (badness 10000) in paragraph at lines 1671--1672
+>>>>>>> 8e7a4f4ba167fb1b9e631959f228454fcf2fc162
 []\T1/lmtt/m/n/10 ## debug en <text>#4: rug(docking[, i])   ## debug en <text>#
 4: browser()   ## debug en
  []
@@ -1810,10 +2005,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 1961--1962
 File: chap4_files/figure-latex/johan-10.pdf Graphic file (type pdf)
 <use chap4_files/figure-latex/johan-10.pdf>
 Package pdftex.def Info: chap4_files/figure-latex/johan-10.pdf used on input li
+<<<<<<< HEAD
 ne 1963.
 (pdftex.def)             Requested size: 436.63019pt x 286.06805pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 1965--1966
+=======
+ne 1673.
+(pdftex.def)             Requested size: 436.63019pt x 286.06805pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1675--1676
+>>>>>>> 8e7a4f4ba167fb1b9e631959f228454fcf2fc162
 []\T1/lmtt/m/n/10 ## debug en <text>#4: rug(docking[, i])   ## debug en <text>#
 4: browser()   ## debug en
  []
@@ -1822,11 +2024,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 1965--1966
 File: chap4_files/figure-latex/johan-11.pdf Graphic file (type pdf)
 <use chap4_files/figure-latex/johan-11.pdf>
 Package pdftex.def Info: chap4_files/figure-latex/johan-11.pdf used on input li
+<<<<<<< HEAD
 ne 1967.
+=======
+ne 1677.
+>>>>>>> 8e7a4f4ba167fb1b9e631959f228454fcf2fc162
 (pdftex.def)             Requested size: 436.63019pt x 286.06805pt.
 [34 <./chap4_files/figure-latex/johan-9.pdf> <./chap4_files/figure-latex/johan-
 10.pdf>]
+<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 1969--1970
+=======
+Underfull \hbox (badness 10000) in paragraph at lines 1679--1680
+>>>>>>> 8e7a4f4ba167fb1b9e631959f228454fcf2fc162
 []\T1/lmtt/m/n/10 ## debug en <text>#4: rug(docking[, i])   ## debug en <text>#
 4: browser()   ## debug en
  []
@@ -1835,10 +2045,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 1969--1970
 File: chap4_files/figure-latex/johan-12.pdf Graphic file (type pdf)
 <use chap4_files/figure-latex/johan-12.pdf>
 Package pdftex.def Info: chap4_files/figure-latex/johan-12.pdf used on input li
+<<<<<<< HEAD
 ne 1971.
 (pdftex.def)             Requested size: 436.63019pt x 286.06805pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 1973--1974
+=======
+ne 1681.
+(pdftex.def)             Requested size: 436.63019pt x 286.06805pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1683--1684
+>>>>>>> 8e7a4f4ba167fb1b9e631959f228454fcf2fc162
 []\T1/lmtt/m/n/10 ## debug en <text>#4: rug(docking[, i])   ## debug en <text>#
 4: browser()   ## debug en
  []
@@ -1847,11 +2064,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 1973--1974
 File: chap4_files/figure-latex/johan-13.pdf Graphic file (type pdf)
 <use chap4_files/figure-latex/johan-13.pdf>
 Package pdftex.def Info: chap4_files/figure-latex/johan-13.pdf used on input li
+<<<<<<< HEAD
 ne 1975.
+=======
+ne 1685.
+>>>>>>> 8e7a4f4ba167fb1b9e631959f228454fcf2fc162
 (pdftex.def)             Requested size: 436.63019pt x 286.06805pt.
 [35 <./chap4_files/figure-latex/johan-11.pdf> <./chap4_files/figure-latex/johan
 -12.pdf>]
+<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 1977--1978
+=======
+Underfull \hbox (badness 10000) in paragraph at lines 1687--1688
+>>>>>>> 8e7a4f4ba167fb1b9e631959f228454fcf2fc162
 []\T1/lmtt/m/n/10 ## debug en <text>#4: rug(docking[, i])   ## debug en <text>#
 4: browser()   ## debug en
  []
@@ -1860,10 +2085,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 1977--1978
 File: chap4_files/figure-latex/johan-14.pdf Graphic file (type pdf)
 <use chap4_files/figure-latex/johan-14.pdf>
 Package pdftex.def Info: chap4_files/figure-latex/johan-14.pdf used on input li
+<<<<<<< HEAD
 ne 1979.
 (pdftex.def)             Requested size: 436.63019pt x 286.06805pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 1981--1982
+=======
+ne 1689.
+(pdftex.def)             Requested size: 436.63019pt x 286.06805pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1691--1692
+>>>>>>> 8e7a4f4ba167fb1b9e631959f228454fcf2fc162
 []\T1/lmtt/m/n/10 ## debug en <text>#4: rug(docking[, i])   ## debug en <text>#
 4: browser()   ## debug en
  []
@@ -1872,11 +2104,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 1981--1982
 File: chap4_files/figure-latex/johan-15.pdf Graphic file (type pdf)
 <use chap4_files/figure-latex/johan-15.pdf>
 Package pdftex.def Info: chap4_files/figure-latex/johan-15.pdf used on input li
+<<<<<<< HEAD
 ne 1983.
+=======
+ne 1693.
+>>>>>>> 8e7a4f4ba167fb1b9e631959f228454fcf2fc162
 (pdftex.def)             Requested size: 436.63019pt x 286.06805pt.
 [36 <./chap4_files/figure-latex/johan-13.pdf> <./chap4_files/figure-latex/johan
 -14.pdf>]
+<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 1985--1986
+=======
+Underfull \hbox (badness 10000) in paragraph at lines 1695--1696
+>>>>>>> 8e7a4f4ba167fb1b9e631959f228454fcf2fc162
 []\T1/lmtt/m/n/10 ## debug en <text>#4: rug(docking[, i])   ## debug en <text>#
 4: browser()   ## debug en
  []
@@ -1885,10 +2125,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 1985--1986
 File: chap4_files/figure-latex/johan-16.pdf Graphic file (type pdf)
 <use chap4_files/figure-latex/johan-16.pdf>
 Package pdftex.def Info: chap4_files/figure-latex/johan-16.pdf used on input li
+<<<<<<< HEAD
 ne 1987.
 (pdftex.def)             Requested size: 436.63019pt x 286.06805pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 1989--1990
+=======
+ne 1697.
+(pdftex.def)             Requested size: 436.63019pt x 286.06805pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1699--1700
+>>>>>>> 8e7a4f4ba167fb1b9e631959f228454fcf2fc162
 []\T1/lmtt/m/n/10 ## debug en <text>#4: rug(docking[, i])   ## debug en <text>#
 4: browser()   ## debug en
  []
@@ -1897,11 +2144,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 1989--1990
 File: chap4_files/figure-latex/johan-17.pdf Graphic file (type pdf)
 <use chap4_files/figure-latex/johan-17.pdf>
 Package pdftex.def Info: chap4_files/figure-latex/johan-17.pdf used on input li
+<<<<<<< HEAD
 ne 1991.
+=======
+ne 1701.
+>>>>>>> 8e7a4f4ba167fb1b9e631959f228454fcf2fc162
 (pdftex.def)             Requested size: 436.63019pt x 286.06805pt.
 [37 <./chap4_files/figure-latex/johan-15.pdf> <./chap4_files/figure-latex/johan
 -16.pdf>]
+<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 1993--1994
+=======
+Underfull \hbox (badness 10000) in paragraph at lines 1703--1704
+>>>>>>> 8e7a4f4ba167fb1b9e631959f228454fcf2fc162
 []\T1/lmtt/m/n/10 ## debug en <text>#4: rug(docking[, i])   ## debug en <text>#
 4: browser()   ## debug en
  []
@@ -1910,10 +2165,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 1993--1994
 File: chap4_files/figure-latex/johan-18.pdf Graphic file (type pdf)
 <use chap4_files/figure-latex/johan-18.pdf>
 Package pdftex.def Info: chap4_files/figure-latex/johan-18.pdf used on input li
+<<<<<<< HEAD
 ne 1995.
 (pdftex.def)             Requested size: 436.63019pt x 286.06805pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 1997--1998
+=======
+ne 1705.
+(pdftex.def)             Requested size: 436.63019pt x 286.06805pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1707--1708
+>>>>>>> 8e7a4f4ba167fb1b9e631959f228454fcf2fc162
 []\T1/lmtt/m/n/10 ## debug en <text>#4: rug(docking[, i])   ## debug en <text>#
 4: browser()   ## debug en
  []
@@ -1922,11 +2184,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 1997--1998
 File: chap4_files/figure-latex/johan-19.pdf Graphic file (type pdf)
 <use chap4_files/figure-latex/johan-19.pdf>
 Package pdftex.def Info: chap4_files/figure-latex/johan-19.pdf used on input li
+<<<<<<< HEAD
 ne 1999.
+=======
+ne 1709.
+>>>>>>> 8e7a4f4ba167fb1b9e631959f228454fcf2fc162
 (pdftex.def)             Requested size: 436.63019pt x 286.06805pt.
 [38 <./chap4_files/figure-latex/johan-17.pdf> <./chap4_files/figure-latex/johan
 -18.pdf>]
+<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 2001--2002
+=======
+Underfull \hbox (badness 10000) in paragraph at lines 1711--1712
+>>>>>>> 8e7a4f4ba167fb1b9e631959f228454fcf2fc162
 []\T1/lmtt/m/n/10 ## debug en <text>#4: rug(docking[, i])   ## debug en <text>#
 4: browser()   ## debug en
  []
@@ -1935,17 +2205,29 @@ Underfull \hbox (badness 10000) in paragraph at lines 2001--2002
 File: chap4_files/figure-latex/johan-20.pdf Graphic file (type pdf)
 <use chap4_files/figure-latex/johan-20.pdf>
 Package pdftex.def Info: chap4_files/figure-latex/johan-20.pdf used on input li
+<<<<<<< HEAD
 ne 2003.
+=======
+ne 1713.
+>>>>>>> 8e7a4f4ba167fb1b9e631959f228454fcf2fc162
 (pdftex.def)             Requested size: 438.64435pt x 286.07242pt.
 <chap4_files/figure-latex/johan-21.pdf, id=37295, 436.63126pt x 248.93pt>
 File: chap4_files/figure-latex/johan-21.pdf Graphic file (type pdf)
 <use chap4_files/figure-latex/johan-21.pdf>
 Package pdftex.def Info: chap4_files/figure-latex/johan-21.pdf used on input li
+<<<<<<< HEAD
 ne 2009.
+=======
+ne 1719.
+>>>>>>> 8e7a4f4ba167fb1b9e631959f228454fcf2fc162
 (pdftex.def)             Requested size: 436.63019pt x 248.92938pt.
 [39 <./chap4_files/figure-latex/johan-19.pdf> <./chap4_files/figure-latex/johan
 -20.pdf>]
+<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 2011--2013
+=======
+Underfull \hbox (badness 10000) in paragraph at lines 1721--1723
+>>>>>>> 8e7a4f4ba167fb1b9e631959f228454fcf2fc162
 []\T1/lmtt/m/n/10 r   ## Leer sobre la incertidumbre del 2 y explicarla     ## 
 Y leer el paper de Julian y
  []
@@ -1955,6 +2237,7 @@ Y leer el paper de Julian y
 File: chap4_files/figure-latex/heatonPDF-1.pdf Graphic file (type pdf)
 <use chap4_files/figure-latex/heatonPDF-1.pdf>
 Package pdftex.def Info: chap4_files/figure-latex/heatonPDF-1.pdf used on input
+<<<<<<< HEAD
  line 2020.
 (pdftex.def)             Requested size: 459.74442pt x 316.19975pt.
 <chapter4/Figura1_4.pdf, id=37317, 597.50786pt x 845.04686pt>
@@ -1964,11 +2247,26 @@ Package pdftex.def Info: chapter4/Figura1_4.pdf used on input line 2024.
 (pdftex.def)             Requested size: 459.91837pt x 650.456pt.
 
 LaTeX Warning: Float too large for page by 23.97041pt on input line 2027.
+=======
+ line 1730.
+(pdftex.def)             Requested size: 459.73741pt x 314.18735pt.
+<chapter4/Figura1_4.pdf, id=37217, 597.50786pt x 845.04686pt>
+File: chapter4/Figura1_4.pdf Graphic file (type pdf)
+<use chapter4/Figura1_4.pdf>
+Package pdftex.def Info: chapter4/Figura1_4.pdf used on input line 1734.
+(pdftex.def)             Requested size: 459.91837pt x 650.456pt.
+
+LaTeX Warning: Float too large for page by 23.97041pt on input line 1737.
+>>>>>>> 8e7a4f4ba167fb1b9e631959f228454fcf2fc162
 
 <chapter4/PriAHeatPot.png, id=37318, 601.24625pt x 692.5875pt>
 File: chapter4/PriAHeatPot.png Graphic file (type png)
 <use chapter4/PriAHeatPot.png>
+<<<<<<< HEAD
 Package pdftex.def Info: chapter4/PriAHeatPot.png used on input line 2031.
+=======
+Package pdftex.def Info: chapter4/PriAHeatPot.png used on input line 1741.
+>>>>>>> 8e7a4f4ba167fb1b9e631959f228454fcf2fc162
 (pdftex.def)             Requested size: 469.76834pt x 541.13548pt.
 [40 <./chap4_files/figure-latex/johan-21.pdf> <./chap4_files/figure-latex/heato
 nPDF-1.pdf>] [41 <./chapter4/Figura1_4.pdf>] [42 <./chapter4/PriAHeatPot.png>]
@@ -1977,6 +2275,7 @@ nPDF-1.pdf>] [41 <./chapter4/Figura1_4.pdf>] [42 <./chapter4/PriAHeatPot.png>]
 File: chap4_files/figure-latex/substrateBox-1.pdf Graphic file (type pdf)
 <use chap4_files/figure-latex/substrateBox-1.pdf>
 Package pdftex.def Info: chap4_files/figure-latex/substrateBox-1.pdf used on in
+<<<<<<< HEAD
 put line 2050.
 (pdftex.def)             Requested size: 459.74442pt x 315.19595pt.
 [43 <./chap4_files/figure-latex/substrateBox-1.pdf>]
@@ -1988,16 +2287,34 @@ LaTeX Warning: Command \texttimes invalid in math mode on input line 2066.
 
 
 Overfull \hbox (69.34259pt too wide) detected at line 2086
+=======
+put line 1760.
+(pdftex.def)             Requested size: 459.7304pt x 313.17877pt.
+[35 <./chap4_files/figure-latex/substrateBox-1.pdf>]
+
+LaTeX Warning: Command \texttimes invalid in math mode on input line 1776.
+
+
+LaTeX Warning: Command \texttimes invalid in math mode on input line 1776.
+
+
+Overfull \hbox (69.34259pt too wide) detected at line 1796
+>>>>>>> 8e7a4f4ba167fb1b9e631959f228454fcf2fc162
 [][]
  []
 
 
+<<<<<<< HEAD
 Overfull \hbox (52.13461pt too wide) in paragraph at lines 2090--2116
+=======
+Overfull \hbox (52.13461pt too wide) in paragraph at lines 1800--1826
+>>>>>>> 8e7a4f4ba167fb1b9e631959f228454fcf2fc162
  [][] 
  []
 
 [44
 
+<<<<<<< HEAD
 ] [45]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2131.
 [46
@@ -2007,12 +2324,24 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 2131.
 (./chap4.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2131.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2131.
+=======
+] [37]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1841.
+[38
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1841.
+(./chap4.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1841.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1841.
+>>>>>>> 8e7a4f4ba167fb1b9e631959f228454fcf2fc162
 
 Package rerunfilecheck Info: File `chap4.out' has not changed.
 (rerunfilecheck)             Checksum: 75B4D55233C3EC1F80768FCD9F46ADC8;5455.
 
 LaTeX Warning: There were multiply-defined labels.
 
+<<<<<<< HEAD
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2131.
  ) 
 Here is how much of TeX's memory you used:
@@ -2025,6 +2354,20 @@ Here is how much of TeX's memory you used:
  36i,9n,38p,1326b,437s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/en
 c/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/shar
+=======
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1841.
+ ) 
+Here is how much of TeX's memory you used:
+ 13955 strings out of 493304
+ 208794 string characters out of 6139870
+ 361247 words of memory out of 5000000
+ 17049 multiletter control sequences out of 15000+600000
+ 50356 words of font info for 86 fonts, out of 8000000 for 9000
+ 957 hyphenation exceptions out of 8191
+ 36i,9n,38p,1270b,439s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
+ips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/shar
+>>>>>>> 8e7a4f4ba167fb1b9e631959f228454fcf2fc162
 e/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/l
 m-rm.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/f
 onts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.
@@ -2036,7 +2379,11 @@ exmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/l
 msy7.pfb></usr/share/texmf/fonts/type1/public/lm/lmtk10.pfb></usr/share/texmf/f
 onts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtti10
 .pfb>
+<<<<<<< HEAD
 Output written on chap4.pdf (46 pages, 12824451 bytes).
+=======
+Output written on chap4.pdf (38 pages, 12569526 bytes).
+>>>>>>> 8e7a4f4ba167fb1b9e631959f228454fcf2fc162
 PDF statistics:
  37476 PDF objects out of 38293 (max. 8388607)
  24806 compressed objects within 249 object streams
