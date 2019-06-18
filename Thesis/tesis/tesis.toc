@@ -97,36 +97,39 @@
 \contentsline {section}{\numberline {3.9}BiG SCAPE y CORASON identificaron nuevos productos variantes de la familia de BGCs Rimosamide - Detoxin en Actinobacteria}{92}{section.3.9}
 \contentsline {section}{\numberline {3.10}CORASON sugiere que las familias detoxin y rimosamide pertenecen a un amplio clan de familias dedicadas a la s\IeC {\'\i }ntesis de p\IeC {\'e}ptidos.}{93}{section.3.10}
 \contentsline {section}{\numberline {3.11}Clados selectos del \IeC {\'a}rbol de CORASON que contiene a las familias rimosamide/detoxin contienen diversidad g\IeC {\'e}nica que correlaciona con novedad qu\IeC {\'\i }mica.}{94}{section.3.11}
-\contentsline {subsection}{\numberline {3.11.1}El superclado spectinomycin/ detoxin-rimosamide-clan produce cinco variantes de detoxin.}{94}{subsection.3.11.1}
-\contentsline {subsection}{\numberline {3.11.2}El clado \emph {Amycolatopsis P450} produce cinco variantes de detoxin.}{95}{subsection.3.11.2}
+\contentsline {subsection}{\numberline {3.11.1}El clado P450/enoyl agrega una heptanamida al core molecular detoxin/rimosamide}{94}{subsection.3.11.1}
+\contentsline {subsection}{\numberline {3.11.2}El superclado spectinomycin/ detoxin-rimosamide-clan produce cinco variantes de detoxin.}{94}{subsection.3.11.2}
+\contentsline {subsection}{\numberline {3.11.3}El clado \emph {Amycolatopsis P450} produce cinco variantes de detoxin.}{95}{subsection.3.11.3}
+\contentsline {section}{\numberline {3.12}CORASON permiti\IeC {\'o} expandir las capacidades de EvoMining y explorar la promiscuidad de familias de BGCs de enzimas divergentes de metabolismo central.}{96}{section.3.12}
 \contentsline {subsubsection}{Discusi\IeC {\'o}n}{96}{section*.57}
 \contentsline {chapter}{Chapter 4: La familia PriA}{97}{chapter.4}
-\contentsline {section}{\numberline {4.1}PriA como modelo de familia enzim\IeC {\'a}tica donde las expansiones no son condici\IeC {\'o}n necesaria para la promiscuidad.}{101}{section.4.1}
-\contentsline {subsubsection}{PriA en EvoMining}{101}{section*.58}
-\contentsline {subsection}{\numberline {4.1.1}PriA CORASON}{102}{subsection.4.1.1}
-\contentsline {section}{\numberline {4.2}Non darwinian trayectories}{106}{section.4.2}
-\contentsline {section}{\numberline {4.3}Estandarizacion de protocolos experimentales de PriA en sus sustratos tradicionales}{106}{section.4.3}
-\contentsline {section}{\numberline {4.4}Afinidad de enzimas selectas por sustratos qu\IeC {\'\i }micamente parecidos a PRA y PROFAR}{108}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}Es posible que PriA tenga actividad en GTP}{112}{subsection.4.4.1}
-\contentsline {section}{\numberline {4.5}El an\IeC {\'a}lisis de PriA a nivel estructural sugiere que GTP es el sustrato m\IeC {\'a}s af\IeC {\'\i }n}{115}{section.4.5}
-\contentsline {subsection}{\numberline {4.5.1}Similar substrates to PRA and PROFAR suggested by Tanimoto distance or previously tested}{117}{subsection.4.5.1}
-\contentsline {subsection}{\numberline {4.5.2}Docking between PriA enzymes and selected substrates}{118}{subsection.4.5.2}
-\contentsline {section}{\numberline {4.6}GTP is the substrate with best PriA affinity}{118}{section.4.6}
-\contentsline {section}{\numberline {4.7}Molecular dynamics vs experimental data}{126}{section.4.7}
-\contentsline {chapter}{Conclusion}{129}{chapter*.79}
-\contentsline {section}{\numberline {4.1}Discusion}{129}{section.4.1}
-\contentsline {subsubsection}{More info}{129}{section*.80}
-\contentsline {chapter}{Appendix A: The First Appendix}{131}{appendix.A}
-\contentsline {subsubsection}{In the main Rmd file:}{131}{section*.81}
-\contentsline {subsubsection}{In \hyperlink {ref_labels}{}:}{131}{section*.82}
-\contentsline {chapter}{Appendix B: The Second Appendix, Open source code on this document}{133}{appendix.B}
-\contentsline {section}{\numberline {B.1}R markdown}{133}{section.B.1}
-\contentsline {section}{\numberline {B.2}Docker}{133}{section.B.2}
-\contentsline {section}{\numberline {B.3}Git}{134}{section.B.3}
-\contentsline {section}{\numberline {B.4}Connect GitHub and DockerHub}{134}{section.B.4}
-\contentsline {section}{\numberline {B.5}Additional resources}{134}{section.B.5}
-\contentsline {chapter}{Appendix C: The third Appendix, Other contributions during my phd}{137}{appendix.C}
-\contentsline {section}{\numberline {C.1}Accepted}{137}{section.C.1}
-\contentsline {section}{\numberline {C.2}Submitted}{137}{section.C.2}
-\contentsline {section}{\numberline {C.3}On preparation}{137}{section.C.3}
-\contentsline {chapter}{References}{139}{appendix*.83}
+\contentsline {section}{\numberline {4.1}PriA como modelo de familia enzim\IeC {\'a}tica donde las expansiones no son condici\IeC {\'o}n necesaria para la promiscuidad.}{99}{section.4.1}
+\contentsline {subsubsection}{PriA en EvoMining}{99}{section*.58}
+\contentsline {subsection}{\numberline {4.1.1}PriA CORASON}{103}{subsection.4.1.1}
+\contentsline {section}{\numberline {4.2}PriA a nivel de amino\IeC {\'a}cidos}{105}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Al transformar una subHisA en una PriA mediante mutaciones no se observ\IeC {\'o} ninguna trayectoria creciente para ambos sustratos (darwininana)}{105}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Los residuos que covar\IeC {\'\i }an en el registro evolutivo de PriA permiten una reconstrucci\IeC {\'o}n aproximada de su estructura tridimensional}{108}{subsection.4.2.2}
+\contentsline {section}{\numberline {4.3}Afinidad de enzimas selectas por sustratos qu\IeC {\'\i }micamente parecidos a PRA y PROFAR}{109}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}El an\IeC {\'a}lisis de PriA a nivel estructural sugiere que GTP es el sustrato m\IeC {\'a}s af\IeC {\'\i }n}{117}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Sustratos similares a PRA y PROFAR sugeridos por distancias de Tanimoto o probados previamente}{118}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}GTP es el sustrato por el que PriA muestra mayor afinidad}{119}{subsection.4.3.3}
+\contentsline {subsection}{\numberline {4.3.4}Molecular dynamics vs experimental data}{123}{subsection.4.3.4}
+\contentsline {section}{\numberline {4.4}PriA en cin\IeC {\'e}ticas enzim\IeC {\'a}ticas no tradicionales.}{125}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Es posible que PriA tenga actividad en GTP}{125}{subsection.4.4.1}
+\contentsline {chapter}{Conclusion}{139}{chapter*.79}
+\contentsline {section}{\numberline {4.1}Discusion}{139}{section.4.1}
+\contentsline {subsubsection}{More info}{139}{section*.80}
+\contentsline {chapter}{Appendix A: The First Appendix}{141}{appendix.A}
+\contentsline {subsubsection}{In the main Rmd file:}{141}{section*.81}
+\contentsline {subsubsection}{In \hyperlink {ref_labels}{}:}{141}{section*.82}
+\contentsline {chapter}{Appendix B: The Second Appendix, Open source code on this document}{143}{appendix.B}
+\contentsline {section}{\numberline {B.1}R markdown}{143}{section.B.1}
+\contentsline {section}{\numberline {B.2}Docker}{143}{section.B.2}
+\contentsline {section}{\numberline {B.3}Git}{144}{section.B.3}
+\contentsline {section}{\numberline {B.4}Connect GitHub and DockerHub}{144}{section.B.4}
+\contentsline {section}{\numberline {B.5}Additional resources}{144}{section.B.5}
+\contentsline {chapter}{Appendix C: The third Appendix, Other contributions during my phd}{147}{appendix.C}
+\contentsline {section}{\numberline {C.1}Accepted}{147}{section.C.1}
+\contentsline {section}{\numberline {C.2}Submitted}{147}{section.C.2}
+\contentsline {section}{\numberline {C.3}On preparation}{147}{section.C.3}
+\contentsline {chapter}{References}{149}{appendix*.83}
