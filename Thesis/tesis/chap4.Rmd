@@ -116,7 +116,11 @@ label(path = "chapter4/PriAExpansiones.png",
       type = "figure")
 ```
 
-En la siguiente  `r ref(label = "PriAEvoMiningCopies", type = "figure")`  se muestra la familia PriA coloreada según el número de copias. 
+Después del conteo de número de copias promedio, se analizaron los árboles de PriA de EvoMining, tanto los coloreados de acuerdo al número de copias, `r ref(label = "PriAEvoMiningCopies", type = "figure")`, como los coloreados según el destino metabólico, `r ref(label = "PriATrees", type = "figure")`. En Actinobacteria la mayoría de las hojas son verdes reafirmando que existe sólo una copia por genoma en ese organismo. Sin embargo, existen varias hojas de color amarillo, indicando de dos copias en ese genoma. Las Actinobacterias con dos copias son _Ornithinimicrobium pekingense_ DSM 21552, _Pseudonocardia_ sp. P2, _Serinicoccus marinus_ DSM 15273, _Serinicoccus profundi_ MCCC 1A05965, _Sphaerobacter thermophilus_ DSM 20745 y _Streptomyces_ sp. CT34. 
+
+En Cyanobacteria, _Pseudomonas_ y Archaea se muestra una mezcla entre organismos con  una o dos copias de PriA en su genoma. 
+Sin embargo analizar a profundidad los árboles producidos por EvoMining en los distintos linajes, observamos que las copias extra tanto de Cyanobacteria como de _Pseudomonas_ son en realidad provenientes de otras familias enzimáticas, que guardan cierta similitud de secuencia con PriA. En ambos casos la segunda copia está anotada por RAST como imidazol glicerol fosfato sintasa ciclasa. En Archaea sin embargo, diversas especies de la clase Methanomicrobia tienen dos copias de PriA. 
+
 ```{r PriAEvoMiningCopies, results = "asis",message=FALSE,echo=FALSE}
 label(path = "chapter4/PriAEvoMiningCopies.pdf", 
       caption = "Copias extras de PriA en Actinobacteria, Cyanobacteria, Pseudomonas y Archaea",
@@ -127,8 +131,8 @@ label(path = "chapter4/PriAEvoMiningCopies.pdf",
       type = "figure")
 ```
 
-Después del conteo de número de copias promedio, se analizaron los árboles de PriA de EvoMining, tanto los coloreados de acuerdo al número de copias `r ref(label = "PriAEvoMiningCopies", type = "figure")`, como los coloreados según el destino metabólico `r ref(label = "PriATrees", type = "figure")`. 
-Al analizar a profundidad los árboles producidos por EvoMining en los distintos linajes, observamos que las copias extra tanto de Cyanobacteria como de _Pseudomonas_ son en realidad provenientes de otras familias enzimáticas, que guardan cierta similitud de secuencia con PriA.  
+Después de explorar cuáles organismos tienen expansiones de PriA 
+
 
 En _Janibacter Hoilley_ hay una fusión de HisA con HisH
 
