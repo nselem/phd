@@ -59,8 +59,9 @@ PriA es una familia de enzimas de Actinobacteria homóloga a la familia HisA en 
 Además, en Actinobacteria PriA ha mostrado un gradiente funcional. Esta variación divide a la familia en varias subfamilias según su capacidad catalíticas en los sustratos ProFAR y PRA. En la `r ref("cineticos", type = "table")` se muestra la constantes catalíticas de PriA estimadas en diferentes organismos para estos dos sustratos. Estos datos ejemplifican las subfamilias de PriA, en la tabla se encuentran ejemplos de miembros de PriB, la subfamilia ubicada en el género _Streptomyces_ con baja capacidad de catálisis para la función TrpF. Varios _Streptomyces_ con un ortólogo en la familia PriB, se diferencian de otras Actinobacterias en que contienen en su genoma un gen _trpF_ localizado fuera del contexto genómico inmediato de los operones de histidina y triptofano. Otra subfamilia de PriA es subHisA, que ha perdido totalmente la actividd TrpF, existen miembros de subHisA en _Corynebacteria_ y en _Actinomyces_. Finalmente en Actinomyces encontramos la subfamilia _subTrpF_ que ha perdido la actividad de HisA.
 
   
-**Table:** Datos Cinéticos de subfamilias de PriA \label{tab:cineticos}   
-|Fuente|Familia|HisA $in\hspace{.1cm}vivo$|TrpF $in\hspace{.1cm}vivo$|$K_{cat}^{\tiny{ProFAR}}$  $\tiny{[M^{-1}s^{-1}]}$|$K_m^{\tiny{ProFAR}}$  $\tiny{[\mu M]}$|HisA  $\frac{K_{cat}}{K_m}$ |$K_{cat}^{\tiny{PRA}}$   $\tiny{[M^{-1}s^{-1}]}$ |$K_m^{\tiny{PRA}}$ $\tiny{[\mu M]}$|TrpF $\frac{Kcat}{Km}$ |Referencia|  
+Table: Datos Cinéticos de subfamilias de PriA \label{tab:cineticos}   
+  
+|Fuente|Familia|HisA $in\hspace{.1cm}vivo$|TrpF $in\hspace{.1cm}vivo$|$K_{cat}^{\tiny{ProFAR}}$  $\tiny{[M^{-1}s^{-1}]}$|$K_m^{\tiny{ProFAR}}$  $\tiny{[\mu M]}$|HisA  $\frac{K_{cat}}{K_m}$ |$K_{cat}^{\tiny{PRA}}$   $\tiny{[M^{-1}s^{-1}]}$ |$K_m^{\tiny{PRA}}$ $\tiny{[\mu M]}$|TrpF $\frac{Kcat}{Km}$ |Referencia|   
 |----------------------------|--------|--------|--------|------------|-----------|---------|----------|----------|------|---------------------|  
 | _Escherichia  coli_  |HisA|-|-|1.6|4.9|3.1|-|-|0|Henn [@henn-sax_two_2002]|  
 | _Escherichia  coli_  |TrpF|-|-|-|-|0|12.2|34.5|2.82|Sterner [Sterner @sterner_phosphoribosyl_1996]|  
@@ -116,10 +117,10 @@ label(path = "chapter4/PriAExpansiones.png",
       type = "figure")
 ```
 
-Después del conteo de número de copias promedio, se analizaron los árboles de PriA de EvoMining, tanto los coloreados de acuerdo al número de copias, `r ref(label = "PriAEvoMiningCopies", type = "figure")`, como los coloreados según el destino metabólico, `r ref(label = "PriATrees", type = "figure")`. En Actinobacteria la mayoría de las hojas son verdes reafirmando que existe sólo una copia por genoma en ese organismo. Sin embargo, existen varias hojas de color amarillo, indicando de dos copias en ese genoma. Las Actinobacterias con dos copias son _Ornithinimicrobium pekingense_ DSM 21552, _Pseudonocardia_ sp. P2, _Serinicoccus marinus_ DSM 15273, _Serinicoccus profundi_ MCCC 1A05965, _Sphaerobacter thermophilus_ DSM 20745 y _Streptomyces_ sp. CT34. 
+Después del conteo de número de copias promedio, se analizaron los árboles de PriA de EvoMining, tanto los coloreados de acuerdo al número de copias, `r ref(label = "PriAEvoMiningCopies", type = "figure")`, como los coloreados según el destino metabólico, 
+`r ref(label = "PriATrees", type = "figure")`. En Actinobacteria la mayoría de las hojas son verdes reafirmando que existe sólo una copia por genoma en ese organismo. Sin embargo, existen varias hojas de color amarillo, indicando de dos copias en ese genoma. Las Actinobacterias con dos copias son _Ornithinimicrobium pekingense_ DSM 21552, _Pseudonocardia_ sp. P2, _Serinicoccus marinus_ DSM 15273, _Serinicoccus profundi_ MCCC 1A05965, _Sphaerobacter thermophilus_ DSM 20745 y _Streptomyces_ sp. CT34. 
 
-En Cyanobacteria, _Pseudomonas_ y Archaea se muestra una mezcla entre organismos con  una o dos copias de PriA en su genoma. 
-Sin embargo analizar a profundidad los árboles producidos por EvoMining en los distintos linajes, observamos que las copias extra tanto de Cyanobacteria como de _Pseudomonas_ son en realidad provenientes de otras familias enzimáticas, que guardan cierta similitud de secuencia con PriA. En ambos casos la segunda copia está anotada por RAST como imidazol glicerol fosfato sintasa ciclasa. En Archaea sin embargo, diversas especies de la clase Methanomicrobia tienen dos copias de PriA. 
+En Cyanobacteria, _Pseudomonas_ y Archaea en contraste con Actinobacteria, se muestran una mezcla entre organismos que poseen una (verdes) o dos copias (amarillos) de PriA. Sin embargo al analizar detalladamente los árboles producidos por EvoMining en los distintos linajes, observamos que las copias extra tanto de Cyanobacteria como de _Pseudomonas_ son en realidad miembros de otras familias enzimáticas, que guardan cierta similitud de secuencia con PriA. En Cyanobacteria y _Pseudomonas_ la copia extra está en una rama divergente y muy poblada del árbol. En ambos casos esta segunda copia está en su mayoría anotada por RAST como imidazol glicerol fosfato sintasa ciclasa. En Archaea sin embargo, diversas especies de la clase Methanomicrobia sí tienen dos copias de PriA. 
 
 ```{r PriAEvoMiningCopies, results = "asis",message=FALSE,echo=FALSE}
 label(path = "chapter4/PriAEvoMiningCopies.pdf", 
@@ -131,10 +132,9 @@ label(path = "chapter4/PriAEvoMiningCopies.pdf",
       type = "figure")
 ```
 
-Después de explorar cuáles organismos tienen expansiones de PriA 
+Después de explorar cuáles organismos tienen expansiones de PriA, a continuación se muestra en la `r ref(label = "PriATrees", type = "figure")` el posible destino metabólico de las copias extra de la familia. El árbl de Actinobacteria está poblado de hojas rojas, es decir de PriA dedicadas al metabolismo conservado, en este caso a las rutas de Histidina y Triptofano. Sin embargo hay algunas hojas grises, como es el caso de los dos _Serenicoccus_ mencionados previamente. Es posible que estas PriA puedan tener funciones alternativas. Además, en Actinobacteria la PriA de _Janibacter Hoilley_, la rama más larga del árbol, es muy divergente. Esto se debe a que existe una fusión de PriA con HisH, que no parece ser un artefacto de anotación ya que hay otros _Janibacter_ con PriA ligeramente más grandes que el promedio.  
 
-
-En _Janibacter Hoilley_ hay una fusión de HisA con HisH
+En Cyanobacteria hay pocas hojas verdes (EvoMining predictions) y no están localizadas cerca de saxitoxin, la HisA marcada como BGC de Cyanobacteria. En _Pseudomonas_ hay una gran población de predicciones de EvoMining, pero son falsos positivios, ya que estas no corresponden a una rama dedicada al metabolismo secundario, sino a la rama de la ciclasa. En Archaea algunas de los hojas grises, es decir sin destino metabólico conocido serán exploradas en la siguiente sección.   
 
 ```{r PriATrees, results = "asis",message=FALSE,echo=FALSE}
 label(path = "chapter4/PriAEvoMining.pdf", 
@@ -142,50 +142,40 @@ label(path = "chapter4/PriAEvoMining.pdf",
       scale=.8,
       cap.size = "footnotesize",
       alt.cap="Árboles de destino metabólico de PriA en Actinobacteria, Cyanobacteria, Pseudomonas y Archaea según EvoMining",
-      label = "PriATrees", type = "figure")
+      label = "PriATrees", 
+      type = "figure")
 ```
 
-
-Los reclutamientos que tuvieron estas expansiones están listados en la tabla `r ref("reclutamientos", type = "table")`.  Entre ellos se encuentran dos toxinas de Cyanobacteria, un lipopolisacárido producido por una Proteobacteria y un BGC productor de cloro pentostatina proveniente producido en Actinobacteria.    
+Todos los reclutamientos (marcados en azul en el árbol) que tuvieron estas expansiones en estos linajes genómicos están listados en la tabla `r ref("reclutamientos", type = "table")`.  Entre ellos se encuentran dos toxinas de Cyanobacteria[@moustafa_origin_2009], un lipopolisacárido producido por una Proteobacteria y un BGC productor de cloro pentostatina producido en Actinobacteria [@gao_biosynthesis_2017]. La pentostatina es un atibiótico nucleosídico derivado de adenosina, cuyo cluster es llamado _ada_ . La PriA del cluster _ada_ es llamada _adaK_ y sí parece participar del cluster, ya que el sustrato muestra una isomerización sobre un sustrato con una anillo de 5 carbonos, dos OH, un oxígeno y un grupo fosfato. Esta isomerización es muy parecida a la que realiza PriA sobre ProFAR y PRA. Así pues habríamos encontrado una nueva promiscuidad de PriA. Es relevante mencionar que la mutante de PriA no suprime la producción de este antibiótico en _Actinomadura_ sp. ATCC 39365, por lo que los autores especulan que otra enzima podría estar realizando la isomerización. _Actinomadura_ no posee una copia de TrpF que sería el candidato inmediato.          
 
  Table: Reclutamientos de expansiones de PriA en MIBiG \label{tab:reclutamientos}     
    
-|Compuesto|Actinobacteria|Cyanobacteria|Pseudomonas|Archaea	| BGC origen|Clase|   
-|---------|--------------|-------------|-----------|--------|-----------|-----|   
-|[saxitoxin](http://mibig.secondarymetabolites.org/repository/BGC0000188/index.html#cluster-1) 	|  x	|x  	| x 	|x  	| Cyanobacteria 	|  Alkaloid	|
-|[lipopoly saccharide](http://mibig.secondarymetabolites.org/repository/BGC0000775/index.html#cluster-1)	|x  	|x  	|  x	|  x	|  Proteobacteria	| Saccharide 	|  
-| [toxin](http://mibig.secondarymetabolites.org/repository/BGC0000928/index.html#cluster-1)	| x 	|  x	| x 	|  x	| Cyanobacteria 	|  Other T3	|  
-| [2'-chloro pentostatin ](http://mibig.secondarymetabolites.org/repository/BGC0001484/index.html#cluster-1)|  x	|-  	| -x	|  -	| Actinobacteria 	| Other  	|  
-2'-amino-2'- deoxy adenosine|  	|  	| 	|  	|  	|  	|  
+|Compuesto|Actinobacteria|Cyanobacteria|Pseudomonas|Archaea|BGC origen|Clase|   
+|---------|:------------:|:-----------:|:---------:|-------|----------|-----|   
+| [saxitoxin](http://mibig.secondarymetabolites.org/repository/BGC0000188/index.html#cluster-1)|x|x|x|x| Cyanobacteria |Alcaloide|
+| [lipopolisacárido](http://mibig.secondarymetabolites.org/repository/BGC0000775/index.html#cluster-1)	|x  	|x  	|  x	|  x	|Proteobacteria	| Sacarido |  
+| [toxin](http://mibig.secondarymetabolites.org/repository/BGC0000928/index.html#cluster-1)|x|x|x|x| Cyanobacteria|Otros |  
+| [ada ](http://mibig.secondarymetabolites.org/repository/BGC0001484/index.html#cluster-1)|x|x|x| x| Actinobacteria 	| Otros  	|  
 
-Finalmente, los árboles que se produjeron por EvoMining están disponibles para exploración interactiva en Microreact en los siguientes links:  
+
+Finalmente, los árboles que se produjeron por EvoMining están disponibles para exploración interactiva en Microreact en los links de la `r ref("reclutamientos", type = "arboles")`:  
 
 Table: Árboles EvoMining de PriA en MicroReact \label{tab:arboles}  
   
 |  Linaje	| Link al árbol de EvoMining en Microreact  	|  
-|---	|---	|  
+|---	|:---:|  
 |  Actinobacteria	|  [7g2IGfkv9](https://microreact.org/project/7g2IGfkv9)	|  
 |  Cyanobacteria	|[qF6jWRMox](https://microreact.org/project/qF6jWRMox) 	|  
-|  	PriA_Pseudomonas| [ydff6DWqs](https://microreact.org/project/ydff6DWqs)	|  
+|  	_Pseudomonas_| [ydff6DWqs](https://microreact.org/project/ydff6DWqs)	|  
 |  Archaea	|  [Ig-m9Cm6f](https://microreact.org/project/Ig-m9Cm6f)|  
   
 
-EvoMining ha detectado un parálogo de PriA en Actinobacteria y una expansión conservada en un grupo de saxitoxinas [@moustafa_origin_2009] en Cyanobacteria .
 
-### PriA CORASON
-En Actinobacteria, se observó que todos los _Streptomyces_ tienen el cluster de PriA parcialmente conservado con respecto al BGC de _Streptomyces coelicolor_. El único organismo de este género con una copia extra de PriA es _Streptomyces_ CT34. Esta copia parece deberse a transferencia horizontal dado que su mejor hit en NCBI proviene de una _Lentzea_. Aún así parece ser un homólogo lejano ya que tuvo 50% de identidad en 98% de cobertura. Otro caso interesante en Actinobacteria es XXXX  
+### Análisis de contextos genómicos de PriA en distintos linajes utilizando CORASON  
+En Actinobacteria, se observó que todos los _Streptomyces_ tienen el cluster de PriA parcialmente conservado con respecto al BGC de _Streptomyces coelicolor_. Ejemplos de ello son _S. roseous_, _S. sviceus_, _S. sp C_ y _S. Mg1_ donde genes tanto de la ruta de histidina como de triptofano rodean a PriA. Otros como _S rimosus_ , _S HmicA12_ y _S. sp CT34_ tienen los genes de triptofano más alejados  `r ref(label = "PriACORASON", type = "figure")` . Como ya se describió en la sección de EvoMining, el único organismo de este género con una copia extra de PriA es _Streptomyces_ CT34. Esta copia parece deberse a transferencia horizontal dado que su mejor hit en NCBI proviene de una _Lentzea_. Aún así parece ser un homólogo lejano ya que tuvo 50% de identidad en 98% de cobertura con respecto a la copia de _Lentzea_. Otro caso interesante en Actinobacteria son las Actinomaduras, ya que CORASON muestra que el cluster _ada_ no está conservado en ellas (datos no mostrados). Además, también en Actinobacteria CORASON muestra en _Sporichthya polymorpha_ DSM 43042 una PriA precedida por una NRPS, una enzima por excelencia de productos naturales. En otros organismos antiSMASH predice que PriA forma parte de clusters putativos, por ejemplo en _Modestobacter marinus_ NC_0179551, _Geodermatophilus obscurus_, y en
+_Streptacidiphilus jeojiense_. Los contornos de los genes reconocidos por antiSMASH como parte de un BGC son marcados en azul en las figuras de CORASON.  
 
-En Cyanobacteria en cambio existen copias dobles en _Oscillatoriales cyanobacterium_ MTP1.
-
-```{r PriAcorason, results = "asis",message=FALSE,echo=FALSE}
-label(path = "chapter4/CORASON/saxitoxin.pdf", 
-      caption = "HisA en saxitoxin, un cluster de Cyanobacteria ",
-      scale=.7,
-      label = "saxitoxin", 
-      cap.size = "footnotesize",
-      alt.cap="HisA en saxitoxin, un cluster de Cyanobacteria ",
-      type = "figure")
-```
+En cuanto a Archaea, los contextos mostrados en los páneles b y c de la `r ref(label = "PriACORASON", type = "figure")` muestran que si bien existen algunos contextos como el de ciertos _Thermococcus_ donde PriA está rodeada de genes de histidina y triptofano, esta configuración no es la generalidad. Al contrario, parece que no hay una configuración conservada que prevalezca en todo Archaea. Esto puede deberse a que Archaea es un dominio, no un phylum como Actinobacteria, y por tanto hay una mayor distancia entre los organismos que la conforman.  
 
 ```{r PriAcorasonCyanos, results = "asis",message=FALSE,echo=FALSE}
 label(path = "chapter4/CORASON/CORASON.pdf", 
@@ -196,67 +186,43 @@ label(path = "chapter4/CORASON/CORASON.pdf",
       alt.cap="Contextos de PriA en Actinobacteria y Archaea",
       type = "figure")
 ``` 
-TrpF1
-TrpF1 queries gave hits with TrpC enzyme present on every Streptomyces, additionally  _S. rimosus_, _S. coelicolor_, _S. venezuelae_ and _S. NRRL S-1813_ had an extra copy. _S rimosus_ TrpC vicinity has PKS and siderophore genes.
 
-TrpF2
-Conserved cluster with NRPS sequences flanking TrpF2
+En cuanto a PriA en Cyanobacteria la visualización de contextos producida por CORASON tomando como referencia el cluster de saxitoxin,  muestra que las enzimas biosintéticas de ese no están conservadas en otros organismos. Además en el lado izquierdo de la `r ref(label = "saxitoxin", type = "figure")` se muestra que la PriA del BGC saxitoxin no está ubicada en una rama de PriA divergente, al contrario está en la parte más conservada. Por estas razones es posible que PriA esté en la orilla del BGC de saxitosin y más bien no participe en la síntesis de este compuesto.
 
-TrpF3
-Non conserved cluster
-
-TrpF4
-purpeofuscus and S bikiniensis 
-
-## PriA a nivel de aminoácidos  
+```{r PriAcorason, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter4/CORASON/saxitoxin.pdf", 
+      caption = "HisA en saxitoxin, un cluster de Cyanobacteria ",
+      scale=.7,
+      label = "saxitoxin", 
+      cap.size = "footnotesize",
+      alt.cap="HisA en saxitoxin, un cluster de Cyanobacteria ",
+      type = "figure")
+```
+## El monitoreo en cambios de aminoácidos en PriA para estudiar rutas evolutivas y reconstrucciones de la estructura tridimensional.  
+En esta segunda sección concerniente a la familia PriA se busca información contenida en la secuencia de aminoácidos. En la primera parte se discute cómo en datos de evolución dirigida en el laboatorio no se encontró ninguna trayectoria en donde algún paso incrementara la actividad de PriA en sus dos sustratos nativos. En la segunda parte se muestra una reconstrucción de la estructura tridimensional de PriA basada en la covarianza de sus aminoácidos en secuencias del registro evolutivo.  
   
-### Al transformar una subHisA en una PriA mediante mutaciones no se observó ninguna trayectoria creciente para ambos sustratos (darwininana)  
-En el segundo punto, al analizar datos de cinéticas enzimaticas de mutantes de subHisA se descubrió que en ellos no existe una trayectoria Darwiniana para ambos sustratos que lleve a la adquisición de promiscuidad. Es decir que al menos en este ejemplo, las mutaciones puntuales que llevan a una enzima monofuncional en la ruta para adquirir promiscuidad nunca incrementan la capacidad catalítica sobre ambas reacciones. 
+### Al transformar una subHisA en una PriA mediante mutaciones no se observó ninguna trayectoria creciente para ambos sustratos (darwiniana)  
+En esta sección analizamos cómo cambia la capacidad catalítica de PriA sobre un sustrato mientras se varía la del otro. Para ello se utilizaron datos de mutantes de subHisA de _Corynebacterium diphteriae_. Estas mediciones de cinéticas enzimáticas fueron obtenidos del trabajo de tesis de Lianet Noda [@noda_tesis_2012]. A partir de la secuencia original que se mostró es una subHisA, se realizaron mutantes con el objetivo de alcanzar la promiscuidad, es decir de convertir la enzima subHisA en una PriA. Se comenzó con diferentes mutantes puntuales adicionando una mutación cada vez, hasta llegar a una con 9 mutaciones, la que alcanzó mayor actividad PRA isomerasa. En esta colección de mutantes varias ganaron la función de PRA isomerasa, a distintos niveles. En estos datos quedaba pendiente la exploración de las rutas, es decir cómo es el camino desde una mutante sencilla hasta una múltiple ¿cuántas rutas son? ¿Existe alguna tendencia en ciertos momentos de la ruta sobre el incremento/decremento de alguna  de las dos funciones?  
 
-En esta sección analizamos cómo cambia la capacidad catalítica de un sustrato mientras se transforma la del otro. Para ello se utilizaron datos de capacidad catalítica de mutantes de subHisA de _Corynebacterium diphteriae_. Estos datos fueron obtenidos de la tesis de Lianet Noda [@noda_tesis_2012]. A partir de la secuencia original que se mostró es una subHisA se obtuvieron mutantes con el objetivo de alcanzar la promiscuidad, es decir de convertir la enzima en una PriA. Con esos datos, quedaba pendiente la exploración de las rutas, ¿cuántas son? ¿Existe alguna tendencia en ciertos momentos de la ruta sobre el incremento/decremento de alguna  de las dos funciones? 
-
-Adicionando una mutación cada vez hasta la mutante con 11 mutaciones.
-Asi pues se desarrolló un script utilizando recursividad que permitiera reconstruir todas las rutas posibles. Como resultado No existieron rutas darwininanas. Finalmente, estos aminoácidos fueron comparados con los provistos por EVCouplings, de covariación.   
-  
-| _Corynebacterium_  | _Streptomyces_ |
-|-----|-------|
-|D20V	|21V|  
-|L48I	|49L |  
-|F50L	|51L|  
-|M66I	|67I|  
-|T80S	|81S|   
-|A97C	|98C|  
-|D127A	|128G|   
-|A129D	|130D|  
-|T139L	|136L|  
-|Y214L	|211Y|  
-|E230A	|227A|  
+Asi pues se desarrolló un [script](https://github.com/nselem/perlas/tree/master/LiaTrayectory)  utilizando recursividad para reconstruir todas las rutas posibles. Las rutas son mostradas en la `r ref(label = "PriARutas", type = "figure")`. 
 
 ```{r PriARutas, results = "asis",message=FALSE,echo=FALSE}
 label(path = "conclusion/Solocirculos.png", 
-      caption = "Non darwinian trayectories",
+      caption = "Rutas desde una subHisA hasta una variante con 9 mutaciones",
       scale=.6,
       label = "PriARutas", 
       cap.size = "footnotesize",
-      alt.cap="",
+      alt.cap="Rutas desde una subHisA hasta una variante con 9 mutaciones. En cada círculo el primer dígito indica el número de mutaciones",
       type = "figure")
 ```
+Al analizar los cambios sufridos en cada actividad en cada paso de cada ruta se descubrió que no existe en ellas una trayectoria Darwiniana para ambos sustratos.  En la `r ref(label = "PriARutas", type = "figure")` se muestran las rutas donde cada mutante mantiene un nível mínimo de actividad de ProFAS isomerasa ($\frac{K_{cat}}{K_m}$ ProFAR $\ge .004$). En azul se ven los incrementos en ProFAR y en rojo los incrementos en PRA. Es decir al menos en este ejemplo, las mutaciones puntuales que llevan a una enzima monofuncional a adquirir promiscuidad no mantienen una tendencia no decreciente de principio a fin sobre alguna reacción (isomerización de PRA y de ProFAR). Siempre en algún paso decrece alguna de las actividades.   
 
 ```{r PriARutasPRA, results = "asis",message=FALSE,echo=FALSE}
-label(path = "conclusion/SolocirculosPRA.png", 
+label(path = "chapter4/LianetFiguras/SolocirculosPRA_PRO_RUTAS_10_1_r002.png", 
       caption = "Positive increments on PRA",
       scale=.6,
       label = "PRARutas", 
       cap.size = "footnotesize",
-      alt.cap="",
-      type = "figure")
-```
-
-```{r PriARutasPRO2, results = "asis",message=FALSE,echo=FALSE}
-label(path = "conclusion/SolocirculosPRO.png", 
-      caption = "Positive increments on ProFAR",
-      scale=.6,
-      label = "ProFARRutas", cap.size = "footnotesize",
       alt.cap="",
       type = "figure")
 ```
@@ -290,6 +256,25 @@ label(path = "chapter4/Couplings/PriACouplingFoldings.png",
       scale=".5",
       type = "figure")
 ```
+
+Finalmente, estos aminoácidos fueron comparados con los provistos por EVCouplings, de covariación.   
+
+
+
+  
+| _Corynebacterium_  | _Streptomyces_ |
+|-----|-------|
+|D20V	|21V|  
+|L48I	|49L |  
+|F50L	|51L|  
+|M66I	|67I|  
+|T80S	|81S|   
+|A97C	|98C|  
+|D127A	|128G|   
+|A129D	|130D|  
+|T139L	|136L|  
+|Y214L	|211Y|  
+|E230A	|227A|  
  
 
 ## Afinidad de enzimas selectas por sustratos químicamente parecidos a PRA y PROFAR 

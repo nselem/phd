@@ -27,13 +27,21 @@ if(!require(reedtemplates)){
 library(reedtemplates)
 ```
 <!--- Archaeas-->
-# EvoMining
+# EvoMining como herramienta para identificar el origen y el destino metabólico de familias enzimáticas
 ## Introduction
 La promiscuidad enzimática puede buscarse en familias envueltas en procesos de divergencia funcional. Uno de dichos procesos es la expansión y posterior reclutamiento de familias pertenecientes a rutas metabólicas conservadas hacia el metabolismo especializado. Los productos naturales o metabolitos especializados son sintetizados generalmente por clusters de genes distribuidos en un pequeño porcentaje de un linaje taxonómico. Estos clusters, conocidos como BGCs (Biosynthetical Gene Clusters), contienen reclutamientos de las copias extras de familias pertenecientes al metabolismo conservado. La similitud de secuencia de los genes que pertenecen a los BGCs así como su relativa sintenia en diversos organismos de un linaje hacen que genómica copmarativa sea de utilidad para intentar localizarlos. Finalmente, el auge en la cantidad de genomas disponibles públicamente así como la facilidad por sequenciar nuevos hace posible que los métodos bioinformáticos ayuden a encontrar nuevos BGCs. EvoMining es un método de para sugerir la formación de nuevos BGCs y en consecuencia encontrar zonas donde puede estar ocurriendo la capcidad de adquirir un nuevo sustrato cambio en promiscuidad enzimátcica.  
   
-En este capítulo se explica el desarrollo de EvoMining como plataforma bioinformática dedicada a presentar una visualización del origen y destino de todas las copias de familia enzimátocas provenientes del emtabolismo conservado. Se discutirán también cuatro linajes genómicos Actinobacteria Cyanobacteria, Pseudomonas y Archaea y finalmente se analizará un BGCs scytonemin.
+En este capítulo se explica el desarrollo de EvoMining como plataforma bioinformática dedicada a presentar una visualización del origen y destino de todas las copias de familia enzimátocas provenientes del emtabolismo conservado. Se discutirán también cuatro linajes genómicos Actinobacteria Cyanobacteria, _Pseudomonas_ y Archaea y finalmente se analizará un BGCs scytonemin.
 
-## EvoMining es un método para encontrar BGCs no tradicionales
+## EvoMining es un método para encontrar BGCs no tradicionales  
+Existen varias clases de BGCs que son arquetipos de los productos naturales. Entre ellas se encuentran las clases _non ribosomomal peptide synthase_ (NRPS), _poliketide synthase_ PKS, terpenos, RIPPs, alcaloides, etc. En estas clases, hay enzimas cuya presencia lleva a la detección del BGC. Por ejemplo, las sintasas no ribosomales son las que al encontrarlas dan nombre a los BGC tipo NRPS y las policétido sintasas son las que dan nombre a los BGC de la clase PKS. 
+
+No todos los productos naturales están dentro de los BGCs clásicos. En MIBiG existe la clase "other", es decir la que no contiene ninguna de las enzimas típicas reportadas en los BGCs de productos naturales.  
+
+
+
+
+
 ## Consideraciones evolutivas en minería genómica permiten identificar clusters no clasificados y dentro de ellos sugerir enzimas con cambios en promiscuidad.  
 En antiSMASH 2.0 existen estos clusters y ___ son no conocidos
 
@@ -44,7 +52,7 @@ Los no clasificados suelen pasar desapercibidos, porque no hay conocimiento prev
 Como ya se mostró en EvoMining 1.0 encontramos una enzima que 
 
 ### Copias extra de familias enzimáticas que son reclutadas para una nueva función están relacionadas con la promiscuidad.    
-
+Algunas retienen la función ancestral mientras que las ancestrales comienzan a desarrollar la nueva función.  
 
 
 ```{r EvoMiningAlgorithm, results = "asis",message=FALSE,echo=FALSE}

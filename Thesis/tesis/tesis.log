@@ -1,17 +1,17 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2018.10.12)  18 JUN 2019 14:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.17)  19 JUN 2019 16:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **tesis.tex
 (./tesis.tex
-LaTeX2e <2011/06/27>
-Babel <3.9h> and hyphenation patterns for 78 languages loaded.
+LaTeX2e <2016/02/01>
+Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
 (./reedthesis.cls
 Document Class: reedthesis 2004/01/27 The Reed College Thesis Class
 (/usr/share/texlive/texmf-dist/tex/latex/base/book.cls
-Document Class: book 2007/10/19 v1.4h Standard LaTeX document class
+Document Class: book 2014/09/29 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/bk12.clo
-File: bk12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+File: bk12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@chapter=\count80
@@ -40,7 +40,7 @@ Package: fancyvrb 2008/02/07
 
 Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
 <2008/02/07> (tvz) (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks14
 )
 \FV@CodeLineNo=\count88
@@ -55,28 +55,34 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 ) (/usr/share/texlive/texmf-dist/tex/latex/base/fixltx2e.sty
-Package: fixltx2e 2006/09/13 v1.1m fixes to LaTeX
-LaTeX Info: Redefining \em on input line 420.
+Package: fixltx2e 2015/06/22 v2.0b fixes to LaTeX (obsolete)
+
+Package fixltx2e Warning: fixltx2e is not required with releases after 2015
+(fixltx2e)                All fixes are now in the LaTeX kernel.
+(fixltx2e)                See the latexrelease package for details.
+
 ) (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def
 File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
-LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 )) (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
-Package: inputenc 2008/03/30 v1.1d Input encoding file
+Package: inputenc 2015/03/17 v1.2c Input encoding file
 \inpenc@prehook=\toks15
 \inpenc@posthook=\toks16
 (/usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
-File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
+File: utf8.def 2015/12/03 v1.1r UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.dfu
-File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+File: t1enc.dfu 2015/12/03 v1.1r UTF-8 support for inputenc
+   defining Unicode char U+00A0 (decimal 160)
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
    defining Unicode char U+00AB (decimal 171)
+   defining Unicode char U+00AD (decimal 173)
    defining Unicode char U+00BB (decimal 187)
    defining Unicode char U+00BF (decimal 191)
    defining Unicode char U+00C0 (decimal 192)
@@ -141,50 +147,94 @@ File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00FD (decimal 253)
    defining Unicode char U+00FE (decimal 254)
    defining Unicode char U+00FF (decimal 255)
+   defining Unicode char U+0100 (decimal 256)
+   defining Unicode char U+0101 (decimal 257)
    defining Unicode char U+0102 (decimal 258)
    defining Unicode char U+0103 (decimal 259)
    defining Unicode char U+0104 (decimal 260)
    defining Unicode char U+0105 (decimal 261)
    defining Unicode char U+0106 (decimal 262)
    defining Unicode char U+0107 (decimal 263)
+   defining Unicode char U+0108 (decimal 264)
+   defining Unicode char U+0109 (decimal 265)
+   defining Unicode char U+010A (decimal 266)
+   defining Unicode char U+010B (decimal 267)
    defining Unicode char U+010C (decimal 268)
    defining Unicode char U+010D (decimal 269)
    defining Unicode char U+010E (decimal 270)
    defining Unicode char U+010F (decimal 271)
    defining Unicode char U+0110 (decimal 272)
    defining Unicode char U+0111 (decimal 273)
+   defining Unicode char U+0112 (decimal 274)
+   defining Unicode char U+0113 (decimal 275)
+   defining Unicode char U+0114 (decimal 276)
+   defining Unicode char U+0115 (decimal 277)
+   defining Unicode char U+0116 (decimal 278)
+   defining Unicode char U+0117 (decimal 279)
    defining Unicode char U+0118 (decimal 280)
    defining Unicode char U+0119 (decimal 281)
    defining Unicode char U+011A (decimal 282)
    defining Unicode char U+011B (decimal 283)
+   defining Unicode char U+011C (decimal 284)
+   defining Unicode char U+011D (decimal 285)
    defining Unicode char U+011E (decimal 286)
    defining Unicode char U+011F (decimal 287)
+   defining Unicode char U+0120 (decimal 288)
+   defining Unicode char U+0121 (decimal 289)
+   defining Unicode char U+0122 (decimal 290)
+   defining Unicode char U+0123 (decimal 291)
+   defining Unicode char U+0124 (decimal 292)
+   defining Unicode char U+0125 (decimal 293)
+   defining Unicode char U+0128 (decimal 296)
+   defining Unicode char U+0129 (decimal 297)
+   defining Unicode char U+012A (decimal 298)
+   defining Unicode char U+012B (decimal 299)
+   defining Unicode char U+012C (decimal 300)
+   defining Unicode char U+012D (decimal 301)
+   defining Unicode char U+012E (decimal 302)
+   defining Unicode char U+012F (decimal 303)
    defining Unicode char U+0130 (decimal 304)
    defining Unicode char U+0131 (decimal 305)
    defining Unicode char U+0132 (decimal 306)
    defining Unicode char U+0133 (decimal 307)
+   defining Unicode char U+0134 (decimal 308)
+   defining Unicode char U+0135 (decimal 309)
+   defining Unicode char U+0136 (decimal 310)
+   defining Unicode char U+0137 (decimal 311)
    defining Unicode char U+0139 (decimal 313)
    defining Unicode char U+013A (decimal 314)
+   defining Unicode char U+013B (decimal 315)
+   defining Unicode char U+013C (decimal 316)
    defining Unicode char U+013D (decimal 317)
    defining Unicode char U+013E (decimal 318)
    defining Unicode char U+0141 (decimal 321)
    defining Unicode char U+0142 (decimal 322)
    defining Unicode char U+0143 (decimal 323)
    defining Unicode char U+0144 (decimal 324)
+   defining Unicode char U+0145 (decimal 325)
+   defining Unicode char U+0146 (decimal 326)
    defining Unicode char U+0147 (decimal 327)
    defining Unicode char U+0148 (decimal 328)
    defining Unicode char U+014A (decimal 330)
    defining Unicode char U+014B (decimal 331)
+   defining Unicode char U+014C (decimal 332)
+   defining Unicode char U+014D (decimal 333)
+   defining Unicode char U+014E (decimal 334)
+   defining Unicode char U+014F (decimal 335)
    defining Unicode char U+0150 (decimal 336)
    defining Unicode char U+0151 (decimal 337)
    defining Unicode char U+0152 (decimal 338)
    defining Unicode char U+0153 (decimal 339)
    defining Unicode char U+0154 (decimal 340)
    defining Unicode char U+0155 (decimal 341)
+   defining Unicode char U+0156 (decimal 342)
+   defining Unicode char U+0157 (decimal 343)
    defining Unicode char U+0158 (decimal 344)
    defining Unicode char U+0159 (decimal 345)
    defining Unicode char U+015A (decimal 346)
    defining Unicode char U+015B (decimal 347)
+   defining Unicode char U+015C (decimal 348)
+   defining Unicode char U+015D (decimal 349)
    defining Unicode char U+015E (decimal 350)
    defining Unicode char U+015F (decimal 351)
    defining Unicode char U+0160 (decimal 352)
@@ -193,10 +243,22 @@ File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+0163 (decimal 355)
    defining Unicode char U+0164 (decimal 356)
    defining Unicode char U+0165 (decimal 357)
+   defining Unicode char U+0168 (decimal 360)
+   defining Unicode char U+0169 (decimal 361)
+   defining Unicode char U+016A (decimal 362)
+   defining Unicode char U+016B (decimal 363)
+   defining Unicode char U+016C (decimal 364)
+   defining Unicode char U+016D (decimal 365)
    defining Unicode char U+016E (decimal 366)
    defining Unicode char U+016F (decimal 367)
    defining Unicode char U+0170 (decimal 368)
    defining Unicode char U+0171 (decimal 369)
+   defining Unicode char U+0172 (decimal 370)
+   defining Unicode char U+0173 (decimal 371)
+   defining Unicode char U+0174 (decimal 372)
+   defining Unicode char U+0175 (decimal 373)
+   defining Unicode char U+0176 (decimal 374)
+   defining Unicode char U+0177 (decimal 375)
    defining Unicode char U+0178 (decimal 376)
    defining Unicode char U+0179 (decimal 377)
    defining Unicode char U+017A (decimal 378)
@@ -204,6 +266,31 @@ File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+017C (decimal 380)
    defining Unicode char U+017D (decimal 381)
    defining Unicode char U+017E (decimal 382)
+   defining Unicode char U+01CD (decimal 461)
+   defining Unicode char U+01CE (decimal 462)
+   defining Unicode char U+01CF (decimal 463)
+   defining Unicode char U+01D0 (decimal 464)
+   defining Unicode char U+01D1 (decimal 465)
+   defining Unicode char U+01D2 (decimal 466)
+   defining Unicode char U+01D3 (decimal 467)
+   defining Unicode char U+01D4 (decimal 468)
+   defining Unicode char U+01E2 (decimal 482)
+   defining Unicode char U+01E3 (decimal 483)
+   defining Unicode char U+01E6 (decimal 486)
+   defining Unicode char U+01E7 (decimal 487)
+   defining Unicode char U+01E8 (decimal 488)
+   defining Unicode char U+01E9 (decimal 489)
+   defining Unicode char U+01EA (decimal 490)
+   defining Unicode char U+01EB (decimal 491)
+   defining Unicode char U+01F0 (decimal 496)
+   defining Unicode char U+01F4 (decimal 500)
+   defining Unicode char U+01F5 (decimal 501)
+   defining Unicode char U+0218 (decimal 536)
+   defining Unicode char U+0219 (decimal 537)
+   defining Unicode char U+021A (decimal 538)
+   defining Unicode char U+021B (decimal 539)
+   defining Unicode char U+01E02 (decimal 7682)
+   defining Unicode char U+01E03 (decimal 7683)
    defining Unicode char U+200C (decimal 8204)
    defining Unicode char U+2013 (decimal 8211)
    defining Unicode char U+2014 (decimal 8212)
@@ -222,9 +309,11 @@ File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
 (/usr/share/texlive/texmf-dist/tex/latex/base/ot1enc.dfu
-File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+File: ot1enc.dfu 2015/12/03 v1.1r UTF-8 support for inputenc
+   defining Unicode char U+00A0 (decimal 160)
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00AD (decimal 173)
    defining Unicode char U+00B8 (decimal 184)
    defining Unicode char U+00BF (decimal 191)
    defining Unicode char U+00C5 (decimal 197)
@@ -242,6 +331,14 @@ File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+0142 (decimal 322)
    defining Unicode char U+0152 (decimal 338)
    defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+0174 (decimal 372)
+   defining Unicode char U+0175 (decimal 373)
+   defining Unicode char U+0176 (decimal 374)
+   defining Unicode char U+0177 (decimal 375)
+   defining Unicode char U+0218 (decimal 536)
+   defining Unicode char U+0219 (decimal 537)
+   defining Unicode char U+021A (decimal 538)
+   defining Unicode char U+021B (decimal 539)
    defining Unicode char U+2013 (decimal 8211)
    defining Unicode char U+2014 (decimal 8212)
    defining Unicode char U+2018 (decimal 8216)
@@ -252,7 +349,7 @@ File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
 (/usr/share/texlive/texmf-dist/tex/latex/base/omsenc.dfu
-File: omsenc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+File: omsenc.dfu 2015/12/03 v1.1r UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
    defining Unicode char U+00B7 (decimal 183)
@@ -290,13 +387,13 @@ Package textcomp Info: Sub-encoding information:
 (textcomp)             only a restricted character set as indicated.
 (textcomp)             Family '?' is the default used for unknown fonts.
 (textcomp)             See the documentation for details.
-Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 71.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 79.
 (/usr/share/texlive/texmf-dist/tex/latex/base/ts1enc.def
 File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
 Now handling font encoding TS1 ...
 ... processing UTF-8 mapping file for font encoding TS1
 (/usr/share/texlive/texmf-dist/tex/latex/base/ts1enc.dfu
-File: ts1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+File: ts1enc.dfu 2015/12/03 v1.1r UTF-8 support for inputenc
    defining Unicode char U+00A2 (decimal 162)
    defining Unicode char U+00A3 (decimal 163)
    defining Unicode char U+00A4 (decimal 164)
@@ -367,68 +464,69 @@ File: ts1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+25EF (decimal 9711)
    defining Unicode char U+266A (decimal 9834)
 ))
-LaTeX Info: Redefining \oldstylenums on input line 266.
-Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 281.
-Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 282.
-Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 283.
-Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 284.
-Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 285.
-Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 286.
-Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 287.
-Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 288.
-Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 289.
-Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 290.
-Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 291.
-Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 292.
-Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 293.
-Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 294.
-Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 295.
-Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 296.
-Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 297.
-Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 298.
-Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 299.
-Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 300.
-Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 301.
-Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 302.
-Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 303.
-Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 304.
+LaTeX Info: Redefining \oldstylenums on input line 334.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 349.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 350.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 351.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 352.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 353.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 354.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 355.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 356.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 357.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 358.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 359.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 360.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 361.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 362.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 363.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 364.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 365.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 366.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 367.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 368.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 369.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 370.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 371.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 372.
 
-Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 305.
-Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 306.
-Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 307.
-Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 308.
-Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 309.
-Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 310.
-Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 311.
-Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 312.
-Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 313.
-Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 314.
-Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 315.
-Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 316.
-Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 317.
-Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 318.
-Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 319.
-Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 320.
-Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 321.
-Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 322.
-Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 323.
-Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 324.
-Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 325.
-Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 326.
-Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 327.
-Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 328.
-Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 329.
-Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 330.
-Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 331.
-Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 332.
-Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 333.
-Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 334.
-Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 335.
-Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 336.
-Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 337.
-Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 338.
-Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 339.
-Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 340.
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 373.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 374.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 375.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 376.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 377.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 378.
+Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 379.
+Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 380.
+Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 381.
+Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 382.
+Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 383.
+Package textcomp Info: Setting lmtt sub-encoding to TS1/0 on input line 384.
+Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 385.
+Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 386.
+Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 387.
+Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 388.
+Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 389.
+Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 390.
+Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 391.
+Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 392.
+Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 393.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 394.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 395.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 396.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 397.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 398.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 399.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 400.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 401.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 402.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 403.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 404.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 405.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 406.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
 )) (/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.sty
 Package: microtype 2013/05/23 v2.5a Micro-typographical refinements (RS)
 \MT@toks=\toks17
@@ -448,11 +546,11 @@ Package microtype Info: Loading configuration file microtype.cfg.
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.cfg
 File: microtype.cfg 2013/05/23 v2.5a microtype main configuration file (RS)
 )) (/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
-Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+Package: color 2016/01/03 v1.1b Standard LaTeX Color (DPC)
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
-Package color Info: Driver file: pdftex.def on input line 130.
+Package color Info: Driver file: pdftex.def on input line 143.
 (/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
@@ -469,15 +567,15 @@ Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \FrameRule=\dimen106
 \FrameSep=\dimen107
 )) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+Package: graphics 2016/01/03 v1.0q Standard LaTeX Graphics (DPC,SPQR)
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
-Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 ) (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
 File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
-Package graphics Info: Driver file: pdftex.def on input line 91.
+Package graphics Info: Driver file: pdftex.def on input line 95.
 )
 \Gin@req@height=\dimen108
 \Gin@req@width=\dimen109
@@ -485,38 +583,38 @@ Package graphics Info: Driver file: pdftex.def on input line 91.
 Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
 \symlasy=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
-(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 47.
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
 ) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2013/01/14 v2.14 AMS math features
+Package: amsmath 2016/03/03 v2.15a AMS math features
 \@mathmargin=\skip54
 For additional information on amsmath, use the `?' option.
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
-Package: amstext 2000/06/29 v2.01
+Package: amstext 2000/06/29 v2.01 AMS text
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
-File: amsgen.sty 1999/11/30 v2.0
+File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks18
 \ex@=\dimen110
 )) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
-Package: amsbsy 1999/11/29 v1.2d
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen111
 ) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count94
-LaTeX Info: Redefining \frac on input line 210.
+LaTeX Info: Redefining \frac on input line 199.
 \uproot@=\count95
 \leftroot@=\count96
-LaTeX Info: Redefining \overline on input line 306.
+LaTeX Info: Redefining \overline on input line 297.
 \classnum@=\count97
 \DOTSCASE@=\count98
-LaTeX Info: Redefining \ldots on input line 378.
-LaTeX Info: Redefining \dots on input line 381.
-LaTeX Info: Redefining \cdots on input line 466.
+LaTeX Info: Redefining \ldots on input line 394.
+LaTeX Info: Redefining \dots on input line 397.
+LaTeX Info: Redefining \cdots on input line 518.
 \Mathstrutbox@=\box27
 \strutbox@=\box28
 \big@size=\dimen112
-LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OML on input line 630.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 631.
 \macc@depth=\count99
 \c@MaxMatrixCols=\count100
 \dotsspace@=\muskip10
@@ -537,8 +635,8 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 \multlinegap=\skip55
 \multlinetaggap=\skip56
 \mathdisplay@stack=\toks22
-LaTeX Info: Redefining \[ on input line 2665.
-LaTeX Info: Redefining \] on input line 2666.
+LaTeX Info: Redefining \[ on input line 2735.
+LaTeX Info: Redefining \] on input line 2736.
 ) (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
@@ -548,7 +646,7 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )) (/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
-Package: amsthm 2004/08/06 v2.20
+Package: amsthm 2015/03/04 v2.20.2
 \thm@style=\toks23
 \thm@bodyfont=\toks24
 \thm@headfont=\toks25
@@ -559,7 +657,7 @@ Package: amsthm 2004/08/06 v2.20
 \thm@headsep=\skip59
 \dth@everypar=\toks28
 ) (/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty
-Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
+Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \LTleft=\skip60
 \LTright=\skip61
 \LTpre=\skip62
@@ -738,7 +836,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 ) (/usr/share/texlive/texmf-dist/tex/latex/rotating/rotating.sty
 Package: rotating 2009/03/28 v2.16a rotated objects in LaTeX
 (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
-Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
 \c@r@tfl@t=\count125
 \rotFPtop=\skip65
@@ -746,10 +844,10 @@ Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 \rot@float@box=\box33
 \rot@mess@toks=\toks30
 ) (/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
-Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
 (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
-Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
-Package caption3 Info: TeX engine: e-TeX on input line 57.
+Package: caption3 2016/02/04 v1.7-139 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
 \captionmargin=\dimen137
 \captionmargin@=\dimen138
 \captionwidth=\dimen139
@@ -762,7 +860,7 @@ Package caption3 Info: TeX engine: e-TeX on input line 57.
 Package caption Info: hyperref package is loaded.
 Package caption Info: longtable package is loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/caption/ltcaption.sty
-Package: ltcaption 2013/02/03 v1.3-62 longtable captions (AR)
+Package: ltcaption 2013/06/09 v1.4-94 longtable captions (AR)
 )
 Package caption Info: rotating package is loaded.
 ) (/usr/share/texlive/texmf-dist/tex/latex/parskip/parskip.sty
@@ -790,7 +888,7 @@ LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 146.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 146.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
-File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 146.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 146.
@@ -915,10 +1013,7 @@ Non-PDF special ignored!
 ] [3] [4
 
 
-] (./tesis.toc [5] [6] [7]
-Underfull \vbox (badness 3138) has occurred while \output is active []
-
-[8]
+] (./tesis.toc [5] [6] [7] [8]
 
 Package hyperref Warning: Suppressing empty link on input line 124.
 
@@ -993,7 +1088,7 @@ Underfull \vbox (badness 3148) has occurred while \output is active []
 [6] [7] [8
 
 
-] <chapter0/NivelesPromiscuidad.png, id=1100, 792.0676pt x 560.01994pt>
+] <chapter0/NivelesPromiscuidad.png, id=1101, 792.0676pt x 560.01994pt>
 File: chapter0/NivelesPromiscuidad.png Graphic file (type png)
 <use chapter0/NivelesPromiscuidad.png>
 Package pdftex.def Info: chapter0/NivelesPromiscuidad.png used on input line 60
@@ -1027,7 +1122,7 @@ e 612.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [9 <./chapter0/NivelesPromiscuidad.png>] <chapter0/AntecedentesConceptuales.png
-, id=1112, 963.6pt x 542.025pt>
+, id=1113, 963.6pt x 542.025pt>
 File: chapter0/AntecedentesConceptuales.png Graphic file (type png)
 <use chapter0/AntecedentesConceptuales.png>
 Package pdftex.def Info: chapter0/AntecedentesConceptuales.png used on input li
@@ -1142,7 +1237,7 @@ Underfull \vbox (badness 1072) has occurred while \output is active []
 
 ]
 Chapter 1.
-<chapter1/coreWiki.png, id=1405, 1038.88126pt x 359.3425pt>
+<chapter1/coreWiki.png, id=1406, 1038.88126pt x 359.3425pt>
 File: chapter1/coreWiki.png Graphic file (type png)
 <use chapter1/coreWiki.png>
 Package pdftex.def Info: chapter1/coreWiki.png used on input line 1549.
@@ -1152,7 +1247,7 @@ Overfull \hbox (2.70715pt too wide) in paragraph at lines 1549--1550
  [][] 
  []
 
-[35 <./chapter1/coreWiki.png>] <chapter1/Metabolismo-Pangenoma.png, id=1413, 60
+[35 <./chapter1/coreWiki.png>] <chapter1/Metabolismo-Pangenoma.png, id=1414, 60
 1.24625pt x 261.97874pt>
 File: chapter1/Metabolismo-Pangenoma.png Graphic file (type png)
 <use chapter1/Metabolismo-Pangenoma.png>
@@ -1171,7 +1266,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 1614.
 [36] [37 <./chapter1/Metabolismo-Pangenoma.png>] <chapter1/CoreMarcadores.png, 
-id=1424, 578.66776pt x 456.97658pt>
+id=1425, 578.66776pt x 456.97658pt>
 File: chapter1/CoreMarcadores.png Graphic file (type png)
 <use chapter1/CoreMarcadores.png>
 Package pdftex.def Info: chapter1/CoreMarcadores.png used on input line 1656.
@@ -1185,14 +1280,14 @@ Overfull \hbox (29.31483pt too wide) in paragraph at lines 1656--1657
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [38] [39 <./chapter1/CoreMarcadores.png>] <chapter1/Best-n-directional.png, id=
-1437, 691.58376pt x 210.7875pt>
+1438, 691.58376pt x 210.7875pt>
 File: chapter1/Best-n-directional.png Graphic file (type png)
 <use chapter1/Best-n-directional.png>
 Package pdftex.def Info: chapter1/Best-n-directional.png used on input line 173
 4.
 (pdftex.def)             Requested size: 691.58206pt x 210.78699pt.
 [40] [41 <./chapter1/Best-n-directional.png>] [42] <chapter1/Nostoc.png, id=145
-3, 1060.96375pt x 795.97375pt>
+4, 1060.96375pt x 795.97375pt>
 File: chapter1/Nostoc.png Graphic file (type png)
 <use chapter1/Nostoc.png>
 Package pdftex.def Info: chapter1/Nostoc.png used on input line 1868.
@@ -1207,7 +1302,7 @@ Underfull \hbox (badness 1072) in paragraph at lines 1887--1887
 []\T1/lmr/bx/n/14.4 Identificación de genes mar-cadores de Clav-ibac-ter
  []
 
-[43] [44 <./chapter1/Nostoc.png>] <chapter1/Marcadores-Clavibacter.png, id=1465
+[43] [44 <./chapter1/Nostoc.png>] <chapter1/Marcadores-Clavibacter.png, id=1466
 , 963.6pt x 542.025pt>
 File: chapter1/Marcadores-Clavibacter.png Graphic file (type png)
 <use chapter1/Marcadores-Clavibacter.png>
@@ -1220,7 +1315,7 @@ Overfull \hbox (48.17883pt too wide) in paragraph at lines 1907--1908
  []
 
 [45 <./chapter1/Marcadores-Clavibacter.png (PNG copy)>] <chapter1/clv.png, id=1
-473, 758.20982pt x 363.35056pt>
+474, 758.20982pt x 363.35056pt>
 File: chapter1/clv.png Graphic file (type png)
 <use chapter1/clv.png>
 Package pdftex.def Info: chapter1/clv.png used on input line 1927.
@@ -1230,7 +1325,7 @@ Overfull \hbox (21.30942pt too wide) in paragraph at lines 1927--1928
  [][] 
  []
 
-[46 <./chapter1/clv.png>] <chapter1/CoreGenomeMicrobioma.png, id=1481, 867.24pt
+[46 <./chapter1/clv.png>] <chapter1/CoreGenomeMicrobioma.png, id=1482, 867.24pt
  x 1011.78pt>
 File: chapter1/CoreGenomeMicrobioma.png Graphic file (type png)
 <use chapter1/CoreGenomeMicrobioma.png>
@@ -1238,7 +1333,7 @@ Package pdftex.def Info: chapter1/CoreGenomeMicrobioma.png used on input line 1
 981.
 (pdftex.def)             Requested size: 867.2379pt x 1011.77753pt.
 [47] [48 <./chapter1/CoreGenomeMicrobioma.png>] <chapter1/Clavisual.png, id=149
-3, 982.67125pt x 401.5pt>
+4, 982.67125pt x 401.5pt>
 File: chapter1/Clavisual.png Graphic file (type png)
 <use chapter1/Clavisual.png>
 Package pdftex.def Info: chapter1/Clavisual.png used on input line 2044.
@@ -1248,7 +1343,7 @@ Underfull \hbox (badness 5756) in paragraph at lines 2050--2050
 []\T1/lmr/bx/n/14.4 El pangenoma de Clav-ibac-ter Michi-ga-nen-sis es
  []
 
-[49 <./chapter1/Clavisual.png>] <chapter1/bpga-pangenoma.png, id=1501, 986.6862
+[49 <./chapter1/Clavisual.png>] <chapter1/bpga-pangenoma.png, id=1502, 986.6862
 5pt x 379.4175pt>
 File: chapter1/bpga-pangenoma.png Graphic file (type png)
 <use chapter1/bpga-pangenoma.png>
@@ -1259,7 +1354,7 @@ Overfull \hbox (59.72192pt too wide) in paragraph at lines 2070--2071
  [][] 
  []
 
-<chapter1/Venn_chart.pdf, id=1503, 803.0pt x 638.385pt>
+<chapter1/Venn_chart.pdf, id=1504, 803.0pt x 638.385pt>
 File: chapter1/Venn_chart.pdf Graphic file (type pdf)
 <use chapter1/Venn_chart.pdf>
 Package pdftex.def Info: chapter1/Venn_chart.pdf used on input line 2082.
@@ -1287,7 +1382,7 @@ Overfull \hbox (10.02635pt too wide) in paragraph at lines 2282--2282
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[55] <chapter2/FigurasPaper/Figure1.pdf, id=1574, 642.4pt x 481.8pt>
+[55] <chapter2/FigurasPaper/Figure1.pdf, id=1575, 642.4pt x 481.8pt>
 File: chapter2/FigurasPaper/Figure1.pdf Graphic file (type pdf)
 <use chapter2/FigurasPaper/Figure1.pdf>
 Package pdftex.def Info: chapter2/FigurasPaper/Figure1.pdf used on input line 2
@@ -1307,7 +1402,7 @@ Underfull \hbox (badness 1997) in paragraph at lines 2313--2313
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [56] [57 <./chapter2/FigurasPaper/Figure1.pdf>] [58] <chapter2/FigurasPaper/Fig
-ure2.pdf, id=1955, 845.04686pt x 597.50786pt>
+ure2.pdf, id=1956, 845.04686pt x 597.50786pt>
 File: chapter2/FigurasPaper/Figure2.pdf Graphic file (type pdf)
 <use chapter2/FigurasPaper/Figure2.pdf>
 Package pdftex.def Info: chapter2/FigurasPaper/Figure2.pdf used on input line 2
@@ -1324,7 +1419,7 @@ Underfull \hbox (badness 1331) in paragraph at lines 2395--2395
  []
 
 [59] [60 <./chapter2/FigurasPaper/Figure2.pdf>] <chapter2/zenodo_1219709.png, i
-d=10473, 149.41635pt x 16.00443pt>
+d=10474, 149.41635pt x 16.00443pt>
 File: chapter2/zenodo_1219709.png Graphic file (type png)
 <use chapter2/zenodo_1219709.png>
 Package pdftex.def Info: chapter2/zenodo_1219709.png used on input line 2486.
@@ -1335,7 +1430,7 @@ File: chapter2/zenodo_1219709.png Graphic file (type png)
 Package pdftex.def Info: chapter2/zenodo_1219709.png used on input line 2553.
 (pdftex.def)             Requested size: 149.41597pt x 16.00436pt.
 [62 <./chapter2/zenodo_1219709.png>] <chapter2/FigurasPaper/Figure3.pdf, id=104
-96, 845.04686pt x 597.50786pt>
+97, 845.04686pt x 597.50786pt>
 File: chapter2/FigurasPaper/Figure3.pdf Graphic file (type pdf)
 <use chapter2/FigurasPaper/Figure3.pdf>
 Package pdftex.def Info: chapter2/FigurasPaper/Figure3.pdf used on input line 2
@@ -1352,7 +1447,7 @@ Underfull \hbox (badness 1490) in paragraph at lines 2624--2632
 i-nas, dice-topiper-az-i-nas,
  []
 
-[65] <chapter2/FigurasPaper/Figure4.pdf, id=11387, 597.50786pt x 845.04686pt>
+[65] <chapter2/FigurasPaper/Figure4.pdf, id=11388, 597.50786pt x 845.04686pt>
 File: chapter2/FigurasPaper/Figure4.pdf Graphic file (type pdf)
 <use chapter2/FigurasPaper/Figure4.pdf>
 Package pdftex.def Info: chapter2/FigurasPaper/Figure4.pdf used on input line 2
@@ -1367,7 +1462,7 @@ Overfull \hbox (44.38693pt too wide) in paragraph at lines 2687--2688
 LaTeX Warning: Float too large for page by 49.3584pt on input line 2690.
 
 [66] [67 <./chapter2/FigurasPaper/Figure4.pdf>] <chapter2/FigurasPaper/Figure5.
-pdf, id=11445, 845.04686pt x 597.50786pt>
+pdf, id=11446, 845.04686pt x 597.50786pt>
 File: chapter2/FigurasPaper/Figure5.pdf Graphic file (type pdf)
 <use chapter2/FigurasPaper/Figure5.pdf>
 Package pdftex.def Info: chapter2/FigurasPaper/Figure5.pdf used on input line 2
@@ -1379,7 +1474,7 @@ Overfull \hbox (73.41203pt too wide) in paragraph at lines 2754--2755
  []
 
 [68] [69 <./chapter2/FigurasPaper/Figure5.pdf>] [70] <chapter2/FigurasPaper/Fig
-ure6.pdf, id=11543, 597.50786pt x 845.04686pt>
+ure6.pdf, id=11544, 597.50786pt x 845.04686pt>
 File: chapter2/FigurasPaper/Figure6.pdf Graphic file (type pdf)
 <use chapter2/FigurasPaper/Figure6.pdf>
 Package pdftex.def Info: chapter2/FigurasPaper/Figure6.pdf used on input line 2
@@ -1397,7 +1492,7 @@ LaTeX Warning: Float too large for page by 49.3584pt on input line 2907.
 Underfull \vbox (badness 4967) has occurred while \output is active []
 
 [71] [72 <./chapter2/FigurasPaper/Figure6.pdf>] <chapter2/FigurasPaper/Figure7.
-pdf, id=11771, 792.23143pt x 560.16362pt>
+pdf, id=11772, 792.23143pt x 560.16362pt>
 File: chapter2/FigurasPaper/Figure7.pdf Graphic file (type pdf)
 <use chapter2/FigurasPaper/Figure7.pdf>
 Package pdftex.def Info: chapter2/FigurasPaper/Figure7.pdf used on input line 2
@@ -1411,7 +1506,7 @@ Overfull \hbox (14.5115pt too wide) in paragraph at lines 2956--2957
 
 LaTeX Warning: Float too large for page by 7.106pt on input line 2959.
 
-<EvoMining/supplementary/AroB.png, id=11779, 1136.245pt x 604.2575pt>
+<EvoMining/supplementary/AroB.png, id=11780, 1136.245pt x 604.2575pt>
 File: EvoMining/supplementary/AroB.png Graphic file (type png)
 <use EvoMining/supplementary/AroB.png>
 Package pdftex.def Info: EvoMining/supplementary/AroB.png used on input line 29
@@ -1477,7 +1572,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 ]
 Chapter 3.
-<chapter3/Corason-pipe.pdf, id=12313, 768.22438pt x 475.16103pt>
+<chapter3/Corason-pipe.pdf, id=12314, 768.22438pt x 475.16103pt>
 File: chapter3/Corason-pipe.pdf Graphic file (type pdf)
 <use chapter3/Corason-pipe.pdf>
 Package pdftex.def Info: chapter3/Corason-pipe.pdf used on input line 3332.
@@ -1487,23 +1582,23 @@ Overfull \hbox (27.31819pt too wide) in paragraph at lines 3332--3333
  [][] 
  []
 
-<chapter3/ISBATalk.png, id=12315, 963.6pt x 542.025pt>
+<chapter3/ISBATalk.png, id=12316, 963.6pt x 542.025pt>
 File: chapter3/ISBATalk.png Graphic file (type png)
 <use chapter3/ISBATalk.png>
 Package pdftex.def Info: chapter3/ISBATalk.png used on input line 3372.
 (pdftex.def)             Requested size: 963.59766pt x 542.02367pt.
 [81] [82 <./chapter3/Corason-pipe.pdf>] [83 <./chapter3/ISBATalk.png (PNG copy)
->] <chapter3/des.png, id=12343, 670.505pt x 609.27625pt>
+>] <chapter3/des.png, id=12344, 670.505pt x 609.27625pt>
 File: chapter3/des.png Graphic file (type png)
 <use chapter3/des.png>
 Package pdftex.def Info: chapter3/des.png used on input line 3452.
 (pdftex.def)             Requested size: 670.50337pt x 609.27475pt.
-<chapter3/Coelicolor.pdf, id=12345, 1053.9375pt x 677.53125pt>
+<chapter3/Coelicolor.pdf, id=12346, 1053.9375pt x 677.53125pt>
 File: chapter3/Coelicolor.pdf Graphic file (type pdf)
 <use chapter3/Coelicolor.pdf>
 Package pdftex.def Info: chapter3/Coelicolor.pdf used on input line 3461.
 (pdftex.def)             Requested size: 1053.93494pt x 677.52959pt.
-<chapter3/azoxy.png, id=12347, 1120.185pt x 343.2825pt>
+<chapter3/azoxy.png, id=12348, 1120.185pt x 343.2825pt>
 File: chapter3/azoxy.png Graphic file (type png)
 <use chapter3/azoxy.png>
 Package pdftex.def Info: chapter3/azoxy.png used on input line 3470.
@@ -1513,7 +1608,7 @@ Overfull \hbox (14.44606pt too wide) in paragraph at lines 3470--3471
  [][] 
  []
 
-<chapter3/PseudomonasTauD.pdf, id=12349, 597.50786pt x 626.34pt>
+<chapter3/PseudomonasTauD.pdf, id=12350, 597.50786pt x 626.34pt>
 File: chapter3/PseudomonasTauD.pdf Graphic file (type pdf)
 <use chapter3/PseudomonasTauD.pdf>
 Package pdftex.def Info: chapter3/PseudomonasTauD.pdf used on input line 3479.
@@ -1523,7 +1618,7 @@ Overfull \hbox (104.13211pt too wide) in paragraph at lines 3479--3480
  [][] 
  []
 
-<chapter3/corason_fig1.png, id=12351, 1604.99625pt x 879.285pt>
+<chapter3/corason_fig1.png, id=12352, 1604.99625pt x 879.285pt>
 File: chapter3/corason_fig1.png Graphic file (type png)
 <use chapter3/corason_fig1.png>
 Package pdftex.def Info: chapter3/corason_fig1.png used on input line 3488.
@@ -1533,7 +1628,7 @@ Overfull \hbox (47.8826pt too wide) in paragraph at lines 3488--3489
  [][] 
  []
 
-[84] <chapter3/figura5.pdf, id=12357, 614.295pt x 794.97pt>
+[84] <chapter3/figura5.pdf, id=12358, 614.295pt x 794.97pt>
 File: chapter3/figura5.pdf Graphic file (type pdf)
 <use chapter3/figura5.pdf>
 Package pdftex.def Info: chapter3/figura5.pdf used on input line 3497.
@@ -1582,558 +1677,1114 @@ Package hyperref Warning: Difference (2) between bookmark levels is greater
 [96]
 Chapter 4.
 
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 3907.
+Overfull \hbox (15.56046pt too wide) in paragraph at lines 3909--3911
+[]|\T1/lmr/m/n/12 (-20) Familia|  
+ []
 
 
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 3908.
+Overfull \hbox (2.88731pt too wide) in paragraph at lines 3911--3913
+[]|\T1/lmr/m/n/12 (-20) HisA 
+ []
 
 
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 3908.
+Overfull \hbox (14.06436pt too wide) in paragraph at lines 3911--3913
+\OML/lmm/m/it/12 in vivo$|  
+ []
 
 
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 3909.
+Overfull \hbox (3.65706pt too wide) in paragraph at lines 3913--3915
+[]|\T1/lmr/m/n/12 (-20) TrpF 
+ []
 
 
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 3910.
+Overfull \hbox (14.06436pt too wide) in paragraph at lines 3913--3915
+\OML/lmm/m/it/12 in vivo$|  
+ []
 
 
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 3910.
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 3916.
 
 
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 3911.
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 3916.
 
 
-LaTeX Font Warning: Command \tiny invalid in math mode on input line 3911.
+Overfull \hbox (15.12943pt too wide) in paragraph at lines 3915--3917
+[]|$\OML/lmm/m/it/12 K[]$ 
+ []
 
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 3921
+
+Overfull \hbox (17.1186pt too wide) in paragraph at lines 3915--3917
+[]$|  
+ []
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 3918.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 3918.
+
+
+Overfull \hbox (19.46986pt too wide) in paragraph at lines 3917--3919
+[]|$\OML/lmm/m/it/12 K[]$ 
+ []
+
+
+Overfull \hbox (2.88731pt too wide) in paragraph at lines 3919--3921
+[]|\T1/lmr/m/n/12 (-20) HisA 
+ []
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 3922.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 3922.
+
+
+Overfull \hbox (4.72986pt too wide) in paragraph at lines 3921--3923
+[]|$\OML/lmm/m/it/12 K[]$ 
+ []
+
+
+Overfull \hbox (21.45905pt too wide) in paragraph at lines 3921--3923
+[]$|  
+ []
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 3924.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 3924.
+
+
+Overfull \hbox (4.72986pt too wide) in paragraph at lines 3923--3925
+[]|$\OML/lmm/m/it/12 K[]$ 
+ []
+
+
+Overfull \hbox (7.99748pt too wide) in paragraph at lines 3925--3927
+[]|\T1/lmr/m/n/12 (-20) TrpF 
+ []
+
+
+Overfull \hbox (4.05743pt too wide) in paragraph at lines 3925--3927
+[]$|  
+ []
+
+
+Overfull \hbox (4.59578pt too wide) in paragraph at lines 3927--3929
+[]|\T1/lmr/m/n/12 (-20) Referencia|  
+ []
+
+
+Overfull \hbox (11.59506pt too wide) in alignment at lines 3903--3931
+ [] [] [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (15.56046pt too wide) in paragraph at lines 3935--3937
+[]|\T1/lmr/m/n/12 (-20) Familia|  
+ []
+
+
+Overfull \hbox (2.88731pt too wide) in paragraph at lines 3937--3939
+[]|\T1/lmr/m/n/12 (-20) HisA 
+ []
+
+
+Overfull \hbox (14.06436pt too wide) in paragraph at lines 3937--3939
+\OML/lmm/m/it/12 in vivo$|  
+ []
+
+
+Overfull \hbox (3.65706pt too wide) in paragraph at lines 3939--3941
+[]|\T1/lmr/m/n/12 (-20) TrpF 
+ []
+
+
+Overfull \hbox (14.06436pt too wide) in paragraph at lines 3939--3941
+\OML/lmm/m/it/12 in vivo$|  
+ []
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 3942.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 3942.
+
+
+Overfull \hbox (15.12943pt too wide) in paragraph at lines 3941--3943
+[]|$\OML/lmm/m/it/12 K[]$ 
+ []
+
+
+Overfull \hbox (17.1186pt too wide) in paragraph at lines 3941--3943
+[]$|  
+ []
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 3944.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 3944.
+
+
+Overfull \hbox (19.46986pt too wide) in paragraph at lines 3943--3945
+[]|$\OML/lmm/m/it/12 K[]$ 
+ []
+
+
+Overfull \hbox (2.88731pt too wide) in paragraph at lines 3945--3947
+[]|\T1/lmr/m/n/12 (-20) HisA 
+ []
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 3948.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 3948.
+
+
+Overfull \hbox (4.72986pt too wide) in paragraph at lines 3947--3949
+[]|$\OML/lmm/m/it/12 K[]$ 
+ []
+
+
+Overfull \hbox (21.45905pt too wide) in paragraph at lines 3947--3949
+[]$|  
+ []
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 3950.
+
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 3950.
+
+
+Overfull \hbox (4.72986pt too wide) in paragraph at lines 3949--3951
+[]|$\OML/lmm/m/it/12 K[]$ 
+ []
+
+
+Overfull \hbox (7.99748pt too wide) in paragraph at lines 3951--3953
+[]|\T1/lmr/m/n/12 (-20) TrpF 
+ []
+
+
+Overfull \hbox (4.05743pt too wide) in paragraph at lines 3951--3953
+[]$|  
+ []
+
+
+Overfull \hbox (4.59578pt too wide) in paragraph at lines 3953--3955
+[]|\T1/lmr/m/n/12 (-20) Referencia|  
+ []
+
+
+Overfull \hbox (11.59506pt too wide) in alignment at lines 3931--3957
+ [] [] [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (3.32205pt too wide) in paragraph at lines 3960--3962
+[]|\T1/lmr/m/n/12 (-20) HisA|  
+ []
+
+
+Overfull \hbox (4.0448pt too wide) in paragraph at lines 3983--3985
+[]|\T1/lmr/m/n/12 (-20) TrpF|  
+ []
+
+
+Overfull \hbox (3.1293pt too wide) in paragraph at lines 3999--4001
+[]|\T1/lmr/m/n/12 (-20) 2.82|  
+ []
+
+
+Overfull \hbox (10.36812pt too wide) in paragraph at lines 4005--4007
+[]|\T1/lmr/m/it/12 (-20) Mycobacterium 
+ []
+
+
+Overfull \hbox (2.4608pt too wide) in paragraph at lines 4007--4009
+[]|\T1/lmr/m/n/12 (-20) PriA|  
+ []
+
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 4014
 .
 (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Underfull \hbox (badness 10000) in paragraph at lines 3903--4039
-\T1/lmr/m/n/12 (+14) |----------------------------|--------|--------|--------|-
------------|-----------|---------|----------|----------
+Overfull \hbox (3.1293pt too wide) in paragraph at lines 4023--4025
+[]|\T1/lmr/m/n/12 (-20) 0.39|  
  []
 
 
-Overfull \hbox (0.1645pt too wide) in paragraph at lines 3903--4039
-\T1/lmr/m/n/12 (+4) |PriA_Ancestral|Ancestral|||9.4\TS1/lmr/m/n/12 ±\T1/lmr/m/n
-/12 (+4) 1.6|0.3\TS1/lmr/m/n/12 ±\T1/lmr/m/n/12 (+4) 0.009|0.03|4.3\TS1/lmr/m/n
-/12 ±\T1/lmr/m/n/12 (+4) 0.4|0.6\TS1/lmr/m/n/12 ±\T1/lmr/m/n/12 (+4) 0.02|0.13|
-Verduzco,
+Overfull \hbox (10.36812pt too wide) in paragraph at lines 4029--4031
+[]|\T1/lmr/m/it/12 (-20) Mycobacterium 
  []
 
 
-Overfull \hbox (2.89929pt too wide) in paragraph at lines 3903--4039
-\T1/lmr/m/it/12 (-20) |SubHisA_PriA|Ancestral|||27.7\TS1/lmr/m/it/12 ±\T1/lmr/m
-/it/12 (-20) 3.4|0.05\TS1/lmr/m/it/12 ±\T1/lmr/m/it/12 (-20) 0.005|2|167.82|0.0
-3\TS1/lmr/m/it/12 ±\T1/lmr/m/it/12 (-20) 0.002|0.0001|Verduzco,
+Overfull \hbox (2.4608pt too wide) in paragraph at lines 4031--4033
+[]|\T1/lmr/m/n/12 (-20) PriA|  
+ []
+
+
+Overfull \hbox (3.1293pt too wide) in paragraph at lines 4047--4049
+[]|\T1/lmr/m/n/12 (-20) 0.17|  
+ []
+
+
+Overfull \hbox (2.4608pt too wide) in paragraph at lines 4054--4056
+[]|\T1/lmr/m/n/12 (-20) PriA|  
+ []
+
+
+Overfull \hbox (3.1293pt too wide) in paragraph at lines 4070--4072
+[]|\T1/lmr/m/n/12 (-20) 0.34|  
+ []
+
+
+Overfull \hbox (2.4608pt too wide) in paragraph at lines 4078--4080
+[]|\T1/lmr/m/n/12 (-20) PriA|  
+ []
+
+
+Overfull \hbox (2.4608pt too wide) in paragraph at lines 4102--4104
+[]|\T1/lmr/m/n/12 (-20) PriA|  
+ []
+
+
+Overfull \hbox (1.98355pt too wide) in paragraph at lines 4126--4128
+[]|\T1/lmr/m/n/12 (-20) PriB|  
+ []
+
+
+Overfull \hbox (3.1293pt too wide) in paragraph at lines 4142--4144
+[]|\T1/lmr/m/n/12 (-20) 0.14|  
+ []
+
+
+Overfull \hbox (1.98355pt too wide) in paragraph at lines 4150--4152
+[]|\T1/lmr/m/n/12 (-20) PriB|  
+ []
+
+
+Overfull \hbox (14.64429pt too wide) in paragraph at lines 4166--4168
+[]|\T1/lmr/m/n/12 (-20) 0.0022|  
+ []
+
+
+Overfull \hbox (1.98355pt too wide) in paragraph at lines 4174--4176
+[]|\T1/lmr/m/n/12 (-20) PriB|  
+ []
+
+
+Overfull \hbox (1.98355pt too wide) in paragraph at lines 4198--4200
+[]|\T1/lmr/m/n/12 (-20) PriB|  
+ []
+
+
+Overfull \hbox (20.20752pt too wide) in paragraph at lines 4220--4222
+[]|\T1/lmr/m/it/12 (-20) Corynebacterium 
+ []
+
+
+Overfull \hbox (20.65889pt too wide) in paragraph at lines 4222--4224
+[]|\T1/lmr/m/n/12 (-20) subHisA|  
+ []
+
+
+Overfull \hbox (20.20752pt too wide) in paragraph at lines 4243--4245
+[]|\T1/lmr/m/it/12 (-20) Corynebacterium 
+ []
+
+
+Overfull \hbox (2.4608pt too wide) in paragraph at lines 4245--4247
+[]|\T1/lmr/m/n/12 (-20) PriA|  
+ []
+
+
+Overfull \hbox (3.1293pt too wide) in paragraph at lines 4261--4263
+[]|\T1/lmr/m/n/12 (-20) 0.31|  
+ []
+
+
+Overfull \hbox (20.20752pt too wide) in paragraph at lines 4266--4268
+[]|\T1/lmr/m/it/12 (-20) Corynebacterium 
+ []
+
+
+Overfull \hbox (20.65889pt too wide) in paragraph at lines 4268--4270
+[]|\T1/lmr/m/n/12 (-20) subHisA|  
+ []
+
+
+Overfull \hbox (20.20752pt too wide) in paragraph at lines 4289--4291
+[]|\T1/lmr/m/it/12 (-20) Corynebacterium 
+ []
+
+
+Overfull \hbox (20.65889pt too wide) in paragraph at lines 4291--4293
+[]|\T1/lmr/m/n/12 (-20) subHisA|  
+ []
+
+
+Overfull \hbox (14.64429pt too wide) in paragraph at lines 4307--4309
+[]|\T1/lmr/m/n/12 (-20) 0.0004|  
+ []
+
+
+Overfull \hbox (1.98355pt too wide) in paragraph at lines 4314--4316
+[]|\T1/lmr/m/n/12 (-20) PriB|  
+ []
+
+
+Overfull \hbox (21.38164pt too wide) in paragraph at lines 4338--4340
+[]|\T1/lmr/m/n/12 (-20) subTrpF|  
+ []
+
+
+Overfull \hbox (3.1293pt too wide) in paragraph at lines 4354--4356
+[]|\T1/lmr/m/n/12 (-20) 0.02|  
+ []
+
+
+Overfull \hbox (2.4608pt too wide) in paragraph at lines 4362--4364
+[]|\T1/lmr/m/n/12 (-20) PriA|  
+ []
+
+
+Overfull \hbox (3.1293pt too wide) in paragraph at lines 4378--4380
+[]|\T1/lmr/m/n/12 (-20) 0.01|  
+ []
+
+
+Overfull \hbox (2.4608pt too wide) in paragraph at lines 4386--4388
+[]|\T1/lmr/m/n/12 (-20) PriA|  
+ []
+
+
+Overfull \hbox (21.38164pt too wide) in paragraph at lines 4410--4412
+[]|\T1/lmr/m/n/12 (-20) subTrpF|  
+ []
+
+
+Overfull \hbox (14.64429pt too wide) in paragraph at lines 4426--4428
+[]|\T1/lmr/m/n/12 (-20) 0.0001|  
+ []
+
+
+Overfull \hbox (11.59506pt too wide) in alignment at lines 3957--4432
+ [] [] [] [] [] [] [] [] [] [] [] 
  []
 
 [97
 
 ]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Overfull \hbox (2.4608pt too wide) in paragraph at lines 4434--4436
+[]|\T1/lmr/m/n/12 (-20) PriA|  
+ []
 
-[98]
-Underfull \hbox (badness 1838) in paragraph at lines 4059--4059
+
+Overfull \hbox (3.1293pt too wide) in paragraph at lines 4450--4452
+[]|\T1/lmr/m/n/12 (-20) 0.02|  
+ []
+
+
+Overfull \hbox (13.75032pt too wide) in paragraph at lines 4456--4458
+[]|\T1/lmr/m/it/12 (-20) Bifidobacterium 
+ []
+
+
+Overfull \hbox (2.4608pt too wide) in paragraph at lines 4458--4460
+[]|\T1/lmr/m/n/12 (-20) PriA|  
+ []
+
+
+Overfull \hbox (13.75032pt too wide) in paragraph at lines 4480--4482
+[]|\T1/lmr/m/it/12 (-20) Bifidobacterium 
+ []
+
+
+Overfull \hbox (2.4608pt too wide) in paragraph at lines 4482--4484
+[]|\T1/lmr/m/n/12 (-20) PriA|  
+ []
+
+
+Overfull \hbox (3.1293pt too wide) in paragraph at lines 4498--4500
+[]|\T1/lmr/m/n/12 (-20) 0.04|  
+ []
+
+
+Overfull \hbox (13.75032pt too wide) in paragraph at lines 4504--4506
+[]|\T1/lmr/m/it/12 (-20) Bifidobacterium 
+ []
+
+
+Overfull \hbox (2.4608pt too wide) in paragraph at lines 4506--4508
+[]|\T1/lmr/m/n/12 (-20) PriA|  
+ []
+
+
+Overfull \hbox (42.60593pt too wide) in paragraph at lines 4530--4532
+[]|\T1/lmr/m/n/12 (-20) Metagenoma|  
+ []
+
+
+Overfull \hbox (3.1293pt too wide) in paragraph at lines 4546--4548
+[]|\T1/lmr/m/n/12 (-20) 0.09|  
+ []
+
+
+Overfull \hbox (6.03015pt too wide) in paragraph at lines 4551--4553
+[]|\T1/lmr/m/n/12 (-20) CAM1_A81G|  
+ []
+
+
+Overfull \hbox (42.60593pt too wide) in paragraph at lines 4553--4555
+[]|\T1/lmr/m/n/12 (-20) Metagenoma|  
+ []
+
+
+Overfull \hbox (3.1293pt too wide) in paragraph at lines 4569--4571
+[]|\T1/lmr/m/n/12 (-20) 0.06|  
+ []
+
+
+Overfull \hbox (3.39297pt too wide) in paragraph at lines 4574--4576
+[]|\T1/lmr/m/n/12 (-20) CAM1_A81S|  
+ []
+
+
+Overfull \hbox (42.60593pt too wide) in paragraph at lines 4576--4578
+[]|\T1/lmr/m/n/12 (-20) Metagenoma|  
+ []
+
+
+Overfull \hbox (3.1293pt too wide) in paragraph at lines 4592--4594
+[]|\T1/lmr/m/n/12 (-20) 0.02|  
+ []
+
+
+Overfull \hbox (42.60593pt too wide) in paragraph at lines 4599--4601
+[]|\T1/lmr/m/n/12 (-20) Metagenoma|  
+ []
+
+
+Overfull \hbox (15.45303pt too wide) in paragraph at lines 4620--4622
+[]|\T1/lmr/m/n/12 (-20) PriA_Ancestral|  
+ []
+
+
+Overfull \hbox (26.03612pt too wide) in paragraph at lines 4622--4624
+[]|\T1/lmr/m/n/12 (-20) Ancestral|  
+ []
+
+
+Overfull \hbox (8.20984pt too wide) in paragraph at lines 4628--4630
+[]|\T1/lmr/m/n/12 (-20) 9.4\TS1/lmr/m/n/12 ±\T1/lmr/m/n/12 (-20) 1.6|  
+ []
+
+
+Overfull \hbox (24.06526pt too wide) in paragraph at lines 4630--4632
+[]|\T1/lmr/m/n/12 (-20) 0.3\TS1/lmr/m/n/12 ±\T1/lmr/m/n/12 (-20) 0.009|  
+ []
+
+
+Overfull \hbox (12.55028pt too wide) in paragraph at lines 4634--4636
+[]|\T1/lmr/m/n/12 (-20) 4.3\TS1/lmr/m/n/12 ±\T1/lmr/m/n/12 (-20) 0.4|  
+ []
+
+
+Overfull \hbox (18.30777pt too wide) in paragraph at lines 4636--4638
+[]|\T1/lmr/m/n/12 (-20) 0.6\TS1/lmr/m/n/12 ±\T1/lmr/m/n/12 (-20) 0.02|  
+ []
+
+
+Overfull \hbox (3.1293pt too wide) in paragraph at lines 4638--4640
+[]|\T1/lmr/m/n/12 (-20) 0.13|  
+ []
+
+
+Overfull \hbox (11.93126pt too wide) in paragraph at lines 4643--4645
+[]|\T1/lmr/m/n/12 (-20) PriA_SubHisA|  
+ []
+
+
+Overfull \hbox (26.03612pt too wide) in paragraph at lines 4645--4647
+[]|\T1/lmr/m/n/12 (-20) Ancestral|  
+ []
+
+
+Overfull \hbox (13.96733pt too wide) in paragraph at lines 4651--4653
+[]|\T1/lmr/m/n/12 (-20) 3.7\TS1/lmr/m/n/12 ±\T1/lmr/m/n/12 (-20) 1.01|  
+ []
+
+
+Overfull \hbox (18.30777pt too wide) in paragraph at lines 4653--4655
+[]|\T1/lmr/m/n/12 (-20) 0.5\TS1/lmr/m/n/12 ±\T1/lmr/m/n/12 (-20) 0.03|  
+ []
+
+
+Overfull \hbox (35.50658pt too wide) in paragraph at lines 4666--4668
+[]|\T1/lmr/m/n/12 (-20) SubHisA_Ancestral|  
+ []
+
+
+Overfull \hbox (26.03612pt too wide) in paragraph at lines 4668--4670
+[]|\T1/lmr/m/n/12 (-20) Ancestral|  
+ []
+
+
+Overfull \hbox (8.20984pt too wide) in paragraph at lines 4674--4676
+[]|\T1/lmr/m/n/12 (-20) 6.3\TS1/lmr/m/n/12 ±\T1/lmr/m/n/12 (-20) 0.7|  
+ []
+
+
+Overfull \hbox (24.06526pt too wide) in paragraph at lines 4676--4678
+[]|\T1/lmr/m/n/12 (-20) 0.15\TS1/lmr/m/n/12 ±\T1/lmr/m/n/12 (-20) 0.03|  
+ []
+
+
+Overfull \hbox (11.93126pt too wide) in paragraph at lines 4689--4691
+[]|\T1/lmr/m/n/12 (-20) SubHisA_PriA|  
+ []
+
+
+Overfull \hbox (26.03612pt too wide) in paragraph at lines 4691--4693
+[]|\T1/lmr/m/n/12 (-20) Ancestral|  
+ []
+
+
+Overfull \hbox (13.96733pt too wide) in paragraph at lines 4697--4699
+[]|\T1/lmr/m/n/12 (-20) 27.7\TS1/lmr/m/n/12 ±\T1/lmr/m/n/12 (-20) 3.4|  
+ []
+
+
+Overfull \hbox (29.82275pt too wide) in paragraph at lines 4699--4701
+[]|\T1/lmr/m/n/12 (-20) 0.05\TS1/lmr/m/n/12 ±\T1/lmr/m/n/12 (-20) 0.005|  
+ []
+
+
+Overfull \hbox (5.97005pt too wide) in paragraph at lines 4703--4705
+[]|\T1/lmr/m/n/12 (-20) 167.82|  
+ []
+
+
+Overfull \hbox (29.82275pt too wide) in paragraph at lines 4705--4707
+[]|\T1/lmr/m/n/12 (-20) 0.03\TS1/lmr/m/n/12 ±\T1/lmr/m/n/12 (-20) 0.002|  
+ []
+
+
+Overfull \hbox (14.64429pt too wide) in paragraph at lines 4707--4709
+[]|\T1/lmr/m/n/12 (-20) 0.0001|  
+ []
+
+
+Overfull \hbox (4.09464pt too wide) in paragraph at lines 4732--4734
+[]|\T1/lmr/m/n/12 (-20) Verduzco*|  
+ []
+
+
+Overfull \hbox (11.59506pt too wide) in alignment at lines 4432--4759
+ [] [] [] [] [] [] [] [] [] [] [] 
+ []
+
+[98] [99]
+Underfull \hbox (badness 1838) in paragraph at lines 4780--4780
 []\T1/lmr/bx/n/17.28 PriA como mod-elo de fa-milia en-z-imática
  []
 
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 4061.
+(hyperref)                than one, level fixed on input line 4782.
 
-
-LaTeX Warning: Reference `fig:PriA_Expansiones' on page 99 undefined on input l
-ine 4068.
-
-[99] <chapter4/PriAExpansiones.png, id=12567, 572.90855pt x 159.29408pt>
+[100] <chapter4/PriAExpansiones.png, id=12572, 572.90855pt x 159.29408pt>
 File: chapter4/PriAExpansiones.png Graphic file (type png)
 <use chapter4/PriAExpansiones.png>
-Package pdftex.def Info: chapter4/PriAExpansiones.png used on input line 4093.
+Package pdftex.def Info: chapter4/PriAExpansiones.png used on input line 4814.
 (pdftex.def)             Requested size: 572.90715pt x 159.29367pt.
 
-Overfull \hbox (24.70746pt too wide) in paragraph at lines 4093--4094
+Overfull \hbox (24.70746pt too wide) in paragraph at lines 4814--4815
  [][] 
  []
 
-
-Overfull \hbox (44.7352pt too wide) in alignment at lines 4104--4111
- [] [] [] [] [] [] [] 
- []
-
-
-Overfull \hbox (44.7352pt too wide) in alignment at lines 4111--4116
- [] [] [] [] [] [] [] 
- []
-
-
-Overfull \hbox (176.77762pt too wide) in alignment at lines 4116--4127
- [] [] [] [] [] [] [] 
- []
-
-
-Package longtable Warning: Column widths have changed
-(longtable)                in table 4.1 on input line 4127.
-
-<chapter4/PriAEvoMining.pdf, id=12573, 597.23125pt x 511.9125pt>
-File: chapter4/PriAEvoMining.pdf Graphic file (type pdf)
-<use chapter4/PriAEvoMining.pdf>
-Package pdftex.def Info: chapter4/PriAEvoMining.pdf used on input line 4137.
-(pdftex.def)             Requested size: 597.22978pt x 511.91125pt.
-
-Overfull \hbox (44.16565pt too wide) in paragraph at lines 4137--4138
- [][] 
- []
-
-[100 <./chapter4/PriAExpansiones.png>] [101 <./chapter4/PriAEvoMining.pdf>]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in table 4.2 on input line 4166.
-
-<chapter4/PriAEvoMiningCopies.pdf, id=12608, 597.23125pt x 511.9125pt>
+[101 <./chapter4/PriAExpansiones.png>] <chapter4/PriAEvoMiningCopies.pdf, id=12
+580, 597.23125pt x 511.9125pt>
 File: chapter4/PriAEvoMiningCopies.pdf Graphic file (type pdf)
 <use chapter4/PriAEvoMiningCopies.pdf>
-Package pdftex.def Info: chapter4/PriAEvoMiningCopies.pdf used on input line 41
-78.
+Package pdftex.def Info: chapter4/PriAEvoMiningCopies.pdf used on input line 48
+46.
 (pdftex.def)             Requested size: 597.22978pt x 511.91125pt.
 
-Overfull \hbox (44.16565pt too wide) in paragraph at lines 4178--4179
+Overfull \hbox (44.16565pt too wide) in paragraph at lines 4846--4847
  [][] 
  []
 
-[102 <./chapter4/PriAEvoMiningCopies.pdf>] <chapter4/CORASON/saxitoxin.pdf, id=
-12645, 722.7pt x 406.51875pt>
+[102 <./chapter4/PriAEvoMiningCopies.pdf>] <chapter4/PriAEvoMining.pdf, id=1261
+7, 597.23125pt x 511.9125pt>
+File: chapter4/PriAEvoMining.pdf Graphic file (type pdf)
+<use chapter4/PriAEvoMining.pdf>
+Package pdftex.def Info: chapter4/PriAEvoMining.pdf used on input line 4874.
+(pdftex.def)             Requested size: 597.22978pt x 511.91125pt.
+
+Overfull \hbox (44.16565pt too wide) in paragraph at lines 4874--4875
+ [][] 
+ []
+
+[103 <./chapter4/PriAEvoMining.pdf>]
+Overfull \hbox (101.377pt too wide) in alignment at lines 4899--4906
+ [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (101.377pt too wide) in alignment at lines 4906--4911
+ [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (101.377pt too wide) in alignment at lines 4911--4921
+ [] [] [] [] [] [] [] 
+ []
+
+
+LaTeX Warning: Reference `reclutamientos' on page 104 undefined on input line 4
+925.
+
+[104] <chapter4/CORASON/CORASON.pdf, id=12661, 586.47102pt x 458.28015pt>
+File: chapter4/CORASON/CORASON.pdf Graphic file (type pdf)
+<use chapter4/CORASON/CORASON.pdf>
+Package pdftex.def Info: chapter4/CORASON/CORASON.pdf used on input line 4988.
+(pdftex.def)             Requested size: 586.46959pt x 458.27902pt.
+[105 <./chapter4/CORASON/CORASON.pdf>] <chapter4/CORASON/saxitoxin.pdf, id=1269
+4, 722.7pt x 406.51875pt>
 File: chapter4/CORASON/saxitoxin.pdf Graphic file (type pdf)
 <use chapter4/CORASON/saxitoxin.pdf>
-Package pdftex.def Info: chapter4/CORASON/saxitoxin.pdf used on input line 4199
+Package pdftex.def Info: chapter4/CORASON/saxitoxin.pdf used on input line 5005
 .
 (pdftex.def)             Requested size: 722.69823pt x 406.51775pt.
 
-Overfull \hbox (72.26656pt too wide) in paragraph at lines 4199--4200
+Overfull \hbox (72.26656pt too wide) in paragraph at lines 5005--5006
  [][] 
  []
 
-<chapter4/CORASON/CORASON.pdf, id=12646, 586.47102pt x 458.28015pt>
-File: chapter4/CORASON/CORASON.pdf Graphic file (type pdf)
-<use chapter4/CORASON/CORASON.pdf>
-Package pdftex.def Info: chapter4/CORASON/CORASON.pdf used on input line 4206.
-(pdftex.def)             Requested size: 586.46959pt x 458.27902pt.
-
-Underfull \vbox (badness 2426) has occurred while \output is active []
-
-[103 <./chapter4/CORASON/saxitoxin.pdf>] [104 <./chapter4/CORASON/CORASON.pdf>]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in table 4.3 on input line 4271.
-
-<conclusion/Solocirculos.png, id=12708, 574.145pt x 504.88625pt>
+[106 <./chapter4/CORASON/saxitoxin.pdf>] <conclusion/Solocirculos.png, id=12726
+, 574.145pt x 504.88625pt>
 File: conclusion/Solocirculos.png Graphic file (type png)
 <use conclusion/Solocirculos.png>
-Package pdftex.def Info: conclusion/Solocirculos.png used on input line 4275.
+Package pdftex.def Info: conclusion/Solocirculos.png used on input line 5063.
 (pdftex.def)             Requested size: 574.1436pt x 504.885pt.
-<conclusion/SolocirculosPRA.png, id=12709, 530.98375pt x 508.90125pt>
+<conclusion/SolocirculosPRA.png, id=12727, 530.98375pt x 508.90125pt>
 File: conclusion/SolocirculosPRA.png Graphic file (type png)
 <use conclusion/SolocirculosPRA.png>
-Package pdftex.def Info: conclusion/SolocirculosPRA.png used on input line 4282
+Package pdftex.def Info: conclusion/SolocirculosPRA.png used on input line 5070
 .
 (pdftex.def)             Requested size: 530.98244pt x 508.90001pt.
-<conclusion/SolocirculosPRO.png, id=12710, 551.05875pt x 482.80376pt>
+<conclusion/SolocirculosPRO.png, id=12728, 551.05875pt x 482.80376pt>
 File: conclusion/SolocirculosPRO.png Graphic file (type png)
 <use conclusion/SolocirculosPRO.png>
-Package pdftex.def Info: conclusion/SolocirculosPRO.png used on input line 4289
+Package pdftex.def Info: conclusion/SolocirculosPRO.png used on input line 5077
 .
 (pdftex.def)             Requested size: 551.05739pt x 482.80258pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[105] [106 <./conclusion/Solocirculos.png>] [107 <./conclusion/SolocirculosPRA.
-png>] [108 <./conclusion/SolocirculosPRO.png>] <chapter4/Couplings/PriAMutation
-s.pdf, id=12728, 597.23125pt x 795.97375pt>
+[107] [108 <./conclusion/Solocirculos.png>] [109 <./conclusion/SolocirculosPRA.
+png>] <chapter4/Couplings/PriAMutations.pdf, id=12742, 597.23125pt x 795.97375p
+t>
 File: chapter4/Couplings/PriAMutations.pdf Graphic file (type pdf)
 <use chapter4/Couplings/PriAMutations.pdf>
 Package pdftex.def Info: chapter4/Couplings/PriAMutations.pdf used on input lin
-e 4333.
+e 5121.
 (pdftex.def)             Requested size: 597.22978pt x 795.97182pt.
 
-Overfull \hbox (44.16565pt too wide) in paragraph at lines 4333--4334
+Overfull \hbox (44.16565pt too wide) in paragraph at lines 5121--5122
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 10.09987pt on input line 4336.
+LaTeX Warning: Float too large for page by 10.09987pt on input line 5124.
 
 
-<chapter4/Couplings/PriACouplingFoldings.png, id=12729, 795.97375pt x 681.54625
+<chapter4/Couplings/PriACouplingFoldings.png, id=12743, 795.97375pt x 681.54625
 pt>
 File: chapter4/Couplings/PriACouplingFoldings.png Graphic file (type png)
 <use chapter4/Couplings/PriACouplingFoldings.png>
 Package pdftex.def Info: chapter4/Couplings/PriACouplingFoldings.png used on in
-put line 4343.
+put line 5131.
 (pdftex.def)             Requested size: 795.97182pt x 681.54459pt.
 
-Underfull \hbox (badness 2809) in paragraph at lines 4350--4350
+Underfull \hbox (badness 2809) in paragraph at lines 5138--5138
 \T1/lmr/bx/n/17.28 quími-ca-mente pare-ci-dos a PRA y PRO-
  []
 
-<chapter4/SustratosQuimicos.pdf, id=12730, 614.295pt x 794.97pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[110 <./conclusion/SolocirculosPRO.png>] [111 <./chapter4/Couplings/PriAMutatio
+ns.pdf>] [112 <./chapter4/Couplings/PriACouplingFoldings.png (PNG copy)>] <chap
+ter4/SustratosQuimicos.pdf, id=12772, 614.295pt x 794.97pt>
 File: chapter4/SustratosQuimicos.pdf Graphic file (type pdf)
 <use chapter4/SustratosQuimicos.pdf>
-Package pdftex.def Info: chapter4/SustratosQuimicos.pdf used on input line 4359
+Package pdftex.def Info: chapter4/SustratosQuimicos.pdf used on input line 5147
 .
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 
-Overfull \hbox (57.81667pt too wide) in paragraph at lines 4359--4360
+Overfull \hbox (57.81667pt too wide) in paragraph at lines 5147--5148
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 9.29686pt on input line 4362.
+LaTeX Warning: Float too large for page by 9.29686pt on input line 5150.
 
-<chapter4/esquema_quimico-2-2.pdf, id=12731, 614.295pt x 794.97pt>
+<chapter4/esquema_quimico-2-2.pdf, id=12773, 614.295pt x 794.97pt>
 File: chapter4/esquema_quimico-2-2.pdf Graphic file (type pdf)
 <use chapter4/esquema_quimico-2-2.pdf>
-Package pdftex.def Info: chapter4/esquema_quimico-2-2.pdf used on input line 43
-66.
+Package pdftex.def Info: chapter4/esquema_quimico-2-2.pdf used on input line 51
+54.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 
-Overfull \hbox (57.81667pt too wide) in paragraph at lines 4366--4367
+Overfull \hbox (57.81667pt too wide) in paragraph at lines 5154--5155
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 9.29686pt on input line 4369.
+LaTeX Warning: Float too large for page by 9.29686pt on input line 5157.
 
-<chapter4/esquema_quimico-3-3.pdf, id=12732, 614.295pt x 794.97pt>
+<chapter4/esquema_quimico-3-3.pdf, id=12774, 614.295pt x 794.97pt>
 File: chapter4/esquema_quimico-3-3.pdf Graphic file (type pdf)
 <use chapter4/esquema_quimico-3-3.pdf>
-Package pdftex.def Info: chapter4/esquema_quimico-3-3.pdf used on input line 43
-73.
+Package pdftex.def Info: chapter4/esquema_quimico-3-3.pdf used on input line 51
+61.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 
-Overfull \hbox (57.81667pt too wide) in paragraph at lines 4373--4374
+Overfull \hbox (57.81667pt too wide) in paragraph at lines 5161--5162
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 9.29686pt on input line 4376.
+LaTeX Warning: Float too large for page by 9.29686pt on input line 5164.
 
-<chapter4/esquema_quimico-4-4.pdf, id=12733, 614.295pt x 794.97pt>
+<chapter4/esquema_quimico-4-4.pdf, id=12775, 614.295pt x 794.97pt>
 File: chapter4/esquema_quimico-4-4.pdf Graphic file (type pdf)
 <use chapter4/esquema_quimico-4-4.pdf>
-Package pdftex.def Info: chapter4/esquema_quimico-4-4.pdf used on input line 43
-80.
+Package pdftex.def Info: chapter4/esquema_quimico-4-4.pdf used on input line 51
+68.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 
-Overfull \hbox (57.81667pt too wide) in paragraph at lines 4380--4381
+Overfull \hbox (57.81667pt too wide) in paragraph at lines 5168--5169
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 9.29686pt on input line 4383.
+LaTeX Warning: Float too large for page by 9.29686pt on input line 5171.
 
-[109] [110 <./chapter4/Couplings/PriAMutations.pdf>] [111 <./chapter4/Couplings
-/PriACouplingFoldings.png (PNG copy)>] [112 <./chapter4/SustratosQuimicos.pdf>]
-[113 <./chapter4/esquema_quimico-2-2.pdf>] [114 <./chapter4/esquema_quimico-3-3
-.pdf>] [115 <./chapter4/esquema_quimico-4-4.pdf>] [116]
+[113] [114 <./chapter4/SustratosQuimicos.pdf>] [115 <./chapter4/esquema_quimico
+-2-2.pdf>] [116 <./chapter4/esquema_quimico-3-3.pdf>] [117 <./chapter4/esquema_
+quimico-4-4.pdf>]
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <12> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 4437.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 5225.
 
-Overfull \hbox (125.55522pt too wide) in alignment at lines 4477--4500
+Overfull \hbox (125.55522pt too wide) in alignment at lines 5230--5235
  [] [] [] [] [] [] 
  []
 
 
-Package longtable Warning: Column widths have changed
-(longtable)                in table 4.4 on input line 4500.
+Overfull \hbox (125.55522pt too wide) in alignment at lines 5235--5239
+ [] [] [] [] [] [] 
+ []
 
-[117
 
-] <chapter4/SubstratesClustering.png, id=12940, 666.49pt x 602.25pt>
-File: chapter4/SubstratesClustering.png Graphic file (type png)
-<use chapter4/SubstratesClustering.png>
-Package pdftex.def Info: chapter4/SubstratesClustering.png used on input line 4
-516.
-(pdftex.def)             Requested size: 666.48837pt x 602.24852pt.
+Overfull \hbox (125.55522pt too wide) in alignment at lines 5239--5265
+ [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (125.55522pt too wide) in alignment at lines 5265--5288
+ [] [] [] [] [] [] 
+ []
+
 [118
 
+] <chapter4/SubstratesClustering.png, id=12953, 666.49pt x 602.25pt>
+File: chapter4/SubstratesClustering.png Graphic file (type png)
+<use chapter4/SubstratesClustering.png>
+Package pdftex.def Info: chapter4/SubstratesClustering.png used on input line 5
+304.
+(pdftex.def)             Requested size: 666.48837pt x 602.24852pt.
+[119
+
  <./chapter4/SubstratesClustering.png>]
-<tesis_files/figure-latex/heatonPDF-1.pdf, id=12946, 459.7175pt x 314.17375pt>
+<tesis_files/figure-latex/heatonPDF-1.pdf, id=12959, 459.7175pt x 316.18124pt>
 File: tesis_files/figure-latex/heatonPDF-1.pdf Graphic file (type pdf)
 <use tesis_files/figure-latex/heatonPDF-1.pdf>
 Package pdftex.def Info: tesis_files/figure-latex/heatonPDF-1.pdf used on input
- line 4537.
-(pdftex.def)             Requested size: 459.71637pt x 314.17297pt.
+ line 5325.
+(pdftex.def)             Requested size: 459.71637pt x 316.18047pt.
 
-Overfull \hbox (26.09637pt too wide) in paragraph at lines 4537--4537
+Overfull \hbox (26.09637pt too wide) in paragraph at lines 5325--5325
  [] 
  []
 
-<chapter4/Figura1_4.pdf, id=12947, 597.50786pt x 845.04686pt>
+<chapter4/Figura1_4.pdf, id=12960, 597.50786pt x 845.04686pt>
 File: chapter4/Figura1_4.pdf Graphic file (type pdf)
 <use chapter4/Figura1_4.pdf>
-Package pdftex.def Info: chapter4/Figura1_4.pdf used on input line 4541.
+Package pdftex.def Info: chapter4/Figura1_4.pdf used on input line 5329.
 (pdftex.def)             Requested size: 597.5064pt x 845.0448pt.
 
-Overfull \hbox (163.8864pt too wide) in paragraph at lines 4541--4542
+Overfull \hbox (163.8864pt too wide) in paragraph at lines 5329--5330
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 218.36479pt on input line 4544.
+LaTeX Warning: Float too large for page by 218.36479pt on input line 5332.
 
-<chapter4/PriAHeatPot.png, id=12948, 601.24625pt x 692.5875pt>
+<chapter4/PriAHeatPot.png, id=12961, 601.24625pt x 692.5875pt>
 File: chapter4/PriAHeatPot.png Graphic file (type png)
 <use chapter4/PriAHeatPot.png>
-Package pdftex.def Info: chapter4/PriAHeatPot.png used on input line 4548.
+Package pdftex.def Info: chapter4/PriAHeatPot.png used on input line 5336.
 (pdftex.def)             Requested size: 601.24477pt x 692.5858pt.
 
-<tesis_files/figure-latex/substrateBox-1.pdf, id=12949, 459.7175pt x 313.17pt>
+<tesis_files/figure-latex/substrateBox-1.pdf, id=12962, 459.7175pt x 315.1775pt
+>
 File: tesis_files/figure-latex/substrateBox-1.pdf Graphic file (type pdf)
 <use tesis_files/figure-latex/substrateBox-1.pdf>
 Package pdftex.def Info: tesis_files/figure-latex/substrateBox-1.pdf used on in
-put line 4567.
-(pdftex.def)             Requested size: 459.71637pt x 313.16922pt.
+put line 5355.
+(pdftex.def)             Requested size: 459.71637pt x 315.17673pt.
 
-Overfull \hbox (26.09637pt too wide) in paragraph at lines 4567--4567
+Overfull \hbox (26.09637pt too wide) in paragraph at lines 5355--5355
  [] 
  []
 
 
-Underfull \vbox (badness 7704) has occurred while \output is active []
+Underfull \vbox (badness 6961) has occurred while \output is active []
 
-[119
+[120
 
- <./tesis_files/figure-latex/heatonPDF-1.pdf>] [120 <./chapter4/Figura1_4.pdf>]
-[121 <./chapter4/PriAHeatPot.png>] [122 <./tesis_files/figure-latex/substrateBo
+ <./tesis_files/figure-latex/heatonPDF-1.pdf>] [121 <./chapter4/Figura1_4.pdf>]
+[122 <./chapter4/PriAHeatPot.png>] [123 <./tesis_files/figure-latex/substrateBo
 x-1.pdf>]
 
-LaTeX Warning: Command \texttimes invalid in math mode on input line 4583.
+LaTeX Warning: Command \texttimes invalid in math mode on input line 5371.
 
 
-LaTeX Warning: Command \texttimes invalid in math mode on input line 4583.
+LaTeX Warning: Command \texttimes invalid in math mode on input line 5371.
 
 
-Overfull \hbox (183.29912pt too wide) detected at line 4603
+Overfull \hbox (183.29912pt too wide) detected at line 5391
 [][]
  []
 
 
-Overfull \hbox (163.2875pt too wide) in paragraph at lines 4607--4633
+Overfull \hbox (163.2875pt too wide) in paragraph at lines 5395--5421
  [][] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[123
+[124
 
-] [124] <chapter4/MutantControl.png, id=13015, 391.4625pt x 234.8775pt>
+] [125] <chapter4/MutantControl.png, id=13028, 391.4625pt x 234.8775pt>
 File: chapter4/MutantControl.png Graphic file (type png)
 <use chapter4/MutantControl.png>
-Package pdftex.def Info: chapter4/MutantControl.png used on input line 4670.
+Package pdftex.def Info: chapter4/MutantControl.png used on input line 5458.
 (pdftex.def)             Requested size: 391.46153pt x 234.87692pt.
-<chapter4/GTPCinetica.pdf, id=13016, 732.18042pt x 342.12921pt>
+<chapter4/GTPCinetica.pdf, id=13029, 732.18042pt x 342.12921pt>
 File: chapter4/GTPCinetica.pdf Graphic file (type pdf)
 <use chapter4/GTPCinetica.pdf>
-Package pdftex.def Info: chapter4/GTPCinetica.pdf used on input line 4677.
+Package pdftex.def Info: chapter4/GTPCinetica.pdf used on input line 5465.
 (pdftex.def)             Requested size: 732.17862pt x 342.12837pt.
 
-Overfull \hbox (5.69164pt too wide) in paragraph at lines 4677--4678
+Overfull \hbox (5.69164pt too wide) in paragraph at lines 5465--5466
  [][] 
  []
 
-[125
+[126
 
- <./chapter4/MutantControl.png>] [126 <./chapter4/GTPCinetica.pdf>]
-Overfull \hbox (157.74pt too wide) in alignment at lines 4703--4709
+ <./chapter4/MutantControl.png>] [127 <./chapter4/GTPCinetica.pdf>]
+Overfull \hbox (307.37578pt too wide) in alignment at lines 5491--5497
  [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (157.74pt too wide) in alignment at lines 4709--4714
+Overfull \hbox (307.37578pt too wide) in alignment at lines 5497--5502
  [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (287.4659pt too wide) in alignment at lines 4714--4772
+Overfull \hbox (307.37578pt too wide) in alignment at lines 5502--5560
  [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (295.62581pt too wide) in alignment at lines 4772--4831
+Overfull \hbox (307.37578pt too wide) in alignment at lines 5560--5619
  [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (307.37578pt too wide) in alignment at lines 4831--4890
+Overfull \hbox (307.37578pt too wide) in alignment at lines 5619--5678
  [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] 
  []
 
-[127
+[128
 
 ]
-Overfull \hbox (307.37578pt too wide) in alignment at lines 4890--4895
+Overfull \hbox (307.37578pt too wide) in alignment at lines 5678--5683
  [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] 
  []
 
-
-Package longtable Warning: Column widths have changed
-(longtable)                in table 4.5 on input line 4895.
-
-[128] <chapter4/Geles/PriAAbril30.png, id=49554, 600.2425pt x 442.65375pt>
+[129] <chapter4/Geles/PriAAbril30.png, id=49568, 600.2425pt x 442.65375pt>
 File: chapter4/Geles/PriAAbril30.png Graphic file (type png)
 <use chapter4/Geles/PriAAbril30.png>
-Package pdftex.def Info: chapter4/Geles/PriAAbril30.png used on input line 4899
+Package pdftex.def Info: chapter4/Geles/PriAAbril30.png used on input line 5687
 .
 (pdftex.def)             Requested size: 600.24103pt x 442.65265pt.
 
-Underfull \vbox (badness 10000) detected at line 4913
+Underfull \vbox (badness 10000) detected at line 5701
  []
 
-LaTeX Font Info:    Try loading font information for TS1+lmtt on input line 491
-8.
+LaTeX Font Info:    Try loading font information for TS1+lmtt on input line 570
+6.
 (/usr/share/texmf/tex/latex/lm/ts1lmtt.fd
 File: ts1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [129
+) [130
 
  <./chapter4/Geles/PriAAbril30.png>]
-<tesis_files/figure-latex/Cinetics-1.pdf, id=49561, 446.66875pt x 251.94125pt>
+<tesis_files/figure-latex/Cinetics-1.pdf, id=49575, 446.66875pt x 251.94125pt>
 File: tesis_files/figure-latex/Cinetics-1.pdf Graphic file (type pdf)
 <use tesis_files/figure-latex/Cinetics-1.pdf>
 Package pdftex.def Info: tesis_files/figure-latex/Cinetics-1.pdf used on input 
-line 4972.
+line 5760.
 (pdftex.def)             Requested size: 446.66765pt x 251.94063pt.
 
-Overfull \hbox (13.04765pt too wide) in paragraph at lines 4972--4972
+Overfull \hbox (13.04765pt too wide) in paragraph at lines 5760--5760
  [] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[130] <tesis_files/figure-latex/Cinetics-2.pdf, id=49567, 463.7325pt x 315.1775
+[131] <tesis_files/figure-latex/Cinetics-2.pdf, id=49581, 463.7325pt x 315.1775
 pt>
 File: tesis_files/figure-latex/Cinetics-2.pdf Graphic file (type pdf)
 <use tesis_files/figure-latex/Cinetics-2.pdf>
 Package pdftex.def Info: tesis_files/figure-latex/Cinetics-2.pdf used on input 
-line 4980.
+line 5768.
 (pdftex.def)             Requested size: 463.73135pt x 315.17673pt.
 
-Overfull \hbox (30.11136pt too wide) in paragraph at lines 4980--4980
+Overfull \hbox (30.11136pt too wide) in paragraph at lines 5768--5768
  [] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[131 <./tesis_files/figure-latex/Cinetics-1.pdf> <./tesis_files/figure-latex/Ci
-netics-2.pdf>] <tesis_files/figure-latex/Cinetics-3.pdf, id=49586, 459.7175pt x
+[132 <./tesis_files/figure-latex/Cinetics-1.pdf> <./tesis_files/figure-latex/Ci
+netics-2.pdf>] <tesis_files/figure-latex/Cinetics-3.pdf, id=49600, 459.7175pt x
  305.14pt>
 File: tesis_files/figure-latex/Cinetics-3.pdf Graphic file (type pdf)
 <use tesis_files/figure-latex/Cinetics-3.pdf>
 Package pdftex.def Info: tesis_files/figure-latex/Cinetics-3.pdf used on input 
-line 4992.
+line 5780.
 (pdftex.def)             Requested size: 459.71637pt x 305.13924pt.
 
-Overfull \hbox (26.09637pt too wide) in paragraph at lines 4992--4992
+Overfull \hbox (26.09637pt too wide) in paragraph at lines 5780--5780
  [] 
  []
 
-[132 <./tesis_files/figure-latex/Cinetics-3.pdf>]
-<tesis_files/figure-latex/Cinetics-4.pdf, id=49599, 446.66875pt x 251.94125pt>
+[133 <./tesis_files/figure-latex/Cinetics-3.pdf>]
+<tesis_files/figure-latex/Cinetics-4.pdf, id=49613, 446.66875pt x 251.94125pt>
 File: tesis_files/figure-latex/Cinetics-4.pdf Graphic file (type pdf)
 <use tesis_files/figure-latex/Cinetics-4.pdf>
 Package pdftex.def Info: tesis_files/figure-latex/Cinetics-4.pdf used on input 
-line 5038.
+line 5826.
 (pdftex.def)             Requested size: 446.66765pt x 251.94063pt.
 
-Overfull \hbox (13.04765pt too wide) in paragraph at lines 5038--5038
+Overfull \hbox (13.04765pt too wide) in paragraph at lines 5826--5826
  [] 
  []
 
-<tesis_files/figure-latex/Cinetics-5.pdf, id=49600, 464.73625pt x 315.1775pt>
+<tesis_files/figure-latex/Cinetics-5.pdf, id=49614, 464.73625pt x 315.1775pt>
 File: tesis_files/figure-latex/Cinetics-5.pdf Graphic file (type pdf)
 <use tesis_files/figure-latex/Cinetics-5.pdf>
 Package pdftex.def Info: tesis_files/figure-latex/Cinetics-5.pdf used on input 
-line 5046.
+line 5834.
 (pdftex.def)             Requested size: 464.7351pt x 315.17673pt.
 
-Overfull \hbox (31.11511pt too wide) in paragraph at lines 5046--5046
+Overfull \hbox (31.11511pt too wide) in paragraph at lines 5834--5834
  [] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[133 <./tesis_files/figure-latex/Cinetics-4.pdf>] <tesis_files/figure-latex/Cin
-etics-6.pdf, id=49612, 459.7175pt x 305.14pt>
+[134 <./tesis_files/figure-latex/Cinetics-4.pdf>] <tesis_files/figure-latex/Cin
+etics-6.pdf, id=49626, 459.7175pt x 305.14pt>
 File: tesis_files/figure-latex/Cinetics-6.pdf Graphic file (type pdf)
 <use tesis_files/figure-latex/Cinetics-6.pdf>
 Package pdftex.def Info: tesis_files/figure-latex/Cinetics-6.pdf used on input 
-line 5058.
+line 5846.
 (pdftex.def)             Requested size: 459.71637pt x 305.13924pt.
 
-Overfull \hbox (26.09637pt too wide) in paragraph at lines 5058--5058
+Overfull \hbox (26.09637pt too wide) in paragraph at lines 5846--5846
  [] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[134 <./tesis_files/figure-latex/Cinetics-5.pdf>]
-Underfull \vbox (badness 10000) detected at line 5094
+[135 <./tesis_files/figure-latex/Cinetics-5.pdf>]
+Underfull \vbox (badness 10000) detected at line 5882
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[135 <./tesis_files/figure-latex/Cinetics-6.pdf>] <tesis_files/figure-latex/slo
-pes-1.pdf, id=49637, 440.64626pt x 266.9975pt>
+[136 <./tesis_files/figure-latex/Cinetics-6.pdf>] <tesis_files/figure-latex/slo
+pes-1.pdf, id=49651, 440.64626pt x 266.9975pt>
 File: tesis_files/figure-latex/slopes-1.pdf Graphic file (type pdf)
 <use tesis_files/figure-latex/slopes-1.pdf>
 Package pdftex.def Info: tesis_files/figure-latex/slopes-1.pdf used on input li
-ne 5096.
+ne 5884.
 (pdftex.def)             Requested size: 440.64517pt x 266.99683pt.
 
-Overfull \hbox (7.02518pt too wide) in paragraph at lines 5096--5096
+Overfull \hbox (7.02518pt too wide) in paragraph at lines 5884--5884
  [] 
  []
 
-[136 <./tesis_files/figure-latex/slopes-1.pdf>] [137] [138
-
-]pdfTeX warning (ext4): destination with the same identifier (name{section.4.1}
-) has been already used, duplicate ignored
+[137 <./tesis_files/figure-latex/slopes-1.pdf>] [138]pdfTeX warning (ext4): des
+tination with the same identifier (name{section.4.1}) has been already used, du
+plicate ignored
 <to be read again> 
                    \relax 
-l.5193   \section{Discusion}
+l.5981   \section{Discusion}
                             \label{discusion-1}
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 5205.
+(hyperref)                than one, level fixed on input line 5993.
 
-[139] [140
+[139
+
+] [140
 
 ]
 Appendix A.
 
 Package hyperref Warning: Difference (3) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 5221.
+(hyperref)                than one, level fixed on input line 6009.
 
 
-Package hyperref Warning: Suppressing empty link on input line 5240.
+Package hyperref Warning: Suppressing empty link on input line 6028.
 
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 5240.
+(hyperref)                than one, level fixed on input line 6028.
 
 [141] [142]
 Appendix B.
 [143
 
 ]
-Overfull \hbox (295.02336pt too wide) in paragraph at lines 5309--5311
+Overfull \hbox (295.02336pt too wide) in paragraph at lines 6097--6099
  []\T1/lmtt/m/n/12 http://10.10.100.234/EvoMining/cgi-bin/color_tree.pl?9&&/var
 /www/html/EvoMining/exchange/CyanosBBH_MiBIG_DB.faa_CYANOS 
  []
@@ -2198,34 +2849,31 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [166]
-
-Package longtable Warning: Table widths have changed. Rerun LaTeX.
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 6534.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 7331.
 [167]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 6534.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 7331.
 (./tesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 6534.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 6534.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 7331.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 7331.
 
 Package rerunfilecheck Info: File `tesis.out' has not changed.
-(rerunfilecheck)             Checksum: 5F2F532CEF317C48A5F993DB01269A25;14305.
+(rerunfilecheck)             Checksum: CFC2FF1444BC0C8D5927EAEC2E68D1AC;14377.
 
 LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 6534.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 7331.
  ) 
 Here is how much of TeX's memory you used:
- 12170 strings out of 493304
- 195101 string characters out of 6139870
- 359952 words of memory out of 5000000
- 14497 multiletter control sequences out of 15000+600000
- 96328 words of font info for 200 fonts, out of 8000000 for 9000
- 957 hyphenation exceptions out of 8191
- 38i,12n,47p,1715b,476s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 12269 strings out of 493029
+ 195862 string characters out of 6136233
+ 364443 words of memory out of 5000000
+ 14668 multiletter control sequences out of 15000+600000
+ 96171 words of font info for 201 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 39i,12n,49p,1715b,476s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
 ips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/shar
 e/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ma
@@ -2241,10 +2889,10 @@ f/fonts/type1/public/lm/lmro12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy
 10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/font
 s/type1/public/lm/lmtk10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb
 ></usr/share/texmf/fonts/type1/public/lm/lmtti10.pfb>
-Output written on tesis.pdf (189 pages, 28501972 bytes).
+Output written on tesis.pdf (189 pages, 28510152 bytes).
 PDF statistics:
- 50206 PDF objects out of 55141 (max. 8388607)
- 33620 compressed objects within 337 object streams
- 565 named destinations out of 1000 (max. 500000)
+ 50216 PDF objects out of 55141 (max. 8388607)
+ 33630 compressed objects within 337 object streams
+ 567 named destinations out of 1000 (max. 500000)
  15704 words of extra memory for PDF output out of 17280 (max. 10000000)
 
