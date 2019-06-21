@@ -3,6 +3,7 @@ header-includes:
 - \usepackage{graphicx,latexsym}
 - \usepackage{amssymb,amsthm,amsmath}
 - \usepackage{longtable,booktabs,setspace}
+- \usepackage{lscape} 
 output:
   pdf_document: default
   word_document: default
@@ -58,19 +59,40 @@ PriA es una familia de enzimas de Actinobacteria homóloga a la familia HisA en 
 
 Además, en Actinobacteria PriA ha mostrado un gradiente funcional. Esta variación divide a la familia en varias subfamilias según su capacidad catalíticas en los sustratos ProFAR y PRA. En la `r ref("cineticos", type = "table")` se muestra la constantes catalíticas de PriA estimadas en diferentes organismos para estos dos sustratos. Estos datos ejemplifican las subfamilias de PriA, en la tabla se encuentran ejemplos de miembros de PriB, la subfamilia ubicada en el género _Streptomyces_ con baja capacidad de catálisis para la función TrpF. Varios _Streptomyces_ con un ortólogo en la familia PriB, se diferencian de otras Actinobacterias en que contienen en su genoma un gen _trpF_ localizado fuera del contexto genómico inmediato de los operones de histidina y triptofano. Otra subfamilia de PriA es subHisA, que ha perdido totalmente la actividd TrpF, existen miembros de subHisA en _Corynebacteria_ y en _Actinomyces_. Finalmente en Actinomyces encontramos la subfamilia _subTrpF_ que ha perdido la actividad de HisA.
 
-  
-Table: Datos Cinéticos de subfamilias de PriA \label{tab:cineticos}   
-\tiny  
-|Fuente|Familia|HisA $in\hspace{.1cm}vivo$|TrpF $in\hspace{.1cm}vivo$|$K_{cat}^{\tiny{ProFAR}}$  $\tiny{[M^{-1}s^{-1}]}$|$K_m^{\tiny{ProFAR}}$  $\tiny{[\mu M]}$|HisA  $\frac{K_{cat}}{K_m}$ |$K_{cat}^{\tiny{PRA}}$   $\tiny{[M^{-1}s^{-1}]}$ |$K_m^{\tiny{PRA}}$ $\tiny{[\mu M]}$|TrpF $\frac{Kcat}{Km}$ |Referencia|   
+\clearpage    
+\begin{landscape}  
+
+$$
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{ l c r l l l l l l l l}
+\hline \\ [-1.5ex]
+Fuente  &Familia & HisA $in\hspace{.1cm}vivo$ &TrpF $in\hspace{.1cm}vivo$ & $K_{cat}^{ProFAR}[M^{-1}s^{-1}]$ & $K_m^{ProFAR}[\mu M]$& $\frac{K_{cat}}{K_m} ProFAR$ & $K_{cat}^{PRA}[M^{-1}s^{-1}]$ & $K_m^{PRA}[\mu M]$  &  $\frac{Kcat}{Km} PRA $  &Referencia  \\ [1ex]
+\hline \\ [-1.5ex]
+
+Afer	  &HisA   & $1.1\pm0.2$                 & $	0.05\pm0.001	$ & 0.045	              &-10.1	&-12.3   	 & Henn \cite{@henn-sax_two_2002}\\ [1ex]
+Ecoli	  &HisA   &$	1.6	        $             & $ 	  	4.9   $  &3.1                   &-9.9   &-16	     &Henn-Sax et al. (2002)\\ [1ex]
+\hline \\ [-1.5ex]
+\hline
+\end{tabular}}
+%}
+\label{tab:cineticos}
+$$   
+\end{landscape}
+
+<!---Escherichia  coli &HisA&-&-& 1.6& 4.9& 3.1&-&-& 0&  Henn [@henn-sax_two_2002]  \\ [1ex]--->
+
+
+  Table: Datos Cinéticos de subfamilias de PriA \label{tab:cineticos2}   
+
+| Fuente| Familia| HisA $in\hspace{.1cm}vivo$| | | | | | | | Referencia|   
 |----------------------------|--------|--------|--------|------------|-----------|---------|----------|----------|------|---------------------|  
-| _Escherichia  coli_  |HisA|-|-|1.6|4.9|3.1|-|-|0|Henn [@henn-sax_two_2002]|  
-| _Escherichia  coli_  |TrpF|-|-|-|-|0|12.2|34.5|2.82|Sterner [Sterner @sterner_phosphoribosyl_1996]|  
-| _Mycobacterium  smegmatis_  |PriA|*|*|2.6 ± 0.5 |0.85 ± 0.04 |0.33|7.9 ± 2.4| 3.1 ± 0.43 |0.39|Verduzco [@verduzco-castro_co-occurrence_2016]| 
+| _Escherichia  coli_  |HisA|-|-| 1.6| 4.9| 3.1|-|-| 0|  Henn [@henn-sax_two_2002]|  
+| _Escherichia  coli_  |TrpF|-|-|-|-|0| 12.2| 34.5| 2.82| Sterner [Sterner @sterner_phosphoribosyl_1996]|  
+| _Mycobacterium  smegmatis_  |PriA|*|*| 2.6 ± 0.5 | 0.85±0.04 |0.33| 7.9 ± 2.4| 3.1± 0.43  |0.39| Verduzco [@verduzco-castro_co-occurrence_2016]| 
 | _Mycobacterium tuberculosis_  |PriA|-|-|19|0.23|12|21|3.6|0.17| Due [@due_bisubstrate_2011]|  
-| _Streptomyces globisporus_  |PriA|*|*|4.2 ± 0.8| 0.74 ± 0.03 |0.18|11 ± 1.0 |3.8 ± 0.2 |0.34|Verduzco [@verduzco-castro_co-occurrence_2016]|  
-| _Streptomyces coelicolor_ |PriA|-|-|3.6 ± 0.7 |1.3 ± 0.2 |0.4|5.0 ± 0.08 |3.4 ± 0.09 |0.7|Noda [@noda-garcia_identification_2010]|  
-| _Streptomyces coelicolor_ |PriA|-|-|3.6 ± 0.7 |1.3 ± 0.2 |0.4|5.0 ± 0.08 |3.4 ± 0.09 |0.7|Noda [@noda-garcia_identification_2010]|  
-| _Streptomyces ipomoeae_  |PriB|*|*|3.8 ± 0.2 |0.82 ± 0.02 |0.21|60.8 ± 1.1| 8.25 ± 0.4|0.14|Verduzco [@verduzco-castro_co-occurrence_2016]|  
+| _Streptomyces globisporus_  |PriA|*|*| 4.2 ± 0.8| 0.74 ± 0.03 |0.18| 11 ± 1.0 | 3.8 ± 0.2 |0.34| Verduzco [@verduzco-castro_co-occurrence_2016]|  
+|  _Streptomyces coelicolor_ |PriA|-|-| 3.6 ± 0.7 | 1.3 ± 0.2 |0.4| 5.0 ± 0.08 | 3.4 ± 0.09 |0.7| Noda [@noda-garcia_identification_2010]|  
+| _Streptomyces ipomoeae_  |PriB|*|*| 3.8 ± 0.2 | 0.82 ± 0.02 |0.21| 60.8 ± 1.1|  8.25 ± 0.4|0.14| Verduzco [@verduzco-castro_co-occurrence_2016]|  
 | _Streptomyces_ Mg1  |PriB|*|*| 13.2 ± 3.4 |0.92 ± 0.19 |69|129.6 ± 34 |0.29 ± 0.04|0.0022|Verduzco [@verduzco-castro_co-occurrence_2016]|  
 | _Streptomyces_ sp. C|PriB|*|*|11.4 ± 3.4 |2.53 ± 0.74 |0.22|149. 9 ± 29| 1.4 ± 0.12 |9|Verduzco [@verduzco-castro_co-occurrence_2016]|  
 | _Streptomyces sviceus_|PriB|*|*|3.9 ± 0.89 |0.69 ± 0.04 |0.18|24.5 ± 4.0| 1.6 ± 0.29 |67|Verduzco [@verduzco-castro_co-occurrence_2016]|  
@@ -148,16 +170,32 @@ label(path = "chapter4/PriAEvoMining.pdf",
       type = "figure")
 ```
 
-Todos los reclutamientos (marcados en azul en el árbol) que tuvieron estas expansiones en estos linajes genómicos están listados en la tabla `r ref("reclutamientos", type = "table")`.  Entre ellos se encuentran dos toxinas de Cyanobacteria[@moustafa_origin_2009], un lipopolisacárido producido por una Proteobacteria y un BGC productor de cloro pentostatina producido en Actinobacteria [@gao_biosynthesis_2017]. La pentostatina es un atibiótico nucleosídico derivado de adenosina, cuyo cluster es llamado _ada_ . La PriA del cluster _ada_ es llamada _adaK_ y sí parece participar del cluster, ya que el sustrato muestra una isomerización sobre un sustrato con una anillo de 5 carbonos, dos OH, un oxígeno y un grupo fosfato. Esta isomerización es muy parecida a la que realiza PriA sobre ProFAR y PRA. Así pues habríamos encontrado una nueva promiscuidad de PriA. Es relevante mencionar que la mutante de PriA no suprime la producción de este antibiótico en _Actinomadura_ sp. ATCC 39365, por lo que los autores especulan que otra enzima podría estar realizando la isomerización. _Actinomadura_ no posee una copia de TrpF que sería el candidato inmediato.          
+Todos los reclutamientos (marcados en azul en el árbol) que tuvieron estas expansiones en estos linajes genómicos están listados en la tabla `r ref("reclutamientos", type = "table")`.  Entre ellos se encuentran dos toxinas de Cyanobacteria[@moustafa_origin_2009], un lipopolisacárido producido por una Proteobacteria y un BGC productor de cloro pentostatina producido en Actinobacteria [@gao_biosynthesis_2017]. 
+
 
  Table: Reclutamientos de expansiones de PriA en MIBiG \label{tab:reclutamientos}     
-   
+  
 |Compuesto|Actinobacteria|Cyanobacteria|Pseudomonas|Archaea|BGC origen|Clase|   
 |---------|:------------:|:-----------:|:---------:|-------|----------|-----|   
 | [saxitoxin](http://mibig.secondarymetabolites.org/repository/BGC0000188/index.html#cluster-1)|x|x|x|x| Cyanobacteria |Alcaloide|
 | [lipopolisacárido](http://mibig.secondarymetabolites.org/repository/BGC0000775/index.html#cluster-1)	|x  	|x  	|  x	|  x	|Proteobacteria	| Sacarido |  
 | [toxin](http://mibig.secondarymetabolites.org/repository/BGC0000928/index.html#cluster-1)|x|x|x|x| Cyanobacteria|Otros |  
 | [ada ](http://mibig.secondarymetabolites.org/repository/BGC0001484/index.html#cluster-1)|x|x|x| x| Actinobacteria 	| Otros  	|  
+  
+
+
+La pentostatina es un atibiótico nucleosídico derivado de adenosina, cuyo cluster es llamado _ada_ . La PriA del cluster _ada_ es llamada _adaK_ y sí parece participar del cluster, ya que muestra una isomerización sobre un sustrato similar a los nativos de PriA, `r ref(label = "ada", type = "figure")`, con un anillo de 5 carbonos, dos OH, un oxígeno y un grupo fosfato . Esta isomerización es muy parecida a la que realiza PriA sobre ProFAR y PRA. Esta PriA no es una copia extra, sino la copia única de este organismo. Este contexto genómico no se encuentra conservado en las copias vecinas en el árbol. Es relevante mencionar que la mutante de PriA no suprime la producción de este antibiótico en _Actinomadura_ sp. ATCC 39365, por lo que los autores especulan que otra enzima podría estar realizando la isomerización redundantemente. _Actinomadura_ no posee una copia de TrpF que sería el candidato inmediato.       
+ 
+ 
+```{r ada, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter4/ada.png", 
+      caption = "PriA participa en la síntesis del antibiótico {ada} en {Actinomadura} ",
+      scale=.6,
+      label = "ada", 
+      cap.size = "footnotesize",
+      alt.cap="PriA participa en la síntesis del antibiótico {ada} en {Actinomadura}. Los sustratos nativos de Pria, ProFAR y PRA son isomerizados de manera muy similar a un paso en la ruta de síntesis de {ada} ",
+      type = "figure")
+```
 
 
 Finalmente, los árboles que se produjeron por EvoMining están disponibles para exploración interactiva en Microreact en los links de la `r ref("reclutamientos", type = "arboles")`:  
@@ -223,7 +261,7 @@ Al analizar los cambios sufridos en cada actividad en cada paso de cada ruta se 
 ```{r PriARutasPRA, results = "asis",message=FALSE,echo=FALSE}
 label(path = "chapter4/LianetFiguras/SolocirculosPRA_PRO_RUTAS_10_1_r002.png", 
       caption = "Positive increments on PRA",
-      scale=.6,
+      scale=.8,
       label = "PRARutas", 
       cap.size = "footnotesize",
       alt.cap="",
@@ -238,7 +276,7 @@ El contenedor docker implementa EVcouplings python framework [@hopf_evcouplings_
 
 EVcouplings fue aplicado a PriA de Streptomyces coelicolor con identificador de Uniprot HIS4_STRCO. Las secuencias para las alineaciones se recuperaron automáticamente de Uniprot, otros parámetros se dejaron con la configuración inicial del archivo de configuración. Como resultado se modeló la estructura de PriA con los acoplamientos de sus aminoácidos. Una comparación con una estructura cristalográfica es mostrada en la `r ref(label = "CouplingsFoldingPriA", type = "figure")`
 
- La estructura reconstruida es parecida, pero para obtener mejor definición es posible que se deba refinar la selección de las secuencias del alineamiento, diferenciando entre secuencias PriA, subHisA, PriB y subTrpF.  
+ La estructura reconstruida es parecida, pero para obtener mejor definición es posible que se deba refinar la selección de las secuencias del alineamiento, diferenciando entre secuencias conocidas de PriA, subHisA, PriB y subTrpF.  
 ```{r PriA CouplingFoldings, results = "asis",message=FALSE,echo=FALSE}
 label(path = "chapter4/Couplings/PriACouplingFoldings.png", 
       caption = "Superposición de estructura de PriA generado por Folding con la estructura cristalográfica", 
@@ -279,7 +317,7 @@ label(path = "chapter4/Couplings/PriAMutations.pdf",
  
 
 ## Afinidad de enzimas selectas por sustratos químicamente parecidos a PRA y PROFAR  
-Además de los sustratos conocidos ProFAR y PRA en los que PriA es capaz de realizar una isomerización, es posible que PriA pueda ser promiscua en otros sustratos. De hecho como se vio en la sección de EvoMining de este capítulo, PriA participa en la síntesis del antibiótico pentostaina. Tomando este ejmplo como inspiración, se colectaron en la literatura sustratos parecidos químicamente a ProFAR y PRA. En esta sección se buscará mostrar sustratos parecidos a los nativos con la idea de posteriormente probarlo en copias seleecionadas de PriA provenientes de diversos organismos. 
+Además de los sustratos conocidos ProFAR y PRA en los que PriA es capaz de realizar una isomerización, es posible que PriA pueda ser promiscua en otros sustratos tal y como ya se mencionó para el antibiótico _ada_ en l. De hecho como se vio en la sección de EvoMining de este capítulo, PriA participa en la síntesis del antibiótico pentostaina. Tomando este ejmplo como inspiración, se colectaron en la literatura sustratos parecidos químicamente a ProFAR y PRA. En esta sección se buscará mostrar sustratos parecidos a los nativos con la idea de posteriormente probarlo en copias seleecionadas de PriA provenientes de diversos organismos. 
 
 
 ```{r Eschema1, results = "asis",message=FALSE,echo=FALSE,warning=FALSE}
@@ -554,8 +592,10 @@ Aodo	    &SubTrpF&		-	           &-	               &-                     &     
 \label{table:name}
 $$ 
   
-  PriA activity on S7  (PROFAR)
-$$ \centering 
+    PriA activity on S7  (PROFAR)  
+    
+$$ 
+\centering 
 \begin{tabular}{ l c r l l l l l}
 \hline \\ [-1.5ex]
 organism  &Family  &  $K_M$ & $k_{cat}$& $\frac{k{cat}}{K_M}$ &Pre MD &Pos MD &Reference  \\ [1ex]

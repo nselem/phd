@@ -34,6 +34,7 @@
 
 % Added by CII
 \usepackage{ifxetex,ifluatex}
+\usepackage{lscape} 
 \usepackage{fixltx2e} % provides \textsubscript
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
   \usepackage[T1]{fontenc}

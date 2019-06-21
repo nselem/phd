@@ -2294,13 +2294,13 @@ starts here.
   \end{figure}
   
   No todos los productos naturales están dentro de los BGCs clásicos.
-  Dentro de MIBiG hay 231 BGC (12.7\%) clasificados como ``otros'', que de
-  hecho carecen de PKS, NRPS o cualquiera de las otras clases de enzimas
-  características del metabolismo especializado. Como ejemplo se muestra
-  la \autoref{fig:other} donde se aprecia que un porcentaje de los BGC
-  reportados tanto en Actinobacteria como en Cyanobacteria pertenece al
-  grupo ``otros''. La ausencia de enzimas biosintéticas conocidas hace que
-  estos BGC sean ``atípicos'', difíciles de identificar. Los BGC no
+  Dentro de MIBiG hay 231 BGC (\(12.7\%\)) clasificados como ``otros'',
+  que de hecho carecen de PKS, NRPS o cualquiera de las otras clases de
+  enzimas características del metabolismo especializado. Como ejemplo se
+  muestra la \autoref{fig:other} donde se aprecia que un porcentaje de los
+  BGC reportados tanto en Actinobacteria como en Cyanobacteria pertenece
+  al grupo ``otros''. La ausencia de enzimas biosintéticas conocidas hace
+  que estos BGC sean ``atípicos'', difíciles de identificar. Los BGC no
   clasificados suelen pasar desapercibidos, porque no hay conocimiento
   previo de ellos que permita reconocerlos. Por ello EvoMining busca
   implementar una estrategia de búsqueda de divergencia del metabolismo
@@ -2312,17 +2312,18 @@ starts here.
   Localizar alguna enzima de un cluster no clasificado es un camino para
   identificar el BGC. Como ya se mostró en EvoMining 1.0 encontramos una
   enzima que XXX Un ejemplo de este escenario es el BGC de scytonemin
-  {[}\protect\hyperlink{ref-garciapichel_evidence_1992}{142}{]}, protector
+  {[}\protect\hyperlink{ref-garciapichel_evidence_1992}{142}{]},protector
   solar cianobacteriano, que incluye ScyB y ScyA como las dos enzimas
   biosintéticas clave que sostienen la síntesis de este metabolito
   especializado
   {[}\protect\hyperlink{ref-balskus_investigating_2008}{143}{]}.
+  
   Curiosamente, ScyB y ScyA son homólogos distantes de la glutamato
   deshidrogenasa (GDH) y la acetolactato sintasa (ALS), respectivamente,
   que participan en la desaminación oxidativa reversible del glutamato a
-  \(\alpha\)-ketoglutarato y amoníaco
-  {[}\protect\hyperlink{ref-engel_glutamate_2014}{145}{]}{]} y en la
-  síntesis de cadena ramificada aminoácidos
+  \(\alpha-\)ketoglutarato y amoníaco
+  {[}\protect\hyperlink{ref-engel_glutamate_2014}{145}{]} y en la síntesis
+  de cadena ramificada aminoácidos
   {[}\protect\hyperlink{ref-liu_acetohydroxyacid_2016}{146}{]},
   respectivamente.
   
@@ -3932,141 +3933,860 @@ starts here.
   encontramos la subfamilia \emph{subTrpF} que ha perdido la actividad de
   HisA.
   
-  Table: Datos Cinéticos de subfamilias de PriA \label{tab:cineticos}\\
-  \tiny   \textbar{}Fuente\textbar{}Familia\textbar{}HisA
-  \(in\hspace{.1cm}vivo\)\textbar{}TrpF
-  \(in\hspace{.1cm}vivo\)\textbar{}\(K_{cat}^{\tiny{ProFAR}}\)
-  \(\tiny{[M^{-1}s^{-1}]}\)\textbar{}\(K_m^{\tiny{ProFAR}}\)
-  \(\tiny{[\mu M]}\)\textbar{}HisA \(\frac{K_{cat}}{K_m}\)
-  \textbar{}\(K_{cat}^{\tiny{PRA}}\) \(\tiny{[M^{-1}s^{-1}]}\)
-  \textbar{}\(K_m^{\tiny{PRA}}\) \(\tiny{[\mu M]}\)\textbar{}TrpF
-  \(\frac{Kcat}{Km}\) \textbar{}Referencia\textbar{}\\
-  \textbar{}----------------------------\textbar{}--------\textbar{}--------\textbar{}--------\textbar{}------------\textbar{}-----------\textbar{}---------\textbar{}----------\textbar{}----------\textbar{}------\textbar{}---------------------\textbar{}\\
-  \textbar{} \emph{Escherichia coli}
-  \textbar{}HisA\textbar{}-\textbar{}-\textbar{}1.6\textbar{}4.9\textbar{}3.1\textbar{}-\textbar{}-\textbar{}0\textbar{}Henn
-  {[}\protect\hyperlink{ref-henn-sax_two_2002}{166}{]}\textbar{}\\
-  \textbar{} \emph{Escherichia coli}
-  \textbar{}TrpF\textbar{}-\textbar{}-\textbar{}-\textbar{}-\textbar{}0\textbar{}12.2\textbar{}34.5\textbar{}2.82\textbar{}Sterner
-  {[}\protect\hyperlink{ref-sterner_phosphoribosyl_1996}{167}{]}\textbar{}\\
-  \textbar{} \emph{Mycobacterium smegmatis}
-  \textbar{}PriA\textbar{}\emph{\textbar{}}\textbar{}2.6 ± 0.5
-  \textbar{}0.85 ± 0.04 \textbar{}0.33\textbar{}7.9 ± 2.4\textbar{} 3.1 ±
-  0.43 \textbar{}0.39\textbar{}Verduzco
-  {[}\protect\hyperlink{ref-verduzco-castro_co-occurrence_2016}{67}{]}\textbar{}
-  \textbar{} \emph{Mycobacterium tuberculosis}
-  \textbar{}PriA\textbar{}-\textbar{}-\textbar{}19\textbar{}0.23\textbar{}12\textbar{}21\textbar{}3.6\textbar{}0.17\textbar{}
-  Due {[}\protect\hyperlink{ref-due_bisubstrate_2011}{168}{]}\textbar{}\\
-  \textbar{} \emph{Streptomyces globisporus}
-  \textbar{}PriA\textbar{}\emph{\textbar{}}\textbar{}4.2 ± 0.8\textbar{}
-  0.74 ± 0.03 \textbar{}0.18\textbar{}11 ± 1.0 \textbar{}3.8 ± 0.2
-  \textbar{}0.34\textbar{}Verduzco
-  {[}\protect\hyperlink{ref-verduzco-castro_co-occurrence_2016}{67}{]}\textbar{}\\
-  \textbar{} \emph{Streptomyces coelicolor}
-  \textbar{}PriA\textbar{}-\textbar{}-\textbar{}3.6 ± 0.7 \textbar{}1.3 ±
-  0.2 \textbar{}0.4\textbar{}5.0 ± 0.08 \textbar{}3.4 ± 0.09
-  \textbar{}0.7\textbar{}Noda
-  {[}\protect\hyperlink{ref-noda-garcia_identification_2010}{169}{]}\textbar{}\\
-  \textbar{} \emph{Streptomyces coelicolor}
-  \textbar{}PriA\textbar{}-\textbar{}-\textbar{}3.6 ± 0.7 \textbar{}1.3 ±
-  0.2 \textbar{}0.4\textbar{}5.0 ± 0.08 \textbar{}3.4 ± 0.09
-  \textbar{}0.7\textbar{}Noda
-  {[}\protect\hyperlink{ref-noda-garcia_identification_2010}{169}{]}\textbar{}\\
-  \textbar{} \emph{Streptomyces ipomoeae}
-  \textbar{}PriB\textbar{}\emph{\textbar{}}\textbar{}3.8 ± 0.2
-  \textbar{}0.82 ± 0.02 \textbar{}0.21\textbar{}60.8 ± 1.1\textbar{} 8.25
-  ± 0.4\textbar{}0.14\textbar{}Verduzco
-  {[}\protect\hyperlink{ref-verduzco-castro_co-occurrence_2016}{67}{]}\textbar{}\\
-  \textbar{} \emph{Streptomyces} Mg1
-  \textbar{}PriB\textbar{}\emph{\textbar{}}\textbar{} 13.2 ± 3.4
-  \textbar{}0.92 ± 0.19 \textbar{}69\textbar{}129.6 ± 34 \textbar{}0.29 ±
-  0.04\textbar{}0.0022\textbar{}Verduzco
-  {[}\protect\hyperlink{ref-verduzco-castro_co-occurrence_2016}{67}{]}\textbar{}\\
-  \textbar{} \emph{Streptomyces} sp.
-  C\textbar{}PriB\textbar{}\emph{\textbar{}}\textbar{}11.4 ± 3.4
-  \textbar{}2.53 ± 0.74 \textbar{}0.22\textbar{}149. 9 ± 29\textbar{} 1.4
-  ± 0.12 \textbar{}9\textbar{}Verduzco
-  {[}\protect\hyperlink{ref-verduzco-castro_co-occurrence_2016}{67}{]}\textbar{}\\
-  \textbar{} \emph{Streptomyces
-  sviceus}\textbar{}PriB\textbar{}\emph{\textbar{}}\textbar{}3.9 ± 0.89
-  \textbar{}0.69 ± 0.04 \textbar{}0.18\textbar{}24.5 ± 4.0\textbar{} 1.6 ±
-  0.29 \textbar{}67\textbar{}Verduzco
-  {[}\protect\hyperlink{ref-verduzco-castro_co-occurrence_2016}{67}{]}\textbar{}\\
-  \textbar{} \emph{Corynebacterium
-  diphteriae}\textbar{}subHisA\textbar{}-\textbar{}-\textbar{}4.4 ±
-  0.5\textbar{}2.6 ±
-  0.3\textbar{}0.59\textbar{}\textbar{}\textbar{}0\textbar{}Noda
-  {[}\protect\hyperlink{ref-noda-garcia_evolution_2013}{41}{]}\textbar{}\\
-  \textbar{} \emph{Corynebacterium
-  jeikeium}\textbar{}PriA\textbar{}-\textbar{}-\textbar{}2.3 ±
-  0.2\textbar{}0.9 ± 0.08\textbar{}0.39\textbar{}5.1 ± 1.0\textbar{}1.6 ±
-  0.16\textbar{}0.31\textbar{}Noda
-  {[}\protect\hyperlink{ref-noda-garcia_evolution_2013}{41}{]}\textbar{}\\
-  \textbar{} \emph{Corynebacterium
-  striatum}\textbar{}subHisA\textbar{}-\textbar{}-\textbar{}6.9 ±
-  0.7\textbar{}2.1 ±
-  0.5\textbar{}0.3\textbar{}\textbar{}\textbar{}0\textbar{}Noda
-  {[}\protect\hyperlink{ref-noda-garcia_evolution_2013}{41}{]}\textbar{}\\
-  \textbar{} \emph{Corynebacterium diphteriae}
-  L48I-F50L-T80S\textbar{}subHisA\textbar{}\textbar{}\textbar{}4.5 ±
-  1.5\textbar{}0.6 ± 0.08\textbar{}0.13\textbar{}133 ± 10\textbar{}0.05 ±
-  0.01\textbar{}0.0004\textbar{}Noda
-  {[}\protect\hyperlink{ref-noda-garcia_evolution_2013}{41}{]}\textbar{}\\
-  \textbar{} \emph{Actinomyces urogenitalis} DSM
-  15434\textbar{}PriB\textbar{}\emph{\textbar{}}\textbar{}2.1 ± 0.5
-  \textbar{}1.8 ± 0.2 \textbar{}0.9\textbar{}26.3 ± 6.3\textbar{} 0.37 ±
-  0.09 \textbar{}14\textbar{}Verduzco
-  {[}\protect\hyperlink{ref-verduzco-castro_co-occurrence_2016}{67}{]}\textbar{}\\
-  \textbar{} \emph{Actinomyces odontolyticus} ATCC
-  17982\textbar{}subTrpF\textbar{}\textbar{}\emph{\textbar{}-\textbar{}-\textbar{}0\textbar{}\textbar{}\textbar{}0.02\textbar{}Juarez
-  {[}\protect\hyperlink{ref-juarez-vazquez_evolution_2017}{70}{]}\textbar{}\\
-  \textbar{} \emph{Actinomyces oris} K20
-  BABV01\textbar{}PriA\textbar{}\textbar{}\textbar{}\textbar{}\textbar{}0.02\textbar{}\textbar{}\textbar{}0.01\textbar{}Juarez
-  {[}\protect\hyperlink{ref-juarez-vazquez_evolution_2017}{70}{]}\textbar{}\\
-  \textbar{} \emph{Actinomyces} sp. oral taxon 171 str.
-  F0337\textbar{}PriA\textbar{}\textbar{}\textbar{}\textbar{}\textbar{}0.01\textbar{}\textbar{}\textbar{}4\textbar{}Juarez
-  {[}\protect\hyperlink{ref-juarez-vazquez_evolution_2017}{70}{]}\textbar{}\\
-  \textbar{} \emph{Actinomyces} sp. oral taxon 848 str.
-  F0332\textbar{}subTrpF\textbar{}\textbar{}}\textbar{}-\textbar{}-\textbar{}0\textbar{}\textbar{}\textbar{}0.0001\textbar{}Juarez
-  {[}\protect\hyperlink{ref-juarez-vazquez_evolution_2017}{70}{]}\textbar{}\\
-  \textbar{} \emph{Actinomyces urogenitalis} DSM
-  15434\textbar{}PriA\textbar{}\textbar{}\textbar{}\textbar{}\textbar{}0.01\textbar{}\textbar{}\textbar{}0.02\textbar{}Juarez
-  {[}\protect\hyperlink{ref-juarez-vazquez_evolution_2017}{70}{]}\textbar{}\\
-  \textbar{} \emph{Bifidobacterium adolescentis}
-  L2-32\textbar{}PriA\textbar{}\emph{\textbar{}}\textbar{}\textbar{}\textbar{}0.2\textbar{}\textbar{}\textbar{}0.1\textbar{}Juarez
-  {[}\protect\hyperlink{ref-juarez-vazquez_evolution_2017}{70}{]}\textbar{}\\
-  \textbar{} \emph{Bifidobacterium gallicum} DSM 20093
-  \textbar{}PriA\textbar{}\emph{\textbar{}}\textbar{}\textbar{}\textbar{}0.1\textbar{}\textbar{}\textbar{}0.04\textbar{}Juarez
-  {[}\protect\hyperlink{ref-juarez-vazquez_evolution_2017}{70}{]}\textbar{}\\
-  \textbar{} \emph{Bifidobacterium longum} ATCC
-  15697\textbar{}PriA\textbar{}\emph{\textbar{}}\textbar{}\textbar{}\textbar{}0.1\textbar{}\textbar{}\textbar{}0.3\textbar{}Juarez
-  {[}\protect\hyperlink{ref-juarez-vazquez_evolution_2017}{70}{]}\textbar{}\\
-  \textbar{}Camera
-  CAM1\textbar{}Metagenoma\textbar{}\textbar{}\textbar{}1.7 ±
-  0.1\textbar{}0.3 ± 0.03\textbar{}0.2\textbar{}40 ± 7\textbar{}3.5 ±
-  0.04\textbar{}0.09\textbar{}Noda
-  {[}\protect\hyperlink{ref-noda-garcia_insights_2015}{39}{]}\textbar{}\\
-  \textbar{}CAM1\_A81G\textbar{}Metagenoma\textbar{}\textbar{}\textbar{}1.7
-  ± 0.2\textbar{}0.1 ± 0.01\textbar{}0.06\textbar{}32.2 ± 1.7\textbar{}1.9
-  ± 0.1\textbar{}0.06\textbar{}Noda
-  {[}\protect\hyperlink{ref-noda-garcia_insights_2015}{39}{]}\textbar{}\\
-  \textbar{}CAM1\_A81S\textbar{}Metagenoma\textbar{}\textbar{}\textbar{}4.0
-  ± 0.9\textbar{}0.2 ± 0.03\textbar{}0.04\textbar{}23.5 ± 6.5\textbar{}0.5
-  ± 0.1\textbar{}0.02\textbar{}Noda
-  {[}\protect\hyperlink{ref-noda-garcia_insights_2015}{39}{]}\textbar{}\\
-  \textbar{}CAM2\textbar{}Metagenoma\textbar{}\textbar{}\textbar{}n.d.\textbar{}n.d.\textbar{}0\textbar{}n.d.\textbar{}n.d.\textbar{}0\textbar{}Noda
-  {[}\protect\hyperlink{ref-noda-garcia_insights_2015}{39}{]}\textbar{}\\
-  \textbar{}PriA\_Ancestral\textbar{}Ancestral\textbar{}\textbar{}\textbar{}9.4±1.6\textbar{}0.3±0.009\textbar{}0.03\textbar{}4.3±0.4\textbar{}0.6±0.02\textbar{}0.13\textbar{}Verduzco,
-  Noda\emph{\textbar{}\\
-  \textbar{}PriA\_SubHisA\textbar{}Ancestral\textbar{}\textbar{}\textbar{}3.7±1.01\textbar{}0.5±0.03\textbar{}0.1\textbar{}-\textbar{}-\textbar{}0\textbar{}Verduzco,
-  Noda}\textbar{}\\
-  \textbar{}SubHisA\_Ancestral\textbar{}Ancestral\textbar{}\textbar{}\textbar{}6.3±0.7\textbar{}0.15±0.03\textbar{}0.02\textbar{}-\textbar{}-\textbar{}0\textbar{}Verduzco,
-  Noda\emph{\textbar{}\\
-  \textbar{}SubHisA\_PriA\textbar{}Ancestral\textbar{}\textbar{}\textbar{}27.7±3.4\textbar{}0.05±0.005\textbar{}2\textbar{}167.82\textbar{}0.03±0.002\textbar{}0.0001\textbar{}Verduzco,
-  Noda}\textbar{}\\
-  \textbar{}
-  \emph{scabies}\textbar{}\textbar{}0\textbar{}0\textbar{}163.6\textbar{}0.1\textbar{}\textbar{}\textbar{}\textbar{}\textbar{}Verduzco\emph{\textbar{}\\
-  \textbar{}
-  \emph{Avisco}\textbar{}\textbar{}\textbar{}46\textbar{}1.37\textbar{}36\textbar{}3.4\textbar{}\textbar{}\textbar{}\textbar{}Juárez}\textbar{}
+  \clearpage    
+  
+  \begin{landscape}  
+  
+  $$
+  \resizebox{\columnwidth}{!}{%
+  \begin{tabular}{ l c r l l l l l l l l}
+  \hline \\ [-1.5ex]
+  Fuente  &Familia & HisA $in\hspace{.1cm}vivo$ &TrpF $in\hspace{.1cm}vivo$ & $K_{cat}^{ProFAR}[M^{-1}s^{-1}]$ & $K_m^{ProFAR}[\mu M]$& $\frac{K_{cat}}{K_m} ProFAR$ & $K_{cat}^{PRA}[M^{-1}s^{-1}]$ & $K_m^{PRA}[\mu M]$  &  $\frac{Kcat}{Km} PRA $  &Referencia  \\ [1ex]
+  \hline \\ [-1.5ex]
+  
+  Afer      &HisA   & $1.1\pm0.2$                 & $ 0.05\pm0.001    $ & 0.045                 &-10.1    &-12.3       & Henn \cite{@henn-sax_two_2002}\\ [1ex]
+  Ecoli     &HisA   &$    1.6         $             & $       4.9   $  &3.1                   &-9.9   &-16         &Henn-Sax et al. (2002)\\ [1ex]
+  \hline \\ [-1.5ex]
+  \hline
+  \end{tabular}}
+  %}
+  \label{tab:cineticos}
+  $$   
+  \end{landscape}
+  
+  \begin{longtable}[]{@{}lllllllllll@{}}
+  \caption{Datos Cinéticos de subfamilias de PriA
+  \label{tab:cineticos2}}\tabularnewline
+  \toprule
+  \begin{minipage}[b]{0.15\columnwidth}\raggedright\strut
+  Fuente\strut
+  \end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\raggedright\strut
+  Familia\strut
+  \end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\raggedright\strut
+  HisA \(in\hspace{.1cm}vivo\)\strut
+  \end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[b]{0.07\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[b]{0.06\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[b]{0.06\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[b]{0.06\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[b]{0.04\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[b]{0.11\columnwidth}\raggedright\strut
+  Referencia\strut
+  \end{minipage}\tabularnewline
+  \midrule
+  \endfirsthead
+  \toprule
+  \begin{minipage}[b]{0.15\columnwidth}\raggedright\strut
+  Fuente\strut
+  \end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\raggedright\strut
+  Familia\strut
+  \end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\raggedright\strut
+  HisA \(in\hspace{.1cm}vivo\)\strut
+  \end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[b]{0.07\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[b]{0.06\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[b]{0.06\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[b]{0.06\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[b]{0.04\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[b]{0.11\columnwidth}\raggedright\strut
+  Referencia\strut
+  \end{minipage}\tabularnewline
+  \midrule
+  \endhead
+  \begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
+  \emph{Escherichia coli}\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  HisA\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  -\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  -\strut
+  \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
+  1.6\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  4.9\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  3.1\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  -\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  -\strut
+  \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
+  0\strut
+  \end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
+  Henn {[}\protect\hyperlink{ref-henn-sax_two_2002}{166}{]}\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
+  \emph{Escherichia coli}\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  TrpF\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  -\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  -\strut
+  \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
+  -\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  -\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  0\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  12.2\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  34.5\strut
+  \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
+  2.82\strut
+  \end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
+  Sterner
+  {[}\protect\hyperlink{ref-sterner_phosphoribosyl_1996}{167}{]}\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
+  \emph{Mycobacterium smegmatis}\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  PriA\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  *\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  *\strut
+  \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
+  2.6 ± 0.5\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  0.85±0.04\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  0.33\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  7.9 ± 2.4\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  3.1± 0.43\strut
+  \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
+  0.39\strut
+  \end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
+  Verduzco
+  {[}\protect\hyperlink{ref-verduzco-castro_co-occurrence_2016}{67}{]}\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
+  \emph{Mycobacterium tuberculosis}\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  PriA\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  -\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  -\strut
+  \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
+  19\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  0.23\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  12\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  21\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  3.6\strut
+  \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
+  0.17\strut
+  \end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
+  Due {[}\protect\hyperlink{ref-due_bisubstrate_2011}{168}{]}\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
+  \emph{Streptomyces globisporus}\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  PriA\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  *\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  *\strut
+  \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
+  4.2 ± 0.8\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  0.74 ± 0.03\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  0.18\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  11 ± 1.0\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  3.8 ± 0.2\strut
+  \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
+  0.34\strut
+  \end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
+  Verduzco
+  {[}\protect\hyperlink{ref-verduzco-castro_co-occurrence_2016}{67}{]}\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
+  \emph{Streptomyces coelicolor}\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  PriA\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  -\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  -\strut
+  \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
+  3.6 ± 0.7\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  1.3 ± 0.2\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  0.4\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  5.0 ± 0.08\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  3.4 ± 0.09\strut
+  \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
+  0.7\strut
+  \end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
+  Noda
+  {[}\protect\hyperlink{ref-noda-garcia_identification_2010}{169}{]}\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
+  \emph{Streptomyces ipomoeae}\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  PriB\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  *\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  *\strut
+  \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
+  3.8 ± 0.2\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  0.82 ± 0.02\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  0.21\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  60.8 ± 1.1\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  8.25 ± 0.4\strut
+  \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
+  0.14\strut
+  \end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
+  Verduzco
+  {[}\protect\hyperlink{ref-verduzco-castro_co-occurrence_2016}{67}{]}\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
+  \emph{Streptomyces} Mg1\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  PriB\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  *\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  *\strut
+  \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
+  13.2 ± 3.4\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  0.92 ± 0.19\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  69\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  129.6 ± 34\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  0.29 ± 0.04\strut
+  \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
+  0.0022\strut
+  \end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
+  Verduzco
+  {[}\protect\hyperlink{ref-verduzco-castro_co-occurrence_2016}{67}{]}\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
+  \emph{Streptomyces} sp. C\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  PriB\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  *\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  *\strut
+  \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
+  11.4 ± 3.4\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  2.53 ± 0.74\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  0.22\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  149. 9 ± 29\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  1.4 ± 0.12\strut
+  \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
+  9\strut
+  \end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
+  Verduzco
+  {[}\protect\hyperlink{ref-verduzco-castro_co-occurrence_2016}{67}{]}\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
+  \emph{Streptomyces sviceus}\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  PriB\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  *\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  *\strut
+  \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
+  3.9 ± 0.89\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  0.69 ± 0.04\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  0.18\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  24.5 ± 4.0\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  1.6 ± 0.29\strut
+  \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
+  67\strut
+  \end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
+  Verduzco
+  {[}\protect\hyperlink{ref-verduzco-castro_co-occurrence_2016}{67}{]}\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
+  \emph{Corynebacterium diphteriae}\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  subHisA\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  -\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  -\strut
+  \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
+  4.4 ± 0.5\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  2.6 ± 0.3\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  0.59\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
+  0\strut
+  \end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
+  Noda {[}\protect\hyperlink{ref-noda-garcia_evolution_2013}{41}{]}\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
+  \emph{Corynebacterium jeikeium}\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  PriA\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  -\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  -\strut
+  \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
+  2.3 ± 0.2\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  0.9 ± 0.08\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  0.39\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  5.1 ± 1.0\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  1.6 ± 0.16\strut
+  \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
+  0.31\strut
+  \end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
+  Noda {[}\protect\hyperlink{ref-noda-garcia_evolution_2013}{41}{]}\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
+  \emph{Corynebacterium striatum}\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  subHisA\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  -\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  -\strut
+  \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
+  6.9 ± 0.7\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  2.1 ± 0.5\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  0.3\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
+  0\strut
+  \end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
+  Noda {[}\protect\hyperlink{ref-noda-garcia_evolution_2013}{41}{]}\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
+  \emph{Corynebacterium diphteriae} L48I-F50L-T80S\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  subHisA\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
+  4.5 ± 1.5\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  0.6 ± 0.08\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  0.13\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  133 ± 10\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  0.05 ± 0.01\strut
+  \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
+  0.0004\strut
+  \end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
+  Noda {[}\protect\hyperlink{ref-noda-garcia_evolution_2013}{41}{]}\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
+  \emph{Actinomyces urogenitalis} DSM 15434\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  PriB\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  *\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  *\strut
+  \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
+  2.1 ± 0.5\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  1.8 ± 0.2\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  0.9\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  26.3 ± 6.3\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  0.37 ± 0.09\strut
+  \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
+  14\strut
+  \end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
+  Verduzco
+  {[}\protect\hyperlink{ref-verduzco-castro_co-occurrence_2016}{67}{]}\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
+  \emph{Actinomyces odontolyticus} ATCC 17982\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  subTrpF\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  *\strut
+  \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
+  -\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  -\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  0\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
+  0.02\strut
+  \end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
+  Juarez
+  {[}\protect\hyperlink{ref-juarez-vazquez_evolution_2017}{70}{]}\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
+  \emph{Actinomyces oris} K20 BABV01\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  PriA\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  0.02\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
+  0.01\strut
+  \end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
+  Juarez
+  {[}\protect\hyperlink{ref-juarez-vazquez_evolution_2017}{70}{]}\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
+  \emph{Actinomyces} sp. oral taxon 171 str. F0337\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  PriA\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  0.01\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
+  4\strut
+  \end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
+  Juarez
+  {[}\protect\hyperlink{ref-juarez-vazquez_evolution_2017}{70}{]}\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
+  \emph{Actinomyces} sp. oral taxon 848 str. F0332\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  subTrpF\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  *\strut
+  \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
+  -\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  -\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  0\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
+  0.0001\strut
+  \end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
+  Juarez
+  {[}\protect\hyperlink{ref-juarez-vazquez_evolution_2017}{70}{]}\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
+  \emph{Actinomyces urogenitalis} DSM 15434\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  PriA\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  0.01\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
+  0.02\strut
+  \end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
+  Juarez
+  {[}\protect\hyperlink{ref-juarez-vazquez_evolution_2017}{70}{]}\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
+  \emph{Bifidobacterium adolescentis} L2-32\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  PriA\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  *\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  *\strut
+  \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  0.2\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
+  0.1\strut
+  \end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
+  Juarez
+  {[}\protect\hyperlink{ref-juarez-vazquez_evolution_2017}{70}{]}\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
+  \emph{Bifidobacterium gallicum} DSM 20093\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  PriA\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  *\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  *\strut
+  \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  0.1\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
+  0.04\strut
+  \end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
+  Juarez
+  {[}\protect\hyperlink{ref-juarez-vazquez_evolution_2017}{70}{]}\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
+  \emph{Bifidobacterium longum} ATCC 15697\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  PriA\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  *\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  *\strut
+  \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  0.1\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
+  0.3\strut
+  \end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
+  Juarez
+  {[}\protect\hyperlink{ref-juarez-vazquez_evolution_2017}{70}{]}\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
+  Camera CAM1\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  Metagenoma\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
+  1.7 ± 0.1\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  0.3 ± 0.03\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  0.2\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  40 ± 7\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  3.5 ± 0.04\strut
+  \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
+  0.09\strut
+  \end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
+  Noda {[}\protect\hyperlink{ref-noda-garcia_insights_2015}{39}{]}\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
+  CAM1\_A81G\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  Metagenoma\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
+  1.7 ± 0.2\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  0.1 ± 0.01\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  0.06\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  32.2 ± 1.7\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  1.9 ± 0.1\strut
+  \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
+  0.06\strut
+  \end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
+  Noda {[}\protect\hyperlink{ref-noda-garcia_insights_2015}{39}{]}\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
+  CAM1\_A81S\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  Metagenoma\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
+  4.0 ± 0.9\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  0.2 ± 0.03\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  0.04\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  23.5 ± 6.5\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  0.5 ± 0.1\strut
+  \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
+  0.02\strut
+  \end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
+  Noda {[}\protect\hyperlink{ref-noda-garcia_insights_2015}{39}{]}\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
+  CAM2\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  Metagenoma\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
+  n.d.\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  n.d.\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  0\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  n.d.\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  n.d.\strut
+  \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
+  0\strut
+  \end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
+  Noda {[}\protect\hyperlink{ref-noda-garcia_insights_2015}{39}{]}\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
+  PriA\_Ancestral\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  Ancestral\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
+  9.4±1.6\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  0.3±0.009\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  0.03\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  4.3±0.4\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  0.6±0.02\strut
+  \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
+  0.13\strut
+  \end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
+  Verduzco, Noda*\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
+  PriA\_SubHisA\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  Ancestral\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
+  3.7±1.01\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  0.5±0.03\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  0.1\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  -\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  -\strut
+  \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
+  0\strut
+  \end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
+  Verduzco, Noda*\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
+  SubHisA\_Ancestral\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  Ancestral\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
+  6.3±0.7\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  0.15±0.03\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  0.02\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  -\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  -\strut
+  \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
+  0\strut
+  \end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
+  Verduzco, Noda*\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
+  SubHisA\_PriA\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  Ancestral\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
+  27.7±3.4\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  0.05±0.005\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  2\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  167.82\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  0.03±0.002\strut
+  \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
+  0.0001\strut
+  \end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
+  Verduzco, Noda*\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
+  \emph{scabies}\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  0\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  0\strut
+  \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
+  163.6\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  0.1\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
+  Verduzco*\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
+  \emph{Avisco}\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  46\strut
+  \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
+  1.37\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  36\strut
+  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+  3.4\strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
+  \strut
+  \end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
+  Juárez*\strut
+  \end{minipage}\tabularnewline
+  \bottomrule
+  \end{longtable}
   
   \begin{itemize}
   \tightlist
@@ -4194,19 +4914,7 @@ starts here.
   Cyanobacteria{[}\protect\hyperlink{ref-moustafa_origin_2009}{103}{]}, un
   lipopolisacárido producido por una Proteobacteria y un BGC productor de
   cloro pentostatina producido en Actinobacteria
-  {[}\protect\hyperlink{ref-gao_biosynthesis_2017}{170}{]}. La
-  pentostatina es un atibiótico nucleosídico derivado de adenosina, cuyo
-  cluster es llamado \emph{ada} . La PriA del cluster \emph{ada} es
-  llamada \emph{adaK} y sí parece participar del cluster, ya que el
-  sustrato muestra una isomerización sobre un sustrato con una anillo de 5
-  carbonos, dos OH, un oxígeno y un grupo fosfato. Esta isomerización es
-  muy parecida a la que realiza PriA sobre ProFAR y PRA. Así pues
-  habríamos encontrado una nueva promiscuidad de PriA. Es relevante
-  mencionar que la mutante de PriA no suprime la producción de este
-  antibiótico en \emph{Actinomadura} sp. ATCC 39365, por lo que los
-  autores especulan que otra enzima podría estar realizando la
-  isomerización. \emph{Actinomadura} no posee una copia de TrpF que sería
-  el candidato inmediato.
+  {[}\protect\hyperlink{ref-gao_biosynthesis_2017}{170}{]}.
   
   \begin{longtable}[]{@{}lccclll@{}}
   \caption{Reclutamientos de expansiones de PriA en MIBiG
@@ -4231,6 +4939,27 @@ starts here.
   & x & x & x & x & Actinobacteria & Otros\tabularnewline
   \bottomrule
   \end{longtable}
+  
+  La pentostatina es un atibiótico nucleosídico derivado de adenosina,
+  cuyo cluster es llamado \emph{ada} . La PriA del cluster \emph{ada} es
+  llamada \emph{adaK} y sí parece participar del cluster, ya que muestra
+  una isomerización sobre un sustrato similar a los nativos de PriA,
+  \autoref{fig:ada}, con un anillo de 5 carbonos, dos OH, un oxígeno y un
+  grupo fosfato . Esta isomerización es muy parecida a la que realiza PriA
+  sobre ProFAR y PRA. Esta PriA no es una copia extra, sino la copia única
+  de este organismo. Este contexto genómico no se encuentra conservado en
+  las copias vecinas en el árbol. Es relevante mencionar que la mutante de
+  PriA no suprime la producción de este antibiótico en \emph{Actinomadura}
+  sp. ATCC 39365, por lo que los autores especulan que otra enzima podría
+  estar realizando la isomerización redundantemente. \emph{Actinomadura}
+  no posee una copia de TrpF que sería el candidato inmediato.
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.6]{chapter4/ada.png}
+  \caption[PriA participa en la síntesis del antibiótico {ada} en {Actinomadura} ]{\footnotesize{PriA participa en la síntesis del antibiótico {ada} en {Actinomadura}. Los sustratos nativos de Pria, ProFAR y PRA son isomerizados de manera muy similar a un paso en la ruta de síntesis de {ada} }}
+  \label{fig:ada}
+  \end{figure}
   
   Finalmente, los árboles que se produjeron por EvoMining están
   disponibles para exploración interactiva en Microreact en los links de
@@ -4390,7 +5119,7 @@ starts here.
   
   \begin{figure}[h!tbp]
   \centering
-  \includegraphics[angle = 0,scale = 0.6]{chapter4/LianetFiguras/SolocirculosPRA_PRO_RUTAS_10_1_r002.png}
+  \includegraphics[angle = 0,scale = 0.8]{chapter4/LianetFiguras/SolocirculosPRA_PRO_RUTAS_10_1_r002.png}
   \caption[Positive increments on PRA]{\footnotesize{}}
   \label{fig:PRARutas}
   \end{figure}
@@ -4444,8 +5173,8 @@ starts here.
   
   La estructura reconstruida es parecida, pero para obtener mejor
   definición es posible que se deba refinar la selección de las secuencias
-  del alineamiento, diferenciando entre secuencias PriA, subHisA, PriB y
-  subTrpF.
+  del alineamiento, diferenciando entre secuencias conocidas de PriA,
+  subHisA, PriB y subTrpF.
   
   \begin{figure}[h!tbp]
   \centering
@@ -4493,13 +5222,14 @@ starts here.
   
   Además de los sustratos conocidos ProFAR y PRA en los que PriA es capaz
   de realizar una isomerización, es posible que PriA pueda ser promiscua
-  en otros sustratos. De hecho como se vio en la sección de EvoMining de
-  este capítulo, PriA participa en la síntesis del antibiótico
-  pentostaina. Tomando este ejmplo como inspiración, se colectaron en la
-  literatura sustratos parecidos químicamente a ProFAR y PRA. En esta
-  sección se buscará mostrar sustratos parecidos a los nativos con la idea
-  de posteriormente probarlo en copias seleecionadas de PriA provenientes
-  de diversos organismos.
+  en otros sustratos tal y como ya se mencionó para el antibiótico
+  \emph{ada} en l. De hecho como se vio en la sección de EvoMining de este
+  capítulo, PriA participa en la síntesis del antibiótico pentostaina.
+  Tomando este ejmplo como inspiración, se colectaron en la literatura
+  sustratos parecidos químicamente a ProFAR y PRA. En esta sección se
+  buscará mostrar sustratos parecidos a los nativos con la idea de
+  posteriormente probarlo en copias seleecionadas de PriA provenientes de
+  diversos organismos.
   
   \begin{figure}[h!tbp]
   \centering
@@ -4749,7 +5479,11 @@ starts here.
   \label{table:name}
   \]
   
-  PriA activity on S7 (PROFAR) \$\$ \centering 
+  \begin{verbatim}
+  PriA activity on S7  (PROFAR)  
+  \end{verbatim}
+  
+  \$\$ \centering 
   
   \begin{tabular}{ l c r l l l l l}
   \hline \\ [-1.5ex]
@@ -6464,7 +7198,7 @@ starts here.
   \url{https://doi.org/10.1007/s10658-014-0495-5}
   
   \hypertarget{ref-garciapichel_evidence_1992}{}
-  142. Garcia‐Pichel F, Sherry ND, Castenholz RW. Evidence for an
+  142. Garcia Pichel F, Sherry ND, Castenholz RW. Evidence for an
   ultraviolet sunscreen role of the extra cellular pigment scytonemin in
   the terrestrial cyanobacterium Chiorogloeopsis sp. Photochemistry and
   Photobiology {[}Internet{]}. 1992 Jul;56(1):17--23. Available from:
