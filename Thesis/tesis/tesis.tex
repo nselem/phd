@@ -2243,9 +2243,11 @@ starts here.
   de las secuencias en el alineamiento final. Después de esta curación las
   secuencias son concatenadas en una matriz final.
   
-  \chapter{EvoMining}\label{evomining}
+  \chapter{EvoMining como herramienta para identificar el origen y el
+  destino metabólico de familias
+  enzimáticas}\label{evomining-como-herramienta-para-identificar-el-origen-y-el-destino-metabolico-de-familias-enzimaticas}
   
-  \section{Introduction}\label{introduction}
+  \section{Introducción}\label{introduccion-1}
   
   La promiscuidad enzimática puede buscarse en familias envueltas en
   procesos de divergencia funcional. Uno de dichos procesos es la
@@ -2270,34 +2272,66 @@ starts here.
   bioinformática dedicada a presentar una visualización del origen y
   destino de todas las copias de familia enzimátocas provenientes del
   emtabolismo conservado. Se discutirán también cuatro linajes genómicos
-  Actinobacteria Cyanobacteria, Pseudomonas y Archaea y finalmente se
-  analizará un BGCs scytonemin.
+  Actinobacteria Cyanobacteria, \emph{Pseudomonas} y Archaea y finalmente
+  se analizará un BGCs scytonemin.
   
   \section{EvoMining es un método para encontrar BGCs no
   tradicionales}\label{evomining-es-un-metodo-para-encontrar-bgcs-no-tradicionales}
   
-  \section{Consideraciones evolutivas en minería genómica permiten
-  identificar clusters no clasificados y dentro de ellos sugerir enzimas
-  con cambios en
-  promiscuidad.}\label{consideraciones-evolutivas-en-mineria-genomica-permiten-identificar-clusters-no-clasificados-y-dentro-de-ellos-sugerir-enzimas-con-cambios-en-promiscuidad.}
+  Existen varias clases de BGCs que son arquetipos de los productos
+  naturales. Entre ellas se encuentran las clases \emph{non ribosomomal
+  peptide synthase} (NRPS), \emph{poliketide synthase} PKS, terpenos,
+  RIPPs, alcaloides, etc. En estas clases, hay enzimas cuya presencia
+  lleva a la detección del BGC. Por ejemplo, las sintasas no ribosomales
+  son las que al encontrarlas dan nombre a los BGC tipo NRPS y las
+  policétido sintasas son las que dan nombre a los BGC de la clase PKS.
   
-  En antiSMASH 2.0 existen estos clusters y \_\_\_ son no conocidos
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = .7]{chapter2/other.png}
+  \caption[Existen cluster biosintéticos no clasificados (other) entre los reportados en MIBiG]{\footnotesize{Existen cluster biosintéticos no clasificados (other) entre los reportados en MIBiG}}
+  \label{fig:other}
+  \end{figure}
   
-  \subsection{Los clusters biosintéticos no clasificados son difíciles de
-  identificar.}\label{los-clusters-biosinteticos-no-clasificados-son-dificiles-de-identificar.}
+  No todos los productos naturales están dentro de los BGCs clásicos.
+  Dentro de MIBiG hay 231 BGC (12.7\%) clasificados como ``otros'', que de
+  hecho carecen de PKS, NRPS o cualquiera de las otras clases de enzimas
+  características del metabolismo especializado. Como ejemplo se muestra
+  la \autoref{fig:other} donde se aprecia que un porcentaje de los BGC
+  reportados tanto en Actinobacteria como en Cyanobacteria pertenece al
+  grupo ``otros''. La ausencia de enzimas biosintéticas conocidas hace que
+  estos BGC sean ``atípicos'', difíciles de identificar. Los BGC no
+  clasificados suelen pasar desapercibidos, porque no hay conocimiento
+  previo de ellos que permita reconocerlos. Por ello EvoMining busca
+  implementar una estrategia de búsqueda de divergencia del metabolismo
+  conservado en lugar de la estrategia de búsqueda de similitud con
+  metabolismo especializado. La ramas divergentes en el registro de
+  secuencias analizadas a través de la evolución son una herramienta para
+  la búsqueda de secuencias divergentes del metabolismo conservado.
   
-  Los no clasificados suelen pasar desapercibidos, porque no hay
-  conocimiento previo
-  
-  \subsection{Localizar alguna enzima de un cluster no clasificado es un
-  camino para identificar el
-  BGC.}\label{localizar-alguna-enzima-de-un-cluster-no-clasificado-es-un-camino-para-identificar-el-bgc.}
-  
-  Como ya se mostró en EvoMining 1.0 encontramos una enzima que
+  Localizar alguna enzima de un cluster no clasificado es un camino para
+  identificar el BGC. Como ya se mostró en EvoMining 1.0 encontramos una
+  enzima que XXX Un ejemplo de este escenario es el BGC de scytonemin
+  {[}\protect\hyperlink{ref-garciapichel_evidence_1992}{142}{]}, protector
+  solar cianobacteriano, que incluye ScyB y ScyA como las dos enzimas
+  biosintéticas clave que sostienen la síntesis de este metabolito
+  especializado
+  {[}\protect\hyperlink{ref-balskus_investigating_2008}{143}{]}.
+  Curiosamente, ScyB y ScyA son homólogos distantes de la glutamato
+  deshidrogenasa (GDH) y la acetolactato sintasa (ALS), respectivamente,
+  que participan en la desaminación oxidativa reversible del glutamato a
+  \(\alpha\)-ketoglutarato y amoníaco
+  {[}\protect\hyperlink{ref-engel_glutamate_2014}{145}{]}{]} y en la
+  síntesis de cadena ramificada aminoácidos
+  {[}\protect\hyperlink{ref-liu_acetohydroxyacid_2016}{146}{]},
+  respectivamente.
   
   \subsection{Copias extra de familias enzimáticas que son reclutadas para
   una nueva función están relacionadas con la
   promiscuidad.}\label{copias-extra-de-familias-enzimaticas-que-son-reclutadas-para-una-nueva-funcion-estan-relacionadas-con-la-promiscuidad.}
+  
+  Algunas retienen la función ancestral mientras que las ancestrales
+  comienzan a desarrollar la nueva función.
   
   \begin{figure}[h!tbp]
   \centering
@@ -2305,8 +2339,6 @@ starts here.
   \caption[EvoMining Algorithm]{\footnotesize{}}
   \label{fig:EvoMiningAlgorithms}
   \end{figure}
-  
-  Introducción de como funciona
   
   \subsection{EvoMining es un paradigma que permite ubicar copias extra de
   familias enzimáticas y organizarlas visualmente acorde a eventos
@@ -2395,16 +2427,16 @@ starts here.
   visualización}\label{algoritmo-de-reconstruccion-filogenetica-y-visualizacion}
   
   Las secuencias de las familias enzimáticas expandidas fueron alineadas
-  con muscle v3.2{[}\protect\hyperlink{ref-edgar_muscle_2004}{142}{]} y
+  con muscle v3.2{[}\protect\hyperlink{ref-edgar_muscle_2004}{147}{]} y
   curadas con Gblocks
-  v0.91b{[}\protect\hyperlink{ref-castresana_selection_2000}{143}{]}. Los
+  v0.91b{[}\protect\hyperlink{ref-castresana_selection_2000}{148}{]}. Los
   parámetros de Gblocks fueron fijados en incluir 5 posiciones como el
   mínimo tamaño de un bloque y diez posiciones como el máximo de
   posiciones contiguas no conservadas. Posiciones ausentes de más del
   \(50\%\) de las secuencias fueron filtradas y removidas del alineameinto
   final. Para recontruis filogenéticamente la historia de las enzimas se
   utilizó FastTree
-  \(2.1\){[}\protect\hyperlink{ref-price_fasttree_2010}{144}{]} que es un
+  \(2.1\){[}\protect\hyperlink{ref-price_fasttree_2010}{149}{]} que es un
   método muy rápido pensado para miles de secuencias que utiliza un
   algoritmo definido como ``aproximadamente máxima verosimilitud''.
   
@@ -2412,20 +2444,20 @@ starts here.
   la tubería de EvoMining, pero puede las predicciones de antiSMASH pueden
   ser calculadas previamente por el usuario y utilizadas por EvoMining. En
   este trabajo antiSMASH
-  3.0{[}\protect\hyperlink{ref-weber_antismash3_2015}{145}{]} fue
+  3.0{[}\protect\hyperlink{ref-weber_antismash3_2015}{150}{]} fue
   utilizado en los secuencias de los genomas de la Genome DB
   \autoref{fig:EvoMiningAlgorithms} panel (b).
   
   La selección de color de las hojas del árbol fue automatizada utilizando
   Newick Utilities una serie de programas llamados desde la terminal para
   manipular árboles en formato
-  Newick{[}\protect\hyperlink{ref-junier_newick_2010}{146}{]}. La
+  Newick{[}\protect\hyperlink{ref-junier_newick_2010}{151}{]}. La
   anotación funcional de RAST en su versión
   clásica{[}\protect\hyperlink{ref-aziz_rast_2008}{86}{]} fue agregada al
   SVG. Otros metadatos como el número de copias por organismo y fueron
   escritos de manera que los árboles producidos por EvoMining sean
   compatible con la visualización de
-  Microreact{[}\protect\hyperlink{ref-argimon_microreact_2016}{147}{]}.
+  Microreact{[}\protect\hyperlink{ref-argimon_microreact_2016}{152}{]}.
   
   Los árboles de EvoMining diferencian entre la función metabólica de cada
   miembro de una familia génica mediante un código de color
@@ -2511,7 +2543,7 @@ starts here.
   RAST{[}\protect\hyperlink{ref-overbeek_seed_2014}{87}{]} que a la vez
   realiza anotaciones funcionales . Estos genomas, previo al análisis de
   EvoMining fueron minados por
-  antiSMASH{[}\protect\hyperlink{ref-weber_antismash3_2015}{145}{]} con un
+  antiSMASH{[}\protect\hyperlink{ref-weber_antismash3_2015}{150}{]} con un
   parámetro \texttt{cf\_threshold\ de\ 0.7}. Estos resultados fueron
   suministrados como una base de datos interna, la antiSMASH DB para
   finalmente esta información ser incorporada a los árboles de EvoMining.
@@ -2590,7 +2622,7 @@ starts here.
   cada taxon, contiene sólo 42 FEs (Table S1). Esta observación, que 64
   FEs no están conservadas en los cuatro taxa refleja lo específico del
   metabolismo en cada linaje
-  {[}\protect\hyperlink{ref-jordan_lineage-specific_2001}{148}{]}
+  {[}\protect\hyperlink{ref-jordan_lineage-specific_2001}{153}{]}
   
   \begin{figure}[h!tbp]
   \centering
@@ -2625,7 +2657,7 @@ starts here.
   dicetopiperazinas, carotenoides y otros productos naturales de Archaea
   fueron aislados de especies de Halobacteria, los NP BGCs sintetizadores
   de estos metabolitos no han sido caracterizados
-  {[}\protect\hyperlink{ref-charlesworth_untapped_natural_products_Archaea_2015}{149}{]}.
+  {[}\protect\hyperlink{ref-charlesworth_untapped_natural_products_Archaea_2015}{154}{]}.
   Por ello EvoMining una herramienta de minería genómica que puede ayudar
   a explorar linajes poco minados con el potencial de descubrir nuevas
   rutas metabólicas.
@@ -2690,7 +2722,7 @@ starts here.
   \end{figure}
   
   Con estas observaciones sospechamos que GDH es miembro del shell genome
-  {[}\protect\hyperlink{ref-koonin_genomics_2008}{150}{]} en los taxa
+  {[}\protect\hyperlink{ref-koonin_genomics_2008}{155}{]} en los taxa
   Actinobacteria , Cyanobacteria y Pseudomonas, ya que en promedio está
   cerca de tener una copia promedio por genoma. El promedio no es
   suficiente para decir que una familia pertenece al shell, podrían
@@ -2724,7 +2756,7 @@ starts here.
   predicciones de antiSMASH para Actinobacteria, Cyanobacteria y Archaea,
   no así para Pseudomonas. La secuencia del reclutamiento de GDH por los
   clusters biosintéticos scytonemin y el policétido pactamycin
-  {[}\protect\hyperlink{ref-kudo_cloning_2007}{151}{]}, es suficientemente
+  {[}\protect\hyperlink{ref-kudo_cloning_2007}{156}{]}, es suficientemente
   parecida como para que EvoMining la detecte como expansión en
   Actinobacteria, Cyanobacteria y Archaea, pero es tan divergente respecto
   a la familia GDH en Pseudomonas que EvoMining lo deja fuera de la
@@ -2747,7 +2779,7 @@ starts here.
   que no fue considerado en la primera iteración que explotó las
   capacidades de EvoMining como herramienta de minería genómica para
   encontrar BGCs
-  novedosos{[}\protect\hyperlink{ref-navarro-munoz_computational_2018}{152}{]}.
+  novedosos{[}\protect\hyperlink{ref-navarro-munoz_computational_2018}{157}{]}.
   
   \begin{figure}[h!tbp]
   \centering
@@ -2769,7 +2801,7 @@ starts here.
   Además de GDH se estudiaron las expansiones y los árboles filogenéticos
   de TrpA, TrpB, TrpC, TrpD, TrpEG, AroB y ALS, todas ellas parte de las
   42 FEs conservadas entre los cuatro linajes y a la vez reclutadas en
-  scytonemin{[}\protect\hyperlink{ref-balskus_investigating_2008}{153}{]}
+  scytonemin{[}\protect\hyperlink{ref-balskus_investigating_2008}{143}{]}
   un cluster biosintético de Cyanobacteria
   
   \subsection{GDH y ALS en el cluster scytonemin ejemplifican como
@@ -2785,18 +2817,18 @@ starts here.
   nombrada como GDH(NAD+). La segunda clase utiliza NADP+ y es conocida
   como GDH(NADP+). La tercera clase utiliza ambos cofactores NAD+ y NADP+;
   por lo que se le conoce como GDH(NAD+ y
-  NADP+){[}\protect\hyperlink{ref-engel_glutamate_2014}{155}{]}.
+  NADP+){[}\protect\hyperlink{ref-engel_glutamate_2014}{145}{]}.
   
   Aunque existen otras clasificaciones de la diversidad de enzimas GDH
   esta fue seleccionada porque se relaciona con la historia evolutiva de
   la enzima. GDH(NAD+) is utilizada para la oxidación del glutamato
   mientras que GDH(NADP+) para fijar amonio, algunas enzimas de Archaea
   funcionan bien con ambos cofactores, es decir tienen promiscuidad de
-  cofactores{[}\protect\hyperlink{ref-engel_glutamate_2014}{155}{]}. La
+  cofactores{[}\protect\hyperlink{ref-engel_glutamate_2014}{145}{]}. La
   especificidad por NAD o NADP probablemente emergió en repetidas
   ocasiones, una evidencia a favor de esta hipótesis es que se ha mostrado
   que algunas mutaciones pueden revertir la
-  especificidad{[}\protect\hyperlink{ref-lilley_partial_1991}{156}{]}.
+  especificidad{[}\protect\hyperlink{ref-lilley_partial_1991}{158}{]}.
   Esto sugiere que en los cofactores análogamente al caso de promiscuidad
   por sustrato, la similitud de secuencia no siempre es suficiente para
   evidenciar la especificidad. En ocasiones la divergencia o cercanía
@@ -2818,7 +2850,7 @@ starts here.
   familia GDH en Archaea fue enraizado con la secuencia semilla de
   \emph{Sulfolobus}, que fue predicha por RAST como una enzima dual en el
   uso de cofactores
-  NAD(P)+{[}\protect\hyperlink{ref-consalvi_glutamate_1991}{157}{]}. En
+  NAD(P)+{[}\protect\hyperlink{ref-consalvi_glutamate_1991}{159}{]}. En
   Archaea las tres clases de GDH alternan en las ramas del
   \href{https://microreact.org/project/ByUcvNmaX?tt=cr}{árbol} (Fig.
   S13,).
@@ -2827,7 +2859,7 @@ starts here.
   concentran volviendo rojas las ramas basales del árbol. Se observa otro
   clado más grande y diverso compuesto casi exclusivamente por enzimas
   específicas para
-  NAD(P){[}\protect\hyperlink{ref-ferrer_nadp-glutamate_1996}{158}{]},
+  NAD(P){[}\protect\hyperlink{ref-ferrer_nadp-glutamate_1996}{160}{]},
   incluyendo muchas predicciones de antiSMASH, y sólo dos marcadas como
   metabolsimo conservado. Estas dos marcas pueden deberse a la pérdida
   real de una enzima d metabolismo central en las ramas centrales o bien a
@@ -2842,7 +2874,7 @@ starts here.
   encuentran un contexto de posible síntesis de terpenos. Este contexto
   incluye enzimas relacionadas al geranyl pyrofosfato, un precursor de
   todos los terpenos y
-  terpenoides{[}\protect\hyperlink{ref-tholl_terpene_2006}{159}{]}. Este
+  terpenoides{[}\protect\hyperlink{ref-tholl_terpene_2006}{161}{]}. Este
   árbol tiene también casos de divergencia reciente, hay una pequeña rama
   indistinguible en la figura pero explorable en la plataforma microreact
   donde los parálogos aparecen junto a las secuencias de metabolismo
@@ -2860,7 +2892,7 @@ starts here.
   GDH que fue reclutado por el BGC scytonemin. ScyB es pues parte de la
   síntesis de scytonemin, un pigmento amarillo producido por muchas
   Cyanobacterias como protección contra la radiación UV-A
-  solar{[}\protect\hyperlink{ref-balskus_genetic_2010}{160}{]}.
+  solar{[}\protect\hyperlink{ref-balskus_genetic_2010}{162}{]}.
   \emph{Nostoc punctiforme} PCC 73102 es el organismo productor de
   scytonemin cuyo BGC fue caracterizado y anotado en MIBiG. EvoMining sólo
   unas pocas secuencias GDH copias extra de especies de Nostoc aún cuando
@@ -2890,7 +2922,7 @@ starts here.
   etiquetadas como predicciones de EvoMining \autoref{fig:Scytonemin} (c).
   Estas predicciones incluyen más de veinte organismos conocidos como
   productores de scytonemin
-  {[}\protect\hyperlink{ref-balskus_investigating_2008}{153}{]}
+  {[}\protect\hyperlink{ref-balskus_investigating_2008}{143}{]}
   
   Además, ramas cercanas muestran secuencias de ALS queson p redicciones
   de antiSMASH, reforzando la sugerencia de que esta seción del árbol se
@@ -2923,7 +2955,7 @@ starts here.
   
   El primer cluster caracterizado de scytonemin, mostrado en la figura
   \autoref{fig:Scytonemin} panel (a) y en \autoref{fig:Ruta} , comprende
-  18 genes {[}\protect\hyperlink{ref-soule_comparative_2009}{154}{]}.
+  18 genes {[}\protect\hyperlink{ref-soule_comparative_2009}{144}{]}.
   Además de genes reguladores, este BGC incluye genes biosintéticos
   scyABC; otros genes conservados cuya función queda por dilucidar,
   scyDEF; y proveedores de precursores: \emph{tyrA}, \emph{dsbA},
@@ -2940,16 +2972,16 @@ starts here.
   caso sí ha cambiado la especificidad por sustrato al momento de la
   incorporación al metabolismo especializado \autoref{fig:Ruta}. ALS une
   dos piruvatos, transformándolos en S-2-acetolactato
-  {[}\protect\hyperlink{ref-liu_acetohydroxyacid_2016}{161}{]}, mientras
+  {[}\protect\hyperlink{ref-liu_acetohydroxyacid_2016}{146}{]}, mientras
   que ScyB cataliza la unión de indol-3-piruvato con p-hydroxy-fenil-ácido
   pirúvico. Análogamente GDH convierte L-glutamate en 2-oxoglutarato
-  {[}\protect\hyperlink{ref-engel_glutamate_2014}{155}{]}, mientras que
+  {[}\protect\hyperlink{ref-engel_glutamate_2014}{145}{]}, mientras que
   ScyA cataliza una desaminación oxidativa de triptofano. El producto de
   estas dos enzimas actuando secuencialmente e un dipéptido, el cual es
   ciclizado por ScyC. La ruta metabólica culmina con una serie de
   oxidaciones y dimerizaciones hasta llegar al producto scytonemin, aún no
   es claro como estos útimos pasos se llevan a cabo
-  {[}\protect\hyperlink{ref-balskus_investigating_2008}{153}{]}.
+  {[}\protect\hyperlink{ref-balskus_investigating_2008}{143}{]}.
   
   \begin{figure}[h!tbp]
   \centering
@@ -2973,12 +3005,12 @@ starts here.
   provenientes de las rutas de síntesis de otros pigmentos protectores
   solares como la shinorina y los aminoácidos de tipo mycosporina
   \autoref{fig:AroB}
-  {[}\protect\hyperlink{ref-balskus_genetic_2010}{160}{]} , además de
+  {[}\protect\hyperlink{ref-balskus_genetic_2010}{162}{]} , además de
   otros productos no relacionados como la welwitindolinona
-  {[}\protect\hyperlink{ref-hillwig_identification_2014}{162}{]},
+  {[}\protect\hyperlink{ref-hillwig_identification_2014}{163}{]},
   ambiguina
-  {[}\protect\hyperlink{ref-li_hapalindole_ambiguine_2015}{163}{]} y la
-  fischerindolina {[}\protect\hyperlink{ref-li_decoding_2017}{164}{]}
+  {[}\protect\hyperlink{ref-li_hapalindole_ambiguine_2015}{164}{]} y la
+  fischerindolina {[}\protect\hyperlink{ref-li_decoding_2017}{165}{]}
   (Figs S3--S7). Estos resultados ilustran como EvoMining puede
   complementar a antiSMASH mediante la identificación de secuencias de NP
   BGCs no tradicionales.
@@ -2996,7 +3028,7 @@ starts here.
   ambas tenían presencia, se concatenaron sus secuencias y se realizó una
   filogenia con ellas. Las variantes de la vecindad genómica del BGC de
   scytonemin fueron visualizadas mediante el uso de corason
-  {[}\protect\hyperlink{ref-navarro-munoz_computational_2018}{152}{]}. En
+  {[}\protect\hyperlink{ref-navarro-munoz_computational_2018}{157}{]}. En
   el siguiente capítulo este software de visualización y organización de
   vecindades genómicas será explicado con más detalle. Los análisis
   filogenómicos resultaron en 34 cyanobacterias con diversidad química en
@@ -3900,863 +3932,141 @@ starts here.
   encontramos la subfamilia \emph{subTrpF} que ha perdido la actividad de
   HisA.
   
-  \begin{longtable}[]{@{}lllllllllll@{}}
-  \caption{Datos Cinéticos de subfamilias de PriA
-  \label{tab:cineticos}}\tabularnewline
-  \toprule
-  \begin{minipage}[b]{0.15\columnwidth}\raggedright\strut
-  Fuente\strut
-  \end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\raggedright\strut
-  Familia\strut
-  \end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\raggedright\strut
-  HisA \(in\hspace{.1cm}vivo\)\strut
-  \end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\raggedright\strut
-  TrpF \(in\hspace{.1cm}vivo\)\strut
-  \end{minipage} & \begin{minipage}[b]{0.07\columnwidth}\raggedright\strut
-  \(K_{cat}^{\tiny{ProFAR}}\) \(\tiny{[M^{-1}s^{-1}]}\)\strut
-  \end{minipage} & \begin{minipage}[b]{0.06\columnwidth}\raggedright\strut
-  \(K_m^{\tiny{ProFAR}}\) \(\tiny{[\mu M]}\)\strut
-  \end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\raggedright\strut
-  HisA \(\frac{K_{cat}}{K_m}\)\strut
-  \end{minipage} & \begin{minipage}[b]{0.06\columnwidth}\raggedright\strut
-  \(K_{cat}^{\tiny{PRA}}\) \(\tiny{[M^{-1}s^{-1}]}\)\strut
-  \end{minipage} & \begin{minipage}[b]{0.06\columnwidth}\raggedright\strut
-  \(K_m^{\tiny{PRA}}\) \(\tiny{[\mu M]}\)\strut
-  \end{minipage} & \begin{minipage}[b]{0.04\columnwidth}\raggedright\strut
-  TrpF \(\frac{Kcat}{Km}\)\strut
-  \end{minipage} & \begin{minipage}[b]{0.11\columnwidth}\raggedright\strut
-  Referencia\strut
-  \end{minipage}\tabularnewline
-  \midrule
-  \endfirsthead
-  \toprule
-  \begin{minipage}[b]{0.15\columnwidth}\raggedright\strut
-  Fuente\strut
-  \end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\raggedright\strut
-  Familia\strut
-  \end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\raggedright\strut
-  HisA \(in\hspace{.1cm}vivo\)\strut
-  \end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\raggedright\strut
-  TrpF \(in\hspace{.1cm}vivo\)\strut
-  \end{minipage} & \begin{minipage}[b]{0.07\columnwidth}\raggedright\strut
-  \(K_{cat}^{\tiny{ProFAR}}\) \(\tiny{[M^{-1}s^{-1}]}\)\strut
-  \end{minipage} & \begin{minipage}[b]{0.06\columnwidth}\raggedright\strut
-  \(K_m^{\tiny{ProFAR}}\) \(\tiny{[\mu M]}\)\strut
-  \end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\raggedright\strut
-  HisA \(\frac{K_{cat}}{K_m}\)\strut
-  \end{minipage} & \begin{minipage}[b]{0.06\columnwidth}\raggedright\strut
-  \(K_{cat}^{\tiny{PRA}}\) \(\tiny{[M^{-1}s^{-1}]}\)\strut
-  \end{minipage} & \begin{minipage}[b]{0.06\columnwidth}\raggedright\strut
-  \(K_m^{\tiny{PRA}}\) \(\tiny{[\mu M]}\)\strut
-  \end{minipage} & \begin{minipage}[b]{0.04\columnwidth}\raggedright\strut
-  TrpF \(\frac{Kcat}{Km}\)\strut
-  \end{minipage} & \begin{minipage}[b]{0.11\columnwidth}\raggedright\strut
-  Referencia\strut
-  \end{minipage}\tabularnewline
-  \midrule
-  \endhead
-  \begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
-  \emph{Escherichia coli}\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  HisA\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  -\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  -\strut
-  \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
-  1.6\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  4.9\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  3.1\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  -\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  -\strut
-  \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
-  0\strut
-  \end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
-  Henn {[}\protect\hyperlink{ref-henn-sax_two_2002}{165}{]}\strut
-  \end{minipage}\tabularnewline
-  \begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
-  \emph{Escherichia coli}\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  TrpF\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  -\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  -\strut
-  \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
-  -\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  -\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  0\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  12.2\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  34.5\strut
-  \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
-  2.82\strut
-  \end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
-  Sterner
-  {[}\protect\hyperlink{ref-sterner_phosphoribosyl_1996}{166}{]}\strut
-  \end{minipage}\tabularnewline
-  \begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
-  \emph{Mycobacterium smegmatis}\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  PriA\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  *\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  *\strut
-  \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
-  2.6 ± 0.5\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  0.85 ± 0.04\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  0.33\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  7.9 ± 2.4\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  3.1 ± 0.43\strut
-  \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
-  0.39\strut
-  \end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
-  Verduzco
-  {[}\protect\hyperlink{ref-verduzco-castro_co-occurrence_2016}{67}{]}\strut
-  \end{minipage}\tabularnewline
-  \begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
-  \emph{Mycobacterium tuberculosis}\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  PriA\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  -\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  -\strut
-  \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
-  19\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  0.23\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  12\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  21\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  3.6\strut
-  \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
-  0.17\strut
-  \end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
-  Due {[}\protect\hyperlink{ref-due_bisubstrate_2011}{167}{]}\strut
-  \end{minipage}\tabularnewline
-  \begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
-  \emph{Streptomyces globisporus}\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  PriA\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  *\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  *\strut
-  \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
-  4.2 ± 0.8\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  0.74 ± 0.03\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  0.18\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  11 ± 1.0\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  3.8 ± 0.2\strut
-  \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
-  0.34\strut
-  \end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
-  Verduzco
-  {[}\protect\hyperlink{ref-verduzco-castro_co-occurrence_2016}{67}{]}\strut
-  \end{minipage}\tabularnewline
-  \begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
-  \emph{Streptomyces coelicolor}\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  PriA\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  -\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  -\strut
-  \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
-  3.6 ± 0.7\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  1.3 ± 0.2\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  0.4\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  5.0 ± 0.08\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  3.4 ± 0.09\strut
-  \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
-  0.7\strut
-  \end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
-  Noda
-  {[}\protect\hyperlink{ref-noda-garcia_identification_2010}{168}{]}\strut
-  \end{minipage}\tabularnewline
-  \begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
-  \emph{Streptomyces coelicolor}\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  PriA\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  -\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  -\strut
-  \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
-  3.6 ± 0.7\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  1.3 ± 0.2\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  0.4\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  5.0 ± 0.08\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  3.4 ± 0.09\strut
-  \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
-  0.7\strut
-  \end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
-  Noda
-  {[}\protect\hyperlink{ref-noda-garcia_identification_2010}{168}{]}\strut
-  \end{minipage}\tabularnewline
-  \begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
-  \emph{Streptomyces ipomoeae}\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  PriB\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  *\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  *\strut
-  \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
-  3.8 ± 0.2\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  0.82 ± 0.02\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  0.21\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  60.8 ± 1.1\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  8.25 ± 0.4\strut
-  \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
-  0.14\strut
-  \end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
-  Verduzco
-  {[}\protect\hyperlink{ref-verduzco-castro_co-occurrence_2016}{67}{]}\strut
-  \end{minipage}\tabularnewline
-  \begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
-  \emph{Streptomyces} Mg1\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  PriB\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  *\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  *\strut
-  \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
-  13.2 ± 3.4\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  0.92 ± 0.19\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  69\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  129.6 ± 34\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  0.29 ± 0.04\strut
-  \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
-  0.0022\strut
-  \end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
-  Verduzco
-  {[}\protect\hyperlink{ref-verduzco-castro_co-occurrence_2016}{67}{]}\strut
-  \end{minipage}\tabularnewline
-  \begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
-  \emph{Streptomyces} sp. C\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  PriB\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  *\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  *\strut
-  \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
-  11.4 ± 3.4\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  2.53 ± 0.74\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  0.22\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  149. 9 ± 29\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  1.4 ± 0.12\strut
-  \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
-  9\strut
-  \end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
-  Verduzco
-  {[}\protect\hyperlink{ref-verduzco-castro_co-occurrence_2016}{67}{]}\strut
-  \end{minipage}\tabularnewline
-  \begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
-  \emph{Streptomyces sviceus}\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  PriB\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  *\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  *\strut
-  \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
-  3.9 ± 0.89\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  0.69 ± 0.04\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  0.18\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  24.5 ± 4.0\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  1.6 ± 0.29\strut
-  \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
-  67\strut
-  \end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
-  Verduzco
-  {[}\protect\hyperlink{ref-verduzco-castro_co-occurrence_2016}{67}{]}\strut
-  \end{minipage}\tabularnewline
-  \begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
-  \emph{Corynebacterium diphteriae}\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  subHisA\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  -\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  -\strut
-  \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
-  4.4 ± 0.5\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  2.6 ± 0.3\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  0.59\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
-  0\strut
-  \end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
-  Noda {[}\protect\hyperlink{ref-noda-garcia_evolution_2013}{41}{]}\strut
-  \end{minipage}\tabularnewline
-  \begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
-  \emph{Corynebacterium jeikeium}\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  PriA\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  -\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  -\strut
-  \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
-  2.3 ± 0.2\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  0.9 ± 0.08\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  0.39\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  5.1 ± 1.0\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  1.6 ± 0.16\strut
-  \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
-  0.31\strut
-  \end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
-  Noda {[}\protect\hyperlink{ref-noda-garcia_evolution_2013}{41}{]}\strut
-  \end{minipage}\tabularnewline
-  \begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
-  \emph{Corynebacterium striatum}\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  subHisA\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  -\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  -\strut
-  \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
-  6.9 ± 0.7\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  2.1 ± 0.5\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  0.3\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
-  0\strut
-  \end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
-  Noda {[}\protect\hyperlink{ref-noda-garcia_evolution_2013}{41}{]}\strut
-  \end{minipage}\tabularnewline
-  \begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
-  \emph{Corynebacterium diphteriae} L48I-F50L-T80S\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  subHisA\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
-  4.5 ± 1.5\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  0.6 ± 0.08\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  0.13\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  133 ± 10\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  0.05 ± 0.01\strut
-  \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
-  0.0004\strut
-  \end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
-  Noda {[}\protect\hyperlink{ref-noda-garcia_evolution_2013}{41}{]}\strut
-  \end{minipage}\tabularnewline
-  \begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
-  \emph{Actinomyces urogenitalis} DSM 15434\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  PriB\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  *\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  *\strut
-  \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
-  2.1 ± 0.5\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  1.8 ± 0.2\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  0.9\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  26.3 ± 6.3\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  0.37 ± 0.09\strut
-  \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
-  14\strut
-  \end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
-  Verduzco
-  {[}\protect\hyperlink{ref-verduzco-castro_co-occurrence_2016}{67}{]}\strut
-  \end{minipage}\tabularnewline
-  \begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
-  \emph{Actinomyces odontolyticus} ATCC 17982\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  subTrpF\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  *\strut
-  \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
-  -\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  -\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  0\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
-  0.02\strut
-  \end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
-  Juarez
-  {[}\protect\hyperlink{ref-juarez-vazquez_evolution_2017}{70}{]}\strut
-  \end{minipage}\tabularnewline
-  \begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
-  \emph{Actinomyces oris} K20 BABV01\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  PriA\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  0.02\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
-  0.01\strut
-  \end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
-  Juarez
-  {[}\protect\hyperlink{ref-juarez-vazquez_evolution_2017}{70}{]}\strut
-  \end{minipage}\tabularnewline
-  \begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
-  \emph{Actinomyces} sp. oral taxon 171 str. F0337\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  PriA\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  0.01\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
-  4\strut
-  \end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
-  Juarez
-  {[}\protect\hyperlink{ref-juarez-vazquez_evolution_2017}{70}{]}\strut
-  \end{minipage}\tabularnewline
-  \begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
-  \emph{Actinomyces} sp. oral taxon 848 str. F0332\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  subTrpF\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  *\strut
-  \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
-  -\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  -\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  0\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
-  0.0001\strut
-  \end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
-  Juarez
-  {[}\protect\hyperlink{ref-juarez-vazquez_evolution_2017}{70}{]}\strut
-  \end{minipage}\tabularnewline
-  \begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
-  \emph{Actinomyces urogenitalis} DSM 15434\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  PriA\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  0.01\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
-  0.02\strut
-  \end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
-  Juarez
-  {[}\protect\hyperlink{ref-juarez-vazquez_evolution_2017}{70}{]}\strut
-  \end{minipage}\tabularnewline
-  \begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
-  \emph{Bifidobacterium adolescentis} L2-32\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  PriA\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  *\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  *\strut
-  \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  0.2\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
-  0.1\strut
-  \end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
-  Juarez
-  {[}\protect\hyperlink{ref-juarez-vazquez_evolution_2017}{70}{]}\strut
-  \end{minipage}\tabularnewline
-  \begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
-  \emph{Bifidobacterium gallicum} DSM 20093\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  PriA\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  *\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  *\strut
-  \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  0.1\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
-  0.04\strut
-  \end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
-  Juarez
-  {[}\protect\hyperlink{ref-juarez-vazquez_evolution_2017}{70}{]}\strut
-  \end{minipage}\tabularnewline
-  \begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
-  \emph{Bifidobacterium longum} ATCC 15697\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  PriA\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  *\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  *\strut
-  \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  0.1\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
-  0.3\strut
-  \end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
-  Juarez
-  {[}\protect\hyperlink{ref-juarez-vazquez_evolution_2017}{70}{]}\strut
-  \end{minipage}\tabularnewline
-  \begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
-  Camera CAM1\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  Metagenoma\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
-  1.7 ± 0.1\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  0.3 ± 0.03\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  0.2\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  40 ± 7\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  3.5 ± 0.04\strut
-  \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
-  0.09\strut
-  \end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
-  Noda {[}\protect\hyperlink{ref-noda-garcia_insights_2015}{39}{]}\strut
-  \end{minipage}\tabularnewline
-  \begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
-  CAM1\_A81G\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  Metagenoma\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
-  1.7 ± 0.2\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  0.1 ± 0.01\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  0.06\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  32.2 ± 1.7\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  1.9 ± 0.1\strut
-  \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
-  0.06\strut
-  \end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
-  Noda {[}\protect\hyperlink{ref-noda-garcia_insights_2015}{39}{]}\strut
-  \end{minipage}\tabularnewline
-  \begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
-  CAM1\_A81S\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  Metagenoma\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
-  4.0 ± 0.9\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  0.2 ± 0.03\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  0.04\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  23.5 ± 6.5\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  0.5 ± 0.1\strut
-  \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
-  0.02\strut
-  \end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
-  Noda {[}\protect\hyperlink{ref-noda-garcia_insights_2015}{39}{]}\strut
-  \end{minipage}\tabularnewline
-  \begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
-  CAM2\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  Metagenoma\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
-  n.d.\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  n.d.\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  0\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  n.d.\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  n.d.\strut
-  \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
-  0\strut
-  \end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
-  Noda {[}\protect\hyperlink{ref-noda-garcia_insights_2015}{39}{]}\strut
-  \end{minipage}\tabularnewline
-  \begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
-  PriA\_Ancestral\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  Ancestral\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
-  9.4±1.6\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  0.3±0.009\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  0.03\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  4.3±0.4\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  0.6±0.02\strut
-  \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
-  0.13\strut
-  \end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
-  Verduzco, Noda*\strut
-  \end{minipage}\tabularnewline
-  \begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
-  PriA\_SubHisA\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  Ancestral\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
-  3.7±1.01\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  0.5±0.03\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  0.1\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  -\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  -\strut
-  \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
-  0\strut
-  \end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
-  Verduzco, Noda*\strut
-  \end{minipage}\tabularnewline
-  \begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
-  SubHisA\_Ancestral\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  Ancestral\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
-  6.3±0.7\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  0.15±0.03\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  0.02\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  -\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  -\strut
-  \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
-  0\strut
-  \end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
-  Verduzco, Noda*\strut
-  \end{minipage}\tabularnewline
-  \begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
-  SubHisA\_PriA\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  Ancestral\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
-  27.7±3.4\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  0.05±0.005\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  2\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  167.82\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  0.03±0.002\strut
-  \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
-  0.0001\strut
-  \end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
-  Verduzco, Noda*\strut
-  \end{minipage}\tabularnewline
-  \begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
-  \emph{scabies}\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  0\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  0\strut
-  \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
-  163.6\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  0.1\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
-  Verduzco*\strut
-  \end{minipage}\tabularnewline
-  \begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
-  \emph{Avisco}\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  46\strut
-  \end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
-  1.37\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  36\strut
-  \end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
-  3.4\strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
-  \strut
-  \end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
-  Juárez*\strut
-  \end{minipage}\tabularnewline
-  \bottomrule
-  \end{longtable}
+  Table: Datos Cinéticos de subfamilias de PriA \label{tab:cineticos}\\
+  \tiny   \textbar{}Fuente\textbar{}Familia\textbar{}HisA
+  \(in\hspace{.1cm}vivo\)\textbar{}TrpF
+  \(in\hspace{.1cm}vivo\)\textbar{}\(K_{cat}^{\tiny{ProFAR}}\)
+  \(\tiny{[M^{-1}s^{-1}]}\)\textbar{}\(K_m^{\tiny{ProFAR}}\)
+  \(\tiny{[\mu M]}\)\textbar{}HisA \(\frac{K_{cat}}{K_m}\)
+  \textbar{}\(K_{cat}^{\tiny{PRA}}\) \(\tiny{[M^{-1}s^{-1}]}\)
+  \textbar{}\(K_m^{\tiny{PRA}}\) \(\tiny{[\mu M]}\)\textbar{}TrpF
+  \(\frac{Kcat}{Km}\) \textbar{}Referencia\textbar{}\\
+  \textbar{}----------------------------\textbar{}--------\textbar{}--------\textbar{}--------\textbar{}------------\textbar{}-----------\textbar{}---------\textbar{}----------\textbar{}----------\textbar{}------\textbar{}---------------------\textbar{}\\
+  \textbar{} \emph{Escherichia coli}
+  \textbar{}HisA\textbar{}-\textbar{}-\textbar{}1.6\textbar{}4.9\textbar{}3.1\textbar{}-\textbar{}-\textbar{}0\textbar{}Henn
+  {[}\protect\hyperlink{ref-henn-sax_two_2002}{166}{]}\textbar{}\\
+  \textbar{} \emph{Escherichia coli}
+  \textbar{}TrpF\textbar{}-\textbar{}-\textbar{}-\textbar{}-\textbar{}0\textbar{}12.2\textbar{}34.5\textbar{}2.82\textbar{}Sterner
+  {[}\protect\hyperlink{ref-sterner_phosphoribosyl_1996}{167}{]}\textbar{}\\
+  \textbar{} \emph{Mycobacterium smegmatis}
+  \textbar{}PriA\textbar{}\emph{\textbar{}}\textbar{}2.6 ± 0.5
+  \textbar{}0.85 ± 0.04 \textbar{}0.33\textbar{}7.9 ± 2.4\textbar{} 3.1 ±
+  0.43 \textbar{}0.39\textbar{}Verduzco
+  {[}\protect\hyperlink{ref-verduzco-castro_co-occurrence_2016}{67}{]}\textbar{}
+  \textbar{} \emph{Mycobacterium tuberculosis}
+  \textbar{}PriA\textbar{}-\textbar{}-\textbar{}19\textbar{}0.23\textbar{}12\textbar{}21\textbar{}3.6\textbar{}0.17\textbar{}
+  Due {[}\protect\hyperlink{ref-due_bisubstrate_2011}{168}{]}\textbar{}\\
+  \textbar{} \emph{Streptomyces globisporus}
+  \textbar{}PriA\textbar{}\emph{\textbar{}}\textbar{}4.2 ± 0.8\textbar{}
+  0.74 ± 0.03 \textbar{}0.18\textbar{}11 ± 1.0 \textbar{}3.8 ± 0.2
+  \textbar{}0.34\textbar{}Verduzco
+  {[}\protect\hyperlink{ref-verduzco-castro_co-occurrence_2016}{67}{]}\textbar{}\\
+  \textbar{} \emph{Streptomyces coelicolor}
+  \textbar{}PriA\textbar{}-\textbar{}-\textbar{}3.6 ± 0.7 \textbar{}1.3 ±
+  0.2 \textbar{}0.4\textbar{}5.0 ± 0.08 \textbar{}3.4 ± 0.09
+  \textbar{}0.7\textbar{}Noda
+  {[}\protect\hyperlink{ref-noda-garcia_identification_2010}{169}{]}\textbar{}\\
+  \textbar{} \emph{Streptomyces coelicolor}
+  \textbar{}PriA\textbar{}-\textbar{}-\textbar{}3.6 ± 0.7 \textbar{}1.3 ±
+  0.2 \textbar{}0.4\textbar{}5.0 ± 0.08 \textbar{}3.4 ± 0.09
+  \textbar{}0.7\textbar{}Noda
+  {[}\protect\hyperlink{ref-noda-garcia_identification_2010}{169}{]}\textbar{}\\
+  \textbar{} \emph{Streptomyces ipomoeae}
+  \textbar{}PriB\textbar{}\emph{\textbar{}}\textbar{}3.8 ± 0.2
+  \textbar{}0.82 ± 0.02 \textbar{}0.21\textbar{}60.8 ± 1.1\textbar{} 8.25
+  ± 0.4\textbar{}0.14\textbar{}Verduzco
+  {[}\protect\hyperlink{ref-verduzco-castro_co-occurrence_2016}{67}{]}\textbar{}\\
+  \textbar{} \emph{Streptomyces} Mg1
+  \textbar{}PriB\textbar{}\emph{\textbar{}}\textbar{} 13.2 ± 3.4
+  \textbar{}0.92 ± 0.19 \textbar{}69\textbar{}129.6 ± 34 \textbar{}0.29 ±
+  0.04\textbar{}0.0022\textbar{}Verduzco
+  {[}\protect\hyperlink{ref-verduzco-castro_co-occurrence_2016}{67}{]}\textbar{}\\
+  \textbar{} \emph{Streptomyces} sp.
+  C\textbar{}PriB\textbar{}\emph{\textbar{}}\textbar{}11.4 ± 3.4
+  \textbar{}2.53 ± 0.74 \textbar{}0.22\textbar{}149. 9 ± 29\textbar{} 1.4
+  ± 0.12 \textbar{}9\textbar{}Verduzco
+  {[}\protect\hyperlink{ref-verduzco-castro_co-occurrence_2016}{67}{]}\textbar{}\\
+  \textbar{} \emph{Streptomyces
+  sviceus}\textbar{}PriB\textbar{}\emph{\textbar{}}\textbar{}3.9 ± 0.89
+  \textbar{}0.69 ± 0.04 \textbar{}0.18\textbar{}24.5 ± 4.0\textbar{} 1.6 ±
+  0.29 \textbar{}67\textbar{}Verduzco
+  {[}\protect\hyperlink{ref-verduzco-castro_co-occurrence_2016}{67}{]}\textbar{}\\
+  \textbar{} \emph{Corynebacterium
+  diphteriae}\textbar{}subHisA\textbar{}-\textbar{}-\textbar{}4.4 ±
+  0.5\textbar{}2.6 ±
+  0.3\textbar{}0.59\textbar{}\textbar{}\textbar{}0\textbar{}Noda
+  {[}\protect\hyperlink{ref-noda-garcia_evolution_2013}{41}{]}\textbar{}\\
+  \textbar{} \emph{Corynebacterium
+  jeikeium}\textbar{}PriA\textbar{}-\textbar{}-\textbar{}2.3 ±
+  0.2\textbar{}0.9 ± 0.08\textbar{}0.39\textbar{}5.1 ± 1.0\textbar{}1.6 ±
+  0.16\textbar{}0.31\textbar{}Noda
+  {[}\protect\hyperlink{ref-noda-garcia_evolution_2013}{41}{]}\textbar{}\\
+  \textbar{} \emph{Corynebacterium
+  striatum}\textbar{}subHisA\textbar{}-\textbar{}-\textbar{}6.9 ±
+  0.7\textbar{}2.1 ±
+  0.5\textbar{}0.3\textbar{}\textbar{}\textbar{}0\textbar{}Noda
+  {[}\protect\hyperlink{ref-noda-garcia_evolution_2013}{41}{]}\textbar{}\\
+  \textbar{} \emph{Corynebacterium diphteriae}
+  L48I-F50L-T80S\textbar{}subHisA\textbar{}\textbar{}\textbar{}4.5 ±
+  1.5\textbar{}0.6 ± 0.08\textbar{}0.13\textbar{}133 ± 10\textbar{}0.05 ±
+  0.01\textbar{}0.0004\textbar{}Noda
+  {[}\protect\hyperlink{ref-noda-garcia_evolution_2013}{41}{]}\textbar{}\\
+  \textbar{} \emph{Actinomyces urogenitalis} DSM
+  15434\textbar{}PriB\textbar{}\emph{\textbar{}}\textbar{}2.1 ± 0.5
+  \textbar{}1.8 ± 0.2 \textbar{}0.9\textbar{}26.3 ± 6.3\textbar{} 0.37 ±
+  0.09 \textbar{}14\textbar{}Verduzco
+  {[}\protect\hyperlink{ref-verduzco-castro_co-occurrence_2016}{67}{]}\textbar{}\\
+  \textbar{} \emph{Actinomyces odontolyticus} ATCC
+  17982\textbar{}subTrpF\textbar{}\textbar{}\emph{\textbar{}-\textbar{}-\textbar{}0\textbar{}\textbar{}\textbar{}0.02\textbar{}Juarez
+  {[}\protect\hyperlink{ref-juarez-vazquez_evolution_2017}{70}{]}\textbar{}\\
+  \textbar{} \emph{Actinomyces oris} K20
+  BABV01\textbar{}PriA\textbar{}\textbar{}\textbar{}\textbar{}\textbar{}0.02\textbar{}\textbar{}\textbar{}0.01\textbar{}Juarez
+  {[}\protect\hyperlink{ref-juarez-vazquez_evolution_2017}{70}{]}\textbar{}\\
+  \textbar{} \emph{Actinomyces} sp. oral taxon 171 str.
+  F0337\textbar{}PriA\textbar{}\textbar{}\textbar{}\textbar{}\textbar{}0.01\textbar{}\textbar{}\textbar{}4\textbar{}Juarez
+  {[}\protect\hyperlink{ref-juarez-vazquez_evolution_2017}{70}{]}\textbar{}\\
+  \textbar{} \emph{Actinomyces} sp. oral taxon 848 str.
+  F0332\textbar{}subTrpF\textbar{}\textbar{}}\textbar{}-\textbar{}-\textbar{}0\textbar{}\textbar{}\textbar{}0.0001\textbar{}Juarez
+  {[}\protect\hyperlink{ref-juarez-vazquez_evolution_2017}{70}{]}\textbar{}\\
+  \textbar{} \emph{Actinomyces urogenitalis} DSM
+  15434\textbar{}PriA\textbar{}\textbar{}\textbar{}\textbar{}\textbar{}0.01\textbar{}\textbar{}\textbar{}0.02\textbar{}Juarez
+  {[}\protect\hyperlink{ref-juarez-vazquez_evolution_2017}{70}{]}\textbar{}\\
+  \textbar{} \emph{Bifidobacterium adolescentis}
+  L2-32\textbar{}PriA\textbar{}\emph{\textbar{}}\textbar{}\textbar{}\textbar{}0.2\textbar{}\textbar{}\textbar{}0.1\textbar{}Juarez
+  {[}\protect\hyperlink{ref-juarez-vazquez_evolution_2017}{70}{]}\textbar{}\\
+  \textbar{} \emph{Bifidobacterium gallicum} DSM 20093
+  \textbar{}PriA\textbar{}\emph{\textbar{}}\textbar{}\textbar{}\textbar{}0.1\textbar{}\textbar{}\textbar{}0.04\textbar{}Juarez
+  {[}\protect\hyperlink{ref-juarez-vazquez_evolution_2017}{70}{]}\textbar{}\\
+  \textbar{} \emph{Bifidobacterium longum} ATCC
+  15697\textbar{}PriA\textbar{}\emph{\textbar{}}\textbar{}\textbar{}\textbar{}0.1\textbar{}\textbar{}\textbar{}0.3\textbar{}Juarez
+  {[}\protect\hyperlink{ref-juarez-vazquez_evolution_2017}{70}{]}\textbar{}\\
+  \textbar{}Camera
+  CAM1\textbar{}Metagenoma\textbar{}\textbar{}\textbar{}1.7 ±
+  0.1\textbar{}0.3 ± 0.03\textbar{}0.2\textbar{}40 ± 7\textbar{}3.5 ±
+  0.04\textbar{}0.09\textbar{}Noda
+  {[}\protect\hyperlink{ref-noda-garcia_insights_2015}{39}{]}\textbar{}\\
+  \textbar{}CAM1\_A81G\textbar{}Metagenoma\textbar{}\textbar{}\textbar{}1.7
+  ± 0.2\textbar{}0.1 ± 0.01\textbar{}0.06\textbar{}32.2 ± 1.7\textbar{}1.9
+  ± 0.1\textbar{}0.06\textbar{}Noda
+  {[}\protect\hyperlink{ref-noda-garcia_insights_2015}{39}{]}\textbar{}\\
+  \textbar{}CAM1\_A81S\textbar{}Metagenoma\textbar{}\textbar{}\textbar{}4.0
+  ± 0.9\textbar{}0.2 ± 0.03\textbar{}0.04\textbar{}23.5 ± 6.5\textbar{}0.5
+  ± 0.1\textbar{}0.02\textbar{}Noda
+  {[}\protect\hyperlink{ref-noda-garcia_insights_2015}{39}{]}\textbar{}\\
+  \textbar{}CAM2\textbar{}Metagenoma\textbar{}\textbar{}\textbar{}n.d.\textbar{}n.d.\textbar{}0\textbar{}n.d.\textbar{}n.d.\textbar{}0\textbar{}Noda
+  {[}\protect\hyperlink{ref-noda-garcia_insights_2015}{39}{]}\textbar{}\\
+  \textbar{}PriA\_Ancestral\textbar{}Ancestral\textbar{}\textbar{}\textbar{}9.4±1.6\textbar{}0.3±0.009\textbar{}0.03\textbar{}4.3±0.4\textbar{}0.6±0.02\textbar{}0.13\textbar{}Verduzco,
+  Noda\emph{\textbar{}\\
+  \textbar{}PriA\_SubHisA\textbar{}Ancestral\textbar{}\textbar{}\textbar{}3.7±1.01\textbar{}0.5±0.03\textbar{}0.1\textbar{}-\textbar{}-\textbar{}0\textbar{}Verduzco,
+  Noda}\textbar{}\\
+  \textbar{}SubHisA\_Ancestral\textbar{}Ancestral\textbar{}\textbar{}\textbar{}6.3±0.7\textbar{}0.15±0.03\textbar{}0.02\textbar{}-\textbar{}-\textbar{}0\textbar{}Verduzco,
+  Noda\emph{\textbar{}\\
+  \textbar{}SubHisA\_PriA\textbar{}Ancestral\textbar{}\textbar{}\textbar{}27.7±3.4\textbar{}0.05±0.005\textbar{}2\textbar{}167.82\textbar{}0.03±0.002\textbar{}0.0001\textbar{}Verduzco,
+  Noda}\textbar{}\\
+  \textbar{}
+  \emph{scabies}\textbar{}\textbar{}0\textbar{}0\textbar{}163.6\textbar{}0.1\textbar{}\textbar{}\textbar{}\textbar{}\textbar{}Verduzco\emph{\textbar{}\\
+  \textbar{}
+  \emph{Avisco}\textbar{}\textbar{}\textbar{}46\textbar{}1.37\textbar{}36\textbar{}3.4\textbar{}\textbar{}\textbar{}\textbar{}Juárez}\textbar{}
   
   \begin{itemize}
   \tightlist
@@ -4764,6 +4074,8 @@ starts here.
     Datos no publicados del Laboratorio de Evolución de la diversidad
     metabólica.
   \end{itemize}
+  
+  \normalsize
   
   En este capítulo en las siguientes secciones se exploran cuatro apectos
   de la familia PriA. \emph{i)} La distribución y el contexto genómico de
@@ -4862,9 +4174,9 @@ starts here.
   \emph{Janibacter} con PriA ligeramente más grandes que el promedio.
   
   En Cyanobacteria hay pocas hojas verdes (EvoMining predictions) y no
-  están localizadas cerca de saxitoxin, la HisA marcada como BGC de
+  están localizadas cerca de la HisA de saxitoxin, el BGC proveniente de
   Cyanobacteria. En \emph{Pseudomonas} hay una gran población de
-  predicciones de EvoMining, pero son falsos positivios, ya que estas no
+  predicciones de EvoMining, pero son falsos positivos, ya que estas no
   corresponden a una rama dedicada al metabolismo secundario, sino a la
   rama de la ciclasa. En Archaea algunas de los hojas grises, es decir sin
   destino metabólico conocido serán exploradas en la siguiente sección.
@@ -4882,7 +4194,7 @@ starts here.
   Cyanobacteria{[}\protect\hyperlink{ref-moustafa_origin_2009}{103}{]}, un
   lipopolisacárido producido por una Proteobacteria y un BGC productor de
   cloro pentostatina producido en Actinobacteria
-  {[}\protect\hyperlink{ref-gao_biosynthesis_2017}{169}{]}. La
+  {[}\protect\hyperlink{ref-gao_biosynthesis_2017}{170}{]}. La
   pentostatina es un atibiótico nucleosídico derivado de adenosina, cuyo
   cluster es llamado \emph{ada} . La PriA del cluster \emph{ada} es
   llamada \emph{adaK} y sí parece participar del cluster, ya que el
@@ -5007,37 +4319,147 @@ starts here.
   \label{fig:saxitoxin}
   \end{figure}
   
-  \section{PriA a nivel de aminoácidos}\label{pria-a-nivel-de-aminoacidos}
+  \section{El monitoreo en cambios de aminoácidos en PriA para estudiar
+  rutas evolutivas y reconstrucciones de la estructura
+  tridimensional.}\label{el-monitoreo-en-cambios-de-aminoacidos-en-pria-para-estudiar-rutas-evolutivas-y-reconstrucciones-de-la-estructura-tridimensional.}
+  
+  En esta segunda sección concerniente a la familia PriA se busca
+  información contenida en la secuencia de aminoácidos. En la primera
+  parte se discute cómo en datos de evolución dirigida en el laboatorio no
+  se encontró ninguna trayectoria en donde algún paso incrementara la
+  actividad de PriA en sus dos sustratos nativos. En la segunda parte se
+  muestra una reconstrucción de la estructura tridimensional de PriA
+  basada en la covarianza de sus aminoácidos en secuencias del registro
+  evolutivo.
   
   \subsection{Al transformar una subHisA en una PriA mediante mutaciones
   no se observó ninguna trayectoria creciente para ambos sustratos
   (darwiniana)}\label{al-transformar-una-subhisa-en-una-pria-mediante-mutaciones-no-se-observo-ninguna-trayectoria-creciente-para-ambos-sustratos-darwiniana}
   
-  En el segundo punto, al analizar datos de cinéticas enzimaticas de
-  mutantes de subHisA se descubrió que en ellos no existe una trayectoria
-  Darwiniana para ambos sustratos que lleve a la adquisición de
-  promiscuidad. Es decir que al menos en este ejemplo, las mutaciones
-  puntuales que llevan a una enzima monofuncional en la ruta para adquirir
-  promiscuidad nunca incrementan la capacidad catalítica sobre ambas
-  reacciones.
-  
-  En esta sección analizamos cómo cambia la capacidad catalítica de un
-  sustrato mientras se transforma la del otro. Para ello se utilizaron
-  datos de capacidad catalítica de mutantes de subHisA de
-  \emph{Corynebacterium diphteriae}. Estos datos fueron obtenidos de la
+  En esta sección analizamos cómo cambia la capacidad catalítica de PriA
+  sobre un sustrato mientras se varía la del otro. Para ello se utilizaron
+  datos de mutantes de subHisA de \emph{Corynebacterium diphteriae}. Estas
+  mediciones de cinéticas enzimáticas fueron obtenidos del trabajo de
   tesis de Lianet Noda {[}\protect\hyperlink{ref-noda_tesis_2012}{71}{]}.
-  A partir de la secuencia original que se mostró es una subHisA se
-  obtuvieron mutantes con el objetivo de alcanzar la promiscuidad, es
-  decir de convertir la enzima en una PriA. Con esos datos, quedaba
-  pendiente la exploración de las rutas, ¿cuántas son? ¿Existe alguna
-  tendencia en ciertos momentos de la ruta sobre el incremento/decremento
-  de alguna de las dos funciones?
+  A partir de la secuencia original que se mostró es una subHisA, se
+  realizaron mutantes con el objetivo de alcanzar la promiscuidad, es
+  decir de convertir la enzima subHisA en una PriA. Se comenzó con
+  diferentes mutantes puntuales adicionando una mutación cada vez, hasta
+  llegar a una con 11 mutaciones. En esta colección de mutantes varias
+  ganaron la función de PRA isomerasa, a distintos niveles. La que alcanzó
+  mayor actividad PRA isomerasa fue la \(9.3\), una variante con nueve
+  mutaciones. En estos datos quedaba pendiente la exploración de las
+  rutas, es decir cómo es el camino desde una mutante sencilla hasta una
+  múltiple ¿cuántas rutas son posibles? ¿Existe alguna tendencia en
+  ciertos momentos de la ruta sobre el incremento/decremento de alguna de
+  las dos funciones?
   
-  Adicionando una mutación cada vez hasta la mutante con 11 mutaciones.
-  Asi pues se desarrolló un script utilizando recursividad que permitiera
-  reconstruir todas las rutas posibles. Como resultado No existieron rutas
-  darwininanas. Finalmente, estos aminoácidos fueron comparados con los
-  provistos por EVCouplings, de covariación.
+  Asi pues se desarrolló un
+  \href{https://github.com/nselem/perlas/tree/master/LiaTrayectory}{script}
+  utilizando recursividad para reconstruir todas las rutas posibles. El
+  total de rutas calculadas hasta la mutación 11 fue de 2928 caminos, las
+  rutas posibles hasta la mutante 9.3 son 790. Estas rutas son mostradas
+  en la \autoref{fig:PriARutas}.
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.6]{conclusion/Solocirculos.png}
+  \caption[Rutas desde una subHisA hasta una variante con 9 mutaciones]{\footnotesize{Rutas desde una subHisA hasta una variante con 9 mutaciones. En cada círculo el primer dígito indica el número de mutaciones}}
+  \label{fig:PriARutas}
+  \end{figure}
+  
+  Al analizar los cambios sufridos en cada actividad en cada paso de cada
+  ruta se descubrió que no existe en ellas una trayectoria no decreciente
+  para ningún sustratos. Como ejemplo, en la \autoref{fig:PriARutas} se
+  muestran las rutas donde cada mutante mantiene un nível mínimo de
+  actividad de ProFAR isomerasa
+  (\(\frac{K_{cat}}{K_m} PriA_{ProFAR} \ge .004\)). En azul sólido se ven
+  los incrementos en PRA y en rojo sólido los incrementos en ProFAR. Las
+  líneas punteadas indican que la actividad decreció en ese paso de la
+  ruta. Entre una y cuatro mutaciones el azul sólido es predominante, es
+  decir se incrementa la actividad para PRA, pero entre 4 y 5 mutaciones
+  ningún paso incrementa la actividad de PRA y en cambio sí se incrementa
+  la actividad para ProFAR, esta figura sugiere que al mejorar una
+  actividad se compromete el mejoramiento de la otra. En este ejemplo, las
+  mutaciones puntuales que llevan a una enzima monofuncional a adquirir
+  promiscuidad no mantienen una tendencia no decreciente de principio a
+  fin sobre ninguna ruta en ninguna de las dos reacciones isomerización de
+  PRA e isomerización de ProFAR. Este tipo de trayectorias se conoce como
+  no darwininana ya que siempre existe algún paso donde decrece alguna de
+  las actividades.
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.6]{chapter4/LianetFiguras/SolocirculosPRA_PRO_RUTAS_10_1_r002.png}
+  \caption[Positive increments on PRA]{\footnotesize{}}
+  \label{fig:PRARutas}
+  \end{figure}
+  
+  \subsection{Los residuos que covarían en el registro evolutivo de PriA
+  permiten una reconstrucción aproximada de su estructura
+  tridimensional}\label{los-residuos-que-covarian-en-el-registro-evolutivo-de-pria-permiten-una-reconstruccion-aproximada-de-su-estructura-tridimensional}
+  
+  El estudio de la evolución de PriA en la sección anterior nos
+  proporcionó el aprendizaje de que para adquirir una actividad el camino
+  no es estrictamente creciente, si no que suele haber pasos donde alguna
+  de las dos actividades baja. En esta sección utilizaremos el registro
+  evolutivo resultado de millones de años. Tomaremos miles de homólogos de
+  PriA para inferir la estructura tridimensional de una secuencia.
+  Evcouplings es un método que considera las secuencias génicas existentes
+  como experimentos exitosos de la naturaleza. Con esta información
+  obtiene la covariación entre pares de aminoácidos de las secuencias
+  existentes en el registro evolutivo. Los pares fuertemente relacionados
+  se denominan acoplamientos, estos acoplamientos a menudo están cerca
+  físicamente en la estructura terciaria de la proteína. Se ha demostrado
+  que muchas proteínas contienen suficientes acoplamientos distribuidos
+  ampliamente en toda la secuencia, de forma que con ellos es posible la
+  reconstrucción de su estructura tridimensional
+  {[}\protect\hyperlink{ref-marks_protein_2011}{171}{]}. En esta sección
+  se aplicará EVcouplings para reconstruir la estructura tridimensional de
+  PriA.
+  
+  Las diferencias a nivel estructural pueden amplificar la información
+  proporcionada por variaciones a nivel de secuencia. Por este motivo se
+  decidió implementar Evcouplings
+  {[}\protect\hyperlink{ref-marks_protein_2011}{171}{]}, para poder
+  aplicarlo a la familia PriA. Este método es de difícil instalación ya
+  que tiene muchas dependencias, por ello desarrollé un contenedor docker
+  donde las dependencias y el software quedan instalados. Este desarrollo
+  fue incluido por los desarrolladores originales como sugerencia de
+  instalación.\\
+  El contenedor docker implementa EVcouplings python framework
+  {[}\protect\hyperlink{ref-hopf_evcouplings_2019}{172}{]} que comprende
+  cinco etapas para estudiar el análisis de coevolución de residuos de una
+  familia de proteínas. Estas etapas son i) Alineado, ii) análisis de
+  acoplamiento, iii) plegamiento basado en acoplamientos iv) análisis de
+  mutación y v) comparación con estructuras conocidas.
+  
+  EVcouplings fue aplicado a PriA de Streptomyces coelicolor con
+  identificador de Uniprot HIS4\_STRCO. Las secuencias para las
+  alineaciones se recuperaron automáticamente de Uniprot, otros parámetros
+  se dejaron con la configuración inicial del archivo de configuración.
+  Como resultado se modeló la estructura de PriA con los acoplamientos de
+  sus aminoácidos. Una comparación con una estructura cristalográfica es
+  mostrada en la \autoref{fig:CouplingsFoldingPriA}
+  
+  La estructura reconstruida es parecida, pero para obtener mejor
+  definición es posible que se deba refinar la selección de las secuencias
+  del alineamiento, diferenciando entre secuencias PriA, subHisA, PriB y
+  subTrpF.
+  
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = .5]{chapter4/Couplings/PriACouplingFoldings.png}
+  \caption[Superposición de estructura de PriA generado por Folding con la estructura cristalográfica]{\footnotesize{}}
+  \label{fig:CouplingsFoldingPriA}
+  \end{figure}
+  
+  Finalmente los aminoácidos utilizados en la evolución dirigida de la
+  sección anterior fueron comparados con los provistos por EVCouplings
+  como altamente partícipes en la covariación. En la siguiente tabla se
+  muestra en la primera columna los aminoácidos variados en la sección
+  anterior, y en la segunda columna el aminoácido correspondiente en la
+  secuencia de \emph{Streptomyces coelicolor}.
   
   \begin{longtable}[]{@{}ll@{}}
   \toprule
@@ -5060,87 +4482,24 @@ starts here.
   
   \begin{figure}[h!tbp]
   \centering
-  \includegraphics[angle = 0,scale = 0.6]{conclusion/Solocirculos.png}
-  \caption[Non darwinian trayectories]{\footnotesize{}}
-  \label{fig:PriARutas}
-  \end{figure}
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 0,scale = 0.6]{conclusion/SolocirculosPRA.png}
-  \caption[Positive increments on PRA]{\footnotesize{}}
-  \label{fig:PRARutas}
-  \end{figure}
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 0,scale = 0.6]{conclusion/SolocirculosPRO.png}
-  \caption[Positive increments on ProFAR]{\footnotesize{}}
-  \label{fig:ProFARRutas}
-  \end{figure}
-  
-  \subsection{Los residuos que covarían en el registro evolutivo de PriA
-  permiten una reconstrucción aproximada de su estructura
-  tridimensional}\label{los-residuos-que-covarian-en-el-registro-evolutivo-de-pria-permiten-una-reconstruccion-aproximada-de-su-estructura-tridimensional}
-  
-  Evcouplings es un método que considera la información contenida en las
-  secuencias genómicas como experimentos exitosos de la naturaleza. Con
-  esta información obtiene la covariación de pares de aminoácidos y
-  reconstruye con ellos la estructura tridimensional de una proteína. Los
-  pares fuertemente relacionados se denominan acoplamientos, estos
-  acoplamientos a menudo están cerca físicamente en la estructura
-  terciaria de la proteína. Se ha demostrado que muchas proteínas
-  contienen suficientes acoplamientos distribuidos en su secuencia para
-  permitir su reconstrucción terciaria {[}1{]}.
-  
-  Las diferencias a nivel estructural pueden amplificar la información
-  proporcionada por variaciones a nivel de secuencia. Por este motivo se
-  decidió implementar Evcouplings {[}REF{]}, para poder aplicarlo a la
-  familia PriA. Este método es de difícil instalación ya que tiene muchas
-  dependencias, por ello desarrollé un contenedor docker donde las
-  dependencias y el software quedan instalados. Este desarrollo fue
-  incluido por los desarrolladores originales como sugerencia de
-  instalación.\\
-  El contenedor docker implementa EVcouplings python framework {[}2{]} que
-  comprende cinco etapas para estudiar el análisis de coevolución de
-  residuos de una familia de proteínas. Estas etapas son i) Alineado, ii)
-  análisis de acoplamiento, iii) plegamiento basado en acoplamientos iv)
-  análisis de mutación y v) comparación con estructuras conocidas.
-  
-  EVcouplings fue aplicado a PriA de Streptomyces coelicolor con
-  identificador de Uniprot HIS4\_STRCO. Las secuencias para las
-  alineaciones se recuperaron automáticamente de Uniprot mientras que
-  otros parámetros se dejaron con la configuración inicial del archivo de
-  configuración.
-  
-  Resultado se modelo PriA con evcouplings y los aminoácidos encontrados
-  coinciden con los encontrados experimentalmente.
-  
-  \begin{figure}[h!tbp]
-  \centering
   \includegraphics[angle = 0,scale = .8]{chapter4/Couplings/PriAMutations.pdf}
   \caption[Tendencia de mutaciones observada en secuencias de PriA]{\footnotesize{}}
   \label{fig:CouplingsMutationsPriA}
-  \end{figure}
-  
-  La estructura reconstruida es parecida, pero para obtener mejor
-  refinamiento se debe seleccionar mejor las secuencias del alineamiento
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 0,scale = .5]{chapter4/Couplings/PriACouplingFoldings.png}
-  \caption[Superposición de estructura de PriA generado por Folding con la estructura cristalográfica]{\footnotesize{}}
-  \label{fig:CouplingsFoldingPriA}
   \end{figure}
   
   \section{Afinidad de enzimas selectas por sustratos químicamente
   parecidos a PRA y
   PROFAR}\label{afinidad-de-enzimas-selectas-por-sustratos-quimicamente-parecidos-a-pra-y-profar}
   
-  Algunas de estas enzimas se seleccionaron en busca de nuevas funciones
-  promiscuas, las reacciones catalizadas por los candidatos se
-  investigaron mediante la exploración de sustratos químicamente similares
-  a los nativos.
+  Además de los sustratos conocidos ProFAR y PRA en los que PriA es capaz
+  de realizar una isomerización, es posible que PriA pueda ser promiscua
+  en otros sustratos. De hecho como se vio en la sección de EvoMining de
+  este capítulo, PriA participa en la síntesis del antibiótico
+  pentostaina. Tomando este ejmplo como inspiración, se colectaron en la
+  literatura sustratos parecidos químicamente a ProFAR y PRA. En esta
+  sección se buscará mostrar sustratos parecidos a los nativos con la idea
+  de posteriormente probarlo en copias seleecionadas de PriA provenientes
+  de diversos organismos.
   
   \begin{figure}[h!tbp]
   \centering
@@ -5318,7 +4677,7 @@ starts here.
   
   \begin{Shaded}
   \begin{Highlighting}[]
-  \KeywordTok{ggplot}\NormalTok{(docking.m, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{variable, }\DataTypeTok{y=}\NormalTok{Enzima)) }\OperatorTok{+}\StringTok{ }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"Substrates"}\NormalTok{, }\DataTypeTok{y =} \StringTok{"Enzymes"}\NormalTok{,}\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size=}\DecValTok{12}\NormalTok{))}\OperatorTok{+}\StringTok{ }\KeywordTok{scale_fill_gradientn}\NormalTok{(}\DataTypeTok{colours =} \KeywordTok{hm.palette}\NormalTok{(}\DecValTok{100}\NormalTok{),}\DataTypeTok{na.value =} \StringTok{"gray"}\NormalTok{)}\OperatorTok{+}\KeywordTok{theme_bw}\NormalTok{()}\OperatorTok{+}\KeywordTok{theme}\NormalTok{(}\DataTypeTok{plot.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{14}\NormalTok{, }\DataTypeTok{face =} \StringTok{"bold"}\NormalTok{), }\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{12}\NormalTok{), }\DataTypeTok{axis.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{face=}\StringTok{"bold"}\NormalTok{), }\DataTypeTok{axis.text.x=}\KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{90}\NormalTok{,}\DataTypeTok{size =} \DecValTok{6}\NormalTok{))}
+  \KeywordTok{ggplot}\NormalTok{(docking.m, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{variable, }\DataTypeTok{y=}\NormalTok{Enzima)) +}\StringTok{ }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"Substrates"}\NormalTok{, }\DataTypeTok{y =} \StringTok{"Enzymes"}\NormalTok{,}\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size=}\DecValTok{12}\NormalTok{))+}\StringTok{ }\KeywordTok{scale_fill_gradientn}\NormalTok{(}\DataTypeTok{colours =} \KeywordTok{hm.palette}\NormalTok{(}\DecValTok{100}\NormalTok{),}\DataTypeTok{na.value =} \StringTok{"gray"}\NormalTok{)+}\KeywordTok{theme_bw}\NormalTok{()+}\KeywordTok{theme}\NormalTok{(}\DataTypeTok{plot.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{14}\NormalTok{, }\DataTypeTok{face =} \StringTok{"bold"}\NormalTok{), }\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{12}\NormalTok{), }\DataTypeTok{axis.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{face=}\StringTok{"bold"}\NormalTok{), }\DataTypeTok{axis.text.x=}\KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{90}\NormalTok{,}\DataTypeTok{size =} \DecValTok{6}\NormalTok{))}
   \end{Highlighting}
   \end{Shaded}
   
@@ -5344,7 +4703,7 @@ starts here.
   \begin{Shaded}
   \begin{Highlighting}[]
   \NormalTok{## boxplot de los sustratos}
-  \KeywordTok{ggplot}\NormalTok{(docking.m, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{variable, }\DataTypeTok{y=}\NormalTok{value)) }\OperatorTok{+}\StringTok{ }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"Substrates"}\NormalTok{, }\DataTypeTok{y =} \StringTok{"Affinity"}\NormalTok{,}\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size=}\DecValTok{12}\NormalTok{)) }\OperatorTok{+}\StringTok{ }\KeywordTok{geom_boxplot}\NormalTok{()}\OperatorTok{+}\KeywordTok{theme_bw}\NormalTok{()}\OperatorTok{+}\KeywordTok{theme}\NormalTok{(}\DataTypeTok{plot.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{14}\NormalTok{, }\DataTypeTok{face =} \StringTok{"bold"}\NormalTok{), }\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{12}\NormalTok{), }\DataTypeTok{axis.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{face=}\StringTok{"bold"}\NormalTok{), }\DataTypeTok{axis.text.x=}\KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{90}\NormalTok{,}\DataTypeTok{size =} \DecValTok{6}\NormalTok{), }\DataTypeTok{legend.position =} \StringTok{"bottom"}\NormalTok{)}
+  \KeywordTok{ggplot}\NormalTok{(docking.m, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{variable, }\DataTypeTok{y=}\NormalTok{value)) +}\StringTok{ }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"Substrates"}\NormalTok{, }\DataTypeTok{y =} \StringTok{"Affinity"}\NormalTok{,}\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size=}\DecValTok{12}\NormalTok{)) +}\StringTok{ }\KeywordTok{geom_boxplot}\NormalTok{()+}\KeywordTok{theme_bw}\NormalTok{()+}\KeywordTok{theme}\NormalTok{(}\DataTypeTok{plot.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{14}\NormalTok{, }\DataTypeTok{face =} \StringTok{"bold"}\NormalTok{), }\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{12}\NormalTok{), }\DataTypeTok{axis.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{face=}\StringTok{"bold"}\NormalTok{), }\DataTypeTok{axis.text.x=}\KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{90}\NormalTok{,}\DataTypeTok{size =} \DecValTok{6}\NormalTok{), }\DataTypeTok{legend.position =} \StringTok{"bottom"}\NormalTok{)}
   \end{Highlighting}
   \end{Shaded}
   
@@ -5472,12 +4831,12 @@ starts here.
   las dos enzimas con actividad \emph{Thermomonospora curvata} es una
   Actinobacteria termofílica de la familia \emph{Thermomonosporaceae} ,
   puede ser encontrada encompostas ya que participa en la degradación de
-  celulosa {[}\protect\hyperlink{ref-chertkov_complete_2011}{170}{]}.
+  celulosa {[}\protect\hyperlink{ref-chertkov_complete_2011}{173}{]}.
   
   Jonesia trpF no mostró actividad \emph{Jonesia denitrificans} está
   clasificada como un organismo patogénico para animales, su genoma fue
   originalmente aislado de from cooked ox blood
-  {[}\protect\hyperlink{ref-pukall_complete_2009}{171}{]}.
+  {[}\protect\hyperlink{ref-pukall_complete_2009}{174}{]}.
   
   \begin{Shaded}
   \begin{Highlighting}[]
@@ -5714,15 +5073,15 @@ starts here.
   
   
   \NormalTok{## visualising full data}
-  \NormalTok{tablePRO}\OperatorTok{$}\NormalTok{Temp<-}\OtherTok{NULL}
-  \NormalTok{tablePRO}\OperatorTok{$}\NormalTok{Cycle<-}\OtherTok{NULL}
+  \NormalTok{tablePRO$Temp<-}\OtherTok{NULL}
+  \NormalTok{tablePRO$Cycle<-}\OtherTok{NULL}
   
-  \NormalTok{a<-tablePRO}\OperatorTok{$}\NormalTok{Time[}\KeywordTok{c}\NormalTok{(}\OtherTok{TRUE}\NormalTok{,}\OtherTok{FALSE}\NormalTok{)]}
-  \NormalTok{b<-tablePRO}\OperatorTok{$}\NormalTok{Time[}\KeywordTok{c}\NormalTok{(}\OtherTok{TRUE}\NormalTok{,}\OtherTok{FALSE}\NormalTok{)]}\OperatorTok{+}\FloatTok{19.15}
+  \NormalTok{a<-tablePRO$Time[}\KeywordTok{c}\NormalTok{(}\OtherTok{TRUE}\NormalTok{,}\OtherTok{FALSE}\NormalTok{)]}
+  \NormalTok{b<-tablePRO$Time[}\KeywordTok{c}\NormalTok{(}\OtherTok{TRUE}\NormalTok{,}\OtherTok{FALSE}\NormalTok{)]+}\FloatTok{19.15}
   
-  \NormalTok{tablePRO}\OperatorTok{$}\NormalTok{Time[}\KeywordTok{c}\NormalTok{(}\OtherTok{TRUE}\NormalTok{, }\OtherTok{FALSE}\NormalTok{)] <-}\StringTok{ }\NormalTok{a}
-  \NormalTok{tablePRO}\OperatorTok{$}\NormalTok{Time[}\KeywordTok{c}\NormalTok{(}\OtherTok{FALSE}\NormalTok{, }\OtherTok{TRUE}\NormalTok{)] <-}\StringTok{ }\NormalTok{b}
-  \NormalTok{tablePRO}\OperatorTok{$}\NormalTok{Time}
+  \NormalTok{tablePRO$Time[}\KeywordTok{c}\NormalTok{(}\OtherTok{TRUE}\NormalTok{, }\OtherTok{FALSE}\NormalTok{)] <-}\StringTok{ }\NormalTok{a}
+  \NormalTok{tablePRO$Time[}\KeywordTok{c}\NormalTok{(}\OtherTok{FALSE}\NormalTok{, }\OtherTok{TRUE}\NormalTok{)] <-}\StringTok{ }\NormalTok{b}
+  \NormalTok{tablePRO$Time}
   \end{Highlighting}
   \end{Shaded}
   
@@ -5751,9 +5110,9 @@ starts here.
   
   \NormalTok{PROassay.m <-}\StringTok{ }\KeywordTok{melt}\NormalTok{(tablePRO,}\DataTypeTok{id=}\StringTok{"Time"}\NormalTok{)}
   
-  \KeywordTok{plot}\NormalTok{(PROassay.m}\OperatorTok{$}\NormalTok{Time, PROassay.m}\OperatorTok{$}\NormalTok{value, }\DataTypeTok{col=}\NormalTok{PROassay.m}\OperatorTok{$}\NormalTok{variable,  }\DataTypeTok{xlab=}\StringTok{"Time [s]"}\NormalTok{,}\DataTypeTok{ylab=}\StringTok{"Absorbance"}\NormalTok{, }\DataTypeTok{pch=}\DecValTok{19}\NormalTok{,}\DataTypeTok{bty=}\StringTok{'L'}\NormalTok{)}
+  \KeywordTok{plot}\NormalTok{(PROassay.m$Time, PROassay.m$value, }\DataTypeTok{col=}\NormalTok{PROassay.m$variable,  }\DataTypeTok{xlab=}\StringTok{"Time [s]"}\NormalTok{,}\DataTypeTok{ylab=}\StringTok{"Absorbance"}\NormalTok{, }\DataTypeTok{pch=}\DecValTok{19}\NormalTok{,}\DataTypeTok{bty=}\StringTok{'L'}\NormalTok{)}
   \KeywordTok{par}\NormalTok{(}\DataTypeTok{xpd =} \OtherTok{TRUE}\NormalTok{)}
-  \KeywordTok{legend}\NormalTok{(}\StringTok{"right"}\NormalTok{, }\DataTypeTok{legend =}\NormalTok{ (}\KeywordTok{unique}\NormalTok{(PROassay.m}\OperatorTok{$}\NormalTok{variable)), }\DataTypeTok{col =}\NormalTok{ (}\KeywordTok{unique}\NormalTok{(PROassay.m}\OperatorTok{$}\NormalTok{variable)),}\DataTypeTok{pch=}\DecValTok{19}\NormalTok{,}\DataTypeTok{bg=}\StringTok{"white"}\NormalTok{)}
+  \KeywordTok{legend}\NormalTok{(}\StringTok{"right"}\NormalTok{, }\DataTypeTok{legend =} \NormalTok{(}\KeywordTok{unique}\NormalTok{(PROassay.m$variable)), }\DataTypeTok{col =} \NormalTok{(}\KeywordTok{unique}\NormalTok{(PROassay.m$variable)),}\DataTypeTok{pch=}\DecValTok{19}\NormalTok{,}\DataTypeTok{bg=}\StringTok{"white"}\NormalTok{)}
   \end{Highlighting}
   \end{Shaded}
   
@@ -5761,7 +5120,7 @@ starts here.
   
   \begin{Shaded}
   \begin{Highlighting}[]
-  \KeywordTok{ggplot}\NormalTok{(PROassay.m, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ PROassay.m}\OperatorTok{$}\NormalTok{Time, }\DataTypeTok{y =}\NormalTok{ PROassay.m}\OperatorTok{$}\NormalTok{value),}\DataTypeTok{color=}\StringTok{"variable"}\NormalTok{) }\OperatorTok{+}\StringTok{ }\KeywordTok{theme_bw}\NormalTok{() }
+  \KeywordTok{ggplot}\NormalTok{(PROassay.m, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =} \NormalTok{PROassay.m$Time, }\DataTypeTok{y =} \NormalTok{PROassay.m$value),}\DataTypeTok{color=}\StringTok{"variable"}\NormalTok{) +}\StringTok{ }\KeywordTok{theme_bw}\NormalTok{() }
   \end{Highlighting}
   \end{Shaded}
   
@@ -5769,7 +5128,7 @@ starts here.
   
   \begin{Shaded}
   \begin{Highlighting}[]
-  \KeywordTok{qplot}\NormalTok{(Time,value, }\DataTypeTok{data =}\NormalTok{ PROassay.m,}\DataTypeTok{colour=}\NormalTok{variable)}\OperatorTok{+}\KeywordTok{theme_bw}\NormalTok{()}\OperatorTok{+}\StringTok{ }\KeywordTok{theme}\NormalTok{(}\DataTypeTok{legend.position  =}\StringTok{"bottom"}\NormalTok{,}\DataTypeTok{legend.text=}\KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size=}\DecValTok{10}\NormalTok{),}\DataTypeTok{plot.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{14}\NormalTok{, }\DataTypeTok{face =} \StringTok{"bold"}\NormalTok{),}\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{12}\NormalTok{),}\DataTypeTok{axis.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{face=}\StringTok{"bold"}\NormalTok{),}\DataTypeTok{axis.text.x=}\KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{10}\NormalTok{),}\DataTypeTok{axis.text.y=}\KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{7}\NormalTok{))}\OperatorTok{+}\KeywordTok{facet_grid}\NormalTok{(PROassay.m}\OperatorTok{$}\NormalTok{variable}\OperatorTok{~}\NormalTok{.,}\DataTypeTok{scales=}\StringTok{"free"}\NormalTok{)}
+  \KeywordTok{qplot}\NormalTok{(Time,value, }\DataTypeTok{data =} \NormalTok{PROassay.m,}\DataTypeTok{colour=}\NormalTok{variable)+}\KeywordTok{theme_bw}\NormalTok{()+}\StringTok{ }\KeywordTok{theme}\NormalTok{(}\DataTypeTok{legend.position  =}\StringTok{"bottom"}\NormalTok{,}\DataTypeTok{legend.text=}\KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size=}\DecValTok{10}\NormalTok{),}\DataTypeTok{plot.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{14}\NormalTok{, }\DataTypeTok{face =} \StringTok{"bold"}\NormalTok{),}\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{12}\NormalTok{),}\DataTypeTok{axis.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{face=}\StringTok{"bold"}\NormalTok{),}\DataTypeTok{axis.text.x=}\KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{10}\NormalTok{),}\DataTypeTok{axis.text.y=}\KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{7}\NormalTok{))+}\KeywordTok{facet_grid}\NormalTok{(PROassay.m$variable~.,}\DataTypeTok{scales=}\StringTok{"free"}\NormalTok{)}
   \end{Highlighting}
   \end{Shaded}
   
@@ -5782,15 +5141,15 @@ starts here.
   \begin{Shaded}
   \begin{Highlighting}[]
   \NormalTok{## visualising full data}
-  \NormalTok{tablePRA}\OperatorTok{$}\NormalTok{Temp<-}\OtherTok{NULL}
-  \NormalTok{tablePRA}\OperatorTok{$}\NormalTok{Cycle<-}\OtherTok{NULL}
+  \NormalTok{tablePRA$Temp<-}\OtherTok{NULL}
+  \NormalTok{tablePRA$Cycle<-}\OtherTok{NULL}
   
-  \NormalTok{a<-tablePRA}\OperatorTok{$}\NormalTok{Time[}\KeywordTok{c}\NormalTok{(}\OtherTok{TRUE}\NormalTok{,}\OtherTok{FALSE}\NormalTok{)]}
-  \NormalTok{b<-tablePRA}\OperatorTok{$}\NormalTok{Time[}\KeywordTok{c}\NormalTok{(}\OtherTok{TRUE}\NormalTok{,}\OtherTok{FALSE}\NormalTok{)]}\OperatorTok{+}\FloatTok{19.15}
+  \NormalTok{a<-tablePRA$Time[}\KeywordTok{c}\NormalTok{(}\OtherTok{TRUE}\NormalTok{,}\OtherTok{FALSE}\NormalTok{)]}
+  \NormalTok{b<-tablePRA$Time[}\KeywordTok{c}\NormalTok{(}\OtherTok{TRUE}\NormalTok{,}\OtherTok{FALSE}\NormalTok{)]+}\FloatTok{19.15}
   
-  \NormalTok{tablePRA}\OperatorTok{$}\NormalTok{Time[}\KeywordTok{c}\NormalTok{(}\OtherTok{TRUE}\NormalTok{, }\OtherTok{FALSE}\NormalTok{)] <-}\StringTok{ }\NormalTok{a}
-  \NormalTok{tablePRA}\OperatorTok{$}\NormalTok{Time[}\KeywordTok{c}\NormalTok{(}\OtherTok{FALSE}\NormalTok{, }\OtherTok{TRUE}\NormalTok{)] <-}\StringTok{ }\NormalTok{b}
-  \NormalTok{tablePRA}\OperatorTok{$}\NormalTok{Time}
+  \NormalTok{tablePRA$Time[}\KeywordTok{c}\NormalTok{(}\OtherTok{TRUE}\NormalTok{, }\OtherTok{FALSE}\NormalTok{)] <-}\StringTok{ }\NormalTok{a}
+  \NormalTok{tablePRA$Time[}\KeywordTok{c}\NormalTok{(}\OtherTok{FALSE}\NormalTok{, }\OtherTok{TRUE}\NormalTok{)] <-}\StringTok{ }\NormalTok{b}
+  \NormalTok{tablePRA$Time}
   \end{Highlighting}
   \end{Shaded}
   
@@ -5817,9 +5176,9 @@ starts here.
   \NormalTok{tablePRA<-tablePRA[}\KeywordTok{grep}\NormalTok{(}\StringTok{"Pra|Time"}\NormalTok{, }\KeywordTok{colnames}\NormalTok{(tablePRA))]}
   
   \NormalTok{PRAassay.m <-}\StringTok{ }\KeywordTok{melt}\NormalTok{(tablePRA,}\DataTypeTok{id=}\StringTok{"Time"}\NormalTok{)}
-  \KeywordTok{plot}\NormalTok{(PRAassay.m}\OperatorTok{$}\NormalTok{Time, PRAassay.m}\OperatorTok{$}\NormalTok{value, }\DataTypeTok{col=}\NormalTok{PRAassay.m}\OperatorTok{$}\NormalTok{variable,  }\DataTypeTok{xlab=}\StringTok{"Time [s]"}\NormalTok{,}\DataTypeTok{ylab=}\StringTok{"Fluorescence"}\NormalTok{, }\DataTypeTok{pch=}\DecValTok{19}\NormalTok{,}\DataTypeTok{bty=}\StringTok{'L'}\NormalTok{)}
+  \KeywordTok{plot}\NormalTok{(PRAassay.m$Time, PRAassay.m$value, }\DataTypeTok{col=}\NormalTok{PRAassay.m$variable,  }\DataTypeTok{xlab=}\StringTok{"Time [s]"}\NormalTok{,}\DataTypeTok{ylab=}\StringTok{"Fluorescence"}\NormalTok{, }\DataTypeTok{pch=}\DecValTok{19}\NormalTok{,}\DataTypeTok{bty=}\StringTok{'L'}\NormalTok{)}
   \KeywordTok{par}\NormalTok{(}\DataTypeTok{xpd =} \OtherTok{TRUE}\NormalTok{)}
-  \KeywordTok{legend}\NormalTok{(}\StringTok{"right"}\NormalTok{, }\DataTypeTok{legend =}\NormalTok{ (}\KeywordTok{unique}\NormalTok{(PRAassay.m}\OperatorTok{$}\NormalTok{variable)), }\DataTypeTok{col =}\NormalTok{ (}\KeywordTok{unique}\NormalTok{(PRAassay.m}\OperatorTok{$}\NormalTok{variable)),}\DataTypeTok{pch=}\DecValTok{19}\NormalTok{,}\DataTypeTok{bg=}\StringTok{"white"}\NormalTok{)}
+  \KeywordTok{legend}\NormalTok{(}\StringTok{"right"}\NormalTok{, }\DataTypeTok{legend =} \NormalTok{(}\KeywordTok{unique}\NormalTok{(PRAassay.m$variable)), }\DataTypeTok{col =} \NormalTok{(}\KeywordTok{unique}\NormalTok{(PRAassay.m$variable)),}\DataTypeTok{pch=}\DecValTok{19}\NormalTok{,}\DataTypeTok{bg=}\StringTok{"white"}\NormalTok{)}
   \end{Highlighting}
   \end{Shaded}
   
@@ -5827,7 +5186,7 @@ starts here.
   
   \begin{Shaded}
   \begin{Highlighting}[]
-  \KeywordTok{ggplot}\NormalTok{(PRAassay.m, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ PRAassay.m}\OperatorTok{$}\NormalTok{Time, }\DataTypeTok{y =}\NormalTok{ PRAassay.m}\OperatorTok{$}\NormalTok{value),}\DataTypeTok{color=}\StringTok{"variable"}\NormalTok{) }\OperatorTok{+}\StringTok{ }\KeywordTok{theme_bw}\NormalTok{() }
+  \KeywordTok{ggplot}\NormalTok{(PRAassay.m, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =} \NormalTok{PRAassay.m$Time, }\DataTypeTok{y =} \NormalTok{PRAassay.m$value),}\DataTypeTok{color=}\StringTok{"variable"}\NormalTok{) +}\StringTok{ }\KeywordTok{theme_bw}\NormalTok{() }
   \end{Highlighting}
   \end{Shaded}
   
@@ -5835,7 +5194,7 @@ starts here.
   
   \begin{Shaded}
   \begin{Highlighting}[]
-  \KeywordTok{qplot}\NormalTok{(Time,value, }\DataTypeTok{data =}\NormalTok{ PRAassay.m,}\DataTypeTok{colour=}\NormalTok{variable)}\OperatorTok{+}\KeywordTok{theme_bw}\NormalTok{()}\OperatorTok{+}\StringTok{ }\KeywordTok{theme}\NormalTok{(}\DataTypeTok{legend.position  =}\StringTok{"bottom"}\NormalTok{,}\DataTypeTok{legend.text=}\KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size=}\DecValTok{10}\NormalTok{),}\DataTypeTok{plot.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{14}\NormalTok{, }\DataTypeTok{face =} \StringTok{"bold"}\NormalTok{),}\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{12}\NormalTok{),}\DataTypeTok{axis.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{face=}\StringTok{"bold"}\NormalTok{),}\DataTypeTok{axis.text.x=}\KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{10}\NormalTok{),}\DataTypeTok{axis.text.y=}\KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{7}\NormalTok{))}\OperatorTok{+}\KeywordTok{facet_grid}\NormalTok{(PRAassay.m}\OperatorTok{$}\NormalTok{variable}\OperatorTok{~}\NormalTok{.,}\DataTypeTok{scales=}\StringTok{"free"}\NormalTok{)}
+  \KeywordTok{qplot}\NormalTok{(Time,value, }\DataTypeTok{data =} \NormalTok{PRAassay.m,}\DataTypeTok{colour=}\NormalTok{variable)+}\KeywordTok{theme_bw}\NormalTok{()+}\StringTok{ }\KeywordTok{theme}\NormalTok{(}\DataTypeTok{legend.position  =}\StringTok{"bottom"}\NormalTok{,}\DataTypeTok{legend.text=}\KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size=}\DecValTok{10}\NormalTok{),}\DataTypeTok{plot.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{14}\NormalTok{, }\DataTypeTok{face =} \StringTok{"bold"}\NormalTok{),}\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{12}\NormalTok{),}\DataTypeTok{axis.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{face=}\StringTok{"bold"}\NormalTok{),}\DataTypeTok{axis.text.x=}\KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{10}\NormalTok{),}\DataTypeTok{axis.text.y=}\KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{7}\NormalTok{))+}\KeywordTok{facet_grid}\NormalTok{(PRAassay.m$variable~.,}\DataTypeTok{scales=}\StringTok{"free"}\NormalTok{)}
   \end{Highlighting}
   \end{Shaded}
   
@@ -5847,24 +5206,24 @@ starts here.
   
   \begin{Shaded}
   \begin{Highlighting}[]
-  \NormalTok{ ##pendientes (slopes) of linear part of the curve}
+   \NormalTok{##pendientes (slopes) of linear part of the curve}
   \CommentTok{# time when TrpF is added}
   \NormalTok{cuttime<-}\FloatTok{344.2}
   \NormalTok{maxtime=}\DecValTok{620}
   
-  \NormalTok{PRAassay2Time<-tablePRA[}\KeywordTok{which}\NormalTok{(tablePRA}\OperatorTok{$}\NormalTok{Time }\OperatorTok{>=}\StringTok{ }\NormalTok{cuttime }\OperatorTok{&}\StringTok{ }\NormalTok{tablePRA}\OperatorTok{$}\NormalTok{Time }\OperatorTok{<=}\StringTok{ }\NormalTok{maxtime),]}
+  \NormalTok{PRAassay2Time<-tablePRA[}\KeywordTok{which}\NormalTok{(tablePRA$Time >=}\StringTok{ }\NormalTok{cuttime &}\StringTok{ }\NormalTok{tablePRA$Time <=}\StringTok{ }\NormalTok{maxtime),]}
   
   \NormalTok{## removi columnas que se salian del margen de medicion}
   \CommentTok{#PRAassay2Time<-PRAassay2Time[, !(colnames(PRAassay2Time) %in% c("C62uM"))]}
   
   \CommentTok{# vector with slopes for each dataset}
-  \NormalTok{V0 <-}\StringTok{ }\KeywordTok{apply}\NormalTok{(PRAassay2Time, }\DecValTok{2}\NormalTok{, }\ControlFlowTok{function}\NormalTok{(x) }\KeywordTok{coefficients}\NormalTok{(}\KeywordTok{lm}\NormalTok{(x }\OperatorTok{~}\StringTok{ }\NormalTok{PRAassay2Time}\OperatorTok{$}\NormalTok{Time,}\DataTypeTok{na.action=}\NormalTok{na.omit))[}\DecValTok{2}\NormalTok{])}
+  \NormalTok{V0 <-}\StringTok{ }\KeywordTok{apply}\NormalTok{(PRAassay2Time, }\DecValTok{2}\NormalTok{, function(x) }\KeywordTok{coefficients}\NormalTok{(}\KeywordTok{lm}\NormalTok{(x ~}\StringTok{ }\NormalTok{PRAassay2Time$Time,}\DataTypeTok{na.action=}\NormalTok{na.omit))[}\DecValTok{2}\NormalTok{])}
   
   \NormalTok{PRAassay2Time.m <-}\StringTok{ }\KeywordTok{melt}\NormalTok{(PRAassay2Time,}\DataTypeTok{id=}\StringTok{"Time"}\NormalTok{)}
-  \KeywordTok{plot}\NormalTok{(PRAassay2Time.m}\OperatorTok{$}\NormalTok{Time, PRAassay2Time.m}\OperatorTok{$}\NormalTok{value, }\DataTypeTok{col=}\NormalTok{PRAassay2Time.m}\OperatorTok{$}\NormalTok{variable,}\DataTypeTok{xlab=}\StringTok{"Time"}\NormalTok{, }\DataTypeTok{ylab=}\StringTok{"URF PRA uM"}\NormalTok{, }\DataTypeTok{pch=}\DecValTok{19}\NormalTok{, }\DataTypeTok{xlim=}\KeywordTok{c}\NormalTok{(cuttime}\OperatorTok{-}\DecValTok{50}\NormalTok{,maxtime}\OperatorTok{+}\DecValTok{50}\NormalTok{),}\DataTypeTok{bty=}\StringTok{'L'}\NormalTok{)}
+  \KeywordTok{plot}\NormalTok{(PRAassay2Time.m$Time, PRAassay2Time.m$value, }\DataTypeTok{col=}\NormalTok{PRAassay2Time.m$variable,}\DataTypeTok{xlab=}\StringTok{"Time"}\NormalTok{, }\DataTypeTok{ylab=}\StringTok{"URF PRA uM"}\NormalTok{, }\DataTypeTok{pch=}\DecValTok{19}\NormalTok{, }\DataTypeTok{xlim=}\KeywordTok{c}\NormalTok{(cuttime}\DecValTok{-50}\NormalTok{,maxtime}\DecValTok{+50}\NormalTok{),}\DataTypeTok{bty=}\StringTok{'L'}\NormalTok{)}
   
-  \NormalTok{V1 <-}\StringTok{ }\KeywordTok{apply}\NormalTok{(PRAassay2Time[,}\DecValTok{2}\OperatorTok{:}\KeywordTok{ncol}\NormalTok{(PRAassay2Time)], }\DecValTok{2}\NormalTok{, }\ControlFlowTok{function}\NormalTok{(x) }\KeywordTok{coefficients}\NormalTok{(}\KeywordTok{lm}\NormalTok{(x }\OperatorTok{~}\StringTok{ }\NormalTok{PRAassay2Time}\OperatorTok{$}\NormalTok{Time,}\DataTypeTok{na.action=}\NormalTok{na.omit)))}
-  \KeywordTok{apply}\NormalTok{(V1, }\DecValTok{2}\NormalTok{, }\ControlFlowTok{function}\NormalTok{(x) \{}\KeywordTok{abline}\NormalTok{(x, }\DataTypeTok{col =}\NormalTok{ PRAassay2Time.m}\OperatorTok{$}\NormalTok{variable)  \})}
+  \NormalTok{V1 <-}\StringTok{ }\KeywordTok{apply}\NormalTok{(PRAassay2Time[,}\DecValTok{2}\NormalTok{:}\KeywordTok{ncol}\NormalTok{(PRAassay2Time)], }\DecValTok{2}\NormalTok{, function(x) }\KeywordTok{coefficients}\NormalTok{(}\KeywordTok{lm}\NormalTok{(x ~}\StringTok{ }\NormalTok{PRAassay2Time$Time,}\DataTypeTok{na.action=}\NormalTok{na.omit)))}
+  \KeywordTok{apply}\NormalTok{(V1, }\DecValTok{2}\NormalTok{, function(x) \{}\KeywordTok{abline}\NormalTok{(x, }\DataTypeTok{col =} \NormalTok{PRAassay2Time.m$variable)  \})}
   \end{Highlighting}
   \end{Shaded}
   
@@ -5876,8 +5235,8 @@ starts here.
   \begin{Highlighting}[]
   \KeywordTok{par}\NormalTok{(}\DataTypeTok{xpd =} \OtherTok{TRUE}\NormalTok{)}
   \NormalTok{slopeText2=}\StringTok{"m ="}
-  \NormalTok{slopeText<-}\KeywordTok{paste}\NormalTok{(slopeText2,}\KeywordTok{rev}\NormalTok{(}\KeywordTok{round}\NormalTok{(V0[}\OperatorTok{-}\DecValTok{1}\NormalTok{],}\DataTypeTok{digits=}\DecValTok{6}\NormalTok{)),}\KeywordTok{rev}\NormalTok{(}\KeywordTok{names}\NormalTok{(V0[}\OperatorTok{-}\DecValTok{1}\NormalTok{])))}
-  \KeywordTok{legend}\NormalTok{(}\DecValTok{450}\NormalTok{,}\DecValTok{100}\NormalTok{, }\DataTypeTok{legend =}\NormalTok{ slopeText, }\DataTypeTok{col =} \KeywordTok{rev}\NormalTok{(}\KeywordTok{unique}\NormalTok{(PRAassay2Time.m}\OperatorTok{$}\NormalTok{variable)), }\DataTypeTok{pch=}\DecValTok{19}\NormalTok{,}\DataTypeTok{box.lwd=}\DecValTok{0}\NormalTok{, }\DataTypeTok{bg=}\StringTok{"white"}\NormalTok{)}
+  \NormalTok{slopeText<-}\KeywordTok{paste}\NormalTok{(slopeText2,}\KeywordTok{rev}\NormalTok{(}\KeywordTok{round}\NormalTok{(V0[-}\DecValTok{1}\NormalTok{],}\DataTypeTok{digits=}\DecValTok{6}\NormalTok{)),}\KeywordTok{rev}\NormalTok{(}\KeywordTok{names}\NormalTok{(V0[-}\DecValTok{1}\NormalTok{])))}
+  \KeywordTok{legend}\NormalTok{(}\DecValTok{450}\NormalTok{,}\DecValTok{100}\NormalTok{, }\DataTypeTok{legend =} \NormalTok{slopeText, }\DataTypeTok{col =} \KeywordTok{rev}\NormalTok{(}\KeywordTok{unique}\NormalTok{(PRAassay2Time.m$variable)), }\DataTypeTok{pch=}\DecValTok{19}\NormalTok{,}\DataTypeTok{box.lwd=}\DecValTok{0}\NormalTok{, }\DataTypeTok{bg=}\StringTok{"white"}\NormalTok{)}
   \end{Highlighting}
   \end{Shaded}
   
@@ -5888,11 +5247,11 @@ starts here.
   \NormalTok{## get relevant velocities and get correspondent concentrations}
   \NormalTok{## V0 or slopes are on [PRA]uM/s }
   \CommentTok{# slopes stores the slope, with TRUE , FALSE the desired enzyme can be selected, One more than one is tested on a plate always check if it is the desired one.}
-  \NormalTok{slopes=(}\KeywordTok{round}\NormalTok{(V0[}\OperatorTok{-}\DecValTok{1}\NormalTok{],}\DataTypeTok{digits=}\DecValTok{6}\NormalTok{))[}\KeywordTok{c}\NormalTok{(}\OtherTok{TRUE}\NormalTok{)]}
+  \NormalTok{slopes=(}\KeywordTok{round}\NormalTok{(V0[-}\DecValTok{1}\NormalTok{],}\DataTypeTok{digits=}\DecValTok{6}\NormalTok{))[}\KeywordTok{c}\NormalTok{(}\OtherTok{TRUE}\NormalTok{)]}
   \NormalTok{concentration<-}\KeywordTok{as.matrix}\NormalTok{(PRAassay2Time[}\DecValTok{1}\NormalTok{,}\KeywordTok{names}\NormalTok{(slopes)])}
   \CommentTok{#slopes}
   \CommentTok{#concentration}
-  \NormalTok{slopes=}\KeywordTok{as.matrix}\NormalTok{((}\KeywordTok{round}\NormalTok{(V0[}\OperatorTok{-}\DecValTok{1}\NormalTok{],}\DataTypeTok{digits=}\DecValTok{6}\NormalTok{))[}\KeywordTok{c}\NormalTok{(}\OtherTok{TRUE}\NormalTok{)])}
+  \NormalTok{slopes=}\KeywordTok{as.matrix}\NormalTok{((}\KeywordTok{round}\NormalTok{(V0[-}\DecValTok{1}\NormalTok{],}\DataTypeTok{digits=}\DecValTok{6}\NormalTok{))[}\KeywordTok{c}\NormalTok{(}\OtherTok{TRUE}\NormalTok{)])}
   \KeywordTok{row.names}\NormalTok{(slopes) <-}\StringTok{ }\OtherTok{NULL} 
   \NormalTok{slopes<-}\KeywordTok{c}\NormalTok{(slopes)## plot on r base}
   
@@ -5939,30 +5298,30 @@ starts here.
   \NormalTok{v<-slopes}
   \CommentTok{#v<-slopes[-length(slopes)]}
   \CommentTok{#v <-slopes[c(TRUE,FALSE)]}
-  \NormalTok{v<-}\OperatorTok{-}\DecValTok{1}\OperatorTok{*}\NormalTok{v}
+  \NormalTok{v<--}\DecValTok{1}\NormalTok{*v}
   \NormalTok{S_ProFAR}
   \NormalTok{v}
   \NormalTok{mm <-}\StringTok{ }\KeywordTok{data.frame}\NormalTok{(S_ProFAR,v)                                                                                 }
-  \NormalTok{model.drm <-}\StringTok{ }\KeywordTok{drm}\NormalTok{(v }\OperatorTok{~}\StringTok{ }\NormalTok{S, }\DataTypeTok{data =}\NormalTok{ mm, }\DataTypeTok{fct =} \KeywordTok{MM.2}\NormalTok{())}
+  \NormalTok{model.drm <-}\StringTok{ }\KeywordTok{drm}\NormalTok{(v ~}\StringTok{ }\NormalTok{S, }\DataTypeTok{data =} \NormalTok{mm, }\DataTypeTok{fct =} \KeywordTok{MM.2}\NormalTok{())}
   \KeywordTok{summary}\NormalTok{(model.drm)}
   \NormalTok{## first value equal km}
   \NormalTok{## second value = vm}
   \NormalTok{Km=}\KeywordTok{coefficients}\NormalTok{(model.drm)[}\DecValTok{1}\NormalTok{]}
-  \NormalTok{Vmax=}\DecValTok{2}\OperatorTok{*}\KeywordTok{coefficients}\NormalTok{(model.drm)[}\DecValTok{2}\NormalTok{]}
+  \NormalTok{Vmax=}\DecValTok{2}\NormalTok{*}\KeywordTok{coefficients}\NormalTok{(model.drm)[}\DecValTok{2}\NormalTok{]}
   \NormalTok{Enzyme=}\FloatTok{2.5} \CommentTok{#2.5uM}
-  \NormalTok{Kcat=Vmax}\OperatorTok{*}\NormalTok{Enzyme  }
+  \NormalTok{Kcat=Vmax*Enzyme  }
   \NormalTok{Km}
   \NormalTok{Vmax}
   \NormalTok{Kcat}
-  \NormalTok{mml <-}\StringTok{ }\KeywordTok{data.frame}\NormalTok{(}\DataTypeTok{S =} \KeywordTok{seq}\NormalTok{(}\DecValTok{0}\NormalTok{, }\KeywordTok{max}\NormalTok{(mm}\OperatorTok{$}\NormalTok{S), }\DataTypeTok{length.out =} \DecValTok{100}\NormalTok{))}
-  \NormalTok{mml}\OperatorTok{$}\NormalTok{v <-}\StringTok{ }\KeywordTok{predict}\NormalTok{(model.drm, }\DataTypeTok{newdata =}\NormalTok{ mml)}
+  \NormalTok{mml <-}\StringTok{ }\KeywordTok{data.frame}\NormalTok{(}\DataTypeTok{S =} \KeywordTok{seq}\NormalTok{(}\DecValTok{0}\NormalTok{, }\KeywordTok{max}\NormalTok{(mm$S), }\DataTypeTok{length.out =} \DecValTok{100}\NormalTok{))}
+  \NormalTok{mml$v <-}\StringTok{ }\KeywordTok{predict}\NormalTok{(model.drm, }\DataTypeTok{newdata =} \NormalTok{mml)}
   
   
   \NormalTok{## plot on r base}
-  \KeywordTok{plot}\NormalTok{(mm,}\DataTypeTok{log=}\StringTok{''}\NormalTok{,}\DataTypeTok{xlim=}\KeywordTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{,}\KeywordTok{max}\NormalTok{(mm}\OperatorTok{$}\NormalTok{S)), }\DataTypeTok{ylim=}\KeywordTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{,}\KeywordTok{max}\NormalTok{(mm}\OperatorTok{$}\NormalTok{v)), }\DataTypeTok{xlab=}\StringTok{"Reads"}\NormalTok{, }\DataTypeTok{ylab=}\StringTok{"Transcripts"}\NormalTok{)}
+  \KeywordTok{plot}\NormalTok{(mm,}\DataTypeTok{log=}\StringTok{''}\NormalTok{,}\DataTypeTok{xlim=}\KeywordTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{,}\KeywordTok{max}\NormalTok{(mm$S)), }\DataTypeTok{ylim=}\KeywordTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{,}\KeywordTok{max}\NormalTok{(mm$v)), }\DataTypeTok{xlab=}\StringTok{"Reads"}\NormalTok{, }\DataTypeTok{ylab=}\StringTok{"Transcripts"}\NormalTok{)}
   
   \NormalTok{##plot on ggplot}
-  \KeywordTok{ggplot}\NormalTok{(mm, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ S, }\DataTypeTok{y =}\NormalTok{ v)) }\OperatorTok{+}\StringTok{ }\KeywordTok{theme_bw}\NormalTok{() }\OperatorTok{+}\StringTok{ }\KeywordTok{xlab}\NormalTok{(}\StringTok{"Concentration [uM]"}\NormalTok{) }\OperatorTok{+}\StringTok{ }\KeywordTok{ylab}\NormalTok{(}\StringTok{"Speed [d[PRA]uM/s]"}\NormalTok{) }\OperatorTok{+}\StringTok{ }\KeywordTok{ggtitle}\NormalTok{(}\StringTok{"Michaelis-Menten kinetics"}\NormalTok{) }\OperatorTok{+}\StringTok{  }\KeywordTok{geom_point}\NormalTok{(}\DataTypeTok{alpha =} \FloatTok{0.5}\NormalTok{) }\OperatorTok{+}\StringTok{ }\KeywordTok{geom_line}\NormalTok{(}\DataTypeTok{data =}\NormalTok{ mml, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ S, }\DataTypeTok{y =}\NormalTok{ v), }\DataTypeTok{colour =} \StringTok{"red"}\NormalTok{)}
+  \KeywordTok{ggplot}\NormalTok{(mm, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =} \NormalTok{S, }\DataTypeTok{y =} \NormalTok{v)) +}\StringTok{ }\KeywordTok{theme_bw}\NormalTok{() +}\StringTok{ }\KeywordTok{xlab}\NormalTok{(}\StringTok{"Concentration [uM]"}\NormalTok{) +}\StringTok{ }\KeywordTok{ylab}\NormalTok{(}\StringTok{"Speed [d[PRA]uM/s]"}\NormalTok{) +}\StringTok{ }\KeywordTok{ggtitle}\NormalTok{(}\StringTok{"Michaelis-Menten kinetics"}\NormalTok{) +}\StringTok{  }\KeywordTok{geom_point}\NormalTok{(}\DataTypeTok{alpha =} \FloatTok{0.5}\NormalTok{) +}\StringTok{ }\KeywordTok{geom_line}\NormalTok{(}\DataTypeTok{data =} \NormalTok{mml, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =} \NormalTok{S, }\DataTypeTok{y =} \NormalTok{v), }\DataTypeTok{colour =} \StringTok{"red"}\NormalTok{)}
   
   \KeywordTok{ggsave}\NormalTok{(}\StringTok{"mm.pdf"}\NormalTok{, }\DataTypeTok{width =} \DecValTok{6}\NormalTok{, }\DataTypeTok{height =} \DecValTok{4}\NormalTok{)}
   \end{Highlighting}
@@ -6014,11 +5373,11 @@ starts here.
   \CommentTok{# installed and loaded. This reedtemplates package includes}
   \CommentTok{# the template files for the thesis and also two functions}
   \CommentTok{# used for labeling and referencing}
-  \ControlFlowTok{if}\NormalTok{(}\OperatorTok{!}\KeywordTok{require}\NormalTok{(devtools))}
+  \NormalTok{if(!}\KeywordTok{require}\NormalTok{(devtools))}
     \KeywordTok{install.packages}\NormalTok{(}\StringTok{"devtools"}\NormalTok{, }\DataTypeTok{repos =} \StringTok{"http://cran.rstudio.com"}\NormalTok{)}
-  \ControlFlowTok{if}\NormalTok{(}\OperatorTok{!}\KeywordTok{require}\NormalTok{(reedtemplates))\{}
+  \NormalTok{if(!}\KeywordTok{require}\NormalTok{(reedtemplates))\{}
     \KeywordTok{library}\NormalTok{(devtools)}
-  \NormalTok{  devtools}\OperatorTok{::}\KeywordTok{install_github}\NormalTok{(}\StringTok{"ismayc/reedtemplates"}\NormalTok{)}
+    \NormalTok{devtools::}\KeywordTok{install_github}\NormalTok{(}\StringTok{"ismayc/reedtemplates"}\NormalTok{)}
   \NormalTok{\}}
   \KeywordTok{library}\NormalTok{(reedtemplates)}
   \end{Highlighting}
@@ -6033,18 +5392,18 @@ starts here.
   \CommentTok{# installed and loaded. This reedtemplates package includes}
   \CommentTok{# the template files for the thesis and also two functions}
   \CommentTok{# used for labeling and referencing}
-  \ControlFlowTok{if}\NormalTok{(}\OperatorTok{!}\KeywordTok{require}\NormalTok{(devtools))}
+  \NormalTok{if(!}\KeywordTok{require}\NormalTok{(devtools))}
     \KeywordTok{install.packages}\NormalTok{(}\StringTok{"devtools"}\NormalTok{, }\DataTypeTok{repos =} \StringTok{"http://cran.rstudio.com"}\NormalTok{)}
-  \ControlFlowTok{if}\NormalTok{(}\OperatorTok{!}\KeywordTok{require}\NormalTok{(plyr))}
+  \NormalTok{if(!}\KeywordTok{require}\NormalTok{(plyr))}
       \KeywordTok{install.packages}\NormalTok{(}\StringTok{"plyr"}\NormalTok{, }\DataTypeTok{repos =} \StringTok{"http://cran.rstudio.com"}\NormalTok{) ## this shoul always go before dplyr}
-  \ControlFlowTok{if}\NormalTok{(}\OperatorTok{!}\KeywordTok{require}\NormalTok{(dplyr))}
+  \NormalTok{if(!}\KeywordTok{require}\NormalTok{(dplyr))}
       \KeywordTok{install.packages}\NormalTok{(}\StringTok{"dplyr"}\NormalTok{, }\DataTypeTok{repos =} \StringTok{"http://cran.rstudio.com"}\NormalTok{)}
-  \ControlFlowTok{if}\NormalTok{(}\OperatorTok{!}\KeywordTok{require}\NormalTok{(ggplot2))}
+  \NormalTok{if(!}\KeywordTok{require}\NormalTok{(ggplot2))}
       \KeywordTok{install.packages}\NormalTok{(}\StringTok{"ggplot2"}\NormalTok{, }\DataTypeTok{repos =} \StringTok{"http://cran.rstudio.com"}\NormalTok{)}
-  \ControlFlowTok{if}\NormalTok{(}\OperatorTok{!}\KeywordTok{require}\NormalTok{(reedtemplates))\{}
+  \NormalTok{if(!}\KeywordTok{require}\NormalTok{(reedtemplates))\{}
     \KeywordTok{library}\NormalTok{(devtools)}
-  \NormalTok{  devtools}\OperatorTok{::}\KeywordTok{install_github}\NormalTok{(}\StringTok{"ismayc/reedtemplates"}\NormalTok{)}
-  \NormalTok{  \}}
+    \NormalTok{devtools::}\KeywordTok{install_github}\NormalTok{(}\StringTok{"ismayc/reedtemplates"}\NormalTok{)}
+    \NormalTok{\}}
   \KeywordTok{library}\NormalTok{(reedtemplates)}
   \end{Highlighting}
   \end{Shaded}
@@ -7104,98 +6463,111 @@ starts here.
   {[}cited 2019 Mar 13{]};140(4):655--64. Available from:
   \url{https://doi.org/10.1007/s10658-014-0495-5}
   
-  \hypertarget{ref-edgar_muscle_2004}{}
-  142. Edgar RC. MUSCLE: Multiple sequence alignment with high accuracy
-  and high throughput. Nucleic Acids Research {[}Internet{]}. 2004
-  {[}cited 2018 May 27{]};32(5):1792--7. Available from:
-  \url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC390337/}
-  
-  \hypertarget{ref-castresana_selection_2000}{}
-  143. Castresana J. Selection of Conserved Blocks from Multiple
-  Alignments for Their Use in Phylogenetic Analysis. Molecular Biology and
-  Evolution {[}Internet{]}. 2000 Apr {[}cited 2018 Jul 3{]};17(4):540--52.
-  Available from:
-  \url{https://academic.oup.com/mbe/article/17/4/540/1127654}
-  
-  \hypertarget{ref-price_fasttree_2010}{}
-  144. Price MN, Dehal PS, Arkin AP. FastTree 2 -- Approximately
-  Maximum-Likelihood Trees for Large Alignments. PLOS ONE {[}Internet{]}.
-  2010 Mar {[}cited 2018 Jul 3{]};5(3):e9490. Available from:
-  \url{http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0009490}
-  
-  \hypertarget{ref-weber_antismash3_2015}{}
-  145. Weber T, Blin K, Duddela S, Krug D, Kim HU, Bruccoleri R, et al.
-  antiSMASH 3.0---a comprehensive resource for the genome mining of
-  biosynthetic gene clusters. Nucleic Acids Research {[}Internet{]}. 2015
-  Jul {[}cited 2017 Feb 7{]};43(W1):W237--43. Available from:
-  \url{https://academic.oup.com/nar/article/43/W1/W237/2467910/antiSMASH-3-0-a-comprehensive-resource-for-the}
-  
-  \hypertarget{ref-junier_newick_2010}{}
-  146. Junier T, Zdobnov EM. The Newick utilities: High-throughput
-  phylogenetic tree processing in the Unix shell. Bioinformatics
-  {[}Internet{]}. 2010 Jul {[}cited 2018 Jul 3{]};26(13):1669--70.
-  Available from:
-  \url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2887050/}
-  
-  \hypertarget{ref-argimon_microreact_2016}{}
-  147. Argimón S, Abudahab K, Goater RJE, Fedosejev A, Bhai J, Glasner C,
-  et al. Microreact: Visualizing and sharing data for genomic epidemiology
-  and phylogeography. Microbial Genomics. 2016 Nov;2(11).
-  
-  \hypertarget{ref-jordan_lineage-specific_2001}{}
-  148. Jordan IK, Makarova KS, Spouge JL, Wolf YI, Koonin EV.
-  Lineage-Specific Gene Expansions in Bacterial and Archaeal Genomes.
-  Genome Research {[}Internet{]}. 2001 Apr;11(4):555--65. Available from:
-  \url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC311027/}
-  
-  \hypertarget{ref-charlesworth_untapped_natural_products_Archaea_2015}{}
-  149. Charlesworth JC, Burns BP. Untapped Resources: Biotechnological
-  Potential of Peptides and Secondary Metabolites in Archaea. Archaea
-  {[}Internet{]}. 2015 Oct {[}cited 2016 Sep 27{]};2015:e282035. Available
-  from: \url{http://www.hindawi.com/journals/archaea/2015/282035/abs/}
-  
-  \hypertarget{ref-koonin_genomics_2008}{}
-  150. Koonin EV, Wolf YI. Genomics of bacteria and archaea: The emerging
-  dynamic view of the prokaryotic world. Nucleic Acids Research
-  {[}Internet{]}. 2008 Dec {[}cited 2017 Jan 26{]};36(21):6688--719.
-  Available from:
-  \url{https://academic.oup.com/nar/article/36/21/6688/2410005/Genomics-of-bacteria-and-archaea-the-emerging}
-  
-  \hypertarget{ref-kudo_cloning_2007}{}
-  151. Kudo F, Kasama Y, Hirayama T, Eguchi T. Cloning of the Pactamycin
-  Biosynthetic Gene Cluster and Characterization of a Crucial
-  Glycosyltransferase Prior to a Unique Cyclopentane Ring Formation. The
-  Journal of Antibiotics {[}Internet{]}. 2007 Aug;60(8):492--503.
-  Available from: \url{https://www.nature.com/articles/ja200763}
-  
-  \hypertarget{ref-navarro-munoz_computational_2018}{}
-  152. Navarro-Muñoz J, Selem-Mojica N, Mullowney M, Kautsar S, Tryon J,
-  Parkinson E, et al. A computational framework for systematic exploration
-  of biosynthetic diversity from large-scale genomic data. bioRxiv
-  {[}Internet{]}. 2018 Oct;445270. Available from:
-  \url{https://www.biorxiv.org/content/early/2018/10/17/445270}
+  \hypertarget{ref-garciapichel_evidence_1992}{}
+  142. Garcia‐Pichel F, Sherry ND, Castenholz RW. Evidence for an
+  ultraviolet sunscreen role of the extra cellular pigment scytonemin in
+  the terrestrial cyanobacterium Chiorogloeopsis sp. Photochemistry and
+  Photobiology {[}Internet{]}. 1992 Jul;56(1):17--23. Available from:
+  \url{https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1751-1097.1992.tb09596.x}
   
   \hypertarget{ref-balskus_investigating_2008}{}
-  153. Balskus EP, Walsh CT. Investigating the Initial Steps in the
+  143. Balskus EP, Walsh CT. Investigating the Initial Steps in the
   Biosynthesis of Cyanobacterial Sunscreen Scytonemin. Journal of the
   American Chemical Society {[}Internet{]}. 2008 Nov;130(46):15260--1.
   Available from: \url{https://doi.org/10.1021/ja807192u}
   
   \hypertarget{ref-soule_comparative_2009}{}
-  154. Soule T, Palmer K, Gao Q, Potrafka RM, Stout V, Garcia-Pichel F. A
+  144. Soule T, Palmer K, Gao Q, Potrafka RM, Stout V, Garcia-Pichel F. A
   comparative genomics approach to understanding the biosynthesis of the
   sunscreen scytonemin in cyanobacteria. BMC Genomics {[}Internet{]}. 2009
   Jul {[}cited 2018 Jun 27{]};10:336. Available from:
   \url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2726228/}
   
   \hypertarget{ref-engel_glutamate_2014}{}
-  155. Engel PC. Glutamate Dehydrogenases: The Why and How of Coenzyme
+  145. Engel PC. Glutamate Dehydrogenases: The Why and How of Coenzyme
   Specificity. Neurochemical Research {[}Internet{]}. 2014
   Mar;39(3):426--32. Available from:
   \url{https://doi.org/10.1007/s11064-013-1089-x}
   
+  \hypertarget{ref-liu_acetohydroxyacid_2016}{}
+  146. Liu Y, Li Y, Wang X. Acetohydroxyacid synthases: Evolution,
+  structure, and function. Applied Microbiology and Biotechnology
+  {[}Internet{]}. 2016 Oct;100(20):8633--49. Available from:
+  \url{https://doi.org/10.1007/s00253-016-7809-9}
+  
+  \hypertarget{ref-edgar_muscle_2004}{}
+  147. Edgar RC. MUSCLE: Multiple sequence alignment with high accuracy
+  and high throughput. Nucleic Acids Research {[}Internet{]}. 2004
+  {[}cited 2018 May 27{]};32(5):1792--7. Available from:
+  \url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC390337/}
+  
+  \hypertarget{ref-castresana_selection_2000}{}
+  148. Castresana J. Selection of Conserved Blocks from Multiple
+  Alignments for Their Use in Phylogenetic Analysis. Molecular Biology and
+  Evolution {[}Internet{]}. 2000 Apr {[}cited 2018 Jul 3{]};17(4):540--52.
+  Available from:
+  \url{https://academic.oup.com/mbe/article/17/4/540/1127654}
+  
+  \hypertarget{ref-price_fasttree_2010}{}
+  149. Price MN, Dehal PS, Arkin AP. FastTree 2 -- Approximately
+  Maximum-Likelihood Trees for Large Alignments. PLOS ONE {[}Internet{]}.
+  2010 Mar {[}cited 2018 Jul 3{]};5(3):e9490. Available from:
+  \url{http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0009490}
+  
+  \hypertarget{ref-weber_antismash3_2015}{}
+  150. Weber T, Blin K, Duddela S, Krug D, Kim HU, Bruccoleri R, et al.
+  antiSMASH 3.0---a comprehensive resource for the genome mining of
+  biosynthetic gene clusters. Nucleic Acids Research {[}Internet{]}. 2015
+  Jul {[}cited 2017 Feb 7{]};43(W1):W237--43. Available from:
+  \url{https://academic.oup.com/nar/article/43/W1/W237/2467910/antiSMASH-3-0-a-comprehensive-resource-for-the}
+  
+  \hypertarget{ref-junier_newick_2010}{}
+  151. Junier T, Zdobnov EM. The Newick utilities: High-throughput
+  phylogenetic tree processing in the Unix shell. Bioinformatics
+  {[}Internet{]}. 2010 Jul {[}cited 2018 Jul 3{]};26(13):1669--70.
+  Available from:
+  \url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2887050/}
+  
+  \hypertarget{ref-argimon_microreact_2016}{}
+  152. Argimón S, Abudahab K, Goater RJE, Fedosejev A, Bhai J, Glasner C,
+  et al. Microreact: Visualizing and sharing data for genomic epidemiology
+  and phylogeography. Microbial Genomics. 2016 Nov;2(11).
+  
+  \hypertarget{ref-jordan_lineage-specific_2001}{}
+  153. Jordan IK, Makarova KS, Spouge JL, Wolf YI, Koonin EV.
+  Lineage-Specific Gene Expansions in Bacterial and Archaeal Genomes.
+  Genome Research {[}Internet{]}. 2001 Apr;11(4):555--65. Available from:
+  \url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC311027/}
+  
+  \hypertarget{ref-charlesworth_untapped_natural_products_Archaea_2015}{}
+  154. Charlesworth JC, Burns BP. Untapped Resources: Biotechnological
+  Potential of Peptides and Secondary Metabolites in Archaea. Archaea
+  {[}Internet{]}. 2015 Oct {[}cited 2016 Sep 27{]};2015:e282035. Available
+  from: \url{http://www.hindawi.com/journals/archaea/2015/282035/abs/}
+  
+  \hypertarget{ref-koonin_genomics_2008}{}
+  155. Koonin EV, Wolf YI. Genomics of bacteria and archaea: The emerging
+  dynamic view of the prokaryotic world. Nucleic Acids Research
+  {[}Internet{]}. 2008 Dec {[}cited 2017 Jan 26{]};36(21):6688--719.
+  Available from:
+  \url{https://academic.oup.com/nar/article/36/21/6688/2410005/Genomics-of-bacteria-and-archaea-the-emerging}
+  
+  \hypertarget{ref-kudo_cloning_2007}{}
+  156. Kudo F, Kasama Y, Hirayama T, Eguchi T. Cloning of the Pactamycin
+  Biosynthetic Gene Cluster and Characterization of a Crucial
+  Glycosyltransferase Prior to a Unique Cyclopentane Ring Formation. The
+  Journal of Antibiotics {[}Internet{]}. 2007 Aug;60(8):492--503.
+  Available from: \url{https://www.nature.com/articles/ja200763}
+  
+  \hypertarget{ref-navarro-munoz_computational_2018}{}
+  157. Navarro-Muñoz J, Selem-Mojica N, Mullowney M, Kautsar S, Tryon J,
+  Parkinson E, et al. A computational framework for systematic exploration
+  of biosynthetic diversity from large-scale genomic data. bioRxiv
+  {[}Internet{]}. 2018 Oct;445270. Available from:
+  \url{https://www.biorxiv.org/content/early/2018/10/17/445270}
+  
   \hypertarget{ref-lilley_partial_1991}{}
-  156. Lilley KS, Baker PJ, Linda Britton K, Stillman TJ, Brown PE, Moir
+  158. Lilley KS, Baker PJ, Linda Britton K, Stillman TJ, Brown PE, Moir
   AJG, et al. The partial amino acid sequence of the NAD -dependent
   glutamate dehydrogenase of Clostridium symbiosum: Implications for the
   evolution and structural basis of coenzyme specificity. Biochimica et
@@ -7204,38 +6576,32 @@ starts here.
   \url{http://www.sciencedirect.com/science/article/pii/016748389190001G}
   
   \hypertarget{ref-consalvi_glutamate_1991}{}
-  157. Consalvi V, Chiaraluce R, Politi L, Gambacorta A, Rosa MD,
+  159. Consalvi V, Chiaraluce R, Politi L, Gambacorta A, Rosa MD,
   Scandurra R. Glutamate dehydrogenase from the thermoacidophilic
   archaebacterium Sulfolobus solfataricus. European Journal of
   Biochemistry {[}Internet{]}. 1991 Mar;196(2):459--67. Available from:
   \url{https://febs.onlinelibrary.wiley.com/doi/abs/10.1111/j.1432-1033.1991.tb15837.x}
   
   \hypertarget{ref-ferrer_nadp-glutamate_1996}{}
-  158. Ferrer J, Pérez-Pomares F, Bonete MJ. NADP-glutamate dehydrogenase
+  160. Ferrer J, Pérez-Pomares F, Bonete MJ. NADP-glutamate dehydrogenase
   from the halophilic archaeon Haloferax mediterranei: Enzyme
   purification, N-terminal sequence and stability. FEMS microbiology
   letters. 1996 Jul;141(1):59--63.
   
   \hypertarget{ref-tholl_terpene_2006}{}
-  159. Tholl D. Terpene synthases and the regulation, diversity and
+  161. Tholl D. Terpene synthases and the regulation, diversity and
   biological roles of terpene metabolism. Current Opinion in Plant Biology
   {[}Internet{]}. 2006 Jun;9(3):297--304. Available from:
   \url{http://www.sciencedirect.com/science/article/pii/S1369526606000537}
   
   \hypertarget{ref-balskus_genetic_2010}{}
-  160. Balskus EP, Walsh CT. The genetic and molecular basis for sunscreen
+  162. Balskus EP, Walsh CT. The genetic and molecular basis for sunscreen
   biosynthesis in cyanobacteria. Science (New York, NY) {[}Internet{]}.
   2010 Sep;329(5999):1653--6. Available from:
   \url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3116657/}
   
-  \hypertarget{ref-liu_acetohydroxyacid_2016}{}
-  161. Liu Y, Li Y, Wang X. Acetohydroxyacid synthases: Evolution,
-  structure, and function. Applied Microbiology and Biotechnology
-  {[}Internet{]}. 2016 Oct;100(20):8633--49. Available from:
-  \url{https://doi.org/10.1007/s00253-016-7809-9}
-  
   \hypertarget{ref-hillwig_identification_2014}{}
-  162. Hillwig ML, Fuhrman HA, Ittiamornkul K, Sevco TJ, Kwak DH, Liu X.
+  163. Hillwig ML, Fuhrman HA, Ittiamornkul K, Sevco TJ, Kwak DH, Liu X.
   Identification and Characterization of A Welwitindolinone Alkaloid
   Biosynthetic Gene Cluster in Stigonematalean Cyanobacterium Hapalosiphon
   welwitschii. Chembiochem : a European journal of chemical biology
@@ -7243,21 +6609,21 @@ starts here.
   \url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4382313/}
   
   \hypertarget{ref-li_hapalindole_ambiguine_2015}{}
-  163. Li S, Lowell AN, Yu F, Raveh A, Newmister SA, Bair N, et al.
+  164. Li S, Lowell AN, Yu F, Raveh A, Newmister SA, Bair N, et al.
   Hapalindole/Ambiguine Biogenesis Is Mediated by a Cope Rearrangement,
   C--C Bond-Forming Cascade. Journal of the American Chemical Society
   {[}Internet{]}. 2015 Dec;137(49):15366--9. Available from:
   \url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4681624/}
   
   \hypertarget{ref-li_decoding_2017}{}
-  164. Li S, Lowell AN, Newmister SA, Yu F, Williams RM, Sherman DH.
+  165. Li S, Lowell AN, Newmister SA, Yu F, Williams RM, Sherman DH.
   Decoding cyclase-dependent assembly of hapalindole and fischerindole
   alkaloids. Nature chemical biology {[}Internet{]}. 2017
   May;13(5):467--9. Available from:
   \url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5391265/}
   
   \hypertarget{ref-henn-sax_two_2002}{}
-  165. Henn-Sax M, Thoma R, Schmidt S, Hennig M, Kirschner K, Sterner R.
+  166. Henn-Sax M, Thoma R, Schmidt S, Hennig M, Kirschner K, Sterner R.
   Two \((\beta\alpha)_8\)-Barrel Enzymes of Histidine and Tryptophan
   Biosynthesis Have Similar Reaction Mechanisms and Common Strategies for
   Protecting Their Labile Substrates, Biochemistry {[}Internet{]}. 2002
@@ -7265,14 +6631,14 @@ starts here.
   \url{https://doi.org/10.1021/bi026092h}
   
   \hypertarget{ref-sterner_phosphoribosyl_1996}{}
-  166. Sterner R, Kleemann GR, Szadkowski H, Lustig A, Kirschner K, Hennig
+  167. Sterner R, Kleemann GR, Szadkowski H, Lustig A, Kirschner K, Hennig
   M. Phosphoribosyl anthranilate isomerase from Thermotoga maritima is an
   extremely stable and active homodimer. Protein Science {[}Internet{]}.
   1996;5(10):2000--8. Available from:
   \url{https://onlinelibrary.wiley.com/doi/abs/10.1002/pro.5560051006}
   
   \hypertarget{ref-due_bisubstrate_2011}{}
-  167. Due AV, Kuper J, Geerlof A, Kries JP von, Wilmanns M. Bisubstrate
+  168. Due AV, Kuper J, Geerlof A, Kries JP von, Wilmanns M. Bisubstrate
   specificity in histidine/tryptophan biosynthesis isomerase from
   Mycobacterium tuberculosis by active site metamorphosis. Proceedings of
   the National Academy of Sciences of the United States of America
@@ -7281,7 +6647,7 @@ starts here.
   \url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3048130/}
   
   \hypertarget{ref-noda-garcia_identification_2010}{}
-  168. Noda-García L, Camacho-Zarco AR, Verdel-Aranda K, Wright H, Soberón
+  169. Noda-García L, Camacho-Zarco AR, Verdel-Aranda K, Wright H, Soberón
   X, Fülöp V, et al. Identification and analysis of residues contained on
   \(\beta \rightarrow \alpha\) loops of the dual-substrate
   \((\beta\alpha)_8\) phosphoribosyl isomerase A specific for its
@@ -7291,7 +6657,7 @@ starts here.
   \url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2866278/}
   
   \hypertarget{ref-gao_biosynthesis_2017}{}
-  169. Gao Y, Xu G, Wu P, Liu J, Cai Y-s, Deng Z, et al. Biosynthesis of
+  170. Gao Y, Xu G, Wu P, Liu J, Cai Y-s, Deng Z, et al. Biosynthesis of
   \(2\prime\)-Chloropentostatin and
   \(2\prime\)-Amino-\(2\prime\)-Deoxyadenosine Highlights a Single Gene
   Cluster Responsible for Two Independent Pathways in Actinomadura sp.
@@ -7299,30 +6665,44 @@ starts here.
   {[}Internet{]}. 2017 May;83(10). Available from:
   \url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5411499/}
   
+  \hypertarget{ref-marks_protein_2011}{}
+  171. Marks DS, Colwell LJ, Sheridan R, Hopf TA, Pagnani A, Zecchina R,
+  et al. Protein 3D Structure Computed from Evolutionary Sequence
+  Variation. PLOS ONE {[}Internet{]}. 2011 Dec;6(12):e28766. Available
+  from:
+  \url{http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0028766}
+  
+  \hypertarget{ref-hopf_evcouplings_2019}{}
+  172. Hopf TA, Green AG, Schubert B, Mersmann S, Schärfe CPI, Ingraham
+  JB, et al. The EVcouplings Python framework for coevolutionary sequence
+  analysis. Bioinformatics {[}Internet{]}. 2019 May;35(9):1582--4.
+  Available from:
+  \url{https://academic.oup.com/bioinformatics/article/35/9/1582/5124274}
+  
   \hypertarget{ref-chertkov_complete_2011}{}
-  170. Chertkov O, Sikorski J, Nolan M, Lapidus A, Lucas S, Del Rio TG, et
+  173. Chertkov O, Sikorski J, Nolan M, Lapidus A, Lucas S, Del Rio TG, et
   al. Complete genome sequence of Thermomonospora curvata type strain
   (B9T). Standards in Genomic Sciences {[}Internet{]}. 2011 Feb {[}cited
   2017 Mar 3{]};4(1):13--22. Available from:
   \url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3072092/}
   
   \hypertarget{ref-pukall_complete_2009}{}
-  171. Pukall R, Gehrich-Schröter G, Lapidus A, Nolan M, Glavina Del Rio
+  174. Pukall R, Gehrich-Schröter G, Lapidus A, Nolan M, Glavina Del Rio
   T, Lucas S, et al. Complete genome sequence of Jonesia denitrificans
   type strain (Prevot 55134T). Standards in Genomic Sciences
   {[}Internet{]}. 2009 Nov {[}cited 2017 Mar 3{]};1(3):262--9. Available
   from: \url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3035236/}
   
   \hypertarget{ref-angel2000}{}
-  172. Angel E. Interactive computer graphics : A top-down approach with
+  175. Angel E. Interactive computer graphics : A top-down approach with
   opengl. Boston, MA: Addison Wesley Longman; 2000.
   
   \hypertarget{ref-angel2001}{}
-  173. Angel E. Batch-file computer graphics : A bottom-up approach with
+  176. Angel E. Batch-file computer graphics : A bottom-up approach with
   quicktime. Boston, MA: Wesley Addison Longman; 2001.
   
   \hypertarget{ref-angel2002a}{}
-  174. Angel E. Test second book by angel. Boston, MA: Wesley Addison
+  177. Angel E. Test second book by angel. Boston, MA: Wesley Addison
   Longman; 2001.
 
 

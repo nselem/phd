@@ -62,73 +62,70 @@
 \BOOKMARK [1][-]{section.1.5}{Relaci\363n entre genes marcadores, Orthocores y la promiscuidad enzim\341tica.}{chapter.1}% 62
 \BOOKMARK [1][-]{section.1.6}{Protocolos para usar Orthocore, myRAST, fastOrtho, Clavigenomics, y BPGA}{chapter.1}% 63
 \BOOKMARK [1][-]{section.1.7}{Orthocore}{chapter.1}% 64
-\BOOKMARK [0][-]{chapter.2}{Chapter 2: EvoMining}{}% 65
-\BOOKMARK [1][-]{section.2.1}{Introduction}{chapter.2}% 66
+\BOOKMARK [0][-]{chapter.2}{Chapter 2: EvoMining como herramienta para identificar el origen y el destino metab\363lico de familias enzim\341ticas}{}% 65
+\BOOKMARK [1][-]{section.2.1}{Introducci\363n}{chapter.2}% 66
 \BOOKMARK [1][-]{section.2.2}{EvoMining es un m\351todo para encontrar BGCs no tradicionales}{chapter.2}% 67
-\BOOKMARK [1][-]{section.2.3}{Consideraciones evolutivas en miner\355a gen\363mica permiten identificar clusters no clasificados y dentro de ellos sugerir enzimas con cambios en promiscuidad.}{chapter.2}% 68
-\BOOKMARK [2][-]{subsection.2.3.1}{Los clusters biosint\351ticos no clasificados son dif\355ciles de identificar.}{section.2.3}% 69
-\BOOKMARK [2][-]{subsection.2.3.2}{Localizar alguna enzima de un cluster no clasificado es un camino para identificar el BGC.}{section.2.3}% 70
-\BOOKMARK [2][-]{subsection.2.3.3}{Copias extra de familias enzim\341ticas que son reclutadas para una nueva funci\363n est\341n relacionadas con la promiscuidad.}{section.2.3}% 71
-\BOOKMARK [2][-]{subsection.2.3.4}{EvoMining es un paradigma que permite ubicar copias extra de familias enzim\341ticas y organizarlas visualmente acorde a eventos evolutivos.}{section.2.3}% 72
-\BOOKMARK [1][-]{section.2.4}{Algoritmos y bases de datos de EvoMining 2.0}{chapter.2}% 73
-\BOOKMARK [2][-]{subsection.2.4.1}{Algoritmo de expansi\363n y reclutamiento}{section.2.4}% 74
-\BOOKMARK [2][-]{subsection.2.4.2}{Algoritmo de reconstrucci\363n filogen\351tica y visualizaci\363n}{section.2.4}% 75
-\BOOKMARK [2][-]{subsection.2.4.3}{Las tres bases de datos de EvoMining}{section.2.4}% 76
-\BOOKMARK [1][-]{section.2.5}{Observaciones gen\363micas de EvoMining}{chapter.2}% 77
-\BOOKMARK [2][-]{subsection.2.5.1}{Los perfiles de expansi\363n de las prote\355nas dependen del linaje.}{section.2.5}% 78
-\BOOKMARK [2][-]{subsection.2.5.2}{El shell genome posee expansiones en sus familias enzim\341ticas}{section.2.5}% 79
-\BOOKMARK [2][-]{subsection.2.5.3}{GDH y ALS en el cluster scytonemin ejemplifican como familias pertenecientes a un mismo BGC pueden tener distintos patrones de expansi\363n.}{section.2.5}% 80
-\BOOKMARK [2][-]{subsection.2.5.4}{El cluster de scytonemin es un cluster promiscuo.}{section.2.5}% 81
-\BOOKMARK [2][-]{subsection.2.5.5}{Consideraciones para el uso de EvoMining}{section.2.5}% 82
-\BOOKMARK [1][-]{section.2.6}{OTros ejemplos de EvoMining en Actinobateria y Pseudomonas}{chapter.2}% 83
-\BOOKMARK [2][-]{subsection.2.6.1}{EvoMining en Rna transferasas}{section.2.6}% 84
-\BOOKMARK [2][-]{subsection.2.6.2}{La familia tauD tiene expansi\363n y reclutamiento tanto en Actinobacteria como en Pseudomonas}{section.2.6}% 85
-\BOOKMARK [1][-]{section.2.7}{Rimosamide y Detoxin tienen en com\372n la enzima TauD,}{chapter.2}% 86
-\BOOKMARK [0][-]{chapter.3}{Chapter 3: Desarrollo de CORASON como herramienta para organizar clusters biosint\351ticos y otras vecindades gen\363micas conservadas.}{}% 87
-\BOOKMARK [1][-]{section.3.1}{Algoritmo y caracter\355sticas de CORASON}{chapter.3}% 88
-\BOOKMARK [1][-]{section.3.2}{Las familias de BGCs est\341n formadas por variantes del BGC de referencia.}{chapter.3}% 89
-\BOOKMARK [1][-]{section.3.3}{Aplicaciones de CORASON en Actinobacteria y Pseudomonas}{chapter.3}% 90
-\BOOKMARK [1][-]{section.3.4}{Estas familias pueden clasificarse}{chapter.3}% 91
-\BOOKMARK [1][-]{section.3.5}{Un BGC reportado puede tener muchas variantes que conforman una familia de BGCs}{chapter.3}% 92
-\BOOKMARK [1][-]{section.3.6}{CORASON analiza la conservaci\363n del contexto gen\363mico de los EvoMining hits}{chapter.3}% 93
-\BOOKMARK [1][-]{section.3.7}{El contexto de una rama divergente de tauD est\341 conservado en Pseudomonas}{chapter.3}% 94
-\BOOKMARK [1][-]{section.3.8}{CORASON se adapt\363 a la herramienta BiG-SCAPE de clasificaci\363n de familias de BGCs}{chapter.3}% 95
-\BOOKMARK [1][-]{section.3.9}{BiG SCAPE y CORASON identificaron nuevos productos variantes de la familia de BGCs Rimosamide - Detoxin en Actinobacteria}{chapter.3}% 96
-\BOOKMARK [1][-]{section.3.10}{CORASON sugiere que las familias detoxin y rimosamide pertenecen a un amplio clan de familias dedicadas a la s\355ntesis de p\351ptidos.}{chapter.3}% 97
-\BOOKMARK [1][-]{section.3.11}{Clados selectos del \341rbol de CORASON que contiene a las familias rimosamide/detoxin contienen diversidad g\351nica que correlaciona con novedad qu\355mica.}{chapter.3}% 98
-\BOOKMARK [2][-]{subsection.3.11.1}{El clado P450/enoyl agrega una heptanamida al core molecular detoxin/rimosamide}{section.3.11}% 99
-\BOOKMARK [2][-]{subsection.3.11.2}{El superclado spectinomycin/ detoxin-rimosamide-clan produce cinco variantes de detoxin.}{section.3.11}% 100
-\BOOKMARK [2][-]{subsection.3.11.3}{El clado Amycolatopsis P450 produce cinco variantes de detoxin.}{section.3.11}% 101
-\BOOKMARK [1][-]{section.3.12}{CORASON permiti\363 expandir las capacidades de EvoMining y explorar la promiscuidad de familias de BGCs de enzimas divergentes de metabolismo central.}{chapter.3}% 102
-\BOOKMARK [2][-]{section*.57}{Discusi\363n}{section.3.12}% 103
-\BOOKMARK [0][-]{chapter.4}{Chapter 4: La familia PriA}{}% 104
-\BOOKMARK [1][-]{section.4.1}{PriA como modelo de familia enzim\341tica donde las expansiones no son condici\363n necesaria para la promiscuidad.}{chapter.4}% 105
-\BOOKMARK [2][-]{section*.58}{PriA en EvoMining}{section.4.1}% 106
-\BOOKMARK [2][-]{subsection.4.1.1}{An\341lisis de contextos gen\363micos de PriA en distintos linajes utilizando CORASON}{section.4.1}% 107
-\BOOKMARK [1][-]{section.4.2}{PriA a nivel de amino\341cidos}{chapter.4}% 108
-\BOOKMARK [2][-]{subsection.4.2.1}{Al transformar una subHisA en una PriA mediante mutaciones no se observ\363 ninguna trayectoria creciente para ambos sustratos \(darwiniana\)}{section.4.2}% 109
-\BOOKMARK [2][-]{subsection.4.2.2}{Los residuos que covar\355an en el registro evolutivo de PriA permiten una reconstrucci\363n aproximada de su estructura tridimensional}{section.4.2}% 110
-\BOOKMARK [1][-]{section.4.3}{Afinidad de enzimas selectas por sustratos qu\355micamente parecidos a PRA y PROFAR}{chapter.4}% 111
-\BOOKMARK [2][-]{subsection.4.3.1}{El an\341lisis de PriA a nivel estructural sugiere que GTP es el sustrato m\341s af\355n}{section.4.3}% 112
-\BOOKMARK [2][-]{subsection.4.3.2}{Sustratos similares a PRA y PROFAR sugeridos por distancias de Tanimoto o probados previamente}{section.4.3}% 113
-\BOOKMARK [2][-]{subsection.4.3.3}{GTP es el sustrato por el que PriA muestra mayor afinidad}{section.4.3}% 114
-\BOOKMARK [2][-]{subsection.4.3.4}{Molecular dynamics vs experimental data}{section.4.3}% 115
-\BOOKMARK [1][-]{section.4.4}{PriA en cin\351ticas enzim\341ticas no tradicionales.}{chapter.4}% 116
-\BOOKMARK [2][-]{subsection.4.4.1}{Es posible que PriA tenga actividad en GTP}{section.4.4}% 117
-\BOOKMARK [0][-]{chapter*.79}{Conclusion}{}% 118
-\BOOKMARK [1][-]{section.4.1}{Discusion}{chapter*.79}% 119
-\BOOKMARK [2][-]{section*.80}{More info}{section.4.1}% 120
-\BOOKMARK [0][-]{appendix.A}{Appendix A: The First Appendix}{}% 121
-\BOOKMARK [1][-]{section*.81}{In the main Rmd file:}{appendix.A}% 122
-\BOOKMARK [2][-]{section*.82}{In :}{section*.81}% 123
-\BOOKMARK [0][-]{appendix.B}{Appendix B: The Second Appendix, Open source code on this document}{}% 124
-\BOOKMARK [1][-]{section.B.1}{R markdown}{appendix.B}% 125
-\BOOKMARK [1][-]{section.B.2}{Docker}{appendix.B}% 126
-\BOOKMARK [1][-]{section.B.3}{Git}{appendix.B}% 127
-\BOOKMARK [1][-]{section.B.4}{Connect GitHub and DockerHub}{appendix.B}% 128
-\BOOKMARK [1][-]{section.B.5}{Additional resources}{appendix.B}% 129
-\BOOKMARK [0][-]{appendix.C}{Appendix C: The third Appendix, Other contributions during my phd}{}% 130
-\BOOKMARK [1][-]{section.C.1}{Accepted}{appendix.C}% 131
-\BOOKMARK [1][-]{section.C.2}{Submitted}{appendix.C}% 132
-\BOOKMARK [1][-]{section.C.3}{On preparation}{appendix.C}% 133
-\BOOKMARK [0][-]{appendix*.83}{References}{}% 134
+\BOOKMARK [2][-]{subsection.2.2.1}{Copias extra de familias enzim\341ticas que son reclutadas para una nueva funci\363n est\341n relacionadas con la promiscuidad.}{section.2.2}% 68
+\BOOKMARK [2][-]{subsection.2.2.2}{EvoMining es un paradigma que permite ubicar copias extra de familias enzim\341ticas y organizarlas visualmente acorde a eventos evolutivos.}{section.2.2}% 69
+\BOOKMARK [1][-]{section.2.3}{Algoritmos y bases de datos de EvoMining 2.0}{chapter.2}% 70
+\BOOKMARK [2][-]{subsection.2.3.1}{Algoritmo de expansi\363n y reclutamiento}{section.2.3}% 71
+\BOOKMARK [2][-]{subsection.2.3.2}{Algoritmo de reconstrucci\363n filogen\351tica y visualizaci\363n}{section.2.3}% 72
+\BOOKMARK [2][-]{subsection.2.3.3}{Las tres bases de datos de EvoMining}{section.2.3}% 73
+\BOOKMARK [1][-]{section.2.4}{Observaciones gen\363micas de EvoMining}{chapter.2}% 74
+\BOOKMARK [2][-]{subsection.2.4.1}{Los perfiles de expansi\363n de las prote\355nas dependen del linaje.}{section.2.4}% 75
+\BOOKMARK [2][-]{subsection.2.4.2}{El shell genome posee expansiones en sus familias enzim\341ticas}{section.2.4}% 76
+\BOOKMARK [2][-]{subsection.2.4.3}{GDH y ALS en el cluster scytonemin ejemplifican como familias pertenecientes a un mismo BGC pueden tener distintos patrones de expansi\363n.}{section.2.4}% 77
+\BOOKMARK [2][-]{subsection.2.4.4}{El cluster de scytonemin es un cluster promiscuo.}{section.2.4}% 78
+\BOOKMARK [2][-]{subsection.2.4.5}{Consideraciones para el uso de EvoMining}{section.2.4}% 79
+\BOOKMARK [1][-]{section.2.5}{OTros ejemplos de EvoMining en Actinobateria y Pseudomonas}{chapter.2}% 80
+\BOOKMARK [2][-]{subsection.2.5.1}{EvoMining en Rna transferasas}{section.2.5}% 81
+\BOOKMARK [2][-]{subsection.2.5.2}{La familia tauD tiene expansi\363n y reclutamiento tanto en Actinobacteria como en Pseudomonas}{section.2.5}% 82
+\BOOKMARK [1][-]{section.2.6}{Rimosamide y Detoxin tienen en com\372n la enzima TauD,}{chapter.2}% 83
+\BOOKMARK [0][-]{chapter.3}{Chapter 3: Desarrollo de CORASON como herramienta para organizar clusters biosint\351ticos y otras vecindades gen\363micas conservadas.}{}% 84
+\BOOKMARK [1][-]{section.3.1}{Algoritmo y caracter\355sticas de CORASON}{chapter.3}% 85
+\BOOKMARK [1][-]{section.3.2}{Las familias de BGCs est\341n formadas por variantes del BGC de referencia.}{chapter.3}% 86
+\BOOKMARK [1][-]{section.3.3}{Aplicaciones de CORASON en Actinobacteria y Pseudomonas}{chapter.3}% 87
+\BOOKMARK [1][-]{section.3.4}{Estas familias pueden clasificarse}{chapter.3}% 88
+\BOOKMARK [1][-]{section.3.5}{Un BGC reportado puede tener muchas variantes que conforman una familia de BGCs}{chapter.3}% 89
+\BOOKMARK [1][-]{section.3.6}{CORASON analiza la conservaci\363n del contexto gen\363mico de los EvoMining hits}{chapter.3}% 90
+\BOOKMARK [1][-]{section.3.7}{El contexto de una rama divergente de tauD est\341 conservado en Pseudomonas}{chapter.3}% 91
+\BOOKMARK [1][-]{section.3.8}{CORASON se adapt\363 a la herramienta BiG-SCAPE de clasificaci\363n de familias de BGCs}{chapter.3}% 92
+\BOOKMARK [1][-]{section.3.9}{BiG SCAPE y CORASON identificaron nuevos productos variantes de la familia de BGCs Rimosamide - Detoxin en Actinobacteria}{chapter.3}% 93
+\BOOKMARK [1][-]{section.3.10}{CORASON sugiere que las familias detoxin y rimosamide pertenecen a un amplio clan de familias dedicadas a la s\355ntesis de p\351ptidos.}{chapter.3}% 94
+\BOOKMARK [1][-]{section.3.11}{Clados selectos del \341rbol de CORASON que contiene a las familias rimosamide/detoxin contienen diversidad g\351nica que correlaciona con novedad qu\355mica.}{chapter.3}% 95
+\BOOKMARK [2][-]{subsection.3.11.1}{El clado P450/enoyl agrega una heptanamida al core molecular detoxin/rimosamide}{section.3.11}% 96
+\BOOKMARK [2][-]{subsection.3.11.2}{El superclado spectinomycin/ detoxin-rimosamide-clan produce cinco variantes de detoxin.}{section.3.11}% 97
+\BOOKMARK [2][-]{subsection.3.11.3}{El clado Amycolatopsis P450 produce cinco variantes de detoxin.}{section.3.11}% 98
+\BOOKMARK [1][-]{section.3.12}{CORASON permiti\363 expandir las capacidades de EvoMining y explorar la promiscuidad de familias de BGCs de enzimas divergentes de metabolismo central.}{chapter.3}% 99
+\BOOKMARK [2][-]{section*.58}{Discusi\363n}{section.3.12}% 100
+\BOOKMARK [0][-]{chapter.4}{Chapter 4: La familia PriA}{}% 101
+\BOOKMARK [1][-]{section.4.1}{PriA como modelo de familia enzim\341tica donde las expansiones no son condici\363n necesaria para la promiscuidad.}{chapter.4}% 102
+\BOOKMARK [2][-]{section*.59}{PriA en EvoMining}{section.4.1}% 103
+\BOOKMARK [2][-]{subsection.4.1.1}{An\341lisis de contextos gen\363micos de PriA en distintos linajes utilizando CORASON}{section.4.1}% 104
+\BOOKMARK [1][-]{section.4.2}{El monitoreo en cambios de amino\341cidos en PriA para estudiar rutas evolutivas y reconstrucciones de la estructura tridimensional.}{chapter.4}% 105
+\BOOKMARK [2][-]{subsection.4.2.1}{Al transformar una subHisA en una PriA mediante mutaciones no se observ\363 ninguna trayectoria creciente para ambos sustratos \(darwiniana\)}{section.4.2}% 106
+\BOOKMARK [2][-]{subsection.4.2.2}{Los residuos que covar\355an en el registro evolutivo de PriA permiten una reconstrucci\363n aproximada de su estructura tridimensional}{section.4.2}% 107
+\BOOKMARK [1][-]{section.4.3}{Afinidad de enzimas selectas por sustratos qu\355micamente parecidos a PRA y PROFAR}{chapter.4}% 108
+\BOOKMARK [2][-]{subsection.4.3.1}{El an\341lisis de PriA a nivel estructural sugiere que GTP es el sustrato m\341s af\355n}{section.4.3}% 109
+\BOOKMARK [2][-]{subsection.4.3.2}{Sustratos similares a PRA y PROFAR sugeridos por distancias de Tanimoto o probados previamente}{section.4.3}% 110
+\BOOKMARK [2][-]{subsection.4.3.3}{GTP es el sustrato por el que PriA muestra mayor afinidad}{section.4.3}% 111
+\BOOKMARK [2][-]{subsection.4.3.4}{Molecular dynamics vs experimental data}{section.4.3}% 112
+\BOOKMARK [1][-]{section.4.4}{PriA en cin\351ticas enzim\341ticas no tradicionales.}{chapter.4}% 113
+\BOOKMARK [2][-]{subsection.4.4.1}{Es posible que PriA tenga actividad en GTP}{section.4.4}% 114
+\BOOKMARK [0][-]{chapter*.79}{Conclusion}{}% 115
+\BOOKMARK [1][-]{section.4.1}{Discusion}{chapter*.79}% 116
+\BOOKMARK [2][-]{section*.80}{More info}{section.4.1}% 117
+\BOOKMARK [0][-]{appendix.A}{Appendix A: The First Appendix}{}% 118
+\BOOKMARK [1][-]{section*.81}{In the main Rmd file:}{appendix.A}% 119
+\BOOKMARK [2][-]{section*.82}{In :}{section*.81}% 120
+\BOOKMARK [0][-]{appendix.B}{Appendix B: The Second Appendix, Open source code on this document}{}% 121
+\BOOKMARK [1][-]{section.B.1}{R markdown}{appendix.B}% 122
+\BOOKMARK [1][-]{section.B.2}{Docker}{appendix.B}% 123
+\BOOKMARK [1][-]{section.B.3}{Git}{appendix.B}% 124
+\BOOKMARK [1][-]{section.B.4}{Connect GitHub and DockerHub}{appendix.B}% 125
+\BOOKMARK [1][-]{section.B.5}{Additional resources}{appendix.B}% 126
+\BOOKMARK [0][-]{appendix.C}{Appendix C: The third Appendix, Other contributions during my phd}{}% 127
+\BOOKMARK [1][-]{section.C.1}{Accepted}{appendix.C}% 128
+\BOOKMARK [1][-]{section.C.2}{Submitted}{appendix.C}% 129
+\BOOKMARK [1][-]{section.C.3}{On preparation}{appendix.C}% 130
+\BOOKMARK [0][-]{appendix*.83}{References}{}% 131

@@ -60,7 +60,7 @@ Además, en Actinobacteria PriA ha mostrado un gradiente funcional. Esta variaci
 
   
 Table: Datos Cinéticos de subfamilias de PriA \label{tab:cineticos}   
-  
+\tiny  
 |Fuente|Familia|HisA $in\hspace{.1cm}vivo$|TrpF $in\hspace{.1cm}vivo$|$K_{cat}^{\tiny{ProFAR}}$  $\tiny{[M^{-1}s^{-1}]}$|$K_m^{\tiny{ProFAR}}$  $\tiny{[\mu M]}$|HisA  $\frac{K_{cat}}{K_m}$ |$K_{cat}^{\tiny{PRA}}$   $\tiny{[M^{-1}s^{-1}]}$ |$K_m^{\tiny{PRA}}$ $\tiny{[\mu M]}$|TrpF $\frac{Kcat}{Km}$ |Referencia|   
 |----------------------------|--------|--------|--------|------------|-----------|---------|----------|----------|------|---------------------|  
 | _Escherichia  coli_  |HisA|-|-|1.6|4.9|3.1|-|-|0|Henn [@henn-sax_two_2002]|  
@@ -99,7 +99,9 @@ Table: Datos Cinéticos de subfamilias de PriA \label{tab:cineticos}
 | _Avisco_|||46|1.37|36|3.4||||Juárez*|    
 
 * Datos no publicados del Laboratorio de Evolución de la diversidad metabólica.  
-    
+  
+\normalsize
+
 En este capítulo en las siguientes secciones se exploran cuatro apectos de la familia PriA. _i)_ La distribución y el contexto genómico de PriA en diversos linajes genómicos. _ii)_ La información contenida a nivel de aminoácidos en variantes de PriA como medio de studio de rutas evolutivas y su relación con la reconstrucción de su estructura tridimensional. _iii)_ Las posibles afinidades de PriA por otros sustratos con métodos bioinformáticos, y finalmente _iv)_ La validación experimental de PriA en sustratos diferentes de PRA y ProFAR o bien en combinaciones de los mismos.   
   
 ## PriA como modelo de familia enzimática donde las expansiones no son condición necesaria para la promiscuidad.  
@@ -134,7 +136,7 @@ label(path = "chapter4/PriAEvoMiningCopies.pdf",
 
 Después de explorar cuáles organismos tienen expansiones de PriA, a continuación se muestra en la `r ref(label = "PriATrees", type = "figure")` el posible destino metabólico de las copias extra de la familia. El árbl de Actinobacteria está poblado de hojas rojas, es decir de PriA dedicadas al metabolismo conservado, en este caso a las rutas de Histidina y Triptofano. Sin embargo hay algunas hojas grises, como es el caso de los dos _Serenicoccus_ mencionados previamente. Es posible que estas PriA puedan tener funciones alternativas. Además, en Actinobacteria la PriA de _Janibacter Hoilley_, la rama más larga del árbol, es muy divergente. Esto se debe a que existe una fusión de PriA con HisH, que no parece ser un artefacto de anotación ya que hay otros _Janibacter_ con PriA ligeramente más grandes que el promedio.  
 
-En Cyanobacteria hay pocas hojas verdes (EvoMining predictions) y no están localizadas cerca de saxitoxin, la HisA marcada como BGC de Cyanobacteria. En _Pseudomonas_ hay una gran población de predicciones de EvoMining, pero son falsos positivios, ya que estas no corresponden a una rama dedicada al metabolismo secundario, sino a la rama de la ciclasa. En Archaea algunas de los hojas grises, es decir sin destino metabólico conocido serán exploradas en la siguiente sección.   
+En Cyanobacteria hay pocas hojas verdes (EvoMining predictions) y no están localizadas cerca de la HisA de saxitoxin, el BGC proveniente de Cyanobacteria. En _Pseudomonas_ hay una gran población de predicciones de EvoMining, pero son falsos positivos, ya que estas no corresponden a una rama dedicada al metabolismo secundario, sino a la rama de la ciclasa. En Archaea algunas de los hojas grises, es decir sin destino metabólico conocido serán exploradas en la siguiente sección.   
 
 ```{r PriATrees, results = "asis",message=FALSE,echo=FALSE}
 label(path = "chapter4/PriAEvoMining.pdf", 
@@ -202,9 +204,9 @@ label(path = "chapter4/CORASON/saxitoxin.pdf",
 En esta segunda sección concerniente a la familia PriA se busca información contenida en la secuencia de aminoácidos. En la primera parte se discute cómo en datos de evolución dirigida en el laboatorio no se encontró ninguna trayectoria en donde algún paso incrementara la actividad de PriA en sus dos sustratos nativos. En la segunda parte se muestra una reconstrucción de la estructura tridimensional de PriA basada en la covarianza de sus aminoácidos en secuencias del registro evolutivo.  
   
 ### Al transformar una subHisA en una PriA mediante mutaciones no se observó ninguna trayectoria creciente para ambos sustratos (darwiniana)  
-En esta sección analizamos cómo cambia la capacidad catalítica de PriA sobre un sustrato mientras se varía la del otro. Para ello se utilizaron datos de mutantes de subHisA de _Corynebacterium diphteriae_. Estas mediciones de cinéticas enzimáticas fueron obtenidos del trabajo de tesis de Lianet Noda [@noda_tesis_2012]. A partir de la secuencia original que se mostró es una subHisA, se realizaron mutantes con el objetivo de alcanzar la promiscuidad, es decir de convertir la enzima subHisA en una PriA. Se comenzó con diferentes mutantes puntuales adicionando una mutación cada vez, hasta llegar a una con 9 mutaciones, la que alcanzó mayor actividad PRA isomerasa. En esta colección de mutantes varias ganaron la función de PRA isomerasa, a distintos niveles. En estos datos quedaba pendiente la exploración de las rutas, es decir cómo es el camino desde una mutante sencilla hasta una múltiple ¿cuántas rutas son? ¿Existe alguna tendencia en ciertos momentos de la ruta sobre el incremento/decremento de alguna  de las dos funciones?  
+En esta sección analizamos cómo cambia la capacidad catalítica de PriA sobre un sustrato mientras se varía la del otro. Para ello se utilizaron datos de mutantes de subHisA de _Corynebacterium diphteriae_. Estas mediciones de cinéticas enzimáticas fueron obtenidos del trabajo de tesis de Lianet Noda [@noda_tesis_2012]. A partir de la secuencia original que se mostró es una subHisA, se realizaron mutantes con el objetivo de alcanzar la promiscuidad, es decir de convertir la enzima subHisA en una PriA. Se comenzó con diferentes mutantes puntuales adicionando una mutación cada vez, hasta llegar a una con 11 mutaciones. En esta colección de mutantes varias ganaron la función de PRA isomerasa, a distintos niveles. La que alcanzó mayor actividad PRA isomerasa fue la $9.3$, una variante con nueve mutaciones. En estos datos quedaba pendiente la exploración de las rutas, es decir cómo es el camino desde una mutante sencilla hasta una múltiple ¿cuántas rutas son posibles? ¿Existe alguna tendencia en ciertos momentos de la ruta sobre el incremento/decremento de alguna  de las dos funciones?  
 
-Asi pues se desarrolló un [script](https://github.com/nselem/perlas/tree/master/LiaTrayectory)  utilizando recursividad para reconstruir todas las rutas posibles. Las rutas son mostradas en la `r ref(label = "PriARutas", type = "figure")`. 
+Asi pues se desarrolló un [script](https://github.com/nselem/perlas/tree/master/LiaTrayectory)  utilizando recursividad para reconstruir todas las rutas posibles. El total de rutas calculadas hasta la mutación 11 fue de 2928 caminos, las rutas posibles hasta la mutante 9.3 son 790. Estas rutas son mostradas en la `r ref(label = "PriARutas", type = "figure")`. 
 
 ```{r PriARutas, results = "asis",message=FALSE,echo=FALSE}
 label(path = "conclusion/Solocirculos.png", 
@@ -215,7 +217,8 @@ label(path = "conclusion/Solocirculos.png",
       alt.cap="Rutas desde una subHisA hasta una variante con 9 mutaciones. En cada círculo el primer dígito indica el número de mutaciones",
       type = "figure")
 ```
-Al analizar los cambios sufridos en cada actividad en cada paso de cada ruta se descubrió que no existe en ellas una trayectoria Darwiniana para ambos sustratos.  En la `r ref(label = "PriARutas", type = "figure")` se muestran las rutas donde cada mutante mantiene un nível mínimo de actividad de ProFAS isomerasa ($\frac{K_{cat}}{K_m}$ ProFAR $\ge .004$). En azul se ven los incrementos en ProFAR y en rojo los incrementos en PRA. Es decir al menos en este ejemplo, las mutaciones puntuales que llevan a una enzima monofuncional a adquirir promiscuidad no mantienen una tendencia no decreciente de principio a fin sobre alguna reacción (isomerización de PRA y de ProFAR). Siempre en algún paso decrece alguna de las actividades.   
+  
+Al analizar los cambios sufridos en cada actividad en cada paso de cada ruta se descubrió que no existe en ellas una trayectoria no decreciente para ningún sustratos.  Como ejemplo, en la `r ref(label = "PriARutas", type = "figure")` se muestran las rutas donde cada mutante mantiene un nível mínimo de actividad de ProFAR isomerasa ($\frac{K_{cat}}{K_m} PriA_{ProFAR} \ge .004$). En azul sólido se ven los incrementos en PRA y en rojo sólido los incrementos en ProFAR. Las líneas punteadas indican que la actividad decreció en ese paso de la ruta. Entre una y cuatro mutaciones el azul sólido es predominante, es decir se incrementa la actividad para PRA, pero entre 4 y 5 mutaciones ningún paso incrementa la actividad de PRA y en cambio sí se incrementa la actividad para ProFAR, esta figura sugiere que al mejorar una actividad se compromete el mejoramiento de la otra. En este ejemplo, las mutaciones puntuales que llevan a una enzima monofuncional a adquirir promiscuidad no mantienen una tendencia no decreciente de principio a fin sobre ninguna ruta en ninguna de las dos reacciones isomerización de PRA e isomerización de ProFAR. Este tipo de trayectorias se conoce como no darwininana ya que siempre existe algún paso donde decrece alguna de las actividades.   
 
 ```{r PriARutasPRA, results = "asis",message=FALSE,echo=FALSE}
 label(path = "chapter4/LianetFiguras/SolocirculosPRA_PRO_RUTAS_10_1_r002.png", 
@@ -228,25 +231,14 @@ label(path = "chapter4/LianetFiguras/SolocirculosPRA_PRO_RUTAS_10_1_r002.png",
 ```
 
 ### Los residuos que covarían en el registro evolutivo de PriA permiten una reconstrucción aproximada de su estructura tridimensional  
-Evcouplings es un método que considera la información contenida en las secuencias genómicas como experimentos exitosos de la naturaleza. Con esta información obtiene la covariación de pares de aminoácidos y reconstruye con ellos la estructura tridimensional de una proteína. Los pares fuertemente relacionados se denominan acoplamientos, estos acoplamientos a menudo están cerca físicamente en la estructura terciaria de la proteína. Se ha demostrado que muchas proteínas contienen suficientes acoplamientos distribuidos en su secuencia para permitir su reconstrucción terciaria [1].
+El estudio de la evolución de PriA en la sección anterior nos proporcionó el aprendizaje de que para adquirir una actividad el camino no es estrictamente creciente, si no que suele haber pasos donde alguna de las dos actividades baja. En esta sección utilizaremos el registro evolutivo resultado de millones de años. Tomaremos miles de homólogos de PriA para inferir la estructura tridimensional de una secuencia. Evcouplings es un método que considera las secuencias génicas existentes como experimentos exitosos de la naturaleza. Con esta información obtiene la covariación entre pares de aminoácidos de las secuencias existentes en el registro evolutivo. Los pares fuertemente relacionados se denominan acoplamientos, estos acoplamientos a menudo están cerca físicamente en la estructura terciaria de la proteína. Se ha demostrado que muchas proteínas contienen suficientes acoplamientos distribuidos ampliamente en toda la secuencia, de forma que con ellos es posible la reconstrucción de su estructura tridimensional [@marks_protein_2011]. En esta sección se aplicará EVcouplings para reconstruir la estructura tridimensional de PriA.  
+  
+Las diferencias a nivel estructural pueden amplificar la información proporcionada por variaciones a nivel de secuencia. Por este motivo se decidió implementar Evcouplings [@marks_protein_2011], para poder aplicarlo a la familia PriA. Este método es de difícil instalación ya que tiene muchas dependencias, por ello desarrollé un contenedor docker donde las dependencias y el software quedan instalados. Este desarrollo fue incluido por los desarrolladores originales como sugerencia de instalación.  
+El contenedor docker implementa EVcouplings python framework [@hopf_evcouplings_2019] que comprende cinco etapas para estudiar el análisis de coevolución de residuos de una familia de proteínas. Estas etapas son i) Alineado, ii) análisis de acoplamiento, iii) plegamiento basado en acoplamientos iv) análisis de mutación y v) comparación con estructuras conocidas.
 
-Las diferencias a nivel estructural pueden amplificar la información proporcionada por variaciones a nivel de secuencia. Por este motivo se decidió implementar Evcouplings [REF], para poder aplicarlo a la familia PriA. Este método es de difícil instalación ya que tiene muchas dependencias, por ello desarrollé un contenedor docker donde las dependencias y el software quedan instalados. Este desarrollo fue incluido por los desarrolladores originales como sugerencia de instalación.  
-El contenedor docker implementa EVcouplings python framework [2] que comprende cinco etapas para estudiar el análisis de coevolución de residuos de una familia de proteínas. Estas etapas son i) Alineado, ii) análisis de acoplamiento, iii) plegamiento basado en acoplamientos iv) análisis de mutación y v) comparación con estructuras conocidas.
+EVcouplings fue aplicado a PriA de Streptomyces coelicolor con identificador de Uniprot HIS4_STRCO. Las secuencias para las alineaciones se recuperaron automáticamente de Uniprot, otros parámetros se dejaron con la configuración inicial del archivo de configuración. Como resultado se modeló la estructura de PriA con los acoplamientos de sus aminoácidos. Una comparación con una estructura cristalográfica es mostrada en la `r ref(label = "CouplingsFoldingPriA", type = "figure")`
 
-EVcouplings fue aplicado a PriA de Streptomyces coelicolor con identificador de Uniprot HIS4_STRCO. Las secuencias para las alineaciones se recuperaron automáticamente de Uniprot mientras que otros parámetros se dejaron con la configuración inicial del archivo de configuración.
-
-Resultado se modelo PriA con evcouplings y los aminoácidos encontrados coinciden con los encontrados experimentalmente. 
-```{r PriACouplinsMutations, results = "asis",message=FALSE,echo=FALSE}
-label(path = "chapter4/Couplings/PriAMutations.pdf", 
-      caption = "Tendencia de mutaciones observada en secuencias de PriA", 
-      label="CouplingsMutationsPriA",
-      cap.size = "footnotesize",
-      alt.cap="",
-      scale=".8",
-      type = "figure")
-```
- 
- La estructura reconstruida es parecida, pero para obtener mejor refinamiento se debe seleccionar mejor las secuencias del alineamiento
+ La estructura reconstruida es parecida, pero para obtener mejor definición es posible que se deba refinar la selección de las secuencias del alineamiento, diferenciando entre secuencias PriA, subHisA, PriB y subTrpF.  
 ```{r PriA CouplingFoldings, results = "asis",message=FALSE,echo=FALSE}
 label(path = "chapter4/Couplings/PriACouplingFoldings.png", 
       caption = "Superposición de estructura de PriA generado por Folding con la estructura cristalográfica", 
@@ -257,11 +249,8 @@ label(path = "chapter4/Couplings/PriACouplingFoldings.png",
       type = "figure")
 ```
 
-Finalmente, estos aminoácidos fueron comparados con los provistos por EVCouplings, de covariación.   
-
-
-
-  
+Finalmente los aminoácidos utilizados en la evolución dirigida de la sección anterior fueron comparados con los provistos por EVCouplings como altamente partícipes en la covariación. En la siguiente tabla se muestra en la primera columna los aminoácidos variados en la sección anterior, y en la segunda columna el aminoácido correspondiente en la secuencia de _Streptomyces coelicolor_.     
+ 
 | _Corynebacterium_  | _Streptomyces_ |
 |-----|-------|
 |D20V	|21V|  
@@ -277,9 +266,20 @@ Finalmente, estos aminoácidos fueron comparados con los provistos por EVCouplin
 |E230A	|227A|  
  
 
-## Afinidad de enzimas selectas por sustratos químicamente parecidos a PRA y PROFAR 
 
-Algunas de estas enzimas se seleccionaron en busca de nuevas funciones promiscuas, las reacciones catalizadas por los candidatos se investigaron mediante la exploración de sustratos químicamente similares a los nativos.
+```{r PriACouplinsMutations, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter4/Couplings/PriAMutations.pdf", 
+      caption = "Tendencia de mutaciones observada en secuencias de PriA", 
+      label="CouplingsMutationsPriA",
+      cap.size = "footnotesize",
+      alt.cap="",
+      scale=".8",
+      type = "figure")
+```
+ 
+
+## Afinidad de enzimas selectas por sustratos químicamente parecidos a PRA y PROFAR  
+Además de los sustratos conocidos ProFAR y PRA en los que PriA es capaz de realizar una isomerización, es posible que PriA pueda ser promiscua en otros sustratos. De hecho como se vio en la sección de EvoMining de este capítulo, PriA participa en la síntesis del antibiótico pentostaina. Tomando este ejmplo como inspiración, se colectaron en la literatura sustratos parecidos químicamente a ProFAR y PRA. En esta sección se buscará mostrar sustratos parecidos a los nativos con la idea de posteriormente probarlo en copias seleecionadas de PriA provenientes de diversos organismos. 
 
 
 ```{r Eschema1, results = "asis",message=FALSE,echo=FALSE,warning=FALSE}
