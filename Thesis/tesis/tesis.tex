@@ -3948,11 +3948,20 @@ starts here.
   tridimensional. \emph{iii)} Las posibles afinidades de PriA por otros
   sustratos con métodos bioinformáticos, y finalmente \emph{iv)} La
   validación experimental de PriA en sustratos diferentes de PRA y ProFAR
-  o bien en combinaciones de los mismos.\\
+  o bien en combinaciones de los mismos.
+  
+  \begin{longtable}[]{@{}l@{}}
+  \caption{Reclutamientos de expansiones de PriA en MIBiG
+  \label{tab:cineticos}}\tabularnewline
+  \toprule
+  --------------------------------------------------------------------------\tabularnewline
+  \bottomrule
+  \end{longtable}
+  
   \clearpage    
   
   \begin{landscape}  
-     
+  
   $$
   \resizebox{\columnwidth}{!}{%
   \begin{tabular}{ l c r c c c c c c c l}
@@ -3998,7 +4007,6 @@ starts here.
   \end{tabular}}
   %}
   $$   
-  Table: Reclutamientos de expansiones de PriA en MIBiG \label{tab:cineticos}    
   
   \end{landscape}
   
@@ -4101,7 +4109,7 @@ starts here.
   \begin{figure}[h!tbp]
   \centering
   \includegraphics[angle = 0,scale = 0.8]{chapter4/PriAEvoMining.pdf}
-  \caption[Árboles de destino metabólico de PriA en Actinobacteria, Cyanobacteria, Pseudomonas y Archaea según EvoMining]{\footnotesize{Árboles de destino metabólico de PriA en Actinobacteria, Cyanobacteria, Pseudomonas y Archaea según EvoMining}}
+  \caption[Árboles de destino metabólico de PriA en Actinobacteria, Cyanobacteria, {Pseudomonas} y Archaea según EvoMining]{\footnotesize{Árboles de destino metabólico de PriA en Actinobacteria, Cyanobacteria, {Pseudomonas} y Archaea según EvoMining}}
   \label{fig:PriATrees}
   \end{figure}
   
@@ -4160,7 +4168,7 @@ starts here.
   
   Finalmente, los árboles que se produjeron por EvoMining están
   disponibles para exploración interactiva en Microreact en los links de
-  la \autoref{reclutamientos}:
+  la \autoref{tab:arboles}:
   
   \begin{longtable}[]{@{}lc@{}}
   \caption{Árboles EvoMining de PriA en MicroReact
@@ -4317,7 +4325,7 @@ starts here.
   \begin{figure}[h!tbp]
   \centering
   \includegraphics[angle = 0,scale = 0.8]{chapter4/LianetFiguras/SolocirculosPRA_PRO_RUTAS_10_1_r002.png}
-  \caption[Positive increments on PRA]{\footnotesize{}}
+  \caption[Positive increments on PRA]{\footnotesize{Rutas de evolución dirigida para ganar la función PRA. En la figura se muestra como la mayoría de los pasos que incrementan una función hacer decrecer la capacidad catalítica de la otra. }}
   \label{fig:PRARutas}
   \end{figure}
   
@@ -4376,35 +4384,61 @@ starts here.
   \begin{figure}[h!tbp]
   \centering
   \includegraphics[angle = 0,scale = .5]{chapter4/Couplings/PriACouplingFoldings.png}
-  \caption[Superposición de estructura de PriA generado por Folding con la estructura cristalográfica]{\footnotesize{}}
+  \caption[Superposición de estructura de PriA generado por Folding con la estructura cristalográfica]{\footnotesize{Comparación de estructura de PriA de {Streptomyces} {coelicolor} generada por EVcouplings con la estructura cristalográfica}}
   \label{fig:CouplingsFoldingPriA}
   \end{figure}
   
   Finalmente los aminoácidos utilizados en la evolución dirigida de la
   sección anterior fueron comparados con los provistos por EVCouplings
-  como altamente partícipes en la covariación. En la siguiente tabla se
-  muestra en la primera columna los aminoácidos variados en la sección
-  anterior, y en la segunda columna el aminoácido correspondiente en la
-  secuencia de \emph{Streptomyces coelicolor}.
+  como altamente partícipes en la covariación. Los 10 con más
+  acoplamientos fueron 90L, 117V, 127V, 48W, 208I, 87D, 135T, 21V, 109E.
+  Sólo el 21V es parte los aminoácidos mutados en el estudio previament
+  descrito. En la \autoref{tab:aminoacidos} se muestra en la primera
+  columna los aminoácidos variados en el estudio de mutación dirigida en
+  \emph{Corynebacterium}, en la segunda columna el aminoácido
+  correspondiente en la secuencia de \emph{Streptomyces coelicolor} y
+  finalmente su correspondiente acoplamiento más significativo.\\
   
-  \begin{longtable}[]{@{}ll@{}}
+  \begin{longtable}[]{@{}ccc@{}}
+  \caption{Árboles EvoMining de PriA en MicroReact
+  \label{tab:aminoacidos}}\tabularnewline
   \toprule
-  \emph{Corynebacterium} & \emph{Streptomyces}\tabularnewline
+  \emph{Corynebacterium} & \emph{Streptomyces} & Acoplamiento más
+  relevante\tabularnewline
+  \midrule
+  \endfirsthead
+  \toprule
+  \emph{Corynebacterium} & \emph{Streptomyces} & Acoplamiento más
+  relevante\tabularnewline
   \midrule
   \endhead
-  D20V & 21V\tabularnewline
-  L48I & 49L\tabularnewline
-  F50L & 51L\tabularnewline
-  M66I & 67I\tabularnewline
-  T80S & 81S\tabularnewline
-  A97C & 98C\tabularnewline
-  D127A & 128G\tabularnewline
-  A129D & 130D\tabularnewline
-  T139L & 136L\tabularnewline
-  Y214L & 211Y\tabularnewline
-  E230A & 227A\tabularnewline
+  D20V & 21V & 173T\tabularnewline
+  L48I & 49L & 76I\tabularnewline
+  F50L & 51L & 70V\tabularnewline
+  M66I & 67I & 80L\tabularnewline
+  T80S & 81S & 102N\tabularnewline
+  A97C & 98C & 107A\tabularnewline
+  D127A & 128G & 164V\tabularnewline
+  A129D & 130D & 168I\tabularnewline
+  T139L & 136L & 151T\tabularnewline
+  Y214L & 211Y & -\tabularnewline
+  E230A & 227A & 234E\tabularnewline
   \bottomrule
   \end{longtable}
+  
+  Además se investigaron los aminoácidos catalíticos D11 y D131 y se
+  econtró que existe un conjunto de secuencias donde no están presentes.
+  La mayoría de estassecuencias es fuera del phylum Actinobacteria, como
+  PSeudomonas, Cyanobacteria, Enterobacteria, Proteobacteria y
+  Chloroflexi. Sin embargo, interesantemente se encontraron 159
+  Corynebacterium, 49 Streptomyces y 2 Actinokineospora sin 131D, entre
+  ellos el ya mencionado \emph{Streptomyces CT 34} y \emph{Streptomyces
+  rimosus} . En Corynebacterium se encuentra localizada la familia subHisA
+  y en Streptomyces la familia PriB, la variabilidad mostrada en estos
+  géneros podría estar relacionada con la existencia de estas familias. A
+  futuro, para obtener resultados exclusivos sobre la covariación de
+  residuos en Actinobacteria, se debe proveer un alineamiento exclusivo de
+  Actinobacteria.
   
   \begin{figure}[h!tbp]
   \centering

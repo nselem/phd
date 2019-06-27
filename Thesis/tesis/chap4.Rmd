@@ -172,10 +172,10 @@ En Cyanobacteria hay pocas hojas verdes (EvoMining predictions) y no están loca
 
 ```{r PriATrees, results = "asis",message=FALSE,echo=FALSE}
 label(path = "chapter4/PriAEvoMining.pdf", 
-      caption = "Árboles de destino metabólico de PriA en Actinobacteria, Cyanobacteria, Pseudomonas y Archaea según EvoMining",
+      caption = "Árboles de destino metabólico de PriA en Actinobacteria, Cyanobacteria, {Pseudomonas} y Archaea según EvoMining",
       scale=.8,
       cap.size = "footnotesize",
-      alt.cap="Árboles de destino metabólico de PriA en Actinobacteria, Cyanobacteria, Pseudomonas y Archaea según EvoMining",
+      alt.cap="Árboles de destino metabólico de PriA en Actinobacteria, Cyanobacteria, {Pseudomonas} y Archaea según EvoMining",
       label = "PriATrees", 
       type = "figure")
 ```
@@ -208,7 +208,7 @@ label(path = "chapter4/ada.png",
 ```
 
 
-Finalmente, los árboles que se produjeron por EvoMining están disponibles para exploración interactiva en Microreact en los links de la `r ref("reclutamientos", type = "arboles")`:  
+Finalmente, los árboles que se produjeron por EvoMining están disponibles para exploración interactiva en Microreact en los links de la `r ref("arboles", type = "table")`:  
 
 Table: Árboles EvoMining de PriA en MicroReact \label{tab:arboles}  
   
@@ -274,7 +274,7 @@ label(path = "chapter4/LianetFiguras/SolocirculosPRA_PRO_RUTAS_10_1_r002.png",
       scale=.8,
       label = "PRARutas", 
       cap.size = "footnotesize",
-      alt.cap="",
+      alt.cap="Rutas de evolución dirigida para ganar la función PRA. En la figura se muestra como la mayoría de los pasos que incrementan una función hacer decrecer la capacidad catalítica de la otra. ",
       type = "figure")
 ```
 
@@ -292,33 +292,35 @@ label(path = "chapter4/Couplings/PriACouplingFoldings.png",
       caption = "Superposición de estructura de PriA generado por Folding con la estructura cristalográfica", 
       label="CouplingsFoldingPriA",
       cap.size = "footnotesize",
-      alt.cap="",
+      alt.cap="Comparación de estructura de PriA de {Streptomyces} {coelicolor} generada por EVcouplings con la estructura cristalográfica",
       scale=".5",
       type = "figure")
 ```
 
-Finalmente los aminoácidos utilizados en la evolución dirigida de la sección anterior fueron comparados con los provistos por EVCouplings como altamente partícipes en la covariación. En la siguiente tabla se muestra en la primera columna los aminoácidos variados en la sección anterior, y en la segunda columna el aminoácido correspondiente en la secuencia de _Streptomyces coelicolor_.     
+Finalmente los aminoácidos utilizados en la evolución dirigida de la sección anterior fueron comparados con los provistos por EVCouplings como altamente partícipes en la covariación. Los 10 con más acoplamientos fueron 90L, 117V, 127V, 48W, 208I, 87D, 135T, 21V, 109E. Sólo el 21V es parte los aminoácidos mutados en el estudio previament descrito. En la `r ref("aminoacidos", type = "table")` se muestra en la primera columna los aminoácidos variados en el estudio de mutación dirigida en _Corynebacterium_, en la segunda columna el aminoácido correspondiente en la secuencia de _Streptomyces coelicolor_ y finalmente su correspondiente acoplamiento más significativo.     
+<!-- cut -d',' -f1 HIS4_STRCO_1-200_CouplingScores_longrange.csv |grep -nw 227|head
+$ 155 227
+head -n155 HIS4_STRCO_1-200_CouplingScores_longrange.csv |tail -1
+-->
  
-| _Corynebacterium_  | _Streptomyces_ |
-|-----|-------|
-|D20V	|21V|  
-|L48I	|49L |  
-|F50L	|51L|  
-|M66I	|67I|  
-|T80S	|81S|   
-|A97C	|98C|  
-|D127A	|128G|   
-|A129D	|130D|  
-|T139L	|136L|  
-|Y214L	|211Y|  
-|E230A	|227A|  
+Table: Árboles EvoMining de PriA en MicroReact \label{tab:aminoacidos}   
  
+| _Corynebacterium_   | _Streptomyces_  | Acoplamiento más relevante  |   
+|:-------------------:|:---------------:|:---------------------------:|  
+|D20V	                |21V              |             173T            |  
+|L48I	                |49L              |             76I             |  
+|F50L	                |51L              |             70V             |  
+|M66I	                |67I              |             80L             |  
+|T80S	                |81S              |             102N            |    
+|A97C	                |98C              |             107A            |  
+|D127A	              |128G             |             164V            |    
+|A129D	              |130D             |             168I            |  
+|T139L	              |136L             |             151T            |  
+|Y214L	              |211Y             |               -             |  
+|E230A	              |227A             |            234E             |  
  
-11  Cyanobacterias
-130 Ademas de Pseudomona, Enterobacteria, proteobacterias, Chloroflexi hay 
-159 Corynebacterium y 49 Streptomyces 2 Actinokineospora
-
-
+<!-- grep -c11| grep -nv D|sort|uniq -c |sort -n-->
+Además se investigaron los aminoácidos catalíticos D11 y D131 y se econtró que existe un conjunto de secuencias donde no están presentes. La mayoría de estassecuencias es fuera del phylum Actinobacteria, como PSeudomonas, Cyanobacteria, Enterobacteria, Proteobacteria y Chloroflexi. Sin embargo, interesantemente se encontraron 159 Corynebacterium, 49 Streptomyces y 2 Actinokineospora sin 131D, entre ellos el ya mencionado _Streptomyces CT 34_ y _Streptomyces rimosus_ . En Corynebacterium se encuentra localizada la familia subHisA y en Streptomyces la familia PriB, la variabilidad mostrada en estos géneros podría estar relacionada con la existencia de estas familias. A futuro, para obtener resultados exclusivos sobre la covariación de residuos en Actinobacteria, se debe proveer un alineamiento exclusivo de Actinobacteria.  
 
 ```{r PriACouplinsMutations, results = "asis",message=FALSE,echo=FALSE}
 label(path = "chapter4/Couplings/PriAMutations.pdf", 
