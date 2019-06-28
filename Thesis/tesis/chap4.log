@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2018.10.12)  27 JUN 2019 11:23
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2018.10.12)  28 JUN 2019 14:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -762,7 +762,11 @@ Package: amsthm 2004/08/06 v2.20
 Package: setspace 2011/12/19 v6.7a set line spacing
 ) (/usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty
 Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
-) (./chap4.aux)
+) (./chap4.aux
+
+LaTeX Warning: Label `fig:Alineamiento' multiply defined.
+
+)
 \openout1 = `chap4.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 129.
@@ -1005,512 +1009,553 @@ Underfull \hbox (badness 10000) in paragraph at lines 621--631
 
  []
 
-[11 <./chapter4/Couplings/PriACouplingFoldings.png (PNG copy)>] <chapter4/Coupl
-ings/PriAMutations.pdf, id=286, 597.23125pt x 795.97375pt>
+
+LaTeX Warning: Reference `fig:PriACouplinsMutations' on page 11 undefined on in
+put line 660.
+
+
+<chapter4/Couplings/HIS4_STRCO_1-200/align/couplings.pdf, id=281, 502.65839pt x
+ 508.15913pt>
+File: chapter4/Couplings/HIS4_STRCO_1-200/align/couplings.pdf Graphic file (typ
+e pdf)
+<use chapter4/Couplings/HIS4_STRCO_1-200/align/couplings.pdf>
+Package pdftex.def Info: chapter4/Couplings/HIS4_STRCO_1-200/align/couplings.pd
+f used on input line 667.
+(pdftex.def)             Requested size: 469.7531pt x 474.89377pt.
+
+LaTeX Warning: Reference `fig:alineamiento' on page 11 undefined on input line 
+677.
+
+[11 <./chapter4/Couplings/PriACouplingFoldings.png (PNG copy)>]
+<chapter4/Couplings/HIS4_STRCO_1-200/align/alineamiento.pdf, id=287, 474.74965p
+t x 253.19392pt>
+File: chapter4/Couplings/HIS4_STRCO_1-200/align/alineamiento.pdf Graphic file (
+type pdf)
+<use chapter4/Couplings/HIS4_STRCO_1-200/align/alineamiento.pdf>
+Package pdftex.def Info: chapter4/Couplings/HIS4_STRCO_1-200/align/alineamiento
+.pdf used on input line 691.
+(pdftex.def)             Requested size: 469.77904pt x 250.54298pt.
+
+LaTeX Warning: Reference `fig:PriACouplinsMutations' on page 12 undefined on in
+put line 697.
+
+<chapter4/Couplings/PriAMutations.pdf, id=288, 597.23125pt x 795.97375pt>
 File: chapter4/Couplings/PriAMutations.pdf Graphic file (type pdf)
 <use chapter4/Couplings/PriAMutations.pdf>
 Package pdftex.def Info: chapter4/Couplings/PriAMutations.pdf used on input lin
-e 675.
+e 701.
 (pdftex.def)             Requested size: 469.75708pt x 626.07964pt.
-[12 <./chapter4/Couplings/PriAMutations.pdf>] <chapter4/SustratosQuimicos.pdf, 
-id=306, 614.295pt x 794.97pt>
+[12 <./chapter4/Couplings/HIS4_STRCO_1-200/align/couplings.pdf> <./chapter4/Cou
+plings/HIS4_STRCO_1-200/align/alineamiento.pdf
+
+pdfTeX warning: pdflatex (file ./chapter4/Couplings/HIS4_STRCO_1-200/align/alin
+eamiento.pdf): PDF inclusion: multiple pdfs with page group included in a singl
+e page
+>] [13 <./chapter4/Couplings/PriAMutations.pdf>] <chapter4/SustratosQuimicos.pd
+f, id=9422, 614.295pt x 794.97pt>
 File: chapter4/SustratosQuimicos.pdf Graphic file (type pdf)
 <use chapter4/SustratosQuimicos.pdf>
-Package pdftex.def Info: chapter4/SustratosQuimicos.pdf used on input line 697.
+Package pdftex.def Info: chapter4/SustratosQuimicos.pdf used on input line 723.
 
 (pdftex.def)             Requested size: 469.75604pt x 607.9196pt.
-<chapter4/esquema_quimico-2-2.pdf, id=307, 614.295pt x 794.97pt>
+<chapter4/esquema_quimico-2-2.pdf, id=9423, 614.295pt x 794.97pt>
 File: chapter4/esquema_quimico-2-2.pdf Graphic file (type pdf)
 <use chapter4/esquema_quimico-2-2.pdf>
-Package pdftex.def Info: chapter4/esquema_quimico-2-2.pdf used on input line 70
-4.
+Package pdftex.def Info: chapter4/esquema_quimico-2-2.pdf used on input line 73
+0.
 (pdftex.def)             Requested size: 469.75604pt x 607.9196pt.
-<chapter4/esquema_quimico-3-3.pdf, id=308, 614.295pt x 794.97pt>
+<chapter4/esquema_quimico-3-3.pdf, id=9424, 614.295pt x 794.97pt>
 File: chapter4/esquema_quimico-3-3.pdf Graphic file (type pdf)
 <use chapter4/esquema_quimico-3-3.pdf>
-Package pdftex.def Info: chapter4/esquema_quimico-3-3.pdf used on input line 71
-1.
+Package pdftex.def Info: chapter4/esquema_quimico-3-3.pdf used on input line 73
+7.
 (pdftex.def)             Requested size: 469.75604pt x 607.9196pt.
-<chapter4/esquema_quimico-4-4.pdf, id=309, 614.295pt x 794.97pt>
+<chapter4/esquema_quimico-4-4.pdf, id=9425, 614.295pt x 794.97pt>
 File: chapter4/esquema_quimico-4-4.pdf Graphic file (type pdf)
 <use chapter4/esquema_quimico-4-4.pdf>
-Package pdftex.def Info: chapter4/esquema_quimico-4-4.pdf used on input line 71
-8.
+Package pdftex.def Info: chapter4/esquema_quimico-4-4.pdf used on input line 74
+4.
 (pdftex.def)             Requested size: 469.75604pt x 607.9196pt.
-[13 <./chapter4/SustratosQuimicos.pdf>] [14 <./chapter4/esquema_quimico-2-2.pdf
->] [15 <./chapter4/esquema_quimico-3-3.pdf>] [16 <./chapter4/esquema_quimico-4-
+[14 <./chapter4/SustratosQuimicos.pdf>] [15 <./chapter4/esquema_quimico-2-2.pdf
+>] [16 <./chapter4/esquema_quimico-3-3.pdf>] [17 <./chapter4/esquema_quimico-4-
 4.pdf>]
-Overfull \hbox (38.3408pt too wide) in paragraph at lines 747--753
+Overfull \hbox (38.3408pt too wide) in paragraph at lines 773--779
 \T1/lmr/m/it/10 (-20) Mycobacterium tu-ber-cu-lo-sis \T1/lmr/m/n/10 (-20) (Mtub
  PDB:2Y88,2Y89,2Y85,3ZS4) \T1/lmr/m/it/10 (-20) Strep-to-myces coeli-color \T1/
 lmr/m/n/10 (-20) (Scoe PDB:2VEP,2X30,1VZW),
  []
 
-[17]
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 774.
+[18]
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 800.
 
 (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 775.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 801.
 
-Overfull \hbox (15.1892pt too wide) in alignment at lines 780--785
+Overfull \hbox (15.1892pt too wide) in alignment at lines 806--811
  [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (15.1892pt too wide) in alignment at lines 785--789
+Overfull \hbox (15.1892pt too wide) in alignment at lines 811--815
  [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (15.1892pt too wide) in alignment at lines 789--815
+Overfull \hbox (15.1892pt too wide) in alignment at lines 815--841
  [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (15.1892pt too wide) in alignment at lines 815--838
+Overfull \hbox (15.1892pt too wide) in alignment at lines 841--864
  [] [] [] [] [] [] 
  []
 
-[18
+[19
 
-] <chapter4/SubstratesClustering.png, id=494, 666.49pt x 602.25pt>
+] <chapter4/SubstratesClustering.png, id=9609, 666.49pt x 602.25pt>
 File: chapter4/SubstratesClustering.png Graphic file (type png)
 <use chapter4/SubstratesClustering.png>
 Package pdftex.def Info: chapter4/SubstratesClustering.png used on input line 8
-54.
+80.
 (pdftex.def)             Requested size: 469.76364pt x 424.48521pt.
-[19
+[20
 
  <./chapter4/SubstratesClustering.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 869--870
+Underfull \hbox (badness 10000) in paragraph at lines 895--896
 []\T1/lmtt/m/n/10 ## Called from: eval(expr, envir, enclos)   ## debug en <text
 >#4: plot(density(docking[,
  []
 
-<chap4_files/figure-latex/johan-2.pdf, id=502, 436.63126pt x 286.06876pt>
+<chap4_files/figure-latex/johan-2.pdf, id=9617, 436.63126pt x 286.06876pt>
 File: chap4_files/figure-latex/johan-2.pdf Graphic file (type pdf)
 <use chap4_files/figure-latex/johan-2.pdf>
 Package pdftex.def Info: chap4_files/figure-latex/johan-2.pdf used on input lin
-e 871.
+e 897.
 (pdftex.def)             Requested size: 436.63019pt x 286.06805pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 873--874
+Underfull \hbox (badness 10000) in paragraph at lines 899--900
 []\T1/lmtt/m/n/10 ## debug en <text>#4: rug(docking[, i])   ## debug en <text>#
 4: browser()   ## debug en
  []
 
-<chap4_files/figure-latex/johan-3.pdf, id=503, 437.635pt x 286.06876pt>
+<chap4_files/figure-latex/johan-3.pdf, id=9618, 437.635pt x 286.06876pt>
 File: chap4_files/figure-latex/johan-3.pdf Graphic file (type pdf)
 <use chap4_files/figure-latex/johan-3.pdf>
 Package pdftex.def Info: chap4_files/figure-latex/johan-3.pdf used on input lin
-e 875.
+e 901.
 (pdftex.def)             Requested size: 437.6406pt x 286.07242pt.
-[20
+[21
 
  <./chap4_files/figure-latex/johan-2.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 877--878
+Underfull \hbox (badness 10000) in paragraph at lines 903--904
 []\T1/lmtt/m/n/10 ## debug en <text>#4: rug(docking[, i])   ## debug en <text>#
 4: browser()   ## debug en
  []
 
-<chap4_files/figure-latex/johan-4.pdf, id=516, 436.63126pt x 286.06876pt>
+<chap4_files/figure-latex/johan-4.pdf, id=9631, 436.63126pt x 286.06876pt>
 File: chap4_files/figure-latex/johan-4.pdf Graphic file (type pdf)
 <use chap4_files/figure-latex/johan-4.pdf>
 Package pdftex.def Info: chap4_files/figure-latex/johan-4.pdf used on input lin
-e 879.
+e 905.
 (pdftex.def)             Requested size: 436.63019pt x 286.06805pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 881--882
+Underfull \hbox (badness 10000) in paragraph at lines 907--908
 []\T1/lmtt/m/n/10 ## debug en <text>#4: rug(docking[, i])   ## debug en <text>#
 4: browser()   ## debug en
  []
 
-<chap4_files/figure-latex/johan-5.pdf, id=517, 436.63126pt x 286.06876pt>
+<chap4_files/figure-latex/johan-5.pdf, id=9632, 436.63126pt x 286.06876pt>
 File: chap4_files/figure-latex/johan-5.pdf Graphic file (type pdf)
 <use chap4_files/figure-latex/johan-5.pdf>
 Package pdftex.def Info: chap4_files/figure-latex/johan-5.pdf used on input lin
-e 883.
+e 909.
 (pdftex.def)             Requested size: 436.63019pt x 286.06805pt.
-[21 <./chap4_files/figure-latex/johan-3.pdf> <./chap4_files/figure-latex/johan-
+[22 <./chap4_files/figure-latex/johan-3.pdf> <./chap4_files/figure-latex/johan-
 4.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 885--886
+Underfull \hbox (badness 10000) in paragraph at lines 911--912
 []\T1/lmtt/m/n/10 ## debug en <text>#4: rug(docking[, i])   ## debug en <text>#
 4: browser()   ## debug en
  []
 
-<chap4_files/figure-latex/johan-6.pdf, id=538, 436.63126pt x 286.06876pt>
+<chap4_files/figure-latex/johan-6.pdf, id=9653, 436.63126pt x 286.06876pt>
 File: chap4_files/figure-latex/johan-6.pdf Graphic file (type pdf)
 <use chap4_files/figure-latex/johan-6.pdf>
 Package pdftex.def Info: chap4_files/figure-latex/johan-6.pdf used on input lin
-e 887.
+e 913.
 (pdftex.def)             Requested size: 436.63019pt x 286.06805pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 889--890
+Underfull \hbox (badness 10000) in paragraph at lines 915--916
 []\T1/lmtt/m/n/10 ## debug en <text>#4: rug(docking[, i])   ## debug en <text>#
 4: browser()   ## debug en
  []
 
-<chap4_files/figure-latex/johan-7.pdf, id=539, 436.63126pt x 286.06876pt>
+<chap4_files/figure-latex/johan-7.pdf, id=9654, 436.63126pt x 286.06876pt>
 File: chap4_files/figure-latex/johan-7.pdf Graphic file (type pdf)
 <use chap4_files/figure-latex/johan-7.pdf>
 Package pdftex.def Info: chap4_files/figure-latex/johan-7.pdf used on input lin
-e 891.
+e 917.
 (pdftex.def)             Requested size: 436.63019pt x 286.06805pt.
-[22 <./chap4_files/figure-latex/johan-5.pdf> <./chap4_files/figure-latex/johan-
+[23 <./chap4_files/figure-latex/johan-5.pdf> <./chap4_files/figure-latex/johan-
 6.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 893--894
+Underfull \hbox (badness 10000) in paragraph at lines 919--920
 []\T1/lmtt/m/n/10 ## debug en <text>#4: rug(docking[, i])   ## debug en <text>#
 4: browser()   ## debug en
  []
 
-<chap4_files/figure-latex/johan-8.pdf, id=561, 436.63126pt x 286.06876pt>
+<chap4_files/figure-latex/johan-8.pdf, id=9675, 436.63126pt x 286.06876pt>
 File: chap4_files/figure-latex/johan-8.pdf Graphic file (type pdf)
 <use chap4_files/figure-latex/johan-8.pdf>
 Package pdftex.def Info: chap4_files/figure-latex/johan-8.pdf used on input lin
-e 895.
+e 921.
 (pdftex.def)             Requested size: 436.63019pt x 286.06805pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 897--898
+Underfull \hbox (badness 10000) in paragraph at lines 923--924
 []\T1/lmtt/m/n/10 ## debug en <text>#4: rug(docking[, i])   ## debug en <text>#
 4: browser()   ## debug en
  []
 
-<chap4_files/figure-latex/johan-9.pdf, id=562, 436.63126pt x 286.06876pt>
+<chap4_files/figure-latex/johan-9.pdf, id=9676, 436.63126pt x 286.06876pt>
 File: chap4_files/figure-latex/johan-9.pdf Graphic file (type pdf)
 <use chap4_files/figure-latex/johan-9.pdf>
 Package pdftex.def Info: chap4_files/figure-latex/johan-9.pdf used on input lin
-e 899.
+e 925.
 (pdftex.def)             Requested size: 436.63019pt x 286.06805pt.
-[23 <./chap4_files/figure-latex/johan-7.pdf> <./chap4_files/figure-latex/johan-
+[24 <./chap4_files/figure-latex/johan-7.pdf> <./chap4_files/figure-latex/johan-
 8.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 901--902
+Underfull \hbox (badness 10000) in paragraph at lines 927--928
 []\T1/lmtt/m/n/10 ## debug en <text>#4: rug(docking[, i])   ## debug en <text>#
 4: browser()   ## debug en
  []
 
-<chap4_files/figure-latex/johan-10.pdf, id=583, 436.63126pt x 286.06876pt>
+<chap4_files/figure-latex/johan-10.pdf, id=9697, 436.63126pt x 286.06876pt>
 File: chap4_files/figure-latex/johan-10.pdf Graphic file (type pdf)
 <use chap4_files/figure-latex/johan-10.pdf>
 Package pdftex.def Info: chap4_files/figure-latex/johan-10.pdf used on input li
-ne 903.
+ne 929.
 (pdftex.def)             Requested size: 436.63019pt x 286.06805pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 905--906
+Underfull \hbox (badness 10000) in paragraph at lines 931--932
 []\T1/lmtt/m/n/10 ## debug en <text>#4: rug(docking[, i])   ## debug en <text>#
 4: browser()   ## debug en
  []
 
-<chap4_files/figure-latex/johan-11.pdf, id=584, 436.63126pt x 286.06876pt>
+<chap4_files/figure-latex/johan-11.pdf, id=9698, 436.63126pt x 286.06876pt>
 File: chap4_files/figure-latex/johan-11.pdf Graphic file (type pdf)
 <use chap4_files/figure-latex/johan-11.pdf>
 Package pdftex.def Info: chap4_files/figure-latex/johan-11.pdf used on input li
-ne 907.
+ne 933.
 (pdftex.def)             Requested size: 436.63019pt x 286.06805pt.
-[24 <./chap4_files/figure-latex/johan-9.pdf> <./chap4_files/figure-latex/johan-
+[25 <./chap4_files/figure-latex/johan-9.pdf> <./chap4_files/figure-latex/johan-
 10.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 909--910
+Underfull \hbox (badness 10000) in paragraph at lines 935--936
 []\T1/lmtt/m/n/10 ## debug en <text>#4: rug(docking[, i])   ## debug en <text>#
 4: browser()   ## debug en
  []
 
-<chap4_files/figure-latex/johan-12.pdf, id=605, 436.63126pt x 286.06876pt>
+<chap4_files/figure-latex/johan-12.pdf, id=9720, 436.63126pt x 286.06876pt>
 File: chap4_files/figure-latex/johan-12.pdf Graphic file (type pdf)
 <use chap4_files/figure-latex/johan-12.pdf>
 Package pdftex.def Info: chap4_files/figure-latex/johan-12.pdf used on input li
-ne 911.
+ne 937.
 (pdftex.def)             Requested size: 436.63019pt x 286.06805pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 913--914
+Underfull \hbox (badness 10000) in paragraph at lines 939--940
 []\T1/lmtt/m/n/10 ## debug en <text>#4: rug(docking[, i])   ## debug en <text>#
 4: browser()   ## debug en
  []
 
-<chap4_files/figure-latex/johan-13.pdf, id=606, 436.63126pt x 286.06876pt>
+<chap4_files/figure-latex/johan-13.pdf, id=9721, 436.63126pt x 286.06876pt>
 File: chap4_files/figure-latex/johan-13.pdf Graphic file (type pdf)
 <use chap4_files/figure-latex/johan-13.pdf>
 Package pdftex.def Info: chap4_files/figure-latex/johan-13.pdf used on input li
-ne 915.
+ne 941.
 (pdftex.def)             Requested size: 436.63019pt x 286.06805pt.
-[25 <./chap4_files/figure-latex/johan-11.pdf> <./chap4_files/figure-latex/johan
+[26 <./chap4_files/figure-latex/johan-11.pdf> <./chap4_files/figure-latex/johan
 -12.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 917--918
+Underfull \hbox (badness 10000) in paragraph at lines 943--944
 []\T1/lmtt/m/n/10 ## debug en <text>#4: rug(docking[, i])   ## debug en <text>#
 4: browser()   ## debug en
  []
 
-<chap4_files/figure-latex/johan-14.pdf, id=628, 436.63126pt x 286.06876pt>
+<chap4_files/figure-latex/johan-14.pdf, id=9742, 436.63126pt x 286.06876pt>
 File: chap4_files/figure-latex/johan-14.pdf Graphic file (type pdf)
 <use chap4_files/figure-latex/johan-14.pdf>
 Package pdftex.def Info: chap4_files/figure-latex/johan-14.pdf used on input li
-ne 919.
+ne 945.
 (pdftex.def)             Requested size: 436.63019pt x 286.06805pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 921--922
+Underfull \hbox (badness 10000) in paragraph at lines 947--948
 []\T1/lmtt/m/n/10 ## debug en <text>#4: rug(docking[, i])   ## debug en <text>#
 4: browser()   ## debug en
  []
 
-<chap4_files/figure-latex/johan-15.pdf, id=629, 436.63126pt x 286.06876pt>
+<chap4_files/figure-latex/johan-15.pdf, id=9743, 436.63126pt x 286.06876pt>
 File: chap4_files/figure-latex/johan-15.pdf Graphic file (type pdf)
 <use chap4_files/figure-latex/johan-15.pdf>
 Package pdftex.def Info: chap4_files/figure-latex/johan-15.pdf used on input li
-ne 923.
+ne 949.
 (pdftex.def)             Requested size: 436.63019pt x 286.06805pt.
-[26 <./chap4_files/figure-latex/johan-13.pdf> <./chap4_files/figure-latex/johan
+[27 <./chap4_files/figure-latex/johan-13.pdf> <./chap4_files/figure-latex/johan
 -14.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 925--926
+Underfull \hbox (badness 10000) in paragraph at lines 951--952
 []\T1/lmtt/m/n/10 ## debug en <text>#4: rug(docking[, i])   ## debug en <text>#
 4: browser()   ## debug en
  []
 
-<chap4_files/figure-latex/johan-16.pdf, id=650, 436.63126pt x 286.06876pt>
+<chap4_files/figure-latex/johan-16.pdf, id=9765, 436.63126pt x 286.06876pt>
 File: chap4_files/figure-latex/johan-16.pdf Graphic file (type pdf)
 <use chap4_files/figure-latex/johan-16.pdf>
 Package pdftex.def Info: chap4_files/figure-latex/johan-16.pdf used on input li
-ne 927.
+ne 953.
 (pdftex.def)             Requested size: 436.63019pt x 286.06805pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 929--930
+Underfull \hbox (badness 10000) in paragraph at lines 955--956
 []\T1/lmtt/m/n/10 ## debug en <text>#4: rug(docking[, i])   ## debug en <text>#
 4: browser()   ## debug en
  []
 
-<chap4_files/figure-latex/johan-17.pdf, id=651, 436.63126pt x 286.06876pt>
+<chap4_files/figure-latex/johan-17.pdf, id=9766, 436.63126pt x 286.06876pt>
 File: chap4_files/figure-latex/johan-17.pdf Graphic file (type pdf)
 <use chap4_files/figure-latex/johan-17.pdf>
 Package pdftex.def Info: chap4_files/figure-latex/johan-17.pdf used on input li
-ne 931.
+ne 957.
 (pdftex.def)             Requested size: 436.63019pt x 286.06805pt.
-[27 <./chap4_files/figure-latex/johan-15.pdf> <./chap4_files/figure-latex/johan
+[28 <./chap4_files/figure-latex/johan-15.pdf> <./chap4_files/figure-latex/johan
 -16.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 933--934
+Underfull \hbox (badness 10000) in paragraph at lines 959--960
 []\T1/lmtt/m/n/10 ## debug en <text>#4: rug(docking[, i])   ## debug en <text>#
 4: browser()   ## debug en
  []
 
-<chap4_files/figure-latex/johan-18.pdf, id=672, 436.63126pt x 286.06876pt>
+<chap4_files/figure-latex/johan-18.pdf, id=9787, 436.63126pt x 286.06876pt>
 File: chap4_files/figure-latex/johan-18.pdf Graphic file (type pdf)
 <use chap4_files/figure-latex/johan-18.pdf>
 Package pdftex.def Info: chap4_files/figure-latex/johan-18.pdf used on input li
-ne 935.
+ne 961.
 (pdftex.def)             Requested size: 436.63019pt x 286.06805pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 937--938
+Underfull \hbox (badness 10000) in paragraph at lines 963--964
 []\T1/lmtt/m/n/10 ## debug en <text>#4: rug(docking[, i])   ## debug en <text>#
 4: browser()   ## debug en
  []
 
-<chap4_files/figure-latex/johan-19.pdf, id=673, 436.63126pt x 286.06876pt>
+<chap4_files/figure-latex/johan-19.pdf, id=9788, 436.63126pt x 286.06876pt>
 File: chap4_files/figure-latex/johan-19.pdf Graphic file (type pdf)
 <use chap4_files/figure-latex/johan-19.pdf>
 Package pdftex.def Info: chap4_files/figure-latex/johan-19.pdf used on input li
-ne 939.
+ne 965.
 (pdftex.def)             Requested size: 436.63019pt x 286.06805pt.
-[28 <./chap4_files/figure-latex/johan-17.pdf> <./chap4_files/figure-latex/johan
+[29 <./chap4_files/figure-latex/johan-17.pdf> <./chap4_files/figure-latex/johan
 -18.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 941--942
+Underfull \hbox (badness 10000) in paragraph at lines 967--968
 []\T1/lmtt/m/n/10 ## debug en <text>#4: rug(docking[, i])   ## debug en <text>#
 4: browser()   ## debug en
  []
 
-<chap4_files/figure-latex/johan-20.pdf, id=694, 438.63875pt x 286.06876pt>
+<chap4_files/figure-latex/johan-20.pdf, id=9809, 438.63875pt x 286.06876pt>
 File: chap4_files/figure-latex/johan-20.pdf Graphic file (type pdf)
 <use chap4_files/figure-latex/johan-20.pdf>
 Package pdftex.def Info: chap4_files/figure-latex/johan-20.pdf used on input li
-ne 943.
+ne 969.
 (pdftex.def)             Requested size: 438.64435pt x 286.07242pt.
-<chap4_files/figure-latex/johan-21.pdf, id=695, 436.63126pt x 248.93pt>
+<chap4_files/figure-latex/johan-21.pdf, id=9810, 436.63126pt x 248.93pt>
 File: chap4_files/figure-latex/johan-21.pdf Graphic file (type pdf)
 <use chap4_files/figure-latex/johan-21.pdf>
 Package pdftex.def Info: chap4_files/figure-latex/johan-21.pdf used on input li
-ne 949.
+ne 975.
 (pdftex.def)             Requested size: 436.63019pt x 248.92938pt.
-[29 <./chap4_files/figure-latex/johan-19.pdf> <./chap4_files/figure-latex/johan
+[30 <./chap4_files/figure-latex/johan-19.pdf> <./chap4_files/figure-latex/johan
 -20.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 951--953
+Underfull \hbox (badness 10000) in paragraph at lines 977--979
 []\T1/lmtt/m/n/10 r   ## Leer sobre la incertidumbre del 2 y explicarla     ## 
 Y leer el paper de Julian y
  []
 
-<chap4_files/figure-latex/heatonPDF-1.pdf, id=717, 459.7175pt x 314.17375pt>
+<chap4_files/figure-latex/heatonPDF-1.pdf, id=9831, 459.7175pt x 314.17375pt>
 File: chap4_files/figure-latex/heatonPDF-1.pdf Graphic file (type pdf)
 <use chap4_files/figure-latex/heatonPDF-1.pdf>
 Package pdftex.def Info: chap4_files/figure-latex/heatonPDF-1.pdf used on input
- line 960.
+ line 986.
 (pdftex.def)             Requested size: 459.73741pt x 314.18735pt.
-<chapter4/Figura1_4.pdf, id=718, 597.50786pt x 845.04686pt>
+<chapter4/Figura1_4.pdf, id=9832, 597.50786pt x 845.04686pt>
 File: chapter4/Figura1_4.pdf Graphic file (type pdf)
 <use chapter4/Figura1_4.pdf>
-Package pdftex.def Info: chapter4/Figura1_4.pdf used on input line 964.
+Package pdftex.def Info: chapter4/Figura1_4.pdf used on input line 990.
 (pdftex.def)             Requested size: 459.91837pt x 650.456pt.
 
-LaTeX Warning: Float too large for page by 23.97041pt on input line 967.
+LaTeX Warning: Float too large for page by 23.97041pt on input line 993.
 
-<chapter4/PriAHeatPot.png, id=719, 601.24625pt x 692.5875pt>
+<chapter4/PriAHeatPot.png, id=9833, 601.24625pt x 692.5875pt>
 File: chapter4/PriAHeatPot.png Graphic file (type png)
 <use chapter4/PriAHeatPot.png>
-Package pdftex.def Info: chapter4/PriAHeatPot.png used on input line 971.
+Package pdftex.def Info: chapter4/PriAHeatPot.png used on input line 997.
 (pdftex.def)             Requested size: 469.76834pt x 541.13548pt.
-[30 <./chap4_files/figure-latex/johan-21.pdf> <./chap4_files/figure-latex/heato
-nPDF-1.pdf>] [31 <./chapter4/Figura1_4.pdf>] [32 <./chapter4/PriAHeatPot.png>] 
-<chap4_files/figure-latex/substrateBox-1.pdf, id=772, 459.7175pt x 313.17pt>
+[31 <./chap4_files/figure-latex/johan-21.pdf> <./chap4_files/figure-latex/heato
+nPDF-1.pdf>] [32 <./chapter4/Figura1_4.pdf>] [33 <./chapter4/PriAHeatPot.png>] 
+<chap4_files/figure-latex/substrateBox-1.pdf, id=9886, 459.7175pt x 313.17pt>
 File: chap4_files/figure-latex/substrateBox-1.pdf Graphic file (type pdf)
 <use chap4_files/figure-latex/substrateBox-1.pdf>
 Package pdftex.def Info: chap4_files/figure-latex/substrateBox-1.pdf used on in
-put line 990.
+put line 1016.
 (pdftex.def)             Requested size: 459.7304pt x 313.17877pt.
-[33 <./chap4_files/figure-latex/substrateBox-1.pdf>]
+[34 <./chap4_files/figure-latex/substrateBox-1.pdf>]
 
-LaTeX Warning: Command \texttimes invalid in math mode on input line 1006.
-
-
-LaTeX Warning: Command \texttimes invalid in math mode on input line 1006.
+LaTeX Warning: Command \texttimes invalid in math mode on input line 1032.
 
 
-Overfull \hbox (69.34259pt too wide) detected at line 1026
+LaTeX Warning: Command \texttimes invalid in math mode on input line 1032.
+
+
+Overfull \hbox (69.34259pt too wide) detected at line 1052
 [][]
  []
 
 
-Overfull \hbox (52.13461pt too wide) in paragraph at lines 1034--1060
+Overfull \hbox (52.13461pt too wide) in paragraph at lines 1060--1086
  [][] 
  []
 
-[34
+[35
 
-] [35] <chapter4/MutantControl.png, id=793, 391.4625pt x 234.8775pt>
+] [36] <chapter4/MutantControl.png, id=9908, 391.4625pt x 234.8775pt>
 File: chapter4/MutantControl.png Graphic file (type png)
 <use chapter4/MutantControl.png>
-Package pdftex.def Info: chapter4/MutantControl.png used on input line 1097.
+Package pdftex.def Info: chapter4/MutantControl.png used on input line 1123.
 (pdftex.def)             Requested size: 391.46153pt x 234.87692pt.
-<chapter4/GTPCinetica.pdf, id=794, 732.18042pt x 342.12921pt>
+<chapter4/GTPCinetica.pdf, id=9909, 732.18042pt x 342.12921pt>
 File: chapter4/GTPCinetica.pdf Graphic file (type pdf)
 <use chapter4/GTPCinetica.pdf>
-Package pdftex.def Info: chapter4/GTPCinetica.pdf used on input line 1104.
+Package pdftex.def Info: chapter4/GTPCinetica.pdf used on input line 1130.
 (pdftex.def)             Requested size: 469.76694pt x 219.51009pt.
-[36
-
- <./chapter4/MutantControl.png> <./chapter4/GTPCinetica.pdf>]
-Overfull \hbox (196.63347pt too wide) in alignment at lines 1130--1136
- [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] 
- []
-
-
-Overfull \hbox (196.63347pt too wide) in alignment at lines 1136--1141
- [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] 
- []
-
-
-Overfull \hbox (196.63347pt too wide) in alignment at lines 1141--1199
- [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] 
- []
-
-
-Overfull \hbox (196.63347pt too wide) in alignment at lines 1199--1258
- [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] 
- []
-
-
-Overfull \hbox (196.63347pt too wide) in alignment at lines 1258--1317
- [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] 
- []
-
-
-Overfull \hbox (196.63347pt too wide) in alignment at lines 1317--1322
- [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] 
- []
-
 [37
 
-] [38] <chapter4/Geles/PriAAbril30.png, id=37329, 600.2425pt x 442.65375pt>
+ <./chapter4/MutantControl.png> <./chapter4/GTPCinetica.pdf>]
+Overfull \hbox (196.63347pt too wide) in alignment at lines 1156--1162
+ [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (196.63347pt too wide) in alignment at lines 1162--1167
+ [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (196.63347pt too wide) in alignment at lines 1167--1225
+ [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (196.63347pt too wide) in alignment at lines 1225--1284
+ [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (196.63347pt too wide) in alignment at lines 1284--1343
+ [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (196.63347pt too wide) in alignment at lines 1343--1348
+ [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] 
+ []
+
+[38
+
+] [39] <chapter4/Geles/PriAAbril30.png, id=46443, 600.2425pt x 442.65375pt>
 File: chapter4/Geles/PriAAbril30.png Graphic file (type png)
 <use chapter4/Geles/PriAAbril30.png>
-Package pdftex.def Info: chapter4/Geles/PriAAbril30.png used on input line 1326
+Package pdftex.def Info: chapter4/Geles/PriAAbril30.png used on input line 1352
 .
 (pdftex.def)             Requested size: 469.77176pt x 346.43703pt.
 
-Underfull \vbox (badness 10000) detected at line 1340
+Underfull \vbox (badness 10000) detected at line 1366
  []
 
-LaTeX Font Info:    Try loading font information for TS1+lmtt on input line 134
-5.
+LaTeX Font Info:    Try loading font information for TS1+lmtt on input line 137
+1.
 (/usr/share/texmf/tex/latex/lm/ts1lmtt.fd
 File: ts1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [39
+) [40
 
  <./chapter4/Geles/PriAAbril30.png>]
-<chap4_files/figure-latex/Cinetics-1.pdf, id=37337, 446.66875pt x 251.94125pt>
+<chap4_files/figure-latex/Cinetics-1.pdf, id=46452, 446.66875pt x 251.94125pt>
 File: chap4_files/figure-latex/Cinetics-1.pdf Graphic file (type pdf)
 <use chap4_files/figure-latex/Cinetics-1.pdf>
 Package pdftex.def Info: chap4_files/figure-latex/Cinetics-1.pdf used on input 
-line 1399.
+line 1425.
 (pdftex.def)             Requested size: 446.66765pt x 251.94063pt.
-<chap4_files/figure-latex/Cinetics-2.pdf, id=37338, 463.7325pt x 315.1775pt>
+<chap4_files/figure-latex/Cinetics-2.pdf, id=46453, 463.7325pt x 315.1775pt>
 File: chap4_files/figure-latex/Cinetics-2.pdf Graphic file (type pdf)
 <use chap4_files/figure-latex/Cinetics-2.pdf>
 Package pdftex.def Info: chap4_files/figure-latex/Cinetics-2.pdf used on input 
-line 1407.
+line 1433.
 (pdftex.def)             Requested size: 463.73842pt x 315.18153pt.
-[40 <./chap4_files/figure-latex/Cinetics-1.pdf>] <chap4_files/figure-latex/Cine
-tics-3.pdf, id=37351, 459.7175pt x 305.14pt>
+[41 <./chap4_files/figure-latex/Cinetics-1.pdf>] <chap4_files/figure-latex/Cine
+tics-3.pdf, id=46466, 459.7175pt x 305.14pt>
 File: chap4_files/figure-latex/Cinetics-3.pdf Graphic file (type pdf)
 <use chap4_files/figure-latex/Cinetics-3.pdf>
 Package pdftex.def Info: chap4_files/figure-latex/Cinetics-3.pdf used on input 
-line 1419.
+line 1445.
 (pdftex.def)             Requested size: 459.73741pt x 305.1532pt.
-[41 <./chap4_files/figure-latex/Cinetics-2.pdf>] [42 <./chap4_files/figure-late
+[42 <./chap4_files/figure-latex/Cinetics-2.pdf>] [43 <./chap4_files/figure-late
 x/Cinetics-3.pdf>]
-<chap4_files/figure-latex/Cinetics-4.pdf, id=37375, 446.66875pt x 251.94125pt>
+<chap4_files/figure-latex/Cinetics-4.pdf, id=46491, 446.66875pt x 251.94125pt>
 File: chap4_files/figure-latex/Cinetics-4.pdf Graphic file (type pdf)
 <use chap4_files/figure-latex/Cinetics-4.pdf>
 Package pdftex.def Info: chap4_files/figure-latex/Cinetics-4.pdf used on input 
-line 1465.
+line 1491.
 (pdftex.def)             Requested size: 446.66765pt x 251.94063pt.
-<chap4_files/figure-latex/Cinetics-5.pdf, id=37376, 464.73625pt x 315.1775pt>
+<chap4_files/figure-latex/Cinetics-5.pdf, id=46492, 464.73625pt x 315.1775pt>
 File: chap4_files/figure-latex/Cinetics-5.pdf Graphic file (type pdf)
 <use chap4_files/figure-latex/Cinetics-5.pdf>
 Package pdftex.def Info: chap4_files/figure-latex/Cinetics-5.pdf used on input 
-line 1473.
+line 1499.
 (pdftex.def)             Requested size: 464.74928pt x 315.18634pt.
-[43 <./chap4_files/figure-latex/Cinetics-4.pdf>] <chap4_files/figure-latex/Cine
-tics-6.pdf, id=37390, 459.7175pt x 305.14pt>
+[44 <./chap4_files/figure-latex/Cinetics-4.pdf>] <chap4_files/figure-latex/Cine
+tics-6.pdf, id=46504, 459.7175pt x 305.14pt>
 File: chap4_files/figure-latex/Cinetics-6.pdf Graphic file (type pdf)
 <use chap4_files/figure-latex/Cinetics-6.pdf>
 Package pdftex.def Info: chap4_files/figure-latex/Cinetics-6.pdf used on input 
-line 1485.
+line 1511.
 (pdftex.def)             Requested size: 459.73741pt x 305.1532pt.
-[44 <./chap4_files/figure-latex/Cinetics-5.pdf>] <chap4_files/figure-latex/slop
-es-1.pdf, id=37402, 440.64626pt x 266.9975pt>
+[45 <./chap4_files/figure-latex/Cinetics-5.pdf>] <chap4_files/figure-latex/slop
+es-1.pdf, id=46516, 440.64626pt x 266.9975pt>
 File: chap4_files/figure-latex/slopes-1.pdf Graphic file (type pdf)
 <use chap4_files/figure-latex/slopes-1.pdf>
 Package pdftex.def Info: chap4_files/figure-latex/slopes-1.pdf used on input li
-ne 1523.
+ne 1549.
 (pdftex.def)             Requested size: 440.66533pt x 267.00903pt.
-[45 <./chap4_files/figure-latex/Cinetics-6.pdf>]
-Overfull \vbox (1.20769pt too high) detected at line 1608
+[46 <./chap4_files/figure-latex/Cinetics-6.pdf>]
+Overfull \vbox (1.20769pt too high) detected at line 1634
  []
 
-[46 <./chap4_files/figure-latex/slopes-1.pdf>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1611.
-[47]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1611.
+[47 <./chap4_files/figure-latex/slopes-1.pdf>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1637.
+[48]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1637.
 (./chap4.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1611.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1611.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1637.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1637.
 
 Package rerunfilecheck Info: File `chap4.out' has not changed.
 (rerunfilecheck)             Checksum: F80CE096ADD6169036ACCEAC61A421E5;6354.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1611.
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1637.
  ) 
 Here is how much of TeX's memory you used:
- 13442 strings out of 493304
- 199860 string characters out of 6139870
- 349736 words of memory out of 5000000
- 16459 multiletter control sequences out of 15000+600000
- 50963 words of font info for 118 fonts, out of 8000000 for 9000
+ 13462 strings out of 493304
+ 200512 string characters out of 6139870
+ 349873 words of memory out of 5000000
+ 16470 multiletter control sequences out of 15000+600000
+ 51306 words of font info for 121 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  31i,10n,35p,1270b,457s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/d
@@ -1526,10 +1571,10 @@ exmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/l
 msy7.pfb></usr/share/texmf/fonts/type1/public/lm/lmtk10.pfb></usr/share/texmf/f
 onts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtti10
 .pfb>
-Output written on chap4.pdf (47 pages, 12940997 bytes).
+Output written on chap4.pdf (48 pages, 14311682 bytes).
 PDF statistics:
- 37508 PDF objects out of 38293 (max. 8388607)
- 24830 compressed objects within 249 object streams
- 90 named destinations out of 1000 (max. 500000)
- 10595 words of extra memory for PDF output out of 12000 (max. 10000000)
+ 46623 PDF objects out of 55141 (max. 8388607)
+ 30867 compressed objects within 309 object streams
+ 93 named destinations out of 1000 (max. 500000)
+ 10605 words of extra memory for PDF output out of 12000 (max. 10000000)
 
