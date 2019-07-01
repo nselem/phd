@@ -72,72 +72,6 @@ Como ejemplo de familias de BGCs podemos pensar a los operones. Un operón es el
 
 En oposición a los BGCs u operones de metabolismo conservado, están los BGCs del actual metabolismo especializado, así como se encuentran familias con mucha variación génica pueden encontrarse otras muy conservadas. En este capítulo presentaremos varios ejemplos de familias de BGCs.
 
-
-
-```{r des, results = "asis",message=FALSE,echo=FALSE}
-label(path = "chapter3/des.png", 
-      caption = "EvoMining Algorithm",
-      label = "des",      
-      cap.size = "footnotesize",
-      alt.cap="Variantes del cluster biosintético de desferroxiamina fueron identificadas por CORASON en Actinobacterias de cuatro ciénegas. Una variante del BGC de desferroxiamina fue identificada. Esta variante se diferencia del cluster reportado por la ganancia de una penicilin amidasa. A este gen extra se le llamó $desG$. Fue verificado que la variación génica está ligada con la variación molecular", scale=".4",
-      type = "figure")
-```
-  Texto `r ref(label = "des", type = "figure")`      
-
-
-```{r Coelicolor, results = "asis",message=FALSE,echo=FALSE}
-label(path = "chapter3/Coelicolor.pdf", 
-      caption = "EvoMining Algorithm",
-      label = "Coelicolor",      
-      cap.size = "footnotesize",
-      alt.cap="Contexto genómico conservado en las expansiones de AroA. La arsenoenol piruvato sintasa fue descubierta en un árbol de EvoMining como parte de una rama de expansiones de AroA en Actinobacteria. El contexto genómico de la arsenoenol piruvato sintasa de $S.~coelicolor$ tiene un core conservado en Actinobacteria. Este BGC está dedicado a la síntesis de metabolitos secundarios de tipo arsenolípidos. Primero se identificaron en otras secuencias genómicas contextos que contengan el homólogo de AroA y algún otro gen de su vecindad en $S.~coelicolor$. A continuación, se ordenaron manualmente los contextos obtenidos y se pudo identificar al menos cuatro diferentes clases de BGCs. La primera clase mostrada en un rectángulo morado no contiene PKS o NRPS, la segunda enmarcada en verde contiene una PKS-NRPS híbrida. La tercera clase incluye una PKS a la izquierda y a más de cinco genes de distancia de la Arsenoenol piruvato sintasa y finalmente la última clase contiene una PKS a la derecha y a sólo un gen de distancia de esta enzima. Esta figura muestra que existen variantes de un BGC ", scale=".4",
-      type = "figure")
-```
- Texto `r ref(label = "Coelicolor", type = "figure")`      
-
-
-```{r azoxy, results = "asis",message=FALSE,echo=FALSE}
-label(path = "chapter3/azoxy.png", 
-      caption = "EvoMining Algorithm",
-      cap.size = "footnotesize",
-      alt.cap="Azoxy BGC", 
-      label = "azoxy",  scale=".4",
-      type = "figure")
-```
- Texto `r ref(label = "azoxy", type = "figure")`      
-
-
-```{r PseudomonasTauD, results = "asis",message=FALSE,echo=FALSE}
-label(path = "chapter3/PseudomonasTauD.pdf", 
-      caption = "EvoMining Algorithm",
-      label = "PseudomonasTauD",     
-      cap.size = "footnotesize",
-      alt.cap="En Pseudomonas el gen $tauD$ tiene un contexto que incluye genes de metabolismo especializado. Variantes de este contexto están distribuidas en varios organismos. En particular  ",  scale=".9",
-      type = "figure")
-```
- Texto `r ref(label = "PseudomonasTauD", type = "figure")`      
-
-
-```{r CORASONAlgorithm, results = "asis",message=FALSE,echo=FALSE}
-label(path = "chapter3/corason_fig1.png", 
-      caption = "EvoMining Algorithm",
-      label = "CORASONAlgorithm",     
-      cap.size = "footnotesize",
-      alt.cap="", scale=".3",
-      type = "figure")
-```
- Texto `r ref(label = "CORASONAlgorithm", type = "figure")`      
-
-```{r Rimosamide, results = "asis",message=FALSE,echo=FALSE}
-label(path = "chapter3/figura5.pdf", 
-      caption = "EvoMining Algorithm",
-      label = "Rimosamide",      
-      cap.size = "footnotesize",
-      alt.cap="n", scale=".8",
-      type = "figure")
-```
- Texto `r ref(label = "Rimosamide", type = "figure")`  
- 
 ## Aplicaciones de CORASON en Actinobacteria y Pseudomonas
 En el capítulo anterior las variantes del BGC scytonemin en Cyanobacteria fueron encontradas al aplicar CORASON a dicho linaje. En este capítulo presento ejemplos del uso de CORASON  para investigar los patrones de conservación/variación en familias de BGCs en los linajes Actinobacteria y _Pseudomonas_. Primero, versiones iniciales de CORASON fueron usadas junto con cromatografía y espectrometría de masas (LC-MS) para estudiar la ecología y evolución de los sideróforos del tipo desferroxiaminas en Actinobacteria. Este estudio permitió la identificación de desG, un miembro de la familia penicilin amidasa responsable de la arilación de desferroxiaminas en actinomicetos acuáticos [REF]. 
 
@@ -149,52 +83,103 @@ Estos cuatro ejemplo ilustran como CORASON puede ser utilizado tanto para priori
 
 ## Estas familias pueden clasificarse 
 
-Figura [CorasonSideróforos] Variantes del cluster biosintético de desferroxiamina fueron identificadas por CORASON en Actinobacterias de cuatro ciénegas. Una variante del BGC de desferroxiamina fue identificada. Esta variante se diferencia del cluster reportado por la ganancia de una penicilin amidasa. A este gen extra se le llamó _desG_. Fue verificado que la variación génica está ligada con la variación molecular
+Variantes del cluster biosintético de desferroxiamina `r ref(label = "des", type = "figure")`  fueron identificadas por CORASON en Actinobacterias de cuatro ciénegas. Una variante del BGC de desferroxiamina fue identificada. Esta variante se diferencia del cluster reportado por la ganancia de una penicilin amidasa. A este gen extra se le llamó _desG_. Fue verificado que la variación génica está ligada con la variación molecular
 
 El hierro es necesario en el metabolismo de muchos seres vivos. Para poder utilizarlo las bacterias han desarrollados moléculas captadoras de hierro llamadas sideróforos. Un ejemplo de sideróforo es la molécula de desferroxiamina sintetizada por los genes _des_  en Actinobacteria
   
+  
+```{r des, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter3/des.png", 
+      caption = "EvoMining Algorithm",
+      label = "des",      
+      cap.size = "footnotesize",
+      alt.cap="Variantes del cluster biosintético de desferroxiamina fueron identificadas por CORASON en Actinobacterias de cuatro ciénegas. Una variante del BGC de desferroxiamina fue identificada. Esta variante se diferencia del cluster reportado por la ganancia de una penicilin amidasa. A este gen extra se le llamó $desG$. Fue verificado que la variación génica está ligada con la variación molecular", scale=".4",
+      type = "figure")
+```
+   
+
 ## Un BGC reportado puede tener muchas variantes que conforman una familia de BGCs  
 En el linaje de _Streptomyces_ EvoMining obtuvo como predicción una arsenoenol piruvato sintasa en una rama del árbol de expansiones de la familia 3-fosfoshikimato-1-carboxivinyl transferasa (AroA). Estudios de mutagénesis y de expresión diferencial génica en presencia de arsénico confirmaron que en _Streptomyces coelicolor_ y en _Streptomyces lividans_ esta enzima pertenece a un BGC que sintetiza arsenolípidos [Pablo tesis]. El contexto genómico de AroA en estos organismos incluye una enzima PKS localizada a seis genes de distancia. AntiSMASH predice los BGCs tipo PKS de estas enzimas pero no incluye en ellos a la arsenoenol piruvato sintasa. El valor de EvoMining fue descubrir que esta copia extra de AroA estaba dedicada al metabolismo especializado y por tanto bien podía tener su propiio BGC o dada la cercanía con las PKS podía ser parte de estos PKS-BGCs.
 Esta ruta de síntesis de arseno compuestos, fue descubierta a partir de una rama de copias extra de AroA donde se apreciaba diversidad en las secuencias de aminoácidos. Una pregunta posible es si esta diversidad de secuencia a nivel de enzima ascendía a un siguiente nivel. Es decir si también existe diversidad a nivel del BGC, si se encuentran variantes con distintos patrones de presencia/ausencia en los genes que coponen al BGC de _S coelicolor_. O más aun, quedaba por investigar si el BGC tenía cierto grado de conservación o era exclusivo de estos dos organismos _S. coelicolor y S. lividans_
 
 Una versión preliminar de CORASON, permitió visualizar las variantes de los contextos genómicos de las arsenol piruvato sintasas. Los genomas donde se buscaron estas variantes fueron seleccionados por una búsqueda de blast en NCBI en la base de datos no redundante como aparecía en 2016. Después de organizar manualmente los BGCs como se muestran a la izquierda de la [Fig Arseno-BGC], la visualización permitió distinguir 4 grupos de contextos conservados. El primero independiente de PKS y NRPS mostrado en morado, el segundo con una NRPS-PKS híbrida mostrado en un rectángulo verde y finalmente en rosa y naranja se muestran los grupos tercero y cuarto que contienen una PKS, los primeros del lado izquierdo y los segundos del lado derecho. Presumiblemente estos BGCs aunque contienen un core común producen distintos arseno compuestos.
 
+```{r Coelicolor, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter3/Coelicolor.pdf", 
+      caption = "EvoMining Algorithm",
+      label = "Coelicolor",      
+      cap.size = "footnotesize",
+      alt.cap="Contexto genómico conservado en las expansiones de AroA. La arsenoenol piruvato sintasa fue descubierta en un árbol de EvoMining como parte de una rama de expansiones de AroA en Actinobacteria. El contexto genómico de la arsenoenol piruvato sintasa de $S.~coelicolor$ tiene un core conservado en Actinobacteria. Este BGC está dedicado a la síntesis de metabolitos secundarios de tipo arsenolípidos. Primero se identificaron en otras secuencias genómicas contextos que contengan el homólogo de AroA y algún otro gen de su vecindad en $S.~coelicolor$. A continuación, se ordenaron manualmente los contextos obtenidos y se pudo identificar al menos cuatro diferentes clases de BGCs. La primera clase mostrada en un rectángulo morado no contiene PKS o NRPS, la segunda enmarcada en verde contiene una PKS-NRPS híbrida. La tercera clase incluye una PKS a la izquierda y a más de cinco genes de distancia de la Arsenoenol piruvato sintasa y finalmente la última clase contiene una PKS a la derecha y a sólo un gen de distancia de esta enzima. Esta figura muestra que existen variantes de un BGC ", scale=".4",
+      type = "figure")
+```
 
-[Fig Arseno-BGC] Contexto genómico conservado en las expansiones de AroA. La arsenoenol piruvato sintasa fue descubierta en un árbol de EvoMining como parte de una rama de expansiones de AroA en Actinobacteria. El contexto genómico de la arsenoenol piruvato sintasa de _S. coelicolor _tiene un core conservado en Actinobacteria. Este BGC está dedicado a la síntesis de metabolitos secundarios de tipo arsenolípidos. Primero se identificaron en otras secuencias genómicas contextos que contengan el homólogo de AroA y algún otro gen de su vecindad en _S. coelicolor_. A continuación, se ordenaron manualmente los contextos obtenidos y se pudo identificar al menos cuatro diferentes clases de BGCs. La primera clase mostrada en un rectángulo morado no contiene PKS o NRPS, la segunda enmarcada en verde contiene una PKS-NRPS híbrida. La tercera clase incluye una PKS a la izquierda y a más de cinco genes de distancia de la Arsenoenol piruvato sintasa y finalmente la última clase contiene una PKS a la derecha y a sólo un gen de distancia de esta enzima. Esta figura muestra que existen variantes de un BGC 
+
+El contexto genómico conservado en las expansiones de AroA puede apreciarse en la `r ref(label = "Coelicolor", type = "figure")`. La arsenoenol piruvato sintasa fue descubierta en un árbol de EvoMining como parte de una rama de expansiones de AroA en Actinobacteria. El contexto genómico de la arsenoenol piruvato sintasa de _S. coelicolor _tiene un core conservado en Actinobacteria. Este BGC está dedicado a la síntesis de metabolitos secundarios de tipo arsenolípidos. Primero se identificaron en otras secuencias genómicas contextos que contengan el homólogo de AroA y algún otro gen de su vecindad en _S. coelicolor_. A continuación, se ordenaron manualmente los contextos obtenidos y se pudo identificar al menos cuatro diferentes clases de BGCs. La primera clase mostrada en un rectángulo morado no contiene PKS o NRPS, la segunda enmarcada en verde contiene una PKS-NRPS híbrida. La tercera clase incluye una PKS a la izquierda y a más de cinco genes de distancia de la Arsenoenol piruvato sintasa y finalmente la última clase contiene una PKS a la derecha y a sólo un gen de distancia de esta enzima. Esta figura muestra que existen variantes de un BGC 
 
 La visualización realizada para los arsenolípidos no incluía ningún tipo de orden y era difícil distinguir grupos de BGCs. Por esta razón se pensó que el orden filogenético ya no de una enzima sino de el core del BGC ordenaría las variantes del BGC. Este orden mostraría en un continuo la dinámica genómica del BGC establecida por los procesos evolutivos. En el caso de los arsenolípidos se utilizó Orthocore para la identificación del core del BGC. En las siguientes versiones de CORASON esta característica fue implementada como parte del algoritmo.
 
 ## CORASON analiza la conservación del contexto genómico de los EvoMining hits
-La predicción de un BGC para la síntesis de un compuesto tipo azoxy es otro ejemplo de CORASON como complemento de EvoMining para la identificación de los dos niveles de promiscuidad, tanto a nivel familia enzimática como familia de BGCs.
-Este trabajo se encuentra en preparación para su publicación por Aguilar-Martínez.
+La predicción de un BGC para la síntesis de un compuesto tipo azoxy es otro ejemplo de CORASON como complemento de EvoMining para la identificación de los dos niveles de promiscuidad, tanto a nivel familia enzimática como familia de BGCs `r ref(label = "azoxy", type = "figure")`. Este trabajo se encuentra en preparación para su publicación por Aguilar-Martínez.
 
-Figura [CorasonAzoxy] Azoxy BGC
- 
+
+```{r azoxy, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter3/azoxy.png", 
+      caption = "EvoMining Algorithm",
+      cap.size = "footnotesize",
+      alt.cap="Azoxy BGC", 
+      label = "azoxy",  scale=".4",
+      type = "figure")
+```
+
+\clearpage
 
 ## El contexto de una rama divergente de _tauD_ está conservado en Pseudomonas  
 
-Figura[CorasonTauD] En Pseudomonas el gen _tauD_ tiene un contexto que incluye genes de metabolismo especializado. Variantes de este contexto están distribuidas en varios organismos. En particular  
+En Pseudomonas el gen _tauD_ tiene un contexto que incluye genes de metabolismo especializado. Variantes de este contexto están distribuidas en varios organismos `r ref(label = "PseudomonasTauD", type = "figure")` . Parecen ser diferentes de los rimosamides y detoxins reportados en Actinobacteria.  
+
+
+```{r PseudomonasTauD, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter3/PseudomonasTauD.pdf", 
+      caption = "EvoMining Algorithm",
+      label = "PseudomonasTauD",     
+      cap.size = "footnotesize",
+      alt.cap="En Pseudomonas el gen $tauD$ tiene un contexto que incluye genes de metabolismo especializado. Variantes de este contexto están distribuidas en varios organismos. En particular  ",  scale=".9",
+      type = "figure")
+```
+   
 
 
 ## CORASON se adaptó a la herramienta BiG-SCAPE de clasificación de familias de BGCs  
-BIG-SCAPE es una herramienta bioinformática para separar un conjunto de BGCs en familias de acuerdo al contenido, conservación y distribución de sus dominios. Un dominio es un conjunto de secuencia conservado de un gen, es considerado una unidad de las proteinas. Existe una base de datos de dominios llamada pFAM.
+BIG-SCAPE es una herramienta bioinformática para separar un conjunto de BGCs en familias de acuerdo al contenido, conservación y distribución de sus dominios. Un dominio es un conjunto de secuencia conservado de un gen, es considerado una unidad de las proteinas. CORASON complemento BIG-SCAPE  `r ref(label = "CORASONAlgorithm", type = "figure")` al proporcionar un algoritmo para ordenar la diversidad dentro de la familia. A la vez CORASON permite conectar mediante la evolución a familias aparentemente separadas por BiGSCAPE.
+
+```{r CORASONAlgorithm, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter3/corason_fig1.png", 
+      caption = "Algoritmo de CORASON Algorithm",
+      label = "CORASONAlgorithm",     
+      cap.size = "footnotesize",
+      alt.cap="", scale=".3",
+      type = "figure")
+```
 
 
 
-[CorasonBiGSCAPE] texto texto
-
-
-
-CORASON complemento BIG-SCAPE al proporcionar un algoritmo para ordenar la diversidad dentro de la familia. A la vez CORASON permite conectar mediante la evolución a familias aparentemente separadas por BiGSCAPE.
 
 ## BiG SCAPE y CORASON identificaron nuevos productos variantes de la familia de BGCs Rimosamide - Detoxin en Actinobacteria
-En esta sección utilizamos CORASON y BIG-SCAPE para analizar una base de datos de miles de genomas de ACtinobacteria. Con estas herramientas se organizó la diversidad biosintética de las familias de BGC detoxin y rimosamide [REF]. El análisis reveló diversidad tanto en los géneros de los organismos que contienen a esta familia, y en la composición génica del BGC. Entre los géneros con alguna variante del BGC están Amycolatopsis, Streptomyces. El core conservado de los BGCs detoxin y rimosamide está compuesto por una NRPS, una NRPS/PKS híbrida, y un homólogo de tauD. Este homólogo fue sugerido por un análisis de EvoMining8, En E.coli tauD se encuentra en el operón tauABCD [MM1] La ruta de síntesis de rimosamide difiere de la de detoxins porque tiene una NRPS adicionoal, que codifica para una modificación del core de molecula detoxin/rimosamide con isobutyrate y glycine39.
+En esta sección utilizamos CORASON y BIG-SCAPE para analizar una base de datos de miles de genomas de ACtinobacteria. Con estas herramientas se organizó la diversidad biosintética de las familias de BGC detoxin y rimosamide [@mcclure_elucidating_2016]. El análisis reveló diversidad tanto en los géneros de los organismos que contienen a esta familia, y en la composición génica del BGC. Entre los géneros con alguna variante del BGC están Amycolatopsis, Streptomyces. El core conservado de los BGCs detoxin y rimosamide está compuesto por una NRPS, una NRPS/PKS híbrida, y un homólogo de tauD. Este homólogo fue sugerido por un análisis de EvoMining. En _E.coli_ tauD se encuentra en el operón tauABCD [MM1] La ruta de síntesis de rimosamide difiere de la de detoxins porque tiene una NRPS adicionoal, que codifica para una modificación del core de molecula detoxin/rimosamide con isobutyrate y glycine39.
 
 
 
-Figura [TauDActinobacteria]texto
+```{r Rimosamide, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter3/figura5.pdf", 
+      caption = "Rimosamide",
+      label = "Rimosamide",      
+      cap.size = "footnotesize",
+      alt.cap="Rimosamide", scale=".8",
+      type = "figure")
+```
 
-El hecho de que el gen _tauD_ estuviera presente en todos los miembros de la familia captó nuestra atención. El producto del gen tauD pertenece a la super familia de enzimas Fe(II)/$\alpha$-ketoglutarato-dependientes hidroxilasas. En particular tauD codifica una $\alpha$-ketoglutarato-dependendiente taurina dioxigenasa involucrada en la asimilacion de sulfito por la liberación oxigenolítica del aminoácido taurina41. Interesantemente, esta familia también incluye enzimas en linajes como hongos, bacterias y plantas. Dichas enzimas catalizan hydroxylations, desaturations, ring expansions and ring formations, among other chemical transformations. A la fecha, el rol de TauD en la biosíntesis de los metabolitos detoxin y rimosamide aún es desconocido, se ha sugerido que es responsable de la oxidación de la prolina observada en algunos análogos39.
+ 
+El hecho de que el gen _tauD_ estuviera presente en todos los miembros de la familia `r ref(label = "Rimosamide", type = "figure")`   captó nuestra atención. El producto del gen tauD pertenece a la super familia de enzimas Fe(II)/$\alpha$-ketoglutarato-dependientes hidroxilasas. En particular tauD codifica una $\alpha$-ketoglutarato-dependendiente taurina dioxigenasa involucrada en la asimilacion de sulfito por la liberación oxigenolítica del aminoácido taurina41. Interesantemente, esta familia también incluye enzimas en linajes como hongos, bacterias y plantas. Dichas enzimas catalizan hydroxylations, desaturations, ring expansions and ring formations, among other chemical transformations. A la fecha, el rol de TauD en la biosíntesis de los metabolitos detoxin y rimosamide aún es desconocido, se ha sugerido que es responsable de la oxidación de la prolina observada en algunos análogos39.
   
 Para identificar variantes de los BGCs relacionados a detoxin y rimosamide dentro de la rama de metabolismo especializado los 1175 BGCs del dataset que contenían un homólogo de tauD se pasaron por un análisis combinado de BiG-SCAPE/CORASON. Los BGCs fueron procesados con CORASON usando tauD como query gene. Teniendo como resultado que es el único miembro del ‘BGC core’. Es importante notar que el core del BGC puede contener entre 1 y 3 genes, [La NRPS, y la NRPS-PKS híbrida quedan en este ejemplo fuera del core debido a gaps en la secuencia del genoma de organismos como _Streptomyces humi_, _Streptomyces Spectabilis_ y _Amycolatopsis Vancoresmycina_]
 

@@ -113,15 +113,13 @@ Your repository is kept up-to-date with code changes automatically.
 
 Docker antiSMASH  run_antismash /<some>.gbk ~/as_results --knownclusterblast --inclusive --cf_threshold 0.7  
 
-# The third Appendix, Other contributions during my phd  
-## Accepted  
--Evomining identifies Arsenolipids biosynthetic cluster  
+# El tercer Apéndice, Protocolos experimentales utilizados en el estudio de PriA  
+```{r materials, child = 'chapter4/materials.Rmd'}
+```
 
-## Submitted  
-- Siderophore micrococcus cluster identified by CORASON  
-- CORASON find genomes that owns cluster from cyanobacterial metagenome  
-- Streptomyces central pathways expanssions    
+```{r ProteinPurification, child = 'chapter4/ProteinPurification.Rmd'}
+```
 
-## On preparation    
-- PriA non Darwinian trayectories  
-poner figura James unidades docking
+```{r ProteinQuantification, child = 'chapter4/ProteinQuantification.Rmd'}
+```
+
