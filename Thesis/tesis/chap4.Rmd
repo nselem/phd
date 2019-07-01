@@ -319,12 +319,12 @@ Table: Árboles EvoMining de PriA en MicroReact \label{tab:aminoacidos}
 |Y214L	              |211Y             |               -             |  
 |E230A	              |227A             |            234E             |  
 
-Una forma gráfica de ver esta tabla es la `r ref("PriACouplinsMutations", type = "figure")`. En las líneas naranjas se muestra como el aminoácido 21D tiene un acoplameinto con el 173T, que está muy cerca del 175D que ha sido asociado con la actividad de isomerización de PRA, pero no de ProFAR.
+Una forma gráfica de ver esta tabla es la `r ref("couplings", type = "figure")`. En las líneas naranjas se muestra como el aminoácido 21D tiene un acoplamiento con el 173T, que está muy cerca del 175D que ha sido asociado con la actividad de isomerización de PRA, pero no de ProFAR.
 
-```{r PriA couplings, results = "asis",message=FALSE,echo=FALSE}
+```{r couplings, results = "asis",message=FALSE,echo=FALSE}
 label(path = "chapter4/Couplings/HIS4_STRCO_1-200/align/couplings.pdf", 
       caption = "Visualización de los acoplamientos en la familia PriA", 
-      label="Alineamiento",
+      label="couplings",
       cap.size = "footnotesize",
       alt.cap="Visualización de los acoplamientos en la familia PriA",
       scale=".5",
@@ -332,9 +332,9 @@ label(path = "chapter4/Couplings/HIS4_STRCO_1-200/align/couplings.pdf",
 ```
  
 <!-- grep -c11| grep -nv D|sort|uniq -c |sort -n-->
-Además se investigaron los aminoácidos catalíticos D130 [@due_bisubstrate_2011] y D175 reportados en _Mycobacterium tuberculosis_[@verduzco-castro_co-occurrence_2016] que corresponden a en _S coelicolor_ D11, D131 y D171. Se econtró que existe un conjunto de secuencias donde estos residuos no están presentes `r ref("alineamiento", type = "figure")`. La mayoría de estassecuencias es fuera del phylum Actinobacteria, como PSeudomonas, Cyanobacteria, Enterobacteria, Proteobacteria y Chloroflexi. Sin embargo, interesantemente se encontraron 159 Corynebacterium, 49 Streptomyces y 2 Actinokineospora sin 131D, entre ellos el ya mencionado _Streptomyces CT 34_ y _Streptomyces rimosus_ . En Corynebacterium se encuentra localizada la familia subHisA y en Streptomyces la familia PriB, la variabilidad mostrada en estos géneros podría estar relacionada con la existencia de estas familias. A futuro, para obtener resultados exclusivos sobre la covariación de residuos en Actinobacteria, se debe proveer un alineamiento exclusivo de Actinobacteria.  
+Además se investigaron los aminoácidos catalíticos D130 [@due_bisubstrate_2011] y D175 reportados en _Mycobacterium tuberculosis_[@verduzco-castro_co-occurrence_2016] que corresponden a en _S coelicolor_ D11, D131 y D171. Se econtró que existe un conjunto de secuencias donde estos residuos no están presentes `r ref("Alineamiento", type = "figure")`. La mayoría de estassecuencias es fuera del phylum Actinobacteria, como PSeudomonas, Cyanobacteria, Enterobacteria, Proteobacteria y Chloroflexi. Sin embargo, interesantemente se encontraron 159 Corynebacterium, 49 Streptomyces y 2 Actinokineospora sin 131D, entre ellos el ya mencionado _Streptomyces CT 34_ y _Streptomyces rimosus_ . En Corynebacterium se encuentra localizada la familia subHisA y en Streptomyces la familia PriB, la variabilidad mostrada en estos géneros podría estar relacionada con la existencia de estas familias. A futuro, para obtener resultados exclusivos sobre la covariación de residuos en Actinobacteria, se debe proveer un alineamiento exclusivo de Actinobacteria.  
 
-```{r PriA alineamiento, results = "asis",message=FALSE,echo=FALSE}
+```{r Alineamiento, results = "asis",message=FALSE,echo=FALSE}
 label(path = "chapter4/Couplings/HIS4_STRCO_1-200/align/alineamiento.pdf", 
       caption = "Miembros de PriA que poseen variantes los residuos catalíticos D11, D130", 
       label="Alineamiento",
@@ -344,9 +344,9 @@ label(path = "chapter4/Couplings/HIS4_STRCO_1-200/align/alineamiento.pdf",
       type = "figure")
 ```
 
-Finalmente el registro de mutacion para cada aminoacido podemos verlo en la siguiente `r ref("PriACouplinsMutations", type = "figure")`
+Finalmente la predicción del efecto de una mutacion para cada posición de la secuencia para cada aminoacido podemos verlo en la siguiente `r ref("CouplingsMutationsPriA", type = "figure")`
 
-```{r PriACouplinsMutations, results = "asis",message=FALSE,echo=FALSE}
+```{r CouplingsMutationsPriA, results = "asis",message=FALSE,echo=FALSE}
 label(path = "chapter4/Couplings/PriAMutations.pdf", 
       caption = "Tendencia de mutaciones observada en secuencias de PriA", 
       label="CouplingsMutationsPriA",
@@ -357,7 +357,7 @@ label(path = "chapter4/Couplings/PriAMutations.pdf",
 ```
  
 ## Afinidad de enzimas selectas por sustratos químicamente parecidos a PRA y PROFAR  
-Además de los sustratos conocidos ProFAR y PRA en los que PriA es capaz de realizar una isomerización, es posible que PriA pueda ser promiscua en otros sustratos tal y como ya se mencionó para el antibiótico _ada_ en l. De hecho como se vio en la sección de EvoMining de este capítulo, PriA participa en la síntesis del antibiótico pentostaina. Tomando este ejmplo como inspiración, se colectaron en la literatura sustratos parecidos químicamente a ProFAR y PRA. En esta sección se buscará mostrar sustratos parecidos a los nativos con la idea de posteriormente probarlo en copias seleecionadas de PriA provenientes de diversos organismos. 
+Además de los sustratos conocidos ProFAR y PRA en los que PriA es capaz de realizar una isomerización, es posible que PriA pueda ser promiscua en otros sustratos. De hecho como se vio en la sección de EvoMining de este capítulo, PriA participa en la síntesis del antibiótico pentostaina _ada_ . Tal y como ya se mencionó puede isomerizar un compuesto como parte de la síntesis de este antibiótico. Tomando este ejemplo como inspiración, se colectaron en la literatura sustratos parecidos químicamente a ProFAR y PRA. Así pues, esta sección buscará mostrar sustratos parecidos a los nativos de PriA para posteriormente probar alguno en copias selectas de PriA provenientes de diversos organismos. 
 
 
 ```{r Eschema1, results = "asis",message=FALSE,echo=FALSE,warning=FALSE}
@@ -410,7 +410,8 @@ TrpF Actinobacteria Jonesia denitrificans and Streptomyces sp Mg1 sequences.
 Chemically characterized Actinobacterial enzymes  
 PriA  
 _Mycobacterium tuberculosis_ (Mtub PDB:2Y88,2Y89,2Y85,3ZS4)
-_Streptomyces coelicolor_ (Scoe PDB:2VEP,2X30,1VZW), _Streptomyces globisporus_,
+_Streptomyces coelicolor_ (Scoe PDB:2VEP,2X30,1VZW),
+_Streptomyces globisporus_,
 _Actynomyces urogenitalis_ 4X2R
 _Corynebacterium jeikeum_ 
 
