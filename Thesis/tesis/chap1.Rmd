@@ -152,8 +152,8 @@ Al analizar en RAST genomas de _Microbacterium_ y _Micrococcus_ aislados de toma
  
 ```{r clv, results = "asis",message=FALSE,echo=FALSE}
 label(path = "chapter1/clv.png", 
-      caption = " clv BGC",
-      alt.cap = "clavibacter",
+      caption = " El Cluster $clv$ es un marcador de la especie $Clavibacter~Michiganesis$ en el orden $Micrococcales$.",
+      alt.cap = "El Cluster $clv$ es un marcador de la especie $Clavibacter~Michiganesis$ en el orden $Micrococcales$. Los genes $clvEGAM$ que son una proteína de membrana, un transportador y dos proteína de síntesis del BGC $clv$ están muy conservados en la especie $Clavibacter~Michiganensis$. $clvFRK$, es decir un transportador y el sistema de dos componentes están presentes en otros $Micrococcales$ pero con baja identidad de secuencia y nunca enel contexto del BGC de clavidicina",
       cap.size = "footnotesize",
       scale=".6",
       label = "clv-Marcadores", 
@@ -165,18 +165,18 @@ Esta observación se corroboró con más genomas, `r ref(label = "clv-Marcadores
 
 De hecho al considerar más genomas dentro del microbioma del tomate, la familia _clvF_ no solo no está en el core conservado de _Microbacterium_ y _Micrococcus_, sino que no está presente en ningún otro genoma distinto a _Clavibacter_. Con distintos niveles de conservación de secuencia los genes _clv_ son un buen marcador para distinguir _Cmm_ de otras especies, por esta razón estos genes aún se encuentran en uso como genes marcadores de _Cmm_. Esta misma conclusión se reporta en el trabajo de yasuhara, su observación de que las familias _clvA, clvF_ y _clvG_ son exclusivas de _Cmm_ es independiente de la nuestra, fue hecha sin análisis genómicos y basada en evidencia experimental [@yasuhara-bell_genes_2014]. Este descubrimiento ha permitido bajar los costos de identificación de Clavibacter, ya que ahora en lugar de enviar a secuenciar el genoma es suficiente identificar por PCR _clvF_ en conjunto con otro marcadores.  
   
-Con Orthocore además de obtener los genes marcadores podemos obtener también la matriz del core conservado para realizar la reconstrucción filogenética de especies cercanas de _Clavibacter_. Debido a que es importante para los agricultores conocer de dónde provienen las bacterias que infectan al tomate, una de las líneas de investigación del laboratorio de evolución de la diversidad metabólica, es la organización taxonómica de cepas de _Cmm_ y de otras bacterias del microbioma de tomate. Por este motivo se tienen unos doscientos genomas privados y se esperan más a futuro. Orthocore colabora con esta investigación proporcionando matrices multilocus que pueden diferenciar entre _Clavibacter_ de la misma o de diferente especie.
+Con Orthocore además de obtener los genes marcadores podemos obtener también la matriz del core conservado para realizar la reconstrucción filogenética de especies cercanas de _Clavibacter_ `r ref(label = "Clavibacter-EvoMining", type = "figure")` . Debido a que es importante para los agricultores conocer de dónde provienen las bacterias que infectan al tomate, una de las líneas de investigación del laboratorio de evolución de la diversidad metabólica, es la organización taxonómica de cepas de _Cmm_ y de otras bacterias del microbioma de tomate. Por este motivo se han secuenciado y mantenido como datos privados unos doscientos genomas provenientes del microbioma del tomate. Orthocore colabora con esta investigación proporcionando matrices multilocus que pueden diferenciar entre cepas de _Clavibacter_ de la misma o de diferente especie.
 
 ```{r core, results = "asis",message=FALSE,echo=FALSE}
-label(path = "chapter1/CoreGenomeMicrobioma.png",
-      scale=".5", 
-      caption = " X X Evomining",
-      alt.cap = "Aqui vemos los marcadores de EEvomining",
+label(path = "chapter1/CoreGenomeMicrobioma.pdf",
+      scale=".7", 
+      caption = "El $core~genome$ de $Micrococcales$ ayuda a identificar genes marcadores ",
+      alt.cap = "El $core~genome$ de $Micrococcales$ ayuda a identificar genes marcadores. El $core~genome$ de siete organismos del microbioma del tomate muestra  de ",
       cap.size = "footnotesize",
       label = "Clavibacter-EvoMining", type = "figure")
 ```
   
-Debido al intercambio génico por transferencia horizontal en las bacterias, es posible que los genes marcadores actuales alguna vez aparezcan en otros organismos. También las bacterias pierden continuamente genes, por lo que es posible que algún gen marcador de Cmm se pierda en una cierta cepa `r ref(label = "Clavibacter-EvoMining", type = "figure")` . Esto hace que la definición de estar presentes en el core del grupo de interés y ausentes totalmente de cada uno de los genomas de otro linaje ya no funcione completamente. Sin embargo, en estas dos situaciones presentadas, ganancia de genes marcadores de organismos externos al linaje original o pérdida de genes marcadores en algunas cepas, se sigue cumpliendo que los ex genes marcadores, estarán presentes en la mayoría de los organismos del linaje de interés y ausentes de la mayoría de los organismos del linaje externo. Por ello, se pensó que está definición de genes marcadores se podía generalizar clasificando a grupos de genes ortólogos acorde a sus porcentajes de ocurrencia. Esta idea se desarrolló en la herramienta clavisual, explicada en la siguiente sección.  
+Debido al intercambio génico por transferencia horizontal en las bacterias, es posible que los genes marcadores actuales alguna vez aparezcan en otros organismos. También las bacterias pierden continuamente genes, por lo que es posible que algún gen marcador de Cmm se pierda en una cierta cepa . Esto hace que la definición de estar presentes en el core del grupo de interés y ausentes totalmente de cada uno de los genomas de otro linaje ya no funcione completamente. Sin embargo, en estas dos situaciones presentadas, ganancia de genes marcadores de organismos externos al linaje original o pérdida de genes marcadores en algunas cepas, se sigue cumpliendo que los ex genes marcadores, estarán presentes en la mayoría de los organismos del linaje de interés y ausentes de la mayoría de los organismos del linaje externo. Por ello, se pensó que está definición de genes marcadores se podía generalizar clasificando a grupos de genes ortólogos acorde a sus porcentajes de ocurrencia. Esta idea se desarrolló en la herramienta clavisual, explicada en la siguiente sección.  
 
 ## Clavisual: Identificación de genes marcadores a un cierto porcentaje de grupos seleccionados  
 La idea de que Orthocore puede ser usado para obtener los genes marcadores de un grupo taxonómico frente a otro fue generalizada en el backend del software Clavisual. Ya se ha explicado previamente que el core puede salir vacío por diversas razones, entre ellas baja calidad de los genomas, o que éstos provengan de organismos muy divergentes, verdaderas razones biológicas como dinámica génica o un core no convergente. Así pues, es posible que si sólo se utiliza el core no se obtengan marcadores. Pero el core puede relajarse de varias maneras una de ellas es el Pseudocore, donde en lugar de multidireccional hits se toman BBH a un genoma de referencia. Otra forma es establecer un porcentaje de presencia /ausencia de interés.  
@@ -188,9 +188,9 @@ Los porcentajes de genomas son diferentes porque al no bastar los best bidirecci
 Finalmente Clavisual despliega un árbol realizado con el Pseudocore respecto a un conjunto de genes de Cmm NCPP previamente seleccionados. En este árbol clavisual permite la visualización de metadatos, como año, género de la bacteria, estado de salud de la planta e invernadero donde fue aislada.  
 
 ```{r Clavisual, results = "asis",message=FALSE,echo=FALSE}
-label(path = "chapter1/Clavisual.png",
-      scale=".4", 
-      caption = " X X XXXX",
+label(path = "chapter1/Clavisual.pdf",
+      scale=".7", 
+      caption = "Clavisual organiza filogenéticamente cepas de $Clavibacter$ ",
       alt.cap = "Aqui vemos un arbol",
       cap.size = "footnotesize",
       label = "Clavisual", 
@@ -205,18 +205,18 @@ Después de desarrollar métodos de identificación de genes marcadores y genera
 label(path = "chapter1/bpga-pangenoma.png",
       scale=".5", 
       caption = " X X",
-      alt.cap = "adihipihfd ",
+      alt.cap = "Pangenoma de $Clavibacter$ calculado por BPGA ",
       cap.size = "footnotesize",
       label = "bpga-pangenoma", 
       type = "figure")
 ```
 
-Tomando otros siete clavibacters, utilizando OrthoVenn tenemos la misma observación, el número de familias de genes agregadas al adicionar genomas, es después de siete genomas casi tan grande como su core `r ref(label = "Venn-Chart", type = "figure")`. 
+Tomando otros siete genomas del género _Clavibacter_, utilizando OrthoVenn tenemos la misma observación, el número de familias de genes agregadas al adicionar genomas, es después de siete genomas casi tan grande como su core `r ref(label = "Venn-Chart", type = "figure")`. 
 ```{r Venn-pangenoma, results = "asis",message=FALSE,echo=FALSE}
 label(path = "chapter1/Venn_chart.pdf",
       scale=".6", 
-      caption = " X X",
-      alt.cap = "Diagrama de Venn del pangenoma de Clavibacter Selectos",
+      caption = "Diagrama de Venn del pangenoma de genomas selectos del género $Clavibacter$ ",
+      alt.cap = "Diagrama de Venn del pangenoma de genomas selectos del género $Clavibacter$ ",
       cap.size = "footnotesize",
       label = "Venn-Chart", 
       type = "figure")
@@ -226,60 +226,3 @@ label(path = "chapter1/Venn_chart.pdf",
 
 Finalmente, al aplicar Orthocore para detectar genes marcadores se vuelve indirectamente reclutamientos al metabolismo especializado, cómo, pues porque dentro de los marcadores hay productos naturales como, PENDIENTE VER RESULTADOS RETRO-EVOMINING la clavidicina (michiganina). Ahí vemos que clvABCDEF participan en metabolismo secundario, las enzimas de metabolismo central de este cluster pueden presentar cierta promiscuidad.  
 
-                          
-## Protocolos para usar Orthocore, myRAST, fastOrtho, Clavigenomics, y BPGA  
-Anotación genómica con el docker myRAST  
-
-Esta es una distribución de myRAST en un contenedor de docker. Para usarla se necesita una cuenta del anotador genómico RAST. el docker myRAST permite hacer anotación genómica y funcional masiva mediante el uso de la terminal en el anotador RAST. Después de anotar los resultados pueden descargarse y procesarse en una terminal  
-
-Descargar myrast docker distribution   
-
-Una vez con docker instalado en la computadora, se hace pull al docker myrast.  
-
-docker pull nselem/myrast  
-Abrir myRast en la terminal  
-
-docker run -i -t -v $(pwd):/home nselem/myrast /bin/bash  
-
-Usar myRast  
-
--Ejemplo subir un archivo fasta  
-
-svr_submit_RAST_job -user <user> -passwd <pass> -fasta <file> -domain Bacteria -bioname "Organism name" -genetic_code 11 -gene_caller rast  
-
--Para bajar un archivo de anotación genómica funcional:  
-
-svr_retrieve_RAST_job <user> <password> <jobId> table_txt > $ID.txt  
-
-Una lista completa de archivos puede ser procesada usando bash. Por ejemplo para bajar una lista de archivos de RAST se deben guardar los identificadores de RAST en una columna de un archivo, (Rast_ID en este ejemplo) y usar un while para obtenerlos:  
-
-En este caso la variable “line” contendrá el identificador RAST Id, y cada archivo fasta de aminácidos podrá ser obtenido mediante su identificador de RASTy será guardado en el archivo “$line.faa”  
-
-cut -f1 Rast_ID | while read line; do svr_retrieve_RAST_job <user> <password> $line amino_acid > $line.faa ; done  
-Formatos de RAST para descargar archivos   
-
-Puedes cambiar el formato table_txt por el que tú necesites.  
-
-Table: Formatos de descarga disponibles en myRAST \label{tab:myrast}
-  
-|Atributo        |Descripción                                             |  
-|----------------|--------------------------------------------------------|  
-|genbank         |GenBank (con funciones y enriquecimiento de SEED)       |  
-|genbank_stripped|Genbank con EC-numbers removidos de las funciones|  
-|embl            |EMBL (con funciones y enriquecimiento de SEED)  |  
-|embl_stripped   |EMBL con EC-numbers removidos de las funciones|  
-|gff3            |GFF3|  
-|gff3_stripped |GFF3 con EC-numbers removidos de las funciones|  
-|gtf |GTF|  
-|gtf_stripped|  GTF con EC-numbers removidos de las funciones|  
-|rast_tarball | Archivo comprimido (gzipped) con todo el directorio de las anotaciones de RAST sobre el genoma|  
-|nucleic_acid|  Fasta de DNA de genes|  
-|amino_acid  |Fasta de DNA de aminoácidos|  
-|table_txt|Gene data in tab-separated format|   
-|table_xls|Preserve the original gene calls and use RAST|  
-
-  Referencia `r ref("myrast", type = "table")`.  
-  
-## Orthocore  
-
-El umbral de e-value de Orthocore es por default 1e-6. Todas las secuencias son alineadas usando MUSCLE v3.8.31 con los parámetros default y curadas utilizando Gblocks con 5 posiciones como longitud mínima del  bloque, 10 como máximo número de posiciones contiguas no conservadas y sólo considerando posiciones con gaps menores que el 50% de las secuencias en el alineamiento final. Después de esta curación las secuencias son concatenadas en una matriz final.

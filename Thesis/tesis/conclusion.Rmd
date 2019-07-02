@@ -2,10 +2,73 @@
 output: pdf_document
 ---
 
-# Conclusion {.unnumbered}
+# Metodologia {.unnumbered}
   \setcounter{chapter}{4}
 	\setcounter{section}{0}
 
+                          
+## Protocolos para usar Orthocore, myRAST, fastOrtho, Clavigenomics, y BPGA  
+Anotación genómica con el docker myRAST  
+
+Esta es una distribución de myRAST en un contenedor de docker. Para usarla se necesita una cuenta del anotador genómico RAST. el docker myRAST permite hacer anotación genómica y funcional masiva mediante el uso de la terminal en el anotador RAST. Después de anotar los resultados pueden descargarse y procesarse en una terminal  
+
+Descargar myrast docker distribution   
+
+Una vez con docker instalado en la computadora, se hace pull al docker myrast.  
+
+docker pull nselem/myrast  
+Abrir myRast en la terminal  
+
+docker run -i -t -v $(pwd):/home nselem/myrast /bin/bash  
+
+Usar myRast  
+
+-Ejemplo subir un archivo fasta  
+
+svr_submit_RAST_job -user <user> -passwd <pass> -fasta <file> -domain Bacteria -bioname "Organism name" -genetic_code 11 -gene_caller rast  
+
+-Para bajar un archivo de anotación genómica funcional:  
+
+svr_retrieve_RAST_job <user> <password> <jobId> table_txt > $ID.txt  
+
+Una lista completa de archivos puede ser procesada usando bash. Por ejemplo para bajar una lista de archivos de RAST se deben guardar los identificadores de RAST en una columna de un archivo, (Rast_ID en este ejemplo) y usar un while para obtenerlos:  
+
+En este caso la variable “line” contendrá el identificador RAST Id, y cada archivo fasta de aminácidos podrá ser obtenido mediante su identificador de RASTy será guardado en el archivo “$line.faa”  
+
+cut -f1 Rast_ID | while read line; do svr_retrieve_RAST_job <user> <password> $line amino_acid > $line.faa ; done  
+Formatos de RAST para descargar archivos   
+
+Puedes cambiar el formato table_txt por el que tú necesites.  
+
+Table: Formatos de descarga disponibles en myRAST \label{tab:myrast}
+  
+|Atributo        |Descripción                                             |  
+|----------------|--------------------------------------------------------|  
+|genbank         |GenBank (con funciones y enriquecimiento de SEED)       |  
+|genbank_stripped|Genbank con EC-numbers removidos de las funciones|  
+|embl            |EMBL (con funciones y enriquecimiento de SEED)  |  
+|embl_stripped   |EMBL con EC-numbers removidos de las funciones|  
+|gff3            |GFF3|  
+|gff3_stripped |GFF3 con EC-numbers removidos de las funciones|  
+|gtf |GTF|  
+|gtf_stripped|  GTF con EC-numbers removidos de las funciones|  
+|rast_tarball | Archivo comprimido (gzipped) con todo el directorio de las anotaciones de RAST sobre el genoma|  
+|nucleic_acid|  Fasta de DNA de genes|  
+|amino_acid  |Fasta de DNA de aminoácidos|  
+|table_txt|Gene data in tab-separated format|   
+|table_xls|Preserve the original gene calls and use RAST|  
+
+  Referencia `r ref("myrast", type = "table")`.  
+  
+## Orthocore  
+
+El umbral de e-value de Orthocore es por default 1e-6. Todas las secuencias son alineadas usando MUSCLE v3.8.31 con los parámetros default y curadas utilizando Gblocks con 5 posiciones como longitud mínima del  bloque, 10 como máximo número de posiciones contiguas no conservadas y sólo considerando posiciones con gaps menores que el 50% de las secuencias en el alineamiento final. Después de esta curación las secuencias son concatenadas en una matriz final.
+
+
+
+
+# Conclusión 
+	\setcounter{section}{1}
 Idea de Rosario
 -ver dell cluster de saxitoxin cuantos pasos se necesitron para llegar ahi.  
 -A donde se iria el resultado de abrir el GMP  
@@ -114,7 +177,7 @@ Your repository is kept up-to-date with code changes automatically.
 Docker antiSMASH  run_antismash /<some>.gbk ~/as_results --knownclusterblast --inclusive --cf_threshold 0.7  
 
 # El tercer Apéndice, Protocolos experimentales utilizados en el estudio de PriA  
-```{r materials, child = 'chapter4/materials.Rmd'}
+```{r materials, child = 'chapter4/materiales.Rmd'}
 ```
 
 ```{r ProteinPurification, child = 'chapter4/ProteinPurification.Rmd'}

@@ -188,17 +188,17 @@ starts here.
   \addcontentsline{toc}{chapter}{Introducción}
   
   Las enzimas catalizan reacciones químicas transformando sustratos en
-  productos. During 20th century enzymes were percived as highly specific
-  catalizer, nevertheless this percepcion changed with the discovery that
-  they can . This abilty to catalice several chemical functions its known
-  as enzyme promscuity. Escherichia coli contains at least 404 promiscuous
-  enzymes. La relevancia de la promiscuidad radica tanto en su papel como
-  mecanismo de evolucion de la funcion enzimatica, asi como en la
-  necesidad de su deteccion para la correccion de modelos de flujo
-  metabolico y la determinacion de efectos secundarios en drogas
-  farmacologicas. A pesar de su frecuencia e importancia aun se esta en el
-  proceso de entender las causas y las caracteristicas observables de la
-  promiscuidad enzimatica.
+  productos. Durante el siglo XX, las enzimas fueron percibidas como
+  catalizadores altamente específicos, sin embargo, esta percepción cambió
+  con el descubrimiento de que pueden. Esta capacidad de catalizar varias
+  funciones químicas se conoce como la promoción de la enzima. Escherichia
+  coli contiene al menos 404 enzimas promiscuas. La relevancia de la
+  promiscuidad radica tanto en su papel como mecanismo de evolución de la
+  funcion enzimatica, asi como en la necesidad de su deteccion para la
+  correccion de modelos de flujo metabolico y la determinacion de efectos
+  secundarios en drogas farmacologicas. A pesar de su frecuencia e
+  importancia aun se esta en el proceso de entender las causas y las
+  caracteristicas observables de la promiscuidad enzimatica.
   
   Para estudiar la promiscuidad es necesario contar con una definicion,
   algunos autores emplean el termino promiscuidad para describir
@@ -1925,7 +1925,7 @@ starts here.
   \begin{figure}[h!tbp]
   \centering
   \includegraphics[angle = 0,scale = .6]{chapter1/clv.png}
-  \caption[ clv BGC]{\footnotesize{clavibacter}}
+  \caption[ El Cluster $clv$ es un marcador de la especie $Clavibacter~Michiganesis$ en el orden $Micrococcales$.]{\footnotesize{El Cluster $clv$ es un marcador de la especie $Clavibacter~Michiganesis$ en el orden $Micrococcales$. Los genes $clvEGAM$ que son una proteína de membrana, un transportador y dos proteína de síntesis del BGC $clv$ están muy conservados en la especie $Clavibacter~Michiganensis$. $clvFRK$, es decir un transportador y el sistema de dos componentes están presentes en otros $Micrococcales$ pero con baja identidad de secuencia y nunca enel contexto del BGC de clavidicina}}
   \label{fig:clv-Marcadores}
   \end{figure}
   
@@ -1978,8 +1978,8 @@ starts here.
   
   \begin{figure}[h!tbp]
   \centering
-  \includegraphics[angle = 0,scale = .5]{chapter1/CoreGenomeMicrobioma.png}
-  \caption[ X X Evomining]{\footnotesize{Aqui vemos los marcadores de EEvomining}}
+  \includegraphics[angle = 0,scale = .7]{chapter1/CoreGenomeMicrobioma.pdf}
+  \caption[El $core~genome$ de $Micrococcales$ ayuda a identificar genes marcadores ]{\footnotesize{El $core~genome$ de $Micrococcales$ ayuda a identificar genes marcadores. }}
   \label{fig:Clavibacter-EvoMining}
   \end{figure}
   
@@ -2041,8 +2041,8 @@ starts here.
   
   \begin{figure}[h!tbp]
   \centering
-  \includegraphics[angle = 0,scale = .4]{chapter1/Clavisual.png}
-  \caption[ X X XXXX]{\footnotesize{Aqui vemos un arbol}}
+  \includegraphics[angle = 0,scale = .7]{chapter1/Clavisual.pdf}
+  \caption[Clavisual organiza filogenéticamente cepas de $Clavibacter$ ]{\footnotesize{Aqui vemos un arbol}}
   \label{fig:Clavisual}
   \end{figure}
   
@@ -2068,19 +2068,19 @@ starts here.
   \begin{figure}[h!tbp]
   \centering
   \includegraphics[angle = 0,scale = .5]{chapter1/bpga-pangenoma.png}
-  \caption[ X X]{\footnotesize{adihipihfd }}
+  \caption[ X X]{\footnotesize{Pangenoma de $Clavibacter$ calculado por BPGA }}
   \label{fig:bpga-pangenoma}
   \end{figure}
   
-  Tomando otros siete clavibacters, utilizando OrthoVenn tenemos la misma
-  observación, el número de familias de genes agregadas al adicionar
-  genomas, es después de siete genomas casi tan grande como su core
-  \autoref{fig:Venn-Chart}.
+  Tomando otros siete genomas del género \emph{Clavibacter}, utilizando
+  OrthoVenn tenemos la misma observación, el número de familias de genes
+  agregadas al adicionar genomas, es después de siete genomas casi tan
+  grande como su core \autoref{fig:Venn-Chart}.
   
   \begin{figure}[h!tbp]
   \centering
   \includegraphics[angle = 0,scale = .6]{chapter1/Venn_chart.pdf}
-  \caption[ X X]{\footnotesize{Diagrama de Venn del pangenoma de Clavibacter Selectos}}
+  \caption[Diagrama de Venn del pangenoma de genomas selectos del género $Clavibacter$ ]{\footnotesize{Diagrama de Venn del pangenoma de genomas selectos del género $Clavibacter$ }}
   \label{fig:Venn-Chart}
   \end{figure}
   
@@ -2094,154 +2094,6 @@ starts here.
   Ahí vemos que clvABCDEF participan en metabolismo secundario, las
   enzimas de metabolismo central de este cluster pueden presentar cierta
   promiscuidad.
-  
-  \section{Protocolos para usar Orthocore, myRAST, fastOrtho,
-  Clavigenomics, y
-  BPGA}\label{protocolos-para-usar-orthocore-myrast-fastortho-clavigenomics-y-bpga}
-  
-  Anotación genómica con el docker myRAST
-  
-  Esta es una distribución de myRAST en un contenedor de docker. Para
-  usarla se necesita una cuenta del anotador genómico RAST. el docker
-  myRAST permite hacer anotación genómica y funcional masiva mediante el
-  uso de la terminal en el anotador RAST. Después de anotar los resultados
-  pueden descargarse y procesarse en una terminal
-  
-  Descargar myrast docker distribution
-  
-  Una vez con docker instalado en la computadora, se hace pull al docker
-  myrast.
-  
-  docker pull nselem/myrast\\
-  Abrir myRast en la terminal
-  
-  docker run -i -t -v \$(pwd):/home nselem/myrast /bin/bash
-  
-  Usar myRast
-  
-  -Ejemplo subir un archivo fasta
-  
-  svr\_submit\_RAST\_job -user -passwd -fasta -domain Bacteria -bioname
-  ``Organism name'' -genetic\_code 11 -gene\_caller rast
-  
-  -Para bajar un archivo de anotación genómica funcional:
-  
-  svr\_retrieve\_RAST\_job table\_txt \textgreater{} \$ID.txt
-  
-  Una lista completa de archivos puede ser procesada usando bash. Por
-  ejemplo para bajar una lista de archivos de RAST se deben guardar los
-  identificadores de RAST en una columna de un archivo, (Rast\_ID en este
-  ejemplo) y usar un while para obtenerlos:
-  
-  En este caso la variable ``line'' contendrá el identificador RAST Id, y
-  cada archivo fasta de aminácidos podrá ser obtenido mediante su
-  identificador de RASTy será guardado en el archivo ``\$line.faa''
-  
-  cut -f1 Rast\_ID \textbar{} while read line; do svr\_retrieve\_RAST\_job
-  \$line amino\_acid \textgreater{} \$line.faa ; done\\
-  Formatos de RAST para descargar archivos
-  
-  Puedes cambiar el formato table\_txt por el que tú necesites.
-  
-  \begin{longtable}[]{@{}ll@{}}
-  \caption{Formatos de descarga disponibles en myRAST
-  \label{tab:myrast}}\tabularnewline
-  \toprule
-  \begin{minipage}[b]{0.22\columnwidth}\raggedright\strut
-  Atributo\strut
-  \end{minipage} & \begin{minipage}[b]{0.72\columnwidth}\raggedright\strut
-  Descripción\strut
-  \end{minipage}\tabularnewline
-  \midrule
-  \endfirsthead
-  \toprule
-  \begin{minipage}[b]{0.22\columnwidth}\raggedright\strut
-  Atributo\strut
-  \end{minipage} & \begin{minipage}[b]{0.72\columnwidth}\raggedright\strut
-  Descripción\strut
-  \end{minipage}\tabularnewline
-  \midrule
-  \endhead
-  \begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
-  genbank\strut
-  \end{minipage} & \begin{minipage}[t]{0.72\columnwidth}\raggedright\strut
-  GenBank (con funciones y enriquecimiento de SEED)\strut
-  \end{minipage}\tabularnewline
-  \begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
-  genbank\_stripped\strut
-  \end{minipage} & \begin{minipage}[t]{0.72\columnwidth}\raggedright\strut
-  Genbank con EC-numbers removidos de las funciones\strut
-  \end{minipage}\tabularnewline
-  \begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
-  embl\strut
-  \end{minipage} & \begin{minipage}[t]{0.72\columnwidth}\raggedright\strut
-  EMBL (con funciones y enriquecimiento de SEED)\strut
-  \end{minipage}\tabularnewline
-  \begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
-  embl\_stripped\strut
-  \end{minipage} & \begin{minipage}[t]{0.72\columnwidth}\raggedright\strut
-  EMBL con EC-numbers removidos de las funciones\strut
-  \end{minipage}\tabularnewline
-  \begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
-  gff3\strut
-  \end{minipage} & \begin{minipage}[t]{0.72\columnwidth}\raggedright\strut
-  GFF3\strut
-  \end{minipage}\tabularnewline
-  \begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
-  gff3\_stripped\strut
-  \end{minipage} & \begin{minipage}[t]{0.72\columnwidth}\raggedright\strut
-  GFF3 con EC-numbers removidos de las funciones\strut
-  \end{minipage}\tabularnewline
-  \begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
-  gtf\strut
-  \end{minipage} & \begin{minipage}[t]{0.72\columnwidth}\raggedright\strut
-  GTF\strut
-  \end{minipage}\tabularnewline
-  \begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
-  gtf\_stripped\strut
-  \end{minipage} & \begin{minipage}[t]{0.72\columnwidth}\raggedright\strut
-  GTF con EC-numbers removidos de las funciones\strut
-  \end{minipage}\tabularnewline
-  \begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
-  rast\_tarball\strut
-  \end{minipage} & \begin{minipage}[t]{0.72\columnwidth}\raggedright\strut
-  Archivo comprimido (gzipped) con todo el directorio de las anotaciones
-  de RAST sobre el genoma\strut
-  \end{minipage}\tabularnewline
-  \begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
-  nucleic\_acid\strut
-  \end{minipage} & \begin{minipage}[t]{0.72\columnwidth}\raggedright\strut
-  Fasta de DNA de genes\strut
-  \end{minipage}\tabularnewline
-  \begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
-  amino\_acid\strut
-  \end{minipage} & \begin{minipage}[t]{0.72\columnwidth}\raggedright\strut
-  Fasta de DNA de aminoácidos\strut
-  \end{minipage}\tabularnewline
-  \begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
-  table\_txt\strut
-  \end{minipage} & \begin{minipage}[t]{0.72\columnwidth}\raggedright\strut
-  Gene data in tab-separated format\strut
-  \end{minipage}\tabularnewline
-  \begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
-  table\_xls\strut
-  \end{minipage} & \begin{minipage}[t]{0.72\columnwidth}\raggedright\strut
-  Preserve the original gene calls and use RAST\strut
-  \end{minipage}\tabularnewline
-  \bottomrule
-  \end{longtable}
-  
-  Referencia \autoref{tab:myrast}.
-  
-  \section{Orthocore}\label{orthocore}
-  
-  El umbral de e-value de Orthocore es por default 1e-6. Todas las
-  secuencias son alineadas usando MUSCLE v3.8.31 con los parámetros
-  default y curadas utilizando Gblocks con 5 posiciones como longitud
-  mínima del bloque, 10 como máximo número de posiciones contiguas no
-  conservadas y sólo considerando posiciones con gaps menores que el 50\%
-  de las secuencias en el alineamiento final. Después de esta curación las
-  secuencias son concatenadas en una matriz final.
   
   \chapter{EvoMining como herramienta para identificar el origen y el
   destino metabólico de familias
@@ -5062,10 +4914,164 @@ starts here.
   \end{Highlighting}
   \end{Shaded}
   
-  \chapter*{Conclusion}\label{conclusion}
-  \addcontentsline{toc}{chapter}{Conclusion}
+  \chapter*{Metodologia}\label{metodologia-1}
+  \addcontentsline{toc}{chapter}{Metodologia}
   
   \setcounter{chapter}{4} \setcounter{section}{0}
+  
+  \section{Protocolos para usar Orthocore, myRAST, fastOrtho,
+  Clavigenomics, y
+  BPGA}\label{protocolos-para-usar-orthocore-myrast-fastortho-clavigenomics-y-bpga}
+  
+  Anotación genómica con el docker myRAST
+  
+  Esta es una distribución de myRAST en un contenedor de docker. Para
+  usarla se necesita una cuenta del anotador genómico RAST. el docker
+  myRAST permite hacer anotación genómica y funcional masiva mediante el
+  uso de la terminal en el anotador RAST. Después de anotar los resultados
+  pueden descargarse y procesarse en una terminal
+  
+  Descargar myrast docker distribution
+  
+  Una vez con docker instalado en la computadora, se hace pull al docker
+  myrast.
+  
+  docker pull nselem/myrast\\
+  Abrir myRast en la terminal
+  
+  docker run -i -t -v \$(pwd):/home nselem/myrast /bin/bash
+  
+  Usar myRast
+  
+  -Ejemplo subir un archivo fasta
+  
+  svr\_submit\_RAST\_job -user -passwd -fasta -domain Bacteria -bioname
+  ``Organism name'' -genetic\_code 11 -gene\_caller rast
+  
+  -Para bajar un archivo de anotación genómica funcional:
+  
+  svr\_retrieve\_RAST\_job table\_txt \textgreater{} \$ID.txt
+  
+  Una lista completa de archivos puede ser procesada usando bash. Por
+  ejemplo para bajar una lista de archivos de RAST se deben guardar los
+  identificadores de RAST en una columna de un archivo, (Rast\_ID en este
+  ejemplo) y usar un while para obtenerlos:
+  
+  En este caso la variable ``line'' contendrá el identificador RAST Id, y
+  cada archivo fasta de aminácidos podrá ser obtenido mediante su
+  identificador de RASTy será guardado en el archivo ``\$line.faa''
+  
+  cut -f1 Rast\_ID \textbar{} while read line; do svr\_retrieve\_RAST\_job
+  \$line amino\_acid \textgreater{} \$line.faa ; done\\
+  Formatos de RAST para descargar archivos
+  
+  Puedes cambiar el formato table\_txt por el que tú necesites.
+  
+  \begin{longtable}[]{@{}ll@{}}
+  \caption{Formatos de descarga disponibles en myRAST
+  \label{tab:myrast}}\tabularnewline
+  \toprule
+  \begin{minipage}[b]{0.22\columnwidth}\raggedright\strut
+  Atributo\strut
+  \end{minipage} & \begin{minipage}[b]{0.72\columnwidth}\raggedright\strut
+  Descripción\strut
+  \end{minipage}\tabularnewline
+  \midrule
+  \endfirsthead
+  \toprule
+  \begin{minipage}[b]{0.22\columnwidth}\raggedright\strut
+  Atributo\strut
+  \end{minipage} & \begin{minipage}[b]{0.72\columnwidth}\raggedright\strut
+  Descripción\strut
+  \end{minipage}\tabularnewline
+  \midrule
+  \endhead
+  \begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
+  genbank\strut
+  \end{minipage} & \begin{minipage}[t]{0.72\columnwidth}\raggedright\strut
+  GenBank (con funciones y enriquecimiento de SEED)\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
+  genbank\_stripped\strut
+  \end{minipage} & \begin{minipage}[t]{0.72\columnwidth}\raggedright\strut
+  Genbank con EC-numbers removidos de las funciones\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
+  embl\strut
+  \end{minipage} & \begin{minipage}[t]{0.72\columnwidth}\raggedright\strut
+  EMBL (con funciones y enriquecimiento de SEED)\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
+  embl\_stripped\strut
+  \end{minipage} & \begin{minipage}[t]{0.72\columnwidth}\raggedright\strut
+  EMBL con EC-numbers removidos de las funciones\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
+  gff3\strut
+  \end{minipage} & \begin{minipage}[t]{0.72\columnwidth}\raggedright\strut
+  GFF3\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
+  gff3\_stripped\strut
+  \end{minipage} & \begin{minipage}[t]{0.72\columnwidth}\raggedright\strut
+  GFF3 con EC-numbers removidos de las funciones\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
+  gtf\strut
+  \end{minipage} & \begin{minipage}[t]{0.72\columnwidth}\raggedright\strut
+  GTF\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
+  gtf\_stripped\strut
+  \end{minipage} & \begin{minipage}[t]{0.72\columnwidth}\raggedright\strut
+  GTF con EC-numbers removidos de las funciones\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
+  rast\_tarball\strut
+  \end{minipage} & \begin{minipage}[t]{0.72\columnwidth}\raggedright\strut
+  Archivo comprimido (gzipped) con todo el directorio de las anotaciones
+  de RAST sobre el genoma\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
+  nucleic\_acid\strut
+  \end{minipage} & \begin{minipage}[t]{0.72\columnwidth}\raggedright\strut
+  Fasta de DNA de genes\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
+  amino\_acid\strut
+  \end{minipage} & \begin{minipage}[t]{0.72\columnwidth}\raggedright\strut
+  Fasta de DNA de aminoácidos\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
+  table\_txt\strut
+  \end{minipage} & \begin{minipage}[t]{0.72\columnwidth}\raggedright\strut
+  Gene data in tab-separated format\strut
+  \end{minipage}\tabularnewline
+  \begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
+  table\_xls\strut
+  \end{minipage} & \begin{minipage}[t]{0.72\columnwidth}\raggedright\strut
+  Preserve the original gene calls and use RAST\strut
+  \end{minipage}\tabularnewline
+  \bottomrule
+  \end{longtable}
+  
+  Referencia \autoref{tab:myrast}.
+  
+  \section{Orthocore}\label{orthocore}
+  
+  El umbral de e-value de Orthocore es por default 1e-6. Todas las
+  secuencias son alineadas usando MUSCLE v3.8.31 con los parámetros
+  default y curadas utilizando Gblocks con 5 posiciones como longitud
+  mínima del bloque, 10 como máximo número de posiciones contiguas no
+  conservadas y sólo considerando posiciones con gaps menores que el 50\%
+  de las secuencias en el alineamiento final. Después de esta curación las
+  secuencias son concatenadas en una matriz final.
+  
+  \chapter{Conclusión}\label{conclusion}
+  
+  \begin{verbatim}
+  \setcounter{section}{1}
+  \end{verbatim}
   
   Idea de Rosario -ver dell cluster de saxitoxin cuantos pasos se
   necesitron para llegar ahi.\\
@@ -5234,15 +5240,15 @@ starts here.
   estudio de
   PriA}\label{el-tercer-apendice-protocolos-experimentales-utilizados-en-el-estudio-de-pria}
   
-  \section{Materials}\label{materials}
+  \section{Materiales}\label{materiales}
   
-  -Incubator\\
-  -Refrigerated centrifuge\\
-  -Sonicator\\
-  -Column HisTrapHP\\
-  -Column AKTA-FPLC\\
-  -Column Vivapure mini\\
-  -Fluorimeter
+  -Incubadora\\
+  - Centrifugadora refrigerada\\
+  -Sonicador\\
+  -Columna HisTrapHP\\
+  -Columna AKTA-FPLC\\
+  -Columna Vivapure Mini\\
+  -Fluorímetro
   
   \section{Purification}\label{purification}
   
