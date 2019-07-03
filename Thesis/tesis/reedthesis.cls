@@ -2,7 +2,7 @@
 % This file is copyright (C) 2003 Sam Noble. It may be modified so long
 % as my name is not removed and the modifier adds his name to the file.
 % Redistribution permitted.
-%
+% 2  Jul 2009   Nelly Selem     Rename fixed in spanish 
 % 27 Jan 2004	Sam Noble	Removed tocbibind dependency.
 % 04 Dec 2001 	Sam Noble	Class file
 % 03 Sep 1995	David Perkinson	Title Page
@@ -97,6 +97,17 @@
 \newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{{#1}}}}
 \newcommand{\NormalTok}[1]{{#1}}
 
+\renewcommand{\figurename}{Figura}
+\renewcommand{\tablename}{Tabla}
+\renewcommand{\listfigurename}{Lista de Figuras}
+\renewcommand{\listtablename}{Lista de Tablas}
+\renewcommand{\chaptername}{Cap\'itulo}
+\renewcommand{\indexname}{Indice}
+\renewcommand{\contentsname}{Tabla de Contenidos}
+\renewcommand{\appendixname}{Ap\'endice}
+
+
+
 \setlength{\emergencystretch}{3em}  % prevent overfull lines
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
@@ -120,6 +131,7 @@
   \let\oldthebibliography=\thebibliography
   \let\endoldthebibliography=\endthebibliography
   \renewenvironment{thebibliography}[1]{
+  \renewcommand{\bibname}{Referencias}
     \oldthebibliography{#1}
     \addcontentsline{toc}{chapter}{\bibname}
   }{\endoldthebibliography}
@@ -128,10 +140,12 @@
   \let\oldtheindex=\theindex
   \let\endoldtheindex=\endtheindex
   \renewenvironment{theindex}{
+  \renewcommand{\indexname}{Indice}
     \oldtheindex
     \addcontentsline{toc}{chapter}{\indexname}
   }{\endoldtheindex}
 }
+
 
 % Stolen from book.cls and modified
 \let\RToldchapter\chapter

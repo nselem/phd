@@ -42,18 +42,19 @@ library(reedtemplates)
 ```{r coreWiki, results = "asis",message=FALSE,echo=FALSE}
 label(path = "chapter1/coreWiki.png", 
       label = "Orthocore", 
-      caption = "Orthocore calcula el core de un linaje genómico para proveer una filogenia",
-      alt.cap = "Orthocore calcula las familias génicas comunes de un linaje genómico. Después de un proceso de filtrado, alineamiento y curación concatena estas familias y entrega una reconstrucción filogenética.",
+      caption = "Orthocore calcula el $core~genome$ de un linaje y construye con él una filogenia",
+      alt.cap = "Orthocore calcula las familias génicas comunes de un linaje taxonómico. Después de un proceso de filtrado, alineamiento y curación, Orthocore concatena las secuencias de estas familias y entrega una reconstrucción filogenética.",
       cap.size = "footnotesize",
-      scale=".42", type = "figure")
+      scale=".42", 
+      type = "figure")
 ```
 
-El pangenoma es el contenido génico total de un linaje taxonómico. Las familias génicas de un pangenoma pueden clasificarse según sus patrones de presencia-ausencia en cada genoma del linaje. De acuerdo a esta clasificación los principales grupos de familias génicas en un pangenoma son el _core_, el _shell_ y el _cloud_ (dispensable) genome. El _core genome_ es el conjunto de familias con presencia en todos los genomas del linaje. Por ejemplo, la secuencia de la subunidad 16s del gene rRNA, así como diversos genes ribosomales que suelen estar en el core de la gran mayoría de los linajes bacterianos. El _shell genome_ es el grupo de familias presentes en la mayoría de los genomas pero no en todos. En el _shell_ se ubican por ejemplo familias que estaban en el _core genome_ pero que algunas bacterias del linaje sufrieron una dinámica de pérdida (o ganancia) génica. Mientras que el _cloud genome_ o dispensable genome es aquel grupo de familias que sólo ocurre en unos cuantos genomas del linaje.  
+El pangenoma es el contenido génico total de un linaje taxonómico. Las familias génicas de un pangenoma pueden clasificarse según sus patrones de presencia-ausencia en cada genoma del linaje. De acuerdo a esta clasificación los principales grupos de familias génicas en un pangenoma son el _core_, el _shell_ y el _cloud_ (dispensable) genome. El _core genome_ es el conjunto de familias con presencia en todos los genomas del linaje. Por ejemplo, la secuencia de la subunidad 16s de rRNA, así como diversos genes ribosomales suelen estar en el core de la gran mayoría de los linajes bacterianos. El _shell genome_ es el grupo de familias presentes en la mayoría de los genomas pero no en todos. En el _shell_ se ubican por ejemplo familias que estaban en el _core genome_ pero que algunas bacterias del linaje sufrieron una dinámica de pérdida (o ganancia) génica. Mientras que el _cloud genome_ o dispensable genome es aquel grupo de familias que sólo ocurre en unos cuantos genomas del linaje.  
 
-La organización filogenética de un linaje genómico permite la observación de pérdida y ganancia de familias génicas en organismos cercanos. Si los organismos están desordenados es difícil apreciar la dinámica genómica de aparición-desaparición de miembros de una familia génica. Ordenar los genomas de un linaje facilita apreciar cambios en el número de copias de una familia. Esto es relevante en el marco de esta tesis ya que cambios en los perfiles de promiscuidad podrían estar relacionados a copias extras de organismos cercanos. Orthocore es un algoritmo que utiliza el core conservado de un linaje genómico para facilitar la organización filogenética de sus organismos  `r ref(label = "Orthocore", type = "figure")`      
+La organización filogenética de un linaje genómico permite la observación de dinámicas de pérdida y ganancia de familias génicas en organismos cercanos. Si los organismos están desordenados es difícil apreciar la dinámica genómica de aparición-desaparición de miembros de una familia génica. Ordenar los genomas de un linaje facilita apreciar cambios en el número de copias de una familia. Esto es relevante en el marco de esta tesis ya que cambios en los perfiles de promiscuidad podrían estar relacionados a copias extras de organismos cercanos. Orthocore es un algoritmo que utiliza el core conservado de un linaje genómico para facilitar la organización filogenética de sus organismos  `r ref(label = "Orthocore", type = "figure")`      
 
 ## La distribución de la función metabólica de las familias del pangenoma depende de la variabilidad del linaje seleccionado.  
-El número de familias génicas presentes en el pangenoma, así como su distribución en el _core_, _shell_ y _dispensable genome_ depende de la elección de los genomas y del linaje genómico. Para entender esto se puede pensar en un ejemplo extremo, consideremos una bacteria de 1000 familias de genes de la cual se obtienen secuencias de diez genomas de la misma cepa. Estas secuenciaciones deberían ser prácticamente idénticas y en ese caso el _core genome_ sería 1000 familias, el _shell_ y el _dispensable genome_ serían cero. En este caso, todo el metabolismo, tanto el central como el especializado estarían conservados dentro del _core genome_, ya que el _shell_ y el _dispensable genome_ se encuentran vacíos. Sin embargo, si variamos el linaje taxonómico, y ahora estudiamos el pangenoma de 10 especies distintas del género _Streptomyces_ ahora el core genome estará compuesto por aproximadamente un tercio de su tamaño promedio, y dentro del _core genome_ es donde se encontrarán muchos de las familias dedicadas al metabolismo central o conservado (por ejemplo, familias de la glicólisis o síntesis de aminoácidos). En cambio muchas de las familias dedicadas al metabolismo especializado y pertenecientes a clústers biosintéticos de productos naturales (BGCs) estarán en el _dispensable genome_ pues _Streptomyces_ es productor de una gran variedad de metabolitos especializados y cada especie suele tener su producto característico.  `r ref(label = "MetabolismoPangenoma", type = "figure")`      
+El número de familias génicas presentes en el pangenoma, así como su distribución en el _core_, _shell_ y _dispensable genome_ depende de la elección de los genomas y del linaje genómico. Para entender esto se puede pensar en un ejemplo extremo, consideremos una bacteria de 1000 familias de genes de la cual se obtienen secuencias de diez genomas de la misma cepa. Estas secuenciaciones deberían ser prácticamente idénticas y en ese caso el _core genome_ sería 1000 familias, el _shell_ y el _dispensable genome_ serían cero. En este caso, todo el metabolismo, tanto el central como el especializado estarían conservados dentro del _core genome_, ya que el _shell_ y el _dispensable genome_ se encuentran vacíos. Sin embargo, si variamos el linaje taxonómico, y ahora estudiamos el pangenoma de 10 especies distintas del género _Streptomyces_ ahora el core genome estará compuesto por aproximadamente un tercio de su tamaño promedio, y dentro del _core genome_ es donde se encontrarán muchos de las familias dedicadas al metabolismo central o conservado (por ejemplo, familias de la glicólisis o síntesis de aminoácidos). En cambio muchas de las familias dedicadas al metabolismo especializado y pertenecientes a clústers biosintéticos de productos naturales (BGCs) estarán en el _dispensable genome_ pues _Streptomyces_ es productor de una gran variedad de metabolitos especializados y cada especie suele tener su producto característico.  `r ref(label = "MetabolismoPangenoma", type = "figure")`.        
 
 
 ```{r Metabolismo-Pangenoma, results = "asis",message=FALSE,echo=FALSE}
@@ -190,22 +191,21 @@ Finalmente Clavisual despliega un árbol realizado con el Pseudocore respecto a 
 ```{r Clavisual, results = "asis",message=FALSE,echo=FALSE}
 label(path = "chapter1/Clavisual.pdf",
       scale=".7", 
-      caption = "Clavisual organiza filogenéticamente cepas de $Clavibacter$ ",
-      alt.cap = "Aqui vemos un arbol",
+      caption = "Clavisual organiza cepas de $Clavibacter$ con sus metadatos. ",
+      alt.cap = "Clavisual organiza filogenéticamente cepas de $Clavibacter$ y generaliza orthocore. Clavisual no se restringe a la búsqueda del core conservado, permite la identificación de familias conservadas sólo en un cierto porcentaje. Además puede filtrar estas familias permitiendo sólo las que estén ausentes en una proporcion mínima de un grupo de genomas de interés. Además orthocore optimiza el funcionamiento de Clavisual ya que fue utilizado para proveer un conjunto de familias génicas conservadas en el género $Clavibacter$. Estas familias son buscadas cada vez que ingresa un genoma nuevo y con ellas se contruye un árbol filogenético. Los metadatos disponibles son desplegados al lado de la cepa correspondiente del árbol.",
       cap.size = "footnotesize",
       label = "Clavisual", 
       type = "figure")
 ```
 ### El pangenoma de Clavibacter Michiganensis es abierto  
-
 Después de desarrollar métodos de identificación de genes marcadores y generalizarlo a obtener grupos con patrones de presencia/ausencia definidos por el usuario, quedaba por responder la pregunta cómo es el pangenoma de _Cmm_. Algunos autores consideran que el pangenoma de patógenos es reducido porque sus genomas suelen sufrir proceso de reducción de tamaño débido a la pérdida de genes. Como _Cmm_ es un patógeno de planta quedaba por investigar cómo es su pangenoma. ¿Es posible saturar el contenido génico de _Cmm_ con sólo secuenciar más genomas?. Aunque actualmente existen ya herramientas web para el análisis de pangenoma, en su momento se utillizó el software bpga que se corre desde la terminal. Para facilitar su instalación se desarrolló un docker que se describe más tarde en este capítulo en la sección de las descripciones técnicas. Como ejemplo de su funcionamiento, se analizó el pangenoma de los mismos diez genomas del pangenoma del tomate utilizados en la visualización de clavisual `r ref(label = "bpga-pangenoma", type = "figure")` .  
   
 
 ```{r bpga-pangenoma, results = "asis",message=FALSE,echo=FALSE}
 label(path = "chapter1/bpga-pangenoma.png",
       scale=".5", 
-      caption = " X X",
-      alt.cap = "Pangenoma de $Clavibacter$ calculado por BPGA ",
+      caption = "El pangenoma de $Clavibacter$ es abierto según el análisis de BPGA.",
+      alt.cap = "El pangenoma de $Clavibacter$ es abierto según el análisis de BPGA. En este ejemplo el pangenoma de Clavibacter se mantiene creciente mientras que el core no alcanza el cero. En contraste, al ampliar el rango taxonómico el $core~genome$ sí se acerca a cero según BPGA",
       cap.size = "footnotesize",
       label = "bpga-pangenoma", 
       type = "figure")
@@ -216,13 +216,13 @@ Tomando otros siete genomas del género _Clavibacter_, utilizando OrthoVenn tene
 label(path = "chapter1/Venn_chart.pdf",
       scale=".6", 
       caption = "Diagrama de Venn del pangenoma de genomas selectos del género $Clavibacter$ ",
-      alt.cap = "Diagrama de Venn del pangenoma de genomas selectos del género $Clavibacter$ ",
+      alt.cap = "Diagrama de Venn del pangenoma de genomas selectos del género $Clavibacter$. Venn-Chart permite visualizar la distribucion de las familias génicas mediante un diagrama de Venn siempre que sean pocos genomas. En la parte superior izquierda se muestra el número de familias compartidas entre distintos grupos de genomas. Por ejemplo existen 1678 familias génicas compartidas entre los seis genomas. Entre los grupos de cinco genomas, el más abundante es el que no contiene a RA1B con 243 familias, así pues RA1B es de los genomas más divergentes de este grupo.",
       cap.size = "footnotesize",
       label = "Venn-Chart", 
       type = "figure")
 ```
 
-## Relación entre genes marcadores, Orthocores y la promiscuidad enzimática.  
+## Relación entre genes marcadores, Orthocore y la promiscuidad enzimática.  
 
 Finalmente, al aplicar Orthocore para detectar genes marcadores se vuelve indirectamente reclutamientos al metabolismo especializado, cómo, pues porque dentro de los marcadores hay productos naturales como, PENDIENTE VER RESULTADOS RETRO-EVOMINING la clavidicina (michiganina). Ahí vemos que clvABCDEF participan en metabolismo secundario, las enzimas de metabolismo central de este cluster pueden presentar cierta promiscuidad.  
 
