@@ -137,7 +137,6 @@ The preface pretty much says it all. \par  Second paragraph of abstract
 starts here.
 }
 
-	\usepackage{tikz}
 	\usepackage[spanish]{babel}
 % End of CII addition
 %%
@@ -331,11 +330,30 @@ starts here.
   \subsection{Relacion del pangenoma con la promiscuidad
   enzimatica}\label{relacion-del-pangenoma-con-la-promiscuidad-enzimatica}
   
-  El core genome de un grupo taxonomico es el conjunto de secuencias
-  codificantes presentes en todos los organismos del grupo. En el Dominio
-  Bacteria el core esta estimado entre 200 y 300 secuencias
-  {[}\protect\hyperlink{ref-halachev_calculating_2011}{34}{]}. Dada su
-  conservacion el core genome puede utilizarse para trazar mejores
+  El pangenoma es el contenido génico total de un linaje taxonómico. Las
+  familias génicas de un pangenoma pueden clasificarse según su frecuencia
+  de presencia/ausencia en cada genoma del linaje. De acuerdo a esta
+  clasificación los principales grupos de familias génicas en un pangenoma
+  son el \emph{core}, el \emph{shell} y el \emph{cloud} también conocido
+  como \emph{dispensable} o \emph{accesory}\$\_ genome. El \emph{core
+  genome} es el conjunto de familias con presencia en todos los genomas
+  del linaje. Por ejemplo, tanto la secuencia de la subunidad 16s de rRNA
+  así como los diversos genes ribosomales suelen estar en el \emph{core}
+  de la gran mayoría de linajes bacterianos. El \emph{shell genome} es el
+  grupo de familias presentes en la mayoría de los genomas pero no en
+  todos. En el \emph{shell} se ubican por ejemplo familias que estaban en
+  el \emph{core genome} pero que algunas bacterias del linaje sufrieron
+  una dinámica de pérdida génica. Mientras que el \emph{cloud genome} o
+  \emph{dispensable genome} es aquel grupo de familias que sólo ocurre en
+  unos cuantos genomas del linaje.
+  
+  En el Dominio Bacteria se estima que entre al rededor de 200 secuencias
+  están altamente conservadas. Si bien no están en el \(core\), estas
+  secuencias están compartidas por 90\% de los genomas
+  {[}\protect\hyperlink{ref-halachev_calculating_2011}{34}{]}. El
+  \emph{core} depende de los genomas seleccionados, entre menos amplio sea
+  el rango filogenético electo mayor será el tamaño del \(core\). Dada su
+  conservacion el \(core~genome\) puede utilizarse para trazar mejores
   relaciones filogeneticas que las obtenidas con el uso exclusivo de
   marcadores como la subunidad 16s del RNA ribosomal o el gen rpoB. El
   pangenoma es el conjunto complemento del core genome, es decir todas
@@ -610,7 +628,6 @@ starts here.
   \label{fig:La promiscuidad puede entenderse a distintos niveles metabólicos: enzima, familia enzimática y ruta biosintética}
   \end{figure}
   
-  \nocite{}
   \nocite{@nobeli_protein_2009,@lamble_archaea_promiscuou_pathways_2003,@weng_promiscuity_specialized_pathways_2012,@baronagomez_occurrence_2003,@juarez-vazquez_evolution_2017}
   
   \section{La promiscuidad puede abordarse a distintos niveles incluyendo
@@ -1549,38 +1566,40 @@ starts here.
   
   \begin{figure}[h!tbp]
   \centering
-  \includegraphics[angle = 0,scale = .42]{chapter1/coreWiki.png}
+  \includegraphics[angle = 0,scale = .44]{chapter1/coreWiki.png}
   \caption[Orthocore calcula el $core~genome$ de un linaje y construye con él una filogenia]{\footnotesize{Orthocore calcula las familias génicas comunes de un linaje taxonómico. Después de un proceso de filtrado, alineamiento y curación, Orthocore concatena las secuencias de estas familias y entrega una reconstrucción filogenética.}}
   \label{fig:Orthocore}
   \end{figure}
   
-  El pangenoma es el contenido génico total de un linaje taxonómico. Las
-  familias génicas de un pangenoma pueden clasificarse según sus patrones
-  de presencia-ausencia en cada genoma del linaje. De acuerdo a esta
-  clasificación los principales grupos de familias génicas en un pangenoma
-  son el \emph{core}, el \emph{shell} y el \emph{cloud} (dispensable)
-  genome. El \emph{core genome} es el conjunto de familias con presencia
-  en todos los genomas del linaje. Por ejemplo, la secuencia de la
-  subunidad 16s de rRNA, así como diversos genes ribosomales suelen estar
-  en el core de la gran mayoría de los linajes bacterianos. El \emph{shell
-  genome} es el grupo de familias presentes en la mayoría de los genomas
-  pero no en todos. En el \emph{shell} se ubican por ejemplo familias que
-  estaban en el \emph{core genome} pero que algunas bacterias del linaje
-  sufrieron una dinámica de pérdida (o ganancia) génica. Mientras que el
-  \emph{cloud genome} o dispensable genome es aquel grupo de familias que
-  sólo ocurre en unos cuantos genomas del linaje.
-  
   La organización filogenética de un linaje genómico permite la
   observación de dinámicas de pérdida y ganancia de familias génicas en
-  organismos cercanos. Si los organismos están desordenados es difícil
-  apreciar la dinámica genómica de aparición-desaparición de miembros de
-  una familia génica. Ordenar los genomas de un linaje facilita apreciar
-  cambios en el número de copias de una familia. Esto es relevante en el
-  marco de esta tesis ya que cambios en los perfiles de promiscuidad
-  podrían estar relacionados a copias extras de organismos cercanos.
-  Orthocore es un algoritmo que utiliza el core conservado de un linaje
-  genómico para facilitar la organización filogenética de sus organismos
-  \autoref{fig:Orthocore}
+  organismos cercanos. Si los organismos están desordenados
+  taxonómicamente es difícil apreciar la dinámica de
+  aparición-desaparición por genoma de ortólogos que son miembros de una
+  familia génica. Así pues, ordenar los genomas de un linaje de acuerdo a
+  su historia evolutiva facilita apreciar cambios en el número de copias
+  de una familia. Esta consideración es relevante en el marco de esta
+  tesis ya que cambios en la ocurrencia de promiscuidad pueden estar
+  relacionados a copias extra de organismos
+  cercanos{[}\protect\hyperlink{ref-verdel-aranda_molecular_2015}{42}{]}.
+  Como se explicó previamente en la introducción el pangenoma de un linaje
+  taxonómico está dividido en el \emph{core}, \emph{shell} y
+  \emph{dispensable} \emph{genome}. Orthocore es un algoritmo que se
+  desarrolló para automatizar la obtención del \emph{core conservado} de
+  un linaje genómico. Con este \emph{core} realiza una reconstrucción
+  filogenética de los organismos del linaje \autoref{fig:Orthocore}. En
+  esta sección se explica el funcionamiento de Orthocore así como casos en
+  donde fue utilizado, específicamente en casos de estudio de los órdenes
+  \emph{Actinomycetales}{[}\protect\hyperlink{ref-juarez-vazquez_evolution_2017}{70}{]},
+  \emph{Micrococcales}{[}\protect\hyperlink{ref-rodriguez_tesis_2016}{140}{]}
+  y
+  \emph{Nostocales}{[}\protect\hyperlink{ref-gutierrez-garcia_cycad_2019}{141}{]}
+  y en el género \emph{Salmonella}
+  {[}\protect\hyperlink{ref-delgado-suarez_whole_2018}{142}{]}. Finalmente
+  se describen otros métodos implementados para entender el pangenoma de
+  un linaje genómico que han sido utilizados en aplicaciones relacionadas
+  al patógeno del tomate \emph{Clavibacter
+  michiganensis}{[}\protect\hyperlink{ref-rodriguez_tesis_2016}{140}{]}.
   
   \section{La distribución de la función metabólica de las familias del
   pangenoma depende de la variabilidad del linaje
@@ -1722,7 +1741,7 @@ starts here.
   género o inclusive a la misma especie. En ocasiones, como en el caso del
   género \emph{Streptomyces}, la secuencia de 16s por sí sola no posee la
   suficiente variación para resolver la filogenia
-  {[}\protect\hyperlink{ref-labeda_phylogenetic_2017}{140}{]}. En
+  {[}\protect\hyperlink{ref-labeda_phylogenetic_2017}{143}{]}. En
   \emph{Streptomyces} la variación entre estas secuencias suele ser menor
   al 1\%. Para resolver el problema de escasa variación en secuencias de
   16s se pueden concatenar las secuencias de otros ortólogos, siempre que
@@ -1780,16 +1799,22 @@ starts here.
   -Provee las funciones del core conservado según la anotación funcional
   de RAST.
   
-  Existen otros algoritmos como OrthoMCL, y fastOrtho que dividen
-  pangenomas en clusters de familias de genes, get\_homologues y metaphor
-  que obtienen el core y filtran buscando verdaderas relaciones de
-  homología, y finalmente BPGA que hace reconstrucciones filogenéticas
-  tanto según el core como según el pangenoma. Sin embargo Orthocore
-  resolvió en su momento la necesidad específica de proporcionar una
-  matriz concatenada de genes del core conservado lista para utilizarse en
-  un árbol multilocus. Adicionalmente, como Orthocore fue diseñado para
-  trabajar con la anotación de la plataforma RAST, también se obtiene la
-  anotación funcional tanto de familias del core como del complemento.
+  Existen otros algoritmos como
+  OrthoMCL{[}\protect\hyperlink{ref-li_orthomcl_2003}{53}{]}, y
+  \href{https://github.com/grovesdixon/using_FastOrtho}{fastOrtho}{[}\protect\hyperlink{ref-wattam_patric_2014}{144}{]}
+  que dividen pangenomas en clusters de familias de genes,
+  \href{http://eead-csic-compbio.github.io/get_homologues/manual/}{get\_homologues}
+  {[}\protect\hyperlink{ref-contreras-moreira_get_homologues_2013}{145}{]}
+  y metaphor que obtienen el core y filtran buscando verdaderas relaciones
+  de homología, y finalmente
+  BPGA{[}\protect\hyperlink{ref-chaudhari_bpga-_2016}{115}{]} que hace
+  reconstrucciones filogenéticas tanto según el core como según el
+  pangenoma. Sin embargo Orthocore resolvió en su momento la necesidad
+  específica de proporcionar una matriz concatenada de genes del core
+  conservado lista para utilizarse en un árbol multilocus. Adicionalmente,
+  como Orthocore fue diseñado para trabajar con la anotación de la
+  plataforma RAST, también se obtiene la anotación funcional tanto de
+  familias del core como del complemento.
   
   Orthocore incorpora todas las dependencias en un contenedor de docker
   disponible en \url{https://github.com/nselem/orthocore}. Además en este
@@ -1808,7 +1833,7 @@ starts here.
   promiscuidad de la familia enzimática PriA mediante la distinción de
   patrones de pérdida y ganancia de genes en las rutas de síntesis de
   histidina y triptófano. En la segunda aplicación cepas de
-  \emph{Salmonella tifi} fueron ordenadas filogenéticamente. La tercera
+  \emph{Salmonella} fueron ordenadas filogenéticamente. La tercera
   aplicación permitió realizar una reconstrucción filogenética del orden
   \emph{Nostocales} del phylum \emph{Cyanobacteria} y comparar así
   patrones de presencia y ausencia de clusters de genes biosintéticos.
@@ -1960,7 +1985,7 @@ starts here.
   las familias \emph{clvA, clvF} y \emph{clvG} son exclusivas de
   \emph{Cmm} es independiente de la nuestra, fue hecha sin análisis
   genómicos y basada en evidencia experimental
-  {[}\protect\hyperlink{ref-yasuhara-bell_genes_2014}{141}{]}. Este
+  {[}\protect\hyperlink{ref-yasuhara-bell_genes_2014}{146}{]}. Este
   descubrimiento ha permitido bajar los costos de identificación de
   Clavibacter, ya que ahora en lugar de enviar a secuenciar el genoma es
   suficiente identificar por PCR \emph{clvF} en conjunto con otro
@@ -2020,9 +2045,11 @@ starts here.
   toman BBH a un genoma de referencia. Otra forma es establecer un
   porcentaje de presencia /ausencia de interés.
   
-  El pseudocore consiste en \_\_\_\_\_\_\_\_ y la metodología está
-  depositada en github en el repositorio\_\_\_\_\_\_\_\_\_. El blast fue
-  optimizado cambiando hacer un blast todos contra todos por archivos
+  El pseudocore consiste en utilizar información previa específica del
+  core de un linaje para obtener los genes de y la metodología está
+  depositada en github integrada en el repositorio
+  \href{https://github.com/nselem/clavigenomics}{clavigenomics}. El blast
+  fue optimizado cambiando hacer un blast todos contra todos por archivos
   genómicos individuales genomai\_vs\_genomaj.blast que luego son
   concatenandos según se necesiten.
   
@@ -2167,19 +2194,19 @@ starts here.
   Localizar alguna enzima de un cluster no clasificado es un camino para
   identificar el BGC. Como ya se mostró en EvoMining 1.0 encontramos una
   enzima que XXX Un ejemplo de este escenario es el BGC de scytonemin
-  {[}\protect\hyperlink{ref-garciapichel_evidence_1992}{142}{]},protector
+  {[}\protect\hyperlink{ref-garciapichel_evidence_1992}{147}{]},protector
   solar cianobacteriano, que incluye ScyB y ScyA como las dos enzimas
   biosintéticas clave que sostienen la síntesis de este metabolito
   especializado
-  {[}\protect\hyperlink{ref-balskus_investigating_2008}{143}{]}.
+  {[}\protect\hyperlink{ref-balskus_investigating_2008}{148}{]}.
   
   Curiosamente, ScyB y ScyA son homólogos distantes de la glutamato
   deshidrogenasa (GDH) y la acetolactato sintasa (ALS), respectivamente,
   que participan en la desaminación oxidativa reversible del glutamato a
   \(\alpha-\)ketoglutarato y amoníaco
-  {[}\protect\hyperlink{ref-engel_glutamate_2014}{145}{]} y en la síntesis
+  {[}\protect\hyperlink{ref-engel_glutamate_2014}{150}{]} y en la síntesis
   de cadena ramificada aminoácidos
-  {[}\protect\hyperlink{ref-liu_acetohydroxyacid_2016}{146}{]},
+  {[}\protect\hyperlink{ref-liu_acetohydroxyacid_2016}{151}{]},
   respectivamente.
   
   \subsection{Copias extra de familias enzimáticas que son reclutadas para
@@ -2283,16 +2310,16 @@ starts here.
   visualización}\label{algoritmo-de-reconstruccion-filogenetica-y-visualizacion}
   
   Las secuencias de las familias enzimáticas expandidas fueron alineadas
-  con muscle v3.2{[}\protect\hyperlink{ref-edgar_muscle_2004}{147}{]} y
+  con muscle v3.2{[}\protect\hyperlink{ref-edgar_muscle_2004}{152}{]} y
   curadas con Gblocks
-  v0.91b{[}\protect\hyperlink{ref-castresana_selection_2000}{148}{]}. Los
+  v0.91b{[}\protect\hyperlink{ref-castresana_selection_2000}{153}{]}. Los
   parámetros de Gblocks fueron fijados en incluir 5 posiciones como el
   mínimo tamaño de un bloque y diez posiciones como el máximo de
   posiciones contiguas no conservadas. Posiciones ausentes de más del
   \(50\%\) de las secuencias fueron filtradas y removidas del alineameinto
   final. Para recontruis filogenéticamente la historia de las enzimas se
   utilizó FastTree
-  \(2.1\){[}\protect\hyperlink{ref-price_fasttree_2010}{149}{]} que es un
+  \(2.1\){[}\protect\hyperlink{ref-price_fasttree_2010}{154}{]} que es un
   método muy rápido pensado para miles de secuencias que utiliza un
   algoritmo definido como ``aproximadamente máxima verosimilitud''.
   
@@ -2300,20 +2327,20 @@ starts here.
   la tubería de EvoMining, pero puede las predicciones de antiSMASH pueden
   ser calculadas previamente por el usuario y utilizadas por EvoMining. En
   este trabajo antiSMASH
-  3.0{[}\protect\hyperlink{ref-weber_antismash3_2015}{150}{]} fue
+  3.0{[}\protect\hyperlink{ref-weber_antismash3_2015}{155}{]} fue
   utilizado en los secuencias de los genomas de la Genome DB
   \autoref{fig:EvoMiningAlgorithms} panel (b).
   
   La selección de color de las hojas del árbol fue automatizada utilizando
   Newick Utilities una serie de programas llamados desde la terminal para
   manipular árboles en formato
-  Newick{[}\protect\hyperlink{ref-junier_newick_2010}{151}{]}. La
+  Newick{[}\protect\hyperlink{ref-junier_newick_2010}{156}{]}. La
   anotación funcional de RAST en su versión
   clásica{[}\protect\hyperlink{ref-aziz_rast_2008}{86}{]} fue agregada al
   SVG. Otros metadatos como el número de copias por organismo y fueron
   escritos de manera que los árboles producidos por EvoMining sean
   compatible con la visualización de
-  Microreact{[}\protect\hyperlink{ref-argimon_microreact_2016}{152}{]}.
+  Microreact{[}\protect\hyperlink{ref-argimon_microreact_2016}{157}{]}.
   
   Los árboles de EvoMining diferencian entre la función metabólica de cada
   miembro de una familia génica mediante un código de color
@@ -2399,7 +2426,7 @@ starts here.
   RAST{[}\protect\hyperlink{ref-overbeek_seed_2014}{87}{]} que a la vez
   realiza anotaciones funcionales . Estos genomas, previo al análisis de
   EvoMining fueron minados por
-  antiSMASH{[}\protect\hyperlink{ref-weber_antismash3_2015}{150}{]} con un
+  antiSMASH{[}\protect\hyperlink{ref-weber_antismash3_2015}{155}{]} con un
   parámetro \texttt{cf\_threshold\ de\ 0.7}. Estos resultados fueron
   suministrados como una base de datos interna, la antiSMASH DB para
   finalmente esta información ser incorporada a los árboles de EvoMining.
@@ -2478,7 +2505,7 @@ starts here.
   cada taxon, contiene sólo 42 FEs (Table S1). Esta observación, que 64
   FEs no están conservadas en los cuatro taxa refleja lo específico del
   metabolismo en cada linaje
-  {[}\protect\hyperlink{ref-jordan_lineage-specific_2001}{153}{]}
+  {[}\protect\hyperlink{ref-jordan_lineage-specific_2001}{158}{]}
   
   \begin{figure}[h!tbp]
   \centering
@@ -2513,7 +2540,7 @@ starts here.
   dicetopiperazinas, carotenoides y otros productos naturales de Archaea
   fueron aislados de especies de Halobacteria, los NP BGCs sintetizadores
   de estos metabolitos no han sido caracterizados
-  {[}\protect\hyperlink{ref-charlesworth_untapped_natural_products_Archaea_2015}{154}{]}.
+  {[}\protect\hyperlink{ref-charlesworth_untapped_natural_products_Archaea_2015}{159}{]}.
   Por ello EvoMining una herramienta de minería genómica que puede ayudar
   a explorar linajes poco minados con el potencial de descubrir nuevas
   rutas metabólicas.
@@ -2578,7 +2605,7 @@ starts here.
   \end{figure}
   
   Con estas observaciones sospechamos que GDH es miembro del shell genome
-  {[}\protect\hyperlink{ref-koonin_genomics_2008}{155}{]} en los taxa
+  {[}\protect\hyperlink{ref-koonin_genomics_2008}{160}{]} en los taxa
   Actinobacteria , Cyanobacteria y Pseudomonas, ya que en promedio está
   cerca de tener una copia promedio por genoma. El promedio no es
   suficiente para decir que una familia pertenece al shell, podrían
@@ -2612,7 +2639,7 @@ starts here.
   predicciones de antiSMASH para Actinobacteria, Cyanobacteria y Archaea,
   no así para Pseudomonas. La secuencia del reclutamiento de GDH por los
   clusters biosintéticos scytonemin y el policétido pactamycin
-  {[}\protect\hyperlink{ref-kudo_cloning_2007}{156}{]}, es suficientemente
+  {[}\protect\hyperlink{ref-kudo_cloning_2007}{161}{]}, es suficientemente
   parecida como para que EvoMining la detecte como expansión en
   Actinobacteria, Cyanobacteria y Archaea, pero es tan divergente respecto
   a la familia GDH en Pseudomonas que EvoMining lo deja fuera de la
@@ -2635,7 +2662,7 @@ starts here.
   que no fue considerado en la primera iteración que explotó las
   capacidades de EvoMining como herramienta de minería genómica para
   encontrar BGCs
-  novedosos{[}\protect\hyperlink{ref-navarro-munoz_computational_2018}{157}{]}.
+  novedosos{[}\protect\hyperlink{ref-navarro-munoz_computational_2018}{162}{]}.
   
   \begin{figure}[h!tbp]
   \centering
@@ -2657,7 +2684,7 @@ starts here.
   Además de GDH se estudiaron las expansiones y los árboles filogenéticos
   de TrpA, TrpB, TrpC, TrpD, TrpEG, AroB y ALS, todas ellas parte de las
   42 FEs conservadas entre los cuatro linajes y a la vez reclutadas en
-  scytonemin{[}\protect\hyperlink{ref-balskus_investigating_2008}{143}{]}
+  scytonemin{[}\protect\hyperlink{ref-balskus_investigating_2008}{148}{]}
   un cluster biosintético de Cyanobacteria
   
   \subsection{GDH y ALS en el cluster scytonemin ejemplifican como
@@ -2673,18 +2700,18 @@ starts here.
   nombrada como GDH(NAD+). La segunda clase utiliza NADP+ y es conocida
   como GDH(NADP+). La tercera clase utiliza ambos cofactores NAD+ y NADP+;
   por lo que se le conoce como GDH(NAD+ y
-  NADP+){[}\protect\hyperlink{ref-engel_glutamate_2014}{145}{]}.
+  NADP+){[}\protect\hyperlink{ref-engel_glutamate_2014}{150}{]}.
   
   Aunque existen otras clasificaciones de la diversidad de enzimas GDH
   esta fue seleccionada porque se relaciona con la historia evolutiva de
   la enzima. GDH(NAD+) is utilizada para la oxidación del glutamato
   mientras que GDH(NADP+) para fijar amonio, algunas enzimas de Archaea
   funcionan bien con ambos cofactores, es decir tienen promiscuidad de
-  cofactores{[}\protect\hyperlink{ref-engel_glutamate_2014}{145}{]}. La
+  cofactores{[}\protect\hyperlink{ref-engel_glutamate_2014}{150}{]}. La
   especificidad por NAD o NADP probablemente emergió en repetidas
   ocasiones, una evidencia a favor de esta hipótesis es que se ha mostrado
   que algunas mutaciones pueden revertir la
-  especificidad{[}\protect\hyperlink{ref-lilley_partial_1991}{158}{]}.
+  especificidad{[}\protect\hyperlink{ref-lilley_partial_1991}{163}{]}.
   Esto sugiere que en los cofactores análogamente al caso de promiscuidad
   por sustrato, la similitud de secuencia no siempre es suficiente para
   evidenciar la especificidad. En ocasiones la divergencia o cercanía
@@ -2706,7 +2733,7 @@ starts here.
   familia GDH en Archaea fue enraizado con la secuencia semilla de
   \emph{Sulfolobus}, que fue predicha por RAST como una enzima dual en el
   uso de cofactores
-  NAD(P)+{[}\protect\hyperlink{ref-consalvi_glutamate_1991}{159}{]}. En
+  NAD(P)+{[}\protect\hyperlink{ref-consalvi_glutamate_1991}{164}{]}. En
   Archaea las tres clases de GDH alternan en las ramas del
   \href{https://microreact.org/project/ByUcvNmaX?tt=cr}{árbol} (Fig.
   S13,).
@@ -2715,7 +2742,7 @@ starts here.
   concentran volviendo rojas las ramas basales del árbol. Se observa otro
   clado más grande y diverso compuesto casi exclusivamente por enzimas
   específicas para
-  NAD(P){[}\protect\hyperlink{ref-ferrer_nadp-glutamate_1996}{160}{]},
+  NAD(P){[}\protect\hyperlink{ref-ferrer_nadp-glutamate_1996}{165}{]},
   incluyendo muchas predicciones de antiSMASH, y sólo dos marcadas como
   metabolsimo conservado. Estas dos marcas pueden deberse a la pérdida
   real de una enzima d metabolismo central en las ramas centrales o bien a
@@ -2730,7 +2757,7 @@ starts here.
   encuentran un contexto de posible síntesis de terpenos. Este contexto
   incluye enzimas relacionadas al geranyl pyrofosfato, un precursor de
   todos los terpenos y
-  terpenoides{[}\protect\hyperlink{ref-tholl_terpene_2006}{161}{]}. Este
+  terpenoides{[}\protect\hyperlink{ref-tholl_terpene_2006}{166}{]}. Este
   árbol tiene también casos de divergencia reciente, hay una pequeña rama
   indistinguible en la figura pero explorable en la plataforma microreact
   donde los parálogos aparecen junto a las secuencias de metabolismo
@@ -2748,7 +2775,7 @@ starts here.
   GDH que fue reclutado por el BGC scytonemin. ScyB es pues parte de la
   síntesis de scytonemin, un pigmento amarillo producido por muchas
   Cyanobacterias como protección contra la radiación UV-A
-  solar{[}\protect\hyperlink{ref-balskus_genetic_2010}{162}{]}.
+  solar{[}\protect\hyperlink{ref-balskus_genetic_2010}{167}{]}.
   \emph{Nostoc punctiforme} PCC 73102 es el organismo productor de
   scytonemin cuyo BGC fue caracterizado y anotado en MIBiG. EvoMining sólo
   unas pocas secuencias GDH copias extra de especies de Nostoc aún cuando
@@ -2778,7 +2805,7 @@ starts here.
   etiquetadas como predicciones de EvoMining \autoref{fig:Scytonemin} (c).
   Estas predicciones incluyen más de veinte organismos conocidos como
   productores de scytonemin
-  {[}\protect\hyperlink{ref-balskus_investigating_2008}{143}{]}
+  {[}\protect\hyperlink{ref-balskus_investigating_2008}{148}{]}
   
   Además, ramas cercanas muestran secuencias de ALS queson p redicciones
   de antiSMASH, reforzando la sugerencia de que esta seción del árbol se
@@ -2811,7 +2838,7 @@ starts here.
   
   El primer cluster caracterizado de scytonemin, mostrado en la figura
   \autoref{fig:Scytonemin} panel (a) y en \autoref{fig:Ruta} , comprende
-  18 genes {[}\protect\hyperlink{ref-soule_comparative_2009}{144}{]}.
+  18 genes {[}\protect\hyperlink{ref-soule_comparative_2009}{149}{]}.
   Además de genes reguladores, este BGC incluye genes biosintéticos
   scyABC; otros genes conservados cuya función queda por dilucidar,
   scyDEF; y proveedores de precursores: \emph{tyrA}, \emph{dsbA},
@@ -2828,16 +2855,16 @@ starts here.
   caso sí ha cambiado la especificidad por sustrato al momento de la
   incorporación al metabolismo especializado \autoref{fig:Ruta}. ALS une
   dos piruvatos, transformándolos en S-2-acetolactato
-  {[}\protect\hyperlink{ref-liu_acetohydroxyacid_2016}{146}{]}, mientras
+  {[}\protect\hyperlink{ref-liu_acetohydroxyacid_2016}{151}{]}, mientras
   que ScyB cataliza la unión de indol-3-piruvato con p-hydroxy-fenil-ácido
   pirúvico. Análogamente GDH convierte L-glutamate en 2-oxoglutarato
-  {[}\protect\hyperlink{ref-engel_glutamate_2014}{145}{]}, mientras que
+  {[}\protect\hyperlink{ref-engel_glutamate_2014}{150}{]}, mientras que
   ScyA cataliza una desaminación oxidativa de triptofano. El producto de
   estas dos enzimas actuando secuencialmente e un dipéptido, el cual es
   ciclizado por ScyC. La ruta metabólica culmina con una serie de
   oxidaciones y dimerizaciones hasta llegar al producto scytonemin, aún no
   es claro como estos útimos pasos se llevan a cabo
-  {[}\protect\hyperlink{ref-balskus_investigating_2008}{143}{]}.
+  {[}\protect\hyperlink{ref-balskus_investigating_2008}{148}{]}.
   
   \begin{figure}[h!tbp]
   \centering
@@ -2861,12 +2888,12 @@ starts here.
   provenientes de las rutas de síntesis de otros pigmentos protectores
   solares como la shinorina y los aminoácidos de tipo mycosporina
   \autoref{fig:AroB}
-  {[}\protect\hyperlink{ref-balskus_genetic_2010}{162}{]} , además de
+  {[}\protect\hyperlink{ref-balskus_genetic_2010}{167}{]} , además de
   otros productos no relacionados como la welwitindolinona
-  {[}\protect\hyperlink{ref-hillwig_identification_2014}{163}{]},
+  {[}\protect\hyperlink{ref-hillwig_identification_2014}{168}{]},
   ambiguina
-  {[}\protect\hyperlink{ref-li_hapalindole_ambiguine_2015}{164}{]} y la
-  fischerindolina {[}\protect\hyperlink{ref-li_decoding_2017}{165}{]}
+  {[}\protect\hyperlink{ref-li_hapalindole_ambiguine_2015}{169}{]} y la
+  fischerindolina {[}\protect\hyperlink{ref-li_decoding_2017}{170}{]}
   (Figs S3--S7). Estos resultados ilustran como EvoMining puede
   complementar a antiSMASH mediante la identificación de secuencias de NP
   BGCs no tradicionales.
@@ -2884,7 +2911,7 @@ starts here.
   ambas tenían presencia, se concatenaron sus secuencias y se realizó una
   filogenia con ellas. Las variantes de la vecindad genómica del BGC de
   scytonemin fueron visualizadas mediante el uso de corason
-  {[}\protect\hyperlink{ref-navarro-munoz_computational_2018}{157}{]}. En
+  {[}\protect\hyperlink{ref-navarro-munoz_computational_2018}{162}{]}. En
   el siguiente capítulo este software de visualización y organización de
   vecindades genómicas será explicado con más detalle. Los análisis
   filogenómicos resultaron en 34 cyanobacterias con diversidad química en
@@ -3539,7 +3566,7 @@ starts here.
   En esta sección utilizamos CORASON y BIG-SCAPE para analizar una base de
   datos de miles de genomas de ACtinobacteria. Con estas herramientas se
   organizó la diversidad biosintética de las familias de BGC detoxin y
-  rimosamide {[}\protect\hyperlink{ref-mcclure_elucidating_2016}{166}{]}.
+  rimosamide {[}\protect\hyperlink{ref-mcclure_elucidating_2016}{171}{]}.
   El análisis reveló diversidad tanto en los géneros de los organismos que
   contienen a esta familia, y en la composición génica del BGC. Entre los
   géneros con alguna variante del BGC están Amycolatopsis, Streptomyces.
@@ -3958,7 +3985,7 @@ starts here.
   Cyanobacteria{[}\protect\hyperlink{ref-moustafa_origin_2009}{103}{]}, un
   lipopolisacárido producido por una Proteobacteria y un BGC productor de
   cloro pentostatina producido en Actinobacteria
-  {[}\protect\hyperlink{ref-gao_biosynthesis_2017}{167}{]}.
+  {[}\protect\hyperlink{ref-gao_biosynthesis_2017}{172}{]}.
   
   \begin{longtable}[]{@{}lccclll@{}}
   \caption{Reclutamientos de expansiones de PriA en MIBiG
@@ -4187,21 +4214,21 @@ starts here.
   que muchas proteínas contienen suficientes acoplamientos distribuidos
   ampliamente en toda la secuencia, de forma que con ellos es posible la
   reconstrucción de su estructura tridimensional
-  {[}\protect\hyperlink{ref-marks_protein_2011}{168}{]}. En esta sección
+  {[}\protect\hyperlink{ref-marks_protein_2011}{173}{]}. En esta sección
   se aplicará EVcouplings para reconstruir la estructura tridimensional de
   PriA.
   
   Las diferencias a nivel estructural pueden amplificar la información
   proporcionada por variaciones a nivel de secuencia. Por este motivo se
   decidió implementar Evcouplings
-  {[}\protect\hyperlink{ref-marks_protein_2011}{168}{]}, para poder
+  {[}\protect\hyperlink{ref-marks_protein_2011}{173}{]}, para poder
   aplicarlo a la familia PriA. Este método es de difícil instalación ya
   que tiene muchas dependencias, por ello desarrollé un contenedor docker
   donde las dependencias y el software quedan instalados. Este desarrollo
   fue incluido por los desarrolladores originales como sugerencia de
   instalación.\\
   El contenedor docker implementa EVcouplings python framework
-  {[}\protect\hyperlink{ref-hopf_evcouplings_2019}{169}{]} que comprende
+  {[}\protect\hyperlink{ref-hopf_evcouplings_2019}{174}{]} que comprende
   cinco etapas para estudiar el análisis de coevolución de residuos de una
   familia de proteínas. Estas etapas son i) Alineado, ii) análisis de
   acoplamiento, iii) plegamiento basado en acoplamientos iv) análisis de
@@ -4278,7 +4305,7 @@ starts here.
   \end{figure}
   
   Además se investigaron los aminoácidos catalíticos D130
-  {[}\protect\hyperlink{ref-due_bisubstrate_2011}{170}{]} y D175
+  {[}\protect\hyperlink{ref-due_bisubstrate_2011}{175}{]} y D175
   reportados en \emph{Mycobacterium
   tuberculosis}{[}\protect\hyperlink{ref-verduzco-castro_co-occurrence_2016}{67}{]}
   que corresponden a en \emph{S coelicolor} D11, D131 y D171. Se econtró
@@ -4425,16 +4452,16 @@ starts here.
   \begin{Shaded}
   \begin{Highlighting}[]
   \NormalTok{table <-}\StringTok{ }\KeywordTok{read.csv}\NormalTok{(}\StringTok{"chapter4/EstructurasPDB"}\NormalTok{, }\DataTypeTok{row.names =} \DecValTok{1}\NormalTok{,}\DataTypeTok{sep=}\StringTok{"}\CharTok{\textbackslash{}t}\StringTok{"}\NormalTok{)}
-  \KeywordTok{kable}\NormalTok{(table,  }\DataTypeTok{caption =} \StringTok{"Estructuras cristalográficas disponibles de PriA y familias relacionadas }\CharTok{\textbackslash{}\textbackslash{}}\StringTok{label\{tab:EnzymePDB\}"}\NormalTok{,}\DataTypeTok{caption.short =} \StringTok{"Estructuras cristalográficas disponibles de PriA y familias relacionadas"}\NormalTok{)}\OperatorTok{%>%}\StringTok{  }\KeywordTok{kable_styling}\NormalTok{(}\DataTypeTok{latex_options=}\StringTok{"scale_down"}\NormalTok{)}
+  \KeywordTok{kable}\NormalTok{(table,  }\DataTypeTok{caption =} \StringTok{"Estructuras cristalográficas disponibles de PriA y familias relacionadas }\CharTok{\textbackslash{}\textbackslash{}}\StringTok{label\{tab:EnzymePDB\}"}\NormalTok{,}\DataTypeTok{caption.short =} \StringTok{"Estructuras cristalográficas disponibles de PriA y familias relacionadas"}\NormalTok{)%>%}\StringTok{  }\KeywordTok{kable_styling}\NormalTok{(}\DataTypeTok{latex_options=}\StringTok{"scale_down"}\NormalTok{)}
   \end{Highlighting}
   \end{Shaded}
   
-  \begin{table}
+  \begin{table}[t]
   
   \caption[Estructuras cristalográficas disponibles de PriA y familias relacionadas]{\label{tab:Enzymes_PDB_out}Estructuras cristalográficas disponibles de PriA y familias relacionadas \label{tab:EnzymePDB}}
   \centering
   \resizebox{\linewidth}{!}{
-  \begin{tabular}[t]{l|l|l|l|r|r}
+  \begin{tabular}{l|l|l|l|r|r}
   \hline
     & Organismo & Family & Observations & Resolution & Year\\
   \hline
@@ -4534,7 +4561,7 @@ starts here.
   \begin{Shaded}
   \begin{Highlighting}[]
   \NormalTok{## boxplot de los sustratos}
-  \KeywordTok{ggplot}\NormalTok{(docking.m, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{variable, }\DataTypeTok{y=}\NormalTok{value)) }\OperatorTok{+}\StringTok{ }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"Substrates"}\NormalTok{, }\DataTypeTok{y =} \StringTok{"Affinity"}\NormalTok{,}\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size=}\DecValTok{12}\NormalTok{)) }\OperatorTok{+}\StringTok{ }\KeywordTok{geom_boxplot}\NormalTok{()}\OperatorTok{+}\KeywordTok{theme_bw}\NormalTok{()}\OperatorTok{+}\KeywordTok{theme}\NormalTok{(}\DataTypeTok{plot.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{14}\NormalTok{, }\DataTypeTok{face =} \StringTok{"bold"}\NormalTok{), }\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{12}\NormalTok{), }\DataTypeTok{axis.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{face=}\StringTok{"bold"}\NormalTok{), }\DataTypeTok{axis.text.x=}\KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{90}\NormalTok{,}\DataTypeTok{size =} \DecValTok{6}\NormalTok{), }\DataTypeTok{legend.position =} \StringTok{"bottom"}\NormalTok{)}
+  \KeywordTok{ggplot}\NormalTok{(docking.m, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{variable, }\DataTypeTok{y=}\NormalTok{value)) +}\StringTok{ }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"Substrates"}\NormalTok{, }\DataTypeTok{y =} \StringTok{"Affinity"}\NormalTok{,}\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size=}\DecValTok{12}\NormalTok{)) +}\StringTok{ }\KeywordTok{geom_boxplot}\NormalTok{()+}\KeywordTok{theme_bw}\NormalTok{()+}\KeywordTok{theme}\NormalTok{(}\DataTypeTok{plot.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{14}\NormalTok{, }\DataTypeTok{face =} \StringTok{"bold"}\NormalTok{), }\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{12}\NormalTok{), }\DataTypeTok{axis.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{face=}\StringTok{"bold"}\NormalTok{), }\DataTypeTok{axis.text.x=}\KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{90}\NormalTok{,}\DataTypeTok{size =} \DecValTok{6}\NormalTok{), }\DataTypeTok{legend.position =} \StringTok{"bottom"}\NormalTok{)}
   \end{Highlighting}
   \end{Shaded}
   
@@ -4625,12 +4652,12 @@ starts here.
   %}  
   \]
   
-  \begin{table}
+  \begin{table}[t]
   
   \caption[Enzymes docking ]{\label{tab:docking_table_out}Enzymes docking \label{tab:docking}}
   \centering
   \resizebox{\linewidth}{!}{
-  \begin{tabular}[t]{l|r|r|r|r|r|r|r|r|r|r|r|r|r|r|r|r|r|r|r|r}
+  \begin{tabular}{l|r|r|r|r|r|r|r|r|r|r|r|r|r|r|r|r|r|r|r|r}
   \hline
   Enzima & S13 & S15 & S14 & S16 & S10 & S12 & S9 & S18 & S5 & S4 & S8 & S17 & S7 & S6 & S11 & S1 & S2 & S3 & S19 & S20\\
   \hline
@@ -4824,11 +4851,11 @@ starts here.
   curvata} que es una Actinobacteria termofílica de la familia
   \emph{Thermomonosporaceae} y que puede ser encontrada encompostas ya que
   participa en la degradación de celulosa
-  {[}\protect\hyperlink{ref-chertkov_complete_2011}{171}{]}. La trpF de
+  {[}\protect\hyperlink{ref-chertkov_complete_2011}{176}{]}. La trpF de
   \emph{Jonesia denitrificans} no mostró actividad.Esta bacteria está
   clasificada como un organismo patogénico para animales, su genoma fue
   originalmente aislado de sangre
-  {[}\protect\hyperlink{ref-pukall_complete_2009}{172}{]}.
+  {[}\protect\hyperlink{ref-pukall_complete_2009}{177}{]}.
   
   \clearpage 
   
@@ -5117,11 +5144,11 @@ starts here.
   \CommentTok{# installed and loaded. This reedtemplates package includes}
   \CommentTok{# the template files for the thesis and also two functions}
   \CommentTok{# used for labeling and referencing}
-  \ControlFlowTok{if}\NormalTok{(}\OperatorTok{!}\KeywordTok{require}\NormalTok{(devtools))}
+  \NormalTok{if(!}\KeywordTok{require}\NormalTok{(devtools))}
     \KeywordTok{install.packages}\NormalTok{(}\StringTok{"devtools"}\NormalTok{, }\DataTypeTok{repos =} \StringTok{"http://cran.rstudio.com"}\NormalTok{)}
-  \ControlFlowTok{if}\NormalTok{(}\OperatorTok{!}\KeywordTok{require}\NormalTok{(reedtemplates))\{}
+  \NormalTok{if(!}\KeywordTok{require}\NormalTok{(reedtemplates))\{}
     \KeywordTok{library}\NormalTok{(devtools)}
-  \NormalTok{  devtools}\OperatorTok{::}\KeywordTok{install_github}\NormalTok{(}\StringTok{"ismayc/reedtemplates"}\NormalTok{)}
+    \NormalTok{devtools::}\KeywordTok{install_github}\NormalTok{(}\StringTok{"ismayc/reedtemplates"}\NormalTok{)}
   \NormalTok{\}}
   \KeywordTok{library}\NormalTok{(reedtemplates)}
   \end{Highlighting}
@@ -5136,18 +5163,18 @@ starts here.
   \CommentTok{# installed and loaded. This reedtemplates package includes}
   \CommentTok{# the template files for the thesis and also two functions}
   \CommentTok{# used for labeling and referencing}
-  \ControlFlowTok{if}\NormalTok{(}\OperatorTok{!}\KeywordTok{require}\NormalTok{(devtools))}
+  \NormalTok{if(!}\KeywordTok{require}\NormalTok{(devtools))}
     \KeywordTok{install.packages}\NormalTok{(}\StringTok{"devtools"}\NormalTok{, }\DataTypeTok{repos =} \StringTok{"http://cran.rstudio.com"}\NormalTok{)}
-  \ControlFlowTok{if}\NormalTok{(}\OperatorTok{!}\KeywordTok{require}\NormalTok{(plyr))}
+  \NormalTok{if(!}\KeywordTok{require}\NormalTok{(plyr))}
       \KeywordTok{install.packages}\NormalTok{(}\StringTok{"plyr"}\NormalTok{, }\DataTypeTok{repos =} \StringTok{"http://cran.rstudio.com"}\NormalTok{) ## this shoul always go before dplyr}
-  \ControlFlowTok{if}\NormalTok{(}\OperatorTok{!}\KeywordTok{require}\NormalTok{(dplyr))}
+  \NormalTok{if(!}\KeywordTok{require}\NormalTok{(dplyr))}
       \KeywordTok{install.packages}\NormalTok{(}\StringTok{"dplyr"}\NormalTok{, }\DataTypeTok{repos =} \StringTok{"http://cran.rstudio.com"}\NormalTok{)}
-  \ControlFlowTok{if}\NormalTok{(}\OperatorTok{!}\KeywordTok{require}\NormalTok{(ggplot2))}
+  \NormalTok{if(!}\KeywordTok{require}\NormalTok{(ggplot2))}
       \KeywordTok{install.packages}\NormalTok{(}\StringTok{"ggplot2"}\NormalTok{, }\DataTypeTok{repos =} \StringTok{"http://cran.rstudio.com"}\NormalTok{)}
-  \ControlFlowTok{if}\NormalTok{(}\OperatorTok{!}\KeywordTok{require}\NormalTok{(reedtemplates))\{}
+  \NormalTok{if(!}\KeywordTok{require}\NormalTok{(reedtemplates))\{}
     \KeywordTok{library}\NormalTok{(devtools)}
-  \NormalTok{  devtools}\OperatorTok{::}\KeywordTok{install_github}\NormalTok{(}\StringTok{"ismayc/reedtemplates"}\NormalTok{)}
-  \NormalTok{  \}}
+    \NormalTok{devtools::}\KeywordTok{install_github}\NormalTok{(}\StringTok{"ismayc/reedtemplates"}\NormalTok{)}
+    \NormalTok{\}}
   \KeywordTok{library}\NormalTok{(reedtemplates)}
   \end{Highlighting}
   \end{Shaded}
@@ -5418,9 +5445,9 @@ starts here.
   \NormalTok{Bradford_df =}\StringTok{ }\KeywordTok{data.frame}\NormalTok{(BSAConcentrationStock,vol)   }
   
   \NormalTok{## quantity of microgrames on .16 ml}
-  \NormalTok{Bradford_df[}\StringTok{"Quantity"}\NormalTok{]<-BSAConcentrationStock}\OperatorTok{*}\NormalTok{.}\DecValTok{160}
+  \NormalTok{Bradford_df[}\StringTok{"Quantity"}\NormalTok{]<-BSAConcentrationStock*.}\DecValTok{160}
   \NormalTok{## concentration after added 40 ul bradford (total 200 ul)}
-  \NormalTok{Bradford_df[}\StringTok{"Concentration200"}\NormalTok{]<-Bradford_df[}\StringTok{"Quantity"}\NormalTok{]}\OperatorTok{/}\NormalTok{.}\DecValTok{2}
+  \NormalTok{Bradford_df[}\StringTok{"Concentration200"}\NormalTok{]<-Bradford_df[}\StringTok{"Quantity"}\NormalTok{]/.}\DecValTok{2}
   
   
   \NormalTok{## This are the absorbance measures for the different BSA concentrations  }
@@ -5431,11 +5458,11 @@ starts here.
   \NormalTok{Bradford_df[}\StringTok{"Abs2BSA"}\NormalTok{]<-Abs2BSA}
   
   \NormalTok{## mean value of measures}
-  \NormalTok{Bradford_df}\OperatorTok{$}\NormalTok{mean<-}\KeywordTok{rowMeans}\NormalTok{(}\KeywordTok{subset}\NormalTok{(Bradford_df, }\DataTypeTok{select =} \KeywordTok{c}\NormalTok{(Abs1BSA, Abs2BSA)), }\DataTypeTok{na.rm =} \OtherTok{TRUE}\NormalTok{)}
+  \NormalTok{Bradford_df$mean<-}\KeywordTok{rowMeans}\NormalTok{(}\KeywordTok{subset}\NormalTok{(Bradford_df, }\DataTypeTok{select =} \KeywordTok{c}\NormalTok{(Abs1BSA, Abs2BSA)), }\DataTypeTok{na.rm =} \OtherTok{TRUE}\NormalTok{)}
   
   \CommentTok{#adjusting blank}
-  \NormalTok{Bradford_df}\OperatorTok{$}\NormalTok{meanAdjusted<-Bradford_df}\OperatorTok{$}\NormalTok{mean}\OperatorTok{-}\NormalTok{Bradford_df}\OperatorTok{$}\NormalTok{mean[}\DecValTok{1}\NormalTok{]}
-  \NormalTok{BSA.lm =}\StringTok{ }\KeywordTok{lm}\NormalTok{(meanAdjusted }\OperatorTok{~}\StringTok{ }\NormalTok{Concentration200, }\DataTypeTok{data=}\NormalTok{Bradford_df) }
+  \NormalTok{Bradford_df$meanAdjusted<-Bradford_df$mean-Bradford_df$mean[}\DecValTok{1}\NormalTok{]}
+  \NormalTok{BSA.lm =}\StringTok{ }\KeywordTok{lm}\NormalTok{(meanAdjusted ~}\StringTok{ }\NormalTok{Concentration200, }\DataTypeTok{data=}\NormalTok{Bradford_df) }
   \NormalTok{coeffs =}\StringTok{ }\KeywordTok{coefficients}\NormalTok{(BSA.lm); coeffs }
   \end{Highlighting}
   \end{Shaded}
@@ -5450,8 +5477,8 @@ starts here.
   \NormalTok{b=coeffs[}\DecValTok{1}\NormalTok{]}
   \NormalTok{m=coeffs[}\DecValTok{2}\NormalTok{]}
   
-  \NormalTok{eq =}\StringTok{ }\ControlFlowTok{function}\NormalTok{(x)\{x}\OperatorTok{*}\NormalTok{m}\OperatorTok{+}\NormalTok{b\}}
-  \KeywordTok{plot}\NormalTok{(Bradford_df}\OperatorTok{$}\NormalTok{Concentration200,Bradford_df}\OperatorTok{$}\NormalTok{meanAdjusted,}\DataTypeTok{type=}\StringTok{"l"}\NormalTok{)}
+  \NormalTok{eq =}\StringTok{ }\NormalTok{function(x)\{x*m+b\}}
+  \KeywordTok{plot}\NormalTok{(Bradford_df$Concentration200,Bradford_df$meanAdjusted,}\DataTypeTok{type=}\StringTok{"l"}\NormalTok{)}
   \KeywordTok{par}\NormalTok{(}\DataTypeTok{new=}\OtherTok{TRUE}\NormalTok{)}
   \KeywordTok{plot}\NormalTok{(eq, }\DecValTok{1}\NormalTok{,}\DecValTok{100}\NormalTok{)}
   \end{Highlighting}
@@ -5472,7 +5499,7 @@ starts here.
   \NormalTok{ABS1=}\FloatTok{0.932099998}    
   \NormalTok{ABS2=}\FloatTok{1.048400044}
   \NormalTok{Pria_df=}\KeywordTok{data.frame}\NormalTok{(vol,type,ABS1,ABS2)}
-  \NormalTok{Pria_df}\OperatorTok{$}\NormalTok{type<-}\KeywordTok{as.character}\NormalTok{(Pria_df}\OperatorTok{$}\NormalTok{type)}
+  \NormalTok{Pria_df$type<-}\KeywordTok{as.character}\NormalTok{(Pria_df$type)}
   \NormalTok{data2=}\KeywordTok{c}\NormalTok{(}\DecValTok{20}\NormalTok{,}\StringTok{"Scoe"}\NormalTok{,}\FloatTok{1.639400005}\NormalTok{,}\FloatTok{1.569700003}\NormalTok{)}
   \NormalTok{data3=}\KeywordTok{c}\NormalTok{(}\DecValTok{5}\NormalTok{,}\StringTok{"D11A"}\NormalTok{,}\FloatTok{0.575600028}\NormalTok{,   }\FloatTok{0.576099992}\NormalTok{)}
   \NormalTok{data4=}\KeywordTok{c}\NormalTok{(}\DecValTok{20}\NormalTok{,}\StringTok{"D11A"}\NormalTok{,}\FloatTok{1.039499998}\NormalTok{,  }\FloatTok{1.067399979}\NormalTok{)}
@@ -5484,21 +5511,21 @@ starts here.
   \NormalTok{Pria_df=}\KeywordTok{rbind}\NormalTok{(Pria_df,data4)}
   \NormalTok{Pria_df=}\KeywordTok{rbind}\NormalTok{(Pria_df,data5)}
   
-  \NormalTok{Pria_df}\OperatorTok{$}\NormalTok{mean<-}\KeywordTok{rowMeans}\NormalTok{(}\KeywordTok{cbind}\NormalTok{(}\KeywordTok{as.numeric}\NormalTok{(Pria_df}\OperatorTok{$}\NormalTok{ABS1),}\KeywordTok{as.numeric}\NormalTok{(Pria_df}\OperatorTok{$}\NormalTok{ABS2)))}
+  \NormalTok{Pria_df$mean<-}\KeywordTok{rowMeans}\NormalTok{(}\KeywordTok{cbind}\NormalTok{(}\KeywordTok{as.numeric}\NormalTok{(Pria_df$ABS1),}\KeywordTok{as.numeric}\NormalTok{(Pria_df$ABS2)))}
   
   \NormalTok{## Pasando absorbancia a concentration de proteina en 200 ul (ug/ml)}
   \NormalTok{## kari values }
   \CommentTok{#m=0.004679534923}
   \CommentTok{#b=0.103674687}
   
-  \NormalTok{inter =}\StringTok{ }\ControlFlowTok{function}\NormalTok{(y)\{(y}\OperatorTok{-}\NormalTok{b)}\OperatorTok{/}\NormalTok{m\}}
-  \NormalTok{Pria_df}\OperatorTok{$}\NormalTok{concentration200<-}\KeywordTok{inter}\NormalTok{(Pria_df}\OperatorTok{$}\NormalTok{mean)}
+  \NormalTok{inter =}\StringTok{ }\NormalTok{function(y)\{(y-b)/m\}}
+  \NormalTok{Pria_df$concentration200<-}\KeywordTok{inter}\NormalTok{(Pria_df$mean)}
   
   \NormalTok{## protein quantity on ug on 200 ul}
-  \NormalTok{Pria_df[}\StringTok{"Quantity"}\NormalTok{]=Pria_df}\OperatorTok{$}\NormalTok{concentration200}\OperatorTok{*}\NormalTok{.}\DecValTok{2}
+  \NormalTok{Pria_df[}\StringTok{"Quantity"}\NormalTok{]=Pria_df$concentration200*.}\DecValTok{2}
   
   \NormalTok{### Inicial concentration  C200_vol200=Cinicial_Vinicial}
-  \NormalTok{Pria_df[}\StringTok{"ConcentrationInitial"}\NormalTok{]=Pria_df}\OperatorTok{$}\NormalTok{Quantity}\OperatorTok{/}\NormalTok{(.}\DecValTok{001}\OperatorTok{*}\KeywordTok{as.numeric}\NormalTok{(Pria_df}\OperatorTok{$}\NormalTok{vol))}
+  \NormalTok{Pria_df[}\StringTok{"ConcentrationInitial"}\NormalTok{]=Pria_df$Quantity/(.}\DecValTok{001}\NormalTok{*}\KeywordTok{as.numeric}\NormalTok{(Pria_df$vol))}
   
   \KeywordTok{kable}\NormalTok{(Bradford_df)}
   \end{Highlighting}
@@ -5554,12 +5581,12 @@ starts here.
   \NormalTok{## mas on Kda = kg/mol  }
   \NormalTok{mw<-}\FloatTok{25.7} 
   \CommentTok{# converting to g/mol  }
-  \NormalTok{mwgram<-mw}\OperatorTok{*}\DecValTok{1000}  
+  \NormalTok{mwgram<-mw*}\DecValTok{1000}  
   \NormalTok{## concentration on g/L (after convert ug/ml)}
   \NormalTok{concentScoe<-}\FloatTok{2.352}
   \NormalTok{concentD11A<-}\FloatTok{1.248}
   \NormalTok{## Concentration on uM (10**6M)}
-  \NormalTok{molar =}\StringTok{ }\ControlFlowTok{function}\NormalTok{(x)\{(}\DecValTok{10}\OperatorTok{**}\DecValTok{6}\NormalTok{)}\OperatorTok{*}\NormalTok{x}\OperatorTok{/}\NormalTok{mwgram\}}
+  \NormalTok{molar =}\StringTok{ }\NormalTok{function(x)\{(}\DecValTok{10}\NormalTok{**}\DecValTok{6}\NormalTok{)*x/mwgram\}}
   \KeywordTok{molar}\NormalTok{(concentScoe)}
   \end{Highlighting}
   \end{Shaded}
@@ -5591,7 +5618,7 @@ starts here.
   \NormalTok{## Vi =CfVf/Vi}
   \NormalTok{## Cf= 80uM Vf=5ul Vi=?ul Ci=x}
   
-  \NormalTok{adjustMol =}\StringTok{ }\ControlFlowTok{function}\NormalTok{(x)\{}\FloatTok{2.5}\OperatorTok{*}\DecValTok{160}\OperatorTok{/}\NormalTok{x\} }
+  \NormalTok{adjustMol =}\StringTok{ }\NormalTok{function(x)\{}\FloatTok{2.5}\NormalTok{*}\DecValTok{160}\NormalTok{/x\} }
   \NormalTok{## this are the ul need from stock cristal enzyme that will be diluted on buffer to complete 160 ul }
   \KeywordTok{adjustMol}\NormalTok{(}\KeywordTok{molar}\NormalTok{(concentScoe))}
   \end{Highlighting}
@@ -6536,125 +6563,160 @@ starts here.
   PLoS ONE {[}Internet{]}. 2013 Feb {[}cited 2017 Feb 8{]};8(2). Available
   from: \url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3583900/}
   
+  \hypertarget{ref-rodriguez_tesis_2016}{}
+  140. Rodríguez-Orduña L. Microbioma del jitomate: Determinante en la
+  infección por Clavibacter michiganensis subsp. michiganensis
+  {[}PhD thesis{]}. {[}Irapuato, GTO{]}: Langebio, CINVESTAV; 2016.
+  
+  \hypertarget{ref-gutierrez-garcia_cycad_2019}{}
+  141. Gutiérrez-García K, Bustos-Díaz ED, Corona-Gómez JA, Ramos-Aboites
+  HE, Sélem-Mojica N, Cruz-Morales P, et al. Cycad Coralloid Roots Contain
+  Bacterial Communities Including Cyanobacteria and Caulobacter spp. That
+  Encode Niche-Specific Biosynthetic Gene Clusters. Genome Biology and
+  Evolution {[}Internet{]}. 2019 Jan;11(1):319--34. Available from:
+  \url{https://academic.oup.com/gbe/article/11/1/319/5238076}
+  
+  \hypertarget{ref-delgado-suarez_whole_2018}{}
+  142. Delgado-Suárez EJ, Selem-Mojica N, Ortiz-López R, Gebreyes WA,
+  Allard MW, Barona-Gómez F, et al. Whole genome sequencing reveals
+  widespread distribution of typhoidal toxin genes and VirB/D4 plasmids in
+  bovine-associated nontyphoidal Salmonella. Scientific Reports
+  {[}Internet{]}. 2018 Jun;8(1):9864. Available from:
+  \url{https://doi.org/10.1038/s41598-018-28169-4}
+  
   \hypertarget{ref-labeda_phylogenetic_2017}{}
-  140. Labeda DP, Dunlap CA, Rong X, Huang Y, Doroghazi JR, Ju K-S, et al.
+  143. Labeda DP, Dunlap CA, Rong X, Huang Y, Doroghazi JR, Ju K-S, et al.
   Phylogenetic relationships in the family Streptomycetaceae using
   multi-locus sequence analysis. Antonie van Leeuwenhoek {[}Internet{]}.
   2017 Apr {[}cited 2019 Mar 13{]};110(4):563--83. Available from:
   \url{https://doi.org/10.1007/s10482-016-0824-0}
   
+  \hypertarget{ref-wattam_patric_2014}{}
+  144. Wattam AR, Abraham D, Dalay O, Disz TL, Driscoll T, Gabbard JL, et
+  al. PATRIC, the bacterial bioinformatics database and analysis resource.
+  Nucleic Acids Research {[}Internet{]}. 2014 Jan;42(Database
+  issue):D581--91. Available from:
+  \url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3965095/}
+  
+  \hypertarget{ref-contreras-moreira_get_homologues_2013}{}
+  145. Contreras-Moreira B, Vinuesa P. GET\_HOMOLOGUES, a Versatile
+  Software Package for Scalable and Robust Microbial Pangenome Analysis.
+  Applied and Environmental Microbiology {[}Internet{]}. 2013
+  Dec;79(24):7696--701. Available from:
+  \url{https://aem.asm.org/content/79/24/7696}
+  
   \hypertarget{ref-yasuhara-bell_genes_2014}{}
-  141. Yasuhara-Bell J, Marrero G, Alvarez AM. Genes clvA, clvF and clvG
+  146. Yasuhara-Bell J, Marrero G, Alvarez AM. Genes clvA, clvF and clvG
   are unique to Clavibacter michiganensis subsp. michiganensis and highly
   conserved. European Journal of Plant Pathology {[}Internet{]}. 2014 Dec
   {[}cited 2019 Mar 13{]};140(4):655--64. Available from:
   \url{https://doi.org/10.1007/s10658-014-0495-5}
   
   \hypertarget{ref-garciapichel_evidence_1992}{}
-  142. Garcia Pichel F, Sherry ND, Castenholz RW. Evidence for an
+  147. Garcia Pichel F, Sherry ND, Castenholz RW. Evidence for an
   ultraviolet sunscreen role of the extra cellular pigment scytonemin in
   the terrestrial cyanobacterium Chiorogloeopsis sp. Photochemistry and
   Photobiology {[}Internet{]}. 1992 Jul;56(1):17--23. Available from:
   \url{https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1751-1097.1992.tb09596.x}
   
   \hypertarget{ref-balskus_investigating_2008}{}
-  143. Balskus EP, Walsh CT. Investigating the Initial Steps in the
+  148. Balskus EP, Walsh CT. Investigating the Initial Steps in the
   Biosynthesis of Cyanobacterial Sunscreen Scytonemin. Journal of the
   American Chemical Society {[}Internet{]}. 2008 Nov;130(46):15260--1.
   Available from: \url{https://doi.org/10.1021/ja807192u}
   
   \hypertarget{ref-soule_comparative_2009}{}
-  144. Soule T, Palmer K, Gao Q, Potrafka RM, Stout V, Garcia-Pichel F. A
+  149. Soule T, Palmer K, Gao Q, Potrafka RM, Stout V, Garcia-Pichel F. A
   comparative genomics approach to understanding the biosynthesis of the
   sunscreen scytonemin in cyanobacteria. BMC Genomics {[}Internet{]}. 2009
   Jul {[}cited 2018 Jun 27{]};10:336. Available from:
   \url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2726228/}
   
   \hypertarget{ref-engel_glutamate_2014}{}
-  145. Engel PC. Glutamate Dehydrogenases: The Why and How of Coenzyme
+  150. Engel PC. Glutamate Dehydrogenases: The Why and How of Coenzyme
   Specificity. Neurochemical Research {[}Internet{]}. 2014
   Mar;39(3):426--32. Available from:
   \url{https://doi.org/10.1007/s11064-013-1089-x}
   
   \hypertarget{ref-liu_acetohydroxyacid_2016}{}
-  146. Liu Y, Li Y, Wang X. Acetohydroxyacid synthases: Evolution,
+  151. Liu Y, Li Y, Wang X. Acetohydroxyacid synthases: Evolution,
   structure, and function. Applied Microbiology and Biotechnology
   {[}Internet{]}. 2016 Oct;100(20):8633--49. Available from:
   \url{https://doi.org/10.1007/s00253-016-7809-9}
   
   \hypertarget{ref-edgar_muscle_2004}{}
-  147. Edgar RC. MUSCLE: Multiple sequence alignment with high accuracy
+  152. Edgar RC. MUSCLE: Multiple sequence alignment with high accuracy
   and high throughput. Nucleic Acids Research {[}Internet{]}. 2004
   {[}cited 2018 May 27{]};32(5):1792--7. Available from:
   \url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC390337/}
   
   \hypertarget{ref-castresana_selection_2000}{}
-  148. Castresana J. Selection of Conserved Blocks from Multiple
+  153. Castresana J. Selection of Conserved Blocks from Multiple
   Alignments for Their Use in Phylogenetic Analysis. Molecular Biology and
   Evolution {[}Internet{]}. 2000 Apr {[}cited 2018 Jul 3{]};17(4):540--52.
   Available from:
   \url{https://academic.oup.com/mbe/article/17/4/540/1127654}
   
   \hypertarget{ref-price_fasttree_2010}{}
-  149. Price MN, Dehal PS, Arkin AP. FastTree 2 -- Approximately
+  154. Price MN, Dehal PS, Arkin AP. FastTree 2 -- Approximately
   Maximum-Likelihood Trees for Large Alignments. PLOS ONE {[}Internet{]}.
   2010 Mar {[}cited 2018 Jul 3{]};5(3):e9490. Available from:
   \url{http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0009490}
   
   \hypertarget{ref-weber_antismash3_2015}{}
-  150. Weber T, Blin K, Duddela S, Krug D, Kim HU, Bruccoleri R, et al.
+  155. Weber T, Blin K, Duddela S, Krug D, Kim HU, Bruccoleri R, et al.
   antiSMASH 3.0---a comprehensive resource for the genome mining of
   biosynthetic gene clusters. Nucleic Acids Research {[}Internet{]}. 2015
   Jul {[}cited 2017 Feb 7{]};43(W1):W237--43. Available from:
   \url{https://academic.oup.com/nar/article/43/W1/W237/2467910/antiSMASH-3-0-a-comprehensive-resource-for-the}
   
   \hypertarget{ref-junier_newick_2010}{}
-  151. Junier T, Zdobnov EM. The Newick utilities: High-throughput
+  156. Junier T, Zdobnov EM. The Newick utilities: High-throughput
   phylogenetic tree processing in the Unix shell. Bioinformatics
   {[}Internet{]}. 2010 Jul {[}cited 2018 Jul 3{]};26(13):1669--70.
   Available from:
   \url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2887050/}
   
   \hypertarget{ref-argimon_microreact_2016}{}
-  152. Argimón S, Abudahab K, Goater RJE, Fedosejev A, Bhai J, Glasner C,
+  157. Argimón S, Abudahab K, Goater RJE, Fedosejev A, Bhai J, Glasner C,
   et al. Microreact: Visualizing and sharing data for genomic epidemiology
   and phylogeography. Microbial Genomics. 2016 Nov;2(11).
   
   \hypertarget{ref-jordan_lineage-specific_2001}{}
-  153. Jordan IK, Makarova KS, Spouge JL, Wolf YI, Koonin EV.
+  158. Jordan IK, Makarova KS, Spouge JL, Wolf YI, Koonin EV.
   Lineage-Specific Gene Expansions in Bacterial and Archaeal Genomes.
   Genome Research {[}Internet{]}. 2001 Apr;11(4):555--65. Available from:
   \url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC311027/}
   
   \hypertarget{ref-charlesworth_untapped_natural_products_Archaea_2015}{}
-  154. Charlesworth JC, Burns BP. Untapped Resources: Biotechnological
+  159. Charlesworth JC, Burns BP. Untapped Resources: Biotechnological
   Potential of Peptides and Secondary Metabolites in Archaea. Archaea
   {[}Internet{]}. 2015 Oct {[}cited 2016 Sep 27{]};2015:e282035. Available
   from: \url{http://www.hindawi.com/journals/archaea/2015/282035/abs/}
   
   \hypertarget{ref-koonin_genomics_2008}{}
-  155. Koonin EV, Wolf YI. Genomics of bacteria and archaea: The emerging
+  160. Koonin EV, Wolf YI. Genomics of bacteria and archaea: The emerging
   dynamic view of the prokaryotic world. Nucleic Acids Research
   {[}Internet{]}. 2008 Dec {[}cited 2017 Jan 26{]};36(21):6688--719.
   Available from:
   \url{https://academic.oup.com/nar/article/36/21/6688/2410005/Genomics-of-bacteria-and-archaea-the-emerging}
   
   \hypertarget{ref-kudo_cloning_2007}{}
-  156. Kudo F, Kasama Y, Hirayama T, Eguchi T. Cloning of the Pactamycin
+  161. Kudo F, Kasama Y, Hirayama T, Eguchi T. Cloning of the Pactamycin
   Biosynthetic Gene Cluster and Characterization of a Crucial
   Glycosyltransferase Prior to a Unique Cyclopentane Ring Formation. The
   Journal of Antibiotics {[}Internet{]}. 2007 Aug;60(8):492--503.
   Available from: \url{https://www.nature.com/articles/ja200763}
   
   \hypertarget{ref-navarro-munoz_computational_2018}{}
-  157. Navarro-Muñoz J, Selem-Mojica N, Mullowney M, Kautsar S, Tryon J,
+  162. Navarro-Muñoz J, Selem-Mojica N, Mullowney M, Kautsar S, Tryon J,
   Parkinson E, et al. A computational framework for systematic exploration
   of biosynthetic diversity from large-scale genomic data. bioRxiv
   {[}Internet{]}. 2018 Oct;445270. Available from:
   \url{https://www.biorxiv.org/content/early/2018/10/17/445270}
   
   \hypertarget{ref-lilley_partial_1991}{}
-  158. Lilley KS, Baker PJ, Linda Britton K, Stillman TJ, Brown PE, Moir
+  163. Lilley KS, Baker PJ, Linda Britton K, Stillman TJ, Brown PE, Moir
   AJG, et al. The partial amino acid sequence of the NAD -dependent
   glutamate dehydrogenase of Clostridium symbiosum: Implications for the
   evolution and structural basis of coenzyme specificity. Biochimica et
@@ -6663,32 +6725,32 @@ starts here.
   \url{http://www.sciencedirect.com/science/article/pii/016748389190001G}
   
   \hypertarget{ref-consalvi_glutamate_1991}{}
-  159. Consalvi V, Chiaraluce R, Politi L, Gambacorta A, Rosa MD,
+  164. Consalvi V, Chiaraluce R, Politi L, Gambacorta A, Rosa MD,
   Scandurra R. Glutamate dehydrogenase from the thermoacidophilic
   archaebacterium Sulfolobus solfataricus. European Journal of
   Biochemistry {[}Internet{]}. 1991 Mar;196(2):459--67. Available from:
   \url{https://febs.onlinelibrary.wiley.com/doi/abs/10.1111/j.1432-1033.1991.tb15837.x}
   
   \hypertarget{ref-ferrer_nadp-glutamate_1996}{}
-  160. Ferrer J, Pérez-Pomares F, Bonete MJ. NADP-glutamate dehydrogenase
+  165. Ferrer J, Pérez-Pomares F, Bonete MJ. NADP-glutamate dehydrogenase
   from the halophilic archaeon Haloferax mediterranei: Enzyme
   purification, N-terminal sequence and stability. FEMS microbiology
   letters. 1996 Jul;141(1):59--63.
   
   \hypertarget{ref-tholl_terpene_2006}{}
-  161. Tholl D. Terpene synthases and the regulation, diversity and
+  166. Tholl D. Terpene synthases and the regulation, diversity and
   biological roles of terpene metabolism. Current Opinion in Plant Biology
   {[}Internet{]}. 2006 Jun;9(3):297--304. Available from:
   \url{http://www.sciencedirect.com/science/article/pii/S1369526606000537}
   
   \hypertarget{ref-balskus_genetic_2010}{}
-  162. Balskus EP, Walsh CT. The genetic and molecular basis for sunscreen
+  167. Balskus EP, Walsh CT. The genetic and molecular basis for sunscreen
   biosynthesis in cyanobacteria. Science (New York, NY) {[}Internet{]}.
   2010 Sep;329(5999):1653--6. Available from:
   \url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3116657/}
   
   \hypertarget{ref-hillwig_identification_2014}{}
-  163. Hillwig ML, Fuhrman HA, Ittiamornkul K, Sevco TJ, Kwak DH, Liu X.
+  168. Hillwig ML, Fuhrman HA, Ittiamornkul K, Sevco TJ, Kwak DH, Liu X.
   Identification and Characterization of A Welwitindolinone Alkaloid
   Biosynthetic Gene Cluster in Stigonematalean Cyanobacterium Hapalosiphon
   welwitschii. Chembiochem : a European journal of chemical biology
@@ -6696,28 +6758,28 @@ starts here.
   \url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4382313/}
   
   \hypertarget{ref-li_hapalindole_ambiguine_2015}{}
-  164. Li S, Lowell AN, Yu F, Raveh A, Newmister SA, Bair N, et al.
+  169. Li S, Lowell AN, Yu F, Raveh A, Newmister SA, Bair N, et al.
   Hapalindole/Ambiguine Biogenesis Is Mediated by a Cope Rearrangement,
   C--C Bond-Forming Cascade. Journal of the American Chemical Society
   {[}Internet{]}. 2015 Dec;137(49):15366--9. Available from:
   \url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4681624/}
   
   \hypertarget{ref-li_decoding_2017}{}
-  165. Li S, Lowell AN, Newmister SA, Yu F, Williams RM, Sherman DH.
+  170. Li S, Lowell AN, Newmister SA, Yu F, Williams RM, Sherman DH.
   Decoding cyclase-dependent assembly of hapalindole and fischerindole
   alkaloids. Nature chemical biology {[}Internet{]}. 2017
   May;13(5):467--9. Available from:
   \url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5391265/}
   
   \hypertarget{ref-mcclure_elucidating_2016}{}
-  166. McClure RA, Goering AW, Ju K-S, Baccile JA, Schroeder FC, Metcalf
+  171. McClure RA, Goering AW, Ju K-S, Baccile JA, Schroeder FC, Metcalf
   WW, et al. Elucidating the Rimosamide-Detoxin Natural Product Families
   and Their Biosynthesis Using Metabolite/Gene Cluster Correlations. ACS
   Chemical Biology {[}Internet{]}. 2016 Dec;11(12):3452--60. Available
   from: \url{http://dx.doi.org/10.1021/acschembio.6b00779}
   
   \hypertarget{ref-gao_biosynthesis_2017}{}
-  167. Gao Y, Xu G, Wu P, Liu J, Cai Y-s, Deng Z, et al. Biosynthesis of
+  172. Gao Y, Xu G, Wu P, Liu J, Cai Y-s, Deng Z, et al. Biosynthesis of
   \(2\prime\)-Chloropentostatin and
   \(2\prime\)-Amino-\(2\prime\)-Deoxyadenosine Highlights a Single Gene
   Cluster Responsible for Two Independent Pathways in Actinomadura sp.
@@ -6726,21 +6788,21 @@ starts here.
   \url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5411499/}
   
   \hypertarget{ref-marks_protein_2011}{}
-  168. Marks DS, Colwell LJ, Sheridan R, Hopf TA, Pagnani A, Zecchina R,
+  173. Marks DS, Colwell LJ, Sheridan R, Hopf TA, Pagnani A, Zecchina R,
   et al. Protein 3D Structure Computed from Evolutionary Sequence
   Variation. PLOS ONE {[}Internet{]}. 2011 Dec;6(12):e28766. Available
   from:
   \url{http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0028766}
   
   \hypertarget{ref-hopf_evcouplings_2019}{}
-  169. Hopf TA, Green AG, Schubert B, Mersmann S, Schärfe CPI, Ingraham
+  174. Hopf TA, Green AG, Schubert B, Mersmann S, Schärfe CPI, Ingraham
   JB, et al. The EVcouplings Python framework for coevolutionary sequence
   analysis. Bioinformatics {[}Internet{]}. 2019 May;35(9):1582--4.
   Available from:
   \url{https://academic.oup.com/bioinformatics/article/35/9/1582/5124274}
   
   \hypertarget{ref-due_bisubstrate_2011}{}
-  170. Due AV, Kuper J, Geerlof A, Kries JP von, Wilmanns M. Bisubstrate
+  175. Due AV, Kuper J, Geerlof A, Kries JP von, Wilmanns M. Bisubstrate
   specificity in histidine/tryptophan biosynthesis isomerase from
   Mycobacterium tuberculosis by active site metamorphosis. Proceedings of
   the National Academy of Sciences of the United States of America
@@ -6749,29 +6811,29 @@ starts here.
   \url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3048130/}
   
   \hypertarget{ref-chertkov_complete_2011}{}
-  171. Chertkov O, Sikorski J, Nolan M, Lapidus A, Lucas S, Del Rio TG, et
+  176. Chertkov O, Sikorski J, Nolan M, Lapidus A, Lucas S, Del Rio TG, et
   al. Complete genome sequence of Thermomonospora curvata type strain
   (B9T). Standards in Genomic Sciences {[}Internet{]}. 2011 Feb {[}cited
   2017 Mar 3{]};4(1):13--22. Available from:
   \url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3072092/}
   
   \hypertarget{ref-pukall_complete_2009}{}
-  172. Pukall R, Gehrich-Schröter G, Lapidus A, Nolan M, Glavina Del Rio
+  177. Pukall R, Gehrich-Schröter G, Lapidus A, Nolan M, Glavina Del Rio
   T, Lucas S, et al. Complete genome sequence of Jonesia denitrificans
   type strain (Prevot 55134T). Standards in Genomic Sciences
   {[}Internet{]}. 2009 Nov {[}cited 2017 Mar 3{]};1(3):262--9. Available
   from: \url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3035236/}
   
   \hypertarget{ref-angel2000}{}
-  173. Angel E. Interactive computer graphics : A top-down approach with
+  178. Angel E. Interactive computer graphics : A top-down approach with
   opengl. Boston, MA: Addison Wesley Longman; 2000.
   
   \hypertarget{ref-angel2001}{}
-  174. Angel E. Batch-file computer graphics : A bottom-up approach with
+  179. Angel E. Batch-file computer graphics : A bottom-up approach with
   quicktime. Boston, MA: Wesley Addison Longman; 2001.
   
   \hypertarget{ref-angel2002a}{}
-  175. Angel E. Test second book by angel. Boston, MA: Wesley Addison
+  180. Angel E. Test second book by angel. Boston, MA: Wesley Addison
   Longman; 2001.
 
 
