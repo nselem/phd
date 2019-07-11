@@ -67,25 +67,16 @@ label(path = "chapter4/isomerizacion.pdf",
       type = "figure")
 ```
 
-PriA es una familia de enzimas de Actinobacteria homóloga a la familia HisA en Enterobacteria. Según las definiciones de este trabajo PriA es una familia promiscua. Varios miembros de PriA han sido sujetos a estudios de cinéticas enzimáticas demostrándose su capacidad de catalizar tanto la reacción correspondiente a HisA como la de TrpF. Es decir PriA participa a la vez en las rutas de síntesis de Histidina y Triptofano, al menos en varias Actinobacterias. Los primeros miembros caracterizados como promiscuos en esta familia en el 2003 fueron _Streptomyces coelicolor_ y _Mycobacterium tuberculosis_ [@baronagomez_occurrence_2003]. La mayoría de las actinobacterias han perdido el gen trpF en la ruta del triptofano, por lo que se cree que la promiscuidad de PriA está extendida en un gran subconjunto de Actinobacteria.   PriA en la ruta de histidina isomeriza el sustrato ProFAR en PRFAR, realizando la función HisA. En la ruta de triptofano lleva a cabo la isomerización de PRA en CdRP actuando análogamente a la función TrpF en la ruta del triptófano. En _Streptomyces coelicolor_ varios genes de los operones de histidina y triprofano están en la vecindad genómica de PriA. 
+PriA es una familia de enzimas de Actinobacteria homóloga a la familia HisA en Enterobacteria. Según las definiciones de este trabajo PriA es una familia promiscua. Varios miembros de PriA han sido sujetos a estudios de cinéticas enzimáticas demostrándose su capacidad de catalizar tanto la reacción correspondiente a HisA como la de TrpF. Es decir PriA participa a la vez en las rutas de síntesis de Histidina y Triptofano, al menos en varias Actinobacterias. Los primeros miembros caracterizados como promiscuos en esta familia en el 2003 fueron _Streptomyces coelicolor_ y _Mycobacterium tuberculosis_ [@baronagomez_occurrence_2003]. La mayoría de las actinobacterias han perdido el gen trpF en la ruta del triptofano, por lo que se cree que la promiscuidad de PriA está extendida en un gran subconjunto de Actinobacteria. PriA en la ruta de histidina isomeriza el sustrato ProFAR en PRFAR, realizando la función HisA. En la ruta de triptofano lleva a cabo la isomerización de PRA en CdRP actuando análogamente a la función TrpF en la ruta del triptófano. En _Streptomyces coelicolor_ varios genes de los operones de histidina y triprofano están en la vecindad genómica de PriA. 
 
 Además, en Actinobacteria PriA ha mostrado un gradiente funcional. Esta variación divide a la familia en varias subfamilias según su capacidad catalíticas en los sustratos ProFAR y PRA. En la `r ref("cineticos", type = "table")` se muestra la constantes catalíticas de PriA estimadas en diferentes organismos para estos dos sustratos. Estos datos ejemplifican las subfamilias de PriA, en la tabla se encuentran ejemplos de miembros de PriB, la subfamilia ubicada en el género _Streptomyces_ con baja capacidad de catálisis para la función TrpF. Varios _Streptomyces_ con un ortólogo en la familia PriB, se diferencian de otras Actinobacterias en que contienen en su genoma un gen _trpF_ localizado fuera del contexto genómico inmediato de los operones de histidina y triptofano. Otra subfamilia de PriA es subHisA, que ha perdido totalmente la actividd TrpF, existen miembros de subHisA en _Corynebacteria_ y en _Actinomyces_. Finalmente en Actinomyces encontramos la subfamilia _subTrpF_ que ha perdido la actividad de HisA.  
 
 En este capítulo en las siguientes secciones se exploran cuatro apectos de la familia PriA. _i)_ La distribución y el contexto genómico de PriA en diversos linajes genómicos. _ii)_ La información contenida a nivel de aminoácidos en variantes de PriA como medio de studio de rutas evolutivas y su relación con la reconstrucción de su estructura tridimensional. _iii)_ Las posibles afinidades de PriA por otros sustratos con métodos bioinformáticos, y finalmente _iv)_ La validación experimental de PriA en sustratos diferentes de PRA y ProFAR o bien en combinaciones de los mismos.  
 
-  
-|                                                                           |   
-|---------------------------------------------------------------------------|   
-| --------------------------------------------------------------------------|  
- Table: Reclutamientos de expansiones de PriA en MIBiG \label{tab:cineticos}     
-
-
+ Table: Capacidad catalítica respecto a PRA y ProFAR de miembros de la familia PriA \label{tab:cineticos}     
 \clearpage    
 
-  
-
 \begin{landscape}  
-
 $$
 \resizebox{\columnwidth}{!}{%
 \begin{tabular}{ l c r c c c c c c c l}
@@ -125,13 +116,12 @@ SubHisA Ancestral&Ancestral&&&6.3±0.7&0.15±0.03&0.02&-&-&0&Verduzco, Noda, sin
 SubHisA PriA&Ancestral&&&27.7±3.4&0.05±0.005&2&167.82&0.03±0.002&0.0001&Verduzco, Noda, sin publicar\\ [1ex]    
 \textit{Streptomyces} \textit{acidiscabies}&&0&0&163.6&0.1&&&&&Verduzco*\\ [1ex]  
 \textit{A} \textit{visco} &&&46&1.37&36&3.4&&&&Juárez*\\ [1ex]  
-
 \hline \\ [-1.5ex]
 \hline
-\end{tabular}}
+\end{tabular}
+}
 %}
 $$   
-
 \end{landscape}
 \normalsize
 
@@ -184,23 +174,23 @@ label(path = "chapter4/PriAEvoMining.pdf",
 Todos los reclutamientos (marcados en azul en el árbol) que tuvieron estas expansiones en estos linajes genómicos están listados en la tabla `r ref("reclutamientos", type = "table")`.  Entre ellos se encuentran dos toxinas de Cyanobacteria[@moustafa_origin_2009], un lipopolisacárido producido por una Proteobacteria y un BGC productor de cloro pentostatina producido en Actinobacteria [@gao_biosynthesis_2017]. 
 
 
- Table: Reclutamientos de expansiones de PriA en MIBiG \label{tab:reclutamientos}     
+Table: Reclutamientos de expansiones de PriA en MIBiG \label{tab:reclutamientos}  
+
 $$
 \resizebox{\columnwidth}{!}{%
-\begin{tabular}{ l c r c c c c}
+\begin{tabular}{ l c c c}
 \hline \\ [-1.5ex]  
-&Compuesto&Actinobacteria&Cyanobacteria&Proteobacteria&Archaea&BGC origen&Clase \\ [1ex]   
-& [saxitoxin](http://mibig.secondarymetabolites.org/repository/BGC0000188/index.html#cluster-1)&&$Cylindrospermopsis~ raciborskii$ T3&&& Alcaloide \\ [1ex] 
-& [toxin](http://mibig.secondarymetabolites.org/repository/BGC0000928/index.html#cluster-1)&&$Dolichospermum~circinale$ AWQC131C&&& Otros    \\ [1ex] 
-& [lipopolisacárido](http://mibig.secondarymetabolites.org/repository/BGC0000775/index.html#cluster-1)	&  	&  	&  	&  $Legionella~pneumophila$	& Sacarido    \\ [1ex] 
-& [ada ](http://mibig.secondarymetabolites.org/repository/BGC0001484/index.html#cluster-1)&$Actinomadura$ sp. ATCC 39365&&&& Otros  	  \\ [1ex]  
-
+Compuesto & Organismo & BGC origen & Clase \\ [1ex]  
 \hline \\ [-1.5ex]
+\href{http://mibig.secondarymetabolites.org/repository/BGC0001484/index.html\#cluster-1}{ada}&\textit{Actinomadura} sp. ATCC 39365&Actinobacteria& Otros  	  \\ [1ex]  
+\href{http://mibig.secondarymetabolites.org/repository/BGC0000188/index.html\#cluster-1}{saxitoxin}&\textit{Cylindrospermopsis~raciborskii} T3&Cyanobacteria&Alcaloide \\ [1ex]  
+\href{http://mibig.secondarymetabolites.org/repository/BGC0000928/index.html\#cluster-1}{toxin }&\textit{Dolichospermum~circinale} AWQC131C & Cyanobacteria & Otros    \\ [1ex]  
+\href{http://mibig.secondarymetabolites.org/repository/BGC0000775/index.html\#cluster-1}{lipopolisacárido}	&\textit{Legionella~pneumophila}	& Proteobacteria & Sac\'arido    \\ [1ex]  
 \hline
 \end{tabular}}
 %}
 $$
-
+\normalsize
 
 La pentostatina es un atibiótico nucleosídico derivado de adenosina, cuyo cluster es llamado _ada_ . La PriA del cluster _ada_ es llamada _adaK_ y sí parece participar del cluster, ya que muestra una isomerización sobre un sustrato similar a los nativos de PriA, `r ref(label = "ada", type = "figure")`, con un anillo de 5 carbonos, dos OH, un oxígeno y un grupo fosfato . Esta isomerización es muy parecida a la que realiza PriA sobre ProFAR y PRA. Esta PriA no es una copia extra, sino la copia única de este organismo. Este contexto genómico no se encuentra conservado en las copias vecinas en el árbol. Es relevante mencionar que la mutante de PriA no suprime la producción de este antibiótico en _Actinomadura_ sp. ATCC 39365, por lo que los autores especulan que otra enzima podría estar realizando la isomerización redundantemente. _Actinomadura_ no posee una copia de TrpF que sería el candidato inmediato.       
  
@@ -289,12 +279,13 @@ label(path = "chapter4/LianetFiguras/SolocirculosPRA_PRO_RUTAS_10_1_r002.png",
 ### Los residuos que covarían en el registro evolutivo de PriA permiten una reconstrucción aproximada de su estructura tridimensional  
 El estudio de la evolución de PriA en la sección anterior nos proporcionó el aprendizaje de que para adquirir una actividad el camino no es estrictamente creciente. En cambio, suele haber pasos donde alguna de las dos actividades baja. En esta sección utilizaremos el registro evolutivo resultado de millones de años, tomaremos miles de homólogos de PriA para inferir la estructura tridimensional de una secuencia. Evcouplings es un método que considera las secuencias génicas existentes como experimentos exitosos de la naturaleza. Con esta información obtiene la covariación entre pares de aminoácidos de las secuencias existentes en el registro evolutivo. Los pares fuertemente relacionados se denominan acoplamientos, estos acoplamientos a menudo están cerca físicamente en la estructura terciaria de la proteína. Se ha demostrado que muchas proteínas contienen suficientes acoplamientos distribuidos ampliamente en toda la secuencia, de forma que con ellos es posible la reconstrucción de su estructura tridimensional [@marks_protein_2011]. En esta sección se aplicará EVcouplings para reconstruir la estructura tridimensional de PriA.  
   
-Las diferencias a nivel estructural pueden amplificar la información proporcionada por variaciones a nivel de secuencia. Por este motivo se decidió implementar Evcouplings [@marks_protein_2011], para poder aplicarlo a la familia PriA. Este método es de difícil instalación ya que tiene muchas dependencias, por ello desarrollé un contenedor docker donde las dependencias y el software quedan instalados. Este desarrollo fue incluido por los desarrolladores originales como sugerencia de instalación.  
-El contenedor docker implementa EVcouplings python framework [@hopf_evcouplings_2019] que comprende cinco etapas para estudiar el análisis de coevolución de residuos de una familia de proteínas. Estas etapas son i) Alineado, ii) análisis de acoplamiento, iii) plegamiento basado en acoplamientos iv) análisis de mutación y v) comparación con estructuras conocidas.
+Las diferencias a nivel estructural pueden amplificar la información proporcionada por variaciones a nivel de secuencia. Por este motivo se decidió implementar Evcouplings [@marks_protein_2011], para poder aplicarlo a la familia PriA. Este método es de difícil instalación ya que tiene muchas dependencias, por ello desarrollé un contenedor docker donde las dependencias y el software quedan instalados. Este desarrollo fue incluido por los desarrolladores originales como sugerencia de instalación. El contenedor docker implementa EVcouplings python framework [@hopf_evcouplings_2019] que comprende cinco etapas para estudiar el análisis de coevolución de residuos de una familia de proteínas. Estas etapas son i) Alineado, ii) análisis de acoplamiento, iii) plegamiento basado en acoplamientos iv) análisis de mutación y v) comparación con estructuras conocidas.
 
-EVcouplings fue aplicado a PriA de Streptomyces coelicolor con identificador de Uniprot HIS4_STRCO. Las secuencias para las alineaciones se recuperaron automáticamente de Uniprot, otros parámetros se dejaron con la configuración inicial del archivo de configuración. Como resultado se modeló la estructura de PriA con los acoplamientos de sus aminoácidos. Una comparación con una estructura cristalográfica es mostrada en la `r ref(label = "CouplingsFoldingPriA", type = "figure")`
+EVcouplings fue aplicado a la secuencia de PriA de _Streptomyces coelicolor_ (identificador de Uniprot HIS4_STRCO). Las secuencias para la alineación se recuperaron automáticamente de Uniprot, otros parámetros se dejaron con la configuración inicial del archivo de configuración de EVCouplings. Como resultado se modeló la estructura de PriA utilizando los acoplamientos de sus aminoácidos. Una comparación de la estructura lograda con una estructura cristalográfica es mostrada en la `r ref(label = "CouplingsFoldingPriA", type = "figure")`. El RMSD es una técnica usual de comparaci{on de estructuras. EL RSMD entre estas dos proteínas es de  3.362, es incluso mejor que el 3.730 entre la 1VZW y la 4TX9. Como las estructuras tienen una resolución de 1-3 A° un RMSD es aceptable. Sin embargo los RMSD Entre otras estructuras cristalográficas de Streptomyces coelicolor son menores a 1.
+0.449 2VEP 1VZW
+<!--align 1vzw, 4tx9 en pymol da el RMSD -->
 
- La estructura reconstruida es parecida, pero para obtener mejor definición es posible que se deba refinar la selección de las secuencias del alineamiento, diferenciando entre secuencias conocidas de PriA, subHisA, PriB y subTrpF.  
+ Así pues, la estructura reconstruida es parecida, pero para obtener mejor definición es posible que se deba refinar la selección de las secuencias del alineamiento, diferenciando entre secuencias conocidas de PriA, subHisA, PriB y subTrpF.  
 ```{r PriA CouplingFoldings, results = "asis",message=FALSE,echo=FALSE}
 label(path = "chapter4/Couplings/PriACouplingFoldings.png", 
       caption = "Superposición de estructura de PriA generado por Folding con la estructura cristalográfica", 
@@ -340,7 +331,7 @@ label(path = "chapter4/Couplings/HIS4_STRCO_1-200/align/couplings.pdf",
 ```
  
 <!-- grep -c11| grep -nv D|sort|uniq -c |sort -n-->
-Además se investigaron los aminoácidos catalíticos D130 [@due_bisubstrate_2011] y D175 reportados en _Mycobacterium tuberculosis_[@verduzco-castro_co-occurrence_2016] que corresponden a en _S coelicolor_ D11, D131 y D171. Se econtró que existe un conjunto de secuencias donde estos residuos no están presentes `r ref("Alineamiento", type = "figure")`. La mayoría de estassecuencias es fuera del phylum Actinobacteria, como PSeudomonas, Cyanobacteria, Enterobacteria, Proteobacteria y Chloroflexi. Sin embargo, interesantemente se encontraron 159 Corynebacterium, 49 Streptomyces y 2 Actinokineospora sin 131D, entre ellos el ya mencionado _Streptomyces CT 34_ y _Streptomyces rimosus_ . En Corynebacterium se encuentra localizada la familia subHisA y en Streptomyces la familia PriB, la variabilidad mostrada en estos géneros podría estar relacionada con la existencia de estas familias. A futuro, para obtener resultados exclusivos sobre la covariación de residuos en Actinobacteria, se debe proveer un alineamiento exclusivo de Actinobacteria.  
+Además se investigaron los aminoácidos catalíticos D130 [@due_bisubstrate_2011] y D175 reportados en _Mycobacterium tuberculosis_[@verduzco-castro_co-occurrence_2016] que corresponden a en _S coelicolor_ D11, D131 y D171. Se econtró que existe un conjunto de secuencias donde estos residuos no están presentes `r ref("Alineamiento", type = "figure")`. La mayoría de estassecuencias es fuera del phylum Actinobacteria, como PSeudomonas, Cyanobacteria, Enterobacteria, Proteobacteria y Chloroflexi. Sin embargo, interesantemente se encontraron 159 Corynebacterium, 49 Streptomyces y 2 Actinokineospora sin 131D, entre ellos el ya mencionado _Streptomyces CT 34_ y _Streptomyces rimosus_ . En _Corynebacterium_ se encuentra localizada la familia subHisA y en Streptomyces la familia PriB, la variabilidad mostrada en estos géneros podría estar relacionada con la existencia de estas familias. A futuro, para obtener resultados exclusivos sobre la covariación de residuos en Actinobacteria, se debe proveer un alineamiento exclusivo de Actinobacteria.  
 
 ```{r Alineamiento, results = "asis",message=FALSE,echo=FALSE}
 label(path = "chapter4/Couplings/HIS4_STRCO_1-200/align/alineamiento.pdf", 

@@ -2131,24 +2131,25 @@ starts here.
   
   \section{Introducción}\label{introduccion-1}
   
-  La promiscuidad enzimática puede buscarse en familias involucradas en
+  La promiscuidad enzimática puede buscarse en familias envueltas en
   procesos de divergencia funcional. Uno de dichos procesos es la
   expansión de familias pertenecientes a rutas metabólicas conservadas y
   su posterior reclutamiento hacia el metabolismo especializado. Los
   productos naturales o metabolitos especializados son sintetizados
   generalmente por \emph{clusters} de genes distribuidos en un pequeño
-  porcentaje de un linaje taxonómico. Estos \emph{clusters}, conocidos
-  como BGC (Biosynthetical Gene \emph{Clusters}), contienen reclutamientos
-  de las copias extras de familias pertenecientes al metabolismo
-  conservado. La similitud de secuencia de los genes que pertenecen a los
-  BGC así como su relativa sintenia en diversos organismos de un linaje
-  hacen que genómica copmarativa sea de utilidad para intentar
-  localizarlos. Finalmente, el auge en la cantidad de genomas disponibles
-  públicamente así como la facilidad por sequenciar nuevos hace posible
-  que los métodos bioinformáticos ayuden a encontrar nuevos BGC. EvoMining
-  es un método de para sugerir la formación de nuevos BGC y en
-  consecuencia encontrar zonas donde puede estar ocurriendo la capcidad de
-  adquirir un nuevo sustrato cambio en promiscuidad enzimátcica.
+  porcentaje de los organismos de un linaje taxonómico. Estos
+  \emph{clusters}, conocidos como BGC ( \emph{Biosynthetical Gene
+  Clusters} ), contienen reclutamientos de las copias extras de familias
+  pertenecientes al metabolismo conservado. La similitud de secuencia de
+  los genes que pertenecen a los BGC así como su relativa sintenia en
+  diversos organismos de un linaje hacen que genómica copmarativa sea de
+  utilidad para intentar localizarlos. Finalmente, el auge en la cantidad
+  de genomas disponibles públicamente así como la facilidad por sequenciar
+  nuevos hace posible que los métodos bioinformáticos ayuden a encontrar
+  nuevos BGC. EvoMining es un método de para sugerir la formación de
+  nuevos BGC y en consecuencia encontrar zonas donde puede estar
+  ocurriendo la capcidad de adquirir un nuevo sustrato cambio en
+  promiscuidad enzimátcica.
   
   En este capítulo se explica el desarrollo de EvoMining como plataforma
   bioinformática dedicada a presentar una visualización del origen y
@@ -3816,19 +3817,13 @@ starts here.
   validación experimental de PriA en sustratos diferentes de PRA y ProFAR
   o bien en combinaciones de los mismos.
   
-  \begin{longtable}[]{@{}l@{}}
-  \caption{Reclutamientos de expansiones de PriA en MIBiG
-  \label{tab:cineticos}}\tabularnewline
-  \toprule
-  --------------------------------------------------------------------------\tabularnewline
-  \bottomrule
-  \end{longtable}
-  
+  Table: Capacidad catalítica respecto a PRA y ProFAR de miembros de la
+  familia PriA \label{tab:cineticos}\\
   \clearpage    
   
-  \textbackslash{}begin\{landscape\}
-  
-  \$\$ \resizebox{\columnwidth}{!}{%
+  \textbackslash{}begin\{landscape\}\\
+  \[
+  \resizebox{\columnwidth}{!}{%
   \begin{tabular}{ l c r c c c c c c c l}
   \hline \\ [-1.5ex]
   Fuente  &Familia & HisA $in\hspace{.1cm}vivo$ &TrpF $in\hspace{.1cm}vivo$ & $K{cat}^{ProFAR}[M^{-1}s^{-1}]$ & $Km^{ProFAR}[\mu M]$& $\frac{K{cat}}{Km} ProFAR$ & $K{cat}^{PRA}[M^{-1}s^{-1}]$ & $Km^{PRA}[\mu M]$  &  $\frac{Kcat}{Km} PRA $  &Referencia  \\ [1ex]
@@ -3866,11 +3861,12 @@ starts here.
   SubHisA PriA&Ancestral&&&27.7±3.4&0.05±0.005&2&167.82&0.03±0.002&0.0001&Verduzco, Noda, sin publicar\\ [1ex]    
   \textit{Streptomyces} \textit{acidiscabies}&&0&0&163.6&0.1&&&&&Verduzco*\\ [1ex]  
   \textit{A} \textit{visco} &&&46&1.37&36&3.4&&&&Juárez*\\ [1ex]  
-  
   \hline \\ [-1.5ex]
   \hline
-  \end{tabular}} \%\} \$\$
-  
+  \end{tabular}
+  }
+  %}
+  \]\\
   \textbackslash{}end\{landscape\} \normalsize
   
   \section{PriA como modelo de familia enzimática donde las expansiones no
@@ -3983,19 +3979,22 @@ starts here.
   {[}\protect\hyperlink{ref-gao_biosynthesis_2017}{172}{]}.
   
   Table: Reclutamientos de expansiones de PriA en MIBiG
-  \label{tab:reclutamientos}\\
-  \($ \resizebox{\columnwidth}{!}{% \begin{tabular}{ l c r c c c c} \hline \\ [-1.5ex] &Compuesto&Actinobacteria&Cyanobacteria&Proteobacteria&Archaea&BGC origen&Clase \\ [1ex] & [saxitoxin](http://mibig.secondarymetabolites.org/repository/BGC0000188/index.html#cluster-1)&&\)Cylindrospermopsis\textasciitilde{}
-  raciborskii\$ T3\&\&\& Alcaloide \textbackslash{} {[}1ex{]} \&
-  \href{http://mibig.secondarymetabolites.org/repository/BGC0000928/index.html\#cluster-1}{toxin}\&\&\(Dolichospermum~circinale\)
-  AWQC131C\&\&\& Otros \textbackslash{} {[}1ex{]} \&
-  \href{http://mibig.secondarymetabolites.org/repository/BGC0000775/index.html\#cluster-1}{lipopolisacárido}
-  \& \& \& \& \(Legionella~pneumophila\) \& Sacarido \textbackslash{}
-  {[}1ex{]} \&
-  \href{http://mibig.secondarymetabolites.org/repository/BGC0001484/index.html\#cluster-1}{ada}\&\(Actinomadura\)
-  sp. ATCC 39365\&\&\&\& Otros \textbackslash{} {[}1ex{]}
+  \label{tab:reclutamientos}
   
-  \hline \textbackslash{} {[}-1.5ex{]} \hline
-  \textbackslash{}end\{tabular\}\} \%\} \$\$
+  \[
+  \resizebox{\columnwidth}{!}{%
+  \begin{tabular}{ l c c c}
+  \hline \\ [-1.5ex]  
+  Compuesto & Organismo & BGC origen & Clase \\ [1ex]  
+  \hline \\ [-1.5ex]
+  \href{http://mibig.secondarymetabolites.org/repository/BGC0001484/index.html\#cluster-1}{ada}&\textit{Actinomadura} sp. ATCC 39365&Actinobacteria& Otros      \\ [1ex]  
+  \href{http://mibig.secondarymetabolites.org/repository/BGC0000188/index.html\#cluster-1}{saxitoxin}&\textit{Cylindrospermopsis~raciborskii} T3&Cyanobacteria&Alcaloide \\ [1ex]  
+  \href{http://mibig.secondarymetabolites.org/repository/BGC0000928/index.html\#cluster-1}{toxin }&\textit{Dolichospermum~circinale} AWQC131C & Cyanobacteria & Otros    \\ [1ex]  
+  \href{http://mibig.secondarymetabolites.org/repository/BGC0000775/index.html\#cluster-1}{lipopolisacárido}  &\textit{Legionella~pneumophila}    & Proteobacteria & Sac\'arido    \\ [1ex]  
+  \hline
+  \end{tabular}}
+  %}
+  \] \normalsize
   
   La pentostatina es un atibiótico nucleosídico derivado de adenosina,
   cuyo cluster es llamado \emph{ada} . La PriA del cluster \emph{ada} es
@@ -4438,7 +4437,7 @@ starts here.
   \begin{Shaded}
   \begin{Highlighting}[]
   \NormalTok{table <-}\StringTok{ }\KeywordTok{read.csv}\NormalTok{(}\StringTok{"chapter4/EstructurasPDB"}\NormalTok{, }\DataTypeTok{row.names =} \DecValTok{1}\NormalTok{,}\DataTypeTok{sep=}\StringTok{"}\CharTok{\textbackslash{}t}\StringTok{"}\NormalTok{)}
-  \KeywordTok{kable}\NormalTok{(table,  }\DataTypeTok{caption =} \StringTok{"Estructuras cristalográficas disponibles de PriA y familias relacionadas }\CharTok{\textbackslash{}\textbackslash{}}\StringTok{label\{tab:EnzymePDB\}"}\NormalTok{,}\DataTypeTok{caption.short =} \StringTok{"Estructuras cristalográficas disponibles de PriA y familias relacionadas"}\NormalTok{)%>%}\StringTok{  }\KeywordTok{kable_styling}\NormalTok{(}\DataTypeTok{latex_options=}\StringTok{"scale_down"}\NormalTok{)}
+  \KeywordTok{kable}\NormalTok{(table,  }\DataTypeTok{caption =} \StringTok{"Estructuras cristalográficas disponibles de PriA y familias relacionadas }\CharTok{\textbackslash{}\textbackslash{}}\StringTok{label\{tab:EnzymePDB\}"}\NormalTok{,}\DataTypeTok{caption.short =} \StringTok{"Estructuras cristalográficas disponibles de PriA y familias relacionadas"}\NormalTok{)}\OperatorTok{%>%}\StringTok{  }\KeywordTok{kable_styling}\NormalTok{(}\DataTypeTok{latex_options=}\StringTok{"scale_down"}\NormalTok{)}
   \end{Highlighting}
   \end{Shaded}
   
@@ -4547,7 +4546,7 @@ starts here.
   \begin{Shaded}
   \begin{Highlighting}[]
   \NormalTok{## boxplot de los sustratos}
-  \KeywordTok{ggplot}\NormalTok{(docking.m, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{variable, }\DataTypeTok{y=}\NormalTok{value)) +}\StringTok{ }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"Substrates"}\NormalTok{, }\DataTypeTok{y =} \StringTok{"Affinity"}\NormalTok{,}\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size=}\DecValTok{12}\NormalTok{)) +}\StringTok{ }\KeywordTok{geom_boxplot}\NormalTok{()+}\KeywordTok{theme_bw}\NormalTok{()+}\KeywordTok{theme}\NormalTok{(}\DataTypeTok{plot.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{14}\NormalTok{, }\DataTypeTok{face =} \StringTok{"bold"}\NormalTok{), }\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{12}\NormalTok{), }\DataTypeTok{axis.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{face=}\StringTok{"bold"}\NormalTok{), }\DataTypeTok{axis.text.x=}\KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{90}\NormalTok{,}\DataTypeTok{size =} \DecValTok{6}\NormalTok{), }\DataTypeTok{legend.position =} \StringTok{"bottom"}\NormalTok{)}
+  \KeywordTok{ggplot}\NormalTok{(docking.m, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{variable, }\DataTypeTok{y=}\NormalTok{value)) }\OperatorTok{+}\StringTok{ }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"Substrates"}\NormalTok{, }\DataTypeTok{y =} \StringTok{"Affinity"}\NormalTok{,}\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size=}\DecValTok{12}\NormalTok{)) }\OperatorTok{+}\StringTok{ }\KeywordTok{geom_boxplot}\NormalTok{()}\OperatorTok{+}\KeywordTok{theme_bw}\NormalTok{()}\OperatorTok{+}\KeywordTok{theme}\NormalTok{(}\DataTypeTok{plot.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{14}\NormalTok{, }\DataTypeTok{face =} \StringTok{"bold"}\NormalTok{), }\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{12}\NormalTok{), }\DataTypeTok{axis.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{face=}\StringTok{"bold"}\NormalTok{), }\DataTypeTok{axis.text.x=}\KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{90}\NormalTok{,}\DataTypeTok{size =} \DecValTok{6}\NormalTok{), }\DataTypeTok{legend.position =} \StringTok{"bottom"}\NormalTok{)}
   \end{Highlighting}
   \end{Shaded}
   
@@ -5130,11 +5129,11 @@ starts here.
   \CommentTok{# installed and loaded. This reedtemplates package includes}
   \CommentTok{# the template files for the thesis and also two functions}
   \CommentTok{# used for labeling and referencing}
-  \NormalTok{if(!}\KeywordTok{require}\NormalTok{(devtools))}
+  \ControlFlowTok{if}\NormalTok{(}\OperatorTok{!}\KeywordTok{require}\NormalTok{(devtools))}
     \KeywordTok{install.packages}\NormalTok{(}\StringTok{"devtools"}\NormalTok{, }\DataTypeTok{repos =} \StringTok{"http://cran.rstudio.com"}\NormalTok{)}
-  \NormalTok{if(!}\KeywordTok{require}\NormalTok{(reedtemplates))\{}
+  \ControlFlowTok{if}\NormalTok{(}\OperatorTok{!}\KeywordTok{require}\NormalTok{(reedtemplates))\{}
     \KeywordTok{library}\NormalTok{(devtools)}
-    \NormalTok{devtools::}\KeywordTok{install_github}\NormalTok{(}\StringTok{"ismayc/reedtemplates"}\NormalTok{)}
+  \NormalTok{  devtools}\OperatorTok{::}\KeywordTok{install_github}\NormalTok{(}\StringTok{"ismayc/reedtemplates"}\NormalTok{)}
   \NormalTok{\}}
   \KeywordTok{library}\NormalTok{(reedtemplates)}
   \end{Highlighting}
@@ -5149,18 +5148,18 @@ starts here.
   \CommentTok{# installed and loaded. This reedtemplates package includes}
   \CommentTok{# the template files for the thesis and also two functions}
   \CommentTok{# used for labeling and referencing}
-  \NormalTok{if(!}\KeywordTok{require}\NormalTok{(devtools))}
+  \ControlFlowTok{if}\NormalTok{(}\OperatorTok{!}\KeywordTok{require}\NormalTok{(devtools))}
     \KeywordTok{install.packages}\NormalTok{(}\StringTok{"devtools"}\NormalTok{, }\DataTypeTok{repos =} \StringTok{"http://cran.rstudio.com"}\NormalTok{)}
-  \NormalTok{if(!}\KeywordTok{require}\NormalTok{(plyr))}
+  \ControlFlowTok{if}\NormalTok{(}\OperatorTok{!}\KeywordTok{require}\NormalTok{(plyr))}
       \KeywordTok{install.packages}\NormalTok{(}\StringTok{"plyr"}\NormalTok{, }\DataTypeTok{repos =} \StringTok{"http://cran.rstudio.com"}\NormalTok{) ## this shoul always go before dplyr}
-  \NormalTok{if(!}\KeywordTok{require}\NormalTok{(dplyr))}
+  \ControlFlowTok{if}\NormalTok{(}\OperatorTok{!}\KeywordTok{require}\NormalTok{(dplyr))}
       \KeywordTok{install.packages}\NormalTok{(}\StringTok{"dplyr"}\NormalTok{, }\DataTypeTok{repos =} \StringTok{"http://cran.rstudio.com"}\NormalTok{)}
-  \NormalTok{if(!}\KeywordTok{require}\NormalTok{(ggplot2))}
+  \ControlFlowTok{if}\NormalTok{(}\OperatorTok{!}\KeywordTok{require}\NormalTok{(ggplot2))}
       \KeywordTok{install.packages}\NormalTok{(}\StringTok{"ggplot2"}\NormalTok{, }\DataTypeTok{repos =} \StringTok{"http://cran.rstudio.com"}\NormalTok{)}
-  \NormalTok{if(!}\KeywordTok{require}\NormalTok{(reedtemplates))\{}
+  \ControlFlowTok{if}\NormalTok{(}\OperatorTok{!}\KeywordTok{require}\NormalTok{(reedtemplates))\{}
     \KeywordTok{library}\NormalTok{(devtools)}
-    \NormalTok{devtools::}\KeywordTok{install_github}\NormalTok{(}\StringTok{"ismayc/reedtemplates"}\NormalTok{)}
-    \NormalTok{\}}
+  \NormalTok{  devtools}\OperatorTok{::}\KeywordTok{install_github}\NormalTok{(}\StringTok{"ismayc/reedtemplates"}\NormalTok{)}
+  \NormalTok{  \}}
   \KeywordTok{library}\NormalTok{(reedtemplates)}
   \end{Highlighting}
   \end{Shaded}
@@ -5431,9 +5430,9 @@ starts here.
   \NormalTok{Bradford_df =}\StringTok{ }\KeywordTok{data.frame}\NormalTok{(BSAConcentrationStock,vol)   }
   
   \NormalTok{## quantity of microgrames on .16 ml}
-  \NormalTok{Bradford_df[}\StringTok{"Quantity"}\NormalTok{]<-BSAConcentrationStock*.}\DecValTok{160}
+  \NormalTok{Bradford_df[}\StringTok{"Quantity"}\NormalTok{]<-BSAConcentrationStock}\OperatorTok{*}\NormalTok{.}\DecValTok{160}
   \NormalTok{## concentration after added 40 ul bradford (total 200 ul)}
-  \NormalTok{Bradford_df[}\StringTok{"Concentration200"}\NormalTok{]<-Bradford_df[}\StringTok{"Quantity"}\NormalTok{]/.}\DecValTok{2}
+  \NormalTok{Bradford_df[}\StringTok{"Concentration200"}\NormalTok{]<-Bradford_df[}\StringTok{"Quantity"}\NormalTok{]}\OperatorTok{/}\NormalTok{.}\DecValTok{2}
   
   
   \NormalTok{## This are the absorbance measures for the different BSA concentrations  }
@@ -5444,11 +5443,11 @@ starts here.
   \NormalTok{Bradford_df[}\StringTok{"Abs2BSA"}\NormalTok{]<-Abs2BSA}
   
   \NormalTok{## mean value of measures}
-  \NormalTok{Bradford_df$mean<-}\KeywordTok{rowMeans}\NormalTok{(}\KeywordTok{subset}\NormalTok{(Bradford_df, }\DataTypeTok{select =} \KeywordTok{c}\NormalTok{(Abs1BSA, Abs2BSA)), }\DataTypeTok{na.rm =} \OtherTok{TRUE}\NormalTok{)}
+  \NormalTok{Bradford_df}\OperatorTok{$}\NormalTok{mean<-}\KeywordTok{rowMeans}\NormalTok{(}\KeywordTok{subset}\NormalTok{(Bradford_df, }\DataTypeTok{select =} \KeywordTok{c}\NormalTok{(Abs1BSA, Abs2BSA)), }\DataTypeTok{na.rm =} \OtherTok{TRUE}\NormalTok{)}
   
   \CommentTok{#adjusting blank}
-  \NormalTok{Bradford_df$meanAdjusted<-Bradford_df$mean-Bradford_df$mean[}\DecValTok{1}\NormalTok{]}
-  \NormalTok{BSA.lm =}\StringTok{ }\KeywordTok{lm}\NormalTok{(meanAdjusted ~}\StringTok{ }\NormalTok{Concentration200, }\DataTypeTok{data=}\NormalTok{Bradford_df) }
+  \NormalTok{Bradford_df}\OperatorTok{$}\NormalTok{meanAdjusted<-Bradford_df}\OperatorTok{$}\NormalTok{mean}\OperatorTok{-}\NormalTok{Bradford_df}\OperatorTok{$}\NormalTok{mean[}\DecValTok{1}\NormalTok{]}
+  \NormalTok{BSA.lm =}\StringTok{ }\KeywordTok{lm}\NormalTok{(meanAdjusted }\OperatorTok{~}\StringTok{ }\NormalTok{Concentration200, }\DataTypeTok{data=}\NormalTok{Bradford_df) }
   \NormalTok{coeffs =}\StringTok{ }\KeywordTok{coefficients}\NormalTok{(BSA.lm); coeffs }
   \end{Highlighting}
   \end{Shaded}
@@ -5463,8 +5462,8 @@ starts here.
   \NormalTok{b=coeffs[}\DecValTok{1}\NormalTok{]}
   \NormalTok{m=coeffs[}\DecValTok{2}\NormalTok{]}
   
-  \NormalTok{eq =}\StringTok{ }\NormalTok{function(x)\{x*m+b\}}
-  \KeywordTok{plot}\NormalTok{(Bradford_df$Concentration200,Bradford_df$meanAdjusted,}\DataTypeTok{type=}\StringTok{"l"}\NormalTok{)}
+  \NormalTok{eq =}\StringTok{ }\ControlFlowTok{function}\NormalTok{(x)\{x}\OperatorTok{*}\NormalTok{m}\OperatorTok{+}\NormalTok{b\}}
+  \KeywordTok{plot}\NormalTok{(Bradford_df}\OperatorTok{$}\NormalTok{Concentration200,Bradford_df}\OperatorTok{$}\NormalTok{meanAdjusted,}\DataTypeTok{type=}\StringTok{"l"}\NormalTok{)}
   \KeywordTok{par}\NormalTok{(}\DataTypeTok{new=}\OtherTok{TRUE}\NormalTok{)}
   \KeywordTok{plot}\NormalTok{(eq, }\DecValTok{1}\NormalTok{,}\DecValTok{100}\NormalTok{)}
   \end{Highlighting}
@@ -5485,7 +5484,7 @@ starts here.
   \NormalTok{ABS1=}\FloatTok{0.932099998}    
   \NormalTok{ABS2=}\FloatTok{1.048400044}
   \NormalTok{Pria_df=}\KeywordTok{data.frame}\NormalTok{(vol,type,ABS1,ABS2)}
-  \NormalTok{Pria_df$type<-}\KeywordTok{as.character}\NormalTok{(Pria_df$type)}
+  \NormalTok{Pria_df}\OperatorTok{$}\NormalTok{type<-}\KeywordTok{as.character}\NormalTok{(Pria_df}\OperatorTok{$}\NormalTok{type)}
   \NormalTok{data2=}\KeywordTok{c}\NormalTok{(}\DecValTok{20}\NormalTok{,}\StringTok{"Scoe"}\NormalTok{,}\FloatTok{1.639400005}\NormalTok{,}\FloatTok{1.569700003}\NormalTok{)}
   \NormalTok{data3=}\KeywordTok{c}\NormalTok{(}\DecValTok{5}\NormalTok{,}\StringTok{"D11A"}\NormalTok{,}\FloatTok{0.575600028}\NormalTok{,   }\FloatTok{0.576099992}\NormalTok{)}
   \NormalTok{data4=}\KeywordTok{c}\NormalTok{(}\DecValTok{20}\NormalTok{,}\StringTok{"D11A"}\NormalTok{,}\FloatTok{1.039499998}\NormalTok{,  }\FloatTok{1.067399979}\NormalTok{)}
@@ -5497,21 +5496,21 @@ starts here.
   \NormalTok{Pria_df=}\KeywordTok{rbind}\NormalTok{(Pria_df,data4)}
   \NormalTok{Pria_df=}\KeywordTok{rbind}\NormalTok{(Pria_df,data5)}
   
-  \NormalTok{Pria_df$mean<-}\KeywordTok{rowMeans}\NormalTok{(}\KeywordTok{cbind}\NormalTok{(}\KeywordTok{as.numeric}\NormalTok{(Pria_df$ABS1),}\KeywordTok{as.numeric}\NormalTok{(Pria_df$ABS2)))}
+  \NormalTok{Pria_df}\OperatorTok{$}\NormalTok{mean<-}\KeywordTok{rowMeans}\NormalTok{(}\KeywordTok{cbind}\NormalTok{(}\KeywordTok{as.numeric}\NormalTok{(Pria_df}\OperatorTok{$}\NormalTok{ABS1),}\KeywordTok{as.numeric}\NormalTok{(Pria_df}\OperatorTok{$}\NormalTok{ABS2)))}
   
   \NormalTok{## Pasando absorbancia a concentration de proteina en 200 ul (ug/ml)}
   \NormalTok{## kari values }
   \CommentTok{#m=0.004679534923}
   \CommentTok{#b=0.103674687}
   
-  \NormalTok{inter =}\StringTok{ }\NormalTok{function(y)\{(y-b)/m\}}
-  \NormalTok{Pria_df$concentration200<-}\KeywordTok{inter}\NormalTok{(Pria_df$mean)}
+  \NormalTok{inter =}\StringTok{ }\ControlFlowTok{function}\NormalTok{(y)\{(y}\OperatorTok{-}\NormalTok{b)}\OperatorTok{/}\NormalTok{m\}}
+  \NormalTok{Pria_df}\OperatorTok{$}\NormalTok{concentration200<-}\KeywordTok{inter}\NormalTok{(Pria_df}\OperatorTok{$}\NormalTok{mean)}
   
   \NormalTok{## protein quantity on ug on 200 ul}
-  \NormalTok{Pria_df[}\StringTok{"Quantity"}\NormalTok{]=Pria_df$concentration200*.}\DecValTok{2}
+  \NormalTok{Pria_df[}\StringTok{"Quantity"}\NormalTok{]=Pria_df}\OperatorTok{$}\NormalTok{concentration200}\OperatorTok{*}\NormalTok{.}\DecValTok{2}
   
   \NormalTok{### Inicial concentration  C200_vol200=Cinicial_Vinicial}
-  \NormalTok{Pria_df[}\StringTok{"ConcentrationInitial"}\NormalTok{]=Pria_df$Quantity/(.}\DecValTok{001}\NormalTok{*}\KeywordTok{as.numeric}\NormalTok{(Pria_df$vol))}
+  \NormalTok{Pria_df[}\StringTok{"ConcentrationInitial"}\NormalTok{]=Pria_df}\OperatorTok{$}\NormalTok{Quantity}\OperatorTok{/}\NormalTok{(.}\DecValTok{001}\OperatorTok{*}\KeywordTok{as.numeric}\NormalTok{(Pria_df}\OperatorTok{$}\NormalTok{vol))}
   
   \KeywordTok{kable}\NormalTok{(Bradford_df)}
   \end{Highlighting}
@@ -5567,12 +5566,12 @@ starts here.
   \NormalTok{## mas on Kda = kg/mol  }
   \NormalTok{mw<-}\FloatTok{25.7} 
   \CommentTok{# converting to g/mol  }
-  \NormalTok{mwgram<-mw*}\DecValTok{1000}  
+  \NormalTok{mwgram<-mw}\OperatorTok{*}\DecValTok{1000}  
   \NormalTok{## concentration on g/L (after convert ug/ml)}
   \NormalTok{concentScoe<-}\FloatTok{2.352}
   \NormalTok{concentD11A<-}\FloatTok{1.248}
   \NormalTok{## Concentration on uM (10**6M)}
-  \NormalTok{molar =}\StringTok{ }\NormalTok{function(x)\{(}\DecValTok{10}\NormalTok{**}\DecValTok{6}\NormalTok{)*x/mwgram\}}
+  \NormalTok{molar =}\StringTok{ }\ControlFlowTok{function}\NormalTok{(x)\{(}\DecValTok{10}\OperatorTok{**}\DecValTok{6}\NormalTok{)}\OperatorTok{*}\NormalTok{x}\OperatorTok{/}\NormalTok{mwgram\}}
   \KeywordTok{molar}\NormalTok{(concentScoe)}
   \end{Highlighting}
   \end{Shaded}
@@ -5604,7 +5603,7 @@ starts here.
   \NormalTok{## Vi =CfVf/Vi}
   \NormalTok{## Cf= 80uM Vf=5ul Vi=?ul Ci=x}
   
-  \NormalTok{adjustMol =}\StringTok{ }\NormalTok{function(x)\{}\FloatTok{2.5}\NormalTok{*}\DecValTok{160}\NormalTok{/x\} }
+  \NormalTok{adjustMol =}\StringTok{ }\ControlFlowTok{function}\NormalTok{(x)\{}\FloatTok{2.5}\OperatorTok{*}\DecValTok{160}\OperatorTok{/}\NormalTok{x\} }
   \NormalTok{## this are the ul need from stock cristal enzyme that will be diluted on buffer to complete 160 ul }
   \KeywordTok{adjustMol}\NormalTok{(}\KeywordTok{molar}\NormalTok{(concentScoe))}
   \end{Highlighting}
