@@ -185,14 +185,22 @@ Todos los reclutamientos (marcados en azul en el árbol) que tuvieron estas expa
 
 
  Table: Reclutamientos de expansiones de PriA en MIBiG \label{tab:reclutamientos}     
-  
-|Compuesto|Actinobacteria|Cyanobacteria|Pseudomonas|Archaea|BGC origen|Clase|   
-|---------|:------------:|:-----------:|:---------:|-------|----------|-----|   
-| [saxitoxin](http://mibig.secondarymetabolites.org/repository/BGC0000188/index.html#cluster-1)|x|x|x|x| Cyanobacteria |Alcaloide|
-| [lipopolisacárido](http://mibig.secondarymetabolites.org/repository/BGC0000775/index.html#cluster-1)	|x  	|x  	|  x	|  x	|Proteobacteria	| Sacarido |  
-| [toxin](http://mibig.secondarymetabolites.org/repository/BGC0000928/index.html#cluster-1)|x|x|x|x| Cyanobacteria|Otros |  
-| [ada ](http://mibig.secondarymetabolites.org/repository/BGC0001484/index.html#cluster-1)|x|x|x| x| Actinobacteria 	| Otros  	|  
-  
+$$
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{ l c r c c c c}
+\hline \\ [-1.5ex]  
+&Compuesto&Actinobacteria&Cyanobacteria&Proteobacteria&Archaea&BGC origen&Clase \\ [1ex]   
+& [saxitoxin](http://mibig.secondarymetabolites.org/repository/BGC0000188/index.html#cluster-1)&&$Cylindrospermopsis~ raciborskii$ T3&&& Alcaloide \\ [1ex] 
+& [toxin](http://mibig.secondarymetabolites.org/repository/BGC0000928/index.html#cluster-1)&&$Dolichospermum~circinale$ AWQC131C&&& Otros    \\ [1ex] 
+& [lipopolisacárido](http://mibig.secondarymetabolites.org/repository/BGC0000775/index.html#cluster-1)	&  	&  	&  	&  $Legionella~pneumophila$	& Sacarido    \\ [1ex] 
+& [ada ](http://mibig.secondarymetabolites.org/repository/BGC0001484/index.html#cluster-1)&$Actinomadura$ sp. ATCC 39365&&&& Otros  	  \\ [1ex]  
+
+\hline \\ [-1.5ex]
+\hline
+\end{tabular}}
+%}
+$$
+
 
 La pentostatina es un atibiótico nucleosídico derivado de adenosina, cuyo cluster es llamado _ada_ . La PriA del cluster _ada_ es llamada _adaK_ y sí parece participar del cluster, ya que muestra una isomerización sobre un sustrato similar a los nativos de PriA, `r ref(label = "ada", type = "figure")`, con un anillo de 5 carbonos, dos OH, un oxígeno y un grupo fosfato . Esta isomerización es muy parecida a la que realiza PriA sobre ProFAR y PRA. Esta PriA no es una copia extra, sino la copia única de este organismo. Este contexto genómico no se encuentra conservado en las copias vecinas en el árbol. Es relevante mencionar que la mutante de PriA no suprime la producción de este antibiótico en _Actinomadura_ sp. ATCC 39365, por lo que los autores especulan que otra enzima podría estar realizando la isomerización redundantemente. _Actinomadura_ no posee una copia de TrpF que sería el candidato inmediato.       
  

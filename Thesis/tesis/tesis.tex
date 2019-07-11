@@ -2131,36 +2131,36 @@ starts here.
   
   \section{Introducción}\label{introduccion-1}
   
-  La promiscuidad enzimática puede buscarse en familias envueltas en
+  La promiscuidad enzimática puede buscarse en familias involucradas en
   procesos de divergencia funcional. Uno de dichos procesos es la
-  expansión y posterior reclutamiento de familias pertenecientes a rutas
-  metabólicas conservadas hacia el metabolismo especializado. Los
+  expansión de familias pertenecientes a rutas metabólicas conservadas y
+  su posterior reclutamiento hacia el metabolismo especializado. Los
   productos naturales o metabolitos especializados son sintetizados
-  generalmente por clusters de genes distribuidos en un pequeño porcentaje
-  de un linaje taxonómico. Estos clusters, conocidos como BGCs
-  (Biosynthetical Gene Clusters), contienen reclutamientos de las copias
-  extras de familias pertenecientes al metabolismo conservado. La
-  similitud de secuencia de los genes que pertenecen a los BGCs así como
-  su relativa sintenia en diversos organismos de un linaje hacen que
-  genómica copmarativa sea de utilidad para intentar localizarlos.
-  Finalmente, el auge en la cantidad de genomas disponibles públicamente
-  así como la facilidad por sequenciar nuevos hace posible que los métodos
-  bioinformáticos ayuden a encontrar nuevos BGCs. EvoMining es un método
-  de para sugerir la formación de nuevos BGCs y en consecuencia encontrar
-  zonas donde puede estar ocurriendo la capcidad de adquirir un nuevo
-  sustrato cambio en promiscuidad enzimátcica.
+  generalmente por \emph{clusters} de genes distribuidos en un pequeño
+  porcentaje de un linaje taxonómico. Estos \emph{clusters}, conocidos
+  como BGC (Biosynthetical Gene \emph{Clusters}), contienen reclutamientos
+  de las copias extras de familias pertenecientes al metabolismo
+  conservado. La similitud de secuencia de los genes que pertenecen a los
+  BGC así como su relativa sintenia en diversos organismos de un linaje
+  hacen que genómica copmarativa sea de utilidad para intentar
+  localizarlos. Finalmente, el auge en la cantidad de genomas disponibles
+  públicamente así como la facilidad por sequenciar nuevos hace posible
+  que los métodos bioinformáticos ayuden a encontrar nuevos BGC. EvoMining
+  es un método de para sugerir la formación de nuevos BGC y en
+  consecuencia encontrar zonas donde puede estar ocurriendo la capcidad de
+  adquirir un nuevo sustrato cambio en promiscuidad enzimátcica.
   
   En este capítulo se explica el desarrollo de EvoMining como plataforma
   bioinformática dedicada a presentar una visualización del origen y
   destino de todas las copias de familia enzimátocas provenientes del
   emtabolismo conservado. Se discutirán también cuatro linajes genómicos
   Actinobacteria Cyanobacteria, \emph{Pseudomonas} y Archaea y finalmente
-  se analizará un BGCs scytonemin.
+  se analizará un BGC scytonemin.
   
-  \section{EvoMining es un método para encontrar BGCs no
-  tradicionales}\label{evomining-es-un-metodo-para-encontrar-bgcs-no-tradicionales}
+  \section{EvoMining es un método para encontrar BGC no
+  tradicionales}\label{evomining-es-un-metodo-para-encontrar-bgc-no-tradicionales}
   
-  Existen varias clases de BGCs que son arquetipos de los productos
+  Existen varias clases de BGC que son arquetipos de los productos
   naturales. Entre ellas se encuentran las clases \emph{non ribosomomal
   peptide synthase} (NRPS), \emph{poliketide synthase} PKS, terpenos,
   RIPPs, alcaloides, etc. En estas clases, hay enzimas cuya presencia
@@ -2175,7 +2175,7 @@ starts here.
   \label{fig:other}
   \end{figure}
   
-  No todos los productos naturales están dentro de los BGCs clásicos.
+  No todos los productos naturales están dentro de los BGC clásicos.
   Dentro de MIBiG hay 231 BGC (\(12.7\%\)) clasificados como ``otros'',
   que de hecho carecen de PKS, NRPS o cualquiera de las otras clases de
   enzimas características del metabolismo especializado. Como ejemplo se
@@ -2249,8 +2249,8 @@ starts here.
   genomas de un linaje taxonómico (Genome DB). Un reclutamiento es una
   copia extra de una familia de metabolismo conservado que ahora participa
   en metabolismo especializado. Ejemplos de reclutamientos conocidos han
-  sido observados en BGCs reportados en MIBiG. Ejemplos de reclutamientos
-  predichos se encuentran en enzimas pertenecientes a BGCs reconocidos por
+  sido observados en BGC reportados en MIBiG. Ejemplos de reclutamientos
+  predichos se encuentran en enzimas pertenecientes a BGC reconocidos por
   antiSMASH que tienen un origen en metabolismo conservado.
   
   En la primera versión de nuestro trabajo definimos que un organismo
@@ -2284,20 +2284,20 @@ starts here.
   Una vez obtenidas las FEs expandidas e identificado los ortólogos del
   metabolismo central, se conduce una nueva búsqueda con BLASTp, E-value
   0.001, utilizando las EFs como queries contra la base de datos NP DB, la
-  de enzimas biosintéticas presentes en BGCs. Otras bases de datos que
+  de enzimas biosintéticas presentes en BGC. Otras bases de datos que
   contengan enzimas con un destino metabólico conocido podrían utilizarse
   en lugar de NP DB. Los reclutamientos son la
   
   En conclusión el algoritmo de expansión - reclutamiento trabaja para
   identificar tres clases de copias en las familias enzimáticas expandidas
   (i) copias altamente conservadas con algún miembro en el metabolismo
-  conservado; (ii) reclutamientos conocidos en BGCs de productos
-  naturales; y (iii) copias extra que no son reclutamientos conocidos ni
-  parte obvia del metabolismo conservado, quedando por definir su destino
-  metabólico. Reconstrucciones filogenéticas de las familias enzimáticas
-  serán utilizadas en la siguiente sección para asignar a estas copias
-  extra obtenidas por el algoritmo de expansión y reclutamiento un origen
-  y destino metabólico
+  conservado; (ii) reclutamientos conocidos en BGC de productos naturales;
+  y (iii) copias extra que no son reclutamientos conocidos ni parte obvia
+  del metabolismo conservado, quedando por definir su destino metabólico.
+  Reconstrucciones filogenéticas de las familias enzimáticas serán
+  utilizadas en la siguiente sección para asignar a estas copias extra
+  obtenidas por el algoritmo de expansión y reclutamiento un origen y
+  destino metabólico
   
   \begin{figure}[h!tbp]
   \centering
@@ -2406,9 +2406,9 @@ starts here.
   una prueba de concepto de EvoMining fue probada, tres nuevas bases de
   datos Genome DBs fueron integradas, incluyendo Cyanobacteria (416
   genomas), Pseudomonas (219 genomas) y Archaea (876 genomas). Estos taxa
-  fueron elegidos por su diversidad de exploración respecto a BGCs, por
-  ejemplo Actinobacteria posee 602 MIBiG BGCs, Cyanobacteria cuenta con 60
-  MIBiG BGCs y Pseudomonas 53 MIBiG BGCs. Estos tres taxa han sido
+  fueron elegidos por su diversidad de exploración respecto a BGC, por
+  ejemplo Actinobacteria posee 602 MIBiG BGC, Cyanobacteria cuenta con 60
+  MIBiG BGC y Pseudomonas 53 MIBiG BGC. Estos tres taxa han sido
   ampliamente explorados experimentalmente y su riqueza metabólica está
   fuera de duda; en contraste Archaea sólo posee 1 BGC en la nueva versión
   MIBiG (v.1.4), y ninguno al tiempo de la realización de este trabajo
@@ -2417,8 +2417,8 @@ starts here.
   minería genómica.
   
   Las predicciones de EvoMining se basan en identificar expansiones de
-  familias de enzimas en lugar de buscar BGCs completos, por esta razón
-  los borradores de genomas con un promedio de al menos 5 genes por contig
+  familias de enzimas en lugar de buscar BGC completos, por esta razón los
+  borradores de genomas con un promedio de al menos 5 genes por contig
   también pudieron ser incluidos en la base de datos Genome DB. Los
   genomas elegidos fueron recopilados de la base de datos pública NCBI tal
   y como estaba disponible en Enero de 2017. Las secuencias de DNA de
@@ -2468,14 +2468,14 @@ starts here.
   \href{https://doi.org/10.5281/zenodo.1219709}{\includegraphics{chapter2/zenodo_1219709.png}}
   
   NP DB Los primeros análisis realizados con EvoMining incluían un base de
-  datos de productos naturales NP DB de 226 BGCs reunidos de la literatura
+  datos de productos naturales NP DB de 226 BGC reunidos de la literatura
   y curados manualmente
   {[}\protect\hyperlink{ref-cruz-morales_phylogenomic_2016}{52}{]}. En
   este trabajo la base NP DB que se utilizó para los análisis es MIBiG
   v1.3{[}\protect\hyperlink{ref-medema_minimum_2015}{105}{]}. La base que
   viene incluida con el contenedor de EvoMining fue actualizada a la
   siguiente versión MIBiG v.1.4 liberada en Agosto de 2018. Esta nueva
-  versión comprende 1813 NP BGCs y un total de \(31,023\) secuencias de
+  versión comprende 1813 NP BGC y un total de \(31,023\) secuencias de
   proteínas.
   
   \section{Observaciones genómicas de
@@ -2490,11 +2490,11 @@ starts here.
   Archaea. Todos los resultados en las figuras son presentados en este
   orden. Estos taxa fueron seleccionados para tener un espectro de
   análisis que abarcara tanto microorganismos ampliamente reconocidos como
-  productores de NP, es decir Actinobacteria (602 MIBiG BGCs),
-  Cyanobacteria (60 MIBiG BGCs) y Pseudomonas (53 MIBiG BGCs); como
-  también Archaea (0 BGCs en MIBiG versión 1.3), que representa un dominio
-  poco explorado en lo que respecta a los genes que forman parte de
-  metabolismo especializado
+  productores de NP, es decir Actinobacteria (602 MIBiG BGC),
+  Cyanobacteria (60 MIBiG BGC) y Pseudomonas (53 MIBiG BGC); como también
+  Archaea (0 BGC en MIBiG versión 1.3), que representa un dominio poco
+  explorado en lo que respecta a los genes que forman parte de metabolismo
+  especializado
   {[}\protect\hyperlink{ref-charlesworth_untapped_2015}{108}{]}.
   
   Basándonos en estas bases de datos del tipo Genome DBs, como es
@@ -2538,7 +2538,7 @@ starts here.
   
   Esta observación es congruente con que las archaeocinas,
   dicetopiperazinas, carotenoides y otros productos naturales de Archaea
-  fueron aislados de especies de Halobacteria, los NP BGCs sintetizadores
+  fueron aislados de especies de Halobacteria, los NP BGC sintetizadores
   de estos metabolitos no han sido caracterizados
   {[}\protect\hyperlink{ref-charlesworth_untapped_natural_products_Archaea_2015}{159}{]}.
   Por ello EvoMining una herramienta de minería genómica que puede ayudar
@@ -2638,7 +2638,7 @@ starts here.
   Las expansiones encontradas por EvoMining en la familia GDH incluían
   predicciones de antiSMASH para Actinobacteria, Cyanobacteria y Archaea,
   no así para Pseudomonas. La secuencia del reclutamiento de GDH por los
-  clusters biosintéticos scytonemin y el policétido pactamycin
+  \emph{clusters} biosintéticos scytonemin y el policétido pactamycin
   {[}\protect\hyperlink{ref-kudo_cloning_2007}{161}{]}, es suficientemente
   parecida como para que EvoMining la detecte como expansión en
   Actinobacteria, Cyanobacteria y Archaea, pero es tan divergente respecto
@@ -2650,7 +2650,7 @@ starts here.
   Los resultados anteriores sugieren que la evolución del metabolismo
   especializado es linaje dependiente, y más aún que tal y como ya se
   conocía en las FEs del core genome las enzimas del shell como GDH
-  también poseen el potencial de ser reclutadas en NP BGCs. A partir de
+  también poseen el potencial de ser reclutadas en NP BGC. A partir de
   estos resultados \autoref{fig:ExpansionPatterns} paneles (a,b), se
   realizó un esquema conceptual para explicar cómo en linajes genómicos
   diversos las familias de enzimas con origen en el metabolismo central
@@ -2661,7 +2661,7 @@ starts here.
   relevante porque establece el papel de las familias del shell genome,
   que no fue considerado en la primera iteración que explotó las
   capacidades de EvoMining como herramienta de minería genómica para
-  encontrar BGCs
+  encontrar BGC
   novedosos{[}\protect\hyperlink{ref-navarro-munoz_computational_2018}{162}{]}.
   
   \begin{figure}[h!tbp]
@@ -2896,7 +2896,7 @@ starts here.
   fischerindolina {[}\protect\hyperlink{ref-li_decoding_2017}{170}{]}
   (Figs S3--S7). Estos resultados ilustran como EvoMining puede
   complementar a antiSMASH mediante la identificación de secuencias de NP
-  BGCs no tradicionales.
+  BGC no tradicionales.
   
   \begin{figure}[h!tbp]
   \centering
@@ -2936,7 +2936,7 @@ starts here.
   y ScyB como anzuelos de búsqueda. Estos resultados sugieren el poder
   predictivo de EvoMining para abrir la exploración de espacios
   metabólicos típicamente inexplorados por métodos de búsqueda
-  tradicionales de NP BGCs que no consideran la evolución dentro de sus
+  tradicionales de NP BGC que no consideran la evolución dentro de sus
   algoritmos de minería genómica.
   
   \subsection{Consideraciones para el uso de
@@ -2951,7 +2951,7 @@ starts here.
   usar EvoMining es que el tamaño de genoma correlaciona con el número de
   copias extra de familias expandidas. Aunque el tamaño de genoma es
   importante, también encontramos expeciones donde EvoMining pudo predecir
-  enzimas de BGCs no tradicionales en genomas relativamente pequeños,
+  enzimas de BGC no tradicionales en genomas relativamente pequeños,
   sugiriendo que hacen falta más análisis para estudiar esta relación.
   
   En este sentido, optamos por comparar linajes genómicos que no solo son
@@ -3038,8 +3038,8 @@ starts here.
   
   TauD en una enzima dedicada al metabolismo de taurina, proviene del
   operon de \emph{E. coli}. En Pseudomonas también tiene muchas
-  expansiones. Es parte de los clusters rimosamide y detoxin, así como de
-  15 BGCs más. Tiene en Actinobacteria una gran rama dedicada al
+  expansiones. Es parte de los \emph{clusters} rimosamide y detoxin, así
+  como de 15 BGC más. Tiene en Actinobacteria una gran rama dedicada al
   metabolismo especializado, es de una ruta biosintética promiscua. La
   ruta biosintética será tratado en el siguiente capítulo.
   
@@ -3054,16 +3054,16 @@ starts here.
   como \emph{Streptomyces}, \emph{Rhodococcus}, \emph{Frankia} y
   \emph{Amycolatopsis} (Fig S13). Dentro de las expansiones de la familia
   existe un clado,que contiene quince homólogos de \emph{tauD} que
-  pertenecen a clusters biosintéticos experimentalmente caracterizados y
-  depositados en MIBiG, incluyendo los BGCs de detoxin y rimosamides
-  (Table S6). La variedad de BGCs mostrada en este clado abre la
-  posibilidad de encontrar variantes moleculares de estas familias.
+  pertenecen a \emph{clusters} biosintéticos experimentalmente
+  caracterizados y depositados en MIBiG, incluyendo los BGC de detoxin y
+  rimosamides (Table S6). La variedad de BGC mostrada en este clado abre
+  la posibilidad de encontrar variantes moleculares de estas familias.
   
-  En Actinobateria se han reportado dos clusters biosintéticos
+  En Actinobateria se han reportado dos \emph{clusters} biosintéticos
   Streptomyces, Rhodococcus, Frankia and Amycolatopsis
   
   \begin{longtable}[]{@{}llll@{}}
-  \caption{Homólogos de \emph{tauD} en BGCs reportados en
+  \caption{Homólogos de \emph{tauD} en BGC reportados en
   MIBiG.\label{tab:tauD}}\tabularnewline
   \toprule
   \begin{minipage}[b]{0.19\columnwidth}\raggedright\strut
@@ -3826,10 +3826,9 @@ starts here.
   
   \clearpage    
   
-  \begin{landscape}  
+  \textbackslash{}begin\{landscape\}
   
-  $$
-  \resizebox{\columnwidth}{!}{%
+  \$\$ \resizebox{\columnwidth}{!}{%
   \begin{tabular}{ l c r c c c c c c c l}
   \hline \\ [-1.5ex]
   Fuente  &Familia & HisA $in\hspace{.1cm}vivo$ &TrpF $in\hspace{.1cm}vivo$ & $K{cat}^{ProFAR}[M^{-1}s^{-1}]$ & $Km^{ProFAR}[\mu M]$& $\frac{K{cat}}{Km} ProFAR$ & $K{cat}^{PRA}[M^{-1}s^{-1}]$ & $Km^{PRA}[\mu M]$  &  $\frac{Kcat}{Km} PRA $  &Referencia  \\ [1ex]
@@ -3870,13 +3869,9 @@ starts here.
   
   \hline \\ [-1.5ex]
   \hline
-  \end{tabular}}
-  %}
-  $$   
+  \end{tabular}} \%\} \$\$
   
-  \end{landscape}
-  
-  \normalsize
+  \textbackslash{}end\{landscape\} \normalsize
   
   \section{PriA como modelo de familia enzimática donde las expansiones no
   son condición necesaria para la
@@ -3987,29 +3982,20 @@ starts here.
   cloro pentostatina producido en Actinobacteria
   {[}\protect\hyperlink{ref-gao_biosynthesis_2017}{172}{]}.
   
-  \begin{longtable}[]{@{}lccclll@{}}
-  \caption{Reclutamientos de expansiones de PriA en MIBiG
-  \label{tab:reclutamientos}}\tabularnewline
-  \toprule
-  Compuesto & Actinobacteria & Cyanobacteria & Pseudomonas & Archaea & BGC
-  origen & Clase\tabularnewline
-  \midrule
-  \endfirsthead
-  \toprule
-  Compuesto & Actinobacteria & Cyanobacteria & Pseudomonas & Archaea & BGC
-  origen & Clase\tabularnewline
-  \midrule
-  \endhead
-  \href{http://mibig.secondarymetabolites.org/repository/BGC0000188/index.html\#cluster-1}{saxitoxin}
-  & x & x & x & x & Cyanobacteria & Alcaloide\tabularnewline
+  Table: Reclutamientos de expansiones de PriA en MIBiG
+  \label{tab:reclutamientos}\\
+  \($ \resizebox{\columnwidth}{!}{% \begin{tabular}{ l c r c c c c} \hline \\ [-1.5ex] &Compuesto&Actinobacteria&Cyanobacteria&Proteobacteria&Archaea&BGC origen&Clase \\ [1ex] & [saxitoxin](http://mibig.secondarymetabolites.org/repository/BGC0000188/index.html#cluster-1)&&\)Cylindrospermopsis\textasciitilde{}
+  raciborskii\$ T3\&\&\& Alcaloide \textbackslash{} {[}1ex{]} \&
+  \href{http://mibig.secondarymetabolites.org/repository/BGC0000928/index.html\#cluster-1}{toxin}\&\&\(Dolichospermum~circinale\)
+  AWQC131C\&\&\& Otros \textbackslash{} {[}1ex{]} \&
   \href{http://mibig.secondarymetabolites.org/repository/BGC0000775/index.html\#cluster-1}{lipopolisacárido}
-  & x & x & x & x & Proteobacteria & Sacarido\tabularnewline
-  \href{http://mibig.secondarymetabolites.org/repository/BGC0000928/index.html\#cluster-1}{toxin}
-  & x & x & x & x & Cyanobacteria & Otros\tabularnewline
-  \href{http://mibig.secondarymetabolites.org/repository/BGC0001484/index.html\#cluster-1}{ada}
-  & x & x & x & x & Actinobacteria & Otros\tabularnewline
-  \bottomrule
-  \end{longtable}
+  \& \& \& \& \(Legionella~pneumophila\) \& Sacarido \textbackslash{}
+  {[}1ex{]} \&
+  \href{http://mibig.secondarymetabolites.org/repository/BGC0001484/index.html\#cluster-1}{ada}\&\(Actinomadura\)
+  sp. ATCC 39365\&\&\&\& Otros \textbackslash{} {[}1ex{]}
+  
+  \hline \textbackslash{} {[}-1.5ex{]} \hline
+  \textbackslash{}end\{tabular\}\} \%\} \$\$
   
   La pentostatina es un atibiótico nucleosídico derivado de adenosina,
   cuyo cluster es llamado \emph{ada} . La PriA del cluster \emph{ada} es

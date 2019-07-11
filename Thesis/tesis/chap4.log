@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2018.10.12)  1 JUL 2019 12:32
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2018.10.12)  10 JUL 2019 17:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -867,14 +867,8 @@ Package: amsthm 2004/08/06 v2.20
 \dth@everypar=\toks40
 ) (/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
-) (./chap4.aux
-
-LaTeX Warning: Label `tab:PriAPRA' multiply defined.
-
-
-LaTeX Warning: Label `tab:PriAProFAR' multiply defined.
-
 )
+No file chap4.aux.
 \openout1 = `chap4.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 144.
@@ -964,7 +958,6 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 144.
 LaTeX Info: Redefining \pageref on input line 144.
 LaTeX Info: Redefining \nameref on input line 144.
-(./chap4.out) (./chap4.out)
 \@outlinefile=\write4
 \openout4 = `chap4.out'.
 
@@ -993,11 +986,15 @@ G,.JBIG2,.JB2,.eps]
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
-)) <chapter4/isomerizacion.pdf, id=72, 359.053pt x 67.9909pt>
+)) <chapter4/isomerizacion.pdf, id=4, 359.053pt x 67.9909pt>
 File: chapter4/isomerizacion.pdf Graphic file (type pdf)
 <use chapter4/isomerizacion.pdf>
 Package pdftex.def Info: chapter4/isomerizacion.pdf used on input line 150.
 (pdftex.def)             Requested size: 359.06854pt x 67.99382pt.
+
+LaTeX Warning: Reference `tab:cineticos' on page 1 undefined on input line 176.
+
+
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}pdfTeX warning (ext4): desti
@@ -1008,774 +1005,110 @@ te ignored
                                                   \fi \fi 
 l.209 \clearpage
                  <./chapter4/isomerizacion.pdf>]
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 213.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 254.
 
 (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 213.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 254.
 
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 213
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 254
 .
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 213
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 254
 .
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 213.
+(Font)              <10> on input line 254.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 213.
+(Font)              <7> on input line 254.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 213.
-LaTeX Font Info:    Try loading font information for U+msa on input line 213.
+(Font)              <5> on input line 254.
+LaTeX Font Info:    Try loading font information for U+msa on input line 254.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 213.
+LaTeX Font Info:    Try loading font information for U+msb on input line 254.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+lasy on input line 213.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 254.
 (/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 255.
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 254.
 
 (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [2
+)
+Overfull \hbox (12.02634pt too wide) in paragraph at lines 213--255
+[]\T1/lmr/m/n/10 (-20) $$ []
+ []
 
 
-] <chapter4/PriAExpansiones.png, id=112, 572.90855pt x 159.29408pt>
+LaTeX Warning: Reference `fig:PriA_Expansiones' on page 2 undefined on input li
+ne 269.
+
+<chapter4/PriAExpansiones.png, id=33, 572.90855pt x 159.29408pt>
 File: chapter4/PriAExpansiones.png Graphic file (type png)
 <use chapter4/PriAExpansiones.png>
-Package pdftex.def Info: chapter4/PriAExpansiones.png used on input line 299.
+Package pdftex.def Info: chapter4/PriAExpansiones.png used on input line 294.
 (pdftex.def)             Requested size: 469.75308pt x 130.61224pt.
-<chapter4/PriAEvoMiningCopies.pdf, id=116, 597.23125pt x 511.9125pt>
+
+LaTeX Warning: Reference `fig:PriAEvoMiningCopies' on page 2 undefined on input
+ line 301.
+
+
+LaTeX Warning: Reference `fig:PriATrees' on page 2 undefined on input line 302.
+
+
+[2
+
+] <chapter4/PriAEvoMiningCopies.pdf, id=48, 597.23125pt x 511.9125pt>
 File: chapter4/PriAEvoMiningCopies.pdf Graphic file (type pdf)
 <use chapter4/PriAEvoMiningCopies.pdf>
-Package pdftex.def Info: chapter4/PriAEvoMiningCopies.pdf used on input line 33
-1.
+Package pdftex.def Info: chapter4/PriAEvoMiningCopies.pdf used on input line 32
+6.
 (pdftex.def)             Requested size: 469.75708pt x 402.64894pt.
-[3
 
-pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) ha
-s been already used, duplicate ignored
+LaTeX Warning: Reference `fig:PriATrees' on page 3 undefined on input line 332.
 
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.348 
-       <./chapter4/PriAExpansiones.png>] [4pdfTeX warning (ext4): destination w
-ith the same identifier (name{figure.3}) has been already used, duplicate ignor
-ed
 
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.348 
-       <./chapter4/PriAEvoMiningCopies.pdf>] <chapter4/PriAEvoMining.pdf, id=16
-3, 597.23125pt x 511.9125pt>
+<chapter4/PriAEvoMining.pdf, id=49, 597.23125pt x 511.9125pt>
 File: chapter4/PriAEvoMining.pdf Graphic file (type pdf)
 <use chapter4/PriAEvoMining.pdf>
-Package pdftex.def Info: chapter4/PriAEvoMining.pdf used on input line 359.
+Package pdftex.def Info: chapter4/PriAEvoMining.pdf used on input line 354.
 (pdftex.def)             Requested size: 469.75708pt x 402.64894pt.
-[5pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) 
-has been already used, duplicate ignored
 
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.393 \end{longtable}
-                      <./chapter4/PriAEvoMining.pdf>] <chapter4/ada.png, id=196
-, 786.94pt x 492.84125pt>
-File: chapter4/ada.png Graphic file (type png)
-<use chapter4/ada.png>
-Package pdftex.def Info: chapter4/ada.png used on input line 411.
-(pdftex.def)             Requested size: 469.75409pt x 294.19547pt.
-[6pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) 
-has been already used, duplicate ignored
+LaTeX Warning: Reference `tab:reclutamientos' on page 3 undefined on input line
+ 361.
 
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.469 
-       <./chapter4/ada.png>] <chapter4/CORASON/CORASON.pdf, id=212, 586.47102pt
- x 458.28015pt>
-File: chapter4/CORASON/CORASON.pdf Graphic file (type pdf)
-<use chapter4/CORASON/CORASON.pdf>
-Package pdftex.def Info: chapter4/CORASON/CORASON.pdf used on input line 481.
-(pdftex.def)             Requested size: 469.75018pt x 367.07214pt.
-<chapter4/CORASON/saxitoxin.pdf, id=214, 722.7pt x 406.51875pt>
-File: chapter4/CORASON/saxitoxin.pdf Graphic file (type pdf)
-<use chapter4/CORASON/saxitoxin.pdf>
-Package pdftex.def Info: chapter4/CORASON/saxitoxin.pdf used on input line 498.
-
-(pdftex.def)             Requested size: 469.76045pt x 264.24025pt.
-[7pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) 
-has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.537 
-       <./chapter4/CORASON/CORASON.pdf>] <conclusion/Solocirculos.png, id=249, 
-574.145pt x 504.88625pt>
-File: conclusion/Solocirculos.png Graphic file (type png)
-<use conclusion/Solocirculos.png>
-Package pdftex.def Info: conclusion/Solocirculos.png used on input line 547.
-(pdftex.def)             Requested size: 469.76819pt x 413.10033pt.
-
-<chapter4/LianetFiguras/SolocirculosPRA_PRO_RUTAS_10_1_r002.png, id=251, 627.34
-375pt x 702.625pt>
-File: chapter4/LianetFiguras/SolocirculosPRA_PRO_RUTAS_10_1_r002.png Graphic fi
-le (type png)
-<use chapter4/LianetFiguras/SolocirculosPRA_PRO_RUTAS_10_1_r002.png>
-Package pdftex.def Info: chapter4/LianetFiguras/SolocirculosPRA_PRO_RUTAS_10_1_
-r002.png used on input line 574.
-(pdftex.def)             Requested size: 469.76956pt x 526.14192pt.
-[8pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) 
-has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.600 
-       <./chapter4/CORASON/saxitoxin.pdf>] [9pdfTeX warning (ext4): destination
- with the same identifier (name{figure.8}) has been already used, duplicate ign
-ored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.628 
-       <./conclusion/Solocirculos.png>] [10pdfTeX warning (ext4): destination w
-ith the same identifier (name{figure.9}) has been already used, duplicate ignor
-ed
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.628 
-       <./chapter4/LianetFiguras/SolocirculosPRA_PRO_RUTAS_10_1_r002.png>]
-<chapter4/Couplings/PriACouplingFoldings.png, id=295, 795.97375pt x 681.54625pt
->
-File: chapter4/Couplings/PriACouplingFoldings.png Graphic file (type png)
-<use chapter4/Couplings/PriACouplingFoldings.png>
-Package pdftex.def Info: chapter4/Couplings/PriACouplingFoldings.png used on in
-put line 631.
-(pdftex.def)             Requested size: 469.75404pt x 402.22319pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 636--646
-
- []
-
-
-<chapter4/Couplings/HIS4_STRCO_1-200/align/couplings.pdf, id=298, 502.65839pt x
- 508.15913pt>
-File: chapter4/Couplings/HIS4_STRCO_1-200/align/couplings.pdf Graphic file (typ
-e pdf)
-<use chapter4/Couplings/HIS4_STRCO_1-200/align/couplings.pdf>
-Package pdftex.def Info: chapter4/Couplings/HIS4_STRCO_1-200/align/couplings.pd
-f used on input line 681.
-(pdftex.def)             Requested size: 469.7531pt x 474.89377pt.
-[11pdfTeX warning (ext4): destination with the same identifier (name{figure.10}
-) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.702 
-       <./chapter4/Couplings/PriACouplingFoldings.png (PNG copy)>]
-<chapter4/Couplings/HIS4_STRCO_1-200/align/alineamiento.pdf, id=306, 595.64029p
-t x 237.36931pt>
-File: chapter4/Couplings/HIS4_STRCO_1-200/align/alineamiento.pdf Graphic file (
-type pdf)
-<use chapter4/Couplings/HIS4_STRCO_1-200/align/alineamiento.pdf>
-Package pdftex.def Info: chapter4/Couplings/HIS4_STRCO_1-200/align/alineamiento
-.pdf used on input line 705.
-(pdftex.def)             Requested size: 469.75996pt x 187.20457pt.
-<chapter4/Couplings/PriAMutations.pdf, id=308, 597.23125pt x 795.97375pt>
-File: chapter4/Couplings/PriAMutations.pdf Graphic file (type pdf)
-<use chapter4/Couplings/PriAMutations.pdf>
-Package pdftex.def Info: chapter4/Couplings/PriAMutations.pdf used on input lin
-e 716.
-(pdftex.def)             Requested size: 469.75708pt x 626.07964pt.
-[12pdfTeX warning (ext4): destination with the same identifier (name{figure.11}
-) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.736 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.
-12}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.736 
-       <./chapter4/Couplings/HIS4_STRCO_1-200/align/couplings.pdf> <./chapter4/
-Couplings/HIS4_STRCO_1-200/align/alineamiento.pdf
-
-pdfTeX warning: pdflatex (file ./chapter4/Couplings/HIS4_STRCO_1-200/align/alin
-eamiento.pdf): PDF inclusion: multiple pdfs with page group included in a singl
-e page
->] [13pdfTeX warning (ext4): destination with the same identifier (name{figure.
-13}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.736 
-       <./chapter4/Couplings/PriAMutations.pdf>] <chapter4/SubstratesClustering
-.png, id=9448, 666.49pt x 602.25pt>
-File: chapter4/SubstratesClustering.png Graphic file (type png)
-<use chapter4/SubstratesClustering.png>
-Package pdftex.def Info: chapter4/SubstratesClustering.png used on input line 7
-48.
-(pdftex.def)             Requested size: 469.76364pt x 424.48521pt.
-[14pdfTeX warning (ext4): destination with the same identifier (name{figure.14}
-) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.753 \clearpage
-                 <./chapter4/SubstratesClustering.png>] <chapter4/SustratosQuim
-icos.pdf, id=9457, 614.295pt x 794.97pt>
-File: chapter4/SustratosQuimicos.pdf Graphic file (type pdf)
-<use chapter4/SustratosQuimicos.pdf>
-Package pdftex.def Info: chapter4/SustratosQuimicos.pdf used on input line 757.
-
-(pdftex.def)             Requested size: 469.75604pt x 607.9196pt.
-<chapter4/esquema_quimico-2-2.pdf, id=9458, 614.295pt x 794.97pt>
-File: chapter4/esquema_quimico-2-2.pdf Graphic file (type pdf)
-<use chapter4/esquema_quimico-2-2.pdf>
-Package pdftex.def Info: chapter4/esquema_quimico-2-2.pdf used on input line 76
-4.
-(pdftex.def)             Requested size: 469.75604pt x 607.9196pt.
-<chapter4/esquema_quimico-3-3.pdf, id=9459, 614.295pt x 794.97pt>
-File: chapter4/esquema_quimico-3-3.pdf Graphic file (type pdf)
-<use chapter4/esquema_quimico-3-3.pdf>
-Package pdftex.def Info: chapter4/esquema_quimico-3-3.pdf used on input line 77
-1.
-(pdftex.def)             Requested size: 469.75604pt x 607.9196pt.
-<chapter4/esquema_quimico-4-4.pdf, id=9460, 614.295pt x 794.97pt>
-File: chapter4/esquema_quimico-4-4.pdf Graphic file (type pdf)
-<use chapter4/esquema_quimico-4-4.pdf>
-Package pdftex.def Info: chapter4/esquema_quimico-4-4.pdf used on input line 77
-8.
-(pdftex.def)             Requested size: 469.75604pt x 607.9196pt.
-[15
-
-pdfTeX warning (ext4): destination with the same identifier (name{figure.15}) h
-as been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.783 \clearpage
-                 <./chapter4/SustratosQuimicos.pdf>] [16pdfTeX warning (ext4): 
-destination with the same identifier (name{figure.16}) has been already used, d
-uplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.783 \clearpage
-                 <./chapter4/esquema_quimico-2-2.pdf>] [17pdfTeX warning (ext4)
-: destination with the same identifier (name{figure.17}) has been already used,
- duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.783 \clearpage
-                 <./chapter4/esquema_quimico-3-3.pdf>] [18pdfTeX warning (ext4)
-: destination with the same identifier (name{figure.18}) has been already used,
- duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.783 \clearpage
-                 <./chapter4/esquema_quimico-4-4.pdf>] [19
-
-]
-
-Package xcolor Warning: Incompatible color definition on input line 829.
-
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 830.
-
-(/usr/share/texmf/tex/latex/lm/t1lmtt.fd
-File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 831.
-
-Package xcolor Warning: Incompatible color definition on input line 834.
-
-
-Package xcolor Warning: Incompatible color definition on input line 834.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 928--929
-[]\T1/lmtt/m/n/10 ## Called from: eval(expr, envir, enclos)   ## debug en <text
->#4: plot(density(docking[,
- []
-
-<chap4_files/figure-latex/johan-2.pdf, id=9638, 436.63126pt x 286.06876pt>
-File: chap4_files/figure-latex/johan-2.pdf Graphic file (type pdf)
-<use chap4_files/figure-latex/johan-2.pdf>
-Package pdftex.def Info: chap4_files/figure-latex/johan-2.pdf used on input lin
-e 930.
-(pdftex.def)             Requested size: 436.63019pt x 286.06805pt.
-[20pdfTeX warning (ext4): destination with the same identifier (name{table.5}) 
-has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.932 ...ensity(docking{[},\ i{]},\ na.rm\ =\ T))}
-                                                  
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 932--933
-[]\T1/lmtt/m/n/10 ## debug en <text>#4: rug(docking[, i])   ## debug en <text>#
-4: browser()   ## debug en
- []
-
-<chap4_files/figure-latex/johan-3.pdf, id=9646, 437.635pt x 286.06876pt>
-File: chap4_files/figure-latex/johan-3.pdf Graphic file (type pdf)
-<use chap4_files/figure-latex/johan-3.pdf>
-Package pdftex.def Info: chap4_files/figure-latex/johan-3.pdf used on input lin
-e 934.
-(pdftex.def)             Requested size: 437.6406pt x 286.07242pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 936--937
-[]\T1/lmtt/m/n/10 ## debug en <text>#4: rug(docking[, i])   ## debug en <text>#
-4: browser()   ## debug en
- []
-
-<chap4_files/figure-latex/johan-4.pdf, id=9647, 436.63126pt x 286.06876pt>
-File: chap4_files/figure-latex/johan-4.pdf Graphic file (type pdf)
-<use chap4_files/figure-latex/johan-4.pdf>
-Package pdftex.def Info: chap4_files/figure-latex/johan-4.pdf used on input lin
-e 938.
-(pdftex.def)             Requested size: 436.63019pt x 286.06805pt.
-[21 <./chap4_files/figure-latex/johan-2.pdf> <./chap4_files/figure-latex/johan-
-3.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 940--941
-[]\T1/lmtt/m/n/10 ## debug en <text>#4: rug(docking[, i])   ## debug en <text>#
-4: browser()   ## debug en
- []
-
-<chap4_files/figure-latex/johan-5.pdf, id=9668, 436.63126pt x 286.06876pt>
-File: chap4_files/figure-latex/johan-5.pdf Graphic file (type pdf)
-<use chap4_files/figure-latex/johan-5.pdf>
-Package pdftex.def Info: chap4_files/figure-latex/johan-5.pdf used on input lin
-e 942.
-(pdftex.def)             Requested size: 436.63019pt x 286.06805pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 944--945
-[]\T1/lmtt/m/n/10 ## debug en <text>#4: rug(docking[, i])   ## debug en <text>#
-4: browser()   ## debug en
- []
-
-<chap4_files/figure-latex/johan-6.pdf, id=9669, 436.63126pt x 286.06876pt>
-File: chap4_files/figure-latex/johan-6.pdf Graphic file (type pdf)
-<use chap4_files/figure-latex/johan-6.pdf>
-Package pdftex.def Info: chap4_files/figure-latex/johan-6.pdf used on input lin
-e 946.
-(pdftex.def)             Requested size: 436.63019pt x 286.06805pt.
-[22 <./chap4_files/figure-latex/johan-4.pdf> <./chap4_files/figure-latex/johan-
-5.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 948--949
-[]\T1/lmtt/m/n/10 ## debug en <text>#4: rug(docking[, i])   ## debug en <text>#
-4: browser()   ## debug en
- []
-
-<chap4_files/figure-latex/johan-7.pdf, id=9690, 436.63126pt x 286.06876pt>
-File: chap4_files/figure-latex/johan-7.pdf Graphic file (type pdf)
-<use chap4_files/figure-latex/johan-7.pdf>
-Package pdftex.def Info: chap4_files/figure-latex/johan-7.pdf used on input lin
-e 950.
-(pdftex.def)             Requested size: 436.63019pt x 286.06805pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 952--953
-[]\T1/lmtt/m/n/10 ## debug en <text>#4: rug(docking[, i])   ## debug en <text>#
-4: browser()   ## debug en
- []
-
-<chap4_files/figure-latex/johan-8.pdf, id=9691, 436.63126pt x 286.06876pt>
-File: chap4_files/figure-latex/johan-8.pdf Graphic file (type pdf)
-<use chap4_files/figure-latex/johan-8.pdf>
-Package pdftex.def Info: chap4_files/figure-latex/johan-8.pdf used on input lin
-e 954.
-(pdftex.def)             Requested size: 436.63019pt x 286.06805pt.
-[23 <./chap4_files/figure-latex/johan-6.pdf> <./chap4_files/figure-latex/johan-
-7.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 956--957
-[]\T1/lmtt/m/n/10 ## debug en <text>#4: rug(docking[, i])   ## debug en <text>#
-4: browser()   ## debug en
- []
-
-<chap4_files/figure-latex/johan-9.pdf, id=9712, 436.63126pt x 286.06876pt>
-File: chap4_files/figure-latex/johan-9.pdf Graphic file (type pdf)
-<use chap4_files/figure-latex/johan-9.pdf>
-Package pdftex.def Info: chap4_files/figure-latex/johan-9.pdf used on input lin
-e 958.
-(pdftex.def)             Requested size: 436.63019pt x 286.06805pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 960--961
-[]\T1/lmtt/m/n/10 ## debug en <text>#4: rug(docking[, i])   ## debug en <text>#
-4: browser()   ## debug en
- []
-
-<chap4_files/figure-latex/johan-10.pdf, id=9713, 436.63126pt x 286.06876pt>
-File: chap4_files/figure-latex/johan-10.pdf Graphic file (type pdf)
-<use chap4_files/figure-latex/johan-10.pdf>
-Package pdftex.def Info: chap4_files/figure-latex/johan-10.pdf used on input li
-ne 962.
-(pdftex.def)             Requested size: 436.63019pt x 286.06805pt.
-[24 <./chap4_files/figure-latex/johan-8.pdf> <./chap4_files/figure-latex/johan-
-9.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 964--965
-[]\T1/lmtt/m/n/10 ## debug en <text>#4: rug(docking[, i])   ## debug en <text>#
-4: browser()   ## debug en
- []
-
-<chap4_files/figure-latex/johan-11.pdf, id=9734, 436.63126pt x 286.06876pt>
-File: chap4_files/figure-latex/johan-11.pdf Graphic file (type pdf)
-<use chap4_files/figure-latex/johan-11.pdf>
-Package pdftex.def Info: chap4_files/figure-latex/johan-11.pdf used on input li
-ne 966.
-(pdftex.def)             Requested size: 436.63019pt x 286.06805pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 968--969
-[]\T1/lmtt/m/n/10 ## debug en <text>#4: rug(docking[, i])   ## debug en <text>#
-4: browser()   ## debug en
- []
-
-<chap4_files/figure-latex/johan-12.pdf, id=9735, 436.63126pt x 286.06876pt>
-File: chap4_files/figure-latex/johan-12.pdf Graphic file (type pdf)
-<use chap4_files/figure-latex/johan-12.pdf>
-Package pdftex.def Info: chap4_files/figure-latex/johan-12.pdf used on input li
-ne 970.
-(pdftex.def)             Requested size: 436.63019pt x 286.06805pt.
-[25 <./chap4_files/figure-latex/johan-10.pdf> <./chap4_files/figure-latex/johan
--11.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 972--973
-[]\T1/lmtt/m/n/10 ## debug en <text>#4: rug(docking[, i])   ## debug en <text>#
-4: browser()   ## debug en
- []
-
-<chap4_files/figure-latex/johan-13.pdf, id=9757, 436.63126pt x 286.06876pt>
-File: chap4_files/figure-latex/johan-13.pdf Graphic file (type pdf)
-<use chap4_files/figure-latex/johan-13.pdf>
-Package pdftex.def Info: chap4_files/figure-latex/johan-13.pdf used on input li
-ne 974.
-(pdftex.def)             Requested size: 436.63019pt x 286.06805pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 976--977
-[]\T1/lmtt/m/n/10 ## debug en <text>#4: rug(docking[, i])   ## debug en <text>#
-4: browser()   ## debug en
- []
-
-<chap4_files/figure-latex/johan-14.pdf, id=9758, 436.63126pt x 286.06876pt>
-File: chap4_files/figure-latex/johan-14.pdf Graphic file (type pdf)
-<use chap4_files/figure-latex/johan-14.pdf>
-Package pdftex.def Info: chap4_files/figure-latex/johan-14.pdf used on input li
-ne 978.
-(pdftex.def)             Requested size: 436.63019pt x 286.06805pt.
-[26 <./chap4_files/figure-latex/johan-12.pdf> <./chap4_files/figure-latex/johan
--13.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 980--981
-[]\T1/lmtt/m/n/10 ## debug en <text>#4: rug(docking[, i])   ## debug en <text>#
-4: browser()   ## debug en
- []
-
-<chap4_files/figure-latex/johan-15.pdf, id=9780, 436.63126pt x 286.06876pt>
-File: chap4_files/figure-latex/johan-15.pdf Graphic file (type pdf)
-<use chap4_files/figure-latex/johan-15.pdf>
-Package pdftex.def Info: chap4_files/figure-latex/johan-15.pdf used on input li
-ne 982.
-(pdftex.def)             Requested size: 436.63019pt x 286.06805pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 984--985
-[]\T1/lmtt/m/n/10 ## debug en <text>#4: rug(docking[, i])   ## debug en <text>#
-4: browser()   ## debug en
- []
-
-<chap4_files/figure-latex/johan-16.pdf, id=9781, 436.63126pt x 286.06876pt>
-File: chap4_files/figure-latex/johan-16.pdf Graphic file (type pdf)
-<use chap4_files/figure-latex/johan-16.pdf>
-Package pdftex.def Info: chap4_files/figure-latex/johan-16.pdf used on input li
-ne 986.
-(pdftex.def)             Requested size: 436.63019pt x 286.06805pt.
-[27 <./chap4_files/figure-latex/johan-14.pdf> <./chap4_files/figure-latex/johan
--15.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 988--989
-[]\T1/lmtt/m/n/10 ## debug en <text>#4: rug(docking[, i])   ## debug en <text>#
-4: browser()   ## debug en
- []
-
-<chap4_files/figure-latex/johan-17.pdf, id=9802, 436.63126pt x 286.06876pt>
-File: chap4_files/figure-latex/johan-17.pdf Graphic file (type pdf)
-<use chap4_files/figure-latex/johan-17.pdf>
-Package pdftex.def Info: chap4_files/figure-latex/johan-17.pdf used on input li
-ne 990.
-(pdftex.def)             Requested size: 436.63019pt x 286.06805pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 992--993
-[]\T1/lmtt/m/n/10 ## debug en <text>#4: rug(docking[, i])   ## debug en <text>#
-4: browser()   ## debug en
- []
-
-<chap4_files/figure-latex/johan-18.pdf, id=9803, 436.63126pt x 286.06876pt>
-File: chap4_files/figure-latex/johan-18.pdf Graphic file (type pdf)
-<use chap4_files/figure-latex/johan-18.pdf>
-Package pdftex.def Info: chap4_files/figure-latex/johan-18.pdf used on input li
-ne 994.
-(pdftex.def)             Requested size: 436.63019pt x 286.06805pt.
-[28 <./chap4_files/figure-latex/johan-16.pdf> <./chap4_files/figure-latex/johan
--17.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 996--997
-[]\T1/lmtt/m/n/10 ## debug en <text>#4: rug(docking[, i])   ## debug en <text>#
-4: browser()   ## debug en
- []
-
-<chap4_files/figure-latex/johan-19.pdf, id=9824, 436.63126pt x 286.06876pt>
-File: chap4_files/figure-latex/johan-19.pdf Graphic file (type pdf)
-<use chap4_files/figure-latex/johan-19.pdf>
-Package pdftex.def Info: chap4_files/figure-latex/johan-19.pdf used on input li
-ne 998.
-(pdftex.def)             Requested size: 436.63019pt x 286.06805pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 1000--1001
-[]\T1/lmtt/m/n/10 ## debug en <text>#4: rug(docking[, i])   ## debug en <text>#
-4: browser()   ## debug en
- []
-
-<chap4_files/figure-latex/johan-20.pdf, id=9825, 438.63875pt x 286.06876pt>
-File: chap4_files/figure-latex/johan-20.pdf Graphic file (type pdf)
-<use chap4_files/figure-latex/johan-20.pdf>
-Package pdftex.def Info: chap4_files/figure-latex/johan-20.pdf used on input li
-ne 1002.
-(pdftex.def)             Requested size: 438.64435pt x 286.07242pt.
-[29 <./chap4_files/figure-latex/johan-18.pdf> <./chap4_files/figure-latex/johan
--19.pdf>] <chap4_files/figure-latex/johan-21.pdf, id=9846, 436.63126pt x 248.93
-pt>
-File: chap4_files/figure-latex/johan-21.pdf Graphic file (type pdf)
-<use chap4_files/figure-latex/johan-21.pdf>
-Package pdftex.def Info: chap4_files/figure-latex/johan-21.pdf used on input li
-ne 1008.
-(pdftex.def)             Requested size: 436.63019pt x 248.92938pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 1010--1012
-[]\T1/lmtt/m/n/10 r   ## Leer sobre la incertidumbre del 2 y explicarla     ## 
-Y leer el paper de Julian y
- []
-
-<chapter4/Figura1_4.pdf, id=9847, 597.50786pt x 845.04686pt>
-File: chapter4/Figura1_4.pdf Graphic file (type pdf)
-<use chapter4/Figura1_4.pdf>
-Package pdftex.def Info: chapter4/Figura1_4.pdf used on input line 1015.
-(pdftex.def)             Requested size: 459.91837pt x 650.456pt.
-
-Package xcolor Warning: Incompatible color definition on input line 1023.
-
-[30 <./chap4_files/figure-latex/johan-20.pdf> <./chap4_files/figure-latex/johan
--21.pdf>] [31pdfTeX warning (ext4): destination with the same identifier (name{
-figure.19}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.1023 \begin{Shaded}
-                      <./chapter4/Figura1_4.pdf>]
-
-Package xcolor Warning: Incompatible color definition on input line 1028.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1028.
-
-<chap4_files/figure-latex/substrateBox-1.pdf, id=9894, 459.7175pt x 313.17pt>
-File: chap4_files/figure-latex/substrateBox-1.pdf Graphic file (type pdf)
-<use chap4_files/figure-latex/substrateBox-1.pdf>
-Package pdftex.def Info: chap4_files/figure-latex/substrateBox-1.pdf used on in
-put line 1034.
-(pdftex.def)             Requested size: 459.7304pt x 313.17877pt.
-[32 <./chap4_files/figure-latex/substrateBox-1.pdf>]
-
-LaTeX Warning: Command \texttimes invalid in math mode on input line 1075.
-
-
-LaTeX Warning: Command \texttimes invalid in math mode on input line 1075.
-
-[33
-
-] [34
-
-] [35pdfTeX warning (ext4): destination with the same identifier (name{table.6}
-) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.1253 \clearpage
-                 ] <chapter4/Geles/PriAAbril30.png, id=9924, 600.2425pt x 442.6
-5375pt>
-File: chapter4/Geles/PriAAbril30.png Graphic file (type png)
-<use chapter4/Geles/PriAAbril30.png>
-Package pdftex.def Info: chapter4/Geles/PriAAbril30.png used on input line 1277
-.
-(pdftex.def)             Requested size: 469.77176pt x 346.43703pt.
-<chapter4/MutantControl.png, id=9925, 391.4625pt x 234.8775pt>
-File: chapter4/MutantControl.png Graphic file (type png)
-<use chapter4/MutantControl.png>
-Package pdftex.def Info: chapter4/MutantControl.png used on input line 1298.
-(pdftex.def)             Requested size: 391.46153pt x 234.87692pt.
-<chapter4/GTPCinetica.pdf, id=9926, 732.18042pt x 342.12921pt>
-File: chapter4/GTPCinetica.pdf Graphic file (type pdf)
-<use chapter4/GTPCinetica.pdf>
-Package pdftex.def Info: chapter4/GTPCinetica.pdf used on input line 1305.
-(pdftex.def)             Requested size: 469.76694pt x 219.51009pt.
-[36
-
-pdfTeX warning (ext4): destination with the same identifier (name{figure.20}) h
-as been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.1310 \clearpage
-                  <./chapter4/Geles/PriAAbril30.png>] [37pdfTeX warning (ext4):
- destination with the same identifier (name{figure.21}) has been already used, 
-duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.1310 \clearpage
-                 pdfTeX warning (ext4): destination with the same identifier (n
-ame{figure.22}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.1310 \clearpage
-                  <./chapter4/MutantControl.png> <./chapter4/GTPCinetica.pdf>] 
-[38
-
-]
-<chap4_files/figure-latex/Cinetics-1.pdf, id=46460, 446.66875pt x 251.94125pt>
-File: chap4_files/figure-latex/Cinetics-1.pdf Graphic file (type pdf)
-<use chap4_files/figure-latex/Cinetics-1.pdf>
-Package pdftex.def Info: chap4_files/figure-latex/Cinetics-1.pdf used on input 
-line 1349.
-(pdftex.def)             Requested size: 446.66765pt x 251.94063pt.
-<chap4_files/figure-latex/Cinetics-2.pdf, id=46461, 463.7325pt x 315.1775pt>
-File: chap4_files/figure-latex/Cinetics-2.pdf Graphic file (type pdf)
-<use chap4_files/figure-latex/Cinetics-2.pdf>
-Package pdftex.def Info: chap4_files/figure-latex/Cinetics-2.pdf used on input 
-line 1350.
-(pdftex.def)             Requested size: 463.73842pt x 315.18153pt.
-<chap4_files/figure-latex/Cinetics-3.pdf, id=46462, 459.7175pt x 305.14pt>
-File: chap4_files/figure-latex/Cinetics-3.pdf Graphic file (type pdf)
-<use chap4_files/figure-latex/Cinetics-3.pdf>
-Package pdftex.def Info: chap4_files/figure-latex/Cinetics-3.pdf used on input 
-line 1351.
-(pdftex.def)             Requested size: 459.73741pt x 305.1532pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 1349--1352
-[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1349--1352
-[]
- []
-
-[39
-
-] [40 <./chap4_files/figure-latex/Cinetics-1.pdf> <./chap4_files/figure-latex/C
-inetics-2.pdf>]
-<chap4_files/figure-latex/Cinetics-4.pdf, id=46485, 446.66875pt x 251.94125pt>
-File: chap4_files/figure-latex/Cinetics-4.pdf Graphic file (type pdf)
-<use chap4_files/figure-latex/Cinetics-4.pdf>
-Package pdftex.def Info: chap4_files/figure-latex/Cinetics-4.pdf used on input 
-line 1371.
-(pdftex.def)             Requested size: 446.66765pt x 251.94063pt.
-<chap4_files/figure-latex/Cinetics-5.pdf, id=46486, 464.73625pt x 315.1775pt>
-File: chap4_files/figure-latex/Cinetics-5.pdf Graphic file (type pdf)
-<use chap4_files/figure-latex/Cinetics-5.pdf>
-Package pdftex.def Info: chap4_files/figure-latex/Cinetics-5.pdf used on input 
-line 1372.
-(pdftex.def)             Requested size: 464.74928pt x 315.18634pt.
-<chap4_files/figure-latex/Cinetics-6.pdf, id=46487, 459.7175pt x 305.14pt>
-File: chap4_files/figure-latex/Cinetics-6.pdf Graphic file (type pdf)
-<use chap4_files/figure-latex/Cinetics-6.pdf>
-Package pdftex.def Info: chap4_files/figure-latex/Cinetics-6.pdf used on input 
-line 1373.
-(pdftex.def)             Requested size: 459.73741pt x 305.1532pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 1371--1374
-[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1371--1374
-[]
- []
-
-[41 <./chap4_files/figure-latex/Cinetics-3.pdf>] [42 <./chap4_files/figure-late
-x/Cinetics-4.pdf> <./chap4_files/figure-latex/Cinetics-5.pdf>] <chap4_files/fig
-ure-latex/slopes-1.pdf, id=46518, 440.64626pt x 266.9975pt>
-File: chap4_files/figure-latex/slopes-1.pdf Graphic file (type pdf)
-<use chap4_files/figure-latex/slopes-1.pdf>
-Package pdftex.def Info: chap4_files/figure-latex/slopes-1.pdf used on input li
-ne 1381.
-(pdftex.def)             Requested size: 440.66533pt x 267.00903pt.
-[43 <./chap4_files/figure-latex/Cinetics-6.pdf> <./chap4_files/figure-latex/slo
-pes-1.pdf>]
-
-Package xcolor Warning: Incompatible color definition on input line 1398.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1402.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1402.
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1405.
-[44]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1405.
-(./chap4.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1405.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1405.
-
-Package rerunfilecheck Info: File `chap4.out' has not changed.
-(rerunfilecheck)             Checksum: DE5CF3711EF8AE5FEF53926C948B4CC2;7170.
-
-LaTeX Warning: There were multiply-defined labels.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1405.
- ) 
+Runaway argument?
+{raciborskii\$ T3\&\&\& Alcaloide \textbackslash {} {[}1ex{]} \& \href \ETC.
+! File ended while scanning use of \Gscale@box@dd.
+<inserted text> 
+                \par 
+<*> chap4.tex
+              
 Here is how much of TeX's memory you used:
- 15089 strings out of 493304
- 221862 string characters out of 6139870
- 484958 words of memory out of 5000000
- 18042 multiletter control sequences out of 15000+600000
- 51024 words of font info for 121 fonts, out of 8000000 for 9000
+ 14650 strings out of 493304
+ 210248 string characters out of 6139870
+ 402035 words of memory out of 5000000
+ 17743 multiletter control sequences out of 15000+600000
+ 47760 words of font info for 97 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 34i,11n,35p,1185b,455s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
-ips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/s
-hare/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/l
-m-rm.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/f
-onts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.
-pfb></usr/share/texmf/fonts/type1/public/lm/lmmi5.pfb></usr/share/texmf/fonts/t
-ype1/public/lm/lmmi7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></us
-r/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/publ
-ic/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/t
-exmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/l
-msy7.pfb></usr/share/texmf/fonts/type1/public/lm/lmtk10.pfb></usr/share/texmf/f
-onts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtti10
-.pfb>
-Output written on chap4.pdf (44 pages, 14143417 bytes).
-PDF statistics:
- 46621 PDF objects out of 55141 (max. 8388607)
- 30872 compressed objects within 309 object streams
- 91 named destinations out of 1000 (max. 500000)
- 10627 words of extra memory for PDF output out of 12000 (max. 10000000)
+ 34i,11n,35p,1160b,339s stack positions out of 5000i,500n,10000p,200000b,80000s
 
+!  ==> Fatal error occurred, no output PDF file produced!
