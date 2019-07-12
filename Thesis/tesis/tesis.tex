@@ -584,19 +584,27 @@ starts here.
   
   \subsection{Subsistemas metabolicos}\label{subsistemas-metabolicos}
   
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.6]{PriA.pdf}
+  \caption[PriA isomeriza los sustratos PRA y ProFAR ]{\footnotesize{PriA cataliza la isomerización  de los sustratos nativos ProFAR y PRA. Convertir ProFAR es un paso de la síntesis de histidina catalizado por {hisA} en otros linajes bacterianos. Análogamente la isomerización de PRA es catalizada por {trpF} en otros linajes. En Actinobacteria PriA se ha subdidvidido en subfamilias. Entre ellas subHisA, que se ha subfuncionalizado a la función HisA, subTrpF que se ha subfuncionalizado a la función TrpF y finalmente PriB, que aún retiene la función TrpF pero con baja actividad catalítica.  }}
+  \label{fig:priAFigure}
+  \end{figure}
+  
   Los operones his y trp de histidina
   {[}\protect\hyperlink{ref-fondi_evolution_2009}{65}{]} y triptofano
   {[}\protect\hyperlink{ref-merino_evolution_2008}{66}{]} respectivamente,
   participantes del metabolismo de aminoacidos estan ampliamente
   distribuidos en los organismos bacterianos. En Actinobacteria la familia
-  promiscua PriA participa en ambas rutas biosinteticas, para su estudio
-  se han generado datos bioquimicos, genomicos y estructurales(Tabla 3).
-  En bacterias gram negativas estan presentes los operones his y trp y en
+  promiscua PriA participa en ambas rutas biosinteticas
+  \autoref{fig:priAFigure}, para su estudio se han generado datos
+  bioquímicos \autoref{tab:cineticos}, genómicos y estructurales. En
+  bacterias gram negativas estan presentes los operones his y trp y en
   lugar de PriA su familia homologa HisA. PriA comprende un conjunto de
-  subfamilias en Actinobacteria. En Streptomyces, el gen trpF se desplaza
-  de la vecindad genomica de trp, con lo que el homologo de hisA gana
-  promiscuidad aunque con baja actividad de TrpF, a esta subfamilia se le
-  llama PriB
+  subfamilias en Actinobacteria. En \emph{Streptomyces}, el gen
+  \emph{trpF} se desplaza de la vecindad genomica de trp, con lo que el
+  homologo de hisA gana promiscuidad aunque con baja actividad de TrpF, a
+  esta subfamilia se le llama PriB
   {[}\protect\hyperlink{ref-verduzco-castro_co-occurrence_2016}{67}{]}. En
   otras Actinobacterias trpF se pierde totalmente y la familia homologa de
   HisA, se vuelve promiscua
@@ -608,7 +616,63 @@ starts here.
   familia subtrpF se conserva solo a la funcion TrpF debido a la perdida
   del operon his {[}Juarez vazquez et al 2015 in prep{]}. Existen al menos
   43 familias de Actinobacteria sin explorar respecto a la funcionalidad
-  de PriA.
+  de PriA. En la \autoref{tab:cineticos} se muestra la constantes
+  catalíticas de PriA estimadas en diferentes organismos para estos dos
+  sustratos.
+  
+  \clearpage    
+  
+  \begin{landscape}  
+  Table: Capacidad catalítica respecto a PRA y ProFAR de miembros de la familia PriA \label{tab:cineticos} 
+  $$
+  \resizebox{\columnwidth}{!}{%
+  \begin{tabular}{ l c r c c c c c c c l}
+  \hline \\ [-1.5ex]
+  Fuente  &Familia & HisA $in\hspace{.1cm}vivo$ &TrpF $in\hspace{.1cm}vivo$ & $K{cat}^{ProFAR}[M^{-1}s^{-1}]$ & $Km^{ProFAR}[\mu M]$& $\frac{K{cat}}{Km} ProFAR$ & $K{cat}^{PRA}[M^{-1}s^{-1}]$ & $Km^{PRA}[\mu M]$  &  $\frac{Kcat}{Km} PRA $  &Referencia  \\ [1ex]
+  \hline \\ [-1.5ex]  
+  \textit{Escherichia} \textit{coli}         & HisA &- &- & 1.6 & 4.9 & 3.1 & -   & -   & 0   & Henn-Sax 2002 \\ [1ex]  
+  \textit{Escherichia}  \textit{coli}        &TrpF  &- &- &-    &-    &0    & 12.2& 34.5& 2.82& Sterner 1996 \\ [1ex]    
+  \textit{Mycobacterium} \textit{tuberculosis} &PriA&-&-&19&0.23&12&21&3.6&0.17& Due 2011\\ [1ex]    
+  \textit{Mycobacterium}  \textit{smegmatis} &PriA&*&*& 2.6 ± 0.5 & 0.85 $ \pm $ 0.04 &0.33& 7.9 $ \pm $  2.4& 3.1 $ \pm $0.43  &0.39& Verduzco-Castro 2016 \\ [1ex]   
+  \textit{Streptomyces} \textit{globisporus}  &PriA&*&*& 4.2 ± 0.8& 0.74 ± 0.03 &0.18& 11 ± 1.0 & 3.8 ± 0.2 &0.34& Verduzco-Castro 2016\\ [1ex]  
+  \textit{Streptomyces} \textit{coelicolor} &PriA&-&-& 3.6 ± 0.7 & 1.3 ± 0.2 &0.4& 5.0 ± 0.08 & 3.4 ± 0.09 &0.7& Noda-Garcia 2010\\ [1ex]   
+  \textit{Streptomyces} \textit{ipomoeae}  &PriB&*&*& 3.8 ± 0.2 & 0.82 ± 0.02 &0.21& 60.8 ± 1.1&  8.25 ± 0.4&0.14& Verduzco-Castro 2016\\ [1ex]   
+  \textit{Streptomyces} sp. Mg1  &PriB&*&*& 13.2 ± 3.4 &0.92 ± 0.19 &69&129.6 ± 34 &0.29 ± 0.04&0.0022&Verduzco-Castro 2016\\ [1ex]  
+  \textit{Streptomyces} sp. C&PriB&*&*&11.4 ± 3.4 &2.53 ± 0.74 &0.22&149. 9 ± 29& 1.4 ± 0.12 &9&Verduzco-Castro 2016\\ [1ex]    
+  \textit{Streptomyces} \textit{sviceus} &PriB&*&*&3.9 ± 0.89 &0.69 ± 0.04 &0.18&24.5 ± 4.0& 1.6 ± 0.29 &67&VVerduzco-Castro 2016\\ [1ex]   
+  \textit{Corynebacterium} \textit{diphteriae} &subHisA&-&-&4.4 ± 0.5&2.6 ± 0.3&0.59&&&0& Noda-Garcia 2013\\ [1ex]    
+  \textit{Corynebacterium} \textit{jeikeium} &PriA&-&-&2.3 ± 0.2&0.9 ± 0.08&0.39&5.1 ± 1.0&1.6 ± 0.16&0.31& Noda-Garcia 2013\\ [1ex]    
+  \textit{Corynebacterium} \textit{striatum} &subHisA&-&-&6.9 ± 0.7&2.1 ± 0.5&0.3&&&0& Noda-Garcia 2013 \\ [1ex]    
+  \textit{Corynebacterium} \textit{diphteriae}  L48I-F50L-T80S&subHisA&&&4.5 ± 1.5&0.6 ± 0.08&0.13&133 ± 10&0.05 ± 0.01&0.0004&NNoda-Garcia 2013\\ [1ex]    
+  \textit{Actinomyces} \textit{urogenitalis} DSM 15434&PriB&*&*&2.1 ± 0.5 &1.8 ± 0.2 &0.9&26.3 ± 6.3& 0.37 ± 0.09 &14&Verduzco-Castro 2016\\ [1ex]   
+  \textit{Actinomyces} \textit{odontolyticus}  ATCC 17982&subTrpF&&*&-&-&0&&&0.02&Juarez-Vazquez 2017\\ [1ex]    
+  \textit{Actinomyces} \textit{oris} K20 BABV01&PriA&&&&&0.02&&&0.01&Juarez-Vazquez 2017\\ [1ex]    
+  \textit{Actinomyces} sp. oral taxon 171 str. F0337&PriA&&&&&0.01&&&4&Juarez-Vazquez 2017\\ [1ex]    
+  \textit{Actinomyces} sp. oral taxon 848 str. F0332&subTrpF&&*&-&-&0&&&0.0001&Juarez-Vazquez 2017\\ [1ex]    
+  \textit{Actinomyces} \textit{urogenitalis} DSM 15434&PriA&&&&&0.01&&&0.02&Juarez-Vazquez 2017\\ [1ex]    
+  \textit{Bifidobacterium} \textit{adolescentis} L2-32&PriA&*&*&&&0.2&&&0.1&Juarez-Vazquez 2017\\ [1ex]    
+  \textit{Bifidobacterium} \textit{gallicum} DSM 20093 &PriA&*&*&&&0.1&&&0.04&Juarez-Vazquez 2017\\ [1ex]    
+  \textit{Bifidobacterium} \textit{longum} ATCC 15697&PriA&*&*&&&0.1&&&0.3&Juarez-Vazquez 2017\\ [1ex]    
+  Camera CAM1&Metagenoma&&&1.7 ± 0.1&0.3 ± 0.03&0.2&40 ± 7&3.5 ± 0.04&0.09&Noda-Garcia 2015\\ [1ex]    
+  CAM1 A81G&Metagenoma&&&1.7 ± 0.2&0.1 ± 0.01&0.06&32.2 ± 1.7&1.9 ± 0.1&0.06&Noda-Garcia 2015\\ [1ex]    
+  CAM1 A81S&Metagenoma&&&4.0 ± 0.9&0.2 ± 0.03&0.04&23.5 ± 6.5&0.5 ± 0.1&0.02&Noda-Garcia 2015\\ [1ex]    
+  CAM2&Metagenoma&&&n.d.&n.d.&0&n.d.&n.d.&0&Noda-Garcia 2015\\ [1ex]    
+  PriA Ancestral&Ancestral&&&9.4±1.6&0.3±0.009&0.03&4.3±0.4&0.6±0.02&0.13&Verduzco, Noda, sin publicar\\ [1ex]    
+  PriA SubHisA&Ancestral&&&3.7±1.01&0.5±0.03&0.1&-&-&0&Verduzco, Noda, sin publicar\\ [1ex]    
+  SubHisA Ancestral&Ancestral&&&6.3±0.7&0.15±0.03&0.02&-&-&0&Verduzco, Noda, sin publicar\\ [1ex]    
+  SubHisA PriA&Ancestral&&&27.7±3.4&0.05±0.005&2&167.82&0.03±0.002&0.0001&Verduzco, Noda, sin publicar\\ [1ex]    
+  \textit{Streptomyces} \textit{acidiscabies}&&0&0&163.6&0.1&&&&&Verduzco*\\ [1ex]  
+  \textit{A} \textit{visco} &&&46&1.37&36&3.4&&&&Juárez*\\ [1ex]  
+  \hline \\ [-1.5ex]
+  \hline
+  \end{tabular}
+  }
+  \label{tab:cineticos}  
+  %}
+  $$   
+  \end{landscape}
+  
+  \normalsize
   
   \section{Modelos computacionales}\label{modelos-computacionales}
   
@@ -3792,20 +3856,18 @@ starts here.
   
   Además, en Actinobacteria PriA ha mostrado un gradiente funcional. Esta
   variación divide a la familia en varias subfamilias según su capacidad
-  catalíticas en los sustratos ProFAR y PRA. En la \autoref{tab:cineticos}
-  se muestra la constantes catalíticas de PriA estimadas en diferentes
-  organismos para estos dos sustratos. Estos datos ejemplifican las
-  subfamilias de PriA, en la tabla se encuentran ejemplos de miembros de
-  PriB, la subfamilia ubicada en el género \emph{Streptomyces} con baja
-  capacidad de catálisis para la función TrpF. Varios \emph{Streptomyces}
-  con un ortólogo en la familia PriB, se diferencian de otras
-  Actinobacterias en que contienen en su genoma un gen \emph{trpF}
-  localizado fuera del contexto genómico inmediato de los operones de
-  histidina y triptofano. Otra subfamilia de PriA es subHisA, que ha
-  perdido totalmente la actividd TrpF, existen miembros de subHisA en
-  \emph{Corynebacteria} y en \emph{Actinomyces}. Finalmente en Actinomyces
-  encontramos la subfamilia \emph{subTrpF} que ha perdido la actividad de
-  HisA.
+  catalíticas en los sustratos ProFAR y PRA. En la introducción mostramos
+  datos que ejemplifican las subfamilias de PriA, incluyendo ejemplos de
+  miembros de PriB, la subfamilia ubicada en el género \emph{Streptomyces}
+  con baja capacidad de catálisis para la función TrpF. Varios
+  \emph{Streptomyces} con un ortólogo en la familia PriB, se diferencian
+  de otras Actinobacterias en que contienen en su genoma un gen
+  \emph{trpF} localizado fuera del contexto genómico inmediato de los
+  operones de histidina y triptofano. Otra subfamilia de PriA es subHisA,
+  que ha perdido totalmente la actividd TrpF, existen miembros de subHisA
+  en \emph{Corynebacteria} y en \emph{Actinomyces}. Finalmente en
+  Actinomyces encontramos la subfamilia \emph{subTrpF} que ha perdido la
+  actividad de HisA.
   
   En este capítulo en las siguientes secciones se exploran cuatro apectos
   de la familia PriA. \emph{i)} La distribución y el contexto genómico de
@@ -3816,58 +3878,6 @@ starts here.
   sustratos con métodos bioinformáticos, y finalmente \emph{iv)} La
   validación experimental de PriA en sustratos diferentes de PRA y ProFAR
   o bien en combinaciones de los mismos.
-  
-  Table: Capacidad catalítica respecto a PRA y ProFAR de miembros de la
-  familia PriA \label{tab:cineticos}\\
-  \clearpage    
-  
-  \textbackslash{}begin\{landscape\}\\
-  \[
-  \resizebox{\columnwidth}{!}{%
-  \begin{tabular}{ l c r c c c c c c c l}
-  \hline \\ [-1.5ex]
-  Fuente  &Familia & HisA $in\hspace{.1cm}vivo$ &TrpF $in\hspace{.1cm}vivo$ & $K{cat}^{ProFAR}[M^{-1}s^{-1}]$ & $Km^{ProFAR}[\mu M]$& $\frac{K{cat}}{Km} ProFAR$ & $K{cat}^{PRA}[M^{-1}s^{-1}]$ & $Km^{PRA}[\mu M]$  &  $\frac{Kcat}{Km} PRA $  &Referencia  \\ [1ex]
-  \hline \\ [-1.5ex]  
-  \textit{Escherichia} \textit{coli}         & HisA &- &- & 1.6 & 4.9 & 3.1 & -   & -   & 0   & Henn-Sax 2002 \\ [1ex]  
-  \textit{Escherichia}  \textit{coli}        &TrpF  &- &- &-    &-    &0    & 12.2& 34.5& 2.82& Sterner 1996 \\ [1ex]    
-  \textit{Mycobacterium} \textit{tuberculosis} &PriA&-&-&19&0.23&12&21&3.6&0.17& Due 2011\\ [1ex]    
-  \textit{Mycobacterium}  \textit{smegmatis} &PriA&*&*& 2.6 ± 0.5 & 0.85 $ \pm $ 0.04 &0.33& 7.9 $ \pm $  2.4& 3.1 $ \pm $0.43  &0.39& Verduzco-Castro 2016 \\ [1ex]   
-  \textit{Streptomyces} \textit{globisporus}  &PriA&*&*& 4.2 ± 0.8& 0.74 ± 0.03 &0.18& 11 ± 1.0 & 3.8 ± 0.2 &0.34& Verduzco-Castro 2016\\ [1ex]  
-  \textit{Streptomyces} \textit{coelicolor} &PriA&-&-& 3.6 ± 0.7 & 1.3 ± 0.2 &0.4& 5.0 ± 0.08 & 3.4 ± 0.09 &0.7& Noda-Garcia 2010\\ [1ex]   
-  \textit{Streptomyces} \textit{ipomoeae}  &PriB&*&*& 3.8 ± 0.2 & 0.82 ± 0.02 &0.21& 60.8 ± 1.1&  8.25 ± 0.4&0.14& Verduzco-Castro 2016\\ [1ex]   
-  \textit{Streptomyces} sp. Mg1  &PriB&*&*& 13.2 ± 3.4 &0.92 ± 0.19 &69&129.6 ± 34 &0.29 ± 0.04&0.0022&Verduzco-Castro 2016\\ [1ex]  
-  \textit{Streptomyces} sp. C&PriB&*&*&11.4 ± 3.4 &2.53 ± 0.74 &0.22&149. 9 ± 29& 1.4 ± 0.12 &9&Verduzco-Castro 2016\\ [1ex]    
-  \textit{Streptomyces} \textit{sviceus} &PriB&*&*&3.9 ± 0.89 &0.69 ± 0.04 &0.18&24.5 ± 4.0& 1.6 ± 0.29 &67&VVerduzco-Castro 2016\\ [1ex]   
-  \textit{Corynebacterium} \textit{diphteriae} &subHisA&-&-&4.4 ± 0.5&2.6 ± 0.3&0.59&&&0& Noda-Garcia 2013\\ [1ex]    
-  \textit{Corynebacterium} \textit{jeikeium} &PriA&-&-&2.3 ± 0.2&0.9 ± 0.08&0.39&5.1 ± 1.0&1.6 ± 0.16&0.31& Noda-Garcia 2013\\ [1ex]    
-  \textit{Corynebacterium} \textit{striatum} &subHisA&-&-&6.9 ± 0.7&2.1 ± 0.5&0.3&&&0& Noda-Garcia 2013 \\ [1ex]    
-  \textit{Corynebacterium} \textit{diphteriae}  L48I-F50L-T80S&subHisA&&&4.5 ± 1.5&0.6 ± 0.08&0.13&133 ± 10&0.05 ± 0.01&0.0004&NNoda-Garcia 2013\\ [1ex]    
-  \textit{Actinomyces} \textit{urogenitalis} DSM 15434&PriB&*&*&2.1 ± 0.5 &1.8 ± 0.2 &0.9&26.3 ± 6.3& 0.37 ± 0.09 &14&Verduzco-Castro 2016\\ [1ex]   
-  \textit{Actinomyces} \textit{odontolyticus}  ATCC 17982&subTrpF&&*&-&-&0&&&0.02&Juarez-Vazquez 2017\\ [1ex]    
-  \textit{Actinomyces} \textit{oris} K20 BABV01&PriA&&&&&0.02&&&0.01&Juarez-Vazquez 2017\\ [1ex]    
-  \textit{Actinomyces} sp. oral taxon 171 str. F0337&PriA&&&&&0.01&&&4&Juarez-Vazquez 2017\\ [1ex]    
-  \textit{Actinomyces} sp. oral taxon 848 str. F0332&subTrpF&&*&-&-&0&&&0.0001&Juarez-Vazquez 2017\\ [1ex]    
-  \textit{Actinomyces} \textit{urogenitalis} DSM 15434&PriA&&&&&0.01&&&0.02&Juarez-Vazquez 2017\\ [1ex]    
-  \textit{Bifidobacterium} \textit{adolescentis} L2-32&PriA&*&*&&&0.2&&&0.1&Juarez-Vazquez 2017\\ [1ex]    
-  \textit{Bifidobacterium} \textit{gallicum} DSM 20093 &PriA&*&*&&&0.1&&&0.04&Juarez-Vazquez 2017\\ [1ex]    
-  \textit{Bifidobacterium} \textit{longum} ATCC 15697&PriA&*&*&&&0.1&&&0.3&Juarez-Vazquez 2017\\ [1ex]    
-  Camera CAM1&Metagenoma&&&1.7 ± 0.1&0.3 ± 0.03&0.2&40 ± 7&3.5 ± 0.04&0.09&Noda-Garcia 2015\\ [1ex]    
-  CAM1 A81G&Metagenoma&&&1.7 ± 0.2&0.1 ± 0.01&0.06&32.2 ± 1.7&1.9 ± 0.1&0.06&Noda-Garcia 2015\\ [1ex]    
-  CAM1 A81S&Metagenoma&&&4.0 ± 0.9&0.2 ± 0.03&0.04&23.5 ± 6.5&0.5 ± 0.1&0.02&Noda-Garcia 2015\\ [1ex]    
-  CAM2&Metagenoma&&&n.d.&n.d.&0&n.d.&n.d.&0&Noda-Garcia 2015\\ [1ex]    
-  PriA Ancestral&Ancestral&&&9.4±1.6&0.3±0.009&0.03&4.3±0.4&0.6±0.02&0.13&Verduzco, Noda, sin publicar\\ [1ex]    
-  PriA SubHisA&Ancestral&&&3.7±1.01&0.5±0.03&0.1&-&-&0&Verduzco, Noda, sin publicar\\ [1ex]    
-  SubHisA Ancestral&Ancestral&&&6.3±0.7&0.15±0.03&0.02&-&-&0&Verduzco, Noda, sin publicar\\ [1ex]    
-  SubHisA PriA&Ancestral&&&27.7±3.4&0.05±0.005&2&167.82&0.03±0.002&0.0001&Verduzco, Noda, sin publicar\\ [1ex]    
-  \textit{Streptomyces} \textit{acidiscabies}&&0&0&163.6&0.1&&&&&Verduzco*\\ [1ex]  
-  \textit{A} \textit{visco} &&&46&1.37&36&3.4&&&&Juárez*\\ [1ex]  
-  \hline \\ [-1.5ex]
-  \hline
-  \end{tabular}
-  }
-  %}
-  \]\\
-  \textbackslash{}end\{landscape\} \normalsize
   
   \section{PriA como modelo de familia enzimática donde las expansiones no
   son condición necesaria para la
@@ -3938,7 +3948,7 @@ starts here.
   \begin{figure}[h!tbp]
   \centering
   \includegraphics[angle = 0,scale = 0.8]{chapter4/PriAEvoMiningCopies.pdf}
-  \caption[Copias extras de PriA en Actinobacteria, Cyanobacteria, Pseudomonas y Archaea]{\footnotesize{}}
+  \caption[Copias extras de PriA en Actinobacteria, Cyanobacteria, {Pseudomonas} y Archaea]{\footnotesize{Número de copias de PriA en Actinobacteria, Cyanobacteria, {Pseudomonas} y Archaea. En Actinobacteria, donde se ha comprobado su promiscuidad enzimática la moda en el número de copias es uno (verde). En Cyanobacteria y Archaea se observa una mezcla de hojas verdes y hojas amarillas, donde las amarillas son nodos que pertenecen a organismos con dos copias. También en estos linajes algunos organismos poseeen tres copias (morado) y cuatro o cinco (rojo). En {Pseudomonas} la mayoría de los organismos muestran dos copias}}
   \label{fig:PriAEvoMiningCopies}
   \end{figure}
   
@@ -4043,7 +4053,7 @@ starts here.
   \bottomrule
   \end{longtable}
   
-  \subsection{Análisis de contextos genómicos de PriA en distintos linajes
+  \section{Análisis de contextos genómicos de PriA en distintos linajes
   utilizando
   CORASON}\label{analisis-de-contextos-genomicos-de-pria-en-distintos-linajes-utilizando-corason}
   
@@ -4104,9 +4114,8 @@ starts here.
   \label{fig:saxitoxin}
   \end{figure}
   
-  \section{El monitoreo en cambios de aminoácidos en PriA para estudiar
-  rutas evolutivas y reconstrucciones de la estructura
-  tridimensional.}\label{el-monitoreo-en-cambios-de-aminoacidos-en-pria-para-estudiar-rutas-evolutivas-y-reconstrucciones-de-la-estructura-tridimensional.}
+  \section{Evolución molecular y estructural de
+  PriA}\label{evolucion-molecular-y-estructural-de-pria}
   
   En esta segunda sección concerniente a la familia PriA se busca
   información contenida en la secuencia de aminoácidos. En la primera
@@ -4140,7 +4149,7 @@ starts here.
   las dos funciones?
   
   Asi pues se desarrolló un
-  \href{https://github.com/nselem/perlas/tree/master/LiaTrayectory}{script}
+  \href{https://github.com/nselem/perlas/tree/master/LiaTrayectory}{programa}
   utilizando recursividad para reconstruir todas las rutas posibles. El
   total de rutas calculadas hasta la mutación 11 fue de 2928 caminos, las
   rutas posibles hasta la mutante 9.3 son 790. Estas rutas son mostradas
@@ -4175,10 +4184,12 @@ starts here.
   
   \begin{figure}[h!tbp]
   \centering
-  \includegraphics[angle = 0,scale = 0.8]{chapter4/LianetFiguras/SolocirculosPRA_PRO_RUTAS_10_1_r002.png}
+  \includegraphics[angle = 0,scale = 0.7]{chapter4/LianetFiguras/SolocirculosPRA_PRO_RUTAS_10_1_r002.png}
   \caption[Positive increments on PRA]{\footnotesize{Rutas de evolución dirigida para ganar la función PRA. En la figura se muestra como la mayoría de los pasos que incrementan una función hacer decrecer la capacidad catalítica de la otra. }}
   \label{fig:PRARutas}
   \end{figure}
+  
+  \clearpage  
   
   \subsection{Los residuos que covarían en el registro evolutivo de PriA
   permiten una reconstrucción aproximada de su estructura
@@ -4211,31 +4222,38 @@ starts here.
   que tiene muchas dependencias, por ello desarrollé un contenedor docker
   donde las dependencias y el software quedan instalados. Este desarrollo
   fue incluido por los desarrolladores originales como sugerencia de
-  instalación.\\
-  El contenedor docker implementa EVcouplings python framework
-  {[}\protect\hyperlink{ref-hopf_evcouplings_2019}{174}{]} que comprende
-  cinco etapas para estudiar el análisis de coevolución de residuos de una
-  familia de proteínas. Estas etapas son i) Alineado, ii) análisis de
-  acoplamiento, iii) plegamiento basado en acoplamientos iv) análisis de
-  mutación y v) comparación con estructuras conocidas.
+  instalación. El contenedor docker implementa EVcouplings python
+  framework {[}\protect\hyperlink{ref-hopf_evcouplings_2019}{174}{]} que
+  comprende cinco etapas para estudiar el análisis de coevolución de
+  residuos de una familia de proteínas. Estas etapas son i) Alineado, ii)
+  análisis de acoplamiento, iii) plegamiento basado en acoplamientos iv)
+  análisis de mutación y v) comparación con estructuras conocidas.
   
-  EVcouplings fue aplicado a PriA de Streptomyces coelicolor con
-  identificador de Uniprot HIS4\_STRCO. Las secuencias para las
-  alineaciones se recuperaron automáticamente de Uniprot, otros parámetros
-  se dejaron con la configuración inicial del archivo de configuración.
-  Como resultado se modeló la estructura de PriA con los acoplamientos de
-  sus aminoácidos. Una comparación con una estructura cristalográfica es
-  mostrada en la \autoref{fig:CouplingsFoldingPriA}
+  EVcouplings fue aplicado a la secuencia de PriA de \emph{Streptomyces
+  coelicolor} (identificador de Uniprot HIS4\_STRCO). Las secuencias para
+  la alineación se recuperaron automáticamente de Uniprot, otros
+  parámetros se dejaron con la configuración inicial del archivo de
+  configuración de EVCouplings. Como resultado se modeló la estructura de
+  PriA utilizando los acoplamientos de sus aminoácidos. Una comparación de
+  la estructura lograda con una estructura cristalográfica es mostrada en
+  la \autoref{fig:CouplingsFoldingPriA}. El RMSD es una técnica usual de
+  comparaci\{on de estructuras. EL RSMD entre estas dos proteínas es de
+  3.362 \(\r{A}\), es incluso mejor que el 3.730 entre la 1VZW y la 4TX9
+  de \emph{Streptomyces sviceus ATCC 29083}. Como las estructuras tienen
+  una resolución de 1-3 A° un RMSD es aceptable. Sin embargo los RMSD
+  Entre otras estructuras cristalográficas de Streptomyces coelicolor son
+  menores a 1. 2.7--4.8 Å Error de EVCouplings 0.449 2VEP 1VZW
   
-  La estructura reconstruida es parecida, pero para obtener mejor
-  definición es posible que se deba refinar la selección de las secuencias
-  del alineamiento, diferenciando entre secuencias conocidas de PriA,
-  subHisA, PriB y subTrpF.
+  Así pues, la estructura reconstruida es parecida, pero para obtener
+  mejor definición es posible que se deba refinar la selección de las
+  secuencias del alineamiento, diferenciando entre secuencias conocidas de
+  PriA, subHisA, PriB y subTrpF.
   
   \begin{figure}[h!tbp]
   \centering
   \includegraphics[angle = 0,scale = .5]{chapter4/Couplings/PriACouplingFoldings.png}
-  \caption[Superposición de estructura de PriA generado por Folding con la estructura cristalográfica]{\footnotesize{Comparación de estructura de PriA de {Streptomyces} {coelicolor} generada por EVcouplings con la estructura cristalográfica}}
+  \caption[Superposición de estructura de PriA generado por Folding con la estructura cristalográfica]{\footnotesize{Comparación de estructura tridimensional de PriA generada por EVcouplings con una estructura cristalográfica de {Streptomyces} {coelicolor}. En azul se muestra la estructura generada considerando acoplamientos de los aminoácidos de PriA según el registro evolutivo. En verde está la estructura 1vzw obtenida experimentalmente. En la parte inferior de la figura se muestran las dos estructuras alineadas. Su RMSD es de 3.362 
+  {A}}}
   \label{fig:CouplingsFoldingPriA}
   \end{figure}
   
@@ -4301,7 +4319,7 @@ starts here.
   interesantemente se encontraron 159 Corynebacterium, 49 Streptomyces y 2
   Actinokineospora sin 131D, entre ellos el ya mencionado
   \emph{Streptomyces CT 34} y \emph{Streptomyces rimosus} . En
-  Corynebacterium se encuentra localizada la familia subHisA y en
+  \emph{Corynebacterium} se encuentra localizada la familia subHisA y en
   Streptomyces la familia PriB, la variabilidad mostrada en estos géneros
   podría estar relacionada con la existencia de estas familias. A futuro,
   para obtener resultados exclusivos sobre la covariación de residuos en
