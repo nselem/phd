@@ -67,9 +67,11 @@ label(path = "chapter4/isomerizacion.pdf",
       type = "figure")
 ```
 
-PriA es una familia de enzimas de Actinobacteria homóloga a la familia HisA en Enterobacteria. Según las definiciones de este trabajo PriA es una familia promiscua. Varios miembros de PriA han sido sujetos a estudios de cinéticas enzimáticas demostrándose su capacidad de catalizar tanto la reacción correspondiente a HisA como la de TrpF. Es decir PriA participa a la vez en las rutas de síntesis de Histidina y Triptofano, al menos en varias Actinobacterias. Los primeros miembros caracterizados como promiscuos en esta familia en el 2003 fueron _Streptomyces coelicolor_ y _Mycobacterium tuberculosis_ [@baronagomez_occurrence_2003]. La mayoría de las actinobacterias han perdido el gen trpF en la ruta del triptofano, por lo que se cree que la promiscuidad de PriA está extendida en un gran subconjunto de Actinobacteria. PriA en la ruta de histidina isomeriza el sustrato ProFAR en PRFAR, realizando la función HisA. En la ruta de triptofano lleva a cabo la isomerización de PRA en CdRP actuando análogamente a la función TrpF en la ruta del triptófano. En _Streptomyces coelicolor_ varios genes de los operones de histidina y triprofano están en la vecindad genómica de PriA. 
+PriA es la familia de enzimas de Actinobacteria homóloga a la familia HisA existente en Enterobacteria, Cyanobacteria, _Pseudomonas_ y Archaea. Según las definiciones de este trabajo PriA es una familia promiscua ya que varios miembros de PriA han demostrado mediante cinéticas enzimáticas _in vitro_, su capacidad de catalizar tanto la reacción correspondiente a su homólogo HisA como la isomerización que cataliza TrpF. Como ya se explicó en la introducción TrpF es una reacción involucrada en la producción de triptofano. Es decir, se ha mostrado que en varias Actinobacterias PriA participa a la vez en las rutas de síntesis de histidina y triptofano. Los primeros miembros caracterizados como promiscuos en esta familia fueron _Streptomyces coelicolor_ y _Mycobacterium tuberculosis_ [@baronagomez_occurrence_2003] durante el año 2003. 
 
-Además, en Actinobacteria PriA ha mostrado un gradiente funcional. Esta variación divide a la familia en varias subfamilias según su capacidad catalíticas en los sustratos ProFAR y PRA.  En la introducción mostramos datos que ejemplifican las subfamilias de PriA, incluyendo ejemplos de miembros de PriB, la subfamilia ubicada en el género _Streptomyces_ con baja capacidad de catálisis para la función TrpF. Varios _Streptomyces_ con un ortólogo en la familia PriB, se diferencian de otras Actinobacterias en que contienen en su genoma un gen _trpF_ localizado fuera del contexto genómico inmediato de los operones de histidina y triptofano. Otra subfamilia de PriA es subHisA, que ha perdido totalmente la actividd TrpF, existen miembros de subHisA en _Corynebacteria_ y en _Actinomyces_. Finalmente en Actinomyces encontramos la subfamilia _subTrpF_ que ha perdido la actividad de HisA.  
+La mayoría de las actinobacterias han perdido el gen _trpF_ aunque conservan el resto del operón de triptofano, por lo que se cree que la promiscuidad de PriA está extendida en un gran subconjunto de Actinobacteria. En la ruta de histidina PriA isomeriza el sustrato ProFAR en PRFAR, realizando la función HisA. En la ruta de triptofano PriA lleva a cabo la isomerización de PRA en CdRP actuando análogamente a la función TrpF en la ruta del triptofano. La vecindad genómica de PriA en _Streptomyces coelicolor_ y en otras Actinobacterias contiene genes tanto del operón de histidina como del de triprofano.
+
+Además, en Actinobacteria PriA ha mostrado un gradiente funcional. Esta variación divide a la familia en varias subfamilias según su capacidad catalítica en los sustratos ProFAR y PRA.  En la introducción mostramos datos que ejemplifican las subfamilias de PriA, incluyendo ejemplos de miembros de PriB, la subfamilia ubicada en el género _Streptomyces_ con baja capacidad de catálisis para la función TrpF. Varios _Streptomyces_ con un ortólogo en la familia PriB, se diferencian de otras Actinobacterias en que contienen en su genoma un gen _trpF_ localizado fuera del contexto genómico inmediato de los operones de histidina y triptofano. Otra subfamilia de PriA es subHisA, que ha perdido totalmente la actividad TrpF, existen miembros de subHisA en _Corynebacteria_ y en _Actinomyces_. Finalmente en Actinomyces encontramos la subfamilia _subTrpF_ que ha perdido la actividad de HisA.  
 
 En este capítulo en las siguientes secciones se exploran cuatro apectos de la familia PriA. _i)_ La distribución y el contexto genómico de PriA en diversos linajes genómicos. _ii)_ La información contenida a nivel de aminoácidos en variantes de PriA como medio de studio de rutas evolutivas y su relación con la reconstrucción de su estructura tridimensional. _iii)_ Las posibles afinidades de PriA por otros sustratos con métodos bioinformáticos, y finalmente _iv)_ La validación experimental de PriA en sustratos diferentes de PRA y ProFAR o bien en combinaciones de los mismos.  
 
@@ -104,9 +106,20 @@ label(path = "chapter4/PriAEvoMiningCopies.pdf",
       type = "figure")
 ```
 
-Después de explorar cuáles organismos tienen expansiones de PriA, a continuación se muestra en la `r ref(label = "PriATrees", type = "figure")` el posible destino metabólico de las copias extra de la familia. El árbl de Actinobacteria está poblado de hojas rojas, es decir de PriA dedicadas al metabolismo conservado, en este caso a las rutas de Histidina y Triptofano. Sin embargo hay algunas hojas grises, como es el caso de los dos _Serenicoccus_ mencionados previamente. Es posible que estas PriA puedan tener funciones alternativas. Además, en Actinobacteria la PriA de _Janibacter Hoilley_, la rama más larga del árbol, es muy divergente. Esto se debe a que existe una fusión de PriA con HisH, que no parece ser un artefacto de anotación ya que hay otros _Janibacter_ con PriA ligeramente más grandes que el promedio.  
+Después de explorar cuáles organismos tienen expansiones de PriA, a continuación se muestra en la `r ref(label = "PriATrees", type = "figure")` el posible destino metabólico de las copias extra de la familia. El árbol de Actinobacteria está poblado de hojas rojas `r ref(label = "PriATrees", type = "figure")`, es decir de PriA dedicadas al metabolismo conservado, en este caso relacionado a las rutas de Histidina y Triptofano. Sin embargo hay algunas hojas grises, como es el caso de los dos _Serenicoccus_ mencionados previamente. Es posible que estas PriA puedan tener funciones alternativas. Además, en Actinobacteria la PriA de _Janibacter Hoilley_, la rama más larga del árbol, es muy divergente. Esto se debe a que existe una fusión de PriA con HisH. La fusión de genes bacterianos es un mecanismo común para formar proteínas multidominio [@pasek_gene_2006]. De hecho, dentro del operon de histidina existen fusiones reportadas HisNB y HisIE con proteínas bifuncionales en ciertas proteobacterias [@fani_origin_2005]. La fusión aquí presentada no parece ser un artefacto de anotación ya que hay otros genomas de _Janibacter_ con secuencias de PriA más grandes que el promedio. Los árboles que se produjeron por EvoMining están disponibles para exploración interactiva en Microreact en los links de la `r ref("arboles", type = "table")`:  
 
-En Cyanobacteria hay pocas hojas verdes (EvoMining predictions) y no están localizadas cerca de la HisA de saxitoxin, el BGC proveniente de Cyanobacteria. En _Pseudomonas_ hay una gran población de predicciones de EvoMining, pero son falsos positivos, ya que estas no corresponden a una rama dedicada al metabolismo secundario, sino a la rama de la ciclasa. En Archaea algunas de los hojas grises, es decir sin destino metabólico conocido serán exploradas en la siguiente sección.   
+Table: Árboles EvoMining de PriA en MicroReact \label{tab:arboles}  
+  
+|  Linaje	| Link al árbol de EvoMining en Microreact  	|  
+|---	|:---:|  
+|  Actinobacteria	|  [7g2IGfkv9](https://microreact.org/project/7g2IGfkv9)	|  
+|  Cyanobacteria	|[qF6jWRMox](https://microreact.org/project/qF6jWRMox) 	|  
+|  	_Pseudomonas_| [ydff6DWqs](https://microreact.org/project/ydff6DWqs)	|  
+|  Archaea	|  [Ig-m9Cm6f](https://microreact.org/project/Ig-m9Cm6f)|  
+
+En Cyanobacteria hay pocas predicciones de EvoMining, lo que se muestra en escasas hojas verdes `r ref(label = "PriATrees", type = "figure")` que además no están localizadas cerca de su reclutamiento la HisA de saxitoxin, el BGC proveniente de Cyanobacteria. En _Pseudomonas_ hay una gran población de predicciones de EvoMining. Estas predicciones corresponden a HisF, la subunidad enzimática imidazol glicerol fosfato sintasa. HisA proviene de una duplicación de un ancestro común de la mitad de su tamaño y HisF proviene de la duplicacion de HisA [@fani_evolution_1994,@fani_paralogous_1997]. Por ello puede considerarse que EvoMining en efecto está encontrando una expansión de HisA que consiste en la familia HisF en los linajes Cyanobacteria y _Pseudomonas_. En su momento HisF fue parte del _dispensable genome_, no todos los organismos poseían esta expansión, pero posteriormente, al parecer antes del último ancestro común de Archaea, Bacteria y Eukarya, la síntesis de histidina fue fijada en el _shell genome_ [@@fondi_evolution_2009]. Este es un caso donde lo que alguna vez fue _dispensable genome_ / metabolismo secundario, se ha vuelto _shell genome_ / metabolismo conservado y donde se muestra que en estos linajes Cyanobacteria y _Pseudomonas_ EvoMining aún es capaz detectar esa marca de expansión. El reclutamiento que hace que el árbol de _Pseudomonas_ tenga una rama verde está anotado funcionalmente no como una HisA, sino como una [HisF](https://www.ncbi.nlm.nih.gov/protein/CAB65215.1/) de _Legionella pneumophila_, una proteobacteria productora de un lipopolisacárido.  
+
+En Archaea, la rama central con una mezcla de hojas grises y rojas `r ref(label = "PriATrees", type = "figure")` contiene también copias de HisF provenientes de genomas de _Sulfolobus_. Al verficar en el árbol interactivo en Microreact  `r ref(label = "arboles", type = "table")` el número de copias presente en organismos con un homólogo clasificado como HisF se comprobó que los _Sulfolobus_ sólo poseen una copia en este árbol. Sin embargo, tanto al explorar manualmente los genomas de _Sulfolobus_, como al revisar la literatura sobre metabolismo de histidina en Archaea se encontró que sí se han encontrado homólogos de PriA en genomas de _Sulfolobus_ [@fondi_evolution_2009]. Por tanto este árbol sugiere que aunque existe tanto PriA como su expansión HisF en el género _Sulfolobus_, la copia HisF es la más parecida a la semilla con que se generó este árbol. Además la similitud de secuencia del homólogo de HisA no fue suficiente para recuperar copias de HisA en este experimento computacional. Algunas de los hojas grises del árbol sin destino metabólico conocido serán exploradas en la siguiente sección.   
 
 ```{r PriATrees, results = "asis",message=FALSE,echo=FALSE}
 label(path = "chapter4/PriAEvoMining.pdf", 
@@ -118,7 +131,7 @@ label(path = "chapter4/PriAEvoMining.pdf",
       type = "figure")
 ```
 
-Todos los reclutamientos (marcados en azul en el árbol) que tuvieron estas expansiones en estos linajes genómicos están listados en la tabla `r ref("reclutamientos", type = "table")`.  Entre ellos se encuentran dos toxinas de Cyanobacteria[@moustafa_origin_2009], un lipopolisacárido producido por una Proteobacteria y un BGC productor de cloro pentostatina producido en Actinobacteria [@gao_biosynthesis_2017]. 
+Los reclutamientos conocidos, marcados en azul en el árbol, que tuvo la familia expandida PriA/HisA en estos linajes genómicos están listados en la tabla `r ref("reclutamientos", type = "table")`.  Entre ellos se encuentran dos toxinas de Cyanobacteria[@moustafa_origin_2009], un lipopolisacárido producido por una Proteobacteria y un BGC productor de cloro-pentostatina producido en Actinobacteria [@gao_biosynthesis_2017]. 
 
 
 Table: Reclutamientos de expansiones de PriA en MIBiG \label{tab:reclutamientos}  
@@ -153,36 +166,35 @@ label(path = "chapter4/ada.png",
 ```
 
 
-Finalmente, los árboles que se produjeron por EvoMining están disponibles para exploración interactiva en Microreact en los links de la `r ref("arboles", type = "table")`:  
-
-Table: Árboles EvoMining de PriA en MicroReact \label{tab:arboles}  
-  
-|  Linaje	| Link al árbol de EvoMining en Microreact  	|  
-|---	|:---:|  
-|  Actinobacteria	|  [7g2IGfkv9](https://microreact.org/project/7g2IGfkv9)	|  
-|  Cyanobacteria	|[qF6jWRMox](https://microreact.org/project/qF6jWRMox) 	|  
-|  	_Pseudomonas_| [ydff6DWqs](https://microreact.org/project/ydff6DWqs)	|  
-|  Archaea	|  [Ig-m9Cm6f](https://microreact.org/project/Ig-m9Cm6f)|  
-  
 
 
 ## Análisis de contextos genómicos de PriA en distintos linajes utilizando CORASON  
-En Actinobacteria, se observó que todos los _Streptomyces_ tienen el cluster de PriA parcialmente conservado con respecto al BGC de _Streptomyces coelicolor_. Ejemplos de ello son _S. roseous_, _S. sviceus_, _S. sp C_ y _S. Mg1_ donde genes tanto de la ruta de histidina como de triptofano rodean a PriA. Otros como _S rimosus_ , _S HmicA12_ y _S. sp CT34_ tienen los genes de triptofano más alejados  `r ref(label = "PriACORASON", type = "figure")` . Como ya se describió en la sección de EvoMining, el único organismo de este género con una copia extra de PriA es _Streptomyces_ CT34. Esta copia parece deberse a transferencia horizontal dado que su mejor hit en NCBI proviene de una _Lentzea_. Aún así parece ser un homólogo lejano ya que tuvo 50% de identidad en 98% de cobertura con respecto a la copia de _Lentzea_. Otro caso interesante en Actinobacteria son las Actinomaduras, ya que CORASON muestra que el cluster _ada_ no está conservado en ellas (datos no mostrados). Además, también en Actinobacteria CORASON muestra en _Sporichthya polymorpha_ DSM 43042 una PriA precedida por una NRPS, una enzima por excelencia de productos naturales. En otros organismos antiSMASH predice que PriA forma parte de clusters putativos, por ejemplo en _Modestobacter marinus_ NC_0179551, _Geodermatophilus obscurus_, y en
+En Actinobacteria, se observó que todos los _Streptomyces_ tienen el cluster de PriA parcialmente conservado con respecto al BGC de _Streptomyces coelicolor_. Ejemplos de ello son _S. roseous_, _S. sviceus_, _S. sp C_ y _S. Mg1_ donde genes tanto de la ruta de histidina como de triptofano rodean a PriA. Otros como _S rimosus_ , _S HmicA12_ y _S. sp CT34_ tienen los genes de triptofano más alejados  `r ref(label = "ActinoCORASON", type = "figure")` . Como ya se describió en la sección de EvoMining, el único organismo de este género con una copia extra de PriA es _Streptomyces_ CT34. Esta copia parece deberse a transferencia horizontal dado que su mejor hit en NCBI proviene de una _Lentzea_. Aún así parece ser un homólogo lejano ya que tuvo 50% de identidad en 98% de cobertura con respecto a la copia de _Lentzea_. Otro caso interesante en Actinobacteria son las Actinomaduras, ya que CORASON muestra que el cluster _ada_ no está conservado en ellas (datos no mostrados). Además, también en Actinobacteria CORASON muestra en _Sporichthya polymorpha_ DSM 43042 una PriA precedida por una NRPS, una enzima por excelencia de productos naturales. En otros organismos antiSMASH predice que PriA forma parte de clusters putativos, por ejemplo en _Modestobacter marinus_ NC_0179551, _Geodermatophilus obscurus_, y en
 _Streptacidiphilus jeojiense_. Los contornos de los genes reconocidos por antiSMASH como parte de un BGC son marcados en azul en las figuras de CORASON.  
 
-En cuanto a Archaea, los contextos mostrados en los páneles b y c de la `r ref(label = "PriACORASON", type = "figure")` muestran que si bien existen algunos contextos como el de ciertos _Thermococcus_ donde PriA está rodeada de genes de histidina y triptofano, esta configuración no es la generalidad. Al contrario, parece que no hay una configuración conservada que prevalezca en todo Archaea. Esto puede deberse a que Archaea es un dominio, no un phylum como Actinobacteria, y por tanto hay una mayor distancia entre los organismos que la conforman.  
-
-```{r PriAcorasonCyanos, results = "asis",message=FALSE,echo=FALSE}
-label(path = "chapter4/CORASON/CORASON.pdf", 
-      caption = "Contextos de PriA en Actinobacteria y Archaea",
+```{r ActinoCORASON, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter4/CORASON/ActinoCORASON.pdf", 
+      caption = "Contextos de PriA en Actinobacteria",
       scale=.7,
-      label = "PriACORASON", 
+      label = "ActinoCORASON", 
       cap.size = "footnotesize",
-      alt.cap="Contextos de PriA en Actinobacteria y Archaea",
+      alt.cap="Contextos de PriA en Actinobacteria",
       type = "figure")
 ``` 
 
-En cuanto a PriA en Cyanobacteria la visualización de contextos producida por CORASON tomando como referencia el cluster de saxitoxin,  muestra que las enzimas biosintéticas de ese no están conservadas en otros organismos. Además en el lado izquierdo de la `r ref(label = "saxitoxin", type = "figure")` se muestra que la PriA del BGC saxitoxin no está ubicada en una rama de PriA divergente, al contrario está en la parte más conservada. Por estas razones es posible que PriA esté en la orilla del BGC de saxitosin y más bien no participe en la síntesis de este compuesto.
+En cuanto a Archaea el panel b de la `r ref(label = "ArchaeaCORASON", type = "figure")` muestran que si bien existen contextos como el de ciertos _Thermococcus_ donde HisA está rodeada de genes de histidina y triptofano, esta configuración no es la generalidad. Dentro de Euryarchaeota en _Archaeoglobales_, _Halobacteriales_, _Methanobacteriales_, _Methanococcales_, y _Methanopyrales_ los genes del operón his están distribuidos en el genoma. En _Thermosarcinales_ donde se conocía la existencia del suboperon _hisGBA_ se observó que que se encuentra conservado en todo el orden.  No existe una configuración conservada que prevalezca en todo Archaea. Esto puede deberse a que Archaea es un dominio, no un phylum como Actinobacteria, y por tanto hay una mayor distancia entre los organismos que la conforman.  Fusion FlaJ ensamblado de flagelo
+
+```{r ArchaeaCORASON, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter4/CORASON/ArchaeaCORASON.pdf", 
+      caption = "Contextos de PriA en Archaea",
+      scale=.7,
+      label = "ArchaeaCORASON", 
+      cap.size = "footnotesize",
+      alt.cap="Contextos de PriA en Archaea",
+      type = "figure")
+``` 
+
+El contexto que rodea al reclutamiento de HisA en el cluster de saxitoxina no está conservado en Cyanobacteria según la visualización de contextos producida por CORASON. Tomando como semilla la HisA del BGC de saxitoxina y como referencia el cluster de saxitoxina, se muestra que si bien los reguladores del BGC saxitoxina están conservados en la vecindad genómica de HisA en otros organismos, este no es el caso para las enzimas biosintéticasdel _cluster_. Además en el lado izquierdo de la `r ref(label = "saxitoxin", type = "figure")` se muestra que la HisA del BGC saxitoxina no está ubicada en una rama de PriA divergente, al contrario está embebida en la parte más conservada. Por estas razones es posible que PriA esté en la orilla del BGC de saxitosina y más bien no participe en la síntesis de este compuesto o bien que mantenga su función primaria y a la ve tenga una función aún desconocida teniendo un papel en la regulación de la producción de saxitosina.
 
 ```{r PriAcorason, results = "asis",message=FALSE,echo=FALSE}
 label(path = "chapter4/CORASON/saxitoxin.pdf", 
@@ -225,15 +237,14 @@ label(path = "chapter4/LianetFiguras/SolocirculosPRA_PRO_RUTAS_10_1_r002.png",
 \clearpage  
 
 ### Los residuos que covarían en el registro evolutivo de PriA permiten una reconstrucción aproximada de su estructura tridimensional  
-El estudio de la evolución de PriA en la sección anterior nos proporcionó el aprendizaje de que para adquirir una actividad el camino no es estrictamente creciente. En cambio, suele haber pasos donde alguna de las dos actividades baja. En esta sección utilizaremos el registro evolutivo resultado de millones de años, tomaremos miles de homólogos de PriA para inferir la estructura tridimensional de una secuencia. Evcouplings es un método que considera las secuencias génicas existentes como experimentos exitosos de la naturaleza. Con esta información obtiene la covariación entre pares de aminoácidos de las secuencias existentes en el registro evolutivo. Los pares fuertemente relacionados se denominan acoplamientos, estos acoplamientos a menudo están cerca físicamente en la estructura terciaria de la proteína. Se ha demostrado que muchas proteínas contienen suficientes acoplamientos distribuidos ampliamente en toda la secuencia, de forma que con ellos es posible la reconstrucción de su estructura tridimensional [@marks_protein_2011]. En esta sección se aplicará EVcouplings para reconstruir la estructura tridimensional de PriA.  
+El estudio de la evolución de PriA en la sección anterior nos proporcionó el aprendizaje de que para adquirir una actividad el camino no es estrictamente creciente. En cambio, suele haber pasos donde alguna de las dos actividades baja. En esta sección utilizaremos el registro evolutivo resultado de millones de años, tomaremos miles de homólogos de PriA para inferir la estructura tridimensional de una secuencia. Evcouplings es un método que considera las secuencias génicas existentes como experimentos exitosos de la naturaleza. Con esta información obtiene la covariación entre pares de aminoácidos de las secuencias existentes en el registro evolutivo. Los pares fuertemente relacionados se denominan acoplamientos, estos acoplamientos a menudo están cerca físicamente en la estructura terciaria de la proteína. Se ha demostrado que muchas proteínas contienen suficientes acoplamientos distribuidos ampliamente en toda la secuencia, de forma que con ellos es posible la reconstrucción de su estructura tridimensional [@marks_protein_2011]. En esta sección se aplicará EVcouplings para reconstruir la estructura tridimensional de PriA. El RMSD es una técnica usual de comparaci{on de estructuras.  
   
-Las diferencias a nivel estructural pueden amplificar la información proporcionada por variaciones a nivel de secuencia. Por este motivo se decidió implementar Evcouplings [@marks_protein_2011], para poder aplicarlo a la familia PriA. Este método es de difícil instalación ya que tiene muchas dependencias, por ello desarrollé un contenedor docker donde las dependencias y el software quedan instalados. Este desarrollo fue incluido por los desarrolladores originales como sugerencia de instalación. El contenedor docker implementa EVcouplings python framework [@hopf_evcouplings_2019] que comprende cinco etapas para estudiar el análisis de coevolución de residuos de una familia de proteínas. Estas etapas son i) Alineado, ii) análisis de acoplamiento, iii) plegamiento basado en acoplamientos iv) análisis de mutación y v) comparación con estructuras conocidas.
+Las diferencias a nivel estructural pueden amplificar la información proporcionada por variaciones a nivel de secuencia. Una métrica común de distancia entre dos estructuras de proteínas es el _root mean sqaured deviation_ (RMSD). Esta distancia se obtiene después de alinear las estructuras con el promedio de las distancias al cuadrado entre los átomos de carbono primarios [@kufareva_methods_2012]. La información comprendida en las covariaciones ha sido suficiente para el método EVcouplings para generar estructuras con un error de 2.7–4.8 ${\AA}$ respecto a la estructura cristalográfica conocida [@marks_protein_2011]. Por este motivo se decidió implementar EVcouplings y aplicarlo a la familia PriA. Este método es de difícil instalación ya que requiere varias dependencias. Por ello desarrollé un contenedor docker donde dependencias, software y base de datos quedan instalados. Este desarrollo fue incluido por los desarrolladores originales de EVcouplings como sugerencia de instalación. El contenedor docker implementa el _EVcouplings python framework_ [@hopf_evcouplings_2019] que comprende cinco etapas para estudiar el análisis de coevolución de residuos de una familia de proteínas. Dichas etapas son i) Alineado, ii) análisis de acoplamiento, iii) plegamiento basado en acoplamientos iv) análisis de mutación y v) comparación con estructuras conocidas.
 
-EVcouplings fue aplicado a la secuencia de PriA de _Streptomyces coelicolor_ (identificador de Uniprot HIS4_STRCO). Las secuencias para la alineación se recuperaron automáticamente de Uniprot, otros parámetros se dejaron con la configuración inicial del archivo de configuración de EVCouplings. Como resultado se modeló la estructura de PriA utilizando los acoplamientos de sus aminoácidos. Una comparación de la estructura lograda con una estructura cristalográfica es mostrada en la `r ref(label = "CouplingsFoldingPriA", type = "figure")`. El RMSD es una técnica usual de comparaci{on de estructuras. EL RSMD entre estas dos proteínas es de  3.362 $\r{A}$, es incluso mejor que el 3.730 entre la 1VZW y la 4TX9 de _Streptomyces sviceus ATCC 29083_. Como las estructuras tienen una resolución de 1-3 A° un RMSD es aceptable. Sin embargo los RMSD Entre otras estructuras cristalográficas de Streptomyces coelicolor son menores a 1. 2.7–4.8 Å Error de EVCouplings 
-0.449 2VEP 1VZW
-<!--align 1vzw, 4tx9 en pymol da el RMSD -->
+EVcouplings fue aplicado a la secuencia de PriA de _Streptomyces coelicolor_  obtenida de la base de datos [Uniprot](https://www.uniprot.org/) con identificador [HIS4_STRCO](https://www.uniprot.org/uniprot/P16250). Los parámetros de EVcouplings se dejaron con su configuración inicial incluyendo el umbral de recuperación para las secuencias utilizadas en el alineamiento. Mediante el uso de EVcouplings en este alineamiento se obtuvo un modelo de la estructura tridimensional de PriA de _S. coelicolor_ utilizando la información de los acoplamientos de sus aminoácidos. Una comparación de la estructura lograda por EVcouplings con respecto a [1VZW](https://www.rcsb.org/structure/1vzw), una estructura de PriA de _S. coelicolor_ obtenida mediante cristalografía es mostrada en la `r ref(label = "CouplingsFoldingPriA", type = "figure")`. La distancia entre estas dos proteínas medida utilizando el RSMD es de  3.362 ${\AA}$. Esta distancia es menor que que el 3.730 entre la 1VZW y la 4TX9 de _Streptomyces sviceus ATCC 29083_. 
 
- Así pues, la estructura reconstruida es parecida, pero para obtener mejor definición es posible que se deba refinar la selección de las secuencias del alineamiento, diferenciando entre secuencias conocidas de PriA, subHisA, PriB y subTrpF.  
+Como las estructuras tienen una resolución de 1-3 A° un RMSD es aceptable. Sin embargo los RMSD Entre otras estructuras cristalográficas de Streptomyces coelicolor son menores a 1, por ejemplo el RMSD entre 2VEP 1VZW de  0.449. De hecho el RMSD entre PriA y HisF de S. coelicolor es  XXX. Sin embargo la distancia entre PriA y otra enzima control TrpF es de 12. Menor a 6 se considera razonable. Aunque EVcouplings obtuvo una estructura similar a la cristalográfica, el RMSD de toda la estructura no es suficiente para diferenciar por familia. Puede ser que las diferencias estructurales no sean suficientes, que los métodos de construcción de las estructuras necesiten mejorarse, Que deban considderarse solo las regiones con más diferencias y no sólo los átomos alfa. 
+<!--align 1vzw, 4tx9 en pymol da el RMSD --> Así pues, la estructura reconstruida es parecida, pero para obtener mejor definición es posible que se deba refinar la selección de las secuencias del alineamiento, diferenciando entre secuencias conocidas de PriA, subHisA, PriB y subTrpF. Tal vez la dinámica molecular, un paso más allá de la comparación estructural, pueda aportar información ya sea sobre las enzimas o sobre los sustratos.
 ```{r PriA CouplingFoldings, results = "asis",message=FALSE,echo=FALSE}
 label(path = "chapter4/Couplings/PriACouplingFoldings.png", 
       caption = "Superposición de estructura de PriA generado por Folding con la estructura cristalográfica", 
@@ -368,14 +379,51 @@ Seleccioné 39 secuencias de la familia PriA para en colaboración con el grupo 
 
 Cuando existían estructuras cristalográficas se utilizó esa estructura, de lo contrario, se generaron estructuras homólogas utilizando como plantilla la estructura de la enzima más cercana que contara estructura de cristalográfica. Los organismos que cuentan con estructura cristalográfica de alguna familia relacionada a PriA están descritos en la `r ref("EnzymePDB", type = "table")`. Entre ellos están ejemplos de la familia HisA de Enterobacteria como _Salmonella enterica_ (PDB:5A-) y _Thermotoga maritima_ (2W79, 1QO2). Los representantes de TrpF son las Actinobacterias _Jonesia denitrificans_ y _Streptomyces sp Mg1_. Entre las Actinobacterias caracterizadas con estructura cristalográfica de PriA están _Mycobacterium tuberculosis_ (Mtub PDB:2Y88,2Y89,2Y85,3ZS4), _Streptomyces coelicolor_ (Scoe PDB:2VEP,2X30,1VZW), _Streptomyces globisporus_, _Actynomyces urogenitalis_ (4X2R) y _Corynebacterium jeikeum_. De la familia subHisA se muestran _Corynebacterium efficiens_ y _Actinomyces urogenitalis_ (PDB:4X2R). Las estructuras cristalográficas disponibles de PriB provienen de _Streptomyces ipomoeae_, _Streptomyces sviceus_ (PDB:4U28,4TX9).  La estructura que representa a  subTrpF  es la de _Arthrobacter aurescens_ (PDB:4WD0) y finalmente, las estructuras de TrpF corresponden al las de los organismos _Jonesia denitrificans_ (PDB:4WUI) _Chlamidya thrachomatis_, _Streptomyces sp. Mg1_ y _Actinomyces odontolyticus_.
 
-\clearpage  
 
 
-```{r Enzymes_PDB_out, results = "asis"}
-table <- read.csv("chapter4/EstructurasPDB", row.names = 1,sep="\t")
-kable(table,  caption = "Estructuras cristalográficas disponibles de PriA y familias relacionadas \\label{tab:EnzymePDB}",caption.short = "Estructuras cristalográficas disponibles de PriA y familias relacionadas")%>%  kable_styling(latex_options="scale_down")
-```
+A continuación se muestra una tabla con las estructuras cristalográficas disponibles de PriA y familias relacionadas.  
 
+Estructuras cristalográficas disponibles de PriA y familias relacionadas \label{tab:EnzymePDB}
+----------------------------------------------------------------------
+Organismo                    PDB   Familia  Resolución  Fecha
+--------------------------- ------ -------  ----------- ----------
+_Salmonella enterica_        5AHE  HisA		      1.7      2015
+_Salmonella enterica_        5AB3  HisA         1.8      2016
+_Salmonella enterica_        5ABT  HisA         1.65     2016
+_Salmonella enterica_        5AC7  HisA         1.9      2016
+_Salmonella enterica_        5AC8  HisA         1.7      2016
+_Salmonella enterica_        5AC6  HisA         1.99     2016
+_Salmonella enterica_        5A5W  HisA   	    1.6      2015
+_Salmonella enterica_        5AHF  HisA         2.2      2015
+_Campylobacter jejuni_       4GJ1  HisA		      2.15     2012
+_Thermotoga maritima_        2W79  HisA		      1.85     2008
+_Thermotoga maritima_        1QO2  HisA		      1.85     2000
+_Streptomyces sp._ Mg1       4X9S  PriB	        1.6      2014
+_Streptomyces sviceus_       4TX9  PriB         1.6      2014
+_Streptomyces sviceus_       4U28  PriB		      1.33     2014
+_Streptomyces sp._ Mg1       4W9T  PriB		      1.57     2014
+_Arthrobacter aurescens_     4WD0  subTrpF	    1.5      2014
+_Streptomyces coelicolor_    5DN1  PriA	        1.95     2015
+_Streptomyces coelicolor_    1VZW  PriA	        1.8      2004
+_Streptomyces coelicolor_    2VEP  PriA         1.8      2007
+_Streptomyces coelicolor_    2X30  PriA         1.95     2010
+_Mycobacterium tuberculosis_ 2Y85  PriA         2.4      2011
+_Mycobacterium tuberculosis_ 2Y88  PriA         1.33     2011
+_Mycobacterium tuberculosis_ 2Y89  PriA         2.5      2011
+_Mycobacterium tuberculosis_ 3ZS4  PriA         1.9      2012
+_Actinomyces urogenitalis_   4X2R  SubHisA      1.05     2014
+_Corynebacterium efficiens_  4AXK  SubHisA	    2.25     2013
+_Thermococcus kodakaraensis_ 5LHE  TrpF		      1.85     2016
+_Thermococcus kodakaraensis_ 5LHF  TrpF		      1.75     2016
+_Thermus thermophilus_       1V5X  TrpF         2        2003
+_Thermotoga maritima_        1DL3  TrpF         2.7      1999
+_Thermotoga maritima_        1LBM  TrpF         2.8      2002
+_Thermotoga maritima_        1NSJ  TrpF		      2        1996
+_Jonesia denitrificans_      4WUI  TrpF		      1.09     2014
+_Pyrococcus furiosus_        4AAJ  TrpF		      1.75     2012
+      
+
+  
 ### El análisis de PriA a nivel estructural sugiere que GTP es el sustrato más afín  
 
 Con las enzimas seleccionadas de PriA se realizaron simulaciones de docking. Se incluyeron también como controles enzimas TrpF provenientes de _Streptomyces Mg1, Jonesia denitrificans_. Los procedimientos pueden ser consultados en  [Docking Protocols](https://github.com/tripplab/Docking/wiki). Como resultado podemos ver `r ref("HeatplodPriAdocking", type = "figure")` que el GTP es el que tiene mayor afinidad.    

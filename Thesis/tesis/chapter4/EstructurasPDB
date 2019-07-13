@@ -1,35 +1,34 @@
-PDB	Organismo	Family	Observations	Resolution	Year
-5AHE	Salmonella enterica	HisA		1.7	2015
-5AB3	Salmonella enterica	HisA	D7N, D10G, dup13-15, Q24L, G102A	1.8	2016
-5ABT	Salmonella enterica	HisA	D7N, G102A, V106M, D176A	1.65	2016
-5AC7	Salmonella enterica	HisA	D7N, D10G, dup13-15	1.9	2016
-5AC8	Salmonella enterica	HisA	D10G, dup13-15, G102A	1.7	2016
-5AC6	Salmonella enterica	HisA	D7N, D10G, dup13-15, Q24L, G102A	1.99	2016
-5A5W	Salmonella enterica	HisA	HisA D7N D176A with ProFAR		2015
-5AHF	Salmonella enterica	HisA	HisA D7N with ProFAR		
-4GJ1	Campylobacter jejuni	HisA		2.15	2012
-2W79	Thermotoga maritima	HisA		1.85	2008
-1QO2	Thermotoga maritima	HisA		1.85	2000
-4X9S	Streptomyces sp. MG1	PriB		1.6	2014
-4TX9	Streptomyces sviceus	PriB	ProFAR	1.6	2014
-4U28	Streptomyces sviceus	PriB		1.33	2014
-4W9T	Streptomyces sp. Mg1	PriB		1.57	2014
-4WD0	Arthrobacter aurescens	subTrpF		1.5	2014
-5DN1	Streptomyces coelicolor	PriA		1.95	2015
-1VZW	Streptomyces coelicolor	PriA		1.8	2004
-2VEP	Streptomyces coelicolor	PriA		1.8	2007
-2X30	Streptomyces coelicolor	PriA	R139N	1.95	2010
-2Y85	Mycobacterium tuberculosis	PriA	RCDRP	2.4	2011
-2Y88	Mycobacterium tuberculosis	PriA	D11N PRFAR	1.33	2011
-2Y89	Mycobacterium tuberculosis	PriA	D11N	2.5	2011
-3ZS4	Mycobacterium tuberculosis	PriA	PRFAR	1.9	2012
-4X2R	Actinomyces urogenitalis	SubHisA		1.05	2014
-4AXK	Corynebacterium efficiens	SubHisA		2.25	2013
-5LHE	Thermococcus kodakaraensis	TrpF		1.85	2016
-5LHF	Thermococcus kodakaraensis	TrpF		1.75	2016
-1V5X	Thermus thermophilus	TrpF		2	2003
-1DL3	Thermotoga maritima	TrpF		2.7	1999
-1LBM	Thermotoga maritima	TrpF	RCDRP	2.8	2002
-1NSJ	Thermotoga maritima	TrpF		2	1996
-4WUI	Jonesia denitrificans	TrpF		1.09	2014
-4AAJ	Pyrococcus furiosus	TrpF		1.75	2012
+Salmonella enterica	5AHE	HisA		1.7	2015
+Salmonella enterica	5AB3	HisA	D7N, D10G, dup13-15, Q24L, G102A	1.8	2016
+Salmonella enterica	5ABT	HisA	D7N, G102A, V106M, D176A	1.65	2016
+Salmonella enterica	5AC7	HisA	D7N, D10G, dup13-15	1.9	2016
+Salmonella enterica	5AC8	HisA	D10G, dup13-15, G102A	1.7	2016
+Salmonella enterica	5AC6	HisA	D7N, D10G, dup13-15, Q24L, G102A	1.99	2016
+Salmonella enterica	5A5W	HisA	HisA D7N D176A with ProFAR		2015
+Salmonella enterica	5AHF	HisA	HisA D7N with ProFAR		
+Campylobacter jejuni	4GJ1	HisA		2.15	2012
+Thermotoga maritima	2W79	HisA		1.85	2008
+Thermotoga maritima	1QO2	HisA		1.85	2000
+Streptomyces sp. MG1	4X9S	PriB		1.6	2014
+Streptomyces sviceus	4TX9	PriB	ProFAR	1.6	2014
+Streptomyces sviceus	4U28	PriB		1.33	2014
+Streptomyces sp. Mg1	4W9T	PriB		1.57	2014
+Arthrobacter aurescens	4WD0	subTrpF		1.5	2014
+Streptomyces coelicolor	5DN1	PriA		1.95	2015
+Streptomyces coelicolor	1VZW	PriA		1.8	2004
+Streptomyces coelicolor	2VEP	PriA		1.8	2007
+Streptomyces coelicolor	2X30	PriA	R139N	1.95	2010
+Mycobacterium tuberculosis	2Y85	PriA	RCDRP	2.4	2011
+Mycobacterium tuberculosis	2Y88	PriA	D11N PRFAR	1.33	2011
+Mycobacterium tuberculosis	2Y89	PriA	D11N	2.5	2011
+Mycobacterium tuberculosis	3ZS4	PriA	PRFAR	1.9	2012
+Actinomyces urogenitalis	4X2R	SubHisA		1.05	2014
+Corynebacterium efficiens	4AXK	SubHisA		2.25	2013
+Thermococcus kodakaraensis	5LHE	TrpF		1.85	2016
+Thermococcus kodakaraensis	5LHF	TrpF		1.75	2016
+Thermus thermophilus	1V5X	TrpF		2	2003
+Thermotoga maritima	1DL3	TrpF		2.7	1999
+Thermotoga maritima	1LBM	TrpF	RCDRP	2.8	2002
+Thermotoga maritima	1NSJ	TrpF		2	1996
+Jonesia denitrificans	4WUI	TrpF		1.09	2014
+Pyrococcus furiosus	4AAJ	TrpF		1.75	2012

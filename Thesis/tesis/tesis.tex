@@ -3954,24 +3954,81 @@ starts here.
   
   Después de explorar cuáles organismos tienen expansiones de PriA, a
   continuación se muestra en la \autoref{fig:PriATrees} el posible destino
-  metabólico de las copias extra de la familia. El árbl de Actinobacteria
+  metabólico de las copias extra de la familia. El árbol de Actinobacteria
   está poblado de hojas rojas, es decir de PriA dedicadas al metabolismo
-  conservado, en este caso a las rutas de Histidina y Triptofano. Sin
-  embargo hay algunas hojas grises, como es el caso de los dos
-  \emph{Serenicoccus} mencionados previamente. Es posible que estas PriA
-  puedan tener funciones alternativas. Además, en Actinobacteria la PriA
-  de \emph{Janibacter Hoilley}, la rama más larga del árbol, es muy
-  divergente. Esto se debe a que existe una fusión de PriA con HisH, que
-  no parece ser un artefacto de anotación ya que hay otros
-  \emph{Janibacter} con PriA ligeramente más grandes que el promedio.
+  conservado, en este caso relacionado a las rutas de Histidina y
+  Triptofano. Sin embargo hay algunas hojas grises, como es el caso de los
+  dos \emph{Serenicoccus} mencionados previamente. Es posible que estas
+  PriA puedan tener funciones alternativas. Además, en Actinobacteria la
+  PriA de \emph{Janibacter Hoilley}, la rama más larga del árbol, es muy
+  divergente. Esto se debe a que existe una fusión de PriA con HisH. La
+  fusión de genes bacterianos es un mecanismo común para formar proteínas
+  multidominio {[}\protect\hyperlink{ref-pasek_gene_2006}{172}{]}. De
+  hecho, dentro del operon de histidina existen fusiones reportadas HisNB
+  y HisIE con proteínas bifuncionales en ciertas proteobacterias
+  {[}\protect\hyperlink{ref-fani_origin_2005}{173}{]}. La fusión aquí
+  presentada no parece ser un artefacto de anotación ya que hay otros
+  genomas de \emph{Janibacter} con secuencias de PriA más grandes que el
+  promedio. Los árboles que se produjeron por EvoMining están disponibles
+  para exploración interactiva en Microreact en los links de la
+  \autoref{tab:arboles}:
+  
+  \begin{longtable}[]{@{}lc@{}}
+  \caption{Árboles EvoMining de PriA en MicroReact
+  \label{tab:arboles}}\tabularnewline
+  \toprule
+  Linaje & Link al árbol de EvoMining en Microreact\tabularnewline
+  \midrule
+  \endfirsthead
+  \toprule
+  Linaje & Link al árbol de EvoMining en Microreact\tabularnewline
+  \midrule
+  \endhead
+  Actinobacteria &
+  \href{https://microreact.org/project/7g2IGfkv9}{7g2IGfkv9}\tabularnewline
+  Cyanobacteria &
+  \href{https://microreact.org/project/qF6jWRMox}{qF6jWRMox}\tabularnewline
+  \emph{Pseudomonas} &
+  \href{https://microreact.org/project/ydff6DWqs}{ydff6DWqs}\tabularnewline
+  Archaea &
+  \href{https://microreact.org/project/Ig-m9Cm6f}{Ig-m9Cm6f}\tabularnewline
+  \bottomrule
+  \end{longtable}
   
   En Cyanobacteria hay pocas hojas verdes (EvoMining predictions) y no
   están localizadas cerca de la HisA de saxitoxin, el BGC proveniente de
   Cyanobacteria. En \emph{Pseudomonas} hay una gran población de
-  predicciones de EvoMining, pero son falsos positivos, ya que estas no
-  corresponden a una rama dedicada al metabolismo secundario, sino a la
-  rama de la ciclasa. En Archaea algunas de los hojas grises, es decir sin
-  destino metabólico conocido serán exploradas en la siguiente sección.
+  predicciones de EvoMining que corresponden a la enzima HisF, la
+  subunidad imidazol glicerol fosfato sintasa. Este es un caso donde lo
+  que alguna vez fue \emph{dispensable genome} / metabolismo secundario,
+  se ha vuelto \emph{shell genome} / metabolismo conservado y donde se
+  muestra que en estos linajes EvoMining aún puede detectar esa marca de
+  expansión. HisA proviene de una duplicación de un ancestro común de la
+  mitad de su tamaño y HisF proviene de la duplicacion de HisA
+  {[}\protect\hyperlink{ref-fani_evolution_1994}{174}{]}. Por ello puede
+  considerarse que EvoMining en efecto está encontrando una expansión de
+  HisA que consiste en la familia HisF en los linajes Cyanobacteria y
+  \emph{Pseudomonas}. En su momento HisF fue parte del \emph{dispensable
+  genome}, no todos los organismos poseían esta expansión, pero
+  posteriormente fue fijada en el \emph{shell genome}. De hecho el
+  reclutamiento que hace que el árbol de \emph{Pseudomonas} tenga una rama
+  verde está anotado funcionalmente como una
+  \href{https://www.ncbi.nlm.nih.gov/protein/CAB65215.1/}{HisF} de
+  \emph{Legionella pneumophila}, una proteobacteria productora de un
+  lipopolisacárido.
+  
+  En Archaea, la rama central con una mezcla de hojas grises y rojas
+  contiene también copias de HisF. Al verficar en el árbol interactivo en
+  Microreact \autoref{tab:arboles} el número de copias de los homólogos
+  clasificados como HisF se comprobó que los \emph{Sulfolobus} sólo poseen
+  una copia en este árbol. Sin embargo al explorar manualmente los genomas
+  de \emph{Sulfolobus} sí se encuentran homologos de PriA. Por tanto este
+  árbol sugiere que aunque existe PriA y su expansión HisF en el género
+  \emph{Sulfolobus}, HisF es más parecida a la semilla a la semilla con
+  que se generó este árbol, y la similitud de secuencia del homólogo de
+  PriA no fue suficiente para recuperarlas en este experimento. algunas de
+  los hojas grises, es decir sin destino metabólico conocido serán
+  exploradas en la siguiente sección.
   
   \begin{figure}[h!tbp]
   \centering
@@ -3986,7 +4043,7 @@ starts here.
   Cyanobacteria{[}\protect\hyperlink{ref-moustafa_origin_2009}{103}{]}, un
   lipopolisacárido producido por una Proteobacteria y un BGC productor de
   cloro pentostatina producido en Actinobacteria
-  {[}\protect\hyperlink{ref-gao_biosynthesis_2017}{172}{]}.
+  {[}\protect\hyperlink{ref-gao_biosynthesis_2017}{176}{]}.
   
   Table: Reclutamientos de expansiones de PriA en MIBiG
   \label{tab:reclutamientos}
@@ -4026,32 +4083,6 @@ starts here.
   \caption[PriA participa en la síntesis del antibiótico {ada} en {Actinomadura} ]{\footnotesize{PriA participa en la síntesis del antibiótico {ada} en {Actinomadura}. Los sustratos nativos de Pria, ProFAR y PRA son isomerizados de manera muy similar a un paso en la ruta de síntesis de {ada} }}
   \label{fig:ada}
   \end{figure}
-  
-  Finalmente, los árboles que se produjeron por EvoMining están
-  disponibles para exploración interactiva en Microreact en los links de
-  la \autoref{tab:arboles}:
-  
-  \begin{longtable}[]{@{}lc@{}}
-  \caption{Árboles EvoMining de PriA en MicroReact
-  \label{tab:arboles}}\tabularnewline
-  \toprule
-  Linaje & Link al árbol de EvoMining en Microreact\tabularnewline
-  \midrule
-  \endfirsthead
-  \toprule
-  Linaje & Link al árbol de EvoMining en Microreact\tabularnewline
-  \midrule
-  \endhead
-  Actinobacteria &
-  \href{https://microreact.org/project/7g2IGfkv9}{7g2IGfkv9}\tabularnewline
-  Cyanobacteria &
-  \href{https://microreact.org/project/qF6jWRMox}{qF6jWRMox}\tabularnewline
-  \emph{Pseudomonas} &
-  \href{https://microreact.org/project/ydff6DWqs}{ydff6DWqs}\tabularnewline
-  Archaea &
-  \href{https://microreact.org/project/Ig-m9Cm6f}{Ig-m9Cm6f}\tabularnewline
-  \bottomrule
-  \end{longtable}
   
   \section{Análisis de contextos genómicos de PriA en distintos linajes
   utilizando
@@ -4210,44 +4241,67 @@ starts here.
   que muchas proteínas contienen suficientes acoplamientos distribuidos
   ampliamente en toda la secuencia, de forma que con ellos es posible la
   reconstrucción de su estructura tridimensional
-  {[}\protect\hyperlink{ref-marks_protein_2011}{173}{]}. En esta sección
+  {[}\protect\hyperlink{ref-marks_protein_2011}{177}{]}. En esta sección
   se aplicará EVcouplings para reconstruir la estructura tridimensional de
-  PriA.
+  PriA. El RMSD es una técnica usual de comparaci\{on de estructuras.
   
   Las diferencias a nivel estructural pueden amplificar la información
-  proporcionada por variaciones a nivel de secuencia. Por este motivo se
-  decidió implementar Evcouplings
-  {[}\protect\hyperlink{ref-marks_protein_2011}{173}{]}, para poder
-  aplicarlo a la familia PriA. Este método es de difícil instalación ya
-  que tiene muchas dependencias, por ello desarrollé un contenedor docker
-  donde las dependencias y el software quedan instalados. Este desarrollo
-  fue incluido por los desarrolladores originales como sugerencia de
-  instalación. El contenedor docker implementa EVcouplings python
-  framework {[}\protect\hyperlink{ref-hopf_evcouplings_2019}{174}{]} que
+  proporcionada por variaciones a nivel de secuencia. Una métrica común de
+  distancia entre dos estructuras de proteínas es el \emph{root mean
+  sqaured deviation} (RMSD). Esta distancia se obtiene después de alinear
+  las estructuras con el promedio de las distancias al cuadrado entre los
+  átomos de carbono primarios
+  {[}\protect\hyperlink{ref-kufareva_methods_2012}{178}{]}. La información
+  comprendida en las covariaciones ha sido suficiente para el método
+  EVcouplings para generar estructuras con un error de 2.7--4.8 \({\AA}\)
+  respecto a la estructura cristalográfica conocida
+  {[}\protect\hyperlink{ref-marks_protein_2011}{177}{]}. Por este motivo
+  se decidió implementar EVcouplings y aplicarlo a la familia PriA. Este
+  método es de difícil instalación ya que requiere varias dependencias.
+  Por ello desarrollé un contenedor docker donde dependencias, software y
+  base de datos quedan instalados. Este desarrollo fue incluido por los
+  desarrolladores originales de EVcouplings como sugerencia de
+  instalación. El contenedor docker implementa el \emph{EVcouplings python
+  framework} {[}\protect\hyperlink{ref-hopf_evcouplings_2019}{179}{]} que
   comprende cinco etapas para estudiar el análisis de coevolución de
-  residuos de una familia de proteínas. Estas etapas son i) Alineado, ii)
+  residuos de una familia de proteínas. Dichas etapas son i) Alineado, ii)
   análisis de acoplamiento, iii) plegamiento basado en acoplamientos iv)
   análisis de mutación y v) comparación con estructuras conocidas.
   
   EVcouplings fue aplicado a la secuencia de PriA de \emph{Streptomyces
-  coelicolor} (identificador de Uniprot HIS4\_STRCO). Las secuencias para
-  la alineación se recuperaron automáticamente de Uniprot, otros
-  parámetros se dejaron con la configuración inicial del archivo de
-  configuración de EVCouplings. Como resultado se modeló la estructura de
-  PriA utilizando los acoplamientos de sus aminoácidos. Una comparación de
-  la estructura lograda con una estructura cristalográfica es mostrada en
-  la \autoref{fig:CouplingsFoldingPriA}. El RMSD es una técnica usual de
-  comparaci\{on de estructuras. EL RSMD entre estas dos proteínas es de
-  3.362 \(\r{A}\), es incluso mejor que el 3.730 entre la 1VZW y la 4TX9
-  de \emph{Streptomyces sviceus ATCC 29083}. Como las estructuras tienen
-  una resolución de 1-3 A° un RMSD es aceptable. Sin embargo los RMSD
-  Entre otras estructuras cristalográficas de Streptomyces coelicolor son
-  menores a 1. 2.7--4.8 Å Error de EVCouplings 0.449 2VEP 1VZW
+  coelicolor} obtenida de la base de datos
+  \href{https://www.uniprot.org/}{Uniprot} con identificador
+  \href{https://www.uniprot.org/uniprot/P16250}{HIS4\_STRCO}. Los
+  parámetros de EVcouplings se dejaron con su configuración inicial
+  incluyendo el umbral de recuperación para las secuencias utilizadas en
+  el alineamiento. Mediante el uso de EVcouplings en este alineamiento se
+  obtuvo un modelo de la estructura tridimensional de PriA de \emph{S.
+  coelicolor} utilizando la información de los acoplamientos de sus
+  aminoácidos. Una comparación de la estructura lograda por EVcouplings
+  con respecto a \href{https://www.rcsb.org/structure/1vzw}{1VZW}, una
+  estructura de PriA de \emph{S. coelicolor} obtenida mediante
+  cristalografía es mostrada en la \autoref{fig:CouplingsFoldingPriA}. La
+  distancia entre estas dos proteínas medida utilizando el RSMD es de
+  3.362 \({\AA}\). Esta distancia es menor que que el 3.730 entre la 1VZW
+  y la 4TX9 de \emph{Streptomyces sviceus ATCC 29083}.
   
-  Así pues, la estructura reconstruida es parecida, pero para obtener
-  mejor definición es posible que se deba refinar la selección de las
-  secuencias del alineamiento, diferenciando entre secuencias conocidas de
-  PriA, subHisA, PriB y subTrpF.
+  Como las estructuras tienen una resolución de 1-3 A° un RMSD es
+  aceptable. Sin embargo los RMSD Entre otras estructuras cristalográficas
+  de Streptomyces coelicolor son menores a 1, por ejemplo el RMSD entre
+  2VEP 1VZW de 0.449. De hecho el RMSD entre PriA y HisF de S. coelicolor
+  es XXX. Sin embargo la distancia entre PriA y otra enzima control TrpF
+  es de 12. Menor a 6 se considera razonable. Aunque EVcouplings obtuvo
+  una estructura similar a la cristalográfica, el RMSD de toda la
+  estructura no es suficiente para diferenciar por familia. Puede ser que
+  las diferencias estructurales no sean suficientes, que los métodos de
+  construcción de las estructuras necesiten mejorarse, Que deban
+  considderarse solo las regiones con más diferencias y no sólo los átomos
+  alfa. Así pues, la estructura reconstruida es parecida, pero para
+  obtener mejor definición es posible que se deba refinar la selección de
+  las secuencias del alineamiento, diferenciando entre secuencias
+  conocidas de PriA, subHisA, PriB y subTrpF. Tal vez la dinámica
+  molecular, un paso más allá de la comparación estructural, pueda aportar
+  información ya sea sobre las enzimas o sobre los sustratos.
   
   \begin{figure}[h!tbp]
   \centering
@@ -4308,7 +4362,7 @@ starts here.
   \end{figure}
   
   Además se investigaron los aminoácidos catalíticos D130
-  {[}\protect\hyperlink{ref-due_bisubstrate_2011}{175}{]} y D175
+  {[}\protect\hyperlink{ref-due_bisubstrate_2011}{180}{]} y D175
   reportados en \emph{Mycobacterium
   tuberculosis}{[}\protect\hyperlink{ref-verduzco-castro_co-occurrence_2016}{67}{]}
   que corresponden a en \emph{S coelicolor} D11, D131 y D171. Se econtró
@@ -4450,94 +4504,65 @@ starts here.
   denitrificans} (PDB:4WUI) \emph{Chlamidya thrachomatis},
   \emph{Streptomyces sp. Mg1} y \emph{Actinomyces odontolyticus}.
   
-  \clearpage  
+  A continuación se muestra una tabla con las estructuras cristalográficas
+  disponibles de PriA y familias relacionadas.
   
-  \begin{Shaded}
-  \begin{Highlighting}[]
-  \NormalTok{table <-}\StringTok{ }\KeywordTok{read.csv}\NormalTok{(}\StringTok{"chapter4/EstructurasPDB"}\NormalTok{, }\DataTypeTok{row.names =} \DecValTok{1}\NormalTok{,}\DataTypeTok{sep=}\StringTok{"}\CharTok{\textbackslash{}t}\StringTok{"}\NormalTok{)}
-  \KeywordTok{kable}\NormalTok{(table,  }\DataTypeTok{caption =} \StringTok{"Estructuras cristalográficas disponibles de PriA y familias relacionadas }\CharTok{\textbackslash{}\textbackslash{}}\StringTok{label\{tab:EnzymePDB\}"}\NormalTok{,}\DataTypeTok{caption.short =} \StringTok{"Estructuras cristalográficas disponibles de PriA y familias relacionadas"}\NormalTok{)}\OperatorTok{%>%}\StringTok{  }\KeywordTok{kable_styling}\NormalTok{(}\DataTypeTok{latex_options=}\StringTok{"scale_down"}\NormalTok{)}
-  \end{Highlighting}
-  \end{Shaded}
+  \section{\texorpdfstring{Estructuras cristalográficas disponibles de
+  PriA y familias relacionadas
+  \label{tab:EnzymePDB}}{Estructuras cristalográficas disponibles de PriA y familias relacionadas }}\label{estructuras-cristalograficas-disponibles-de-pria-y-familias-relacionadas}
   
-  \begin{table}[t]
-  
-  \caption[Estructuras cristalográficas disponibles de PriA y familias relacionadas]{\label{tab:Enzymes_PDB_out}Estructuras cristalográficas disponibles de PriA y familias relacionadas \label{tab:EnzymePDB}}
-  \centering
-  \resizebox{\linewidth}{!}{
-  \begin{tabular}{l|l|l|l|r|r}
-  \hline
-    & Organismo & Family & Observations & Resolution & Year\\
-  \hline
-  5AHE & Salmonella enterica & HisA &  & 1.70 & 2015\\
-  \hline
-  5AB3 & Salmonella enterica & HisA & D7N, D10G, dup13-15, Q24L, G102A & 1.80 & 2016\\
-  \hline
-  5ABT & Salmonella enterica & HisA & D7N, G102A, V106M, D176A & 1.65 & 2016\\
-  \hline
-  5AC7 & Salmonella enterica & HisA & D7N, D10G, dup13-15 & 1.90 & 2016\\
-  \hline
-  5AC8 & Salmonella enterica & HisA & D10G, dup13-15, G102A & 1.70 & 2016\\
-  \hline
-  5AC6 & Salmonella enterica & HisA & D7N, D10G, dup13-15, Q24L, G102A & 1.99 & 2016\\
-  \hline
-  5A5W & Salmonella enterica & HisA & HisA D7N D176A with ProFAR & NA & 2015\\
-  \hline
-  5AHF & Salmonella enterica & HisA & HisA D7N with ProFAR & NA & NA\\
-  \hline
-  4GJ1 & Campylobacter jejuni & HisA &  & 2.15 & 2012\\
-  \hline
-  2W79 & Thermotoga maritima & HisA &  & 1.85 & 2008\\
-  \hline
-  1QO2 & Thermotoga maritima & HisA &  & 1.85 & 2000\\
-  \hline
-  4X9S & Streptomyces sp. MG1 & PriB &  & 1.60 & 2014\\
-  \hline
-  4TX9 & Streptomyces sviceus & PriB & ProFAR & 1.60 & 2014\\
-  \hline
-  4U28 & Streptomyces sviceus & PriB &  & 1.33 & 2014\\
-  \hline
-  4W9T & Streptomyces sp. Mg1 & PriB &  & 1.57 & 2014\\
-  \hline
-  4WD0 & Arthrobacter aurescens & subTrpF &  & 1.50 & 2014\\
-  \hline
-  5DN1 & Streptomyces coelicolor & PriA &  & 1.95 & 2015\\
-  \hline
-  1VZW & Streptomyces coelicolor & PriA &  & 1.80 & 2004\\
-  \hline
-  2VEP & Streptomyces coelicolor & PriA &  & 1.80 & 2007\\
-  \hline
-  2X30 & Streptomyces coelicolor & PriA & R139N & 1.95 & 2010\\
-  \hline
-  2Y85 & Mycobacterium tuberculosis & PriA & RCDRP & 2.40 & 2011\\
-  \hline
-  2Y88 & Mycobacterium tuberculosis & PriA & D11N PRFAR & 1.33 & 2011\\
-  \hline
-  2Y89 & Mycobacterium tuberculosis & PriA & D11N & 2.50 & 2011\\
-  \hline
-  3ZS4 & Mycobacterium tuberculosis & PriA & PRFAR & 1.90 & 2012\\
-  \hline
-  4X2R & Actinomyces urogenitalis & SubHisA &  & 1.05 & 2014\\
-  \hline
-  4AXK & Corynebacterium efficiens & SubHisA &  & 2.25 & 2013\\
-  \hline
-  5LHE & Thermococcus kodakaraensis & TrpF &  & 1.85 & 2016\\
-  \hline
-  5LHF & Thermococcus kodakaraensis & TrpF &  & 1.75 & 2016\\
-  \hline
-  1V5X & Thermus thermophilus & TrpF &  & 2.00 & 2003\\
-  \hline
-  1DL3 & Thermotoga maritima & TrpF &  & 2.70 & 1999\\
-  \hline
-  1LBM & Thermotoga maritima & TrpF & RCDRP & 2.80 & 2002\\
-  \hline
-  1NSJ & Thermotoga maritima & TrpF &  & 2.00 & 1996\\
-  \hline
-  4WUI & Jonesia denitrificans & TrpF &  & 1.09 & 2014\\
-  \hline
-  4AAJ & Pyrococcus furiosus & TrpF &  & 1.75 & 2012\\
-  \hline
-  \end{tabular}}
-  \end{table}
+  \begin{longtable}[]{@{}lclll@{}}
+  \toprule
+  Organismo & PDB & Familia & Resolución & Fecha\tabularnewline
+  \midrule
+  \endhead
+  \emph{Salmonella enterica} & 5AHE & HisA & 1.7 & 2015\tabularnewline
+  \emph{Salmonella enterica} & 5AB3 & HisA & 1.8 & 2016\tabularnewline
+  \emph{Salmonella enterica} & 5ABT & HisA & 1.65 & 2016\tabularnewline
+  \emph{Salmonella enterica} & 5AC7 & HisA & 1.9 & 2016\tabularnewline
+  \emph{Salmonella enterica} & 5AC8 & HisA & 1.7 & 2016\tabularnewline
+  \emph{Salmonella enterica} & 5AC6 & HisA & 1.99 & 2016\tabularnewline
+  \emph{Salmonella enterica} & 5A5W & HisA & 1.6 & 2015\tabularnewline
+  \emph{Salmonella enterica} & 5AHF & HisA & 2.2 & 2015\tabularnewline
+  \emph{Campylobacter jejuni} & 4GJ1 & HisA & 2.15 & 2012\tabularnewline
+  \emph{Thermotoga maritima} & 2W79 & HisA & 1.85 & 2008\tabularnewline
+  \emph{Thermotoga maritima} & 1QO2 & HisA & 1.85 & 2000\tabularnewline
+  \emph{Streptomyces sp.} Mg1 & 4X9S & PriB & 1.6 & 2014\tabularnewline
+  \emph{Streptomyces sviceus} & 4TX9 & PriB & 1.6 & 2014\tabularnewline
+  \emph{Streptomyces sviceus} & 4U28 & PriB & 1.33 & 2014\tabularnewline
+  \emph{Streptomyces sp.} Mg1 & 4W9T & PriB & 1.57 & 2014\tabularnewline
+  \emph{Arthrobacter aurescens} & 4WD0 & subTrpF & 1.5 &
+  2014\tabularnewline
+  \emph{Streptomyces coelicolor} & 5DN1 & PriA & 1.95 &
+  2015\tabularnewline
+  \emph{Streptomyces coelicolor} & 1VZW & PriA & 1.8 & 2004\tabularnewline
+  \emph{Streptomyces coelicolor} & 2VEP & PriA & 1.8 & 2007\tabularnewline
+  \emph{Streptomyces coelicolor} & 2X30 & PriA & 1.95 &
+  2010\tabularnewline
+  \emph{Mycobacterium tuberculosis} & 2Y85 & PriA & 2.4 &
+  2011\tabularnewline
+  \emph{Mycobacterium tuberculosis} & 2Y88 & PriA & 1.33 &
+  2011\tabularnewline
+  \emph{Mycobacterium tuberculosis} & 2Y89 & PriA & 2.5 &
+  2011\tabularnewline
+  \emph{Mycobacterium tuberculosis} & 3ZS4 & PriA & 1.9 &
+  2012\tabularnewline
+  \emph{Actinomyces urogenitalis} & 4X2R & SubHisA & 1.05 &
+  2014\tabularnewline
+  \emph{Corynebacterium efficiens} & 4AXK & SubHisA & 2.25 &
+  2013\tabularnewline
+  \emph{Thermococcus kodakaraensis} & 5LHE & TrpF & 1.85 &
+  2016\tabularnewline
+  \emph{Thermococcus kodakaraensis} & 5LHF & TrpF & 1.75 &
+  2016\tabularnewline
+  \emph{Thermus thermophilus} & 1V5X & TrpF & 2 & 2003\tabularnewline
+  \emph{Thermotoga maritima} & 1DL3 & TrpF & 2.7 & 1999\tabularnewline
+  \emph{Thermotoga maritima} & 1LBM & TrpF & 2.8 & 2002\tabularnewline
+  \emph{Thermotoga maritima} & 1NSJ & TrpF & 2 & 1996\tabularnewline
+  \emph{Jonesia denitrificans} & 4WUI & TrpF & 1.09 & 2014\tabularnewline
+  \emph{Pyrococcus furiosus} & 4AAJ & TrpF & 1.75 & 2012\tabularnewline
+  \bottomrule
+  \end{longtable}
   
   \subsection{El análisis de PriA a nivel estructural sugiere que GTP es
   el sustrato más
@@ -4854,11 +4879,11 @@ starts here.
   curvata} que es una Actinobacteria termofílica de la familia
   \emph{Thermomonosporaceae} y que puede ser encontrada encompostas ya que
   participa en la degradación de celulosa
-  {[}\protect\hyperlink{ref-chertkov_complete_2011}{176}{]}. La trpF de
+  {[}\protect\hyperlink{ref-chertkov_complete_2011}{181}{]}. La trpF de
   \emph{Jonesia denitrificans} no mostró actividad.Esta bacteria está
   clasificada como un organismo patogénico para animales, su genoma fue
   originalmente aislado de sangre
-  {[}\protect\hyperlink{ref-pukall_complete_2009}{177}{]}.
+  {[}\protect\hyperlink{ref-pukall_complete_2009}{182}{]}.
   
   \clearpage 
   
@@ -5154,6 +5179,7 @@ starts here.
   \NormalTok{  devtools}\OperatorTok{::}\KeywordTok{install_github}\NormalTok{(}\StringTok{"ismayc/reedtemplates"}\NormalTok{)}
   \NormalTok{\}}
   \KeywordTok{library}\NormalTok{(reedtemplates)}
+  \KeywordTok{library}\NormalTok{(kableExtra)}
   \end{Highlighting}
   \end{Shaded}
   
@@ -6781,8 +6807,34 @@ starts here.
   Chemical Biology {[}Internet{]}. 2016 Dec;11(12):3452--60. Available
   from: \url{http://dx.doi.org/10.1021/acschembio.6b00779}
   
+  \hypertarget{ref-pasek_gene_2006}{}
+  172. Pasek S, Risler J-L, Brézellec P. Gene fusion/fission is a major
+  contributor to evolution of multi-domain bacterial proteins.
+  Bioinformatics {[}Internet{]}. 2006 Jun;22(12):1418--23. Available from:
+  \url{https://academic.oup.com/bioinformatics/article/22/12/1418/207642}
+  
+  \hypertarget{ref-fani_origin_2005}{}
+  173. Fani R, Brilli M, Liò P. The Origin and Evolution of Operons: The
+  Piecewise Building of the Proteobacterial Histidine Operon. Journal of
+  Molecular Evolution {[}Internet{]}. 2005 Mar;60(3):378--90. Available
+  from: \url{https://doi.org/10.1007/s00239-004-0198-1}
+  
+  \hypertarget{ref-fani_evolution_1994}{}
+  174. Fani R, Liò P, Chiarelli I, Bazzicalupo M. The evolution of the
+  histidine biosynthetic genes in prokaryotes: A common ancestor for the
+  hisA and hisF genes. Journal of Molecular Evolution {[}Internet{]}. 1994
+  May;38(5):489--95. Available from:
+  \url{https://doi.org/10.1007/BF00178849}
+  
+  \hypertarget{ref-fani_paralogous_1997}{}
+  175. Fani R, Tamburini E, Mori E, Lazcano A, Liò P, Barberio C, et al.
+  Paralogous histidine biosynthetic genes: Evolutionary analysis of the
+  Saccharomyces cerevisiae HIS6 and HIS7 genes. Gene {[}Internet{]}. 1997
+  Sep;197(1):9--17. Available from:
+  \url{http://www.sciencedirect.com/science/article/pii/S0378111997001467}
+  
   \hypertarget{ref-gao_biosynthesis_2017}{}
-  172. Gao Y, Xu G, Wu P, Liu J, Cai Y-s, Deng Z, et al. Biosynthesis of
+  176. Gao Y, Xu G, Wu P, Liu J, Cai Y-s, Deng Z, et al. Biosynthesis of
   \(2\prime\)-Chloropentostatin and
   \(2\prime\)-Amino-\(2\prime\)-Deoxyadenosine Highlights a Single Gene
   Cluster Responsible for Two Independent Pathways in Actinomadura sp.
@@ -6791,21 +6843,27 @@ starts here.
   \url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5411499/}
   
   \hypertarget{ref-marks_protein_2011}{}
-  173. Marks DS, Colwell LJ, Sheridan R, Hopf TA, Pagnani A, Zecchina R,
+  177. Marks DS, Colwell LJ, Sheridan R, Hopf TA, Pagnani A, Zecchina R,
   et al. Protein 3D Structure Computed from Evolutionary Sequence
   Variation. PLOS ONE {[}Internet{]}. 2011 Dec;6(12):e28766. Available
   from:
   \url{http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0028766}
   
+  \hypertarget{ref-kufareva_methods_2012}{}
+  178. Kufareva I, Abagyan R. Methods of protein structure comparison.
+  Methods in molecular biology (Clifton, NJ) {[}Internet{]}.
+  2012;857:231--57. Available from:
+  \url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4321859/}
+  
   \hypertarget{ref-hopf_evcouplings_2019}{}
-  174. Hopf TA, Green AG, Schubert B, Mersmann S, Schärfe CPI, Ingraham
+  179. Hopf TA, Green AG, Schubert B, Mersmann S, Schärfe CPI, Ingraham
   JB, et al. The EVcouplings Python framework for coevolutionary sequence
   analysis. Bioinformatics {[}Internet{]}. 2019 May;35(9):1582--4.
   Available from:
   \url{https://academic.oup.com/bioinformatics/article/35/9/1582/5124274}
   
   \hypertarget{ref-due_bisubstrate_2011}{}
-  175. Due AV, Kuper J, Geerlof A, Kries JP von, Wilmanns M. Bisubstrate
+  180. Due AV, Kuper J, Geerlof A, Kries JP von, Wilmanns M. Bisubstrate
   specificity in histidine/tryptophan biosynthesis isomerase from
   Mycobacterium tuberculosis by active site metamorphosis. Proceedings of
   the National Academy of Sciences of the United States of America
@@ -6814,29 +6872,29 @@ starts here.
   \url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3048130/}
   
   \hypertarget{ref-chertkov_complete_2011}{}
-  176. Chertkov O, Sikorski J, Nolan M, Lapidus A, Lucas S, Del Rio TG, et
+  181. Chertkov O, Sikorski J, Nolan M, Lapidus A, Lucas S, Del Rio TG, et
   al. Complete genome sequence of Thermomonospora curvata type strain
   (B9T). Standards in Genomic Sciences {[}Internet{]}. 2011 Feb {[}cited
   2017 Mar 3{]};4(1):13--22. Available from:
   \url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3072092/}
   
   \hypertarget{ref-pukall_complete_2009}{}
-  177. Pukall R, Gehrich-Schröter G, Lapidus A, Nolan M, Glavina Del Rio
+  182. Pukall R, Gehrich-Schröter G, Lapidus A, Nolan M, Glavina Del Rio
   T, Lucas S, et al. Complete genome sequence of Jonesia denitrificans
   type strain (Prevot 55134T). Standards in Genomic Sciences
   {[}Internet{]}. 2009 Nov {[}cited 2017 Mar 3{]};1(3):262--9. Available
   from: \url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3035236/}
   
   \hypertarget{ref-angel2000}{}
-  178. Angel E. Interactive computer graphics : A top-down approach with
+  183. Angel E. Interactive computer graphics : A top-down approach with
   opengl. Boston, MA: Addison Wesley Longman; 2000.
   
   \hypertarget{ref-angel2001}{}
-  179. Angel E. Batch-file computer graphics : A bottom-up approach with
+  184. Angel E. Batch-file computer graphics : A bottom-up approach with
   quicktime. Boston, MA: Wesley Addison Longman; 2001.
   
   \hypertarget{ref-angel2002a}{}
-  180. Angel E. Test second book by angel. Boston, MA: Wesley Addison
+  185. Angel E. Test second book by angel. Boston, MA: Wesley Addison
   Longman; 2001.
 
 

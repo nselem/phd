@@ -67,6 +67,8 @@ if(!require(reedtemplates)){
   devtools::install_github("ismayc/reedtemplates")
 }
 library(reedtemplates)
+library(kableExtra)
+
 ```
 
 <!--
