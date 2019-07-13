@@ -277,7 +277,7 @@ Table: Árboles EvoMining de PriA en MicroReact \label{tab:aminoacidos}
 |D20V	                |21V              |             173T            |  
 |L48I	                |49L              |             76I             |  
 |F50L	                |51L              |             70V             |  
-|M66I	                |67I              |             80L             |  
+|M66I	                 |67I              |             80L             |  
 |T80S	                |81S              |             102N            |    
 |A97C	                |98C              |             107A            |  
 |D127A	              |128G             |             164V            |    
@@ -314,21 +314,7 @@ label(path = "chapter4/Couplings/alineamiento.pdf",
 \clearpage
 
 ## Afinidad de enzimas selectas por sustratos químicamente parecidos a PRA y PROFAR  
-Además de los sustratos conocidos ProFAR y PRA en los que PriA es capaz de realizar una isomerización, es posible que PriA pueda ser promiscua en otros sustratos. Como se vio en la sección de EvoMining de este capítulo, PriA parece participar en la síntesis del antibiótico pentostaina _ada_. Tomando este ejemplo como inspiración, se colectaron en la literatura sustratos químicamente parecidos a ProFAR y PRA `r ref("Eschema1", type = "figure")`, `r ref("Eschema2", type = "figure")`,`r ref("Eschema3", type = "figure")`,`r ref("Eschema4", type = "figure")`. Así pues, esta sección buscará mostrar sustratos parecidos a los nativos de PriA para posteriormente probar alguno en copias selectas de PriA provenientes de diversos organismos.  
-  
-Se seleccionaron veinte sustratos para realizar docking entre ellos y las estructuras de las secuencias de PriA S1, S2, ... S20 sustratos fueron recolectados de la literatura y las predicciones de la quimioinformática. S3 PRA y S7 PROFAR son sustratos nativos, S13-S16 son sustratos activados por la luz, S17 PRAP, S18 Compuesto V, se encontraron en la literatura, S6 GMP, S11 GTP y otros fueron sugeridos por chemioinformatics. Para tener una diea de la diversidad de estos sustratos, se realizó entre ellos, un cálculo de distancias de Tanimoto.
-
-```{r Tanimoto, results = "asis",message=FALSE,echo=FALSE}
-label(path = "chapter4/SubstratesClustering.png", 
-      caption = "Clustering de sustratos de acuerdo a sus distancias de Tanimoto",
-      scale=.4,
-      label = "tanimoto", 
-      cap.size = "footnotesize",
-      alt.cap="Clustering de sustratos de acuerdo a sus distancias de Tanimoto",
-      type = "figure")
-```
-
-\clearpage  
+Además de los sustratos conocidos ProFAR y PRA en los que PriA es capaz de realizar una isomerización, es posible que PriA pueda ser promiscua en otros sustratos. De hecho, como se vio en la sección de EvoMining de este capítulo PriA parece participar en la síntesis del antibiótico pentostaina ( _ada_ BGC). Tomando este ejemplo como inspiración, se buscaron sustratos químicamente parecidos a ProFAR y PRA. Esta sección buscará probar la afinidad de sustratos parecidos a los nativos de PriA para posteriormente seleccionar probar alguno en copias selectas de PriA provenientes de diversos organismos. Veinte sustratos S1, S2, ... S20 sustratos fueron recolectados tanto de la literatura como de predicciones quimioinformáticas. Estos sustratos son mostrados en `r ref("Eschema1", type = "figure")`, `r ref("Eschema2", type = "figure")`,`r ref("Eschema3", type = "figure")`,`r ref("Eschema4", type = "figure")`. En este set S3 es el sustrato PRA y S7 el sustrato PROFAR, los sustratos nativos. S13-S16 son sustratos activados por luz. Los sustratos S17 (PRAP) y S18 (Compuesto V) se encontraron en la literatura, mientras que S6 (GMP), S11 (GTP) y otros fueron sugeridos por el grupo del Dr Chris Henry debido a sus similitudes quimioinformáticas. En la siguiente subsección, posteriormente a la selección de sustratos seleccionaremos las secuencias de PriA con las cuales se realizará el docking enzima-sustrato.  
 
 ```{r Eschema1, results = "asis",message=FALSE,echo=FALSE,warning=FALSE}
 label(path = "chapter4/SustratosQuimicos.pdf", 
@@ -374,12 +360,58 @@ label(path = "chapter4/esquema_quimico-4-4.pdf",
 
 ### Selección de secuencias de PriA o familias relacionadas para docking con sustratos similares a lo nativos
 
-Seleccioné 39 secuencias de la familia PriA para en colaboración con el grupo del Dr Carillo-Trip realizar el análisis bioinformático de acoplamiento enzima-sustrato. entre ellas varios _Streptomyces_ dado que en ese género existen al menos dos familias, PriA y PriB. Estas secuencias seleccionadas de PriA / PriB están uniformemente distribuidas en un árbol de especies de _Streptomyces_ basado en la proteína RpoB. Estos Streptomyces tienen variedad en cuanto a la presencia / ausencia de TrpF. En esta sección se incluyeron otros homólogos de PriA de Actinobacteria caracterizados químicamente, finalmente se agregaron secuencias de HisA de _Escherichia coli_, _Arthrobacter Aurescens_, _Salmonella enterica_ y _Acidimicrobium ferrooxidans_ y para TrpF _Jonesia denitrificans_ y _Streptomyces sp _ Mg1 como controles.
+Una vez escogidos los sustratos quedaban por definir las secuencias con las que se llevaría a cabo el análisis bioinformático de acoplamiento enzima-sustrato, en colaboración con el grupo del Dr Carillo-Trip. Para ello seleccioné 39 secuencias de la familia PriA y sus subfamilias, entre ellas varios _Streptomyces_ con el objetivo de incluir tanto secuencias perteneciantes a PriA y como a la subfamilia PriB. Estas secuencias seleccionadas de PriA / PriB están uniformemente distribuidas en _Streptomyces_ de acuerdo a un árbol de especies de _Streptomyces_ basado en la proteína RpoB. Además estos _Streptomyces_ tienen variedad en cuanto a la presencia / ausencia de _trpF_ en su genoma. Se incluyeron además otros homólogos de PriA que han sido caracterizados químicamente y finalmente se con el mismo criterio de carcaterización bioquímica se agregaron secuencias de HisA de _Escherichia coli_, _Arthrobacter Aurescens_, _Salmonella enterica_ y _Acidimicrobium ferrooxidans_ y secuencias TrpF provenientes _Jonesia denitrificans_ y _Streptomyces sp _ Mg1 para ser utilizadas como controles.
 
-Cuando existían estructuras cristalográficas se utilizó esa estructura, de lo contrario, se generaron estructuras homólogas utilizando como plantilla la estructura de la enzima más cercana que contara estructura de cristalográfica. Los organismos que cuentan con estructura cristalográfica de alguna familia relacionada a PriA están descritos en la `r ref("EnzymePDB", type = "table")`. Entre ellos están ejemplos de la familia HisA de Enterobacteria como _Salmonella enterica_ (PDB:5A-) y _Thermotoga maritima_ (2W79, 1QO2). Los representantes de TrpF son las Actinobacterias _Jonesia denitrificans_ y _Streptomyces sp Mg1_. Entre las Actinobacterias caracterizadas con estructura cristalográfica de PriA están _Mycobacterium tuberculosis_ (Mtub PDB:2Y88,2Y89,2Y85,3ZS4), _Streptomyces coelicolor_ (Scoe PDB:2VEP,2X30,1VZW), _Streptomyces globisporus_, _Actynomyces urogenitalis_ (4X2R) y _Corynebacterium jeikeum_. De la familia subHisA se muestran _Corynebacterium efficiens_ y _Actinomyces urogenitalis_ (PDB:4X2R). Las estructuras cristalográficas disponibles de PriB provienen de _Streptomyces ipomoeae_, _Streptomyces sviceus_ (PDB:4U28,4TX9).  La estructura que representa a  subTrpF  es la de _Arthrobacter aurescens_ (PDB:4WD0) y finalmente, las estructuras de TrpF corresponden al las de los organismos _Jonesia denitrificans_ (PDB:4WUI) _Chlamidya thrachomatis_, _Streptomyces sp. Mg1_ y _Actinomyces odontolyticus_.
+Para realizar el docking se requieren estructuras cristalográficas. Cuando existían estructuras cristalográficas de la secuencia específica de PriA del organismo se utilizó dicha estructura. En caso contrario, el grupo del Dr Carrillo-Tripp generó estructuras homólogas utilizando la técnica de modelado por homología mediante el software Rosseta. Para cada secuencia decidí usar como plantilla la estructura tridimensional del homólogo de PriA más cercano que sí contara estructura con estructura cristalográfica. Los organismos con estructura cristalográfica de alguna familia relacionada a PriA están descritos en la `r ref("EnzymePDB", type = "table")`.
+Para este análisis fueron las secuencias con estructura(s) cristalográfica(s) seleccionadas fueron: para la familia HisA la Enterobacteria _Salmonella enterica_ (PDB:5AHE), para la familia subHisA la Actinobacteria _Actinomyces urogenitalis_ (PDB:4X2R), la estructura que representa a subTrpF es la de _Arthrobacter aurescens_ (PDB:4WD0). En cuanto a la familia PriA, varias estructuras cristalográficas de _Mycobacterium tuberculosis_ (Mtub PDB:2Y88,2Y89,2Y85,3ZS4) y _Streptomyces coelicolor_ (Scoe PDB:2VEP,2X30,1VZW) fueron incluidas. Las estructuras de PriB consideradas fueron las de _Streptomyces sviceus_ (PDB:4U28,4TX9) y las de  _Streptomyces sp_ Mg1 (4W9T, 4X9S). Finalmente la estructura cristalográfica de TrpF corresponde a _Jonesia denitrificans_ (PDB:4WUI). `r ref("EnzymeDocking", type = "table")`.
 
-A continuación se muestra una tabla con las estructuras cristalográficas disponibles de PriA y familias relacionadas.  
+Se incluyeron también enzimas TrpF provenientes de _Streptomyces Mg1, Jonesia denitrificans_. Las estructuras cristalográficas disponibles de PriB provienen de de . . _Streptomyces globisporus_, _Actynomyces urogenitalis_ (4X2R) y _Corynebacterium jeikeum_. De la familia subHisA se muestran _Corynebacterium efficiens_ y .    y finalmente,  _Chlamidya thrachomatis_, _Streptomyces sp. Mg1_ y _Actinomyces odontolyticus_. Las representantes de la familia TrpF son las Actinobacterias _Jonesia denitrificans_ y _Streptomyces sp Mg1_. A continuación se muestra una tabla con las estructuras cristalográficas disponibles de PriA y familias relacionadas.  
 
+Table: Secuencias selectas de PriA y familias relacionadas para el análisis de docking \label{tab:EnzymeDocking}
+
+|Abreviatura|Organismo               |  
+|-----------|------------------------|  
+|Save	| _Streptomyces avellaneus_ |  
+|Scar	| _Streptomyces carneus_ |  
+|Spur	| _Streptomyces purpeofuscus_|  
+|Smeg	| _Streptomyces megasporus_|  
+|Sfrad	| _Streptomyces fradiae_|  
+|Svar	| _Streptomyces varsoviensis_|  
+|Satra|	 _Streptomyces atratus_|  
+|Srim	| _Streptomyces rimosus_ R6-500|  
+|SCT34|	 _Streptomyces sp._ CT34|  
+|S1813|	 _Streptomyces sp._ NRRL S-1813|  
+|Ssul	| _Streptomyces sulphureus_ DSM 40104|  
+|Scla	| _Streptomyces clavuligerus_ ATCC 27064|  
+|Stsu	| _Streptomyces tsukubaensis_ NRRL18488|  
+|Sbik	| _Streptomyces bikiniensis_ |  
+|Sven	| _Streptomyces venezuelae_ ATCC 10712|  
+|Sful	| _Streptomyces fulvoviridis_|  
+|Scal	| _Streptomyces californicus_|  
+|Sbaa	| _Streptomyces baarnensis_ |  
+|Salb	| _Streptomyces albus_ J1074|  
+|Siak	| _Streptomyces iakyrus_|  
+|Sgha	| _Streptomyces ghanaensis_ ATCC 14672 |  
+|Sbic	| _Streptomyces bicolor_|  
+|Sipo	| _Streptomyces ipomoeae_ 91-03|  
+|Sbot	| _Streptomyces bottropensis_ ATCC 25435|  
+|SspC | _Streptomyces sp._ C |  
+|SMg1 | _Streptomyces sp._ Mg1|  
+|Sxan	| _Streptomyces xanthophaeus_ |  
+|Skat	| _Streptomyces katrae_|  
+|Slav	| _Streptomyces lavendulae subsp. lavendulae_ |  
+|Sery	| _Streptomyces erythrochromogenes_|  
+|Sniv	| _Streptomyces niveus_ NCIMB 11891|  
+|Ssvi | _Streptomyces sviceus_ ATCC 29083|  
+|Sfla	| _Streptomyces flaveus_ |  
+|Save |	 _Streptomyces avermitilis_ MA-4680 = NBRC 14893|  
+|Scoe | _Streptomyces coelicolor_ A3(2)|  
+|ArTC1|	 _Arthrobacter aurescens_ TC1|  
+|Sglob|	 _Streptomyces globisporus_ C-1027 |  
+|Sgri | _Streptomyces griseolus_|  
+|S34  |	 _Streptomyces sp. _ CT34  (paralogo)  |  
+	
+	
 Table: Estructuras cristalográficas disponibles de PriA y familias relacionadas \label{tab:EnzymePDB}
 
 |Organismo                 |   PDB |   Familia | Resolución ${\AA}$ | Fecha|  
@@ -418,12 +450,11 @@ Table: Estructuras cristalográficas disponibles de PriA y familias relacionadas
 | _Jonesia denitrificans_     | 4WUI | TrpF	|	      1.09   |  2014|  
 | _Pyrococcus furiosus_       | 4AAJ | TrpF	|	      1.75    | 2012|  
       
-
-
   
 ### El análisis de PriA a nivel estructural sugiere que GTP es el sustrato más afín  
 
-Con las enzimas seleccionadas de PriA se realizaron simulaciones de docking. Se incluyeron también como controles enzimas TrpF provenientes de _Streptomyces Mg1, Jonesia denitrificans_. Los procedimientos pueden ser consultados en  [Docking Protocols](https://github.com/tripplab/Docking/wiki). Como resultado podemos ver `r ref("HeatplodPriAdocking", type = "figure")` que el GTP es el que tiene mayor afinidad.    
+Con las estructuras de las enzimas seleccionadas de PriA se realizaron simulaciones de docking respecto a los veinte sustratos descritos. El procedimiento puede ser consultado en  [Docking Protocols](https://github.com/tripplab/Docking/wiki). En la `r ref("HeatplodPriAdocking", type = "figure")` presento una visualización de los resultados obtenidos. En esta figura se marcan en color los organismos de los que se tiene una caracterización bioquímica, en azul están las secuencias correspondientes a TrpF, en rojo las de HisA, en rosa las secuencias de PriA y subHisA y en verde las de PriB y subTrpF. Con un asterisco fueron marcadas las secuencias de las que se cuenta con estructura cristalográfica. En el caso de las secuencias que no contaban con estructura cristalográfica, la estructura que sirvió como base está anotada después de la abreviatura del organismo. Las abreviaturas corresponden a los organismos de la  `r ref("EnzymeDocking", type = "table")`. Los cuadrados grises son datos que faltaron de simular. Entre más azul es mayor la afinidad del sustrato por la secuencia, entre más rojo menor la afinidad de la enzima por este sustrato. Se requieren más controles para este experimento, pero una tendencia general es que la columna correspondiente a S11 (GTP) es el sustrato que tiene mayor afinidad. Por ello, aunque afinidad no tiene porque corresponder con capacidad catalítica, se decidió investigar la capacidad de secuencias de PriA para catalizar alguna reacción sobre el GTP, esa investigación es el objeto de la última sección de este capítulo.     
+
 
 ```{r sessionInfo,echo=FALSE, eval=FALSE,results='hide',message=FALSE,warning=FALSE}
 
@@ -540,16 +571,6 @@ label(path = "chapter4/Figura1_4.pdf",
       cap.size = "footnotesize",
       scale=".7",
       alt.cap="Heatplot del docking de enzimas relacionadas a PriA vs posibles substratos",
-      type = "figure")
-```
-
-```{r PriADocking, results = "asis", results='hide', message=FALSE,echo=FALSE, eval="FALSE"}
-label(path = "chapter4/PriAHeatPot.png", 
-      caption = "Heat Plot PriA Streptomyces vs other subtrates",
-      scale=.6,
-      label = "PriADocking",
-      cap.size = "footnotesize",
-      alt.cap="",
       type = "figure")
 ```
 

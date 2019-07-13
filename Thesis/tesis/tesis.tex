@@ -4387,18 +4387,18 @@ starts here.
   
   Ahora bien, \href{https://www.rcsb.org/structure/1vzw}{1VZW} es una
   estructura de PriA de \emph{S. coelicolor} obtenida mediante
-  cristalografía {[}kuper\_twofold\_200{]}. En esta tesis calculé que el
-  RMSD entre PriA (\href{https://www.rcsb.org/structure/1vzw}{1VZW}) y su
-  homólogo lejano HisF (\href{http://www.rcsb.org/structure/2A0N}{2A0N}
-  proveniente de \emph{Thermotoga maritima} es de 7.34\({\AA}\). Así mismo
-  la distancia obtenida entre PriA
-  (\href{https://www.rcsb.org/structure/1vzw}{1VZW}) y el modelo de TrpF
-  \href{http://www.rcsb.org/structure/5LHE}{5LHE} de \emph{Thermococcus
-  kodakaraensis} es de 12.088 \({\AA}\). Por tanto cualquier modelo
-  existoso de PriA debe tener un RMSD menor que estas distancias con
-  respecto al modelo 1VZW. La distancia entre la estructura PriAEV y HisF
-  es de 5.603 \({\AA}\) y el RMSD entre PriAEV y TrpF es de 12.554
-  \({\AA}\). Además, la distancia entre estas 1VZW y PriAEV medida
+  cristalografía {[}\protect\hyperlink{ref-kuper_twofold_2005}{181}{]}. En
+  esta tesis calculé que el RMSD entre PriA
+  (\href{https://www.rcsb.org/structure/1vzw}{1VZW}) y su homólogo lejano
+  HisF (\href{http://www.rcsb.org/structure/2A0N}{2A0N} proveniente de
+  \emph{Thermotoga maritima} es de 7.34\({\AA}\). Así mismo la distancia
+  obtenida entre PriA (\href{https://www.rcsb.org/structure/1vzw}{1VZW}) y
+  el modelo de TrpF \href{http://www.rcsb.org/structure/5LHE}{5LHE} de
+  \emph{Thermococcus kodakaraensis} es de 12.088 \({\AA}\). Por tanto
+  cualquier modelo existoso de PriA debe tener un RMSD menor que estas
+  distancias con respecto al modelo 1VZW. La distancia entre la estructura
+  PriAEV y HisF es de 5.603 \({\AA}\) y el RMSD entre PriAEV y TrpF es de
+  12.554 \({\AA}\). Además, la distancia entre estas 1VZW y PriAEV medida
   utilizando el RSMD (pymol 2.2.3) entre ellas es de 3.362 \({\AA}\). Así
   pues PriAEV consigue diferenciarse de HisF y TrpF y estar a una
   distancia de 3.362 \({\AA}\) de 1VZW. Esta distancia es menor que que el
@@ -4492,7 +4492,7 @@ starts here.
   acoplamiento con el 173T, que está muy cerca del 175D que ha sido
   asociado con la actividad de isomerización de PRA, pero no de ProFAR.
   Además se investigaron los aminoácidos catalíticos D130
-  {[}\protect\hyperlink{ref-due_bisubstrate_2011}{181}{]} y D175
+  {[}\protect\hyperlink{ref-due_bisubstrate_2011}{182}{]} y D175
   reportados en \emph{Mycobacterium
   tuberculosis}{[}\protect\hyperlink{ref-verduzco-castro_co-occurrence_2016}{67}{]}
   que corresponden a en \emph{S coelicolor} D11, D131 y D171. En este
@@ -4538,33 +4538,25 @@ starts here.
   
   Además de los sustratos conocidos ProFAR y PRA en los que PriA es capaz
   de realizar una isomerización, es posible que PriA pueda ser promiscua
-  en otros sustratos. Como se vio en la sección de EvoMining de este
-  capítulo, PriA parece participar en la síntesis del antibiótico
-  pentostaina \emph{ada}. Tomando este ejemplo como inspiración, se
-  colectaron en la literatura sustratos químicamente parecidos a ProFAR y
-  PRA \autoref{fig:Eschema1},
-  \autoref{fig:Eschema2},\autoref{fig:Eschema3},\autoref{fig:Eschema4}.
-  Así pues, esta sección buscará mostrar sustratos parecidos a los nativos
-  de PriA para posteriormente probar alguno en copias selectas de PriA
-  provenientes de diversos organismos.
-  
-  Se seleccionaron veinte sustratos para realizar docking entre ellos y
-  las estructuras de las secuencias de PriA S1, S2, \ldots{} S20 sustratos
-  fueron recolectados de la literatura y las predicciones de la
-  quimioinformática. S3 PRA y S7 PROFAR son sustratos nativos, S13-S16 son
-  sustratos activados por la luz, S17 PRAP, S18 Compuesto V, se
-  encontraron en la literatura, S6 GMP, S11 GTP y otros fueron sugeridos
-  por chemioinformatics. Para tener una diea de la diversidad de estos
-  sustratos, se realizó entre ellos, un cálculo de distancias de Tanimoto.
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 0,scale = 0.4]{chapter4/SubstratesClustering.png}
-  \caption[Clustering de sustratos de acuerdo a sus distancias de Tanimoto]{\footnotesize{Clustering de sustratos de acuerdo a sus distancias de Tanimoto}}
-  \label{fig:tanimoto}
-  \end{figure}
-  
-  \clearpage  
+  en otros sustratos. De hecho, como se vio en la sección de EvoMining de
+  este capítulo PriA parece participar en la síntesis del antibiótico
+  pentostaina ( \emph{ada} BGC). Tomando este ejemplo como inspiración, se
+  buscaron sustratos químicamente parecidos a ProFAR y PRA. Esta sección
+  buscará probar la afinidad de sustratos parecidos a los nativos de PriA
+  para posteriormente seleccionar probar alguno en copias selectas de PriA
+  provenientes de diversos organismos. Veinte sustratos S1, S2, \ldots{}
+  S20 sustratos fueron recolectados tanto de la literatura como de
+  predicciones quimioinformáticas. Estos sustratos son mostrados en
+  \autoref{fig:Eschema1},
+  \autoref{fig:Eschema2},\autoref{fig:Eschema3},\autoref{fig:Eschema4}. En
+  este set S3 es el sustrato PRA y S7 el sustrato PROFAR, los sustratos
+  nativos. S13-S16 son sustratos activados por luz. Los sustratos S17
+  (PRAP) y S18 (Compuesto V) se encontraron en la literatura, mientras que
+  S6 (GMP), S11 (GTP) y otros fueron sugeridos por el grupo del Dr Chris
+  Henry debido a sus similitudes quimioinformáticas. En la siguiente
+  subsección, posteriormente a la selección de sustratos seleccionaremos
+  las secuencias de PriA con las cuales se realizará el docking
+  enzima-sustrato.
   
   \begin{figure}[h!tbp]
   \centering
@@ -4600,45 +4592,112 @@ starts here.
   docking con sustratos similares a lo
   nativos}\label{seleccion-de-secuencias-de-pria-o-familias-relacionadas-para-docking-con-sustratos-similares-a-lo-nativos}
   
-  Seleccioné 39 secuencias de la familia PriA para en colaboración con el
-  grupo del Dr Carillo-Trip realizar el análisis bioinformático de
-  acoplamiento enzima-sustrato. entre ellas varios \emph{Streptomyces}
-  dado que en ese género existen al menos dos familias, PriA y PriB. Estas
+  Una vez escogidos los sustratos quedaban por definir las secuencias con
+  las que se llevaría a cabo el análisis bioinformático de acoplamiento
+  enzima-sustrato, en colaboración con el grupo del Dr Carillo-Trip. Para
+  ello seleccioné 39 secuencias de la familia PriA y sus subfamilias,
+  entre ellas varios \emph{Streptomyces} con el objetivo de incluir tanto
+  secuencias perteneciantes a PriA y como a la subfamilia PriB. Estas
   secuencias seleccionadas de PriA / PriB están uniformemente distribuidas
-  en un árbol de especies de \emph{Streptomyces} basado en la proteína
-  RpoB. Estos Streptomyces tienen variedad en cuanto a la presencia /
-  ausencia de TrpF. En esta sección se incluyeron otros homólogos de PriA
-  de Actinobacteria caracterizados químicamente, finalmente se agregaron
-  secuencias de HisA de \emph{Escherichia coli}, \emph{Arthrobacter
-  Aurescens}, \emph{Salmonella enterica} y \emph{Acidimicrobium
-  ferrooxidans} y para TrpF \emph{Jonesia denitrificans} y
-  \emph{Streptomyces sp } Mg1 como controles.
+  en \emph{Streptomyces} de acuerdo a un árbol de especies de
+  \emph{Streptomyces} basado en la proteína RpoB. Además estos
+  \emph{Streptomyces} tienen variedad en cuanto a la presencia / ausencia
+  de \emph{trpF} en su genoma. Se incluyeron además otros homólogos de
+  PriA que han sido caracterizados químicamente y finalmente se con el
+  mismo criterio de carcaterización bioquímica se agregaron secuencias de
+  HisA de \emph{Escherichia coli}, \emph{Arthrobacter Aurescens},
+  \emph{Salmonella enterica} y \emph{Acidimicrobium ferrooxidans} y
+  secuencias TrpF provenientes \emph{Jonesia denitrificans} y
+  \emph{Streptomyces sp } Mg1 para ser utilizadas como controles.
   
-  Cuando existían estructuras cristalográficas se utilizó esa estructura,
-  de lo contrario, se generaron estructuras homólogas utilizando como
-  plantilla la estructura de la enzima más cercana que contara estructura
-  de cristalográfica. Los organismos que cuentan con estructura
+  Para realizar el docking se requieren estructuras cristalográficas.
+  Cuando existían estructuras cristalográficas de la secuencia específica
+  de PriA del organismo se utilizó dicha estructura. En caso contrario, el
+  grupo del Dr Carrillo-Tripp generó estructuras homólogas utilizando la
+  técnica de modelado por homología mediante el software Rosseta. Para
+  cada secuencia decidí usar como plantilla la estructura tridimensional
+  del homólogo de PriA más cercano que sí contara estructura con
+  estructura cristalográfica. Los organismos con estructura
   cristalográfica de alguna familia relacionada a PriA están descritos en
-  la \autoref{tab:EnzymePDB}. Entre ellos están ejemplos de la familia
-  HisA de Enterobacteria como \emph{Salmonella enterica} (PDB:5A-) y
-  \emph{Thermotoga maritima} (2W79, 1QO2). Los representantes de TrpF son
-  las Actinobacterias \emph{Jonesia denitrificans} y \emph{Streptomyces sp
-  Mg1}. Entre las Actinobacterias caracterizadas con estructura
-  cristalográfica de PriA están \emph{Mycobacterium tuberculosis} (Mtub
-  PDB:2Y88,2Y89,2Y85,3ZS4), \emph{Streptomyces coelicolor} (Scoe
-  PDB:2VEP,2X30,1VZW), \emph{Streptomyces globisporus}, \emph{Actynomyces
-  urogenitalis} (4X2R) y \emph{Corynebacterium jeikeum}. De la familia
-  subHisA se muestran \emph{Corynebacterium efficiens} y \emph{Actinomyces
-  urogenitalis} (PDB:4X2R). Las estructuras cristalográficas disponibles
-  de PriB provienen de \emph{Streptomyces ipomoeae}, \emph{Streptomyces
-  sviceus} (PDB:4U28,4TX9). La estructura que representa a subTrpF es la
-  de \emph{Arthrobacter aurescens} (PDB:4WD0) y finalmente, las
-  estructuras de TrpF corresponden al las de los organismos \emph{Jonesia
-  denitrificans} (PDB:4WUI) \emph{Chlamidya thrachomatis},
-  \emph{Streptomyces sp. Mg1} y \emph{Actinomyces odontolyticus}.
+  la \autoref{tab:EnzymePDB}. Para este análisis fueron las secuencias con
+  estructura(s) cristalográfica(s) seleccionadas fueron: para la familia
+  HisA la Enterobacteria \emph{Salmonella enterica} (PDB:5AHE), para la
+  familia subHisA la Actinobacteria \emph{Actinomyces urogenitalis}
+  (PDB:4X2R), la estructura que representa a subTrpF es la de
+  \emph{Arthrobacter aurescens} (PDB:4WD0). En cuanto a la familia PriA,
+  varias estructuras cristalográficas de \emph{Mycobacterium tuberculosis}
+  (Mtub PDB:2Y88,2Y89,2Y85,3ZS4) y \emph{Streptomyces coelicolor} (Scoe
+  PDB:2VEP,2X30,1VZW) fueron incluidas. Las estructuras de PriB
+  consideradas fueron las de \emph{Streptomyces sviceus} (PDB:4U28,4TX9) y
+  las de \emph{Streptomyces sp} Mg1 (4W9T, 4X9S). Finalmente la estructura
+  cristalográfica de TrpF corresponde a \emph{Jonesia denitrificans}
+  (PDB:4WUI). \autoref{tab:EnzymeDocking}.
   
-  A continuación se muestra una tabla con las estructuras cristalográficas
-  disponibles de PriA y familias relacionadas.
+  Se incluyeron también enzimas TrpF provenientes de \emph{Streptomyces
+  Mg1, Jonesia denitrificans}. Las estructuras cristalográficas
+  disponibles de PriB provienen de de . . \emph{Streptomyces globisporus},
+  \emph{Actynomyces urogenitalis} (4X2R) y \emph{Corynebacterium jeikeum}.
+  De la familia subHisA se muestran \emph{Corynebacterium efficiens} y . y
+  finalmente, \emph{Chlamidya thrachomatis}, \emph{Streptomyces sp. Mg1} y
+  \emph{Actinomyces odontolyticus}. Las representantes de la familia TrpF
+  son las Actinobacterias \emph{Jonesia denitrificans} y
+  \emph{Streptomyces sp Mg1}. A continuación se muestra una tabla con las
+  estructuras cristalográficas disponibles de PriA y familias
+  relacionadas.
+  
+  \begin{longtable}[]{@{}ll@{}}
+  \caption{Secuencias selectas de PriA y familias relacionadas para el
+  análisis de docking \label{tab:EnzymeDocking}}\tabularnewline
+  \toprule
+  Abreviatura & Organismo\tabularnewline
+  \midrule
+  \endfirsthead
+  \toprule
+  Abreviatura & Organismo\tabularnewline
+  \midrule
+  \endhead
+  Save & \emph{Streptomyces avellaneus}\tabularnewline
+  Scar & \emph{Streptomyces carneus}\tabularnewline
+  Spur & \emph{Streptomyces purpeofuscus}\tabularnewline
+  Smeg & \emph{Streptomyces megasporus}\tabularnewline
+  Sfrad & \emph{Streptomyces fradiae}\tabularnewline
+  Svar & \emph{Streptomyces varsoviensis}\tabularnewline
+  Satra & \emph{Streptomyces atratus}\tabularnewline
+  Srim & \emph{Streptomyces rimosus} R6-500\tabularnewline
+  SCT34 & \emph{Streptomyces sp.} CT34\tabularnewline
+  S1813 & \emph{Streptomyces sp.} NRRL S-1813\tabularnewline
+  Ssul & \emph{Streptomyces sulphureus} DSM 40104\tabularnewline
+  Scla & \emph{Streptomyces clavuligerus} ATCC 27064\tabularnewline
+  Stsu & \emph{Streptomyces tsukubaensis} NRRL18488\tabularnewline
+  Sbik & \emph{Streptomyces bikiniensis}\tabularnewline
+  Sven & \emph{Streptomyces venezuelae} ATCC 10712\tabularnewline
+  Sful & \emph{Streptomyces fulvoviridis}\tabularnewline
+  Scal & \emph{Streptomyces californicus}\tabularnewline
+  Sbaa & \emph{Streptomyces baarnensis}\tabularnewline
+  Salb & \emph{Streptomyces albus} J1074\tabularnewline
+  Siak & \emph{Streptomyces iakyrus}\tabularnewline
+  Sgha & \emph{Streptomyces ghanaensis} ATCC 14672\tabularnewline
+  Sbic & \emph{Streptomyces bicolor}\tabularnewline
+  Sipo & \emph{Streptomyces ipomoeae} 91-03\tabularnewline
+  Sbot & \emph{Streptomyces bottropensis} ATCC 25435\tabularnewline
+  SspC & \emph{Streptomyces sp.} C\tabularnewline
+  SMg1 & \emph{Streptomyces sp.} Mg1\tabularnewline
+  Sxan & \emph{Streptomyces xanthophaeus}\tabularnewline
+  Skat & \emph{Streptomyces katrae}\tabularnewline
+  Slav & \emph{Streptomyces lavendulae subsp. lavendulae}\tabularnewline
+  Sery & \emph{Streptomyces erythrochromogenes}\tabularnewline
+  Sniv & \emph{Streptomyces niveus} NCIMB 11891\tabularnewline
+  Ssvi & \emph{Streptomyces sviceus} ATCC 29083\tabularnewline
+  Sfla & \emph{Streptomyces flaveus}\tabularnewline
+  Save & \emph{Streptomyces avermitilis} MA-4680 = NBRC
+  14893\tabularnewline
+  Scoe & \emph{Streptomyces coelicolor} A3(2)\tabularnewline
+  ArTC1 & \emph{Arthrobacter aurescens} TC1\tabularnewline
+  Sglob & \emph{Streptomyces globisporus} C-1027\tabularnewline
+  Sgri & \emph{Streptomyces griseolus}\tabularnewline
+  S34 & \emph{Streptomyces sp. } CT34 (paralogo)\tabularnewline
+  \bottomrule
+  \end{longtable}
   
   \begin{longtable}[]{@{}ccccc@{}}
   \caption{Estructuras cristalográficas disponibles de PriA y familias
@@ -4702,13 +4761,29 @@ starts here.
   el sustrato más
   afín}\label{el-analisis-de-pria-a-nivel-estructural-sugiere-que-gtp-es-el-sustrato-mas-afin}
   
-  Con las enzimas seleccionadas de PriA se realizaron simulaciones de
-  docking. Se incluyeron también como controles enzimas TrpF provenientes
-  de \emph{Streptomyces Mg1, Jonesia denitrificans}. Los procedimientos
-  pueden ser consultados en
-  \href{https://github.com/tripplab/Docking/wiki}{Docking Protocols}. Como
-  resultado podemos ver \autoref{fig:HeatplodPriAdocking} que el GTP es el
-  que tiene mayor afinidad.
+  Con las estructuras de las enzimas seleccionadas de PriA se realizaron
+  simulaciones de docking respecto a los veinte sustratos descritos. El
+  procedimiento puede ser consultado en
+  \href{https://github.com/tripplab/Docking/wiki}{Docking Protocols}. En
+  la \autoref{fig:HeatplodPriAdocking} presento una visualización de los
+  resultados obtenidos. En esta figura se marcan en color los organismos
+  de los que se tiene una caracterización bioquímica, en azul están las
+  secuencias correspondientes a TrpF, en rojo las de HisA, en rosa las
+  secuencias de PriA y subHisA y en verde las de PriB y subTrpF. Con un
+  asterisco fueron marcadas las secuencias de las que se cuenta con
+  estructura cristalográfica. En el caso de las secuencias que no contaban
+  con estructura cristalográfica, la estructura que sirvió como base está
+  anotada después de la abreviatura del organismo. Las abreviaturas
+  corresponden a los organismos de la \autoref{tab:EnzymeDocking}. Los
+  cuadrados grises son datos que faltaron de simular. Entre más azul es
+  mayor la afinidad del sustrato por la secuencia, entre más rojo menor la
+  afinidad de la enzima por este sustrato. Se requieren más controles para
+  este experimento, pero una tendencia general es que la columna
+  correspondiente a S11 (GTP) es el sustrato que tiene mayor afinidad. Por
+  ello, aunque afinidad no tiene porque corresponder con capacidad
+  catalítica, se decidió investigar la capacidad de secuencias de PriA
+  para catalizar alguna reacción sobre el GTP, esa investigación es el
+  objeto de la última sección de este capítulo.
   
   \begin{figure}[h!tbp]
   \centering
@@ -5013,11 +5088,11 @@ starts here.
   curvata} que es una Actinobacteria termofílica de la familia
   \emph{Thermomonosporaceae} y que puede ser encontrada encompostas ya que
   participa en la degradación de celulosa
-  {[}\protect\hyperlink{ref-chertkov_complete_2011}{182}{]}. La trpF de
+  {[}\protect\hyperlink{ref-chertkov_complete_2011}{183}{]}. La trpF de
   \emph{Jonesia denitrificans} no mostró actividad.Esta bacteria está
   clasificada como un organismo patogénico para animales, su genoma fue
   originalmente aislado de sangre
-  {[}\protect\hyperlink{ref-pukall_complete_2009}{183}{]}.
+  {[}\protect\hyperlink{ref-pukall_complete_2009}{184}{]}.
   
   \clearpage 
   
@@ -7002,8 +7077,15 @@ starts here.
   Available from:
   \url{https://academic.oup.com/bioinformatics/article/35/9/1582/5124274}
   
+  \hypertarget{ref-kuper_twofold_2005}{}
+  181. Kuper J, Doenges C, Wilmanns M. Two fold repeated
+  \((\beta\alpha)_4\) half barrels may provide a molecular tool for dual
+  substrate specificity. EMBO reports {[}Internet{]}. 2005
+  Feb;6(2):134--9. Available from:
+  \url{https://www.embopress.org/doi/abs/10.1038/sj.embor.7400330}
+  
   \hypertarget{ref-due_bisubstrate_2011}{}
-  181. Due AV, Kuper J, Geerlof A, Kries JP von, Wilmanns M. Bisubstrate
+  182. Due AV, Kuper J, Geerlof A, Kries JP von, Wilmanns M. Bisubstrate
   specificity in histidine/tryptophan biosynthesis isomerase from
   Mycobacterium tuberculosis by active site metamorphosis. Proceedings of
   the National Academy of Sciences of the United States of America
@@ -7012,29 +7094,29 @@ starts here.
   \url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3048130/}
   
   \hypertarget{ref-chertkov_complete_2011}{}
-  182. Chertkov O, Sikorski J, Nolan M, Lapidus A, Lucas S, Del Rio TG, et
+  183. Chertkov O, Sikorski J, Nolan M, Lapidus A, Lucas S, Del Rio TG, et
   al. Complete genome sequence of Thermomonospora curvata type strain
   (B9T). Standards in Genomic Sciences {[}Internet{]}. 2011 Feb {[}cited
   2017 Mar 3{]};4(1):13--22. Available from:
   \url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3072092/}
   
   \hypertarget{ref-pukall_complete_2009}{}
-  183. Pukall R, Gehrich-Schröter G, Lapidus A, Nolan M, Glavina Del Rio
+  184. Pukall R, Gehrich-Schröter G, Lapidus A, Nolan M, Glavina Del Rio
   T, Lucas S, et al. Complete genome sequence of Jonesia denitrificans
   type strain (Prevot 55134T). Standards in Genomic Sciences
   {[}Internet{]}. 2009 Nov {[}cited 2017 Mar 3{]};1(3):262--9. Available
   from: \url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3035236/}
   
   \hypertarget{ref-angel2000}{}
-  184. Angel E. Interactive computer graphics : A top-down approach with
+  185. Angel E. Interactive computer graphics : A top-down approach with
   opengl. Boston, MA: Addison Wesley Longman; 2000.
   
   \hypertarget{ref-angel2001}{}
-  185. Angel E. Batch-file computer graphics : A bottom-up approach with
+  186. Angel E. Batch-file computer graphics : A bottom-up approach with
   quicktime. Boston, MA: Wesley Addison Longman; 2001.
   
   \hypertarget{ref-angel2002a}{}
-  186. Angel E. Test second book by angel. Boston, MA: Wesley Addison
+  187. Angel E. Test second book by angel. Boston, MA: Wesley Addison
   Longman; 2001.
 
 
