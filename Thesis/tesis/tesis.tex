@@ -2199,43 +2199,119 @@ starts here.
   
   \section{Introducción}\label{introduccion-1}
   
+  \subsection{Las copias extra de familias enzimáticas que son reclutadas
+  para una nueva función están relacionadas con la
+  promiscuidad.}\label{las-copias-extra-de-familias-enzimaticas-que-son-reclutadas-para-una-nueva-funcion-estan-relacionadas-con-la-promiscuidad.}
+  
   La promiscuidad enzimática puede buscarse en familias envueltas en
-  procesos de divergencia funcional. Uno de dichos procesos es la
-  expansión de familias pertenecientes a rutas metabólicas conservadas y
-  su posterior reclutamiento hacia el metabolismo especializado. Los
-  productos naturales o metabolitos especializados son sintetizados
+  procesos de divergencia funcional REFERENCIA. Uno de dichos procesos es
+  la expansión de familias pertenecientes a rutas metabólicas conservadas
+  y su posterior reclutamiento hacia el metabolismo especializado
+  REFERENCIA. Cuando se identifica que en una misma familia de enzimas
+  existe un subgrupo de homólogos con una función del metabolismo central
+  bien caracterizada y al menos otro homólogo con evidencia experimental
+  de poseer otra función bioquímica, se puede inferir que la
+  neofuncionalización probabliemente ocurrió a traves de promiscuidad
+  enzimática. Los homólogos con la función `secundaria' suelen ser
+  producto de expansiones previas de genes con la funcion `primaria'
+  REFERENCIA. En un trabajo previo se demostró para un caso en el que
+  efectivamente las enzima XXX realiza la funcion primaria mientras que
+  XXX cataliza la funcion secundaria mientras que los homólogos
+  intermedios son promiscuos REFERENCIA. EvoMining es un algoritmo que
+  sigue esta estrategia para identificar cambios en la promiscuidad de una
+  familia de ezimas dentro de un linaje definido por el usuario. Al
+  cambiar la familia de enzimas en la que se buscan neofuncionalizaciones
+  se puede encontrar cuáles familias han sido más frecuentemente
+  promiscuas dentro de un linaje, mientras que si se busca cómo han
+  evolucionado las funciones conocidas de una misma familia en distintos
+  linajes se pueden descubrir los patrones característicos de cada grupo
+  de organismos. Además de que EvoMining permite analizar los orígenes y
+  destinos metabólicos de las familias enzimáticas para entender la
+  evolución del metabolismo, también permite la identificación de rutas de
+  metabolismo especializado que frecuentemente conduce al descubrimiento
+  de nuevos productos naturales.
+  
+  Los productos naturales o metabolitos especializados son sintetizados
   generalmente por \emph{clusters} de genes distribuidos en un pequeño
   porcentaje de los organismos de un linaje taxonómico. Estos
-  \emph{clusters}, conocidos como BGC ( \emph{Biosynthetical Gene
-  Clusters} ), contienen reclutamientos de las copias extras de familias
-  pertenecientes al metabolismo conservado. La similitud de secuencia de
-  los genes que pertenecen a los BGC así como su relativa sintenia en
-  diversos organismos de un linaje hacen que genómica copmarativa sea de
-  utilidad para intentar localizarlos. Finalmente, el auge en la cantidad
-  de genomas disponibles públicamente así como la facilidad por sequenciar
-  nuevos hace posible que los métodos bioinformáticos ayuden a encontrar
-  nuevos BGC. EvoMining es un método de para sugerir la formación de
-  nuevos BGC y en consecuencia encontrar zonas donde puede estar
-  ocurriendo la capcidad de adquirir un nuevo sustrato cambio en
-  promiscuidad enzimátcica.
+  \emph{clusters}, conocidos como BGC ( \emph{Biosynthetic Gene Clusters}
+  ), contienen copias extras de genes de familias que pertenecen al
+  metabolismo conservado. En este trabajo aprovechamos que en la
+  actualidad es posible predecir nuevos BGC mediante estrategias
+  bioinformáticas gracias a la gran cantidad de secuencias disponibles
+  públicamente así como la facilidad para secuenciar nuevos genomas. La
+  similitud de secuencia de los genes que pertenecen a los BGC así como su
+  sintenia en diversos organismos de un linaje hacen que genómica
+  comparativa sea de utilidad para intentar localizarlos.
   
   En este capítulo se explica el desarrollo de EvoMining como plataforma
   bioinformática dedicada a presentar una visualización del origen y
-  destino de todas las copias de familia enzimátocas provenientes del
-  emtabolismo conservado. Se discutirán también cuatro linajes genómicos
-  Actinobacteria Cyanobacteria, \emph{Pseudomonas} y Archaea y finalmente
-  se analizará un BGC scytonemin.
+  destino de todas las copias de familia escitonemina enzimáticas
+  provenientes del metabolismo conservado. Se discutirá también la
+  evolución de las expansiones de familias génicas en cuatro linajes
+  genómicos Actinobacteria cianobacteria, \emph{Pseudomonas} y Archaea.
+  Finalmente se analizarán BGC que fueron detectados a partir del uso de
+  EvoMining con énfasis en el de la escitonemina.
   
   \section{EvoMining es un método para encontrar BGC no
   tradicionales}\label{evomining-es-un-metodo-para-encontrar-bgc-no-tradicionales}
   
+  \subsection{EvoMining es un paradigma que permite ubicar copias extra de
+  familias enzimáticas y organizarlas visualmente acorde a eventos
+  evolutivos.}\label{evomining-es-un-paradigma-que-permite-ubicar-copias-extra-de-familias-enzimaticas-y-organizarlas-visualmente-acorde-a-eventos-evolutivos.}
+  
   Existen varias clases de BGC que son arquetipos de los productos
   naturales. Entre ellas se encuentran las clases \emph{non ribosomomal
-  peptide synthase} (NRPS), \emph{poliketide synthase} PKS, terpenos,
-  RIPPs, alcaloides, etc. En estas clases, hay enzimas cuya presencia
-  lleva a la detección del BGC. Por ejemplo, las sintasas no ribosomales
-  son las que al encontrarlas dan nombre a los BGC tipo NRPS y las
-  policétido sintasas son las que dan nombre a los BGC de la clase PKS.
+  peptide synthetase} (NRPS), \emph{poliketide synthase} (PKS), terpenos,
+  péptidos ribosomales modificados post-traduccionalmente (RIPPs),
+  alcaloides, etc. En estas clases, hay enzimas cuya presencia lleva a la
+  detección de los BGC. Por ejemplo, las sintetasas no ribosomales son las
+  que al encontrarlas dan nombre a los BGC tipo NRPS y las policétido
+  sintasas son las que dan nombre a los BGC de la clase PKS. No todos los
+  productos naturales están dentro de los BGC clásicos. Dentro de MIBiG
+  (BGC caracterizados experimentalmente) hay 231 BGC {[}REF
+  2012,2016,\ldots{}{]} (\(12.7\%\)) clasificados como ``otros'', que de
+  hecho carecen de PKS, NRPS o cualquiera de las otras clases de enzimas
+  características del metabolismo especializado. Como ejemplo se muestra
+  la \autoref{fig:other} donde se aprecia que un porcentaje de los BGC
+  reportados tanto en Actinobacteria como en cianobacteria pertenece al
+  grupo ``otros''. La ausencia de enzimas biosintéticas conocidas hace que
+  estos BGC sean ``atípicos'', difíciles de identificar. Los BGC no
+  tradicionales suelen pasar desapercibidos porque no hay conocimiento
+  previo de ellos que permita reconocerlos.
+  
+  EvoMining implementa una estrategia de búsqueda de divergencia del
+  metabolismo conservado en lugar de la estrategia de búsqueda de
+  similitud con metabolismo especializado, lo que permite identificar BGC
+  que no pertenecen a ninguna categoría del metabolismo secundario
+  previamente descritos. Para ello facilita la identificación de las ramas
+  divergentes en el registro de secuencias de una familia de enzimas
+  analizada a través de la evolución y las utiliza como una marca que
+  sugiere funciones divergentes del metabolismo conservado. De esta forma
+  se puede localizar alguna enzima de un BGC no clasificado Como ya se
+  mostró en EvoMining 1.0 encontramos una enzima que FALTA FALTA YA NO
+  HACE LA REACCION SOBRE EL METABOLITO CON AZUFRE SINO CON UN ANÁLOGO QUE
+  TIENE ARSÉNICO EN SU LUGAR, luego de identificar esta enzima divergente
+  de su homóloga de metabolismo central pudimos identificar que era parte
+  de una región con X genes que además mantienen la sintenia en un clado
+  de los ACTINOBACTERIALDETES. Lo que constituyó el primer caso de un BGC
+  con química nueva predicho a partir de secuencias de enzimas que eran
+  divergentes de sus homólogas de metabolismo central{[}REFYAÑEZ ET AL{]},
+  XXX FALTA FALTA FALTA HASTA AQUI Otro ejemplo de este escenario es el
+  BGC de la escitonemina
+  {[}\protect\hyperlink{ref-garciapichel_evidence_1992}{147}{]}, un
+  pigmento cianobacteriano que absorve luz UV. Su biosíntesis requiere de
+  ScyB y ScyA, dos enzimas que sostienen la síntesis de este metabolito
+  especializado
+  {[}\protect\hyperlink{ref-balskus_investigating_2008}{148}{]}.
+  Curiosamente, ScyB y ScyA son homólogos distantes de la glutamato
+  deshidrogenasa (GDH) y la acetolactato sintasa (ALS), respectivamente,
+  que participan en la desaminación oxidativa reversible del glutamato a
+  \(\alpha-\)ketoglutarato y amoníaco
+  {[}\protect\hyperlink{ref-engel_glutamate_2014}{150}{]} y en la síntesis
+  de aminoácidos de cadena ramificada
+  {[}\protect\hyperlink{ref-liu_acetohydroxyacid_2016}{151}{]},
+  respectivamente.
   
   \begin{figure}[h!tbp]
   \centering
@@ -2244,212 +2320,243 @@ starts here.
   \label{fig:other}
   \end{figure}
   
-  No todos los productos naturales están dentro de los BGC clásicos.
-  Dentro de MIBiG hay 231 BGC (\(12.7\%\)) clasificados como ``otros'',
-  que de hecho carecen de PKS, NRPS o cualquiera de las otras clases de
-  enzimas características del metabolismo especializado. Como ejemplo se
-  muestra la \autoref{fig:other} donde se aprecia que un porcentaje de los
-  BGC reportados tanto en Actinobacteria como en Cyanobacteria pertenece
-  al grupo ``otros''. La ausencia de enzimas biosintéticas conocidas hace
-  que estos BGC sean ``atípicos'', difíciles de identificar. Los BGC no
-  clasificados suelen pasar desapercibidos, porque no hay conocimiento
-  previo de ellos que permita reconocerlos. Por ello EvoMining busca
-  implementar una estrategia de búsqueda de divergencia del metabolismo
-  conservado en lugar de la estrategia de búsqueda de similitud con
-  metabolismo especializado. La ramas divergentes en el registro de
-  secuencias analizadas a través de la evolución son una herramienta para
-  la búsqueda de secuencias divergentes del metabolismo conservado.
+  \section{Algoritmos y bases de datos de EvoMining
+  2.0}\label{algoritmos-y-bases-de-datos-de-evomining-2.0}
   
-  Localizar alguna enzima de un cluster no clasificado es un camino para
-  identificar el BGC. Como ya se mostró en EvoMining 1.0 encontramos una
-  enzima que XXX Un ejemplo de este escenario es el BGC de scytonemin
-  {[}\protect\hyperlink{ref-garciapichel_evidence_1992}{147}{]},protector
-  solar cianobacteriano, que incluye ScyB y ScyA como las dos enzimas
-  biosintéticas clave que sostienen la síntesis de este metabolito
-  especializado
-  {[}\protect\hyperlink{ref-balskus_investigating_2008}{148}{]}.
-  
-  Curiosamente, ScyB y ScyA son homólogos distantes de la glutamato
-  deshidrogenasa (GDH) y la acetolactato sintasa (ALS), respectivamente,
-  que participan en la desaminación oxidativa reversible del glutamato a
-  \(\alpha-\)ketoglutarato y amoníaco
-  {[}\protect\hyperlink{ref-engel_glutamate_2014}{150}{]} y en la síntesis
-  de cadena ramificada aminoácidos
-  {[}\protect\hyperlink{ref-liu_acetohydroxyacid_2016}{151}{]},
-  respectivamente.
-  
-  \subsection{Copias extra de familias enzimáticas que son reclutadas para
-  una nueva función están relacionadas con la
-  promiscuidad.}\label{copias-extra-de-familias-enzimaticas-que-son-reclutadas-para-una-nueva-funcion-estan-relacionadas-con-la-promiscuidad.}
-  
-  Algunas retienen la función ancestral mientras que las ancestrales
-  comienzan a desarrollar la nueva función.
+  EvoMining está compuesto de dos algoritmos: el primero que encuentra
+  miembros de la familia semilla entre todos los genomas blanco para así
+  detectar genomas donde haya habido expansiones y luego busca cuáles
+  homólogos seguramente tienen la misma función que las secuencias semilla
+  y cuales otros miembros de la familia son más similares a genes que han
+  sido reclutados por BGCs de acuerdo a reportes previos. El segundo
+  algoritmo permite la visualización de todas las copias de una familia
+  expandida en un árbol clasificadas según sus posibles destinos
+  metabólicos. Para ello, los algortimos EvoMining necesitan tres bases de
+  datos: i) los genomas blanco, ii) las secuencias de ezimas semilla, y
+  iii) la de productos naturales verificados.
   
   \begin{figure}[h!tbp]
   \centering
   \includegraphics[angle = 0,scale = .7]{chapter2/FigurasPaper/Figure1.pdf}
-  \caption[EvoMining Algorithm]{\footnotesize{}}
+  \caption[EvoMining Algorithm]{\footnotesize{Representación de la tubería bioinformática de los dos algoritmos que componen EvoMining. a) Algoritmo de expansión - clasificación/reclutamiento. Se ingresan la Enzima DB (cilindro anaranjado) y la Genome DB (cilindros grises) para identificar por medio de BlastP a todos los que sean miembrios de la Familia de las enzimas en Enzima DB, luego se identifican los ortólogos de la base de datos de enzimas (Flechas rojas), finalmente se buscan homólogos de la familia similares a genes reclutados a BGC (Flechas azules),  b) EvoMining toma en cuenta los cuando se hace una búsqueda en AntiSMASH. Cuando un  gen es encontrado como miembro de un BGC por antiSMASH es cian si no se le había encontrado en las categorías anteriores o morado si antes había sido detectado como rojo. c) El Algoritmo de visualización muestra un árbol donde cada homólogo de la familia expandida tiene una código de color que lo clasifica como se describe en la leyenda}}
   \label{fig:EvoMiningAlgorithms}
   \end{figure}
   
-  \subsection{EvoMining es un paradigma que permite ubicar copias extra de
-  familias enzimáticas y organizarlas visualmente acorde a eventos
-  evolutivos.}\label{evomining-es-un-paradigma-que-permite-ubicar-copias-extra-de-familias-enzimaticas-y-organizarlas-visualmente-acorde-a-eventos-evolutivos.}
-  
-  \section{Algoritmos y bases de datos de EvoMining
-  2.0}\label{algoritmos-y-bases-de-datos-de-evomining-2.0}
-  
-  EvoMining está compuesto de dos algoritmos, el de búsqueda de patrones
-  de expansión - reclutamiento y el de visualización de todas las copias
-  de una familia expandida clasificadas según sus posibles destinos
-  metabólicos. Además de los algortimos EvoMining necesita tres bases de
-  datos: i) la genómica, ii) las semillas enzimáticas, y iii) la de
-  productos naturales.
-  
-  \subsection{Algoritmo de expansión y
-  reclutamiento}\label{algoritmo-de-expansion-y-reclutamiento}
+  \subsection{Algoritmo de expansión y clasificación de grupos de
+  homólogos.}\label{algoritmo-de-expansion-y-clasificacion-de-grupos-de-homologos.}
   
   La primera parte de la minería genómica evolutiva de EvoMining consiste
-  en detectar las expansiones y los reclutamientos de las familias
-  enzimáticas semilla. Una familia expandida consiste en todas las copias
-  detectadas mediante una búsqueda con BLASTp, e-value de 0.001 y bitscore
-  de 100, usando como query las secuencias de aminoácidos de las enzimas
-  semilla (Enzyme DB) y como base de datos de búsqueda las secuencias de
-  genomas de un linaje taxonómico (Genome DB). Un reclutamiento es una
-  copia extra de una familia de metabolismo conservado que ahora participa
-  en metabolismo especializado. Ejemplos de reclutamientos conocidos han
-  sido observados en BGC reportados en MIBiG. Ejemplos de reclutamientos
-  predichos se encuentran en enzimas pertenecientes a BGC reconocidos por
-  antiSMASH que tienen un origen en metabolismo conservado.
+  en detectar las expansiones de la familia semilla y clasificar los
+  homólogos que son muy similares a la secuencia de las ezimas con la
+  función primaria separándolos de los que son más similares a genes que
+  han sufrido reclutamientos a BGC. Este algoritmo requiere las siguientes
+  entradas:
   
-  En la primera versión de nuestro trabajo definimos que un organismo
-  poseía una expansión si el número de copias de una familia estaba por
-  encima del promedio mas dos desviaciones estándar. Siguiendo esta
-  definición EvoMining colorea en un heat plot las expansiones de las
-  familias enzimáticas respecto a un linaje taxonómico, señalando
-  explícitamente el número de copias de cada familia.
+  \begin{enumerate}
+  \def\labelenumi{\alph{enumi})}
+  \item
+    Secuencia semillla (Enzyme DB). Es una secuencia o un conjunto de
+    secuencias de la misma familia que serán interpretadas como las
+    enzimas con una función primaria. Por esta razón es importante que el
+    usuario haga una curación minuciosa en la que se sugiere que utilice
+    genes con evidencia experimental que sí sean de una familia enzimática
+    única y conservada. La implementación actual de EvoMining 2.0 permite
+    que se introduzcan en el archivo de entrada varias familias bien
+    identificadas simultáneamente, sin embargo el algoritmo procesa una
+    familia a la vez.
+  \item
+    Base de datos de genomas blanco (Genome DB). Son las secuencias
+    genómicas de todos los organismos en los que se quiera realizar el
+    análisis. Se recomienda que los genomas incluidos pertenezcan a un
+    mismo linaje taxonómico.
+  \item
+    Base de datos de genes reclutados a BGC (NP DB). La versión actual
+    utiliza MIBiG, que contiene genes de BGC que se han demostrado
+    experimentalmente.
+  \end{enumerate}
   
-  En este sentido, no todas ls copias son expansiones, pero aún así pueden
-  ser predicciones de EvoMining, por ello para futuros trabajos es posible
-  que estar una unidad arriba de la moda, sea suficiente para ser un
-  reclutamiento.
+  La primera parte de este algoritmo consiste en identificar las Familias
+  Expandidas (FE). Una FE consiste en todas las copias detectadas mediante
+  una búsqueda con BLASTp, e-value de 0.001 y bitscore de 100, usando como
+  \emph{query} las secuencias de aminoácidos de las enzimas semilla
+  (Enzyme DB) y como base de datos de búsqueda las secuencias de genomas
+  blanco de un linaje taxonómico (Genome DB). En la primera versión de
+  nuestro trabajo definimos que un organismo poseía una expansión si el
+  número de copias de una familia estaba por encima del promedio mas dos
+  desviaciones estándar. Siguiendo esta definición EvoMining colorea en un
+  heat plot las expansiones de las familias enzimáticas respecto a un
+  linaje taxonómico, señalando explícitamente el número de copias de cada
+  familia que se haya agregado como semilla FIGURAX.
   
-  Los patrones de reclutamiento sólo pueden ser apreciados tras ordenar
-  los organismos filogenéticamente, por ejemplo \emph{Streptomyces} tiene
-  dos enolasas. Se recomienda al usuario reordenar los organismos del
-  heatplot de acuerdo a un árbol de especies, mismo que puede ser
-  calculado utilizando Orthocore.
-  
-  En este paso, en cada familia expandida los ortólogos más parecidos a
-  las enzimas semilla de la enzyme DB son identificados por BBH. Estos
+  Una vez detectados todos los homólogos de la FE sigue encontrar a los
+  ortólogos más parecidos a las enzimas semilla de la enzyme DB mismos que
+  son identificados por \emph{Best Bidirectional Hit} (BBH). Estos
   ortólogos serán considerados parte del metabolismo conservado y serán
-  posteriormente identificados con color rojo en la visualización. Las
-  copias extra parte de la familia expandida son enzimas de las que no se
-  conoce el destino metabólico, es posible que en los pasos subsequentes
-  de EvoMining sean reconocidas por antiSMASH o EvoMining como posibles
-  reclutamientos a metabolismo especializado. En otro caso permanecerán
-  como copias extra con destino metabólico desconocido.
+  posteriormente identificados con color rojo en la visualización. Se
+  infiere que son enzimas que tienen la misma función que las semillas.
+  Por otra parte, las copias extra de la familia expandida hasta este
+  punto son enzimas de las que no se conoce el destino metabólico. Es
+  posible que en los pasos subsequentes de EvoMining sean reconocidas como
+  posibles reclutamientos a metabolismo especializado con el uso de
+  antiSMASH y MIBiG. En otro caso permanecerán como copias extra con
+  destino metabólico desconocido.
   
-  Una vez obtenidas las FEs expandidas e identificado los ortólogos del
-  metabolismo central, se conduce una nueva búsqueda con BLASTp, E-value
-  0.001, utilizando las EFs como queries contra la base de datos NP DB, la
-  de enzimas biosintéticas presentes en BGC. Otras bases de datos que
-  contengan enzimas con un destino metabólico conocido podrían utilizarse
-  en lugar de NP DB. Los reclutamientos son la
-  
-  En conclusión el algoritmo de expansión - reclutamiento trabaja para
-  identificar tres clases de copias en las familias enzimáticas expandidas
-  (i) copias altamente conservadas con algún miembro en el metabolismo
-  conservado; (ii) reclutamientos conocidos en BGC de productos naturales;
-  y (iii) copias extra que no son reclutamientos conocidos ni parte obvia
-  del metabolismo conservado, quedando por definir su destino metabólico.
-  Reconstrucciones filogenéticas de las familias enzimáticas serán
-  utilizadas en la siguiente sección para asignar a estas copias extra
-  obtenidas por el algoritmo de expansión y reclutamiento un origen y
-  destino metabólico
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 0,scale = .6]{chapter2/FigurasPaper/Figure2.pdf}
-  \caption[Seed genomes]{\footnotesize{}}
-  \label{fig:SeedGenomes}
-  \end{figure}
-  
-  \subsection{Algoritmo de reconstrucción filogenética y
-  visualización}\label{algoritmo-de-reconstruccion-filogenetica-y-visualizacion}
-  
-  Las secuencias de las familias enzimáticas expandidas fueron alineadas
-  con muscle v3.2{[}\protect\hyperlink{ref-edgar_muscle_2004}{152}{]} y
-  curadas con Gblocks
-  v0.91b{[}\protect\hyperlink{ref-castresana_selection_2000}{153}{]}. Los
-  parámetros de Gblocks fueron fijados en incluir 5 posiciones como el
-  mínimo tamaño de un bloque y diez posiciones como el máximo de
-  posiciones contiguas no conservadas. Posiciones ausentes de más del
-  \(50\%\) de las secuencias fueron filtradas y removidas del alineameinto
-  final. Para recontruis filogenéticamente la historia de las enzimas se
-  utilizó FastTree
-  \(2.1\){[}\protect\hyperlink{ref-price_fasttree_2010}{154}{]} que es un
-  método muy rápido pensado para miles de secuencias que utiliza un
-  algoritmo definido como ``aproximadamente máxima verosimilitud''.
-  
+  El último paso de este algoritmo consiste en encontrar miembros de la
+  familia que se encuentren reclutados a BGC reportados anteriormente. En
+  este paso definimos un reclutamiento como una copia extra de una familia
+  de metabolismo conservado que ahora participa en un \emph{cluster} de
+  metabolismo especializado. Ejemplos de reclutamientos conocidos han sido
+  observados en BGC reportados en MIBiG. En esta parte, los homólogos de
+  la FE que tengan alta similitud con algún gen de MIBiG se clasifican
+  como casos de reclutamiento. Una vez obtenidas las FEs expandidas e
+  identificado los ortólogos del metabolismo central, se conduce una nueva
+  búsqueda con BLASTp, E-value 0.001, utilizando las EFs como
+  \emph{queries} contra la base de datos NP DB, la de enzimas
+  biosintéticas presentes en BGC. Podrían utilizarse otras bases de datos
+  que contengan enzimas con un destino metabólico conocido en lugar de NP
+  DB. Hasta este punto se tienen clasificados los genes con la función
+  primaria y en este paso se designan los que tendrían una función
+  divergente. Es posible agregar un análisis opcional en el que se agregan
+  predicciones de los genes que están en BGC de acuerdo a las predicciones
+  de antiSMASH. AntiSMASH busca seucencias con dominios conocidos de BGC
+  tradicionales en la base de datos de genomas blanco (Genome DB) y además
+  busca entre los genes circundantes la presencia de otras enzimas que ya
+  hayan sido reclutadas a BGC conocidos. Si alguna enzima de la FE es
+  detectada por antiSMASH nos será también útil para identificarla como el
+  producto de una expansión que está en proceso o se ha neofuncionalizado.
   La minería genómica tradicional realizada por antiSMASH no es parte de
   la tubería de EvoMining, pero puede las predicciones de antiSMASH pueden
   ser calculadas previamente por el usuario y utilizadas por EvoMining. En
   este trabajo antiSMASH
-  3.0{[}\protect\hyperlink{ref-weber_antismash3_2015}{155}{]} fue
+  3.0{[}\protect\hyperlink{ref-weber_antismash3_2015}{152}{]} fue
   utilizado en los secuencias de los genomas de la Genome DB
   \autoref{fig:EvoMiningAlgorithms} panel (b).
   
-  La selección de color de las hojas del árbol fue automatizada utilizando
-  Newick Utilities una serie de programas llamados desde la terminal para
-  manipular árboles en formato
-  Newick{[}\protect\hyperlink{ref-junier_newick_2010}{156}{]}. La
-  anotación funcional de RAST en su versión
-  clásica{[}\protect\hyperlink{ref-aziz_rast_2008}{86}{]} fue agregada al
-  SVG. Otros metadatos como el número de copias por organismo y fueron
-  escritos de manera que los árboles producidos por EvoMining sean
-  compatible con la visualización de
-  Microreact{[}\protect\hyperlink{ref-argimon_microreact_2016}{157}{]}.
+  Los usuarios de EvoMining, por lo tanto, deben definir de antemano las
+  familias enzimáticas semilla más apropiadas para un determinado grupo
+  taxonómico. El Enzyme DB seleccionado debe contener un conjunto de
+  familias donde se puedan detectar los patrones de expansión. A su vez,
+  las familias con una distribución restringida a un pequeño porcentaje de
+  genomas no son adecuados para el análisis de EvoMining, situación que se
+  puede detectar en el heat plot en el primer paso del primer algoritmo de
+  EvoMining. También es importante determinar qué familias enzimáticas
+  están compartidas por la mayoría de los genomas dentro de los linajes
+  genómicos de interés, y si esto es importante para el tipo de análisis
+  de EvoMining que se realizarán. El EvoMining DB original incluía las
+  familias curadas manualmente que solo incluían enzimas metabólicas
+  centrales, pero éstas no representaban el repertorio enzimático central
+  de Actinobacteria. Esto se relaciona con la dificultad de definir qué es
+  el metabolismo central; por lo tanto, preferimos utilizar el término
+  enzimas centrales en diferentes umbrales de conservación. En nuestro
+  caso, usamos \(50\%\) para definir las enzimas del \emph{shell}. Esta
+  noción implica la posibilidad de automatizar la integración de Enzyme DB
+  mediante la selección de familias enzimáticas en cualquier linaje
+  genómico dado, evitando la necesidad de definir arbitrariamente qué es
+  el metabolismo central.
   
-  Los árboles de EvoMining diferencian entre la función metabólica de cada
-  miembro de una familia génica mediante un código de color
-  \autoref{fig:EvoMiningAlgorithms} panel (b, c) . Las secuencias más
-  conservadas se identifican mediante BBH contra la Enzyme DB, los hits de
-  este proceso son considerados copias de metabolismo central, y son
-  marcadas en rojo. En el otro extremo están los reclutamientos conocidos
-  con alguna evidencia experimental que fueron reportados en
+  En conclusión el algoritmo de expansión - clasificación/reclutamiento
+  trabaja para identificar tres clases de copias en las familias
+  enzimáticas expandidas y tiene como resultado tres salidas. La primera
+  es una matriz que contiene el número de genes de cada familia semilla
+  por cada genoma que se haya provisto y que puede ser visualizado e
+  interpretado independientemente de los otros resultados y procesos de
+  EvoMining. La segunda es una tabla por cada FE que enlista todos los
+  homólogos pertenecientes a ella así como su identificador de a qué
+  categoría pertenece, (i) copias altamente conservadas con algún miembro
+  en el metabolismo conservado; (ii) reclutamientos conocidos en BGC de
+  productos naturales; y (iii) copias extra que no son reclutamientos
+  conocidos ni parte obvia del metabolismo conservado, quedando por
+  definir su destino metabólico. La última salida son las secuencias de
+  los genes de la FE, que servirán para hacer un análisis de su evolución
+  mediante una filogenia en el siguiente algoritmo de visualización.
+  
+  \subsection{Algoritmo de reconstrucción filogenética y
+  visualización}\label{algoritmo-de-reconstruccion-filogenetica-y-visualizacion}
+  
+  Una vez que se tienen definidos los genes de una famliia expandida (FE)
+  de enzimas y que ya se conoce cuáles de los homólogos realizan la
+  funcion primaria así como los que han sido reclutados a BGC para
+  realizar una función divergente, en este algoritmo se visualiza esa
+  información junto con la inferencia de los genes que no han sido
+  clasificados todavia. Para eso se alínean las secuencias de la FE y se
+  construye un árbol filogenético para luego visualizar cada uno de los
+  homólogos como una hoja del árbol con un código de color que clasifica
+  de acuerdo a la inferencia de origen-destino.
+  
+  Las secuencias de la FE detectadas por el algoritmo de búsqueda -
+  clasificación/reclutamiento se alínean con muscle v3.2 y son curadas con
+  Gblocks. Las posiciones ausentes en más del \(50\%\) de las secuencias
+  se filtran y remueven del alineameinto final. Para recontruir
+  filogenéticamente la historia de las enzimas se utiliza FastTree
+  \(2.1\){[}\protect\hyperlink{ref-price_fasttree_2010}{153}{]} que es un
+  método muy rápido pensado para miles de secuencias que utiliza un
+  algoritmo definido como ``aproximadamente máxima verosimilitud''. Así se
+  obtiene un árbol en formato newick, mismo que puede ser utilizado con el
+  software de visualización de
+  Microreact{[}\protect\hyperlink{ref-argimon_microreact_2016}{154}{]} y
+  que también es usado por EvoMining para ser visualizado en su propia
+  plataforma.
+  
+  Los árboles visualizados en EvoMining diferencian entre la función
+  metabólica de cada miembro de una familia génica mediante un código de
+  color \autoref{fig:EvoMiningAlgorithms} panel (b, c) . Las secuencias
+  más conservadas se identifican mediante BBH contra la Enzyme DB, los
+  hits de este proceso son considerados copias de metabolismo central, y
+  son marcadas en rojo. En el otro extremo están los reclutamientos
+  conocidos con alguna evidencia experimental que fueron reportados en
   MIBiG{[}\protect\hyperlink{ref-medema_minimum_2015}{105}{]}. Estos
   reclutamientos son marcados en azul. Una vez definidos estos dos grupos,
-  una predicción de EvoMining es definida como aquellas hojas más cerca de
-  una hoja azul que de una hoja roja. Estas predicciones consideradas con
-  más posibilidades de pertenecer al metabolismo especializado que al
-  conservado, son coloreadas en verde \autoref{fig:EvoMiningAlgorithms}
-  panel (c).
+  una predicción de EvoMining es definida como aquellas hojas sin una
+  categoría definida en el primer algoritmo y qu están más cerca de una
+  hoja azul que de una hoja roja. Es decir, son los homólogos que están en
+  ramas del árbol que contienen genes descritos como reclutados por BGC y
+  que no están en ramas de los homologos con la función primaria. Estas
+  predicciones consideradas con más posibilidades de pertenecer al
+  metabolismo especializado que al conservado, son coloreadas en verde
+  \autoref{fig:EvoMiningAlgorithms} panel (c).
   
   Además de los tres destinos metabólicos descritos marcados
   respectivamente en rojo, azul y verde, se puede opcionalmente agregar
   información predicha por antiSMASH. Cuando el usuario provee resultados
   de antiSMASH sobre qué genes pertenecen a un BGC que contiene una enzima
-  típica de metabolismo especializado, estos se colorean en cyan y son
+  típica de metabolismo especializado, estos se colorean en cian y son
   llamados predicciones antiSMASH. Si una secuencia es al mismo tiempo
-  predicción EvoMining y predicción antiSMASH se colorea cyan y se ignora
+  predicción EvoMining y predicción antiSMASH se colorea cian y se ignora
   el verde para enfatizar en los verdes las posibles novedades químicas.
   Cuando una secuencia está en la intersección de las reconocidas como
   metabolismo conservado marcada como roja y predicción de antiSMASH es
-  decir color cyan entonces es coloreada de púrpura. Estas enzimas de
+  decir color cian entonces es coloreada de púrpura. Estas enzimas de
   intersección entre metabolismo conservado y metabolismo especializado
-  son definidas como enzimas de intersección. Finalmente para todas las
-  copias extra que no fueron marcadas como rojas, azules, verdes, cyanes o
-  púrpuras existe el color girs. Así pues gris son aquellas hojas del
-  árbol de las que no se tiene un clave sobre su destino metabólico, estas
-  secuencias son llamadas de destino metabólico desconocido.
+  son definidas como enzimas de transición ya que se podrían pertenecer al
+  metabolismo conservado, al especializado o a ambos. Además las enzimas
+  de transición suelen estar en ramas intermedias entre ramas de
+  metabolismo conservado y ramas de metabolismo especializado. Finalmente
+  para todas las copias extra que no fueron marcadas como rojas, azules,
+  verdes, cianes o púrpuras se les asigna el color girs. Así pues gris son
+  aquellas hojas del árbol de las que no se tiene un clave sobre su
+  destino metabólico, estas secuencias son llamadas de destino metabólico
+  desconocido.
   
-  \subsection{Las tres bases de datos de
-  EvoMining}\label{las-tres-bases-de-datos-de-evomining}
+  En este trabajo se diseñó e implementó el código para hacer el
+  visualizador de EvoMining que permite hacer zoom en las ramas de interés
+  además de que tiene links en las hojas azules que llevan al BGC en la
+  página de MIBiG. También tiene la función de que cuando se seleccionan
+  hojas de otro color se expande un recuadro que muestra un mapa del
+  contexto genómico de ese homólogo. Finalmente, este algoritmo también
+  produce archivos de salida con otros metadatos como el número de copias
+  por organismo y para que los árboles producidos por EvoMining sean
+  compatible con la visualización de
+  Microreact{[}\protect\hyperlink{ref-argimon_microreact_2016}{154}{]}.
   
-  EvoMining DBs Tres bases de datos son requeridas como variables de
-  inicio de EvoMining, la primera es el conjunto de secuencias de genomas
-  de un linaje, esta base fue llamada Genome DB. La segunda es un grupo de
+  FALTA UNA FIGURA DONDE SE VEAN ALGUNAS CARACTERIÍSTICAS DEL VISUALIZADOR
+  O DE LA VISUALIZACIÓN EN MICRORREACT
+  
+  \subsection{Actualizaciones de las bases de datos de
+  EvoMining}\label{actualizaciones-de-las-bases-de-datos-de-evomining}
+  
+  Tres bases de datos son requeridas como variables de inicio de
+  EvoMining, la primera es el conjunto de secuencias de genomas de un
+  linaje, esta base fue llamada Genome DB. La segunda es un grupo de
   secuencias de enzimas de metabolismo conservado llamada Enzyme DB. La
   base de datos se secuencias de genes que pertenecen a un cluster
   biosintético de metabolismo especializado es abreviada como base de
@@ -2458,32 +2565,26 @@ starts here.
   versión de EvoMining hasta este trabajo están resumidas en la tabla uno
   y serán descritas a continuación( Table 1 ).
   
-  Genome DB La primera versión de Genome DB comprendió 230 genomas de
-  Actinobacteria, incluyendo 50 géneros diferentes. Gracias a la explosión
-  de datos genómicos disponibles, en EvoMining 2.0 fue posible expandir el
-  número de genomas de Actinobacteria de Genome DB hasta 1245 genomes,
-  incluyendo 193 géneros diferentes. Cuatro diferentes bases Genome DB
-  fueron utilizadas en este trabajo, Actinobacteria, Cyanobacteria,
-  Pseudomonas y Archaea.\\
-  Estas bases están disponibles en el repositorio de datos público Zenodo
-  con identificador
-  \href{https://doi.org/10.5281/zenodo.1219709}{\includegraphics{chapter2/zenodo_1219709.png}}
-  
-  .
-  
-  Así pues, adicionalmente a Actinobacteria donde fue la primera vez que
-  una prueba de concepto de EvoMining fue probada, tres nuevas bases de
-  datos Genome DBs fueron integradas, incluyendo Cyanobacteria (416
-  genomas), Pseudomonas (219 genomas) y Archaea (876 genomas). Estos taxa
-  fueron elegidos por su diversidad de exploración respecto a BGC, por
-  ejemplo Actinobacteria posee 602 MIBiG BGC, Cyanobacteria cuenta con 60
-  MIBiG BGC y Pseudomonas 53 MIBiG BGC. Estos tres taxa han sido
-  ampliamente explorados experimentalmente y su riqueza metabólica está
-  fuera de duda; en contraste Archaea sólo posee 1 BGC en la nueva versión
-  MIBiG (v.1.4), y ninguno al tiempo de la realización de este trabajo
-  (v.1.3). Por esta razón, incluir el dominio Archaea en los análisis
-  permitía explorar espacios metabólicos previamente ignorados en la
-  minería genómica.
+  Genome DB La primera versión tenía 230 genomas de Actinobacteria,
+  incluyendo 50 géneros diferentes. Gracias a la explosión de datos
+  genómicos disponibles, en EvoMining 2.0 ahora tiene 1245 genomas,
+  incluyendo 193 géneros diferentes. Así pues, adicional a la
+  actualización de Actinobacteria donde fue la primera vez que una prueba
+  de concepto de EvoMining fue probada, tres nuevas bases de datos Genome
+  DBs fueron integradas, incluyendo Cianobacteria (416 genomas),
+  \emph{Pseudomonas} (219 genomas) y Archaea (876 genomas). estas bases
+  están disponibles en el repositorio de datos público Zenodo con
+  identificador
+  \href{https://doi.org/10.5281/zenodo.1219709}{\includegraphics{chapter2/zenodo_1219709.png}}.
+  Estos taxa fueron elegidos por su diversidad de exploración respecto a
+  BGC, por ejemplo Actinobacteria posee 602 MIBiG BGC, Cianobacteria
+  cuenta con 60 MIBiG BGC y \emph{Pseudomonas} 53 MIBiG BGC. Estos tres
+  taxa han sido ampliamente explorados experimentalmente y su riqueza
+  metabólica está fuera de duda; en contraste Archaea sólo posee 1 BGC en
+  la nueva versión MIBiG (v.1.4), y no había ninguno al tiempo de la
+  realización de este trabajo (v.1.3). Por esta razón, incluir el dominio
+  Archaea en los análisis permitía explorar espacios metabólicos
+  previamente ignorados en la minería genómica.
   
   Las predicciones de EvoMining se basan en identificar expansiones de
   familias de enzimas en lugar de buscar BGC completos, por esta razón los
@@ -2492,10 +2593,11 @@ starts here.
   genomas elegidos fueron recopilados de la base de datos pública NCBI tal
   y como estaba disponible en Enero de 2017. Las secuencias de DNA de
   estos genomas fueron anotadas como aminoácidos por la plataforma
-  RAST{[}\protect\hyperlink{ref-overbeek_seed_2014}{87}{]} que a la vez
-  realiza anotaciones funcionales . Estos genomas, previo al análisis de
+  RAST{[}\protect\hyperlink{ref-overbeek_seed_2014}{87}{]} que a su vez
+  realiza anotaciones funcionales basadas en la homología con otras
+  secuencias con funciones descritas. Estos genomas, previo al análisis de
   EvoMining fueron minados por
-  antiSMASH{[}\protect\hyperlink{ref-weber_antismash3_2015}{155}{]} con un
+  antiSMASH{[}\protect\hyperlink{ref-weber_antismash3_2015}{152}{]} con un
   parámetro \texttt{cf\_threshold\ de\ 0.7}. Estos resultados fueron
   suministrados como una base de datos interna, la antiSMASH DB para
   finalmente esta información ser incorporada a los árboles de EvoMining.
@@ -2508,32 +2610,33 @@ starts here.
   106 EFs comprenden 339 secuencias de aminoácidos de Actinobacteria, que
   fueron usadas como secuencias semilla. En la versión actual, las 106
   familias fueron filtradas hasta quedar sólo 42 que están presentes en
-  Cyanobacteria , Pseudomonas and Archaea. Durante el proceso de
-  selección, para evitar excluir familias debido a huecos debidos a
+  Cianobacteria, \emph{Pseudomonas} y Archaea. Durante el proceso de
+  selección se escogieron genomas semilla que estuvieran contenidos en un
+  sólo contig para evitar excluir familias debido a huecos debidos a
   problemas técnicos relacionados a la secuenciación o al ensamble de los
-  genomas, se escogieron genomas semilla que estuvieran contenidos en un
-  sólo contig. Los genomas semillas son los proveedores de las secuencias
-  semilla que conforman la base de datos Enzyme DB. Para Cyanobacteria,
-  los genomas seleccionados son Cyanothece sp. ATCC 51142 , Synechococcus
-  sp. PCC 7002 y Synechocystis sp. PCC 6803; para el género Pseudomonas,
-  se escogieron Pseudomonas fluorescens pf0-1,Pseudomonas protegens Pf5,
-  Pseudomonas syringae y Pseudomonas fulva 12-X; y para el dominio
-  Archaea, los elegidos son Natronomonas pharaonis , Methanosarcina
-  acetivorans , Sulfolobus solfataricus y `Nanoarchaeum equitans' Kin4-M.
-  Las enzimas semilla que conforman la base Enzyme DB, fueron determinadas
-  en los genomas semilla de cada linaje mediante BBH contra la base de
-  datos de secuencias de metabolismo conservado original de EvoMining, la
-  Actinobacteria Enzyme DB
+  genomas. Los genomas semillas son los proveedores de las secuencias
+  semilla que conforman la base de datos Enzyme DB. Para cianobacteria,
+  los genomas seleccionados son \emph{Cianothece} sp. ATCC 51142 ,
+  \emph{Synechococcus} sp. PCC 7002 y \emph{Synechocystis} sp. PCC 6803;
+  para el género \emph{Pseudomonas}, se escogieron \emph{Pseudomonas
+  fluorescens} pf0-1, \emph{Pseudomonas protegens} Pf5, \emph{Pseudomonas
+  syringae} y \emph{Pseudomonas fulva} 12-X; y para el dominio Archaea,
+  los elegidos son \emph{Natronomonas pharaonis}, \emph{Methanosarcina
+  acetivorans}, \emph{Sulfolobus solfataricus} y \emph{Nanoarchaeum
+  equitans} Kin4-M. Las enzimas semilla que conforman la base Enzyme DB,
+  fueron determinadas en los genomas semilla de cada linaje mediante BBH
+  contra la base de datos de secuencias de metabolismo conservado original
+  de EvoMining, la Actinobacteria Enzyme DB
   {[}\protect\hyperlink{ref-cruz-morales_phylogenomic_2016}{52}{]}. La
   herramienta Metaphor
-  {[}\protect\hyperlink{ref-van_der_veen_metaphor_2014}{77}{]} fue la
-  técnica implementada para obtener los BBH, se fitraron aquellas
-  secuencias con menos del \(30\%\) de identidad en un alineamiento del
-  \(80\%\) de la secuencia de las dos proteínas. Como resultado, las 106
-  familias de Actinobacteria quedaron reducidas a 42 FEs, compartidas por
-  los genomas semilla de Actinobacteria, Cyanobacteria, Pseudomonas y
-  Archaea. Las bases de datos Enzyme DBs de todos los linajes están
-  disponibles en Zenodo con número de identificación
+  {[}\protect\hyperlink{ref-van_der_veen_metaphor_2014}{77}{]} fue
+  implementada para obtener los BBH, se fitraron aquellas secuencias con
+  menos del \(30\%\) de identidad en un alineamiento del \(80\%\) de la
+  secuencia de las dos proteínas. Como resultado, las 106 familias de
+  Actinobacteria quedaron reducidas a 42 FEs, compartidas por los genomas
+  semilla de Actinobacteria, Cianobacteria, \emph{Pseudomonas} y Archaea.
+  Las bases de datos Enzyme DBs de todos los linajes están disponibles en
+  Zenodo con número de identificación
   \href{https://doi.org/10.5281/zenodo.1219709}{\includegraphics{chapter2/zenodo_1219709.png}}
   
   NP DB Los primeros análisis realizados con EvoMining incluían un base de
@@ -2547,57 +2650,72 @@ starts here.
   versión comprende 1813 NP BGC y un total de \(31,023\) secuencias de
   proteínas.
   
-  \section{Observaciones genómicas de
-  EvoMining}\label{observaciones-genomicas-de-evomining}
+  \section{Detectamos patrones de neofuncionalización a BGC en distintos
+  linajes y en familias enzimáticas con distintos orígenes metabóicos OR
+  EvoMining detecta distintás dinámicas evolutivas de las enzimas
+  metabólicas que dependen de la familia enzimática y del linaje
+  taxonomíco.}\label{detectamos-patrones-de-neofuncionalizacion-a-bgc-en-distintos-linajes-y-en-familias-enzimaticas-con-distintos-origenes-metaboicos-or-evomining-detecta-distintas-dinamicas-evolutivas-de-las-enzimas-metabolicas-que-dependen-de-la-familia-enzimatica-y-del-linaje-taxonomico.}
   
   \subsection{Los perfiles de expansión de las proteínas dependen del
   linaje.}\label{los-perfiles-de-expansion-de-las-proteinas-dependen-del-linaje.}
   
   Para entender la evolución de las enzimas y rutas metabólicas se
   seleccionaron cuatro linajes de diversas características los phyla
-  Actinobacteria y Cyanobacteria , el género Pseudomonas y el dominio
-  Archaea. Todos los resultados en las figuras son presentados en este
-  orden. Estos taxa fueron seleccionados para tener un espectro de
+  Actinobacteria y Cianobacteria , el género \emph{Pseudomonas} y el
+  dominio Archaea. Todos los resultados en las figuras son presentados en
+  este orden. Estos taxa fueron seleccionados para tener un espectro de
   análisis que abarcara tanto microorganismos ampliamente reconocidos como
   productores de NP, es decir Actinobacteria (602 MIBiG BGC),
-  Cyanobacteria (60 MIBiG BGC) y Pseudomonas (53 MIBiG BGC); como también
+  cianobacteria (60 MIBiG BGC) y Pseudomonas (53 MIBiG BGC); como también
   Archaea (0 BGC en MIBiG versión 1.3), que representa un dominio poco
   explorado en lo que respecta a los genes que forman parte de metabolismo
   especializado
   {[}\protect\hyperlink{ref-charlesworth_untapped_2015}{108}{]}.
   
-  Basándonos en estas bases de datos del tipo Genome DBs, como es
-  explicado en la \autoref{fig:SeedGenomes} panel (a), un conjunto de
-  familias enzimáticas comunes fue identificado. Notablemente, de las
-  originales 106 familias actinobacteriales menos del 50\% estaba
-  conservada en los nuevos taxa incorporados. Cada base de datos, una para
-  cada taxon, contiene sólo 42 FEs (Table S1). Esta observación, que 64
-  FEs no están conservadas en los cuatro taxa refleja lo específico del
-  metabolismo en cada linaje
-  {[}\protect\hyperlink{ref-jordan_lineage-specific_2001}{158}{]}
+  Basándonos en estas bases de datos de genomas blanco (Genome DB), como
+  es explicado en la \autoref{fig:SeedGenomes} panel (a), un conjunto de
+  familias enzimáticas comunes fue identificado. Notablemente, de las 106
+  familias actinobacteriales menos del 50\% están conservadas en los
+  nuevos taxa. Cada base de datos, una para cada taxon, contiene sólo 42
+  FEs (Table S1). La observación de que 64 FEs no están conservadas en los
+  cuatro taxa refleja lo específico del metabolismo en cada linaje con
+  respecto a los otros
+  {[}\protect\hyperlink{ref-jordan_lineage-specific_2001}{155}{]}.
+  
+  Ya que la cantidad de expansiones de un gen en un organismo sería
+  proporcional al tamaño de su genoma, verificamos cómo cambia el número
+  de copias de los genes que pertenecen a las 42 FEs conservadas con
+  respecto al tamaño de los genomas en los cuatro linajes. Todos los
+  linajes tienen patrones de expansión similares en las 42 FEs analizadas
+  hasta un tamaño de genoma 5 Mbp. En genomas más grandes, el número total
+  de secuencias crece más en \emph{Pseudomonas} que en el phylum
+  Actinobacteria, que a su vez es más grande que el phylum Cianobacteria y
+  que el dominio Archaea \autoref{fig:SeedGenomes} panel(b). Se observa
+  cómo \emph{Pseudomonas} es el linaje en el que su tamaño de genoma crece
+  tanto como el número de copias de genes de familias muy conservadas
+  (Glucólisis, síntesis de aminoácidos, Ciclo de Krebs, etc.). El
+  resultado en Archea se debe a que no se han descubierto organismos
+  tamaños de genoma Archaea de tamaño comparable a los de Streptomyces o
+  \emph{Pseudomonas} (\(> 5\)Mbp). Actinobacteria y Cianobacteria aunque
+  tienen genomas \(>5\)Mbp, el incremento en tamaño podría ser porque
+  tienen expansiones de genes que no son del metabolismo más conservado,
+  porque obtienen más genes por transferencia horizontal u otros
+  mecanismos por los que se incremente el tamaño del genoma. Cianobacteria
+  a pesar de tener genomas grandes no tiene tantas expansiones en estas
+  FEs Esta observación, es posible que sea generalizable a todas las FEs
+  de metabolismo conservado o bien que se deba a un sesgo en la selección
+  de las familias que componen a las FEs.
   
   \begin{figure}[h!tbp]
   \centering
-  \includegraphics[angle = 0,scale = .6]{chapter2/FigurasPaper/Figure3.pdf}
-  \caption[Expansion patterns in 42 conserved families]{\footnotesize{EvoMining perfiles de enzimas conservadas seleccionadas. (a) Patrones de expansión de las ocho familias conservadas cuyas copias adicionales participan en la biosíntesis de scytonemin. El conjunto completo de 42 EF se muestra en la Fig. S11. La codificación de colores es la siguiente: rojo para el metabolismo conservado, azul para los reclutamientos anotados en MIBiG, cian para las predicciones antiSMASH de metabolismo especializado, púrpura para la intersección entre el metabolismo conservado y las predicciones antiSMASH, y gris para las expansiones sin destino metabólico conocido. El orden en el eje x es Actinobacteria, Cianobacteria, Pseudomonas y Archaea. Los triángulos indican el linaje con el mayor número de copias por genoma en promedio, y los círculos representan el linaje menos expandido. Aunque Archaea tiende a ser los taxones menos expandidos, esta tendencia se revierte en la familia GDH. (b) Se proporciona un ejemplo de un núcleo frente a un shell EF. AroB es un EF básico porque tiene al menos una copia por genoma, mientras que GDH es un EF de shell debido a su ausencia en tres genomas. A pesar de ser un shell EF, GDH tiene copias adicionales que pueden ser reclutadas en un metabolismo especializado. (c) Modelo para la $nube$ o genoma variable compuesto parcialmente por enzimas que pertenecen a BGC NP. En este modelo, el metabolismo conservado se compone de EF tanto de shell como de núcleo. Estos EF pueden sufrir eventos de expansión, y algunas de las copias adicionales son reclutadas para realizar nuevas funciones en el metabolismo especializado.}}
-  \label{fig:ExpansionPatterns}
+  \includegraphics[angle = 0,scale = .6]{chapter2/FigurasPaper/Figure2.pdf}
+  \caption[Seed genomes]{\footnotesize{}}
+  \label{fig:SeedGenomes}
   \end{figure}
-  
-  Todos los linajes tienen patrones de expansión similares en las 42 FEs
-  analizadas hasta un tamaño de genoma 5 Mbp. En genomas más grandes, el
-  número total de secuencias crece más en Pseudomonas que en el phylum
-  Actinobacteria, que es más grande que el phylum Cyanobacteria y que el
-  dominio Archaea \autoref{fig:SeedGenomes} panel(b). Este resultado puede
-  deberse a que no se han descubierto tamaños de genoma Archaea de tamaño
-  comparable a los de Streptomyces o Pseudomonas (\(> 5\)Mbp).
-  Cyanobacteria a pesar de tener genomas grandes no tiene tantas
-  expansiones. Esta observación, es posible que sea generalizable a todas
-  las EFs de metabolismo conservado o bien que se deba a un sesgo en la
-  selección de las familias que componen a la EFs.
   
   Los órdenes con mayor número de copias fueron en las expansiones de las
   familias de la Enzyme DB fueron Streptomycetales y Nostocales , en
-  Actinobacteria y Cyanobacteria respectivamente. Esta observación es
+  Actinobacteria y Cianobacteria respectivamente. Esta observación es
   congruente con que estos órdenes tienen un tamaño de genoma grande en
   sus linajes correspondientes, y además están ampliamente representados
   en MIBiG como sintetizadores de productos naturales. Interesantemente la
@@ -2607,38 +2725,38 @@ starts here.
   
   Esta observación es congruente con que las archaeocinas,
   dicetopiperazinas, carotenoides y otros productos naturales de Archaea
-  fueron aislados de especies de Halobacteria, los NP BGC sintetizadores
-  de estos metabolitos no han sido caracterizados
-  {[}\protect\hyperlink{ref-charlesworth_untapped_natural_products_Archaea_2015}{159}{]}.
+  fueron aislados de especies de Halobacteria, los genes, probablemente en
+  BGC, que sintetizan de estos metabolitos no han sido caracterizados
+  {[}\protect\hyperlink{ref-charlesworth_untapped_natural_products_Archaea_2015}{156}{]}.
   Por ello EvoMining una herramienta de minería genómica que puede ayudar
   a explorar linajes poco minados con el potencial de descubrir nuevas
   rutas metabólicas.
   
-  La figura muestra que aunque en las familias conservadas seleccionadas
-  el número de copias extra correlaciona con el tamaño de genoma los
-  perfiles de expansiones son diferentes en cada grupo taxonómico. Este
+  Es claro que en las familias conservadas seleccionadas el número de
+  copias extra correlaciona con el tamaño de genoma los perfiles de
+  expansiones son diferentes en cada grupo taxonómico y que este
   incremento parece cambiar su patrón en todos los linajes a partir de
-  5Mbp \autoref{fig:SeedGenomes} (2b). Acorde a estos resultados se
-  concluye que para ensamblar una base de datos genómica para EvoMining se
-  debe considerar que las expansiones dependen tanto de los distintos
-  linajes taxonómicos como de la diversidad del tamaño de genoma.
+  5Mbp \autoref{fig:SeedGenomes} (2b). Por ello se concluye que para
+  ensamblar una base de datos genómica para EvoMining se debe considerar
+  que las expansiones dependen tanto de los distintos linajes taxonómicos
+  como de la diversidad del tamaño de genoma.
   
   \subsection{El shell genome posee expansiones en sus familias
   enzimáticas}\label{el-shell-genome-posee-expansiones-en-sus-familias-enzimaticas}
   
-  La figura muestra que Pseudomonas posee en promedio más copias por
-  genoma que los otros taxa. De las 42 familias analizadas el \(54.8\%\)
-  tiene su máximo número promedio de copias por genoma en este linaje.
-  (Fig. S11). En contraste, Actinobacteria es el máximo en \(26.2\%\) de
-  las FEs, mientras que Archaea and Cyanobacteria empatan en ser el linaje
-  con más expansiones sólo en el \(9.5\%\) de los casos (Table S1). Aunque
-  existen familias como la acetylornitino aminotransferasa o la
-  acetolactato sintasa (ALS) que están expandidas en todos los linajes
-  (coordenadas A1 y E1, Fig. S11), muchas otras familias exhiben
-  expansiones sólo en ciertos linajes. Tal es el caso de la fumarato
-  reductasa subunidad de hierro-azufre (coordinate C3, Fig. S11), muy
-  expandida en Actinobacteria pero con menos de una copia por genoma en
-  promedio en Cyanobacteria .
+  La figura muestra que \emph{Pseudomonas} posee en promedio más copias
+  por genoma que los otros taxa. De las 42 familias analizadas el
+  \(54.8\%\) tiene su máximo número promedio de copias por genoma en este
+  linaje. (FIGURA FIGURA ig. S11). En contraste, Actinobacteria es el
+  máximo en \(26.2\%\) de las FEs, mientras que Archaea y Cianobacteria
+  empatan en ser el linaje con expansiones sólo en el \(9.5\%\) de los
+  casos (TABLATABLATABLA S1). Aunque existen familias como la
+  acetylornitino aminotransferasa o la acetolactato sintasa (ALS) que
+  están expandidas en todos los linajes (coordenadas A1 y E1,
+  FIGURAFIGURAFIGURA S11), muchas otras familias exhiben expansiones sólo
+  en ciertos linajes. Tal es el caso de la fumarato reductasa subunidad de
+  hierro-azufre (coordinate C3, Fig. S11), muy expandida en Actinobacteria
+  pero con menos de una copia por genoma en promedio en Cianobacteria.
   
   No todas las FEs están expandidas, aunque las 42 familias conservadas
   están presentes en alguno de los genomas semilla de cada linaje, varias
@@ -2646,12 +2764,12 @@ starts here.
   base de datos. Este es el caso de AroB en Archaea, donde tiene muy poca
   representación. Sin embargo, un gran porcentaje de familias muestra
   perfiles de expansión acordes a la tendencia del número total de copias
-  extra, mostrada en la figura XX. Es decir, por familia Pseudomonas suele
-  ser el linaje con el mayor número de expansiones mientras que Archaea
-  suele ser el linaje menos expandido. Entre las excepciones a esta
-  tendencia está GDH una familia incluida dentro de los ocho casos
-  seleccionados para ilustrar esta diversidad que son mostrados en la
-  figura \autoref{fig:ExpansionPatterns}\\
+  extra, mostrada en la figura FIGURAFIGURAFIGURA. Por familia,
+  \emph{Pseudomonas} suele ser el linaje con el mayor número de
+  expansiones mientras que Archaea suele ser el linaje menos expandido.
+  Entre las excepciones a esta tendencia está GDH una familia incluida
+  dentro de los ocho casos seleccionados. Para ilustrar esta diversidad
+  que son mostrados en la figura \autoref{fig:ExpansionPatterns}\\
   panel (a). En esta figura los máximos están marcados con un círculo
   mientras que los mínimos con un triángulo, los colores de estas formas
   geométricas representan los mismos linajes que los mostrados en la
@@ -2663,57 +2781,57 @@ starts here.
   opuesta, no es parte del core de Archaea pero muestra copias extra y una
   presencia mayor que uno en promedio en los otros tres taxa analizados
   \autoref{fig:ExpansionPatterns} panel (b). Los ocho casos mostrados en
-  la figura son todos parte de un cluster biosintético de Cyanobacteria,
+  la figura son todos parte de un cluster biosintético de cianobacteria,
   descrito en las secciones posteriores de este trabajo.
   
   \begin{figure}[h!tbp]
   \centering
-  \includegraphics[angle = 0,scale = .8]{chapter2/FigurasPaper/Figure4.pdf}
-  \caption[EvoMining en cuatro linajes genómicos]{\footnotesize{n}}
-  \label{fig:GenomicLinajes}
+  \includegraphics[angle = 0,scale = .6]{chapter2/FigurasPaper/Figure3.pdf}
+  \caption[Expansion patterns in 42 conserved families]{\footnotesize{Perfiles de expansiones de EvoMining de enzimas conservadas seleccionadas. (a) Patrones de expansión de las ocho familias conservadas cuyas copias adicionales participan en la biosíntesis de escitonemina. El conjunto completo de 42 EF se muestra en la Fig. S11. La codificación de colores es la siguiente: rojo para el metabolismo conservado, azul para los reclutamientos anotados en MIBiG, cian para las predicciones antiSMASH de metabolismo especializado, púrpura para la intersección entre el metabolismo conservado y las predicciones antiSMASH, y gris para las expansiones sin destino metabólico conocido. El orden en el eje x es Actinobacteria, Cianobacteria, Pseudomonas y Archaea. Los triángulos indican el linaje con el mayor número de copias por genoma en promedio, y los círculos representan el linaje menos expandido. Aunque Archaea tiende a ser los taxones menos expandidos, esta tendencia se revierte en la familia GDH. (b) Se proporciona un ejemplo de un núcleo frente a un shell EF. AroB es un EF básico porque tiene al menos una copia por genoma, mientras que GDH es un EF de shell debido a su ausencia en tres genomas. A pesar de ser un shell EF, GDH tiene copias adicionales que pueden ser reclutadas en un metabolismo especializado. (c) Modelo para la $nube$ o genoma variable compuesto parcialmente por enzimas que pertenecen a BGC NP. En este modelo, el metabolismo conservado se compone de EF tanto de shell como de núcleo. Estos EF pueden sufrir eventos de expansión, y algunas de las copias adicionales son reclutadas para realizar nuevas funciones en el metabolismo especializado.}}
+  \label{fig:ExpansionPatterns}
   \end{figure}
   
   Con estas observaciones sospechamos que GDH es miembro del shell genome
-  {[}\protect\hyperlink{ref-koonin_genomics_2008}{160}{]} en los taxa
-  Actinobacteria , Cyanobacteria y Pseudomonas, ya que en promedio está
-  cerca de tener una copia promedio por genoma. El promedio no es
-  suficiente para decir que una familia pertenece al shell, podrían
-  suceder casos sobre todo cuando hay mucha variación n un taxon como en
-  el caso de un domino o un phylum en contraposición con taxones
+  (Ver capítulo 1) {[}\protect\hyperlink{ref-koonin_genomics_2008}{157}{]}
+  en los taxa Actinobacteria , Cianobacteria y \emph{Pseudomonas}, ya que
+  en promedio está cerca de tener una copia promedio por genoma. El
+  promedio no es suficiente para decir que una familia pertenece al shell,
+  podrían suceder casos sobre todo cuando hay mucha variación en un taxon
+  como en el caso de un domino o un phylum en contraposición con taxones
   coservados como géneros en los que para una cierta familia la mitad de
   los genomas de un linaje tuviera dos copias y la otra mitad cero. Sin
   embargo en el caso de la GDH si es consistente en que está presente en
   más del \(50\%\) de los genomas de cada linaje
   \autoref{fig:ExpansionPatterns} panel (a). Las modas de número de copias
-  también son informativas por ello son mostradas en la figura XXX. Una
-  sóla copia extra puede ser la que sea reclutada en metabolismo
-  especializado.
+  también son informativas por ello son mostradas en la figura
+  FIGURAFIGURAFIGURA. Una sóla copia extra puede ser la que sea reclutada
+  en metabolismo especializado.
   
-  En la figura XXX se muestra un ejemplo donde AroB es una enzima core en
-  oposición a GDH que es una enzima shell. En este esquema conceptual, en
-  algunos de los genomas que contienen a AroB existen copias que se
-  dedican al metabolismo especializado marcadas en color cyan, otras
-  copias no tienen un destino metabólico conocido por lo que están
-  marcadas en gris, y otras más marcadas en púrpura son enzimas de
+  En la figura FIGURAFIGURAFIGURA se muestra un ejemplo donde AroB es una
+  enzima core en oposición a GDH que es una enzima shell. En este esquema
+  conceptual, en algunos de los genomas que contienen a AroB existen
+  copias que se dedican al metabolismo especializado marcadas en color
+  cian, otras copias no tienen un destino metabólico conocido por lo que
+  están marcadas en gris, y otras más marcadas en púrpura son enzimas de
   transición que están llevando a cabo simultáneamente una función en
   metabolismo central y otra en metabolismo especializado. En contraste a
   AroB se muestra GDH, que a pesar de no tener copias en algunos genomas y
   con un promedio de copias por genoma menor a uno y una moda de uno en
   esta muestra, GDH existe por duplicado en dos genomas. En uno de esos
   genomas donde GDH tiene una copia extra, más allá de la moda, esa copia
-  se muestra como un reclutamiento al metabolismo especializado en cyan.
+  se muestra como un reclutamiento al metabolismo especializado en cian.
   \autoref{fig:ExpansionPatterns} panel (b) .
   
   Las expansiones encontradas por EvoMining en la familia GDH incluían
-  predicciones de antiSMASH para Actinobacteria, Cyanobacteria y Archaea,
-  no así para Pseudomonas. La secuencia del reclutamiento de GDH por los
-  \emph{clusters} biosintéticos scytonemin y el policétido pactamycin
-  {[}\protect\hyperlink{ref-kudo_cloning_2007}{161}{]}, es suficientemente
-  parecida como para que EvoMining la detecte como expansión en
-  Actinobacteria, Cyanobacteria y Archaea, pero es tan divergente respecto
-  a la familia GDH en Pseudomonas que EvoMining lo deja fuera de la
-  familia expandida en este linaje. Los árboles donde puede apreciarse
-  esta observación pueden consultarse más adelante en la
+  predicciones de antiSMASH para Actinobacteria, Cianobacteria y Archaea,
+  no así para \emph{Pseudomonas}. La secuencia del reclutamiento de GDH
+  por los \emph{clusters} biosintéticos escitonemina y el policétido
+  pactamycin {[}\protect\hyperlink{ref-kudo_cloning_2007}{158}{]}, es
+  suficientemente parecida como para que EvoMining la detecte como
+  expansión en Actinobacteria, Cianobacteria y Archaea, pero es tan
+  divergente respecto a la familia GDH en \emph{Pseudomonas} que EvoMining
+  lo deja fuera de la familia expandida en este linaje. Los árboles donde
+  puede apreciarse esta observación pueden consultarse más adelante en la
   \autoref{fig:GenomicLinajes} de la siguiente sección.
   
   Los resultados anteriores sugieren que la evolución del metabolismo
@@ -2731,13 +2849,13 @@ starts here.
   que no fue considerado en la primera iteración que explotó las
   capacidades de EvoMining como herramienta de minería genómica para
   encontrar BGC
-  novedosos{[}\protect\hyperlink{ref-navarro-munoz_computational_2018}{162}{]}.
+  novedosos{[}\protect\hyperlink{ref-navarro-munoz_computational_2018}{159}{]}.
   
   \begin{figure}[h!tbp]
   \centering
-  \includegraphics[angle = 0,scale = .6]{chapter2/FigurasPaper/Figure5.pdf}
-  \caption[EvoMining aplicado a la rama de scytonemina]{\footnotesize{}}
-  \label{fig:Scytonemin}
+  \includegraphics[angle = 0,scale = .8]{chapter2/FigurasPaper/Figure4.pdf}
+  \caption[EvoMining en cuatro linajes genómicos]{\footnotesize{n}}
+  \label{fig:GenomicLinajes}
   \end{figure}
   
   En la siguiente sección se analizarán los patrones de expansión
@@ -2746,41 +2864,47 @@ starts here.
   \autoref{fig:GenomicLinajes} , así como un árbol que incluye
   conjuntamente secuencias de todos los linajes (Figs S12 and S13). En
   Archaea, GDH tiene en promedio 1.23 copias por genoma, mientras en
-  Actinobacteria, Cyanobacteria y Pseudomonas esta media es de 0.74, 0.56
+  Actinobacteria, cianobacteria y Pseudomonas esta media es de 0.74, 0.56
   y 0.65, respectivamente. En estos tres taxa GDH es parte del shell
-  genome (Table S2).
+  genome (Table S2). Además de GDH se estudiaron las expansiones y los
+  árboles filogenéticos de TrpA, TrpB, TrpC, TrpD, TrpEG, AroB y ALS,
+  todas ellas parte de las 42 FEs conservadas entre los cuatro linajes y a
+  la vez reclutadas en escitonemina
+  {[}\protect\hyperlink{ref-balskus_investigating_2008}{148}{]} un cluster
+  biosintético de cianobacteria.
   
-  Además de GDH se estudiaron las expansiones y los árboles filogenéticos
-  de TrpA, TrpB, TrpC, TrpD, TrpEG, AroB y ALS, todas ellas parte de las
-  42 FEs conservadas entre los cuatro linajes y a la vez reclutadas en
-  scytonemin{[}\protect\hyperlink{ref-balskus_investigating_2008}{148}{]}
-  un cluster biosintético de Cyanobacteria
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = .6]{chapter2/FigurasPaper/Figure5.pdf}
+  \caption[EvoMining aplicado a la rama de escitoneminaa]{\footnotesize{}}
+  \label{fig:Scytonemin}
+  \end{figure}
   
-  \subsection{GDH y ALS en el cluster scytonemin ejemplifican como
+  \subsection{GDH y ALS en el cluster escitonemina ejemplifican como
   familias pertenecientes a un mismo BGC pueden tener distintos patrones
   de
-  expansión.}\label{gdh-y-als-en-el-cluster-scytonemin-ejemplifican-como-familias-pertenecientes-a-un-mismo-bgc-pueden-tener-distintos-patrones-de-expansion.}
+  expansión.}\label{gdh-y-als-en-el-cluster-escitonemina-ejemplifican-como-familias-pertenecientes-a-un-mismo-bgc-pueden-tener-distintos-patrones-de-expansion.}
   
   La enzima GDH, se encuentra presente en muchos linajes debido tanto a su
   origen ancestral como a la transferencia horizontal {[} 28, 42 {]} (Fig.
   S12). GDH cataliza la reacción reversible de desaminación oxidativa de
   glutamato en \(\alpha\)-cetoglutarato y amonio. De acuerdo al uso de
-  cofactores GDH puede dividirse en tres clases, la primera usa NAD+ y es
-  nombrada como GDH(NAD+). La segunda clase utiliza NADP+ y es conocida
+  cofactores, la GDH puede dividirse en tres clases, la primera usa NAD+ y
+  es nombrada como GDH(NAD+). La segunda clase utiliza NADP+ y es conocida
   como GDH(NADP+). La tercera clase utiliza ambos cofactores NAD+ y NADP+;
   por lo que se le conoce como GDH(NAD+ y
   NADP+){[}\protect\hyperlink{ref-engel_glutamate_2014}{150}{]}.
   
   Aunque existen otras clasificaciones de la diversidad de enzimas GDH
   esta fue seleccionada porque se relaciona con la historia evolutiva de
-  la enzima. GDH(NAD+) is utilizada para la oxidación del glutamato
+  la enzima. GDH(NAD+) es utilizada para la oxidación del glutamato
   mientras que GDH(NADP+) para fijar amonio, algunas enzimas de Archaea
   funcionan bien con ambos cofactores, es decir tienen promiscuidad de
   cofactores{[}\protect\hyperlink{ref-engel_glutamate_2014}{150}{]}. La
-  especificidad por NAD o NADP probablemente emergió en repetidas
+  especificidad por NAD+ o NADP+ probablemente emergió en repetidas
   ocasiones, una evidencia a favor de esta hipótesis es que se ha mostrado
   que algunas mutaciones pueden revertir la
-  especificidad{[}\protect\hyperlink{ref-lilley_partial_1991}{163}{]}.
+  especificidad{[}\protect\hyperlink{ref-lilley_partial_1991}{160}{]}.
   Esto sugiere que en los cofactores análogamente al caso de promiscuidad
   por sustrato, la similitud de secuencia no siempre es suficiente para
   evidenciar la especificidad. En ocasiones la divergencia o cercanía
@@ -2791,7 +2915,7 @@ starts here.
   La familia GDH muestra expansiones aunque no muy abundantes en
   \href{https://microreact.org/project/r1IhjVm6X?tt=cr}{Actinobacteria}
   \autoref{fig:GenomicLinajes} panel (a) ,y en
-  \href{https://microreact.org/project/HyjYUN7pQ?tt=cr}{Cyanobacteria}
+  \href{https://microreact.org/project/HyjYUN7pQ?tt=cr}{cianobacteria}
   \autoref{fig:GenomicLinajes} panel(b). Las expansiones están
   prácticamente ausentes en
   \href{https://microreact.org/project/HyjYUN7pQ?tt=cr}{\emph{Pseudomonas}}
@@ -2802,7 +2926,7 @@ starts here.
   familia GDH en Archaea fue enraizado con la secuencia semilla de
   \emph{Sulfolobus}, que fue predicha por RAST como una enzima dual en el
   uso de cofactores
-  NAD(P)+{[}\protect\hyperlink{ref-consalvi_glutamate_1991}{164}{]}. En
+  NAD(P)+{[}\protect\hyperlink{ref-consalvi_glutamate_1991}{161}{]}. En
   Archaea las tres clases de GDH alternan en las ramas del
   \href{https://microreact.org/project/ByUcvNmaX?tt=cr}{árbol} (Fig.
   S13,).
@@ -2811,23 +2935,20 @@ starts here.
   concentran volviendo rojas las ramas basales del árbol. Se observa otro
   clado más grande y diverso compuesto casi exclusivamente por enzimas
   específicas para
-  NAD(P){[}\protect\hyperlink{ref-ferrer_nadp-glutamate_1996}{165}{]},
+  NAD(P){[}\protect\hyperlink{ref-ferrer_nadp-glutamate_1996}{162}{]},
   incluyendo muchas predicciones de antiSMASH, y sólo dos marcadas como
   metabolsimo conservado. Estas dos marcas pueden deberse a la pérdida
   real de una enzima d metabolismo central en las ramas centrales o bien a
   huecos debidos a la calidad del ensamblado y la secuenciación de los
-  genomas.
-  
-  La anotación funcional de estos ortólogos de GDH apunta hacia
+  genomas.La anotación funcional de estos ortólogos de GDH apunta hacia
   reclutamientos en el metabolismo especializado. Estos reclutamientos
   fueron identificados en organismos de los genera \emph{Haladaptatus},
   \emph{Haloterrigena} , \emph{Natrialba} , \emph{Natrinema} ,
-  \emph{Natrialbaceae} y \emph{Natronococcus}. Los genes codificante se
-  encuentran un contexto de posible síntesis de terpenos. Este contexto
-  incluye enzimas relacionadas al geranyl pyrofosfato, un precursor de
-  todos los terpenos y
-  terpenoides{[}\protect\hyperlink{ref-tholl_terpene_2006}{166}{]}. Este
-  árbol tiene también casos de divergencia reciente, hay una pequeña rama
+  \emph{Natrialbaceae} y \emph{Natronococcus}. Los genes se encuentran un
+  contexto de posible síntesis de terpenos. Este contexto incluye enzimas
+  relacionadas al geranil pirofosfato, un precursor de todos los terpenos
+  y terpenoides{[}\protect\hyperlink{ref-tholl_terpene_2006}{163}{]}. Este
+  árbol tiene también casos de divergencia reciente. Hay una pequeña rama
   indistinguible en la figura pero explorable en la plataforma microreact
   donde los parálogos aparecen junto a las secuencias de metabolismo
   central. Finalmente a pesar de la divergencia las últimas ramas
@@ -2836,30 +2957,30 @@ starts here.
   Enzyme DB \autoref{fig:GenomicLinajes} panel(d).
   
   En contraste con la amplia expansión de GDH relacionada a las
-  adaptaciones metabólicas en Archaea, el árbol de Cyanobacteria tiene
+  adaptaciones metabólicas en Archaea, el árbol de Cianobacteria tiene
   copias extra sólo en el \(4.5\%\) de sus genomas (
   \autoref{fig:GenomicLinajes} panel(b) , Table S2). En esta rama
   expandida se encontraron cuatro predicciones de antiSMASH y cuatro
   predicciones de EvoMining en la rama que contiene a ScyB el homólogo de
-  GDH que fue reclutado por el BGC scytonemin. ScyB es pues parte de la
-  síntesis de scytonemin, un pigmento amarillo producido por muchas
-  Cyanobacterias como protección contra la radiación UV-A
-  solar{[}\protect\hyperlink{ref-balskus_genetic_2010}{167}{]}.
+  GDH que fue reclutado por el BGC escitonemina. ScyB es pues parte de la
+  síntesis de escitonemina, un pigmento amarillo producido por muchas
+  cianobacterias como protección contra la radiación UV-A
+  solar{[}\protect\hyperlink{ref-balskus_genetic_2010}{164}{]}.
   \emph{Nostoc punctiforme} PCC 73102 es el organismo productor de
-  scytonemin cuyo BGC fue caracterizado y anotado en MIBiG. EvoMining sólo
-  unas pocas secuencias GDH copias extra de especies de Nostoc aún cuando
-  se conoce que homólogos de scyB pueden encontrarse en estos genomas.
-  Esta observación puede deberse a la gran divergencia de secuencia entre
-  copias de metabolismo central y de metabolismo especializado en estos
-  organismos.
+  escitonemina cuyo BGC fue caracterizado y anotado en MIBiG. EvoMining
+  sólo unas pocas secuencias GDH copias extra de especies de Nostoc aún
+  cuando se conoce que homólogos de scyB pueden encontrarse en estos
+  genomas. Esta observación puede deberse a la gran divergencia de
+  secuencia entre copias de metabolismo central y de metabolismo
+  especializado en estos organismos.
   
   En la vecindad genómica de algunas expansiones de GDH se observó la
   secuencia de ALS, un gen identificado en la literatura como homólogo de
-  \emph{scyA}. además, en los BGC conocidos de scytonemin se observó que
+  \emph{scyA}. además, en los BGC conocidos de escitonemina se observó que
   \emph{scyB} se conserva cerca del gene \emph{scyA}
   \autoref{fig:Scytonemin} panel (a). \emph{scyA} es homólogo de la
   subunidad larga de ALS. Esta familia tiene un número promedio de copias
-  de \(1.87\%\) en la base de datos Genome DB de Cyanobacteria. La media
+  de \(1.87\%\) en la base de datos Genome DB de cianobacteria. La media
   es de hecho de \(2.1\) copias en organismos que contienen al menos una
   copia ALS, pero la moda del número de copias es 1 (Table S2). Estos
   datos indican que muchos organismos tienen más de dos copias de ALS lo
@@ -2868,16 +2989,15 @@ starts here.
   
   Al generar el
   \href{https://microreact.org/project/B11HkUtdm?tt=cr.}{árbol de
-  EvoMining de ALS en Cyanobacteria} , Fig. S11, se observó que
+  EvoMining de ALS en cianobacteria} , Fig. S11, se observó que
   \emph{scyA} es un reclutamiento que se localiza en una rama repleta de
   secuencias de ALS provenientes de \emph{Nostoc spp.}, que fueron
   etiquetadas como predicciones de EvoMining \autoref{fig:Scytonemin} (c).
   Estas predicciones incluyen más de veinte organismos conocidos como
-  productores de scytonemin
-  {[}\protect\hyperlink{ref-balskus_investigating_2008}{148}{]}
-  
-  Además, ramas cercanas muestran secuencias de ALS queson p redicciones
-  de antiSMASH, reforzando la sugerencia de que esta seción del árbol se
+  productores de escitonemina
+  {[}\protect\hyperlink{ref-balskus_investigating_2008}{148}{]}. Además,
+  ramas cercanas muestran secuencias de ALS que son predicciones de
+  antiSMASH, reforzando la sugerencia de que esta seción del árbol se
   dedica al metabolismo especializado. Una última rama contiene a los
   mismos organismos encontrados en el árbol de EvoMining de la familia
   GDH. Estos organismos son mostrados en el zoom de la rama de \emph{scyB}
@@ -2892,48 +3012,53 @@ starts here.
   
   Esta observación sugiere co-diversificación, vía un evento de expansión
   reclutamiento de ScyA y ScyB a partir de su origen en ALS y GDH,
-  respectivamente. Los perfiles de expansin de estas familias difieren ya
+  respectivamente. Los perfiles de expansión de estas familias difieren ya
   que a diferencia de la muy poblada rama de \emph{scyA} en el árbol de
-  ALS, la similitud entre homólogos de GDH EF y homólogos de ScyB no fue
-  suficiente para reconstruir una rama de \emph{scyB} con todas las
-  expansiones sugeridas por la ocurrencia del cluster de scytonemin. Estas
-  observaciones son una lección a usar EvoMining como herramienta de
+  ALS, la similitud entre homólogos de la FE de GDH y homólogos de ScyB no
+  fue suficiente para reconstruir una rama de \emph{scyB} con todas las
+  expansiones sugeridas por la ocurrencia del cluster de escitonemina.
+  Estas observaciones son una lección a usar EvoMining como herramienta de
   minería genómica, que enzimas cercanas pueden co-diversificarse en
   ocasiones formando parte de un mismo BGC pero a la vez estar sujetas a
   distintas restricciones evolutivas.
   
-  \subsection{El cluster de scytonemin es un cluster
-  promiscuo.}\label{el-cluster-de-scytonemin-es-un-cluster-promiscuo.}
+  \subsection{El cluster de escitonemina es un cluster
+  promiscuo.}\label{el-cluster-de-escitonemina-es-un-cluster-promiscuo.}
   
-  El primer cluster caracterizado de scytonemin, mostrado en la figura
-  \autoref{fig:Scytonemin} panel (a) y en \autoref{fig:Ruta} , comprende
-  18 genes {[}\protect\hyperlink{ref-soule_comparative_2009}{149}{]}.
-  Además de genes reguladores, este BGC incluye genes biosintéticos
-  scyABC; otros genes conservados cuya función queda por dilucidar,
-  scyDEF; y proveedores de precursores: \emph{tyrA}, \emph{dsbA},
-  \emph{aroB}, \emph{trpE/G}, \emph{trpC}, \emph{trpA}, \emph{tyrP},
-  \emph{trpB}, \emph{trpD}, \emph{aroG}. Las familias enzimáticas
-  TrpABCDEG y AroB son parte de las rutas de los aminoácidos aromáticos y
-  el ácido shikímico, parecen haber sido reclutadas para proveer de los
-  precursores L-triptofano y prefrenato necesarios para la síntesis de
-  scytonemin. En oposición a los genes del operon \emph{trp} y a AroB que
-  siguen realizando su función de metabolismo conservado aún al ser parte
-  de una ruta de metabolismo especializado están ScyA y ScyB. Estas dos
-  familias también tienen un origen en el metabolismo conservado, ya se ha
-  explicado que tienen su origen en las familias ALS y GDH, pero en este
-  caso sí ha cambiado la especificidad por sustrato al momento de la
+  Definimos \emph{cluster promiscuo} como un BGC que sintetiza distintos
+  productos naturales con la misma estructura base y con algunas
+  modificaciones que son específicas de cada organismo que los contiene o
+  icluso aquellos BGC que en un mismo organismo pueden producir varias
+  moléculas muy similares. El \emph{cluster} de la escitonemina mostrado
+  en la figura \autoref{fig:Scytonemin} panel (a) y en \autoref{fig:Ruta}
+  comprende 18 genes
+  {[}\protect\hyperlink{ref-soule_comparative_2009}{149}{]}. Además de
+  genes reguladores, este BGC incluye a los genes genes biosintéticos
+  scyABC, los genes conservados con función desconocida scyDEF y los
+  proveedores de precursores: \emph{tyrA}, \emph{dsbA}, \emph{aroB},
+  \emph{trpE/G}, \emph{trpC}, \emph{trpA}, \emph{tyrP}, \emph{trpB},
+  \emph{trpD}, \emph{aroG}. Las familias enzimáticas TrpABCDEG y AroB son
+  parte de las rutas de los aminoácidos aromáticos y del ácido shikímico,
+  parecen haber sido reclutadas para proveer de los precursores
+  L-triptofano y prefrenato, que son necesarios para la síntesis de
+  escitonemina. En oposición a los genes del operon \emph{trp} y a AroB
+  que siguen realizando su función de metabolismo conservado aún al ser
+  parte de una ruta de metabolismo especializado están ScyA y ScyB. Estas
+  dos familias también tienen un origen en el metabolismo conservado, ya
+  se ha explicado que tienen su origen en las familias ALS y GDH, pero en
+  este caso sí ha cambiado la especificidad por sustrato al momento de la
   incorporación al metabolismo especializado \autoref{fig:Ruta}. ALS une
   dos piruvatos, transformándolos en S-2-acetolactato
   {[}\protect\hyperlink{ref-liu_acetohydroxyacid_2016}{151}{]}, mientras
-  que ScyB cataliza la unión de indol-3-piruvato con p-hydroxy-fenil-ácido
-  pirúvico. Análogamente GDH convierte L-glutamate en 2-oxoglutarato
+  que ScyB cataliza la unión de indol-3-piruvato con ácido p-hidroxi-fenil
+  pirúvico. De forma análoga, GDH convierte L-glutamato en 2-oxoglutarato
   {[}\protect\hyperlink{ref-engel_glutamate_2014}{150}{]}, mientras que
   ScyA cataliza una desaminación oxidativa de triptofano. El producto de
   estas dos enzimas actuando secuencialmente e un dipéptido, el cual es
-  ciclizado por ScyC. La ruta metabólica culmina con una serie de
-  oxidaciones y dimerizaciones hasta llegar al producto scytonemin, aún no
-  es claro como estos útimos pasos se llevan a cabo
-  {[}\protect\hyperlink{ref-balskus_investigating_2008}{148}{]}.
+  ciclado por ScyC. La ruta metabólica culmina con una serie de
+  oxidaciones y dimerizaciones hasta llegar al producto escitonemina, aún
+  no es claro como se llevan a cabo estos útimos
+  pasos{[}\protect\hyperlink{ref-balskus_investigating_2008}{148}{]}.
   
   \begin{figure}[h!tbp]
   \centering
@@ -2942,161 +3067,73 @@ starts here.
   \label{fig:CorasonScytonemina}
   \end{figure}
   
-  Además de GDH y ALS el BGC de scytonemin tiene seis familias que son
+  Además de GDH y ALS el BGC de escitonemina tiene seis familias que son
   parte de las 42 FEs analizadas aquí, es decir 8 de los genes que
-  participan en la síntesis de scytonemin tienen un origen en metabolismo
-  central y fueron reclutados en el cluster de scytonemin (
-  \autoref{fig:ExpansionPatterns} panel 1, Table S3). (
+  participan en la síntesis de escitonemina tienen un origen en
+  metabolismo conservado y fueron reclutados en el cluster de escitonemina
+  ( \autoref{fig:ExpansionPatterns} panel 1, Table S3). (
   \autoref{fig:Scytonemin} and S3--S9). De estas familias, seis de los
   siete árboles de EvoMining contienen copias extras identificadas como
-  predicciones de EvoMining predictions, debido a que en su rama de
-  expansión se encuentra el correspondiente gen de scytonemin del cluster
-  reportado en MIBiG. Estas familias incluyen AroB y todos los genes de la
-  ruta del L-triptofano excepto trpF. Además los árboles de EvoMining de
-  estas familias incluyen predicciones en ramas que con enzimas
+  predicciones de EvoMining, debido a que en su rama de expansión se
+  encuentra el correspondiente gen de escitonemina del cluster reportado
+  en MIBiG. Estas familias incluyen AroB y todos los genes de la ruta del
+  L-triptofano excepto \emph{trpF}. Además los árboles de EvoMining de
+  estas familias incluyen predicciones en ramas que son enzimas
   provenientes de las rutas de síntesis de otros pigmentos protectores
   solares como la shinorina y los aminoácidos de tipo mycosporina
   \autoref{fig:AroB}
-  {[}\protect\hyperlink{ref-balskus_genetic_2010}{167}{]} , además de
+  {[}\protect\hyperlink{ref-balskus_genetic_2010}{164}{]} , además de
   otros productos no relacionados como la welwitindolinona
-  {[}\protect\hyperlink{ref-hillwig_identification_2014}{168}{]},
+  {[}\protect\hyperlink{ref-hillwig_identification_2014}{165}{]},
   ambiguina
-  {[}\protect\hyperlink{ref-li_hapalindole_ambiguine_2015}{169}{]} y la
-  fischerindolina {[}\protect\hyperlink{ref-li_decoding_2017}{170}{]}
+  {[}\protect\hyperlink{ref-li_hapalindole_ambiguine_2015}{166}{]} y la
+  fischerindolina {[}\protect\hyperlink{ref-li_decoding_2017}{167}{]}
   (Figs S3--S7). Estos resultados ilustran como EvoMining puede
-  complementar a antiSMASH mediante la identificación de secuencias de NP
-  BGC no tradicionales.
+  complementar a antiSMASH mediante la identificación de secuencias de BGC
+  no tradicionales.
   
   \begin{figure}[h!tbp]
   \centering
   \includegraphics[angle = 0,scale = .48]{EvoMining/supplementary/AroB.png}
-  \caption[AroB en Cyanobacteria]{\footnotesize{}}
+  \caption[AroB en cianobacteria]{\footnotesize{}}
   \label{fig:AroB}
   \end{figure}
   
   Para investigar la coocurrencia de ScyA y ScyB, que son necesarias
-  juntas para producir scytonemin, reconstruimos su historia evolutiva
+  juntas para producir escitonemina, reconstruimos su historia evolutiva
   conjunta. Para ello se obtuvieron las secuencias de lo genomas donde
   ambas tenían presencia, se concatenaron sus secuencias y se realizó una
   filogenia con ellas. Las variantes de la vecindad genómica del BGC de
-  scytonemin fueron visualizadas mediante el uso de corason
-  {[}\protect\hyperlink{ref-navarro-munoz_computational_2018}{162}{]}. En
-  el siguiente capítulo este software de visualización y organización de
-  vecindades genómicas será explicado con más detalle. Los análisis
-  filogenómicos resultaron en 34 cyanobacterias con diversidad química en
-  el BGC de scytonemin. Es decir en concusión scytonemin es un ejemplo de
-  cluster promiscuo, ya que parece haber un core conservado, pero
+  escitonemina fueron visualizadas mediante el uso de CORASON
+  {[}\protect\hyperlink{ref-navarro-munoz_computational_2018}{159}{]}. En
+  el siguiente capítulo será explicado con más detalle este software de
+  visualización y organización de vecindades genómicas. Los análisis
+  filogenómicos resultaron en 34 cianobacterias con diversidad química en
+  el BGC de escitonemina. Es decir en concusión escitonemina es un ejemplo
+  de cluster promiscuo, ya que parece haber un core conservado, pero
   diversidad en enzimas accesorias y por tanto en sus productos finales.
   
   Se pudieron predecir cinco estructuras putativas que son variantes de
-  scytonemin y correlacionan con episodios de pérdida y ganancia de genes
-  en este locus \autoref{fig:CorasonScytonemina}. Al core de genes scyABCD
-  se incorporan genes que realizan ornamentos como hidrolasas,
+  escitonemina y correlacionan con episodios de pérdida y ganancia de
+  genes en este locus \autoref{fig:CorasonScytonemina}. Al core de genes
+  scyABCD se incorporan genes que realizan ornamentos como hidrolasas,
   prenil-transferasas , fosfodiesterasas y monooxigenasas , para formar
-  congéneres de scytonemin como los compuestos 1 y 2. La pérdida de los
-  genes \emph{scyDEF} y la aparición de otras enzimas como la tyrosinase y
+  congéneres de escitonemina como los compuestos 1 y 2. La pérdida de los
+  genes \emph{scyDEF} y la aparición de otras enzimas como la tyrosinasa y
   o la amidasa pueden derivar en la síntesis de los compuestos 3 and 4.
-  Además encontramos que homólogos de scyA y scyB son parte de otro BGC
-  que contiene un híbrido NRPS-PKS. Siguiendo las reglas biosintéticas de
-  estas enzimas se propuso el compuesto 5. La diversidad química sugerida
-  en estas predicciones sólo puede ser validado mediante el trabajo
-  experimental. Las variantes producidas por la dinámica evolutiva del
-  metabolismo especializado fueron sugeridas mediante el sólo uso de ScyA
-  y ScyB como anzuelos de búsqueda. Estos resultados sugieren el poder
-  predictivo de EvoMining para abrir la exploración de espacios
-  metabólicos típicamente inexplorados por métodos de búsqueda
-  tradicionales de NP BGC que no consideran la evolución dentro de sus
-  algoritmos de minería genómica.
+  Además encontramos que homólogos de \emph{scyA} y \emph{scyB} son parte
+  de otro BGC que contiene un híbrido NRPS-PKS. Siguiendo las reglas
+  biosintéticas de estas enzimas se propuso el compuesto 5. La diversidad
+  química sugerida en estas predicciones sólo puede ser validado mediante
+  el trabajo experimental. Las variantes producidas por la dinámica
+  evolutiva del metabolismo especializado fueron sugeridas mediante el
+  sólo uso de ScyA y ScyB como semillas de búsqueda. Estos resultados
+  sugieren el poder predictivo de EvoMining para explorar espacios
+  metabólicos típicamente ignorados por métodos de búsqueda tradicionales
+  de BGC que no consideran la evolución dentro de sus algoritmos de
+  minería genómica.
   
-  \subsection{Consideraciones para el uso de
-  EvoMining}\label{consideraciones-para-el-uso-de-evomining}
-  
-  EvoMining fue desarrollado como una herramienta descargable de minería
-  genómica que puede ser aplicada a bases de datos de secuencias de
-  metabolismo conservado (Enzyme DB) provenientes de FEs de distintos
-  phyla. Nuestros análisis llevaron a la conclusión de que los patrones de
-  expansión reclutamiento dependen tanto de la familia enzimática como del
-  linaje genómico en el que se analiza. Una consideración importante al
-  usar EvoMining es que el tamaño de genoma correlaciona con el número de
-  copias extra de familias expandidas. Aunque el tamaño de genoma es
-  importante, también encontramos expeciones donde EvoMining pudo predecir
-  enzimas de BGC no tradicionales en genomas relativamente pequeños,
-  sugiriendo que hacen falta más análisis para estudiar esta relación.
-  
-  En este sentido, optamos por comparar linajes genómicos que no solo son
-  altamente divergentes y, en algunos casos, poco conocidos con respecto a
-  la biosíntesis de NP, sino también desproporcionados en cuanto a su
-  resolución taxonómica y distancias. Por lo tanto, es posible que estos
-  factores hayan impuesto un sesgo al establecer relaciones entre el
-  tamaño del genoma, la tasa de expansión de genes y la diversidad
-  metabólica.
-  
-  Después de analizar GDH de manera exhaustiva, un EF expandido
-  notablemente en Archaea pero no en otros taxones, proporcionamos un
-  ejemplo de un reclutamiento de una enzima metabólica central por un NP
-  BGC, así como por otras vías metabólicas. Es interesante observar que
-  los EF más expandidos en los análisis de prueba de concepto anteriores
-  de EvoMining
-  {[}\protect\hyperlink{ref-cruz-morales_phylogenomic_2016}{52}{]} fueron
-  asparagina sintasa, 2-dehidro-3-deoxifosfoheptanoato aldolasa y
-  3-fosfosquimato-1-carboxivinil transferasa, que llevan a El
-  descubrimiento de enzimas biosintéticas de arsenolípidos sin
-  precedentes. Cabe destacar que ninguna de estas enzimas formaba parte de
-  los 42 EF analizados en el presente documento, lo que refuerza la idea
-  de que no solo las enzimas conservadas, sino también las enzimas de
-  cáscara con copias adicionales, pueden servir como balizas para el
-  descubrimiento de nuevos BGC de NP. Estas observaciones enfatizan la
-  naturaleza predictiva de EvoMining, que se hizo evidente solo después de
-  que el origen y el destino de las enzimas pudieran rastrearse hasta
-  eventos evolutivos en diferentes niveles, desde la dinámica del genoma
-  que involucra loci grandes, hasta diferentes tasas de mutaciones en el
-  nivel de secuencia proteica.
-  
-  Los usuarios de EvoMining, por lo tanto, deben definir de antemano el EF
-  más apropiado para un determinado grupo taxonómico. El Enzyme DB
-  seleccionado debe contener un conjunto de EF donde se puedan detectar
-  los patrones de expansión. A su vez, los EF con una distribución
-  restringida a un pequeño porcentaje de genomas no son adecuados para el
-  análisis de EvoMining. También es importante determinar qué EF están
-  compartidos por la mayoría de los genomas dentro de los linajes
-  genómicos de interés, y si esto es importante para el tipo de análisis
-  de EvoMining que se realizarán. El EvoMining DB original incluía EF
-  curados manualmente que solo incluían enzimas metabólicas centrales,
-  pero, como se demostró aquí, no representaban necesariamente el
-  repertorio enzimático central de Actinobacteria. Esto se relaciona con
-  la dificultad de definir qué es el metabolismo central; por lo tanto,
-  preferimos utilizar el término enzimas centrales en diferentes umbrales
-  de conservación. En nuestro caso, usamos \(50\%\) para definir las
-  enzimas de la cubierta. Esta noción implica la posibilidad de
-  automatizar la integración de Enzyme DB mediante la selección de EF en
-  cualquier linaje genómico dado, evitando la necesidad de definir
-  arbitrariamente qué es el metabolismo central.
-  
-  Otro punto clave para el mejoramiento de EvoMining fue la disponibilidad
-  de la base de datos MIBiG
-  {[}\protect\hyperlink{ref-medema_minimum_2015}{105}{]} que permite
-  incrementar consistentemente y sin esfuerzo de curación manual a los
-  BGCS reportados por investigadores de todo el mundo. La versión previa
-  de EvoMining no incluía por ejemplo NP BGC de Cyanobacteria o de
-  Archaea, y fue por esta actualización que la nueva versión de EvoMining
-  pudo identificar correctamente secuencias cercanas a ScyA y ScyB. Sin la
-  presencia de la señal de los BGC de Cyanobacteria en MIBiG estas hojas
-  habrían sido catalogadas como de destino metabólico desconocido.
-  
-  This maybe the case in Archaea, where some sequences in the GDH tree are
-  labelled as such, possibly related to terpenes as well as to other
-  metabolic fates yet-to-be discovered. The presence of only one Archaea
-  BGC at MIBiG is clearly due to the limited research available of the
-  potential of Archaea to synthesize NPs, as our results suggest that
-  current methods based on previous knowledge from unrelated taxa impose
-  biases that hamper our ability to unlock the metabolic diversity of this
-  domain of life. We anticipate that this situation will be overcome by
-  EvoMining, as it is a less-biased and rule-independent approach.
-  
-  \section{OTros ejemplos de EvoMining en Actinobateria y
-  Pseudomonas}\label{otros-ejemplos-de-evomining-en-actinobateria-y-pseudomonas}
-  
-  \subsection{EvoMining en Rna
+  \subsection{EvoMining en RNA
   transferasas}\label{evomining-en-rna-transferasas}
   
   Azoxy
@@ -3114,19 +3151,19 @@ starts here.
   
   AQUI ARBOL EVOMINING TAUD y GRAFICA CON tauD
   
-  \section{Rimosamide y Detoxin tienen en común la enzima
+  \subsection{Rimosamide y Detoxin tienen en común la enzima
   TauD,}\label{rimosamide-y-detoxin-tienen-en-comun-la-enzima-taud}
   
-  Un análisis de EvoMining8 de las expansiones de la familia TauD
+  Un análisis de EvoMining de las expansiones de la familia TauD
   dioxygenasa mostró que existe una rama dedicada al metabolismo
   especializado. Dentro de esta rama existen paralogos dentro de géneros
   como \emph{Streptomyces}, \emph{Rhodococcus}, \emph{Frankia} y
-  \emph{Amycolatopsis} (Fig S13). Dentro de las expansiones de la familia
-  existe un clado,que contiene quince homólogos de \emph{tauD} que
-  pertenecen a \emph{clusters} biosintéticos experimentalmente
-  caracterizados y depositados en MIBiG, incluyendo los BGC de detoxin y
-  rimosamides (Table S6). La variedad de BGC mostrada en este clado abre
-  la posibilidad de encontrar variantes moleculares de estas familias.
+  \emph{Amycolatopsis} (Fig S13). Encontramos un clado dentro de las
+  expansiones de la familia que contiene quince homólogos de \emph{tauD}
+  que pertenecen a BGC experimentalmente caracterizados y depositados en
+  MIBiG, incluyendo los de la de detoxin y rimosamidas (Table S6). La
+  variedad de BGC mostrada en este clado abre la posibilidad de encontrar
+  variantes moleculares de estas familias.
   
   En Actinobateria se han reportado dos \emph{clusters} biosintéticos
   Streptomyces, Rhodococcus, Frankia and Amycolatopsis
@@ -3306,6 +3343,78 @@ starts here.
   \end{longtable}
   
   La tabla \autoref{tab:tauD} muestra los reclutamientos de \emph{tauD}.
+  
+  \section{Consideraciones finales sobre el uso de
+  EvoMining}\label{consideraciones-finales-sobre-el-uso-de-evomining}
+  
+  EvoMining fue desarrollado como una herramienta de minería genómica
+  descargable que puede ser aplicada a bases de datos de secuencias de
+  metabolismo conservado (Enzyme DB) provenientes de FEs de distintos
+  phyla. Nuestros análisis llevaron a la conclusión de que los patrones de
+  expansión reclutamiento dependen tanto de la familia enzimática como del
+  linaje genómico en el que se analiza. Una consideración importante al
+  usar EvoMining es que el tamaño de genoma correlaciona con el número de
+  copias extra de familias expandidas. Aunque el tamaño de genoma es
+  importante, también encontramos expeciones donde EvoMining pudo predecir
+  enzimas de BGC no tradicionales en genomas relativamente pequeños,
+  sugiriendo que hacen falta más análisis para estudiar esta relación. En
+  este sentido, optamos por comparar linajes genómicos que no solo son
+  altamente divergentes y, en algunos casos, poco conocidos con respecto a
+  la biosíntesis de NP, sino también desproporcionados en cuanto a su
+  resolución taxonómica y distancias. Por lo tanto, es posible que estos
+  factores hayan impuesto un sesgo al establecer relaciones entre el
+  tamaño del genoma, la tasa de expansión de genes y la diversidad
+  metabólica.
+  
+  Es interesante observar que las familias más expandidas según los
+  análisis de prueba de concepto anteriores de EvoMining
+  {[}\protect\hyperlink{ref-cruz-morales_phylogenomic_2016}{52}{]} fueron
+  asparagina sintasa, 2-dehidro-3-deoxifosfoheptanoato aldolasa y
+  3-fosfosquimato-1-carboxivinil transferasa, que llevaron al
+  descubrimiento de enzimas biosintéticas de arsenolípidos. Cabe destacar
+  que ninguna de estas enzimas formaba parte de los 42 FE analizados en el
+  presente documento, lo que refuerza la idea de que no solo las enzimas
+  conservadas, sino también las enzimas del \emph{shell} con copias
+  adicionales, pueden servir como semillas para el descubrimiento de
+  nuevos BGC. Después de observar que la familia de la GDH tiene numerosas
+  expansiones en Archaea pero no en otros taxones, proporcionamos un
+  ejemplo de un reclutamiento de una enzima metabólica central por un BGC
+  en Cianobacteria, donde no hay tantas expansiones, lo que sugiere que
+  las predicciones en Arhea deben ser exploradas experimentalmente. Estas
+  observaciones enfatizan la naturaleza predictiva de EvoMining.
+  
+  En este punto conviene enfatizar cómo fue clave el papel de MIBiG para
+  esta versión de EvoMining
+  {[}\protect\hyperlink{ref-medema_minimum_2015}{105}{]} ya que permite
+  incrementar consistentemente y sin esfuerzo de curación manual a los BGC
+  reportados por investigadores de todo el mundo. La versión previa de
+  EvoMining no incluía por ejemplo BGC de Cianobacteria o de Archaea.
+  Gracias a esta actualización que la nueva versión de EvoMining pudo
+  identificar correctamente secuencias de genes del BGC de la escitonemina
+  (ver abajo). Sin la presencia de la señal de los BGC de cianobacteria en
+  MIBiG estas hojas habrían sido catalogadas como de destino metabólico
+  desconocido.
+  
+  En este capítulo se describió el funcionamiento de EvoMining y sus
+  aplicaciones como una herramienta de minería genómica que permite
+  relacionar la historia evolutiva de familias enzimáticas con su función.
+  Específicamente, lo empleamos para señalar familias de genes con
+  expansiones que seguramente tienen elementos con promiscuidad y para
+  ubicar a los homólogos que probablemente forman parte de BGC. Estos
+  últimos seguramente producen nuevos productos naturales, razón por la
+  que mejoramos la predicción BGC a partir de estas enzimas en ael
+  siguiente capítulo. Se mostró que el metabolismo se puede expandir a
+  partir de genes de metabolismo conservado o de genes de metabolismo
+  \emph{shell}, que en un BGC se encuentran genes provenientes de la
+  expansión de distintas familias de ezimas, que una misma expansión puede
+  ser utilizada para producir distintos análogos con estructuras similares
+  y que los patrones de expansión son específicos de cada familia y
+  linaje. Finalmente, se describió el descubrimiento de 3 nuevos BGC cuyo
+  producto natural ya ha sido demostrado por colaboradores. Queda por
+  exporar los patrones de neofuncionalización de forma exahustiva con
+  genes que provengan no sólo de metabolismo conservado sino también del
+  \emph{shell} así como el determinar qué familias del metabolismo
+  conservado dieron origen a los BGC conocidos.
   
   \chapter{Desarrollo de CORASON como herramienta para organizar clusters
   biosintéticos y otras vecindades genómicas
@@ -3635,7 +3744,7 @@ starts here.
   En esta sección utilizamos CORASON y BIG-SCAPE para analizar una base de
   datos de miles de genomas de ACtinobacteria. Con estas herramientas se
   organizó la diversidad biosintética de las familias de BGC detoxin y
-  rimosamide {[}\protect\hyperlink{ref-mcclure_elucidating_2016}{171}{]}.
+  rimosamide {[}\protect\hyperlink{ref-mcclure_elucidating_2016}{168}{]}.
   El análisis reveló diversidad tanto en los géneros de los organismos que
   contienen a esta familia, y en la composición génica del BGC. Entre los
   géneros con alguna variante del BGC están Amycolatopsis, Streptomyces.
@@ -3974,10 +4083,10 @@ starts here.
   larga del árbol, es muy divergente. Esto se debe a que existe una fusión
   de PriA con HisH. La fusión de genes bacterianos es un mecanismo común
   para formar proteínas multidominio
-  {[}\protect\hyperlink{ref-pasek_gene_2006}{172}{]}. De hecho, dentro del
+  {[}\protect\hyperlink{ref-pasek_gene_2006}{169}{]}. De hecho, dentro del
   operon de histidina existen fusiones reportadas HisNB y HisIE con
   proteínas bifuncionales en ciertas proteobacterias
-  {[}\protect\hyperlink{ref-fani_origin_2005}{173}{]}. La fusión aquí
+  {[}\protect\hyperlink{ref-fani_origin_2005}{170}{]}. La fusión aquí
   presentada no parece ser un artefacto de anotación ya que hay otros
   genomas de \emph{Janibacter} con secuencias de PriA más grandes que el
   promedio. Los árboles que se produjeron por EvoMining están disponibles
@@ -4014,7 +4123,7 @@ starts here.
   glicerol fosfato sintasa parte también del operón de histidina. HisA
   proviene de una duplicación de un ancestro común de la mitad de su
   tamaño y HisF proviene de la duplicacion de HisA
-  {[}\protect\hyperlink{ref-fani_evolution_1994}{174}{]}. Por ello puede
+  {[}\protect\hyperlink{ref-fani_evolution_1994}{171}{]}. Por ello puede
   considerarse que EvoMining en efecto está encontrando una expansión de
   HisA que consiste en la familia HisF en el linajes Cyanobacteria, lo
   mismo ocurre en \emph{Pseudomonas}. En su momento HisF fue parte del
@@ -4028,7 +4137,7 @@ starts here.
   EvoMining aún es capaz detectar esa marca de expansión. De hecho se ha
   reconstruido una HisF ancestral con el objetivo de probar si retenía la
   actividad de HisA, es decir si poseía promiscuidad enzimática
-  {[}\protect\hyperlink{ref-merkl_reconstruction_2016}{176}{]}. LUCA-HisF
+  {[}\protect\hyperlink{ref-merkl_reconstruction_2016}{173}{]}. LUCA-HisF
   mostró no ser promiscua para los sustratos de HisA ni tampoco para su
   similar el sustrato TrpF.
   
@@ -4071,7 +4180,7 @@ starts here.
   {[}\protect\hyperlink{ref-moustafa_origin_2009}{103}{]}, un
   lipopolisacárido producido por una Proteobacteria y un BGC productor de
   cloro-pentostatina producido en Actinobacteria
-  {[}\protect\hyperlink{ref-gao_biosynthesis_2017}{177}{]}.
+  {[}\protect\hyperlink{ref-gao_biosynthesis_2017}{174}{]}.
   
   Table: Reclutamientos de expansiones de PriA en MIBiG
   \label{tab:reclutamientos}\\
@@ -4348,7 +4457,7 @@ starts here.
   que muchas proteínas contienen suficientes acoplamientos distribuidos
   ampliamente en toda la secuencia, de forma que con ellos es posible la
   reconstrucción de su estructura tridimensional
-  {[}\protect\hyperlink{ref-marks_protein_2011}{178}{]}. En esta sección
+  {[}\protect\hyperlink{ref-marks_protein_2011}{175}{]}. En esta sección
   se aplicará EVcouplings para reconstruir la estructura tridimensional de
   PriA. El RMSD es una técnica usual de comparaci\{on de estructuras.
   
@@ -4358,18 +4467,18 @@ starts here.
   sqaured deviation} (RMSD). Esta distancia se obtiene después de alinear
   las estructuras calculando el promedio de las distancias al cuadrado
   entre los átomos de carbono primarios
-  {[}\protect\hyperlink{ref-kufareva_methods_2012}{179}{]}. La información
+  {[}\protect\hyperlink{ref-kufareva_methods_2012}{176}{]}. La información
   comprendida en las covariaciones ha sido suficiente en distintas
   proteínas para que el método EVcouplings genere estructuras con un error
   de 2.7--4.8 \({\AA}\) respecto a la estructura cristalográfica conocida
-  {[}\protect\hyperlink{ref-marks_protein_2011}{178}{]}. Por este motivo
+  {[}\protect\hyperlink{ref-marks_protein_2011}{175}{]}. Por este motivo
   se decidió implementar EVcouplings y aplicarlo a la familia PriA. Este
   método es de difícil instalación ya que requiere varias dependencias.
   Por ello, desarrollé un contenedor docker donde dependencias, software y
   base de datos quedan instalados. Este desarrollo fue incluido por los
   autores de EVcouplings como sugerencia de instalación. El contenedor
   docker implementa el \emph{EVcouplings python framework}
-  {[}\protect\hyperlink{ref-hopf_evcouplings_2019}{180}{]} que comprende
+  {[}\protect\hyperlink{ref-hopf_evcouplings_2019}{177}{]} que comprende
   cinco etapas para estudiar el análisis de coevolución de residuos de una
   familia de proteínas. Dichas etapas son i) Alineado, ii) análisis de
   acoplamiento, iii) plegamiento basado en acoplamientos iv) análisis de
@@ -4387,7 +4496,7 @@ starts here.
   
   Ahora bien, \href{https://www.rcsb.org/structure/1vzw}{1VZW} es una
   estructura de PriA de \emph{S. coelicolor} obtenida mediante
-  cristalografía {[}\protect\hyperlink{ref-kuper_twofold_2005}{181}{]}. En
+  cristalografía {[}\protect\hyperlink{ref-kuper_twofold_2005}{178}{]}. En
   esta tesis calculé que el RMSD entre PriA
   (\href{https://www.rcsb.org/structure/1vzw}{1VZW}) y su homólogo lejano
   HisF (\href{http://www.rcsb.org/structure/2A0N}{2A0N} proveniente de
@@ -4492,7 +4601,7 @@ starts here.
   acoplamiento con el 173T, que está muy cerca del 175D que ha sido
   asociado con la actividad de isomerización de PRA, pero no de ProFAR.
   Además se investigaron los aminoácidos catalíticos D130
-  {[}\protect\hyperlink{ref-due_bisubstrate_2011}{182}{]} y D175
+  {[}\protect\hyperlink{ref-due_bisubstrate_2011}{179}{]} y D175
   reportados en \emph{Mycobacterium
   tuberculosis}{[}\protect\hyperlink{ref-verduzco-castro_co-occurrence_2016}{67}{]}
   que corresponden a en \emph{S coelicolor} D11, D131 y D171. En este
@@ -5088,11 +5197,11 @@ starts here.
   curvata} que es una Actinobacteria termofílica de la familia
   \emph{Thermomonosporaceae} y que puede ser encontrada encompostas ya que
   participa en la degradación de celulosa
-  {[}\protect\hyperlink{ref-chertkov_complete_2011}{183}{]}. La trpF de
+  {[}\protect\hyperlink{ref-chertkov_complete_2011}{180}{]}. La trpF de
   \emph{Jonesia denitrificans} no mostró actividad.Esta bacteria está
   clasificada como un organismo patogénico para animales, su genoma fue
   originalmente aislado de sangre
-  {[}\protect\hyperlink{ref-pukall_complete_2009}{184}{]}.
+  {[}\protect\hyperlink{ref-pukall_complete_2009}{181}{]}.
   
   \clearpage 
   
@@ -6882,79 +6991,59 @@ starts here.
   {[}Internet{]}. 2016 Oct;100(20):8633--49. Available from:
   \url{https://doi.org/10.1007/s00253-016-7809-9}
   
-  \hypertarget{ref-edgar_muscle_2004}{}
-  152. Edgar RC. MUSCLE: Multiple sequence alignment with high accuracy
-  and high throughput. Nucleic Acids Research {[}Internet{]}. 2004
-  {[}cited 2018 May 27{]};32(5):1792--7. Available from:
-  \url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC390337/}
-  
-  \hypertarget{ref-castresana_selection_2000}{}
-  153. Castresana J. Selection of Conserved Blocks from Multiple
-  Alignments for Their Use in Phylogenetic Analysis. Molecular Biology and
-  Evolution {[}Internet{]}. 2000 Apr {[}cited 2018 Jul 3{]};17(4):540--52.
-  Available from:
-  \url{https://academic.oup.com/mbe/article/17/4/540/1127654}
-  
-  \hypertarget{ref-price_fasttree_2010}{}
-  154. Price MN, Dehal PS, Arkin AP. FastTree 2 -- Approximately
-  Maximum-Likelihood Trees for Large Alignments. PLOS ONE {[}Internet{]}.
-  2010 Mar {[}cited 2018 Jul 3{]};5(3):e9490. Available from:
-  \url{http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0009490}
-  
   \hypertarget{ref-weber_antismash3_2015}{}
-  155. Weber T, Blin K, Duddela S, Krug D, Kim HU, Bruccoleri R, et al.
+  152. Weber T, Blin K, Duddela S, Krug D, Kim HU, Bruccoleri R, et al.
   antiSMASH 3.0---a comprehensive resource for the genome mining of
   biosynthetic gene clusters. Nucleic Acids Research {[}Internet{]}. 2015
   Jul {[}cited 2017 Feb 7{]};43(W1):W237--43. Available from:
   \url{https://academic.oup.com/nar/article/43/W1/W237/2467910/antiSMASH-3-0-a-comprehensive-resource-for-the}
   
-  \hypertarget{ref-junier_newick_2010}{}
-  156. Junier T, Zdobnov EM. The Newick utilities: High-throughput
-  phylogenetic tree processing in the Unix shell. Bioinformatics
-  {[}Internet{]}. 2010 Jul {[}cited 2018 Jul 3{]};26(13):1669--70.
-  Available from:
-  \url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2887050/}
+  \hypertarget{ref-price_fasttree_2010}{}
+  153. Price MN, Dehal PS, Arkin AP. FastTree 2 -- Approximately
+  Maximum-Likelihood Trees for Large Alignments. PLOS ONE {[}Internet{]}.
+  2010 Mar {[}cited 2018 Jul 3{]};5(3):e9490. Available from:
+  \url{http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0009490}
   
   \hypertarget{ref-argimon_microreact_2016}{}
-  157. Argimón S, Abudahab K, Goater RJE, Fedosejev A, Bhai J, Glasner C,
+  154. Argimón S, Abudahab K, Goater RJE, Fedosejev A, Bhai J, Glasner C,
   et al. Microreact: Visualizing and sharing data for genomic epidemiology
   and phylogeography. Microbial Genomics. 2016 Nov;2(11).
   
   \hypertarget{ref-jordan_lineage-specific_2001}{}
-  158. Jordan IK, Makarova KS, Spouge JL, Wolf YI, Koonin EV.
+  155. Jordan IK, Makarova KS, Spouge JL, Wolf YI, Koonin EV.
   Lineage-Specific Gene Expansions in Bacterial and Archaeal Genomes.
   Genome Research {[}Internet{]}. 2001 Apr;11(4):555--65. Available from:
   \url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC311027/}
   
   \hypertarget{ref-charlesworth_untapped_natural_products_Archaea_2015}{}
-  159. Charlesworth JC, Burns BP. Untapped Resources: Biotechnological
+  156. Charlesworth JC, Burns BP. Untapped Resources: Biotechnological
   Potential of Peptides and Secondary Metabolites in Archaea. Archaea
   {[}Internet{]}. 2015 Oct {[}cited 2016 Sep 27{]};2015:e282035. Available
   from: \url{http://www.hindawi.com/journals/archaea/2015/282035/abs/}
   
   \hypertarget{ref-koonin_genomics_2008}{}
-  160. Koonin EV, Wolf YI. Genomics of bacteria and archaea: The emerging
+  157. Koonin EV, Wolf YI. Genomics of bacteria and archaea: The emerging
   dynamic view of the prokaryotic world. Nucleic Acids Research
   {[}Internet{]}. 2008 Dec {[}cited 2017 Jan 26{]};36(21):6688--719.
   Available from:
   \url{https://academic.oup.com/nar/article/36/21/6688/2410005/Genomics-of-bacteria-and-archaea-the-emerging}
   
   \hypertarget{ref-kudo_cloning_2007}{}
-  161. Kudo F, Kasama Y, Hirayama T, Eguchi T. Cloning of the Pactamycin
+  158. Kudo F, Kasama Y, Hirayama T, Eguchi T. Cloning of the Pactamycin
   Biosynthetic Gene Cluster and Characterization of a Crucial
   Glycosyltransferase Prior to a Unique Cyclopentane Ring Formation. The
   Journal of Antibiotics {[}Internet{]}. 2007 Aug;60(8):492--503.
   Available from: \url{https://www.nature.com/articles/ja200763}
   
   \hypertarget{ref-navarro-munoz_computational_2018}{}
-  162. Navarro-Muñoz J, Selem-Mojica N, Mullowney M, Kautsar S, Tryon J,
+  159. Navarro-Muñoz J, Selem-Mojica N, Mullowney M, Kautsar S, Tryon J,
   Parkinson E, et al. A computational framework for systematic exploration
   of biosynthetic diversity from large-scale genomic data. bioRxiv
   {[}Internet{]}. 2018 Oct;445270. Available from:
   \url{https://www.biorxiv.org/content/early/2018/10/17/445270}
   
   \hypertarget{ref-lilley_partial_1991}{}
-  163. Lilley KS, Baker PJ, Linda Britton K, Stillman TJ, Brown PE, Moir
+  160. Lilley KS, Baker PJ, Linda Britton K, Stillman TJ, Brown PE, Moir
   AJG, et al. The partial amino acid sequence of the NAD -dependent
   glutamate dehydrogenase of Clostridium symbiosum: Implications for the
   evolution and structural basis of coenzyme specificity. Biochimica et
@@ -6963,32 +7052,32 @@ starts here.
   \url{http://www.sciencedirect.com/science/article/pii/016748389190001G}
   
   \hypertarget{ref-consalvi_glutamate_1991}{}
-  164. Consalvi V, Chiaraluce R, Politi L, Gambacorta A, Rosa MD,
+  161. Consalvi V, Chiaraluce R, Politi L, Gambacorta A, Rosa MD,
   Scandurra R. Glutamate dehydrogenase from the thermoacidophilic
   archaebacterium Sulfolobus solfataricus. European Journal of
   Biochemistry {[}Internet{]}. 1991 Mar;196(2):459--67. Available from:
   \url{https://febs.onlinelibrary.wiley.com/doi/abs/10.1111/j.1432-1033.1991.tb15837.x}
   
   \hypertarget{ref-ferrer_nadp-glutamate_1996}{}
-  165. Ferrer J, Pérez-Pomares F, Bonete MJ. NADP-glutamate dehydrogenase
+  162. Ferrer J, Pérez-Pomares F, Bonete MJ. NADP-glutamate dehydrogenase
   from the halophilic archaeon Haloferax mediterranei: Enzyme
   purification, N-terminal sequence and stability. FEMS microbiology
   letters. 1996 Jul;141(1):59--63.
   
   \hypertarget{ref-tholl_terpene_2006}{}
-  166. Tholl D. Terpene synthases and the regulation, diversity and
+  163. Tholl D. Terpene synthases and the regulation, diversity and
   biological roles of terpene metabolism. Current Opinion in Plant Biology
   {[}Internet{]}. 2006 Jun;9(3):297--304. Available from:
   \url{http://www.sciencedirect.com/science/article/pii/S1369526606000537}
   
   \hypertarget{ref-balskus_genetic_2010}{}
-  167. Balskus EP, Walsh CT. The genetic and molecular basis for sunscreen
+  164. Balskus EP, Walsh CT. The genetic and molecular basis for sunscreen
   biosynthesis in cyanobacteria. Science (New York, NY) {[}Internet{]}.
   2010 Sep;329(5999):1653--6. Available from:
   \url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3116657/}
   
   \hypertarget{ref-hillwig_identification_2014}{}
-  168. Hillwig ML, Fuhrman HA, Ittiamornkul K, Sevco TJ, Kwak DH, Liu X.
+  165. Hillwig ML, Fuhrman HA, Ittiamornkul K, Sevco TJ, Kwak DH, Liu X.
   Identification and Characterization of A Welwitindolinone Alkaloid
   Biosynthetic Gene Cluster in Stigonematalean Cyanobacterium Hapalosiphon
   welwitschii. Chembiochem : a European journal of chemical biology
@@ -6996,60 +7085,60 @@ starts here.
   \url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4382313/}
   
   \hypertarget{ref-li_hapalindole_ambiguine_2015}{}
-  169. Li S, Lowell AN, Yu F, Raveh A, Newmister SA, Bair N, et al.
+  166. Li S, Lowell AN, Yu F, Raveh A, Newmister SA, Bair N, et al.
   Hapalindole/Ambiguine Biogenesis Is Mediated by a Cope Rearrangement,
   C--C Bond-Forming Cascade. Journal of the American Chemical Society
   {[}Internet{]}. 2015 Dec;137(49):15366--9. Available from:
   \url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4681624/}
   
   \hypertarget{ref-li_decoding_2017}{}
-  170. Li S, Lowell AN, Newmister SA, Yu F, Williams RM, Sherman DH.
+  167. Li S, Lowell AN, Newmister SA, Yu F, Williams RM, Sherman DH.
   Decoding cyclase-dependent assembly of hapalindole and fischerindole
   alkaloids. Nature chemical biology {[}Internet{]}. 2017
   May;13(5):467--9. Available from:
   \url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5391265/}
   
   \hypertarget{ref-mcclure_elucidating_2016}{}
-  171. McClure RA, Goering AW, Ju K-S, Baccile JA, Schroeder FC, Metcalf
+  168. McClure RA, Goering AW, Ju K-S, Baccile JA, Schroeder FC, Metcalf
   WW, et al. Elucidating the Rimosamide-Detoxin Natural Product Families
   and Their Biosynthesis Using Metabolite/Gene Cluster Correlations. ACS
   Chemical Biology {[}Internet{]}. 2016 Dec;11(12):3452--60. Available
   from: \url{http://dx.doi.org/10.1021/acschembio.6b00779}
   
   \hypertarget{ref-pasek_gene_2006}{}
-  172. Pasek S, Risler J-L, Brézellec P. Gene fusion/fission is a major
+  169. Pasek S, Risler J-L, Brézellec P. Gene fusion/fission is a major
   contributor to evolution of multi-domain bacterial proteins.
   Bioinformatics {[}Internet{]}. 2006 Jun;22(12):1418--23. Available from:
   \url{https://academic.oup.com/bioinformatics/article/22/12/1418/207642}
   
   \hypertarget{ref-fani_origin_2005}{}
-  173. Fani R, Brilli M, Liò P. The Origin and Evolution of Operons: The
+  170. Fani R, Brilli M, Liò P. The Origin and Evolution of Operons: The
   Piecewise Building of the Proteobacterial Histidine Operon. Journal of
   Molecular Evolution {[}Internet{]}. 2005 Mar;60(3):378--90. Available
   from: \url{https://doi.org/10.1007/s00239-004-0198-1}
   
   \hypertarget{ref-fani_evolution_1994}{}
-  174. Fani R, Liò P, Chiarelli I, Bazzicalupo M. The evolution of the
+  171. Fani R, Liò P, Chiarelli I, Bazzicalupo M. The evolution of the
   histidine biosynthetic genes in prokaryotes: A common ancestor for the
   hisA and hisF genes. Journal of Molecular Evolution {[}Internet{]}. 1994
   May;38(5):489--95. Available from:
   \url{https://doi.org/10.1007/BF00178849}
   
   \hypertarget{ref-fani_paralogous_1997}{}
-  175. Fani R, Tamburini E, Mori E, Lazcano A, Liò P, Barberio C, et al.
+  172. Fani R, Tamburini E, Mori E, Lazcano A, Liò P, Barberio C, et al.
   Paralogous histidine biosynthetic genes: Evolutionary analysis of the
   Saccharomyces cerevisiae HIS6 and HIS7 genes. Gene {[}Internet{]}. 1997
   Sep;197(1):9--17. Available from:
   \url{http://www.sciencedirect.com/science/article/pii/S0378111997001467}
   
   \hypertarget{ref-merkl_reconstruction_2016}{}
-  176. Merkl R, Sterner R. Reconstruction of ancestral enzymes.
+  173. Merkl R, Sterner R. Reconstruction of ancestral enzymes.
   Perspectives in Science {[}Internet{]}. 2016 Dec;9:17--23. Available
   from:
   \url{http://www.sciencedirect.com/science/article/pii/S2213020916302336}
   
   \hypertarget{ref-gao_biosynthesis_2017}{}
-  177. Gao Y, Xu G, Wu P, Liu J, Cai Y-s, Deng Z, et al. Biosynthesis of
+  174. Gao Y, Xu G, Wu P, Liu J, Cai Y-s, Deng Z, et al. Biosynthesis of
   \(2\prime\)-Chloropentostatin and
   \(2\prime\)-Amino-\(2\prime\)-Deoxyadenosine Highlights a Single Gene
   Cluster Responsible for Two Independent Pathways in Actinomadura sp.
@@ -7058,34 +7147,34 @@ starts here.
   \url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5411499/}
   
   \hypertarget{ref-marks_protein_2011}{}
-  178. Marks DS, Colwell LJ, Sheridan R, Hopf TA, Pagnani A, Zecchina R,
+  175. Marks DS, Colwell LJ, Sheridan R, Hopf TA, Pagnani A, Zecchina R,
   et al. Protein 3D Structure Computed from Evolutionary Sequence
   Variation. PLOS ONE {[}Internet{]}. 2011 Dec;6(12):e28766. Available
   from:
   \url{http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0028766}
   
   \hypertarget{ref-kufareva_methods_2012}{}
-  179. Kufareva I, Abagyan R. Methods of protein structure comparison.
+  176. Kufareva I, Abagyan R. Methods of protein structure comparison.
   Methods in molecular biology (Clifton, NJ) {[}Internet{]}.
   2012;857:231--57. Available from:
   \url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4321859/}
   
   \hypertarget{ref-hopf_evcouplings_2019}{}
-  180. Hopf TA, Green AG, Schubert B, Mersmann S, Schärfe CPI, Ingraham
+  177. Hopf TA, Green AG, Schubert B, Mersmann S, Schärfe CPI, Ingraham
   JB, et al. The EVcouplings Python framework for coevolutionary sequence
   analysis. Bioinformatics {[}Internet{]}. 2019 May;35(9):1582--4.
   Available from:
   \url{https://academic.oup.com/bioinformatics/article/35/9/1582/5124274}
   
   \hypertarget{ref-kuper_twofold_2005}{}
-  181. Kuper J, Doenges C, Wilmanns M. Two fold repeated
+  178. Kuper J, Doenges C, Wilmanns M. Two fold repeated
   \((\beta\alpha)_4\) half barrels may provide a molecular tool for dual
   substrate specificity. EMBO reports {[}Internet{]}. 2005
   Feb;6(2):134--9. Available from:
   \url{https://www.embopress.org/doi/abs/10.1038/sj.embor.7400330}
   
   \hypertarget{ref-due_bisubstrate_2011}{}
-  182. Due AV, Kuper J, Geerlof A, Kries JP von, Wilmanns M. Bisubstrate
+  179. Due AV, Kuper J, Geerlof A, Kries JP von, Wilmanns M. Bisubstrate
   specificity in histidine/tryptophan biosynthesis isomerase from
   Mycobacterium tuberculosis by active site metamorphosis. Proceedings of
   the National Academy of Sciences of the United States of America
@@ -7094,29 +7183,29 @@ starts here.
   \url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3048130/}
   
   \hypertarget{ref-chertkov_complete_2011}{}
-  183. Chertkov O, Sikorski J, Nolan M, Lapidus A, Lucas S, Del Rio TG, et
+  180. Chertkov O, Sikorski J, Nolan M, Lapidus A, Lucas S, Del Rio TG, et
   al. Complete genome sequence of Thermomonospora curvata type strain
   (B9T). Standards in Genomic Sciences {[}Internet{]}. 2011 Feb {[}cited
   2017 Mar 3{]};4(1):13--22. Available from:
   \url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3072092/}
   
   \hypertarget{ref-pukall_complete_2009}{}
-  184. Pukall R, Gehrich-Schröter G, Lapidus A, Nolan M, Glavina Del Rio
+  181. Pukall R, Gehrich-Schröter G, Lapidus A, Nolan M, Glavina Del Rio
   T, Lucas S, et al. Complete genome sequence of Jonesia denitrificans
   type strain (Prevot 55134T). Standards in Genomic Sciences
   {[}Internet{]}. 2009 Nov {[}cited 2017 Mar 3{]};1(3):262--9. Available
   from: \url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3035236/}
   
   \hypertarget{ref-angel2000}{}
-  185. Angel E. Interactive computer graphics : A top-down approach with
+  182. Angel E. Interactive computer graphics : A top-down approach with
   opengl. Boston, MA: Addison Wesley Longman; 2000.
   
   \hypertarget{ref-angel2001}{}
-  186. Angel E. Batch-file computer graphics : A bottom-up approach with
+  183. Angel E. Batch-file computer graphics : A bottom-up approach with
   quicktime. Boston, MA: Wesley Addison Longman; 2001.
   
   \hypertarget{ref-angel2002a}{}
-  187. Angel E. Test second book by angel. Boston, MA: Wesley Addison
+  184. Angel E. Test second book by angel. Boston, MA: Wesley Addison
   Longman; 2001.
 
 
