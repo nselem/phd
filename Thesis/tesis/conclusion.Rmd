@@ -176,11 +176,214 @@ Your repository is kept up-to-date with code changes automatically.
 
 Docker antiSMASH  run_antismash /<some>.gbk ~/as_results --knownclusterblast --inclusive --cf_threshold 0.7  
 
+# Apendice 3 Dinámica molecular vs datos experimentales  
+
+En las tablas  `r ref("PriAPRA", type = "table")` , `r ref("PriAProFAR", type = "table")` se muestra a detalle la comparación entre las dinámicas moleculares de PriA respecto a PRA y ProFAR. Estos datos sugirieron que GTp es el sustrato con mayor afinidad y por ello en la última sección se avanzó en la realización de cinéticas enzimáticas con GTP.
+
+Table: Actividad de PriA en S3 PRA \label{tab:PriAPRA}     
+
+$$ 
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{ l c r l l l l l}
+\hline \\ [-1.5ex]
+organism  &Family & $K_M    $     & $k_{cat}$        & $\frac{k_{cat}}{K_M}$ &Pre MD & Pos MD & Reference  \\ [1ex]
+\hline \\ [-1.5ex]
+Afer	    &HisA   & $1.1\pm0.2$   &$	0.05\pm0.001	$& 0.045	              &-10.1	&-12.3   	 &Noda-García L et al 2015\\ [1ex]
+Ecoli	    &HisA   &$	1.6	        $&$ 	  	4.9       $&3.1                   &-9.9   &-16	     &Henn-Sax et al. (2002)\\ [1ex]
+Sent	    &HisA   &$	17.0 \pm0.1 $&$	7.8 \pm 2.4	  $&$4.5 × 10^5          $&-10.3  &-20.1     &Söderholm A et al (2015)\\ [1ex]
+Aaur	    &PriB   &$	2.1 \pm 0.5 $& $	1.8 \pm 0.2 	$&0.9                   &-7.4   &   		   &verduzco-castro 2016\\ [1ex]
+Sipo	    &PriB   &$	3.8\pm0.2	  $&$0.82\pm0.02	    $&0.21	                &-8.2	  &-14.7	   &verduzco-castro 2016\\ [1ex]
+SspC	    &PriB   &$	11.4\pm3.4	$&$2.53\pm0.74	    $&0.22                  &	-8.5	&-12.7	   &verduzco-castro 2016\\ [1ex]
+SMg1	    &PriB   &$	13.2\pm3.4	$&$0.92\pm0.19	    $&0.069	                &-8	    &-15.2     &verduzco-castro 2016\\ [1ex]
+Ssvi	    &PriB   &$	3.9\pm0.89	$&$0.69\pm0.04	    $&0.18	                &-8.2	  &-16.7     &verduzco-castro 2016\\ [1ex]
+Scoe	    &PriA   &$	3.6\pm0.7	  $&$ 1.3\pm0.2	    $  &0.4	                  &-8.4	  &-15	     &Noda-García et al (2010)\\ [1ex]
+Sglob	    &PriA   & $4.2\pm0.8	 $ & $0.74\pm0.03	 $   &0.18	                &-9.2	  &-16.7	   &verduzco-castro\\ [1ex]
+Mtub 2Y85	&priA   &$	19	0.23	  $&$0.012	-9.7		  $&                      &       &          &Due et al 2011\\ [1ex]
+Mtub 3ZS4	&priA   &$	?			      $&$-9.9		        $&                      &       &          &Due et al 2011 (To be published)\\ [1ex]
+Auro	    &priA   &$	4.0 \pm 0.9	$&$0.2 \pm 0.03	  $&0.04	                &-9.2		&          &Vazquez-Juarez (2016)\\ [1ex]
+Cjei	    &PriA   &$	2.3 \pm 0.2	$&$0.9 \pm 0.08	  $&0.39	                &-8.5		&          &Noda-García et al (2013)\\ [1ex]
+Cdip	    &subHisA&$	4.4 \pm 0.5	$&$2.6 \pm 0.3	    $&0.59	                &-9.2		&          &Noda-García et al (2013)\\ [1ex]
+SMg1 TrpF	&TrpF3  &	-	             &-	               &-	                    &-6.9	  &-9.6	     &verduzco-castro 2016\\ [1ex]
+Jden	    &TrpF3  &	-	             &-	               &-	       -7.2	        &-9.4	  &$16.8\pm3.3$&	Verduzco-Castro E et al  2016\\ [1ex]
+Acar      &SubHisA&	0.02					 &                 &	                    &       &          &			\\ [1ex]
+Aodo	    &SubTrpF&		-	           &-	               &-                     &       &          &\\ [1ex]
+\hline
+\end{tabular}}
+\label{tab:PriAPRA}  
+%}
+$$ 
+  
+\clearpage  
+La siguiente tabla es análoga a la anterior pero con el sustrato ProFAR  
+  
+Table: Actividad de PriA en S7 ProFAR \label{tab:PriAProFAR}      
+
+$$ 
+\resizebox{\columnwidth}{!}{%
+\centering 
+\begin{tabular}{ l c r l l l l l}
+\hline \\ [-1.5ex]
+organism  &Family  &  $K_M$ & $k_{cat}$& $\frac{k{cat}}{K_M}$ &Pre MD &Pos MD &Reference  \\ [1ex]
+\hline \\ [-1.5ex]
+Afer      &HisA    &-            &-                &-          &-9.2    &-9        &Noda-García L et al. (2015)   \\ [1ex]
+Ecoli     &HisA    &-            &-                &-          &-9      &-11.1     &Henn-Sax et al. (2002)\\ [1ex]
+Sent      &HisA    &-            & -               &-          &-9.6    &-10.2     &Söderholm A et al (2015)\\ [1ex]
+Aaur      &PriB    &$26.3\pm6.3$ & $0.37\pm 0.09$  & 0.014     &-7.1    &-         &verduzco-castro 2016\\ [1ex]
+Sipo      &PriB    &$60.8\pm1.1$ &$8.25\pm0.4 $    &0.14       &-8      &-8.5      &verduzco-castro 2016 \\ [1ex]
+SspC      &PriB    &$149.9\pm29$ &$1.4\pm0.12 $    &0.009      &-8.5    &-10.8     &verduzco-castro 2016\\ [1ex]
+SMg1      &PriB    &$129.6\pm34$ &$0.29\pm0.04$    &0.0022     &-7.5    &-11       &verduzco-castro 2016\\ [1ex]
+Ssvi      &PriB    &$24.5\pm4.0$ &$1.6\pm0.29 $    &0.067      &-8      &-9.7      &verduzco-castro 2016 \\ [1ex]
+Scoe      &PriA    &$5.0\pm0.08$ &$3.4\pm0.09  $   &0.7        &-8      &-9.4      &Noda-García et al (2010)   \\ [1ex]
+Sglob     &PriA    &$11\pm1.0$  &$3.8\pm0.2  $     &0.34       &-8.7    &-9.4      &verduzco-castro 2016  \\ [1ex]
+Mtub2Y85  &priA    &21         &3.6         &0.17       &-8.6    &          &Due et al 2011                        \\ [1ex] 
+Mtub3ZS4  &priA    &           &            &           &-9.3    &          &Due et al 2011 (To be published)      \\ [1ex] 
+Auro      &priA    &$23 \pm 6.5 $  &$0.5\pm0.05 $&0.02       &-9.3    &          &Vazquez-Juarez (2016)                 \\ [1ex] 
+Cjei      &PriA    &$5.1 \pm1.0$  &$1.6 \pm 0.16 $&0.31       &-9      &          &Noda-García et al (2013)              \\ [1ex]
+Cdip      &subHisA &-          &-           &-          &-8.8    &          &Noda-García et al (2013)              \\ [1ex]
+SMg1 TrpF &TrpF3   &$8.4\pm1.7$    &$10.5\pm2.4$    &1.25       &-7.6    &-9        &verduzco-castro     \\ [1ex] 
+Jden      &TrpF3   &$16.8\pm3.3$   &$27\pm1.6$      &1.6        &-7.6    &-7.7      &verduzco-castro     \\ [1ex] 
+Acar      &SubHisA &Na         &Na          &0.02       &Na      &Na        &Na                                    \\ [1ex] 
+Aodo      &SubTrpF &-          &-           &-          &-       &Na        &Na                                    \\ [1ex]
+\hline
+\end{tabular}}
+\label{tab:PriAProFAR}    
+%}  
+$$
+
+
+
+```{r sessionInfo,echo=FALSE, eval=FALSE,results='hide',message=FALSE,warning=FALSE}
+
+#vignette(package="genstats")
+#vignette("01_06_three-tables")
+
+# phenoData:
+tmp <- read.csv("chapter4/ProteinData", row.names = 1,header=TRUE,sep="\t")
+pdata <- AnnotatedDataFrame(tmp)
+
+# featureData:
+tmp <- read.csv("chapter4/Substrate.data", row.names = 1,sep="\t")
+fdata <- AnnotatedDataFrame(tmp)
+
+# expression data:
+tmp <- read.table("chapter4/EnsymeVsSubstrate.data",row.names = 1,header=TRUE,sep="\t")
+m <- as.matrix(tmp)
+#dim(m)
+#class(m)
+#colnames(m)
+#rownames(m)
+## Names should not start on numbers never
+## create ExpressionSet object:
+#eset <- new("ExpressionSet", exprs = m, phenoData = pdata, featureData = fdata)
+```
+<!-- to change R colors to my wn perl heatplot
+mrBayes PriAjulian.nxs on mazorca goes to PriAjulian.con.tre
+PriAjulian.con.tre was open with figtree and saved as SVG
+To get coordinates: `coordtree.pl PriAjulian.SVG`  
+Heatplot color are from ggplot R
+mydata.xls lo guardoen mydata.cvs
+perl read_mydata.pl mydata.cvs >Heat.colors
+manually edit Heat.colors by adding headers enzymas y substrates
+perl heatFromRGB.pl HeatColor YPriAJulian
+Hice el heatplot en SVG con el script   
+-->
+  
+  <!--
+  Observaciones Mauricio  
+Figura/tabla de funcionalidad de familias  
+Separar datos experimentales por funcion y poner  pie de tabla  
+en la figura colorear por funcion, solo 3 grupos  
+
+Poner Figura suplementaria PRA PROFAR presencia ausencia trpF
+
+
+- falta el pie de figura
+Substrate docking over enzymes from extended PriA families. Substrates 1-20  
+
+- poner unidades en la escala  
+
+- intenta aumentar el contraste de color entre el valor mínimo y máximo de la escala  
+invertir colores 
+
+- repite las etiquetas de los sutratos abajo del heatmap  
+Pendiende  
+
+JOHAN /MAURICIo
+Poner que No es todo el univrso de sustratos sino solo el de KEGG
+
+Hacer mejor curvas con los valores, en lugar del heatplot
+
+Hacer docking con otras plantillas (2VEP vs 2X30)
+
+Analisis cuantitativo de los datos.  
+
+PACO
+Tipo de seleccion en todo PriA  
+
+-->
+  <!---
+  ```{r johan}
+docking <- read.csv("chapter4/SmallHeat.data", header=TRUE, sep="\t")
+
+for (i in 2:21)
+{plot(density(docking[,i],na.rm=T)); rug(docking[,i]);browser()}
+plot(cor(docking[-c(5,12,13,38,51),-1]))
+## Leer sobre la incertidumbre del 2 y explicarla  
+## Y leer el paper de Julian y el de mauricio sobre reportes de docking
+
+```
+--->
+  
+```{r load_data_docking,results='hide',echo=FALSE,message=FALSE,echo=FALSE,warning=FALSE}
+docking <- read.csv("chapter4/SmallHeat.data", header=TRUE, sep="\t")
+EnzymeOrder=factor(docking$Enzima,levels=unique(docking$Enzima))
+docking.m <- melt(docking,id = "Enzima")
+docking.m <- ddply(docking.m, .(variable), transform,rescale = rescale(value))
+docking.m$Enzima <- factor(docking.m$Enzima, levels = rev(docking.m$Enzima[order(EnzymeOrder)]))
+
+##on colors
+colorHeatPlot<-ggplot(docking.m, aes(x=variable, y=Enzima)) + labs(x = "Substrates", y = "Enzymes",text = element_text(size=12))+ geom_raster(aes(fill=value))+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6))+ scale_fill_gradientn(colours = hm.palette(100),na.value = "gray")
+ggsave("chapter4/colorHeatPlot.pdf", plot = colorHeatPlot,height = 36, width = 24)
+
+gcolor <- ggplot_build(colorHeatPlot)
+#gcolor$data[[1]]["fill"]
+#gcolor$data[[1]]
+write.xlsx(gcolor$data[[1]], "chapter4/mydataColor.xlsx")
+
+```
+
+```{r heatonPDF, eval=FALSE,results='hide',  echo=FALSE,message=FALSE,echo=FALSE,warning=FALSE}
+ggplot(docking.m, aes(x=variable, y=Enzima)) + labs(x = "Substrates", y = "Enzymes",text = element_text(size=12))+ scale_fill_gradientn(colours = hm.palette(100),na.value = "gray")+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6))
+```
+
+```{r substrateBox, eval=FALSE, message=FALSE,echo=FALSE,warning=FALSE}
+## boxplot de los sustratos
+ggplot(docking.m, aes(x=variable, y=value)) + labs(x = "Substrates", y = "Affinity",text = element_text(size=12)) + geom_boxplot()+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6), legend.position = "bottom")
+
+```
+
+\clearpage  
+
+```{r docking_table_out, results = "asis", message=FALSE,echo=FALSE,warning=FALSE}
+docking <- read.csv("chapter4/SmallHeat.data", header=TRUE, sep="\t")
+kable(docking,  
+      caption = "Enzymes docking \\label{tab:docking}",
+      caption.short = "Enzymes docking ") %>%  kable_styling(latex_options="scale_down")
+```
+<!--
+  \caption[Table caption text]{Table taken from \cite[p.10]{verduzco-castro_co-occurrence_2016} }
+
+\label{table:name}
+
+-->
+
+\clearpage  
+
 # El tercer Apéndice, Protocolos experimentales utilizados en el estudio de PriA  
 ```{r materials, child = 'chapter4/materiales.Rmd'}
 ```
 
-```{r ProteinPurification, child = 'chapter4/ProteinPurification.Rmd'}
+```{r ProteinPurification, child = 'chapter4/ProteinaPurificacion.Rmd'}
 ```
 
 ```{r ProteinQuantification, child = 'chapter4/ProteinQuantification.Rmd'}

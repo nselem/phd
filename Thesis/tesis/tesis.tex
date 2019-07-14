@@ -1628,16 +1628,9 @@ starts here.
   variabilidad del 16s
   {[}\protect\hyperlink{ref-vetrovsky_variability_2013}{139}{]}
   
-  \chapter{Desarrollo de Orthocore e implementación de otras herramientas
-  computacionales para entender el pangenoma de un linaje
-  genómico.}\label{desarrollo-de-orthocore-e-implementacion-de-otras-herramientas-computacionales-para-entender-el-pangenoma-de-un-linaje-genomico.}
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 0,scale = .44]{chapter1/coreWiki.png}
-  \caption[Orthocore calcula el $core~genome$ de un linaje y construye con él una filogenia]{\footnotesize{Orthocore calcula las familias génicas comunes de un linaje taxonómico. Después de un proceso de filtrado, alineamiento y curación, Orthocore concatena las secuencias de estas familias y entrega una reconstrucción filogenética.}}
-  \label{fig:Orthocore}
-  \end{figure}
+  \chapter{Orthocore: una herramienta computacional para entender el
+  pangenoma de un linaje
+  genómico.}\label{orthocore-una-herramienta-computacional-para-entender-el-pangenoma-de-un-linaje-genomico.}
   
   La organización filogenética de un linaje genómico permite la
   observación de dinámicas de pérdida y ganancia de familias génicas en
@@ -1650,8 +1643,8 @@ starts here.
   tesis ya que cambios en la ocurrencia de promiscuidad pueden estar
   relacionados a copias extra de organismos
   cercanos{[}\protect\hyperlink{ref-verdel-aranda_molecular_2015}{42}{]}.
-  Como se explicó previamente en la introducción el pangenoma de un linaje
-  taxonómico está dividido en el \emph{core}, \emph{shell} y
+  Como se explicó previamente en la introducción, el pangenoma de un
+  linaje taxonómico está dividido en el \emph{core}, \emph{shell} y
   \emph{dispensable} \emph{genome}. Orthocore es un algoritmo que se
   desarrolló para automatizar la obtención del \emph{core conservado} de
   un linaje genómico. Con este \emph{core} realiza una reconstrucción
@@ -1669,6 +1662,13 @@ starts here.
   al patógeno del tomate \emph{Clavibacter
   michiganensis}{[}\protect\hyperlink{ref-rodriguez_tesis_2016}{140}{]}.
   
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = .44]{chapter1/coreWiki.png}
+  \caption[Orthocore calcula el $core~genome$ de un linaje y construye con él una filogenia]{\footnotesize{Orthocore calcula las familias génicas comunes de un linaje taxonómico. Después de un proceso de filtrado, alineamiento y curación, Orthocore concatena las secuencias de estas familias y entrega una reconstrucción filogenética.}}
+  \label{fig:Orthocore}
+  \end{figure}
+  
   \section{La distribución de la función metabólica de las familias del
   pangenoma depende de la variabilidad del linaje
   seleccionado.}\label{la-distribucion-de-la-funcion-metabolica-de-las-familias-del-pangenoma-depende-de-la-variabilidad-del-linaje-seleccionado.}
@@ -1677,25 +1677,24 @@ starts here.
   distribución en el \emph{core}, \emph{shell} y \emph{dispensable genome}
   depende de la elección de los genomas y del linaje genómico. Para
   entender esto se puede pensar en un ejemplo extremo, consideremos una
-  bacteria de 1000 familias de genes de la cual se obtienen secuencias de
-  diez genomas de la misma cepa. Estas secuenciaciones deberían ser
-  prácticamente idénticas y en ese caso el \emph{core genome} sería 1000
-  familias, el \emph{shell} y el \emph{dispensable genome} serían cero. En
-  este caso, todo el metabolismo, tanto el central como el especializado
-  estarían conservados dentro del \emph{core genome}, ya que el
-  \emph{shell} y el \emph{dispensable genome} se encuentran vacíos. Sin
-  embargo, si variamos el linaje taxonómico, y ahora estudiamos el
-  pangenoma de 10 especies distintas del género \emph{Streptomyces} ahora
-  el core genome estará compuesto por aproximadamente un tercio de su
-  tamaño promedio, y dentro del \emph{core genome} es donde se encontrarán
-  muchos de las familias dedicadas al metabolismo central o conservado
-  (por ejemplo, familias de la glicólisis o síntesis de aminoácidos). En
-  cambio muchas de las familias dedicadas al metabolismo especializado y
-  pertenecientes a clústers biosintéticos de productos naturales (BGCs)
-  estarán en el \emph{dispensable genome} pues \emph{Streptomyces} es
-  productor de una gran variedad de metabolitos especializados y cada
-  especie suele tener su producto característico.
-  \autoref{fig:MetabolismoPangenoma}.
+  bacteria con 1000 familias de genes de la cual se secuencian diez
+  genomas de la misma cepa. Estas secuencias deberían ser prácticamente
+  idénticas y en ese caso el \emph{core genome} sería 1000 familias, el
+  \emph{shell} y el \emph{dispensable genome} serían cero. En este caso,
+  todo el metabolismo, tanto el central como el especializado estarían
+  conservados dentro del \emph{core genome}, ya que el \emph{shell} y el
+  \emph{dispensable genome} se encuentran vacíos. Sin embargo, si variamos
+  el linaje taxonómico, y ahora estudiamos el pangenoma de 10 especies
+  distintas del género \emph{Streptomyces} ahora el core genome estará
+  compuesto por aproximadamente un tercio de su tamaño. Dentro del
+  \emph{core genome} es donde se encontrarán muchos de las familias
+  dedicadas al metabolismo central o conservado (por ejemplo, familias de
+  la glicólisis o síntesis de aminoácidos). En cambio muchas de las
+  familias dedicadas al metabolismo especializado y pertenecientes a
+  clústers biosintéticos de productos naturales (BGCs) estarán en el
+  \emph{dispensable genome} pues \emph{Streptomyces} es productor de una
+  gran variedad de metabolitos especializados y cada especie suele tener
+  su producto característico. \autoref{fig:MetabolismoPangenoma}.
   
   \begin{figure}[h!tbp]
   \centering
@@ -1704,41 +1703,41 @@ starts here.
   \label{fig:MetabolismoPangenoma}
   \end{figure}
   
-  El \emph{core genome} de un linaje, además de tener familias conservadas
-  y prácticamente presentes en todo el dominio Bacteria también puede
-  contener familias marcadoras \autoref{fig:CoreMarcadores} . Estos genes
-  marcadores permiten realizar pruebas de diagnóstico para colonizaciones
-  bacterianas. A las familias que están presentes en el \emph{core genome}
-  de un linaje A, pero que están completamente ausentes de un linaje B se
-  les llama marcadoras. Por ejemplo genes conservados en la especie
-  \emph{Streptomyces coelicolor} pero no conservados en \emph{Streptomyces
-  rimosus} son genes marcadores de \emph{Streptomyces coelicolor} respecto
-  de \emph{Streptomyces rimosus}. Estos mismos marcadores tal vez no sean
-  marcadores respecto de \emph{Streptomyces lividans}, a pesar de la
-  cercanía taxonómica entre estos organismos. La presencia de genes
-  marcadores en el core depende de ambos linajes, por lo que es importante
-  contar con algoritmos que permitan automatizar su cálculo.
+  El \emph{core genome} de un linaje se puede usar para encontrar familias
+  marcadoras \autoref{fig:CoreMarcadores} . Estos genes marcadores
+  permiten realizar pruebas que diagnostiquen la presencia de organismos
+  de ese linaje. A las familias que están presentes en el \emph{core
+  genome} de un linaje A, pero que están completamente ausentes de un
+  linaje B se les llama marcadoras. Por ejemplo genes conservados en la
+  especie \emph{Streptomyces coelicolor} pero ausentes en
+  \emph{Streptomyces rimosus} son genes marcadores de \emph{Streptomyces
+  coelicolor} respecto de \emph{Streptomyces rimosus}. Estos mismos
+  marcadores tal vez no sean marcadores respecto de \emph{Streptomyces
+  lividans}, a pesar de la cercanía taxonómica entre estos organismos. La
+  presencia de genes marcadores en el core depende de ambos linajes, y ya
+  que es de interés científico y tecnológico encontrarlos en para
+  identificar diferentes taxones es importante contar con algoritmos que
+  permitan encontrarlos de forma automatizada.
   
-  El número de familias en el pangenoma, ya sea en el \emph{core, shell o
-  dispensable} genome no sólo depende de la divergencia o proximidad
-  taxonómica de los organismos del linaje seleccionado, también depende de
-  lo variable que sea el contenido génico en los genomas del linaje. A
-  esta característica se le conoce como apertura. Hay especies, por
-  ejemplo algunos patógenos, cuyo pangenoma se encuentra sumamente cerrado
-  en el sentido de que no importa cuántos genomas se agreguen, el número
-  de familias parece converger y ser asintótico rápidamente a una cota
-  superior. En cambio especies o géneros que viven en una gran diversidad
-  de hábitats suelen tener un pangenoma abierto. Esto significa que cada
-  vez que se agrega un nuevo genoma aparecen otras familias que no estaban
-  en los genomas anteriores. En los linajes con pangenoma abierto el
-  número de familias nuevas al agregar un genomas seguirá una tendencia
-  creciente y no asintótica.
-  
-  Además de la apertura, existen otros intentos de cuantificar la
-  diversidad génica de un linaje. Está por ejemplo la fluidez, definida
-  como el promedio de familias únicas entre familias totales por pares de
-  genomas. El pangenoma bacteriano total, es decir el total de familias
-  génicas en el dominio Bacteria es considerado abierto.
+  El número de familias en el pangenoma, ya sea en el \emph{core},
+  \emph{shell} o \emph{dispensable genome} no sólo depende de la
+  divergencia o proximidad taxonómica de los organismos del linaje
+  seleccionado, también depende de lo variable que sea el contenido génico
+  en los genomas del linaje. A esta característica se le conoce como
+  apertura. Hay especies, por ejemplo algunos patógenos, cuyo pangenoma se
+  encuentra sumamente cerrado en el sentido de que no importa cuántos
+  genomas se agreguen, el número de familias parece converger y ser
+  asintótico rápidamente a una cota superior. En cambio especies o géneros
+  que viven en una gran diversidad de hábitats suelen tener un pangenoma
+  abierto. Esto significa que cada vez que se agrega un nuevo genoma
+  aparecen otras familias que no estaban en los genomas anteriores. En los
+  linajes con pangenoma abierto el número de familias nuevas al agregar un
+  genomas seguirá una tendencia creciente y no asintótica. Además de la
+  apertura, existen otros intentos de cuantificar la diversidad génica de
+  un linaje. Está por ejemplo la fluidez, definida como el promedio de
+  familias únicas entre familias totales por pares de genomas. El
+  pangenoma bacteriano total, es decir el total de familias génicas en el
+  dominio Bacteria es considerado abierto.
   
   \begin{figure}[h!tbp]
   \centering
@@ -1747,25 +1746,26 @@ starts here.
   \label{fig:CoreMarcadores}
   \end{figure}
   
-  Finalmente la distribución de las funciones metabólicas encontrada en
-  los subconjuntos del pangenoma ( \emph{core, shell y dispensable}
-  genome) está relacionada a la proximidad filogenética de los organismos
-  seleccionados en el estudio. Entre más diversos sean los organismos
-  menos familias dedicadas exclusivamente a metabolismo especializado
-  abundarán en el \emph{core/shell genome}. La diversidad provocará que lo
-  único que tengan los genomas de estos organismos en común sean funciones
-  conservadas por una amplia variedad de especies bacterianas. Ahora bien,
-  muchas familias de metabolismo especializado provienen de reclutamientos
-  de copias extra de familias de metabolismo conservado. Así pues aunque
-  decrezca el número de familias con exclusividad en metabolismo
-  especializado en el \emph{core y shell genome}, estos sunconjuntos del
-  pangenoma aún pueden contener familias conservadas que tengan copias
-  extra en proceso de reclutamiento para algún Cluster biosintético de
-  genes (BGCs) de metabolismo especializado. Considerando las reflexiones
-  anteriores, entre más diverso sea un linaje, más tenderá su \emph{core
-  genome} a contener exclusivamente familias de metabolismo conservado
-  mientras que su dispensable genome estará formado mayormente por
-  familias de enzimas del metabolismo especializado.
+  Finalmente, la distribución de las funciones metabólicas encontrada en
+  los subconjuntos del pangenoma ( \emph{core}, \emph{shell} o
+  \emph{dispensable genome} está relacionada a la proximidad filogenética
+  de los organismos seleccionados en el estudio. Entre más diversos sean
+  los organismos menos familias dedicadas exclusivamente a metabolismo
+  especializado abundarán en el \emph{core/shell genome}. La diversidad
+  provocará que lo único que tengan los genomas de estos organismos en
+  común sean funciones conservadas por una amplia variedad de especies
+  bacterianas. Ahora bien, muchas familias de metabolismo especializado
+  provienen de reclutamientos de copias extra de familias de metabolismo
+  conservado. Así pues aunque decrezca el número de familias con
+  exclusividad en metabolismo especializado en el \emph{core y shell
+  genome}, estos subconjuntos del pangenoma aún pueden contener familias
+  conservadas que tengan copias extra en proceso de reclutamiento para
+  algún \emph{Cluster} biosintético de genes (BGC) de metabolismo
+  especializado. Considerando las reflexiones anteriores, entre más
+  diverso sea un linaje, más tenderá su \emph{core genome} a contener
+  exclusivamente familias de metabolismo conservado mientras que su
+  dispensable genome estará formado mayormente por familias de enzimas del
+  metabolismo especializado.
   
   \section{El core conservado permite la reconstrucción de filogenias
   complicadas}\label{el-core-conservado-permite-la-reconstruccion-de-filogenias-complicadas}
@@ -1800,14 +1800,14 @@ starts here.
   identificación de estas familias.
   
   Entre los factores importantes para establecer las relaciones
-  filogenéticas diferenciando entre Archaea y Bacteria están los
-  siguientes: 1) la presencia conservada de la subunidad de 16s en los
-  tres dominios mencionados, y 2) la suficiente divergencia entre estas
-  secuencias en los organismos de dichos dominios. Ahora bien, establecer
-  relaciones filogenéticas entre Archaea y Bacteria es en cierto sentido
-  más sencillo que establecerlas entre organismos pertenecientes al mismo
-  género o inclusive a la misma especie. En ocasiones, como en el caso del
-  género \emph{Streptomyces}, la secuencia de 16s por sí sola no posee la
+  filogenéticas que diferencian a las Archaeas de las Bacteria están los
+  siguientes: 1) la presencia conservada de la subunidad de 16s en los dos
+  dominios y 2) la suficiente divergencia entre estas secuencias en los
+  organismos de dichos dominios. Ahora bien, establecer relaciones
+  filogenéticas entre Archaea y Bacteria es en cierto sentido más sencillo
+  que establecerlas entre organismos pertenecientes al mismo género o
+  inclusive a la misma especie. En ocasiones, como en el caso del género
+  \emph{Streptomyces}, la secuencia de 16s por sí sola no posee la
   suficiente variación para resolver la filogenia
   {[}\protect\hyperlink{ref-labeda_phylogenetic_2017}{143}{]}. En
   \emph{Streptomyces} la variación entre estas secuencias suele ser menor
@@ -1818,12 +1818,27 @@ starts here.
   
   \section{El algoritmo de Orthocore}\label{el-algoritmo-de-orthocore}
   
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 0,scale = .55]{chapter1/Best-n-directional.png}
-  \caption[Los mejores hits n-direccionales generalizan a los $Bidirectional~Best~Hits$]{\footnotesize{Orthocore utiliza los mejores hits n-direccionales para obtener grupos de ortólogos. Un hit es el mejor resultado de una secuencia en otro genoma. Un Bidireccional Best Hit es el mejor hit bidireccional. La secuencia 2 es el mejor hit de la secuencia 1 en el genoma 2 y recíprocamente, la secuencia 1 es el mejor hit de la secuencia 2 en el genoma 1. La existencia de una copia extra muy parecida a la secuencia 2 puede romper el BBH. Un mejor hit n-direccional debe ser BBH todos contra todos garantizando que estas secuencias están muy conservadas entre sí.}}
-  \label{fig:Best-n-directional}
-  \end{figure}
+  Orthocore encuentra los genes del \emph{core} conservado en todos los
+  genomas que se le proveen. Para poder ejecutarlo, el usuario tiene que
+  proveer como entrada un conjunto de secuencias genómicas que ya debieron
+  haber sido procesados por RAST, es decir ya deben tener anotaciones
+  funcionales de los genes presentes en dichos genomas. El algoritmo de
+  Orthocore encuentra los genes que están conservados como ortólogos en
+  todas las secuencias y proporciona como salida una matriz con todos los
+  genes y secuencias del \emph{core} es decir, todos los genes que
+  resultaron mejores hits multidireccionales
+  \autoref{fig:Best-n-directional}. Una vez que tiene todas las secuencias
+  realiza una reconstrucción filogenética con las secuencias de
+  aminoácidos y entrega la segunda salida, que es un árbol en formato
+  árbol en formato Newick. Con estas salidas se puede visualizar la
+  filogenia de los organismos en cuestión, identificar cuáles genes son
+  parte del \emph{core}. Una parte central de este algoritmo consiste en
+  determinar cuáles genes realmente son ortologos confiables para
+  reconstruir la filogenia.
+  
+  \subsection{\texorpdfstring{Los mejores hits multidireccionales definen
+  los genes del \emph{core}
+  conservado}{Los mejores hits multidireccionales definen los genes del core conservado}}\label{los-mejores-hits-multidireccionales-definen-los-genes-del-core-conservado}
   
   Los ortólogos suelen identificarse por similitud de secuencia, pero si
   se realiza la identificación manualmente también se suelen capturar
@@ -1832,40 +1847,49 @@ starts here.
   en genomas procariontes mediante la generalización de la definición del
   mejor hit bidireccional (BBH por sus siglas en inglés)
   \autoref{fig:Best-n-directional} . Dos secuencias son BBH si cada una es
-  el mejor hit de un algoritmo de distancia (BLAST usualmente) en el
-  genoma de origen de la otra. Una primera generalización para obtener el
-  set de ortólogos de una familia del core es definir un genoma de
-  referencia y tomar los BBH respecto a ese genoma. En la práctica, esta
-  definición da como resultado distintos resultados según el genoma de
-  referencia, haciendo que algunos parálogos no sea filtrados.
+  el mejor hit de un algoritmo alineamiento local por distancia (BLAST
+  usualmente) en el genoma de origen de la otra. Una primera
+  generalización para obtener el set de ortólogos de una familia del core
+  es definir un genoma de referencia y tomar los BBH respecto a ese
+  genoma. En la práctica, esta definición da como resultado distintos
+  resultados según el genoma de referencia, haciendo que algunos parálogos
+  no sean filtrados.
   
   Para solventar esta dificultad se definió en Orthocore el concepto de
   mejores hits multidireccionales. Un conjunto de genes son mejores hits
-  multidireccionales si todos entre sí son BBH por pares. Es decir si cada
-  gen fuera un punto y ser mejor hit se expresara como una conexión con
-  dirección todos los puntos estarían conectados por una flecha de ida y
-  otra de regreso. Con este método se eliminó la dependencia de un genoma
-  de referencia. Esta restricción también ocasiona que en grupos muy
-  grandes por ejemplo más de 100 genomas de distintas especies, o muy
-  diversos de distintos dominios, o muy fragmentados como con contigs de
-  en promedio 3 Mbp, el core conservado puede quedar vacío.
+  multidireccionales si todos entre sí son BBH por pares y cada uno de los
+  miembros de ese conjunto de genes pertenece a cada una de las secuencias
+  genómicas. Es decir si cada gen fuera un punto y ser mejor hit se
+  expresara como una conexión con dirección todos los puntos estarían
+  conectados por una flecha de ida y otra de regreso. Con este método se
+  eliminó la dependencia de un genoma de referencia. Esta restricción
+  también ocasiona que en grupos muy grandes por ejemplo más de 100
+  genomas de distintas especies, o muy diversos de distintos dominios, o
+  muy fragmentados como con contigs de en promedio 3 Mbp, el core
+  conservado puede quedar vacío.
   
-  \subsection{Componentes técnicos de
-  Orthocore}\label{componentes-tecnicos-de-orthocore}
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = .55]{chapter1/Best-n-directional.png}
+  \caption[Los mejores hits n-direccionales generalizan a los $Bidirectional~Best~Hits$]{\footnotesize{Orthocore utiliza los mejores hits n-direccionales para obtener grupos de ortólogos. Un hit es el mejor resultado de una secuencia en otro genoma. Un Bidireccional Best Hit es el mejor hit bidireccional. La secuencia 2 es el mejor hit de la secuencia 1 en el genoma 2 y recíprocamente, la secuencia 1 es el mejor hit de la secuencia 2 en el genoma 1. La existencia de una copia extra muy parecida a la secuencia 2 puede romper el BBH. Un mejor hit n-direccional debe ser BBH todos contra todos garantizando que estas secuencias están muy conservadas entre sí.}}
+  \label{fig:Best-n-directional}
+  \end{figure}
+  
+  \subsection{Ejecución de Orthocore}\label{ejecucion-de-orthocore}
   
   Orthocore es un tubería escrita en perl que incorpora los hits
   multidireccionales permitiendo obtener y usar el core conservado para
   realizar una reconstrucción filogenética mediante los siguientes pasos:
   
-  -Obtiene el core conservado: los mejores n-direcional hits (blastp).\\
+  -Obtiene el \emph{core} conservado: los mejores hits mutidireccionales
+  (blastp).\\
   -Alinea cada familia del core conservado (MUSCLE).\\
   -Cura automáticamente cada familia del core conservado (Gblocks).\\
-  -Concatena las familias del core conservado formando una matriz de
-  aminoácidos.\\
-  -Realiza una reconstrucción filogenética de la matriz de aminoácidos
-  (FastTree)\\
-  -Provee las funciones del core conservado según la anotación funcional
-  de RAST.
+  -Concatena las familias del core conservado formando una alineamiento
+  multilocus de aminoácidos.\\
+  -Provee una reconstrucción filogenética que se genera a partir del
+  alineamiento (FastTree). -Provee los genes del \emph{core} conservado y
+  su anotación funcional según RAST.
   
   Existen otros algoritmos como
   OrthoMCL{[}\protect\hyperlink{ref-li_orthomcl_2003}{53}{]}, y
@@ -1878,7 +1902,7 @@ starts here.
   BPGA{[}\protect\hyperlink{ref-chaudhari_bpga-_2016}{115}{]} que hace
   reconstrucciones filogenéticas tanto según el core como según el
   pangenoma. Sin embargo Orthocore resolvió en su momento la necesidad
-  específica de proporcionar una matriz concatenada de genes del core
+  específica de proporcionar un alineamiento concatenada de genes del core
   conservado lista para utilizarse en un árbol multilocus. Adicionalmente,
   como Orthocore fue diseñado para trabajar con la anotación de la
   plataforma RAST, también se obtiene la anotación funcional tanto de
@@ -1890,8 +1914,8 @@ starts here.
   y posteriormente anotarlos en RAST desde la terminal. Los protocolos de
   uso se encuentran al final de este capítulo.
   
-  \subsection{Aplicaciones de Orthocore, identificación del core
-  conservado y de familias de genes
+  \section{Aplicaciones de Orthocore, identificación del core conservado y
+  de familias de genes
   marcadores.}\label{aplicaciones-de-orthocore-identificacion-del-core-conservado-y-de-familias-de-genes-marcadores.}
   
   Cuatro aplicaciones de Orthocore serán presentadas en las siguientes
@@ -1910,12 +1934,20 @@ starts here.
   \emph{Clavibacter Michiganensis} de otras especies de
   \emph{Micrococcales}.
   
-  Perfiles de promiscuidad de PriA en el orden \emph{Actinomycetales} se
-  relacionan con la especiación. Para mejorar el entendimiento de los
-  cambios en promiscuidad enzimática de PriA, se necesitaba entender
-  filogenéticamente al orden \emph{Actinomycetales}, un camino era obtener
-  su core conservado. Orthocore fue diseñado para resolver este problema.
-  Con el resultado de Orthocore se realizó un árbol de especies donde se
+  \subsection{\texorpdfstring{Orthocore de \emph{Actinomycetales} para
+  mejorar el árbol de
+  especies}{Orthocore de Actinomycetales para mejorar el árbol de especies}}\label{orthocore-de-actinomycetales-para-mejorar-el-arbol-de-especies}
+  
+  A pesar de que se sabía que miembros de la familia PriA había sufrido
+  cambios de promiscuidad y de especificidad entre la funcion XXX de la
+  vía de síntesis de histidina y la función YYY de la biosíntesis de
+  triptofano REFERENCIA se desonocía cómo había ido cambiando la función
+  de esta familia de genes durante los procesos de especiación en
+  \emph{Actinomycetales}. Para eso se necesitaba entender
+  filogenéticamente al orden \emph{Actinomycetales}, el camino que
+  seguimos fue hacer una filogenia con las secuencias de su core
+  conservado. Orthocore fue diseñado para resolver este problema. Con el
+  resultado de Orthocore se realizó un árbol de especies donde se
   observaron patrones de pérdida y ganancia de genes en la vecindad
   genómica del gen que codifica para PriA. Se encontró que hay clados de
   \emph{Actinomyces} donde los genes correspondientes a la síntesis de
@@ -1930,40 +1962,45 @@ starts here.
   la especiación coincidió con el cambio de promiscuidad en la familia
   PriA, acorde a la pérdida y ganancia de genes vecinos. La promiscuidad
   puede co-ocurrir con variaciones en el contexto genómico, pudiendo estos
-  cambios ser una marca para sugerir cambio funcional en una familia.
+  cambios ser una marca para sugerir cambio funcional en una familia. De
+  esta forma, se pudo concluir que los perfiles de promiscuidad de PriA en
+  el orden \emph{Actinomycetales} se relacionan con la especiación
+  REFERENCIA.
   
-  \subsection{\texorpdfstring{Genes de islas de patogenicidad de
-  \emph{Salmonella} en México están conservados en la mayoría de los
-  genomas.}{Genes de islas de patogenicidad de Salmonella en México están conservados en la mayoría de los genomas.}}\label{genes-de-islas-de-patogenicidad-de-salmonella-en-mexico-estan-conservados-en-la-mayoria-de-los-genomas.}
+  \subsection{\texorpdfstring{Uso de Orthocore para entender la evolución
+  de la patogénesis de \emph{Salmonella} en
+  México.}{Uso de Orthocore para entender la evolución de la patogénesis de Salmonella en México.}}\label{uso-de-orthocore-para-entender-la-evolucion-de-la-patogenesis-de-salmonella-en-mexico.}
   
-  Para estudiar la diversidad de \emph{Salmonella} presente en alimentos
-  en México, primero se ensamblaron y anotaron genomas secuenciados para
-  el trabajo ``distribución de los genes de la toxina VirB/D4 en plásmidos
-  de bovino asociados a \emph{Salmonella} no tifoidal''. Los genomas
-  fueron ensamblados en Patrick y se desarrolló myRAST, una tubería previa
-  a Orthocore para la anotación automática de genomas ensamblados en RAST.
-  El protocolo de myRAST puede encontrarse al final de este capítulo.
+  Los genomas conocidos de \emph{Salmonella} en México están tan
+  conservados que se dificultaba hacer una filogenia con los marcadores
+  tradicionales y por lo tanto se desconocía el orden en el que habían
+  ocurrido las divergencias de distintas cepas de ese género. Además era
+  importante relacionar las especiaciones y la evolución de las islas de
+  patogenicidad que se sabía estaban presentes en la mayoría de los
+  aislados.\\
+  Para esto se implementó un contenedor de myRAST en Docker para usarlo en
+  nuestro servidor, esta tubería prepara los datos para Orthocore al
+  realizar la anotación automática de genomas ensamblados en RAST. El
+  protocolo de myRAST puede encontrarse al final de este capítulo.
+  Orthocore fue usado aquí para reconstruir la filogenia de esos aislados
+  de \emph{Salmonella}. Además se buscó cómo fue la evolución de las islas
+  de patogenicidad de esas cepas mediante un análisis de CORASON (Ver
+  Capítulo 3), en el que visualizamos las islas de patogenicidad
+  organizados filogenéticamente. En este caso se observó una alta
+  conservación de toxinas tifoidales en islas de patogenicidad de
+  \emph{Salmonella}. Éstas fueron identificadas en 76\% de las cepas
+  analizadas. Sin embargo la visualización en CORASON nos permitió inferir
+  que las islas de patogenicidad no se han transferido verticalmente y en
+  vez de eso se estima que la transferencia horizontal de estos genes ha
+  sido extensiva, lo cual era esperado ya que se encuentran en un
+  plásmido. Esta análisis se publicó como parte de un trabajo donde además
+  se mostró que las islas de patogenicidad no pueden ser marcadoras de la
+  enfermedad ya que se encontró ganado sin síntomas de la enfermedad pero
+  que sí contenía bacterias con estas islas REFERENCIA.
   
-  Orthocore fue usado aquí para reconstruir filogenias de
-  \emph{Salmonella} y además fue integrado como parte de CORASON, el cual
-  se reporta en el Capítulo 3, es el algoritmo que sirve para visualizar
-  variantes de clusters organizados filogenéticamente. Los clusters de
-  genes pueden ser biosintéticos, islas de patogenicidad, operones o
-  cualquier región parcialmente sinténica de un genoma bacteriano centrada
-  en un gen. En este caso se observó una alta conservación de toxinas
-  tifoidales en islas de patogenicidad de \emph{Salmonella}. Éstas fueron
-  identificadas en 76\% de las cepas analizadas y posteriormente
-  visualizadas mediante CORASON.
-  
-  \subsection{Nostoc provenientes del metagenoma de cícadas se agrupan
-  Cyanobacteria}\label{nostoc-provenientes-del-metagenoma-de-cicadas-se-agrupan-cyanobacteria}
-  
-  \begin{figure}[h!tbp]
-  \centering
-  \includegraphics[angle = 0,scale = .45]{chapter1/Nostoc.png}
-  \caption[Arbol filogenético de $Nostoc$ construido utilizando  la selección de genes del $core~conservado$]{\footnotesize{Reconstrucción de 76 taxa provenientes de 7 órdenes de Cyanobacteria. La matriz final incluyó 45,475 aminoácidos curados de 198 familias de proteínas pertenecientes al $core~conservado$. A la derecha se muestra un zoom sobre el orden $Nostocales$. En este orden se incluyen algunas bacterias simbiontes de cícadas. Metadatos como el tamaño de genoma, contenido de GC y hábitat de origen muestran una posible tendencia de incremento de tamaño en los genomas provenientes del microbioma de plantas.}}
-  \label{fig:ArbolNostoc}
-  \end{figure}
+  \subsection{Las Nostoc provenientes del metagenoma de cícadas están en e
+  mismo grupo
+  filogenético}\label{las-nostoc-provenientes-del-metagenoma-de-cicadas-estan-en-e-mismo-grupo-filogenetico}
   
   Las Cyanobacterias son un phylum de bacterias que se han adaptado a
   diversos ambientes. Aunque muchas de ellas son marinas algunas
@@ -1976,12 +2013,24 @@ starts here.
   de 7 órdenes distintos construida con 198 proteínas del core conservado
   obtenidas por Orthocore. En esta reconstrucción se puede observar que
   los \emph{Nostoc} asociados a plantas tienden a agruparse en la
-  filogenia.
+  filogenia REFERENCIA lo que sugiere que entre las cianobacterias de
+  nuestro set de datos pudiera ser que las 3 \emph{Nostoc} provenientes de
+  raíz coraloide provengan de un evento de colonización. Queda por mostrar
+  si esta filogenia corresponde a la de las cícadas simbiontes, lo que
+  sugeriría una estrecha coevolución entre ambos organismos.
   
-  \subsection{Identificación de genes marcadores de Clavibacter
-  michiganensis}\label{identificacion-de-genes-marcadores-de-clavibacter-michiganensis}
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = .45]{chapter1/Nostoc.png}
+  \caption[Arbol filogenético de $Nostoc$ construido utilizando  la selección de genes del $core~conservado$]{\footnotesize{Reconstrucción de 76 taxa provenientes de 7 órdenes de Cyanobacteria. La matriz final incluyó 45,475 aminoácidos curados de 198 familias de proteínas pertenecientes al $core~conservado$. A la derecha se muestra un zoom sobre el orden $Nostocales$. En este orden se incluyen algunas bacterias simbiontes de cícadas. Metadatos como el tamaño de genoma, contenido de GC y hábitat de origen muestran una posible tendencia de incremento de tamaño en los genomas provenientes del microbioma de plantas.}}
+  \label{fig:ArbolNostoc}
+  \end{figure}
   
-  \emph{Micrococcales} es un orden de Actinobacteria que contiene a
+  \subsection{\texorpdfstring{Identificación de genes marcadores de la
+  bacteria del `cáncer del tomate' Clavibacter
+  michiganensis}{Identificación de genes marcadores de la bacteria del cáncer del tomate Clavibacter michiganensis}}\label{identificacion-de-genes-marcadores-de-la-bacteria-del-cancer-del-tomate-clavibacter-michiganensis}
+  
+  Los \emph{Micrococcales} es un orden de Actinobacteria que contiene a
   \emph{Clavibacter}, \emph{Micrococcus} y \emph{Microbacterium}, entre
   otros microorganismos. El género \emph{Clavibacter} comprende especies
   que pueden causar enfermedades en diversas plantas. En particular la
@@ -2004,18 +2053,18 @@ starts here.
   \label{fig:Marcadores}
   \end{figure}
   
-  Al analizar en RAST genomas de \emph{Microbacterium} y
-  \emph{Micrococcus} aislados de tomate se encontró que en efecto,
-  \emph{tomA} y los otros marcadores propuestos previamente no eran
-  exclusivos de \emph{Clavibacter michiganensis} ( \emph{Cmm} ). Al
-  utilizar Orthocore en siete genomas de \emph{Cmm} encontramos que varios
-  genes del cluster biosintético de michiganina (BGC0000528 en MIBiG)
-  codificado por los genes \emph{clvAFGLKM} pertenecían al core
-  conservado, pero que al agregar los genomas no Cmm del resto del
-  microbioma del tomate los genes \emph{clv} se pierden. El descubrimiento
-  de que \emph{clv} pertenecía al core de \emph{Cmm} se realizó con
-  secuencias de genomas muy fragmentados, en la\autoref{fig:Marcadores} se
-  muestran las cepas originales que fueron analizadas.
+  Al analizar en Orthocore genomas de \emph{Microbacterium} y
+  \emph{Micrococcus} aislados de tomate se encontró que \emph{tomA} y los
+  otros marcadores propuestos previamente no eran exclusivos de
+  \emph{Clavibacter michiganensis} ( \emph{Cmm} ). Al utilizar Orthocore
+  en siete genomas de \emph{Cmm} encontramos que varios genes del cluster
+  biosintético de michiganina (BGC0000528 en MIBiG) codificado por los
+  genes \emph{clvAFGLKM} pertenecían al core conservado, pero que al
+  agregar los genomas no \emph{Cmm} del resto del microbioma del tomate
+  los genes \emph{clv} se pierden. El descubrimiento de que \emph{clv}
+  pertenecía al core de \emph{Cmm} se realizó con secuencias de genomas
+  muy fragmentados, en la\autoref{fig:Marcadores} se muestran las cepas
+  originales que fueron analizadas.
   
   \begin{figure}[h!tbp]
   \centering
@@ -2028,11 +2077,10 @@ starts here.
   \autoref{fig:clv-Marcadores} en este caso se muestran como ejemplo 10
   genomas de bacterias del microbioma del tomate, entre ellas siete
   \emph{Clavibacter}, seis de tomates de invernadero y uno
-  \emph{Clavibacter} proveniente de tomate silvestre, \emph{Clavibacter}
-  RA1B que fue reportado en la tesis de maestría de Yanez. Con Orthocore
-  vemos que el tamaño del core decrece al ir agregando genomas de
-  \emph{Clavibacter} y decrece aún más rápido al agregar los genomas de
-  \emph{Micrococcus} y \emph{Microbacterium} La reconstrucción
+  \emph{Clavibacter} proveniente de tomate silvestre y \emph{Clavibacter}
+  RA1B. Con Orthocore vemos que el tamaño del core decrece al ir agregando
+  genomas de \emph{Clavibacter} y decrece aún más rápido al agregar los
+  genomas de \emph{Micrococcus} y \emph{Microbacterium} La reconstrucción
   filogenetica de este microbioma, ubica a \emph{Clavibacter} RA1B cerca
   de los otros \emph{Cmm} pero no en un clado junto con ellos. Una
   búsqueda por blast revela que los genes marcadores de \emph{Cmm}:
@@ -2048,30 +2096,27 @@ starts here.
   ningún otro genoma distinto a \emph{Clavibacter}. Con distintos niveles
   de conservación de secuencia los genes \emph{clv} son un buen marcador
   para distinguir \emph{Cmm} de otras especies, por esta razón estos genes
-  aún se encuentran en uso como genes marcadores de \emph{Cmm}. Esta misma
-  conclusión se reporta en el trabajo de yasuhara, su observación de que
-  las familias \emph{clvA, clvF} y \emph{clvG} son exclusivas de
-  \emph{Cmm} es independiente de la nuestra, fue hecha sin análisis
-  genómicos y basada en evidencia experimental
-  {[}\protect\hyperlink{ref-yasuhara-bell_genes_2014}{146}{]}. Este
-  descubrimiento ha permitido bajar los costos de identificación de
-  Clavibacter, ya que ahora en lugar de enviar a secuenciar el genoma es
-  suficiente identificar por PCR \emph{clvF} en conjunto con otro
-  marcadores.
+  aún se encuentran en uso como genes marcadores de \emph{Cmm}.
+  Previamente se reportó que las familias \emph{clvA, clvF} y \emph{clvG}
+  son exclusivas de \emph{Cmm}, de acuerdo a evidencia experimental
+  {[}\protect\hyperlink{ref-yasuhara-bell_genes_2014}{146}{]} pero sin
+  análisis genómicos que confirmaran que esos genes no estaban presentes
+  en otras especies sin ser expresados. Este descubrimiento ha permitido
+  bajar los costos de identificación de Clavibacter, ya que ahora en lugar
+  de enviar a secuenciar el genoma es suficiente identificar por PCR
+  \emph{clvF} en conjunto con otros marcadores.
   
   Con Orthocore además de obtener los genes marcadores podemos obtener
   también la matriz del core conservado para realizar la reconstrucción
   filogenética de especies cercanas de \emph{Clavibacter}
-  \autoref{fig:Clavibacter-EvoMining} . Debido a que es importante para
-  los agricultores conocer de dónde provienen las bacterias que infectan
-  al tomate, una de las líneas de investigación del laboratorio de
-  evolución de la diversidad metabólica, es la organización taxonómica de
-  cepas de \emph{Cmm} y de otras bacterias del microbioma de tomate. Por
-  este motivo se han secuenciado y mantenido como datos privados unos
-  doscientos genomas provenientes del microbioma del tomate. Orthocore
-  colabora con esta investigación proporcionando matrices multilocus que
-  pueden diferenciar entre cepas de \emph{Clavibacter} de la misma o de
-  diferente especie.
+  \autoref{fig:Clavibacter-EvoMining} . Ya que los productores querían
+  conocer de dónde provienen las bacterias que infectan al tomate con el
+  fin de evitarlas, se determinó la organización taxonómica de cepas de
+  \emph{Cmm} y de otras bacterias del microbioma de tomate. Para esto se
+  han secuenciado y mantenido como datos privados unos doscientos genomas
+  provenientes del microbioma del tomate y se han analizado con Orthocore
+  para obtener matrices multilocus que pueden diferenciar entre cepas de
+  \emph{Clavibacter} de la misma o de diferente especie.
   
   \begin{figure}[h!tbp]
   \centering
@@ -2097,45 +2142,44 @@ starts here.
   porcentajes de ocurrencia. Esta idea se desarrolló en la herramienta
   clavisual, explicada en la siguiente sección.
   
-  \section{Clavisual: Identificación de genes marcadores a un cierto
+  \subsubsection{Clavisual: Identificación de genes marcadores a un cierto
   porcentaje de grupos
   seleccionados}\label{clavisual-identificacion-de-genes-marcadores-a-un-cierto-porcentaje-de-grupos-seleccionados}
   
   La idea de que Orthocore puede ser usado para obtener los genes
   marcadores de un grupo taxonómico frente a otro fue generalizada en el
-  backend del software Clavisual. Ya se ha explicado previamente que el
-  core puede salir vacío por diversas razones, entre ellas baja calidad de
-  los genomas, o que éstos provengan de organismos muy divergentes,
-  verdaderas razones biológicas como dinámica génica o un core no
-  convergente. Así pues, es posible que si sólo se utiliza el core no se
-  obtengan marcadores. Pero el core puede relajarse de varias maneras una
-  de ellas es el Pseudocore, donde en lugar de multidireccional hits se
-  toman BBH a un genoma de referencia. Otra forma es establecer un
-  porcentaje de presencia /ausencia de interés.
-  
-  El pseudocore consiste en utilizar información previa específica del
-  core de un linaje para obtener los genes de y la metodología está
-  depositada en github integrada en el repositorio
+  software Clavisual. Ya se ha explicado previamente que el core puede
+  salir vacío por diversas razones, entre ellas baja calidad de los
+  genomas, o que éstos provengan de organismos muy divergentes, verdaderas
+  razones biológicas como dinámica génica o un core no convergente. Así
+  pues, es posible que si sólo se utiliza el core no se obtengan
+  marcadores. Pero el core puede relajarse de varias maneras una de ellas
+  es el Pseudocore, donde en lugar de multidireccional hits se toman BBH a
+  un genoma de referencia. Otra forma es establecer un porcentaje de
+  presencia /ausencia de interés. El pseudocore consiste en utilizar
+  información previa específica del core de un linaje para obtener los
+  genes de y la metodología está depositada en github integrada en el
+  repositorio
   \href{https://github.com/nselem/clavigenomics}{clavigenomics}. El blast
   fue optimizado cambiando hacer un blast todos contra todos por archivos
   genómicos individuales genomai\_vs\_genomaj.blast que luego son
   concatenandos según se necesiten.
   
-  Los porcentajes de genomas son diferentes porque al no bastar los best
-  bidireccional hits conservados, todo el pangenoma es decir todos los
-  genes contenidos en los genomas del grupo de interés necesitan ser
-  clasificados por familias, para de ahi obtener las familias que tienen
-  presencia en un porcentaje \%p y ausencia en un porcentaje a\% del grupo
-  externo. Estos perfiles fueron desarrollados para Clavisual
+  Los porcentajes de genomas son diferentes porque al no bastar los
+  mejores hits bidirectionales conservados, todo el pangenoma es decir
+  todos los genes contenidos en los genomas del grupo de interés necesitan
+  ser clasificados por familias, para de ahi obtener las familias que
+  tienen presencia en un porcentaje \%p y ausencia en un porcentaje a\%
+  del grupo externo. Estos perfiles fueron desarrollados para Clavisual
   \autoref{fig:Clavisual} utilizando FasthOrtho para clasificar las
   familias y de ahi obtener los grupos. Con ellos se consiguieron
   marcadores para Kurtobacterium.
   
   Finalmente Clavisual despliega un árbol realizado con el Pseudocore
-  respecto a un conjunto de genes de Cmm NCPP previamente seleccionados.
-  En este árbol clavisual permite la visualización de metadatos, como año,
-  género de la bacteria, estado de salud de la planta e invernadero donde
-  fue aislada.
+  respecto a un conjunto de genes de \emph{Cmm} NCPP previamente
+  seleccionados. En este árbol clavisual permite la visualización de
+  metadatos, como año, género de la bacteria, estado de salud de la planta
+  e invernadero donde fue aislada.
   
   \begin{figure}[h!tbp]
   \centering
@@ -2144,7 +2188,7 @@ starts here.
   \label{fig:Clavisual}
   \end{figure}
   
-  \subsection{El pangenoma de Clavibacter Michiganensis es
+  \subsubsection{El pangenoma de Clavibacter Michiganensis es
   abierto}\label{el-pangenoma-de-clavibacter-michiganensis-es-abierto}
   
   Después de desarrollar métodos de identificación de genes marcadores y
@@ -2156,12 +2200,16 @@ starts here.
   patógeno de planta quedaba por investigar cómo es su pangenoma. ¿Es
   posible saturar el contenido génico de \emph{Cmm} con sólo secuenciar
   más genomas?. Aunque actualmente existen ya herramientas web para el
-  análisis de pangenoma, en su momento se utillizó el software bpga que se
-  corre desde la terminal. Para facilitar su instalación se desarrolló un
-  docker que se describe más tarde en este capítulo en la sección de las
-  descripciones técnicas. Como ejemplo de su funcionamiento, se analizó el
-  pangenoma de los mismos diez genomas del pangenoma del tomate utilizados
-  en la visualización de clavisual \autoref{fig:bpga-pangenoma} .
+  análisis de pangenoma, en su momento se utillizó el software Bacterial
+  PanGenome Analysis Tool que se corre desde la terminal. Para facilitar
+  su instalación se desarrolló un contenedor Docker (ver abajo,
+  descripciones técnicas). Como ejemplo de su funcionamiento, se analizó
+  el pangenoma de los mismos diez genomas del tomate utilizados en la
+  visualización de clavisual \autoref{fig:bpga-pangenoma} . Tomando otros
+  siete genomas del género \emph{Clavibacter}, utilizando OrthoVenn
+  tenemos la misma observación, el número de familias de genes agregadas
+  al adicionar genomas, es después de siete genomas casi tan grande como
+  su core \autoref{fig:Venn-Chart}.
   
   \begin{figure}[h!tbp]
   \centering
@@ -2169,11 +2217,6 @@ starts here.
   \caption[El pangenoma de $Clavibacter$ es abierto según el análisis de BPGA.]{\footnotesize{El pangenoma de $Clavibacter$ es abierto según el análisis de BPGA. En este ejemplo el pangenoma de Clavibacter se mantiene creciente mientras que el core no alcanza el cero. En contraste, al ampliar el rango taxonómico el $core~genome$ sí se acerca a cero según BPGA}}
   \label{fig:bpga-pangenoma}
   \end{figure}
-  
-  Tomando otros siete genomas del género \emph{Clavibacter}, utilizando
-  OrthoVenn tenemos la misma observación, el número de familias de genes
-  agregadas al adicionar genomas, es después de siete genomas casi tan
-  grande como su core \autoref{fig:Venn-Chart}.
   
   \begin{figure}[h!tbp]
   \centering
@@ -2253,12 +2296,10 @@ starts here.
   Finalmente se analizarán BGC que fueron detectados a partir del uso de
   EvoMining con énfasis en el de la escitonemina.
   
-  \section{EvoMining es un método para encontrar BGC no
-  tradicionales}\label{evomining-es-un-metodo-para-encontrar-bgc-no-tradicionales}
-  
   \subsection{EvoMining es un paradigma que permite ubicar copias extra de
   familias enzimáticas y organizarlas visualmente acorde a eventos
-  evolutivos.}\label{evomining-es-un-paradigma-que-permite-ubicar-copias-extra-de-familias-enzimaticas-y-organizarlas-visualmente-acorde-a-eventos-evolutivos.}
+  evolutivos para encontrar BGC no
+  tradicionales}\label{evomining-es-un-paradigma-que-permite-ubicar-copias-extra-de-familias-enzimaticas-y-organizarlas-visualmente-acorde-a-eventos-evolutivos-para-encontrar-bgc-no-tradicionales}
   
   Existen varias clases de BGC que son arquetipos de los productos
   naturales. Entre ellas se encuentran las clases \emph{non ribosomomal
@@ -2323,17 +2364,18 @@ starts here.
   \section{Algoritmos y bases de datos de EvoMining
   2.0}\label{algoritmos-y-bases-de-datos-de-evomining-2.0}
   
-  EvoMining está compuesto de dos algoritmos: el primero que encuentra
-  miembros de la familia semilla entre todos los genomas blanco para así
-  detectar genomas donde haya habido expansiones y luego busca cuáles
-  homólogos seguramente tienen la misma función que las secuencias semilla
-  y cuales otros miembros de la familia son más similares a genes que han
-  sido reclutados por BGCs de acuerdo a reportes previos. El segundo
-  algoritmo permite la visualización de todas las copias de una familia
-  expandida en un árbol clasificadas según sus posibles destinos
-  metabólicos. Para ello, los algortimos EvoMining necesitan tres bases de
-  datos: i) los genomas blanco, ii) las secuencias de ezimas semilla, y
-  iii) la de productos naturales verificados.
+  EvoMining está compuesto de dos algoritmos: el primero que utiliza a la
+  familia semilla para encuentrar todos miembros de la familia entre todos
+  los genomas blanco para así detectar genomas donde haya habido
+  expansiones e identificar a todos los miembros de la Familia Expandida
+  (FE) y luego busca cuáles homólogos seguramente tienen la misma función
+  que las secuencias semilla y cuales otros miembros de la familia son más
+  similares a genes que han sido reclutados por BGCs de acuerdo a reportes
+  previos. El segundo algoritmo permite la visualización de todas las
+  copias de una familia expandida en un árbol clasificadas según sus
+  posibles destinos metabólicos. Para ello, los algortimos EvoMining
+  necesitan tres bases de datos: i) los genomas blanco, ii) las secuencias
+  de ezimas semilla, y iii) la de productos naturales verificados.
   
   \begin{figure}[h!tbp]
   \centering
@@ -3138,9 +3180,9 @@ starts here.
   
   Azoxy
   
-  \subsection{\texorpdfstring{La familia \emph{tauD} tiene expansión y
-  reclutamiento tanto en Actinobacteria como en
-  Pseudomonas}{La familia tauD tiene expansión y reclutamiento tanto en Actinobacteria como en Pseudomonas}}\label{la-familia-taud-tiene-expansion-y-reclutamiento-tanto-en-actinobacteria-como-en-pseudomonas}
+  \subsection{\texorpdfstring{EvoMining en La familia \emph{tauD} tiene
+  expansión y reclutamiento tanto en Actinobacteria como en
+  Pseudomonas}{EvoMining en La familia tauD tiene expansión y reclutamiento tanto en Actinobacteria como en Pseudomonas}}\label{evomining-en-la-familia-taud-tiene-expansion-y-reclutamiento-tanto-en-actinobacteria-como-en-pseudomonas}
   
   TauD en una enzima dedicada al metabolismo de taurina, proviene del
   operon de \emph{E. coli}. En Pseudomonas también tiene muchas
@@ -4901,260 +4943,34 @@ starts here.
   \label{fig:HeatplodPriAdocking}
   \end{figure}
   
-  \subsection{GTP es el sustrato por el que PriA muestra mayor
-  afinidad}\label{gtp-es-el-sustrato-por-el-que-pria-muestra-mayor-afinidad}
-  
-  \begin{Shaded}
-  \begin{Highlighting}[]
-  \NormalTok{## boxplot de los sustratos}
-  \KeywordTok{ggplot}\NormalTok{(docking.m, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{variable, }\DataTypeTok{y=}\NormalTok{value)) }\OperatorTok{+}\StringTok{ }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"Substrates"}\NormalTok{, }\DataTypeTok{y =} \StringTok{"Affinity"}\NormalTok{,}\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size=}\DecValTok{12}\NormalTok{)) }\OperatorTok{+}\StringTok{ }\KeywordTok{geom_boxplot}\NormalTok{()}\OperatorTok{+}\KeywordTok{theme_bw}\NormalTok{()}\OperatorTok{+}\KeywordTok{theme}\NormalTok{(}\DataTypeTok{plot.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{14}\NormalTok{, }\DataTypeTok{face =} \StringTok{"bold"}\NormalTok{), }\DataTypeTok{text =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{12}\NormalTok{), }\DataTypeTok{axis.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{face=}\StringTok{"bold"}\NormalTok{), }\DataTypeTok{axis.text.x=}\KeywordTok{element_text}\NormalTok{(}\DataTypeTok{angle =} \DecValTok{90}\NormalTok{,}\DataTypeTok{size =} \DecValTok{6}\NormalTok{), }\DataTypeTok{legend.position =} \StringTok{"bottom"}\NormalTok{)}
-  \end{Highlighting}
-  \end{Shaded}
-  
-  \begin{verbatim}
-  Warning: Removed 100 rows containing non-finite values (stat_boxplot).
-  \end{verbatim}
-  
-  \begin{center}\includegraphics{tesis_files/figure-latex/substrateBox-1} \end{center}
-  
-  \clearpage  
-  
-  \subsection{Dinámica molecular vs datos
-  experimentales}\label{dinamica-molecular-vs-datos-experimentales}
-  
-  En las tablas \autoref{tab:PriAPRA} , \autoref{tab:PriAProFAR} se
-  muestra a detalle la comparación entre las dinámicas moleculares de PriA
-  respecto a PRA y ProFAR. Estos datos sugirieron que GTp es el sustrato
-  con mayor afinidad y por ello en la última sección se avanzó en la
-  realización de cinéticas enzimáticas con GTP.
-  
-  Table: Actividad de PriA en S3 PRA \label{tab:PriAPRA}
-  
-  \[ 
-  \resizebox{\columnwidth}{!}{%
-  \begin{tabular}{ l c r l l l l l}
-  \hline \\ [-1.5ex]
-  organism  &Family & $K_M    $     & $k_{cat}$        & $\frac{k_{cat}}{K_M}$ &Pre MD & Pos MD & Reference  \\ [1ex]
-  \hline \\ [-1.5ex]
-  Afer        &HisA   & $1.1\pm0.2$   &$  0.05\pm0.001    $& 0.045                  &-10.1    &-12.3       &Noda-García L et al 2015\\ [1ex]
-  Ecoli       &HisA   &$  1.6         $&$         4.9       $&3.1                   &-9.9   &-16       &Henn-Sax et al. (2002)\\ [1ex]
-  Sent        &HisA   &$  17.0 \pm0.1 $&$ 7.8 \pm 2.4   $&$4.5 × 10^5          $&-10.3  &-20.1     &Söderholm A et al (2015)\\ [1ex]
-  Aaur        &PriB   &$  2.1 \pm 0.5 $& $    1.8 \pm 0.2     $&0.9                   &-7.4   &              &verduzco-castro 2016\\ [1ex]
-  Sipo        &PriB   &$  3.8\pm0.2     $&$0.82\pm0.02        $&0.21                  &-8.2     &-14.7       &verduzco-castro 2016\\ [1ex]
-  SspC        &PriB   &$  11.4\pm3.4  $&$2.53\pm0.74      $&0.22                  &   -8.5    &-12.7     &verduzco-castro 2016\\ [1ex]
-  SMg1        &PriB   &$  13.2\pm3.4  $&$0.92\pm0.19      $&0.069                 &-8     &-15.2     &verduzco-castro 2016\\ [1ex]
-  Ssvi        &PriB   &$  3.9\pm0.89  $&$0.69\pm0.04      $&0.18                  &-8.2     &-16.7     &verduzco-castro 2016\\ [1ex]
-  Scoe        &PriA   &$  3.6\pm0.7     $&$ 1.3\pm0.2     $  &0.4                   &-8.4   &-15       &Noda-García et al (2010)\\ [1ex]
-  Sglob       &PriA   & $4.2\pm0.8     $ & $0.74\pm0.03    $   &0.18                  &-9.2     &-16.7       &verduzco-castro\\ [1ex]
-  Mtub 2Y85   &priA   &$  19  0.23      $&$0.012  -9.7          $&                      &       &          &Due et al 2011\\ [1ex]
-  Mtub 3ZS4   &priA   &$  ?                 $&$-9.9               $&                      &       &          &Due et al 2011 (To be published)\\ [1ex]
-  Auro        &priA   &$  4.0 \pm 0.9 $&$0.2 \pm 0.03   $&0.04                    &-9.2       &          &Vazquez-Juarez (2016)\\ [1ex]
-  Cjei        &PriA   &$  2.3 \pm 0.2 $&$0.9 \pm 0.08   $&0.39                    &-8.5       &          &Noda-García et al (2013)\\ [1ex]
-  Cdip        &subHisA&$  4.4 \pm 0.5 $&$2.6 \pm 0.3      $&0.59                  &-9.2       &          &Noda-García et al (2013)\\ [1ex]
-  SMg1 TrpF   &TrpF3  &   -                &-                &-                       &-6.9     &-9.6      &verduzco-castro 2016\\ [1ex]
-  Jden        &TrpF3  &   -                &-                &-          -7.2         &-9.4     &$16.8\pm3.3$&    Verduzco-Castro E et al  2016\\ [1ex]
-  Acar      &SubHisA& 0.02                     &                 &                        &       &          &            \\ [1ex]
-  Aodo        &SubTrpF&       -              &-                  &-                     &       &          &\\ [1ex]
-  \hline
-  \end{tabular}}
-  \label{tab:PriAPRA}  
-  %}
-  \]
-  
-  \clearpage   La siguiente tabla es análoga a la anterior pero con el
-  sustrato ProFAR
-  
-  Table: Actividad de PriA en S7 ProFAR \label{tab:PriAProFAR}
-  
-  \[ 
-  \resizebox{\columnwidth}{!}{%
-  \centering 
-  \begin{tabular}{ l c r l l l l l}
-  \hline \\ [-1.5ex]
-  organism  &Family  &  $K_M$ & $k_{cat}$& $\frac{k{cat}}{K_M}$ &Pre MD &Pos MD &Reference  \\ [1ex]
-  \hline \\ [-1.5ex]
-  Afer      &HisA    &-            &-                &-          &-9.2    &-9        &Noda-García L et al. (2015)   \\ [1ex]
-  Ecoli     &HisA    &-            &-                &-          &-9      &-11.1     &Henn-Sax et al. (2002)\\ [1ex]
-  Sent      &HisA    &-            & -               &-          &-9.6    &-10.2     &Söderholm A et al (2015)\\ [1ex]
-  Aaur      &PriB    &$26.3\pm6.3$ & $0.37\pm 0.09$  & 0.014     &-7.1    &-         &verduzco-castro 2016\\ [1ex]
-  Sipo      &PriB    &$60.8\pm1.1$ &$8.25\pm0.4 $    &0.14       &-8      &-8.5      &verduzco-castro 2016 \\ [1ex]
-  SspC      &PriB    &$149.9\pm29$ &$1.4\pm0.12 $    &0.009      &-8.5    &-10.8     &verduzco-castro 2016\\ [1ex]
-  SMg1      &PriB    &$129.6\pm34$ &$0.29\pm0.04$    &0.0022     &-7.5    &-11       &verduzco-castro 2016\\ [1ex]
-  Ssvi      &PriB    &$24.5\pm4.0$ &$1.6\pm0.29 $    &0.067      &-8      &-9.7      &verduzco-castro 2016 \\ [1ex]
-  Scoe      &PriA    &$5.0\pm0.08$ &$3.4\pm0.09  $   &0.7        &-8      &-9.4      &Noda-García et al (2010)   \\ [1ex]
-  Sglob     &PriA    &$11\pm1.0$  &$3.8\pm0.2  $     &0.34       &-8.7    &-9.4      &verduzco-castro 2016  \\ [1ex]
-  Mtub2Y85  &priA    &21         &3.6         &0.17       &-8.6    &          &Due et al 2011                        \\ [1ex] 
-  Mtub3ZS4  &priA    &           &            &           &-9.3    &          &Due et al 2011 (To be published)      \\ [1ex] 
-  Auro      &priA    &$23 \pm 6.5 $  &$0.5\pm0.05 $&0.02       &-9.3    &          &Vazquez-Juarez (2016)                 \\ [1ex] 
-  Cjei      &PriA    &$5.1 \pm1.0$  &$1.6 \pm 0.16 $&0.31       &-9      &          &Noda-García et al (2013)              \\ [1ex]
-  Cdip      &subHisA &-          &-           &-          &-8.8    &          &Noda-García et al (2013)              \\ [1ex]
-  SMg1 TrpF &TrpF3   &$8.4\pm1.7$    &$10.5\pm2.4$    &1.25       &-7.6    &-9        &verduzco-castro     \\ [1ex] 
-  Jden      &TrpF3   &$16.8\pm3.3$   &$27\pm1.6$      &1.6        &-7.6    &-7.7      &verduzco-castro     \\ [1ex] 
-  Acar      &SubHisA &Na         &Na          &0.02       &Na      &Na        &Na                                    \\ [1ex] 
-  Aodo      &SubTrpF &-          &-           &-          &-       &Na        &Na                                    \\ [1ex]
-  \hline
-  \end{tabular}}
-  \label{tab:PriAProFAR}    
-  %}  
-  \]
-  
-  \begin{table}[t]
-  
-  \caption[Enzymes docking ]{\label{tab:docking_table_out}Enzymes docking \label{tab:docking}}
-  \centering
-  \resizebox{\linewidth}{!}{
-  \begin{tabular}{l|r|r|r|r|r|r|r|r|r|r|r|r|r|r|r|r|r|r|r|r}
-  \hline
-  Enzima & S13 & S15 & S14 & S16 & S10 & S12 & S9 & S18 & S5 & S4 & S8 & S17 & S7 & S6 & S11 & S1 & S2 & S3 & S19 & S20\\
-  \hline
-  Srub\_2VEP & -7.4 & -7.3 & -7.5 & -7.1 & -6.5 & -6.2 & -6.5 & -7.7 & -9.4 & -9.3 & -7.9 & -7.2 & -8.3 & -8.6 & -8.9 & -9.0 & -7.1 & -8.9 & -7.8 & -7.7\\
-  \hline
-  Saver\_2VEP & -7.4 & -7.2 & -7.0 & -6.5 & -7.3 & -6.4 & -7.0 & -7.5 & -9.6 & -8.5 & -7.9 & -7.6 & -8.4 & -8.7 & -9.8 & -8.3 & -7.9 & -8.6 & -7.7 & -7.6\\
-  \hline
-  Scoe\_2VEP & -7.5 & -7.5 & -7.9 & -7.0 & -7.0 & -6.2 & -6.5 & -7.8 & -8.8 & -9.2 & -7.8 & -7.9 & -8.0 & -8.9 & -10.3 & -9.2 & -9.3 & -8.4 & -8.1 & -8.2\\
-  \hline
-  Scoe\_2X30 & -8.1 & -7.4 & -7.6 & -6.9 & -6.7 & -6.8 & -7.1 & -7.9 & -9.1 & -9.0 & -8.3 & -8.6 & -8.5 & -9.0 & -10.6 & -10.0 & -10.3 & -10.2 & -8.1 & -7.9\\
-  \hline
-  Scoe\_1VZW & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA\\
-  \hline
-  Sfla\_2VEP & -7.1 & -7.6 & -7.2 & -7.3 & -7.2 & -6.8 & -6.9 & -8.1 & -8.2 & -7.2 & -8.2 & -7.2 & -8.4 & -8.3 & -8.5 & -7.9 & -7.8 & -6.0 & -7.5 & -7.3\\
-  \hline
-  Sgha\_2VEP & -9.2 & -8.7 & -6.7 & -6.7 & -7.4 & -7.7 & -7.2 & -7.5 & -9.8 & -8.9 & -8.2 & -7.8 & -8.8 & -8.7 & -10.1 & -9.1 & -9.0 & -9.5 & -8.0 & -7.5\\
-  \hline
-  Siak\_2VEP & -6.6 & -7.3 & -7.0 & -7.1 & -7.1 & -7.1 & -6.8 & -8.0 & -9.2 & -8.7 & -7.8 & -7.6 & -8.3 & -8.4 & -9.1 & -5.8 & -5.3 & -8.5 & -7.3 & -7.4\\
-  \hline
-  Sbic\_2VEP & -7.2 & -6.7 & -6.8 & -6.5 & -6.2 & -6.6 & -5.9 & -7.8 & -8.5 & -7.8 & -7.8 & -7.2 & -8.2 & -8.0 & -9.6 & -8.2 & -8.0 & -9.4 & -7.7 & -7.5\\
-  \hline
-  Sbot\_2VEP & -9.6 & -10.9 & -8.9 & -7.1 & -6.0 & -6.2 & -6.7 & -8.1 & -9.1 & -8.8 & -8.3 & -7.9 & -8.9 & -9.3 & -9.4 & -9.8 & -10.0 & -8.9 & -8.2 & -8.0\\
-  \hline
-  Sipo\_2VEP & -6.6 & -6.6 & -7.3 & -6.9 & -6.5 & -6.3 & -6.5 & -8.1 & -8.6 & -9.1 & -8.0 & -7.9 & -8.0 & -8.4 & -8.5 & -7.2 & -8.4 & -8.2 & -7.9 & -7.6\\
-  \hline
-  Ssvi & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA\\
-  \hline
-  Ssvi\_4U28 & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA\\
-  \hline
-  Ssvi\_4TX9 & -5.9 & -8.2 & -7.1 & -6.6 & -6.8 & -7.0 & -7.6 & -7.9 & -8.4 & -8.3 & -8.2 & -8.1 & -8.4 & -8.7 & -7.7 & -8.2 & -8.2 & -6.7 & -8.0 & -7.5\\
-  \hline
-  Salb\_2VEP & -6.3 & -7.1 & -7.4 & -6.8 & -7.7 & -6.9 & -6.6 & -8.0 & -9.6 & -8.9 & -8.6 & -7.9 & -8.6 & -8.4 & -9.1 & -7.4 & -7.2 & -8.8 & -8.1 & -7.8\\
-  \hline
-  Sbik\_2VEP & -7.4 & -6.7 & -7.4 & -7.3 & -7.7 & -6.5 & -6.8 & -8.5 & -9.9 & -9.8 & -8.3 & -7.8 & -8.2 & -8.4 & -10.5 & -7.1 & -6.3 & -8.3 & -8.1 & -7.9\\
-  \hline
-  Stsu\_2VEP & -6.9 & -7.5 & -7.9 & -7.8 & -7.5 & -7.3 & -7.7 & -8.1 & -10.0 & -9.7 & -8.7 & -7.8 & -8.8 & -8.8 & -10.6 & -7.8 & -8.7 & -9.2 & -7.9 & -7.8\\
-  \hline
-  Sven\_2VEP & -8.3 & -7.6 & -7.5 & -6.8 & -6.4 & -7.0 & -6.2 & -8.2 & -9.6 & -9.0 & -7.9 & -7.4 & -8.3 & -8.6 & -10.0 & -8.2 & -8.2 & -8.1 & -7.6 & -7.4\\
-  \hline
-  Scal\_2VEP & -7.3 & -8.8 & -7.5 & -6.7 & -7.0 & -6.5 & -6.5 & -8.7 & -10.0 & -9.7 & -8.8 & -7.7 & -8.2 & -8.6 & -10.5 & -8.1 & -9.2 & -8.9 & -7.6 & -7.6\\
-  \hline
-  Sbaa\_2VEP & -8.9 & -6.6 & -6.7 & -6.8 & -7.2 & -7.2 & -6.2 & -7.7 & -9.6 & -9.5 & -8.4 & -7.4 & -8.5 & -8.2 & -9.7 & -8.5 & -8.4 & -9.3 & -7.4 & -7.7\\
-  \hline
-  Sglo\_2VEP & -6.1 & -6.8 & -6.9 & -6.5 & -6.7 & -6.3 & -6.7 & -7.5 & -9.6 & -9.6 & -8.6 & -7.8 & -8.7 & -8.7 & -9.9 & -6.2 & -5.1 & -9.2 & -7.8 & -7.7\\
-  \hline
-  Sful\_2VEP & -9.0 & -6.9 & -7.1 & -6.8 & -6.3 & -7.2 & -6.6 & -8.1 & -9.8 & -9.3 & -7.7 & -8.0 & -8.7 & -8.8 & -10.5 & -7.6 & -9.1 & -10.5 & -7.1 & -7.4\\
-  \hline
-  Sgri\_2VEP & -6.6 & -8.2 & -7.1 & -6.4 & -7.1 & -7.4 & -7.1 & -7.4 & -9.4 & -8.5 & -8.6 & -7.5 & -8.8 & -8.4 & -9.6 & -8.8 & -8.8 & -8.7 & -7.7 & -7.5\\
-  \hline
-  S34\_2VEP & -7.8 & -7.2 & -7.6 & -7.3 & -6.2 & -6.5 & -6.9 & -8.0 & -8.8 & -8.6 & -7.7 & -7.1 & -7.7 & -7.9 & -7.2 & -7.1 & -6.7 & -7.1 & -7.7 & -7.7\\
-  \hline
-  Srim\_2VEP & -7.4 & -6.8 & -7.1 & -7.2 & -7.2 & -7.4 & -7.8 & -8.6 & -9.7 & -9.3 & -8.8 & -7.7 & -8.9 & -8.7 & -10.2 & -6.8 & -8.2 & -9.0 & -7.5 & -7.8\\
-  \hline
-  Satr\_2VEP & -7.6 & -7.1 & -7.5 & -7.4 & -6.2 & -6.5 & -6.9 & -8.0 & -8.9 & -8.7 & -7.7 & -7.4 & -7.7 & -7.8 & -6.5 & -7.0 & -6.3 & -7.7 & -7.7 & -7.7\\
-  \hline
-  S1813\_2VEP & -7.5 & -6.7 & -6.8 & -6.6 & -6.8 & -7.0 & -6.7 & -7.9 & -9.9 & -9.7 & -8.3 & -7.7 & -8.5 & -8.6 & -10.0 & -7.6 & -7.5 & -8.6 & -7.3 & -7.5\\
-  \hline
-  Svar\_2VEP & -6.3 & -6.8 & -7.0 & -6.3 & -6.9 & -6.9 & -6.6 & -7.8 & -9.3 & -7.4 & -8.5 & -7.3 & -8.0 & -8.7 & -8.5 & -7.4 & -6.3 & -6.0 & -7.9 & -7.5\\
-  \hline
-  Sfra\_2VEP & -7.3 & -7.0 & -6.8 & -6.6 & -6.5 & -7.3 & -6.6 & -8.6 & -9.1 & -8.7 & -8.9 & -7.7 & -8.9 & -9.0 & -8.7 & -6.0 & -6.3 & -7.9 & -8.2 & -7.8\\
-  \hline
-  Smeg\_2VEP & -8.0 & -7.3 & -6.9 & -6.6 & -7.2 & -6.7 & -6.1 & -7.6 & -9.2 & -9.1 & -7.8 & -7.4 & -8.2 & -8.5 & -9.6 & -9.2 & -9.2 & -8.6 & -7.7 & -7.5\\
-  \hline
-  Ssul\_2VEP & -7.5 & -7.0 & -6.9 & -6.6 & -6.6 & -6.7 & -6.9 & -7.7 & -8.4 & -8.2 & -8.2 & -7.5 & -8.1 & -7.7 & -8.2 & -6.7 & -7.1 & -7.7 & -7.6 & -7.4\\
-  \hline
-  Slav\_4X9S & -8.0 & -7.1 & -6.7 & -6.9 & -6.6 & -6.8 & -6.7 & -8.2 & -9.5 & -9.1 & -8.6 & -8.0 & -8.4 & -8.7 & -9.1 & -9.5 & -9.3 & -8.1 & -8.1 & -7.6\\
-  \hline
-  Sery\_4X9S & -7.8 & -7.2 & -7.6 & -7.2 & -7.4 & -6.9 & -7.4 & -8.5 & -9.4 & -9.4 & -8.6 & -7.6 & -8.4 & -8.6 & -9.1 & -10.0 & -10.1 & -9.0 & -7.8 & -8.2\\
-  \hline
-  SspC\_4X9S & -7.4 & -6.9 & -7.3 & -6.8 & -7.3 & -6.6 & -7.5 & -8.0 & -9.8 & -9.3 & -8.7 & -7.6 & -8.5 & -8.4 & -10.6 & -9.1 & -8.9 & -8.5 & -8.1 & -8.0\\
-  \hline
-  Sxan\_4X9S & -7.5 & -6.9 & -6.8 & -6.8 & -6.5 & -6.6 & -6.5 & -8.3 & -8.0 & -8.1 & -7.6 & -7.4 & -8.7 & -8.1 & -8.1 & -8.5 & -8.0 & -7.6 & -7.7 & -7.4\\
-  \hline
-  Skat\_4X9S & -6.4 & -7.0 & -7.1 & -6.7 & -7.7 & -6.3 & -6.2 & -8.1 & -8.5 & -9.2 & -8.3 & -7.6 & -9.0 & -8.5 & -9.7 & -9.5 & -9.9 & -9.2 & -7.4 & -7.5\\
-  \hline
-  SMg1\_4X9S & -6.5 & -6.9 & -7.2 & -7.1 & -6.5 & -6.9 & -6.4 & -7.3 & -7.8 & -7.7 & -8.3 & -7.5 & -7.9 & -8.4 & -9.5 & -7.6 & -5.2 & -7.5 & -7.6 & -7.7\\
-  \hline
-  SMg1\_W9T & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA\\
-  \hline
-  Sniv\_2VEP & -6.2 & -6.8 & -7.4 & -6.5 & -7.8 & -6.8 & -6.7 & -9.5 & -9.6 & -9.4 & -8.7 & -8.2 & -8.6 & -9.1 & -9.9 & -5.4 & -5.5 & -9.2 & -8.0 & -7.5\\
-  \hline
-  Scla\_2VEP & -6.4 & -7.7 & -7.4 & -7.2 & -7.6 & -7.5 & -7.2 & -8.5 & -10.1 & -10.0 & -8.7 & -7.9 & -8.8 & -9.1 & -10.2 & -6.9 & -8.1 & -8.5 & -7.7 & -7.7\\
-  \hline
-  Save\_2VEP & -7.6 & -6.7 & -7.1 & -7.2 & -7.1 & -6.5 & -6.6 & -7.8 & -8.6 & -10.0 & -8.6 & -7.5 & -8.3 & -8.5 & -8.8 & -5.3 & -5.2 & -5.8 & -7.7 & -7.4\\
-  \hline
-  Spur\_2vEP & -6.8 & -7.3 & -6.9 & -6.7 & -8.0 & -7.9 & -7.7 & -8.5 & -9.5 & -9.8 & -8.1 & -7.8 & -8.7 & -9.7 & -10.0 & -5.3 & -6.2 & -8.2 & -7.6 & -7.4\\
-  \hline
-  Scar\_2Y89 & -6.9 & -6.8 & -7.5 & -7.1 & -7.8 & -7.3 & -7.2 & -8.3 & -9.2 & -8.3 & -8.9 & -8.4 & -8.9 & -9.3 & -9.4 & -5.3 & -5.2 & -7.1 & -8.5 & -8.6\\
-  \hline
-  Mtub\_2Y88 & -10.0 & -7.8 & -8.9 & -5.4 & -8.6 & -7.3 & -7.8 & -9.5 & -10.9 & -10.3 & -9.5 & -9.0 & -9.8 & -9.8 & -11.3 & -10.1 & -10.2 & -11.3 & -9.5 & -8.8\\
-  \hline
-  Mtub\_2Y89 & -8.7 & -8.6 & -9.6 & -9.4 & -6.4 & -5.9 & -5.6 & -7.1 & -7.0 & -7.5 & -7.3 & -6.8 & -7.4 & -8.4 & -7.5 & -8.1 & -8.6 & -7.5 & -7.7 & -7.3\\
-  \hline
-  Mtub\_2Y85 & -8.2 & -7.9 & -9.2 & -7.4 & -7.6 & -7.5 & -7.6 & -8.4 & -9.7 & -9.5 & -9.3 & -7.8 & -8.6 & -8.6 & -10.2 & -9.8 & -9.9 & -10.1 & -7.3 & -7.4\\
-  \hline
-  Mtub\_3ZS4 & -10.0 & -10.5 & -11.4 & -6.4 & -8.2 & -7.2 & -7.0 & -9.6 & -10.2 & -10.2 & -9.9 & -8.5 & -9.3 & -9.6 & -10.9 & -10.0 & -10.7 & -9.9 & -8.8 & -8.9\\
-  \hline
-  S34\_3ZS4 & -7.4 & -8.0 & -7.6 & -6.4 & -5.2 & -5.4 & -5.2 & -6.1 & -6.8 & -6.4 & -5.7 & -6.4 & -6.3 & -6.3 & -7.1 & -7.4 & -7.1 & -6.4 & -7.1 & -6.6\\
-  \hline
-  Cdip\_4AXK & -9.2 & -7.8 & -10.9 & -7.2 & -7.5 & -7.6 & -7.7 & -8.9 & -9.0 & -9.8 & -9.0 & -8.3 & -8.8 & -9.2 & -10.1 & -9.5 & -9.9 & -9.2 & -8.0 & -7.9\\
-  \hline
-  Cjei\_4AXK & -7.5 & -6.9 & -7.2 & -6.5 & -8.4 & -8.0 & -8.5 & -8.7 & -9.5 & -9.6 & -9.4 & -8.8 & -9.0 & -9.5 & -9.3 & -8.1 & -9.3 & -8.5 & -7.9 & -7.7\\
-  \hline
-  Aaur & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA\\
-  \hline
-  Aaur\_4WD0 & -8.2 & -8.5 & -8.1 & -7.9 & -5.7 & -5.5 & -5.9 & -7.0 & -7.5 & -7.2 & -7.1 & -6.7 & -7.1 & -7.4 & -8.4 & -7.2 & -7.3 & -7.4 & -7.0 & -6.7\\
-  \hline
-  Acar\_4X2R & -10.6 & -9.3 & -9.3 & -7.2 & -7.2 & -6.8 & -7.3 & -7.5 & -9.5 & -9.8 & -8.0 & -7.8 & -9.3 & -8.9 & -10.3 & -9.6 & -9.4 & -9.4 & -8.1 & -8.0\\
-  \hline
-  Auro\_4X2R & -9.9 & -9.1 & -9.8 & -8.1 & -7.4 & -7.1 & -7.4 & -7.8 & -9.2 & -9.8 & -8.3 & -7.8 & -9.3 & -9.0 & -9.9 & -9.0 & -8.6 & -9.2 & -8.5 & -8.2\\
-  \hline
-  Afer\_4WD0 & -5.7 & -5.8 & -6.0 & -5.7 & -6.7 & -6.2 & -5.8 & -7.6 & -9.2 & -8.8 & -7.8 & -7.4 & -8.3 & -8.4 & -9.3 & -6.7 & -4.5 & -9.1 & -8.3 & -8.1\\
-  \hline
-  Sent\_5AHE & -9.1 & -5.4 & -6.4 & -5.2 & -8.0 & -7.3 & -7.4 & -8.8 & -10.7 & -10.2 & -8.7 & -8.7 & -9.6 & -9.9 & -10.9 & -7.8 & -9.1 & -10.3 & -9.0 & -8.4\\
-  \hline
-  Ecoli\_K12 & -9.7 & -9.7 & -9.2 & -6.1 & -7.2 & -6.6 & -6.8 & -8.6 & -9.5 & -9.1 & -8.6 & -8.2 & -9.0 & -8.6 & -10.2 & -9.9 & -10.2 & -9.9 & -8.2 & -7.9\\
-  \hline
-  Jden\_4WUI & -8.3 & -8.8 & -8.2 & -6.8 & -6.2 & -6.1 & -6.0 & -6.8 & -7.4 & -7.6 & -7.5 & -6.9 & -7.6 & -7.5 & -7.7 & -7.5 & -7.6 & -7.2 & -7.3 & -7.2\\
-  \hline
-  Ctra & -8.2 & -8.0 & -7.4 & -7.2 & -6.1 & -5.5 & -5.4 & -6.5 & -7.1 & -7.1 & -7.0 & -6.2 & -6.8 & -6.8 & -6.9 & -7.2 & -7.4 & -6.5 & -6.7 & -6.6\\
-  \hline
-  SMg1\_trpF & -7.2 & -8.8 & -8.2 & -7.3 & -6.2 & -5.7 & -5.7 & -6.9 & -6.6 & -6.7 & -7.3 & -6.7 & -7.6 & -6.9 & -7.5 & -7.1 & -7.1 & -6.9 & -6.7 & -6.5\\
-  \hline
-  Aodo\_4X2R & -8.5 & -8.6 & -8.8 & -7.3 & -7.1 & -7.1 & -7.1 & -7.5 & -9.7 & -9.4 & -7.8 & -7.6 & -9.6 & -8.8 & -10.1 & -8.4 & -8.9 & -9.4 & -8.0 & -8.1\\
-  \hline
-  \end{tabular}}
-  \end{table}
-  
-  Con actividad de FolE i.e activa para el compuesto V Adams et al (2014)
-  
-  \clearpage  
+  \clearpage
   
   \section{PriA en cinéticas enzimáticas no
   tradicionales.}\label{pria-en-cineticas-enzimaticas-no-tradicionales.}
   
-  Además de la exploración genómica de PriA se realizaron
-  caracterizaciones experimentales. No se tuvo el tiempo ni la experiencia
-  para tener réplicas de los resultados descritos a continuación, sin
-  embargo pueden ser un buen comienzo para futuros estudiantes que deseen
-  retomarlos. Todos los protocolos fueron cuidadosamente descritos y se
-  encuentran en los anexos. Este capítulo se enfoca en el montaje de dos
-  experimentos. \emph{i)} Cinéticas de PriA en GTP . \emph{ii)} Medición
-  simultánea de la actividad de PriA sobre ProFAR y PRA.
+  Después de la exploración genómica de PriA/HisA se trabajó en
+  caracterizaciones experimentales no tradicionales de PriA. No se tuvo el
+  tiempo ni la experiencia para tener réplicas de los resultados descritos
+  a continuación, sin embargo se incluyen en esta tesis porque pueden ser
+  un buen comienzo para otros estudiantes que deseen retomar este trabajo.
+  Los protocolos fueron cuidadosamente descritos y se encuentran incluidos
+  en los anexos. Este capítulo se enfoca en el montaje de dos
+  experimentos, el primero sugerido por la sección anterior: \emph{i)}
+  Cinéticas de PriA en GTP. Mientras que el segundo está motivado por la
+  curiosidad sobre el cambio en la capacidad catalítica según se provea
+  primero un sustrato u otro, este experimento consiste en la \emph{ii)}
+  Medición simultánea de la actividad de PriA sobre ProFAR y PRA.
   
-  Lo primero que se realizó fue la sobre expresión heteróloga de PriA y su
-  respectiva purificación para poder realizar \emph{in vitro} cinéticas
-  enzimáticas. Las enzimas fueron clonadas en cepas de \emph{E. coli} V68
-  se indujo sobre expresión y se purifico la proteína. Se corroboró el
-  éxito de esta actividad mediante un gel de proteína en la que puede
-  verse expresión en la barra correspondiente al tamaño de PriA
-  \autoref{fig:gel}.
+  Lo primero que se realizó fue la sobre-expresión heteróloga de PriA. La
+  secuencia de PriA fue clonada en cepas de \emph{E. coli} V68 donde se
+  indujo la sobre expresión. A partir de este cultivo productor de PriA se
+  purificó la proteína. Se corroboró el éxito de esta actividad mediante
+  un gel de proteína en la que puede verse expresión en la barra
+  correspondiente al tamaño de PriA \autoref{fig:gel}. La proteína
+  purificada fue almacenada a -80° en esferas de proteína selladas con
+  nitrógeno líquido para su mejor preservación, tal y como se describe en
+  el anexo de los procedimientos. Con este \emph{stock} de proteína se
+  realizaron cinéticas enzimáticas \emph{in vitro}.
   
   \begin{figure}[h!tbp]
   \centering
@@ -5163,132 +4979,117 @@ starts here.
   \label{fig:gel}
   \end{figure}
   
-  Con la proteína purificada y almacenada a -80° en esferas de proteína
-  selladas con nitrógeno líquido como se describe en el anexo de los
-  procedimientos se procedió a realizar cinéticas enzimáticas.
-  
   \subsection{PriA puede tener actividad en
   GTP}\label{pria-puede-tener-actividad-en-gtp}
   
-  La actividad fue medida fluorometricamente en placas de 96 (Nuc 96-Well
-  Optical Botto Plates) en un lector de placas TECAN infinite M1000 (con
-  exitación a 286 nm y emisión a 386 nm). Ensayos preliminares de
-  actividad se realizaron en una PriA activa respecto a los otros
-  substratos y proveniente de \emph{Streptomyces coelicolor} y en la
-  mutante inactiva D11A.
+  Como se sugirió en la sección anterior PriA puede tener actividad sobre
+  GTP. Ahora bien, la actividad de PriA en ProFAR es medida en un ensayo
+  estandarizado mediante la detección de cambio de fluorescencia. Para
+  esta medición por fluorimetría se coloca la enzima en placas de 96 pozos
+  (Nuc 96-Well Optical Botto Plates), se agrega el sustrato y utilizando
+  un lector de fluorescencia de placas (TECAN infinite M1000) se mide el
+  cambio de fluorescencia en el tiempo. Una variación de este ensayo
+  permitió obtener información sobre la actividd PriA sobre dGTP. Los
+  parámetros utilizados para la medición fueron tomados del trabajo no
+  publicado de Verduzco-Castro en este laboratorio (exitación a 255 nm y
+  emisión a 334 nm). Para comenzar esta investigación se utilizó primero
+  dGTP en lugar de GTP esto debido a que el dGTP es un sustrato siempre
+  disponible en cualquier laboratorio ya que es necesario para la reacción
+  de PCR. Así pues, ensayos preliminares de actividad de PriA sobre este
+  dGTP se realizaron en la proteína purificada de PriA de
+  \emph{Streptomyces coelicolor}, activa en ambos sustratos nativos
+  utilizando como control su mutante inactiva que sustituye en la posición
+  11 el ácido aspártico por una alanina (D11A). La
+  \autoref{fig:PriAActividaddGTP} muestra el resultado de este experimento
+  donde se aprecia un decrecimiento mayor en la fluorescencia del pozo que
+  contiene la proteína activa respecto del pozo que contiene a la mutante.
   
   \begin{figure}[h!tbp]
   \centering
   \includegraphics[angle = 0,scale = 0.8]{chapter4/MutantControl.png}
-  \caption[Scoe and non functional Scoe PriA acting on dGTP]{\footnotesize{}}
-  \label{fig:PriARutas1}
+  \caption[PriA de {S.}{coelicolor} y su mutante no funcional sobre dGTP]{\footnotesize{PriA de {S.}{coelicolor} y su mutante no funcional sobre dGTP}}
+  \label{fig:PriAActividaddGTP}
   \end{figure}
+  
+  Este experimento de detección de actividad de dGTP fue ampliado
+  incluyendo ahora proteínas provenientes de otros organismos. Para ello
+  se utilizaron los stocks disponibles de PriA provenientes de
+  \emph{Streptomyces roseus} , \emph{Thermomonospora curvata} y
+  \emph{Mycobacterium smegmatis}; los stocks de PriB provenientes de
+  \emph{Streptomyces sp C}, \emph{Streptomyces sviceus} y de
+  \emph{Streptomyces sp} Mg1 y finalmente el stocks de TrpF de
+  \emph{Jonesia denitrificans}. El ensayo descrito arriba fue realizado en
+  estas enzimas y el resultado es mostrado en
+  \autoref{fig:dGTPActividadHomologos}. En la parte inferior derecha vemos
+  que como debe ser el control negativo, el pozo con Buffer y sustrato no
+  muestra ningún cambio en la fluorescencia. Sin embargo no es claro que
+  exista una tendencia claramente decreciente en los pozos que contienen
+  enzima. Posiblemente la pendiente que se observa en los datos de
+  \emph{Thermomonospora curvata}, indique cierta actividad sobre dGTP.
+  Este comportamiento también puede deberse a que las proteínas llevaban
+  tiempo almacenadas. Los experimentos deben ser repetidos con proteína
+  recién purificada.
   
   \begin{figure}[h!tbp]
   \centering
-  \includegraphics[angle = 0,scale = 0.6]{chapter4/GTPCinetica.pdf}
-  \caption[Scoe and non functional Scoe PriA acting on dGTP]{\footnotesize{}}
-  \label{fig:PriARutas2}
+  \includegraphics[angle = 0,scale = 0.6]{chapter4/GTPCinetica.png}
+  \caption[Homólogos de PriA y familias relacionadas no muestran actividad clara sobre dGTP]{\footnotesize{Actividad de PriA y familias relacionadas de distintos organismos sobre dGTP. Este experimento no muestra decrecimiento de fluorescencia en las enzimas seleccionadas lo que implicaría que no existe actividad importante sobre dGTP, excepto poiblemente en el caso de {Thermomonospora} {curvata}}}
+  \label{fig:dGTPActividadHomologos}
   \end{figure}
   
-  \clearpage  
+  Finalmente se probó con los mismos parámetros la actividad de PriA de
+  \emph{Streptomyces coelicolor} sobre GTP. Se comprobó que la enzima
+  estuviera activa mediante ensayos enzimáticos exitosos en sus otros dos
+  sustratos. Sin embargo, no se pudo detectar cambio en la fluorescencia
+  de GTP debido a la actividad de PriA. Tan es posible que la PriA de
+  \emph{S coelicolor} no pueda catalizar ninguna reacción sobre el GTP
+  como que los parámetros de medición de fluorescencia no sean los
+  adecuados, una variante que a futuro podría aportar a este experimento
+  es utilizar
+  \href{https://www.jenabioscience.com/nucleotides-nucleosides/nucleotides-by-structure/fluorescent-nucleotides/guanosines-intrinsically-fluorescent}{análogos
+  fluorescentes de GTP}.
   
-  Entre las enzimas donde se aprecia actividad está \emph{Thermomonospora
-  curvata} que es una Actinobacteria termofílica de la familia
-  \emph{Thermomonosporaceae} y que puede ser encontrada encompostas ya que
-  participa en la degradación de celulosa
-  {[}\protect\hyperlink{ref-chertkov_complete_2011}{180}{]}. La trpF de
-  \emph{Jonesia denitrificans} no mostró actividad.Esta bacteria está
-  clasificada como un organismo patogénico para animales, su genoma fue
-  originalmente aislado de sangre
-  {[}\protect\hyperlink{ref-pukall_complete_2009}{181}{]}.
+  \begin{figure}[h!tbp]
+  \centering
+  \includegraphics[angle = 0,scale = 0.6]{chapter4/GTP.png}
+  \caption[PriA no mostró actividad sobre GTP a diversas concentraciones]{\footnotesize{PriA no mostró actividad sobre GTP. El ensayo enzimático de PriA de {Streptomyces}{coelicolor} sobre GTP a distintas concentraciones no mostró cambios en la fluorescencia de GTP.}}
+  \label{fig:GTP}
+  \end{figure}
   
   \clearpage 
   
   \subsection{Cinéticas simultáneas para PRA y
   ProFAR}\label{cineticas-simultaneas-para-pra-y-profar}
   
-  En esta sección se tratpo de medir simultáneamente las actividades de
-  Pra y ProFAR.
+  Otra pregunta que me surgió al investigar la promiscuidad enzimática es
+  si esta es una propiedad de la población o de cada una de las enzimas
+  existentes en la célula. En PriA esta pregunta puede traducirse a ¿cómo
+  saber si cada molécula de PriA cataliza PRA y ProFAR \emph{in vivo}? o
+  si en cambio, existe una subpoblación que cataliza la isomerización de
+  PRA y otra subpoblación de moléculas que cataliza isomerización de
+  ProFAR. Una buena aproximación \emph{in vitro} a este problema sería
+  poder medir el comportamiento de una sola molécula en un medio con ambos
+  sustratos. Una serie de estos experimentos mostraría si existen
+  subpoblaciones dedicadas a la catálisis de uno u otro substrato, o bien
+  si todas las enzimas de una población son igualmente promiscuas. La
+  existencia de subpoblaciones podría deberse a interacciones de la enzima
+  con el sustrato, como por ejemplo que agregar PRA primero al medio
+  sesgue el comportamiento de la enzima y la haga mejor para catalizar PRA
+  que ProFAR o visceversa.
   
-  \section{Cinéticas}\label{cineticas}
-  
-  \begin{verbatim}
-    [1]    0.00   19.15   40.50   59.65   81.00  100.15  423.50  442.65
-    [9]  464.00  483.15  504.50  523.65  545.00  564.15  585.50  604.65
-   [17]  692.40  711.55  732.90  752.05  773.40  792.55  907.00  926.15
-   [25]  947.50  966.65  988.00 1007.15 1028.50 1047.65 1120.70 1139.85
-   [33] 1161.20 1180.35 1201.70 1220.85 1242.20 1261.35      NA      NA
-   [41] 1282.80 1301.95 1323.30 1342.45 1424.00 1443.15 1464.50 1483.65
-   [49] 1505.00 1524.15 1545.50 1564.65 1586.00 1605.15 1626.50 1645.65
-   [57] 1667.00 1686.15 1707.50 1726.65 1748.00 1767.15 1788.50 1807.65
-   [65] 1829.00 1848.15 1869.50 1888.65 1910.00 1929.15 1950.50 1969.65
-   [73] 1991.00 2010.15 2031.40 2050.55 2071.90 2091.05 2112.50 2131.65
-   [81] 2153.00 2172.15 2193.50 2212.65 2234.00 2253.15 2274.50 2293.65
-   [89] 2315.00 2334.15 2355.50 2374.65 2396.00 2415.15 2436.50 2455.65
-   [97] 2477.00 2496.15 2517.50 2536.65 2558.00 2577.15 2598.50 2617.65
-  [105] 2639.00 2658.15 2679.50 2698.65 2720.00 2739.15 2760.50 2779.65
-  [113] 2801.00 2820.15 2841.50 2860.65 2882.00 2901.15
-  \end{verbatim}
+  Para empezar a abordar este problema pensé que un primer paso era poder
+  medir simultáneamente la actividad de una población de PriA sobre PRA y
+  ProFAR. Por separado, ambos ensayos están montados, pero nunca se ha
+  intentado un ensayo simultáneo. Las constantes cataliticas de PriA para
+  la isomerización de ProFAR se mide utilizando absorbancia. El ensayo
+  enzimático de isomerización de PRA se realiza mediante la medición de
+  fluorescencia. En esta sección se empezó a desarrollar un método para
+  medir simultáneamente las actividades de Pra y ProFAR. El Tecan es capaz
+  de cambiar el sensor para tomar mediciones de ambos. Caja transparente.
   
   \begin{center}\includegraphics{tesis_files/figure-latex/Cinetics-1} \end{center}
   
-  \begin{center}\includegraphics{tesis_files/figure-latex/Cinetics-2} \end{center}
-  
-  \begin{center}\includegraphics{tesis_files/figure-latex/Cinetics-3} \end{center}
-  
-  \begin{verbatim}
-    [1]    0.00   19.15   40.50   59.65   81.00  100.15  423.50  442.65
-    [9]  464.00  483.15  504.50  523.65  545.00  564.15  585.50  604.65
-   [17]  692.30  711.45  732.80  751.95  773.40  792.55  907.00  926.15
-   [25]  947.50  966.65  988.00 1007.15 1028.50 1047.65 1120.70 1139.85
-   [33] 1161.20 1180.35 1201.70 1220.85 1242.20 1261.35 1282.80 1301.95
-   [41] 1323.30 1342.45 1424.00 1443.15 1464.50 1483.65 1505.00 1524.15
-   [49] 1545.50 1564.65 1586.00 1605.15 1626.50 1645.65 1667.00 1686.15
-   [57] 1707.50 1726.65 1748.00 1767.15 1788.50 1807.65 1829.00 1848.15
-   [65] 1869.50 1888.65 1910.00 1929.15 1950.40 1969.55 1991.00 2010.15
-   [73] 2031.50 2050.65 2071.90 2091.05 2112.50 2131.65 2153.00 2172.15
-   [81] 2193.50 2212.65 2234.00 2253.15 2274.50 2293.65 2315.00 2334.15
-   [89] 2355.50 2374.65 2396.00 2415.15 2436.50 2455.65 2477.00 2496.15
-   [97] 2517.50 2536.65 2558.00 2577.15 2598.50 2617.65 2639.00 2658.15
-  [105] 2679.50 2698.65 2720.00 2739.15 2760.50 2779.65 2801.00 2820.15
-  [113] 2841.50 2860.65 2882.00 2901.15
-  \end{verbatim}
-  
-  \begin{center}\includegraphics{tesis_files/figure-latex/Cinetics-4} \end{center}
-  
-  \begin{center}\includegraphics{tesis_files/figure-latex/Cinetics-5} \end{center}
-  
-  \begin{center}\includegraphics{tesis_files/figure-latex/Cinetics-6} \end{center}
-  
-  \section{Gráfico de pendientes}\label{grafico-de-pendientes}
-  
-  \begin{verbatim}
-  NULL
-  \end{verbatim}
-  
-  \begin{center}\includegraphics{tesis_files/figure-latex/slopes-1} \end{center}
-  
-  \begin{verbatim}
-  [1]  0.196328 -9.695510 -5.757290 -3.640738 -2.943265  0.188880 -1.364567
-  \end{verbatim}
-  
-  \begin{verbatim}
-  [1]  0.196328 -9.695510 -5.757290 -3.640738 -2.943265  0.188880 -1.364567
-  \end{verbatim}
-  
-  \begin{verbatim}
-  [1]  1031 10920 22410 32161 41918  1168 40922
-  \end{verbatim}
-  
-  \section{Interpolación con Michaelis
-  Menden}\label{interpolacion-con-michaelis-menden}
-  
-  \begin{Shaded}
-  \begin{Highlighting}[]
-  \CommentTok{#sessionInfo()}
-  \end{Highlighting}
-  \end{Shaded}
+  \begin{center}\includegraphics{tesis_files/figure-latex/CineticsPRA-1} \end{center}
   
   \chapter*{Metodologia}\label{metodologia-1}
   \addcontentsline{toc}{chapter}{Metodologia}
@@ -5613,6 +5414,223 @@ starts here.
   Docker antiSMASH run\_antismash /.gbk \textasciitilde{}/as\_results
   --knownclusterblast --inclusive --cf\_threshold 0.7
   
+  \chapter{Apendice 3 Dinámica molecular vs datos
+  experimentales}\label{apendice-3-dinamica-molecular-vs-datos-experimentales}
+  
+  En las tablas \autoref{tab:PriAPRA} , \autoref{tab:PriAProFAR} se
+  muestra a detalle la comparación entre las dinámicas moleculares de PriA
+  respecto a PRA y ProFAR. Estos datos sugirieron que GTp es el sustrato
+  con mayor afinidad y por ello en la última sección se avanzó en la
+  realización de cinéticas enzimáticas con GTP.
+  
+  Table: Actividad de PriA en S3 PRA \label{tab:PriAPRA}
+  
+  \[ 
+  \resizebox{\columnwidth}{!}{%
+  \begin{tabular}{ l c r l l l l l}
+  \hline \\ [-1.5ex]
+  organism  &Family & $K_M    $     & $k_{cat}$        & $\frac{k_{cat}}{K_M}$ &Pre MD & Pos MD & Reference  \\ [1ex]
+  \hline \\ [-1.5ex]
+  Afer        &HisA   & $1.1\pm0.2$   &$  0.05\pm0.001    $& 0.045                  &-10.1    &-12.3       &Noda-García L et al 2015\\ [1ex]
+  Ecoli       &HisA   &$  1.6         $&$         4.9       $&3.1                   &-9.9   &-16       &Henn-Sax et al. (2002)\\ [1ex]
+  Sent        &HisA   &$  17.0 \pm0.1 $&$ 7.8 \pm 2.4   $&$4.5 × 10^5          $&-10.3  &-20.1     &Söderholm A et al (2015)\\ [1ex]
+  Aaur        &PriB   &$  2.1 \pm 0.5 $& $    1.8 \pm 0.2     $&0.9                   &-7.4   &              &verduzco-castro 2016\\ [1ex]
+  Sipo        &PriB   &$  3.8\pm0.2     $&$0.82\pm0.02        $&0.21                  &-8.2     &-14.7       &verduzco-castro 2016\\ [1ex]
+  SspC        &PriB   &$  11.4\pm3.4  $&$2.53\pm0.74      $&0.22                  &   -8.5    &-12.7     &verduzco-castro 2016\\ [1ex]
+  SMg1        &PriB   &$  13.2\pm3.4  $&$0.92\pm0.19      $&0.069                 &-8     &-15.2     &verduzco-castro 2016\\ [1ex]
+  Ssvi        &PriB   &$  3.9\pm0.89  $&$0.69\pm0.04      $&0.18                  &-8.2     &-16.7     &verduzco-castro 2016\\ [1ex]
+  Scoe        &PriA   &$  3.6\pm0.7     $&$ 1.3\pm0.2     $  &0.4                   &-8.4   &-15       &Noda-García et al (2010)\\ [1ex]
+  Sglob       &PriA   & $4.2\pm0.8     $ & $0.74\pm0.03    $   &0.18                  &-9.2     &-16.7       &verduzco-castro\\ [1ex]
+  Mtub 2Y85   &priA   &$  19  0.23      $&$0.012  -9.7          $&                      &       &          &Due et al 2011\\ [1ex]
+  Mtub 3ZS4   &priA   &$  ?                 $&$-9.9               $&                      &       &          &Due et al 2011 (To be published)\\ [1ex]
+  Auro        &priA   &$  4.0 \pm 0.9 $&$0.2 \pm 0.03   $&0.04                    &-9.2       &          &Vazquez-Juarez (2016)\\ [1ex]
+  Cjei        &PriA   &$  2.3 \pm 0.2 $&$0.9 \pm 0.08   $&0.39                    &-8.5       &          &Noda-García et al (2013)\\ [1ex]
+  Cdip        &subHisA&$  4.4 \pm 0.5 $&$2.6 \pm 0.3      $&0.59                  &-9.2       &          &Noda-García et al (2013)\\ [1ex]
+  SMg1 TrpF   &TrpF3  &   -                &-                &-                       &-6.9     &-9.6      &verduzco-castro 2016\\ [1ex]
+  Jden        &TrpF3  &   -                &-                &-          -7.2         &-9.4     &$16.8\pm3.3$&    Verduzco-Castro E et al  2016\\ [1ex]
+  Acar      &SubHisA& 0.02                     &                 &                        &       &          &            \\ [1ex]
+  Aodo        &SubTrpF&       -              &-                  &-                     &       &          &\\ [1ex]
+  \hline
+  \end{tabular}}
+  \label{tab:PriAPRA}  
+  %}
+  \]
+  
+  \clearpage   La siguiente tabla es análoga a la anterior pero con el
+  sustrato ProFAR
+  
+  Table: Actividad de PriA en S7 ProFAR \label{tab:PriAProFAR}
+  
+  \[ 
+  \resizebox{\columnwidth}{!}{%
+  \centering 
+  \begin{tabular}{ l c r l l l l l}
+  \hline \\ [-1.5ex]
+  organism  &Family  &  $K_M$ & $k_{cat}$& $\frac{k{cat}}{K_M}$ &Pre MD &Pos MD &Reference  \\ [1ex]
+  \hline \\ [-1.5ex]
+  Afer      &HisA    &-            &-                &-          &-9.2    &-9        &Noda-García L et al. (2015)   \\ [1ex]
+  Ecoli     &HisA    &-            &-                &-          &-9      &-11.1     &Henn-Sax et al. (2002)\\ [1ex]
+  Sent      &HisA    &-            & -               &-          &-9.6    &-10.2     &Söderholm A et al (2015)\\ [1ex]
+  Aaur      &PriB    &$26.3\pm6.3$ & $0.37\pm 0.09$  & 0.014     &-7.1    &-         &verduzco-castro 2016\\ [1ex]
+  Sipo      &PriB    &$60.8\pm1.1$ &$8.25\pm0.4 $    &0.14       &-8      &-8.5      &verduzco-castro 2016 \\ [1ex]
+  SspC      &PriB    &$149.9\pm29$ &$1.4\pm0.12 $    &0.009      &-8.5    &-10.8     &verduzco-castro 2016\\ [1ex]
+  SMg1      &PriB    &$129.6\pm34$ &$0.29\pm0.04$    &0.0022     &-7.5    &-11       &verduzco-castro 2016\\ [1ex]
+  Ssvi      &PriB    &$24.5\pm4.0$ &$1.6\pm0.29 $    &0.067      &-8      &-9.7      &verduzco-castro 2016 \\ [1ex]
+  Scoe      &PriA    &$5.0\pm0.08$ &$3.4\pm0.09  $   &0.7        &-8      &-9.4      &Noda-García et al (2010)   \\ [1ex]
+  Sglob     &PriA    &$11\pm1.0$  &$3.8\pm0.2  $     &0.34       &-8.7    &-9.4      &verduzco-castro 2016  \\ [1ex]
+  Mtub2Y85  &priA    &21         &3.6         &0.17       &-8.6    &          &Due et al 2011                        \\ [1ex] 
+  Mtub3ZS4  &priA    &           &            &           &-9.3    &          &Due et al 2011 (To be published)      \\ [1ex] 
+  Auro      &priA    &$23 \pm 6.5 $  &$0.5\pm0.05 $&0.02       &-9.3    &          &Vazquez-Juarez (2016)                 \\ [1ex] 
+  Cjei      &PriA    &$5.1 \pm1.0$  &$1.6 \pm 0.16 $&0.31       &-9      &          &Noda-García et al (2013)              \\ [1ex]
+  Cdip      &subHisA &-          &-           &-          &-8.8    &          &Noda-García et al (2013)              \\ [1ex]
+  SMg1 TrpF &TrpF3   &$8.4\pm1.7$    &$10.5\pm2.4$    &1.25       &-7.6    &-9        &verduzco-castro     \\ [1ex] 
+  Jden      &TrpF3   &$16.8\pm3.3$   &$27\pm1.6$      &1.6        &-7.6    &-7.7      &verduzco-castro     \\ [1ex] 
+  Acar      &SubHisA &Na         &Na          &0.02       &Na      &Na        &Na                                    \\ [1ex] 
+  Aodo      &SubTrpF &-          &-           &-          &-       &Na        &Na                                    \\ [1ex]
+  \hline
+  \end{tabular}}
+  \label{tab:PriAProFAR}    
+  %}  
+  \]
+  
+  \clearpage  
+  
+  \begin{table}[t]
+  
+  \caption[Enzymes docking ]{\label{tab:docking_table_out}Enzymes docking \label{tab:docking}}
+  \centering
+  \resizebox{\linewidth}{!}{
+  \begin{tabular}{l|r|r|r|r|r|r|r|r|r|r|r|r|r|r|r|r|r|r|r|r}
+  \hline
+  Enzima & S13 & S15 & S14 & S16 & S10 & S12 & S9 & S18 & S5 & S4 & S8 & S17 & S7 & S6 & S11 & S1 & S2 & S3 & S19 & S20\\
+  \hline
+  Srub\_2VEP & -7.4 & -7.3 & -7.5 & -7.1 & -6.5 & -6.2 & -6.5 & -7.7 & -9.4 & -9.3 & -7.9 & -7.2 & -8.3 & -8.6 & -8.9 & -9.0 & -7.1 & -8.9 & -7.8 & -7.7\\
+  \hline
+  Saver\_2VEP & -7.4 & -7.2 & -7.0 & -6.5 & -7.3 & -6.4 & -7.0 & -7.5 & -9.6 & -8.5 & -7.9 & -7.6 & -8.4 & -8.7 & -9.8 & -8.3 & -7.9 & -8.6 & -7.7 & -7.6\\
+  \hline
+  Scoe\_2VEP & -7.5 & -7.5 & -7.9 & -7.0 & -7.0 & -6.2 & -6.5 & -7.8 & -8.8 & -9.2 & -7.8 & -7.9 & -8.0 & -8.9 & -10.3 & -9.2 & -9.3 & -8.4 & -8.1 & -8.2\\
+  \hline
+  Scoe\_2X30 & -8.1 & -7.4 & -7.6 & -6.9 & -6.7 & -6.8 & -7.1 & -7.9 & -9.1 & -9.0 & -8.3 & -8.6 & -8.5 & -9.0 & -10.6 & -10.0 & -10.3 & -10.2 & -8.1 & -7.9\\
+  \hline
+  Scoe\_1VZW & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA\\
+  \hline
+  Sfla\_2VEP & -7.1 & -7.6 & -7.2 & -7.3 & -7.2 & -6.8 & -6.9 & -8.1 & -8.2 & -7.2 & -8.2 & -7.2 & -8.4 & -8.3 & -8.5 & -7.9 & -7.8 & -6.0 & -7.5 & -7.3\\
+  \hline
+  Sgha\_2VEP & -9.2 & -8.7 & -6.7 & -6.7 & -7.4 & -7.7 & -7.2 & -7.5 & -9.8 & -8.9 & -8.2 & -7.8 & -8.8 & -8.7 & -10.1 & -9.1 & -9.0 & -9.5 & -8.0 & -7.5\\
+  \hline
+  Siak\_2VEP & -6.6 & -7.3 & -7.0 & -7.1 & -7.1 & -7.1 & -6.8 & -8.0 & -9.2 & -8.7 & -7.8 & -7.6 & -8.3 & -8.4 & -9.1 & -5.8 & -5.3 & -8.5 & -7.3 & -7.4\\
+  \hline
+  Sbic\_2VEP & -7.2 & -6.7 & -6.8 & -6.5 & -6.2 & -6.6 & -5.9 & -7.8 & -8.5 & -7.8 & -7.8 & -7.2 & -8.2 & -8.0 & -9.6 & -8.2 & -8.0 & -9.4 & -7.7 & -7.5\\
+  \hline
+  Sbot\_2VEP & -9.6 & -10.9 & -8.9 & -7.1 & -6.0 & -6.2 & -6.7 & -8.1 & -9.1 & -8.8 & -8.3 & -7.9 & -8.9 & -9.3 & -9.4 & -9.8 & -10.0 & -8.9 & -8.2 & -8.0\\
+  \hline
+  Sipo\_2VEP & -6.6 & -6.6 & -7.3 & -6.9 & -6.5 & -6.3 & -6.5 & -8.1 & -8.6 & -9.1 & -8.0 & -7.9 & -8.0 & -8.4 & -8.5 & -7.2 & -8.4 & -8.2 & -7.9 & -7.6\\
+  \hline
+  Ssvi & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA\\
+  \hline
+  Ssvi\_4U28 & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA\\
+  \hline
+  Ssvi\_4TX9 & -5.9 & -8.2 & -7.1 & -6.6 & -6.8 & -7.0 & -7.6 & -7.9 & -8.4 & -8.3 & -8.2 & -8.1 & -8.4 & -8.7 & -7.7 & -8.2 & -8.2 & -6.7 & -8.0 & -7.5\\
+  \hline
+  Salb\_2VEP & -6.3 & -7.1 & -7.4 & -6.8 & -7.7 & -6.9 & -6.6 & -8.0 & -9.6 & -8.9 & -8.6 & -7.9 & -8.6 & -8.4 & -9.1 & -7.4 & -7.2 & -8.8 & -8.1 & -7.8\\
+  \hline
+  Sbik\_2VEP & -7.4 & -6.7 & -7.4 & -7.3 & -7.7 & -6.5 & -6.8 & -8.5 & -9.9 & -9.8 & -8.3 & -7.8 & -8.2 & -8.4 & -10.5 & -7.1 & -6.3 & -8.3 & -8.1 & -7.9\\
+  \hline
+  Stsu\_2VEP & -6.9 & -7.5 & -7.9 & -7.8 & -7.5 & -7.3 & -7.7 & -8.1 & -10.0 & -9.7 & -8.7 & -7.8 & -8.8 & -8.8 & -10.6 & -7.8 & -8.7 & -9.2 & -7.9 & -7.8\\
+  \hline
+  Sven\_2VEP & -8.3 & -7.6 & -7.5 & -6.8 & -6.4 & -7.0 & -6.2 & -8.2 & -9.6 & -9.0 & -7.9 & -7.4 & -8.3 & -8.6 & -10.0 & -8.2 & -8.2 & -8.1 & -7.6 & -7.4\\
+  \hline
+  Scal\_2VEP & -7.3 & -8.8 & -7.5 & -6.7 & -7.0 & -6.5 & -6.5 & -8.7 & -10.0 & -9.7 & -8.8 & -7.7 & -8.2 & -8.6 & -10.5 & -8.1 & -9.2 & -8.9 & -7.6 & -7.6\\
+  \hline
+  Sbaa\_2VEP & -8.9 & -6.6 & -6.7 & -6.8 & -7.2 & -7.2 & -6.2 & -7.7 & -9.6 & -9.5 & -8.4 & -7.4 & -8.5 & -8.2 & -9.7 & -8.5 & -8.4 & -9.3 & -7.4 & -7.7\\
+  \hline
+  Sglo\_2VEP & -6.1 & -6.8 & -6.9 & -6.5 & -6.7 & -6.3 & -6.7 & -7.5 & -9.6 & -9.6 & -8.6 & -7.8 & -8.7 & -8.7 & -9.9 & -6.2 & -5.1 & -9.2 & -7.8 & -7.7\\
+  \hline
+  Sful\_2VEP & -9.0 & -6.9 & -7.1 & -6.8 & -6.3 & -7.2 & -6.6 & -8.1 & -9.8 & -9.3 & -7.7 & -8.0 & -8.7 & -8.8 & -10.5 & -7.6 & -9.1 & -10.5 & -7.1 & -7.4\\
+  \hline
+  Sgri\_2VEP & -6.6 & -8.2 & -7.1 & -6.4 & -7.1 & -7.4 & -7.1 & -7.4 & -9.4 & -8.5 & -8.6 & -7.5 & -8.8 & -8.4 & -9.6 & -8.8 & -8.8 & -8.7 & -7.7 & -7.5\\
+  \hline
+  S34\_2VEP & -7.8 & -7.2 & -7.6 & -7.3 & -6.2 & -6.5 & -6.9 & -8.0 & -8.8 & -8.6 & -7.7 & -7.1 & -7.7 & -7.9 & -7.2 & -7.1 & -6.7 & -7.1 & -7.7 & -7.7\\
+  \hline
+  Srim\_2VEP & -7.4 & -6.8 & -7.1 & -7.2 & -7.2 & -7.4 & -7.8 & -8.6 & -9.7 & -9.3 & -8.8 & -7.7 & -8.9 & -8.7 & -10.2 & -6.8 & -8.2 & -9.0 & -7.5 & -7.8\\
+  \hline
+  Satr\_2VEP & -7.6 & -7.1 & -7.5 & -7.4 & -6.2 & -6.5 & -6.9 & -8.0 & -8.9 & -8.7 & -7.7 & -7.4 & -7.7 & -7.8 & -6.5 & -7.0 & -6.3 & -7.7 & -7.7 & -7.7\\
+  \hline
+  S1813\_2VEP & -7.5 & -6.7 & -6.8 & -6.6 & -6.8 & -7.0 & -6.7 & -7.9 & -9.9 & -9.7 & -8.3 & -7.7 & -8.5 & -8.6 & -10.0 & -7.6 & -7.5 & -8.6 & -7.3 & -7.5\\
+  \hline
+  Svar\_2VEP & -6.3 & -6.8 & -7.0 & -6.3 & -6.9 & -6.9 & -6.6 & -7.8 & -9.3 & -7.4 & -8.5 & -7.3 & -8.0 & -8.7 & -8.5 & -7.4 & -6.3 & -6.0 & -7.9 & -7.5\\
+  \hline
+  Sfra\_2VEP & -7.3 & -7.0 & -6.8 & -6.6 & -6.5 & -7.3 & -6.6 & -8.6 & -9.1 & -8.7 & -8.9 & -7.7 & -8.9 & -9.0 & -8.7 & -6.0 & -6.3 & -7.9 & -8.2 & -7.8\\
+  \hline
+  Smeg\_2VEP & -8.0 & -7.3 & -6.9 & -6.6 & -7.2 & -6.7 & -6.1 & -7.6 & -9.2 & -9.1 & -7.8 & -7.4 & -8.2 & -8.5 & -9.6 & -9.2 & -9.2 & -8.6 & -7.7 & -7.5\\
+  \hline
+  Ssul\_2VEP & -7.5 & -7.0 & -6.9 & -6.6 & -6.6 & -6.7 & -6.9 & -7.7 & -8.4 & -8.2 & -8.2 & -7.5 & -8.1 & -7.7 & -8.2 & -6.7 & -7.1 & -7.7 & -7.6 & -7.4\\
+  \hline
+  Slav\_4X9S & -8.0 & -7.1 & -6.7 & -6.9 & -6.6 & -6.8 & -6.7 & -8.2 & -9.5 & -9.1 & -8.6 & -8.0 & -8.4 & -8.7 & -9.1 & -9.5 & -9.3 & -8.1 & -8.1 & -7.6\\
+  \hline
+  Sery\_4X9S & -7.8 & -7.2 & -7.6 & -7.2 & -7.4 & -6.9 & -7.4 & -8.5 & -9.4 & -9.4 & -8.6 & -7.6 & -8.4 & -8.6 & -9.1 & -10.0 & -10.1 & -9.0 & -7.8 & -8.2\\
+  \hline
+  SspC\_4X9S & -7.4 & -6.9 & -7.3 & -6.8 & -7.3 & -6.6 & -7.5 & -8.0 & -9.8 & -9.3 & -8.7 & -7.6 & -8.5 & -8.4 & -10.6 & -9.1 & -8.9 & -8.5 & -8.1 & -8.0\\
+  \hline
+  Sxan\_4X9S & -7.5 & -6.9 & -6.8 & -6.8 & -6.5 & -6.6 & -6.5 & -8.3 & -8.0 & -8.1 & -7.6 & -7.4 & -8.7 & -8.1 & -8.1 & -8.5 & -8.0 & -7.6 & -7.7 & -7.4\\
+  \hline
+  Skat\_4X9S & -6.4 & -7.0 & -7.1 & -6.7 & -7.7 & -6.3 & -6.2 & -8.1 & -8.5 & -9.2 & -8.3 & -7.6 & -9.0 & -8.5 & -9.7 & -9.5 & -9.9 & -9.2 & -7.4 & -7.5\\
+  \hline
+  SMg1\_4X9S & -6.5 & -6.9 & -7.2 & -7.1 & -6.5 & -6.9 & -6.4 & -7.3 & -7.8 & -7.7 & -8.3 & -7.5 & -7.9 & -8.4 & -9.5 & -7.6 & -5.2 & -7.5 & -7.6 & -7.7\\
+  \hline
+  SMg1\_W9T & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA\\
+  \hline
+  Sniv\_2VEP & -6.2 & -6.8 & -7.4 & -6.5 & -7.8 & -6.8 & -6.7 & -9.5 & -9.6 & -9.4 & -8.7 & -8.2 & -8.6 & -9.1 & -9.9 & -5.4 & -5.5 & -9.2 & -8.0 & -7.5\\
+  \hline
+  Scla\_2VEP & -6.4 & -7.7 & -7.4 & -7.2 & -7.6 & -7.5 & -7.2 & -8.5 & -10.1 & -10.0 & -8.7 & -7.9 & -8.8 & -9.1 & -10.2 & -6.9 & -8.1 & -8.5 & -7.7 & -7.7\\
+  \hline
+  Save\_2VEP & -7.6 & -6.7 & -7.1 & -7.2 & -7.1 & -6.5 & -6.6 & -7.8 & -8.6 & -10.0 & -8.6 & -7.5 & -8.3 & -8.5 & -8.8 & -5.3 & -5.2 & -5.8 & -7.7 & -7.4\\
+  \hline
+  Spur\_2vEP & -6.8 & -7.3 & -6.9 & -6.7 & -8.0 & -7.9 & -7.7 & -8.5 & -9.5 & -9.8 & -8.1 & -7.8 & -8.7 & -9.7 & -10.0 & -5.3 & -6.2 & -8.2 & -7.6 & -7.4\\
+  \hline
+  Scar\_2Y89 & -6.9 & -6.8 & -7.5 & -7.1 & -7.8 & -7.3 & -7.2 & -8.3 & -9.2 & -8.3 & -8.9 & -8.4 & -8.9 & -9.3 & -9.4 & -5.3 & -5.2 & -7.1 & -8.5 & -8.6\\
+  \hline
+  Mtub\_2Y88 & -10.0 & -7.8 & -8.9 & -5.4 & -8.6 & -7.3 & -7.8 & -9.5 & -10.9 & -10.3 & -9.5 & -9.0 & -9.8 & -9.8 & -11.3 & -10.1 & -10.2 & -11.3 & -9.5 & -8.8\\
+  \hline
+  Mtub\_2Y89 & -8.7 & -8.6 & -9.6 & -9.4 & -6.4 & -5.9 & -5.6 & -7.1 & -7.0 & -7.5 & -7.3 & -6.8 & -7.4 & -8.4 & -7.5 & -8.1 & -8.6 & -7.5 & -7.7 & -7.3\\
+  \hline
+  Mtub\_2Y85 & -8.2 & -7.9 & -9.2 & -7.4 & -7.6 & -7.5 & -7.6 & -8.4 & -9.7 & -9.5 & -9.3 & -7.8 & -8.6 & -8.6 & -10.2 & -9.8 & -9.9 & -10.1 & -7.3 & -7.4\\
+  \hline
+  Mtub\_3ZS4 & -10.0 & -10.5 & -11.4 & -6.4 & -8.2 & -7.2 & -7.0 & -9.6 & -10.2 & -10.2 & -9.9 & -8.5 & -9.3 & -9.6 & -10.9 & -10.0 & -10.7 & -9.9 & -8.8 & -8.9\\
+  \hline
+  S34\_3ZS4 & -7.4 & -8.0 & -7.6 & -6.4 & -5.2 & -5.4 & -5.2 & -6.1 & -6.8 & -6.4 & -5.7 & -6.4 & -6.3 & -6.3 & -7.1 & -7.4 & -7.1 & -6.4 & -7.1 & -6.6\\
+  \hline
+  Cdip\_4AXK & -9.2 & -7.8 & -10.9 & -7.2 & -7.5 & -7.6 & -7.7 & -8.9 & -9.0 & -9.8 & -9.0 & -8.3 & -8.8 & -9.2 & -10.1 & -9.5 & -9.9 & -9.2 & -8.0 & -7.9\\
+  \hline
+  Cjei\_4AXK & -7.5 & -6.9 & -7.2 & -6.5 & -8.4 & -8.0 & -8.5 & -8.7 & -9.5 & -9.6 & -9.4 & -8.8 & -9.0 & -9.5 & -9.3 & -8.1 & -9.3 & -8.5 & -7.9 & -7.7\\
+  \hline
+  Aaur & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA\\
+  \hline
+  Aaur\_4WD0 & -8.2 & -8.5 & -8.1 & -7.9 & -5.7 & -5.5 & -5.9 & -7.0 & -7.5 & -7.2 & -7.1 & -6.7 & -7.1 & -7.4 & -8.4 & -7.2 & -7.3 & -7.4 & -7.0 & -6.7\\
+  \hline
+  Acar\_4X2R & -10.6 & -9.3 & -9.3 & -7.2 & -7.2 & -6.8 & -7.3 & -7.5 & -9.5 & -9.8 & -8.0 & -7.8 & -9.3 & -8.9 & -10.3 & -9.6 & -9.4 & -9.4 & -8.1 & -8.0\\
+  \hline
+  Auro\_4X2R & -9.9 & -9.1 & -9.8 & -8.1 & -7.4 & -7.1 & -7.4 & -7.8 & -9.2 & -9.8 & -8.3 & -7.8 & -9.3 & -9.0 & -9.9 & -9.0 & -8.6 & -9.2 & -8.5 & -8.2\\
+  \hline
+  Afer\_4WD0 & -5.7 & -5.8 & -6.0 & -5.7 & -6.7 & -6.2 & -5.8 & -7.6 & -9.2 & -8.8 & -7.8 & -7.4 & -8.3 & -8.4 & -9.3 & -6.7 & -4.5 & -9.1 & -8.3 & -8.1\\
+  \hline
+  Sent\_5AHE & -9.1 & -5.4 & -6.4 & -5.2 & -8.0 & -7.3 & -7.4 & -8.8 & -10.7 & -10.2 & -8.7 & -8.7 & -9.6 & -9.9 & -10.9 & -7.8 & -9.1 & -10.3 & -9.0 & -8.4\\
+  \hline
+  Ecoli\_K12 & -9.7 & -9.7 & -9.2 & -6.1 & -7.2 & -6.6 & -6.8 & -8.6 & -9.5 & -9.1 & -8.6 & -8.2 & -9.0 & -8.6 & -10.2 & -9.9 & -10.2 & -9.9 & -8.2 & -7.9\\
+  \hline
+  Jden\_4WUI & -8.3 & -8.8 & -8.2 & -6.8 & -6.2 & -6.1 & -6.0 & -6.8 & -7.4 & -7.6 & -7.5 & -6.9 & -7.6 & -7.5 & -7.7 & -7.5 & -7.6 & -7.2 & -7.3 & -7.2\\
+  \hline
+  Ctra & -8.2 & -8.0 & -7.4 & -7.2 & -6.1 & -5.5 & -5.4 & -6.5 & -7.1 & -7.1 & -7.0 & -6.2 & -6.8 & -6.8 & -6.9 & -7.2 & -7.4 & -6.5 & -6.7 & -6.6\\
+  \hline
+  SMg1\_trpF & -7.2 & -8.8 & -8.2 & -7.3 & -6.2 & -5.7 & -5.7 & -6.9 & -6.6 & -6.7 & -7.3 & -6.7 & -7.6 & -6.9 & -7.5 & -7.1 & -7.1 & -6.9 & -6.7 & -6.5\\
+  \hline
+  Aodo\_4X2R & -8.5 & -8.6 & -8.8 & -7.3 & -7.1 & -7.1 & -7.1 & -7.5 & -9.7 & -9.4 & -7.8 & -7.6 & -9.6 & -8.8 & -10.1 & -8.4 & -8.9 & -9.4 & -8.0 & -8.1\\
+  \hline
+  \end{tabular}}
+  \end{table}
+  
+  \clearpage  
+  
   \chapter{El tercer Apéndice, Protocolos experimentales utilizados en el
   estudio de
   PriA}\label{el-tercer-apendice-protocolos-experimentales-utilizados-en-el-estudio-de-pria}
@@ -5627,61 +5645,67 @@ starts here.
   -Columna Vivapure Mini\\
   -Fluorímetro
   
-  \section{Purification}\label{purification}
+  \section{Purificación de proteínas utilizadas en los ensayos
+  enzimáticos}\label{purificacion-de-proteinas-utilizadas-en-los-ensayos-enzimaticos}
   
-  TrpC and TrpD will be purified by Nickel chromatography using AKTA-FPLC
-  while ScoePriA and D11A purification will be done by Nickel
-  chromatography using vivapure columns
+  TrpC y TrpD se purificaron mediante cromatografía de níquel utilizando
+  AKTA-FPLC, mientras que PriA y D11A de \emph{Sc coelicolor} se
+  purificaron mediante cromatografía de níquel utilizando columnas
+  vivapure.
   
-  \subsection{Centrifugation}\label{centrifugation}
+  \subsection{Centrifugación}\label{centrifugacion}
   
   \begin{enumerate}
   \def\labelenumi{\arabic{enumi}.}
   \tightlist
   \item
-    Centrifuge on \(.5L\) cans (Cans as big as possible)\\
-    rotor that suits for cans (On \(.5L\) cans rotor code is 03)\\
-    Karina: velocity \(6000 rpm\) Time \(10 min\) Ana: \(7000rpm\) for
-    \(10 min\) At this point experiment may be interrupted and pellet can
-    be stored at \(-80^{\circ}\) on Falcon tubes or better run the essay
-    the same day.
+    Centrifugar en botes de \(.5L\) (Botellas tan grandes como sea
+    posible)\\
+    utilizando el rotor para botes (En \(.5L\) el código del rotor es
+    03)\\
+    Se han utilizado las siguientes velocidades:\\
+    Verdel-Aranda: \(6000 rpm\) / \(10 min\)\\
+    Vázquez-Juárez: \(7000rpm\) / \(10 min\)\\
+    En este punto, el experimento se puede interrumpir y el pellet se
+    puede almacenar a \(-80^{\circ}\) en tubos falcon de 50 \(ml\) o,
+    mejor aún se puede ejecutar el ensayo el mismo día. Para reiniciar
+    este protocolo, vuelve a suspender el sedimento en \$ 25 ml \$ de
+    Buffer de lisis manteniendo en hielo todos los pasos siguientes.
   \end{enumerate}
   
-  To restart this protocol re suspend pellet on \(25 ml\) lysis buffer
-  keeping on ice all the following steps.
+  \subsection{Sonicación.}\label{sonicacion.}
   
-  \subsection{Sonication}\label{sonication}
+  A continuación se debe sonicar el pellet para romper las células y
+  obtener las proteínas. Todos los reactivos deben enfriarse previamente y
+  mantenerse en hielo. El sonicador debe tocar el tubo falcon, que siempre
+  debe mantenerse en hielo.
   
-  We sonicate pellet to disrupt cells and get the proteins. All reactives
-  must be cooled previously and kept on ice. The sonicator must touch the
-  falcon tube. Falcon must be kept on ice.
-  
-  Add fresh components to Lysis buffer:\\
-  -Add proteasas inhibitor mix \(2\mu l\) (Protein Box)\\
-  -Add DTT \(.1 25\mu l\)\\
-  -Karina: Add Lysozyme \(\frac{2mg}{ml}\) \(100\mu l\)\\
-  -Ana: Add Lysozyme \(\frac{10mg}{ml}\)(\(1000X\)) \(100\mu l\)
+  Agregar componentes nuevos al Buffer de lisis: -Agregar mezcla de
+  inhibidor de proteasas \(2\mu l\) (caja de proteínas) -Añadir DTT
+  \(.125\mu l\) -Verdel-Aranda: Agregue Lysozyme \(\frac{2mg}{ml}\)
+  \(100\mu l\) -Vazquez-Juárez: Agregue Lysozyme \(\frac{10mg}{ml}\) (\$
+  1000X \$) \(100\mu l\)
   
   \begin{enumerate}
   \def\labelenumi{\arabic{enumi}.}
   \setcounter{enumi}{1}
   \item
-    Resuspension. Add lysis Buffer \(25ml\) to resuspend pellet and put
-    test tubes on an small glass ware with ice
+    Resuspensión. Agregue el buffer de lisis \$ 25ml \$ para volver a
+    suspender el pellet y coloque los tubos en una vajilla de vidrio
+    pequeña con hielo
   \item
-    Sonication. After buffer addition sonicate:\\
-    \(7\) times sonication \(20s\) with \(1min\) rest between every
-    sonication cycle.\\
-    Only total time of sonication must be entered on sonicaction device
-    (\(140s\)).
+    Sonicación. Después de la adición de Buffer hay que sonicar: \$ 7 \$
+    ciclos de sonicaciones de \$ 20s \$ con \$ 1min \$ de descanso entre
+    cada ciclo de sonicación. Solo se debe ingresar el tiempo total de
+    sonicación en el dispositivo de sonicación (\$ 140s \$).
   \item
-    Centrifugation. After sonication centrifuge on refrigerated centrifuge
-    at 4°C \(25 min\) at \(8000 rpm\)
+    Centrifugación. Después de la sonicación, centrifugar en una
+    centrífuga refrigerada a 4°C \$ 25 min \$ a \$ 8000 rpm \$
   \item
-    Inject into AKTA-FPL previously balanced with Buffer A (or vivapure
-    balanced with bufferA)\\
-    When vivapure is being used, the supernatant must be filtered on .45
-    \(\mu l\) filters to avoid column damage.
+    Inyectar lo colectado en el AKTA-FPL previamente balanceado con Buffer
+    A (o vivapure balanceado con bufferA) Cuando se usa vivapure, el
+    sobrenadante debe filtrarse en los filtros de .45 \(\mu l\) para
+    evitar daños en la columna.
   \item
     Wash with 5\% Buffer B and subsequently with an imidazol gradient
     (Buffer B) from 5\% to 60\% on 16 vol of the column with a flux of
@@ -7182,30 +7206,16 @@ starts here.
   Available from:
   \url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3048130/}
   
-  \hypertarget{ref-chertkov_complete_2011}{}
-  180. Chertkov O, Sikorski J, Nolan M, Lapidus A, Lucas S, Del Rio TG, et
-  al. Complete genome sequence of Thermomonospora curvata type strain
-  (B9T). Standards in Genomic Sciences {[}Internet{]}. 2011 Feb {[}cited
-  2017 Mar 3{]};4(1):13--22. Available from:
-  \url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3072092/}
-  
-  \hypertarget{ref-pukall_complete_2009}{}
-  181. Pukall R, Gehrich-Schröter G, Lapidus A, Nolan M, Glavina Del Rio
-  T, Lucas S, et al. Complete genome sequence of Jonesia denitrificans
-  type strain (Prevot 55134T). Standards in Genomic Sciences
-  {[}Internet{]}. 2009 Nov {[}cited 2017 Mar 3{]};1(3):262--9. Available
-  from: \url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3035236/}
-  
   \hypertarget{ref-angel2000}{}
-  182. Angel E. Interactive computer graphics : A top-down approach with
+  180. Angel E. Interactive computer graphics : A top-down approach with
   opengl. Boston, MA: Addison Wesley Longman; 2000.
   
   \hypertarget{ref-angel2001}{}
-  183. Angel E. Batch-file computer graphics : A bottom-up approach with
+  181. Angel E. Batch-file computer graphics : A bottom-up approach with
   quicktime. Boston, MA: Wesley Addison Longman; 2001.
   
   \hypertarget{ref-angel2002a}{}
-  184. Angel E. Test second book by angel. Boston, MA: Wesley Addison
+  182. Angel E. Test second book by angel. Boston, MA: Wesley Addison
   Longman; 2001.
 
 

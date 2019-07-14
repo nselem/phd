@@ -286,7 +286,12 @@ Table: Árboles EvoMining de PriA en MicroReact \label{tab:aminoacidos}
 |Y214L	              |211Y             |               -             |  
 |E230A	              |227A             |            234E             |  
 
-Una forma gráfica de ver esta tabla es la `r ref("couplings", type = "figure")`. En las líneas naranjas se muestra como el aminoácido 21D tiene un acoplamiento con el 173T, que está muy cerca del 175D que ha sido asociado con la actividad de isomerización de PRA, pero no de ProFAR. Además se investigaron los aminoácidos catalíticos D130 [@due_bisubstrate_2011] y D175 reportados en _Mycobacterium tuberculosis_[@verduzco-castro_co-occurrence_2016] que corresponden a en _S coelicolor_ D11, D131 y D171. En este trabajo se econtró que existe un conjunto de secuencias donde estos posiciones tienen variación en dichos residuos `r ref("Alineamiento", type = "figure")`. Las secuencias más relevantes de PriA/HisA abordadas en este capítulo junto con secuencias seleccionadas divergentes en los residuos mencionados fueron alineadas para mostrar la diversidad a nivel aminoácidos de la familias PriA/HisA.
+Una forma gráfica de ver esta tabla es la `r ref("couplings", type = "figure")`. Esta figura es simétrica porque los acoplamientos son simétricos. Los puntos negros indican acoplamientos entre pares de aminoácidos. Entre más cerca de la diagonal hay más acoplamientos porque son residuos cercanos en la secuencia lineal de la proteína. En las líneas naranjas muestro cómo el aminoácido 21D tiene un acoplamiento con el 173T, que está muy cerca del 175D que ha sido asociado con la actividad de isomerización de PRA, pero no de ProFAR. A futuro, para obtener resultados más precisos sobre la covariación de residuos en Actinobacteria, se debe proveer un alineamiento exclusivo de Actinobacteria.
+
+Finalmente se investigó también la variación individual de los aminoácidos catalíticos D11, D130 [@due_bisubstrate_2011] y D175 reportados en _Mycobacterium tuberculosis_[@verduzco-castro_co-occurrence_2016]. Estas posiciones corresponden en _S coelicolor_ a D11, D131 y D171. En este trabajo se econtró que existe un conjunto de secuencias donde estos residuos presentan variantes `r ref("Alineamiento", type = "figure")`. Los homólogos más relevantes de PriA/HisA abordados en este capítulo junto con las secuencias seleccionadas divergentes en los residuos mencionados fueron alineadas para mostrar la diversidad de las familias PriA/HisA a nivel de aminoácidos. Aunque existen variantes de 131D fuera del phylum Actinobacteria, como en _Pseudomonas_, Cyanobacteria, Enterobacteria, Proteobacteria y Chloroflexi también en Actinobacteria se encontraron 159 _Corynebacterium_, 49 _Streptomyces_ y 2 _Actinokineospora_ con un residuo diferente al aspártico en la posición 131. Están depositados en la base pública NCBI hasta Enero de 2019, 349 genomas públicos de _Streptomyces_  2019, así pues aproximadamente un 14% tiene una variante en la posición 131. Entre estos _Streptomyces_ están el ya mencionado _Streptomyces _ CT 34 que posee dos copias de PriA una de ellas muy divergente y el _Streptomyces rimosus_ del que se habló en en capítulo anterior porque sintetiza rimosamidas. Es llamativo que las variantes de 131D se encuentran principalmente en _Corynebacterium_ y en _Streptomyces_ que corresponden a los géneros donde se han ubicado a la familia subHisA y a la familia PriB respectivamente. La variabilidad mostrada en estos géneros podría estar relacionada con la existencia de estas familias. Otros los _Streptomyces_ con una variante en 131D son _S. oceani_ , _S. scabiei_, _S. fradiae_, _S. rimosus_ , _S. sp._ CT34 y _S. _ MUSC 14
+y _S. D11H_ . De ellos los tres últimos son además los únicos _Streptomyces_ con la variante D11H que comparten con _Actinokineospora auranticolor_. De hecho las tres posiciones conservadas en la mayoría de las PriA presentan variantes en estos cuatro organismos, por lo que sería interesante caracterizarlos bioquímicamente. Entre los organismos con doble copia de PriA están _Serinicoccus marinus_ , _Serinicoccus profundi_ y _Ornithinimicrobium pekingense_, ambas copias fueron incluidas en el alineamiento. Estas seis secuencias de PriA tienen aspártico en las tres posiciones conservadas, las diferencias que muestran en otras posiciones indican que las copias primarias y las secundarias de cada organismo se agrupan entre sí. La secuencia de _Actinomadura sp._ ATCC 39365 involucrada en el BGC _ada_ es similar a la PriA de _S. coelicolor_ por lo que posiblemente PriA de _S. coelicolor_ también podría presentar esta actividad. Se incluyó en el análisis una secuencia reconstruída del ancestro común de HisA en Bacteria [REF], esta secuencia muestra el aspártico en las tres posiciones. En Cyanobacteria la HisA del BGC saxitoxin es prácticamente igual a la de _Cylindrospermopsis raciborskii_ CS50 y ambas conservan el aspártico en las tres posiciones. En Archaea las PriA más grandes encontradas _Halorubrum tebenquichense_ y _Halonotius sp J07HN6_ tienen la variante en D171E, que comparten con los _Streptomyces_ y la _Actinokineospora_ con variante D11H y con los _Streptomyces_ con la variante D130E. Finalmente también en Archaea _Thermococcus sp JCM 11816_ que comparte el contexto genómico con genes de triptofano presenta los tres reiduos conservados.
+
+
 
 ```{r couplings, results = "asis",message=FALSE,echo=FALSE}
 label(path = "chapter4/Couplings/HIS4_STRCO_1-200/align/couplings.pdf", 
@@ -300,7 +305,6 @@ label(path = "chapter4/Couplings/HIS4_STRCO_1-200/align/couplings.pdf",
  
 <!-- grep -c11| grep -nv D|sort|uniq -c |sort -n-->
 
- Secuencias fuera del phylum Actinobacteria, como _Pseudomonas_, Cyanobacteria, Enterobacteria, Proteobacteria y Chloroflexi muestran variantes del residuo 131D. Sin embargo, en Actinobacteria se encontraron 159 _Corynebacterium_, 49 _Streptomyces_ y 2 _Actinokineospora_ sin 131D. Entre los _Streptomyces_ está el ya mencionado _Streptomyces _ CT 34 y _Streptomyces rimosus_. En _Corynebacterium_ se encuentra localizada la familia subHisA y en _Streptomyces_ la familia PriB, la variabilidad mostrada en estos géneros podría estar relacionada con la existencia de estas familias. A futuro, para obtener resultados exclusivos sobre la covariación de residuos en Actinobacteria, se debe proveer un alineamiento exclusivo de Actinobacteria.
 
 ```{r Alineamiento, results = "asis",message=FALSE,echo=FALSE}
 label(path = "chapter4/Couplings/alineamiento.pdf", 
@@ -455,115 +459,6 @@ Table: Estructuras cristalográficas disponibles de PriA y familias relacionadas
 
 Con las estructuras de las enzimas seleccionadas de PriA se realizaron simulaciones de docking respecto a los veinte sustratos descritos. El procedimiento puede ser consultado en  [Docking Protocols](https://github.com/tripplab/Docking/wiki). En la `r ref("HeatplodPriAdocking", type = "figure")` presento una visualización de los resultados obtenidos. En esta figura se marcan en color los organismos de los que se tiene una caracterización bioquímica, en azul están las secuencias correspondientes a TrpF, en rojo las de HisA, en rosa las secuencias de PriA y subHisA y en verde las de PriB y subTrpF. Con un asterisco fueron marcadas las secuencias de las que se cuenta con estructura cristalográfica. En el caso de las secuencias que no contaban con estructura cristalográfica, la estructura que sirvió como base está anotada después de la abreviatura del organismo. Las abreviaturas corresponden a los organismos de la  `r ref("EnzymeDocking", type = "table")`. Los cuadrados grises son datos que faltaron de simular. Entre más azul es mayor la afinidad del sustrato por la secuencia, entre más rojo menor la afinidad de la enzima por este sustrato. Se requieren más controles para este experimento, pero una tendencia general es que la columna correspondiente a S11 (GTP) es el sustrato que tiene mayor afinidad. Por ello, aunque afinidad no tiene porque corresponder con capacidad catalítica, se decidió investigar la capacidad de secuencias de PriA para catalizar alguna reacción sobre el GTP, esa investigación es el objeto de la última sección de este capítulo.     
 
-
-```{r sessionInfo,echo=FALSE, eval=FALSE,results='hide',message=FALSE,warning=FALSE}
-
-#vignette(package="genstats")
-#vignette("01_06_three-tables")
-
-# phenoData:
-tmp <- read.csv("chapter4/ProteinData", row.names = 1,header=TRUE,sep="\t")
-pdata <- AnnotatedDataFrame(tmp)
-
-# featureData:
-tmp <- read.csv("chapter4/Substrate.data", row.names = 1,sep="\t")
-fdata <- AnnotatedDataFrame(tmp)
-
-# expression data:
-tmp <- read.table("chapter4/EnsymeVsSubstrate.data",row.names = 1,header=TRUE,sep="\t")
-m <- as.matrix(tmp)
-#dim(m)
-#class(m)
-#colnames(m)
-#rownames(m)
-## Names should not start on numbers never
-## create ExpressionSet object:
-#eset <- new("ExpressionSet", exprs = m, phenoData = pdata, featureData = fdata)
-```
-<!-- to change R colors to my wn perl heatplot
-mrBayes PriAjulian.nxs on mazorca goes to PriAjulian.con.tre
-PriAjulian.con.tre was open with figtree and saved as SVG
-To get coordinates: `coordtree.pl PriAjulian.SVG`  
-Heatplot color are from ggplot R
-mydata.xls lo guardoen mydata.cvs
-perl read_mydata.pl mydata.cvs >Heat.colors
-manually edit Heat.colors by adding headers enzymas y substrates
-perl heatFromRGB.pl HeatColor YPriAJulian
-Hice el heatplot en SVG con el script   
--->
-  
-  <!--
-  Observaciones Mauricio  
-Figura/tabla de funcionalidad de familias  
-Separar datos experimentales por funcion y poner  pie de tabla  
-en la figura colorear por funcion, solo 3 grupos  
-
-Poner Figura suplementaria PRA PROFAR presencia ausencia trpF
-
-
-- falta el pie de figura
-Substrate docking over enzymes from extended PriA families. Substrates 1-20  
-
-- poner unidades en la escala  
-
-- intenta aumentar el contraste de color entre el valor mínimo y máximo de la escala  
-invertir colores 
-
-- repite las etiquetas de los sutratos abajo del heatmap  
-Pendiende  
-
-JOHAN /MAURICIo
-Poner que No es todo el univrso de sustratos sino solo el de KEGG
-
-Hacer mejor curvas con los valores, en lugar del heatplot
-
-Hacer docking con otras plantillas (2VEP vs 2X30)
-
-Analisis cuantitativo de los datos.  
-
-PACO
-Tipo de seleccion en todo PriA  
-
--->
-  <!---
-  ```{r johan}
-docking <- read.csv("chapter4/SmallHeat.data", header=TRUE, sep="\t")
-
-for (i in 2:21)
-{plot(density(docking[,i],na.rm=T)); rug(docking[,i]);browser()}
-plot(cor(docking[-c(5,12,13,38,51),-1]))
-## Leer sobre la incertidumbre del 2 y explicarla  
-## Y leer el paper de Julian y el de mauricio sobre reportes de docking
-
-```
---->
-  
-  
-  
-```{r load_data_docking,results='hide',echo=FALSE,message=FALSE,echo=FALSE,warning=FALSE}
-docking <- read.csv("chapter4/SmallHeat.data", header=TRUE, sep="\t")
-EnzymeOrder=factor(docking$Enzima,levels=unique(docking$Enzima))
-docking.m <- melt(docking,id = "Enzima")
-docking.m <- ddply(docking.m, .(variable), transform,rescale = rescale(value))
-docking.m$Enzima <- factor(docking.m$Enzima, levels = rev(docking.m$Enzima[order(EnzymeOrder)]))
-
-##on colors
-colorHeatPlot<-ggplot(docking.m, aes(x=variable, y=Enzima)) + labs(x = "Substrates", y = "Enzymes",text = element_text(size=12))+ geom_raster(aes(fill=value))+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6))+ scale_fill_gradientn(colours = hm.palette(100),na.value = "gray")
-ggsave("chapter4/colorHeatPlot.pdf", plot = colorHeatPlot,height = 36, width = 24)
-
-gcolor <- ggplot_build(colorHeatPlot)
-#gcolor$data[[1]]["fill"]
-#gcolor$data[[1]]
-write.xlsx(gcolor$data[[1]], "chapter4/mydataColor.xlsx")
-
-```
-
-
-```{r heatonPDF, eval=FALSE,results='hide',  echo=FALSE,message=FALSE,echo=FALSE,warning=FALSE}
-ggplot(docking.m, aes(x=variable, y=Enzima)) + labs(x = "Substrates", y = "Enzymes",text = element_text(size=12))+ scale_fill_gradientn(colours = hm.palette(100),na.value = "gray")+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6))
-```
-
-
 ```{r Figure_Heatplot, results = "asis", message=FALSE,echo=FALSE,warning=FALSE}
 label(path = "chapter4/Figura1_4.pdf", 
       caption = "Heatplot del docking de enzimas relacionadas a PriA vs posibles substratos",
@@ -574,112 +469,12 @@ label(path = "chapter4/Figura1_4.pdf",
       type = "figure")
 ```
 
-### GTP es el sustrato por el que PriA muestra mayor afinidad  
-```{r substrateBox}
-## boxplot de los sustratos
-ggplot(docking.m, aes(x=variable, y=value)) + labs(x = "Substrates", y = "Affinity",text = element_text(size=12)) + geom_boxplot()+theme_bw()+theme(plot.title = element_text(size = 14, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.x=element_text(angle = 90,size = 6), legend.position = "bottom")
-
-```
-
-\clearpage  
-
-### Dinámica molecular vs datos experimentales  
-
-En las tablas  `r ref("PriAPRA", type = "table")` , `r ref("PriAProFAR", type = "table")` se muestra a detalle la comparación entre las dinámicas moleculares de PriA respecto a PRA y ProFAR. Estos datos sugirieron que GTp es el sustrato con mayor afinidad y por ello en la última sección se avanzó en la realización de cinéticas enzimáticas con GTP.
-
-Table: Actividad de PriA en S3 PRA \label{tab:PriAPRA}     
-
-$$ 
-\resizebox{\columnwidth}{!}{%
-\begin{tabular}{ l c r l l l l l}
-\hline \\ [-1.5ex]
-organism  &Family & $K_M    $     & $k_{cat}$        & $\frac{k_{cat}}{K_M}$ &Pre MD & Pos MD & Reference  \\ [1ex]
-\hline \\ [-1.5ex]
-Afer	    &HisA   & $1.1\pm0.2$   &$	0.05\pm0.001	$& 0.045	              &-10.1	&-12.3   	 &Noda-García L et al 2015\\ [1ex]
-Ecoli	    &HisA   &$	1.6	        $&$ 	  	4.9       $&3.1                   &-9.9   &-16	     &Henn-Sax et al. (2002)\\ [1ex]
-Sent	    &HisA   &$	17.0 \pm0.1 $&$	7.8 \pm 2.4	  $&$4.5 × 10^5          $&-10.3  &-20.1     &Söderholm A et al (2015)\\ [1ex]
-Aaur	    &PriB   &$	2.1 \pm 0.5 $& $	1.8 \pm 0.2 	$&0.9                   &-7.4   &   		   &verduzco-castro 2016\\ [1ex]
-Sipo	    &PriB   &$	3.8\pm0.2	  $&$0.82\pm0.02	    $&0.21	                &-8.2	  &-14.7	   &verduzco-castro 2016\\ [1ex]
-SspC	    &PriB   &$	11.4\pm3.4	$&$2.53\pm0.74	    $&0.22                  &	-8.5	&-12.7	   &verduzco-castro 2016\\ [1ex]
-SMg1	    &PriB   &$	13.2\pm3.4	$&$0.92\pm0.19	    $&0.069	                &-8	    &-15.2     &verduzco-castro 2016\\ [1ex]
-Ssvi	    &PriB   &$	3.9\pm0.89	$&$0.69\pm0.04	    $&0.18	                &-8.2	  &-16.7     &verduzco-castro 2016\\ [1ex]
-Scoe	    &PriA   &$	3.6\pm0.7	  $&$ 1.3\pm0.2	    $  &0.4	                  &-8.4	  &-15	     &Noda-García et al (2010)\\ [1ex]
-Sglob	    &PriA   & $4.2\pm0.8	 $ & $0.74\pm0.03	 $   &0.18	                &-9.2	  &-16.7	   &verduzco-castro\\ [1ex]
-Mtub 2Y85	&priA   &$	19	0.23	  $&$0.012	-9.7		  $&                      &       &          &Due et al 2011\\ [1ex]
-Mtub 3ZS4	&priA   &$	?			      $&$-9.9		        $&                      &       &          &Due et al 2011 (To be published)\\ [1ex]
-Auro	    &priA   &$	4.0 \pm 0.9	$&$0.2 \pm 0.03	  $&0.04	                &-9.2		&          &Vazquez-Juarez (2016)\\ [1ex]
-Cjei	    &PriA   &$	2.3 \pm 0.2	$&$0.9 \pm 0.08	  $&0.39	                &-8.5		&          &Noda-García et al (2013)\\ [1ex]
-Cdip	    &subHisA&$	4.4 \pm 0.5	$&$2.6 \pm 0.3	    $&0.59	                &-9.2		&          &Noda-García et al (2013)\\ [1ex]
-SMg1 TrpF	&TrpF3  &	-	             &-	               &-	                    &-6.9	  &-9.6	     &verduzco-castro 2016\\ [1ex]
-Jden	    &TrpF3  &	-	             &-	               &-	       -7.2	        &-9.4	  &$16.8\pm3.3$&	Verduzco-Castro E et al  2016\\ [1ex]
-Acar      &SubHisA&	0.02					 &                 &	                    &       &          &			\\ [1ex]
-Aodo	    &SubTrpF&		-	           &-	               &-                     &       &          &\\ [1ex]
-\hline
-\end{tabular}}
-\label{tab:PriAPRA}  
-%}
-$$ 
-  
-\clearpage  
-La siguiente tabla es análoga a la anterior pero con el sustrato ProFAR  
-  
-Table: Actividad de PriA en S7 ProFAR \label{tab:PriAProFAR}      
-
-$$ 
-\resizebox{\columnwidth}{!}{%
-\centering 
-\begin{tabular}{ l c r l l l l l}
-\hline \\ [-1.5ex]
-organism  &Family  &  $K_M$ & $k_{cat}$& $\frac{k{cat}}{K_M}$ &Pre MD &Pos MD &Reference  \\ [1ex]
-\hline \\ [-1.5ex]
-Afer      &HisA    &-            &-                &-          &-9.2    &-9        &Noda-García L et al. (2015)   \\ [1ex]
-Ecoli     &HisA    &-            &-                &-          &-9      &-11.1     &Henn-Sax et al. (2002)\\ [1ex]
-Sent      &HisA    &-            & -               &-          &-9.6    &-10.2     &Söderholm A et al (2015)\\ [1ex]
-Aaur      &PriB    &$26.3\pm6.3$ & $0.37\pm 0.09$  & 0.014     &-7.1    &-         &verduzco-castro 2016\\ [1ex]
-Sipo      &PriB    &$60.8\pm1.1$ &$8.25\pm0.4 $    &0.14       &-8      &-8.5      &verduzco-castro 2016 \\ [1ex]
-SspC      &PriB    &$149.9\pm29$ &$1.4\pm0.12 $    &0.009      &-8.5    &-10.8     &verduzco-castro 2016\\ [1ex]
-SMg1      &PriB    &$129.6\pm34$ &$0.29\pm0.04$    &0.0022     &-7.5    &-11       &verduzco-castro 2016\\ [1ex]
-Ssvi      &PriB    &$24.5\pm4.0$ &$1.6\pm0.29 $    &0.067      &-8      &-9.7      &verduzco-castro 2016 \\ [1ex]
-Scoe      &PriA    &$5.0\pm0.08$ &$3.4\pm0.09  $   &0.7        &-8      &-9.4      &Noda-García et al (2010)   \\ [1ex]
-Sglob     &PriA    &$11\pm1.0$  &$3.8\pm0.2  $     &0.34       &-8.7    &-9.4      &verduzco-castro 2016  \\ [1ex]
-Mtub2Y85  &priA    &21         &3.6         &0.17       &-8.6    &          &Due et al 2011                        \\ [1ex] 
-Mtub3ZS4  &priA    &           &            &           &-9.3    &          &Due et al 2011 (To be published)      \\ [1ex] 
-Auro      &priA    &$23 \pm 6.5 $  &$0.5\pm0.05 $&0.02       &-9.3    &          &Vazquez-Juarez (2016)                 \\ [1ex] 
-Cjei      &PriA    &$5.1 \pm1.0$  &$1.6 \pm 0.16 $&0.31       &-9      &          &Noda-García et al (2013)              \\ [1ex]
-Cdip      &subHisA &-          &-           &-          &-8.8    &          &Noda-García et al (2013)              \\ [1ex]
-SMg1 TrpF &TrpF3   &$8.4\pm1.7$    &$10.5\pm2.4$    &1.25       &-7.6    &-9        &verduzco-castro     \\ [1ex] 
-Jden      &TrpF3   &$16.8\pm3.3$   &$27\pm1.6$      &1.6        &-7.6    &-7.7      &verduzco-castro     \\ [1ex] 
-Acar      &SubHisA &Na         &Na          &0.02       &Na      &Na        &Na                                    \\ [1ex] 
-Aodo      &SubTrpF &-          &-           &-          &-       &Na        &Na                                    \\ [1ex]
-\hline
-\end{tabular}}
-\label{tab:PriAProFAR}    
-%}  
-$$
-
-
-```{r docking_table_out, results = "asis", message=FALSE,echo=FALSE,warning=FALSE}
-docking <- read.csv("chapter4/SmallHeat.data", header=TRUE, sep="\t")
-kable(docking,  
-      caption = "Enzymes docking \\label{tab:docking}",
-      caption.short = "Enzymes docking ") %>%  kable_styling(latex_options="scale_down")
-```
-<!--
-  \caption[Table caption text]{Table taken from \cite[p.10]{verduzco-castro_co-occurrence_2016} }
-
-\label{table:name}
-
--->
-Con actividad de FolE i.e activa para el compuesto V										Adams et al (2014)
-
-\clearpage  
-
-
+\clearpage
 
 ## PriA en cinéticas enzimáticas no tradicionales.
-Además de la exploración genómica de PriA se realizaron caracterizaciones experimentales. No se tuvo el tiempo ni la experiencia para tener réplicas de los resultados descritos a continuación, sin embargo pueden ser un buen comienzo para futuros estudiantes que deseen retomarlos. Todos los protocolos fueron cuidadosamente descritos y se encuentran en los anexos. Este capítulo se enfoca en el montaje de dos experimentos. _i)_ Cinéticas de PriA en GTP . _ii)_ Medición simultánea de la actividad de PriA sobre ProFAR y PRA.  
+Después de la exploración genómica de PriA/HisA se trabajó en caracterizaciones experimentales no tradicionales de PriA. No se tuvo el tiempo ni la experiencia para tener réplicas de los resultados descritos a continuación, sin embargo se incluyen en esta tesis porque pueden ser un buen comienzo para otros estudiantes que deseen retomar este trabajo. Los protocolos fueron cuidadosamente descritos y se encuentran incluidos en los anexos. Este capítulo se enfoca en el montaje de dos experimentos, el primero sugerido por la sección anterior: _i)_ Cinéticas de PriA en GTP. Mientras que el segundo está motivado por la curiosidad sobre el cambio en la capacidad catalítica según se provea primero un sustrato u otro, este experimento consiste en la _ii)_ Medición simultánea de la actividad de PriA sobre ProFAR y PRA.  
 
-Lo primero que se realizó fue la sobre expresión heteróloga de PriA y su respectiva purificación para poder realizar _in vitro_ cinéticas enzimáticas. Las enzimas fueron clonadas en cepas de _E. coli_ V68 se indujo sobre expresión y se purifico la proteína. Se corroboró el éxito de esta actividad mediante un gel de proteína en la que puede verse expresión en la barra correspondiente al tamaño de PriA `r ref("gel", type = "figure")`.  
+Lo primero que se realizó fue la sobre-expresión heteróloga de PriA. La secuencia de PriA fue clonada en cepas de _E. coli_ V68 donde se indujo la sobre expresión. A partir de este cultivo productor de PriA se purificó la proteína. Se corroboró el éxito de esta actividad mediante un gel de proteína en la que puede verse expresión en la barra correspondiente al tamaño de PriA `r ref("gel", type = "figure")`. La proteína purificada fue almacenada a -80° en esferas de proteína selladas con nitrógeno líquido para su mejor preservación, tal y como se describe en el anexo de los procedimientos. Con este _stock_ de proteína se realizaron cinéticas enzimáticas _in vitro_. 
 
 ```{r gel, results = "asis",message=FALSE,echo=FALSE}
 label(path = "chapter4/Geles/PriAAbril30.png", 
@@ -690,36 +485,32 @@ label(path = "chapter4/Geles/PriAAbril30.png",
        type = "figure")
 ``` 
 
-Con la proteína purificada y almacenada a -80° en esferas de proteína selladas con nitrógeno líquido como se describe en el anexo de los procedimientos se procedió a realizar cinéticas enzimáticas.  
-
 ### PriA puede tener actividad en GTP  
-La actividad fue medida fluorometricamente en placas de 96 (Nuc 96-Well Optical Botto Plates) en un lector de placas TECAN infinite M1000 (con exitación a 286 nm y emisión a 386 nm). Ensayos preliminares de actividad se realizaron en una PriA activa respecto a los otros substratos y proveniente de _Streptomyces coelicolor_ y en la mutante inactiva D11A. 
+Como se sugirió en la sección anterior PriA puede tener actividad sobre GTP. Ahora bien, la actividad de PriA en ProFAR es medida en un ensayo estandarizado mediante la detección de cambio de fluorescencia. Para esta medición por fluorimetría se coloca la enzima en placas de 96 pozos (Nuc 96-Well Optical Botto Plates), se agrega el sustrato y utilizando un lector de fluorescencia de placas (TECAN infinite M1000) se mide el cambio de fluorescencia en el tiempo.  Una variación de este ensayo permitió obtener información sobre la actividd PriA sobre dGTP. Los parámetros utilizados para la medición fueron tomados del trabajo no publicado de Verduzco-Castro en este laboratorio (exitación a 255 nm y emisión a 334 nm). Para comenzar esta investigación se utilizó primero dGTP en lugar de GTP esto debido a que el dGTP es un sustrato siempre disponible en cualquier laboratorio ya que es necesario para la reacción de PCR. Así pues, ensayos preliminares de actividad de PriA sobre este dGTP se realizaron en la proteína purificada de PriA de _Streptomyces coelicolor_, activa en ambos sustratos nativos utilizando como control su mutante inactiva que sustituye en la posición 11 el ácido aspártico por una alanina (D11A). La `r ref("PriAActividaddGTP", type = "figure")` muestra el resultado de este experimento donde se aprecia un decrecimiento mayor en la fluorescencia del pozo que contiene la proteína activa respecto del pozo que contiene a la mutante. 
 
 ```{r mutControl, results = "asis",message=FALSE,echo=FALSE}
 label(path = "chapter4/MutantControl.png", 
-      caption = "Scoe and non functional Scoe PriA acting on dGTP",
+      caption = "PriA de {S.}{coelicolor} y su mutante no funcional sobre dGTP",
       scale=.8,
-      label = "PriARutas1", 
+      label = "PriAActividaddGTP", 
       cap.size = "footnotesize",
-      alt.cap="",
+      alt.cap="PriA de {S.}{coelicolor} y su mutante no funcional sobre dGTP",
       type = "figure")
 ```
 
+Este experimento de detección de actividad de dGTP fue ampliado incluyendo ahora proteínas provenientes de otros organismos. Para ello se utilizaron los stocks disponibles de PriA provenientes de  _Streptomyces roseus_ ,  _Thermomonospora curvata_ y  _Mycobacterium smegmatis_; los stocks de PriB provenientes de _Streptomyces sp C_, _Streptomyces sviceus_ y de _Streptomyces sp_ Mg1 y finalmente el stocks de TrpF de _Jonesia denitrificans_. El ensayo descrito arriba fue realizado en estas enzimas  y el resultado es mostrado en `r ref("dGTPActividadHomologos", type = "figure")`. En la parte inferior derecha vemos que como debe ser el control negativo, el pozo con Buffer y sustrato no muestra ningún cambio en la fluorescencia. Sin embargo no es claro que exista una tendencia claramente decreciente en los pozos que contienen enzima. Posiblemente la pendiente que se observa en los datos de _Thermomonospora curvata_, indique cierta actividad sobre dGTP. Este comportamiento también puede deberse a que las proteínas llevaban tiempo almacenadas. Los experimentos deben ser repetidos con proteína recién purificada.
 
-```{r GTPCinetica, results = "asis",message=FALSE,echo=FALSE}
-label(path = "chapter4/GTPCinetica.pdf", 
-      caption = "Scoe and non functional Scoe PriA acting on dGTP",
+```{r dGTPActividadHomologos, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter4/GTPCinetica.png", 
+      caption = "Homólogos de PriA y familias relacionadas no muestran actividad clara sobre dGTP",
       scale=.6,
-      label = "PriARutas2", 
+      label = "dGTPActividadHomologos", 
       cap.size = "footnotesize",
-      alt.cap="",
+      alt.cap="Actividad de PriA y familias relacionadas de distintos organismos sobre dGTP. Este experimento no muestra decrecimiento de fluorescencia en las enzimas seleccionadas lo que implicaría que no existe actividad importante sobre dGTP, excepto poiblemente en el caso de {Thermomonospora} {curvata}",
       type = "figure")
 ```
 
-
-\clearpage  
-
-
+Finalmente se probó con los mismos parámetros la actividad de PriA de _Streptomyces coelicolor_ sobre GTP. Se comprobó que la enzima estuviera activa mediante ensayos enzimáticos exitosos en sus otros dos sustratos. Sin embargo, no se pudo detectar cambio en la fluorescencia de GTP debido a la actividad de PriA. Tan es posible que la PriA de _S coelicolor_ no pueda catalizar ninguna reacción sobre el GTP como que los parámetros de medición de fluorescencia no sean los adecuados, una variante que a futuro podría aportar a este experimento es utilizar [análogos fluorescentes de GTP](https://www.jenabioscience.com/nucleotides-nucleosides/nucleotides-by-structure/fluorescent-nucleotides/guanosines-intrinsically-fluorescent). 
 ```{r activity ,eval=FALSE,message=FALSE,echo=FALSE,warning=FALSE}
 #library(reshape)
 #library(ggplot2)
@@ -730,7 +521,7 @@ GTP.m <- melt(GTP,id="Time")
   #plot(GTP.m$Time, GTP.m$value, col=GTP.m$variable, pch=19)
 plot.new()
 legend("center", legend = unique(GTP.m$variable), col = unique(GTP.m$variable), pch=19)
-ggplot(GTP.m, aes(Time, value,colour=variable))+ geom_point()+ facet_wrap(~ variable)+ geom_smooth()+theme_bw()+theme(plot.title = element_text(size = 8, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.y=element_text(angle = 30,size = 1), legend.position = "bottom")+ scale_size_area()
+GTPCinetica<-ggplot(GTP.m, aes(Time, value,colour=variable))+ geom_point()+ facet_wrap(~ variable)+ geom_smooth()+theme_bw()+theme(plot.title = element_text(size = 8, face = "bold"), text = element_text(size = 12), axis.title = element_text(face="bold"), axis.text.y=element_text(angle = 30,size = 1), legend.position = "bottom")+ scale_size_area()
 
 ggsave(file="chapter4/GTPCinetica.pdf", plot=GTPCinetica, width=30, height=8)
 
@@ -738,21 +529,91 @@ ggsave(file="chapter4/GTPCinetica.pdf", plot=GTPCinetica, width=30, height=8)
 ```
 
 
-
-Entre las enzimas donde se aprecia actividad está _Thermomonospora curvata_  que es una Actinobacteria termofílica de la familia _Thermomonosporaceae_ y que puede ser encontrada encompostas ya que participa en la degradación de celulosa [@chertkov_complete_2011]. La trpF de _Jonesia denitrificans_ no mostró actividad.Esta bacteria está clasificada como un organismo patogénico para animales, su genoma fue originalmente aislado de sangre [@pukall_complete_2009].  
-
+```{r GTP, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter4/GTP.png", 
+      caption = "PriA no mostró actividad sobre GTP a diversas concentraciones",
+      scale=.6,
+      label = "GTP", 
+      cap.size = "footnotesize",
+      alt.cap="PriA no mostró actividad sobre GTP. El ensayo enzimático de PriA de {Streptomyces}{coelicolor} sobre GTP a distintas concentraciones no mostró cambios en la fluorescencia de GTP.",
+      type = "figure")
+```
 \clearpage 
 
 
 
 ### Cinéticas simultáneas para PRA y ProFAR  
+Otra pregunta que me surgió al investigar la promiscuidad enzimática es si esta es una propiedad de la población o de cada una de las enzimas existentes en la célula. En PriA esta pregunta puede traducirse a ¿cómo saber si cada molécula de PriA cataliza PRA y ProFAR _in vivo_? o si en cambio, existe una subpoblación que cataliza la isomerización de PRA y otra subpoblación de moléculas que cataliza isomerización de ProFAR. Una buena aproximación _in vitro_ a este problema sería poder medir el comportamiento de una sola molécula en un medio con ambos sustratos. Una serie de estos experimentos mostraría si existen subpoblaciones dedicadas a la catálisis de uno u otro substrato, o bien si todas las enzimas de una población son igualmente promiscuas. La existencia de subpoblaciones podría deberse a interacciones de la enzima con el sustrato, como por ejemplo que agregar PRA primero al medio sesgue el comportamiento de la enzima y la haga mejor para catalizar PRA que ProFAR o visceversa. 
 
-```{r simultáneas, child = 'chapter4/TrpF_PriA_joint_kinetics.Rmd'}
+Para empezar a abordar este problema pensé que un primer paso era poder medir simultáneamente la actividad de una población de PriA sobre PRA y ProFAR. Por separado, ambos ensayos están montados, pero nunca se ha intentado un ensayo simultáneo. Las constantes cataliticas de PriA para la isomerización de ProFAR se mide utilizando absorbancia. El ensayo enzimático de isomerización de PRA se realiza mediante la medición de fluorescencia. En esta sección se empezó a desarrollar un método para medir simultáneamente las actividades de Pra y ProFAR. El Tecan es capaz de cambiar el sensor para tomar mediciones de ambos. Caja transparente.  
+
+<!-- Cinéticas  -->
+```{r Cinetics,  message=FALSE,echo=FALSE,warning=FALSE}
+#First I saved file as scv tablar separated    
+#perl -p -i -e 's/,/\t/g' Pra_scoe1.csv   
+#An cut it to obtain just data  
+#tail -n +39 Pra_scoe1.csv | head -n-3 > Pra_scoe1.data  
+#perl -p -i -e 's/\sNr\.|\s\[\w*\]|\.\s\[.*\]//g' Pra_scoe1.data
+#tablePRAPRO <- read.table(s"chapter2/cineticas/Pra_scoe1.data",header=TRUE, sep="\t") 
+tablePRO <- read.table("chapter4/cineticas/18082017_PraProfarAbsorbanceCombined.data",header=TRUE, sep="\t") 
+
+## visualising full data
+tablePRO$Temp<-NULL
+tablePRO$Cycle<-NULL
+
+a<-tablePRO$Time[c(TRUE,FALSE)]
+b<-tablePRO$Time[c(TRUE,FALSE)]+19.15
+
+tablePRO$Time[c(TRUE, FALSE)] <- a
+tablePRO$Time[c(FALSE, TRUE)] <- b
+
+tablePRO$ProFAr50<-NULL # posible error en el tubo
+tablePRO$ProFAr50.1<-NULL
+
+tablePRO<-tablePRO[grep("Pro|Time", colnames(tablePRO))]
+#tablePRA<-tablePRA[grep("Pra|Time", colnames(tablePRA))]
+
+PROassay.m <- melt(tablePRO,id="Time")
+
+plot(PROassay.m$Time, PROassay.m$value, col=PROassay.m$variable,  xlab="Time [s]",ylab="Absorbance", pch=19,bty='L')
+par(xpd = TRUE)
+#legend("right", legend = (unique(PROassay.m$variable)), col = (unique(PROassay.m$variable)),pch=19,bg="white")
+legend("right", legend = (c("ProFAR 0 uM","ProFAR 25 uM","ProFAR 75 uM","ProFAR 100 uM","ProFAR 0 uM Replica","ProFAR 100 uM Replica")), col = (unique(PROassay.m$variable)), pch=19,bg="white")
+
+#ggplot(PROassay.m, aes(x = PROassay.m$Time, y = PROassay.m$value),color="variable") + theme_bw() 
+
+ProFARPartes<-qplot(Time,value, data = PROassay.m,colour=variable)+theme_bw()+ theme(legend.position	="bottom",legend.text=element_text(size=10),plot.title = element_text(size = 14, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 10),axis.text.y=element_text(size = 7))+facet_grid(PROassay.m$variable~.,scales="free") 
+
+
 ```
 
+```{r CineticsPRA,  message=FALSE,echo=FALSE,warning=FALSE}
 
+tablePRA <- read.table("chapter4/cineticas/18082017_PraProfarFluorCombined.data",header=TRUE, sep="\t") 
+#tablePRA <- read.table("15082017_praOSCURO.data",header=TRUE, sep="\t") 
 
-```{r endsession}
-#sessionInfo()
+## visualising full data
+tablePRA$Temp<-NULL
+tablePRA$Cycle<-NULL
+
+a<-tablePRA$Time[c(TRUE,FALSE)]
+b<-tablePRA$Time[c(TRUE,FALSE)]+19.15
+
+tablePRA$Time[c(TRUE, FALSE)] <- a
+tablePRA$Time[c(FALSE, TRUE)] <- b
+tablePRA$Pra50<-NULL
+#tablePRA$Time
+tablePRA<-tablePRA[grep("Pra|Time", colnames(tablePRA))]
+
+PRAassay.m <- melt(tablePRA,id="Time")
+plot(PRAassay.m$Time, PRAassay.m$value, col=PRAassay.m$variable,  xlab="Time [s]",ylab="Fluorescence", pch=19,bty='L')
+par(xpd = TRUE)
+legend("right", legend = (c("PRA 0 uM","PRA 25 uM","PRA 75 uM","PRA 100 uM","PRA 0 uM Replica","PRA 100 uM Replica")), col = (unique(PROassay.m$variable)), pch=19,bg="white")
+#legend("right", legend = (unique(PRAassay.m$variable)), col = (unique(PRAassay.m$variable)),pch=19,bg="white")
+
+#ggplot(PRAassay.m, aes(x = PRAassay.m$Time, y = PRAassay.m$value),color="variable") + theme_bw() 
+
+PRAPartes<-qplot(Time,value, data = PRAassay.m,colour=variable)+theme_bw()+ theme(legend.position	="bottom",legend.text=element_text(size=10),plot.title = element_text(size = 14, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 10),axis.text.y=element_text(size = 7))+facet_grid(PRAassay.m$variable~.,scales="free")
 
 ```
+

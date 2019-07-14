@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.17)  13 JUL 2019 19:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.17)  14 JUL 2019 01:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1042,9 +1042,12 @@ Non-PDF special ignored!
 ] (./tesis.toc
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
-[5] [6] [7] [8]
+[5] [6] [7]
+Underfull \vbox (badness 3503) has occurred while \output is active []
 
-Package hyperref Warning: Suppressing empty link on input line 129.
+[8]
+
+Package hyperref Warning: Suppressing empty link on input line 125.
 
 )
 \tf@toc=\write5
@@ -1117,7 +1120,7 @@ LaTeX Font Info:    Try loading font information for T1+lmtt on input line 580.
 
 (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) <PriA.pdf, id=1133, 590.12517pt x 369.60399pt>
+) <PriA.pdf, id=1121, 590.12517pt x 369.60399pt>
 File: PriA.pdf Graphic file (type pdf)
 <use PriA.pdf>
 Package pdftex.def Info: PriA.pdf used on input line 593.
@@ -1132,7 +1135,7 @@ File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 
 ] [10
 
-] <chapter0/NivelesPromiscuidad.png, id=1244, 792.0676pt x 560.01994pt>
+] <chapter0/NivelesPromiscuidad.png, id=1233, 792.0676pt x 560.01994pt>
 File: chapter0/NivelesPromiscuidad.png Graphic file (type png)
 <use chapter0/NivelesPromiscuidad.png>
 Package pdftex.def Info: chapter0/NivelesPromiscuidad.png used on input line 69
@@ -1169,7 +1172,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
  <./chapter0/NivelesPromiscuidad.png>] <chapter0/AntecedentesConceptuales.png, 
-id=1255, 963.6pt x 542.025pt>
+id=1244, 963.6pt x 542.025pt>
 File: chapter0/AntecedentesConceptuales.png Graphic file (type png)
 <use chapter0/AntecedentesConceptuales.png>
 Package pdftex.def Info: chapter0/AntecedentesConceptuales.png used on input li
@@ -1304,47 +1307,49 @@ LaTeX Info: Redefining \% on input line 1631.
 
 ]
 Cap\'{\i }tulo 1.
-<chapter1/coreWiki.png, id=1547, 1038.88126pt x 359.3425pt>
+<chapter1/coreWiki.png, id=1543, 1038.88126pt x 359.3425pt>
 File: chapter1/coreWiki.png Graphic file (type png)
 <use chapter1/coreWiki.png>
-Package pdftex.def Info: chapter1/coreWiki.png used on input line 1637.
+Package pdftex.def Info: chapter1/coreWiki.png used on input line 1667.
 (pdftex.def)             Requested size: 1038.87872pt x 359.34161pt.
 
-Overfull \hbox (23.48917pt too wide) in paragraph at lines 1637--1638
+Overfull \hbox (23.48917pt too wide) in paragraph at lines 1667--1668
  [][] 
  []
 
-[37 <./chapter1/coreWiki.png>] <chapter1/Metabolismo-Pangenoma.png, id=1560, 60
-1.24625pt x 261.97874pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[37] <chapter1/Metabolismo-Pangenoma.png, id=1552, 601.24625pt x 261.97874pt>
 File: chapter1/Metabolismo-Pangenoma.png Graphic file (type png)
 <use chapter1/Metabolismo-Pangenoma.png>
 Package pdftex.def Info: chapter1/Metabolismo-Pangenoma.png used on input line 
-1702.
+1701.
 (pdftex.def)             Requested size: 601.24477pt x 261.9781pt.
 
-Overfull \hbox (17.31357pt too wide) in paragraph at lines 1702--1703
+Overfull \hbox (17.31357pt too wide) in paragraph at lines 1701--1702
  [][] 
  []
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 1703.
+(Font)              <10> on input line 1702.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 1703.
+(Font)              <7> on input line 1702.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 1703.
+(Font)              <5> on input line 1702.
 LaTeX Info: Redefining \. on input line 1721.
 LaTeX Info: Redefining \% on input line 1721.
-[38]
+[38 <./chapter1/coreWiki.png>]
 LaTeX Info: Redefining \. on input line 1721.
 LaTeX Info: Redefining \% on input line 1721.
 [39 <./chapter1/Metabolismo-Pangenoma.png>] <chapter1/CoreMarcadores.png, id=15
-75, 578.66776pt x 456.97658pt>
+64, 578.66776pt x 456.97658pt>
 File: chapter1/CoreMarcadores.png Graphic file (type png)
 <use chapter1/CoreMarcadores.png>
-Package pdftex.def Info: chapter1/CoreMarcadores.png used on input line 1745.
+Package pdftex.def Info: chapter1/CoreMarcadores.png used on input line 1744.
 (pdftex.def)             Requested size: 578.66634pt x 456.97545pt.
 
-Overfull \hbox (29.31483pt too wide) in paragraph at lines 1745--1746
+Overfull \hbox (29.31483pt too wide) in paragraph at lines 1744--1745
  [][] 
  []
 
@@ -1356,1205 +1361,1117 @@ LaTeX Info: Redefining \% on input line 1784.
 [40]
 LaTeX Info: Redefining \. on input line 1784.
 LaTeX Info: Redefining \% on input line 1784.
-[41 <./chapter1/CoreMarcadores.png>] <chapter1/Best-n-directional.png, id=1587,
- 691.58376pt x 210.7875pt>
+[41 <./chapter1/CoreMarcadores.png>]
+LaTeX Info: Redefining \. on input line 1838.
+LaTeX Info: Redefining \% on input line 1838.
+[42] <chapter1/Best-n-directional.png, id=1583, 691.58376pt x 210.7875pt>
 File: chapter1/Best-n-directional.png Graphic file (type png)
 <use chapter1/Best-n-directional.png>
-Package pdftex.def Info: chapter1/Best-n-directional.png used on input line 182
+Package pdftex.def Info: chapter1/Best-n-directional.png used on input line 187
 3.
 (pdftex.def)             Requested size: 691.58206pt x 210.78699pt.
-LaTeX Info: Redefining \. on input line 1841.
-LaTeX Info: Redefining \% on input line 1841.
-[42]
-LaTeX Info: Redefining \. on input line 1869.
-LaTeX Info: Redefining \% on input line 1869.
-[43 <./chapter1/Best-n-directional.png>]
-LaTeX Info: Redefining \. on input line 1934.
-LaTeX Info: Redefining \% on input line 1934.
-[44] <chapter1/Nostoc.png, id=1611, 1060.96375pt x 795.97375pt>
+LaTeX Info: Redefining \. on input line 1893.
+LaTeX Info: Redefining \% on input line 1893.
+[43]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 1936.
+LaTeX Info: Redefining \% on input line 1936.
+[44 <./chapter1/Best-n-directional.png>]
+LaTeX Info: Redefining \. on input line 2000.
+LaTeX Info: Redefining \% on input line 2000.
+[45] <chapter1/Nostoc.png, id=1608, 1060.96375pt x 795.97375pt>
 File: chapter1/Nostoc.png Graphic file (type png)
 <use chapter1/Nostoc.png>
-Package pdftex.def Info: chapter1/Nostoc.png used on input line 1963.
+Package pdftex.def Info: chapter1/Nostoc.png used on input line 2024.
 (pdftex.def)             Requested size: 1060.96115pt x 795.97182pt.
 
-Overfull \hbox (43.80928pt too wide) in paragraph at lines 1963--1964
+Overfull \hbox (43.80928pt too wide) in paragraph at lines 2024--2025
  [][] 
  []
 
-LaTeX Info: Redefining \. on input line 1999.
-LaTeX Info: Redefining \% on input line 1999.
-[45]
-LaTeX Info: Redefining \. on input line 1999.
-LaTeX Info: Redefining \% on input line 1999.
-[46 <./chapter1/Nostoc.png>] <chapter1/Marcadores-Clavibacter.png, id=1624, 963
+
+Underfull \vbox (badness 2253) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 2048.
+LaTeX Info: Redefining \% on input line 2048.
+[46]
+LaTeX Info: Redefining \. on input line 2048.
+LaTeX Info: Redefining \% on input line 2048.
+[47 <./chapter1/Nostoc.png>] <chapter1/Marcadores-Clavibacter.png, id=1618, 963
 .6pt x 542.025pt>
 File: chapter1/Marcadores-Clavibacter.png Graphic file (type png)
 <use chapter1/Marcadores-Clavibacter.png>
 Package pdftex.def Info: chapter1/Marcadores-Clavibacter.png used on input line
- 2002.
+ 2051.
 (pdftex.def)             Requested size: 963.59766pt x 542.02367pt.
 
-Overfull \hbox (48.17883pt too wide) in paragraph at lines 2002--2003
+Overfull \hbox (48.17883pt too wide) in paragraph at lines 2051--2052
  [][] 
  []
 
-LaTeX Info: Redefining \. on input line 2019.
-LaTeX Info: Redefining \% on input line 2019.
-[47 <./chapter1/Marcadores-Clavibacter.png (PNG copy)>] <chapter1/clv.png, id=1
-631, 758.20982pt x 363.35056pt>
+LaTeX Info: Redefining \. on input line 2068.
+LaTeX Info: Redefining \% on input line 2068.
+[48 <./chapter1/Marcadores-Clavibacter.png (PNG copy)>] <chapter1/clv.png, id=1
+625, 758.20982pt x 363.35056pt>
 File: chapter1/clv.png Graphic file (type png)
 <use chapter1/clv.png>
-Package pdftex.def Info: chapter1/clv.png used on input line 2022.
+Package pdftex.def Info: chapter1/clv.png used on input line 2071.
 (pdftex.def)             Requested size: 758.20798pt x 363.34967pt.
 
-Overfull \hbox (21.30942pt too wide) in paragraph at lines 2022--2023
+Overfull \hbox (21.30942pt too wide) in paragraph at lines 2071--2072
  [][] 
  []
 
-LaTeX Info: Redefining \. on input line 2061.
-LaTeX Info: Redefining \% on input line 2061.
-[48 <./chapter1/clv.png>] <chapter1/CoreGenomeMicrobioma.pdf, id=1640, 615.0979
+LaTeX Info: Redefining \. on input line 2108.
+LaTeX Info: Redefining \% on input line 2108.
+[49 <./chapter1/clv.png>] <chapter1/CoreGenomeMicrobioma.pdf, id=1634, 615.0979
 9pt x 228.69452pt>
 File: chapter1/CoreGenomeMicrobioma.pdf Graphic file (type pdf)
 <use chapter1/CoreGenomeMicrobioma.pdf>
 Package pdftex.def Info: chapter1/CoreGenomeMicrobioma.pdf used on input line 2
-078.
+123.
 (pdftex.def)             Requested size: 615.09648pt x 228.69394pt.
-LaTeX Info: Redefining \. on input line 2099.
-LaTeX Info: Redefining \% on input line 2099.
-[49 <./chapter1/CoreGenomeMicrobioma.pdf>] <chapter1/Clavisual.pdf, id=1683, 45
+LaTeX Info: Redefining \. on input line 2144.
+LaTeX Info: Redefining \% on input line 2144.
+[50 <./chapter1/CoreGenomeMicrobioma.pdf>] <chapter1/Clavisual.pdf, id=1677, 45
 5.2319pt x 232.36853pt>
 File: chapter1/Clavisual.pdf Graphic file (type pdf)
 <use chapter1/Clavisual.pdf>
-Package pdftex.def Info: chapter1/Clavisual.pdf used on input line 2142.
+Package pdftex.def Info: chapter1/Clavisual.pdf used on input line 2186.
 (pdftex.def)             Requested size: 455.23079pt x 232.36795pt.
-LaTeX Info: Redefining \. on input line 2165.
-LaTeX Info: Redefining \% on input line 2165.
-[50] <chapter1/bpga-pangenoma.png, id=1689, 986.68625pt x 379.4175pt>
+LaTeX Info: Redefining \. on input line 2213.
+LaTeX Info: Redefining \% on input line 2213.
+[51] <chapter1/bpga-pangenoma.png, id=1685, 986.68625pt x 379.4175pt>
 File: chapter1/bpga-pangenoma.png Graphic file (type png)
 <use chapter1/bpga-pangenoma.png>
-Package pdftex.def Info: chapter1/bpga-pangenoma.png used on input line 2168.
+Package pdftex.def Info: chapter1/bpga-pangenoma.png used on input line 2216.
 (pdftex.def)             Requested size: 986.68384pt x 379.41656pt.
 
-Overfull \hbox (59.72192pt too wide) in paragraph at lines 2168--2169
+Overfull \hbox (59.72192pt too wide) in paragraph at lines 2216--2217
  [][] 
  []
 
-<chapter1/Venn_chart.pdf, id=1691, 803.0pt x 638.385pt>
+<chapter1/Venn_chart.pdf, id=1686, 803.0pt x 638.385pt>
 File: chapter1/Venn_chart.pdf Graphic file (type pdf)
 <use chapter1/Venn_chart.pdf>
-Package pdftex.def Info: chapter1/Venn_chart.pdf used on input line 2180.
+Package pdftex.def Info: chapter1/Venn_chart.pdf used on input line 2223.
 (pdftex.def)             Requested size: 802.99805pt x 638.38342pt.
 
-Overfull \hbox (48.18373pt too wide) in paragraph at lines 2180--2181
+Overfull \hbox (48.18373pt too wide) in paragraph at lines 2223--2224
  [][] 
  []
 
-LaTeX Info: Redefining \. on input line 2195.
-LaTeX Info: Redefining \% on input line 2195.
-[51 <./chapter1/Clavisual.pdf>]
-LaTeX Info: Redefining \. on input line 2196.
-LaTeX Info: Redefining \% on input line 2196.
-[52 <./chapter1/bpga-pangenoma.png>]
-LaTeX Info: Redefining \. on input line 2196.
-LaTeX Info: Redefining \% on input line 2196.
-[53 <./chapter1/Venn_chart.pdf>] [54
+LaTeX Info: Redefining \. on input line 2239.
+LaTeX Info: Redefining \% on input line 2239.
+[52 <./chapter1/Clavisual.pdf>]
+LaTeX Info: Redefining \. on input line 2239.
+LaTeX Info: Redefining \% on input line 2239.
+[53 <./chapter1/bpga-pangenoma.png>]
+LaTeX Info: Redefining \. on input line 2239.
+LaTeX Info: Redefining \% on input line 2239.
+[54 <./chapter1/Venn_chart.pdf>]
+Cap\'{\i }tulo 2.
+[55
 
 ]
-Cap\'{\i }tulo 2.
-[55]
-LaTeX Info: Redefining \. on input line 2282.
-LaTeX Info: Redefining \% on input line 2282.
-[56] <chapter2/other.png, id=1786, 629.35126pt x 331.2375pt>
+LaTeX Info: Redefining \. on input line 2324.
+LaTeX Info: Redefining \% on input line 2324.
+[56] <chapter2/other.png, id=1776, 629.35126pt x 331.2375pt>
 File: chapter2/other.png Graphic file (type png)
 <use chapter2/other.png>
-Package pdftex.def Info: chapter2/other.png used on input line 2318.
+Package pdftex.def Info: chapter2/other.png used on input line 2359.
 (pdftex.def)             Requested size: 629.34972pt x 331.23668pt.
 
-Overfull \hbox (6.92288pt too wide) in paragraph at lines 2318--2319
+Overfull \hbox (6.92288pt too wide) in paragraph at lines 2359--2360
  [][] 
  []
 
-<chapter2/FigurasPaper/Figure1.pdf, id=1787, 642.4pt x 481.8pt>
+LaTeX Info: Redefining \. on input line 2379.
+LaTeX Info: Redefining \% on input line 2379.
+[57 <./chapter2/other.png>] <chapter2/FigurasPaper/Figure1.pdf, id=1787, 642.4p
+t x 481.8pt>
 File: chapter2/FigurasPaper/Figure1.pdf Graphic file (type pdf)
 <use chapter2/FigurasPaper/Figure1.pdf>
 Package pdftex.def Info: chapter2/FigurasPaper/Figure1.pdf used on input line 2
-340.
+382.
 (pdftex.def)             Requested size: 642.39844pt x 481.79881pt.
 
-Overfull \hbox (16.05695pt too wide) in paragraph at lines 2340--2341
+Overfull \hbox (16.05695pt too wide) in paragraph at lines 2382--2383
  [][] 
  []
 
-
-Underfull \vbox (badness 2401) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 2354.
-LaTeX Info: Redefining \% on input line 2354.
-[57]
-LaTeX Info: Redefining \. on input line 2390.
-LaTeX Info: Redefining \% on input line 2390.
-[58 <./chapter2/other.png>]
-LaTeX Info: Redefining \. on input line 2390.
-LaTeX Info: Redefining \% on input line 2390.
+LaTeX Info: Redefining \. on input line 2432.
+LaTeX Info: Redefining \% on input line 2432.
+[58]
+LaTeX Info: Redefining \. on input line 2432.
+LaTeX Info: Redefining \% on input line 2432.
 [59 <./chapter2/FigurasPaper/Figure1.pdf>]
-Underfull \vbox (badness 5189) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 2456.
-LaTeX Info: Redefining \% on input line 2456.
+LaTeX Info: Redefining \. on input line 2498.
+LaTeX Info: Redefining \% on input line 2498.
 [60]
-LaTeX Info: Redefining \. on input line 2499.
-LaTeX Info: Redefining \% on input line 2499.
+LaTeX Info: Redefining \. on input line 2541.
+LaTeX Info: Redefining \% on input line 2541.
 [61]
-LaTeX Info: Redefining \. on input line 2550.
-LaTeX Info: Redefining \% on input line 2550.
-[62] <chapter2/zenodo_1219709.png, id=2200, 149.41635pt x 16.00443pt>
+LaTeX Info: Redefining \. on input line 2596.
+LaTeX Info: Redefining \% on input line 2596.
+[62] <chapter2/zenodo_1219709.png, id=2190, 149.41635pt x 16.00443pt>
 File: chapter2/zenodo_1219709.png Graphic file (type png)
 <use chapter2/zenodo_1219709.png>
-Package pdftex.def Info: chapter2/zenodo_1219709.png used on input line 2578.
+Package pdftex.def Info: chapter2/zenodo_1219709.png used on input line 2620.
 (pdftex.def)             Requested size: 149.41597pt x 16.00436pt.
-LaTeX Info: Redefining \. on input line 2604.
-LaTeX Info: Redefining \% on input line 2604.
+File: chapter2/zenodo_1219709.png Graphic file (type png)
+<use chapter2/zenodo_1219709.png>
+Package pdftex.def Info: chapter2/zenodo_1219709.png used on input line 2682.
+(pdftex.def)             Requested size: 149.41597pt x 16.00436pt.
+LaTeX Info: Redefining \. on input line 2683.
+LaTeX Info: Redefining \% on input line 2683.
 [63 <./chapter2/zenodo_1219709.png>]
-File: chapter2/zenodo_1219709.png Graphic file (type png)
-<use chapter2/zenodo_1219709.png>
-Package pdftex.def Info: chapter2/zenodo_1219709.png used on input line 2640.
-(pdftex.def)             Requested size: 149.41597pt x 16.00436pt.
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 2674.
-LaTeX Info: Redefining \% on input line 2674.
+LaTeX Info: Redefining \. on input line 2716.
+LaTeX Info: Redefining \% on input line 2716.
 [64]
-LaTeX Info: Redefining \. on input line 2708.
-LaTeX Info: Redefining \% on input line 2708.
+LaTeX Info: Redefining \. on input line 2750.
+LaTeX Info: Redefining \% on input line 2750.
 
 Package Fancyhdr Warning: \headheight is too small (27.11652pt): 
  Make it at least 56.11652pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[65] <chapter2/FigurasPaper/Figure2.pdf, id=2229, 845.04686pt x 597.50786pt>
+[65] <chapter2/FigurasPaper/Figure2.pdf, id=2219, 845.04686pt x 597.50786pt>
 File: chapter2/FigurasPaper/Figure2.pdf Graphic file (type pdf)
 <use chapter2/FigurasPaper/Figure2.pdf>
 Package pdftex.def Info: chapter2/FigurasPaper/Figure2.pdf used on input line 2
-711.
+753.
 (pdftex.def)             Requested size: 845.0448pt x 597.5064pt.
 
-Overfull \hbox (73.41203pt too wide) in paragraph at lines 2711--2712
+Overfull \hbox (73.41203pt too wide) in paragraph at lines 2753--2754
  [][] 
  []
 
-LaTeX Info: Redefining \. on input line 2734.
-LaTeX Info: Redefining \% on input line 2734.
+LaTeX Info: Redefining \. on input line 2776.
+LaTeX Info: Redefining \% on input line 2776.
 [66 <./chapter2/FigurasPaper/Figure2.pdf>]
-LaTeX Info: Redefining \. on input line 2786.
-LaTeX Info: Redefining \% on input line 2786.
-[67] <chapter2/FigurasPaper/Figure3.pdf, id=10735, 845.04686pt x 597.50786pt>
+LaTeX Info: Redefining \. on input line 2828.
+LaTeX Info: Redefining \% on input line 2828.
+[67] <chapter2/FigurasPaper/Figure3.pdf, id=10725, 845.04686pt x 597.50786pt>
 File: chapter2/FigurasPaper/Figure3.pdf Graphic file (type pdf)
 <use chapter2/FigurasPaper/Figure3.pdf>
 Package pdftex.def Info: chapter2/FigurasPaper/Figure3.pdf used on input line 2
-789.
+831.
 (pdftex.def)             Requested size: 845.0448pt x 597.5064pt.
 
-Overfull \hbox (73.41203pt too wide) in paragraph at lines 2789--2790
+Overfull \hbox (73.41203pt too wide) in paragraph at lines 2831--2832
  [][] 
  []
 
-LaTeX Info: Redefining \. on input line 2853.
-LaTeX Info: Redefining \% on input line 2853.
+LaTeX Info: Redefining \. on input line 2895.
+LaTeX Info: Redefining \% on input line 2895.
 [68]
-LaTeX Info: Redefining \. on input line 2853.
-LaTeX Info: Redefining \% on input line 2853.
+LaTeX Info: Redefining \. on input line 2895.
+LaTeX Info: Redefining \% on input line 2895.
 [69 <./chapter2/FigurasPaper/Figure3.pdf>] <chapter2/FigurasPaper/Figure4.pdf, 
-id=11625, 597.50786pt x 845.04686pt>
+id=11615, 597.50786pt x 845.04686pt>
 File: chapter2/FigurasPaper/Figure4.pdf Graphic file (type pdf)
 <use chapter2/FigurasPaper/Figure4.pdf>
 Package pdftex.def Info: chapter2/FigurasPaper/Figure4.pdf used on input line 2
-856.
+898.
 (pdftex.def)             Requested size: 597.5064pt x 845.0448pt.
 
-Overfull \hbox (44.38693pt too wide) in paragraph at lines 2856--2857
+Overfull \hbox (44.38693pt too wide) in paragraph at lines 2898--2899
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 49.3584pt on input line 2859.
+LaTeX Warning: Float too large for page by 49.3584pt on input line 2901.
 
-<chapter2/FigurasPaper/Figure5.pdf, id=11628, 845.04686pt x 597.50786pt>
+<chapter2/FigurasPaper/Figure5.pdf, id=11618, 845.04686pt x 597.50786pt>
 File: chapter2/FigurasPaper/Figure5.pdf Graphic file (type pdf)
 <use chapter2/FigurasPaper/Figure5.pdf>
 Package pdftex.def Info: chapter2/FigurasPaper/Figure5.pdf used on input line 2
-878.
+920.
 (pdftex.def)             Requested size: 845.0448pt x 597.5064pt.
 
-Overfull \hbox (73.41203pt too wide) in paragraph at lines 2878--2879
+Overfull \hbox (73.41203pt too wide) in paragraph at lines 2920--2921
  [][] 
  []
 
-LaTeX Info: Redefining \. on input line 2933.
-LaTeX Info: Redefining \% on input line 2933.
+LaTeX Info: Redefining \. on input line 2975.
+LaTeX Info: Redefining \% on input line 2975.
 [70]
-LaTeX Info: Redefining \. on input line 2933.
-LaTeX Info: Redefining \% on input line 2933.
+LaTeX Info: Redefining \. on input line 2975.
+LaTeX Info: Redefining \% on input line 2975.
 [71 <./chapter2/FigurasPaper/Figure4.pdf>]
-LaTeX Info: Redefining \. on input line 2933.
-LaTeX Info: Redefining \% on input line 2933.
+LaTeX Info: Redefining \. on input line 2975.
+LaTeX Info: Redefining \% on input line 2975.
 [72 <./chapter2/FigurasPaper/Figure5.pdf>]
-LaTeX Info: Redefining \. on input line 2989.
-LaTeX Info: Redefining \% on input line 2989.
-[73] <chapter2/FigurasPaper/Figure6.pdf, id=11765, 597.50786pt x 845.04686pt>
+LaTeX Info: Redefining \. on input line 3031.
+LaTeX Info: Redefining \% on input line 3031.
+[73] <chapter2/FigurasPaper/Figure6.pdf, id=11755, 597.50786pt x 845.04686pt>
 File: chapter2/FigurasPaper/Figure6.pdf Graphic file (type pdf)
 <use chapter2/FigurasPaper/Figure6.pdf>
 Package pdftex.def Info: chapter2/FigurasPaper/Figure6.pdf used on input line 3
-008.
+050.
 (pdftex.def)             Requested size: 597.5064pt x 845.0448pt.
 
-Overfull \hbox (44.38693pt too wide) in paragraph at lines 3008--3009
+Overfull \hbox (44.38693pt too wide) in paragraph at lines 3050--3051
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 49.3584pt on input line 3011.
+LaTeX Warning: Float too large for page by 49.3584pt on input line 3053.
 
-LaTeX Info: Redefining \. on input line 3062.
-LaTeX Info: Redefining \% on input line 3062.
+LaTeX Info: Redefining \. on input line 3104.
+LaTeX Info: Redefining \% on input line 3104.
 [74]
-LaTeX Info: Redefining \. on input line 3062.
-LaTeX Info: Redefining \% on input line 3062.
+LaTeX Info: Redefining \. on input line 3104.
+LaTeX Info: Redefining \% on input line 3104.
 [75 <./chapter2/FigurasPaper/Figure6.pdf>] <chapter2/FigurasPaper/Figure7.pdf, 
-id=11993, 792.23143pt x 560.16362pt>
+id=11983, 792.23143pt x 560.16362pt>
 File: chapter2/FigurasPaper/Figure7.pdf Graphic file (type pdf)
 <use chapter2/FigurasPaper/Figure7.pdf>
 Package pdftex.def Info: chapter2/FigurasPaper/Figure7.pdf used on input line 3
-065.
+107.
 (pdftex.def)             Requested size: 792.22949pt x 560.16225pt.
 
-Overfull \hbox (14.5115pt too wide) in paragraph at lines 3065--3066
+Overfull \hbox (14.5115pt too wide) in paragraph at lines 3107--3108
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 7.106pt on input line 3068.
+LaTeX Warning: Float too large for page by 7.106pt on input line 3110.
 
-<EvoMining/supplementary/AroB.png, id=12001, 1136.245pt x 604.2575pt>
+<EvoMining/supplementary/AroB.png, id=11991, 1136.245pt x 604.2575pt>
 File: EvoMining/supplementary/AroB.png Graphic file (type png)
 <use EvoMining/supplementary/AroB.png>
-Package pdftex.def Info: EvoMining/supplementary/AroB.png used on input line 30
-97.
+Package pdftex.def Info: EvoMining/supplementary/AroB.png used on input line 31
+39.
 (pdftex.def)             Requested size: 1136.24222pt x 604.25603pt.
 
-Overfull \hbox (111.77141pt too wide) in paragraph at lines 3097--3098
+Overfull \hbox (111.77141pt too wide) in paragraph at lines 3139--3140
  [][] 
  []
 
-LaTeX Info: Redefining \. on input line 3135.
-LaTeX Info: Redefining \% on input line 3135.
+LaTeX Info: Redefining \. on input line 3177.
+LaTeX Info: Redefining \% on input line 3177.
 [76]
-LaTeX Info: Redefining \. on input line 3135.
-LaTeX Info: Redefining \% on input line 3135.
+LaTeX Info: Redefining \. on input line 3177.
+LaTeX Info: Redefining \% on input line 3177.
 [77 <./chapter2/FigurasPaper/Figure7.pdf>]
-LaTeX Info: Redefining \. on input line 3167.
-LaTeX Info: Redefining \% on input line 3167.
+LaTeX Info: Redefining \. on input line 3196.
+LaTeX Info: Redefining \% on input line 3196.
 [78 <./EvoMining/supplementary/AroB.png>]
-Overfull \hbox (3.7167pt too wide) in paragraph at lines 3252--3254
+Overfull \hbox (3.7167pt too wide) in paragraph at lines 3294--3296
 []|\T1/lmr/m/n/12 (-20) 1183_AGC09526|  
  []
 
 
-Overfull \hbox (4.2813pt too wide) in paragraph at lines 3261--3263
+Overfull \hbox (4.2813pt too wide) in paragraph at lines 3303--3305
 []|\T1/lmr/m/n/12 (-20) 1156_ADD83004|  
  []
 
 
-Overfull \hbox (3.63832pt too wide) in paragraph at lines 3270--3272
+Overfull \hbox (3.63832pt too wide) in paragraph at lines 3312--3314
 []|\T1/lmr/m/n/12 (-20) 1140_ACO31277|  
  []
 
 
-Overfull \hbox (3.63832pt too wide) in paragraph at lines 3279--3281
+Overfull \hbox (3.63832pt too wide) in paragraph at lines 3321--3323
 []|\T1/lmr/m/n/12 (-20) 1140_ACO31282|  
  []
 
 
-Overfull \hbox (0.9199pt too wide) in paragraph at lines 3288--3290
+Overfull \hbox (0.9199pt too wide) in paragraph at lines 3330--3332
 []|\T1/lmr/m/n/12 (-20) 715_ABW87795|  
  []
 
 
-Overfull \hbox (4.67714pt too wide) in paragraph at lines 3297--3299
+Overfull \hbox (4.67714pt too wide) in paragraph at lines 3339--3341
 []|\T1/lmr/m/n/12 (-20) 1205_KGO40485|  
  []
 
 
-Overfull \hbox (4.67714pt too wide) in paragraph at lines 3306--3308
+Overfull \hbox (4.67714pt too wide) in paragraph at lines 3348--3350
 []|\T1/lmr/m/n/12 (-20) 1205_KGO40482|  
  []
 
 
-Overfull \hbox (3.7167pt too wide) in paragraph at lines 3315--3317
+Overfull \hbox (3.7167pt too wide) in paragraph at lines 3357--3359
 []|\T1/lmr/m/n/12 (-20) 1183_AGC09525|  
  []
 
 
-Overfull \hbox (3.64034pt too wide) in paragraph at lines 3333--3335
+Overfull \hbox (3.64034pt too wide) in paragraph at lines 3375--3377
 []|\T1/lmr/m/n/12 (-20) 1070_CAN89617|  
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 3347.
-LaTeX Info: Redefining \% on input line 3347.
+LaTeX Info: Redefining \. on input line 3385.
+LaTeX Info: Redefining \% on input line 3385.
 [79]
-LaTeX Info: Redefining \. on input line 3418.
-LaTeX Info: Redefining \% on input line 3418.
+LaTeX Info: Redefining \. on input line 3439.
+LaTeX Info: Redefining \% on input line 3439.
 [80]
-LaTeX Info: Redefining \. on input line 3419.
-LaTeX Info: Redefining \% on input line 3419.
+LaTeX Info: Redefining \. on input line 3461.
+LaTeX Info: Redefining \% on input line 3461.
 [81] [82
 
 ]
 Cap\'{\i }tulo 3.
-<chapter3/Corason-pipe.pdf, id=12529, 768.22438pt x 475.16103pt>
+<chapter3/Corason-pipe.pdf, id=12519, 768.22438pt x 475.16103pt>
 File: chapter3/Corason-pipe.pdf Graphic file (type pdf)
 <use chapter3/Corason-pipe.pdf>
-Package pdftex.def Info: chapter3/Corason-pipe.pdf used on input line 3425.
+Package pdftex.def Info: chapter3/Corason-pipe.pdf used on input line 3467.
 (pdftex.def)             Requested size: 768.22252pt x 475.15987pt.
 
-Overfull \hbox (27.31819pt too wide) in paragraph at lines 3425--3426
+Overfull \hbox (27.31819pt too wide) in paragraph at lines 3467--3468
  [][] 
  []
 
-<chapter3/ISBATalk.png, id=12531, 963.6pt x 542.025pt>
+<chapter3/ISBATalk.png, id=12521, 963.6pt x 542.025pt>
 File: chapter3/ISBATalk.png Graphic file (type png)
 <use chapter3/ISBATalk.png>
-Package pdftex.def Info: chapter3/ISBATalk.png used on input line 3465.
+Package pdftex.def Info: chapter3/ISBATalk.png used on input line 3507.
 (pdftex.def)             Requested size: 963.59766pt x 542.02367pt.
 [83]
-LaTeX Info: Redefining \. on input line 3468.
-LaTeX Info: Redefining \% on input line 3468.
+LaTeX Info: Redefining \. on input line 3510.
+LaTeX Info: Redefining \% on input line 3510.
 [84 <./chapter3/Corason-pipe.pdf>]
-LaTeX Info: Redefining \. on input line 3509.
-LaTeX Info: Redefining \% on input line 3509.
+LaTeX Info: Redefining \. on input line 3551.
+LaTeX Info: Redefining \% on input line 3551.
 [85 <./chapter3/ISBATalk.png (PNG copy)>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 3557.
-LaTeX Info: Redefining \% on input line 3557.
+LaTeX Info: Redefining \. on input line 3599.
+LaTeX Info: Redefining \% on input line 3599.
 [86]
-LaTeX Info: Redefining \. on input line 3598.
-LaTeX Info: Redefining \% on input line 3598.
-[87] <chapter3/des.png, id=12570, 670.505pt x 609.27625pt>
+LaTeX Info: Redefining \. on input line 3640.
+LaTeX Info: Redefining \% on input line 3640.
+[87] <chapter3/des.png, id=12560, 670.505pt x 609.27625pt>
 File: chapter3/des.png Graphic file (type png)
 <use chapter3/des.png>
-Package pdftex.def Info: chapter3/des.png used on input line 3605.
+Package pdftex.def Info: chapter3/des.png used on input line 3647.
 (pdftex.def)             Requested size: 670.50337pt x 609.27475pt.
 
-Underfull \hbox (badness 1824) in paragraph at lines 3612--3612
+Underfull \hbox (badness 1824) in paragraph at lines 3654--3654
 []\T1/lmr/bx/n/17.28 Un BGC re-por-ta-do pue-de te-ner mu-chas
  []
 
 
-Underfull \hbox (badness 2707) in paragraph at lines 3612--3612
+Underfull \hbox (badness 2707) in paragraph at lines 3654--3654
 \T1/lmr/bx/n/17.28 va-rian-tes que con-for-man una fa-mi-lia de
  []
 
-LaTeX Info: Redefining \. on input line 3636.
-LaTeX Info: Redefining \% on input line 3636.
-[88 <./chapter3/des.png>] <chapter3/Coelicolor.pdf, id=12575, 1053.9375pt x 677
+LaTeX Info: Redefining \. on input line 3678.
+LaTeX Info: Redefining \% on input line 3678.
+[88 <./chapter3/des.png>] <chapter3/Coelicolor.pdf, id=12565, 1053.9375pt x 677
 .53125pt>
 File: chapter3/Coelicolor.pdf Graphic file (type pdf)
 <use chapter3/Coelicolor.pdf>
-Package pdftex.def Info: chapter3/Coelicolor.pdf used on input line 3653.
+Package pdftex.def Info: chapter3/Coelicolor.pdf used on input line 3695.
 (pdftex.def)             Requested size: 1053.93494pt x 677.52959pt.
 
 Underfull \vbox (badness 5036) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 3694.
-LaTeX Info: Redefining \% on input line 3694.
+LaTeX Info: Redefining \. on input line 3736.
+LaTeX Info: Redefining \% on input line 3736.
 [89]
-LaTeX Info: Redefining \. on input line 3694.
-LaTeX Info: Redefining \% on input line 3694.
-[90 <./chapter3/Coelicolor.pdf>] <chapter3/azoxy.png, id=12656, 1120.185pt x 34
+LaTeX Info: Redefining \. on input line 3736.
+LaTeX Info: Redefining \% on input line 3736.
+[90 <./chapter3/Coelicolor.pdf>] <chapter3/azoxy.png, id=12646, 1120.185pt x 34
 3.2825pt>
 File: chapter3/azoxy.png Graphic file (type png)
 <use chapter3/azoxy.png>
-Package pdftex.def Info: chapter3/azoxy.png used on input line 3697.
+Package pdftex.def Info: chapter3/azoxy.png used on input line 3739.
 (pdftex.def)             Requested size: 1120.18227pt x 343.28165pt.
 
-Overfull \hbox (14.44606pt too wide) in paragraph at lines 3697--3698
+Overfull \hbox (14.44606pt too wide) in paragraph at lines 3739--3740
  [][] 
  []
 
-LaTeX Info: Redefining \. on input line 3702.
-LaTeX Info: Redefining \% on input line 3702.
-[91 <./chapter3/azoxy.png>] <chapter3/PseudomonasTauD.pdf, id=12662, 597.50786p
+LaTeX Info: Redefining \. on input line 3744.
+LaTeX Info: Redefining \% on input line 3744.
+[91 <./chapter3/azoxy.png>] <chapter3/PseudomonasTauD.pdf, id=12652, 597.50786p
 t x 626.34pt>
 File: chapter3/PseudomonasTauD.pdf Graphic file (type pdf)
 <use chapter3/PseudomonasTauD.pdf>
-Package pdftex.def Info: chapter3/PseudomonasTauD.pdf used on input line 3715.
+Package pdftex.def Info: chapter3/PseudomonasTauD.pdf used on input line 3757.
 (pdftex.def)             Requested size: 597.5064pt x 626.33846pt.
 
-Overfull \hbox (104.13211pt too wide) in paragraph at lines 3715--3716
+Overfull \hbox (104.13211pt too wide) in paragraph at lines 3757--3758
  [][] 
  []
 
 
-Underfull \hbox (badness 3260) in paragraph at lines 3722--3722
+Underfull \hbox (badness 3260) in paragraph at lines 3764--3764
 []\T1/lmr/bx/n/17.28 CORASON se adap-tó a la he-rra-mien-ta
  []
 
-<chapter3/corason_fig1.png, id=12664, 1604.99625pt x 879.285pt>
+<chapter3/corason_fig1.png, id=12654, 1604.99625pt x 879.285pt>
 File: chapter3/corason_fig1.png Graphic file (type png)
 <use chapter3/corason_fig1.png>
-Package pdftex.def Info: chapter3/corason_fig1.png used on input line 3735.
+Package pdftex.def Info: chapter3/corason_fig1.png used on input line 3777.
 (pdftex.def)             Requested size: 1604.99234pt x 879.28287pt.
 
-Overfull \hbox (47.8826pt too wide) in paragraph at lines 3735--3736
+Overfull \hbox (47.8826pt too wide) in paragraph at lines 3777--3778
  [][] 
  []
 
-<chapter3/figura5.pdf, id=12666, 614.295pt x 794.97pt>
+<chapter3/figura5.pdf, id=12656, 614.295pt x 794.97pt>
 File: chapter3/figura5.pdf Graphic file (type pdf)
 <use chapter3/figura5.pdf>
-Package pdftex.def Info: chapter3/figura5.pdf used on input line 3761.
+Package pdftex.def Info: chapter3/figura5.pdf used on input line 3803.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 
-Overfull \hbox (57.81667pt too wide) in paragraph at lines 3761--3762
+Overfull \hbox (57.81667pt too wide) in paragraph at lines 3803--3804
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 9.29686pt on input line 3764.
+LaTeX Warning: Float too large for page by 9.29686pt on input line 3806.
 
-LaTeX Info: Redefining \. on input line 3779.
-LaTeX Info: Redefining \% on input line 3779.
+LaTeX Info: Redefining \. on input line 3821.
+LaTeX Info: Redefining \% on input line 3821.
 [92
 
 ]
-LaTeX Info: Redefining \. on input line 3779.
-LaTeX Info: Redefining \% on input line 3779.
+LaTeX Info: Redefining \. on input line 3821.
+LaTeX Info: Redefining \% on input line 3821.
 [93 <./chapter3/PseudomonasTauD.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 3804.
-LaTeX Info: Redefining \% on input line 3804.
+LaTeX Info: Redefining \. on input line 3846.
+LaTeX Info: Redefining \% on input line 3846.
 [94 <./chapter3/corason_fig1.png>]
-LaTeX Info: Redefining \. on input line 3804.
-LaTeX Info: Redefining \% on input line 3804.
+LaTeX Info: Redefining \. on input line 3846.
+LaTeX Info: Redefining \% on input line 3846.
 [95 <./chapter3/figura5.pdf>]
-LaTeX Info: Redefining \. on input line 3840.
-LaTeX Info: Redefining \% on input line 3840.
+LaTeX Info: Redefining \. on input line 3882.
+LaTeX Info: Redefining \% on input line 3882.
 [96]
-LaTeX Info: Redefining \. on input line 3891.
-LaTeX Info: Redefining \% on input line 3891.
+LaTeX Info: Redefining \. on input line 3933.
+LaTeX Info: Redefining \% on input line 3933.
 [97]
-LaTeX Info: Redefining \. on input line 3936.
-LaTeX Info: Redefining \% on input line 3936.
+LaTeX Info: Redefining \. on input line 3978.
+LaTeX Info: Redefining \% on input line 3978.
 [98]
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 3937.
+(hyperref)                than one, level fixed on input line 3979.
 
-LaTeX Info: Redefining \. on input line 3942.
-LaTeX Info: Redefining \% on input line 3942.
+LaTeX Info: Redefining \. on input line 3984.
+LaTeX Info: Redefining \% on input line 3984.
 [99] [100
 
 ]
 Cap\'{\i }tulo 4.
-<chapter4/isomerizacion.pdf, id=12743, 359.053pt x 67.9909pt>
+<chapter4/isomerizacion.pdf, id=12733, 359.053pt x 67.9909pt>
 File: chapter4/isomerizacion.pdf Graphic file (type pdf)
 <use chapter4/isomerizacion.pdf>
-Package pdftex.def Info: chapter4/isomerizacion.pdf used on input line 3946.
+Package pdftex.def Info: chapter4/isomerizacion.pdf used on input line 3988.
 (pdftex.def)             Requested size: 359.05211pt x 67.99072pt.
 [101 <./chapter4/isomerizacion.pdf>]
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 4005.
+(hyperref)                than one, level fixed on input line 4047.
 
-LaTeX Info: Redefining \. on input line 4034.
-LaTeX Info: Redefining \% on input line 4034.
-[102] <chapter4/PriAExpansiones.png, id=12769, 572.90855pt x 159.29408pt>
+LaTeX Info: Redefining \. on input line 4076.
+LaTeX Info: Redefining \% on input line 4076.
+[102] <chapter4/PriAExpansiones.png, id=12759, 572.90855pt x 159.29408pt>
 File: chapter4/PriAExpansiones.png Graphic file (type png)
 <use chapter4/PriAExpansiones.png>
-Package pdftex.def Info: chapter4/PriAExpansiones.png used on input line 4037.
+Package pdftex.def Info: chapter4/PriAExpansiones.png used on input line 4079.
 (pdftex.def)             Requested size: 572.90715pt x 159.29367pt.
 
-Overfull \hbox (24.70746pt too wide) in paragraph at lines 4037--4038
+Overfull \hbox (24.70746pt too wide) in paragraph at lines 4079--4080
  [][] 
  []
 
-<chapter4/PriAEvoMiningCopies.pdf, id=12772, 597.23125pt x 511.9125pt>
+<chapter4/PriAEvoMiningCopies.pdf, id=12762, 597.23125pt x 511.9125pt>
 File: chapter4/PriAEvoMiningCopies.pdf Graphic file (type pdf)
 <use chapter4/PriAEvoMiningCopies.pdf>
-Package pdftex.def Info: chapter4/PriAEvoMiningCopies.pdf used on input line 40
-69.
+Package pdftex.def Info: chapter4/PriAEvoMiningCopies.pdf used on input line 41
+11.
 (pdftex.def)             Requested size: 597.22978pt x 511.91125pt.
 
-Overfull \hbox (44.16565pt too wide) in paragraph at lines 4069--4070
+Overfull \hbox (44.16565pt too wide) in paragraph at lines 4111--4112
  [][] 
  []
 
-LaTeX Info: Redefining \. on input line 4095.
-LaTeX Info: Redefining \% on input line 4095.
+LaTeX Info: Redefining \. on input line 4137.
+LaTeX Info: Redefining \% on input line 4137.
 [103 <./chapter4/PriAExpansiones.png>]
-LaTeX Info: Redefining \. on input line 4095.
-LaTeX Info: Redefining \% on input line 4095.
+LaTeX Info: Redefining \. on input line 4137.
+LaTeX Info: Redefining \% on input line 4137.
 [104 <./chapter4/PriAEvoMiningCopies.pdf>]
-LaTeX Info: Redefining \. on input line 4168.
-LaTeX Info: Redefining \% on input line 4168.
-[105] <chapter4/PriAEvoMining.pdf, id=12853, 597.23125pt x 511.9125pt>
+LaTeX Info: Redefining \. on input line 4210.
+LaTeX Info: Redefining \% on input line 4210.
+[105] <chapter4/PriAEvoMining.pdf, id=12843, 597.23125pt x 511.9125pt>
 File: chapter4/PriAEvoMining.pdf Graphic file (type pdf)
 <use chapter4/PriAEvoMining.pdf>
-Package pdftex.def Info: chapter4/PriAEvoMining.pdf used on input line 4171.
+Package pdftex.def Info: chapter4/PriAEvoMining.pdf used on input line 4213.
 (pdftex.def)             Requested size: 597.22978pt x 511.91125pt.
 
-Overfull \hbox (44.16565pt too wide) in paragraph at lines 4171--4172
+Overfull \hbox (44.16565pt too wide) in paragraph at lines 4213--4214
  [][] 
  []
 
 
 Underfull \vbox (badness 8094) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 4184.
-LaTeX Info: Redefining \% on input line 4184.
+LaTeX Info: Redefining \. on input line 4226.
+LaTeX Info: Redefining \% on input line 4226.
 [106 <./chapter4/PriAEvoMining.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 4185--4187
+Underfull \hbox (badness 10000) in paragraph at lines 4227--4229
 
  []
 
-<chapter4/ada.png, id=12926, 786.94pt x 492.84125pt>
+<chapter4/ada.png, id=12916, 786.94pt x 492.84125pt>
 File: chapter4/ada.png Graphic file (type png)
 <use chapter4/ada.png>
-Package pdftex.def Info: chapter4/ada.png used on input line 4218.
+Package pdftex.def Info: chapter4/ada.png used on input line 4260.
 (pdftex.def)             Requested size: 786.93808pt x 492.84003pt.
 
-Overfull \hbox (38.54765pt too wide) in paragraph at lines 4218--4219
+Overfull \hbox (38.54765pt too wide) in paragraph at lines 4260--4261
  [][] 
  []
 
-LaTeX Info: Redefining \. on input line 4223.
-LaTeX Info: Redefining \% on input line 4223.
+LaTeX Info: Redefining \. on input line 4265.
+LaTeX Info: Redefining \% on input line 4265.
 [107]
-LaTeX Info: Redefining \. on input line 4223.
-LaTeX Info: Redefining \% on input line 4223.
+LaTeX Info: Redefining \. on input line 4265.
+LaTeX Info: Redefining \% on input line 4265.
 [108 <./chapter4/ada.png>]
-Overfull \hbox (4.42833pt too wide) in paragraph at lines 4227--4227
+Overfull \hbox (4.42833pt too wide) in paragraph at lines 4269--4269
 []\T1/lmr/bx/n/17.28 Análisis de con-tex-tos ge-nó-mi-cos de PriA/HisA
  []
 
-<chapter4/CORASON/ActinoCORASON.pdf, id=12937, 503.86314pt x 196.93323pt>
+<chapter4/CORASON/ActinoCORASON.pdf, id=12927, 503.86314pt x 196.93323pt>
 File: chapter4/CORASON/ActinoCORASON.pdf Graphic file (type pdf)
 <use chapter4/CORASON/ActinoCORASON.pdf>
 Package pdftex.def Info: chapter4/CORASON/ActinoCORASON.pdf used on input line 
-4234.
+4276.
 (pdftex.def)             Requested size: 503.86191pt x 196.93274pt.
 
-Overfull \hbox (19.85265pt too wide) in paragraph at lines 4234--4235
+Overfull \hbox (19.85265pt too wide) in paragraph at lines 4276--4277
  [][] 
  []
 
-<chapter4/CORASON/ArchaeaCORASON.pdf, id=12939, 510.11575pt x 344.03528pt>
+<chapter4/CORASON/ArchaeaCORASON.pdf, id=12929, 510.11575pt x 344.03528pt>
 File: chapter4/CORASON/ArchaeaCORASON.pdf Graphic file (type pdf)
 <use chapter4/CORASON/ArchaeaCORASON.pdf>
 Package pdftex.def Info: chapter4/CORASON/ArchaeaCORASON.pdf used on input line
- 4268.
+ 4310.
 (pdftex.def)             Requested size: 510.1145pt x 344.03444pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 4284.
-LaTeX Info: Redefining \% on input line 4284.
+LaTeX Info: Redefining \. on input line 4326.
+LaTeX Info: Redefining \% on input line 4326.
 [109
 
  <./chapter4/CORASON/ActinoCORASON.pdf>]
-LaTeX Info: Redefining \. on input line 4321.
-LaTeX Info: Redefining \% on input line 4321.
+LaTeX Info: Redefining \. on input line 4363.
+LaTeX Info: Redefining \% on input line 4363.
 [110 <./chapter4/CORASON/ArchaeaCORASON.pdf>] <chapter4/CORASON/saxitoxin.pdf, 
-id=13085, 722.7pt x 406.51875pt>
+id=13075, 722.7pt x 406.51875pt>
 File: chapter4/CORASON/saxitoxin.pdf Graphic file (type pdf)
 <use chapter4/CORASON/saxitoxin.pdf>
-Package pdftex.def Info: chapter4/CORASON/saxitoxin.pdf used on input line 4341
+Package pdftex.def Info: chapter4/CORASON/saxitoxin.pdf used on input line 4383
 .
 (pdftex.def)             Requested size: 722.69823pt x 406.51775pt.
 
-Overfull \hbox (72.26656pt too wide) in paragraph at lines 4341--4342
+Overfull \hbox (72.26656pt too wide) in paragraph at lines 4383--4384
  [][] 
  []
 
-LaTeX Info: Redefining \. on input line 4375.
-LaTeX Info: Redefining \% on input line 4375.
+LaTeX Info: Redefining \. on input line 4417.
+LaTeX Info: Redefining \% on input line 4417.
 [111]
-LaTeX Info: Redefining \. on input line 4397.
-LaTeX Info: Redefining \% on input line 4397.
-[112 <./chapter4/CORASON/saxitoxin.pdf>] <conclusion/Solocirculos.png, id=13126
+LaTeX Info: Redefining \. on input line 4439.
+LaTeX Info: Redefining \% on input line 4439.
+[112 <./chapter4/CORASON/saxitoxin.pdf>] <conclusion/Solocirculos.png, id=13116
 , 574.145pt x 504.88625pt>
 File: conclusion/Solocirculos.png Graphic file (type png)
 <use conclusion/Solocirculos.png>
-Package pdftex.def Info: conclusion/Solocirculos.png used on input line 4407.
+Package pdftex.def Info: conclusion/Solocirculos.png used on input line 4449.
 (pdftex.def)             Requested size: 574.1436pt x 504.885pt.
-LaTeX Info: Redefining \. on input line 4431.
-LaTeX Info: Redefining \% on input line 4431.
+LaTeX Info: Redefining \. on input line 4473.
+LaTeX Info: Redefining \% on input line 4473.
 [113 <./conclusion/Solocirculos.png>]
-<chapter4/LianetFiguras/SolocirculosPRA_PRO_RUTAS_10_1_r002.png, id=13132, 627.
+<chapter4/LianetFiguras/SolocirculosPRA_PRO_RUTAS_10_1_r002.png, id=13122, 627.
 34375pt x 702.625pt>
 File: chapter4/LianetFiguras/SolocirculosPRA_PRO_RUTAS_10_1_r002.png Graphic fi
 le (type png)
 <use chapter4/LianetFiguras/SolocirculosPRA_PRO_RUTAS_10_1_r002.png>
 Package pdftex.def Info: chapter4/LianetFiguras/SolocirculosPRA_PRO_RUTAS_10_1_
-r002.png used on input line 4434.
+r002.png used on input line 4476.
 (pdftex.def)             Requested size: 627.34221pt x 702.62328pt.
 
-Overfull \hbox (5.51762pt too wide) in paragraph at lines 4434--4435
+Overfull \hbox (5.51762pt too wide) in paragraph at lines 4476--4477
  [][] 
  []
 
-LaTeX Info: Redefining \. on input line 4439.
-LaTeX Info: Redefining \% on input line 4439.
+LaTeX Info: Redefining \. on input line 4481.
+LaTeX Info: Redefining \% on input line 4481.
 [114]
-LaTeX Info: Redefining \. on input line 4439.
-LaTeX Info: Redefining \% on input line 4439.
+LaTeX Info: Redefining \. on input line 4481.
+LaTeX Info: Redefining \% on input line 4481.
 [115 <./chapter4/LianetFiguras/SolocirculosPRA_PRO_RUTAS_10_1_r002.png>]
 
-LaTeX Warning: Command \r invalid in math mode on input line 4473.
+LaTeX Warning: Command \r invalid in math mode on input line 4515.
 
 
-LaTeX Warning: Command \r invalid in math mode on input line 4503.
+LaTeX Warning: Command \r invalid in math mode on input line 4545.
 
 
-LaTeX Warning: Command \r invalid in math mode on input line 4506.
+LaTeX Warning: Command \r invalid in math mode on input line 4548.
 
 
-LaTeX Warning: Command \r invalid in math mode on input line 4509.
+LaTeX Warning: Command \r invalid in math mode on input line 4551.
 
 
-LaTeX Warning: Command \r invalid in math mode on input line 4510.
+LaTeX Warning: Command \r invalid in math mode on input line 4552.
 
 
-LaTeX Warning: Command \r invalid in math mode on input line 4511.
+LaTeX Warning: Command \r invalid in math mode on input line 4553.
 
 
-LaTeX Warning: Command \r invalid in math mode on input line 4513.
+LaTeX Warning: Command \r invalid in math mode on input line 4555.
 
 
-LaTeX Warning: Command \r invalid in math mode on input line 4514.
+LaTeX Warning: Command \r invalid in math mode on input line 4556.
 
 
-LaTeX Warning: Command \r invalid in math mode on input line 4519.
+LaTeX Warning: Command \r invalid in math mode on input line 4561.
 
 
-LaTeX Warning: Command \r invalid in math mode on input line 4520.
+LaTeX Warning: Command \r invalid in math mode on input line 4562.
 
 
-LaTeX Warning: Command \r invalid in math mode on input line 4522.
+LaTeX Warning: Command \r invalid in math mode on input line 4564.
 
 
-LaTeX Warning: Command \r invalid in math mode on input line 4523.
+LaTeX Warning: Command \r invalid in math mode on input line 4565.
 
 
-LaTeX Warning: Command \r invalid in math mode on input line 4524.
+LaTeX Warning: Command \r invalid in math mode on input line 4566.
 
 
-LaTeX Warning: Command \r invalid in math mode on input line 4524.
+LaTeX Warning: Command \r invalid in math mode on input line 4566.
 
-LaTeX Info: Redefining \. on input line 4531.
-LaTeX Info: Redefining \% on input line 4531.
+LaTeX Info: Redefining \. on input line 4573.
+LaTeX Info: Redefining \% on input line 4573.
 [116
 
 ]
-<chapter4/Couplings/PriACouplingFoldings.png, id=13166, 795.97375pt x 681.54625
+<chapter4/Couplings/PriACouplingFoldings.png, id=13156, 795.97375pt x 681.54625
 pt>
 File: chapter4/Couplings/PriACouplingFoldings.png Graphic file (type png)
 <use chapter4/Couplings/PriACouplingFoldings.png>
 Package pdftex.def Info: chapter4/Couplings/PriACouplingFoldings.png used on in
-put line 4553.
+put line 4595.
 (pdftex.def)             Requested size: 795.97182pt x 681.54459pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 4559--4571
+Underfull \hbox (badness 10000) in paragraph at lines 4601--4613
 
  []
 
-LaTeX Info: Redefining \. on input line 4597.
-LaTeX Info: Redefining \% on input line 4597.
+LaTeX Info: Redefining \. on input line 4639.
+LaTeX Info: Redefining \% on input line 4639.
 [117]
-LaTeX Info: Redefining \. on input line 4597.
-LaTeX Info: Redefining \% on input line 4597.
+LaTeX Info: Redefining \. on input line 4639.
+LaTeX Info: Redefining \% on input line 4639.
 [118 <./chapter4/Couplings/PriACouplingFoldings.png (PNG copy)>]
-<chapter4/Couplings/HIS4_STRCO_1-200/align/couplings.pdf, id=13181, 502.65839pt
+<chapter4/Couplings/HIS4_STRCO_1-200/align/couplings.pdf, id=13171, 502.65839pt
  x 508.15913pt>
 File: chapter4/Couplings/HIS4_STRCO_1-200/align/couplings.pdf Graphic file (typ
 e pdf)
 <use chapter4/Couplings/HIS4_STRCO_1-200/align/couplings.pdf>
 Package pdftex.def Info: chapter4/Couplings/HIS4_STRCO_1-200/align/couplings.pd
-f used on input line 4617.
+f used on input line 4659.
 (pdftex.def)             Requested size: 502.65715pt x 508.1579pt.
-<chapter4/Couplings/alineamiento.pdf, id=13182, 546.05109pt x 562.02661pt>
+<chapter4/Couplings/alineamiento.pdf, id=13172, 546.05109pt x 562.02661pt>
 File: chapter4/Couplings/alineamiento.pdf Graphic file (type pdf)
 <use chapter4/Couplings/alineamiento.pdf>
 Package pdftex.def Info: chapter4/Couplings/alineamiento.pdf used on input line
- 4637.
+ 4679.
 (pdftex.def)             Requested size: 546.04974pt x 562.02524pt.
 
-Overfull \hbox (3.22147pt too wide) in paragraph at lines 4637--4638
+Overfull \hbox (3.22147pt too wide) in paragraph at lines 4679--4680
  [][] 
  []
 
-LaTeX Info: Redefining \. on input line 4642.
-LaTeX Info: Redefining \% on input line 4642.
+LaTeX Info: Redefining \. on input line 4684.
+LaTeX Info: Redefining \% on input line 4684.
 [119]
-LaTeX Info: Redefining \. on input line 4642.
-LaTeX Info: Redefining \% on input line 4642.
+LaTeX Info: Redefining \. on input line 4684.
+LaTeX Info: Redefining \% on input line 4684.
 [120 <./chapter4/Couplings/HIS4_STRCO_1-200/align/couplings.pdf>]
-LaTeX Info: Redefining \. on input line 4642.
-LaTeX Info: Redefining \% on input line 4642.
+LaTeX Info: Redefining \. on input line 4684.
+LaTeX Info: Redefining \% on input line 4684.
 [121 <./chapter4/Couplings/alineamiento.pdf>]
-Underfull \hbox (badness 1983) in paragraph at lines 4646--4646
+Underfull \hbox (badness 1983) in paragraph at lines 4688--4688
 \T1/lmr/bx/n/17.28 quí-mi-ca-men-te pa-re-ci-dos a PRA y PRO-
  []
 
-<chapter4/SustratosQuimicos.pdf, id=22313, 614.295pt x 794.97pt>
+<chapter4/SustratosQuimicos.pdf, id=22303, 614.295pt x 794.97pt>
 File: chapter4/SustratosQuimicos.pdf Graphic file (type pdf)
 <use chapter4/SustratosQuimicos.pdf>
-Package pdftex.def Info: chapter4/SustratosQuimicos.pdf used on input line 4672
+Package pdftex.def Info: chapter4/SustratosQuimicos.pdf used on input line 4714
 .
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 
-Overfull \hbox (57.81667pt too wide) in paragraph at lines 4672--4673
+Overfull \hbox (57.81667pt too wide) in paragraph at lines 4714--4715
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 9.29686pt on input line 4675.
+LaTeX Warning: Float too large for page by 9.29686pt on input line 4717.
 
-<chapter4/esquema_quimico-2-2.pdf, id=22314, 614.295pt x 794.97pt>
+<chapter4/esquema_quimico-2-2.pdf, id=22304, 614.295pt x 794.97pt>
 File: chapter4/esquema_quimico-2-2.pdf Graphic file (type pdf)
 <use chapter4/esquema_quimico-2-2.pdf>
-Package pdftex.def Info: chapter4/esquema_quimico-2-2.pdf used on input line 46
-79.
+Package pdftex.def Info: chapter4/esquema_quimico-2-2.pdf used on input line 47
+21.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 
-Overfull \hbox (57.81667pt too wide) in paragraph at lines 4679--4680
+Overfull \hbox (57.81667pt too wide) in paragraph at lines 4721--4722
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 9.29686pt on input line 4682.
+LaTeX Warning: Float too large for page by 9.29686pt on input line 4724.
 
-<chapter4/esquema_quimico-3-3.pdf, id=22315, 614.295pt x 794.97pt>
+<chapter4/esquema_quimico-3-3.pdf, id=22305, 614.295pt x 794.97pt>
 File: chapter4/esquema_quimico-3-3.pdf Graphic file (type pdf)
 <use chapter4/esquema_quimico-3-3.pdf>
-Package pdftex.def Info: chapter4/esquema_quimico-3-3.pdf used on input line 46
-86.
+Package pdftex.def Info: chapter4/esquema_quimico-3-3.pdf used on input line 47
+28.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 
-Overfull \hbox (57.81667pt too wide) in paragraph at lines 4686--4687
+Overfull \hbox (57.81667pt too wide) in paragraph at lines 4728--4729
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 9.29686pt on input line 4689.
+LaTeX Warning: Float too large for page by 9.29686pt on input line 4731.
 
-<chapter4/esquema_quimico-4-4.pdf, id=22316, 614.295pt x 794.97pt>
+<chapter4/esquema_quimico-4-4.pdf, id=22306, 614.295pt x 794.97pt>
 File: chapter4/esquema_quimico-4-4.pdf Graphic file (type pdf)
 <use chapter4/esquema_quimico-4-4.pdf>
-Package pdftex.def Info: chapter4/esquema_quimico-4-4.pdf used on input line 46
-93.
+Package pdftex.def Info: chapter4/esquema_quimico-4-4.pdf used on input line 47
+35.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 
-Overfull \hbox (57.81667pt too wide) in paragraph at lines 4693--4694
+Overfull \hbox (57.81667pt too wide) in paragraph at lines 4735--4736
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 9.29686pt on input line 4696.
+LaTeX Warning: Float too large for page by 9.29686pt on input line 4738.
 
-LaTeX Info: Redefining \. on input line 4698.
-LaTeX Info: Redefining \% on input line 4698.
+LaTeX Info: Redefining \. on input line 4740.
+LaTeX Info: Redefining \% on input line 4740.
 [122
 
 ]
-LaTeX Info: Redefining \. on input line 4698.
-LaTeX Info: Redefining \% on input line 4698.
+LaTeX Info: Redefining \. on input line 4740.
+LaTeX Info: Redefining \% on input line 4740.
 [123 <./chapter4/SustratosQuimicos.pdf>]
-LaTeX Info: Redefining \. on input line 4698.
-LaTeX Info: Redefining \% on input line 4698.
+LaTeX Info: Redefining \. on input line 4740.
+LaTeX Info: Redefining \% on input line 4740.
 [124 <./chapter4/esquema_quimico-2-2.pdf>]
-LaTeX Info: Redefining \. on input line 4698.
-LaTeX Info: Redefining \% on input line 4698.
+LaTeX Info: Redefining \. on input line 4740.
+LaTeX Info: Redefining \% on input line 4740.
 [125 <./chapter4/esquema_quimico-3-3.pdf>]
-LaTeX Info: Redefining \. on input line 4698.
-LaTeX Info: Redefining \% on input line 4698.
+LaTeX Info: Redefining \. on input line 4740.
+LaTeX Info: Redefining \% on input line 4740.
 [126 <./chapter4/esquema_quimico-4-4.pdf>]
-LaTeX Info: Redefining \. on input line 4788.
-LaTeX Info: Redefining \% on input line 4788.
+LaTeX Info: Redefining \. on input line 4830.
+LaTeX Info: Redefining \% on input line 4830.
 [127
 
 ]
 
-LaTeX Warning: Command \r invalid in math mode on input line 4815.
+LaTeX Warning: Command \r invalid in math mode on input line 4857.
 
 
-LaTeX Warning: Command \r invalid in math mode on input line 4819.
+LaTeX Warning: Command \r invalid in math mode on input line 4861.
 
-LaTeX Info: Redefining \. on input line 4846.
-LaTeX Info: Redefining \% on input line 4846.
+LaTeX Info: Redefining \. on input line 4888.
+LaTeX Info: Redefining \% on input line 4888.
 [128]
-LaTeX Info: Redefining \. on input line 4896.
-LaTeX Info: Redefining \% on input line 4896.
-[129] <chapter4/Figura1_4.pdf, id=22507, 597.50786pt x 845.04686pt>
+LaTeX Info: Redefining \. on input line 4938.
+LaTeX Info: Redefining \% on input line 4938.
+[129] <chapter4/Figura1_4.pdf, id=22497, 597.50786pt x 845.04686pt>
 File: chapter4/Figura1_4.pdf Graphic file (type pdf)
 <use chapter4/Figura1_4.pdf>
-Package pdftex.def Info: chapter4/Figura1_4.pdf used on input line 4899.
+Package pdftex.def Info: chapter4/Figura1_4.pdf used on input line 4941.
 (pdftex.def)             Requested size: 597.5064pt x 845.0448pt.
-LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <12> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 4910.
-
-<tesis_files/figure-latex/substrateBox-1.pdf, id=22508, 459.7175pt x 313.17pt>
-File: tesis_files/figure-latex/substrateBox-1.pdf Graphic file (type pdf)
-<use tesis_files/figure-latex/substrateBox-1.pdf>
-Package pdftex.def Info: tesis_files/figure-latex/substrateBox-1.pdf used on in
-put line 4918.
-(pdftex.def)             Requested size: 459.71637pt x 313.16922pt.
-
-Overfull \hbox (26.09637pt too wide) in paragraph at lines 4918--4918
- [] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 4918.
-LaTeX Info: Redefining \% on input line 4918.
+LaTeX Info: Redefining \. on input line 4946.
+LaTeX Info: Redefining \% on input line 4946.
 [130]
-LaTeX Info: Redefining \. on input line 4918.
-LaTeX Info: Redefining \% on input line 4918.
-[131 <./chapter4/Figura1_4.pdf>]
-LaTeX Info: Redefining \. on input line 4920.
-LaTeX Info: Redefining \% on input line 4920.
-[132 <./tesis_files/figure-latex/substrateBox-1.pdf>]
-
-LaTeX Warning: Command \texttimes invalid in math mode on input line 4959.
-
-
-LaTeX Warning: Command \texttimes invalid in math mode on input line 4959.
-
-LaTeX Info: Redefining \. on input line 4964.
-LaTeX Info: Redefining \% on input line 4964.
-[133
-
-]
-LaTeX Info: Redefining \. on input line 5137.
-LaTeX Info: Redefining \% on input line 5137.
-[134
-
-]
-LaTeX Info: Redefining \. on input line 5137.
-LaTeX Info: Redefining \% on input line 5137.
-[135] <chapter4/Geles/PriAAbril30.png, id=22569, 600.2425pt x 442.65375pt>
+LaTeX Info: Redefining \. on input line 4946.
+LaTeX Info: Redefining \% on input line 4946.
+[131 <./chapter4/Figura1_4.pdf>] <chapter4/Geles/PriAAbril30.png, id=22530, 600
+.2425pt x 442.65375pt>
 File: chapter4/Geles/PriAAbril30.png Graphic file (type png)
 <use chapter4/Geles/PriAAbril30.png>
-Package pdftex.def Info: chapter4/Geles/PriAAbril30.png used on input line 5161
+Package pdftex.def Info: chapter4/Geles/PriAAbril30.png used on input line 4977
 .
 (pdftex.def)             Requested size: 600.24103pt x 442.65265pt.
+LaTeX Info: Redefining \. on input line 5006.
+LaTeX Info: Redefining \% on input line 5006.
+[132
 
-Underfull \vbox (badness 3635) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 5179.
-LaTeX Info: Redefining \% on input line 5179.
-[136
-
- <./chapter4/Geles/PriAAbril30.png>] <chapter4/MutantControl.png, id=22574, 391
+ <./chapter4/Geles/PriAAbril30.png>] <chapter4/MutantControl.png, id=22536, 391
 .4625pt x 234.8775pt>
 File: chapter4/MutantControl.png Graphic file (type png)
 <use chapter4/MutantControl.png>
-Package pdftex.def Info: chapter4/MutantControl.png used on input line 5182.
+Package pdftex.def Info: chapter4/MutantControl.png used on input line 5009.
 (pdftex.def)             Requested size: 391.46153pt x 234.87692pt.
-<chapter4/GTPCinetica.pdf, id=22575, 732.18042pt x 342.12921pt>
-File: chapter4/GTPCinetica.pdf Graphic file (type pdf)
-<use chapter4/GTPCinetica.pdf>
-Package pdftex.def Info: chapter4/GTPCinetica.pdf used on input line 5189.
-(pdftex.def)             Requested size: 732.17862pt x 342.12837pt.
+LaTeX Info: Redefining \. on input line 5032.
+LaTeX Info: Redefining \% on input line 5032.
+[133 <./chapter4/MutantControl.png>] <chapter4/GTPCinetica.png, id=22542, 732.3
+2767pt x 342.21971pt>
+File: chapter4/GTPCinetica.png Graphic file (type png)
+<use chapter4/GTPCinetica.png>
+Package pdftex.def Info: chapter4/GTPCinetica.png used on input line 5035.
+(pdftex.def)             Requested size: 732.32588pt x 342.21887pt.
 
-Overfull \hbox (5.69164pt too wide) in paragraph at lines 5189--5190
+Overfull \hbox (5.78pt too wide) in paragraph at lines 5035--5036
  [][] 
  []
 
-LaTeX Info: Redefining \. on input line 5194.
-LaTeX Info: Redefining \% on input line 5194.
-[137 <./chapter4/MutantControl.png> <./chapter4/GTPCinetica.pdf>]
-LaTeX Info: Redefining \. on input line 5206.
-LaTeX Info: Redefining \% on input line 5206.
-[138
-
-]
-<tesis_files/figure-latex/Cinetics-1.pdf, id=59105, 446.66875pt x 251.94125pt>
+<chapter4/GTP.png, id=22544, 722.7pt x 404.51125pt>
+File: chapter4/GTP.png Graphic file (type png)
+<use chapter4/GTP.png>
+Package pdftex.def Info: chapter4/GTP.png used on input line 5054.
+(pdftex.def)             Requested size: 722.69823pt x 404.51025pt.
+LaTeX Info: Redefining \. on input line 5059.
+LaTeX Info: Redefining \% on input line 5059.
+[134 <./chapter4/GTPCinetica.png>]
+LaTeX Info: Redefining \. on input line 5059.
+LaTeX Info: Redefining \% on input line 5059.
+[135 <./chapter4/GTP.png>]
+<tesis_files/figure-latex/Cinetics-1.pdf, id=22557, 446.66875pt x 251.94125pt>
 File: tesis_files/figure-latex/Cinetics-1.pdf Graphic file (type pdf)
 <use tesis_files/figure-latex/Cinetics-1.pdf>
 Package pdftex.def Info: tesis_files/figure-latex/Cinetics-1.pdf used on input 
-line 5234.
+line 5090.
 (pdftex.def)             Requested size: 446.66765pt x 251.94063pt.
 
-Overfull \hbox (13.04765pt too wide) in paragraph at lines 5234--5234
- [] 
- []
-
-<tesis_files/figure-latex/Cinetics-2.pdf, id=59106, 463.7325pt x 315.1775pt>
-File: tesis_files/figure-latex/Cinetics-2.pdf Graphic file (type pdf)
-<use tesis_files/figure-latex/Cinetics-2.pdf>
-Package pdftex.def Info: tesis_files/figure-latex/Cinetics-2.pdf used on input 
-line 5236.
-(pdftex.def)             Requested size: 463.73135pt x 315.17673pt.
-
-Overfull \hbox (30.11136pt too wide) in paragraph at lines 5236--5236
- [] 
- []
-
-LaTeX Info: Redefining \. on input line 5236.
-LaTeX Info: Redefining \% on input line 5236.
-[139
-
- <./tesis_files/figure-latex/Cinetics-1.pdf>] <tesis_files/figure-latex/Cinetic
-s-3.pdf, id=59118, 459.7175pt x 305.14pt>
-File: tesis_files/figure-latex/Cinetics-3.pdf Graphic file (type pdf)
-<use tesis_files/figure-latex/Cinetics-3.pdf>
-Package pdftex.def Info: tesis_files/figure-latex/Cinetics-3.pdf used on input 
-line 5238.
-(pdftex.def)             Requested size: 459.71637pt x 305.13924pt.
-
-Overfull \hbox (26.09637pt too wide) in paragraph at lines 5238--5238
+Overfull \hbox (13.04765pt too wide) in paragraph at lines 5090--5090
  [] 
  []
 
 
-Underfull \vbox (badness 4981) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 5243.
-LaTeX Info: Redefining \% on input line 5243.
-[140 <./tesis_files/figure-latex/Cinetics-2.pdf> <./tesis_files/figure-latex/Ci
-netics-3.pdf>]
-<tesis_files/figure-latex/Cinetics-4.pdf, id=59138, 446.66875pt x 251.94125pt>
-File: tesis_files/figure-latex/Cinetics-4.pdf Graphic file (type pdf)
-<use tesis_files/figure-latex/Cinetics-4.pdf>
-Package pdftex.def Info: tesis_files/figure-latex/Cinetics-4.pdf used on input 
-line 5258.
+<tesis_files/figure-latex/CineticsPRA-1.pdf, id=22558, 446.66875pt x 251.94125p
+t>
+File: tesis_files/figure-latex/CineticsPRA-1.pdf Graphic file (type pdf)
+<use tesis_files/figure-latex/CineticsPRA-1.pdf>
+Package pdftex.def Info: tesis_files/figure-latex/CineticsPRA-1.pdf used on inp
+ut line 5092.
 (pdftex.def)             Requested size: 446.66765pt x 251.94063pt.
 
-Overfull \hbox (13.04765pt too wide) in paragraph at lines 5258--5258
- [] 
- []
-
-<tesis_files/figure-latex/Cinetics-5.pdf, id=59139, 464.73625pt x 315.1775pt>
-File: tesis_files/figure-latex/Cinetics-5.pdf Graphic file (type pdf)
-<use tesis_files/figure-latex/Cinetics-5.pdf>
-Package pdftex.def Info: tesis_files/figure-latex/Cinetics-5.pdf used on input 
-line 5260.
-(pdftex.def)             Requested size: 464.7351pt x 315.17673pt.
-
-Overfull \hbox (31.11511pt too wide) in paragraph at lines 5260--5260
+Overfull \hbox (13.04765pt too wide) in paragraph at lines 5092--5092
  [] 
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 3557) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 5260.
-LaTeX Info: Redefining \% on input line 5260.
-[141 <./tesis_files/figure-latex/Cinetics-4.pdf>] <tesis_files/figure-latex/Cin
-etics-6.pdf, id=59152, 459.7175pt x 305.14pt>
-File: tesis_files/figure-latex/Cinetics-6.pdf Graphic file (type pdf)
-<use tesis_files/figure-latex/Cinetics-6.pdf>
-Package pdftex.def Info: tesis_files/figure-latex/Cinetics-6.pdf used on input 
-line 5262.
-(pdftex.def)             Requested size: 459.71637pt x 305.13924pt.
+LaTeX Info: Redefining \. on input line 5092.
+LaTeX Info: Redefining \% on input line 5092.
+[136
 
-Overfull \hbox (26.09637pt too wide) in paragraph at lines 5262--5262
- [] 
- []
-
-
-Underfull \vbox (badness 4981) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 5268.
-LaTeX Info: Redefining \% on input line 5268.
-[142 <./tesis_files/figure-latex/Cinetics-5.pdf> <./tesis_files/figure-latex/Ci
-netics-6.pdf>] <tesis_files/figure-latex/slopes-1.pdf, id=59172, 440.64626pt x 
-266.9975pt>
-File: tesis_files/figure-latex/slopes-1.pdf Graphic file (type pdf)
-<use tesis_files/figure-latex/slopes-1.pdf>
-Package pdftex.def Info: tesis_files/figure-latex/slopes-1.pdf used on input li
-ne 5270.
-(pdftex.def)             Requested size: 440.64517pt x 266.99683pt.
-
-Overfull \hbox (7.02518pt too wide) in paragraph at lines 5270--5270
- [] 
- []
-
-LaTeX Info: Redefining \. on input line 5293.
-LaTeX Info: Redefining \% on input line 5293.
-[143 <./tesis_files/figure-latex/slopes-1.pdf>] [144
+ <./tesis_files/figure-latex/Cinetics-1.pdf>]
+LaTeX Info: Redefining \. on input line 5094.
+LaTeX Info: Redefining \% on input line 5094.
+[137 <./tesis_files/figure-latex/CineticsPRA-1.pdf>] [138
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{section.4.1}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.5300   BPGA}
+l.5101   BPGA}
               \label{protocolos-para-usar-orthocore-myrast-fastortho-clavige...
-[145]pdfTeX warning (ext4): destination with the same identifier (name{section.
+[139]pdfTeX warning (ext4): destination with the same identifier (name{section.
 4.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.5436   \section{Orthocore}
+l.5237   \section{Orthocore}
                             \label{orthocore}
-LaTeX Info: Redefining \. on input line 5446.
-LaTeX Info: Redefining \% on input line 5446.
-[146]
+LaTeX Info: Redefining \. on input line 5247.
+LaTeX Info: Redefining \% on input line 5247.
+[140]
 Cap\'{\i }tulo 5.
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 5469.
+(hyperref)                than one, level fixed on input line 5270.
 
-[147
+[141
 
-] [148
+] [142
 
 ]
 Ap\'{e}ndice A.
 
 Package hyperref Warning: Difference (3) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 5485.
+(hyperref)                than one, level fixed on input line 5286.
 
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <12> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 5294.
 
-Package hyperref Warning: Suppressing empty link on input line 5505.
+Package hyperref Warning: Suppressing empty link on input line 5306.
 
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 5505.
+(hyperref)                than one, level fixed on input line 5306.
 
-[149]
-LaTeX Info: Redefining \. on input line 5529.
-LaTeX Info: Redefining \% on input line 5529.
-[150]
+[143]
+LaTeX Info: Redefining \. on input line 5330.
+LaTeX Info: Redefining \% on input line 5330.
+[144]
 Ap\'{e}ndice B.
 
-Underfull \hbox (badness 10000) in paragraph at lines 5548--5551
+Underfull \hbox (badness 10000) in paragraph at lines 5349--5352
 \T1/lmtt/m/n/12 sudo docker exec -i -t romantic_brahmagupta /bin/bash docker ex
 ec -it
  []
 
-[151
+[145
 
 ]
-Overfull \hbox (54.20525pt too wide) in paragraph at lines 5567--5569
+Overfull \hbox (54.20525pt too wide) in paragraph at lines 5368--5370
 \T1/lmtt/m/n/12 docker run -i -t -v /home/nelly/GIT/EvoMining/:/var/www/html/Ev
 oMining/exchange
  []
 
 
-Overfull \hbox (295.02336pt too wide) in paragraph at lines 5573--5576
+Overfull \hbox (295.02336pt too wide) in paragraph at lines 5374--5377
 \T1/lmtt/m/n/12 http://10.10.100.234/EvoMining/cgi-bin/color_tree.pl?9&&/var/ww
 w/html/EvoMining/exchange/CyanosBBH_MiBIG_DB.faa_CYANOS
  []
 
-LaTeX Font Info:    Try loading font information for TS1+lmtt on input line 557
-8.
+LaTeX Font Info:    Try loading font information for TS1+lmtt on input line 537
+9.
 (/usr/share/texmf/tex/latex/lm/ts1lmtt.fd
 File: ts1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Overfull \hbox (0.63019pt too wide) in paragraph at lines 5577--5581
+Overfull \hbox (0.63019pt too wide) in paragraph at lines 5378--5382
 \T1/lmtt/m/n/12 perl -MList::Util -e\TS1/lmtt/m/n/12 '\T1/lmtt/m/n/12 print $_ 
 . " => " . $INC{$_} . "\n" for keys$ $%INC\TS1/lmtt/m/n/12 '
  []
 
-LaTeX Info: Redefining \. on input line 5611.
-LaTeX Info: Redefining \% on input line 5611.
-[152]
-LaTeX Info: Redefining \. on input line 5616.
-LaTeX Info: Redefining \% on input line 5616.
-[153] [154
+LaTeX Info: Redefining \. on input line 5412.
+LaTeX Info: Redefining \% on input line 5412.
+[146]
+LaTeX Info: Redefining \. on input line 5417.
+LaTeX Info: Redefining \% on input line 5417.
+[147] [148
 
 ]
 Ap\'{e}ndice C.
+
+LaTeX Warning: Command \texttimes invalid in math mode on input line 5454.
+
+
+LaTeX Warning: Command \texttimes invalid in math mode on input line 5454.
+
+[149]
+LaTeX Info: Redefining \. on input line 5496.
+LaTeX Info: Redefining \% on input line 5496.
+[150
+
+] [151] [152
+
+
+
+]
+Ap\'{e}ndice D.
+[153]
+Underfull \vbox (badness 6157) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 5735.
+LaTeX Info: Redefining \% on input line 5735.
+[154]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 5787.
+LaTeX Info: Redefining \% on input line 5787.
 [155]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 5711.
-LaTeX Info: Redefining \% on input line 5711.
+LaTeX Info: Redefining \. on input line 5839.
+LaTeX Info: Redefining \% on input line 5839.
 [156]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 5763.
-LaTeX Info: Redefining \% on input line 5763.
-[157]
-LaTeX Info: Redefining \. on input line 5815.
-LaTeX Info: Redefining \% on input line 5815.
-[158]
-<tesis_files/figure-latex/BSA_Bradford-1.pdf, id=59267, 437.635pt x 253.94875pt
+<tesis_files/figure-latex/BSA_Bradford-1.pdf, id=22684, 437.635pt x 253.94875pt
 >
 File: tesis_files/figure-latex/BSA_Bradford-1.pdf Graphic file (type pdf)
 <use tesis_files/figure-latex/BSA_Bradford-1.pdf>
 Package pdftex.def Info: tesis_files/figure-latex/BSA_Bradford-1.pdf used on in
-put line 5834.
+put line 5858.
 (pdftex.def)             Requested size: 437.63393pt x 253.94812pt.
 
-Overfull \hbox (4.01393pt too wide) in paragraph at lines 5834--5834
+Overfull \hbox (4.01393pt too wide) in paragraph at lines 5858--5858
  [] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 5841.
-LaTeX Info: Redefining \% on input line 5841.
-[159 <./tesis_files/figure-latex/BSA_Bradford-1.pdf>]
-Overfull \hbox (181.96454pt too wide) in paragraph at lines 5881--5898
+LaTeX Info: Redefining \. on input line 5865.
+LaTeX Info: Redefining \% on input line 5865.
+[157 <./tesis_files/figure-latex/BSA_Bradford-1.pdf>]
+Overfull \hbox (181.96454pt too wide) in paragraph at lines 5905--5922
 [][] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 5899.
-LaTeX Info: Redefining \% on input line 5899.
-[160]
-Overfull \hbox (143.27563pt too wide) in paragraph at lines 5905--5920
+LaTeX Info: Redefining \. on input line 5923.
+LaTeX Info: Redefining \% on input line 5923.
+[158]
+Overfull \hbox (143.27563pt too wide) in paragraph at lines 5929--5944
 [][] 
  []
 
-LaTeX Info: Redefining \. on input line 5972.
-LaTeX Info: Redefining \% on input line 5972.
-[161]
-LaTeX Info: Redefining \. on input line 5988.
-LaTeX Info: Redefining \% on input line 5988.
-[162]
-Underfull \hbox (badness 1810) in paragraph at lines 6011--6015
+LaTeX Info: Redefining \. on input line 5996.
+LaTeX Info: Redefining \% on input line 5996.
+[159]
+LaTeX Info: Redefining \. on input line 6012.
+LaTeX Info: Redefining \% on input line 6012.
+[160]
+Underfull \hbox (badness 1810) in paragraph at lines 6035--6039
  []\T1/lmr/m/n/12 (+20) 3. Hult K, Ber-glund P. Enzy-me pro-mis-cuity: Me-cha-n
 ism and ap-pli-ca-tions.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6011--6015
+Underfull \hbox (badness 10000) in paragraph at lines 6035--6039
  \T1/lmr/m/n/12 (+20) Avai-la-ble from: []$\T1/lmtt/m/n/12 https : / / www . sc
 iencedirect . com / science / article / pii /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6044--6049
+Underfull \hbox (badness 10000) in paragraph at lines 6068--6073
  \T1/lmr/m/n/12 (+20) Avai-la-ble from: []$\T1/lmtt/m/n/12 https : / / www . sc
 iencedirect . com / science / article / pii /
  []
 
-[163
+[161
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 6051--6055
+Underfull \hbox (badness 10000) in paragraph at lines 6075--6079
  \T1/lmr/m/n/12 (+20) Avai-la-ble from: []$\T1/lmtt/m/n/12 https : / / www . sc
 iencedirect . com / science / article / pii /
  []
 
 
-Underfull \hbox (badness 5288) in paragraph at lines 6092--6096
+Underfull \hbox (badness 5288) in paragraph at lines 6116--6120
  \T1/lmr/m/n/12 (+20) Avai-la-ble from: []$\T1/lmtt/m/n/12 http : / / link . sp
 ringer . com / article / 10 . 1007 / s00792 -[] 012 -[]
  []
@@ -2562,16 +2479,16 @@ ringer . com / article / 10 . 1007 / s00792 -[] 012 -[]
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 6115.
-LaTeX Info: Redefining \% on input line 6115.
-[164]
-Underfull \hbox (badness 1867) in paragraph at lines 6170--6175
+LaTeX Info: Redefining \. on input line 6139.
+LaTeX Info: Redefining \% on input line 6139.
+[162]
+Underfull \hbox (badness 1867) in paragraph at lines 6194--6199
  []\T1/lmr/m/n/12 (+20) 27. Pa-trick WM, Quandt EM, Swar-tz-lan-der DB, Matsu-m
 u-ra I. Mul-ti-copy
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6170--6175
+Underfull \hbox (badness 10000) in paragraph at lines 6194--6199
  []$\T1/lmtt/m/n/12 https : / / academic . oup . com / mbe / article / 24 / 12 
 / 2716 / 978039 / Multicopy -[]
  []
@@ -2579,14 +2496,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 6170--6175
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[165]
-Underfull \hbox (badness 1748) in paragraph at lines 6190--6196
+[163]
+Underfull \hbox (badness 1748) in paragraph at lines 6214--6220
  \T1/lmr/m/n/12 (+20) Im-pli-ca-tions for Na-tu-ral and Di-rec-ted Evo-lu-tion.
  Mo-le-cu-lar Bio-logy and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6190--6196
+Underfull \hbox (badness 10000) in paragraph at lines 6214--6220
  []$\T1/lmtt/m/n/12 https : / / academic . oup . com / mbe / article / 32 / 1 /
  100 / 2925554 / Differential -[]
  []
@@ -2594,16 +2511,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 6190--6196
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 6235.
-LaTeX Info: Redefining \% on input line 6235.
-[166]
-Underfull \hbox (badness 10000) in paragraph at lines 6243--6248
+LaTeX Info: Redefining \. on input line 6259.
+LaTeX Info: Redefining \% on input line 6259.
+[164]
+Underfull \hbox (badness 10000) in paragraph at lines 6267--6272
  []$\T1/lmtt/m/n/12 http : / / journals . plos . org / plosone / article ? id =
  10 . 1371 / journal . pone .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6267--6273
+Underfull \hbox (badness 10000) in paragraph at lines 6291--6297
  []$\T1/lmtt/m/n/12 https : / / academic . oup . com / mbe / article / 30 / 9 /
  2024 / 1000280 / Evolution -[]
  []
@@ -2611,32 +2528,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 6267--6273
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[167]
-Underfull \hbox (badness 1558) in paragraph at lines 6313--6317
+[165]
+Underfull \hbox (badness 1558) in paragraph at lines 6337--6341
  \T1/lmr/m/n/12 (+20) Jul;28(7):361--8. Avai-la-ble from: []$\T1/lmtt/m/n/12 ht
 tps : / / www . sciencedirect . com / science /
  []
 
 
-Underfull \hbox (badness 1648) in paragraph at lines 6326--6331
+Underfull \hbox (badness 1648) in paragraph at lines 6350--6355
  \T1/lmr/m/n/12 (+20) le-cu-lar Bio-logy and Evo-lu-tion [In-ter-net]. 2013 Jul
 ;30(7):1500--3. Avai-la-ble
  []
 
 
-Underfull \hbox (badness 1028) in paragraph at lines 6326--6331
+Underfull \hbox (badness 1028) in paragraph at lines 6350--6355
  \T1/lmr/m/n/12 (+20) from: []$\T1/lmtt/m/n/12 https : / / academic . oup . com
  / mbe / article / 30 / 7 / 1500 / 972515 / Protein -[]
  []
 
 
-Underfull \hbox (badness 1796) in paragraph at lines 6347--6351
+Underfull \hbox (badness 1796) in paragraph at lines 6371--6375
  \T1/lmr/m/n/12 (+20) 8];13(9):2178--89. Avai-la-ble from: []$\T1/lmtt/m/n/12 h
 ttp : / / genome . cshlp . org / content / 13 / 9 /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6353--6358
+Underfull \hbox (badness 10000) in paragraph at lines 6377--6382
  []$\T1/lmtt/m/n/12 https : / / academic . oup . com / nar / article / 41 / D1 
 / D358 / 1060216 / OrthoDB -[] a -[]
  []
@@ -2644,13 +2561,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 6353--6358
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 6358.
-LaTeX Info: Redefining \% on input line 6358.
-[168]
+LaTeX Info: Redefining \. on input line 6382.
+LaTeX Info: Redefining \% on input line 6382.
+[166]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[169]
-Underfull \hbox (badness 4366) in paragraph at lines 6482--6488
+[167]
+Underfull \hbox (badness 4366) in paragraph at lines 6506--6512
  \T1/lmr/m/n/12 (+20) 52. Avai-la-ble from: []$\T1/lmtt/m/n/12 https : / / acad
 emic . oup . com / nar / article / 43 / D1 / D447 /
  []
@@ -2658,18 +2575,18 @@ emic . oup . com / nar / article / 43 / D1 / D447 /
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 6488.
-LaTeX Info: Redefining \% on input line 6488.
+LaTeX Info: Redefining \. on input line 6512.
+LaTeX Info: Redefining \% on input line 6512.
+[168]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[169]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 6646.
+LaTeX Info: Redefining \% on input line 6646.
 [170]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[171]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 6622.
-LaTeX Info: Redefining \% on input line 6622.
-[172]
-Underfull \hbox (badness 10000) in paragraph at lines 6630--6635
+Underfull \hbox (badness 10000) in paragraph at lines 6654--6659
  \T1/lmr/m/n/12 (+20) from: []$\T1/lmtt/m/n/12 https : / / academic . oup . com
  / nar / article / 39 / suppl _ 1 / D670 / 2506543 /
  []
@@ -2677,14 +2594,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 6630--6635
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[173]
-Underfull \hbox (badness 6445) in paragraph at lines 6732--6737
+[171]
+Underfull \hbox (badness 6445) in paragraph at lines 6756--6761
  \T1/lmr/m/n/12 (+20) Avai-la-ble from: []$\T1/lmtt/m/n/12 http : / / www . nat
 ure . com / ncomms / 2015 / 150305 / ncomms7509 /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6739--6744
+Underfull \hbox (badness 10000) in paragraph at lines 6763--6768
  []$\T1/lmtt/m/n/12 http : / / www . nature . com / nature / journal / v499 / n
 7459 / full / nature12352 .
  []
@@ -2692,13 +2609,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 6739--6744
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 6744.
-LaTeX Info: Redefining \% on input line 6744.
-[174]
+LaTeX Info: Redefining \. on input line 6768.
+LaTeX Info: Redefining \% on input line 6768.
+[172]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[175]
-Overfull \hbox (0.8451pt too wide) in paragraph at lines 6817--6821
+[173]
+Overfull \hbox (0.8451pt too wide) in paragraph at lines 6841--6845
  \T1/lmr/m/n/12 (-20) National Academy of Sciences of the United States of Amer
 ica. 1990 Jun;87(12):4576--
  []
@@ -2706,16 +2623,16 @@ ica. 1990 Jun;87(12):4576--
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 6876.
-LaTeX Info: Redefining \% on input line 6876.
-[176]
-Underfull \hbox (badness 1365) in paragraph at lines 6888--6893
+LaTeX Info: Redefining \. on input line 6900.
+LaTeX Info: Redefining \% on input line 6900.
+[174]
+Underfull \hbox (badness 1365) in paragraph at lines 6912--6917
  \T1/lmr/m/n/12 (+20) Bi-functionality Con-tri-bu-tes to the Ro-bust-ness of Mi
 -cro-bial Li-fe th-rough
  []
 
 
-Underfull \hbox (badness 6428) in paragraph at lines 6888--6893
+Underfull \hbox (badness 6428) in paragraph at lines 6912--6917
  \T1/lmr/m/n/12 (+20) Avai-la-ble from: []$\T1/lmtt/m/n/12 http : / / journals 
 . plos . org / plosgenetics / article ? id = 10 .
  []
@@ -2723,14 +2640,14 @@ Underfull \hbox (badness 6428) in paragraph at lines 6888--6893
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[177]
-Overfull \hbox (0.20375pt too wide) in paragraph at lines 6989--6993
+[175]
+Overfull \hbox (0.20375pt too wide) in paragraph at lines 7013--7017
  \T1/lmr/m/n/12 (-20) function. Applied Microbiology and Biotechnology [Interne
 t]. 2016 Oct;100(20):8633--
  []
 
 
-Underfull \hbox (badness 4634) in paragraph at lines 6995--7000
+Underfull \hbox (badness 4634) in paragraph at lines 7019--7024
  \T1/lmr/m/n/12 (+20) 43. Avai-la-ble from: []$\T1/lmtt/m/n/12 https : / / acad
 emic . oup . com / nar / article / 43 / W1 / W237 /
  []
@@ -2738,28 +2655,28 @@ emic . oup . com / nar / article / 43 / W1 / W237 /
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 7000.
-LaTeX Info: Redefining \% on input line 7000.
-[178]
-Underfull \hbox (badness 1867) in paragraph at lines 7025--7030
+LaTeX Info: Redefining \. on input line 7024.
+LaTeX Info: Redefining \% on input line 7024.
+[176]
+Underfull \hbox (badness 1867) in paragraph at lines 7049--7054
  []\T1/lmr/m/n/12 (+20) 157. Koo-nin EV, Wolf YI. Ge-no-mics of bac-te-ria and 
 ar-chaea: The emer-
  []
 
 
-Underfull \hbox (badness 4403) in paragraph at lines 7025--7030
+Underfull \hbox (badness 4403) in paragraph at lines 7049--7054
  \T1/lmr/m/n/12 (+20) ging dy-na-mic view of the pro-kar-yo-tic world. Nu-cleic
  Acids Re-search
  []
 
 
-Underfull \hbox (badness 1762) in paragraph at lines 7025--7030
+Underfull \hbox (badness 1762) in paragraph at lines 7049--7054
  \T1/lmr/m/n/12 (+20) [In-ter-net]. 2008 Dec [ci-ted 2017 Jan 26];36(21):6688--
 719. Avai-la-ble from:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7025--7030
+Underfull \hbox (badness 10000) in paragraph at lines 7049--7054
  []$\T1/lmtt/m/n/12 https : / / academic . oup . com / nar / article / 36 / 21 
 / 6688 / 2410005 / Genomics -[]
  []
@@ -2767,20 +2684,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 7025--7030
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[179]
-Underfull \hbox (badness 2799) in paragraph at lines 7074--7078
+[177]
+Underfull \hbox (badness 2799) in paragraph at lines 7098--7102
  \T1/lmr/m/n/12 (+20) biosynt-he-sis in cya-no-bac-te-ria. Scien-ce (New York, 
 NY) [In-ter-net]. 2010
  []
 
 
-Underfull \hbox (badness 1033) in paragraph at lines 7074--7078
+Underfull \hbox (badness 1033) in paragraph at lines 7098--7102
  \T1/lmr/m/n/12 (+20) Sep;329(5999):1653--6. Avai-la-ble from: []$\T1/lmtt/m/n/
 12 https : / / www . ncbi . nlm . nih . gov / pmc /
  []
 
 
-Underfull \hbox (badness 1270) in paragraph at lines 7109--7113
+Underfull \hbox (badness 1270) in paragraph at lines 7133--7137
  \T1/lmr/m/n/12 (+20) tor to evo-lu-tion of multi-domain bac-te-rial pro-teins.
  Bio-in-for-ma-tics [In-ter-
  []
@@ -2788,63 +2705,40 @@ Underfull \hbox (badness 1270) in paragraph at lines 7109--7113
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 7119.
-LaTeX Info: Redefining \% on input line 7119.
-[180]
+LaTeX Info: Redefining \. on input line 7143.
+LaTeX Info: Redefining \% on input line 7143.
+[178]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[181]
-Underfull \hbox (badness 4205) in paragraph at lines 7193--7198
- []\T1/lmr/m/n/12 (+20) 181. Pu-kall R, Gehrich-Schröter G, La-pi-dus A, No-lan
- M, Gla-vi-na Del
- []
-
-
-Underfull \hbox (badness 1852) in paragraph at lines 7193--7198
- \T1/lmr/m/n/12 (+20) Rio T, Lu-cas S, et al. Com-ple-te ge-no-me se-quen-ce of
- Jo-ne-sia de-ni-tri-fi-
- []
-
-
-Underfull \hbox (badness 2941) in paragraph at lines 7193--7198
- \T1/lmr/m/n/12 (+20) cans ty-pe strain (Pre-vot 55134T). Stan-dards in Ge-no-m
-ic Scien-ces [In-
- []
-
-
-Underfull \hbox (badness 2318) in paragraph at lines 7193--7198
- \T1/lmr/m/n/12 (+20) ter-net]. 2009 Nov [ci-ted 2017 Mar 3];1(3):262--9. Avai-
-la-ble from: []$\T1/lmtt/m/n/12 http :
- []
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 7214.
-LaTeX Info: Redefining \. on input line 7214.
-LaTeX Info: Redefining \% on input line 7214.
-[182]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 7214.
+[179]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 7224.
+LaTeX Info: Redefining \. on input line 7224.
+LaTeX Info: Redefining \% on input line 7224.
+[180]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 7224.
 (./tesis.aux
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 7214.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 7214.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 7224.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 7224.
 
 Package rerunfilecheck Info: File `tesis.out' has not changed.
-(rerunfilecheck)             Checksum: 49CAD1E3F1541B219D8B4E51A0CC4B1F;15506.
+(rerunfilecheck)             Checksum: 91616F8E02CF4621CEEF9C4D107C879A;15433.
 
 LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 7214.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 7224.
  ) 
 Here is how much of TeX's memory you used:
- 13165 strings out of 493029
- 208372 string characters out of 6136233
- 478098 words of memory out of 5000000
- 15476 multiletter control sequences out of 15000+600000
- 93933 words of font info for 210 fonts, out of 8000000 for 9000
+ 13131 strings out of 493029
+ 207291 string characters out of 6136233
+ 468402 words of memory out of 5000000
+ 15451 multiletter control sequences out of 15000+600000
+ 94051 words of font info for 211 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,12n,49p,1735b,640s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/d
@@ -2862,10 +2756,10 @@ f/fonts/type1/public/lm/lmro12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy
 10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/font
 s/type1/public/lm/lmtk10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb
 ></usr/share/texmf/fonts/type1/public/lm/lmtti10.pfb>
-Output written on tesis.pdf (204 pages, 30690780 bytes).
+Output written on tesis.pdf (202 pages, 27503399 bytes).
 PDF statistics:
- 59918 PDF objects out of 66169 (max. 8388607)
- 40123 compressed objects within 402 object streams
- 614 named destinations out of 1000 (max. 500000)
- 15791 words of extra memory for PDF output out of 17280 (max. 10000000)
+ 23329 PDF objects out of 26593 (max. 8388607)
+ 15885 compressed objects within 159 object streams
+ 608 named destinations out of 1000 (max. 500000)
+ 15742 words of extra memory for PDF output out of 17280 (max. 10000000)
 

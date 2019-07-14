@@ -1,0 +1,84 @@
+---
+title: "ProteinPurification"
+author: "NellySelem"
+date: "May 18, 2017"
+output: pdf_document
+---
+
+## Purificación de proteínas utilizadas en los ensayos enzimáticos  
+
+TrpC y TrpD se purificaron mediante cromatografía de níquel utilizando AKTA-FPLC, mientras que PriA y D11A de _Sc coelicolor_ se purificaron mediante cromatografía de níquel utilizando columnas vivapure.  
+
+### Centrifugación  
+1. Centrifugar en botes de $.5L$  (Botellas tan grandes como sea posible)    
+utilizando el rotor para botes (En $.5L$ el código del rotor es 03)  
+Se han utilizado las siguientes velocidades:  
+Verdel-Aranda: $6000 rpm$ / $10 min$  
+Vázquez-Juárez: $7000rpm$ / $10 min$  
+En este punto, el experimento se puede interrumpir y el pellet se puede almacenar a $-80^{\circ}$ en tubos falcon de 50 $ml$ o, mejor aún se puede ejecutar el ensayo el mismo día. Para reiniciar este protocolo, vuelve a suspender el sedimento en $ 25 ml $ de Buffer de lisis manteniendo en hielo todos los pasos siguientes.  
+
+### Sonicación.  
+A continuación se debe sonicar el pellet para romper las células y obtener las proteínas. Todos los reactivos deben enfriarse previamente y mantenerse en hielo. El sonicador debe tocar el tubo falcon, que siempre debe mantenerse en hielo.  
+
+
+Agregar componentes nuevos al Buffer de lisis:
+-Agregar mezcla de inhibidor de proteasas $2\mu l$ (caja de proteínas)
+-Añadir DTT $.125\mu l$
+-Verdel-Aranda: Agregue Lysozyme $\frac{2mg}{ml}$ $100\mu l$
+-Vazquez-Juárez: Agregue Lysozyme $\frac{10mg}{ml}$ ($ 1000X $) $100\mu l$
+
+2. Resuspensión. Agregue el buffer de lisis $ 25ml $ para volver a suspender el pellet y coloque los tubos en una vajilla de vidrio pequeña con hielo
+
+3. Sonicación. Después de la adición de Buffer hay que sonicar:
+$ 7 $ ciclos de sonicaciones de $ 20s $ con $ 1min $ de descanso entre cada ciclo de sonicación.
+Solo se debe ingresar el tiempo total de sonicación en el dispositivo de sonicación ($ 140s $).
+
+4. Centrifugación. Después de la sonicación, centrifugar en una centrífuga refrigerada a 4°C $ 25 min $ a $ 8000 rpm $
+
+5. Inyectar lo colectado en el AKTA-FPL previamente balanceado con Buffer A (o vivapure balanceado con bufferA)
+Cuando se usa vivapure, el sobrenadante debe filtrarse en los filtros de .45 $\mu l$ para evitar daños en la columna.
+
+6. Wash with 5% Buffer B and subsequently with an imidazol gradient (Buffer B) from 5% to 60% on 16 vol of the column with a flux of 1ml/min. Conserve each elution tube properly labeled.  2000rpm 5 min  
+What we did to purificate Scoe PriA  was an imidazol gradient:  
+  
+Flask each one with a 100ml were prepared. columns were washed with 20ml of this tubes at 2000rpm 5 min  
+Imidazol concentration=x  
+v: (x=)100ml/500mM    
+
+\label{my-label enzyme}
+\begin{tabular}{ l l c c l}
+\hline \\ [-1.5ex]
+Flask & BufferB (mM)   & BufferB (ml)  & Buffer A ml & Buffer B  \\  [1ex]
+\hline \\ [-1.5ex]
+1 & 50& 10&  90& 10 \\  [1ex]
+2 & 100& 20& 80& 20 \\  [1ex]
+3 & 150& 30& 70 & 30 \\  [1ex]
+4 & 300& 60& 40 & 60 \\  [1ex]
+5 & 500& 100& 0& 100 \\  [1ex]
+\hline
+\end{tabular}
+
+Flask must be ketp cold.  
+
+7. Recover the fractions that contains the protein that elutes approximately at 150-200 mM imidazol. (TrpC, TrpD) or 300mM imidazol (must PriA). Collect the relevant fractions. At this point a protein gel can be run to check protein elution.
+
+8. Concentrate the protein using AMICON tubes 10kDa (all molecules below this weight will be discarded, molecules with weight above 10kDa such as PriA will be kept inside the tube) until an approximate concentration of $90 \frac{\mu g}{\mu l}$ ($1ml$ vol approx). Because imidazol>200mM reacts with Bradford, protein on amicon must be washed with 10 ml of buffer A to eliminate imidazol (4ml each time on amicon tube). Finally, after protein concentration, 100 ul sample must be recovered with 900 ul Buffer A (free of imidazol) 
+(8000 rpm 10 min)
+when AMICON are stored for long periods leave on ethanol at 20%, to reuse them throw ethanol out and wash many times with miliQ water.
+
+
+9. Check purity by SDS-PAGE gel    
+on _S coelicolor_ PriA molecular weight is around 25.7 kDa (length 240 aminoacids), 
+on _T maritima_ TrpC molecular weight is around 27.5 kDa (length 242 aminoacids)
+
+10. Add glycerol at a final concentration of 15% and quantify using Bradford. Store at -80C
+
+
+_TrpC important before step 5_  
+After centrifuge step 4 :    
+Heat supernatant by 15 min at 65C  
+Centrifuge at 10000rpm by 20min. Recover the supernatant.  
+
+Continue with steps 5-10 as in trpD purification.  
+
+On protein activity is more important to be pure than to have protein abundance.  

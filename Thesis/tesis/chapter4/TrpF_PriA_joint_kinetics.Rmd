@@ -25,7 +25,6 @@ if(!require(reedtemplates)){
 library(reedtemplates)
 ```
 
-En esta sección se tratpo de medir simultáneamente las actividades de Pra y ProFAR. 
 ```{r load_pkgs_TrpFkinetics,  message=FALSE,echo=FALSE,warning=FALSE}
 # List of packages required for this analysis
 pkg <- c("dplyr", "ggplot2", "knitr", "devtools","RColorBrewer")
@@ -54,7 +53,7 @@ library(knitr)
 library(ggplot2) # for drawing
 ```
 
-## Cinéticas  
+<!-- Cinéticas  -->
 ```{r Cinetics,  message=FALSE,echo=FALSE,warning=FALSE}
 #First I saved file as scv tablar separated    
 #perl -p -i -e 's/,/\t/g' Pra_scoe1.csv   
@@ -76,7 +75,7 @@ b<-tablePRO$Time[c(TRUE,FALSE)]+19.15
 
 tablePRO$Time[c(TRUE, FALSE)] <- a
 tablePRO$Time[c(FALSE, TRUE)] <- b
-tablePRO$Time
+#tablePRO$Time
 tablePRO<-tablePRO[grep("Pro|Time", colnames(tablePRO))]
 #tablePRA<-tablePRA[grep("Pra|Time", colnames(tablePRA))]
 
@@ -86,9 +85,9 @@ plot(PROassay.m$Time, PROassay.m$value, col=PROassay.m$variable,  xlab="Time [s]
 par(xpd = TRUE)
 legend("right", legend = (unique(PROassay.m$variable)), col = (unique(PROassay.m$variable)),pch=19,bg="white")
 
-ggplot(PROassay.m, aes(x = PROassay.m$Time, y = PROassay.m$value),color="variable") + theme_bw() 
+#ggplot(PROassay.m, aes(x = PROassay.m$Time, y = PROassay.m$value),color="variable") + theme_bw() 
 
-qplot(Time,value, data = PROassay.m,colour=variable)+theme_bw()+ theme(legend.position	="bottom",legend.text=element_text(size=10),plot.title = element_text(size = 14, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 10),axis.text.y=element_text(size = 7))+facet_grid(PROassay.m$variable~.,scales="free")
+ProFARPartes<-qplot(Time,value, data = PROassay.m,colour=variable)+theme_bw()+ theme(legend.position	="bottom",legend.text=element_text(size=10),plot.title = element_text(size = 14, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 10),axis.text.y=element_text(size = 7))+facet_grid(PROassay.m$variable~.,scales="free") 
 
 ## visualising full data
 tablePRA$Temp<-NULL
@@ -99,7 +98,7 @@ b<-tablePRA$Time[c(TRUE,FALSE)]+19.15
 
 tablePRA$Time[c(TRUE, FALSE)] <- a
 tablePRA$Time[c(FALSE, TRUE)] <- b
-tablePRA$Time
+#tablePRA$Time
 tablePRA<-tablePRA[grep("Pra|Time", colnames(tablePRA))]
 
 PRAassay.m <- melt(tablePRA,id="Time")
@@ -107,14 +106,14 @@ plot(PRAassay.m$Time, PRAassay.m$value, col=PRAassay.m$variable,  xlab="Time [s]
 par(xpd = TRUE)
 legend("right", legend = (unique(PRAassay.m$variable)), col = (unique(PRAassay.m$variable)),pch=19,bg="white")
 
-ggplot(PRAassay.m, aes(x = PRAassay.m$Time, y = PRAassay.m$value),color="variable") + theme_bw() 
+#ggplot(PRAassay.m, aes(x = PRAassay.m$Time, y = PRAassay.m$value),color="variable") + theme_bw() 
 
-qplot(Time,value, data = PRAassay.m,colour=variable)+theme_bw()+ theme(legend.position	="bottom",legend.text=element_text(size=10),plot.title = element_text(size = 14, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 10),axis.text.y=element_text(size = 7))+facet_grid(PRAassay.m$variable~.,scales="free")
+PRAPartes<-qplot(Time,value, data = PRAassay.m,colour=variable)+theme_bw()+ theme(legend.position	="bottom",legend.text=element_text(size=10),plot.title = element_text(size = 14, face = "bold"),text = element_text(size = 12),axis.title = element_text(face="bold"),axis.text.x=element_text(size = 10),axis.text.y=element_text(size = 7))+facet_grid(PRAassay.m$variable~.,scales="free")
 
 ```
-
-## Gráfico de pendientes   
-```{r slopes,  message=FALSE,echo=FALSE,warning=FALSE}
+<!-- Comentado para la tesis porque no son necesarias las pendientes
+## Gráfico de pendientes   -->
+```{r slopes,  message=FALSE,echo=FALSE,warning=FALSE,eval=FALSE}
  ##pendientes (slopes) of linear part of the curve
 # time when TrpF is added
 cuttime<-344.2
@@ -157,7 +156,8 @@ slopes
 concentration
 ```
 
-## Interpolación con Michaelis Menden  
+<!-- Comentado para la tesis porque no funcionó la libreria de michaelis para esta version de R
+## Interpolación con Michaelis Menden  -->
 ```{r interpolar michaelis-menden, eval=FALSE, message=FALSE,echo=FALSE,warning=FALSE}
 ## interpolar michaelis-menden
 
