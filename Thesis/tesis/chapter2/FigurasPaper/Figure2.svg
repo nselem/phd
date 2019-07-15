@@ -9,9 +9,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="1052.3622"
-   height="744.09448"
-   viewBox="0 0 296.99999 210"
+   width="943.13635"
+   height="425.61914"
+   viewBox="0 0 266.17403 120.11919"
    version="1.1"
    id="svg8"
    inkscape:version="0.92.4 (33fec40, 2019-01-16)"
@@ -30,8 +30,8 @@
        style="overflow:visible">
       <path
          id="path10253"
-         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
-         style="fill:none;stroke:#000000;stroke-width:1pt;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:none;stroke:#000000;stroke-width:1.00000003pt;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
          transform="matrix(-0.2,0,0,-0.2,-1.2,0)"
          inkscape:connector-curvature="0" />
     </marker>
@@ -46,7 +46,7 @@
          id="path10265"
          style="fill:none;stroke:#000000;stroke-width:0.625;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
          d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
-         transform="scale(-0.6,-0.6)"
+         transform="scale(-0.6)"
          inkscape:connector-curvature="0" />
     </marker>
     <marker
@@ -72,9 +72,9 @@
        style="overflow:visible">
       <path
          id="path10371"
-         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
-         style="fill:none;stroke:#000000;stroke-width:1pt;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
-         transform="scale(-0.8,-0.8)"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         style="fill:none;stroke:#000000;stroke-width:1.00000003pt;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
+         transform="scale(-0.8)"
          inkscape:connector-curvature="0" />
     </marker>
     <marker
@@ -88,7 +88,7 @@
          id="path10262"
          style="fill:none;stroke:#000000;stroke-width:0.625;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
          d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
-         transform="scale(0.6,0.6)"
+         transform="scale(0.6)"
          inkscape:connector-curvature="0" />
     </marker>
     <marker
@@ -100,8 +100,8 @@
        style="overflow:visible">
       <path
          id="path10244"
-         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
-         style="fill:none;stroke:#000000;stroke-width:1pt;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:none;stroke:#000000;stroke-width:1.00000003pt;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
          transform="matrix(0.4,0,0,0.4,4,0)"
          inkscape:connector-curvature="0" />
     </marker>
@@ -128,8 +128,8 @@
        style="overflow:visible">
       <path
          id="path10241"
-         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
-         style="fill:none;stroke:#000000;stroke-width:1pt;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:none;stroke:#000000;stroke-width:1.00000003pt;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
          transform="matrix(-0.8,0,0,-0.8,-10,0)"
          inkscape:connector-curvature="0" />
     </marker>
@@ -142,8 +142,8 @@
        style="overflow:visible">
       <path
          id="path10238"
-         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
-         style="fill:none;stroke:#000000;stroke-width:1pt;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:none;stroke:#000000;stroke-width:1.00000003pt;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
          transform="matrix(0.8,0,0,0.8,10,0)"
          inkscape:connector-curvature="0" />
     </marker>
@@ -341,11 +341,11 @@
          style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10" />
     </clipPath>
     <filter
-       color-interpolation-filters="sRGB"
        inkscape:label="Ink Bleed"
        inkscape:menu="Protrusions"
        inkscape:menu-tooltip="Inky splotches underneath the object"
-       id="filter6453">
+       id="filter6453"
+       style="color-interpolation-filters:sRGB">
       <feGaussianBlur
          result="result1"
          in="SourceGraphic"
@@ -379,11 +379,11 @@
          id="feComposite6451" />
     </filter>
     <filter
-       color-interpolation-filters="sRGB"
        inkscape:label="Ink Bleed"
        inkscape:menu="Protrusions"
        inkscape:menu-tooltip="Inky splotches underneath the object"
-       id="filter6453-8">
+       id="filter6453-8"
+       style="color-interpolation-filters:sRGB">
       <feGaussianBlur
          result="result1"
          in="SourceGraphic"
@@ -417,11 +417,11 @@
          id="feComposite6451-3" />
     </filter>
     <filter
-       color-interpolation-filters="sRGB"
        inkscape:label="Ink Bleed"
        inkscape:menu="Protrusions"
        inkscape:menu-tooltip="Inky splotches underneath the object"
-       id="filter6453-3">
+       id="filter6453-3"
+       style="color-interpolation-filters:sRGB">
       <feGaussianBlur
          result="result1"
          in="SourceGraphic"
@@ -464,8 +464,8 @@
       <path
          inkscape:connector-curvature="0"
          id="path10238-6"
-         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
-         style="fill:none;stroke:#000000;stroke-width:1pt;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:none;stroke:#000000;stroke-width:1.00000003pt;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
          transform="matrix(0.8,0,0,0.8,10,0)" />
     </marker>
     <marker
@@ -478,8 +478,8 @@
       <path
          inkscape:connector-curvature="0"
          id="path10253-6"
-         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
-         style="fill:none;stroke:#000000;stroke-width:1pt;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:none;stroke:#000000;stroke-width:1.00000003pt;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
          transform="matrix(-0.2,0,0,-0.2,-1.2,0)" />
     </marker>
     <marker
@@ -492,8 +492,8 @@
       <path
          inkscape:connector-curvature="0"
          id="path10238-7"
-         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
-         style="fill:none;stroke:#000000;stroke-width:1pt;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:none;stroke:#000000;stroke-width:1.00000003pt;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
          transform="matrix(0.8,0,0,0.8,10,0)" />
     </marker>
     <marker
@@ -506,8 +506,8 @@
       <path
          inkscape:connector-curvature="0"
          id="path10253-5"
-         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
-         style="fill:none;stroke:#000000;stroke-width:1pt;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:none;stroke:#000000;stroke-width:1.00000003pt;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
          transform="matrix(-0.2,0,0,-0.2,-1.2,0)" />
     </marker>
     <marker
@@ -520,8 +520,8 @@
       <path
          inkscape:connector-curvature="0"
          id="path13444"
-         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
-         style="fill:none;stroke:#000000;stroke-width:1pt;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:none;stroke:#000000;stroke-width:1.00000003pt;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
          transform="matrix(0.8,0,0,0.8,10,0)" />
     </marker>
     <marker
@@ -534,8 +534,8 @@
       <path
          inkscape:connector-curvature="0"
          id="path13448"
-         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
-         style="fill:none;stroke:#000000;stroke-width:1pt;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:none;stroke:#000000;stroke-width:1.00000003pt;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
          transform="matrix(-0.2,0,0,-0.2,-1.2,0)" />
     </marker>
     <marker
@@ -548,8 +548,8 @@
       <path
          inkscape:connector-curvature="0"
          id="path10238-4"
-         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
-         style="fill:none;stroke:#000000;stroke-width:1pt;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:none;stroke:#000000;stroke-width:1.00000003pt;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
          transform="matrix(0.8,0,0,0.8,10,0)" />
     </marker>
     <marker
@@ -562,8 +562,8 @@
       <path
          inkscape:connector-curvature="0"
          id="path10253-0"
-         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
-         style="fill:none;stroke:#000000;stroke-width:1pt;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:none;stroke:#000000;stroke-width:1.00000003pt;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
          transform="matrix(-0.2,0,0,-0.2,-1.2,0)" />
     </marker>
     <marker
@@ -576,8 +576,8 @@
       <path
          inkscape:connector-curvature="0"
          id="path13444-8"
-         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
-         style="fill:none;stroke:#000000;stroke-width:1pt;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:none;stroke:#000000;stroke-width:1.00000003pt;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
          transform="matrix(0.8,0,0,0.8,10,0)" />
     </marker>
     <marker
@@ -590,8 +590,8 @@
       <path
          inkscape:connector-curvature="0"
          id="path13448-8"
-         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
-         style="fill:none;stroke:#000000;stroke-width:1pt;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:none;stroke:#000000;stroke-width:1.00000003pt;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
          transform="matrix(-0.2,0,0,-0.2,-1.2,0)" />
     </marker>
     <marker
@@ -604,8 +604,8 @@
       <path
          inkscape:connector-curvature="0"
          id="path10238-66"
-         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
-         style="fill:none;stroke:#000000;stroke-width:1pt;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:none;stroke:#000000;stroke-width:1.00000003pt;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
          transform="matrix(0.8,0,0,0.8,10,0)" />
     </marker>
     <marker
@@ -618,8 +618,8 @@
       <path
          inkscape:connector-curvature="0"
          id="path10253-50"
-         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
-         style="fill:none;stroke:#000000;stroke-width:1pt;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:none;stroke:#000000;stroke-width:1.00000003pt;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
          transform="matrix(-0.2,0,0,-0.2,-1.2,0)" />
     </marker>
     <clipPath
@@ -642,8 +642,8 @@
       <path
          inkscape:connector-curvature="0"
          id="path10238-2"
-         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
-         style="fill:none;stroke:#000000;stroke-width:1pt;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:none;stroke:#000000;stroke-width:1.00000003pt;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
          transform="matrix(0.8,0,0,0.8,10,0)" />
     </marker>
     <marker
@@ -656,8 +656,8 @@
       <path
          inkscape:connector-curvature="0"
          id="path10253-09"
-         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
-         style="fill:none;stroke:#000000;stroke-width:1pt;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:none;stroke:#000000;stroke-width:1.00000003pt;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
          transform="matrix(-0.2,0,0,-0.2,-1.2,0)" />
     </marker>
     <clipPath
@@ -26342,8 +26342,8 @@
        style="overflow:visible">
       <path
          id="path10238-26"
-         d="M 0,0 5,-5 -12.5,0 5,5 z"
-         style="fill:none;stroke:#000000;stroke-width:1pt;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:none;stroke:#000000;stroke-width:1.00000003pt;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
          transform="matrix(0.8,0,0,0.8,10,0)"
          inkscape:connector-curvature="0" />
     </marker>
@@ -26356,8 +26356,8 @@
        style="overflow:visible">
       <path
          id="path10253-8"
-         d="M 0,0 5,-5 -12.5,0 5,5 z"
-         style="fill:none;stroke:#000000;stroke-width:1pt;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:none;stroke:#000000;stroke-width:1.00000003pt;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
          transform="matrix(-0.2,0,0,-0.2,-1.2,0)"
          inkscape:connector-curvature="0" />
     </marker>
@@ -26370,8 +26370,8 @@
        style="overflow:visible">
       <path
          id="path5762"
-         d="M 0,0 5,-5 -12.5,0 5,5 z"
-         style="fill:none;stroke:#000000;stroke-width:1pt;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:none;stroke:#000000;stroke-width:1.00000003pt;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
          transform="matrix(0.8,0,0,0.8,10,0)"
          inkscape:connector-curvature="0" />
     </marker>
@@ -26384,8 +26384,8 @@
        style="overflow:visible">
       <path
          id="path5766"
-         d="M 0,0 5,-5 -12.5,0 5,5 z"
-         style="fill:none;stroke:#000000;stroke-width:1pt;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:none;stroke:#000000;stroke-width:1.00000003pt;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
          transform="matrix(-0.2,0,0,-0.2,-1.2,0)"
          inkscape:connector-curvature="0" />
     </marker>
@@ -26398,8 +26398,8 @@
        style="overflow:visible">
       <path
          id="path10238-3"
-         d="M 0,0 5,-5 -12.5,0 5,5 z"
-         style="fill:none;stroke:#000000;stroke-width:1pt;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:none;stroke:#000000;stroke-width:1.00000003pt;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
          transform="matrix(0.8,0,0,0.8,10,0)"
          inkscape:connector-curvature="0" />
     </marker>
@@ -26412,8 +26412,8 @@
        style="overflow:visible">
       <path
          id="path10253-1"
-         d="M 0,0 5,-5 -12.5,0 5,5 z"
-         style="fill:none;stroke:#000000;stroke-width:1pt;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:none;stroke:#000000;stroke-width:1.00000003pt;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
          transform="matrix(-0.2,0,0,-0.2,-1.2,0)"
          inkscape:connector-curvature="0" />
     </marker>
@@ -26426,8 +26426,8 @@
        style="overflow:visible">
       <path
          id="path10238-26-3"
-         d="M 0,0 5,-5 -12.5,0 5,5 z"
-         style="fill:none;stroke:#000000;stroke-width:1pt;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:none;stroke:#000000;stroke-width:1.00000003pt;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
          transform="matrix(0.8,0,0,0.8,10,0)"
          inkscape:connector-curvature="0" />
     </marker>
@@ -26440,8 +26440,8 @@
        style="overflow:visible">
       <path
          id="path10253-8-0"
-         d="M 0,0 5,-5 -12.5,0 5,5 z"
-         style="fill:none;stroke:#000000;stroke-width:1pt;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:none;stroke:#000000;stroke-width:1.00000003pt;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
          transform="matrix(-0.2,0,0,-0.2,-1.2,0)"
          inkscape:connector-curvature="0" />
     </marker>
@@ -26454,8 +26454,8 @@
        style="overflow:visible">
       <path
          id="path6162"
-         d="M 0,0 5,-5 -12.5,0 5,5 z"
-         style="fill:none;stroke:#000000;stroke-width:1pt;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:none;stroke:#000000;stroke-width:1.00000003pt;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
          transform="matrix(0.8,0,0,0.8,10,0)"
          inkscape:connector-curvature="0" />
     </marker>
@@ -26468,8 +26468,8 @@
        style="overflow:visible">
       <path
          id="path6166"
-         d="M 0,0 5,-5 -12.5,0 5,5 z"
-         style="fill:none;stroke:#000000;stroke-width:1pt;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:none;stroke:#000000;stroke-width:1.00000003pt;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
          transform="matrix(-0.2,0,0,-0.2,-1.2,0)"
          inkscape:connector-curvature="0" />
     </marker>
@@ -54483,8 +54483,8 @@
        style="overflow:visible">
       <path
          id="path6162-8"
-         d="M 0,0 5,-5 -12.5,0 5,5 z"
-         style="fill:none;stroke:#000000;stroke-width:1pt;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:none;stroke:#000000;stroke-width:1.00000003pt;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
          transform="matrix(0.8,0,0,0.8,10,0)"
          inkscape:connector-curvature="0" />
     </marker>
@@ -54497,8 +54497,8 @@
        style="overflow:visible">
       <path
          id="path6162-6"
-         d="M 0,0 5,-5 -12.5,0 5,5 z"
-         style="fill:none;stroke:#000000;stroke-width:1pt;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:none;stroke:#000000;stroke-width:1.00000003pt;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
          transform="matrix(0.8,0,0,0.8,10,0)"
          inkscape:connector-curvature="0" />
     </marker>
@@ -54511,8 +54511,8 @@
        style="overflow:visible">
       <path
          id="path6162-0"
-         d="M 0,0 5,-5 -12.5,0 5,5 z"
-         style="fill:none;stroke:#000000;stroke-width:1pt;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:none;stroke:#000000;stroke-width:1.00000003pt;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
          transform="matrix(0.8,0,0,0.8,10,0)"
          inkscape:connector-curvature="0" />
     </marker>
@@ -54524,9 +54524,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.70710678"
-     inkscape:cx="776.96357"
-     inkscape:cy="532.1983"
+     inkscape:zoom="1"
+     inkscape:cx="479.87427"
+     inkscape:cy="175.37898"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -54537,14 +54537,20 @@
      inkscape:window-maximized="1"
      showguides="false"
      units="mm"
-     inkscape:snap-grids="false">
+     inkscape:snap-grids="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0">
     <inkscape:grid
        type="xygrid"
        id="grid4709"
        empspacing="5"
        visible="true"
        enabled="true"
-       snapvisiblegridlinesonly="true" />
+       snapvisiblegridlinesonly="true"
+       originx="-13.000972"
+       originy="-71.758416" />
   </sodipodi:namedview>
   <metadata
      id="metadata5">
@@ -54562,7 +54568,7 @@
      inkscape:label="Capa 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(0,-86.999982)">
+     transform="translate(-13.000962,-105.1224)">
     <g
        id="g19908"
        transform="matrix(0.86452475,0,0,0.86452475,111.03948,65.181743)">
@@ -75784,7 +75790,7 @@
                id="text28078">
               <tspan
                  style="font-size:20.56138992px"
-                 id="tspan32417">0</tspan>
+                 id="tspan32417" />
             </text>
           </g>
           <g
@@ -78989,46 +78995,6 @@
            id="tspan19898">Genome size (bp)</tspan>
       </text>
     </g>
-    <flowRoot
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-       id="flowRoot17120"
-       xml:space="preserve"
-       transform="matrix(0.25509409,0,0,0.25115437,14.059038,138.09273)"><flowRegion
-         id="flowRegion17122"><rect
-           style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
-           y="552"
-           x="23"
-           height="197"
-           width="375"
-           id="rect17125" /></flowRegion><flowPara
-         id="flowPara17127"
-         style="font-size:14px;line-height:1.25"> </flowPara></flowRoot>    <text
-       id="text17073"
-       y="295.76373"
-       x="-415.48868"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-       xml:space="preserve"><tspan
-         y="295.76373"
-         x="-415.48868"
-         id="tspan17075"
-         sodipodi:role="line"
-         style="font-size:3.95111108px;line-height:1.25"> </tspan><tspan
-         id="tspan17077"
-         y="300.70264"
-         x="-415.48868"
-         sodipodi:role="line"
-         style="font-size:3.95111108px;line-height:1.25"> </tspan></text>
-    <text
-       id="text17140"
-       y="250.71553"
-       x="18.908888"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-       xml:space="preserve"><tspan
-         y="250.71553"
-         x="18.908888"
-         id="tspan17142"
-         sodipodi:role="line"
-         style="font-size:3.95111108px;line-height:1.25"> </tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"

@@ -2,9 +2,33 @@
 output: pdf_document
 ---
 
-# Metodologia {.unnumbered}
+# Conclusión {.unnumbered}
   \setcounter{chapter}{4}
 	\setcounter{section}{0}
+
+Idea de Rosario
+-ver dell cluster de saxitoxin cuantos pasos se necesitron para llegar ahi.  
+-A donde se iria el resultado de abrir el GMP  
+-Otra vez, que Actinos tienen FolE  
+Están depositados en la base pública NCBI hasta Enero de 2019, 1573 genomas
+## Discusion 
+Finalmente, una pregunta abierta es aún dada una enzima promiscua es la población promiscua, y son sólo unos confórmeros o todas y cada una de las enzimas son promiscuas 
+
+Una mezcla entre Orthocore y EvoMining permite descubrir que PriA no está expandida en Actinobacteria y que ni siquiera es parte del core. Debido a la ausencia tanto de PriA como del resto de los genes de la ruta ciertos grupos de Actinobacteria parecen ser auxótrofos para histidina. Entre ellos están _Atopobium_, _Molibuncus_ y _Tropheryma_, ciertos _Bifidobacterium_ y _Actinomyces_ e incluso algunos _Corynebacterium_. _Molibuncus_ y _Tropheryma_ carecen de la mayoría de genes de síntesis tanto de histidina como de triptofano. Los _Corynebacterium_ en cambio sí poseen genes de síntesis de triptofano, lo que sugiere que podría estar subfuncionalizándose reteniendo sólo la función TrpF. Esto es una novedad para el _Corynebacterium_ donde ya se conoce la ocurrencia de homólogos pertenecientes a subHisA pero no se ha detectado la presencia de la familia subtrpF. Además en _Saccharomonospora halophila_ , _Streptomyces sp._ NRRL B-2790, _Streptomyces sp._ NRRL S-1777, _Streptomyces sp. NRRL WC-3549_ y _Streptomyces sp._ NRRL WC-3704 tampoco fue encontrada PriA y sí genes de los operones de histidina y triptofano. En los últimos tres se localiza una doble copia de HisF. Esto puede deberse tanto a problemas técnicos de secuenciación como a una verdadera observación biológica donde se sugiere que HisF puede ser multifuncional rescatando al menos la función de HisA y posiblemente la de TrpF.  
+es parte 
+If we don't want Conclusion to have a chapter number next to it, we can add the `{.unnumbered}` attribute.  This has an unintended consequence of the sections being labeled as 3.6 for example though instead of 4.1.  The \LaTeX\ commands immediately following the Conclusion declaration get things back on track.
+
+#### More info
+
+And here's some other random info: the first paragraph after a chapter title or section head _shouldn't be_ indented, because indents are to tell the reader that you're starting a new paragraph. Since that's obvious after a chapter or section title, proper typesetting doesn't add an indent there.
+
+<!--
+If you feel it necessary to include an appendix, it goes here.
+-->
+
+# Metodología 
+	\setcounter{section}{1}
+
 
                           
 ## Protocolos para usar Orthocore, myRAST, fastOrtho, Clavigenomics, y BPGA  
@@ -66,28 +90,6 @@ El umbral de e-value de Orthocore es por default 1e-6. Todas las secuencias son 
 
 
 
-
-# Conclusión 
-	\setcounter{section}{1}
-Idea de Rosario
--ver dell cluster de saxitoxin cuantos pasos se necesitron para llegar ahi.  
--A donde se iria el resultado de abrir el GMP  
--Otra vez, que Actinos tienen FolE  
-
-## Discusion 
-Finalmente, una pregunta abierta es aún dada una enzima promiscua es la población promiscua, y son sólo unos confórmeros o todas y cada una de las enzimas son promiscuas 
-
-
-If we don't want Conclusion to have a chapter number next to it, we can add the `{.unnumbered}` attribute.  This has an unintended consequence of the sections being labeled as 3.6 for example though instead of 4.1.  The \LaTeX\ commands immediately following the Conclusion declaration get things back on track.
-
-#### More info
-
-And here's some other random info: the first paragraph after a chapter title or section head _shouldn't be_ indented, because indents are to tell the reader that you're starting a new paragraph. Since that's obvious after a chapter or section title, proper typesetting doesn't add an indent there.
-
-<!--
-If you feel it necessary to include an appendix, it goes here.
--->
-
 \appendix
 
 # The First Appendix
@@ -103,8 +105,62 @@ This first appendix includes all of the R chunks of code that were hidden throug
 
 ```{r ref.label = 'include_packages_2', results = 'hide', echo = TRUE}
 ```
+# El Segundo apéndice Tablas de EvoMining  
+```{r DataTabla42, results = "asis",message=FALSE,echo=FALSE}
+label(path = "Anexos/Tabla42.pdf", 
+      caption = "Expansiones de las 42 enzimas en los cuatro linajes genómicos",
+      label = "DataTabla42", 
+    scale=".8",
+      cap.size = "footnotesize",
+      alt.cap="Función y número de copias promedio en los cuatro linajes taxonómicos de las enzimas de las 42 familias de la base de datos de enzimas de EvoMining",
+      type = "figure")
+```
 
-# The Second Appendix, Open source code on this document
+```{r HeatMapsytonemin, results = "asis",message=FALSE,echo=FALSE}
+label(path = "Anexos/HeatMapsytonemin.pdf", 
+      caption = "HeatMap de EvoMining de enzimas relacionadas a escytonemina en el linaje Cyanobacteria",
+      label = "HeatMapsytonemin", 
+    scale=".8",
+      cap.size = "footnotesize",
+      type = "figure")
+```
+
+
+```{r GDHJunto, results = "asis",message=FALSE,echo=FALSE}
+label(path = "Anexos/GDHJunto.png", 
+      caption = "Árbol de GDH en Actinobacteria, Cyanobacteria, $Pseudomonas$ y Archaea donde se muestra la transferencia horizontal ocurrida en esta familia.",
+      label = "GDHJunto", 
+    scale=".8",
+      cap.size = "footnotesize",
+      type = "figure")
+```
+
+```{r GDHFactor, results = "asis",message=FALSE,echo=FALSE}
+label(path = "Anexos/GDHFactor.pdf", 
+      caption = "Árbol de GDH en los cuatro linajes donde se muestra la alternancia en el uso de cofactores.",
+      label = "GDHFactor", 
+    scale=".8",
+      cap.size = "footnotesize",
+      type = "figure")
+```
+
+## El contexto de una rama divergente de _tauD_ está conservado en Pseudomonas  
+
+En Pseudomonas el gen _tauD_ tiene un contexto que incluye genes de metabolismo especializado. Variantes de este contexto están distribuidas en varios organismos. Parecen ser diferentes de los rimosamides y detoxins reportados en Actinobacteria.  
+
+
+```{r PseudomonasTauD, results = "asis",message=FALSE,echo=FALSE}
+label(path = "chapter3/PseudomonasTauD.pdf", 
+      caption = "EvoMining Algorithm",
+      label = "PseudomonasTauD",     
+      cap.size = "footnotesize",
+      alt.cap="En Pseudomonas el gen $tauD$ tiene un contexto que incluye genes de metabolismo especializado. Variantes de este contexto están distribuidas en varios organismos. En particular  ",  scale=".9",
+      type = "figure")
+```
+   
+
+
+# El tercer apéndice, cógigo abierto
 ## R markdown  
 Thanks to Rmakdown  Thesis  
 Apendix one Useful docker commands   
@@ -379,7 +435,7 @@ kable(docking,
 
 \clearpage  
 
-# El tercer Apéndice, Protocolos experimentales utilizados en el estudio de PriA  
+# El cuarto Apéndice, Protocolos experimentales utilizados en el estudio de PriA  
 ```{r materials, child = 'chapter4/materiales.Rmd'}
 ```
 

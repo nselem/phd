@@ -41,100 +41,101 @@
 \BOOKMARK [2][-]{section*.25}{Actinobacteria genomica}{subsection.0.9.4}% 41
 \BOOKMARK [3][-]{section*.26}{Annotation}{section*.25}% 42
 \BOOKMARK [3][-]{section*.27}{Genomic DB phylogeny}{section*.25}% 43
-\BOOKMARK [2][-]{subsection.0.9.5}{Identificar cambios en la vecindad genomica en familias selectas de enzimas de metabolismo central.}{subsection.0.9.4}% 44
-\BOOKMARK [3][-]{section*.28}{Organizar y presentar los datos en una plataforma.}{subsection.0.9.5}% 45
-\BOOKMARK [2][-]{subsection.0.9.6}{Promiscuidad in vitro}{subsection.0.9.4}% 46
-\BOOKMARK [3][-]{section*.29}{Datos cineticos:}{subsection.0.9.6}% 47
-\BOOKMARK [3][-]{section*.30}{Dinamica molecular}{subsection.0.9.6}% 48
-\BOOKMARK [2][-]{subsection.0.9.7}{Promiscuidad in vivo}{subsection.0.9.4}% 49
-\BOOKMARK [2][-]{subsection.0.9.8}{Consideraciones}{subsection.0.9.4}% 50
-\BOOKMARK [0][-]{chapter.1}{Cap\355tulo 1: Orthocore: una herramienta computacional para entender el pangenoma de un linaje gen\363mico.}{}% 51
-\BOOKMARK [1][-]{section.1.1}{La distribuci\363n de la funci\363n metab\363lica de las familias del pangenoma depende de la variabilidad del linaje seleccionado.}{chapter.1}% 52
-\BOOKMARK [1][-]{section.1.2}{El core conservado permite la reconstrucci\363n de filogenias complicadas}{chapter.1}% 53
-\BOOKMARK [1][-]{section.1.3}{El algoritmo de Orthocore}{chapter.1}% 54
-\BOOKMARK [2][-]{subsection.1.3.1}{Los mejores hits multidireccionales definen los genes del core conservado}{section.1.3}% 55
-\BOOKMARK [2][-]{subsection.1.3.2}{Ejecuci\363n de Orthocore}{section.1.3}% 56
-\BOOKMARK [1][-]{section.1.4}{Aplicaciones de Orthocore, identificaci\363n del core conservado y de familias de genes marcadores.}{chapter.1}% 57
-\BOOKMARK [2][-]{subsection.1.4.1}{Orthocore de Actinomycetales para mejorar el \341rbol de especies}{section.1.4}% 58
-\BOOKMARK [2][-]{subsection.1.4.2}{Uso de Orthocore para entender la evoluci\363n de la patog\351nesis de Salmonella en M\351xico.}{section.1.4}% 59
-\BOOKMARK [2][-]{subsection.1.4.3}{Las Nostoc provenientes del metagenoma de c\355cadas est\341n en e mismo grupo filogen\351tico}{section.1.4}% 60
-\BOOKMARK [2][-]{subsection.1.4.4}{Identificaci\363n de genes marcadores de la bacteria del c\341ncer del tomate Clavibacter michiganensis}{section.1.4}% 61
-\BOOKMARK [3][-]{section*.39}{Clavisual: Identificaci\363n de genes marcadores a un cierto porcentaje de grupos seleccionados}{subsection.1.4.4}% 62
-\BOOKMARK [3][-]{section*.41}{El pangenoma de Clavibacter Michiganensis es abierto}{subsection.1.4.4}% 63
-\BOOKMARK [1][-]{section.1.5}{Relaci\363n entre genes marcadores, Orthocore y la promiscuidad enzim\341tica.}{chapter.1}% 64
-\BOOKMARK [0][-]{chapter.2}{Cap\355tulo 2: EvoMining como herramienta para identificar el origen y el destino metab\363lico de familias enzim\341ticas}{}% 65
-\BOOKMARK [1][-]{section.2.1}{Introducci\363n}{chapter.2}% 66
-\BOOKMARK [2][-]{subsection.2.1.1}{Las copias extra de familias enzim\341ticas que son reclutadas para una nueva funci\363n est\341n relacionadas con la promiscuidad.}{section.2.1}% 67
-\BOOKMARK [2][-]{subsection.2.1.2}{EvoMining es un paradigma que permite ubicar copias extra de familias enzim\341ticas y organizarlas visualmente acorde a eventos evolutivos para encontrar BGC no tradicionales}{section.2.1}% 68
-\BOOKMARK [1][-]{section.2.2}{Algoritmos y bases de datos de EvoMining 2.0}{chapter.2}% 69
-\BOOKMARK [2][-]{subsection.2.2.1}{Algoritmo de expansi\363n y clasificaci\363n de grupos de hom\363logos.}{section.2.2}% 70
-\BOOKMARK [2][-]{subsection.2.2.2}{Algoritmo de reconstrucci\363n filogen\351tica y visualizaci\363n}{section.2.2}% 71
-\BOOKMARK [2][-]{subsection.2.2.3}{Actualizaciones de las bases de datos de EvoMining}{section.2.2}% 72
-\BOOKMARK [1][-]{section.2.3}{Detectamos patrones de neofuncionalizaci\363n a BGC en distintos linajes y en familias enzim\341ticas con distintos or\355genes metab\363icos OR EvoMining detecta distint\341s din\341micas evolutivas de las enzimas metab\363licas que dependen de la familia enzim\341tica y del linaje taxonom\355co.}{chapter.2}% 73
-\BOOKMARK [2][-]{subsection.2.3.1}{Los perfiles de expansi\363n de las prote\355nas dependen del linaje.}{section.2.3}% 74
-\BOOKMARK [2][-]{subsection.2.3.2}{El shell genome posee expansiones en sus familias enzim\341ticas}{section.2.3}% 75
-\BOOKMARK [2][-]{subsection.2.3.3}{GDH y ALS en el cluster escitonemina ejemplifican como familias pertenecientes a un mismo BGC pueden tener distintos patrones de expansi\363n.}{section.2.3}% 76
-\BOOKMARK [2][-]{subsection.2.3.4}{El cluster de escitonemina es un cluster promiscuo.}{section.2.3}% 77
-\BOOKMARK [2][-]{subsection.2.3.5}{EvoMining en RNA transferasas}{section.2.3}% 78
-\BOOKMARK [2][-]{subsection.2.3.6}{EvoMining en La familia tauD tiene expansi\363n y reclutamiento tanto en Actinobacteria como en Pseudomonas}{section.2.3}% 79
-\BOOKMARK [2][-]{subsection.2.3.7}{Rimosamide y Detoxin tienen en com\372n la enzima TauD,}{section.2.3}% 80
-\BOOKMARK [1][-]{section.2.4}{Consideraciones finales sobre el uso de EvoMining}{chapter.2}% 81
+\BOOKMARK [3][-]{section*.28}{Organizaci\363n y presentaci\363n de familias extendidas mediante el desarrollo una plataforma bioinform\341tica.}{section*.25}% 44
+\BOOKMARK [3][-]{section*.29}{Algoritmo de reconstrucci\363n filogen\351tica y visualizaci\363n}{section*.25}% 45
+\BOOKMARK [3][-]{section*.30}{Algoritmo de visualizaci\363n}{section*.25}% 46
+\BOOKMARK [2][-]{subsection.0.9.5}{Identificar cambios en la vecindad genomica en familias selectas de enzimas de metabolismo central.}{subsection.0.9.4}% 47
+\BOOKMARK [2][-]{subsection.0.9.6}{Promiscuidad in vitro}{subsection.0.9.4}% 48
+\BOOKMARK [3][-]{section*.31}{Datos cineticos:}{subsection.0.9.6}% 49
+\BOOKMARK [3][-]{section*.32}{Dinamica molecular}{subsection.0.9.6}% 50
+\BOOKMARK [2][-]{subsection.0.9.7}{Promiscuidad in vivo}{subsection.0.9.4}% 51
+\BOOKMARK [2][-]{subsection.0.9.8}{Consideraciones}{subsection.0.9.4}% 52
+\BOOKMARK [0][-]{chapter.1}{Cap\355tulo 1: Orthocore: una herramienta computacional para entender el pangenoma de un linaje gen\363mico.}{}% 53
+\BOOKMARK [1][-]{section.1.1}{La distribuci\363n de la funci\363n metab\363lica de las familias del pangenoma depende de la variabilidad del linaje seleccionado.}{chapter.1}% 54
+\BOOKMARK [1][-]{section.1.2}{El core conservado permite la reconstrucci\363n de filogenias complicadas}{chapter.1}% 55
+\BOOKMARK [1][-]{section.1.3}{El algoritmo de Orthocore}{chapter.1}% 56
+\BOOKMARK [2][-]{subsection.1.3.1}{Los mejores hits multidireccionales definen los genes del core conservado}{section.1.3}% 57
+\BOOKMARK [2][-]{subsection.1.3.2}{Ejecuci\363n de Orthocore}{section.1.3}% 58
+\BOOKMARK [1][-]{section.1.4}{Aplicaciones de Orthocore, identificaci\363n del core conservado y de familias de genes marcadores.}{chapter.1}% 59
+\BOOKMARK [2][-]{subsection.1.4.1}{Orthocore de Actinomycetales para mejorar el \341rbol de especies}{section.1.4}% 60
+\BOOKMARK [2][-]{subsection.1.4.2}{Uso de Orthocore para entender la evoluci\363n de la patog\351nesis de Salmonella en M\351xico.}{section.1.4}% 61
+\BOOKMARK [2][-]{subsection.1.4.3}{Las Nostoc provenientes del metagenoma de c\355cadas est\341n en el mismo grupo filogen\351tico}{section.1.4}% 62
+\BOOKMARK [2][-]{subsection.1.4.4}{Identificaci\363n de genes marcadores de la bacteria del c\341ncer del tomate Clavibacter michiganensis}{section.1.4}% 63
+\BOOKMARK [3][-]{section*.41}{Clavisual: Identificaci\363n de genes marcadores a un cierto porcentaje de grupos seleccionados}{subsection.1.4.4}% 64
+\BOOKMARK [3][-]{section*.43}{El pangenoma de Clavibacter Michiganensis es abierto}{subsection.1.4.4}% 65
+\BOOKMARK [1][-]{section.1.5}{Relaci\363n entre genes marcadores, Orthocore y la promiscuidad enzim\341tica.}{chapter.1}% 66
+\BOOKMARK [0][-]{chapter.2}{Cap\355tulo 2: EvoMining como herramienta para identificar el origen y el destino metab\363lico de familias enzim\341ticas}{}% 67
+\BOOKMARK [1][-]{section.2.1}{Introducci\363n}{chapter.2}% 68
+\BOOKMARK [2][-]{subsection.2.1.1}{Las copias extra de familias enzim\341ticas que son reclutadas para una nueva funci\363n est\341n relacionadas con la promiscuidad.}{section.2.1}% 69
+\BOOKMARK [2][-]{subsection.2.1.2}{EvoMining es un paradigma que permite ubicar copias extra de familias enzim\341ticas y organizarlas visualmente acorde a eventos evolutivos para encontrar BGC no tradicionales}{section.2.1}% 70
+\BOOKMARK [1][-]{section.2.2}{Algoritmos y bases de datos de EvoMining 2.0}{chapter.2}% 71
+\BOOKMARK [2][-]{subsection.2.2.1}{Algoritmo de expansi\363n y clasificaci\363n de grupos de hom\363logos.}{section.2.2}% 72
+\BOOKMARK [2][-]{subsection.2.2.2}{Algoritmo de reconstrucci\363n filogen\351tica y visualizaci\363n}{section.2.2}% 73
+\BOOKMARK [2][-]{subsection.2.2.3}{Actualizaciones de las bases de datos de EvoMining}{section.2.2}% 74
+\BOOKMARK [1][-]{section.2.3}{EvoMining detecta distintas din\341micas evolutivas de las enzimas metab\363licas que dependen de la familia enzim\341tica y del linaje taxonom\355co.}{chapter.2}% 75
+\BOOKMARK [2][-]{subsection.2.3.1}{Los perfiles de expansi\363n de las prote\355nas dependen del linaje.}{section.2.3}% 76
+\BOOKMARK [2][-]{subsection.2.3.2}{El shell genome posee expansiones en sus familias enzim\341ticas}{section.2.3}% 77
+\BOOKMARK [2][-]{subsection.2.3.3}{GDH y ALS en el cluster escitonemina ejemplifican como familias pertenecientes a un mismo BGC pueden tener distintos patrones de expansi\363n.}{section.2.3}% 78
+\BOOKMARK [2][-]{subsection.2.3.4}{El cluster de escitonemina es una familia de clusters cuyas variantes en los genes accesorios muestran promiscuidad de producto.}{section.2.3}% 79
+\BOOKMARK [1][-]{section.2.4}{EvoMining aplicado a TauD, enzima com\372n de los BGC Rimosamide y Detoxin sugieren otra clase de clusters con promiscuidad de producto.}{chapter.2}% 80
+\BOOKMARK [1][-]{section.2.5}{Consideraciones finales sobre el uso de EvoMining}{chapter.2}% 81
 \BOOKMARK [0][-]{chapter.3}{Cap\355tulo 3: Desarrollo de CORASON como herramienta para organizar clusters biosint\351ticos y otras vecindades gen\363micas conservadas.}{}% 82
 \BOOKMARK [1][-]{section.3.1}{Algoritmo y caracter\355sticas de CORASON}{chapter.3}% 83
-\BOOKMARK [1][-]{section.3.2}{Las familias de BGCs est\341n formadas por variantes del BGC de referencia.}{chapter.3}% 84
+\BOOKMARK [1][-]{section.3.2}{Las familias de BGC son variantes del BGC de referencia.}{chapter.3}% 84
 \BOOKMARK [1][-]{section.3.3}{Aplicaciones de CORASON en Actinobacteria y Pseudomonas}{chapter.3}% 85
-\BOOKMARK [1][-]{section.3.4}{Estas familias pueden clasificarse}{chapter.3}% 86
-\BOOKMARK [1][-]{section.3.5}{Un BGC reportado puede tener muchas variantes que conforman una familia de BGCs}{chapter.3}% 87
-\BOOKMARK [1][-]{section.3.6}{CORASON analiza la conservaci\363n del contexto gen\363mico de los EvoMining hits}{chapter.3}% 88
-\BOOKMARK [1][-]{section.3.7}{El contexto de una rama divergente de tauD est\341 conservado en Pseudomonas}{chapter.3}% 89
-\BOOKMARK [1][-]{section.3.8}{CORASON se adapt\363 a la herramienta BiG-SCAPE de clasificaci\363n de familias de BGCs}{chapter.3}% 90
-\BOOKMARK [1][-]{section.3.9}{BiG SCAPE y CORASON identificaron nuevos productos variantes de la familia de BGCs Rimosamide - Detoxin en Actinobacteria}{chapter.3}% 91
-\BOOKMARK [1][-]{section.3.10}{CORASON sugiere que las familias detoxin y rimosamide pertenecen a un amplio clan de familias dedicadas a la s\355ntesis de p\351ptidos.}{chapter.3}% 92
-\BOOKMARK [1][-]{section.3.11}{Clados selectos del \341rbol de CORASON que contiene a las familias rimosamide/detoxin contienen diversidad g\351nica que correlaciona con novedad qu\355mica.}{chapter.3}% 93
-\BOOKMARK [2][-]{subsection.3.11.1}{El clado P450/enoyl agrega una heptanamida al core molecular detoxin/rimosamide}{section.3.11}% 94
-\BOOKMARK [2][-]{subsection.3.11.2}{El superclado spectinomycin/ detoxin-rimosamide-clan produce cinco variantes de detoxin.}{section.3.11}% 95
-\BOOKMARK [2][-]{subsection.3.11.3}{El clado Amycolatopsis P450 produce cinco variantes de detoxin.}{section.3.11}% 96
-\BOOKMARK [1][-]{section.3.12}{CORASON permiti\363 expandir las capacidades de EvoMining y explorar la promiscuidad de familias de BGCs de enzimas divergentes de metabolismo central.}{chapter.3}% 97
-\BOOKMARK [2][-]{section*.61}{Discusi\363n}{section.3.12}% 98
-\BOOKMARK [0][-]{chapter.4}{Cap\355tulo 4: La familia PriA}{}% 99
-\BOOKMARK [1][-]{section.4.1}{PriA como modelo de familia enzim\341tica donde las expansiones no son condici\363n necesaria para la promiscuidad.}{chapter.4}% 100
-\BOOKMARK [2][-]{section*.63}{PriA en EvoMining}{section.4.1}% 101
+\BOOKMARK [1][-]{section.3.4}{Detectamos variantes de sider\363foros en Actinobacterias de vida libre}{chapter.3}% 86
+\BOOKMARK [1][-]{section.3.5}{Un BGC de metabolismo de ars\351nico tiene variantes que conforman una familia de BGCs}{chapter.3}% 87
+\BOOKMARK [1][-]{section.3.6}{Combinamos CORASON y BiG-SCAPE para mejorar la clasificaci\363n de BGC y logramos predecir dos nuevos compuestos de la familia rimosamide-detoxin que fueron caracterizados experimentalmente}{chapter.3}% 88
+\BOOKMARK [2][-]{subsection.3.6.1}{Identificamos nuevos productos variantes de la familia de BGCs Rimosamide - Detoxin en Actinobacteria integrando BiG SCAPE y CORASON}{section.3.6}% 89
+\BOOKMARK [2][-]{subsection.3.6.2}{CORASON sugiere que las familias detoxin y rimosamide pertenecen a un amplio grupo de familias dedicadas a la s\355ntesis de p\351ptidos.}{section.3.6}% 90
+\BOOKMARK [2][-]{subsection.3.6.3}{Aglunos clados selectos del \341rbol de CORASON que contiene a las familias rimosamide/detoxin contienen diversidad g\351nica que correlaciona con novedad qu\355mica.}{section.3.6}% 91
+\BOOKMARK [3][-]{section*.63}{El clado P450/enoyl agrega una heptanamida al core molecular detoxin/rimosamide}{subsection.3.6.3}% 92
+\BOOKMARK [3][-]{section*.64}{El superclado spectinomycin/ detoxin-rimosamide produce cinco variantes de detoxin.}{subsection.3.6.3}% 93
+\BOOKMARK [3][-]{section*.65}{El clado Amycolatopsis P450 produce cinco variantes de detoxin.}{subsection.3.6.3}% 94
+\BOOKMARK [1][-]{section.3.7}{CORASON permiti\363 explorar la promiscuidad de familias de BGCs de enzimas divergentes de metabolismo central.}{chapter.3}% 95
+\BOOKMARK [0][-]{chapter.4}{Cap\355tulo 4: La familia PriA/HisA}{}% 96
+\BOOKMARK [1][-]{section.4.1}{La familia PriA cambi\363 su funci\363n y sus patrones de promiscuidad en los cuatro linajes analizados}{chapter.4}% 97
+\BOOKMARK [2][-]{subsection.4.1.1}{Las expansiones no son condici\363n necesaria para la promiscuidad}{section.4.1}% 98
+\BOOKMARK [2][-]{subsection.4.1.2}{Las expansiones condujeron a la creaci\363n de la subfamilia HisF}{section.4.1}% 99
+\BOOKMARK [2][-]{subsection.4.1.3}{Cada linaje tiene distintos destinos metab\363licos de PriA}{section.4.1}% 100
+\BOOKMARK [3][-]{section*.70}{Hom\363logos de PriA han sido reclutados a clusters de metabolismo especializado}{subsection.4.1.3}% 101
 \BOOKMARK [1][-]{section.4.2}{An\341lisis de contextos gen\363micos de PriA/HisA en distintos linajes utilizando CORASON como herramienta de visualizaci\363n.}{chapter.4}% 102
 \BOOKMARK [2][-]{subsection.4.2.1}{Contextos gen\363micos de HisA en Actinobacteria}{section.4.2}% 103
 \BOOKMARK [2][-]{subsection.4.2.2}{Contextos gen\363micos de HisA en Archaea}{section.4.2}% 104
 \BOOKMARK [2][-]{subsection.4.2.3}{Contextos gen\363micos de HisA en saxitoxin}{section.4.2}% 105
 \BOOKMARK [1][-]{section.4.3}{Evoluci\363n molecular y estructural de PriA}{chapter.4}% 106
-\BOOKMARK [2][-]{subsection.4.3.1}{Al transformar una subHisA en una PriA mediante mutaciones no se observ\363 ninguna trayectoria creciente para ambos sustratos \(darwiniana\)}{section.4.3}% 107
+\BOOKMARK [2][-]{subsection.4.3.1}{Al transformar una subHisA en una PriA mediante mutaciones no se observ\363 ninguna trayectoria creciente para ambos sustratos}{section.4.3}% 107
 \BOOKMARK [2][-]{subsection.4.3.2}{Los residuos que covar\355an en el registro evolutivo de PriA permiten una reconstrucci\363n aproximada de su estructura tridimensional}{section.4.3}% 108
 \BOOKMARK [1][-]{section.4.4}{Afinidad de enzimas selectas por sustratos qu\355micamente parecidos a PRA y PROFAR}{chapter.4}% 109
 \BOOKMARK [2][-]{subsection.4.4.1}{Selecci\363n de secuencias de PriA o familias relacionadas para docking con sustratos similares a lo nativos}{section.4.4}% 110
 \BOOKMARK [2][-]{subsection.4.4.2}{El an\341lisis de PriA a nivel estructural sugiere que GTP es el sustrato m\341s af\355n}{section.4.4}% 111
 \BOOKMARK [1][-]{section.4.5}{PriA en cin\351ticas enzim\341ticas no tradicionales.}{chapter.4}% 112
-\BOOKMARK [2][-]{subsection.4.5.1}{PriA puede tener actividad en GTP}{section.4.5}% 113
+\BOOKMARK [2][-]{subsection.4.5.1}{PriA puede metabolizar GTP}{section.4.5}% 113
 \BOOKMARK [2][-]{subsection.4.5.2}{Cin\351ticas simult\341neas para PRA y ProFAR}{section.4.5}% 114
-\BOOKMARK [0][-]{chapter*.85}{Metodologia}{}% 115
-\BOOKMARK [1][-]{section.4.1}{Protocolos para usar Orthocore, myRAST, fastOrtho, Clavigenomics, y BPGA}{chapter*.85}% 116
-\BOOKMARK [1][-]{section.4.2}{Orthocore}{chapter*.85}% 117
-\BOOKMARK [0][-]{chapter.5}{Cap\355tulo 5: Conclusi\363n}{}% 118
-\BOOKMARK [1][-]{section.5.1}{Discusion}{chapter.5}% 119
-\BOOKMARK [2][-]{section*.86}{More info}{section.5.1}% 120
-\BOOKMARK [0][-]{appendix.Alph1}{Ap\351ndice A: The First Appendix}{}% 121
-\BOOKMARK [1][-]{section*.87}{In the main Rmd file:}{appendix.Alph1}% 122
-\BOOKMARK [2][-]{section*.88}{In :}{section*.87}% 123
-\BOOKMARK [0][-]{appendix.Alph2}{Ap\351ndice B: The Second Appendix, Open source code on this document}{}% 124
-\BOOKMARK [1][-]{section.Alph2.1}{R markdown}{appendix.Alph2}% 125
-\BOOKMARK [1][-]{section.Alph2.2}{Docker}{appendix.Alph2}% 126
-\BOOKMARK [1][-]{section.Alph2.3}{Git}{appendix.Alph2}% 127
-\BOOKMARK [1][-]{section.Alph2.4}{Connect GitHub and DockerHub}{appendix.Alph2}% 128
-\BOOKMARK [1][-]{section.Alph2.5}{Additional resources}{appendix.Alph2}% 129
-\BOOKMARK [0][-]{appendix.Alph3}{Ap\351ndice C: Apendice 3 Din\341mica molecular vs datos experimentales}{}% 130
-\BOOKMARK [0][-]{appendix.Alph4}{Ap\351ndice D: El tercer Ap\351ndice, Protocolos experimentales utilizados en el estudio de PriA}{}% 131
-\BOOKMARK [1][-]{section.Alph4.1}{Materiales}{appendix.Alph4}% 132
-\BOOKMARK [1][-]{section.Alph4.2}{Purificaci\363n de prote\355nas utilizadas en los ensayos enzim\341ticos}{appendix.Alph4}% 133
-\BOOKMARK [2][-]{subsection.Alph4.2.1}{Centrifugaci\363n}{section.Alph4.2}% 134
-\BOOKMARK [2][-]{subsection.Alph4.2.2}{Sonicaci\363n.}{section.Alph4.2}% 135
-\BOOKMARK [1][-]{section.Alph4.3}{Protein Quantification}{appendix.Alph4}% 136
-\BOOKMARK [2][-]{subsection.Alph4.3.1}{Bradford calibration curve}{section.Alph4.3}% 137
-\BOOKMARK [2][-]{subsection.Alph4.3.2}{Enzyme quantification}{section.Alph4.3}% 138
-\BOOKMARK [1][-]{section.Alph4.4}{Concentration on microMolar}{appendix.Alph4}% 139
-\BOOKMARK [0][-]{appendix*.90}{References}{}% 140
+\BOOKMARK [0][-]{chapter*.90}{Conclusi\363n}{}% 115
+\BOOKMARK [1][-]{section*.91}{More info}{chapter*.90}% 116
+\BOOKMARK [0][-]{chapter.5}{Cap\355tulo 5: Metodolog\355a}{}% 117
+\BOOKMARK [1][-]{section.5.1}{Protocolos para usar Orthocore, myRAST, fastOrtho, Clavigenomics, y BPGA}{chapter.5}% 118
+\BOOKMARK [1][-]{section.5.2}{Orthocore}{chapter.5}% 119
+\BOOKMARK [0][-]{appendix.Alph1}{Ap\351ndice A: The First Appendix}{}% 120
+\BOOKMARK [1][-]{section*.92}{In the main Rmd file:}{appendix.Alph1}% 121
+\BOOKMARK [2][-]{section*.93}{In :}{section*.92}% 122
+\BOOKMARK [0][-]{appendix.Alph2}{Ap\351ndice B: El Segundo ap\351ndice Tablas de EvoMining}{}% 123
+\BOOKMARK [1][-]{section.Alph2.1}{El contexto de una rama divergente de tauD est\341 conservado en Pseudomonas}{appendix.Alph2}% 124
+\BOOKMARK [0][-]{appendix.Alph3}{Ap\351ndice C: El tercer ap\351ndice, c\363gigo abierto}{}% 125
+\BOOKMARK [1][-]{section.Alph3.1}{R markdown}{appendix.Alph3}% 126
+\BOOKMARK [1][-]{section.Alph3.2}{Docker}{appendix.Alph3}% 127
+\BOOKMARK [1][-]{section.Alph3.3}{Git}{appendix.Alph3}% 128
+\BOOKMARK [1][-]{section.Alph3.4}{Connect GitHub and DockerHub}{appendix.Alph3}% 129
+\BOOKMARK [1][-]{section.Alph3.5}{Additional resources}{appendix.Alph3}% 130
+\BOOKMARK [0][-]{appendix.Alph4}{Ap\351ndice D: Apendice 3 Din\341mica molecular vs datos experimentales}{}% 131
+\BOOKMARK [0][-]{appendix.Alph5}{Ap\351ndice E: El cuarto Ap\351ndice, Protocolos experimentales utilizados en el estudio de PriA}{}% 132
+\BOOKMARK [1][-]{section.Alph5.1}{Materiales}{appendix.Alph5}% 133
+\BOOKMARK [1][-]{section.Alph5.2}{Purificaci\363n de prote\355nas utilizadas en los ensayos enzim\341ticos}{appendix.Alph5}% 134
+\BOOKMARK [2][-]{subsection.Alph5.2.1}{Centrifugaci\363n}{section.Alph5.2}% 135
+\BOOKMARK [2][-]{subsection.Alph5.2.2}{Sonicaci\363n.}{section.Alph5.2}% 136
+\BOOKMARK [1][-]{section.Alph5.3}{Protein Quantification}{appendix.Alph5}% 137
+\BOOKMARK [2][-]{subsection.Alph5.3.1}{Bradford calibration curve}{section.Alph5.3}% 138
+\BOOKMARK [2][-]{subsection.Alph5.3.2}{Enzyme quantification}{section.Alph5.3}% 139
+\BOOKMARK [1][-]{section.Alph5.4}{Concentration on microMolar}{appendix.Alph5}% 140
+\BOOKMARK [0][-]{appendix*.100}{References}{}% 141

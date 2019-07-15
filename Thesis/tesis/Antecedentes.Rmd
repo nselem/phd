@@ -35,9 +35,9 @@ library(reedtemplates)
 <!------------- Poner antecedentes directos a mi trabajo -->
 
 ```{r Niveles_promiscuidad_imagen, results = "asis",message=FALSE, echo=FALSE}
-      label(path = "chapter0/NivelesPromiscuidad.png", caption = "Antecedentes Conceptuales", 
+      label(path = "chapter0/NivelesPromiscuidad.png", caption = "La promiscuidad puede entenderse a distintos niveles metabólicos: enzima, familia enzimática y ruta biosintética", 
       scale = .6,
-      label = "La promiscuidad puede entenderse a distintos niveles metabólicos: enzima, familia enzimática y ruta biosintética", type = "figure")
+      label = "niveles", type = "figure")
 ```
 <!--- ¿Qué artículos debo de citar ---> 
 <!--- niveles FIGURa 1
@@ -58,18 +58,12 @@ Metabolismo central de genomas reducidos JEnsen [@jensen_enzyme_1976]
 6 Promiscuidad en metabolismo especializado  [@weng_promiscuity_specialized_pathways_2012]*
 [@lamble_archaea_promiscuou_pathways_2003] *
 Conclusión aparece/desaparece por ciertos sustratos. 
-
 --->
-\nocite{@nobeli_protein_2009,@lamble_archaea_promiscuou_pathways_2003,@weng_promiscuity_specialized_pathways_2012,@baronagomez_occurrence_2003,@juarez-vazquez_evolution_2017}
-
 ## La promiscuidad puede abordarse a distintos niveles incluyendo enzima, familia y ruta de metabólica.  
   
-Si se entiende a la promiscuidad como funciones alternativas de alguna unidad molecular, puede observarse promiscuidad a distintos niveles: desde un mismo gen que presenta splicing alternativo, una misma enzima con funciones alternativas, o bien una familia enzimática donde al menos algunos homologos codifican enzimas promiscuas [@nobeli_protein_2009]. Existen también rutas que generan productos metabólicos alternativos[@lamble_archaea_promiscuou_pathways_2003,@weng_promiscuity_specialized_pathways_2012], si se considera como la unidad de estudio a una ruta biosintética podemos generalizar la noción de promiscuidad al concepto de rutas promiscuas. La *Figura 1* muestra tres niveles en los que se puede estudiar la promiscuidad: i) Distinguiendo familias de enzimas promiscuas de familias especialistas, ii) Distinguiendo enzimas específicas de enzimas especialistas en una familia enzimática promiscua y finalmente iii) encontrando promiscuidad en rutas de metabolismo especializado. 
+Si se entiende a la promiscuidad como funciones alternativas de alguna unidad molecular, puede observarse promiscuidad a distintos niveles: desde un mismo gen que presenta splicing alternativo, una misma enzima con funciones alternativas, o bien una familia enzimática donde al menos algunos homologos codifican enzimas promiscuas [@nobeli_protein_2009]. Existen también rutas que generan productos metabólicos alternativos [@lamble_archaea_promiscuou_pathways_2003,@weng_promiscuity_specialized_pathways_2012], si se considera como la unidad de estudio a una ruta biosintética podemos generalizar la noción de promiscuidad al concepto de rutas promiscuas. La  `r ref(label = "niveles", type = "figure")` muestra tres niveles en los que se puede estudiar la promiscuidad: i) Distinguiendo familias de enzimas promiscuas de familias especialistas, ii) Distinguiendo enzimas específicas de enzimas especialistas en una familia enzimática promiscua y finalmente iii) encontrando promiscuidad en rutas de metabolismo especializado. 
 
-PriA en Actinobacteria y HisA en enterobacteria son familias que ambas isomerizan proFAR en la ruta de síntesis de histidina pero solo la familia PriA es promiscua pues puede además isomerizar el sustrato PRA durante la síntesis de triptofano [@baronagomez_occurrence_2003]. Sin embargo dentro de Actinobacteria, existen miembros no promiscuos de PriA, en algunas especies de Actinomyces los homólogos de *priA* codifican para enzimas monofuncionales en alguno de los dos sustratos, al menos en análisis in vitro [@juarez-vazquez_evolution_2017]. Así pues dentro de una familia promiscua no todos los miembros tienen esta propiedad. 
-
-En este trabajo se buscará encontrar marcas de promiscuidad a nivel familia, enzima y ruta biosintética en el metabolismo especializado. 
-
+Para clarificar la diferencia entre identificar familias promiscuas y miembro de familias promiscua se propone el siguiente ejemplo: PriA en Actinobacteria y HisA en enterobacteria son ambas familias que isomerizan proFAR en la ruta de síntesis de histidina pero solo la familia PriA es promiscua pues puede además isomerizar el sustrato PRA durante la síntesis de triptofano [@baronagomez_occurrence_2003]. Sin embargo dentro de Actinobacteria, existen miembros no promiscuos de PriA, en algunas especies de _Actinomyces_ los homólogos de *priA* codifican para enzimas monofuncionales en alguno de los dos sustratos, al menos en el análisis _in vitro_ [@juarez-vazquez_evolution_2017]. Así pues dentro de una familia promiscua no todos los miembros tienen esta propiedad [@bloom_neutral_2007]. En este trabajo se buscará encontrar marcas de promiscuidad a nivel familia, enzima y ruta biosintética en el metabolismo especializado. 
 
 <!--   FIGURA 2 medición promiscuidad nos quedamos genómica comparada medición estructural 
 <! para la genómica 
@@ -83,15 +77,13 @@ En este trabajo se buscará encontrar marcas de promiscuidad a nivel familia, en
 --->
 
 ```{r Antecedentes_conceptuales_imagen, results = "asis",message=FALSE, echo=FALSE}
-      label(path = "chapter0/AntecedentesConceptuales.png", caption = "Antecedentes Conceptuales", 
+      label(path = "chapter0/AntecedentesConceptuales.png", caption = "Antecedentes conceptuales de promiscuidad metabólica", 
       scale = .5,
-      label = "Antecedentes conceptuales de promiscuidad", type = "figure")
+      label = "Antecedentes", type = "figure")
 ```
 
-\nocite{@carbonell_molecular_2010,@juarez-vazquez_evolution_2017,@noda_tesis_2012,@soskine_mutational_2010,@aharoni_evolvability_2005,@bloom_neutral_2007,@zhao__function_prediction_neighbourhood_2014,@juarez-vazquez_evolution_2017,@martinez-nunez_lifestyle_2015,@zou_evolution_2015, @gatti-lafranconi_flexibility_2013}  
-
 ## Antecedentes conceptuales   
-Se ha intentado identificar enzimas promiscuas mediante aprendizaje máquina utilizando únicamente la secuencia de aminoácidos. Estos enfoques no han distiguido entre identificación de familias promiscuas e identificación a nivel de enzima. [@carbonell_molecular_2010] Hasta ahora al utilizar únicamente la información de la secuencia no ha sido posible identificar una familia promiscua sin conocer previamente al menos un miembro promiscuo de ella. Por otra parte, diferenciar la promiscuidad a nivel de enzima se dificulta cuando la identidad de secuencia es alta, como en el caso de las PriA que han perdido la promiscuidad en Actinomyces [@juarez-vazquez_evolution_2017]
+Algunos autores han intentado identificar enzimas promiscuas mediante aprendizaje máquina utilizando únicamente la secuencia de aminoácidos. Estos enfoques no han distiguido entre los problemas identificación de familias promiscuas e identificación a nivel de enzima [@carbonell_molecular_2010]. Hasta ahora utilizar únicamente la información de la secuencia de aminoácidos no ha sido suficiente para identificar una familia promiscua sin conocer previamente al menos un miembro promiscuo de ella. Por otra parte, diferenciar la promiscuidad a nivel de enzima una vez que se conoce una familia promiscua se dificulta cuando la identidad de secuencia es alta. Tal es el caso de las PriA que han perdido la promiscuidad en algunos miembros del género _Actinomyces_ [@juarez-vazquez_evolution_2017]. En este caso el establecimiento de las filogenia de los miembros del género permitió entender la distribución de la 
 
 Para mejorar nuestro entendimiento del fenomeno además de la comparación de secuencias es necesario integrar otros elementos al análisis, Figura 2. Es difícil medir la promiscuidad en términos absolutos, por ejemplo, no se puede aseverar que una enzima es no promiscua sin haber previamente descartado todos los posibles sustratos del universo químico. Además incluso enzimas que resultan no promiscuas en análisis in vivo si son promiscuas al examinarlas in vivo [@noda_tesis_2012]. Sin embargo debido a que al adquirir una nueva función existe un umbral donde la función ancestral es conservada, es plausible estudiar transformar el problema de encontrar promiscuidad al de encontrar cambios en promiscuidad al relacionar estos últimos con las huellas que dejan los cambios funcionales[@soskine_mutational_2010,@aharoni_evolvability_2005,@bloom_neutral_2007]. Entre los elementos relevantes que correlacionan con la adquisición de una función alternativa se encuentran además de divergencia de secuencia, diversidad en vecindad genomica[@zhao__function_prediction_neighbourhood_2014], la perdida o ganancia de genes[@juarez-vazquez_evolution_2017], las expansiones genicas, i.e. el crecimiento del pangenoma endtro de un grupo taxonómico [@martinez-nunez_lifestyle_2015] y finalmente cambios estructurales o de flexibilidad durante la dinámica molecular[@zou_evolution_2015, @gatti-lafranconi_flexibility_2013 ]. Estos elementos tienen en común que reflejan un cambio en alguna propiedad genómica o biofísica observable en el registro evolutivo, de lo que se deriva que el buscar cambios en la promiscuidad de una enzima, familia o ruta, resulta mas factible por ahora que la búsqueda intrínseca de promiscuidad.
 

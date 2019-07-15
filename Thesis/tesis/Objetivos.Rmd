@@ -108,6 +108,18 @@ Para obtener el core genome y en base a el reclasificar los genomas se diseño e
     
 Estrellas. Se realiza un blast all vs all de genomas deseados. Para cada secuencia, centrado en cada genoma se realiza una lista (estrella) de sus mejores hits bidireccionales. Si las listas de todos los genomas coinciden es un BBH multiple y se agrega la lista al core genome. (Fig 9) Una vez con el core genome completo se puede reconstruir la filogenia. Este metodo fue exitoso en la deteccion de una familia marcadora de Clavibacter michiganensis (2014 Rodriguez-Orduña in prep). 
    
+#### Organización y presentación de familias extendidas mediante el desarrollo una plataforma bioinformática.  
+Para contribuir al desarrollo de la plataforma Evomining se desarrollaron programas de visualización de árboles filogenéticos y contextos genómicos.  
+
+#### Algoritmo de reconstrucción filogenética y visualización
+Las secuencias de las familias enzimáticas expandidas fueron alineadas con muscle v3.2[@edgar_muscle_2004] y curadas con Gblocks v0.91b[@castresana_selection_2000]. Los parámetros de Gblocks fueron fijados en incluir 5 posiciones como el mínimo tamaño de un bloque y diez posiciones como el máximo de posiciones contiguas no conservadas. 
+La selección de color de las hojas del árbol fue automatizada utilizando Newick Utilities una serie de programas llamados desde la terminal para manipular árboles en formato Newick[@junier_newick_2010].  La anotación funcional de RAST en su versión clásica[@aziz_rast_2008,@overbeek_seed_2014] fue agregada al SVG. 
+
+#### Algoritmo de visualización  
+Para facilitar el análisis visual de una vecindad genómica y a la vez generar imagenes de alta calidad exportables para su uso en publicaciones, se desarrolló código cuya salida es el formato _Scalable Vector Graphics_ (SVG). Este formato es básicamente un archivo de texto XML que contiene instrucciones para que navegadores como Chrome o firefox realicen un dibujo. Al ser vectores, las imágenes generadas en SVG no pierden resolucion al ser escaladas y justamente por ser escalables permiten explorar con detalle grandes cantidades de datos organizados por ejemplo en árboles filogenéticos. Los scripts estraen para cada gen información necesaria como coordenadas, dirección, función química. La anotación de función proviene de la anotacion de RAST, la visualización de vecindades genomicas fue desarrollada _de novo_. Los primeros análisis de EvoMining, antes de la existencia de esta plataforma fueron desarrollados en el lenguaje perl; este lenguaje cuenta con un modulo para facilitar la elaboracion de SVG (perlmaven/SVG 2015) por lo que se decidió utilizarlo y continuar el desarrollo en Perl para no agregar nuevos requerimientos y facilitar su portabilidad.
+   
+Se amplificara Evomining de los 200 genomas con que contaba su version inicial a los 880 colectados mudando la curacion manual de su base de datos de rutas centrales a la anotacion por subsistemas de RAST. Finalmente se presentara la variacion en vecindades genomicos como una herramienta adicional que ayude en la busqueda de promiscuidad en familias de enzimas pertenecientes al metabolismo central.
+   
 ### Identificar cambios en la vecindad genomica en familias selectas de enzimas de metabolismo central.  
 Clasificar sistematicamente las secuencias de familias codificantes segun su similitud en familias enzimaticas.  
 
@@ -149,13 +161,6 @@ S(Cl)=f(k,m,M)=c1k+c2m+c3M
   
 Este algoritmo se puede mejorar considerando la orientacion de los genes del cluster asi como clusters de los vecinos.
   
-####Organizar y presentar los datos en una plataforma.  
-Para contribuir al desarrollo de la plataforma Evomining se desarrollaran scripts de visualizacion de arboles filogeneticos y contextos genomicos.  
-  
-Para facilitar el analisis visual de una vecindad genomica ya la vez generar imagenes de alta calidad facilmente exportables para su uso en publicaciones, se desarrollaran scripts de visualizacion que utilizaran el formato Scalable Vector Graphics (SVG), dicho formato es basicamente un archivo de texto XML que contiene instrucciones para que el navegador realice un dibujo (W3school/SVG 2015). Al ser vectores, las imagenes generadas en SVG no pierden resolucion al ser escaladas y justamente por ser escalables permiten explorar con detalle grandes cantidades de datos organizados por ejemplo en arboles filogeneticos. Los scripts a desarrollar extraeran para cada gen informacion necesaria como coordenadas, direccion, funcion quimica, etc, proveniente de la anotacion de RAST y de los scripts de comparacion de vecindades genomicas. La primera version de evomining fue desarrollada en el lenguaje perl; este lenguaje cuenta con un modulo para facilitar la elaboracion de SVG (perlmaven/SVG 2015) por lo que al utilizar SVG no se agregan nuevos requerimientos a su desarrollo y se facilita su portabilidad.
-   
-Se amplificara Evomining de los 200 genomas con que contaba su version inicial a los 880 colectados mudando la curacion manual de su base de datos de rutas centrales a la anotacion por subsistemas de RAST. Finalmente se presentara la variacion en vecindades genomicos como una herramienta adicional que ayude en la busqueda de promiscuidad en familias de enzimas pertenecientes al metabolismo central.
-   
 
 
 ###Promiscuidad in vitro  
@@ -187,21 +192,16 @@ Archaeal core  [@makarova_comparative_1999]
 Methanosarcina reconstruction [@benedict_genome-scale_2012]  
 Archaea phylum[@seitz_genomic_2016]  
 Prediction for possible products of promiscuous enzymes[@jeffryes_mines_2015]  
-Saxitoxin [@moustafa_origin_2009]  
 Plants clusters [@medema_computational_2016]  
-MiBIG [@medema_minimum_2015]  
 Metagenomics on Streptomyces [@iqbal_natural_2016]  
 Sulfolobus reconsruction [@ulas_genome-scale_2012]  
 Archaeal Natural products[@charlesworth_untapped_2015]    
 Computational Pangenomics [@computational_pan-genomics_consortium_computational_2016]  
-Cuántos genes "obtenidos por EvoMining" son core/ cloud/stand alone  
-Qué porcentaje de genes únicos recupera EvoMining  
 Eucarya paralogs reshape gene clusters [@chan_remodelling_2015]  
 Microbial dark mater [@rinke_insights_2013]  
 Archaea anaerobica carbon [@castelle_genomic_2015]
 Archaea Eucarya gap loki[@spang_complex_2015]  
 Archaea and eucarya[@koonin_archaeal_2015]  
-BPGA [@chaudhari_bpga-_2016]
 genes esenciales bacteria minima[@glass_essential_2006]  
 Radical [@narechania_random_2012]  
 RaxML large philogenies [@stamatakis_raxml_2014]  
@@ -221,7 +221,6 @@ Phylogeny R [@omeara_cran_2016]
 Cyanobacteria fluctuacion genomica y adaptacion [@larsson_genome_2011]  
 Ecology of cyanobacterua [@whitton_ecology_2012]  
 Histdine biosynthesis[@cohen_biosynthesis_2004]  
-PriA reconstruction [@plach_long-term_2016]  
 Escala temporl bacterias [@battistuzzi_genomic_2004]  
 Pangenome size [@lapierre_estimating_2009]  
 variabilidad del 16s [@vetrovsky_variability_2013]  
