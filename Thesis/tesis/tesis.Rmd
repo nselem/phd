@@ -16,13 +16,14 @@ acknowledgements: >
  
   A Abraham Avelar por su impaciencia, sus enseñanzas, revisión, esfuerzo y aportaciones a la vida.  
   
-  A mi familia por el largo camino recorrido juntos.  
+  A mi familia, papás  por el largo camino recorrido juntos.  
   
 dedication: >
   A mis seres queridos. 
   
 preface: >
-  This is an example of a thesis setup to use the reed thesis document class.
+  La promiscuidad ha redefinido cómo entendemos la función enzimática. Se ha transitado de considerar a todas las enzimas como altamente especialistas a entender que muchas de ellas pueden llevar a cabo más de una función metabólica. La promiscuidad parece parte del proceso evolutivo, provee material para que una posterior duplicación conlleve a la formación de nuevas familias enzimáticas. Esta tesis aborda el problema de promiscuidad distinguiendo entre familias de enzimas promiscuas y miembros promiscuos de una familia. A continuación generaliza el concepto de promiscuidad en una enzima a promiscuidad de un cluster biosintético (BGC). Para sugerir promiscuidad se desarrollan una serie de herramientas para estudiar el pangenoma de linajes taxonómicos. La primera herramienta Orthocore busca entender los genes conservados y sin expansiones entre organismos de un linaje. La segunda herramienta se ocupa al contrario de familias que sí tienen copias extra y propone como organizar esta variación en posibles destinos metabólicos. La tercera herramienta sube un nivel en la complejidad organizacional y busca entender la variación de grupos de genes (clusters biosintéticos) señalando una familia que presenta promiscuidad de producto. Finalmente estudiamos diversos aspectos de la familia PriA, una familia promiscua en Actinobacteria que no pasó por un proceso de duplicación reciente en Actinobacteria.  
+  
 bibliography: bib/Nelly.bib
 # Download your specific bibliography database file and refer to it in the line above.
 csl: csl/vancouver-brackets.csl #apa.csl

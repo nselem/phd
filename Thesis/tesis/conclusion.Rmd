@@ -2,10 +2,15 @@
 output: pdf_document
 ---
 
-# Conclusión {.unnumbered}
+# Perspectivas {.unnumbered}  
   \setcounter{chapter}{4}
 	\setcounter{section}{0}
+	
+En este trabajo estudiamos la promiscuidad enzimática tanto a nivel enzima, como familia de enzimas como BGC. Primero 
 
+La promiscuidad ha redefinido cómo entendemos la función enzimática. Se ha transitado de considerar a todas las enzimas como altamente especialistas a entender que muchas de ellas pueden llevar a cabo más de una función metabólica. La promiscuidad parece parte del proceso evolutivo, provee material para que una posterior duplicación conlleve a la formación de nuevas familias enzimáticas. Esta tesis aborda el problema de promiscuidad distinguiendo entre familias de enzimas promiscuas y miembros promiscuos de una familia. A continuación generaliza el concepto de promiscuidad en una enzima a promiscuidad de un cluster biosintético (BGC). Para sugerir promiscuidad se desarrollan una serie de herramientas para estudiar el pangenoma de linajes taxonómicos. La primera herramienta Orthocore busca entender los genes conservados y sin expansiones entre organismos de un linaje. La segunda herramienta se ocupa al contrario de familias que sí tienen copias extra y propone como organizar esta variación en posibles destinos metabólicos. La tercera herramienta sube un nivel en la complejidad organizacional y busca entender la variación de grupos de genes (clusters biosintéticos) señalando una familia que presenta promiscuidad de producto. Finalmente estudiamos diversos aspectos de la familia PriA, una familia promiscua en Actinobacteria que no pasó por un proceso de duplicación reciente en Actinobacteria.  
+   Aqui proponemos organizar los clusters y finalmente la medida de su apertura. variantes de clusters producen nuevos compuestos, ya sea por promiscuidad enzimática en un core conservado o por variación en la presencia / ausencia de genes. Un cluster recibe los mismos sustratos y los transforma en diferentes productos. 
+  
 Idea de Rosario
 -ver dell cluster de saxitoxin cuantos pasos se necesitron para llegar ahi.  
 -A donde se iria el resultado de abrir el GMP  
@@ -18,18 +23,8 @@ Una mezcla entre Orthocore y EvoMining permite descubrir que PriA no está expan
 es parte 
 If we don't want Conclusion to have a chapter number next to it, we can add the `{.unnumbered}` attribute.  This has an unintended consequence of the sections being labeled as 3.6 for example though instead of 4.1.  The \LaTeX\ commands immediately following the Conclusion declaration get things back on track.
 
-#### More info
-
-And here's some other random info: the first paragraph after a chapter title or section head _shouldn't be_ indented, because indents are to tell the reader that you're starting a new paragraph. Since that's obvious after a chapter or section title, proper typesetting doesn't add an indent there.
-
-<!--
-If you feel it necessary to include an appendix, it goes here.
--->
-
-# Metodología 
+# Protocolos
 	\setcounter{section}{1}
-
-
                           
 ## Protocolos para usar Orthocore, myRAST, fastOrtho, Clavigenomics, y BPGA  
 Anotación genómica con el docker myRAST  
@@ -86,26 +81,11 @@ Table: Formatos de descarga disponibles en myRAST \label{tab:myrast}
   
 ## Orthocore  
 
-El umbral de e-value de Orthocore es por default 1e-6. Todas las secuencias son alineadas usando MUSCLE v3.8.31 con los parámetros default y curadas utilizando Gblocks con 5 posiciones como longitud mínima del  bloque, 10 como máximo número de posiciones contiguas no conservadas y sólo considerando posiciones con gaps menores que el 50% de las secuencias en el alineamiento final. Después de esta curación las secuencias son concatenadas en una matriz final.
-
-
+El umbral de e-value de Orthocore es por default 1e-6. Todas las secuencias son alineadas usando MUSCLE v3.8.31 con los parámetros default y curadas utilizando Gblocks con 5 posiciones como longitud mínima del  bloque, 10 como máximo número de posiciones contiguas no conservadas y sólo considerando posiciones con gaps menores que el 50% de las secuencias en el alineamiento final. Después de esta curación las secuencias son concatenadas en una matriz final
 
 \appendix
 
-# The First Appendix
-
-This first appendix includes all of the R chunks of code that were hidden throughout the document (using the `include = FALSE` chunk tag) to help with readibility and/or setup.
-
-#### In the main Rmd file:
-
-```{r ref.label = 'include_packages', results = 'hide', echo = TRUE}
-```
-
-#### In [](#ref_labels):
-
-```{r ref.label = 'include_packages_2', results = 'hide', echo = TRUE}
-```
-# El Segundo apéndice Tablas de EvoMining  
+# Figuras suplementarias de EvoMining  
 ```{r DataTabla42, results = "asis",message=FALSE,echo=FALSE}
 label(path = "Anexos/Tabla42.pdf", 
       caption = "Expansiones de las 42 enzimas en los cuatro linajes genómicos",
@@ -144,7 +124,9 @@ label(path = "Anexos/GDHFactor.pdf",
       type = "figure")
 ```
 
-## El contexto de una rama divergente de _tauD_ está conservado en Pseudomonas  
+## Figuras suplementarias de CORASON  
+
+### El contexto de una rama divergente de _tauD_ está conservado en Pseudomonas  
 
 En Pseudomonas el gen _tauD_ tiene un contexto que incluye genes de metabolismo especializado. Variantes de este contexto están distribuidas en varios organismos. Parecen ser diferentes de los rimosamides y detoxins reportados en Actinobacteria.  
 
@@ -160,15 +142,12 @@ label(path = "chapter3/PseudomonasTauD.pdf",
    
 
 
-# El tercer apéndice, cógigo abierto
-## R markdown  
-Thanks to Rmakdown  Thesis  
-Apendix one Useful docker commands   
+# El tercer apéndice, comandos de Docker y Git y R  
+## Docker  
 -Create a new repository  
 `docker build . -t evomining`  
 `docker push nselemevomining`
 
-## Docker  
 Restart docker and free all ports  
 `sudo service docker restart`   
 
@@ -178,7 +157,6 @@ list containers
 ssh or bash into a running docker container  
 `sudo docker exec -i -t romantic_brahmagupta /bin/bash`
 `docker exec -it <mycontainer> bash`  
-
 
 Stop all containers  
 `docker rm $(docker ps -a -q)`  
@@ -219,18 +197,6 @@ Gblocks only runs inside folder /var/www/html/EvoMining
 automated builds
 The Dockerfile is available to anyone with access to your Docker Hub repository.
 Your repository is kept up-to-date with code changes automatically.
-
-## Additional resources
-
-- _Markdown_ Cheatsheet - <https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet>
-
-- _R Markdown_ Reference Guide - <https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf>
-
-- Introduction to `dplyr` - <https://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html>
-
-- `ggplot2` Documentation - <http://docs.ggplot2.org/current/>
-
-Docker antiSMASH  run_antismash /<some>.gbk ~/as_results --knownclusterblast --inclusive --cf_threshold 0.7  
 
 # Apendice 3 Dinámica molecular vs datos experimentales  
 

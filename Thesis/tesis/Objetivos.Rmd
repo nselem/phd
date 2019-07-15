@@ -25,91 +25,78 @@ if(!require(reedtemplates)){
 library(reedtemplates)
 ```
   
-# Pregunta biológica  {.unnumbered}
-  
-\clearpage  
-  
 # Objetivos  {.unnumbered}
 
 ## Objetivo General   
-  
-Estudiar el fenomeno de promiscuidad enzimatica tanto desarrollando estrategias para identificar familias promiscuas dentro de un grupo taxonomico, como comparando variaciones de promiscuidad in vitro e in vivo  con variaciones en contexto genomico y flexibilidad en miembros de una familia. (Figura 7)
+Estudiar el fenomeno de promiscuidad tanto desarrollando estrategias para identificar familias promiscuas, miembros promiscuos en dichas familias o clusters biosintéticos promiscuos dentro de un grupo taxonómico, como comparando variaciones de promiscuidad _in vitro_ con variaciones en contexto genómico y en propiedades relacionadas a la estructura tridimensional en miembros de una familia.  
 
 ## Objetivos particulares  
-Mejorar evomining como metodo de identificacion de familias enzimaticas promiscuas aprovechando los cambios en vecindades genomicas como caracteristicas informativas provenientes de datos filogenomicos. 
-Estudiar la relacion entre historias filogenomicas y procesos biofisicos con la promiscuidad in vitro, a traves de mediciones de ciertas caracteristicas de la familia PriA.
-Caracterizar cambios de promiscuidad enzimatica in vivo mediante perfiles metabolomicos de actividades de PriA y enzimas asociadas.
-  
+1. Desarrollar Orthocore un método para entendercuáles son los genes más conservados en el _core genome_ en un linaje taxonómico y aplicar este conocimiento.  
+
+2. Mejorar EvoMining como método de identificación de familias enzimáticas promiscuas aprovechando los cambios en vecindades genómicas como características informativas provenientes de datos filogenómicos.  
+
+3. Desarrollar CORASON una herramienta Optimizar el entendimiento de la evolución de clusters biosintéticos y vecindades genómicas diversas, para poder organizarlas jerárquicamente tal y como se pueden organizar las secuencias de enzimas. Con este conocimiento proponer y verificar mediante BGC promiscuo y verificar la hipótesis   
+
+4. Estudiar la relacion entre historias filogenómicas y procesos biofísicos con la promiscuidad _in vitro_, a través de mediciones de ciertas características de la familia PriA.  
+
 \clearpage  
   
 # Estrategias   {.unnumbered}
-#### Obtener informacion genomica del phylum Actinobacteria.  
-Colectar genomas de Actinobacteria de NCBI y de colecciones privadas.  
+#### Obtener informacion genomica de diversos linajes genómicos.  
+Colectar genomas de Actinobacteria, Cyanobacteria, _Pseudomonas_ y Archaea de NCBI y de colecciones privadas.  
 
 ### Anotar consistentemente las secuencias codificantes de estos genomas.    
-Utilizar un anotador automatizado y desarrollar los scripts necesarios para anotar los genomas.  
+Utilizar un anotador automatizado y desarrollar los scripts necesarios para automatizar la anotación de los genomas.  
 
-#### Establecer las relaciones filogeneticas de los genomas colectados.  
-Mediante el uso del core genome construir un arbol filogenomico que permita establecer un marco sobre el cual hablar de cambio y que facilite reclasificar los genomas mal nombrados.  
-
+#### Establecer las relaciones filogenéticas de los genomas colectados.  
+Mediante el uso del _core genome_ construir un arbol filogenomico que permita establecer un marco sobre el cual hablar de cambio.  
 
 ### La promiscuidad en familias enzimaticas.  
-Mejorar Evomining mediante la  identificacion de cambios de vecindad genomica en familias selectas de metabolismo central convirtiendola en una plataforma de codigo libre disponible para otros investigadores.  
+Desarrollar Evomining hasta el punto de convertirla en una distribución funcional de código libre disponible para otros investigadores. Agregar características que faciliten la investigación como la visualización de la vecindad genomica de los miembros de una familia y otros metadatos como el número de copias por organismo.   
 
 ##### Identificar cambios en la vecindad genomica en familias selectas de enzimas de metabolismo central.
-Clasificar sistematicamente las secuencias de familias codificantes segun su similitud en familias enzimaticas.   
-Desarrollar las herramientas bioinformaticas necesarias para separar clusters de vecindades genomicas.  
+Identificar familias de metabolismo central en los linajes genómicos seleccionados.  
+
+Identificar mediante EvoMining las familias de metabolismo central con expansiones y reclutamientos que pueden presentar promiscuidad enzimática.  
+
+Desarrollar las herramientas bioinformáticas necesarias para entender la conservación y evolución de BGCs u otras vecindades genomicas a las que pertenecen las expansiones de las familias centrales previamente seleccionadas.    
 
 #### Promiscuidad in vitro dentro de miembros de una familia promiscua de enzimas. 
-Dados los sustratos conocidos de PriA investigar las posibles correlaciones entre mediciones de constantes cataliticas, contexto genomico, vecindad genomica, numero de conformeros e indice de flexibilidad. 
+Dados los sustratos conocidos de PriA investigar las posibles correlaciones entre mediciones de constantes cataliticas, contexto genomico, vecindad genómica, estructura tridimensional y cambio en el número de copias en diversos linajes.  
 
 #### Sistematizar Evomining para convertirla una plataforma descargable y utilizable en cualquier set de datos bacterianos relacionados taxonomicamente proporcionados por el usuario.  
-Ampliar el contenido de Evomining al integrar los genomas colectados de Actinobacteria.
+-Ampliar el contenido de Evomining para poder analizar nuevas bases de datos genómicas, agregando por ejemplo los nuevos genomas colectados de Actinobacteria, así como los genomas de Cyanbacteria, $Pseudomonas$ y Archaea.  
 Sistematizar la base de datos de metabolismo central.  
-Desarrollar la visualizacion e integrar la clasificacion de vecindades genomicas como una herramienta adicional en la busqueda de promiscuidad.  
+
+-Desarrollar la visualizacion e integrar la clasificacion de vecindades genomicas como una herramienta adicional en la busqueda de promiscuidad.  
 
  
-#### Seleccionar miembros homologos de la familia de enzimas.   
-Se escogieron 41 Streptomyces repartidos en un arbol de rpoB de 400 Streptomyces con genoma disponible. Esta seleccion incluye los seis Streptomyces de los que se cuenta con cinetica enzimatica de PriA, tres de ellos con estructura cristalografica.  
+#### Seleccionar miembros homologos de la familia de enzimas para modelado molecular.   
+Se escogieron 41 _Streptomyces_ repartidos en un arbol de rpoB de 400 Streptomyces con genoma disponible. Esta selección incluye los seis _Streptomyces_ de los que se cuenta con cinética enzimatica de PriA, tres de ellos con estructura cristalográfica.  
 
-#### Medir cineticas enzimaticas, contexto genomico, vecindad genomica, flexibilidad y numero de conformeros.  
-Determinar la pertenencia a uno de cuatro posibles contextos genomicos respecto al gen trpF. Estudiar la existencia de distintas vecindades genomicas. Determinar la cinetica enzimatica de 9 enzimas mas buscando variabilidad en contexto genomico (sugeridas en la tabla 4). Obtener mediante una colaboracion 37 modelos estructurales por homologia y modelar dinamica molecular.  
+#### Medir cinéticas enzimaticas, contexto genómico y vecindad genómica
+Estudiar la existencia de distintas vecindades genomicas. Determinar la cinetica enzimatica de PriA respecto a sustratos atípicos sugeridos por los estudios estructurales. Obtener mediante una colaboración 37 modelos estructurales por homología y modelar docking molecular.  
    
-La siguiente tabla contiene la diversidad de contextos y vecindades genomicas de 41 Streptomyces respecto al gen trpF.  
-
-#### Determinar posibles correlaciones entre los datos producidos.  
-Numero de conformeros e indice de promiscuidad.   
-indice de flexibilidad y numero de conformeros.  
-Numero de conformeros y contexto genomico.  
-indice de flexibilidad y contexto genomico.  
-Contexto genomico e indice de promiscuidad I.  
-Analizar las vecindades genomicas e indice de promiscuidad I.  
-
-### Desarrollar una metodologia para la deteccion in vivo de promiscuidad enzimatica.  
-Debido a cambios en flexibilidad o cambios de contexto genomico, se puede sospechar de diferencias en la funcion quimica de dos miembros de una familia de enzimas, sin conocer las diferencias a nivel de sustratos. Para investigar estos cambio in vivo  se propone estudiar diferencias en perfiles metabolomicos de una coleccion de cepas en condiciones diversas.  
-
 \clearpage  
   
 #Metodologia  {.unnumbered}
-A continuacion describiré la metodologia para cada una de las estrategias expuestas previamente. Todos los scripts desarrollados fueron escritos en perl y estan disponibles en github https://github.com/nselem/perlas.
+A continuacion describiré la metodologia para cada una de las estrategias expuestas previamente. Todos los scripts desarrollados fueron escritos en perl y estan disponibles en github https://github.com/nselem/perlas y empacados como un contenedor de docker.
   
 ###La promiscuidad en familias enzimaticas.  
 
 #### Actinobacteria genomica  
-Para obtener informacion genomica del phylum Actinobacteria mediante la coleccion de genomas de NCBI se revisaron todas las familias de Actinobacteria de la base genoma de NCBI y se seleccionaron los genomas con minimo 5 genes por contig. Se crearon scripts para utilizar la interfaz e-utils de NCBI y descargar estos genomas desde la terminal a partir de una lista de identificadores.
+Para obtener información genómica del phylum Actinobacteria mediante la coleccion de genomas de NCBI se revisaron todas las familias de Actinobacteria de la base genoma de NCBI y se seleccionaron los genomas con mínimo 5 genes por contig. Se crearon scripts para utilizar la interfaz e-utils de NCBI y descargar estos genomas desde la terminal a partir de una lista de identificadores. El mismo procedimiento se aplico a Cyanobacteria, _Pseudomonas_ y Archaea.  
    
-#### Annotation  
-Para anotar consistentemente las secuencias codificantes de estos genomas se utilizo el anotador automatizado RAST y se desarrollaron los scripts necesarios para anotar los genomas desde la terminal, conectado asi NCBI y RAST.
+#### Annotación
+Para anotar consistentemente las secuencias codificantes de estos genomas se utilizó el anotador automatizado RAST y se desarrollaron los scripts necesarios para anotar los genomas desde la terminal, conectado asi NCBI y RAST. Se empacaron estos scripts en una distribución docker de myrast.  
 
-#### Genomic DB phylogeny  
-Establecer las relaciones filogeneticas de los genomas colectados.
-Mediante el uso del core genome para construir un arbol filogenomico, para reclasificar los genomas mal nombrados.   
-Para obtener el core genome y en base a el reclasificar los genomas se diseño el algoritmo estrellas basado en Best Bidirectional Hits (blast all vs all). 
+#### Filogenia de la base de datos genómica  
+Establecer las relaciones filogeneticas de los genomas colectados mediante el uso del _core genome_ para construir un arbol filogenómico, y para encontrar genes marcadores de un linaje taxonómico. Para obtener el _core genome_ y en base a el reclasificar los genomas se diseño el algoritmo Orthocore que generaliza el concepto de Best Bidirectional Hits (blast all vs all). 
     
-Estrellas. Se realiza un blast all vs all de genomas deseados. Para cada secuencia, centrado en cada genoma se realiza una lista (estrella) de sus mejores hits bidireccionales. Si las listas de todos los genomas coinciden es un BBH multiple y se agrega la lista al core genome. (Fig 9) Una vez con el core genome completo se puede reconstruir la filogenia. Este metodo fue exitoso en la deteccion de una familia marcadora de Clavibacter michiganensis (2014 Rodriguez-Orduña in prep). 
+Orthocore. Se realiza un blast all vs all de genomas deseados. Para cada secuencia, centrado en cada genoma se realiza una lista (estrella) de sus mejores hits bidireccionales. Si las listas de todos los genomas coinciden es un BBH multiple y se agrega la lista al core genome. Una vez con el _core genome_ completo se puede reconstruir la filogenia. Este metodo fue exitoso en la deteccion de una familia marcadora de _Clavibacter michiganensis_.
    
 #### Organización y presentación de familias extendidas mediante el desarrollo una plataforma bioinformática.  
-Para contribuir al desarrollo de la plataforma Evomining se desarrollaron programas de visualización de árboles filogenéticos y contextos genómicos.  
+Se desarrolló EvoMining como una plataforma interactiva de consulta, se complementó con programas de visualización de árboles filogenéticos y contextos genómicos.   
 
 #### Algoritmo de reconstrucción filogenética y visualización
 Las secuencias de las familias enzimáticas expandidas fueron alineadas con muscle v3.2[@edgar_muscle_2004] y curadas con Gblocks v0.91b[@castresana_selection_2000]. Los parámetros de Gblocks fueron fijados en incluir 5 posiciones como el mínimo tamaño de un bloque y diez posiciones como el máximo de posiciones contiguas no conservadas. 
@@ -121,62 +108,8 @@ Para facilitar el análisis visual de una vecindad genómica y a la vez generar 
 Se amplificara Evomining de los 200 genomas con que contaba su version inicial a los 880 colectados mudando la curacion manual de su base de datos de rutas centrales a la anotacion por subsistemas de RAST. Finalmente se presentara la variacion en vecindades genomicos como una herramienta adicional que ayude en la busqueda de promiscuidad en familias de enzimas pertenecientes al metabolismo central.
    
 ### Identificar cambios en la vecindad genomica en familias selectas de enzimas de metabolismo central.  
-Clasificar sistematicamente las secuencias de familias codificantes segun su similitud en familias enzimaticas.  
-
-Como se menciono en los antecedentes, se han separado 888 genomas de Actinobacteria en 3 grupos taxonomicos utilizando para la anotacion la tecnologia de subsistemas de RAST. Para la separacion en familias iso funcionales (ortologos, paralogos y expansiones) n se utilizo RAST, especificamente el script What Changed (WC) que asigna un numero a cada familia, esta herramienta esta basada en k-mers,  su codigo esta disponible en github: (https://github.com/kbase/kbseed/blob/master/service-scripts/svr_CS.pl). Ademas de en los tres grupos ya mencionados, tambien se realizara una clasificacion para trescientos genomas de Actinobacteria distribuidos en todas sus familias taxonomicas.
-   
-Para desarrollar las herramientas bioinformaticas necesarias para separar clusters de vecindades genomicas a continuacion se describe detalladamente como se definicio vecindad genomica y la relacion implementada de similitud.
-  
-1.  Un conjunto expandido es un conjunto que contiene secuencias homologas asi como sus expansiones: paralogos y transferencias horizontales. Dado un conjunto de genomas, se pueden calcular y enumerar todos sus contextos extendidos utilizando WC. 
-    
-2.  Un PEG es un elemento de un conjunto expandido. Dado un PEG p, se define CE(p) el numero del conjunto expandido de p, como el numero asignado por WC al conjunto expandido a que p pertenece.
-  
-3.  La vecindad de un PEG es el conjunto de PEGs cercanos a el. Dado un umbral en terminos de distancia de pares de bases entre puntos medios para precisar la definicion de cercano, se pueden calcular todos los contextos de un genoma. 
-    
-4. Una vecindad Aes n-similar a otra vecindad B si C={aA |  b B ,CE(b)=CE(a)} tiene al menos cardinalidad n. Es decir si existen al menos n elementos de A que pertenecen al mismo conjunto expandido que algun elemento de B.
-  
-5.  Un conjunto de vecindades es un conjunto de PEGs clusterizado segun la relacion n-similaridad.  Si A es n-similar a B y B esn-similar a C entonces, aun si A no fuese n-similar a C, los PEGs generadores de A,B,C son agrupados dentro del mismoconjunto de vecindades.
-  
-6. Un cluster es un conjunto de conjunto de vecindades.
-  
-7. Los clusters son evaluados segun el numero y la cardinalidad de sus conjuntos de vecindades.
-       
-Sea Cl un cluster, donde CCi es un conjunto de contextos y ni es la cardinalidad de CCi
-Cl={CC1,CC2,...,CCk} 
-   
-Sean M la cardinalidad maxima de un conjunto de contextos y m la cardinalidad maxima sin considerar M.  
-```{r}
-
-#$$   M\eq\max_{ni} i\eq{1,2,..,k}         m\eq\max_ni i\eq {1,2,...,k}  ni\ne{M}  $$
-
-```
-$$\sum_{j=1}^n (\delta\theta_j)^2 \leq {{\beta_i^2}\over{\delta_i^2 + \rho_i^2}}
-\left[ 2\rho_i^2 + {\delta_i^2\beta_i^2\over{\delta_i^2 + \rho_i^2}} \right] \equiv \omega_i^2$$
-
-
-M representa el contexto mas difundido de  la enzima, dentro del grupo taxonomico considerado; mes relevante porque si m es grande significa que hay un segundo contexto genomico conservado en dicho grupo taxonomico, y entonces posiblemente una ganancia de funcion.  
-  
-La evaluacion de Cl esta dada por una combinacion lineal de k,m y M  
-S(Cl)=f(k,m,M)=c1k+c2m+c3M  
-  
-Este algoritmo se puede mejorar considerando la orientacion de los genes del cluster asi como clusters de los vecinos.
-  
-
-
-###Promiscuidad in vitro  
-####Datos cineticos:  
-En todos los ensayos enzimaticos se busca medir una señal que permita una distincion clara entre sustrato y producto [@bisswanger_general_2011]. La cinetica enzimatica de PriA proveniente del genero Streptomyces sera determinada como ya se ha reportado previamente, mediante el monitoreo de cambios en fluorescencia (isomerizacion del sustrato PRA) o en absorbancia (isomerizacion del sustrato PROFAR). En el caso de la isomerizacion de PRA, debido a que contiene un anillo de antranilato, la fluorescencia del sustrato PRA es 50 veces mayor que la del producto 1-(2-carboxyphenylamino)-1-deoxy-D-ribulose 5-phosphate (CdRP) por lo que se utiliza la disminucion en fluorescencia como medida de la conversion del sustrato en producto [@hommel_phosphoribosyl_1995]. Se mandaran sintetizar estas variantes para posteriormente sobre expresarlas en E. coli. Se creceran cepas modificadas de E. coli (W-, H-) en medio minimo M9 enriquecido con una mezcla de aminoacidos excepto L-histidina y L-triptofano y se seleccionaran por rescate de auxotrofia. Para obtener la enzima necesaria para los ensayos enzimaticos se utilizaran plasmidos disponibles para construcciones de sobreexpresion de proteina, despues de la produccion la enzima se purificara utilizando cromatografia por afinidad a niquel [@verduzco-castro_co-occurrence_2016].
-  
-Finalmente se recopilaran datos cineticos de PriA tanto privados como los publicos reportados a la fecha en la BRaunschweig ENzyme DAtabase BRENDA [@scheer_brenda_2011]. Una vez colectados los datos se anotaran en PEDB, nuestra base de datos ad hoc, y se tomara como medida de promiscuidad el I-index [@nath_quantitative_2008] que se define como:
- I=1ln Ni=1Npi( pi) donde pi=Kicat Kim   / i=1NKicatKim   
-    
 ####Dinamica molecular    
 Para generar dinamicas moleculares primer lugar se recolectaran las estructuras tridimensionales de miembros de PriA de Actinobacteria. Despues se procedera a modelar por homologia las estructuras tridimensionales faltantes utilizando el pipeline del laboratorio de bioinformatica y biofisica computacional. Este pipeline utiliza el software Rosetta para el modelado para las estructuras y GROMACS Groningen Machine for Chemical Simulation, [@van_der_spoel_gromacs_2005] para el modelado de la dinamica molecular. Esta parte del trabajo se realizara en colaboracion con el laboratorio de bioinformatica y biofisica computacional.
-  
-###Promiscuidad in vivo  
-Se realizaran construcciones con variantes no nativas de priA y/o trpF en Streptomyces coelicolor. Para las construcciones se amplificara mediante PCR un fragmento alrededor de PriA que se insertara en un vector. Este vector recombinara en E. coli con un casete provisto de un gen marcador de resistencia a antibiotico y este gen recombinado se pasara por conjugacion a S. coelicolor donde se espera que realice una doble recombinacion. El paso por E. coli es llevado a cabo porque Streptomyces no se puede transformar por electroporacion. Se seleccionaran las cepas de Streptomyces resistentes al antibiotico como prueba de que ya no poseen su priA nativa. Posteriormente, mediante un procedimiento analogo se sustituira el gen marcador, por variantes no nativas de priA/trpF.
-   
-La cromatografia se refiere a un conjunto de metodos que separan y analizan mezclas de moleculas. Basicamente estos metodos se basan en diferencias en el tamaño, intercambio de iones y afinidad. [@campbell_biophysical_2012] Posteriormente se combinan con espectrometria de masas que  es una tecnica que mide el radio masa-carga de las particulas fragmentadas en iones. [@campbell_biophysical_2012]. Los datos obtenidos de espectrometria de masas se procesaran utilizando redes moleculares, que consiste en agrupar los productos segun la similitud de sus partes. Plan: 3 replicas tecnicas, 2 replicas biologicas de 5 cepas.  
     
 ###Consideraciones   
 Falsos negativos respecto a promiscuidad estan muy extendidos en la literatura y en las bases de datos, en parte porque la mayoria de las funciones son asignadas por similitud de secuencia y dado un falso negativo el error se propaga en secuencias similares. Por otro lado es muy dificil demostrar un verdadero negativo a menos que se prueben todas las posibilidades de sustrato para la enzima. Sin embargo el espacio de sustratos puede acotarse gracias a tecnicas como el docking que esta intimamente relacionado con la dinamica molecular [@campbell_biophysical_2012,@kukol_molecular_2008]. Limitar el espacio de sustratos puede retroalimentarse con el estudio de la promiscuidad in vivo y viceversa. 
@@ -185,45 +118,4 @@ Con los metodos propuestos en este trabajo solo se podra detectar perdida o gana
   
 Se debe considerar que si existe una correlacion vecindad genomica-promiscuidad, esta no indica causa efecto, mas bien, es plausible que la vecindad sea un amplificacion de diferencias en secuencia,  a un numero igual de variaciones en secuencia la existencia de un cambio de vecindad indica un proceso mas largo y mas cambios, es una amplificacion de las marcas dejadas por transformaciones funcionales.
   
-Si bien no se resuelve el problema de anotar promiscuidad automaticamente, este trabajo pretende aprovechar que los contextos genomicos ayudan a la identificacion de familias promiscuas para mejorar una plataforma de productos naturales, pretende tambien una confirmacion de que los cambios en la dinamica molecular ayudan a identificar los miembros mas promiscuos hacia actividades recien adquiridas, asi como tambien ser pionero en la investigacion de promiscuidad in vivo.  
-  
-Gene cluster plants[@osbourn_gene_2010]  
-Archaeal core  [@makarova_comparative_1999]  
-Methanosarcina reconstruction [@benedict_genome-scale_2012]  
-Archaea phylum[@seitz_genomic_2016]  
-Prediction for possible products of promiscuous enzymes[@jeffryes_mines_2015]  
-Plants clusters [@medema_computational_2016]  
-Metagenomics on Streptomyces [@iqbal_natural_2016]  
-Sulfolobus reconsruction [@ulas_genome-scale_2012]  
-Archaeal Natural products[@charlesworth_untapped_2015]    
-Computational Pangenomics [@computational_pan-genomics_consortium_computational_2016]  
-Eucarya paralogs reshape gene clusters [@chan_remodelling_2015]  
-Microbial dark mater [@rinke_insights_2013]  
-Archaea anaerobica carbon [@castelle_genomic_2015]
-Archaea Eucarya gap loki[@spang_complex_2015]  
-Archaea and eucarya[@koonin_archaeal_2015]  
-genes esenciales bacteria minima[@glass_essential_2006]  
-Radical [@narechania_random_2012]  
-RaxML large philogenies [@stamatakis_raxml_2014]  
-R phylogenies [@phyloseq_powerful_2016]  
-Streptomyces exploradores [@zacharia_exploring_2017]  
-LUCA [@woese_universal_1998]
-Luchando por el reconocimiento de Archaea[@woese_are_1981],[@woese_towards_1990]
-The primary kingdoms [@woese_phylogenetic_1977]  
-Predicccion aRchaeas [@woese_there_1994]  
-RASt archaea [@graham_archaeal_2000]
-Book Archaea [@howland_surprising_2000]   
-Computational methods for bacterial and archaeal genomes [@xu_computational_2008]   
-Archaeas boook [@garrett_archaea_2008]   
-GC content plasmido genoma [@nishida_evolution_2012]
-Genoma minimo[@coyle_mysteries_2016]  
-Phylogeny R [@omeara_cran_2016]  
-Cyanobacteria fluctuacion genomica y adaptacion [@larsson_genome_2011]  
-Ecology of cyanobacterua [@whitton_ecology_2012]  
-Histdine biosynthesis[@cohen_biosynthesis_2004]  
-Escala temporl bacterias [@battistuzzi_genomic_2004]  
-Pangenome size [@lapierre_estimating_2009]  
-variabilidad del 16s [@vetrovsky_variability_2013]  
-
-  
-  
+Si bien no se resuelve el problema de anotar promiscuidad automaticamente, este trabajo pretende aprovechar que los contextos genomicos ayudan a la identificacion de familias promiscuas para mejorar una plataforma de productos naturales, pretende tambien una confirmacion de que los cambios en la dinamica molecular ayudan a identificar los miembros mas promiscuos hacia actividades recien adquiridas, asi como tambien ser pionero en la investigacion de promiscuidad in vivo. 
