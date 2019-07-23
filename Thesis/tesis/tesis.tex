@@ -70,11 +70,11 @@
 % To pass between YAML and LaTeX the dollar signs are added by CII
 \title{La ocurrencia y variación de la promiscuidad en rutas del metabolismo
 especializado son reveladas por herramientas bioinformáticas evolutivas.}
-\author{Nelly Selem}
+\author{Nelly Sélem}
 % The month and year that you submit your FINAL draft TO THE LIBRARY (May or December)
 \date{Enero 2019}
 \division{}
-\advisor{Francisco Baróna Gómez}
+\advisor{Francisco Barona Gómez}
 %If you have two advisors for some reason, you can use the following
 % Uncommented out by CII
 % End of CII addition
@@ -802,12 +802,12 @@ starts here.
   Para clarificar la diferencia entre identificar familias promiscuas y
   miembro de familias promiscua se propone el siguiente ejemplo: PriA en
   Actinobacteria y HisA en enterobacteria son ambas familias que
-  isomerizan proFAR en la ruta de síntesis de histidina pero solo la
+  isomerizan ProFAR en la ruta de síntesis de histidina pero solo la
   familia PriA es promiscua pues puede además isomerizar el sustrato PRA
   durante la síntesis de triptofano
   {[}\protect\hyperlink{ref-baronagomez_occurrence_2003}{9}{]}. Sin
   embargo dentro de Actinobacteria, existen miembros no promiscuos de
-  PriA. Cinética \emph{in vitro} han mostrado que en algunas especies del
+  PriA. Cinéticas \emph{in vitro} han mostrado que en algunas especies del
   género \emph{Actinomyces} los homólogos de \emph{priA} codifican para
   enzimas monofuncionales en alguno de los dos sustratos
   {[}\protect\hyperlink{ref-juarez-vazquez_evolution_2017}{47}{]}. Así
@@ -845,7 +845,7 @@ starts here.
   de la comparación de secuencias es necesario integrar otros elementos al
   análisis,\autoref{fig:Antecedentes}. Es difícil medir la promiscuidad en
   términos absolutos, por ejemplo, no se puede aseverar que una enzima es
-  ``no promiscua''" sin haber previamente descartado a todos los posibles
+  ``no promiscua'' sin haber previamente descartado a todos los posibles
   sustratos del universo químico. Además incluso enzimas que resultan no
   promiscuas en análisis \emph{in vitro} resulta que sí son promiscuas al
   examinarlas \emph{in vivo}
@@ -1681,35 +1681,35 @@ starts here.
   La comparación de la variación molecular entre ortólogos ha sido
   utilizada para establecer relaciones filogenéticas entre organismos.
   Esta técnica ha dado lugar a grandes descubrimientos. Por ejemplo
-  comparar la secuencia de la subunidad 16s del gen RNA ribosomal condujo
-  a Woese al descubrimiento del dominio Archaea en 1977
+  comparar la secuencia de la subunidad 16S del gen RNA ribosomal (16S
+  rRNA) condujo a Woese al descubrimiento del dominio Archaea en 1977
   {[}\protect\hyperlink{ref-woese_phylogenetic_1977}{105}{]}. Un árbol de
   especies suele hacerse con secuencias de familias que pertenecen al
-  \emph{core genome} de un Dominio, por ejemplo las familias 16s o RpoB en
-  los Dominios Bacteria y Archaea. Algunos autores realizan árboles
-  multilocus para mejorar la resolución de árboles de especies realizados
-  mediante la comparación de secuencias de 16s. Los genes seleccionados
-  para los árboles multilocus deben estar en todos los organismos y no
-  tener copias extra tan parecidas que puedan confundirse y entorpecer la
-  reconstrucción filogenética, es decir, las familias seleccionadas deben
-  ser parte del \emph{core conservado}. Orthocore automatiza la
-  identificación de estas familias.
+  \emph{core genome} de un Dominio, por ejemplo las familias 16S rRNA o
+  RpoB en los Dominios Bacteria y Archaea. Algunos autores realizan
+  árboles multilocus para mejorar la resolución de árboles de especies
+  realizados mediante la comparación de secuencias de 16S rRNA. Los genes
+  seleccionados para los árboles multilocus deben estar en todos los
+  organismos y no tener copias extra tan parecidas que puedan confundirse
+  y entorpecer la reconstrucción filogenética, es decir, las familias
+  seleccionadas deben ser parte del \emph{core conservado}. Orthocore
+  automatiza la identificación de estas familias.
   
   Entre los factores importantes para establecer las relaciones
   filogenéticas que diferencian a las Archaeas de las Bacteria están los
-  siguientes: 1) la presencia conservada de la subunidad de 16s en los dos
+  siguientes: 1) la presencia conservada de la subunidad de 16S en los dos
   dominios y 2) la suficiente divergencia entre estas secuencias en los
   organismos de dichos dominios. Ahora bien, establecer relaciones
   filogenéticas entre Archaea y Bacteria es en cierto sentido más sencillo
   que establecerlas entre organismos pertenecientes al mismo género o
   inclusive a la misma especie. En ocasiones, como en el caso del género
-  \emph{Streptomyces}, la secuencia de 16s por sí sola no posee la
+  \emph{Streptomyces}, la secuencia de 16S rRNA por sí sola no posee la
   suficiente variación para resolver la filogenia
   {[}\protect\hyperlink{ref-labeda_phylogenetic_2017}{106}{]}. En
   \emph{Streptomyces} la variación entre estas secuencias suele ser menor
   al 1\%. Para resolver el problema de escasa variación en secuencias de
-  16s se pueden concatenar las secuencias de otros ortólogos, siempre que
-  estos aparezcan en todos los organismos que se estén estudiando, es
+  16S rRNA se pueden concatenar las secuencias de otros ortólogos, siempre
+  que estos aparezcan en todos los organismos que se estén estudiando, es
   decir, siempre que sean parte del core genómico.
   
   \section{El algoritmo de Orthocore}\label{el-algoritmo-de-orthocore}
@@ -1742,14 +1742,13 @@ starts here.
   Orthocore automatizó la búsqueda de ortólogos y el filtrado de parálogos
   en genomas procariontes mediante la generalización de la definición del
   mejor hit bidireccional (BBH por sus siglas en inglés)
-  \autoref{fig:Best-n-directional} . Dos secuencias son BBH si cada una es
-  el mejor hit de un algoritmo alineamiento local por distancia (BLAST
-  usualmente) en el genoma de origen de la otra. Una primera
-  generalización para obtener el set de ortólogos de una familia del core
-  es definir un genoma de referencia y tomar los BBH respecto a ese
-  genoma. En la práctica, esta definición da como resultado distintos
-  resultados según el genoma de referencia, haciendo que algunos parálogos
-  no sean filtrados.
+  \autoref{fig:Best-n-directional}. Dos secuencias son BBH si cada una es
+  el mejor hit de un algoritmo de distancia (BLAST usualmente) en el
+  genoma de origen de la otra. Una primera generalización para obtener el
+  set de ortólogos de una familia del core es definir un genoma de
+  referencia y tomar los BBH respecto a ese genoma. En la práctica, esta
+  definición da como resultado distintos resultados según el genoma de
+  referencia, haciendo que algunos parálogos no sean filtrados.
   
   Para solventar esta dificultad se definió en Orthocore el concepto de
   mejores hits multidireccionales. Un conjunto de genes son mejores hits
@@ -1761,8 +1760,8 @@ starts here.
   eliminó la dependencia de un genoma de referencia. Esta restricción
   también ocasiona que en grupos muy grandes por ejemplo más de 100
   genomas de distintas especies, o muy diversos de distintos dominios, o
-  muy fragmentados como con contigs de en promedio 3 Mbp, el core
-  conservado puede quedar vacío.
+  muy fragmentados como con contigs de en promedio 3 Mbp, el \emph{core
+  conservado} puede quedar vacío.
   
   \begin{figure}[h!tbp]
   \centering
@@ -1773,18 +1772,20 @@ starts here.
   
   \subsection{Ejecución de Orthocore}\label{ejecucion-de-orthocore}
   
-  Orthocore es un tubería escrita en perl que incorpora los hits
-  multidireccionales permitiendo obtener y usar el core conservado para
-  realizar una reconstrucción filogenética mediante los siguientes pasos:
+  Orthocore es un tubería escrita en Perl que incorpora los hits
+  multidireccionales permitiendo obtener y usar el \emph{core conservado}
+  para realizar una reconstrucción filogenética mediante los siguientes
+  pasos:
   
-  -Obtiene el \emph{core} conservado: los mejores hits multidireccionales
+  -Obtiene el \emph{core conservado}: los mejores hits multidireccionales
   (blastp).\\
-  -Alinea cada familia del core conservado (MUSCLE).\\
-  -Cura automáticamente cada familia del core conservado (Gblocks).\\
-  -Concatena las familias del core conservado formando una alineamiento
-  multilocus de aminoácidos.\\
+  -Alinea cada familia del \emph{core conservado} (MUSCLE).\\
+  -Cura automáticamente cada familia del \emph{core conservado}
+  (Gblocks).\\
+  -Concatena las familias del \emph{core conservado} formando una
+  alineamiento multilocus de aminoácidos.\\
   -Provee una reconstrucción filogenética que se genera a partir del
-  alineamiento (FastTree). -Provee los genes del \emph{core} conservado y
+  alineamiento (FastTree). -Provee los genes del \emph{core conservado} y
   su anotación funcional según RAST.
   
   Existen otros algoritmos como
@@ -1793,16 +1794,16 @@ starts here.
   que dividen pangenomas en clusters de familias de genes,
   \href{http://eead-csic-compbio.github.io/get_homologues/manual/}{get\_homologues}
   {[}\protect\hyperlink{ref-contreras-moreira_get_homologues_2013}{108}{]}
-  y metaphor que obtienen el core y filtran buscando verdaderas relaciones
-  de homología, y finalmente
+  y metaphor que obtienen el \emph{core} y filtran buscando verdaderas
+  relaciones de homología, y finalmente
   BPGA{[}\protect\hyperlink{ref-chaudhari_bpga-_2016}{109}{]} que hace
-  reconstrucciones filogenéticas tanto según el core como según el
+  reconstrucciones filogenéticas tanto según el \emph{core} como según el
   pangenoma. Sin embargo Orthocore resolvió en su momento la necesidad
-  específica de proporcionar un alineamiento concatenada de genes del core
-  conservado lista para utilizarse en un árbol multilocus. Adicionalmente,
-  como Orthocore fue diseñado para trabajar con la anotación de la
-  plataforma RAST, también se obtiene la anotación funcional tanto de
-  familias del core como del complemento.
+  específica de proporcionar un alineamiento concatenada de genes del
+  \emph{core conservado} lista para utilizarse en un árbol multilocus.
+  Adicionalmente, como Orthocore fue diseñado para trabajar con la
+  anotación de la plataforma RAST, también se obtiene la anotación
+  funcional tanto de familias del \emph{core} como del complemento.
   
   Orthocore incorpora todas las dependencias en un contenedor de docker
   disponible en \url{https://github.com/nselem/orthocore}. Además en este
@@ -1810,20 +1811,20 @@ starts here.
   y posteriormente anotarlos en RAST desde la terminal. Los protocolos de
   uso se encuentran al final de este capítulo.
   
-  \section{Aplicaciones de Orthocore, identificación del core conservado y
-  de familias de genes
-  marcadores.}\label{aplicaciones-de-orthocore-identificacion-del-core-conservado-y-de-familias-de-genes-marcadores.}
+  \section{\texorpdfstring{Aplicaciones de Orthocore, identificación del
+  \emph{core conservado} y de familias de genes
+  marcadores.}{Aplicaciones de Orthocore, identificación del core conservado y de familias de genes marcadores.}}\label{aplicaciones-de-orthocore-identificacion-del-core-conservado-y-de-familias-de-genes-marcadores.}
   
   Cuatro aplicaciones de Orthocore serán presentadas en las siguientes
-  secciones de este capítulo. En la primera aplicación el core conservado
-  en \emph{Actinomycetales} permitió organizar filogenéticamente a este
-  orden. Esta organización facilitó el entendimiento en cambios de
-  promiscuidad de la familia enzimática PriA mediante la distinción de
-  patrones de pérdida y ganancia de genes en las rutas de síntesis de
-  histidina y triptófano. En la segunda aplicación cepas de
-  \emph{Salmonella} fueron ordenadas filogenéticamente. La tercera
-  aplicación permitió realizar una reconstrucción filogenética del orden
-  \emph{Nostocales} del phylum \emph{Cyanobacteria} y comparar así
+  secciones de este capítulo. En la primera aplicación el \emph{core
+  conservado} en \emph{Actinomycetales} permitió organizar
+  filogenéticamente a este orden. Esta organización facilitó el
+  entendimiento en cambios de promiscuidad de la familia enzimática PriA
+  mediante la distinción de patrones de pérdida y ganancia de genes en las
+  rutas de síntesis de histidina y triptófano. En la segunda aplicación
+  cepas de \emph{Salmonella} fueron ordenadas filogenéticamente. La
+  tercera aplicación permitió realizar una reconstrucción filogenética del
+  orden \emph{Nostocales} del phylum \emph{Cyanobacteria} y comparar así
   patrones de presencia y ausencia de clusters de genes biosintéticos.
   Finalmente, en organismos del microbioma del tomate orthocore de utilizó
   para identificar genes marcadores que permitieran distinguir cepas de
@@ -1842,8 +1843,8 @@ starts here.
   genes durante los procesos de especiación en \emph{Actinomycetales}.
   Para eso se necesitaba entender filogenéticamente al orden
   \emph{Actinomycetales}, el camino que seguimos fue hacer una filogenia
-  con las secuencias de su core conservado. Orthocore fue diseñado para
-  resolver este problema. Con el resultado de Orthocore se realizó un
+  con las secuencias de su \emph{core conservado}. Orthocore fue diseñado
+  para resolver este problema. Con el resultado de Orthocore se realizó un
   árbol de especies donde se observaron patrones de pérdida y ganancia de
   genes en la vecindad genómica del gen que codifica para PriA. Se
   encontró que hay clados de \emph{Actinomyces} donde los genes
@@ -1908,15 +1909,16 @@ starts here.
   raíz coraloide de las cícadas es fácilmente distinguible por la
   formación de un anillo verde conocido como anillo cyanobacterial. En la
   \autoref{fig:ArbolNostoc} se muestra la filogenia de 76 Cyanobacterias
-  de 7 órdenes distintos construida con 198 proteínas del core conservado
-  obtenidas por Orthocore. En esta reconstrucción se puede observar que
-  los \emph{Nostoc} asociados a plantas tienden a agruparse en la
-  filogenia {[}\protect\hyperlink{ref-gutierrez-garcia_cycad_2019}{103}{]}
-  lo que sugiere que entre las cianobacterias de nuestro set de datos
-  pudiera ser que las 3 \emph{Nostoc} provenientes de raíz coraloide
-  provengan de un evento de colonización. Queda por mostrar si esta
-  filogenia corresponde a la de las cícadas simbiontes, lo que sugeriría
-  una estrecha coevolución entre ambos organismos.
+  de 7 órdenes distintos construida con 198 proteínas del \emph{core
+  conservado} obtenidas por Orthocore. En esta reconstrucción se puede
+  observar que los \emph{Nostoc} asociados a plantas tienden a agruparse
+  en la filogenia
+  {[}\protect\hyperlink{ref-gutierrez-garcia_cycad_2019}{103}{]} lo que
+  sugiere que entre las cianobacterias de nuestro set de datos pudiera ser
+  que las 3 \emph{Nostoc} provenientes de raíz coraloide provengan de un
+  evento de colonización. Queda por mostrar si esta filogenia corresponde
+  a la de las cícadas simbiontes, lo que sugeriría una estrecha
+  coevolución entre ambos organismos.
   
   \begin{figure}[h!tbp]
   \centering
@@ -1937,13 +1939,13 @@ starts here.
   enfermedad del cáncer del tomate. \emph{Clavibacter michiganensis} ha
   sido frecuentemente aislada en compañía de otros \emph{Micrococcales}
   morfológicamente parecidos. La distinción entre microorganismos debida a
-  la comparación de la secuencia de 16s no era suficiente para distinguir
-  entre \emph{Micrococales} del microbioma del tomate, por lo que una
-  prueba de diagnóstico se hacía necesaria. Se habían utilizado como
-  marcadores genes como \emph{tomA}, \emph{ppaC} y \emph{celA} entre
+  la comparación de la secuencia de 16S rRNA no era suficiente para
+  distinguir entre \emph{Micrococales} del microbioma del tomate, por lo
+  que una prueba de diagnóstico se hacía necesaria. Se habían utilizado
+  como marcadores genes como \emph{tomA}, \emph{ppaC} y \emph{celA} entre
   otros, sin embargo estas elecciones en ocasiones resultaban en falsos
-  positivos según árboles de especies de 16s, por lo que nuevos marcadores
-  eran necesarios.
+  positivos según árboles de especies de 16S rRNA, por lo que nuevos
+  marcadores eran necesarios.
   
   \begin{figure}[h!tbp]
   \centering
@@ -2099,13 +2101,13 @@ starts here.
   patógeno de planta quedaba por investigar cómo es su pangenoma. ¿Es
   posible saturar el contenido génico de \emph{Cmm} con sólo secuenciar
   más genomas?. Aunque actualmente existen ya herramientas web para el
-  análisis de pangenoma, en su momento se utilizó el software Bacterial
-  PanGenome Analysis Tool que se corre desde la terminal. Para facilitar
-  su instalación se desarrolló un contenedor Docker (ver abajo,
-  descripciones técnicas). Como ejemplo de su funcionamiento, se analizó
-  el pangenoma de los mismos diez genomas del tomate utilizados en la
-  visualización de clavisual \autoref{fig:bpga-pangenoma} . Tomando otros
-  siete genomas del género \emph{Clavibacter}, utilizando OrthoVenn
+  análisis de pangenoma, en su momento se utilizó el software
+  \emph{Bacterial PanGenome Analysis Tool} que se corre desde la terminal.
+  Para facilitar su instalación se desarrolló un contenedor Docker (ver
+  abajo, descripciones técnicas). Como ejemplo de su funcionamiento, se
+  analizó el pangenoma de los mismos diez genomas del tomate utilizados en
+  la visualización de clavisual \autoref{fig:bpga-pangenoma} . Tomando
+  otros siete genomas del género \emph{Clavibacter}, utilizando OrthoVenn
   tenemos la misma observación, el número de familias de genes agregadas
   al adicionar genomas, es después de siete genomas casi tan grande como
   su core \autoref{fig:Venn-Chart}.
@@ -2310,7 +2312,7 @@ starts here.
   \begin{figure}[h!tbp]
   \centering
   \includegraphics[angle = 0,scale = .8]{chapter2/FigurasPaper/Figure1.pdf}
-  \caption[EvoMining Algorithm]{\footnotesize{Representación de la tubería bioinformática de los dos algoritmos que componen EvoMining. a) Algoritmo de expansión - clasificación/reclutamiento. Se ingresan la Enzima DB (cilindro anaranjado) y la Genome DB (cilindros grises) para identificar por medio de BlastP a todos los que sean miembrios de la Familia de las enzimas en Enzima DB, luego se identifican los ortólogos de la base de datos de enzimas (Flechas rojas), finalmente se buscan homólogos de la familia similares a genes reclutados a BGC (Flechas azules),  b) EvoMining toma en cuenta los cuando se hace una búsqueda en AntiSMASH. Cuando un  gen es encontrado como miembro de un BGC por antiSMASH es cian si no se le había encontrado en las categorías anteriores o morado si antes había sido detectado como rojo. c) El Algoritmo de visualización muestra un árbol donde cada homólogo de la familia expandida tiene una código de color que lo clasifica como se describe en la leyenda}}
+  \caption[EvoMining Algorithm]{\footnotesize{Representación de la tubería bioinformática de los dos algoritmos que componen EvoMining. a) Algoritmo de expansión - clasificación/reclutamiento. Se ingresan la Enzima DB (cilindro anaranjado) y la Genome DB (cilindros grises) para identificar por medio de BlastP a todos los que sean miembrios de la Familia de las enzimas en Enzima DB, luego se identifican los ortólogos de la base de datos de enzimas (Flechas rojas), finalmente se buscan homólogos de la familia similares a genes reclutados a BGC (Flechas azules),  b) EvoMining toma en cuenta las predicciones de antiSMASH. Cuando un  gen es encontrado como miembro de un BGC predicho por antiSMASH se colorea de cian, o bien de morado si había sido detectado también como parte del metabolismo central (rojo). c) El Algoritmo de visualización muestra un árbol donde cada homólogo de la familia expandida tiene una código de color que lo clasifica como se describe en la leyenda}}
   \label{fig:EvoMiningAlgorithms}
   \end{figure}
   
@@ -2398,8 +2400,8 @@ starts here.
   detectada por antiSMASH nos será también útil para identificarla como el
   producto de una expansión que está en proceso o se ha neofuncionalizado.
   La minería genómica tradicional realizada por antiSMASH no es parte de
-  la tubería de EvoMining, pero puede las predicciones de antiSMASH pueden
-  ser calculadas previamente por el usuario y utilizadas por EvoMining. En
+  la tubería de EvoMining, pero las predicciones de antiSMASH pueden ser
+  calculadas previamente por el usuario y utilizadas por EvoMining. En
   este trabajo antiSMASH
   3.0{[}\protect\hyperlink{ref-weber_antismash3_2015}{119}{]} fue
   utilizado en los secuencias de los genomas de la Genome DB
@@ -2719,8 +2721,9 @@ starts here.
   que las expansiones dependen tanto de los distintos linajes taxonómicos
   como de la diversidad del tamaño de genoma.
   
-  \subsection{El shell genome posee expansiones en sus familias
-  enzimáticas}\label{el-shell-genome-posee-expansiones-en-sus-familias-enzimaticas}
+  \subsection{\texorpdfstring{El \emph{shell} genome posee expansiones en
+  sus familias
+  enzimáticas}{El shell genome posee expansiones en sus familias enzimáticas}}\label{el-shell-genome-posee-expansiones-en-sus-familias-enzimaticas}
   
   La figura muestra que \emph{Pseudomonas} posee en promedio más copias
   por genoma que los otros taxa. De las 42 familias analizadas el
@@ -2748,7 +2751,7 @@ starts here.
   a ser los taxones menos expandidos, esta tendencia revierte en las
   familias A4, C4, G4 (GDH) y B5. GDH y ALS (E1) están encerradas en una
   cuadro, estas enzimas son el origen de los reclutamientos en el BGC de
-  escytonemina. Muchas otras familias exhiben expansiones sólo en ciertos
+  escitonemina. Muchas otras familias exhiben expansiones sólo en ciertos
   linajes. Tal es el caso de la fumarato reductasa subunidad de
   hierro-azufre, cordenada C3 de la figura, muy expandida en
   Actinobacteria pero con menos de una copia por genoma en promedio en
@@ -2781,18 +2784,18 @@ starts here.
   \autoref{fig:SeedGenomes}. Del total de las 42 familias, GDH es una de
   las cuatro FEs en las que el mayor número de expansiones se encuentra en
   Archaea. De hecho, GDH tiene menos de una copia por genoma en promedio
-  en los otros taxa, probando que no se encuentra dentro del core genómico
-  de estos linajes. Esto contrasta con AroB, que muestra una tendencia
-  opuesta, no es parte del core de Archaea pero muestra copias extra y una
-  presencia mayor que uno en promedio en los otros tres taxa analizados
-  \autoref{fig:ExpansionPatterns} panel (b). Los ocho casos mostrados en
-  la figura son todos parte de un cluster biosintético de Cianobacteria,
-  descrito en las secciones posteriores de este trabajo.
+  en los otros taxa, probando que no se encuentra dentro del \emph{core}
+  genómico de estos linajes. Esto contrasta con AroB, que muestra una
+  tendencia opuesta, no es parte del \emph{core} de Archaea pero muestra
+  copias extra y una presencia mayor que uno en promedio en los otros tres
+  taxa analizados \autoref{fig:ExpansionPatterns} panel (b). Los ocho
+  casos mostrados en la figura son todos parte de un cluster biosintético
+  de Cianobacteria, descrito en las secciones posteriores de este trabajo.
   
   \begin{figure}[h!tbp]
   \centering
   \includegraphics[angle = 0,scale = .6]{chapter2/FigurasPaper/Figure3.pdf}
-  \caption[Patrones de expansión de familias que participan en la síntesis de escitonemina]{\footnotesize{Perfiles de expansiones de EvoMining de enzimas conservadas seleccionadas. (a) Patrones de expansión de las ocho familias conservadas cuyas copias adicionales participan en la biosíntesis de escitonemina. El conjunto completo de 42 EF se muestra en la figura anterior. La codificación de colores es la siguiente: rojo para el metabolismo conservado, azul para los reclutamientos anotados en MIBiG, cian para las predicciones antiSMASH de metabolismo especializado, púrpura para la intersección entre el metabolismo conservado y las predicciones antiSMASH, y gris para las expansiones sin destino metabólico conocido. El orden en el eje x es Actinobacteria, Cianobacteria, Pseudomonas y Archaea. Los triángulos indican el linaje con el mayor número de copias por genoma en promedio, y los círculos representan el linaje menos expandido. Aunque Archaea tiende a ser los taxones menos expandidos, esta tendencia se revierte en la familia GDH. (b) Se proporciona un ejemplo de un núcleo frente a un shell EF. AroB es un EF básico porque tiene al menos una copia por genoma, mientras que GDH es un EF de shell debido a su ausencia en tres genomas. A pesar de ser un shell EF, GDH tiene copias adicionales que pueden ser reclutadas en un metabolismo especializado. (c) Modelo para la $nube$ o genoma variable compuesto parcialmente por enzimas que pertenecen a BGC NP. En este modelo, el metabolismo conservado se compone de EF tanto de shell como de núcleo. Estos EF pueden sufrir eventos de expansión, y algunas de las copias adicionales son reclutadas para realizar nuevas funciones en el metabolismo especializado.}}
+  \caption[Patrones de expansión de familias que participan en la síntesis de escitonemina]{\footnotesize{Perfiles de expansiones de EvoMining de enzimas conservadas seleccionadas. (a) Patrones de expansión de las ocho familias conservadas cuyas copias adicionales participan en la biosíntesis de escitonemina. El conjunto completo de 42 EF se muestra en la figura anterior. La codificación de colores es la siguiente: rojo para el metabolismo conservado, azul para los reclutamientos anotados en MIBiG, cian para las predicciones antiSMASH de metabolismo especializado, púrpura para la intersección entre el metabolismo conservado y las predicciones antiSMASH, y gris para las expansiones sin destino metabólico conocido. El orden en el eje x es Actinobacteria, Cianobacteria, $Pseudomonas$ y Archaea. Los triángulos indican el linaje con el mayor número de copias por genoma en promedio, y los círculos representan el linaje menos expandido. Aunque Archaea tiende a ser los taxones menos expandidos, esta tendencia se revierte en la familia GDH. (b) Se proporciona un ejemplo de un $core$ frente a una familia enzimática $shell$. AroB es un EF básico porque tiene al menos una copia por genoma, mientras que GDH es un familia del $shell$ debido a su ausencia en tres genomas. A pesar de ser una familia $shell$, GDH tiene copias adicionales que pueden ser reclutadas en un metabolismo especializado. (c) Modelo para la $nube$ o genoma variable compuesto parcialmente por enzimas que pertenecen a BGC de productos naturales. En este modelo, el metabolismo conservado se compone de familias tanto del $shell$ como del $core~genome$. Estas familias pueden sufrir eventos de expansión, y algunas de las copias adicionales son reclutadas para realizar nuevas funciones en el metabolismo especializado.}}
   \label{fig:ExpansionPatterns}
   \end{figure}
   
@@ -2801,7 +2804,7 @@ starts here.
   {[}\protect\hyperlink{ref-koonin_genomics_2008}{124}{]} en los taxa
   Actinobacteria , Cianobacteria y \emph{Pseudomonas}, ya que en promedio
   está cerca de tener una copia promedio por genoma. El promedio no es
-  suficiente para decir que una familia pertenece al shell, podrían
+  suficiente para decir que una familia pertenece al \emph{shell}, podrían
   suceder casos sobre todo cuando hay mucha variación en un taxon como en
   el caso de un domino o un phylum en contraposición con taxones
   conservados como géneros en los que para una cierta familia la mitad de
@@ -2813,19 +2816,20 @@ starts here.
   reclutada en metabolismo especializado.
   
   En la figura \autoref{fig:ExpansionPatterns} se muestra un ejemplo donde
-  AroB es una enzima core en oposición a GDH que es una enzima shell. En
-  este esquema conceptual, en algunos de los genomas que contienen a AroB
-  existen copias que se dedican al metabolismo especializado marcadas en
-  color cían, otras copias no tienen un destino metabólico conocido por lo
-  que están marcadas en gris, y otras más marcadas en púrpura son enzimas
-  de transición que están llevando a cabo simultáneamente una función en
-  metabolismo central y otra en metabolismo especializado. En contraste a
-  AroB se muestra GDH, que a pesar de no tener copias en algunos genomas y
-  con un promedio de copias por genoma menor a uno y una moda de uno en
-  esta muestra, GDH existe por duplicado en dos genomas. En uno de esos
-  genomas donde GDH tiene una copia extra, más allá de la moda, esa copia
-  se muestra como un reclutamiento al metabolismo especializado en cían.
-  \autoref{fig:ExpansionPatterns} panel (b) .
+  AroB es una enzima \emph{core} en oposición a GDH que es una enzima
+  \emph{shell}. En este esquema conceptual, en algunos de los genomas que
+  contienen a AroB existen copias que se dedican al metabolismo
+  especializado marcadas en color cían, otras copias no tienen un destino
+  metabólico conocido por lo que están marcadas en gris, y otras más
+  marcadas en púrpura son enzimas de transición que están llevando a cabo
+  simultáneamente una función en metabolismo central y otra en metabolismo
+  especializado. En contraste a AroB se muestra GDH, que a pesar de no
+  tener copias en algunos genomas y con un promedio de copias por genoma
+  menor a uno y una moda de uno en esta muestra, GDH existe por duplicado
+  en dos genomas. En uno de esos genomas donde GDH tiene una copia extra,
+  más allá de la moda, esa copia se muestra como un reclutamiento al
+  metabolismo especializado en cían. \autoref{fig:ExpansionPatterns} panel
+  (b) .
   
   Las expansiones encontradas por EvoMining en la familia GDH incluían
   predicciones de antiSMASH para Actinobacteria, Cianobacteria y Archaea,
@@ -2841,19 +2845,19 @@ starts here.
   
   Los resultados anteriores sugieren que la evolución del metabolismo
   especializado es linaje dependiente, y más aún que tal y como ya se
-  conocía en las FEs del \emph{core genome} las enzimas del shell como GDH
-  también poseen el potencial de ser reclutadas en NP BGC. A partir de
-  estos resultados \autoref{fig:ExpansionPatterns} paneles (a,b), se
-  realizó un esquema conceptual para explicar cómo en linajes genómicos
-  diversos las familias de enzimas con origen en el metabolismo central
-  que forman parte del \emph{core genome} o bien las familias en el
-  metabolismo conservado que incluye tanto al core como al \emph{shell
-  genome}, evolucionan al metabolismo especializado que tiene una mayor
-  representación en el \emph{cloud genome} \autoref{fig:ExpansionPatterns}
-  panel (c) . Este modelo es relevante porque establece el papel de las
-  familias del \emph{shell genome}, que no fue considerado en la primera
-  iteración que explotó las capacidades de EvoMining como herramienta de
-  minería genómica para encontrar BGC
+  conocía en las FEs del \emph{core genome} las enzimas del \emph{shell}
+  como GDH también poseen el potencial de ser reclutadas en NP BGC. A
+  partir de estos resultados \autoref{fig:ExpansionPatterns} paneles
+  (a,b), se realizó un esquema conceptual para explicar cómo en linajes
+  genómicos diversos las familias de enzimas con origen en el metabolismo
+  central que forman parte del \emph{core genome} o bien las familias en
+  el metabolismo conservado que incluye tanto al \emph{core} como al
+  \emph{shell genome}, evolucionan al metabolismo especializado que tiene
+  una mayor representación en el \emph{cloud genome}
+  \autoref{fig:ExpansionPatterns} panel (c) . Este modelo es relevante
+  porque establece el papel de las familias del \emph{shell genome}, que
+  no fue considerado en la primera iteración que explotó las capacidades
+  de EvoMining como herramienta de minería genómica para encontrar BGC
   novedosos{[}\protect\hyperlink{ref-navarro-munoz_computational_2018}{110}{]}.
   
   \begin{figure}[h!tbp]
@@ -2946,9 +2950,9 @@ starts here.
   NAD(P){[}\protect\hyperlink{ref-ferrer_nadp-glutamate_1996}{129}{]},
   incluyendo muchas predicciones de antiSMASH, y sólo dos marcadas como
   metabolismo conservado. Estas dos marcas pueden deberse a la pérdida
-  real de una enzima d metabolismo central en las ramas centrales o bien a
-  huecos debidos a la calidad del ensamblado y la secuenciación de los
-  genomas.La anotación funcional de estos ortólogos de GDH apunta hacia
+  real de una enzima de metabolismo central en las ramas centrales o bien
+  a huecos debidos a la calidad del ensamblado y la secuenciación de los
+  genomas. La anotación funcional de estos ortólogos de GDH apunta hacia
   reclutamientos en el metabolismo especializado. Estos reclutamientos
   fueron identificados en organismos de los genera \emph{Haladaptatus},
   \emph{Haloterrigena} , \emph{Natrialba} , \emph{Natrinema} ,
@@ -3043,11 +3047,11 @@ starts here.
   tenemos los clusters u operones del metabolismo central, donde la
   selección ya ha actuado siempre obtener el mismo producto, por ejemplo
   algún aminoácido en particular. Como veremos más adelante el BGC de
-  escytonemina presenta diversidad de productos.
+  escitonemina presenta diversidad de productos.
   
-  El \emph{cluster} de la escitonemina reportado en MIBiG y mostrado
-  mostrado en la figura \autoref{fig:Scytonemin} panel (a) y en
-  \autoref{fig:Ruta} comprende 18 genes
+  El \emph{cluster} de la escitonemina reportado en MIBiG y mostrado en la
+  figura \autoref{fig:Scytonemin} panel (a) y en \autoref{fig:Ruta}
+  comprende 18 genes
   {[}\protect\hyperlink{ref-soule_comparative_2009}{116}{]}. Además de
   genes reguladores, este BGC incluye a los genes genes biosintéticos
   \emph{scyABC}, los genes conservados con función desconocida
@@ -3095,7 +3099,7 @@ starts here.
   cluster reportado en MIBiG. Los reclutamientos incluyen AroB y todos los
   genes de la ruta del L-triptofano excepto \emph{trpF}. Estos árboles
   pueden ser consultados interactivamente, los links de microreact están
-  anotados en la \autoref{tab:microreact}.
+  anotados en la \autoref{tab:Microreact}.
   
   \begin{figure}[h!tbp]
   \centering
@@ -3160,26 +3164,26 @@ starts here.
   visualización y organización de vecindades genómicas. Los análisis
   filogenómicos resultaron en 34 Cyanobacterias con diversidad química en
   el BGC de escitonemina. Es decir en conclusión escitonemina es un
-  ejemplo de cluster promiscuo, ya que parece haber un core conservado,
-  pero diversidad en enzimas accesorias y por tanto en sus productos
-  finales.
+  ejemplo de cluster promiscuo, ya que parece haber un \emph{core
+  conservado}, pero diversidad en enzimas accesorias y por tanto en sus
+  productos finales.
   
   Se pudieron predecir cinco estructuras putativas que son variantes de
   escitonemina y correlacionan con episodios de pérdida y ganancia de
   genes en este locus \autoref{fig:CorasonScytonemina}. En esta figura la
   clasificación de EvoMining para la familia ALS se muestra en un círculo
-  acorde con los colores de EvoMining. Al core de genes \emph{scyABCD} se
-  incorporan genes que realizan ornamentos como hidrolasas,
-  prenil-transferasas , fosfodiesterasas y monooxigenasas , para formar
-  congéneres de escitonemina como los compuestos 1 y 2. La pérdida de los
-  genes \emph{scyDEF} y la aparición de otras enzimas como la tyrosinasa y
-  o la amidasa pueden derivar en la síntesis de los compuestos 3 y 4.
-  Además encontramos que homólogos de \emph{scyA} y \emph{scyB} son parte
-  de otro BGC que contiene un híbrido NRPS-PKS. Siguiendo las reglas
-  biosintéticas de estas enzimas se propuso el compuesto 5. La diversidad
-  química sugerida en estas predicciones sólo puede ser validada mediante
-  trabajo experimental, sin embargo si existen variantes reportadas de la
-  molécula de escytonemina
+  acorde con los colores de EvoMining. Al \emph{core} de genes
+  \emph{scyABCD} se incorporan genes que realizan ornamentos como
+  hidrolasas, prenil-transferasas , fosfodiesterasas y monooxigenasas ,
+  para formar congéneres de escitonemina como los compuestos 1 y 2. La
+  pérdida de los genes \emph{scyDEF} y la aparición de otras enzimas como
+  la tyrosinasa y o la amidasa pueden derivar en la síntesis de los
+  compuestos 3 y 4. Además encontramos que homólogos de \emph{scyA} y
+  \emph{scyB} son parte de otro BGC que contiene un híbrido NRPS-PKS.
+  Siguiendo las reglas biosintéticas de estas enzimas se propuso el
+  compuesto 5. La diversidad química sugerida en estas predicciones sólo
+  puede ser validada mediante trabajo experimental, sin embargo si existen
+  variantes reportadas de la molécula de escitonemina
   {[}\protect\hyperlink{ref-grant_scytonemin-imine_2013}{135}{]}. Las
   variantes producidas por la dinámica evolutiva del metabolismo
   especializado fueron sugeridas mediante el sólo uso de ScyA y ScyB como
@@ -3207,15 +3211,15 @@ starts here.
   PKS, sugiriendo la pertenencia de \emph{tauD} a BGC de productos
   naturales. En Actinobacteria \emph{tauD} es parte de 15 BGCs
   \autoref{tab:tauD}, entre ellos los \emph{clusters} que producen los
-  metabolitos rimosamide y detoxin. Estos metabolitos comparten un core
-  molecular y difieren en ornamentaciones. Esta observación y el hecho de
-  que estos BGC comparten más genes además de la rimosamide, nos pueden
-  sugerir que los BGC de rimosamide y detoxin, también pueden considerarse
-  como parte de una sola clase de BGCs que presentan promiscuidad de
-  producto. El estudio de las variantes de rimosamide-detoxin BGC será
-  objeto del siguiente capítulo donde cambiaremos de estudiar las
-  variaciones a nivel secuencia de enzimas a estudiar variantes de
-  clusters biosintéticos.
+  metabolitos rimosamide y detoxin. Estos metabolitos comparten un
+  \emph{core} molecular y difieren en ornamentaciones. Esta observación y
+  el hecho de que estos BGC comparten más genes además de la rimosamide,
+  nos pueden sugerir que los BGC de rimosamide y detoxin, también pueden
+  considerarse como parte de una sola clase de BGCs que presentan
+  promiscuidad de producto. El estudio de las variantes de
+  rimosamide-detoxin BGC será objeto del siguiente capítulo donde
+  cambiaremos de estudiar las variaciones a nivel secuencia de enzimas a
+  estudiar variantes de clusters biosintéticos.
   
   \begin{figure}[h!tbp]
   \centering
@@ -3476,9 +3480,9 @@ starts here.
   biosintéticos y otras vecindades genómicas
   conservadas.}\label{desarrollo-de-corason-como-herramienta-para-organizar-clusters-biosinteticos-y-otras-vecindades-genomicas-conservadas.}
   
-  En este capítulo presento CORASON, CORe Analysis of Syntenic Orthologs
-  to prioritize Natural products biosynthetic gene clusters, una
-  herramienta para explorar la diversidad en el contenido de los
+  En este capítulo presento CORASON, \emph{CORe Analysis of Syntenic
+  Orthologs to prioritize Natural products biosynthetic gene clusters},
+  una herramienta para explorar la diversidad en el contenido de los
   \emph{Clusters} de Genes Biosintéticos (BGC por sus siglas en inglés)
   así como su distribución en un linaje proporcionado por el usuario.
   CORASON es una herramienta en línea de comandos para organizar
@@ -3501,7 +3505,7 @@ starts here.
   \begin{figure}[h!tbp]
   \centering
   \includegraphics[angle = 0,scale = .6]{chapter3/Corason-pipe.pdf}
-  \caption[La herramienta corason localiza familias de clusters biosintéticos en un linaje genómico partiendo de un cluster y un gen de referencia.]{\footnotesize{La herramienta corason localiza familias de clusters biosintéticos en un linaje genómico partiendo de un cluster y un gen de referencia. Todos los contextos genómicos que contengan ese gen y algún otro gen del cluster de referencia serán encontrados en el linaje seleccionado por el usuario. CORASON identifica el core génico de la familia. La información del core se utiliza para organizar filogenéticamente todos los miembros de la familia del BGC, es decir todas las variantes del BGC serán organizadas. El core génico está relacionado con el core de la molécula, la parte variable del BGC codifica enzimas accesorias que producen ornamentos. Al cambiar de gen de referencia CORASON permite explorar otras familias de BGC que contengan las mismas modificaciones. Los resultados se presentan en una visualización que permite al mismo tiempo apreciar variación a nivel de presencia-ausencia de genes entre miembros de una familia de BGCs, como también apreciar variación a nivel de secuencia a través de un gradiente de color entre genes conservados entre una variante y el BGC de referencia.}}
+  \caption[La herramienta corason localiza familias de clusters biosintéticos en un linaje genómico partiendo de un cluster y un gen de referencia.]{\footnotesize{La herramienta corason localiza familias de clusters biosintéticos en un linaje genómico partiendo de un cluster y un gen de referencia. Todos los contextos genómicos que contengan ese gen y algún otro gen del cluster de referencia serán encontrados en el linaje seleccionado por el usuario. CORASON identifica el $core$ génico de la familia. La información del $core$ se utiliza para organizar filogenéticamente todos los miembros de la familia del BGC, es decir todas las variantes del BGC serán organizadas. El core génico está relacionado con el $core$ de la molécula, la parte variable del BGC codifica enzimas accesorias que producen ornamentos. Al cambiar de gen de referencia CORASON permite explorar otras familias de BGC que contengan las mismas modificaciones. Los resultados se presentan en una visualización que permite al mismo tiempo apreciar variación a nivel de presencia-ausencia de genes entre miembros de una familia de BGCs, como también apreciar variación a nivel de secuencia a través de un gradiente de color entre genes conservados entre una variante y el BGC de referencia.}}
   \label{fig:Corason-pipe}
   \end{figure}
   
@@ -3522,23 +3526,24 @@ starts here.
   CORASON identifica el \emph{core} génico de la familia con el algoritmo
   de Orthocore. La información del \emph{core} se utiliza para organizar
   filogenéticamente todos los miembros de la familia del BGC. Ya que el
-  \emph{core} génico está relacionado con el core de la molécula, CORASON
-  permite detectar en la parte variable del BGC a las enzimas accesorias
-  que producen ornamentos i.e.~variantes moleculares. Los resultados son
-  un árbol en formato Newick junto con una visualización que permite al
-  mismo tiempo apreciar variación a nivel de presencia-ausencia de genes
-  entre miembros de una familia de BGCs así como la divergencia a nivel de
-  secuencia entre genes conservados entre una variante y el BGC de
-  referencia, mismo que se distingue con un código de color.
+  \emph{core} génico está relacionado con el \emph{core} de la molécula,
+  CORASON permite detectar en la parte variable del BGC a las enzimas
+  accesorias que producen ornamentos i.e.~variantes moleculares. Los
+  resultados son un árbol en formato Newick junto con una visualización
+  que permite al mismo tiempo apreciar variación a nivel de
+  presencia-ausencia de genes entre miembros de una familia de BGCs así
+  como la divergencia a nivel de secuencia entre genes conservados entre
+  una variante y el BGC de referencia, mismo que se distingue con un
+  código de color.
   
   CORASON fue diseñado con las siguientes características: (i) Se
   implementa en una interfaz de línea de comando simple. (ii)
   Identificación de todos los homólogos de un gen de referencia en una
-  base de datos de genomas. (iii) Identificación del core génico del BGC.
-  (iv) Reconstrucción filogenética de la familia de BGCs utilizando la
-  información del core. (v) Salida visual en formato SVG, que muestra
-  tanto la anotación funcional de los genes como como la distancia
-  respecto a sus ortólogos del \emph{cluster} de referencia.
+  base de datos de genomas. (iii) Identificación del \emph{core} génico
+  del BGC. (iv) Reconstrucción filogenética de la familia de BGCs
+  utilizando la información del \emph{core}. (v) Salida visual en formato
+  SVG, que muestra tanto la anotación funcional de los genes como como la
+  distancia respecto a sus ortólogos del \emph{cluster} de referencia.
   
   \section{Las familias de BGC son variantes del BGC de
   referencia.}\label{las-familias-de-bgc-son-variantes-del-bgc-de-referencia.}
@@ -3677,38 +3682,38 @@ starts here.
   apreciarse en la \autoref{fig:Coelicolor}. La arsenoenol piruvato
   sintasa fue descubierta en un árbol de EvoMining como parte de una rama
   de expansiones de AroA en Actinobacteria. El contexto genómico de la
-  arsenoenol piruvato sintasa de \emph{S. coelicolor } tiene un core
-  conservado en Actinobacteria. Este BGC está dedicado a la síntesis de
+  arsenoenol piruvato sintasa de \emph{S. coelicolor } tiene un \emph{core
+  conservado} en Actinobacteria. Este BGC está dedicado a la síntesis de
   metabolitos secundarios de tipo arsenolípidos. Primero se identificaron
   en otras secuencias genómicas contextos que contengan el homólogo de
   AroA y algún otro gen de su vecindad en \emph{S. coelicolor}. A
   continuación, se ordenaron manualmente los contextos obtenidos y se pudo
   identificar al menos cuatro diferentes subclases de BGC. La primera
-  clase mostrada en un contiene PKS o NRPS, la segunda enmarcada en verde
-  contiene una PKS-NRPS híbrida. Los otros dos subgrupos que solo
-  contienen una PKS pero en un caso está río arriba y en otro río abajo de
-  AroA. La tercera clase incluye una PKS a la izquierda y a más de cinco
-  genes de distancia de la Arsenoenol piruvato sintasa y finalmente la
-  última clase contiene una PKS a la derecha y a sólo un gen de distancia
-  de esta enzima. Así, se muestra que existen variantes de un BGC y,
-  presumiblemente, aunque estos BGC aunque contienen un core común
-  producen distintos arseno compuestos.
+  clase mostrada en un rectángulo morado no contiene PKS o NRPS, la
+  segunda enmarcada en verde contiene una PKS-NRPS híbrida. Los otros dos
+  subgrupos solo contienen una PKS, en un caso está río arriba y en otro
+  río abajo de AroA. La tercera clase incluye una PKS a la izquierda y a
+  más de cinco genes de distancia de la arsenoenol piruvato sintasa;
+  finalmente la última clase contiene una PKS a la derecha a sólo un gen
+  de distancia de esta enzima. Así, se muestra que existen variantes de un
+  BGC que contienen un \emph{core} común, presumiblemente pueden producir
+  variantes de arseno compuestos.
   
   \begin{figure}[h!tbp]
   \centering
   \includegraphics[angle = 0,scale = .4]{chapter3/Coelicolor.pdf}
-  \caption[EvoMining Algorithm]{\footnotesize{El contexto genómico conservado en las expansiones de AroA sugiere que es una familia de BGC con promiscuidad de productos. El contexto genómico de la arsenoenol piruvato sintasa de $S.~coelicolor$ tiene un core conservado en Actinobacteria que produce arsenolípidos. Se identificaron cuatro clases de BGCs. La primera clase en morado no contiene PKS o NRPS, la segunda enmarcada en verde contiene una PKS-NRPS híbrida. La tercera clase incluye una PKS a la izquierda y a más de cinco genes de distancia de la Arsenoenol piruvato sintasa y finalmente la última clase contiene una PKS a la derecha y a sólo un gen de distancia de esta enzima.}}
+  \caption[EvoMining Algorithm]{\footnotesize{El contexto genómico conservado en las expansiones de AroA sugiere que es una familia de BGC con promiscuidad de productos. El contexto genómico de la arsenoenol piruvato sintasa de $S.~coelicolor$ tiene un $core~conservado$ en Actinobacteria que produce arsenolípidos. Se identificaron cuatro clases de BGCs. La primera clase en morado no contiene PKS o NRPS, la segunda enmarcada en verde contiene una PKS-NRPS híbrida. La tercera clase incluye una PKS a la izquierda y a más de cinco genes de distancia de la Arsenoenol piruvato sintasa y finalmente la última clase contiene una PKS a la derecha y a sólo un gen de distancia de esta enzima.}}
   \label{fig:Coelicolor}
   \end{figure}
   
   Hasta esta versión de CORASON la visualización realizada para los
   arsenolípidos no incluía ningún tipo de orden y era difícil distinguir
   grupos de BGCs. Por esta razón se pensó que el orden filogenético ya no
-  de una enzima sino de el core del BGC ordenaría las variantes del BGC.
-  Este orden mostraría en un continuo la dinámica genómica del BGC
+  de una enzima sino del \emph{core} del BGC ordenaría las variantes del
+  BGC. Este orden mostraría en un continuo la dinámica genómica del BGC
   establecida por los procesos evolutivos. En el caso de los arsenolípidos
-  se utilizó Orthocore para la identificación del core del BGC. En las
-  siguientes versiones de CORASON esta característica fue implementada
+  se utilizó Orthocore para la identificación del \emph{core} del BGC. En
+  las siguientes versiones de CORASON esta característica fue implementada
   como parte del algoritmo.
   
   \section{Combinamos CORASON y BiG-SCAPE para mejorar la clasificación de
@@ -3758,12 +3763,13 @@ starts here.
   reveló diversidad tanto en los géneros de los organismos que contienen a
   esta familia, y en la composición génica del BGC. Entre los géneros con
   alguna variante del BGC están \emph{Amycolatopsis}, \emph{Streptomyces}.
-  El core conservado de los BGCs detoxin y rimosamide está compuesto por
-  una NRPS, una NRPS/PKS híbrida, y un homólogo de \emph{tauD}. En
-  \emph{E.coli} tauD se encuentra en el operón \emph{tauABCD}. La ruta de
-  síntesis de rimosamide difiere de la de detoxins porque tiene una NRPS
-  adicional, que codifica para una modificación del core de molécula
-  detoxin/rimosamide con isobutirato y glicina.
+  El \emph{core conservado} de los BGCs detoxin y rimosamide está
+  compuesto por una NRPS, una NRPS/PKS híbrida, y un homólogo de
+  \emph{tauD}. En \emph{E.coli} tauD se encuentra en el operón
+  \emph{tauABCD}. La ruta de síntesis de rimosamide difiere de la de
+  detoxins porque tiene una NRPS adicional, que codifica para una
+  modificación del \emph{core} de molécula detoxin/rimosamide con
+  isobutirato y glicina.
   
   El hecho de que el gen \emph{tauD} estuviera presente en todos los
   miembros de la familia \autoref{fig:Rimosamide} captó nuestra atención.
@@ -3785,13 +3791,13 @@ starts here.
   que contenían un homólogo de \emph{tauD} se pasaron por un análisis
   combinado de BiG-SCAPE/CORASON. Se uso \emph{tauD} como gen de
   referencia en CORASON ya que es el único gen miembro del `BGC core' que
-  está presente en todos los genomas. Es importante notar que el core del
-  BGC podría contener hasta 3 genes porque la NRPS, y la NRPS-PKS híbrida
-  quedan fuera en este ejemplo debido a que algunos genomas no están
-  completamente secuenciados y justamente hay huecos a los extremos de los
-  contigs que contienen estos BGC. Este es el caso de los organismos
-  \emph{Streptomyces humi}, \emph{Streptomyces spectabilis} y
-  \emph{Amycolatopsis vancoresmycina}{]}
+  está presente en todos los genomas. Es importante notar que el
+  \emph{core} del BGC podría contener hasta 3 genes porque la NRPS, y la
+  NRPS-PKS híbrida quedan fuera en este ejemplo debido a que algunos
+  genomas no están completamente secuenciados y justamente hay huecos a
+  los extremos de los contigs que contienen estos BGC. Este es el caso de
+  los organismos \emph{Streptomyces humi}, \emph{Streptomyces spectabilis}
+  y \emph{Amycolatopsis vancoresmycina}{]}
   
   \begin{figure}[h!tbp]
   \centering
@@ -3872,8 +3878,8 @@ starts here.
   tandem de espectrometría de masas de extracto \emph{S. spectabilis} NRRL
   2792 reveló la presencia de cinco compuestos tipo detoxin.
   
-  Los tiempos de retención de ionies y los patrones de fragmentación de
-  los últimos dos compuestos también fueron observados en extractos de
+  Los tiempos de retención de iones y los patrones de fragmentación de los
+  últimos dos compuestos también fueron observados en extractos de
   \emph{Streptomyces} sp. NRRL B-1347 parte del clado del supercluster.
   Esto confirma la habilidad de CORASON para guiar un descubrimiento
   mediante la utilización de la filogenia a pesar de lo limitado de los
@@ -6002,9 +6008,9 @@ starts here.
   \NormalTok{Bradford_df =}\StringTok{ }\KeywordTok{data.frame}\NormalTok{(BSAConcentrationStock,vol)   }
   
   \NormalTok{## quantity of microgrames on .16 ml}
-  \NormalTok{Bradford_df[}\StringTok{"Quantity"}\NormalTok{]<-BSAConcentrationStock}\OperatorTok{*}\NormalTok{.}\DecValTok{160}
+  \NormalTok{Bradford_df[}\StringTok{"Quantity"}\NormalTok{]<-BSAConcentrationStock*.}\DecValTok{160}
   \NormalTok{## concentration after added 40 ul bradford (total 200 ul)}
-  \NormalTok{Bradford_df[}\StringTok{"Concentration200"}\NormalTok{]<-Bradford_df[}\StringTok{"Quantity"}\NormalTok{]}\OperatorTok{/}\NormalTok{.}\DecValTok{2}
+  \NormalTok{Bradford_df[}\StringTok{"Concentration200"}\NormalTok{]<-Bradford_df[}\StringTok{"Quantity"}\NormalTok{]/.}\DecValTok{2}
   
   
   \NormalTok{## This are the absorbance measures for the different BSA concentrations  }
@@ -6015,11 +6021,11 @@ starts here.
   \NormalTok{Bradford_df[}\StringTok{"Abs2BSA"}\NormalTok{]<-Abs2BSA}
   
   \NormalTok{## mean value of measures}
-  \NormalTok{Bradford_df}\OperatorTok{$}\NormalTok{mean<-}\KeywordTok{rowMeans}\NormalTok{(}\KeywordTok{subset}\NormalTok{(Bradford_df, }\DataTypeTok{select =} \KeywordTok{c}\NormalTok{(Abs1BSA, Abs2BSA)), }\DataTypeTok{na.rm =} \OtherTok{TRUE}\NormalTok{)}
+  \NormalTok{Bradford_df$mean<-}\KeywordTok{rowMeans}\NormalTok{(}\KeywordTok{subset}\NormalTok{(Bradford_df, }\DataTypeTok{select =} \KeywordTok{c}\NormalTok{(Abs1BSA, Abs2BSA)), }\DataTypeTok{na.rm =} \OtherTok{TRUE}\NormalTok{)}
   
   \CommentTok{#adjusting blank}
-  \NormalTok{Bradford_df}\OperatorTok{$}\NormalTok{meanAdjusted<-Bradford_df}\OperatorTok{$}\NormalTok{mean}\OperatorTok{-}\NormalTok{Bradford_df}\OperatorTok{$}\NormalTok{mean[}\DecValTok{1}\NormalTok{]}
-  \NormalTok{BSA.lm =}\StringTok{ }\KeywordTok{lm}\NormalTok{(meanAdjusted }\OperatorTok{~}\StringTok{ }\NormalTok{Concentration200, }\DataTypeTok{data=}\NormalTok{Bradford_df) }
+  \NormalTok{Bradford_df$meanAdjusted<-Bradford_df$mean-Bradford_df$mean[}\DecValTok{1}\NormalTok{]}
+  \NormalTok{BSA.lm =}\StringTok{ }\KeywordTok{lm}\NormalTok{(meanAdjusted ~}\StringTok{ }\NormalTok{Concentration200, }\DataTypeTok{data=}\NormalTok{Bradford_df) }
   \NormalTok{coeffs =}\StringTok{ }\KeywordTok{coefficients}\NormalTok{(BSA.lm); coeffs }
   \end{Highlighting}
   \end{Shaded}
@@ -6034,8 +6040,8 @@ starts here.
   \NormalTok{b=coeffs[}\DecValTok{1}\NormalTok{]}
   \NormalTok{m=coeffs[}\DecValTok{2}\NormalTok{]}
   
-  \NormalTok{eq =}\StringTok{ }\ControlFlowTok{function}\NormalTok{(x)\{x}\OperatorTok{*}\NormalTok{m}\OperatorTok{+}\NormalTok{b\}}
-  \KeywordTok{plot}\NormalTok{(Bradford_df}\OperatorTok{$}\NormalTok{Concentration200,Bradford_df}\OperatorTok{$}\NormalTok{meanAdjusted,}\DataTypeTok{type=}\StringTok{"l"}\NormalTok{)}
+  \NormalTok{eq =}\StringTok{ }\NormalTok{function(x)\{x*m+b\}}
+  \KeywordTok{plot}\NormalTok{(Bradford_df$Concentration200,Bradford_df$meanAdjusted,}\DataTypeTok{type=}\StringTok{"l"}\NormalTok{)}
   \KeywordTok{par}\NormalTok{(}\DataTypeTok{new=}\OtherTok{TRUE}\NormalTok{)}
   \KeywordTok{plot}\NormalTok{(eq, }\DecValTok{1}\NormalTok{,}\DecValTok{100}\NormalTok{)}
   \end{Highlighting}
@@ -6056,7 +6062,7 @@ starts here.
   \NormalTok{ABS1=}\FloatTok{0.932099998}    
   \NormalTok{ABS2=}\FloatTok{1.048400044}
   \NormalTok{Pria_df=}\KeywordTok{data.frame}\NormalTok{(vol,type,ABS1,ABS2)}
-  \NormalTok{Pria_df}\OperatorTok{$}\NormalTok{type<-}\KeywordTok{as.character}\NormalTok{(Pria_df}\OperatorTok{$}\NormalTok{type)}
+  \NormalTok{Pria_df$type<-}\KeywordTok{as.character}\NormalTok{(Pria_df$type)}
   \NormalTok{data2=}\KeywordTok{c}\NormalTok{(}\DecValTok{20}\NormalTok{,}\StringTok{"Scoe"}\NormalTok{,}\FloatTok{1.639400005}\NormalTok{,}\FloatTok{1.569700003}\NormalTok{)}
   \NormalTok{data3=}\KeywordTok{c}\NormalTok{(}\DecValTok{5}\NormalTok{,}\StringTok{"D11A"}\NormalTok{,}\FloatTok{0.575600028}\NormalTok{,   }\FloatTok{0.576099992}\NormalTok{)}
   \NormalTok{data4=}\KeywordTok{c}\NormalTok{(}\DecValTok{20}\NormalTok{,}\StringTok{"D11A"}\NormalTok{,}\FloatTok{1.039499998}\NormalTok{,  }\FloatTok{1.067399979}\NormalTok{)}
@@ -6068,21 +6074,21 @@ starts here.
   \NormalTok{Pria_df=}\KeywordTok{rbind}\NormalTok{(Pria_df,data4)}
   \NormalTok{Pria_df=}\KeywordTok{rbind}\NormalTok{(Pria_df,data5)}
   
-  \NormalTok{Pria_df}\OperatorTok{$}\NormalTok{mean<-}\KeywordTok{rowMeans}\NormalTok{(}\KeywordTok{cbind}\NormalTok{(}\KeywordTok{as.numeric}\NormalTok{(Pria_df}\OperatorTok{$}\NormalTok{ABS1),}\KeywordTok{as.numeric}\NormalTok{(Pria_df}\OperatorTok{$}\NormalTok{ABS2)))}
+  \NormalTok{Pria_df$mean<-}\KeywordTok{rowMeans}\NormalTok{(}\KeywordTok{cbind}\NormalTok{(}\KeywordTok{as.numeric}\NormalTok{(Pria_df$ABS1),}\KeywordTok{as.numeric}\NormalTok{(Pria_df$ABS2)))}
   
   \NormalTok{## Pasando absorbancia a concentration de proteina en 200 ul (ug/ml)}
   \NormalTok{## kari values }
   \CommentTok{#m=0.004679534923}
   \CommentTok{#b=0.103674687}
   
-  \NormalTok{inter =}\StringTok{ }\ControlFlowTok{function}\NormalTok{(y)\{(y}\OperatorTok{-}\NormalTok{b)}\OperatorTok{/}\NormalTok{m\}}
-  \NormalTok{Pria_df}\OperatorTok{$}\NormalTok{concentration200<-}\KeywordTok{inter}\NormalTok{(Pria_df}\OperatorTok{$}\NormalTok{mean)}
+  \NormalTok{inter =}\StringTok{ }\NormalTok{function(y)\{(y-b)/m\}}
+  \NormalTok{Pria_df$concentration200<-}\KeywordTok{inter}\NormalTok{(Pria_df$mean)}
   
   \NormalTok{## protein quantity on ug on 200 ul}
-  \NormalTok{Pria_df[}\StringTok{"Quantity"}\NormalTok{]=Pria_df}\OperatorTok{$}\NormalTok{concentration200}\OperatorTok{*}\NormalTok{.}\DecValTok{2}
+  \NormalTok{Pria_df[}\StringTok{"Quantity"}\NormalTok{]=Pria_df$concentration200*.}\DecValTok{2}
   
   \NormalTok{### Inicial concentration  C200_vol200=Cinicial_Vinicial}
-  \NormalTok{Pria_df[}\StringTok{"ConcentrationInitial"}\NormalTok{]=Pria_df}\OperatorTok{$}\NormalTok{Quantity}\OperatorTok{/}\NormalTok{(.}\DecValTok{001}\OperatorTok{*}\KeywordTok{as.numeric}\NormalTok{(Pria_df}\OperatorTok{$}\NormalTok{vol))}
+  \NormalTok{Pria_df[}\StringTok{"ConcentrationInitial"}\NormalTok{]=Pria_df$Quantity/(.}\DecValTok{001}\NormalTok{*}\KeywordTok{as.numeric}\NormalTok{(Pria_df$vol))}
   
   \KeywordTok{kable}\NormalTok{(Bradford_df)}
   \end{Highlighting}
@@ -6138,12 +6144,12 @@ starts here.
   \NormalTok{## mas on Kda = kg/mol  }
   \NormalTok{mw<-}\FloatTok{25.7} 
   \CommentTok{# converting to g/mol  }
-  \NormalTok{mwgram<-mw}\OperatorTok{*}\DecValTok{1000}  
+  \NormalTok{mwgram<-mw*}\DecValTok{1000}  
   \NormalTok{## concentration on g/L (after convert ug/ml)}
   \NormalTok{concentScoe<-}\FloatTok{2.352}
   \NormalTok{concentD11A<-}\FloatTok{1.248}
   \NormalTok{## Concentration on uM (10**6M)}
-  \NormalTok{molar =}\StringTok{ }\ControlFlowTok{function}\NormalTok{(x)\{(}\DecValTok{10}\OperatorTok{**}\DecValTok{6}\NormalTok{)}\OperatorTok{*}\NormalTok{x}\OperatorTok{/}\NormalTok{mwgram\}}
+  \NormalTok{molar =}\StringTok{ }\NormalTok{function(x)\{(}\DecValTok{10}\NormalTok{**}\DecValTok{6}\NormalTok{)*x/mwgram\}}
   \KeywordTok{molar}\NormalTok{(concentScoe)}
   \end{Highlighting}
   \end{Shaded}
@@ -6175,7 +6181,7 @@ starts here.
   \NormalTok{## Vi =CfVf/Vi}
   \NormalTok{## Cf= 80uM Vf=5ul Vi=?ul Ci=x}
   
-  \NormalTok{adjustMol =}\StringTok{ }\ControlFlowTok{function}\NormalTok{(x)\{}\FloatTok{2.5}\OperatorTok{*}\DecValTok{160}\OperatorTok{/}\NormalTok{x\} }
+  \NormalTok{adjustMol =}\StringTok{ }\NormalTok{function(x)\{}\FloatTok{2.5}\NormalTok{*}\DecValTok{160}\NormalTok{/x\} }
   \NormalTok{## this are the ul need from stock cristal enzyme that will be diluted on buffer to complete 160 ul }
   \KeywordTok{adjustMol}\NormalTok{(}\KeywordTok{molar}\NormalTok{(concentScoe))}
   \end{Highlighting}
